@@ -1,0 +1,44 @@
+[Desktop Entry]
+_Name=Videos
+_Comment=Play movies
+_Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
+Exec=totem %U
+Icon=totem
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;AudioVideo;Player;Video;
+@MIMETYPES@
+X-GNOME-DocPath=totem/totem.xml
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=totem
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=@VERSION@
+X-GNOME-Bugzilla-OtherBinaries=totem-video-thumbnailer;totem-audio-preview;
+X-GNOME-Bugzilla-ExtraInfoScript=@FULL_LIBEXECDIR@/totem/totem-bugreport.py
+StartupNotify=true
+Actions=Play;Next;Previous;Mute;Fullscreen;
+
+[Desktop Action Play]
+_Name=Play/Pause
+Exec=totem --play-pause
+OnlyShowIn=Unity;
+
+[Desktop Action Next]
+_Name=Next
+Exec=totem --next
+OnlyShowIn=Unity;
+
+[Desktop Action Previous]
+_Name=Previous
+Exec=totem --previous
+OnlyShowIn=Unity;
+
+[Desktop Action Mute]
+_Name=Mute
+Exec=totem --mute
+OnlyShowIn=Unity;
+
+[Desktop Action Fullscreen]
+_Name=Fullscreen
+Exec=totem --fullscreen
+OnlyShowIn=Unity;

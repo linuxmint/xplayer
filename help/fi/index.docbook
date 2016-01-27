@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26">
+<!ENTITY manrevision "3.0">
+<!ENTITY date "February 2009">
+<!ENTITY app "Totem Movie Player">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file.
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!--
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="fi">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo>
+    <title><application>Totem-elokuvasoittimen</application> käyttöohje</title>
+    <copyright lang="en">
+      <year>2003</year>
+      <holder>Chee Bin HOH</holder>
+    </copyright>
+    <copyright lang="en">
+      <year>2009</year>
+      <holder>Philip Withnall</holder>
+    </copyright>
+    <releaseinfo revision="2.26" role="final">
+    	<ulink type="peerreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=574524"/>
+    </releaseinfo>
+
+    <abstract role="description">
+      <para><application>Totem-elokuvasoitin</application> on mediasoitin Gnomea varten. Oletusarvoisesti se pyörii GStreamerin päällä, mutta myös xine voi ajaa sitä. Se tukee useimpia audio- ja videokoodekkeja, mukaanluettuna DVD:t. Ominaisuuksiin kuuluvat TV-ulostulo,  kokoruututila, tekstitykset ja paljon muuta.</para>
+    </abstract>
+
+    <publisher>
+      <publishername lang="en"> GNOME Documentation Project </publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para lang="en">
+	  Permission is granted to copy, distribute and/or modify this
+	  document under the terms of the GNU Free Documentation
+	  License (GFDL), Version 1.1 or any later version published
+	  by the Free Software Foundation with no Invariant Sections,
+	  no Front-Cover Texts, and no Back-Cover Texts.  You can find
+	  a copy of the GFDL at this <ulink type="help" url="help:fdl">link</ulink> or in the file COPYING-DOCS
+	  distributed with this manual.
+         </para>
+         <para>Tämä käyttöohje on osa Gnomen käyttöohjekokoelmaa ja levitetään GFDL-lisenssin alaisena. Jos haluat levittää tätä käyttöohjetta erillään kokoelmasta, voit tehdä sen liittämällä lisenssin kopion ohjeen mukaan, kuten lisenssin luku 6 sanelee.</para>
+
+	<para>Monet tuotteiden ja palveluiden nimet ovat tuotemerkkejä. Gnomen dokumentointiprojektissa nämä nimet pyritään kirjoittamaan suuraakkosin tai isolla alkukirjaimella, sikäli kun projektin jäsenet tietävät kyseisistä tuotemerkeistä.</para>
+
+	<para lang="en">
+	  DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+	  UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+	  WITH THE FURTHER UNDERSTANDING THAT:
+
+	  <orderedlist>
+		<listitem>
+		  <para lang="en">DOCUMENT IS PROVIDED ON AN "AS IS" BASIS,
+                    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                    IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                    THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                    A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                    RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                    OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                    MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                    YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                    CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                    SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                    OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                    LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                    VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                    EXCEPT UNDER THIS DISCLAIMER; AND
+		  </para>
+		</listitem>
+		<listitem>
+		  <para lang="en">UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                       THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                       CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                       INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                       DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                       OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                       PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                       DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                       CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                       INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                       OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                       MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                       LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                       DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                       EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                       THE POSSIBILITY OF SUCH DAMAGES.
+		  </para>
+		</listitem>
+	  </orderedlist>
+	</para>
+  </legalnotice>
+
+
+    <!-- This file  contains link to license for the documentation (GNU FDL), and
+         other legal stuff such as "NO WARRANTY" statement. Please do not change
+	 any of this. -->
+
+    <authorgroup>
+      <author role="maintainer" lang="en">
+	<firstname>Chee Bin</firstname>
+	<surname>HOH</surname>
+	<affiliation>
+  	  <orgname>GNOME Documentation Project</orgname>
+	</affiliation>
+	<email>cbhoh@gnome.org</email>
+      </author>
+      <author lang="en">
+	<firstname>Baptiste</firstname>
+	<surname>Mille-Mathias</surname>
+	<affiliation>
+          <orgname>GNOME Documentation project</orgname>
+        </affiliation>
+        <contrib>Update documentation</contrib>
+        <email>baptiste.millemathias@gmail.org</email>
+      </author>
+       <author lang="en">
+	<firstname>Philip</firstname>
+	<surname>Withnall</surname>
+        <contrib>Update documentation</contrib>
+	<email>philip@tecnocode.co.uk</email>
+      </author>
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+	<firstname>Latin</firstname>
+	<surname>Translator 1</surname>
+	<affiliation>
+          <orgname>Latin Translation Team</orgname>
+  	  <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other -->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+	<date>August 2006</date>
+	<revdescription>
+	  <para role="author" lang="en">Chee Bin HOH
+	    <email>cbhoh@gnome.org</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+	<date>February 2009</date>
+	<revdescription>
+	  <para role="author" lang="en">Philip Withnall
+	    <email>philip@tecnocode.co.uk</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Tämä käyttöopas kuvaa Totem-elokuvasoittimen versiota 2.26.</releaseinfo>
+    <legalnotice>
+      <title>Palaute</title>
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+        this manual, follow the directions in the
+        <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+      </para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index" lang="en">
+    <primary>Totem Movie Player</primary>
+  </indexterm>
+  <indexterm zone="index" lang="en">
+    <primary>totem</primary>
+  </indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="totem-introduction">
+    <title>Johdanto</title>
+    <para><application>Totem-elokuvasoitin</application> on elokuvasoitinsovellus Gnomen työpöytää varten. Se pohjautuu GStreameriin ja xine-kirjastoon, ja mahdollistaa elokuvien ja musiikin toistamisen.</para>
+    <para><application>Totem-elokuvasoitin</application> tarjoaa seuraavat ominaisuudet:</para>
+    <itemizedlist>
+      <listitem>
+	<para>Tuen monentyyppisille video- ja audiotiedostoille.</para>
+      </listitem>
+      <listitem>
+	<para>Laajan valikoiman suurennusasteita ja kuvasuhteita sekä kokoruutunäytön.</para>
+      </listitem>
+      <listitem>
+        <para>Etsinnän ja äänenvoimakkuuden säädön.</para>
+      </listitem>
+      <listitem>
+        <para>Soittolistan.</para>
+      </listitem>
+      <listitem>
+        <para>Tuen tekstityksille</para>
+      </listitem>
+      <listitem>
+	<para>Täydellisen näppäimistöohjattavuuden.</para>
+      </listitem>
+      <listitem>
+	<para>Laajan valikoiman lisäosia, kuten tekstityksen lataajan, YouTube-selaimen ja levynpolton.</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <para><application>Totem-elokuvasoittimessa</application> on myös lisätoiminnallisuuksia kuten:</para>
+      <itemizedlist>
+	<listitem>
+	  <para>Videoiden pienoiskuva Gnomea varten.</para>
+        </listitem>
+        <listitem>
+	  <para>Audion esikuuntelusovellus Gnomea varten.</para>
+        </listitem>
+	<listitem>
+	  <para>Nautiluksen ominaisuusvälilehti</para>
+        </listitem>
+      </itemizedlist>
+    </note>
+  </sect1>
+<!-- =========== End of Introduction ========================= -->
+
+<!-- =========== Getting Started ============================= -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here.
+     If the information about how to get started is very short, you can
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="totem-getting-started">
+    <title>Aloitus</title>
+
+    <sect2 id="totem-start">
+      <title><application>Totem-elokuvasoittimen</application> käynnistäminen</title>
+      <para>Voit käynnistää <application>Totem-elokuvasoittimen</application> seuraavilla tavoilla:</para>
+      <variablelist>
+	<varlistentry>
+	  <term><guimenu>Sovellus</guimenu>-valikosta</term>
+	  <listitem>
+	    <para lang="en">Choose
+              <menuchoice>
+		<guisubmenu>Sound &amp; Video</guisubmenu>
+		<guimenuitem>Movie Player</guimenuitem>
+	      </menuchoice>.
+            </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Komentorivi</term>
+	  <listitem>
+	    <para>Käynnistääksesi <application>Totem-elokuvasoittimen</application> komentoriviltä, kirjoita seuraava komento ja paina <keycap>Return</keycap>:</para>
+	    <para lang="en">
+            <command>totem</command>
+            </para>
+	    <tip>
+	      <para>Nähdäksesi tarjolla olevat komentorivivalinnat, kirjoita <command>totem --help</command> ja paina <keycap>Return</keycap>.</para>
+	    </tip>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-when-start">
+      <title><application>Totem-elokuvasoittimen</application> käynnnistäminen</title>
+      <para>Kun käynnistät <application>Totem-elokuvasoittimen</application>, näkyviin tulee seuraava ikkuna.</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="totem-start-fig">
+	<title><application>Totem-elokuvasoittimen</application> käynnistysikkuna</title>
+	<screenshot>
+	  <mediaobject lang="en">
+	    <imageobject>
+	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Shows <application>Totem Movie Player</application> main window with
+		  sidebar opened on playlist. Contains
+		  menubar, display area, sidebar, elapsed time slider, seek control
+		  buttons, volume slider and statusbar.
+          </phrase>
+	    </textobject>
+	  </mediaobject>
+	</screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+      <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+      <para><application>Totem-elokuvasoittimen</application> ikkuna sisältää seuraavaat elementit:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Valikkopalkki.</term>
+  	  <listitem>
+	    <para>Valikkopalkin valikoissa on kaikki komennot, joita tarvitaan <application>Totem-elokuvasoittimen</application> käyttämiseen.</para>
+ 	  </listitem>
+   	</varlistentry>
+	<varlistentry>
+	  <term>Näyttöalue.</term>
+	  <listitem>
+	    <para>Näyttöalue näyttää elokuvan tai pyörivän musiikkikappaleen visualisaation.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Sivupalkki.</term>
+	  <listitem>
+	    <para>Sivupalkki näyttää toistettavan tiedoston ominaisuudet ja toimii soittolistana. Sitä voivat käyttää myös erilaiset lisäosat, kuten MythTV-, YouTube- ja videohakulisäosat. Nämä voidaan valita napsauttamalla pudotusvalikkoa sivupalkin yläosasta.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Kuluneen ajan liukusäädin.</term>
+	  <listitem>
+	    <para>Kuluneen ajan liukusäädin näyttää, minkä verran on kulunut aikaa toistettavasta elokuvasta tai musiikkikappaleesta. Se mahdollistaa myös siirtymisen eteen- tai taaksepäin elokuvassa tai musiikkikappaleessa vetämällä liukusäädintä palkkia pitkin tai napsauttamalla jotain kohtaa palkista.</para>
+	  </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Kelauksen säätöpainikkeet.</term>
+          <listitem>
+            <para>Kelauksen säätöpainikkeiden avulla voit siirtyä seuraavaan tai edelliseen raitaan, tai keskeyttää tai jatkaa elokuvan tai musiikkikappeleen toistoa.</para>
+	  </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Äänenvoimakkuuden säätöpainike.</term>
+          <listitem>
+	    <para>Äänenvoimakkuuden säätöpainikkeen avulla voit säätää äänenvoimakkuutta.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Tilapalkki.</term>
+	  <listitem>
+	    <para>Tilapalkki näyttää tietoa toistettavan elokuvan tai musiikkikappaleen tilasta.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+<!-- =========== End of Getting Started ====================== -->
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to use the application to perform the tasks for
+  which the application is designed. -->
+  <sect1 id="totem-usage">
+    <title>Käyttö</title>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="totem-open-file">
+      <title>Tiedoston avaaminen</title>
+      <para lang="en">To open a video or an audio file, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut>
+          <guimenu>Movie</guimenu>
+	  <guisubmenu>Open</guisubmenu>
+        </menuchoice>.
+        The <application>Select Movies or Playlists</application> dialog is displayed.
+		Select the file or files you want to open, then click
+	<guibutton>OK</guibutton>.
+      </para>
+      <para>Voit raahata tiedoston toisesta sovelluksesta, kuten tiedostonhallinnasta <application>Totem-elokuvasoittimen</application> ikkunaan. Jos raahaat tiedoston näyttöalueelle, tiedosto korvaa senhetkisen soittolistan ja alkaa pyöriä välittömästi. Jos raahaat tiedoston sivupalkin soittolistaan, tiedosto lisätään senhetkiseen soittolistaan. <application>Totem-elokuvasoitin</application> avaa tiedoston ja toistaa elokuvan tai musiikkikappaleen. <application>Totem-elokuvasoitin</application> näyttää elokuvan tai musiikkikappaleen nimen ikkunan nimipalkissa ja sivupalkin soittolistassa.</para>
+      <para>Jos yrität avata tiedostotyyppiä, jota <application>Totem-elokuvasoitin</application> ei tunnista, sovellus näyttää virheviestin. Tämä virhe syntyy useimmiten, mikäli sinulla ei ole asennettuna oikeita koodekkeja. Koodekkien saamisesta toimimaan on tietoa <ulink url="http://projects.gnome.org/totem/#codecs" type="http"><application>Totem-elokuvasoittimen</application> web-sivustolla</ulink>.</para>
+      <tip>
+	<para>Voit kaksoisnapsauttaa video- tai audiotiedostoa <application>Nautilus</application>-tiedostonhallinnassa avataksesi sen <application>Totem-elokuvasoittimessa</application>.</para>
+      </tip>
+    </sect2>
+
+    <sect2 id="totem-usage-open-location">
+      <title>Sijainnin avaaminen</title>
+      <para lang="en">To open a file by URI (location), choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Open Location</guimenuitem>
+        </menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down
+        combination box to specify the URI you would like to open (it lists URIs which have
+        previously been opened) – or type one in directly – then click on the <guibutton>Open</guibutton> button.
+      </para>
+      <para>Jos leikepöydällä on valmiiksi URI, se siirtyy automaattisesti valikkoon.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-play">
+      <title>Elokuvan toistaminen (DVD:ltä tai VCD:ltä)</title>
+	      <para lang="en">Insert the disc in the optical device of your computer, then choose
+          	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
+              </menuchoice>.</para>
+             <para lang="en">To eject a DVD or VCD, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Eject</guimenuitem>
+        </menuchoice>.
+      </para>
+       </sect2>
+
+    <sect2 id="totem-usage-pause">
+      <title>Elokuvan tai musiikkikappaleen keskeyttäminen</title>
+      <para lang="en">To pause a movie or song that is playing, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows pause button.</phrase></textobject>
+        </inlinemediaobject> button, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie.
+      </para>
+      <para lang="en">To resume playing a movie or song, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows play button.</phrase></textobject>
+        </inlinemediaobject> button again, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>.
+      </para>
+    </sect2>
+
+    <sect2 id="totem-usage-view-properties">
+      <title>Elokuvan tai musiikkikappaleen ominaisuuksien katsominen</title>
+      <para lang="en">To view the properties of a movie or song, choose
+        <menuchoice>
+	  <guimenu>View</guimenu>
+	  <guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar
+	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-seek">
+      <title>Elokuvien tai musiikkikappaleiden selaamiseen</title>
+      <para>Voit käyttää seuraavia tapoja elokuvien tai musiikkikappaleiden selaamiseen:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Kelaaminen eteenpäin</term>
+	  <listitem>
+	    <para lang="en">To skip forward through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Right</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Forward</guimenuitem>
+              </menuchoice>.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Kelaaminen taaksepäin</term>
+	  <listitem>
+	    <para lang="en">To skip backwards through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Left</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Backwards</guimenuitem>
+              </menuchoice>.
+             </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Hyppy tiettyyn kohtaan</term>
+	  <listitem>
+	    <para lang="en">To skip to a specific elapsed time in the movie or song, choose
+              <menuchoice>
+		<shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip to</guimenuitem>
+              </menuchoice>. The <application>Skip to</application> dialog is displayed. Use the
+              spin box to specify the elapsed time (in seconds) to skip to, then
+              click <guibutton>OK</guibutton>.
+            </para>
+            <para>Säädin mahdollistaa myös luontevamman käskytyksen. Voit syöttää ajan muodoissa "hh:mm:ss", "mm:ss" tai "ss"; missä "hh" on tunnit, "mm" on minuutit ja "ss" on sekunnit halutusta kohdasta.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Siirtyminen seuraavaan elokuvaan tai musiikkikappaleeseen</term>
+	  <listitem>
+	    <para lang="en">To move to the next movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Next Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek next button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Edelliseen elokuvaan tai kappaleeseen siirtyminen</term>
+	  <listitem>
+	    <para lang="en">To move to the previous movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Previous Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-usage-change-zoom">
+      <title>Lähennysmäärän muuttaminen</title>
+	  <sect3 id="totem-usage-change-size">
+		<title>Videokuvan koon muuttaminen</title>
+      <para>Vaihtaaksesi näyttöalueen lähennyksen määrää, voit käyttää seuraavia tapoja:</para>
+      <itemizedlist>
+	<listitem>
+	  <para lang="en">To zoom to fullscreen mode, choose
+	  <menuchoice><shortcut><keycap>F11</keycap></shortcut>
+	  <guimenu>View</guimenu><guimenuitem>Fullscreen</guimenuitem></menuchoice>. You can also
+	  use the <keycap>F</keycap> key to toggle fullscreen mode.
+	  To exit fullscreen mode, click on the
+			<guibutton>Leave Fullscreen</guibutton> button or press
+			<keycap>Esc</keycap>, <keycap>F11</keycap> or <keycap>F</keycap>.
+          </para>
+    </listitem>
+	<listitem>
+	  <para lang="en">To change the size of the original movie or visualization,
+            choose
+            <menuchoice>
+	      <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut>
+	      <guimenu>View</guimenu><guimenuitem>Fit Window to Movie</guimenuitem>
+            </menuchoice> and choose a scale ratio.
+      </para>
+    </listitem>
+	</itemizedlist>
+	</sect3>
+	 <sect3 id="totem-usage-change-ratio">
+		<title>Kuvasuhteen muuttaminen</title>
+	      <para lang="en">To switch between different aspect ratios, choose
+            <menuchoice>
+	      <shortcut><keycap>A</keycap></shortcut>
+	      <guimenu>View</guimenu>
+	      <guisubmenu>Aspect Ratio</guisubmenu>
+            </menuchoice>.</para>
+	  </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-adjust-volume">
+      <title>Äänenvoimakkuuden säätö</title>
+      <para lang="en">To increase the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Up</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Up</guimenuitem>
+        </menuchoice>.
+        To decrease the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Down</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Down</guimenuitem>
+        </menuchoice>.
+      </para>
+      <para>Voit myös käyttää äänenvoimakkuuspainiketta: napsauta voimakkuussäädintä ja valitse äänenvoimakkuus liukusäätimellä.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-on-top">
+      <title>Ikkunan näyttäminen aina päällimmäisenä</title>
+      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+        choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Plugins</guimenuitem>
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        top of all other windows while a movie is playing, but not while audio or visualizations are playing.
+       </para>
+       <para>Jos haluat, että ikkuna ei ole aina päällimmäisenä, poista valinta <guilabel>Aina päällimmäisenä</guilabel>. Katso <xref linkend="totem-plugins-always-on-top"/> lisätietoja varten.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-show-control">
+      <title>Säätimien näyttäminen tai piilottaminen</title>
+      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+          <guimenu>View</guimenu>
+          <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice>, or press the <keycap>H</keycap> key.
+        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+	  <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice> from the popup menu.
+      </para>
+      <para>Jos <guilabel>Näytä säätimet</guilabel> -vaihtoehto on valittuna, <application>Totem-elokuvasoitin</application> näyttää valikkopalkin, kuluneen ajan liukusäätimen, etsintäpainikkeet, äänenvoimakkuudensäätimen sekä ikkunan tilapalkin. Jos <guilabel>Näytä säätimet</guilabel> -vaihtoehtoa ei ole valittu, sovellus piilottaa nämä säätimet ja näyttää vain näyttöalueen.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-playlist">
+      <title>Soittolistan hallinnointi</title>
+
+      <sect3 id="totem-usage-playlist-show-hide">
+	<title>Soittolistan näyttäminen ja piilottaminen</title>
+	<para lang="en">To show or hide the playlist, choose
+          <menuchoice>
+	    <guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem>
+          </menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and
+		  choose <guimenu>Playlist</guimenu> on the top of
+		  the sidebar.</para>
+      </sect3>
+
+      <sect3 id="totem-usage-playlist-manage">
+	<title>Soittolistan hallinnointi</title>
+	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en">To add a track or movie</term>
+	      <listitem>
+		<para lang="en">To add a track or movie to the playlist, click on the <guibutton>Add</guibutton>
+                  button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you
+                  want to add to the playlist, then click <guibutton>Add</guibutton>.
+                </para>
+              </listitem>
+            </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To remove a track or movie</term>
+	      <listitem>
+		<para lang="en">To remove a track or movie from the playlist, select the item or items to remove from the
+                  playlist, then click on the <guibutton>Remove</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To save the playlist to a file</term>
+	      <listitem>
+		<para lang="en">To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton>
+                  button. The <application>Save Playlist</application> dialog is displayed; specify
+                  the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie up the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie up the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Up</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie down the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie down the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Down</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+          </variablelist>
+        </para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-repeat">
+	<title>Kertaustilan valitseminen tai poistaminen</title>
+	<para>Kytkeäksesi kertaustilan päälle tai pois, valitse <menuchoice><guimenu>Muokkaa</guimenu><guimenuitem>Kertaustila</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-shuffle">
+	<title>Satunnaissoittotilan valitseminen tai poistaminen</title>
+	<para>Kytkeäksesi satunnaissoittotilan päälle tai pois, valitse <menuchoice><guimenu>Muokkaa</guimenu><guimenuitem>Satunnaissoittotila</guimenuitem></menuchoice>.</para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-subtitle">
+	  <title>Tekstityksen valinta</title>
+	  <para>Valitaksesi tekstityksen kielen, valitse <menuchoice><guimenu>Näytä</guimenu><guisubmenu>Tekstitys</guisubmenu></menuchoice> ja valitse haluamasi tekstityskieli.</para>
+	  <para>Ottaaksesi tekstityksen pois käytöstä, valitse <menuchoice><guimenu>Näytä</guimenu><guisubmenu>Tekstitys</guisubmenu><guimenuitem>Ei mikään</guimenuitem></menuchoice>.</para>
+	  <note><para>Oletusarvoisesti <application>Totem-elokuvasoitin</application> käyttää tekstityksiin samaa kieltä kuin mitä normaalisti käytät tietokoneellasi.</para></note>
+	  <para><application>Totem-elokuvasoitin</application> lataa ja näyttää automaattisesti tekstityksen videolle, jos se löytää tekstitystiedoston, jolla on sama nimi kuin videolla, ja jonka tiedostopääte on <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> tai <filename class="extension">ass</filename>.</para>
+	  <para>Jos tekstitystiedosto on eriniminen kuin video, voit napsauttaa soittolistalta videota hiiren oikealla painikkeella ja valita <menuchoice><guimenuitem>Valitse tekstitys</guimenuitem></menuchoice> ponnahdusvalikosta ladataksesi oikean tekstitystiedoston. Voit myös valita tekstityksen valitsemalla <menuchoice><guimenu>Näytä</guimenu><guimenuitem>Valitse tekstitys</guimenuitem></menuchoice>.</para>
+	  <para>Voit käyttää <guilabel>Tekstitysten lataaja</guilabel>-lisäosaa, jolla voit ladata tekstityksiä OpenSubtitles-palvelusta. Katso <xref linkend="totem-plugins-opensubtitles"/> saadaksesi lisätietoja.</para>
+	</sect2>
+
+    <sect2 id="totem-usage-take-screenshot">
+      <title>Kuvakaappauksen ottaminen</title>
+      <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Take Screenshot</guimenuitem>
+        </menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para><application>Totem-elokuvasoitin</application> näyttäää esikatseluversion kuvakaappauksesta <application>Tallenna kuvakaappaus</application> -valintaikkunan vasemmalla puolella.</para></tip>
+    </sect2>
+
+    <sect2 id="totem-usage-create-screenshot-gallery">
+      <title>Kuvakaappausgallerian luominen</title>
+      <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Create Screenshot Gallery</guimenuitem>
+        </menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para>Voit valita yksittäisten kuvakaappausten leveyden galleriaa varten käyttämällä <guilabel>Kuvakaappauksen leveys</guilabel> -vaihtoehtoa. Oletusarvoisesti leveys on 128 pikseliä.</para>
+      <para>Voit myös valita, kuinka monta kuvakaappausta haluat galleriaan. Oletusarvoisesti tämä lasketaan elokuvan pituuden perusteella, mutta oletusarvon voi vaihtaa poistamalla valinnan kohdasta <guilabel>Laske kuvakaappausten lukumäärä</guilabel> ja syöttämällä uuden numeron <guilabel>Kuvakaappausten lukumäärä</guilabel>-valintaikkunaan.</para></tip>
+    </sect2>
+  </sect1>
+
+<!-- =========== Plugins ======================================= -->
+  <sect1 id="totem-plugins">
+    <title>Lisäosat</title>
+    <para lang="en"><application>Totem Movie Player</application> has many features which are present in the form of plugins — pieces of the software which are only loaded
+      if necessary.</para>
+    <sect2 id="totem-plugins-load">
+      <title>Lisäosan kytkeminen päälle</title>
+      <para>Nähdäksesi asennettujen lisäosien luettelon, valitse <menuchoice><guimenu>Muokkaa</guimenu><guimenuitem>Liitännäiset</guimenuitem></menuchoice>. Esiin tulee <application>Liitännäisten asetukset</application> -valintaikkuna. Vasemmalla on luettelo asennetuista lisäosista, ja oikealla on kuvaus valittuna olevasta lisäosasta. Lisäosissa, joissa on valittavissa vaihtoehtoja, on <guibutton>Asetukset</guibutton>-painike oikealla.</para>
+      <para>Ottaaksesi lisäosan käyttöön, valitse se kyseisen lisäosan vasemmalla puolella olevan valintaruudun avulla. Lisäosa otetaan välittömästi käyttöön. Jos lisäosan lataamisessa tapahtuu jokin virhe, virheikkuna tulee välittömästi esiin.</para>
+      <para>Jos haluat poistaa lisäosan käytöstä, poista valintamerkki kyseisen lisäosan valintaruudusta. Lisäosat pysyvät valitsemassasi tilassa (käytössä tai ei käytössä) myös silloin, kun <application>Totem-elokuvasoitin</application> sammutetaan.</para>
+    </sect2>
+    <sect2 id="totem-plugins-always-on-top">
+      <title>Aina päällimmäisenä</title>
+      <para>Ollessaan valittuna <guilabel>Aina päällimmäisenä</guilabel> -lisäosa pakottaa <application>Totem-elokuvasoittimen</application> pääikkunan kaikkien muiden ikkunoiden päälle, kun elokuva on pyörimässä, mutta ei äänitoiston tai visualisaatioiden aikana. Jos haluat estää ikkunaa olemasta aina päällimmäisenä, poista lisäosa käytöstä.</para>
+    </sect2>
+    <sect2 id="totem-plugins-coherence">
+      <title>Coherence DLNA/UPnP -asiakas</title>
+      <para><guilabel>Coherence DLNA/UPnP Client</guilabel> -lisäosa antaa <application>Totem-elokuvasoittimen</application> toidtaa multimediasisältöä UPnP-mediapalvelimilta (esimerkiksi Coherence-palvelimilta) paikallisverkossa.</para>
+      <para>Kun <guilabel>Coherence DLNA/UPnP Client</guilabel> -lisäosa on käytössä, valitse <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Näytä</guimenu><guimenuitem>Sivupalkki</guimenuitem></menuchoice> tai napsauta <guibutton>Sivupalkki</guibutton>-painiketta tuodaksesi sivupalkin esiin Valitse <guilabel>Coherence DLNA/UPnP Client</guilabel> sivupalkin yläosan pudotusvalikosta tuodaksesi esiin <guilabel>Coherence DLNA/UPnP Client</guilabel> -sivupalkin.</para>
+      <para>Sivupalkin puunäkymä näyttää tarjolla olevat mediapalvelimet. Napsauta jotain niistä, jolloin se avautuu ja näyttää millaista mediaa se tarjoaa. Mediakansion napsauttaminen tuo näkyviin tarjolla olevat tiedostot. Mediatiedoston kaksoisnapsauttaminen lisää kyseisen tiedoston <application>Totem-elokuvasoittimen</application> soittolistaan ja toistaa sen. Vaihtoehtoisesti voit napsauttaa tiedostoa hiiren oikealla painikkeella ja valita <menuchoice><guimenuitem>Toista</guimenuitem></menuchoice> tai <menuchoice><guimenuitem>Lisää jonoon</guimenuitem></menuchoice> toistaaksesi tiedoston välittömästi tai lisätäksesi sen soittolistaan.</para>
+      <para>Jos mediapalvelin sallii, kohdan <menuchoice><guimenuitem>Poista</guimenuitem></menuchoice> valitseminen tiedoston valikosta antaa poistaa kyseisen tiedoston mediapalvelimelta.</para>
+    </sect2>
+    <sect2 id="totem-plugins-gromit">
+      <title>Gromit-merkinnät</title>
+      <para lang="en">The <guilabel>Gromit Annotations</guilabel> plugin allows you to draw on top of movies as they are played using
+        <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. You must have
+        <application>Gromit</application> installed before you can enable the plugin — consult your operating system documentation for
+        information on how to do this.</para>
+      <para>Kun lisäosa on käytössä, paina <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> kytkeäksesi <application>Gromitin</application> päälle ja pois. Kun <application>Gromit</application> on päällä, hiiren osoitin muuttuu ristikuvioksi. Piirtääksesi ruudulle pidä hiiren painikerra alhaalla ja liikuta osoitinta ympäriinsä, ennen kuin vapautat hiiren painikkeen. Paina uudestaan <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> kytkeäksesi <application>Gromitin</application> pois käytöstä.</para>
+      <para>Tyhjätäksesi ruudun paina <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, tai sammuta <application>Totem-elokuvasoitin</application>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-jamendo">
+      <title>Jamendo</title>
+      <para><guilabel>Jamendo</guilabel>-lisäosa sallii sinun kuunnella Creative Commons -lisensoitua musiikkia <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>-palvelun kautta.</para>
+      <sect3 id="totem-plugins-jamendo-configuration">
+        <title>Lisäosan asetusten muuttaminen</title>
+        <para><guilabel>Jamendo</guilabel>-lisäosan asetuksia voi muuttaa. Napsauta <guibutton>Asetukset</guibutton>-painiketta ottaessasi lisäosan käyttöön, ja esiin tulee <application>Jamendo-liitännäisen asetukset</application> -valintaikkuna. Voit valita, lataatko kappaleet Ogg- vai MP3-muodossa (Ogg on suositeltava, koska se on avoimen lähdekoodin piirissä); sekä kuinka monta albumia ladataan haun aikana (voit valita useamman albumin, jos sinulla on nopea Internet-yhteys).</para>
+        <para>Kun olet valmis, napsauta <guibutton>OK</guibutton>-painiketta.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-setup">
+        <title>Jamendo-sivupalkin näyttäminen</title>
+        <para>Kun <guilabel>Jamendo</guilabel>-lisäosa on käytössä, valitse <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Näytä</guimenu><guimenuitem>Sivupalkki</guimenuitem></menuchoice> tai napsauta <guibutton>Sivupalkki</guibutton>-painiketta tuodaksesi sivupalkin esiin. Valitse sivupalkin yläosan pudotusvalikosta <guilabel>Jamendo</guilabel> tuodaksesi esiin <guilabel>Jamendo</guilabel>-sivupalkin.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-search">
+        <title>Musiikin etsiminen</title>
+        <para>Syötä hakutermit <guilabel>Jamendo</guilabel>-sivupalkin yläosassa olevaan hakukenttään. Voit etsiä artistin tai tagien perusteella. Napsauta hakupainiketta aloittaaksesi haun.</para>
+        <para>Haun tulokset näkyvät puunäkymänä sivupalkin <guilabel>Hakutulokset</guilabel>-sivulla, ja niitä voi selata sivupalkin alalaidassa olevilla nuolipainikkeilla. Albumit ovat luettelossa, ja kun napsautat albumia, kaikki sen raidat näytetään albumin alapuolella. Napsauta uudestaan piilottaaksesi raidat.</para>
+        <para>Kun artisti on valittuna, voit napsauttaa <guibutton>Jamendo-levysivu</guibutton>-painiketta avataksesi kyseisen albumin sivun Jamendon web-sivustolla. Kaksoisnapsauta albumia tai valitse <menuchoice><guimenuitem>Lisää soittolistaan</guimenuitem></menuchoice> albumin valikosta, niin soittolistasi korvautuu albumin raidoilla ja albumin ensimmäinen raita alkaa soida stream-muodossa Jamendon web-sivustolta. Yksittäisen raidan kaksoisnapsauttaminen korvaa soittolistan vain kyseisellä raidalla.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-popular">
+        <title>Suositut albumit ja uusimmat julkaisut</title>
+        <para><guilabel>Suositut</guilabel>-sivun avaaminen <guilabel>Jamendo</guilabel>-sivupalkissa lataa luettelon Jamendon senhetkisistä suosituimmista albumeista, ja niitä voi kuunnella samalla tavalla kuin hakutuloksiakin. <guilabel>Viimeisimmät julkaisut</guilabel> -sivu vastaavasti lataa luettelon tuoreimmista Jamendossa julkaistuista albumeista.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-tracker">
+      <title>Paikallinen haku</title>
+      <para><guilabel>Paikallinen haku</guilabel> -lisäosa mahdollistaa toistettavien elokuvien ja äänitiedostojen etsimisen tietokoneeltasi <application>Totem-elokuvasoittimella</application>. Kun lisäosa on päällä, valitse <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Näytä</guimenu><guimenuitem>Sivupalkki</guimenuitem></menuchoice> tai napsauta <guibutton>Sivupalkki</guibutton>-painiketta tuodaksesi esiin sivupalkin. Valitse <guilabel>Paikallinen haku</guilabel> sivupalkin yläosan pudotusvalikosta saadaksesi esiin <guilabel>Paikallinen haku</guilabel>-sivupalkin.</para>
+      <para>Tehdäksesi haun, syötä hakutermit hakekenttään sivupalkin yläosassa ja napsauta <guibutton>Etsi</guibutton>-painiketta. Voit käyttää haussasi jokereita, kuten <literal>*</literal>, joka vastaa mitä tahansa merkkiä. Esimerkiksi haku <userinput>*.mpg</userinput> löytää kaikki elokuvat, joiden tiedostopääte on <filename class="extension">.mpg</filename>.</para>
+      <para>Hakutuloksia voi selata käyttäen <guibutton>Taaksepäin</guibutton>- ja <guibutton>Eteenpäin</guibutton>-painikkeita sivupalkin alaosassa, ja tietylle hakusivulle voi siirtyä syöttämällä sen numeron sivunumerokenttään.</para>
+    </sect2>
+    <sect2 id="totem-plugins-publish">
+      <title>Soittolistan julkaiseminen</title>
+      <para><guilabel>Julkista soittolista</guilabel> -lisäosa mahdollistaa soittolistojen julkaisun paikallisverkossa, jolloin toiset tietokoneet pääsevät niihin käsiksi ja voivat soittaa niitä.</para>
+      <sect3 id="totem-plugins-publish-configuration">
+        <title>Lisäosan asetusten muuttaminen</title>
+        <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
+          plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
+          strings will be replaced when playlists are published:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en"><literal>%a</literal></term>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%h</literal></term>
+	      <listitem><para lang="en">Replaced with your computer's host name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%u</literal></term>
+	      <listitem><para lang="en">Replaced with your username.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%U</literal></term>
+	      <listitem><para lang="en">Replaced with your real name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%%</literal></term>
+	      <listitem><para lang="en">Replaced with a literal percent sign.</para></listitem>
+	    </varlistentry>
+	  </variablelist>
+	</para>
+	<para>Voit myös valita You can also select the <guilabel>Käytä salattua siirtoprotokollaa</guilabel> -valintalaatikon, jos haluat salata jaetut soittolistat verkon yli siirtämisen aikana.</para>
+        <para>Kun olet valmis, napsauta <guibutton>Sulje</guibutton>-painiketta.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-publishing">
+        <title>Soittolistojen julkaiseminen</title>
+        <para>Kun lisäosa on käytössä, sinun ei tarvitse erityisesti julkaista soittolistoja; ne ovat automaattisesti saatavilla verkossa Zeroconf-web-sivustona.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-neighborhood">
+        <title>Naapuruston selaaminen</title>
+        <para>Nähdöksesi muut jaetut soittolistat paikallisverkossasi, valitse <guilabel>Naapurusto</guilabel> sivupalkin yläosan pudotusvalikosta. Jos verkossa on julkaistuja soittolistoja, ne näkyvät luettelona. Kaksoisnapsauta soittolistaa ladataksesi sen ja toistaaksesi sen tietokoneellasi.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-opensubtitles">
+      <title>Tekstitysten lataaja</title>
+      <para><guilabel>Tekstitysten lataaja</guilabel> -lisäosa mahdollistaa tekstitystiedostojen etsimisen ja lataamisen <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink>palvelusta.</para>
+      <para>Tekstityksiä voi ladata vain tietokoneella oleviin elokuviin - ei äänitiedostoihin, DVD:eihin, DVB-virtaustoistoihin, VCD:eihin tai HTTP-virtaustoistoihin. Etsiäksesi tekstityksiä pyörimässä olevaan elokuvaan, valitse <menuchoice><guimenu>Näytä</guimenu><guimenuitem>Lataa elokuvan tekstityksiä</guimenuitem></menuchoice>, joka tuo esiin <application>Lataa elokuvan tekstityksiä</application> -valintaikkunan.</para>
+      <para>Valitse haluamasi tekstityskieli valintaikkunan yläosan pudotusvalikosta ja napsauta <guibutton>Etsi</guibutton>painiketta hakeaksesi tekstityksiä pyörimässä olevalle elokuvalle. Tekstitykset haetaan elokuvan sisällön perusteella, ei tiedostonimen tai tagien perusteella.</para>
+      <para>Hakutulokset näkyvät puunäkymänä keskellä hakuikkunaa. Nykyisellään tekstityksiä voi käyttää vain <emphasis>käynnistämällä elokuva uudestaan</emphasis> tekstitysten kanssa, joten kun olet valinnut haluamasi tekstitystiedoston ladattavaksi, napsauta <guibutton>Toista tekstityksillä</guibutton> -painiketta ladataksesi tekstityksen ja käynnistääksesi elokuvan uudestaan.</para>
+        <note><para lang="en">Downloaded subtitle files are cached (in <filename>~/.cache/totem/subtitles</filename>, by default) so that they do not need to be downloaded
+        again when playing the movie again. When downloading new subtitles for a movie, any previously downloaded subtitles for that movie are deleted.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-thumbnail">
+      <title>Pienoiskuva</title>
+      <para><guilabel>Pienoiskuva</guilabel>-lisäosa muuttaa <application>Totem-elokuvasoittimen</application> pääikkunan kuvakkeen senhetkisen elokuvan pienoiskuvaksi, ja päivittää kuvaketta, kun uusi elokuva käynnistyy.</para>
+      <note><para>Jos pienoiskuvaa senhetkiselle elokuvalle ei ole olemassa (tai jos soitat äänitiedostoa), pääikkunan kuvake palautuu <application>Totem-elokuvasoittimen</application> logoksi.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-brasero">
+      <title>Videolevyjen nauhoitin</title>
+      <para><guilabel>Videolevyjen nauhoitin</guilabel> -lisäosa mahdollistaa senhetkisen soittolistan polttamisen DVD:lle tai VCD:lle <application>Braseron</application> avulla.</para>
+      <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
+        A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
+        information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-youtube">
+      <title>YouTube-selain</title>
+      <para><guilabel>YouTube-selain</guilabel>-lisäosa mahdollistaa <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>- haut ja selaamisen, ja voit toistaa YouTube-videoita suoraan <application>Totem-elokuvasoittimessa</application>. Kun lisäosa on päällä, valitse <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Näytä</guimenu><guimenuitem>Sivupalkki</guimenuitem></menuchoice> tai napsauta <guibutton>Sivupalkki</guibutton>-painiketta tuodaksesi sivupalkin esiin. Valitse sivupalkin yläosan pudotusvalikosta <guilabel>YouTube</guilabel> saadaksesi esiin <guilabel>YouTube</guilabel>-sivupalkin.</para>
+      <para>Etsiäksesi YouTube-videota, syötä hakutermit sivupalkin yläosan hakulaatikkoon ja napsauta <guibutton>Etsi</guibutton>-painiketta. Hakutulokset näytetään alapuolella puunäkymänä. Enemmän tuloksia ladataan automaattisesti, kun selaat luetteloa alaspäin.</para>
+      <para>Toistaaksesi videon, kaksoisnapsauta sitä tulosluettelosta tai valitse videon valikosta <menuchoice><guimenuitem>Lisää soittolistaan</guimenuitem></menuchoice>. Kun videota toistetaan, luettelo vastaavista videoista latautuu automaattisesti <guilabel>Liittyvät videot</guilabel>-sivulle <guilabel>YouTube</guilabel>-sivupalkissa.</para>
+      <para>YouTube-videot voi avata web-selaimessa valitsemalla <menuchoice><guimenuitem>Avaa selaimessa</guimenuitem></menuchoice> videon valikosta. Tämä avaa videon alkuperäisessä paikassa YouTube-sivustolla.</para>
+    </sect2>
+    <sect2 id="totem-plugins-dbus-service">
+      <title>D-Bus Service</title>
+      <para><guilabel>D-Bus Service</guilabel> -lisäosa julkistaa tietoja <application>Totem-elokuvasoittimessa</application> toistettavasta raidasta D-Bus-laiteväylässä. <application>Gajimin</application> tyyppiset sovellukset voivat kuunnella kyseisiä tietoja ja esimerkiksi päivittää tilaasi pikaviestimessäsi näyttämään, mikä video pyörii parhaillaan <application>Totem-elokuvasoittimessa</application>.</para>
+    </sect2>
+  </sect1>
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to customize the
+     application. -->
+  <sect1 id="totem-prefs">
+    <title>Asetukset</title>
+    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+	<guimenuitem>Preferences</guimenuitem>
+      </menuchoice>.</para>
+
+    <sect2 id="totem-prefs-general">
+      <title>Yleistä</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Verkko</term>
+	  <listitem>
+	    <para>Valitse verkon yhteysnopeus <guilabel>Verkkoyhteyden nopeus</guilabel>-pudotusvalikosta.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Tekstitys</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	      	<para><guilabel>Lataa tekstitykset automaattisesti</guilabel>: valitse tämä, jos haluat automaattisesti ladata elokuvan käynnistyessä tekstitystiedoston, jolla on sama nimi kuin elokuvalla.</para>
+	      </listitem>
+	      <listitem>
+                <para><guilabel>Kirjasin</guilabel>: valitse tämä muuttaaksesi tekstityksissä käytettävää kirjasinta.</para>
+              </listitem>
+	          <listitem>
+				<para><guilabel>Merkistökoodaus</guilabel>: valitse tämä muuttaaksesi tekstitysten näyttämisessä käytettävää merkistökoodausta.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-display">
+      <title>Näyttö</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Näyttö</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	        <para>Valitse muuta kooksi -vaihtoehdoista, jos haluat <application>Totem-elokuvasoittimen</application> muuttavan automaattisesti ikkunan kokoa videon kooksi, kun uusi video ladataan.</para>
+              </listitem>
+              <listitem>
+                <para>Valitse näytönsäästäjävaihtoehto, jos haluat näytönsäästäjän käynnistyvän äänitiedostoja toistettaessa. Jotkin monitorit, joissa on sisäänrakennetut kaiuttimet, saattavat keskeyttää musiikin toiston, kun näytönsäästäjä menee päälle.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Visuaaliset tehosteet</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+                <para><guilabel>Visualisointi</guilabel>: valitse tämä, jos haluat näyttää visuaalisia tehosteita äänitiedostoa toistettaessa.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Visualisoinnin tyyppi</guilabel>: valitse pudotusvalikosta haluamasi visualisointityyppi.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Visualisaation koko</guilabel>: valitse visualisaation koko pudotusvalikosta.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Väritasapaino</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		    <para><guilabel>Kirkkaus</guilabel>: käytä liukusäädintä määrittääksesi kirkkauden.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Kontrasti</guilabel>: käytä liukusäädintä määrittääksesi kontrastin.</para>
+          </listitem>
+	      <listitem>
+		    <para><guilabel>Värikylläisyys</guilabel>: käytä liukusäädintä määrittääksesi värikylläisyyden.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Sävy</guilabel>: käytä liukusäädintä määrittääksesi sävyn.</para>
+          </listitem>
+	    </itemizedlist>
+	    <tip><para>Voit käyttää <guilabel>Palauta oletusasetukset</guilabel> -painiketta palauttaaksesi värisäätimet oletusasentoihinsa.</para></tip>
+      </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-audio">
+      <title>Ääni</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Ääniulostulo</term>
+	  <listitem>
+	    <para>Valitse ääniulostulon tyyppi <guilabel>Ääniulostulon tyyppi</guilabel> -pudotusvalikosta.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default.
+     You can use it to describe known bugs and limitations of the
+	  program if there are any - please be frank and list all
+     problems you know of.
+
+  <sect1 id="mayapp-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="totem-about">
+    <title><application>Totem-elokuvasoittimesta</application></title>
+    <para><application>Totem-elokuvasoittimen</application> ovat kirjoittaneet Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) GStreameriä varten, ja Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Saadaksesi lisää tietoa <application>Totem-elokuvasoittimesta</application>, käy <ulink url="http://projects.gnome.org/totem/" type="http"><application>Totem-elokuvasoittimen</application> web-sivustolla</ulink>.</para>
+    <para lang="en">
+      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      this manual, follow the directions in the
+      <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+    </para>
+    <para lang="en"> This program is distributed under the terms of the GNU
+      General Public license as published by the Free Software
+      Foundation; either version 2 of the License, or (at your option)
+      any later version. A copy of this license can be found at this
+      <ulink url="help:gpl" type="help">link</ulink>, or in the file
+      COPYING included with the source code of this program. </para>
+  </sect1>
+</article>

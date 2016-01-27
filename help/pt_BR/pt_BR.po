@@ -1,0 +1,1187 @@
+# Brazilian Portuguese translation of totem.
+# This file is distributed under the same license as the totem package.
+# Copyright (C) 2007-2013 Free Software Foundation, Inc.
+#
+# Raphael Higino <In memoriam>, 2007.
+# Irapuan Pascoal <irapuan.menezes@gmail.com>, 2007.
+# Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2008.
+# Fabrício Godoy <skarllot@gmail.com>, 2009.
+# Isis Binder <isis.binder@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: Totem\n"
+"POT-Creation-Date: 2013-01-02 21:28+0000\n"
+"PO-Revision-Date: 2013-01-09 10:13-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 0.2\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Raphael Higino <In memoriam>, 2007.\n"
+"Irapuan Pascoal <irapuan.menezes@gmail.com>, 2007.\n"
+"Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2008.\n"
+"Fabrício Godoy <skarllot@gmail.com>, 2009.\n"
+"Ísis Binder <isis.binder@gmail.com>, 2010.\n"
+"Enrico Nicoletto <liverig@gmail.com>, 2013."
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:258(imagedata)
+msgctxt "_"
+msgid "external ref='figures/totem_start_window.png' md5='85daf6f6aaae9262482c8f1b0b6d67b0'"
+msgstr "external ref='figures/totem_start_window.png' md5='85daf6f6aaae9262482c8f1b0b6d67b0'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:405(imagedata)
+msgctxt "_"
+msgid "external ref='figures/totem_pause_button.png' md5='8af1d98e40e2ebda89cc2cd86550c5f2'"
+msgstr "external ref='figures/totem_pause_button.png' md5='8af1d98e40e2ebda89cc2cd86550c5f2'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:416(imagedata)
+msgctxt "_"
+msgid "external ref='figures/totem_play_button.png' md5='feb4dec4237e6eb7ce571af2dbd0cf79'"
+msgstr "external ref='figures/totem_play_button.png' md5='feb4dec4237e6eb7ce571af2dbd0cf79'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:493(imagedata)
+msgctxt "_"
+msgid "external ref='figures/totem_next_button.png' md5='c7f9041dc1804edc6777cfe68456e703'"
+msgstr "external ref='figures/totem_next_button.png' md5='c7f9041dc1804edc6777cfe68456e703'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:509(imagedata)
+msgctxt "_"
+msgid "external ref='figures/totem_previous_button.png' md5='a966195040a035bf48daab94c9320afc'"
+msgstr "external ref='figures/totem_previous_button.png' md5='a966195040a035bf48daab94c9320afc'"
+
+#: C/index.docbook:30(articleinfo/title)
+msgid "<application>Totem Movie Player</application> Manual"
+msgstr "Manual do <application>Reprodutor de filmes Totem</application>"
+
+#: C/index.docbook:31(articleinfo/copyright)
+msgid "<year>2003</year> <holder>Chee Bin HOH</holder>"
+msgstr "<year>2003</year> <holder>Chee Bin HOH</holder>"
+
+#: C/index.docbook:35(articleinfo/copyright)
+msgid "<year>2009</year> <holder>Philip Withnall</holder>"
+msgstr "<year>2009</year> <holder>Philip Withnall</holder>"
+
+#: C/index.docbook:44(abstract/para)
+msgid "<application>Totem Movie Player</application> is a media player for GNOME that runs on GStreamer by default, but can also be run on xine. It has support for most audio and video codecs including DVDs among many others. Features include TV-out, fullscreen, subtitles, and more."
+msgstr "O <application>Reprodutor de filmes Totem</application> é um reprodutor de mídia para o GNOME que preferencialmente executa por meio do GStreamer, mas pode também ser executado por meio do xine. Há suporte a maioria dos codecs de áudio e vídeo incluindo DVDs dentre muitos outros. Dentre os recursos estão inclusos saída de TV, tela cheia, legendas e mais."
+
+#: C/index.docbook:51(publisher/publishername)
+#: C/index.docbook:117(revdescription/para)
+#: C/index.docbook:127(revdescription/para)
+msgid "GNOME Documentation Project"
+msgstr "Projeto de documentação do GNOME"
+
+#: C/index.docbook:2(legalnotice/para)
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+msgstr "Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation License), Versão 1.1 ou qualquer versão mais recente publicada pela Free Software Foundation; sem Seções Invariantes, Textos de Capa Frontal, e sem Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL neste <ulink type=\"help\" url=\"help:fdl\">link</ulink> ou no arquivo COPYING-DOCS distribuído com este manual."
+
+#: C/index.docbook:12(legalnotice/para)
+#: C/legal.xml:12(legalnotice/para)
+msgid "This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the license to the manual, as described in section 6 of the license."
+msgstr "Este manual é parte da coleção de manuais do GNOME distribuídos sob a GFDL. Se você quiser distribuí-lo separadamente da coleção, você pode fazê-lo adicionando ao manual uma cópia da licença, como descrito na seção 6 da licença."
+
+#: C/index.docbook:19(legalnotice/para)
+#: C/legal.xml:19(legalnotice/para)
+msgid "Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters."
+msgstr "Muitos dos nomes usados por empresas para distinguir seus produtos e serviços são reivindicados como marcas registradas. Onde esses nomes aparecem em qualquer documentação do GNOME e os membros do Projeto de Documentação do GNOME estiverem cientes dessas marcas registradas, os nomes aparecerão impressos em letras maiúsculas ou com iniciais em maiúsculas."
+
+#: C/index.docbook:35(listitem/para)
+#: C/legal.xml:35(listitem/para)
+msgid "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr "O DOCUMENTO É FORNECIDO NA BASE \"COMO ESTÁ\", SEM GARANTIAS DE QUALQUER TIPO, TANTO EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO LIMITADO A, GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO SEJA COMERCIALIZÁVEL, LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU SEM INFRAÇÕES. TODO O RISCO A RESPEITO DA QUALIDADE, EXATIDÃO, E DESEMPENHO DO DOCUMENTO OU VERSÕES MODIFICADAS DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA SE PROVAR DEFEITUOSO EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESSA RENÚNCIA DE GARANTIAS CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DESTE DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB ESSA RENÚNCIA; E"
+
+#: C/index.docbook:55(listitem/para)
+#: C/legal.xml:55(listitem/para)
+msgid "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES."
+msgstr "SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANO (INCLUINDO NEGLIGÊNCIA), CONTRATO, OU OUTROS, DEVEM O AUTOR, ESCRITOR INICIAL, QUALQUER CONTRIBUIDOR, OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO, OU QUALQUER FORNECEDOR DE ALGUMA DESSAS PARTES, SER CONSIDERADOS RESPONSÁVEIS A QUALQUER PESSOA POR QUALQUER DANO, SEJA DIRETO, INDIRETO, ESPECIAL, ACIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, MAS NÃO LIMITADO A, DANOS POR PERDA DE BOA VONTADE, TRABALHO PARADO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR, OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADOS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA POSSIBILIDADE DE TAIS DANOS."
+
+#: C/index.docbook:28(legalnotice/para)
+#: C/legal.xml:28(legalnotice/para)
+msgid "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: <_:orderedlist-1/>"
+msgstr "O DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDOS SOB OS TERMOS DA GNU FREE DOCUMENTATION LICENSE COM O ENTENDIMENTO ADICIONAL DE QUE: <_:orderedlist-1/>"
+
+#: C/index.docbook:60(authorgroup/author)
+msgid "<firstname>Chee Bin</firstname> <surname>HOH</surname> <affiliation> <orgname>GNOME Documentation Project</orgname> </affiliation> <email>cbhoh@gnome.org</email>"
+msgstr "<firstname>Chee Bin</firstname> <surname>HOH</surname> <affiliation> <orgname>Projeto de documentação do GNOME</orgname> </affiliation> <email>cbhoh@gnome.org</email>"
+
+#: C/index.docbook:68(authorgroup/author)
+msgid "<firstname>Baptiste</firstname> <surname>Mille-Mathias</surname> <affiliation> <orgname>GNOME Documentation project</orgname> </affiliation> <contrib>Update documentation</contrib> <email>baptiste.millemathias@gmail.org</email>"
+msgstr "<firstname>Baptiste</firstname> <surname>Mille-Mathias</surname> <affiliation> <orgname>Projeto de documentação do GNOME</orgname> </affiliation> <contrib>Atualização da documentação</contrib> <email>baptiste.millemathias@gmail.org</email>"
+
+#: C/index.docbook:77(authorgroup/author)
+msgid "<firstname>Philip</firstname> <surname>Withnall</surname> <contrib>Update documentation</contrib> <email>philip@tecnocode.co.uk</email>"
+msgstr "<firstname>Philip</firstname> <surname>Withnall</surname> <contrib>Atualização da documentação</contrib> <email>philip@tecnocode.co.uk</email>"
+
+#: C/index.docbook:114(revdescription/para)
+msgid "Chee Bin HOH <email>cbhoh@gnome.org</email>"
+msgstr "Chee Bin HOH <email>cbhoh@gnome.org</email>"
+
+#: C/index.docbook:110(revhistory/revision)
+msgid "<revnumber>Totem Movie Player Manual V2.0</revnumber> <date>August 2006</date> <_:revdescription-1/>"
+msgstr "<revnumber>Manual do reprodutor de filmes Totem V2.0</revnumber> <date>Agosto de 2006</date> <_:revdescription-1/>"
+
+#: C/index.docbook:124(revdescription/para)
+msgid "Philip Withnall <email>philip@tecnocode.co.uk</email>"
+msgstr "Philip Withnall <email>philip@tecnocode.co.uk</email>"
+
+#: C/index.docbook:120(revhistory/revision)
+msgid "<revnumber>Totem Movie Player Manual V3.0</revnumber> <date>February 2009</date> <_:revdescription-1/>"
+msgstr "<revnumber>Manual do reprodutor de filmes Totem V3.0</revnumber> <date>Fevereiro de 2009</date> <_:revdescription-1/>"
+
+#: C/index.docbook:132(articleinfo/releaseinfo)
+msgid "This manual describes version 2.26 of Totem Movie Player."
+msgstr "Este manual descreve a versão 2.26 do Reprodutor de filmes Totem."
+
+#: C/index.docbook:135(legalnotice/title)
+msgid "Feedback"
+msgstr "Feedback"
+
+#: C/index.docbook:136(legalnotice/para)
+#: C/index.docbook:1100(sect1/para)
+msgid "To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or this manual, follow the directions in the <ulink url=\"help:user-guide#feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Para informar um erro ou fazer uma sugestão a respeito do aplicativo <application>Reprodutor de filmes Totem</application> ou este manual, visite <ulink url=\"help:user-guide#feedback\" type=\"help\">Página de feedback do GNOME</ulink>."
+
+#: C/index.docbook:143(article/indexterm)
+msgid "<primary>Totem Movie Player</primary>"
+msgstr "<primary>Reprodutor de filmes Totem</primary>"
+
+#: C/index.docbook:146(article/indexterm)
+msgid "<primary>totem</primary>"
+msgstr "<primary>totem</primary>"
+
+#: C/index.docbook:156(sect1/title)
+msgid "Introduction"
+msgstr "Introdução"
+
+#: C/index.docbook:157(sect1/para)
+msgid "The <application>Totem Movie Player</application> application is a movie player for the GNOME desktop based on the GStreamer framework and xine library, and enables you to play movies or songs."
+msgstr "O aplicativo <application>Reprodutor de filmes Totem</application> é um reprodutor de filmes para o ambiente GNOME baseado no framework GStreamer e na biblioteca xine, e permite que sejam reproduzidos filmes e músicas."
+
+#: C/index.docbook:160(sect1/para)
+msgid "<application>Totem Movie Player</application> provides the following features:"
+msgstr "O <application>Reprodutor de filmes Totem</application> fornece os seguintes recursos:"
+
+#: C/index.docbook:163(listitem/para)
+msgid "Support for a variety of video and audio files."
+msgstr "Suporte a uma variedade de arquivos de vídeo e áudio."
+
+#: C/index.docbook:166(listitem/para)
+msgid "A variety of zoom levels and aspect ratios, and a fullscreen view."
+msgstr "Uma variedade de níveis de ampliação e taxas de proporção e uma visão em tela cheia."
+
+#: C/index.docbook:169(listitem/para)
+msgid "Seek and volume controls."
+msgstr "Controles de busca e volume."
+
+#: C/index.docbook:172(listitem/para)
+msgid "A playlist."
+msgstr "Uma lista de reprodução."
+
+#: C/index.docbook:175(listitem/para)
+msgid "Subtitle support."
+msgstr "Suporte a legendas."
+
+#: C/index.docbook:178(listitem/para)
+msgid "Complete keyboard navigation."
+msgstr "Navegação completa através do teclado."
+
+#: C/index.docbook:181(listitem/para)
+msgid "Comprehensive set of plugins, including a subtitle downloader, YouTube browser, and disc burner."
+msgstr "Um conjunto abrangente de plugins, incluindo um gerenciador de downloads de legendas, navegador do YouTube e gravador de disco."
+
+#: C/index.docbook:185(note/para)
+msgid "<application>Totem Movie Player</application> also comes with additional functionality such as:"
+msgstr "O <application>Reprodutor de filmes Totem</application> também possui funcionalidades adicionais tais como:"
+
+#: C/index.docbook:189(listitem/para)
+msgid "Video thumbnailer for GNOME."
+msgstr "Miniaturizador de vídeo para o GNOME."
+
+#: C/index.docbook:192(listitem/para)
+msgid "Audio preview application for GNOME."
+msgstr "Aplicativo de visualização de áudio para o GNOME."
+
+#: C/index.docbook:195(listitem/para)
+msgid "Nautilus properties tab."
+msgstr "Aba de propriedades do Nautilus."
+
+#: C/index.docbook:212(sect1/title)
+msgid "Getting Started"
+msgstr "Primeiros passos"
+
+#: C/index.docbook:215(sect2/title)
+msgid "To Start <application>Totem Movie Player</application>"
+msgstr "Iniciar o <application>Reprodutor de filmes Totem</application>"
+
+#: C/index.docbook:216(sect2/para)
+msgid "You can start <application>Totem Movie Player</application> in the following ways:"
+msgstr "Você pode iniciar o <application>Reprodutor de filmes Totem</application> das seguintes maneiras:"
+
+#: C/index.docbook:220(varlistentry/term)
+msgid "<guimenu>Applications</guimenu> menu"
+msgstr "Menu <guimenu>Aplicativos</guimenu>"
+
+#: C/index.docbook:222(listitem/para)
+msgid "Choose <menuchoice> <guisubmenu>Sound &amp; Video</guisubmenu> <guimenuitem>Movie Player</guimenuitem> </menuchoice>."
+msgstr "Va até <menuchoice> <guisubmenu>Sound &amp; Video</guisubmenu> <guimenuitem>Reprodutor de filmes</guimenuitem> </menuchoice>."
+
+#: C/index.docbook:231(varlistentry/term)
+msgid "Command line"
+msgstr "Linha de comando"
+
+#: C/index.docbook:233(listitem/para)
+msgid "To start <application>Totem Movie Player</application> from a command line, type the following command, then press <keycap>Return</keycap>:"
+msgstr "Para iniciar o <application>Reprodutor de filmes Totem</application> a partir da linha de comando, digite o seguinte comando, e então pressione <keycap>Enter</keycap>:"
+
+#: C/index.docbook:235(listitem/para)
+msgid "<command>totem</command>"
+msgstr "<command>totem</command>"
+
+#: C/index.docbook:239(tip/para)
+msgid "To view other command line options that are available, type <command>totem --help</command>, then press <keycap>Return</keycap>."
+msgstr "Para visualizar outras opções que estão disponíveis na linha de comando, digite <command>totem --help</command> e então pressione <keycap>Enter</keycap>."
+
+#: C/index.docbook:249(sect2/title)
+msgid "When You Start <application>Totem Movie Player</application>"
+msgstr "Após a inicialização do <application>Reprodutor de filmes Totem</application>"
+
+#: C/index.docbook:250(sect2/para)
+msgid "When you start <application>Totem Movie Player</application>, the following window is displayed."
+msgstr "Após você iniciar o <application>Reprodutor de filmes Totem</application> a seguinte janela será exibida."
+
+#: C/index.docbook:254(figure/title)
+msgid "<application>Totem Movie Player</application> Start Up Window"
+msgstr "Janela inicial do <application>Reprodutor de filmes Totem</application>"
+
+#: C/index.docbook:256(screenshot/mediaobject)
+msgid "<imageobject> <imagedata fileref=\"figures/totem_start_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Totem Movie Player</application> main window with sidebar opened on playlist. Contains menubar, display area, sidebar, elapsed time slider, seek control buttons, volume slider and statusbar. </phrase> </textobject>"
+msgstr "<imageobject> <imagedata fileref=\"figures/totem_start_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Mostra a janela principal do <application>Reprodutor de filmes Totem</application> com uma barra lateral aberta em uma lista de reprodução. Contém uma barra de menus, uma área de exibição, uma barra lateral, um controle deslizante de tempo decorrido, botões de controle de posicionamento, um controle deslizante de volume e uma barra de status. </phrase> </textobject>"
+
+#: C/index.docbook:274(sect2/para)
+msgid "The <application>Totem Movie Player</application> window contains the following elements:"
+msgstr "A janela do <application>Reprodutor de filmes Totem</application> contém os seguintes elementos:"
+
+#: C/index.docbook:278(varlistentry/term)
+msgid "Menubar."
+msgstr "Barra de menus."
+
+#: C/index.docbook:280(listitem/para)
+msgid "The menus on the menubar contain all of the commands you need to use in <application>Totem Movie Player</application>."
+msgstr "Nos menus na barra de menus estão todos os comandos que você precisa para usar o <application>Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:285(varlistentry/term)
+msgid "Display area."
+msgstr "Área de exibição."
+
+#: C/index.docbook:287(listitem/para)
+msgid "The display area displays the movie or a visualization of the current song."
+msgstr "A área de exibição exibe o filme ou uma visualização da música atual."
+
+#: C/index.docbook:292(varlistentry/term)
+msgid "Sidebar."
+msgstr "Barra lateral."
+
+#: C/index.docbook:294(listitem/para)
+msgid "The sidebar displays properties of the file played and acts as playlist. It can also be used by various plugins, such as the MythTV, YouTube and Video Search plugins. They can be selected by clicking on the drop-down list at the top of the sidebar."
+msgstr "A barra lateral exibe as propriedades do arquivo sendo reproduzido e funciona com uma lista de reprodução. Ela pode também ser usada por vários plugins como o MythTV, YouTube e pesquisa de vídeo. Eles podem ser selecionados clicando na lista suspensa no topo da barra lateral."
+
+#: C/index.docbook:301(varlistentry/term)
+msgid "Elapsed time slider."
+msgstr "Controle deslizante de tempo decorrido."
+
+#: C/index.docbook:303(listitem/para)
+msgid "The elapsed time slider displays the elapsed time of the movie or song that is playing. It also enables you to skip forward or backward in a movie or song by dragging the slider's handle along the bar, or by clicking on a point on the bar."
+msgstr "O controle deslizante de tempo decorrido exibe o tempo decorrido da reprodução do filme ou da música. Ele também permite que você avance ou retroceda o tempo de um filme ou música apenas arrastando a alça do controle deslizante ao longo da barra ou clicando em algum ponto na barra."
+
+#: C/index.docbook:310(varlistentry/term)
+msgid "Seek control buttons."
+msgstr "Botões de controle de posicionamento."
+
+#: C/index.docbook:312(listitem/para)
+msgid "The seek control buttons enable you to move to the next or previous track, and to pause or play a movie or song."
+msgstr "Os botões de controle de posicionamento permitem que se vá para a próxima trilha, volte à trilha anterior, pause uma reprodução ou reproduza um filme ou música."
+
+#: C/index.docbook:318(varlistentry/term)
+msgid "Volume button."
+msgstr "Botão de volume."
+
+#: C/index.docbook:320(listitem/para)
+msgid "The volume button enables you to adjust the volume."
+msgstr "O botão de volume permite que você ajuste o volume."
+
+#: C/index.docbook:324(varlistentry/term)
+msgid "Statusbar."
+msgstr "Barra de status."
+
+#: C/index.docbook:326(listitem/para)
+msgid "The statusbar displays status information about the movie or song that is playing."
+msgstr "A barra de status exibe informações sobre o filme ou música que está sendo reproduzido."
+
+#: C/index.docbook:338(sect1/title)
+msgid "Usage"
+msgstr "Modo de usar"
+
+#: C/index.docbook:342(sect2/title)
+msgid "To Open a File"
+msgstr "Abrir um Arquivo"
+
+#: C/index.docbook:343(sect2/para)
+msgid "To open a video or an audio file, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> <guisubmenu>Open</guisubmenu> </menuchoice>. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file or files you want to open, then click <guibutton>OK</guibutton>."
+msgstr "Para abrir um arquivo de vídeo ou de áudio, vá até <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut> <guimenu>Filme</guimenu> <guisubmenu>Abrir</guisubmenu> </menuchoice>. O diálogo <application>Selecionar filmes ou listas de reprodução</application> dialog is displayed. será exibido. Selecione o arquivo ou os arquivos que você quer abrir, e então clique no botão <guibutton>OK</guibutton>."
+
+#: C/index.docbook:353(sect2/para)
+msgid "You can drag a file from another application such as a file manager to the <application>Totem Movie Player</application> window. If you drag the file to the display area, the file will replace the current playlist and will start playing immediately. If you drag the file to the playlist in the sidebar, the file will be appended to the current playlist. The <application>Totem Movie Player</application> application will open the file and play the movie or song. <application>Totem Movie Player</application> displays the title of the movie or song in the titlebar of the window and in the playlist in the sidebar."
+msgstr "Você pode arrastar um arquivo a partir de outro aplicativo tal como algum gerenciador de aquivos para a janela do <application>Reprodutor de filmes Totem</application>. Se você arrastar o arquivo para a área de exibição, o arquivo sobrescreverá a lista de reprodução atual e iniciará a reprodução imediatamente. Se você arrastar o arquivo para a lista de reprodução na barra lateral, o arquivo será anexado à lista de reprodução atual. O aplicativo <application>Reprodutor de filmes Totem</application> abrirá o arquivo e o reproduzirá seja filme ou música. O <application>Reprodutor de filmes Totem</application> exibirá o título do filme ou da música na barra de título da janela e na lista de reprodução na barra lateral."
+
+#: C/index.docbook:361(sect2/para)
+msgid "If you try to open a file format that <application>Totem Movie Player</application> does not recognize, the application displays an error message. This error is most often encountered if you do not have the correct codecs installed. Information on getting codecs working can be found on the <ulink url=\"http://projects.gnome.org/totem/#codecs\" type=\"http\"><application>Totem Movie Player</application> website</ulink>."
+msgstr "Se você tentar abrir um formato de arquivo que o <application>Totem Movie Player</application> não reconhece, o aplicativo exibirá uma mensagem de erro. Este erro muitas vezes ocorre quando você não tem os codecs necessários instalados. As informações de como fazer que os codecs funcionem podem ser encontradas no <ulink url=\"http://projects.gnome.org/totem/#codecs\" type=\"http\">site do <application>Reprodutor de filmes Totem</application></ulink>."
+
+#: C/index.docbook:367(tip/para)
+msgid "You can double-click on a video or an audio file in the <application>Nautilus</application> file manager to open it in the <application>Totem Movie Player</application> window."
+msgstr "Você pode clicar duas vezes sobre o arquivo de vídeo ou de áudio no gerenciador de aquivos <application>Nautilus</application> para abrí-lo no <application>Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:374(sect2/title)
+msgid "To Open a Location"
+msgstr "Abrir um endereço"
+
+#: C/index.docbook:375(sect2/para)
+msgid "To open a file by URI (location), choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> <guimenuitem>Open Location</guimenuitem> </menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down combination box to specify the URI you would like to open (it lists URIs which have previously been opened) – or type one in directly – then click on the <guibutton>Open</guibutton> button."
+msgstr "Para abrir um arquivo através de endereço URI, va até <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut> <guimenu>Filme</guimenu> <guimenuitem>Abrir localização</guimenuitem> </menuchoice>. O diálogo <application>Abrir localização</application> será exibido. Use a caixa de combinação suspensa para especificar o URI de um arquivo que você deseja abrir (são listados os URIs que foram abertos anteriormente), ou digite um diretamente, e então clique no botão <guibutton>Abrir</guibutton>."
+
+#: C/index.docbook:384(sect2/para)
+msgid "If you have a URI in the clipboard already, it will automatically be pasted into the combination box."
+msgstr "Se você já tem um URI na área de tranferência ele será colado automaticamente na caixa de combinação."
+
+#: C/index.docbook:388(sect2/title)
+msgid "To Play a Movie (DVD or VCD)"
+msgstr "Reproduzir um filme (DVD ou VCD)"
+
+#: C/index.docbook:389(sect2/para)
+msgid "Insert the disc in the optical device of your computer, then choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem> </menuchoice>."
+msgstr "Insira o disco no dispositivo óptico do seu computador, e então vá até <menuchoice><guimenu>Filme</guimenu><guimenuitem>Reproduzir o disco</guimenuitem> </menuchoice>."
+
+#: C/index.docbook:392(sect2/para)
+msgid "To eject a DVD or VCD, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> <guimenuitem>Eject</guimenuitem> </menuchoice>."
+msgstr "Para ejetar um DVD ou VCD, vá até <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut><guimenu>Filme</guimenu><guimenuitem>Ejetar</guimenuitem></menuchoice>."
+
+#: C/index.docbook:402(sect2/title)
+msgid "To Pause a Movie or Song"
+msgstr "Pausar um filme ou música"
+
+#: C/index.docbook:403(sect2/para)
+msgid "To pause a movie or song that is playing, click on the <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_pause_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Shows pause button.</phrase></textobject> </inlinemediaobject> button, or choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> <guimenuitem>Play / Pause</guimenuitem> </menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie."
+msgstr "Para pausar um filme ou uma música que está sendo reproduzida, clique no botão <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_pause_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Mostra o botão de pausa.</phrase></textobject> </inlinemediaobject> ou vá até <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut> <guimenu>Filme</guimenu> <guimenuitem>Reproduzir / Pausar</guimenuitem> </menuchoice>. Você pode também usar a tecla <keycap>P</keycap> para pausar ou reproduzir um filme."
+
+#: C/index.docbook:414(sect2/para)
+msgid "To resume playing a movie or song, click on the <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_play_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Shows play button.</phrase></textobject> </inlinemediaobject> button again, or choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> <guimenuitem>Play / Pause</guimenuitem> </menuchoice>."
+msgstr "Para continuar com a reprodução de um filme ou uma música, clique no botão <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_play_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Mostra o botão de reprodução.</phrase></textobject> </inlinemediaobject> novamente, ou va até <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut> <guimenu>Filme</guimenu> <guimenuitem>Reproduzir / Pausar</guimenuitem> </menuchoice>."
+
+#: C/index.docbook:428(sect2/title)
+msgid "To View Properties of a Movie or Song"
+msgstr "Visualizar as propriedades de um filme ou música"
+
+#: C/index.docbook:429(sect2/para)
+msgid "To view the properties of a movie or song, choose <menuchoice> <guimenu>View</guimenu> <guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar."
+msgstr "Para visualizar as propriedades de um filme ou música, vá até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> para que a barra lateral apareça, e vá até <guimenu>Propriedades</guimenu> na lista suspensa no topo da barra lateral."
+
+#: C/index.docbook:437(sect2/title)
+msgid "To Seek Through Movies or Songs"
+msgstr "Procurar nos filmes ou músicas"
+
+#: C/index.docbook:438(sect2/para)
+msgid "To seek through movies or songs, you can use the following methods:"
+msgstr "Para procurar nos filmes ou músicas, você pode usar os seguintes métodos:"
+
+#: C/index.docbook:442(varlistentry/term)
+msgid "To skip forward"
+msgstr "Pular para frente"
+
+#: C/index.docbook:444(listitem/para)
+msgid "To skip forward through a movie or song, choose <menuchoice> <shortcut><keycap>Right</keycap></shortcut> <guimenu>Go</guimenu> <guimenuitem>Skip Forward</guimenuitem> </menuchoice>."
+msgstr "Para pular para frente num filme ou música, vá até <menuchoice><shortcut><keycap>Seta para direita</keycap></shortcut><guimenu>Ir</guimenu><guimenuitem>Pular para frente</guimenuitem></menuchoice>."
+
+#: C/index.docbook:454(varlistentry/term)
+msgid "To skip backward"
+msgstr "Pular para trás"
+
+#: C/index.docbook:456(listitem/para)
+msgid "To skip backwards through a movie or song, choose <menuchoice> <shortcut><keycap>Left</keycap></shortcut> <guimenu>Go</guimenu> <guimenuitem>Skip Backwards</guimenuitem> </menuchoice>."
+msgstr "Para pular para trás num filme ou música, vá até <menuchoice><shortcut><keycap>Seta para esqueda</keycap></shortcut><guimenu>Ir</guimenu><guimenuitem>Pular para trás</guimenuitem></menuchoice>."
+
+#: C/index.docbook:466(varlistentry/term)
+msgid "To skip to a time"
+msgstr "Pular para um tempo"
+
+#: C/index.docbook:468(listitem/para)
+msgid "To skip to a specific elapsed time in the movie or song, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut> <guimenu>Go</guimenu> <guimenuitem>Skip to</guimenuitem> </menuchoice>. The <application>Skip to</application> dialog is displayed. Use the spin box to specify the elapsed time (in seconds) to skip to, then click <guibutton>OK</guibutton>."
+msgstr "Para pular para um tempo específico no filme ou música, vá até <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut><guimenu>Ir</guimenu><guimenuitem>Pular para...</guimenuitem></menuchoice>. O diálogo <application>Pular para</application> será exibido. Use o seletor numérico para especificar o tempo decorrido (em segundos) para pular, e então clique no botão <guibutton>OK</guibutton>."
+
+#: C/index.docbook:477(listitem/para)
+msgid "The spin box also allows more natural language to be used. You can enter a time in the formats \"hh:mm:ss\", \"mm:ss\" or \"ss\"; where \"hh\" is the hour, \"mm\" is the minute and \"ss\" is the second to skip to."
+msgstr "O seletor numérico também permite que seja usada uma linguagem mais natural. Você pode digitar o tempo nos formatos \"hh:mm:ss\", \"mm:ss\" ou \"ss\". Onde \"hh\" é a hora, \"mm\" é o minuto e \"ss\" é o segundo para pular."
+
+#: C/index.docbook:484(varlistentry/term)
+msgid "To move to the next movie or song"
+msgstr "Ir para o próximo filme ou música"
+
+#: C/index.docbook:486(listitem/para)
+msgid "To move to the next movie or song, choose <menuchoice> <shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></shortcut> <guimenu>Go</guimenu> <guimenuitem>Next Chapter/Movie</guimenuitem> </menuchoice> or click on the <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_next_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Shows a seek next button</phrase></textobject> </inlinemediaobject> button."
+msgstr "Para ir ao próximo filme ou música, vá até <menuchoice> <shortcut><keycombo><keycap>Alt</keycap><keycap>Seta para direita</keycap></keycombo></shortcut> <guimenu>Ir</guimenu> <guimenuitem>Próximo capítulo/filme</guimenuitem> </menuchoice> ou clique no botão <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_next_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Mostra um botão de busca progressivo</phrase></textobject> </inlinemediaobject>."
+
+#: C/index.docbook:500(varlistentry/term)
+msgid "To move to the previous movie or song"
+msgstr "Ir para o filme ou música anterior"
+
+#: C/index.docbook:502(listitem/para)
+msgid "To move to the previous movie or song, choose <menuchoice> <shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></shortcut> <guimenu>Go</guimenu> <guimenuitem>Previous Chapter/Movie</guimenuitem> </menuchoice> or click on the <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_previous_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Shows a seek previous button</phrase></textobject> </inlinemediaobject> button."
+msgstr "Para ir ao filme ou música anterior, vá até <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Seta para esquerda</keycap></keycombo></shortcut><guimenu>Ir</guimenu><guimenuitem>Capítulo/filme anterior</guimenuitem></menuchoice>, ou clique no botão <inlinemediaobject> <imageobject><imagedata fileref=\"figures/totem_previous_button.png\" format=\"PNG\"/></imageobject> <textobject><phrase>Mostra um botão de busca regressivo</phrase></textobject> </inlinemediaobject>."
+
+#: C/index.docbook:519(sect2/title)
+msgid "To Change the Zoom Factor"
+msgstr "Mudar o fator de ampliação"
+
+#: C/index.docbook:521(sect3/title)
+msgid "To Change the Video Size"
+msgstr "Mudar o tamanho do vídeo"
+
+#: C/index.docbook:522(sect3/para)
+msgid "To change the zoom factor of the display area, you can use the following methods:"
+msgstr "Para mudar o fator de ampliação da área de exibição, você pode usar os seguintes métodos:"
+
+#: C/index.docbook:527(listitem/para)
+msgid "To zoom to fullscreen mode, choose <menuchoice><shortcut><keycap>F11</keycap></shortcut> <guimenu>View</guimenu><guimenuitem>Fullscreen</guimenuitem></menuchoice>. You can also use the <keycap>F</keycap> key to toggle fullscreen mode. To exit fullscreen mode, click on the <guibutton>Leave Fullscreen</guibutton> button or press <keycap>Esc</keycap>, <keycap>F11</keycap> or <keycap>F</keycap>."
+msgstr "Para ampliar no modo de tela cheia, vá até <menuchoice><shortcut><keycap>F11</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Tela cheia</guimenuitem></menuchoice>. Você também pode usar a tecla <keycap>F</keycap> para alternar o modo de tela cheia. Para sair do modo de tela cheia, clique no botão <guibutton>Sair da tela cheia</guibutton> ou pressione <keycap>Esc</keycap>, <keycap>F11</keycap> ou <keycap>F</keycap>."
+
+#: C/index.docbook:537(listitem/para)
+msgid "To change the size of the original movie or visualization, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut> <guimenu>View</guimenu><guimenuitem>Fit Window to Movie</guimenuitem> </menuchoice> and choose a scale ratio."
+msgstr "Para mudar o tamanho original do filme ou visualização, vá até <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut><guimenu>Ver</guimenu><guimenuitem>Ajustar a janela ao filme</guimenuitem></menuchoice> e escolha uma taxa de dimensionamento."
+
+#: C/index.docbook:548(sect3/title)
+msgid "To Change the Video Aspect Ratio"
+msgstr "Mudar a taxa de proporção do vídeo"
+
+#: C/index.docbook:549(sect3/para)
+msgid "To switch between different aspect ratios, choose <menuchoice> <shortcut><keycap>A</keycap></shortcut> <guimenu>View</guimenu> <guisubmenu>Aspect Ratio</guisubmenu> </menuchoice>."
+msgstr "Para alternar entre as diferentes taxa de proporção, vá até <menuchoice><shortcut><keycap>A</keycap></shortcut><guimenu>Ver</guimenu><guisubmenu>Taxa de proporção</guisubmenu></menuchoice>."
+
+#: C/index.docbook:559(sect2/title)
+msgid "To Adjust the Volume"
+msgstr "Ajuste de volume"
+
+#: C/index.docbook:560(sect2/para)
+msgid "To increase the volume, choose <menuchoice> <shortcut><keycap>Up</keycap></shortcut> <guimenu>Sound</guimenu> <guimenuitem>Volume Up</guimenuitem> </menuchoice>. To decrease the volume, choose <menuchoice> <shortcut><keycap>Down</keycap></shortcut> <guimenu>Sound</guimenu> <guimenuitem>Volume Down</guimenuitem> </menuchoice>."
+msgstr "Para aumentar o volume, vá até <menuchoice><shortcut><keycap>Seta para cima</keycap></shortcut><guimenu>Som</guimenu><guimenuitem>Aumentar volume</guimenuitem></menuchoice>. Para diminuir o volume, vá até <menuchoice><shortcut><keycap>Seta para baixo</keycap></shortcut><guimenu>Som</guimenu><guimenuitem>Diminuir volume</guimenuitem></menuchoice>."
+
+#: C/index.docbook:573(sect2/para)
+msgid "You can also use the volume button: click on the volume button and choose the volume level with the slider."
+msgstr "Você também pode usar o botão de volume: clique no botão de volume e escolha o nível de volume com o controle deslizante."
+
+#: C/index.docbook:577(sect2/title)
+msgid "To Make the Window Always on Top"
+msgstr "Fazer com que a janela fique sempre no topo"
+
+#: C/index.docbook:578(sect2/para)
+msgid "To make the <application>Totem Movie Player</application> window always on top of other application windows, choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Plugins</guimenuitem> </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on top of all other windows while a movie is playing, but not while audio or visualizations are playing."
+msgstr "Para que a janela do <application>Reprodutor de filmes Totem</application> fique sempre no topo em relação as outras janelas, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Plug-ins</guimenuitem></menuchoice>. Selecione o plug-in <guilabel>Sempre no topo</guilabel> para habilitá-lo. A janela do <application>Reprodutor de filmes Totem</application> ficará no topo sobre outras janelas quando um vídeo estiver sendo reproduzido, mas não ficará quando áudios ou visualizações estiverem sendo reproduzidos."
+
+#: C/index.docbook:586(sect2/para)
+msgid "To stop the window from always being on top, disable the <guilabel>Always on Top</guilabel> plugin again. See <xref linkend=\"totem-plugins-always-on-top\"/> for more information."
+msgstr "Para que a janela não fique sempre no topo, desabilite o plug-in <guilabel>Sempre no topo</guilabel> novamente. Consulte <xref linkend=\"totem-plugins-always-on-top\"/> para mais informações."
+
+#: C/index.docbook:591(sect2/title)
+msgid "To Show or Hide Controls"
+msgstr "Mostrar ou ocultar os controles"
+
+#: C/index.docbook:592(sect2/para)
+msgid "To show or hide the <application>Totem Movie Player</application> window controls, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut> <guimenu>View</guimenu> <guimenuitem>Show Controls</guimenuitem> </menuchoice>, or press the <keycap>H</keycap> key. You can also right-click on the <application>Totem Movie Player</application> window, then choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut> <guimenuitem>Show Controls</guimenuitem> </menuchoice> from the popup menu."
+msgstr "Para mostrar ou ocultar os controles da janela do <application>Reprodutor de filmes Totem</application>, vá até <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenu>Ver</guimenu><guimenuitem>Mostrar controles</guimenuitem></menuchoice>, ou pressione a tecla <keycap>H</keycap>. Você também pode clicar com o botão direito na janela do <application>Reprodutor de filmes Totem</application>, então vá até <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenuitem>Mostrar controles</guimenuitem></menuchoice> do menu de contexto."
+
+#: C/index.docbook:604(sect2/para)
+msgid "If the <guilabel>Show Controls</guilabel> option is selected, <application>Totem Movie Player</application> will show the menubar, elapsed time slider, seek control buttons, volume slider and statusbar on the window. If the <guilabel>Show Controls</guilabel> option is unselected, the application will hide these controls and show only the display area."
+msgstr "Se a opção <guilabel>Mostrar controles</guilabel> estiver marcada, então a janela do <application>Reprodutor de filmes Totem</application> exibirá a barra de menus, o controle deslizante de tempo decorrido, os botões de controle de posicionamento, o controle deslizante de volume e a barra de status. Caso a opção <guilabel>Mostrar controles</guilabel> estiver desmarcada, o aplicativo ocultará esses controles e mostrará apenas a área de exibição."
+
+#: C/index.docbook:613(sect2/title)
+msgid "To Manage the Playlist"
+msgstr "Gerenciar a lista de reprodução"
+
+#: C/index.docbook:616(sect3/title)
+msgid "To Show or Hide the Playlist"
+msgstr "Mostrar ou ocultar a lista de reprodução"
+
+#: C/index.docbook:617(sect3/para)
+msgid "To show or hide the playlist, choose <menuchoice> <guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem> </menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and choose <guimenu>Playlist</guimenu> on the top of the sidebar."
+msgstr "Para mostrar ou ocultar a lista de reprodução, vá até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou clique no botão <guibutton>Barra lateral</guibutton>, e vá até <guimenu>Lista de reprodução</guimenu> no topo da barra lateral."
+
+#: C/index.docbook:626(sect3/title)
+msgid "Manage a Playlist"
+msgstr "Gerenciar uma lista de reprodução"
+
+#: C/index.docbook:630(varlistentry/term)
+msgid "To add a track or movie"
+msgstr "Adicionar um filme ou uma música"
+
+#: C/index.docbook:632(listitem/para)
+msgid "To add a track or movie to the playlist, click on the <guibutton>Add</guibutton> button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you want to add to the playlist, then click <guibutton>Add</guibutton>."
+msgstr "Para adicionar um filme ou uma música na lista de reprodução, clique no botão <guibutton>Adicionar</guibutton>. O diálogo <application>Selecionar filmes ou listas de reprodução</application> será exibido. Selecione o arquivo que você deseja adicionar na lista de reprodução, e então clique no botão <guibutton>Adicionar</guibutton>."
+
+#: C/index.docbook:639(varlistentry/term)
+msgid "To remove a track or movie"
+msgstr "Remover um filme ou uma música"
+
+#: C/index.docbook:641(listitem/para)
+msgid "To remove a track or movie from the playlist, select the item or items to remove from the playlist, then click on the <guibutton>Remove</guibutton> button."
+msgstr "Para remover um filme ou uma música da lista de reprodução, selecione o item ou os itens para remover da lista de reprodução, e então clique no botão <guibutton>Remover</guibutton>."
+
+#: C/index.docbook:647(varlistentry/term)
+msgid "To save the playlist to a file"
+msgstr "Salvar a lista de reprodução em um arquivo"
+
+#: C/index.docbook:649(listitem/para)
+msgid "To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton> button. The <application>Save Playlist</application> dialog is displayed; specify the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>."
+msgstr "Para salvar a lista de reprodução em um arquivo, clique no botão <guibutton>Salvar lista de reprodução</guibutton>. O diálogo <application>Salvar lista de reprodução</application> será exibido. Especifique o nome desejado para o arquivo que será salvo a lista de reprodução e clique no botão <guibutton>Salvar</guibutton>"
+
+#: C/index.docbook:656(varlistentry/term)
+msgid "To move a track or movie up the playlist"
+msgstr "Mover para cima um filme ou uma música na lista de reprodução"
+
+#: C/index.docbook:658(listitem/para)
+msgid "To move a track or movie up the playlist, select the item from the playlist, then click on the <guibutton>Move Up</guibutton> button."
+msgstr "Para mover um filme ou uma música para cima na lista de reprodução, selecione o item da lista de reprodução, e então clique no botão <guibutton>Mover para cima</guibutton>."
+
+#: C/index.docbook:664(varlistentry/term)
+msgid "To move a track or movie down the playlist"
+msgstr "Mover para baixo um filme ou uma música na lista de reprodução"
+
+#: C/index.docbook:666(listitem/para)
+msgid "To move a track or movie down the playlist, select the item from the playlist, then click on the <guibutton>Move Down</guibutton> button."
+msgstr "Para mover um filme ou música para baixo na lista de reprodução, selecione o item da lista de reprodução, e então clique no botão <guibutton>Mover para baixo</guibutton>."
+
+#: C/index.docbook:627(sect3/para)
+msgid "You can use the <application>Playlist</application> dialog to do the following: <_:variablelist-1/>"
+msgstr "Você pode usar o diálogo <application>Lista de reprodução</application> para fazer o seguinte: <_:variablelist-1/>"
+
+#: C/index.docbook:675(sect3/title)
+msgid "To Select or Unselect Repeat Mode"
+msgstr "Marcar ou desmarcar o modo de repetição"
+
+#: C/index.docbook:676(sect3/para)
+msgid "To enable or disable repeat mode, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Repeat Mode</guimenuitem></menuchoice>."
+msgstr "Para habilitar ou desabilitar o modo de repetição, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Modo de repetição</guimenuitem></menuchoice>."
+
+#: C/index.docbook:681(sect3/title)
+msgid "To Select or Unselect Shuffle Mode"
+msgstr "Marcar ou desmarcar o modo embaralhado"
+
+#: C/index.docbook:682(sect3/para)
+msgid "To enable or disable shuffle mode, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Shuffle Mode</guimenuitem></menuchoice>."
+msgstr "Para habilitar ou desabilitar o modo embaralhado, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Modo embaralhado</guimenuitem></menuchoice>."
+
+#: C/index.docbook:690(sect2/title)
+msgid "To Choose Subtitles"
+msgstr "Escolher legendas"
+
+#: C/index.docbook:691(sect2/para)
+msgid "To choose the language of the subtitles, select <menuchoice><guimenu>View</guimenu><guisubmenu>Subtitles</guisubmenu></menuchoice> and choose the subtitle language you want to display."
+msgstr "Para escolher o idioma das legendas, vá até <menuchoice><guimenu>Ver</guimenu><guisubmenu>Legendas</guisubmenu></menuchoice> e escolha o idioma da legenda que você deseja exibir."
+
+#: C/index.docbook:695(sect2/para)
+msgid "To disable the display of subtitles, select <menuchoice><guimenu>View</guimenu><guisubmenu>Subtitles</guisubmenu><guimenuitem>None</guimenuitem></menuchoice>."
+msgstr "Para desabilitar a exibição de legendas, vá até <menuchoice><guimenu>Ver</guimenu><guisubmenu>Legendas</guisubmenu><guimenuitem>Nenhum</guimenuitem></menuchoice>."
+
+#: C/index.docbook:697(note/para)
+msgid "By default, <application>Totem Movie Player</application> will choose the same language for the subtitles as the one you normally use on your computer."
+msgstr "Sem que seja configurado o <application>Reprodutor de filmes Totem</application> escolherá o mesmo idioma para as legendas o qual você normalmente usa no seu computador."
+
+#: C/index.docbook:699(sect2/para)
+msgid "<application>Totem Movie Player</application> will automatically load and display subtitles for a video if it finds a subtitle file with the same name as the video being played, and the extension <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> or <filename class=\"extension\">ass</filename>."
+msgstr "O <application>Reprodutor de filmes Totem</application> carregará e exibirá automaticamente as legendas para um vídeo no caso dele encontrar um arquivo de legenda com o mesmo nome do vídeo sendo reproduzido, e com a extensão <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> ou <filename class=\"extension\">ass</filename>."
+
+#: C/index.docbook:704(sect2/para)
+msgid "If the file containing the subtitles has a different name from the video being played, you can right-click on the video in the playlist and choose <menuchoice><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice> from the popup menu to load the correct subtitle file. You may also choose subtitles by choosing <menuchoice><guimenu>View</guimenu><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice>."
+msgstr "Se o arquivo que contém as legendas tem um nome diferente do vídeo sendo reproduzido, você pode clicar com botão direito no vídeo na lista de reprodução e escolher <menuchoice><guimenuitem>Selecionar legenda de texto</guimenuitem></menuchoice> do menu de contexto para carregar o arquivo de legenda correto. Você pode também escolher legendas indo até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Selecionar legenda de texto</guimenuitem></menuchoice>."
+
+#: C/index.docbook:708(sect2/para)
+msgid "Using the <guilabel>Subtitle Downloader</guilabel> plugin, you can also download subtitles from the OpenSubtitles service. See <xref linkend=\"totem-plugins-opensubtitles\"/> for more information."
+msgstr "Usando o plug-in <guilabel>Buscador de legendas</guilabel>, você pode também baixar legendas do serviço do OpenSubtitles. Consulte <xref linkend=\"totem-plugins-opensubtitles\"/> para mais informações."
+
+#: C/index.docbook:713(sect2/title)
+msgid "To Take a Screenshot"
+msgstr "Obter uma captura de tela"
+
+#: C/index.docbook:714(sect2/para)
+msgid "To take a screenshot of the movie or visualization that is playing, choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Take Screenshot</guimenuitem> </menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button to save the screenshot."
+msgstr "Para obter uma captura de tela de um filme ou de uma visualização de música que está sendo reproduzida, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Capturar imagem da tela</guimenuitem></menuchoice>. O diálogo <application>Salvar captura de tela</application> será exibido. Escolha uma localização e insira o nome de arquivo desejado que será salvo a captura de tela, e então clique no botão <guibutton>Salvar</guibutton> para salvar a captura de tela."
+
+#: C/index.docbook:722(tip/para)
+msgid "<application>Totem Movie Player</application> will display a preview of the screenshot which is to be saved on the left-hand side of the <application>Save Screenshot</application> dialog."
+msgstr "O <application>Reprodutor de filmes Totem</application> exibirá uma visualização da captura de tela que será salva, no lado esquerdo do diálogo <application>Salvar captura de tela</application>."
+
+#: C/index.docbook:726(sect2/title)
+msgid "To Create a Screenshot Gallery"
+msgstr "Criar uma galeria de capturas de tela"
+
+#: C/index.docbook:727(sect2/para)
+msgid "To create a gallery of screenshots of the movie or visualization that is playing, choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Create Screenshot Gallery</guimenuitem> </menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button to save the screenshot."
+msgstr "Para criar uma galeria de capturas de tela de um filme ou visualização que está sendo reproduzido, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Criar uma galeria de capturas de tela</guimenuitem></menuchoice>. O diálogo <application>Salvar galeria</application> será exibido. Escolha uma localização e insira o nome do arquivo que será salvo a galeria de imagens, e então clique no botão <guibutton>Salvar</guibutton> para salvar as capturas de tela."
+
+#: C/index.docbook:735(tip/para)
+msgid "You may specify the width of the individual screenshots in the gallery using the <guilabel>Screenshot width</guilabel> entry. The default width is 128 pixels."
+msgstr "Você pode especificar a largura das capturas de tela individuais na galeria usando a entrada <guilabel>Largura da captura de tela</guilabel>. A largura padrão é 128 pixels."
+
+#: C/index.docbook:737(tip/para)
+msgid "You may also specify the number of screenshots to be put in the gallery. By default, this is calculated based on the length of the movie; however, this may be overridden by deselecting the <guilabel>Calculate the number of screenshots</guilabel> checkbox and entering the new number in the <guilabel>Number of screenshots</guilabel> spin box."
+msgstr "Você pode também especificar o número de capturas de tela a serem colocadas na galeria. Por padrão, o cálculo é baseado na duração do filme; porém, isso pode ser sobrescrito desmarcando a caixa de seleção <guilabel>Calcular o número de capturas de tela</guilabel> e escolhendo o novo número no seletor numérico <guilabel>Número de capturas de tela</guilabel>."
+
+#: C/index.docbook:745(sect1/title)
+msgid "Plugins"
+msgstr "Plug-ins"
+
+#: C/index.docbook:746(sect1/para)
+msgid "<application>Totem Movie Player</application> has many features which are present in the form of plugins — pieces of the software which are only loaded if necessary."
+msgstr "O <application>Reprodutor de filmes Totem</application> tem muitos recursos dos quais estão presentes na forma de plug-in, partes de software que são apenas carregadas se necessário."
+
+#: C/index.docbook:749(sect2/title)
+msgid "To Enable a Plugin"
+msgstr "Habilitar um plug-in"
+
+#: C/index.docbook:750(sect2/para)
+msgid "To view the list of installed plugins, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. The <application>Configure Plugins</application> dialog is displayed. On the left is a list of all the plugins you have installed, while on the right is a description of the currently selected plugin. Plugins which have options which can be changed will have a sensitive <guibutton>Configure</guibutton> button on the right."
+msgstr "Para ver a lista de plug-ins instalados, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Plug-ins</guimenuitem></menuchoice>. O diálogo <application>Configurar plug-ins</application> será exibido. Na parte esquerda há uma lista de todos os plug-ins que você instalou, enquanto que na parte direita há uma descrição do plug-in selecionado atualmente. O botão <guibutton>Configurar</guibutton>, na direita, estará disponível no caso do plug-in ter opções que podem ser alteradas."
+
+#: C/index.docbook:754(sect2/para)
+msgid "To enable a plugin, simply select the checkbox to the left of its name in the plugin list, and the plugin will be loaded immediately. If there is any error loading the plugin, an error dialog will also be displayed immediately."
+msgstr "Para habilitar um plugin, simplesmente marque a caixa de seleção na esquerda de seu nome na lista de plug-in, e o plug-in será carregado imediatamente. Se houver qualquer erro ao carregar o plug-in um diálogo de erro será exibido imediatamente."
+
+#: C/index.docbook:756(sect2/para)
+msgid "To disable a plugin again, deselect its checkbox. Plugins will remain enabled or disabled as set even when <application>Totem Movie Player</application> is closed."
+msgstr "Para desabilitar um plug-in novamente, desmarque sua caixa de seleção. Os plug-ins continuam habilitados ou desabilitados como definido, mesmo quando o <application>Reprodutor de filmes Totem</application> é fechado."
+
+#: C/index.docbook:760(sect2/title)
+msgid "Always on Top"
+msgstr "Sempre no topo"
+
+#: C/index.docbook:761(sect2/para)
+msgid "When enabled, the <guilabel>Always on Top</guilabel> plugin will force the main <application>Totem Movie Player</application> window to be on top of all other windows while a movie is playing, but not while audio or visualizations are playing. To stop the window being on top, disable the plugin again."
+msgstr "Quando habilitado, o plug-in <guilabel>Sempre no topo</guilabel> forçará para que a janela principal do <application>Reprodutor de filmes Totem</application> fique no topo em relação a todas as outras janelas enquanto um filme está sendo reproduzido, mas não quando músicas ou visualizações estão sendo reproduzidas. Para que a janela não fique mais no topo desabilite o plug-in novamente."
+
+#: C/index.docbook:766(sect2/title)
+msgid "Coherence DLNA/UPnP Client"
+msgstr "Cliente DLNA/UPnP Coherence"
+
+#: C/index.docbook:767(sect2/para)
+msgid "The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows <application>Totem Movie Player</application> to play multimedia content from UPnP media servers (such as Coherence servers) on the local network."
+msgstr "O plug-in <guilabel>Cliente DLNA/UPnP Coherence</guilabel> permite que o <application>Reprodutor de filmes Totem</application> reproduza conteúdo multimídia de servidores de mídia UPnP (como servidores Coherence) na rede local."
+
+#: C/index.docbook:769(sect2/para)
+msgid "With the <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Coherence DLNA/UPnP Client</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Coherence DLNA/UPnP Client</guilabel> sidebar."
+msgstr "Com o plug-in <guilabel>Cliente DLNA/UPnP Coherence</guilabel> habilitado, vá até <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou clique no botão <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Selecione <guilabel>Cliente DLNA/UPnP Coherence</guilabel> na lista suspensa do topo da barra lateral para exibir a barra lateral do <guilabel>Cliente DLNA/UPnP Coherence</guilabel>."
+
+#: C/index.docbook:773(sect2/para)
+msgid "The tree view in the sidebar will list the available media servers. Clicking on one will expand it to show the types of media it can serve, and clicking on a media folder will expand it to list the media files available. Double-clicking on a media file will add it to <application>Totem Movie Player</application>'s playlist and play it. You may alternatively right-click on a file and choose <menuchoice><guimenuitem>Play</guimenuitem></menuchoice> or <menuchoice><guimenuitem>Enqueue</guimenuitem></menuchoice> to play the file immediately or add it to the playlist, respectively."
+msgstr "A visão em árvore na barra lateral listará os servidores de mídia disponíveis. Clicando em algum, o expandirá para mostrar os tipos de mídia que ele pode servir e clicando no arquivo de mídia o adicionará a lista de reprodução do <application>Reprodutor de filmes Totem</application> e o reproduzirá. Alternativamente você pode clicar com o botão direito no arquivo e escolher <menuchoice><guimenuitem>Reproduzir</guimenuitem></menuchoice> ou <menuchoice><guimenuitem>Adiciona à fila de reprodução</guimenuitem></menuchoice> para reproduzir o arquivo imediatamente ou adicioná-lo a lista de reprodução, respectivamente."
+
+#: C/index.docbook:778(sect2/para)
+msgid "If the media server allows it, choosing <menuchoice><guimenuitem>Delete</guimenuitem></menuchoice> from a file's context menu allows you to delete that file from the media server."
+msgstr "Se o servidor de mídia permitir, ao escolher <menuchoice><guimenuitem>Excluir</guimenuitem></menuchoice> do menu de contexto de um arquivo, permite que você exclua este arquivo do servidor de mídia."
+
+#: C/index.docbook:782(sect2/title)
+msgid "Gromit Annotations"
+msgstr "Anotações do Gromit"
+
+#: C/index.docbook:783(sect2/para)
+msgid "The <guilabel>Gromit Annotations</guilabel> plugin allows you to draw on top of movies as they are played using <ulink type=\"http\" url=\"http://www.home.unix-ag.org/simon/gromit/\"><application>Gromit</application></ulink>. You must have <application>Gromit</application> installed before you can enable the plugin — consult your operating system documentation for information on how to do this."
+msgstr "O plug-in <guilabel>Anotações do Gromit</guilabel> permite que você desenhe sobre os filmes enquanto eles estão sendo reproduzidos usando o <ulink type=\"http\" url=\"http://www.home.unix-ag.org/simon/gromit/\"><application>Gromit</application></ulink>. Você precisa ter o <application>Gromit</application> instalado para que você possa habilitar o plugin, consulte a documentação do seu sistema operacional para informações de como fazer isso."
+
+#: C/index.docbook:787(sect2/para)
+msgid "With the plugin enabled, press <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> to toggle <application>Gromit</application> on or off. When <application>Gromit</application> is enabled, your pointer will change to a crosshair. To draw on the screen, hold down your mouse button and drag your pointer around, before releasing your mouse button. Press <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> again to toggle <application>Gromit</application> off."
+msgstr "Com o plug-in habilitado pressione <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> para alternar entre ligado e desligado no <application>Gromit</application>. Quando o <application>Gromit</application> está habilitado, seu ponteiro alterará para a forma de cruz. Para desenhar na tela segure o botão do mouse e arraste seu ponteiro, antes de soltar o botão do mouse. Pressione <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> novamente para alternar o <application>Gromit</application> para desligado."
+
+#: C/index.docbook:791(sect2/para)
+msgid "To clear the screen of annotations, press <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, or close <application>Totem Movie Player</application>."
+msgstr "Para limpar as anotações na tela, pressione <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> ou feche o <application>Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:795(sect2/title)
+msgid "Jamendo"
+msgstr "Jamendo"
+
+#: C/index.docbook:796(sect2/para)
+msgid "The <guilabel>Jamendo</guilabel> plugin allows you to listen to the collection of Creative Commons-licensed music on the <ulink type=\"http\" url=\"http://www.jamendo.com/en/\">Jamendo</ulink> service."
+msgstr "O plug-in <guilabel>Jamendo</guilabel> permite que você escute a coleção de músicas licenciadas pela Creative Commons do serviço do <ulink type=\"http\" url=\"http://www.jamendo.com/en/\">Jamendo</ulink>."
+
+#: C/index.docbook:799(sect3/title)
+#: C/index.docbook:850(sect3/title)
+msgid "To Configure the Plugin"
+msgstr "Configurar o plug-in"
+
+#: C/index.docbook:800(sect3/para)
+msgid "The <guilabel>Jamendo</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the plugin, and the <application>Jamendo Plugin Configuration</application> dialog will be displayed. Here, you can choose whether to download songs in Ogg or MP3 format (Ogg is preferred due to its open-source nature); and the number of albums to retrieve when doing a search (choose more albums if you have a faster Internet connection)."
+msgstr "O plug-in <guilabel>Jamendo</guilabel> pode ser configurado. Clique no botão <guibutton>Configurar</guibutton> ao habilitar o plug-in, e o diálogo <application>Configuração do plug-in do Jamendo</application> será exibido. Aqui você pode escolher se deve-se baixar as músicas no formato Ogg ou MP3 (Ogg é preferível devido sua natureza de código aberto); e o número de álbuns a retornar ao fazer uma pesquisa (escolha mais álbuns se você tiver uma conexão de Internet rápida)."
+
+#: C/index.docbook:804(sect3/para)
+msgid "Once you're done, click <guibutton>OK</guibutton>."
+msgstr "Uma vez concluído, clique em <guibutton>OK</guibutton>."
+
+#: C/index.docbook:807(sect3/title)
+msgid "To Display the Jamendo Sidebar"
+msgstr "Exibir a barra lateral do Jamendo"
+
+#: C/index.docbook:808(sect3/para)
+msgid "With the <guilabel>Jamendo</guilabel> plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Jamendo</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Jamendo</guilabel> sidebar."
+msgstr "Com o plug-in <guilabel>Jamendo</guilabel> habilitado, vá até <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou clique no botão <guibutton>Barra lateral</guibutton> para exibir a barra lateral. Selecione <guilabel>Jamendo</guilabel> na lista suspensa do topo da barra lateral para exibir a barra lateral <guilabel>Jamendo</guilabel>."
+
+#: C/index.docbook:814(sect3/title)
+msgid "To Search for Music"
+msgstr "Pesquisar por músicas"
+
+#: C/index.docbook:815(sect3/para)
+msgid "Enter your search terms in the search entry at the top of the <guilabel>Jamendo</guilabel> sidebar. You can search by either artist or by tags. Click on the search button to start your search."
+msgstr "Digite sua expressão de pesquisa na entrada de pesquisa do topo da barra lateral <guilabel>Jamendo</guilabel>. Você pode pesquisar tanto pelo artista quanto por etiquetas. Clique no botão pesquisar para iniciar sua pesquisa."
+
+#: C/index.docbook:817(sect3/para)
+msgid "Search results will be displayed in the tree view in the <guilabel>Search Results</guilabel> page of the sidebar, and can be browsed through using the arrow buttons at the bottom of the sidebar. Albums are listed, and if you click on an album, its tracks will be listed below it. Click again to hide the album's tracks."
+msgstr "Os resultados da pesquisa serão exibidos na visão em árvore na página <guilabel>Resultados da pesquisa</guilabel> da barra lateral e pode ser navegado por meio dos botões na base da barra lateral. Álbuns serão listados e se você clicar no álbum, suas faixas serão listadas abaixo dele. Clique novamente para ocultar as faixas do álbum."
+
+#: C/index.docbook:820(sect3/para)
+msgid "With an artist selected, you can click on the <guibutton>Jamendo Album Page</guibutton> button to open that album's page on the Jamendo website. Double-clicking an album, or choosing <menuchoice><guimenuitem>Add to Playlist</guimenuitem></menuchoice> from the album's context menu, will replace your playlist with all the tracks on that album and begin streaming the first track from Jamendo's website. Double-clicking an individual track will replace your playlist with just that track."
+msgstr "Com um artista selecionado, você pode clicar no botão <guibutton>Página de álbuns do Jamendo</guibutton> para abrir a página deste álbum no site do Jamendo. Clicando duas vezes no álbum, ou escolhendo <menuchoice><guimenuitem>Adicionar à lista de reprodução</guimenuitem></menuchoice> do menu de contexto do álbum, sua lista de reprodução será sobrescrita com todas as músicas do álbum e começará a transmissão, do Jamendo, da primeira música. Clicando duas vezes uma música individualmente a sua lista de reprodução será sobrescrita com apenas esta música."
+
+#: C/index.docbook:826(sect3/title)
+msgid "Popular Albums and Latest Releases"
+msgstr "Álbuns populares e últimos lançamentos"
+
+#: C/index.docbook:827(sect3/para)
+msgid "Viewing the <guilabel>Popular</guilabel> page in the <guilabel>Jamendo</guilabel> sidebar will load a list of the most popular albums on Jamendo at the moment, which can be played as with search results. Viewing the <guilabel>Latest Releases</guilabel> page will likewise load a list of the latest albums released on Jamendo."
+msgstr "Visualizando a página <guilabel>Popular</guilabel> na barra lateral <guilabel>Jamendo</guilabel> será carregado uma lista dos álbuns mais populares do Jamendo no momento, o qual pode ser reproduzido como nos resultados de pesquisa. Visualizando a página <guilabel>Últimos lançamentos</guilabel> carregará uma lista dos últimos álbuns lançados no Jamendo."
+
+#: C/index.docbook:833(sect2/title)
+msgid "Local Search"
+msgstr "Pesquisa local"
+
+#: C/index.docbook:834(sect2/para)
+msgid "The <guilabel>Local Search</guilabel> plugin allows you to search for playable movies and audio files on your computer from within <application>Totem Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Local Search</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Local Search</guilabel> sidebar."
+msgstr "O plug-in <guilabel>Pesquisa local</guilabel> permite que você pesquise por filmes e arquivos de áudio reproduzíveis no seu computador com o <application>Reprodutor de filmes Totem</application>. Com o plug-in habilitado, vá até <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou clique no botão <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Selecione <guilabel>Pesquisa local</guilabel> na lista suspensa do topo da barra lateral para exibir a barra lateral <guilabel>Pesquisa local</guilabel>."
+
+#: C/index.docbook:839(sect2/para)
+msgid "To perform a search, enter your search terms in the search entry at the top of the sidebar and click <guibutton>Find</guibutton>. Your search terms may include wildcards such as <literal>*</literal>, which will match any character. For example, the search <userinput>*.mpg</userinput> will find all movies with the <filename class=\"extension\">.mpg</filename> file extension."
+msgstr "Para realizar uma pesquisa insira sua expressão de pesquisa na entrada de pesquisa no topo da barra lateral e clique em <guibutton>Localizar</guibutton>. Sua expressão de pesquisa pode incluir curingas como <literal>*</literal>, o qual combina com qualquer caractere. Por exemplo, a pesquisa <userinput>*.mpg</userinput> localizará todos os filmes com a extensão de arquivo <filename class=\"extension\">.mpg</filename>."
+
+#: C/index.docbook:842(sect2/para)
+msgid "Search results may be browsed using the <guibutton>Back</guibutton> and <guibutton>Forward</guibutton> buttons at the bottom of the sidebar, and you may jump to a specific results page by entering its number in the spin box."
+msgstr "Os resultados de pesquisa podem ser navegados usando os botões <guibutton>Voltar</guibutton> e <guibutton>Avançar</guibutton> na base da barra lateral, e você pode pular para uma página de resultados específica inserindo seu número no seletor numérico."
+
+#: C/index.docbook:846(sect2/title)
+msgid "Publish Playlist"
+msgstr "Publicar lista de reprodução"
+
+#: C/index.docbook:847(sect2/para)
+msgid "The <guilabel>Publish Playlist</guilabel> plugin allows you to publish playlists on your local network to allow other computers to access and play them."
+msgstr "O plug-in <guilabel>Publicar lista de reprodução</guilabel> permite que você publique listas de reprodução na sua rede local para permitir que outros computadores os acessem e os reproduza."
+
+#: C/index.docbook:856(varlistentry/term)
+msgid "<literal>%a</literal>"
+msgstr "<literal>%a</literal>"
+
+#: C/index.docbook:857(listitem/para)
+msgid "Replaced with the program's name: <application>Totem Movie Player</application>."
+msgstr "Substituído com o nome do programa: <application>Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:860(varlistentry/term)
+msgid "<literal>%h</literal>"
+msgstr "<literal>%h</literal>"
+
+#: C/index.docbook:861(listitem/para)
+msgid "Replaced with your computer's host name."
+msgstr "Substituído com o nome de máquina do seu computador."
+
+#: C/index.docbook:864(varlistentry/term)
+msgid "<literal>%u</literal>"
+msgstr "<literal>%u</literal>"
+
+#: C/index.docbook:865(listitem/para)
+msgid "Replaced with your username."
+msgstr "Substituído com o seu nome de usuário."
+
+#: C/index.docbook:868(varlistentry/term)
+msgid "<literal>%U</literal>"
+msgstr "<literal>%U</literal>"
+
+#: C/index.docbook:869(listitem/para)
+msgid "Replaced with your real name."
+msgstr "Substituído com o seu nome real."
+
+#: C/index.docbook:872(varlistentry/term)
+msgid "<literal>%%</literal>"
+msgstr "<literal>%%</literal>"
+
+#: C/index.docbook:873(listitem/para)
+msgid "Replaced with a literal percent sign."
+msgstr "Substituído com um sinal de porcentagem."
+
+#: C/index.docbook:851(sect3/para)
+msgid "The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following strings will be replaced when playlists are published: <_:variablelist-1/>"
+msgstr "O plug-in <guilabel>Publicar lista de reprodução</guilabel> pode ser configurado. Clique no botão <guibutton>Configurar</guibutton> ao habilitar o plug-in e o diálogo de configuração será exibido. Aqui você pode alterar o nome que aparecerá para seu compartilhamento de lista de reprodução. Os seguintes textos serão substituídos quando as listas de reprodução forem publicadas: <_:variablelist-1/>"
+
+#: C/index.docbook:877(sect3/para)
+msgid "You can also select the <guilabel>Use encrypted transport protocol</guilabel> checkbox if you wish to encrypt the shared playlists when they're transmitted over the network."
+msgstr "Você também pode selecionar a caixa de seleção <guilabel>Usar protocolo de transporte criptografado</guilabel> se você desejar criptografar as listas de reprodução compartilhadas quando elas são transmitidas sobre a rede."
+
+#: C/index.docbook:879(sect3/para)
+msgid "Once you're done, click <guibutton>Close</guibutton>."
+msgstr "Uma vez concluído clique em <guibutton>Fechar</guibutton>."
+
+#: C/index.docbook:882(sect3/title)
+msgid "To Publish Playlists"
+msgstr "Publicar listas de reprodução"
+
+#: C/index.docbook:883(sect3/para)
+msgid "With the plugin enabled, you do not need to explicitly publish playlists; they are automatically made available on the network as a Zeroconf website."
+msgstr "Com o plug-in habilitado você não precisar publicar as listas de reprodução explicitamente, elas ficam automaticamente disponíveis na rede como um site Zeroconf."
+
+#: C/index.docbook:887(sect3/title)
+msgid "To Browse your Neighborhood"
+msgstr "Navegar na sua vizinhança"
+
+#: C/index.docbook:888(sect3/para)
+msgid "To view the shared playlists of others on your network, select <guilabel>Neighborhood</guilabel> from the drop-down list at the top of the sidebar. If any playlists have been published on the network, they will be listed here. Double-click on a playlist to load and play it on your computer."
+msgstr "Para ver as listas de reprodução de outros na sua rede selecione <guilabel>Vizinhança</guilabel> na sua lista suspensa no topo da barra lateral. Se alguma lista de reprodução foi publicada na rede, ela será listada aqui. Clique duas vezes na lista de reprodução para carregá-la e reproduzí-la no seu computador."
+
+#: C/index.docbook:894(sect2/title)
+msgid "Subtitle Downloader"
+msgstr "Buscador de legendas"
+
+#: C/index.docbook:895(sect2/para)
+msgid "The <guilabel>Subtitle Downloader</guilabel> plugin allows you to find and download subtitle files from the <ulink type=\"http\" url=\"http://www.opensubtitles.org/en\">OpenSubtitles</ulink> service."
+msgstr "O plug-in <guilabel>Buscador de legendas</guilabel> permite que você localize e baixe arquivos de legenda do serviço <ulink type=\"http\" url=\"http://www.opensubtitles.org/pb\">OpenSubtitles</ulink>."
+
+#: C/index.docbook:897(sect2/para)
+msgid "Subtitles can only be downloaded for local movies; not audio files, DVDs, DVB streams, VCDs or HTTP streams. To search for subtitles for the currently playing movie, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Download Movie Subtitles</guimenuitem></menuchoice>, which will display the <application>Download Movie Subtitles</application> dialog."
+msgstr "Legendas podem apenas ser baixadas de filmes locais e não de arquivos de música, DVDs, fluxos DVB, VCDs ou fluxos HTTP. Para pesquisar por legendas para o filme que está sendo reproduzido, vá até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Baixar a legenda do filme</guimenuitem></menuchoice>, o qual exibirá o diálogo <application>Baixe a legenda do filme</application>."
+
+#: C/index.docbook:900(sect2/para)
+msgid "Select the language in which you wish to have your subtitles from the drop-down list at the top of the dialog, then click on the <guibutton>Find</guibutton> button to search for subtitles for the current movie. Subtitles are found on the basis of the movie's content, rather than its filename or tags."
+msgstr "Selecione o idioma que você deseja para suas legendas na lista suspensa no topo do diálogo, e então clique no botão <guibutton>Localizar</guibutton> para pesquisar por legendas para o filme atual. Legendas são encontradas com base no conteúdo do filme, em preferência ao seu nome de arquivo ou etiquetas."
+
+#: C/index.docbook:903(sect2/para)
+msgid "Search results are listed in the tree view in the middle of the dialog. Currently, subtitles can only be used with a movie by <emphasis>reloading</emphasis> the movie with the subtitles, so after selecting the subtitle file you wish to download, click on the <guibutton>Play with Subtitle</guibutton> button to download the subtitles and reload the movie."
+msgstr "Os resultados de pesquisa são listados na visão em árvore no meio do diálogo. Atualmente, legendas podem apenas serem usadas com um filme após <emphasis>recarregar</emphasis>-lo com as legendas, assim após selecionar o arquivo de legenda que você deseja baixar, clique no botão <guibutton>Reproduzir com legenda</guibutton> para baixar as legendas e recarregar o filme."
+
+#: C/index.docbook:906(note/para)
+msgid "Downloaded subtitle files are cached (in <filename>~/.cache/totem/subtitles</filename>, by default) so that they do not need to be downloaded again when playing the movie again. When downloading new subtitles for a movie, any previously downloaded subtitles for that movie are deleted."
+msgstr "Arquivos de legenda baixados são guardados no cache (em <filename>~ /.cache/totem/subtitles</filename>, por padrão), de modo que não necessitem ser baixados novamente ao reproduzir o filme novamente. Ao baixar novas legendas para um filme,  quaisquer legendas baixadas anteriormente para o filme são excluídas."
+
+#: C/index.docbook:910(sect2/title)
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: C/index.docbook:911(sect2/para)
+msgid "The <guilabel>Thumbnail</guilabel> plugin sets <application>Totem Movie Player</application>'s main window icon to a thumbnail of the current movie, and updates the icon when new movies are loaded."
+msgstr "O plug-in <guilabel>Miniatura</guilabel> define que o ícone da janela principal do <application>Reprodutor de filmes Totem</application> deve ser uma miniatura do filme atual e atualiza o ícone quando novos filmes são carregados."
+
+#: C/index.docbook:913(note/para)
+msgid "If a thumbnail doesn't exist for the current movie (or if you're playing an audio file), the main window icon will be reset to the <application>Totem Movie Player</application> logo."
+msgstr "Se uma miniatura não existir para o filme atual (ou se você estiver reproduzindo um arquivo de áudio), o ícone da janela principal será redefinido para o logotipo do <application> Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:917(sect2/title)
+msgid "Video Disc Recorder"
+msgstr "Gravador de discos de vídeo"
+
+#: C/index.docbook:918(sect2/para)
+msgid "The <guilabel>Video Disc Recorder</guilabel> plugin allows you to burn the current playlist to a DVD or VCD using <application>Brasero</application>."
+msgstr "O plug-in <guilabel>Gravador de discos de vídeo</guilabel> permite que você grave a lista de reprodução atual para um DVD ou VCD usando o <application>Brasero</application>."
+
+#: C/index.docbook:919(sect2/para)
+msgid "To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>. A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more information, see the <ulink type=\"help\" url=\"help:brasero/brasero-new-project-video\">Brasero documentation</ulink>."
+msgstr "Para gravar a lista de reprodução atual, vá até <menuchoice><guimenu>Filme</guimenu><guimenuitem>Criar um disco de vídeo</guimenuitem></menuchoice>. Um diálogo do <application>Brasero</application> será exibido, dando opções para conversão de filmes para o formato apropriado e para gravá-los no disco. Para mais informações visite a <ulink type=\"help\" url=\"help:brasero/brasero-new-project-video\">documentação do Brasero</ulink>."
+
+#: C/index.docbook:924(sect2/title)
+msgid "YouTube Browser"
+msgstr "Navegador do YouTube"
+
+#: C/index.docbook:925(sect2/para)
+msgid "The <guilabel>YouTube Browser</guilabel> plugin allows you to search and browse <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink>, and play YouTube videos directly in <application>Totem Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>YouTube</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>YouTube</guilabel> sidebar."
+msgstr "O plug-in <guilabel>YouTube Browser</guilabel> permite que você pesquise e navegue no <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink> e reproduza videos do YouTube diretamente no <application>Reprodutor de filmes Totem</application>. Com o plug-in habilitado, pressione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou clique no botão <guibutton>Barra lateral</guibutton> para mostrá-la. Selecione <guilabel>YouTube</guilabel> a partir da lista suspensa no topo da barra lateral para exibir a barra lateral do <guilabel>YouTube</guilabel>."
+
+#: C/index.docbook:931(sect2/para)
+msgid "To search for a YouTube video, enter your search terms in the entry at the top of the sidebar, then click <guibutton>Find</guibutton>. The search results will be listed in the tree view below. More results will be loaded automatically as you scroll down the list."
+msgstr "Para pesquisar por um vídeo do YouTube, insira sua expressão de pesquisa na entrada no topo da barra lateral, e então clique em <guibutton>Localizar</guibutton>. Os resultados da pesquisa serão listados na visão em árvore abaixo. Mais resultados podem ser carregados automaticamente quando você rola abaixo na lista."
+
+#: C/index.docbook:933(sect2/para)
+msgid "To play a video, double-click it in the results list, or choose <menuchoice><guimenuitem>Add to Playlist</guimenuitem></menuchoice> from its context menu. When a video is played, a list of related videos will automatically be loaded in the <guilabel>Related Videos</guilabel> page of the <guilabel>YouTube</guilabel> sidebar."
+msgstr "Para reproduzir um vídeo, clique duas vezes nele na lista de resultados ou escolha <menuchoice><guimenuitem>Adicionar à lista de reprodução</guimenuitem></menuchoice> do seu menu de contexto. Quando um vídeo está sendo reproduzido uma lista dos vídeos relacionados será automaticamente carregada na página <guilabel>Vídeos relacionados</guilabel> da barra lateral <guilabel>YouTube</guilabel>."
+
+#: C/index.docbook:936(sect2/para)
+msgid "YouTube videos can be opened in a web browser by choosing <menuchoice><guimenuitem>Open in Web Browser</guimenuitem></menuchoice> from their context menu. This will open the video in its original location on the YouTube website."
+msgstr "Os vídeos do YouTube podem ser abertos em um navegador web escolhendo <menuchoice><guimenuitem>Abrir no navegador web</guimenuitem></menuchoice> do seu menu de contexto. Isso abrirá o vídeo na sua localização original do site do YouTube."
+
+#: C/index.docbook:940(sect2/title)
+msgid "D-Bus Service"
+msgstr "Serviço D-Bus"
+
+#: C/index.docbook:941(sect2/para)
+msgid "The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of which track is playing in <application>Totem Movie Player</application> on the D-Bus session bus. Applications such as <application>Gajim</application> can listen for such notifications and respond accordingly by, for example, updating your instant messaging status message to display the video currently being played in <application>Totem Movie Player</application>."
+msgstr "O plug-in do <guilabel>Serviço D-Bus</guilabel> realiza o broadcast das notificações sobre a faixa sendo reproduzida no <application>Reprodutor de filmes Totem</application> no barramento de sessão do D-Bus. Aplicativos como o <application>Gajim</application> podem escutar essas notificações e responder adequadamente, por exemplo, atualizando o status do mensageiro instantâneo para exibir o vídeo em execução no <application>Reprodutor de filmes Totem</application>."
+
+#: C/index.docbook:952(sect1/title)
+msgid "Preferences"
+msgstr "Preferências"
+
+#: C/index.docbook:953(sect1/para)
+msgid "To modify the preferences of <application>Totem Movie Player</application>, choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Preferences</guimenuitem> </menuchoice>."
+msgstr "Para modificar as preferências do <application>Reprodutor de filmes Totem</application>, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Preferências</guimenuitem></menuchoice>."
+
+#: C/index.docbook:960(sect2/title)
+msgid "General"
+msgstr "Geral"
+
+#: C/index.docbook:963(varlistentry/term)
+msgid "Networking"
+msgstr "Rede"
+
+#: C/index.docbook:965(listitem/para)
+msgid "Select network connection speed from the <guilabel>Connection speed</guilabel> drop-down list."
+msgstr "Selecione a velocidade de conexão de rede na lista suspensa <guilabel>Velocidade da conexão</guilabel>."
+
+#: C/index.docbook:971(varlistentry/term)
+msgid "Text Subtitles"
+msgstr "Legendas de texto"
+
+#: C/index.docbook:975(listitem/para)
+msgid "<guilabel>Automatically load subtitle files</guilabel>: select this option to automatically load any subtitle files with the same filename as a movie when the movie is loaded."
+msgstr "<guilabel>Carregar automaticamente arquivos de legenda</guilabel>: selecione esta opção para carregar automaticamente quaisquer arquivos de legenda com o mesmo nome de arquivo do filme quando um filme é carregado."
+
+#: C/index.docbook:979(listitem/para)
+msgid "<guilabel>Font</guilabel>: select this option to change the font used to display subtitles."
+msgstr "<guilabel>Fonte</guilabel>: selecione esta opção para alterar a fonte usada para exibir as legendas."
+
+#: C/index.docbook:983(listitem/para)
+msgid "<guilabel>Encoding</guilabel>: select this option to change the encoding used to display subtitles."
+msgstr "<guilabel>Codificação</guilabel>: selecione esta opção para alterar a codificação usada para exibir as legendas."
+
+#: C/index.docbook:992(sect2/title)
+#: C/index.docbook:995(varlistentry/term)
+msgid "Display"
+msgstr "Monitor"
+
+#: C/index.docbook:999(listitem/para)
+msgid "Select the resize option if you want <application>Totem Movie Player</application> to automatically resize the window to the size of the video when a new video is loaded."
+msgstr "Selecione a opção de redimensionar se você deseja que o <application>Reprodutor de filmes Totem</application> redimensione automaticamente a janela para o tamanho do vídeo quando um novo vídeo for carregado."
+
+#: C/index.docbook:1004(listitem/para)
+msgid "Select the screensaver option if you want to allow the screensaver to activate when playing audio files. Some monitors with integrated speakers may stop playing music when the screensaver is activated."
+msgstr "Selecione a opção de proteção de tela se você deseja habilitar a proteção de tela para que inicie ao reproduzir arquivos de áudio. Alguns monitores com caixas de som integrada podem parar de reproduzir música quando a proteção de tela é ativada."
+
+#: C/index.docbook:1011(varlistentry/term)
+msgid "Visual Effects"
+msgstr "Efeitos visuais"
+
+#: C/index.docbook:1015(listitem/para)
+msgid "<guilabel>Visual</guilabel>: select this option to show visual effects while an audio file is playing."
+msgstr "<guilabel>Efeitos visuais</guilabel>: selecione esta opção para mostrar efeitos visuais quando um arquivo de áudio estiver sendo reproduzido."
+
+#: C/index.docbook:1020(listitem/para)
+msgid "<guilabel>Type of visualization</guilabel>: select type of visualization from the drop-down list."
+msgstr "<guilabel>Tipo de visualização</guilabel>: selecione o tipo de visualização a partir da lista suspensa."
+
+#: C/index.docbook:1025(listitem/para)
+msgid "<guilabel>Visualization size</guilabel>: select visualization size from the drop-down list."
+msgstr "<guilabel>Tamanho da visualização</guilabel>: selecione o tamanho da visualização a partir da lista suspensa."
+
+#: C/index.docbook:1033(varlistentry/term)
+msgid "Color balance"
+msgstr "Balanço de cor"
+
+#: C/index.docbook:1037(listitem/para)
+msgid "<guilabel>Brightness</guilabel>: use the slider to specify the level of brightness."
+msgstr "<guilabel>Brilho</guilabel>: use o controle deslizante para especificar o nível de brilho."
+
+#: C/index.docbook:1040(listitem/para)
+msgid "<guilabel>Contrast</guilabel>: use the slider to specify the level of contrast."
+msgstr "<guilabel>Contraste</guilabel>: use o controle deslizante para especificar o nível de contraste."
+
+#: C/index.docbook:1043(listitem/para)
+msgid "<guilabel>Saturation</guilabel>: use the slider to specify the level of saturation."
+msgstr "<guilabel>Saturação</guilabel>: use o controle deslizante para especificar o nível de saturação."
+
+#: C/index.docbook:1047(listitem/para)
+msgid "<guilabel>Hue</guilabel>: use the slider to specify the level of hue."
+msgstr "<guilabel>Matiz</guilabel>: use o controle deslizante para especificar o nível de matiz."
+
+#: C/index.docbook:1051(tip/para)
+msgid "You may use the <guilabel>Reset to Defaults</guilabel> button to reset the color balance controls to their default positions."
+msgstr "Você pode usar o botão <guilabel>Restaurar padrões</guilabel> para redefinir os valores dos controles de balanço de cor para suas posições padrões."
+
+#: C/index.docbook:1058(sect2/title)
+msgid "Audio"
+msgstr "Áudio"
+
+#: C/index.docbook:1061(varlistentry/term)
+msgid "Audio Output"
+msgstr "Saída de áudio"
+
+#: C/index.docbook:1063(listitem/para)
+msgid "Select audio output type from the <guilabel>Audio output type</guilabel> drop-down list."
+msgstr "Selecione o tipo de saída de áudio a partir da lista suspensa <guilabel>Tipo de saída de áudio</guilabel>."
+
+#: C/index.docbook:1091(sect1/title)
+msgid "About <application>Totem Movie Player</application>"
+msgstr "Sobre o <application>Reprodutor de filmes Totem</application>"
+
+#: C/index.docbook:1092(sect1/para)
+msgid "<application>Totem Movie Player</application> is written by Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) for the GStreamer backend, and Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). To find more information about <application>Totem Movie Player</application>, please visit the <ulink url=\"http://projects.gnome.org/totem/\" type=\"http\"><application>Totem Movie Player</application> website</ulink>."
+msgstr "O <application>Reprodutor de filmes Totem</application> é escrito por Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) para a base GStreamer e Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Para encontrar mais informações sobre o <application>Reprodutor de filmes Totem</application>, por favor, visite a página do <ulink url=\"http://projects.gnome.org/totem/\" type=\"http\"><application>Reprodutor de filmes Totem</application></ulink> (em inglês)."
+
+#: C/index.docbook:1105(sect1/para)
+msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
+msgstr "Este programa é distribuído sob os termos da licença GNU General Public license publicada pela Free Software Foundation; tanto a versão 2 dessa licença, como (a seu critério) qualquer uma mais nova. Uma cópia dessa licença pode ser encontrada neste  <ulink url=\"help:gpl\" type=\"help\">link</ulink> ou no arquivo COPYING incluso no código fonte deste programa."
+
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "link"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed with this manual."
+msgstr "Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation License), Versão 1.1 ou qualquer versão mais recente publicada pela Free Software Foundation; sem Seções Invariantes, sem Textos de Capa Frontal, e sem Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL neste <_:ulink-1/> ou no arquivo COPYING-DOCS distribuído com este manual."
+
+#~ msgid "2003"
+#~ msgstr "2003"
+
+#~ msgid "Chee Bin HOH"
+#~ msgstr "Chee Bin HOH"
+
+#~ msgid "2009"
+#~ msgstr "2009"
+
+#~ msgid "Philip Withnall"
+#~ msgstr "Philip Withnall"
+
+#~ msgid "Chee Bin"
+#~ msgstr "Chee Bin"
+
+#~ msgid "HOH"
+#~ msgstr "HOH"
+
+#~ msgid "cbhoh@gnome.org"
+#~ msgstr "cbhoh@gnome.org"
+
+#~ msgid "Baptiste"
+#~ msgstr "Baptiste"
+
+#~ msgid "Mille-Mathias"
+#~ msgstr "Mille-Mathias"
+
+#~ msgid "GNOME Documentation project"
+#~ msgstr "Projeto de documentação do GNOME"
+
+#~ msgid "Update documentation"
+#~ msgstr "Atualização da documentação"
+
+#~ msgid "baptiste.millemathias@gmail.org"
+#~ msgstr "baptiste.millemathias@gmail.org"
+
+#~ msgid "Philip"
+#~ msgstr "Philip"
+
+#~ msgid "Withnall"
+#~ msgstr "Withnall"
+
+#~ msgid "philip@tecnocode.co.uk"
+#~ msgstr "philip@tecnocode.co.uk"
+
+#~ msgid "Totem Movie Player Manual V2.0"
+#~ msgstr "Versão 2.0 do Manual do Reprodutor de filmes Totem"
+
+#~ msgid "August 2006"
+#~ msgstr "Agosto de 2006"
+
+#~ msgid "Totem Movie Player Manual V3.0"
+#~ msgstr "Versão 3.0 do Manual do Reprodutor de filmes Totem"
+
+#~ msgid "February 2009"
+#~ msgstr "Fevereiro de 2009"
+
+#~ msgid "Totem Movie Player"
+#~ msgstr "Reprodutor de filmes Totem"
+
+#~ msgid "totem"
+#~ msgstr "totem"
+
+#~ msgid "Shows pause button."
+#~ msgstr "Mostra o botão pausar."
+
+#~ msgid "Shows play button."
+#~ msgstr "Mostra o botão reproduzir."
+
+#~ msgid "Shows a seek next button"
+#~ msgstr "Mostra o botão de busca \"Próximo\""
+
+#~ msgid "Shows a seek previous button"
+#~ msgstr "Mostra o botão de busca \"Anterior\""
+
+#~ msgid "%a"
+#~ msgstr "%a"
+
+#~ msgid "%h"
+#~ msgstr "%h"
+
+#~ msgid "%u"
+#~ msgstr "%u"
+
+#~ msgid "%U"
+#~ msgstr "%U"
+
+#~ msgid "%%"
+#~ msgstr "%%"

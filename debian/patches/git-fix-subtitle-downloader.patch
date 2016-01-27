@@ -1,0 +1,30 @@
+Description: adds a missing library import and circumvents an
+ incompatibility between totem 3.10 and pygobject 3.11
+Author: Matthias Niess
+Origin: vendor
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=724093
+Ubuntu-Bug: https://bugs.launchpad.net/ubuntu/+source/totem/+bug/1292262
+Forwarded: not-needed
+
+Index: fix-lp1292262/src/plugins/opensubtitles/opensubtitles.py
+===================================================================
+--- fix-lp1292262.orig/src/plugins/opensubtitles/opensubtitles.py	2014-03-23 17:02:37.229660000 +0100
++++ fix-lp1292262/src/plugins/opensubtitles/opensubtitles.py	2014-03-23 17:05:57.629681060 +0100
+@@ -1,7 +1,7 @@
+ # -*- coding: utf-8 -*-
+ 
+ from gi.repository import GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
+-from gi.repository import Gio, Pango, Totem # pylint: disable-msg=E0611
++from gi.repository import GLib, Gio, Pango, Totem # pylint: disable-msg=E0611
+ 
+ import xmlrpclib
+ import threading
+@@ -438,7 +438,7 @@
+         builder = Totem.plugin_load_interface ("opensubtitles",
+                                                "opensubtitles.ui", True,
+                                                self._totem.get_main_window (),
+-                                               self)
++                                               None)
+ 
+         # Obtain all the widgets we need to initialize
+         combobox = builder.get_object ('language_combobox')

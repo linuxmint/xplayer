@@ -1,0 +1,9 @@
+---[ Configuring the output sink
+
+You can choose your preferred output sink by using gnome-sound-properties (in
+the gnome-control-center package), or by editing the GConf key:
+    /system/gstreamer/0.10/default/musicaudiosink
+
+The default is to detect your output sink automagically.
+
+

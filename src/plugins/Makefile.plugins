@@ -1,0 +1,50 @@
+%.plugin: %.plugin.in
+	$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+
+plugin_DATA = $(plugin_in_files:.plugin.in=.plugin)
+
+CLEANFILES = $(plugin_DATA)
+DISTCLEANFILES = $(plugin_DATA)
+EXTRA_DIST = $(plugin_in_files)
+
+AM_CPPFLAGS = \
+	-DG_LOG_DOMAIN=\""Totem"\"	\
+	$(DISABLE_DEPRECATED)		\
+	-I$(top_srcdir)/		\
+	-I$(top_srcdir)/src		\
+	-I$(top_srcdir)/src/plugins	\
+	-I$(top_srcdir)/src/gst
+
+plugin_cflags =			\
+	$(PLAYER_CFLAGS)	\
+	$(WARN_CFLAGS)
+
+plugin_ldflags = \
+	-export-dynamic \
+	-no-undefined \
+	-avoid-version \
+	-module
+
+plugin_libadd = \
+	$(top_builddir)/src/libtotem.la
+
+# Checking rules for Python plugins
+# Execute pylint on all the requisite files individually, returning non-zero
+# iff any of the calls to pylint returned non-zero.
+check-pylint: $(plugin_PYTHON)
+if ENABLE_PYTHON
+	@exitstatus=0; \
+	for py in $^; do \
+		$(PYLINT) -i y -d C0111 -d W0511 -d F0401 $$py; \
+		\
+		newexitstatus=$$?; \
+		if [ $$exitstatus == 0 ]; then \
+			exitstatus=$$newexitstatus; \
+		fi; \
+	done; \
+	exit $$exitstatus
+endif
+
+check: check-pylint
+
+.PHONY: check-pylint

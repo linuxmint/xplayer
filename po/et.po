@@ -1,0 +1,1916 @@
+# Totem'i eesti keele tõlge.
+# Estonian translation of Totem.
+#
+# Copyright (C) 2002, 2005, 2006 The Free Software Foundation
+# Copyright (C) 2007–2011 The GNOME Project.
+# This file is distributed under the same license as the totem package.
+#
+# Ilmar Kerm <ikerm hot ee>, 2002.
+# Ivar Smolin <okul linux ee>, 2005–2011.
+# Priit Laes <amd store20 com>, 2005–2007, 2009.
+# Mattias Põldaru <mahfiaz@gmail.com>, 2008–2010, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: totem MASTER\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=totem&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-09-18 17:02+0000\n"
+"PO-Revision-Date: 2013-09-20 18:54+0300\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
+"Language-Team: Estonian <gnome-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "Stopped"
+msgstr "Seisatud"
+
+msgid "Paused"
+msgstr "Pausitud"
+
+msgid "Playing"
+msgstr "Esitamine"
+
+msgid "Playing a movie"
+msgstr "Filmi esitamine"
+
+msgid "No URI to play"
+msgstr "Esitamiseks puudub URI"
+
+msgid "Totem Movie Player"
+msgstr "Totem filmiesitaja"
+
+#. translators: this is:
+#. * Open With ApplicationName
+#. * as in nautilus' right-click menu
+#, c-format
+msgid "_Open with \"%s\""
+msgstr "_Ava programmiga \"%s\""
+
+msgid "An error occurred"
+msgstr "Tekkis veaolukord"
+
+msgid "No playlist or playlist empty"
+msgstr "Esitusnimekiri on puudu või tühi"
+
+msgid "Movie browser plugin"
+msgstr "Filmisirvija plugin"
+
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Thread-safe teeke pole võimalik lähtestada."
+
+msgid "Verify your system installation. The Totem plugin will now exit."
+msgstr "Kontrolli oma süsteemi paigaldust. Totemi plugin lõpetab oma töö."
+
+msgid "Leave Fullscreen"
+msgstr "Välju täisekraanvaatest"
+
+msgid "Time:"
+msgstr "Aeg:"
+
+msgid "Allow the screensaver to activate when playing audio"
+msgstr "Ekraanisäästja aktiveerimise lubamine audoesituse ajal"
+
+msgid ""
+"Allow the screensaver to activate when playing audio. Disable if you have "
+"monitor-powered speakers."
+msgstr ""
+"Ekraanisäästja aktiveerimise lubamine isegi siis, kui esitatakse audiot. Kui "
+"kasutatad monitori sisseehitatud kõlareid, siis on mõistlik see keelata."
+
+msgid "Show visual effects when no video is displayed"
+msgstr "Visuaalefektide näitamine, kui videot ei esitata"
+
+msgid "Show visual effects when playing an audio only file."
+msgstr "Visuaalefektide näitamine, kui videot ei esitata."
+
+msgid "Name of the visual effects plugin"
+msgstr "Visuaalefektide plugina nimi"
+
+msgid "The brightness of the video"
+msgstr "Video heledus"
+
+msgid "The contrast of the video"
+msgstr "Video kontrast"
+
+msgid "The hue of the video"
+msgstr "Video toon"
+
+msgid "The saturation of the video"
+msgstr "Video küllastatus"
+
+msgid "Resize the canvas automatically on file load"
+msgstr "Lõuendi suuruse automaatne muutmine faili laadimisel"
+
+msgid "Repeat mode"
+msgstr "Kordav režiim"
+
+msgid "Shuffle mode"
+msgstr "Segatud režiim"
+
+msgid "Whether to disable deinterlacing for interlaced movies"
+msgstr ""
+"Kas ülerealaotusega videote puhul tuleb ülerealaotus eemaldada või mitte"
+
+msgid "Whether to enable debug for the playback engine"
+msgstr "Kas lubada silumisteabe väljastamist esitusmootori poolt"
+
+msgid "Type of audio output to use"
+msgstr "Kasutatav heliväljund"
+
+msgid "Visualization quality setting"
+msgstr "Visualisee_rimise kvaliteet"
+
+msgid "Quality setting for the audio visualization."
+msgstr "Audio visualiseerimise kvaliteedisätted."
+
+msgid "Network buffering threshold"
+msgstr "Võrgupuhverdamise lävi"
+
+msgid ""
+"Amount of data to buffer for network streams before starting to display the "
+"stream (in seconds)."
+msgstr ""
+"Andmehulk, mida puhverdatakse enne kui võrgust tulevat striimi esitama "
+"hakatakse (sekundites)."
+
+msgid "Subtitle font"
+msgstr "Subtiitri kirjatüüp"
+
+msgid "Pango font description for subtitle rendering."
+msgstr "Pango kirjatüübikirjeldus subtiitrite esitamiseks."
+
+msgid "Subtitle encoding"
+msgstr "Subtiitri kooditabel"
+
+msgid "Encoding character set for subtitle."
+msgstr "Subtriitrite kooditabel."
+
+msgid "Default location for the \"Open...\" dialogs"
+msgstr "Vaikimisi asukoht \"Ava...\" dialoogidele"
+
+msgid ""
+"Default location for the \"Open...\" dialogs. Default is the current "
+"directory."
+msgstr ""
+"Vaikimisi asukoht \"Ava...\" dialoogidele, vaikimisi on selleks aktiivne "
+"kataloog"
+
+msgid "Default location for the \"Take Screenshot\" dialogs"
+msgstr "Vaikimisi asukoht \"Võta stoppkaader\" dialoogidele"
+
+msgid ""
+"Default location for the \"Take Screenshot\" dialogs. Default is the "
+"Pictures directory."
+msgstr ""
+"Vaikimisi asukoht \"Võta stoppkaader\" dialoogidele, vaikimisi on selleks "
+"piltide kataloog."
+
+msgid "Whether to disable the plugins in the user's home directory"
+msgstr "Kas kasutaja kodukataloogis olevad pluginad on lubatud või mitte"
+
+msgid "Whether to disable the keyboard shortcuts"
+msgstr "Kas kiirklahvid on keelatud või mitte"
+
+msgid "Whether to autoload text subtitle files when a movie is loaded"
+msgstr ""
+"Kas subtiitrid laaditakse pärast filmi laadimist automaatselt või mitte"
+
+msgid "Whether to autoload external chapter files when a movie is loaded"
+msgstr "Kas filmiga koos laaditakse automaatselt ka välised peatükifailid"
+
+msgid ""
+"Whether to remember the position of played audio/video files when pausing or "
+"closing them"
+msgstr ""
+"Kas audio- ja videofailide viimane asukoht tuleb esitamise pausimisel või "
+"faili sulgemisel meelde jätta või mitte"
+
+msgid "Active plugins list"
+msgstr "Aktiivsete pluginate nimekiri"
+
+msgid ""
+"A list of the names of the plugins which are currently active (loaded and "
+"running)."
+msgstr "Hetkel aktiivsete (laaditud ja töötavate) pluginate nimekiri."
+
+msgid "_Remove"
+msgstr "_Eemalda"
+
+msgid "Remove file from playlist"
+msgstr "Esitusnimekirjast eemaldamine"
+
+msgid "_Copy Location"
+msgstr "_Kopeeri asukoht"
+
+msgid "Copy the location to the clipboard"
+msgstr "Asukoha kopeerimine lõikelauale"
+
+msgid "_Select Text Subtitles..."
+msgstr "_Vali tekstisubtiitrid..."
+
+msgid "Select a file to use for text subtitles"
+msgstr "Vali subtiitrid"
+
+msgid "Add..."
+msgstr "Lisamine..."
+
+msgid "Remove"
+msgstr "Eemalda"
+
+msgid "Save Playlist..."
+msgstr "Salvesta esitusnimekiri..."
+
+msgid "Move Up"
+msgstr "Liigutamine üles"
+
+msgid "Move Down"
+msgstr "Liigutamine alla"
+
+#. Audio visualization dimensions
+msgid "Normal"
+msgstr "Tavaline"
+
+#. Audio visualization dimensions
+msgid "Large"
+msgstr "Suur"
+
+#. Audio visualization dimensions
+msgid "Extra Large"
+msgstr "Eriti suur"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "4-channel"
+msgstr "4 kanalit"
+
+msgid "4.1-channel"
+msgstr "4.1 kanalit"
+
+msgid "5.0-channel"
+msgstr "5.0 kanalit"
+
+msgid "5.1-channel"
+msgstr "5.1 kanalit"
+
+msgid "AC3 Passthrough"
+msgstr "AC3 läbilaskerežiim"
+
+msgid "Totem Preferences"
+msgstr "Totem'i eelistused"
+
+msgid "Playback"
+msgstr "Esitamine"
+
+msgid "Start playing files from last position"
+msgstr "Failide esitust jätkatakse sealt, kus pooleli jäi"
+
+msgid "Text Subtitles"
+msgstr "Tekstilised subtiitrid"
+
+msgid "_Load subtitle files when movie is loaded"
+msgstr "_Video avamisel laaditakse subtiitrid"
+
+msgid "_Font:"
+msgstr "_Kirjatüüp:"
+
+msgid "_Encoding:"
+msgstr "Koo_ditabel:"
+
+msgid "External Chapters"
+msgstr "Välised peatükid"
+
+msgid "Load _chapter files when movie is loaded"
+msgstr "_Peatükkide failid laaditakse koos filmiga"
+
+msgid "General"
+msgstr "Üldine"
+
+#. Tab label in the Preferences dialogue
+msgid "Display"
+msgstr "Kuva"
+
+msgid "_Resize the window when a new video is loaded"
+msgstr "_Uue video avamisel sobitatakse akna suurus"
+
+msgid "Disable _deinterlacing of interlaced videos"
+msgstr "Üle_realaotusega videotelt ülerealaotuse eemaldamine"
+
+msgid "Disable screensaver when playing"
+msgstr "Ekraanisäästja keelamine esituse ajaks"
+
+msgctxt "Screensaver disable"
+msgid "Video"
+msgstr "Video"
+
+#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+msgid "Video or Audio"
+msgstr "Video või audio"
+
+msgid "Visual Effects"
+msgstr "Visuaalefektid"
+
+msgid "Show _visual effects when an audio file is played"
+msgstr "_Visuaalefektide näitamine audiofailide esitamise ajal"
+
+msgid "_Type of visualization:"
+msgstr "Visualiseerimise l_iik:"
+
+msgid "Visualization _size:"
+msgstr "Visualisee_rimise suurus:"
+
+msgid "Color Balance"
+msgstr "Värvustasakaal"
+
+msgid "_Brightness:"
+msgstr "_Heledus:"
+
+msgid "Co_ntrast:"
+msgstr "Ko_ntrast:"
+
+msgid "Sat_uration:"
+msgstr "_Küllastus:"
+
+msgid "_Hue:"
+msgstr "_Toon:"
+
+msgid "Reset to _Defaults"
+msgstr "_Lähtesta"
+
+msgid "Audio Output"
+msgstr "Heliväljund"
+
+msgid "_Audio output type:"
+msgstr "_Heliväljundi liik:"
+
+msgid "Audio"
+msgstr "Audio"
+
+msgid "Title:"
+msgstr "Pealkiri:"
+
+msgid "Artist:"
+msgstr "Esitaja:"
+
+msgid "Duration:"
+msgstr "Kestus:"
+
+msgid "Year:"
+msgstr "Aasta:"
+
+msgid "Album:"
+msgstr "Album:"
+
+msgid "Comment:"
+msgstr "Kommentaar:"
+
+msgid "Container:"
+msgstr "Konteiner:"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Dimensions:"
+msgstr "Mõõtmed:"
+
+msgid "Codec:"
+msgstr "Koodek:"
+
+msgid "Framerate:"
+msgstr "Kaadrisagedus:"
+
+msgid "Bitrate:"
+msgstr "Bitikiirus:"
+
+msgid "Sample rate:"
+msgstr "Diskreetimissagedus:"
+
+msgid "Channels:"
+msgstr "Kanaleid:"
+
+#. Title
+msgid "Videos"
+msgstr "Videod"
+
+msgid "Play movies"
+msgstr "Filmide esitamine"
+
+msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
+msgstr ""
+"Video;Film;Klipp;Kaader;Seeriad;Seebikad;Seebiooperid;Esitaja;Mängija;Pleier;"
+"DVD;TV;Plaat;"
+
+msgid "_Open"
+msgstr "_Ava"
+
+msgid "Open _Location"
+msgstr "Ava a_sukoht"
+
+msgid "_Fullscreen"
+msgstr "_Täisekraanvaade"
+
+msgid "Prefere_nces"
+msgstr "_Eelistused"
+
+msgid "Shuff_le"
+msgstr "_Segatud režiim"
+
+msgid "_Repeat"
+msgstr "_Kordav režiim"
+
+msgid "_Quit"
+msgstr "_Lõpeta"
+
+msgid "_Movie"
+msgstr "_Film"
+
+msgid "_Eject"
+msgstr "_Väljasta"
+
+msgid "Eject the current disc"
+msgstr "Praeguse plaadi väljastamine"
+
+msgid "_Properties"
+msgstr "_Omadused"
+
+msgid "View the properties of the current stream"
+msgstr "Praeguse andmevoo omaduste vaatamine"
+
+msgid "Play / P_ause"
+msgstr "Esita / p_ausi"
+
+msgid "Play or pause the movie"
+msgstr "Filmi esitamine või esitamisse pausi tegemine"
+
+msgid "_Edit"
+msgstr "_Redaktor"
+
+msgid "_Clear Playlist"
+msgstr "_Tühjenda esitusnimekiri"
+
+msgid "Clear the playlist"
+msgstr "Esitusnimekirja tühjendamine"
+
+msgid "Plugins..."
+msgstr "Pluginad..."
+
+msgid "Configure plugins to extend the application"
+msgstr "Rakenduse laienduspluginate seadistamine"
+
+msgid "_View"
+msgstr "_Vaade"
+
+msgid "Fit Window to Movie"
+msgstr "Sobita aken filmi järgi"
+
+msgid "_Resize 1∶2"
+msgstr "_Suurus 1∶2"
+
+msgid "Resize to half the original video size"
+msgstr "Suurenda poole suuruseni originaalsuurusest"
+
+msgid "Resize _1∶1"
+msgstr "Suurus _1∶1"
+
+msgid "Resize to the original video size"
+msgstr "Taasta video originaalsuurus"
+
+msgid "Resize _2∶1"
+msgstr "Suurus _2∶1"
+
+msgid "Resize to double the original video size"
+msgstr "Suurenda topeltsuurusele originaalsuurusest"
+
+msgid "_Aspect Ratio"
+msgstr "_Kuvasuhe"
+
+msgid "Switch An_gles"
+msgstr "Muuda _vaatenurka"
+
+msgid "Switch camera angles"
+msgstr "Vaatenurkade muutmine"
+
+msgid "_Go"
+msgstr "_Liikumine"
+
+msgid "_DVD Menu"
+msgstr "_DVD menüü"
+
+msgid "Go to the DVD menu"
+msgstr "Liigu DVD menüüsse"
+
+msgid "_Title Menu"
+msgstr "_Pealkirjamenüü"
+
+msgid "Go to the title menu"
+msgstr "Pealkirjamenüü avamine"
+
+msgid "A_udio Menu"
+msgstr "_Helimenüü"
+
+msgid "Go to the audio menu"
+msgstr "Liigu audio menüüsse"
+
+msgid "_Angle Menu"
+msgstr "_Nurgamenüü"
+
+msgid "Go to the angle menu"
+msgstr "Nurgamenüü avamine"
+
+msgid "_Chapter Menu"
+msgstr "_Peatükimenüü"
+
+msgid "Go to the chapter menu"
+msgstr "Peatükimenüü avamine"
+
+msgid "_Next Chapter/Movie"
+msgstr "_Järgmine lõik/film"
+
+msgid "Next chapter or movie"
+msgstr "Järgmisele filmilõigule või filmile lülitumine"
+
+msgid "_Previous Chapter/Movie"
+msgstr "_Eelmine lõik/film"
+
+msgid "Previous chapter or movie"
+msgstr "Eelmisele filmilõigule või filmile lülitumine"
+
+msgid "_Sound"
+msgstr "_Heli"
+
+msgid "Volume _Up"
+msgstr "Heli va_ljemaks"
+
+msgid "Increase volume"
+msgstr "Heli valjemaks"
+
+msgid "Volume _Down"
+msgstr "Heli _vaiksemaks"
+
+msgid "Decrease volume"
+msgstr "Heli vaiksemaks"
+
+msgid "_Help"
+msgstr "A_bi"
+
+msgid "_Contents"
+msgstr "_Sisukord"
+
+msgid "Help contents"
+msgstr "Abiteabe sisukord"
+
+msgid "_About"
+msgstr "_Programmist"
+
+msgid "About this application"
+msgstr "Lähem teave selle rakenduse kohta"
+
+msgid "Show _Controls"
+msgstr "Näita _juhtnuppe"
+
+msgid "Show controls"
+msgstr "Juhtnuppude näitamine"
+
+msgid "S_idebar"
+msgstr "_Külgriba"
+
+msgid "Show or hide the sidebar"
+msgstr "Külgriba näitamine või peitmine"
+
+msgctxt "Aspect ratio"
+msgid "Auto"
+msgstr "Automaatne"
+
+msgid "Sets automatic aspect ratio"
+msgstr "Automaatse kuvasuhte määramine"
+
+msgid "Square"
+msgstr "Ruut"
+
+msgid "Sets square aspect ratio"
+msgstr "Ruudukujulise kuvasuhte määramine"
+
+msgid "4∶3 (TV)"
+msgstr "4∶3 (TV)"
+
+msgid "Sets 4∶3 (TV) aspect ratio"
+msgstr "4∶3 (TV) kuvasuhte määramine"
+
+msgid "16∶9 (Widescreen)"
+msgstr "16∶9 (laiekraan)"
+
+msgid "Sets 16∶9 (widescreen) aspect ratio"
+msgstr "16∶9 (laiekraan) kuvasuhte määramine"
+
+msgid "2.11∶1 (DVB)"
+msgstr "2.11∶1 (DVB)"
+
+msgid "Sets 2.11∶1 (DVB) aspect ratio"
+msgstr "2.11∶1 (DVB) kuvasuhte määramine"
+
+msgid "S_ubtitles"
+msgstr "S_ubtiitrid"
+
+msgid "_Languages"
+msgstr "_Keeled"
+
+msgid "Zoom In"
+msgstr "Suurenda"
+
+msgid "Zoom in"
+msgstr "Suurendamine"
+
+msgid "Skip _Forward"
+msgstr "Keri _edasi"
+
+msgid "Skip forward"
+msgstr "Edasikerimine"
+
+msgid "Skip _Backwards"
+msgstr "Keri _tagasi"
+
+msgid "Skip backwards"
+msgstr "Tagasikerimine"
+
+msgid "Time seek bar"
+msgstr "Kerimisriba"
+
+msgid "Enter the _address of the file you would like to open:"
+msgstr "Sisesta faili _aadress, mida sa soovid avada:"
+
+msgid "Password requested for RTSP server"
+msgstr "RTSP-serveri jaoks nõutav parool"
+
+#, c-format
+msgid "Audio Track #%d"
+msgstr "Audiorada nr. %d"
+
+#, c-format
+msgid "Subtitle #%d"
+msgstr "Subtiiter nr. %d"
+
+msgid "The server you are trying to connect to is not known."
+msgstr "Server, millega üritad ühenduda, on tundmatu."
+
+msgid "The connection to this server was refused."
+msgstr "See server keeldus ühendusest."
+
+msgid "The specified movie could not be found."
+msgstr "Antud filmi ei leitud."
+
+msgid "The server refused access to this file or stream."
+msgstr "Server keeldus ligipääsust failile või voole."
+
+msgid "Authentication is required to access this file or stream."
+msgstr "Ligipääsuks sellele failile või voole on vajalik autentimine."
+
+msgid "You are not allowed to open this file."
+msgstr "Sul puuduvad õigused selle faili avamiseks."
+
+msgid "This location is not a valid one."
+msgstr "Asukoht pole korrektne."
+
+msgid "The movie could not be read."
+msgstr "Filmi pole võimalik lugeda."
+
+#. should be exactly one missing thing (source or converter)
+#, c-format
+msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid_plural ""
+"The playback of this movie requires the following plugins which are not "
+"installed:\n"
+"\n"
+"%s"
+msgstr[0] "Selle filmi esitamiseks on vaja %s pluginat, mis pole paigaldatud."
+msgstr[1] ""
+"Selle filmi esitamiseks on vaja järgnevaid pluginaid, mis pole paigaldatud:\n"
+"\n"
+"%s"
+
+msgid ""
+"An audio or video stream is not handled due to missing codecs. You might "
+"need to install additional plugins to be able to play some types of movies"
+msgstr ""
+"Audio- või videovoogu pole võimalik puuduva koodeki tõttu kasutada. Mõnede "
+"eriliiki videote mängimiseks võib olla vajalik lisapluginate paigaldamine."
+
+msgid ""
+"This file cannot be played over the network. Try downloading it locally "
+"first."
+msgstr ""
+"Seda faili pole võimalik otse võrgust mängida. Proovi see kõigepealt "
+"allalaadida."
+
+msgid "Surround"
+msgstr "Surround"
+
+msgid "Mono"
+msgstr "Mono"
+
+msgid "Media contains no supported video streams."
+msgstr "Meedia ei sisalda ühtegi toetatud videostriimi."
+
+msgid ""
+"Some necessary plug-ins are missing. Make sure that the program is correctly "
+"installed."
+msgstr ""
+"Mõned vajalikud pluginad on puudu. Veendu, et see rakendus on korrektselt "
+"paigaldatud."
+
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "Fail pole korrektne .desktop fail"
+
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "Tundmatu .desktop fail versioon '%s'"
+
+#, c-format
+msgid "Starting %s"
+msgstr "Käivitamine: %s"
+
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "Rakendus ei oota käsurealt dokumente"
+
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "Tundmatu käivitusvalik: %d"
+
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+"Dokumendi URI-sid pole võimalik 'Liik=Viit' tüüpi töölauakirjetele edastada"
+
+#, c-format
+msgid "Not a launchable item"
+msgstr "Pole käivitatav element"
+
+#, c-format
+msgid "File _Format: %s"
+msgstr "Faili _vorming: %s"
+
+msgid "All Files"
+msgstr "Kõik failid"
+
+msgid "All Supported Files"
+msgstr "Kõik toetatud failitüübid"
+
+msgid "By Extension"
+msgstr "Laiendi järgi"
+
+msgid "File Format"
+msgstr "Faili vorming"
+
+msgid "Extension(s)"
+msgstr "Laiendi(d)"
+
+#. Translators: the parameter is a filename
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for `"
+"%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+"Programmil pole võimalik `%s' jaoks failivormingut leida. Palun veendu, et "
+"sul on selle faili jaoks plugin või vali allpool olevast nimekirjast sobiv "
+"vorming."
+
+msgid "File format not recognized"
+msgstr "Faili vormingut pole võimalik ära tunda"
+
+msgid "Disable connection to session manager"
+msgstr "Seansihalduriga ühendumise keelamine"
+
+msgid "Specify file containing saved configuration"
+msgstr "Salvestatud seadistusi sisaldava faili määramine"
+
+msgid "FILE"
+msgstr "FAIL"
+
+msgid "Specify session management ID"
+msgstr "Seansihalduse ID määramine"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Session management options:"
+msgstr "Seansihalduse valikud:"
+
+msgid "Show session management options"
+msgstr "Seansihalduse valikute näitamine"
+
+#. hour:minutes:seconds
+#. Translators: This is a time format, like "9:05:02" for 9
+#. * hours, 5 minutes, and 2 seconds. You may change ":" to
+#. * the separator that your locale uses or use "%Id" instead
+#. * of "%d" if your locale uses localized digits.
+#.
+#, c-format
+msgctxt "long time format"
+msgid "%d:%02d:%02d"
+msgstr "%d:%02d:%02d"
+
+#. minutes:seconds
+#. Translators: This is a time format, like "5:02" for 5
+#. * minutes and 2 seconds. You may change ":" to the
+#. * separator that your locale uses or use "%Id" instead of
+#. * "%d" if your locale uses localized digits.
+#.
+#, c-format
+msgctxt "short time format"
+msgid "%d:%02d"
+msgstr "%d:%02d"
+
+#. Title
+#. Artist
+#. Album
+#. Year
+#. Container
+msgid "Unknown"
+msgstr "Tundmatu"
+
+#. Dimensions
+msgctxt "Dimensions"
+msgid "N/A"
+msgstr "Puuduvad"
+
+#. Video Codec
+msgctxt "Video codec"
+msgid "N/A"
+msgstr "Puudub"
+
+msgctxt "Video bit rate"
+msgid "N/A"
+msgstr "Puudub"
+
+msgctxt "Frame rate"
+msgid "N/A"
+msgstr "Puudub"
+
+msgctxt "Audio bit rate"
+msgid "N/A"
+msgstr "Puudub"
+
+#. Audio Codec
+msgctxt "Audio codec"
+msgid "N/A"
+msgstr "Puudub"
+
+#. Sample rate
+msgid "0 Hz"
+msgstr "0 Hz"
+
+#. Channels
+msgid "0 Channels"
+msgstr "0 kanalit"
+
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d tund"
+msgstr[1] "%d tundi"
+
+#, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minutit"
+
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekundit"
+
+#. 5 hours 2 minutes 12 seconds
+#, c-format
+msgctxt "time"
+msgid "%s %s %s"
+msgstr "%s %s %s"
+
+#. 2 minutes 12 seconds
+#, c-format
+msgctxt "time"
+msgid "%s %s"
+msgstr "%s %s"
+
+#. 0 seconds
+msgid "0 seconds"
+msgstr "0 sekundit"
+
+#, c-format
+msgid "%d frame per second"
+msgid_plural "%d frames per second"
+msgstr[0] "%d kaader sekundis"
+msgstr[1] "%d kaadrit sekundis"
+
+msgid "Audio Preview"
+msgstr "Audio eelvaatlemine"
+
+msgid "Verify your system installation. Totem will now exit."
+msgstr "Kontrolli oma süsteemi paigaldust. Totem lõpetab oma töö."
+
+msgid "_Play Now"
+msgstr "_Esita kohe"
+
+msgid "_Add to Playlist"
+msgstr "_Lisa esitusnimekirja"
+
+msgid "Cancel"
+msgstr "Tühista"
+
+msgid "No File"
+msgstr "Fail puudub"
+
+#, c-format
+msgid "Couldn't load the '%s' interface. %s"
+msgstr "'%s' liidest pole võimalik laadida. %s"
+
+msgid "The file does not exist."
+msgstr "Faili pole olemas."
+
+msgid "Make sure that Totem is properly installed."
+msgstr "Veendu, et Totem on õigesti paigaldatud."
+
+msgid ""
+"Totem is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
+msgstr ""
+"Totem on vaba tarkvara. Te võite seda edasi levitada ja/või muuta vastavalt "
+"GNU Üldise Avaliku Litsentsi tingimustele, nagu need on Vaba Tarkvara Fondi "
+"poolt avaldatud; kas Litsentsi versioon number 2 või (vastavalt Teie "
+"valikule) ükskõik milline hilisem versioon."
+
+msgid ""
+"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Totem'it levitatakse lootuses, et see on kasulik, kuid ILMA IGASUGUSE "
+"GARANTIITA; isegi KESKMISE/TAVALISE KVALITEEDIGARANTIITA või SOBIVUSELE "
+"TEATUD KINDLAKS EESMÄRGIKS. Üksikasjade suhtes vaata GNU Üldist Avalikku "
+"Litsentsi."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Suite 330, Boston, MA  02111-1307  USA"
+msgstr ""
+"Te peaks olema saanud GNU Üldise Avaliku Litsentsi koopia koos Totem'iga; "
+"kui ei, siis võtke ühendust Free Software Foundation'iga, 59 Temple Place, "
+"Suite 330, Boston, MA 02111-1307 USA"
+
+msgid ""
+"Totem contains an exception to allow the use of proprietary GStreamer "
+"plugins."
+msgstr ""
+"Totem sisaldab erandit, mis võimaldab kasutada omandiõigustega kaitstud "
+"GStreamer'i pluginaid."
+
+#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
+msgid "None"
+msgstr "Puudub"
+
+#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
+msgctxt "Language"
+msgid "Auto"
+msgstr "Automaatne"
+
+msgid "Copyright © 2002-2009 Bastien Nocera"
+msgstr "Autoriõigused © 2002-2009 Bastien Nocera"
+
+msgid "translator-credits"
+msgstr ""
+"Ilmar Kerm <ikerm hot ee>, 2002.\n"
+"Ivar Smolin <okul linux ee>, 2005–2011.\n"
+"Priit Laes <amd store20 com>, 2005–2007.\n"
+"Mattias Põldaru <mahfiaz gmail com>, 2008–2010."
+
+msgid "Totem Website"
+msgstr "Totemi veebisait"
+
+msgid "Configure Plugins"
+msgstr "Pluginate seadistamine"
+
+#, c-format
+msgid ""
+"%s\n"
+"Run '%s --help' to see a full list of available command line options.\n"
+msgstr ""
+"%s\n"
+"Kõigi saadaolevate käsureavõtmete vaatamiseks käivita '%s --help'.\n"
+
+#. Translators: %s is the totem version number
+#, c-format
+msgid "Totem %s"
+msgstr "Totem %s"
+
+msgid "Pause"
+msgstr "Pausitud"
+
+msgid "Play"
+msgstr "Esitamine"
+
+#, c-format
+msgid "Totem could not play '%s'."
+msgstr "Totemil pole võimalik esitada '%s'."
+
+msgid "Totem could not display the help contents."
+msgstr "Totemil pole võimalik abiteabe sisu näidata."
+
+msgid "Previous Chapter/Movie"
+msgstr "Eelmine lõik/film"
+
+msgid "Play / Pause"
+msgstr "Esita / pausi"
+
+msgid "Next Chapter/Movie"
+msgstr "Järgmine lõik/film"
+
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
+msgid "Fullscreen"
+msgstr "Täisekraanvaade"
+
+msgid "Totem could not startup."
+msgstr "Totemil pole võimalik käivituda."
+
+msgid "No reason."
+msgstr "Põhjendus puudub."
+
+msgid "Open Location..."
+msgstr "Asukoha avamine..."
+
+msgid "Enable debug"
+msgstr "Silumise lubamine"
+
+msgid "Play/Pause"
+msgstr "Esitamine või pausi määramine"
+
+msgid "Next"
+msgstr "Järgmine"
+
+msgid "Previous"
+msgstr "Eelmine"
+
+msgid "Seek Forwards"
+msgstr "Edasikerimine"
+
+msgid "Seek Backwards"
+msgstr "Tagasikerimine"
+
+msgid "Volume Up"
+msgstr "Heli valjemaks"
+
+msgid "Volume Down"
+msgstr "Heli vaiksemaks"
+
+msgid "Mute sound"
+msgstr "Heli vaigistamine"
+
+msgid "Toggle Fullscreen"
+msgstr "Täisekraanvaate sisse- või väljalülitamine"
+
+msgid "Show/Hide Controls"
+msgstr "Juhtpaneeli näitamine või peitmine"
+
+msgid "Quit"
+msgstr "Lõpetamine"
+
+msgid "Enqueue"
+msgstr "Järjekorda panemine"
+
+msgid "Replace"
+msgstr "Asendamine"
+
+msgid "Seek"
+msgstr "Kerimine"
+
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
+msgid "Playlist index"
+msgstr "Esitusnimekirja indeks"
+
+msgid "Movies to play"
+msgstr "Esitatavad filmid"
+
+msgid "- Play movies and songs"
+msgstr "- Filmide ja muusika esitamine"
+
+msgid "Can't enqueue and replace at the same time"
+msgstr "Üheaegselt pole võimalik järjekorda panna ja asendada"
+
+#. By extension entry
+msgid "MP3 ShoutCast playlist"
+msgstr "MP3 ShoutCast esitusnimekiri"
+
+msgid "MP3 audio (streamed)"
+msgstr "MP3-audio (voog)"
+
+msgid "MP3 audio (streamed, DOS format)"
+msgstr "MP3-audio (voog, DOS-vorming)"
+
+msgid "XML Shareable Playlist"
+msgstr "Jagatav XML-esitusnimekiri"
+
+#. This is "Title 3", where title is a DVD title
+#. * Note: NOT a DVD chapter
+#, c-format
+msgid "Title %d"
+msgstr "%d. pealkiri"
+
+msgid "Could not save the playlist"
+msgstr "Esitusnimekirja pole võimalik salvestada"
+
+msgid "Save Playlist"
+msgstr "Salvesta esitusnimekiri"
+
+#. translators: Playlist is the default saved playlist filename,
+#. * without the suffix
+msgid "Playlist"
+msgstr "Esitusnimekiri"
+
+#, c-format
+msgid "The playlist '%s' could not be parsed. It might be damaged."
+msgstr "Esitusnimekirja '%s' pole võimalik parsida, see võib olla rikutud."
+
+msgid "Playlist error"
+msgstr "Esitusnimekirja viga"
+
+msgid "Preferences"
+msgstr "Eelistused"
+
+msgid "Select Subtitle Font"
+msgstr "Subtiitri kirjatüübi valimine"
+
+msgid "Audio/Video"
+msgstr "Audio/Video"
+
+msgid "N/A"
+msgstr "Puudub"
+
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Puudub"
+
+#, c-format
+msgid "%d kbps"
+msgstr "%d kb/s"
+
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "Puudub"
+
+msgctxt "Number of audio channels"
+msgid "N/A"
+msgstr "Puudub"
+
+msgid "0:00 / 0:00"
+msgstr "0:00 / 0:00"
+
+#, c-format
+msgid "%s (Streaming)"
+msgstr "%s (Striimiesitus)"
+
+#. Elapsed / Total Length
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "Liikumine asukohale %s / %s"
+
+msgid "Buffering"
+msgstr "Puhverdamine"
+
+#. eg: 75 %
+#, c-format
+msgid "%lf %%"
+msgstr "%lf %%"
+
+#. eg: Paused, 0:32 / 1:05
+#, c-format
+msgid "%s, %s"
+msgstr "%s, %s"
+
+#. eg: Buffering, 75 %
+#, c-format
+msgid "%s, %f %%"
+msgstr "%s, %f %%"
+
+msgid "Current Locale"
+msgstr "Aktiivne lokaat"
+
+msgid "Arabic"
+msgstr "Araabia"
+
+msgid "Armenian"
+msgstr "Armeenia"
+
+msgid "Baltic"
+msgstr "Balti"
+
+msgid "Celtic"
+msgstr "Keldi"
+
+msgid "Central European"
+msgstr "Kesk-Euroopa"
+
+msgid "Chinese Simplified"
+msgstr "Hiina lihtsustatud"
+
+msgid "Chinese Traditional"
+msgstr "Hiina traditsiooniline"
+
+msgid "Croatian"
+msgstr "Horvaatia"
+
+msgid "Cyrillic"
+msgstr "Kirillitsa"
+
+msgid "Cyrillic/Russian"
+msgstr "Kirillitsa/Vene"
+
+msgid "Cyrillic/Ukrainian"
+msgstr "Kirillitsa/Ukraina"
+
+msgid "Georgian"
+msgstr "Gruusia"
+
+msgid "Greek"
+msgstr "Kreeka"
+
+msgid "Gujarati"
+msgstr "Gujarati"
+
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+msgid "Hebrew"
+msgstr "Heebrea"
+
+msgid "Hebrew Visual"
+msgstr "Heebrea visuaalne"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Icelandic"
+msgstr "Islandi"
+
+msgid "Japanese"
+msgstr "Jaapani"
+
+msgid "Korean"
+msgstr "Korea"
+
+msgid "Nordic"
+msgstr "Põhjamaad"
+
+msgid "Persian"
+msgstr "Pärsia"
+
+msgid "Romanian"
+msgstr "Rumeenia"
+
+msgid "South European"
+msgstr "Lõuna-Euroopa"
+
+msgid "Thai"
+msgstr "Tai"
+
+msgid "Turkish"
+msgstr "Türgi"
+
+msgid "Unicode"
+msgstr "Unikood"
+
+msgid "Western"
+msgstr "Lääne"
+
+msgid "Vietnamese"
+msgstr "Vietnami"
+
+msgid "All files"
+msgstr "Kõik failid"
+
+msgid "Supported files"
+msgstr "Toetatud failitüübid"
+
+msgid "Audio files"
+msgstr "Audiofailid"
+
+msgid "Video files"
+msgstr "Videofailid"
+
+msgid "Subtitle files"
+msgstr "Subtiitrifailid"
+
+msgid "Select Text Subtitles"
+msgstr "Tekstisubtiitrite valimine"
+
+msgid "Select Movies or Playlists"
+msgstr "Filmide või esitusnimekirjade valimine"
+
+msgid "Add Directory"
+msgstr "Kataloogi lisamine"
+
+#. Translators: The first string is "Filename" (as translated); the second is an actual filename.
+#. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
+#. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
+#, c-format
+msgid ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
+msgstr ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
+
+msgid "Filename"
+msgstr "Failinimi"
+
+msgid "Resolution"
+msgstr "Lahutus"
+
+msgid "Duration"
+msgstr "Kestus"
+
+msgid "Apple Trailers"
+msgstr "Apple'i treilerid"
+
+msgid "Sets the user agent for the Apple Trailers site"
+msgstr "Apple'i treilerite saidi jaoks kasutajaagendi määramine"
+
+msgid "Autoload Subtitles"
+msgstr "Subtiitrite automaatne laadimine"
+
+msgid "Autoloads text subtitles"
+msgstr "Tekstisubtriitrite automaatne laadimine"
+
+msgid "Video Disc Recorder"
+msgstr "Videoplaadi lindistaja"
+
+msgid "Records (S)VCDs or video DVDs"
+msgstr "(S)VCD'de või video-DVD'de lindistamine"
+
+msgid "_Create Video Disc..."
+msgstr "_Loo videoplaat..."
+
+msgid "Create a video DVD or a (S)VCD from the currently opened movie"
+msgstr "Video-DVD või (S)VCD loomine praegu avatud filmist"
+
+msgid "Copy Vide_o DVD..."
+msgstr "Kopeeri vide_o DVD..."
+
+msgid "Copy the currently playing video DVD"
+msgstr "Koopia praegu mängivast DVD'st"
+
+msgid "Copy (S)VCD..."
+msgstr "Kopeeri (S)VCD..."
+
+msgid "Copy the currently playing (S)VCD"
+msgstr "Praegu esitatava (S)VCD kopeerimine"
+
+msgid "The video disc could not be duplicated."
+msgstr "Filmiplaati pole võimalik paljundada."
+
+msgid "The movie could not be recorded."
+msgstr "Filmi pole võimalik lindistada."
+
+msgid "Unable to write a project."
+msgstr "Projekti pole võimalik kirjutada."
+
+msgid "Name for new chapter:"
+msgstr "Uue peatüki nimi:"
+
+msgid "_Remove Chapter"
+msgstr "_Eemalda peatükk"
+
+msgid "Remove the chapter from the list"
+msgstr "Peatüki eemaldamine nimekirjast"
+
+msgid "_Go to Chapter"
+msgstr "_Liigu peatükile"
+
+msgid "Go to the chapter in the movie"
+msgstr "Filmi peatükile liikumine"
+
+msgid "Add Chapter..."
+msgstr "Lisa peatükk..."
+
+msgid "Remove Chapter"
+msgstr "Eemalda peatükk"
+
+msgid "Go to Chapter"
+msgstr "Liikumine peatükile"
+
+msgid "Save Changes"
+msgstr "Salvesta muutused"
+
+msgid "No chapter data"
+msgstr "Peatükkide andmed puuduvad"
+
+msgid "Load Chapters..."
+msgstr "Laadi peatükid..."
+
+msgid "Load chapters from an external CMML file"
+msgstr "Peatükkide laadimine välisest CMML-failist"
+
+msgid "Add New Chapters"
+msgstr "Uute peatükkide lisamine"
+
+msgid "Create a new chapter list for the movie"
+msgstr "Filmile uue peatükkide nimekirja loomine"
+
+msgid "Chapters"
+msgstr "Peatükid"
+
+msgid "Support chapter markers in movies"
+msgstr "Peatükimarkerite tugi filmidele"
+
+#, c-format
+msgid ""
+"<b>Title: </b>%s\n"
+"<b>Start time: </b>%s"
+msgstr ""
+"<b>Pealkiri: </b>%s\n"
+"<b>Algusaeg: </b>%s"
+
+msgid "Error while reading file with chapters"
+msgstr "Viga peatükkide faili laadimisel"
+
+msgid "Chapter with the same time already exists"
+msgstr "Sama ajaga peatükk on juba olemas"
+
+msgid "Try another name or remove an existing chapter."
+msgstr "Proovi mõnda muud nime või eemalda olemasolev peatükk."
+
+msgid "Error while writing file with chapters"
+msgstr "Viga peatükkide faili kirjutamisel"
+
+msgid "Error occurred while saving chapters"
+msgstr "Viga peatükkide salvestamisel"
+
+msgid ""
+"Please check you have permission to write to the folder containing the movie."
+msgstr "Palun veendu, et sul on õigus filmi sisaldavasse kataloogi kirjutada."
+
+msgid "Open Chapter File"
+msgstr "Ava peatükkide fail"
+
+msgid "Chapter Screenshot"
+msgstr "Peatüki kaader"
+
+msgid "Chapter Title"
+msgstr "Peatüki pealkiri"
+
+msgid "Save changes to chapter list before closing?"
+msgstr "Kas peatükkide nimekiri tuleb enne sulgemist salvestada?"
+
+#. Translators: close Totem without saving changes to the chapter list of the current movie.
+msgid "Close without Saving"
+msgstr "Jätka ilma salvestamata"
+
+#. Translators: save changes to the chapter list of the current movie before closing Totem.
+msgid "Save"
+msgstr "Salvesta"
+
+msgid "If you don't save, changes to the chapter list will be lost."
+msgstr ""
+"Salvestamata jätmise korral lähevad pealkirjade nimekirjas tehtud muudatused "
+"kaotsi."
+
+msgid "Add Chapter"
+msgstr "Peatüki lisamine"
+
+msgid "D-Bus Service"
+msgstr "D-Bus teenus"
+
+msgid ""
+"Plugin for sending notifications of currently playing movies to the D-Bus "
+"subsystem."
+msgstr ""
+"Plugin hetkel esitatava filmi kohta teavituse saatmiseks D-Bus "
+"alamsüsteemile."
+
+#, python-format
+msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
+msgstr "MediaPlayer2 objektil ei ole '%s' liidest teostatud"
+
+#, python-format
+msgid "The property ‘%s’ is not writeable."
+msgstr "Omadus '%s' ei ole kirjutatav."
+
+#, python-format
+msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
+msgstr "MediaPlayer 2 objektilt päriti tundmatut omadust '%s'"
+
+#, python-format
+msgid "The URI ‘%s’ is not supported."
+msgstr "URI '%s' pole toetatud."
+
+msgid "Grilo Browser"
+msgstr "Grilo sirvija"
+
+msgid "A plugin to let you browse media content from various sources"
+msgstr "Plugin erinevatest allikatest meedia sirvimiseks"
+
+msgid "Add to Playlist"
+msgstr "Esitusnimekirja lisamine"
+
+msgid "Copy Location"
+msgstr "Asukoha kopeerimine"
+
+msgid "Browse"
+msgstr "Sirvi"
+
+msgid "Search"
+msgstr "Otsing"
+
+msgid "Browse Error"
+msgstr "Viga sirvimisel"
+
+msgid "Search Error"
+msgstr "Viga otsimisel"
+
+msgid "Gromit Annotations"
+msgstr "Gromiti kommentaarid"
+
+msgid "Presentation helper to make annotations on screen"
+msgstr "Esitlusabiline kommentaaride lisamiseks ekraanile"
+
+msgid "The gromit binary was not found."
+msgstr "gromit-i binaarfaili ei leitud"
+
+msgid "Instant Messenger Status"
+msgstr "Välksõnumirakenduse olek"
+
+msgid "Set your Instant Messenger status to away when a movie is playing"
+msgstr "Välksõnumirakendusele \"eemal\" oleku määramine filmi esitamise ajaks"
+
+msgid "Infrared Remote Control"
+msgstr "Infrapuna-kaugjuhtimine"
+
+msgid "Support infrared remote control"
+msgstr "Infrapunaliidese kaudu kaugjuhtimise toetus"
+
+msgid "Couldn't initialize lirc."
+msgstr "Lirc'i pole võimalik lähtestada."
+
+msgid "Couldn't read lirc configuration."
+msgstr "Lirc'i sätteid pole võimalik lugeda."
+
+msgid "Media Player Keys"
+msgstr "Meediaesitaja klahvid"
+
+msgid "Support additional media player keys"
+msgstr "Meediaesitaja lisaklahvide tugi"
+
+msgid "Always On Top"
+msgstr "Alati pealmine"
+
+msgid "Keep the main window on top when playing a movie"
+msgstr "Filmi esitamise ajal hoitakse peaakent alati teiste akende peal"
+
+msgid "Subtitle Downloader"
+msgstr "Subtiitrite allalaadija"
+
+msgid "Look for subtitles for the currently playing movie"
+msgstr "Praegu esitatavale filmile subtiitrite otsimine."
+
+msgid "Brazilian Portuguese"
+msgstr "Brasiilia-portugali"
+
+msgid "Searching for subtitles…"
+msgstr "Subtiitrite otsimine…"
+
+msgid "Downloading the subtitles…"
+msgstr "Subtriitrite allalaadimine…"
+
+msgid "Could not contact the OpenSubtitles website"
+msgstr "OpenSubtitles veebilehega ühendumine pole võimalik"
+
+msgid "Could not contact the OpenSubtitles website."
+msgstr "OpenSubtitles veebilehega ühendumine pole võimalik"
+
+msgid "No results found."
+msgstr "Tulemusi ei leitud."
+
+msgid "Subtitles"
+msgstr "Subtiitrid"
+
+#. translators comment:
+#. This is the file-type of the subtitle file detected
+msgid "Format"
+msgstr "Vorming"
+
+#. translators comment:
+#. This is a rating of the quality of the subtitle
+msgid "Rating"
+msgstr "Hinnang"
+
+msgid "Download movie subtitles from OpenSubtitles"
+msgstr "Subtiitrite allalaadimine OpenSubtitles'ist"
+
+msgid "_Download Movie Subtitles…"
+msgstr "_Laadi filmi subtiitrid alla…"
+
+msgid "Searching subtitles…"
+msgstr "Subtiitrite otsimine…"
+
+msgid "Download Movie Subtitles"
+msgstr "Filmi subtiitrite allalaadimine"
+
+msgid "Subtitle _language:"
+msgstr "Subtiitrite _keel:"
+
+msgid "_Play with Subtitle"
+msgstr "_Esita subtiitritega"
+
+msgid "Subtitle language"
+msgstr "Subtiitrite keel"
+
+msgid "The language to search for subtitles for movies in."
+msgstr "Filmides kasutatavate subtiitrite keel."
+
+msgid "Movie Properties"
+msgstr "Filmi omadused"
+
+msgid "Adds movie properties to the sidebar"
+msgstr "Filmi omaduste lisamine külgribale"
+
+msgid "Properties"
+msgstr "Omadused"
+
+msgid "rpdb2 password"
+msgstr "rpdb2 parool"
+
+msgid ""
+"A password to protect the rpdb2 server for debugging Totem from unauthorized "
+"remote access. If this is empty, a default of 'totem' will be used."
+msgstr ""
+"Parool, millega kaitstakse Totemi rpdb2 silumisserverit mittesoovitavate "
+"kaugühenduste eest. Kui see on tühi, kasutatakse vaikimisi väärtust 'totem'."
+
+msgid "Python Console"
+msgstr "Pythoni konsool"
+
+msgid "Interactive Python console"
+msgstr "Interaktiivne Pythoni konsool"
+
+msgid "Python Console Menu"
+msgstr "Pythoni konsooli menüü"
+
+msgid "_Python Console"
+msgstr "_Pythoni konsool"
+
+msgid "Show Totem's Python console"
+msgstr "Totemi Pythoni konsooli näitamine"
+
+msgid "Python Debugger"
+msgstr "Pythoni silur"
+
+msgid "Enable remote Python debugging with rpdb2"
+msgstr "Pythoni kaugsilumise lubamine rpdb2 abil"
+
+#. pylint: disable-msg=E1101
+#, python-format
+msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
+msgstr "Totem.Object'i on võimalik kasutada 'totem_object' kaudu:\\n%s"
+
+msgid "Totem Python Console"
+msgstr "Totemi pythoni konsool"
+
+msgid ""
+"After you press OK, Totem will wait until you connect to it with winpdb or "
+"rpdb2. If you have not set a debugger password in DConf, it will use the "
+"default password ('totem')."
+msgstr ""
+"Pärast \"Olgu\" vajutamist ootab Totem winpdb või rpdb2 abil loodud "
+"ühendust. Kui DConfi's pole siluri parooli määratud, siis kasutatakse "
+"vaikimisi parooli ('totem')."
+
+msgid "Recent files"
+msgstr "Hiljutised failid"
+
+msgid "Adds files that have been played to recent files"
+msgstr "Esitatud failide lisamine hiljutiste failide nimekirja"
+
+msgid "Rotation Plugin"
+msgstr "Pööramise plugin"
+
+msgid "Allows videos to be rotated if they are in the wrong orientation"
+msgstr "Võimaldab videot pöörata, kui see on vales suunas"
+
+msgid "_Rotate Clockwise"
+msgstr "_Pööra päripäeva"
+
+msgid "Rotate Counterc_lockwise"
+msgstr "Pööra _vastupäeva"
+
+msgid "Save Copy"
+msgstr "Koopia salvestamine"
+
+msgid "Save a copy of the currently playing movie"
+msgstr "Koopia salvestamine praegu mängivast filmist"
+
+msgid "Save a Copy..."
+msgstr "Salvesta koopia..."
+
+msgid "Save a copy of the movie"
+msgstr "Filmist koopia salvestamine"
+
+msgid "Save a Copy"
+msgstr "Koopia salvestamine"
+
+#. translators: Movie is the default saved movie filename,
+#. * without the suffix
+msgid "Movie"
+msgstr "Film"
+
+msgid "Movie stream"
+msgstr "Filmivoog"
+
+msgid "Screen Saver"
+msgstr "Ekraanisäästja"
+
+msgid "Deactivates the screen saver when a movie is playing"
+msgstr "Ekraanisäästja keelamine filmi mängimise ajaks"
+
+msgid "Screenshot width (in pixels):"
+msgstr "Stoppkaadri laius (pikslites):"
+
+msgid "Calculate the number of screenshots"
+msgstr "Stoppkaadrite arv arvutatakse"
+
+msgid "Number of screenshots:"
+msgstr "Stoppkaadrite arv:"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#, c-format
+msgid "Screenshot from %s.png"
+msgstr "%s stoppkaader.png"
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#, c-format
+msgid "Screenshot from %s - %d.png"
+msgstr "%s - %d stoppkaader.png"
+
+msgid "Screenshot"
+msgstr "Stoppkaader"
+
+msgid "Allows screenshots and galleries to be taken of videos"
+msgstr "Võimaldab videotest stoppkaadrite ja galeriide loomise"
+
+msgid "Save Gallery"
+msgstr "Galerii salvestamine"
+
+#. Translators: The first argument is the movie title. The second
+#. * argument is a number which is used to prevent overwriting files.
+#. * Just translate "Gallery", and not the ".jpg". Example:
+#. * "Galerie-%s-%d.jpg".
+#, c-format
+msgid "Gallery-%s-%d.jpg"
+msgstr "Galerii-%s-%d.jpg"
+
+#. Set up the window
+msgid "Creating Gallery..."
+msgstr "Galerii loomine..."
+
+#. Set the progress label
+#, c-format
+msgid "Saving gallery as \"%s\""
+msgstr "Galerii salvestamine nimega \"%s\""
+
+msgid "Totem could not get a screenshot of the video."
+msgstr "Totem pole suuteline sellest filmist stoppkaadrit tegema."
+
+msgid "This is not supposed to happen; please file a bug report."
+msgstr "Seda ei oleks tohtinud juhtuda; palun saada veateade."
+
+msgid "Take _Screenshot"
+msgstr "Võta _stoppkaader"
+
+msgid "Take a screenshot"
+msgstr "Stoppkaadri võtmine"
+
+msgid "Create Screenshot _Gallery..."
+msgstr "Loo stoppkaadrite _galerii..."
+
+msgid "Create a gallery of screenshots"
+msgstr "Stoppkaadrite galerii loomine"
+
+msgid "Skip To"
+msgstr "Asukoha vahetamine"
+
+msgid "Provides the \"Skip to\" dialog"
+msgstr "Pakub dialoogi \"Asukoha vahetamine\""
+
+msgid "_Skip to:"
+msgstr "_Liikumine asukohale:"
+
+#. Update the "seconds" label so that it always has the correct singular/plural form
+#. Translators: label for the seconds selector in the "Skip to" dialogue
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "sekund"
+msgstr[1] "sekundit"
+
+#. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
+#. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
+#. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
+#. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
+msgctxt "Skip To label length"
+msgid "7"
+msgstr "8"
+
+msgid "_Skip To..."
+msgstr "_Liigu asukohale..."
+
+msgid "Skip to a specific time"
+msgstr "Liikumine määratud ajahetkele"
+
+msgid "Zeitgeist Plugin"
+msgstr "Zeitgeisti plugin"
+
+msgid "A plugin sending events to Zeitgeist"
+msgstr "Plugin, mis saadab sündmuseid Zeitgeistile"
+
+#, fuzzy
+#~ msgid "Plugins"
+#~ msgstr "Pluginad..."
+
+#, fuzzy
+#~ msgctxt "long time format"
+#~ msgid "-%d:%02d:%02d"
+#~ msgstr "%d:%02d:%02d"
+
+#, fuzzy
+#~ msgctxt "short time format"
+#~ msgid "-%d:%02d"
+#~ msgstr "%d:%02d"
+
+#, fuzzy
+#~ msgid "_Cancel"
+#~ msgstr "Tühista"
+
+#, fuzzy
+#~ msgid "_Save"
+#~ msgstr "Salvesta"
+
+#, fuzzy
+#~ msgid "Recent"
+#~ msgstr "Hiljutised failid"
+
+#, fuzzy
+#~ msgid "_Skip To"
+#~ msgstr "Asukoha vahetamine"
+
+#, fuzzy
+#~ msgid "Sets the user agent for the Vimeo site"
+#~ msgstr "Apple'i treilerite saidi jaoks kasutajaagendi määramine"
+
+#~ msgid ""
+#~ "Whether to remember the current playlist, the playing track and position."
+#~ msgstr ""
+#~ "Kas pidada meeles praegust esitusnimekirja, esitatavat lugu ja asukohta."
+
+#~ msgid "Remember last played movies"
+#~ msgstr "Viimati esitatud filmide meelespidamine"
+
+#~ msgid "No error message"
+#~ msgstr "Veateadet pole"
+
+#~ msgid "Failed to parse CMML file"
+#~ msgstr "Tõrge CMML-faili parsimisel"
+
+#~ msgid "Add the video to the playlist"
+#~ msgstr "Lisa video esitusnimekirja"
+
+#~ msgid "Unknown video"
+#~ msgstr "Tundmatu video"
+
+#~ msgid "No video URI"
+#~ msgstr "Video-URI'd pole"

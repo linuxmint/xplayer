@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26">
+<!ENTITY manrevision "3.0">
+<!ENTITY date "February 2009">
+<!ENTITY app "Totem Movie Player">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file.
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!--
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="fr">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo>
+    <title>Manuel du <application>lecteur vidéo Totem</application></title>
+    <copyright lang="en">
+      <year>2003</year>
+      <holder>Chee Bin HOH</holder>
+    </copyright>
+    <copyright lang="en">
+      <year>2009</year>
+      <holder>Philip Withnall</holder>
+    </copyright>
+    <releaseinfo revision="2.26" role="final">
+    	<ulink type="peerreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=574524"/>
+    </releaseinfo>
+
+    <abstract role="description">
+      <para>Le <application>Lecteur vidéo Totem</application> est un lecteur multimédia pour GNOME. Par défaut, il est basé sur GStreamer, mais il peut également exploiter le moteur « xine ». Il gère la plupart des codecs audio et vidéo, y compris les DVD parmi beaucoup d'autres. Parmi ses nombreuses fonctionnalités, on peut notamment mentionner la sortie TV, un mode plein écran et l'affichage de sous-titres.</para>
+    </abstract>
+
+    <publisher>
+      <publishername>Projet de documentation GNOME</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para lang="en">
+	  Permission is granted to copy, distribute and/or modify this
+	  document under the terms of the GNU Free Documentation
+	  License (GFDL), Version 1.1 or any later version published
+	  by the Free Software Foundation with no Invariant Sections,
+	  no Front-Cover Texts, and no Back-Cover Texts.  You can find
+	  a copy of the GFDL at this <ulink type="help" url="help:fdl">link</ulink> or in the file COPYING-DOCS
+	  distributed with this manual.
+         </para>
+         <para>Ce manuel fait partie de la collection de manuels GNOME distribués selon les termes de la licence de documentation libre GNU. Si vous souhaitez distribuer ce manuel indépendamment de la collection, vous devez joindre un exemplaire de la licence au document, comme indiqué dans la section 6 de celle-ci.</para>
+
+	<para>La plupart des noms utilisés par les entreprises pour distinguer leurs produits et services sont des marques déposées. Lorsque ces noms apparaissent dans la documentation GNOME et que les membres du projet de Documentation GNOME sont informés de l'existence de ces marques déposées, soit ces noms entiers, soit leur première lettre est en majuscule.</para>
+
+	<para lang="en">
+	  DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+	  UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+	  WITH THE FURTHER UNDERSTANDING THAT:
+
+	  <orderedlist>
+		<listitem>
+		  <para lang="en">DOCUMENT IS PROVIDED ON AN "AS IS" BASIS,
+                    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                    IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                    THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                    A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                    RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                    OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                    MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                    YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                    CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                    SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                    OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                    LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                    VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                    EXCEPT UNDER THIS DISCLAIMER; AND
+		  </para>
+		</listitem>
+		<listitem>
+		  <para lang="en">UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                       THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                       CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                       INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                       DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                       OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                       PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                       DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                       CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                       INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                       OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                       MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                       LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                       DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                       EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                       THE POSSIBILITY OF SUCH DAMAGES.
+		  </para>
+		</listitem>
+	  </orderedlist>
+	</para>
+  </legalnotice>
+
+
+    <!-- This file  contains link to license for the documentation (GNU FDL), and
+         other legal stuff such as "NO WARRANTY" statement. Please do not change
+	 any of this. -->
+
+    <authorgroup>
+      <author role="maintainer" lang="en">
+	<firstname>Chee Bin</firstname>
+	<surname>HOH</surname>
+	<affiliation>
+  	  <orgname>GNOME Documentation Project</orgname>
+	</affiliation>
+	<email>cbhoh@gnome.org</email>
+      </author>
+      <author lang="en">
+	<firstname>Baptiste</firstname>
+	<surname>Mille-Mathias</surname>
+	<affiliation>
+          <orgname>GNOME Documentation project</orgname>
+        </affiliation>
+        <contrib>Update documentation</contrib>
+        <email>baptiste.millemathias@gmail.org</email>
+      </author>
+       <author lang="en">
+	<firstname>Philip</firstname>
+	<surname>Withnall</surname>
+        <contrib>Update documentation</contrib>
+	<email>philip@tecnocode.co.uk</email>
+      </author>
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+	<firstname>Latin</firstname>
+	<surname>Translator 1</surname>
+	<affiliation>
+          <orgname>Latin Translation Team</orgname>
+  	  <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other -->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+	<date>August 2006</date>
+	<revdescription>
+	  <para role="author" lang="en">Chee Bin HOH
+	    <email>cbhoh@gnome.org</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+	<date>February 2009</date>
+	<revdescription>
+	  <para role="author" lang="en">Philip Withnall
+	    <email>philip@tecnocode.co.uk</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Ce manuel documente la version 2.26 du lecteur vidéo Totem.</releaseinfo>
+    <legalnotice>
+      <title>Votre avis</title>
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+        this manual, follow the directions in the
+        <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+      </para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index" lang="en">
+    <primary>Totem Movie Player</primary>
+  </indexterm>
+  <indexterm zone="index" lang="en">
+    <primary>totem</primary>
+  </indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="totem-introduction">
+    <title>Introduction</title>
+    <para>L'application <application>Totem</application> est un lecteur vidéo pour GNOME basé sur la structure GStreamer et la bibliothèque xine. Il permet de lire des vidéos ou de la musique.</para>
+    <para><application>Totem</application> possède les fonctionnalités suivantes :</para>
+    <itemizedlist>
+      <listitem>
+	<para>prise en charge de nombreux fichiers audio et vidéo ;</para>
+      </listitem>
+      <listitem>
+	<para>de nombreux niveaux de zoom et de rapports d'affichage, ainsi qu'un mode plein écran ;</para>
+      </listitem>
+      <listitem>
+        <para>contrôle du volume et de la lecture ;</para>
+      </listitem>
+      <listitem>
+        <para>une liste de lecture ;</para>
+      </listitem>
+      <listitem>
+        <para>prise en charge des sous-titres ;</para>
+      </listitem>
+      <listitem>
+	<para>une navigation complète au clavier ;</para>
+      </listitem>
+      <listitem>
+	<para>un large choix de greffons, incluant un programme de téléchargement de sous-titres, un navigateur YouTube et un graveur de disque.</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <para><application>Totem</application> possède également d'autres fonctionnalités comme :</para>
+      <itemizedlist>
+	<listitem>
+	  <para>un générateur de vignettes vidéo pour GNOME ;</para>
+        </listitem>
+        <listitem>
+	  <para>un programme d'aperçu audio pour GNOME ;</para>
+        </listitem>
+	<listitem>
+	  <para>un onglet de propriétés pour Nautilus.</para>
+        </listitem>
+      </itemizedlist>
+    </note>
+  </sect1>
+<!-- =========== End of Introduction ========================= -->
+
+<!-- =========== Getting Started ============================= -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here.
+     If the information about how to get started is very short, you can
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="totem-getting-started">
+    <title>Premiers pas</title>
+
+    <sect2 id="totem-start">
+      <title>Lancement du <application>lecteur vidéo Totem</application></title>
+      <para>Vous pouvez démarrer <application>Totem</application> avec l'une des méthodes suivantes :</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Menu <guimenu>Applications</guimenu></term>
+	  <listitem>
+	    <para lang="en">Choose
+              <menuchoice>
+		<guisubmenu>Sound &amp; Video</guisubmenu>
+		<guimenuitem>Movie Player</guimenuitem>
+	      </menuchoice>.
+            </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Ligne de commande</term>
+	  <listitem>
+	    <para>Pour démarrer <application>Totem</application> en ligne de commande, saisissez la commande suivante, puis appuyez sur <keycap>Entrée</keycap> :</para>
+	    <para lang="en">
+            <command>totem</command>
+            </para>
+	    <tip>
+	      <para>Saisissez <command>totem --help</command>, puis appuyez sur <keycap>Entrée</keycap> pour voir les autres options de ligne de commande disponibles.</para>
+	    </tip>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-when-start">
+      <title>Démarrage du <application>lecteur vidéo Totem</application></title>
+      <para>Lorsque vous lancez <application>Totem</application>, la fenêtre suivante s'ouvre.</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="totem-start-fig">
+	<title>Fenêtre de démarrage du <application>lecteur vidéo Totem</application></title>
+	<screenshot>
+	  <mediaobject lang="en">
+	    <imageobject>
+	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Shows <application>Totem Movie Player</application> main window with
+		  sidebar opened on playlist. Contains
+		  menubar, display area, sidebar, elapsed time slider, seek control
+		  buttons, volume slider and statusbar.
+          </phrase>
+	    </textobject>
+	  </mediaobject>
+	</screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+      <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+      <para>La fenêtre du <application>lecteur vidéo Totem</application> contient les éléments suivants :</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Barre de menus.</term>
+  	  <listitem>
+	    <para>Les menus de la barre de menus contiennent toutes les commandes dont vous avez besoin dans <application>Totem</application>.</para>
+ 	  </listitem>
+   	</varlistentry>
+	<varlistentry>
+	  <term>Zone d'affichage.</term>
+	  <listitem>
+	    <para>La zone d'affichage affiche le film, ou un effet visuel à la lecture d'une musique.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Panneau latéral.</term>
+	  <listitem>
+	    <para>Le panneau latéral affiche les propriétés du fichier en cours de lecture et agit comme liste de lecture. Il peut également être exploité par différents greffons, comme MythTV, YouTube et la recherche de vidéos. Ceux-ci peuvent être choisis en cliquant sur la liste déroulante au sommet du panneau latéral.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Curseur de progression.</term>
+	  <listitem>
+	    <para>Le curseur de progression affiche le temps écoulé depuis la lecture du film ou de la musique. Il permet également de se déplacer en avant ou en arrière dans un film ou une musique en faisant glisser la poignée du curseur le long de la barre ou en cliquant en un point de la barre.</para>
+	  </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Boutons de contrôle de lecture.</term>
+          <listitem>
+            <para>Les boutons de contrôle de lecture permettent de passer à la piste suivante ou à la piste précédente, et de mettre en pause ou en lecture un film ou une musique.</para>
+	  </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Bouton de volume.</term>
+          <listitem>
+	    <para>Le bouton de volume permet de régler le volume.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Barre d'état.</term>
+	  <listitem>
+	    <para>La barre d'état affiche des informations concernant le film ou la musique jouée.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+<!-- =========== End of Getting Started ====================== -->
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to use the application to perform the tasks for
+  which the application is designed. -->
+  <sect1 id="totem-usage">
+    <title>Utilisation</title>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="totem-open-file">
+      <title>Ouverture d'un fichier</title>
+      <para lang="en">To open a video or an audio file, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut>
+          <guimenu>Movie</guimenu>
+	  <guisubmenu>Open</guisubmenu>
+        </menuchoice>.
+        The <application>Select Movies or Playlists</application> dialog is displayed.
+		Select the file or files you want to open, then click
+	<guibutton>OK</guibutton>.
+      </para>
+      <para>Vous pouvez faire glisser sur la fenêtre de <application>Totem</application> un fichier à ouvrir venant d'une autre application, comme le gestionnaire de fichiers. Si vous déposez le fichier sur la zone d'affichage, le fichier remplace la liste de lecture actuelle et sa lecture démarre automatiquement. Si vous déposez le fichier sur la liste de lecture du panneau latéral, le fichier est ajouté à la liste de lecture actuelle. L'application <application>Totem</application> ouvre alors le fichier et le lit. <application>Totem</application> affiche le titre du film ou de la musique dans la barre de titre de la fenêtre et dans la liste de lecture du panneau latéral.</para>
+      <para>Si vous tentez d'ouvrir un fichier dont le format n'est pas reconnu par <application>Totem</application>, l'application affiche un message d'erreur. La plupart du temps, cette erreur apparaît parce que vous ne possédez pas les codecs nécessaires. Pour savoir comment obtenir et installer des codecs, visitez le <ulink url="http://projects.gnome.org/totem/#codecs" type="http">site Web de <application>Totem</application></ulink> (en anglais).</para>
+      <tip>
+	<para>Vous pouvez double-cliquer sur un fichier audio ou vidéo dans le gestionnaire de fichier <application>Nautilus</application> pour l'ouvrir dans <application>Totem</application>.</para>
+      </tip>
+    </sect2>
+
+    <sect2 id="totem-usage-open-location">
+      <title>Ouverture d'un emplacement</title>
+      <para lang="en">To open a file by URI (location), choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Open Location</guimenuitem>
+        </menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down
+        combination box to specify the URI you would like to open (it lists URIs which have
+        previously been opened) – or type one in directly – then click on the <guibutton>Open</guibutton> button.
+      </para>
+      <para>Si un URI se trouve déjà dans le presse-papiers, il apparaît automatiquement dans la liste déroulante.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-play">
+      <title>Lecture d'un film (DVD ou VCD)</title>
+	      <para lang="en">Insert the disc in the optical device of your computer, then choose
+          	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
+              </menuchoice>.</para>
+             <para lang="en">To eject a DVD or VCD, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Eject</guimenuitem>
+        </menuchoice>.
+      </para>
+       </sect2>
+
+    <sect2 id="totem-usage-pause">
+      <title>Mise en pause d'un film ou d'une musique</title>
+      <para lang="en">To pause a movie or song that is playing, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows pause button.</phrase></textobject>
+        </inlinemediaobject> button, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie.
+      </para>
+      <para lang="en">To resume playing a movie or song, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows play button.</phrase></textobject>
+        </inlinemediaobject> button again, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>.
+      </para>
+    </sect2>
+
+    <sect2 id="totem-usage-view-properties">
+      <title>Affichage des propriétés d'un film ou d'une musique</title>
+      <para lang="en">To view the properties of a movie or song, choose
+        <menuchoice>
+	  <guimenu>View</guimenu>
+	  <guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar
+	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-seek">
+      <title>Navigation dans les films et les musiques</title>
+      <para>Pour naviguer dans des films ou des musiques, les méthodes suivantes sont disponibles :</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Avance rapide</term>
+	  <listitem>
+	    <para lang="en">To skip forward through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Right</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Forward</guimenuitem>
+              </menuchoice>.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Retour rapide</term>
+	  <listitem>
+	    <para lang="en">To skip backwards through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Left</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Backwards</guimenuitem>
+              </menuchoice>.
+             </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Sauter vers un instant précis</term>
+	  <listitem>
+	    <para lang="en">To skip to a specific elapsed time in the movie or song, choose
+              <menuchoice>
+		<shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip to</guimenuitem>
+              </menuchoice>. The <application>Skip to</application> dialog is displayed. Use the
+              spin box to specify the elapsed time (in seconds) to skip to, then
+              click <guibutton>OK</guibutton>.
+            </para>
+            <para>La zone de sélection numérique permet également d'utiliser un langage plus naturel. Vous pouvez saisir un instant précis à atteindre sous le format « hh:mm:ss », « mm:ss » ou « ss » où « hh » désigne les heures, « mm » les minutes et « ss » les secondes.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Film ou musique suivant</term>
+	  <listitem>
+	    <para lang="en">To move to the next movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Next Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek next button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Film ou musique précédent</term>
+	  <listitem>
+	    <para lang="en">To move to the previous movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Previous Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-usage-change-zoom">
+      <title>Changement du facteur de zoom</title>
+	  <sect3 id="totem-usage-change-size">
+		<title>Changement de la taille de la vidéo</title>
+      <para>Pour changer le facteur de zoom de la zone d'affichage, les méthodes suivantes sont disponibles :</para>
+      <itemizedlist>
+	<listitem>
+	  <para lang="en">To zoom to fullscreen mode, choose
+	  <menuchoice><shortcut><keycap>F11</keycap></shortcut>
+	  <guimenu>View</guimenu><guimenuitem>Fullscreen</guimenuitem></menuchoice>. You can also
+	  use the <keycap>F</keycap> key to toggle fullscreen mode.
+	  To exit fullscreen mode, click on the
+			<guibutton>Leave Fullscreen</guibutton> button or press
+			<keycap>Esc</keycap>, <keycap>F11</keycap> or <keycap>F</keycap>.
+          </para>
+    </listitem>
+	<listitem>
+	  <para lang="en">To change the size of the original movie or visualization,
+            choose
+            <menuchoice>
+	      <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut>
+	      <guimenu>View</guimenu><guimenuitem>Fit Window to Movie</guimenuitem>
+            </menuchoice> and choose a scale ratio.
+      </para>
+    </listitem>
+	</itemizedlist>
+	</sect3>
+	 <sect3 id="totem-usage-change-ratio">
+		<title>Changement du rapport d'affichage vidéo</title>
+	      <para lang="en">To switch between different aspect ratios, choose
+            <menuchoice>
+	      <shortcut><keycap>A</keycap></shortcut>
+	      <guimenu>View</guimenu>
+	      <guisubmenu>Aspect Ratio</guisubmenu>
+            </menuchoice>.</para>
+	  </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-adjust-volume">
+      <title>Réglage du volume</title>
+      <para lang="en">To increase the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Up</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Up</guimenuitem>
+        </menuchoice>.
+        To decrease the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Down</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Down</guimenuitem>
+        </menuchoice>.
+      </para>
+      <para>Vous pouvez également utiliser le bouton du volume : cliquez sur le bouton du volume et réglez le volume à l'aide du curseur.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-on-top">
+      <title>Affichage de la fenêtre toujours au-dessus des autres</title>
+      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+        choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Plugins</guimenuitem>
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        top of all other windows while a movie is playing, but not while audio or visualizations are playing.
+       </para>
+       <para>Pour que la fenêtre de Totem ne reste plus toujours au-dessus des autres, désactivez le greffon <guilabel>Toujours au-dessus</guilabel>. Voir <xref linkend="totem-plugins-always-on-top"/> pour plus d'informations.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-show-control">
+      <title>Afficher et masquer les contrôles</title>
+      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+          <guimenu>View</guimenu>
+          <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice>, or press the <keycap>H</keycap> key.
+        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+	  <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice> from the popup menu.
+      </para>
+      <para>Si l'option <guilabel>Afficher les contrôles</guilabel> est cochée, <application>Totem</application> affiche sur sa fenêtre la barre de menu, le curseur de progression, les boutons de contrôle de lecture, le contrôleur de volume et la barre d'état. Si l'option <guilabel>Afficher les contrôles</guilabel> est décochée, l'application masque ces éléments et ne montre que la zone d'affichage.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-playlist">
+      <title>Gestion de la liste de lecture</title>
+
+      <sect3 id="totem-usage-playlist-show-hide">
+	<title>Afficher et masquer la liste de lecture</title>
+	<para lang="en">To show or hide the playlist, choose
+          <menuchoice>
+	    <guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem>
+          </menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and
+		  choose <guimenu>Playlist</guimenu> on the top of
+		  the sidebar.</para>
+      </sect3>
+
+      <sect3 id="totem-usage-playlist-manage">
+	<title>Gestion de la liste de lecture</title>
+	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en">To add a track or movie</term>
+	      <listitem>
+		<para lang="en">To add a track or movie to the playlist, click on the <guibutton>Add</guibutton>
+                  button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you
+                  want to add to the playlist, then click <guibutton>Add</guibutton>.
+                </para>
+              </listitem>
+            </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To remove a track or movie</term>
+	      <listitem>
+		<para lang="en">To remove a track or movie from the playlist, select the item or items to remove from the
+                  playlist, then click on the <guibutton>Remove</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To save the playlist to a file</term>
+	      <listitem>
+		<para lang="en">To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton>
+                  button. The <application>Save Playlist</application> dialog is displayed; specify
+                  the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie up the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie up the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Up</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie down the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie down the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Down</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+          </variablelist>
+        </para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-repeat">
+	<title>Lecture en boucle</title>
+	<para>Pour activer ou désactiver la lecture en boucle, choisissez <menuchoice><guimenu>Édition</guimenu><guimenuitem>Lecture en boucle</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-shuffle">
+	<title>Lecture aléatoire</title>
+	<para>Pour activer ou désactiver la lecture aléatoire, choisissez <menuchoice><guimenu>Édition</guimenu><guimenuitem>Lecture aléatoire</guimenuitem></menuchoice>.</para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-subtitle">
+	  <title>Choix des sous-titres</title>
+	  <para>Pour choisir la langue des sous-titres, choisissez <menuchoice><guimenu>Affichage</guimenu><guisubmenu>Sous-titres</guisubmenu></menuchoice> et sélectionnez la langue à afficher.</para>
+	  <para>Pour désactiver l'affichage des sous-titres, choisissez <menuchoice><guimenu>Affichage</guimenu><guisubmenu>Sous-titres</guisubmenu><guimenuitem>Aucun</guimenuitem></menuchoice>.</para>
+	  <note><para>Par défaut, le <application>lecteur vidéo Totem</application> choisit la même langue de sous-titre que celle de votre ordinateur.</para></note>
+	  <para><application>Totem</application> charge et affiche automatiquement les sous-titres d'une vidéo si le fichier qui les contient possède le même nom que le fichier vidéo en cours de lecture, et que son extension est <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> ou <filename class="extension">ass</filename>.</para>
+	  <para>Si le fichier contenant les sous-titres possède un nom différent de la vidéo en cours de lecture, vous pouvez faire un clic droit sur la vidéo dans la liste de lecture et choisir <menuchoice><guimenuitem>Sélection des sous-titres</guimenuitem></menuchoice> dans le menu pour charger le fichier de sous-titres correct. Vous pouvez également choisir les sous-titres en choisissant <menuchoice><guimenu>Affichage</guimenu><guimenuitem>Sélection des sous-titres</guimenuitem></menuchoice>.</para>
+	  <para>Avec le greffon <guilabel>Téléchargement de sous-titres</guilabel>, vous pouvez aussi télécharger des sous-titres via le service OpenSubtitles. Voir <xref linkend="totem-plugins-opensubtitles"/> pour plus d'informations.</para>
+	</sect2>
+
+    <sect2 id="totem-usage-take-screenshot">
+      <title>Capture d'une image</title>
+      <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Take Screenshot</guimenuitem>
+        </menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para><application>Totem</application> affiche un aperçu de la capture d'écran en cours d'enregistrement sur le côté gauche de la boîte de dialogue d'enregistrement.</para></tip>
+    </sect2>
+
+    <sect2 id="totem-usage-create-screenshot-gallery">
+      <title>Pour créer une galerie de captures d'écran</title>
+      <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Create Screenshot Gallery</guimenuitem>
+        </menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para>Vous pouvez définir la largeur de chaque capture d'écran de la galerie en utilisant la rubrique <guilabel>Largeur de la capture d'écran</guilabel>. La largeur par défaut est de 128 pixels.</para>
+      <para>Vous pouvez également indiquer le nombre de captures d'écran à mettre dans la galerie. Par défaut, il est calculé d'après la longueur du film ; cependant, il est possible de le modifier en décochant la case <guilabel>Calculer le nombre de captures d'écran</guilabel> et en saisissant le nouveau nombre dans la zone de sélection numérique <guilabel>Nombre de captures d'écran</guilabel>.</para></tip>
+    </sect2>
+  </sect1>
+
+<!-- =========== Plugins ======================================= -->
+  <sect1 id="totem-plugins">
+    <title>Greffons</title>
+    <para>Plusieurs fonctionnalités du <application>lecteur vidéo Totem</application> se trouvent sous la forme de greffons, qui sont des bouts de logiciels qui ne sont chargés que lorsqu'ils sont nécessaires.</para>
+    <sect2 id="totem-plugins-load">
+      <title>Activation d'un greffon</title>
+      <para>Pour voir la liste des greffons installés, choisissez <menuchoice><guimenu>Édition</guimenu><guimenuitem>Greffons</guimenuitem></menuchoice>. La boîte de dialogue <application>Configuration des greffons</application> apparaît. La gauche de la fenêtre présente tous les greffons installés, alors que sur la droite vous pouvez lire la description du greffon actuellement sélectionné. Pour les greffons qui ont des options configurables, le bouton <guibutton>Configurer</guibutton> devient actif.</para>
+      <para>Pour activer un greffon, cochez simplement la case à gauche de son nom dans la liste des greffons, et le greffon est immédiatement chargé. Dans le cas où le chargement du greffon produit une erreur, une boîte de dialogue apparaît immédiatement.</para>
+      <para>Pour désactiver un greffon, décochez la case correspondante. L'activation ou la désactivation des greffons est conservée même après la fermeture du <application>lecteur vidéo Totem</application>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-always-on-top">
+      <title>Toujours au-dessus</title>
+      <para>Lorsqu'il est activé, le greffon <guilabel>Toujours au-dessus</guilabel> force la fenêtre principale de <application>Totem</application> à toujours rester au-dessus de toutes les autres fenêtres lorsque vous regardez un film, mais pas lorsqu'il n'y a que du son ou une animation visuelle. Pour éviter que la fenêtre ne reste toujours au premier plan, désactivez le greffon.</para>
+    </sect2>
+    <sect2 id="totem-plugins-coherence">
+      <title>Client DLNA/UPnP Coherence</title>
+      <para>Le greffon <guilabel>Coherence DLNA/UPnP Client</guilabel> permet au <application>lecteur vidéo Totem</application> de lire du contenu multimédia à partir de serveurs média UPnP (tels que les serveurs Coherence) sur le réseau local.</para>
+      <para>Avec le greffon <guilabel>Client DLNA/UPnP Coherence</guilabel> activé, choisissez <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Affichage</guimenu><guimenuitem>Panneau latéral</guimenuitem></menuchoice> ou cliquez sur le bouton <guibutton>Panneau latéral</guibutton> pour afficher celui-ci. Puis, choisissez <guilabel>Client DLNA/UPnP Coherence</guilabel> dans la liste déroulante au sommet du panneau latéral afin d'afficher le panneau latéral de ce greffon.</para>
+      <para>L'arborescence du panneau latéral affiche la liste des serveurs médias disponibles. En cliquant sur un serveur, la liste s'enrichit des types de médias que ce serveur peut produire, et un clic sur un dossier média présente la liste des fichiers médias disponibles. Un double-clic sur un fichier média ajoute celui-ci dans la liste de lecture de <application>Totem</application> et le lance. Vous pouvez également cliquer avec le bouton droit sur un fichier et choisir <menuchoice><guimenuitem>Lecture</guimenuitem></menuchoice> ou <menuchoice><guimenuitem>Mettre en attente</guimenuitem></menuchoice> pour respectivement lire le fichier tout de suite ou l'ajouter dans la liste de lecture.</para>
+      <para>Si le serveur média le permet, vous pouvez choisir <menuchoice><guimenuitem>Supprimer</guimenuitem></menuchoice> dans le menu contextuel du clic droit sur un fichier pour supprimer ce fichier du serveur média.</para>
+    </sect2>
+    <sect2 id="totem-plugins-gromit">
+      <title>Annotations Gromit</title>
+      <para>Le greffon <guilabel>Annotations Gromit</guilabel> vous permet de dessiner par-dessus des films en cours de visionnement en utilisant <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. <application>Gromit</application> doit être installé avant de pouvoir activer ce greffon. Consultez la documentation de votre système pour en savoir plus sur la manière de procéder.</para>
+      <para>Lorsque le greffon est activé, appuyez sur <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> pour activer ou désactiver <application>Gromit</application>. Quand <application>Gromit</application> est activé, le pointeur prend une forme de croix. Pour dessiner sur l'écran, maintenez enfoncé le bouton de la souris et faites glisser le pointeur, avant de relâcher le bouton. Appuyez de nouveau sur <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> pour désactiver <application>Gromit</application>.</para>
+      <para>Pour effacer les annotations à l'écran, appuyez sur <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> ou fermez le <application>lecteur vidéo Totem</application>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-jamendo">
+      <title>Jamendo</title>
+      <para>Le greffon <guilabel>Jamendo</guilabel> vous permet d'écouter la collection de musique sous licence Creative Commons que l'on peut trouver sur le service <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>.</para>
+      <sect3 id="totem-plugins-jamendo-configuration">
+        <title>Configuration du greffon</title>
+        <para>Le greffon <guilabel>Jamendo</guilabel> peut être configuré. Cliquez sur le bouton <guibutton>Configurer</guibutton> après avoir activé le greffon et la boîte de dialogue <application>Configuration du greffon Jamendo</application> apparaît. Vous pouvez alors choisir le format de téléchargement des morceaux (Ogg ou MP3, Ogg étant le format préféré du fait de sa nature libre) ou le nombre d'albums à récupérer lors d'une recherche (choisissez plus d'albums si votre connexion Internet est performante).</para>
+        <para>Cliquez sur <guibutton>Valider</guibutton> après avoir terminé la configuration.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-setup">
+        <title>Affichage du panneau latéral de Jamendo</title>
+        <para>Avec le greffon <guilabel>Jamendo</guilabel> activé, choisissez <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Affichage</guimenu><guimenuitem>Panneau latéral</guimenuitem></menuchoice> ou cliquez sur le bouton <guibutton>Panneau latéral</guibutton> pour afficher celui-ci. Puis, choisissez <guilabel>Jamendo</guilabel> dans la liste déroulante au sommet du panneau latéral pour afficher le panneau latéral correspondant à <guilabel>Jamendo</guilabel>.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-search">
+        <title>Recherche de musique</title>
+        <para>Saisissez vos termes de recherche dans la zone de saisie au sommet du panneau latéral <guilabel>Jamendo</guilabel>. Vous pouvez rechercher par artiste ou par étiquette. Cliquez sur le bouton de recherche pour démarrer la recherche.</para>
+        <para>Les résultats de la recherche s'affichent dans l'arborescence du panneau latéral sous l'onglet <guilabel>Résultats de la recherche</guilabel>. Il est possible de les parcourir à l'aide des boutons flèches au bas du panneau. La liste contient les albums et quand vous cliquez sur un album, la liste des pistes de l'album s'affiche. Cliquez une seconde fois pour faire disparaître les pistes de l'album.</para>
+        <para>Lorsqu'un artiste est sélectionné, vous pouvez cliquer sur le bouton <guibutton>Page d'album Jamendo</guibutton> pour ouvrir la page de cet album sur le site Web de Jamendo. En double-cliquant sur l'album ou en choisissant <menuchoice><guimenuitem>Ajouter à la liste de lecture</guimenuitem></menuchoice> dans le menu contextuel de l'album, le contenu de votre liste de lecture sera remplacé par toutes les pistes de cet album et le premier morceau va démarrer à partir du site Web de Jamendo. En double-cliquant sur une seule piste, la liste de lecture sera remplacée par cette piste uniquement.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-popular">
+        <title>Albums populaires et dernières versions</title>
+        <para>L'onglet <guilabel>Populaire</guilabel> du panneau latéral <guilabel>Jamendo</guilabel> charge une liste les albums les plus populaires du moment sur Jamendo, et ils peuvent être lus comme pour les résultats d'une recherche. Sur le même principe, l'onglet <guilabel>Dernières versions</guilabel> charge une liste des albums les plus récents sur Jamendo.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-tracker">
+      <title>Recherche locale</title>
+      <para>Le greffon <guilabel>Recherche locale</guilabel> vous permet de rechercher des films et des fichiers audio sur votre ordinateur depuis le <application>lecteur vidéo Totem</application>. Avec le greffon activé, choisissez <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Affichage</guimenu><guimenuitem>Panneau latéral</guimenuitem></menuchoice> ou cliquez sur le bouton <guibutton>Panneau latéral</guibutton> pour afficher celui-ci. Puis, choisissez <guilabel>Recherche locale</guilabel> dans la liste déroulante au sommet du panneau latéral pour afficher le panneau latéral correspondant à <guilabel>Recherche locale</guilabel>.</para>
+      <para>Pour effectuer une recherche, saisissez les termes de recherche dans la zone de saisie au sommet du panneau latéral et cliquez sur <guibutton>Rechercher</guibutton>. La recherche peut contenir des caractères génériques tels que <literal>*</literal> qui correspond à n'importe quel caractère. Par exemple, <userinput>*.mpg</userinput> recherche tous les films dont le nom de fichier possède l'extension <filename class="extension">.mpg</filename>.</para>
+      <para>Les résultats de recherche peuvent être parcourus avec les boutons <guibutton>Suivant</guibutton> et <guibutton>Précédent</guibutton> au bas du panneau latéral et il est possible de sauter à une page spécifique des résultats en saisissant son numéro dans la zone de sélection numérique.</para>
+    </sect2>
+    <sect2 id="totem-plugins-publish">
+      <title>Publier la liste de lecture</title>
+      <para>Le greffon <guilabel>Publier la liste de lecture</guilabel> permet de publier les listes de lecture sur le réseau local et permet ainsi à d'autres ordinateurs d'y accéder et de les lire.</para>
+      <sect3 id="totem-plugins-publish-configuration">
+        <title>Configuration du greffon</title>
+        <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
+          plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
+          strings will be replaced when playlists are published:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en"><literal>%a</literal></term>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%h</literal></term>
+	      <listitem><para lang="en">Replaced with your computer's host name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%u</literal></term>
+	      <listitem><para lang="en">Replaced with your username.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%U</literal></term>
+	      <listitem><para lang="en">Replaced with your real name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%%</literal></term>
+	      <listitem><para lang="en">Replaced with a literal percent sign.</para></listitem>
+	    </varlistentry>
+	  </variablelist>
+	</para>
+	<para>Vous pouvez également cocher la case <guilabel>Utiliser un protocole de transfert chiffré</guilabel> si vous souhaitez que les listes de lecture partagées soient chiffrées lorsqu'elles sont transmises sur le réseau.</para>
+        <para>Cliquez sur <guibutton>Fermer</guibutton> après avoir terminé la configuration.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-publishing">
+        <title>Publication de listes de lecture</title>
+        <para>Quand le greffon est activé, vous n'avez pas besoin de publier explicitement les listes de lecture ; elles sont automatiquement mises à disposition sur le réseau comme site Web Zeroconf.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-neighborhood">
+        <title>Navigation dans le voisinage réseau</title>
+        <para>Pour voir les listes de lecture partagées des autres personnes de votre réseau, choisissez <guilabel>Voisins</guilabel> dans la liste déroulante au sommet du panneau latéral. S'il existe des listes de lecture publiées sur le réseau, elles apparaissent à cet endroit. Double-cliquez sur une liste de lecture pour la charger et la lire sur votre ordinateur.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-opensubtitles">
+      <title>Téléchargement de sous-titres</title>
+      <para>Le greffon <guilabel>Téléchargement de sous-titres</guilabel> vous permet de chercher ou de télécharger des sous-titres via le service <ulink type="http" url="http://www.opensubtitles.org/fr">OpenSubtitles</ulink>.</para>
+      <para>Les sous-titres ne peuvent être téléchargés que pour des films stockés localement ; pas pour des fichiers audio, des DVD, des flux DVB, des VCD ou des flux HTTP. Pour rechercher des sous-titres pour le film en cours de visionnement, choisissez <menuchoice><guimenu>Affichage</guimenu><guimenuitem>Télécharger les sous-titres du film</guimenuitem></menuchoice>, ce qui provoque l'affichage de la boîte de dialogue de téléchargement des sous-titres.</para>
+      <para>Choisissez dans la liste déroulante au sommet du panneau latéral la langue dans laquelle vous souhaitez obtenir les sous-titres, puis cliquez sur le bouton <guibutton>Rechercher</guibutton> pour lancer la recherche de sous-titres pour le film actuel. La recherche s'effectue sur la base du contenu du film et non pas sur le nom de fichier ou les étiquettes.</para>
+      <para>Les résultats de recherche apparaissent au centre de la boîte de dialogue. Actuellement, les sous-titres ne peuvent être affichés avec un film qu'en <emphasis>rechargeant</emphasis> le film avec les sous-titres. Après avoir sélectionné le fichier de sous-titres à télécharger, cliquez sur le bouton <guibutton>Lire avec les sous-titres</guibutton> pour télécharger les sous-titres et recharger le film.</para>
+        <note><para>Les fichiers de sous-titrage téléchargés sont enregistrés dans un endroit temporaire (dans <filename>~/.cache/totem/subtitles</filename>, par défaut) afin qu'ils ne soient pas téléchargés à nouveau lorsque vous regardez le film une nouvelle fois. Si vous téléchargez de nouveaux sous-titres pour un film, tout fichier de sous-titres précédemment téléchargé pour ce film sera supprimé.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-thumbnail">
+      <title>Vignette</title>
+      <para>Le greffon <guilabel>Vignette</guilabel> transforme l'icône de la fenêtre principale du <application>lecteur vidéo Totem</application> en une vignette du film en cours de visionnement et il met à jour l'icône quand de nouveaux films sont lancés.</para>
+      <note><para>S'il n'existe pas de vignette pour le film actuel (ou si vous lisez un fichier audio), l'icône de la fenêtre principale est rétablie avec le logo de <application>Totem</application>.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-brasero">
+      <title>Enregistreur de disque vidéo</title>
+      <para>Le greffon <guilabel>Enregistreur de disque vidéo</guilabel> vous permet de graver la liste de lecture actuelle sur un DVD ou un VCD en utilisant <application>Brasero</application>.</para>
+      <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
+        A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
+        information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-youtube">
+      <title>Navigateur YouTube</title>
+      <para>Le greffon <guilabel>Navigateur YouTube</guilabel> vous permet de rechercher et de naviguer dans <ulink type="http" url="http://www.youtube.com/">YouTube</ulink> et de lire des vidéos YouTube directement dans le <application>lecteur de vidéo Totem</application>. Avec le greffon activé, choisissez <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Affichage</guimenu><guimenuitem>Panneau latéral</guimenuitem></menuchoice> ou cliquez sur le bouton <guibutton>Panneau latéral</guibutton> pour afficher celui-ci. Puis, choisissez <guilabel>YouTube</guilabel> dans la liste déroulante au sommet du panneau latéral pour afficher le panneau latéral correspondant à <guilabel>YouTube</guilabel>.</para>
+      <para>Pour rechercher une vidéo YouTube, saisissez des termes de recherche dans la zone de saisie au sommet du panneau latéral, puis cliquez sur <guibutton>Rechercher</guibutton>. Les résultats de recherche apparaissent dans l'arborescence qui se trouve au-dessous. Au fur et à mesure que vous descendez dans la liste des résultats, des résultats supplémentaires sont automatiquement chargés.</para>
+      <para>Pour lire une vidéo, double-cliquez sur son nom dans la liste des résultats ou choisissez <menuchoice><guimenuitem>Ajouter à la liste de lecture</guimenuitem></menuchoice> dans le menu contextuel qui apparaît en cliquant dessus avec le bouton droit. Lorsqu'une vidéo est en cours de lecture, une liste de vidéos similaires est automatiquement chargée dans l'onglet <guilabel>Vidéos associées</guilabel> du panneau latéral <guilabel>YouTube</guilabel>.</para>
+      <para>Les vidéos YouTube peuvent être ouvertes dans un navigateur Web en choisissant <menuchoice><guimenuitem>Ouvrir dans le navigateur Web</guimenuitem></menuchoice> dans leur menu contextuel. La vidéo s'ouvre alors à son emplacement d'origine sur le site Web YouTube.</para>
+    </sect2>
+    <sect2 id="totem-plugins-dbus-service">
+      <title>Service D-Bus</title>
+      <para>Le greffon <guilabel>Service D-Bus</guilabel> diffuse des notifications sur le bus de session D-Bus au sujet des pistes en cours de lecture dans le <application>lecteur vidéo Totem</application>. Des applications comme <application>Gajim</application> sont capables de capter ces notifications et d'y répondre intelligemment, par exemple en mettant à jour votre message d'état de messagerie instantanée pour qu'il affiche la vidéo que vous regardez actuellement dans le <application>lecteur vidéo Totem</application>.</para>
+    </sect2>
+  </sect1>
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to customize the
+     application. -->
+  <sect1 id="totem-prefs">
+    <title>Préférences</title>
+    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+	<guimenuitem>Preferences</guimenuitem>
+      </menuchoice>.</para>
+
+    <sect2 id="totem-prefs-general">
+      <title>Général</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Réseau</term>
+	  <listitem>
+	    <para>Sélectionnez la vitesse de votre connexion réseau à partir de la liste déroulante <guilabel>Vitesse de la connexion</guilabel>.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Sous-titres</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	      	<para><guilabel>Charger automatiquement les fichiers de sous-titres</guilabel> : cochez cette option pour charger automatiquement un fichier de sous-titres possédant le même nom de fichier que le film (si existant), au moment du lancement du film.</para>
+	      </listitem>
+	      <listitem>
+                <para><guilabel>Police</guilabel> : cliquez sur le bouton pour modifier la police d'affichage des sous-titres.</para>
+              </listitem>
+	          <listitem>
+				<para><guilabel>Codage</guilabel> : sélectionnez le codage utilisé pour afficher les sous-titres.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-display">
+      <title>Affichage</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Affichage</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	        <para>Cochez l'option <guilabel>Redimensionner</guilabel> si vous voulez que <application>Totem</application> redimensionne automatiquement la fenêtre à la taille de la vidéo quand une nouvelle vidéo est chargée.</para>
+              </listitem>
+              <listitem>
+                <para>Choisissez l'option Économiseur d'écran si vous voulez autoriser le lancement de l'économiseur d'écran pendant la lecture de fichiers audio. Il se peut que certains écrans avec haut-parleurs intégrés arrêtent de lire la musique lorsque l'économiseur d'écran se lance.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Effets visuels</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+                <para><guilabel>Afficher des effets visuels lorsqu'un fichier son est lu</guilabel> : cochez cette option pour obtenir des effets visuels lors de la lecture d'un fichier audio.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Type de visualisation</guilabel> : choisissez dans la liste déroulante le type de visualisation désiré.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Taille de visualisation</guilabel> : choisissez dans la liste déroulante la taille de visualisation.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Balance des couleurs</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		    <para><guilabel>Luminosité</guilabel> : utilisez le curseur pour régler la luminosité.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Contraste</guilabel> : utilisez le curseur pour régler le contraste.</para>
+          </listitem>
+	      <listitem>
+		    <para><guilabel>Saturation</guilabel> : utilisez le curseur pour régler la saturation.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Teinte</guilabel> : utilisez le curseur pour régler la teinte.</para>
+          </listitem>
+	    </itemizedlist>
+	    <tip><para>Vous pouvez utiliser le bouton <guilabel>Rétablir les valeurs par défaut</guilabel> pour remettre les contrôles de la balance des couleurs à leur position par défaut.</para></tip>
+      </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-audio">
+      <title>Audio</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Sortie audio</term>
+	  <listitem>
+	    <para>Choisissez le type de sortie audio à partir de la liste déroulante <guilabel>Type de sortie audio</guilabel>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default.
+     You can use it to describe known bugs and limitations of the
+	  program if there are any - please be frank and list all
+     problems you know of.
+
+  <sect1 id="mayapp-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="totem-about">
+    <title>À propos de <application>Totem</application></title>
+    <para><application>Totem</application> est écrit par Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) pour le backend GStreamer, et Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Pour plus d'informations sur <application>Totem</application>, visitez <ulink url="http://projects.gnome.org/totem/" type="http">le site Web de <application>Totem</application></ulink>.</para>
+    <para lang="en">
+      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      this manual, follow the directions in the
+      <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+    </para>
+    <para lang="en"> This program is distributed under the terms of the GNU
+      General Public license as published by the Free Software
+      Foundation; either version 2 of the License, or (at your option)
+      any later version. A copy of this license can be found at this
+      <ulink url="help:gpl" type="help">link</ulink>, or in the file
+      COPYING included with the source code of this program. </para>
+  </sect1>
+</article>

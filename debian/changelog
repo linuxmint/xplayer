@@ -1,0 +1,2218 @@
+totem (3.10.1-1ubuntu4) trusty; urgency=medium
+
+  * debian/patches/revert_shell_menu.patch:
+    - clean leftover line leading to a warning
+  * debian/patches/git_clutter_correct_use.patch:
+    - clean some clutter warnings
+
+  [ Matthias Niess ]
+  * debian/patches/git-fix-subtitle-downloader.patch:
+    - missing dependency in opensubtitles.py and bad argument passed
+      to PyGObject (LP: #1292262)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 31 Mar 2014 17:40:40 +0200
+
+totem (3.10.1-1ubuntu3) trusty; urgency=medium
+
+  * Include the version of libgstreamer1.0-0 in apport reports. Thanks,
+    Daniel Letzeisen (LP: #1264547) 
+  * Don't recommend gnome-settings-daemon from the plugins any more; it's not
+    right to pull in desktop integration bits (the functionality required is
+    optional and the D-Bus activation explicitly doesn't start the daemon) by
+    default.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Thu, 20 Feb 2014 11:40:43 +0000
+
+totem (3.10.1-1ubuntu2) trusty; urgency=medium
+
+  * No-change rebuild for new cogl
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Tue, 14 Jan 2014 23:15:46 +0000
+
+totem (3.10.1-1ubuntu1) trusty; urgency=low
+
+  * Merge 3.10.1-1 from experimental.
+    - Remaining changes mostly annotated in 3.8.2-0ubuntu1 entry.
+  * Drop git_no_assert_on_start.patch, upstreamed.
+  * Add vimeo plugin to totem-plugins.
+  * Bump libzeitgeist dep to libzeitgeist-2.0-dev.
+
+ -- Maarten Lankhorst <maarten.lankhorst@ubuntu.com>  Mon, 23 Dec 2013 18:34:50 +0100
+
+totem (3.10.1-1) experimental; urgency=low
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Bump totem-pl-parser build-dependency to >= 3.9.92
+
+  [ Sjoerd Simons ]
+  * Build against clutter 1.16
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 06 Nov 2013 22:35:20 +0100
+
+totem (3.8.2-3) unstable; urgency=low
+
+  * Switch gstreamer1.0-plugins-bad Recommends to Depends. The 'scaletempo'
+    plugin shipped by gstreamer1.0-plugins-bad is now mandatory and totem
+    refuses to start without it. Closes: #721374
+  * Add Recommends on grilo-plugins-0.2 which is required by the Browse and
+    Search sidebar.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 01 Sep 2013 19:13:45 +0200
+
+totem (3.8.2-2) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control.in:
+    - Don't build-depend on scrollkeeper
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+  * Remove Build-Depends on librsvg2-common, librsvg2-dev already depends on
+    that.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 23 Aug 2013 20:05:37 +0200
+
+totem (3.8.2-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * debian/control.in:
+    - Drop dependencies on python-beautifulsoup, python-feedparser, and
+      python-httplib2 since the iplayer plugin that used them is no longer
+      available
+
+  [ Andreas Henriksson ]
+  * Add missing separator in gir1.2-totem-1.0 depends, caught by lintian!
+  * Fix totem-plugins dependency on gir1.2-gdkpixbuf-2.0 (not gdk-pixbuf).
+  * Bump Standards-Version to 3.9.4
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 13 Jun 2013 13:38:50 +0200
+
+totem (3.8.2-0ubuntu3) trusty; urgency=medium
+
+  * No change rebuild for totem-pl-parser soname bump.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 22 Dec 2013 16:36:31 +0100
+
+totem (3.8.2-0ubuntu2) trusty; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control.in:
+    - Don't build-depend on scrollkeeper
+
+  [ Sebastien Bacher ]
+  * debian/patches/git_no_assert_on_start.patch:
+    - "main: Fix possible assertion on startup" (lp: #1197507)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 15 Nov 2013 16:02:30 +0100
+
+totem (3.8.2-0ubuntu1) saucy; urgency=low
+
+  * Sync with Debian. Remaining changes: 
+  * debian/control.in:
+    - Drop build-depends on libepc-ui-dev and libgrilo-0.2-dev (in universe)
+    - Drop libxtst-dev build-depends so that the (redundant) fake key presses
+      for inhibiting the screensaver are disabled (LP: #1007438)
+    - Build-depend on libzeitgeist-dev
+    - Suggest rather than recommend gstreamer components in universe
+    - Add totem-plugins-extra
+    - Add XB-Npp-Description and XB-Npp-Filename header to the 
+      totem-mozilla package to improve ubufox/ubuntu plugin db integration 
+    - Refer to Firefox in totem-mozilla description instead of Iceweasel
+    - Don't have totem-mozilla recommend any particular browser
+    - Drop obsolete python library dependencies since iplayer is no longer
+      included
+  * debian/totem-common.install, debian/source_totem.py:
+    - Install Ubuntu apport debugging hook
+  * debian/totem-plugins-extra.install:
+    - Universe plugins split out of totem-plugins (currently only gromit)
+  * debian/totem-plugins.install:    
+    - Skip the plugins split to -extra and add the zeitgeist plugin
+  * debian/rules:
+    - Build with --fail-missing, to ensure we install everything. 
+      + Ignore libtotem.{,l}a since we delibrately don't install these.
+    - Re-enable hardening, make sure both PIE and BINDNOW are used
+      by setting hardening=+all. (LP: #1039604)
+  * debian/patches/91_quicklist_entries.patch:
+    - Add static quicklist
+  * debian/patches/92_gst-plugins-good.patch:
+    - Build without unnecessary gstreamer1.0-bad dependency
+  * debian/patches/93_grilo_optional.patch:
+    - Allow building without grilo while grilo MIR is still pending
+  * debian/patches/correct_desktop_mimetypes.patch:
+    - Don't list the mimetypes after the unity lists
+  * debian/patches/revert_shell_menu.patch: 
+    - revert the use of a shell menu until indicator-appmenu can handle
+      the mixed shell/traditional menus itself
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 26 May 2013 00:07:51 -0400
+
+totem (3.8.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 28 Mar 2013 02:03:59 +0100
+
+totem (3.7.93-1) experimental; urgency=low
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Replace gnome-doc-utils with yelp-tools in build dependencies.
+  * Replace build dependency on valac-0.14 with valac (>= 0.14.1).
+  * Install /usr/share/help instead of /usr/share/gnome and
+    /usr/share/omf in totem-common, since we're now on the new
+    help infrastructure.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 24 Mar 2013 16:19:12 +0100
+
+totem (3.6.3-2) experimental; urgency=low
+
+  [ Andreas Henriksson ]
+  * Drop gstreamer1.0-pulseaudio from Suggests, already in Recommends.
+
+  [ Michael Biebl ]
+  * Disable the Vegas browser plugin. It conflicts with other Flash
+    implementations and is not ready for prime time yet. Closes: #673667
+  * Drop explicit Build-Depends on gir packages, they are pulled in by the
+    corresponding -dev package.
+  * Drop old Conflicts which are no longer necessary.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 12 Dec 2012 19:54:10 +0100
+
+totem (3.6.3-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * Add missing epochs on libxrandr and libxxf86vm build-dependencies.
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+    - switch all gstreamer 0.10 deps to gstreamer 1.0
+      (this might need tweaking to be entirely correct)
+    - replace gst*-ffmpeg with gst*-libav
+    - drop build-dependency on gstreamer0.10-gconf
+    - add build-dependency on libgstreamer-plugins-bad1.0-dev
+    - add build-dependency on gstreamer1.0-plugins-bad
+    - bump glib build dependency to 2.33.0 according to configure.in
+    - drop build-dependency on libmx-dev, no longer needed.
+    - bump gtk+ build dependency to 3.5.2 according to configure.in
+    - switch build-dependency from libclutter-gst-1.0-dev to
+      libclutter-gst-2.0-dev
+    - switch build-dependency from libgrilo-0.1-dev to libgrilo-0.2-dev
+    - add build-dependency on gsettings-desktop-schemas-dev
+    - add gsettings-desktop-schemas to totem dependencies
+    - debian/patches/series: disable 01_fake_keypresses.patch
+    - debian/totem-plugins.install: iplayer removed upstream, dropped.
+    - debian/totem-plugins.install: publish removed upstream, dropped.
+    - debian/totem-plugins.install: recent added upstream, added.
+    - debian/totem-plugins.install: apple-trailers added upstream, added.
+    - debian/totem-plugins.install: autoload-subtitles added upstream, added.
+    - make totem depend on gstreamer1.0-clutter for cluttersink element
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 05 Dec 2012 20:49:30 +0100
+
+totem (3.4.2-1) experimental; urgency=low
+
+  [ Michael Biebl ]
+  * Remove coherence plugin leftovers. It doesn't look like this plugin is
+    coming back.
+
+  [ Josselin Mouette ]
+  * 02_revert_clutter.patch: un-clutter totem. Revert to the good old 
+    XVideo code. It is less elegant, but works on many more systems.
+  * Update build-dependencies accordingly.
+  * Use dh-autoreconf.
+  * Build-depend on gtk-doc-tools for autoreconf.
+  * totem-plugins.install: remove rotation plugin.
+  * Drop useless build-dependency on libmusicbrainz.
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * No longer try to install dropped bemused and youtube plugins.
+  * Bump GTK+ build-dependency to >= 3.3.6 as required by configure script.
+    - could possibly be reverted, when reverting changes to make below apply.
+  * Disable d/p/02_revert_clutter.patch for now, doesn't apply against 3.4.0.
+  * Temporarily add build-dependencies needed because of above:
+    - libclutter-gst-dev, libclutter-gtk-1.0-dev
+
+  [ Michael Biebl ]
+  * Drop obsolete Build-Depends on libirman-dev. Closes: #672401
+  * Bump Standards-Version to 3.9.3.
+  * Drop Build-Depends on libcam-dev, no longer required to build on kfreebsd.
+    Closes: #659622
+  * Install rotation plugin since we are building with Clutter support.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 16 May 2012 00:53:29 +0200
+
+totem (3.2.1-2) experimental; urgency=low
+
+  * Lower Build-Depends on libgdata-dev so we build against the version from
+    unstable, the same version grilo-plugins was built against. This avoids a
+    crash when trying to enable the youtube plugin. Closes: #651554
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 Dec 2011 00:15:14 +0100
+
+totem (3.2.1-1) experimental; urgency=low
+
+  [ Sjoerd Simons ]
+  * New upstream release
+  * debian/control.in: Update build-depends
+  * debian/rules: Enable vala plugins
+  * debian/totem-plugins.install:
+    - Add grilo and rotation plugins
+    - Remove jamendo, thumbnail and tracker plugins
+
+  [ Michael Biebl ]
+  * debian/control.in:
+    - Bump Depends on python-gobject to (>= 2.90.3).
+
+  [ Josselin Mouette ]
+  * Replace python-gobject dependencies by python-gi.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 27 Nov 2011 06:21:34 +0100
+
+totem (3.0.1-9) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Enable all hardening flags. Closes: #613763.
+  * Add corresponding build-dependency on a recent dpkg-dev.
+  * Add missing epochs on libxrandr and libxxf86vm build-dependencies.
+
+  [ Michael Biebl ]
+  * Build against tracker 0.16.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 30 Jul 2013 14:38:30 +0200
+
+totem (3.0.1-8) unstable; urgency=low
+
+  * Build against tracker 0.14.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 14 Mar 2012 19:00:57 +0100
+
+totem (3.0.1-7) unstable; urgency=low
+
+  * Drop useless build-dependency on libmusicbrainz4-dev. Closes: #657013
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 24 Jan 2012 23:41:08 +0100
+
+totem (3.0.1-6) unstable; urgency=low
+
+  [ Michael Biebl ]
+  * Remove coherence plugin leftovers. This plugin is gone for good.
+
+  [ Josselin Mouette ]
+  * 03_gdata_0.9.patch: stolen from upstream git. Port totem to libgdata 
+    0.9.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 16 Dec 2011 21:34:28 +0100
+
+totem (3.0.1-5) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/patches/04_port_to_gobject.patch:
+    Use the new pygobject, fixes all Python plugins. Closes: #649755
+  * debian/patches/90_fix_save_playlist.patch:
+    Git patch to fix broken save plugin button. Closes: #647305
+
+  [ Michael Biebl ]
+  * Replace python-gobject dependencies by python-gi.
+  * Change section of gir1.2-totem-1.0 to introspection.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 08 Dec 2011 09:32:07 +0100
+
+totem (3.0.1-4) unstable; urgency=low
+
+  * Build against tracker 0.12. Closes: #643941
+    - Add debian/patches/02_tracker_0.12.patch.
+    - Use dh-autoreconf to update the build system.
+    - Add Build-Depends on gtk-doc-tools, required by autoreconf.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 20 Nov 2011 23:02:51 +0100
+
+totem (3.0.1-3) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Drop useless gst-alsa | gst-audiosink dependency; recommend 
+    gst-pulseaudio instead.
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+  * debian/control.in:
+    - Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer.
+    - Add Vcs-* fields.
+  * debian/watch:
+    - Switch to .xz tarballs.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 13 Oct 2011 22:07:16 +0200
+
+totem (3.0.1-2) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * Add missing dependency on python-beautifulsoup. Closes: #630095.
+
+  [ Michael Biebl ]
+  * Move .gir file into libtotem-dev package. Closes: #635451
+  * Switch to dh_python2. Closes: #637280
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 29 Aug 2011 01:34:34 +0200
+
+totem (3.0.1-1) experimental; urgency=low
+
+  [ Sebastien Bacher ]
+  * New upstream version
+  * debian/control.in:
+    - don't Build-Depends on xulrunner-dev
+    - let libtotem0 Replaces totem (<< 3.0.1-1), it's not required for Debian
+      but is not an issue either and will lower the delta with Ubuntu
+    - update Standards-Version to 3.9.2
+  * debian/totem-common.install:
+    - install the thumbnailers directory there
+      Closes: #629536.
+  * debian/totem.preinst: clean it now that squeeze is out
+
+  [ Josselin Mouette ]
+  * Add libtotem-dev. Closes: #561934.
+
+  [ Michael Biebl ]
+  * debian/watch: Switch to .bz2 tarball.
+  * Bump debhelper compatibility level to 8.
+    - Update Build-Depends on debhelper.
+    - Strip leading debian/tmp/ from .install files.
+  * debian/totem-plugins.install
+    - Install tracker and gromit plugin.
+  * debian/control.in
+    - Remove obsolete Build-Depends on dpkg-dev (>= 1.13.19).
+  * debian/libtotem-dev.install
+    - Install libtotem.so symlink.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 10 Jun 2011 00:36:38 +0200
+
+totem (3.0.0-1) experimental; urgency=low
+
+  * Team upload to experimental.
+
+  [ Josselin Mouette ]
+  * Only suggest totem-mozilla. Closes: #599638.
+  * totem-coherence depends on totem-plugins. Closes: #607436.
+
+  [ Emilio Pozuelo Monfort ]
+  * New upstream development release.
+    - debian/patches/80_webm.patch,
+      debian/patches/81_mpegts.patch,
+      debian/patches/82_youtube_api.patch:
+      + Removed, applied upstream.
+    - debian/patches/90_autotools.patch:
+      + Removed, no longer needed.
+    - debian/patches/70_bbc_plugin.patch:
+      + Disabled, needs porting.
+    - debian/control.in:
+      + Updated build dependencies and dependencies.
+      + Removed transitional totem-xine and totem-gstreamer packages.
+      + Don't build totem-coherence for now, it hasn't been ported
+        to PyGI and so it's that plugin or all the others.
+    - debian/totem-common.install:
+      + Don't install the gconf schemas, they're gone. Install the
+        gsettings files instead.
+    - debian/totem.install:
+      + Ship libtotem here.
+    - debian/control.in,
+      debian/rules,
+      debian/gir1.2-totem-1.0.install:
+      + Add a gir package and update the plugins package dependencies
+        for the new gir dependencies.
+  * debian/rules,
+    debian/control.in,
+    debian/source/format:
+    - Switch to source format 3.0 (quilt).
+  * debian/control.in:
+    - Remove obsolete build dependency on libhal-dev. Closes: #615214.
+
+  [ Sjoerd Simons ]
+  * New upstream release (2.91.7)
+  * debian/totem-plugins.install:
+    * Don't install the grommit plugin
+    * Install the chapters plugin
+
+  [ Frederic Peters ]
+  * New upstream release (2.91.91)
+  * debian/control.in: bump build-dep on libpeas.
+  * debian/control.in, debian/totem-plugins.install:
+    * The galago plugin has been renamed to im-status, and no longer uses
+      libgalago.
+
+  [ Michael Biebl ]
+  * debian/control.in:
+    - Add Build-Depends on libtracker-sparql-0.10-dev for media search support
+      using Tracker.
+
+  [ Raphaël Hertzog ]
+  * New upstream release (3.0.0).
+  * Added Build-Depends on gstreamer0.10-gconf.
+  * Bumped minimal version of build-dependency on totem-plparser-dev to
+    2.32.4-2 to match the ./configure requirements and to ensure libquvi-dev
+    is there as required by the totem-plparser.pc.
+  * Add some copyright notices to debian/copyright to please lintian.
+  * Call dh_pysupport on totem to generate the python dependency for
+    totem-bugreport.py
+  * Tell dh_makeshlibs to skip /usr/lib/nautilus. This avoids generating
+    an shlib entry for the plugin it contains.
+  * Tweaked the totem description to fix lintian warning description-
+    synopsis-starts-with-article.
+  * Updated dependencies of totem-coherence to match the new code using
+    introspection but keep the package disabled as python-coherence is
+    still PyGTK based and thus incompatible.
+  * Add lintian overrides for menu-icon-missing (icon is in totem-
+    common).
+  * Add gnome-icon-theme-symbolic to totem's dependencies.
+  * Bump build-dep on libgdata >= 0.8.0.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sun, 10 Apr 2011 18:12:25 +0000
+
+totem (2.30.2-8) unstable; urgency=low
+
+  * Remove the galago plugin. Closes: #635620
+  * Remove Build-Depends on libhal-dev.
+  * Use architecture wildcards.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 28 Jul 2011 05:34:33 +0200
+
+totem (2.30.2-7) unstable; urgency=low
+
+  * Build for tracker 0.10.
+  * Add Build-Depends on gstreamer0.10-gconf as it was split from
+    gstreamer0.10-plugins-good into a separate package.
+  * Refresh debian/patches/90_autotools.patch.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 26 Jul 2011 19:50:20 +0200
+
+totem (2.30.2-6) unstable; urgency=low
+
+  * Only suggest totem-mozilla. Closes: #599638.
+  * totem-coherence depends on totem-plugins. Closes: #607436.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 22 Dec 2010 20:32:01 +0100
+
+totem (2.30.2-5) unstable; urgency=low
+
+  * Revert r25131: switch back to 1.0 source format + quilt.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 03 Oct 2010 14:44:56 +0200
+
+totem (2.30.2-4) unstable; urgency=low
+
+  * Only install the bemused plugin on Linux.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 01 Oct 2010 16:40:23 +0200
+
+totem (2.30.2-3) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * Really ship the UPnP plugin in totem-coherence.
+
+  [ Josselin Mouette ]
+  * 82_youtube_api.patch: patch from upstream git to fix youtube plugin, 
+    since the youtube API has changed *again* (sigh).
+  * Switch to 3.0 source package format.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 01 Oct 2010 13:52:30 +0200
+
+totem (2.30.2-2) unstable; urgency=low
+
+  * debian/patches/80_webm.patch,
+    debian/patches/81_mpegts.patch:
+    + Patches from upstream GIT to add MPEG TS and WebM support in
+      the browser plugin and to add the mimetypes to the list of
+      supported mimetypes.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 29 May 2010 11:25:57 +0200
+
+totem (2.30.2-1) unstable; urgency=low
+
+  * New upstream bugfix release:
+    + debian/patches/90_autotools.patch:
+      - Updated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 12 May 2010 18:34:53 +0200
+
+totem (2.30.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 03 May 2010 13:52:51 +0200
+
+totem (2.30.1-1) experimental; urgency=low
+
+  [ Loïc Minier ]
+  * totem.preinst: Actually remove alternatives by checking for action
+    "upgrade" instead of "configure" which isn't used with preinsts; bump
+    verison to 2.30.0-2 for that to be effective.
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release:
+    + debian/control.in:
+      - Update build dependencies.
+    + debian/patches/02_tracker_0.8.patch:
+      - Dropped, merged upstream.
+    + debian/patches/90_autotools.patch:
+      - Updated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 28 Apr 2010 14:41:52 +0200
+
+totem (2.30.0-2) experimental; urgency=low
+
+  * debian/patches/03_tracker_0.8.patch
+    - Add support for tracker 0.8. Closes: #577207
+      Patch cherry-picked from upstream Git.
+  * Refresh patches to apply cleanly.
+  * debian/control.in
+    - Re-enable tracker plugin support. Add Build-Depends on
+      libtracker-client-0.8-dev (>= 0.8.1).
+    - Update package description of totem-plugins.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 17 Apr 2010 00:46:43 +0200
+
+totem (2.30.0-1) experimental; urgency=low
+
+  * New upstream stable release:
+    + debian/patches/90_autotools.patch:
+      - Refreshed for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 31 Mar 2010 13:32:09 +0200
+
+totem (2.29.92-1) experimental; urgency=low
+
+  * New upstream development release:
+    + debian/patches/90_autotools.patch:
+      - Refreshed for the new version.
+    + debian/patches/99_gst-bus_flush.patch:
+      - Dropped, merged upstream.
+  * Merge changes from 2.28.5-2.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 16 Mar 2010 09:06:31 +0100
+
+totem (2.29.91-1) experimental; urgency=low
+
+  * New upstream development release:
+    + debian/patches/90_autotools.patch:
+      - Refreshed for the new version.
+    + debian/control.in:
+      - Update build dependencies and dependencies.
+  * debian/patches/99_gst-bus_flush.patch:
+    + Patch from upstream GIT to fix automatic codec installation
+      and random errors showing up from previous tracks.
+  * debian/control.in:
+    + Add ATK build dependency to allow buildds to actually install
+      the correct version instead of producing an error.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 25 Feb 2010 19:11:33 +0100
+
+totem (2.29.4-1) experimental; urgency=low
+
+  * New upstream development release:
+    + debian/patches/90_autotools.patch:
+      - Refreshed for the new version.
+    + debian/control.in:
+      - Update build dependencies and dependencies.
+      - Drop tracker plugin, it needs tracker 0.7.
+    + debian/totem-mozilla.links:
+      - Drop the complex plugin, it doesn't exist anymore.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 27 Jan 2010 09:40:18 +0100
+
+totem (2.28.5-2) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * totem-mozilla.links: removed. We don’t need iceweasel-specific 
+    links, it is able to use the files in /usr/lib/mozilla/plugins.
+    Closes: #569891.
+  * Require totem-common = ${source:Version}. Closes: #571164.
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/patches/02_python2.6.patch:
+    - Backport change from GIT to fix FTBFS with Python 2.6 as the
+      default interpreter. Closes: #571517.
+  * debian/patches/90_autotools.patch:
+    - Updated.
+  * debian/control.in:
+    - Standards-Version is 3.8.4, no changes needed.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 04 Mar 2010 10:06:44 +0100
+
+totem (2.28.5-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+    - debian/patches/90_autotools.patch,
+      debian/patches/70_bbc_plugin.patch:
+      + Refreshed for the new version.
+  * debian/control.in:
+    - Don't build depend on libbluetooth-dev on Hurd.
+  * debian/watch:
+    - Only track stable releases.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 23 Dec 2009 00:35:07 +0100
+
+totem (2.28.4-1) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release:
+    + debian/patches/90_autotools.patch:
+      - Regenerated.
+
+  [ Josselin Mouette ]
+  * Let the transitional totem-xine package depend on gst-plugins-bad 
+    and -ugly. Closes: #559558.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 08 Dec 2009 15:50:19 +0100
+
+totem (2.28.3-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Split the UPnP plugin in a separate totem-coherence package.
+    Closes: #553058.
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in:
+    - Build depend on xulrunner-dev rather than on iceape-dev.
+      Closes: #555914.
+    - Let totem-coherence depend on ${misc:Depends}.
+
+  [ Josselin Mouette ]
+  * Call dh_pysupport and add ${python:Depends} for totem-coherence.
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release:
+    + debian/patches/02_use_gconf_audio_sink.patch,
+      debian/patches/80_fix_youtube_regex.patch:
+      - Dropped, merged upstream.
+    + debian/patches/90_autotools.patch:
+      - Regenerated.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 14 Nov 2009 10:12:07 +0100
+
+totem (2.28.2-3) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * totem-plugins depends on python-coherence. Closes: #553058.
+  * The section for totem-mozilla is video too.
+
+  [ Sjoerd Simons ]
+  * debian/patches/80_fix_youtube_regex.patch:
+    + Added. Update the regexp for parsing parameters from youtube (from
+      upstream git)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 07 Nov 2009 15:45:32 +0000
+
+totem (2.28.2-2) unstable; urgency=low
+
+  * debian/patches/02_use_gconf_audio_sink.patch,
+    debian/control.in:
+    + Updated from upstream Bugzilla, this patch together with
+      gst-plugins-base 0.10.25-5 and gst-plugins-good 0.10.16-5
+      this fixes all volume related issues with totem and pulseaudio.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 30 Oct 2009 10:47:49 +0100
+
+totem (2.28.2-1) unstable; urgency=low
+
+  * New upstream bugfix release:
+    + debian/control.in:
+      - Update build dependencies.
+    + debian/patches/90_autotools.patch:
+      - Regenerated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 26 Oct 2009 13:19:20 +0100
+
+totem (2.28.1-2) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/patches/02_use_gconf_audio_sink.patch:
+    - Don't try to use PulseAudio inconditionally, use the user defined
+      one from GConf instead. Closes: #548260.
+
+  [ Josselin Mouette ]
+  * Add missing shlibs:Depends in totem-mozilla.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 24 Oct 2009 12:29:50 +0200
+
+totem (2.28.1-1) unstable; urgency=low
+
+  * debian/control.in:
+    + Clean up inter-package dependencies and remove a completely
+      useless circular dependency (Closes: #548891). There's no reason
+      why totem should depend on totem-plugins and the other way around.
+  * debian/totem.install,
+    debian/totem-common.install,
+    debian/control.in:
+    + Move the desktop file into the same package as the binaries.
+  * New upstream bugfix release:
+    + debian/patches/90_autotools.patch:
+      - Regenerated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 29 Sep 2009 17:16:16 +0200
+
+totem (2.28.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 23 Sep 2009 11:01:01 +0200
+
+totem (2.28.0-1) experimental; urgency=low
+
+  * New upstream release:
+    + debian/patches/90_autotools.patch:
+      - Regenerated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 21 Sep 2009 16:53:12 +0200
+
+totem (2.27.92-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * totem-plugins depends on python-gconf. Closes: #541352.
+  * and on python-gobject 2.18. Closes: #528459.
+  * Remove gmyth plugin. Closes: #542127.
+  * Drop useless build-dependency on libxml-parser-perl.
+  * Add missing dependencies for the iplayer plugin. Closes: #530438.
+
+  [ Sebastian Dröge ]
+  * New upstream development release:
+    + debian/control.in:
+      - Update build dependencies.
+    + debian/patches/03_disable_debug.patch:
+      - Dropped, fixed upstream.
+    + debian/patches/90_autotools.patch:
+      - Regenerated for the new version.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.3.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 09 Sep 2009 07:52:42 +0200
+
+totem (2.27.2-3) experimental; urgency=low
+
+  * debiam/totem-mozilla.links:
+    + Make the links originate from the correct location and update the list
+      for the current set of plugins.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 09 Aug 2009 00:00:00 +0100
+
+totem (2.27.2-2) experimental; urgency=low
+
+  * debian/control.in:
+    + Build depend on libgdata-dev (>= 0.4.0) for the youtube plugin.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 08 Aug 2009 21:16:15 +0200
+
+totem (2.27.2-1) experimental; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * Move totem to the video section, and totem-dbg to debug.
+
+  [ Josselin Mouette ]
+  * Only suggest gnome-codec-install, it is way too obnoxious with some
+    packages like rhythmbox.
+
+  [ Sebastian Dröge ]
+  * New upstream development release:
+    + debian/control.in:
+      - Update GStreamer build dependencies.
+    + debian/patches/90_autotools.patch:
+      - Updated for the new version.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.2.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 24 Jul 2009 08:13:11 +0200
+
+totem (2.27.1-2) experimental; urgency=low
+
+  [ Sebastian Dröge ]
+  * Some minor changes from the Ubuntu package:
+    + debian/totem.menu:
+      - Let the title start with an uppercase T.
+    + debian/control.in:
+      - Remove some unneeded build dependencies and update description
+        to clarify that totem uses GIO nowadays.
+
+  [ Josselin Mouette ]
+  * Remove gstreamer0.10-gnomevfs from the dependencies and bump 
+    requirement on -good to a version with a working soup plugin.
+    Closes: #530663.
+
+  [ Sebastian Dröge ]
+  * debian/patches/20_use_alternatives.patch:
+    + Dropped, there are no alternatives anymore.
+  * debian/totem.{pre,post}inst:
+    + Remove alternatives in preinst, otherwise the totem binary will
+      be removed (Closes: #531704). Thanks to Martin Pitt for the fix.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 04 Jun 2009 20:15:57 +0200
+
+totem (2.27.1-1) experimental; urgency=low
+
+  * New upstream development release:
+    + This release drops the Xine backend, this allows a much simplified
+      packaging.
+    + The YouTube plugin is not built at the moment until we have a
+      libgdata package, which is required for the plugin now.
+    + debian/patches/60_build_libbaconvideowidget_statically.patch:
+      - Dropped, merged upstream.
+    + debian/patches/70_bbc_plugin.patch,
+      debian/patches/90_autotools.patch:
+      - Updated for the new version.
+    + debian/control.in,
+      debian/rules,
+      debian/*:
+      - Drop the xine flavor and merge totem-gstreamer into
+        the totem package.
+      - Remove alternatives on upgrades.
+      - Convert packaging to cdbs.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 18 May 2009 19:40:39 +0200
+
+totem (2.26.2-1) UNRELEASED; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 18 May 2009 17:41:11 +0200
+
+totem (2.26.1-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * totem-plugins depends on python-gdbm. Closes: #523582.
+
+  [ Sjoerd Simons ]
+  * New upstream release (2.26.1)
+  * debian/patches/02_flv.patch: Dropped, fixed upstream
+  * debian/patches/04_tracker_build.patch: Dropped, fixed upstream
+  * debian/patches/01_fake_keypresses.patch: Updated and simplified
+  * debian/patches/70_bbc_plugin.patch: Updated
+  * debian/patches/90_autotools.patch: Updated
+
+  [ Emilio Pozuelo Monfort ]
+  * Recommend gnome-codec-install rather than gnome-app-install.
+    Closes: #523052.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 19 Apr 2009 17:28:51 +0100
+
+totem (2.24.3-3) unstable; urgency=low
+
+  * totem-mozilla.docs: ship README.browser-plugin which explains how to 
+    disable the plugin for some MIME types.
+  * rules: remove the hack that only let totem-xine support VCDs and 
+    DVDs, now that GStreamer supports them. Closes: #370789.
+  * 01_fake_keypresses.patch: new patch. Completely disable the broken 
+    XTEST code that generates fake keypresses. Closes: #500330.
+  * 90_autotools.patch: regenerated.
+  * Build-depend on nautilus 2.22 to be sure to build the extension for 
+    the correct version.
+  * totem-xine depends on libxine1-x.
+  * Standards version is 3.8.1.
+  * Upload to unstable.
+  * 04_tracker_build.patch: new patch, stolen upstream. Fix build with 
+    latest tracker version.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 07 Apr 2009 15:21:00 +0200
+
+totem (2.24.3-2) experimental; urgency=low
+
+  * Let totem-plugins depends on python-gtk2 instead of python-gtk2-dev.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 21 Dec 2008 15:57:12 +0000
+
+totem (2.24.3-1) experimental; urgency=low
+
+  [ Sam Morris ]
+  * New upstream release.
+  * 01_gecko_iceape.patch, 07_autoconf.patch: removed, no longer necessary.
+    Also remove --with-gecko=iceape from configure arguments.
+  * 02_flv.patch: refreshed.
+  * 30_fix_youtube_plugin.patch: merged upstream.
+  * 60_build_libbaconvideowidget_statically.patch: taken from Ubuntu, from
+    <https://launchpad.net/ubuntu/intrepid/+source/totem/2.23.3-0ubuntu1>. Building
+    libbaconvideowidget statically means that totem-gstreamer and totem-xine can be
+    co-installable.
+  * 70_autoconf.patch: disabled, no need for it.
+  * 90_automake.patch: generated by running 'automake' after applying
+    60_build_libbaconvideowidget_statically.patch.
+  * Drop GnomeVFS dependency.
+  * Add versioned build-dependency on intltool 0.4.
+  * Reduce GLib dependency to 2.13.
+  * Depend on x11proto-core-dev for multimedia keys.
+  * Depend on libgmythupnp-dev and bump gmyth dependency to 0.7.1.
+  * Increase GTK+ dependency to 2.13.
+  * Increase totem-plparser dependency to 2.23.91.
+  * The browser plugin no longer uses xpt files; remove
+    totem-mozilla.links and the code in debian/rules that handles them.
+  * Explicitly enable the complex browser plugin, as it is disabled by
+    default.
+
+  [ Josselin Mouette ]
+  * 03_disable_debug.patch: new patch. Drop debugging output in the 
+    browser plugin. Closes: #507491.
+
+  [ Sjoerd Simons ]
+  * debian/patches/70_bbc_plugin.patch:
+    - Added. Add BBC content viewer plugin
+  * debian/patches/90_autotools.patch:
+    - Added. rerun autogen after adding the bbc plugin
+  * debian/patches/90_automake.patch:
+    - Removed. Deprecated by debian/patches/90_autotools.patch
+  * debian/patches/series: updated
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 07 Dec 2008 16:28:18 +0000
+
+totem (2.22.2-5) unstable; urgency=low
+
+  * Don’t build-depend on libbluetooth-dev on kfreebsd. Closes: #499384.
+  * Remove the conditional build-dep on hal, which now builds on the 
+    said systems.
+  * 30_fix_youtube_plugin.patch: update youtube plugin to the version in 
+    GNOME 2.24 to match the changes on the server side, excluding 
+    changes in the C code. Closes: #503363.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 25 Oct 2008 12:55:59 +0200
+
+totem (2.22.2-4) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Change the recommends on g-c-c to one on g-s-d. Also move it to
+    totem-plugins, which is the package providing the media keys
+    functionality.
+  * Change the depends on dbus to dbus-x11.
+
+  [ Loic Minier ]
+  * Let totem-gstreamer recommend gnome-app-install for easy codec
+    installation.
+
+  [ Josselin Mouette ]
+  * 02_flv.patch: the canonical MIME type for Flash videos is 
+    video/x-flv, not video/flv. Closes: #486468.
+
+  [ Sjoerd Simons ]
+  * 30_fix_youtube_plugin.patch: Set the server as a keyword argument to be
+    compatible with both old and new versions of python-gdata. Fixes searching
+    for youtube videos
+  * debian/control.in: Fix double Recommend field for totem-gstreamer
+
+  [ Josselin Mouette ]
+  * rules: rally disable the vala plugin.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 10 Sep 2008 15:38:34 +0200
+
+totem (2.22.2-3) unstable; urgency=low
+
+  * debian/control.in,
+    debian/rules:
+    + Disable vala support for now. It only builds a sample plugin anyway
+      and thus is rather useless. Fixes FTBFS with newer valac.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 22 May 2008 10:01:33 +0200
+
+totem (2.22.2-2) unstable; urgency=low
+
+  [ Sam Morris ]
+  * Only totem-xine can satisfactorily play DVDs and VCds (it can do
+    de-interlacing and menus), so update its .desktop files to reflect this.
+    This only affects nautilus 2.22, which has taken over the job of launching
+    progrems when media are inserted in GNOME 2.22.
+
+  [ Josselin Mouette ]
+  * Build-depend on iceape-dev 1.1.9-5.
+  * Use the iceape gecko variant. This way it should work with both 
+    gecko 1.8 and 1.9. Closes: #479344, #480809.
+  * 01_gecko_iceape.patch: support iceape as a valid gecko variant.
+  * 70_autoconf.patch: re-run autoconf on top of that.
+  * Require debhelper 5.0.51 for dh_icons.
+  * Build-depend on python-support; call dh_pysupport; depend on 
+    ${python:Depends}. Adds correct dependencies for the python scripts 
+    in totem-{gstreamer,xine} and the module in totem-plugins.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 12 May 2008 15:04:36 +0200
+
+totem (2.22.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 24 Apr 2008 12:10:38 +0200
+
+totem (2.22.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add an update-alternative slave for audio-preview per flavor; LP: #199701;
+    see also Debian #472370.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 24 Mar 2008 20:22:26 +0100
+
+totem (2.22.0-2) unstable; urgency=high
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control:
+    - Remove duplicated libepc-ui-dev build dependency.
+
+  [ Loic Minier ]
+  * Merge below changes by Steve Langasek again; these were not applied to the
+    experimental branch; doh!
+
+  [ Steve Langasek ]
+  * Auto-generate totem-{xine,gstreamer}.postinst from new
+    debian/totem-flavor.postinst.in in the install target
+  * Substitute the pkg-config variable into the generated postinst also,
+    so that the update-alternatives slave for the nautilus extension is
+    kept in sync with the ABI.
+
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Sun, 23 Mar 2008 20:20:36 +0100
+
+totem (2.22.0-1) unstable; urgency=low
+
+  [ Sam Morris ]
+  * New upstream development release.
+    - Build-depend on libepc-ui-dev 0.3 for publish plugin.
+    - Build-depend on libglib2.0-dev 2.15.
+    - Build-depend on libgnome-keyring-dev.
+    - Build-depend on libstartup-notification0-dev 0.8 for web browser plugin.
+    - Build-depend on libtrackerclient-dev for tracker plugin.
+    - Build-depend on python-gtk2-dev 2.12.
+    - Build-depend on valac, libvala-dev 0.1.16.
+    - Build-depend on libgtk2.0-dev 2.12.6.
+    - Drop build-dependency on libgnome-desktop-dev.
+    - Drop build-dependency on libgnome-settings-daemon-dev.
+  * totem-pl-parser library was split into a separate source package.
+    - Build-depend on libtotem-plparser-dev 2.21.90.
+    - Drop libtotem-parser7 and libtotem-plparser-dev packages.
+    - Drop 30_kfreebsd_gnu.patch.
+  * Drop 25_revert-xine-reqs-bump.patch: a new enough xine is new present in
+    unstable. Also drop 70_autoconf.patch as we no longer patch configure.in.
+  * Update totem-plugins description with entries for new plugins.
+  * Include check-dist.mk in rules file to prevent accidental uploads to
+    unstable.
+
+  [ Emilio Pozuelo Monfort ]
+  * Fix Homepage field in debian/control. Thanks to Amaya Rodrigo.
+    Closes: #464354.
+  * Build-depend on libepc-ui-dev to build the Publisher plugin.
+
+  [ Josselin Mouette ]
+  * Fix capitalization of GNOME and GStreamer.
+
+  [ Sebastian Dröge ]
+  * debian/rules:
+    + Call dh_icons and dh_shlibdeps.
+    + Don't ship *.py[co], taken from the Ubuntu package.
+    + Don't hardcode nautilus-extension directory, taken from the
+      Ubuntu package.
+    + Upload to unstable, drop check-dist include.
+  * debian/control.in:
+    + Update build dependencies.
+    + Build depend on libgmyth-dev.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 13 Mar 2008 15:08:06 +0100
+
+totem (2.20.3-1) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Let totem-common and totem-plugins replace totem-xine and -gstreamer.
+
+  [ Josselin Mouette ]
+  * Fix totem-dbg's section, see #457534.
+  * totem-xine recommends libxine1-gnome.
+
+  [ Sebastien Bacher ]
+  * use change from launchpad bug #177459 to fix bashim in the debian rules
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release:
+    + debian/patches/70_autoconf.patch:
+      - Regenerated for the new version.
+  * debian/control.in:
+    + Update Standards-Version to 3.7.3, no additional changes needed.
+    + Use Homepage field.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 07 Jan 2008 21:49:41 +0100
+
+totem (2.20.1-1) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Cleanup whitespace.
+
+  [ Josselin Mouette ]
+  * totem depends on totem-plugins. Closes: #445675.
+  * Conflict against totem-mozilla (<< 2.20.0-3). Closes: #448554.
+  * debian/bug/control: ship a bug control file in totem to correctly
+    report dependencies of totem-{gstreamer,xine}.
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release:
+    + debian/control:
+      - Build depend on Gtk >= 2.12.1 as per configure.in.
+    + debian/patches/60_gnome-doc-utils.patch:
+      - Dropped, upstream uses new enough gnome-doc-utils now.
+    + debian/patches/70_autoconf.patch:
+      - Regenerated for the new version.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 25 Nov 2007 13:15:19 +0100
+
+totem (2.20.0-3) unstable; urgency=low
+
+  * Complete rework of debian/rules.
+  * Split data files in totem-common.
+  * Make totem-xine and totem-gstreamer installable together.
+    Closes: #402549.
+  * Move debugging symbols to totem-dbg.
+  * Move plugins to totem-plugins.
+  * Switch to quilt.
+  * Refresh patches.
+  * Fix menu files and ship them in both packages.
+  * 60_gnome-doc-utils.patch: regenerate help/Makefile.in with a newer
+    gnome-doc-utils.make that supports out-of-tree builds.
+  * Build-depend on libbluetooth-dev and libgalago-dev for the
+    corresponding plugins.
+  * Remove symbolic links in the firefox directory.
+  * Improve long package descriptions.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 26 Sep 2007 22:36:06 +0200
+
+totem (2.20.0-2) unstable; urgency=low
+
+  [ Sebastian Dröge ]
+  * Upload to unstable.
+  * debian/control.in:
+    + Remove duplicated liblircclient-dev build dependency.
+
+  [ Josselin Mouette ]
+  * libtotem-plparser7-dbg conflicts with libtotem-plparser1-dbg.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 26 Sep 2007 00:41:46 +0200
+
+totem (2.20.0-1) experimental; urgency=low
+
+  * New upstream stable release:
+    + debian/control.in:
+      - Bump required versions of Gtk, GLib, GnomeVFS, GStreamer,
+        shared-mime-info.
+      - Build depend on vala.
+      - Build depend on python-gobject-dev and python-gtk2-dev.
+      - Build depend on libgnome-settings-daemon-dev.
+      - Build depend on liblircclient-dev.
+      - Bump soname of libtotem-plparser.
+    + debian/rules:
+      - Enable the vala bindings support.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 17 Sep 2007 07:12:48 +0200
+
+totem (2.18.2-2) unstable; urgency=high
+
+  * Depend on iso-codes; thanks Jan Alonzo.
+  * Recommend libxine1-ffmpeg; closes: #433166.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 22 Jul 2007 15:06:24 +0200
+
+totem (2.18.2-1) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Honor CFLAGS we set in rules, doh!
+
+  [ Sven Arvidsson ]
+  * New patch, lirc_freeconfig, from upstream SVN, fix freeze on close
+    with lirc; thanks Philip Withnall (GNOME bug #427681);
+    (Closes: #418020)
+
+  [ Loic Minier ]
+  * Excluse /usr/lib/totem/ and /usr/lib/nautilus/extensions- for
+    dh_makeshlibs as there are plugins in these dirs.
+  * Upload to unstable; drop check-dist include.
+  * New upstream stable release.
+    - New patch, 25_revert-xine-reqs, reverts the bump in Xine requirements
+      which was only added to pull a Xine bugfix.
+    - New patch, 70_autoconf, run autoconf.
+    - Drop patch 40_lirc_freeconfig, merged upstream.
+  * Wrap build-deps and deps.
+  * Fix some ${binary:Version} uses in Arch: all packages.
+  * Sprinkle some ${misc:Depends}.
+  * Bump up Debhelper compatibility level to 5.
+
+ -- Loic Minier <lool@dooz.org>  Fri, 01 Jun 2007 15:36:12 +0200
+
+totem (2.18.1-1) experimental; urgency=low
+
+  * Include the new check-dist Makefile to prevent accidental uploads to
+    unstable; bump build-dep on gnome-pkg-tools to >= 0.10.
+  * New upstreeam release; no API change.
+
+ -- Loic Minier <lool@dooz.org>  Wed, 04 Apr 2007 17:26:55 +0200
+
+totem (2.18.0-1) experimental; urgency=low
+
+  * New upstream major stable release; with API additions.
+    - Pass --enable-xine to the Xine configure and drop the --enable-gstreamer
+      from the gstreamer configure.
+    - Prefer totem-gstreamer over totem-xine in the dependencies of totem.
+    - Bump up shlibs to >= 2.17.5.
+    - Configure with --disable-run-in-source-tree; change --enable-mozilla
+      --with-browser-plugins=xulrunner into --with-gecko=xulrunner.
+    - Bump up build-deps and existing deps to libglib2.0-dev >= 2.12.0,
+      libgtk2.0-dev >= 2.10.0, libgnomevfs2-dev >= 2.9.92, gnome-icon-theme >=
+      2.15.90, libdbus-glib-1-dev >= 0.61, dbus >= 0.61, libxine-dev >= 1.1.4,
+      libgstreamer0.10-dev >= 0.10.6, libgstreamer-plugins-base0.10-dev >=
+      0.10.7.
+    - Add a build-dep on libgnome2-dev >= 2.14.0.
+    - Add deps on gnome-icon-theme >= 2.15.90.
+    - Build-depend on gnome-doc-utils.
+  * Configure with --disable-scrollkeeper.
+  * Drop INSTALL_PROGRAM, dh_strip handles this.
+  * Cleanups.
+  * Let totem-gstreamer recommend gnome-control-center >= 2.15.90 for
+    gnome-sound-properties; conflict with gnome-control-center << 2.15.90 as
+    the bundled gnome-sound-properties is not aware of GStreamer profiles.
+  * Add a totem-gstreamer.README.Debian to document setting the output sink.
+  * Build-depend on librsvg2-dev and librsvg2-common >= 2.16.0-2 to make the
+    package autobuildable.
+
+ -- Loic Minier <lool@dooz.org>  Fri, 23 Mar 2007 11:53:24 +0100
+
+totem (2.16.6-1) unstable; urgency=medium
+
+  * New upstream stable release; bug fixes and translations.
+    - Drop patch 30_dlopen_noremove_dbus_glib, merged upstream.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 19 Mar 2007 15:33:08 +0100
+
+totem (2.16.5-3) unstable; urgency=medium
+
+  [ Sebastien Bacher ]
+  * debian/patches/30_dlopen_noremove_dbus_glib.dpatch:
+    - fix "crash because NPPVpluginKeepLibraryInMemory is broken in gecko",
+      patch from Alexander Sack (GNOME bug #415389)
+
+  [ Loic Minier ]
+  * Urgency medium.
+
+ -- Loic Minier <lool@dooz.org>  Thu,  8 Mar 2007 14:51:55 +0100
+
+totem (2.16.5-2) unstable; urgency=low
+
+  * Upload to unstable; drop dist-check.
+
+ -- Loic Minier <lool@dooz.org>  Sat,  3 Feb 2007 14:58:22 +0100
+
+totem (2.16.5-1) experimental; urgency=low
+
+  * New upstream stable release; bug fixes and translation updates; no API or
+    ABI change.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 29 Jan 2007 17:55:00 +0100
+
+totem (2.16.4-3) UNRELEASED; urgency=low
+
+  [ Sven Arvidsson ]
+  * Add upstream ChangeLog, NEWS and README. (Closes: #404362)
+  * Remove unnecessary upstream TODO.
+
+  [ Loic Minier ]
+  * Add a get-orig-source target to retrieve the upstream tarball.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 13 Jan 2007 22:51:13 +0100
+
+totem (2.16.4-2) unstable; urgency=low
+
+  * Build-depend on libxtst-dev, thanks Sven Arvidsson
+    (closes: #315926).
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 30 Nov 2006 14:16:44 +0100
+
+totem (2.16.4-1) unstable; urgency=low
+
+  * New upstream stable release; no API change; fixes for session saving (now
+    correctly restored, closes: #399983, and with support for the width of the
+    sidebar), some translation cleanups.
+
+ -- Loic Minier <lool@dooz.org>  Wed, 29 Nov 2006 21:41:02 +0100
+
+totem (2.16.3-3) unstable; urgency=high
+
+  * Add symlinks in the iceweasel plugins directory; symlinks for the firefox
+    plugins dir are still installed for compatibility with local firefox debs
+    and backwards-compatibility.
+  * Update description to mention Iceweasel instead of Firefox.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 21 Nov 2006 17:31:59 +0100
+
+totem (2.16.3-2) unstable; urgency=low
+
+  * Do not build-depend on libhal-dev for kfreebsd-i386 and kfreebsd-amd64;
+    build-depend on libcam-dev instead; thanks Petr Salinger; closes: #399091.
+  * Drop useless libnautilus-burn-dev build-dep; thanks Bastien Nocera.
+
+ -- Loic Minier <lool@dooz.org>  Sat, 18 Nov 2006 10:03:47 +0100
+
+totem (2.16.3-1) unstable; urgency=low
+
+  * New upstream release; no API change.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 14 Nov 2006 17:38:27 +0100
+
+totem (2.16.2-4) unstable; urgency=low
+
+  * GNU/kFreeBSD support thanks Aurelien Jarno; closes: #391307.
+    - New dpatch, 30_kfreebsd_gnu, to use sys/cdio.h and sys/disklabel.h under
+      FreeBSD and mntent.h under Linux.
+  * Update 30_kfreebsd_gnu dpatch for totem 2.16.2.
+
+ -- Loic Minier <lool@dooz.org>  Mon,  6 Nov 2006 18:24:35 +0100
+
+totem (2.16.2-3) unstable; urgency=low
+
+  * Fix copyright to mention the LGPL for the Totem Playlist parser library,
+    "plparser", and the excemption for proprietary GStreamer plugins; thanks
+    Thadeu Lima de Souza Cascardo; closes: #396549.
+
+ -- Loic Minier <lool@dooz.org>  Wed,  1 Nov 2006 15:43:30 +0100
+
+totem (2.16.2-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Loic Minier <lool@dooz.org>  Thu, 19 Oct 2006 11:57:54 +0200
+
+totem (2.16.2-1) experimental; urgency=low
+
+  * New upstream release; no API change.
+
+ -- Loic Minier <lool@dooz.org>  Mon,  2 Oct 2006 15:52:01 +0200
+
+totem (2.16.1-1) experimental; urgency=low
+
+  [ Guilherme de S. Pastore ]
+  * New upstream release.
+  * debian/watch: updated.
+
+  [ Loic Minier ]
+  * Add debian/test.html, sample javascript integration of the gecko plugin.
+  * Re-add Firefox symlinks as these are required after all.
+  * New upstream release; with API additions.
+    - Bump libtotem-plaparser1 shlibs to >= 2.16.1.
+    - Install new plugin flavor, MullY.
+
+ -- Loic Minier <lool@dooz.org>  Fri,  8 Sep 2006 09:14:19 +0200
+
+totem (1.5.92-1) experimental; urgency=low
+
+  * Fix changelog of 1.5.91-1; hal 0.6 is not released yet, but upstream has a
+    safety check just in case it would break API/ABI.
+  * New upstream development release.
+    - Drop 10_dont-clean-totem-schemas-in dpatch, merged upstream.
+
+ -- Loic Minier <lool@dooz.org>  Fri, 25 Aug 2006 22:04:46 +0200
+
+totem (1.5.91-2) experimental; urgency=low
+
+  * Bump shlibs to libtotem-plparser1 >= 1.5.1.
+  * Pass "-L libtotem-plparser1" and  "-l debian/libtotem-plparser1/usr/lib"
+    to dh_shlibdeps for the other packages to see the lib and use the shlibs.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 13 Aug 2006 15:19:01 +0200
+
+totem (1.5.91-1) experimental; urgency=low
+
+  * New upstream development releases; with API additions.
+    - Target at experimental.
+    - Bump up libgstreamer0.10-dev and libgstreamer-plugins-base0.10-dev
+      build-deps to >= 0.10.1.
+    - Bump up libglib2.0-dev build-dep to >= 2.8.0.
+    - Bump up libxine-dev build-dep to >= 1.1.2.
+    - Add a build-dep on libgconf2-dev.
+    - Rename --with-mozilla configure flag to --with-browser-plugins.
+    - Add a build-dep on shared-mime-info (>= 0.17).
+    - Add a build-dep on libhal-dev (>= 0.5).
+    - Drop 09_maintainer-mode dpatch as upstream now calls
+      GNOME_MAINTAINER_MODE_DEFINES which requires AM_MAINTAINER_MODE.
+    - Drop 60_mandatory-relibtoolizing dpatch which isn't required anymore.
+    - Update symlinks and installation steps for the split in 4 distinct
+      plugins.
+    - New dpatch, 10_dont-clean-totem-schemas-in, to workaround an upstream
+      bug preventing two successive builds.
+    - Fixes playing of streams with mms:// URL lists. (Closes: #382603)
+  * Ship the *.xpt files as recommended by upstream.
+  * Only symlink the plugin in /usr/lib/mozilla as Firefox and XULRunner are
+    expected to look there too.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 13 Aug 2006 14:28:00 +0200
+
+totem (1.4.5-1) unstable; urgency=low
+
+  * New upstream release; no API changes.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 12 Sep 2006 10:41:57 +0200
+
+totem (1.4.4-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Make the package binNMU-able by making the arch-all packages depend
+    only on >= ${Source-Version} arch-any packages.
+  * Make totem-mozilla depend on dbus.
+
+  [ Loic Minier ]
+  * Use ${source:Version} and ${binary:Version} because of the totem-mozilla
+    Recommend; build-depend on dpkg-dev >= 1.13.19.
+  * Let totem-xine also Recommend totem-mozilla.
+  * New upstream release.
+    - Drop the 11_configure-drop-mozilla-link-flags dpatch, merged upstream.
+    - Update 60_mandatory-relibtoolizing dpatch.
+    - Fix the moves of the mozilla plugin since upstream now installs in
+      /usr/lib/mozilla/plugins, whatever the gecko engine.
+
+ -- Loic Minier <lool@dooz.org>  Tue,  8 Aug 2006 14:13:44 +0200
+
+totem (1.4.3-1) unstable; urgency=low
+
+  * Fix bashishm in mv "foo.{x,y}" snippet executed by $SHELL, thanks Julien
+    Danjou. (Closes: #377367)
+  * Drop 10_configure-force-xulrunner dpatch as --with-mozilla=xulrunner is
+    enough to select the appropriate Gecko.
+  * New upstream release.
+    - Update 60_mandatory-relibtoolizing dpatch.
+
+ -- Loic Minier <lool@dooz.org>  Thu, 13 Jul 2006 13:42:08 +0200
+
+totem (1.4.2-1) experimental; urgency=low
+
+  * Upload to experimental for now as the package is frozen in unstable due to
+    a big transition, but some users requested the fixed package.
+  * Set libtotem-plparser1-dbg Priority to extra.
+    [debian/control, debian/control.in]
+  * New dpatch, 09_maintainer-mode, to use AM_MAINTAINER_MODE for safety.
+  * Update 60_mandatory-relibtoolizing dpatch to also intltoolize as this is
+    required with intltool 0.35. (Closes: #372529)
+  * Bump up Standards-Version to 3.7.2.
+  * New upstream release.
+    - Lower libgnomevfs2-dev build-dep to >= 2.8.2
+    - Bump up gstreamer0.10-plugins-base build-dep to >= 0.10.7.
+    - Drop 30_totem-mozilla-types dpatch, merged upstream.
+    - Update 60_mandatory-relibtoolizing dpatch.
+  * Build-depend on autotools-dev for the config.guess / config.sub update
+    snippet to work.
+
+ -- Loic Minier <lool@dooz.org>  Sat,  8 Jul 2006 21:34:16 +0200
+
+totem (1.4.1-2) unstable; urgency=low
+
+  * debian/patches/30_totem-mozilla-types.dpatch
+    - Added. Correct the Bool types used by the totem-mozilla plugin. Fixes the
+      mozilla plugin on big-endian architectures.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun,  4 Jun 2006 22:16:38 +0200
+
+totem (1.4.1-1) unstable; urgency=low
+
+  [ Guilherme de S. Pastore ]
+  * New upstream release.
+  * debian/patches:
+    - 00list: updated.
+    - 06_volume_icons_change.dpatch, 07_no_mms_to_mmsh_change.dpatch,
+      08_aspect_ratio_fix.dpatch,
+      09_play_protocol_not_listed_by_firefox.dpatch: removed, applied upstream.
+
+  [ Loic Minier ]
+  * Update the mandatory relibtoolizing patch...
+    [debian/patches/60_mandatory-relibtoolizing.dpatch]
+  * Move common configure flags to COMMON_CONFIGURE_FLAGS and add
+    --disable-maintainer-mode to them.
+    [debian/rules]
+  * Recommend totem-mozilla and not totem-gstreamer-xul-plugin.
+    [debian/control, debian/control.in]
+  * Promote gstreamer0.10-plugins-ugly and gstreamer0.10-ffmpeg from Suggests
+    to Recommends.
+    [debian/control, debian/control.in]
+  * Remove what looks useless and now bogus deps on xlibs. (Closes: #370089)
+    [debian/control, debian/control.in]
+
+ -- Loic Minier <lool@dooz.org>  Thu, 25 May 2006 21:09:34 +0200
+
+totem (1.4.0-1) unstable; urgency=low
+
+  [ Gustavo Franco ]
+  * New upstream release.
+  * debian/control:
+    - intltool added in build-depends field
+    - libnautilus-burn-dev build-depends downgraded
+    - libtotem-plparser1 added, dropping libtotem-plparser0 (due to
+      SONAME change)
+    - gstreamer0.8 related dependencies bumped up to gstreamer0.10
+    - Uploaders field sync with gnome-pkg-tools
+    - Standards-Version bumped up to 3.7.0
+  * debian/rules:
+    - minor changes to fix the build (e.g: libtotem-plparser1 bits)
+    - fix '*.la' removal from all the binaries
+    - config.{guess,sub} unneeded copy removed from clean target
+  * debian/patches/01_totem_playlist_add_fix.dpatch dropped (merged upstream)
+  * debian/patches/08_firefox-plugin-fix.dpatch dropped (merged upstream)
+  * Patches merged from Ubuntu:
+    * debian/patches/06_volume_icons_change.dpatch:
+      - patch from CVS, don't use the mute icon for non muted volume
+    * debian/patches/07_no_mms_to_mmsh_change.dpatch:
+      - patch from CVS, to automatically change mms to mmsh
+    * debian/patches/08_aspect_ratio_fix.dpatch:
+      - patch from upstream CVS, work by j^ <j@bootlab.org>, fix the aspect
+        ratio setting usage
+    * debian/patches/09_play_protocol_not_listed_by_firefox.dpatch:
+      - patch from upstream, work by Gary Coady <gary@lyranthe.org>, fix the
+        playing of protocols not listed by firefox
+
+  [ Gustavo Noronha Silva ]
+  * debian/patches/01_totem_playlist_add_fix.dpatch:
+  - patch by Thadeu Lima de Souza Cascardo <cascardo@minaslivre.org>
+    to fix crash on playlist add (Closes: #349357)
+  * debian/control.in, debian/rules:
+  - add xulrunner plugins for totem as new packages (Closes: #321400)
+  - added libxul-dev, and xulrunner (for xpidl) to Build-Deps
+
+  [ Loic Minier ]
+  * Trash all *.a and *.la files not only from debian/totem-gstreamer/usr/lib,
+    but from debian/totem-gstreamer and debian/totem-xine altogether, except
+    for debian/totem-xine/usr/lib/*.a.
+    [debian/rules]
+  * Remove the now useless rm calls on "*a" files.
+    [debian/rules]
+  * Remove config.guess and config.sub updating patch as cdbs takes care of
+    this and hence fix clean target.
+    [debian/rules]
+  * Bump libgnomevfs2-dev build-dep to >= 2.9.92 per configure.ac.
+    [debian/control, debian/control.in]
+  * Fix config.sub / config.guess copying over, even if it's useless.
+    [debian/rules]
+  * Drop useless dh_installdirs calls.
+    [debian/rules]
+  * Remove *-xul packages in favor of a new totem-mozilla package, arch: all.
+    [debian/control, debian/control.in]
+  * Permit "| www-browser" in totem-mozilla's Recommends too.
+    [debian/control, debian/control.in]
+  * Add symlinks in /usr/lib/{firefox,mozilla,xulrunner}/plugins to
+    the mozilla plugin below /usr/lib/totem.
+    [debian/totem-mozilla.links]
+  * Install the mozilla plugin in /usr/lib/totem in totem-xine and
+    totem-gstreamer, drop anything else from /usr/lib/xulrunner.
+    [debian/rules]
+  * Add new patch to force usage of xulrunner, even if mozilla, firefox, or
+    seamonkey are available; WARNING: requires relibtoolizing.
+    [debian/patches/00list,
+     debian/patches/10_configure-force-xulrunner.dpatch]
+  * Add new patch to stop linling against mozilla libs (-lxpcom -lplds4 -lplc4
+    -lnspr4) by splitting the PKG_CHECK_MODULES calls in configure.in;
+    WARNING: requires relibtoolizing.
+    [debian/patches/00list,
+     debian/patches/11_configure-drop-mozilla-link-flags.dpatch]
+  * Relibtoolize, as required by the preceding patches.
+    [debian/patches/00list, debian/patches/60_mandatory-relibtoolizing.dpatch]
+  * Use similar definitions as CDBS for DEB_MAKE_INVOKE and DEB_MAKE_ENVVARS
+    and use $(DEB_MAKE_INVOKE) instead of $(MAKE) to call make, fixes warnings
+    on schema installation.
+    [debian/rules]
+
+ -- Loic Minier <lool@dooz.org>  Sat,  6 May 2006 18:38:39 +0200
+
+totem (1.2.1-4) unstable; urgency=low
+
+  * Simple rebuild to get rid of references to Xcursor.la, and Xrender.la.
+
+ -- Loic Minier <lool@dooz.org>  Tue,  2 May 2006 16:09:22 +0200
+
+totem (1.2.1-3) unstable; urgency=low
+
+  *  debian/patches/08_firefox-plugin-fix.dpatch:
+    - upstream patch to fix the firefox plugin crasher
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 13 Jan 2006 00:12:49 +0100
+
+totem (1.2.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Mon,  9 Jan 2006 22:58:02 -0200
+
+totem (1.2.1-1) experimental; urgency=low
+
+  [ Loic Minier ]
+  * Update watch file. [debian/watch]
+
+  [ Sjoerd Simons ]
+  * New upstream release
+  * Recommend gstreamer-theora and ffmpeg.
+  * Depend on llibmusicbrainz4-dev >= 2.1.1-4.1 to get the C++ transitioned
+    version.
+  * Build-Depend on libdbus-glib-1-dev so totem can disable gnome-screensaver
+    via dbus.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Tue, 20 Dec 2005 12:09:07 +0100
+
+totem (1.2.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Version the libmusicbrainz4-dev build-dep to >= 2.1.1-3.1 to get a
+    C++ transitionned version. [debian/control, debian/control.in]
+  * Drop hardcoded libtotem-plparser0 depends in totem-xine and
+    totem-gstreamer. [debian/control, debian/control.in]
+  * Menu icon fixes: [debian/totem-gstreamer.install,
+    debian/totem-gstreamer.menu, debian/totem-xine.install,
+    debian/totem-xine.menu, debian/totem.xpm]
+    - Convert the upstream PNG icon to XPM.
+    - Install totem.xpm in /usr/share/pixmaps for totem-xine and
+      totem-gstreamer.
+    - Update totem-gstreamer and totem-xine menu files.
+  * Only update config.guess and config.sub if we're in a tree with these
+    files. [debian/rules]
+
+ -- Loic Minier <lool@dooz.org>  Wed, 14 Sep 2005 13:03:01 +0200
+
+totem (1.1.5-1) experimental; urgency=medium
+
+  * Ship missing shlibs.
+  * New upstream release.
+
+ -- Loic Minier <lool@dooz.org>  Sun, 11 Sep 2005 11:37:42 +0200
+
+totem (1.1.4-1) experimental; urgency=low
+
+  * debian/control.in:
+    - new packages for libtotem-plparser.
+    - updated the Build-Depends.
+    - updated the Standards-Version.
+  * debian/rules:
+    - move libtotem-plparser files to the right place.
+  * debian/watch:
+    - updated.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 13 Aug 2005 14:24:36 +0200
+
+totem (1.0.4-1) unstable; urgency=low
+
+  * New upstream version:
+    - say that we support 3GPP files.
+    - avoid resizing on startup before we really show the window.
+    - fix a crash when 'Hide controls' is called while starting up.
+    - fix crashes when playing back some files with errors (xine-lib).
+    - fix hand icon not appearing on DVD menus in fullscreen (xine-lib).
+    - fix detection of still images with newer xine-lib.
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue, 28 Jun 2005 12:14:31 +0200
+
+totem (1.0.3-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 10 Jun 2005 01:08:45 +0200
+
+totem (1.0.2-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon,  2 May 2005 18:38:08 +0200
+
+totem (1.0.1-1) experimental; urgency=low
+
+  * New upstream version.
+  * debian/control.in:
+    - updated the requirements.
+  * debian/patches/02_crashnull.dpatch,
+    debian/patches/10_vcd_hang.dpatch:
+    - the new version fixes that.
+  * debian/watch:
+    - updated.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  9 Apr 2005 17:39:02 +0200
+
+totem (0.100-5) unstable; urgency=low
+
+  * Rebuilt for the libhowl transition (Closes: #298872).
+  * debian/control.in:
+    - updated the gnome-vfs requirements.
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 10 Mar 2005 19:14:51 +0100
+
+totem (0.100-4) unstable; urgency=low
+
+  * debian/patches/00list:
+    - list the new patch (Closes: #289470).
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 16 Feb 2005 15:09:35 +0100
+
+totem (0.100-3) unstable; urgency=low
+
+  * debian/patches/02_crashnull.dpatch:
+    - updated with the patch from Josselin Mouette <joss@debian.org>.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 13 Feb 2005 12:40:17 +0100
+
+totem (0.100-2) unstable; urgency=low
+
+  * debian/patches/01_gst-plugins-0.8.5.dpatch:
+    - removed, the new gst-plugins is in the archive now.
+  * debian/patches/02_crashnull.dpatch:
+    - added, fix the crash on system without any cdrom drive (Closes: #289470).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 10 Feb 2005 19:05:00 +0100
+
+totem (0.100-1) unstable; urgency=low
+
+  * New upstream release:
+    - implement session management support, remove automatic save/restore of
+      the current playlist (Closes: #255320).
+    - GStreamer DVD support.
+    - make Ctrl+arrows seek further in streams.
+    - turn the cursor into a hand when hovering a menu in a DVD (xine-lib).
+    - zoom in/out support (xine-lib).
+    - implement buffering (GStreamer).
+    - enable visualisation effects (GStreamer) (Closes: #269910).
+    - make the properties page work (GStreamer) and misc. fixes (all)
+      (Hoary: #1453).
+    - add Album metadata to the properties windows.
+    - hide the video properties if a file is an audio-only one.
+    - work-around a bug in GConf that caused playbacks
+      to be very dark (xine-lib).
+    - add 4.1-channel audio support.
+    - fix parsing of sub-directories, and .pls playlists with relative paths.
+  * debian/control.in:
+    - totem-gstreamer and totem-xine Provides totem (Closes: 287981).
+    - updated the descriptions about the subtitle (Closes: #285153).
+  * debian/patches/01_gst-plugins-0.8.5.dpatch:
+    - removed, this fix is in the new version.
+  * debian/watch:
+    - updated.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  8 Jan 2005 16:45:28 +0100
+
+totem (0.99.22-1) unstable; urgency=low
+
+  * New upstream release:
+    - show the popups in fullscreen (GStreamer).
+    - fix multiple volume icons appearing in the playlist.
+    - automatically load text subtitles (xine-lib).
+    - handle Drag'n'drop from Mozilla/Netscape.
+    - implement Drag from the Screenshot dialog to the file manager.
+    - make it possible to play a DVD from the hard-disk (xine-lib).
+    - fix getting the CD type when the drive doesn't implement it.
+    - add an error message when the audio device is busy (GStreamer).
+    - make drag'n'drop work again after double-clicking a playlist entry.
+  * debian/control.in:
+    - updated the Build-Depends and Depends.
+  * debian/patches/01_gst-plugins-0.8.5.dpatch:
+    - make the new version working well with gst-plugins 0.8.5.
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 22 Nov 2004 15:57:25 +0100
+
+totem (0.99.20-2) experimental; urgency=low
+
+  * debian/control.in:
+    - Build-Depends on libgstreamer-plugins0.8-dev (Closes: #279038).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 31 Oct 2004 12:38:09 +0100
+
+totem (0.99.20-1) experimental; urgency=low
+
+  * New upstream release:
+     - fix a crash when closing Totem with non-file locations.
+     - set the current file chooser paths correctly.
+     - fix "Play Disc..." when the detected device is a symbolic link.
+     - fix detection of some DVDs, and speed-up disc type detection.
+     - add bitrate support to the GStreamer backend.
+  * debian/control.in:
+     - updated the Build-Depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 27 Oct 2004 19:27:57 +0200
+
+totem (0.99.19-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    - updated the debhelper Build-Depends to get dh_desktop.
+  * debian/totem-gstreamer.postinst, debian/totem-xine.postinst:
+    - dh_desktop handles the mime update now.
+  * debian/patches/01_automake.dpatch:
+    - removed.
+  * debian/rules:
+    - use dh_desktop.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 17 Oct 2004 14:51:31 +0200
+
+totem (0.99.17-2) experimental; urgency=low
+
+  * debian/control.in:
+    - updated the Depends on nautilus-cd-burner (Closes: #275886).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 10 Oct 2004 22:28:12 +0200
+
+totem (0.99.17-1) experimental; urgency=low
+
+  * New upstream release:
+    - great overhaul of the GStreamer backend.
+    - fix parsing of Real Media and ASF playlists.
+    - support for writing m3u playlists, including relative paths.
+  * debian/control.in:
+    - updated the Build-Depends.
+    - updated the Standards-Version.
+  * debian/patches/01_automake.dpatch:
+    - run automake to fix the broken build for the gstreamer backend.
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu,  7 Oct 2004 22:13:20 +0200
+
+totem (0.99.16-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    - totem depends on totem-xine | totem-gstreamer (Closes: #270985).
+  * debian/patches/20_use_alternatives.dpatch:
+    - patch from Emil Soleyman-Zomalan <emil@nishra.com> to convert the
+      video-thumbnailer to an alternative. (Closes: #270222).
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 17 Sep 2004 12:17:22 +0200
+
+totem (0.99.15.1-2) unstable; urgency=low
+
+  * debian/control.in:
+    - updated the Build-Depends on libgnomeui-dev (Closes: #263661).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu,  5 Aug 2004 16:59:26 +0200
+
+totem (0.99.15.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - add a MimeType line to the desktop file (for the new MIME system).
+  * debian/control.in:
+    - updated the Build-Depends.
+  * debian/rules:
+    - added a call to dh_gconf.
+  * debian/totem-gstreamer.postinst, debian/totem-xine.postinst:
+    - removed schemas registration code, dh_gconf handles that.
+    - run update-desktop-database if available.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 24 Jul 2004 13:23:10 +0200
+
+totem (0.99.13-1) unstable; urgency=low
+
+  * New upstream release
+    - Handle Ctrl+P to show the playlist even in hidden controls mode
+      (Closes: #252604).
+  * debian/control.in
+    - Updated the totem-gstreamer description to remove references to xine
+      (Closes: #255420).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  3 Jul 2004 00:01:52 +0200
+
+totem (0.99.12-2) unstable; urgency=low
+
+  * Split the package, now we have:
+    - totem-xine using the xine backend.
+    - totem-gstreamer using the gstreamer backend (Closes: #246058).
+    - totem, dummy package depending on totem-xine (since it seems to be
+      a better default for the moment).
+  * debian/control.in:
+    - updated for the split.
+  * debian/patches:
+    - switched to dpatch.
+  * debian/rules:
+    - switched back to debhelper since cdbs doesn't support multibuild for
+      the moment.
+  * debina/template:
+    - removed debconf's template for the moment, gstreamer-media is not ready
+      to be a suitable alternative for thumbnails (Closes: #235857, #252941).
+  * debian/totem.1:
+    - removed, the manpage is included in the upstream tarball now.
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue,  8 Jun 2004 15:16:34 +0200
+
+totem (0.99.12-1) unstable; urgency=low
+
+  * New upstream release
+    + turn off vanity's build.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun,  6 Jun 2004 03:12:19 +0200
+
+totem (0.99.11-2) unstable; urgency=low
+
+  * Upload in unstable.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 26 May 2004 23:53:54 +0200
+
+totem (0.99.11-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/patches/stock-icon.patch, debian/patches/totem-rwcrash-fix.patch:
+    + removed since included in new version.
+  * debian/control.in:
+    + updated Build-Depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  1 May 2004 23:28:02 +0200
+
+totem (0.99.10-3) experimental; urgency=low
+
+  * debian/patches/stock-icon.patch:
+    + patch from Michel Daenzer <daenzer@debian.org> that makes all installed
+      icons loadable by totem (Closes: 243334).
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue, 27 Apr 2004 00:21:22 +0200
+
+totem (0.99.10-2) experimental; urgency=low
+
+  * debian/patches/totem-rwcrash-fix.patch:
+    + new patch to fix a crasher.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 18 Apr 2004 17:30:38 +0200
+
+totem (0.99.10-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    + updated Build-Depends.
+  * Included Brazilian Portuguese debconf template from Andre Luis Lopes
+    <andrelop@debian.org> (Closes: #235384).
+  * Included new manpage from Andre Lehovich <andrel@U.Arizona.EDU>
+    (Closes: #241814).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 11 Apr 2004 00:46:20 +0200
+
+totem (0.99.9-4) unstable; urgency=low
+
+  * Fixed schemas registration (should fix the problem with colors).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 22 Feb 2004 19:57:11 +0100
+
+totem (0.99.9-3) unstable; urgency=low
+
+  * debian/patches/vcd_hang.patch:
+    + patch to fix hang on start with VCD plugin.
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue, 17 Feb 2004 19:36:46 +0100
+
+totem (0.99.9-2) unstable; urgency=low
+
+  * GNOME team upload.
+  * [debian/control.in] Added build dependency on scrollkeeper.
+    (Closes: #232588)
+
+ -- J.H.M. Dassen (Ray) <jdassen@debian.org>  Sat, 14 Feb 2004 10:10:04 +0100
+
+totem (0.99.9-1) unstable; urgency=low
+
+  * New upstream release
+    + fix bug with directory selection in the file selector (Closes: #225903).
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 13 Feb 2004 19:47:26 +0100
+
+totem (0.99.8-3) unstable; urgency=low
+
+  * Rebuilt with xfree 4.2.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 18 Jan 2004 01:01:37 +0100
+
+totem (0.99.8-2) unstable; urgency=low
+
+  * Fixed a typo in the french debconf translation (Closes: #227311).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 17 Jan 2004 16:58:34 +0100
+
+totem (0.99.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    + updated Build-Depends.
+    + updated for the GNOME Team.
+  * debian/rules:
+    + updated for the GNOME Team.
+  * Added french template (Closes: #218730).
+  * Changed the template to remove the "yes" from the description
+    (Closes: #218117).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun,  9 Nov 2003 14:03:46 +0100
+
+totem (0.99.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added debconf option to use or not totem as the nautilus video thumbnailer.
+    (Closes: #212555).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 16 Oct 2003 01:01:24 +0200
+
+totem (0.99.6-1) unstable; urgency=low
+
+  * New upstream release.
+    + playlist improvements (Closes: #211833).
+    + fixed crash on eject (Closes: #211968).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 12 Oct 2003 18:34:48 +0200
+
+totem (0.99.5-1) unstable; urgency=low
+
+  * New upstream release
+    + disable xscreensaver (Closes: #208175).
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 15 Sep 2003 17:55:44 +0200
+
+totem (0.99.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu,  4 Sep 2003 15:41:46 +0200
+
+totem (0.99.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switched to cdbs.
+  * Updated menu icon.
+  * Updated description (Closes: #207007).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 31 Aug 2003 19:53:10 +0200
+
+totem (0.99.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixed XFree86 lockup on start bug (Closes: #200101).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  5 Jul 2003 14:02:13 +0000
+
+totem (0.99.1-2) unstable; urgency=low
+
+  * Build with xfree 4.2 instead 4.3. (Closes: #199335).
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue,  1 Jul 2003 23:49:57 +0200
+
+totem (0.99.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 23 Jun 2003 11:49:55 +0200
+
+totem (0.99.0-2) unstable; urgency=low
+
+  * Added libgnome-desktop-dev to Build-Depends (Closes: #196224).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu,  5 Jun 2003 17:11:25 +0200
+
+totem (0.99.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixed DVD/CD playing (Closes: #195090).
+  * Updated to standards version 3.5.10.0.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 31 May 2003 19:19:39 +0200
+
+totem (0.98.0-1) unstable; urgency=low
+
+  * New upstream relase.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 11 May 2003 21:13:06 +0200
+
+totem (0.97.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixed the thumbnailer (Closes: #188979).
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue, 29 Apr 2003 22:13:05 +0200
+
+totem (0.96.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Changed section to gnome.
+  * Updated to standards version 3.5.9.
+  * Updated Description to add Author and Homepage.
+  * Added Depends on ${misc:Depends}.
+  * Updated Build-Depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 10 Apr 2003 11:17:49 +0200
+
+totem (0.95.1-3) unstable; urgency=low
+
+  * This time the schema file should be ok ...
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 28 Mar 2003 21:54:13 +0100
+
+totem (0.95.1-2) unstable; urgency=low
+
+  * Fixed schema file (Closes: #185137).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 27 Mar 2003 17:09:15 +0100
+
+totem (0.95.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 26 Feb 2003 23:43:07 +0100
+
+totem (0.95.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated to standards-version 3.5.8.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 26 Feb 2003 22:01:48 +0100
+
+totem (0.90.0-5) unstable; urgency=low
+
+  * Added "liblircclient-dev" and "libirman-dev" to Build-Depends (Closes: #182195).
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 23 Feb 2003 17:47:25 +0100
+
+totem (0.90.0-4) unstable; urgency=low
+
+  * Apply patch to support playing straight from amazon (Closes: #181485).
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 20 Feb 2003 17:19:18 +0100
+
+totem (0.90.0-3) unstable; urgency=low
+
+  * Register totem-video-thumbnail schemas (Closes: #179343).
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed,  5 Feb 2003 01:13:54 +0100
+
+totem (0.90.0-2) unstable; urgency=low
+
+  * Update README file.
+  * Update Build-Depends.
+  * Remove obsolete depend on xine-dvdnav (Closes: #179160).
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 31 Jan 2003 10:59:36 +0100
+
+totem (0.90.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Should close the FTBFS (Closes: #176530).
+  * Updated Build-Depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Wed, 29 Jan 2003 20:39:02 +0100
+
+totem (0.13.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated xine-lib Depends.
+  * Totem doesn't use xine logo any more (Closes: #160429).
+  * Updated xpm icon for debian menu.
+  * Updated to standards-version 3.5.7.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  3 Jan 2003 12:34:20 +0100
+
+totem (0.11.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #161818).
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 28 Oct 2002 13:02:10 +0100
+
+totem (0.10.0-3) unstable; urgency=low
+
+  * Added xine-dvdnav to Depends (and not to Build-Depends ...).
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri, 25 Oct 2002 01:17:52 +0200
+
+totem (0.10.0-2) unstable; urgency=low
+
+  * Added xine-dvdnav to Build-Depends.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sun, 20 Oct 2002 00:22:30 +0200
+
+totem (0.10.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon,  2 Sep 2002 19:14:31 +0200
+
+totem (0.9.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 24 Aug 2002 15:12:51 +0200
+
+

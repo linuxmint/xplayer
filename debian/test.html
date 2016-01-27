@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+<div align="middle">
+<h1>PIMP</h1>
+<h3>PIMP Internet Media Player</h3>
+<table cellspacing="12" cellpadding="0">
+<tr>
+  <td colspan="3">
+<embed src="file:///home/lool/fnu/apple_promouse.mpeg"
+  width="384" height="300" controller="false" enablejavascript="true"
+  bgcolor=#000000 autoplay="true" name="player"/>
+  </td>
+</tr>
+<tr>
+  <td align="middle">
+    <img src="file:///usr/share/icons/Bluecurve/48x48/stock/media-play.png"
+      onClick="javascript:document.player.Play();"/>
+  </td>
+  <td align="middle">
+    <img src="file:///usr/share/icons/Bluecurve/48x48/stock/media-pause.png"
+      onClick="javascript:document.player.Stop();"/>
+  </td>
+  <td align="middle">
+    <img src="file:///usr/share/icons/Bluecurve/48x48/stock/media-stop.png"
+      onClick="javascript:document.player.Rewind();"/>
+  </td>
+</td>
+</table>
+<script><!--
+  Maybe add in future:
+  - kiosk mode
+
+  Javascript controls:
+  Play() -> play
+  Rewind() -> stop
+  Stop() -> pause
+  GetTimeScale() -> get units per second (e.g. milliseconds)
+  SetTime(int time) / GetTime() -> query/seek (in timescale)
+  GetVolume() / SetVolume (int vol) -> set/get volume (?)
+  SetIsLooping(boolean loop) / GetIsLooping() -> get/set loop
+  GetMute() / SetMute(boolean mute) -> set/get mute
+  SetTarget(string url) / GetTarget() -> change HREF
+  SetURL(string url) / GetURL() -> change URL
+  GetDuration() -> get movie length (in timescale)
+--></script>
+</div>
+</body>
+</html>

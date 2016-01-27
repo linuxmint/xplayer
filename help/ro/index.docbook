@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26">
+<!ENTITY manrevision "3.0">
+<!ENTITY date "February 2009">
+<!ENTITY app "Totem Movie Player">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file.
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!--
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="ro">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo>
+    <title><application>Playerul pentru filme Totem</application> – Manualul utilizatorului</title>
+    <copyright lang="en">
+      <year>2003</year>
+      <holder>Chee Bin HOH</holder>
+    </copyright>
+    <copyright lang="en">
+      <year>2009</year>
+      <holder>Philip Withnall</holder>
+    </copyright>
+    <releaseinfo revision="2.26" role="final">
+    	<ulink type="peerreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=574524"/>
+    </releaseinfo>
+
+    <abstract role="description">
+      <para><application>Playerul pentru filme Totem</application> este un player media pentru GNOME ce rulează în mod implicit pe GStreamer, dar poate fi rulat și pe xine. Are suport pentru cele mai multe codecuri audio și video inclusiv DVD-uri. Caracteristicile includ ieșire TV, modul ecran complet, subtitrări, și altele.</para>
+    </abstract>
+
+    <publisher>
+      <publishername>Proiectul de documentație GNOME</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para lang="en">
+	  Permission is granted to copy, distribute and/or modify this
+	  document under the terms of the GNU Free Documentation
+	  License (GFDL), Version 1.1 or any later version published
+	  by the Free Software Foundation with no Invariant Sections,
+	  no Front-Cover Texts, and no Back-Cover Texts.  You can find
+	  a copy of the GFDL at this <ulink type="help" url="help:fdl">link</ulink> or in the file COPYING-DOCS
+	  distributed with this manual.
+         </para>
+         <para>Acest manual este parte a colecției de manuale GNOME distribuit sub licența GFDL. Dacă doriți, puteți distribui acest manual separat de colecție, puteți face acest lucru prin adăugarea unei copii a licenței la manual în modul descris în secțiunea 6 a licenței.</para>
+
+	<para>Multe dintre numele utilizate de companii pentru a distinge produsele și serviciile lor sunt revendicate ca mărci comerciale. Atunci când aceste nume apar în orice documentație GNOME, și membrii proiectului de documentare GNOME sunt informați despre aceste mărci comerciale, ele sunt scrise cu majuscule sau cu majusculă inițială.</para>
+
+	<para lang="en">
+	  DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+	  UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+	  WITH THE FURTHER UNDERSTANDING THAT:
+
+	  <orderedlist>
+		<listitem>
+		  <para lang="en">DOCUMENT IS PROVIDED ON AN "AS IS" BASIS,
+                    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                    IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                    THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                    A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                    RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                    OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                    MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                    YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                    CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                    SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                    OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                    LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                    VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                    EXCEPT UNDER THIS DISCLAIMER; AND
+		  </para>
+		</listitem>
+		<listitem>
+		  <para lang="en">UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                       THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                       CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                       INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                       DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                       OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                       PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                       DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                       CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                       INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                       OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                       MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                       LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                       DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                       EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                       THE POSSIBILITY OF SUCH DAMAGES.
+		  </para>
+		</listitem>
+	  </orderedlist>
+	</para>
+  </legalnotice>
+
+
+    <!-- This file  contains link to license for the documentation (GNU FDL), and
+         other legal stuff such as "NO WARRANTY" statement. Please do not change
+	 any of this. -->
+
+    <authorgroup>
+      <author role="maintainer" lang="en">
+	<firstname>Chee Bin</firstname>
+	<surname>HOH</surname>
+	<affiliation>
+  	  <orgname>GNOME Documentation Project</orgname>
+	</affiliation>
+	<email>cbhoh@gnome.org</email>
+      </author>
+      <author lang="en">
+	<firstname>Baptiste</firstname>
+	<surname>Mille-Mathias</surname>
+	<affiliation>
+          <orgname>GNOME Documentation project</orgname>
+        </affiliation>
+        <contrib>Update documentation</contrib>
+        <email>baptiste.millemathias@gmail.org</email>
+      </author>
+       <author lang="en">
+	<firstname>Philip</firstname>
+	<surname>Withnall</surname>
+        <contrib>Update documentation</contrib>
+	<email>philip@tecnocode.co.uk</email>
+      </author>
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+	<firstname>Latin</firstname>
+	<surname>Translator 1</surname>
+	<affiliation>
+          <orgname>Latin Translation Team</orgname>
+  	  <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other -->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+	<date>August 2006</date>
+	<revdescription>
+	  <para role="author" lang="en">Chee Bin HOH
+	    <email>cbhoh@gnome.org</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision lang="en">
+        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+	<date>February 2009</date>
+	<revdescription>
+	  <para role="author" lang="en">Philip Withnall
+	    <email>philip@tecnocode.co.uk</email>
+	  </para>
+	  <para role="publisher" lang="en">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Acest manual descrie versiune 2.26 a lui playerului pentru filme Totem.</releaseinfo>
+    <legalnotice>
+      <title>Sugestii</title>
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+        this manual, follow the directions in the
+        <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+      </para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index" lang="en">
+    <primary>Totem Movie Player</primary>
+  </indexterm>
+  <indexterm zone="index" lang="en">
+    <primary>totem</primary>
+  </indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="totem-introduction">
+    <title>Introducere</title>
+    <para><application>Playerul pentru filme Totem</application> este un player pentru filme pentru desktopul GNOME bazat pe platforma GStreamer și biblioteca xine, ce vă permite să redați filme sau melodii.</para>
+    <para><application>Playerul pentru filme Totem</application> oferă următoarele caracteristici:</para>
+    <itemizedlist>
+      <listitem>
+	<para>Suport pentru o varietate de fișiere audio și video.</para>
+      </listitem>
+      <listitem>
+	<para>O varietate de nivele de zoom și proporții de aspect și vizualizare pe întreg ecranul.</para>
+      </listitem>
+      <listitem>
+        <para>Derularea și controlul volumului.</para>
+      </listitem>
+      <listitem>
+        <para>O listă de redare.</para>
+      </listitem>
+      <listitem>
+        <para>Suport pentru subtitrări.</para>
+      </listitem>
+      <listitem>
+	<para>Navigare completă cu ajutorul tastaturii.</para>
+      </listitem>
+      <listitem>
+	<para>Un set cuprinzător de module, incluzând un descărcător de subtitrări, un navigator YouTube și un inscriptor de discuri.</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <para><application>Playerul pentru filme Totem</application>, vine și cu funcționalități suplimentare cum ar fi:</para>
+      <itemizedlist>
+	<listitem>
+	  <para>Creator de miniaturi video pentru GNOME.</para>
+        </listitem>
+        <listitem>
+	  <para>Aplicație de previzualizare audio pentru GNOME.</para>
+        </listitem>
+	<listitem>
+	  <para>Tabul de proprietăți din Nautilus.</para>
+        </listitem>
+      </itemizedlist>
+    </note>
+  </sect1>
+<!-- =========== End of Introduction ========================= -->
+
+<!-- =========== Getting Started ============================= -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here.
+     If the information about how to get started is very short, you can
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="totem-getting-started">
+    <title>Primii pași</title>
+
+    <sect2 id="totem-start">
+      <title>Pentru a porni <application>Playerul pentru filme Totem</application></title>
+      <para>Puteți porni <application>Playerul pentru filme Totem</application> în următoarele moduri:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Din meniul <guimenu>Aplicații</guimenu></term>
+	  <listitem>
+	    <para lang="en">Choose
+              <menuchoice>
+		<guisubmenu>Sound &amp; Video</guisubmenu>
+		<guimenuitem>Movie Player</guimenuitem>
+	      </menuchoice>.
+            </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Din linia de comandă</term>
+	  <listitem>
+	    <para>Pentru a porni <application>Playerul pentru filme Totem</application> dintr-o linie de comandă, tastați următoarea comandă, apoi apăsați <keycap>Enter</keycap>:</para>
+	    <para lang="en">
+            <command>totem</command>
+            </para>
+	    <tip>
+	      <para>Pentru a vizualiza alte opțiuni disponibile în linia de comandă, tastați <command>totem --help</command>, apoi apăsați <keycap>Enter</keycap>.</para>
+	    </tip>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-when-start">
+      <title>Când porniți <application>Playerul pentru filme Totem</application></title>
+      <para>Când porniți <application>Playerul pentru filme Totem</application>, următoarea fereastră va fi afișată.</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="totem-start-fig">
+	<title>Fereastra principală a <application>playerului pentru filme Totem</application></title>
+	<screenshot>
+	  <mediaobject lang="en">
+	    <imageobject>
+	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Shows <application>Totem Movie Player</application> main window with
+		  sidebar opened on playlist. Contains
+		  menubar, display area, sidebar, elapsed time slider, seek control
+		  buttons, volume slider and statusbar.
+          </phrase>
+	    </textobject>
+	  </mediaobject>
+	</screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+      <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+      <para>Fereastra <application>Playerul pentru filme Totem</application> conține următoarele elemente:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Bara de meniu.</term>
+  	  <listitem>
+	    <para>Meniurile din bara de meniu conțin toate comenzile pe care le puteți utiliza în <application>Playerul pentru filme Totem</application>.</para>
+ 	  </listitem>
+   	</varlistentry>
+	<varlistentry>
+	  <term>Zona de afișare.</term>
+	  <listitem>
+	    <para>Zona de afișare conține filmul sau o vizualizare a melodiei curente.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Bara laterală.</term>
+	  <listitem>
+	    <para>Bara laterală afișează proprietățile fișierelor redate și funcționează ca o listă de redare. Poate fi utilizată și de diverse module, precum modulele MythTV, YouTube și Căutare video. Acestea pot fi selectate apăsând pe lista derulantă din partea de sus a barei laterale.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Glisorul pentru timpul scurs.</term>
+	  <listitem>
+	    <para>Glisorul pentru timpul scurs afișează cât timp s-a scurs din filmul sau melodia care este redată. Vă permite să derulați înainte sau înapoi într-un film sau într-o melodie trăgând glisorul de-a lungul barei, sau printr-un clic într-un punct de pe bară.</para>
+	  </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Butoane de derulare.</term>
+          <listitem>
+            <para>Butoanele de control pentru derulare vă permit să vă deplasați la piesa următoare sau anterioară, să opriți sau redați un film sau o melodie.</para>
+	  </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Butonul de volum.</term>
+          <listitem>
+	    <para>Butonul de volum vă permite să ajustați volumul.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Bara de stare.</term>
+	  <listitem>
+	    <para>Bara de stare afișează informații despre starea filmului sau melodiei care este redată.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+<!-- =========== End of Getting Started ====================== -->
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to use the application to perform the tasks for
+  which the application is designed. -->
+  <sect1 id="totem-usage">
+    <title>Utilizare</title>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="totem-open-file">
+      <title>Pentru a deschide un fișier</title>
+      <para lang="en">To open a video or an audio file, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut>
+          <guimenu>Movie</guimenu>
+	  <guisubmenu>Open</guisubmenu>
+        </menuchoice>.
+        The <application>Select Movies or Playlists</application> dialog is displayed.
+		Select the file or files you want to open, then click
+	<guibutton>OK</guibutton>.
+      </para>
+      <para>Puteți trage un fișier dintr-o altă aplicație, precum un administrator de fișiere, în fereastra <application>playerului pentru filme Totem</application>. Dacă trageți fișierul în zona de afișare, fișierul va înlocui lista de redare curentă și va începe redarea imediat. Dacă trageți fișierul în lista de redare din bara laterală, fișierul va fi adăugat listei de radare curentă. <application>Playerul pentru filme Totem</application> va deschide fișierul și va reda filmul sau melodia. <application>Playerul pentru filme Totem</application> afișează titlul filmului sau melodiei în bara de titlu a ferestrei și în lista de redare din bara laterală.</para>
+      <para>Dacă încercați să deschideți un format de fișier care nu este recunoscut de <application>Playerul pentru filme Totem</application>, aplicația afișează un mesaj de eroare. Acestă eroare are loc adesea dacă nu aveți instalate codecurile corecte. Informații despre punerea în funcțiune a codecurilor pot fi găsite pe <ulink url="http://projects.gnome.org/totem/#codecs" type="http">pagina <application>playerului pentru filme Totem</application></ulink>.</para>
+      <tip>
+	<para>Puteți deschide în <application>playerul pentru filme Totem</application> fișiere video sau audio din administratorul de fișiere <application>Nautilus</application> prin dublu-clic.</para>
+      </tip>
+    </sect2>
+
+    <sect2 id="totem-usage-open-location">
+      <title>Pentru a deschide o locație</title>
+      <para lang="en">To open a file by URI (location), choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Open Location</guimenuitem>
+        </menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down
+        combination box to specify the URI you would like to open (it lists URIs which have
+        previously been opened) – or type one in directly – then click on the <guibutton>Open</guibutton> button.
+      </para>
+      <para>Dacă aveți URI-ul deja copiat, acesta va fi lipit automat în căsuța pentru combinații.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-play">
+      <title>Redarea unui film (DVD sau VCD)</title>
+	      <para lang="en">Insert the disc in the optical device of your computer, then choose
+          	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
+              </menuchoice>.</para>
+             <para lang="en">To eject a DVD or VCD, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+	  <guimenuitem>Eject</guimenuitem>
+        </menuchoice>.
+      </para>
+       </sect2>
+
+    <sect2 id="totem-usage-pause">
+      <title>Pentru a întrerupe un film sau o melodie</title>
+      <para lang="en">To pause a movie or song that is playing, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows pause button.</phrase></textobject>
+        </inlinemediaobject> button, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie.
+      </para>
+      <para lang="en">To resume playing a movie or song, click on the
+        <inlinemediaobject>
+	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+          <textobject><phrase>Shows play button.</phrase></textobject>
+        </inlinemediaobject> button again, or choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
+	  <guimenu>Movie</guimenu>
+          <guimenuitem>Play / Pause</guimenuitem>
+        </menuchoice>.
+      </para>
+    </sect2>
+
+    <sect2 id="totem-usage-view-properties">
+      <title>Pentru a vizualiza proprietățile unui film sau ale unei melodii</title>
+      <para lang="en">To view the properties of a movie or song, choose
+        <menuchoice>
+	  <guimenu>View</guimenu>
+	  <guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar
+	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-seek">
+      <title>Derularea filmelor și a melodiilor</title>
+      <para>Pentru a derula filme sau melodii, puteți utiliza următoarele metode:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Pentru a derula înainte</term>
+	  <listitem>
+	    <para lang="en">To skip forward through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Right</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Forward</guimenuitem>
+              </menuchoice>.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Pentru a derula înapoi</term>
+	  <listitem>
+	    <para lang="en">To skip backwards through a movie or song, choose
+              <menuchoice>
+		<shortcut><keycap>Left</keycap></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip Backwards</guimenuitem>
+              </menuchoice>.
+             </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Pentru a sări la un timp specificat</term>
+	  <listitem>
+	    <para lang="en">To skip to a specific elapsed time in the movie or song, choose
+              <menuchoice>
+		<shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+		<guimenuitem>Skip to</guimenuitem>
+              </menuchoice>. The <application>Skip to</application> dialog is displayed. Use the
+              spin box to specify the elapsed time (in seconds) to skip to, then
+              click <guibutton>OK</guibutton>.
+            </para>
+            <para>Căsuța de incrementare permite utilizarea unui limbaj mai natural. Puteți introduce un timp în formatele „hh:mm:ss”, „mm:ss” sau „ss” unde „hh” este ora, „mm” este minutul și „ss” este secunda la care să se sară.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Pentru a trece la următorul film sau melodia următoare</term>
+	  <listitem>
+	    <para lang="en">To move to the next movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Next Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek next button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Pentru a trece la filmul sau melodia anterioară</term>
+	  <listitem>
+	    <para lang="en">To move to the previous movie or song, choose
+              <menuchoice>
+                <shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></shortcut>
+                <guimenu>Go</guimenu>
+                <guimenuitem>Previous Chapter/Movie</guimenuitem>
+              </menuchoice> or click on the
+              <inlinemediaobject>
+	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
+              </inlinemediaobject> button.
+            </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+
+    <sect2 id="totem-usage-change-zoom">
+      <title>Pentru a modifica factorul de zoom</title>
+	  <sect3 id="totem-usage-change-size">
+		<title>Pentru a schimba dimensiunea video</title>
+      <para>Pentru a modifica factorul de zoom al zonei de afișare, puteți utiliza următoarele metode:</para>
+      <itemizedlist>
+	<listitem>
+	  <para lang="en">To zoom to fullscreen mode, choose
+	  <menuchoice><shortcut><keycap>F11</keycap></shortcut>
+	  <guimenu>View</guimenu><guimenuitem>Fullscreen</guimenuitem></menuchoice>. You can also
+	  use the <keycap>F</keycap> key to toggle fullscreen mode.
+	  To exit fullscreen mode, click on the
+			<guibutton>Leave Fullscreen</guibutton> button or press
+			<keycap>Esc</keycap>, <keycap>F11</keycap> or <keycap>F</keycap>.
+          </para>
+    </listitem>
+	<listitem>
+	  <para lang="en">To change the size of the original movie or visualization,
+            choose
+            <menuchoice>
+	      <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut>
+	      <guimenu>View</guimenu><guimenuitem>Fit Window to Movie</guimenuitem>
+            </menuchoice> and choose a scale ratio.
+      </para>
+    </listitem>
+	</itemizedlist>
+	</sect3>
+	 <sect3 id="totem-usage-change-ratio">
+		<title>Pentru a modifica proporția de aspect a videoului</title>
+	      <para lang="en">To switch between different aspect ratios, choose
+            <menuchoice>
+	      <shortcut><keycap>A</keycap></shortcut>
+	      <guimenu>View</guimenu>
+	      <guisubmenu>Aspect Ratio</guisubmenu>
+            </menuchoice>.</para>
+	  </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-adjust-volume">
+      <title>Pentru a ajusta volumul</title>
+      <para lang="en">To increase the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Up</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Up</guimenuitem>
+        </menuchoice>.
+        To decrease the volume, choose
+        <menuchoice>
+	  <shortcut><keycap>Down</keycap></shortcut>
+          <guimenu>Sound</guimenu>
+          <guimenuitem>Volume Down</guimenuitem>
+        </menuchoice>.
+      </para>
+      <para>Puteți de asemenea utiliza butonul pentru volum: apăsați butonul pentru volum și alegeți nivelul volumului cu glisorul.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-on-top">
+      <title>Pentru a pune fereastra întotdeauna deasupra</title>
+      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+        choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Plugins</guimenuitem>
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        top of all other windows while a movie is playing, but not while audio or visualizations are playing.
+       </para>
+       <para>Pentru a împiedica fereastra să fie întotdeauna deasupra, dezactivați modulul <guilabel>Întotdeauna deasupra</guilabel> din nou. Consultați <xref linkend="totem-plugins-always-on-top"/> pentru mai multe informații.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-show-control">
+      <title>Pentru a afișa sau ascunde controale</title>
+      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+          <guimenu>View</guimenu>
+          <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice>, or press the <keycap>H</keycap> key.
+        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        <menuchoice>
+	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
+	  <guimenuitem>Show Controls</guimenuitem>
+        </menuchoice> from the popup menu.
+      </para>
+      <para>Dacă opțiunea <guilabel>Afișează controale</guilabel> este selectată. <application>Playerul pentru filme Totem</application> va afișa în fereastră bara de meniu, glisorul pentru timp scurs, butoanele pentru controalele de derulare, glisorul de volum și bara de stare. Dacă opțiunea <guilabel>Afișează controale</guilabel> nu este selectată, aplicația va ascunde aceste controale și va afișa doar zona de afișare.</para>
+    </sect2>
+
+    <sect2 id="totem-usage-playlist">
+      <title>Pentru a administra lista de redare</title>
+
+      <sect3 id="totem-usage-playlist-show-hide">
+	<title>Pentru a afișa sau a ascunde lista de redare</title>
+	<para lang="en">To show or hide the playlist, choose
+          <menuchoice>
+	    <guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem>
+          </menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and
+		  choose <guimenu>Playlist</guimenu> on the top of
+		  the sidebar.</para>
+      </sect3>
+
+      <sect3 id="totem-usage-playlist-manage">
+	<title>Administrarea unei liste de redare</title>
+	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en">To add a track or movie</term>
+	      <listitem>
+		<para lang="en">To add a track or movie to the playlist, click on the <guibutton>Add</guibutton>
+                  button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you
+                  want to add to the playlist, then click <guibutton>Add</guibutton>.
+                </para>
+              </listitem>
+            </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To remove a track or movie</term>
+	      <listitem>
+		<para lang="en">To remove a track or movie from the playlist, select the item or items to remove from the
+                  playlist, then click on the <guibutton>Remove</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To save the playlist to a file</term>
+	      <listitem>
+		<para lang="en">To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton>
+                  button. The <application>Save Playlist</application> dialog is displayed; specify
+                  the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie up the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie up the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Up</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en">To move a track or movie down the playlist</term>
+	      <listitem>
+		<para lang="en">To move a track or movie down the playlist, select the item from the
+                  playlist, then click on the <guibutton>Move Down</guibutton> button.
+                </para>
+              </listitem>
+	    </varlistentry>
+          </variablelist>
+        </para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-repeat">
+	<title>Pentru a selecta sau deselecta modul repetitiv</title>
+	<para>Pentru a activa sau dezactiva modul repetitiv, selectați <menuchoice><guimenu>Editare</guimenu><guimenuitem>Mod repetitiv</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="totem-usage-playlist-shuffle">
+	<title>Pentru a selecta sau deselecta modul amestecat</title>
+	<para>Pentru a activa modul amestecat, selectați <menuchoice><guimenu>Editare</guimenu><guimenuitem>Mod amestecat</guimenuitem></menuchoice>.</para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="totem-usage-subtitle">
+	  <title>Pentru a alege subtitrări</title>
+	  <para>Pentru a alege limba subtitrărilor, selectați <menuchoice><guimenu>Afișare</guimenu><guisubmenu>Subtitrări</guisubmenu></menuchoice> și alegeți limba subtitrărilor pe care doriți să le afișați.</para>
+	  <para>Pentru a dezactiva afișarea subtitrărilor, selectați <menuchoice><guimenu>Afișare</guimenu><guisubmenu>Subtitrări</guisubmenu><guimenuitem>Niciunul</guimenuitem></menuchoice>.</para>
+	  <note><para>În mod implicit, <application>Playerul pentru filme Totem</application> va alege aceeași limbă pentru subtitrări ca și cea utilizată în mod normal pe calculator.</para></note>
+	  <para><application>Playerul pentru filme Totem</application> va încărca și afișa automat subtitrări pentru un video dacă găsește un fișier subtitrare cu același nume ca și videoul redat, și cu extensia <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> sau <filename class="extension">ass</filename>.</para>
+	  <para>Dacă fișierul care conține subtitrările are un nume diferit de videoul care este redat, puteți apăsa clic-dreapta pe video în lista de redare și selecta <menuchoice><guimenuitem>Alegeți textul subtitrărilor</guimenuitem></menuchoice> din meniul popup pentru a încărca fișierul corect cu subtitrări. Puteți de asemenea alege subtitrări selectând <menuchoice><guimenu>Afișare</guimenu><guimenuitem>Alegeți textul subtitrărilor</guimenuitem></menuchoice>.</para>
+	  <para>Utilizând modulul <guilabel>Descărcare subtitrări</guilabel>, puteți de asemenea descărca subtitrări prin intermediul serviciului OpenSubtitles. Consultați <xref linkend="totem-plugins-opensubtitles"/> pentru mai multe informații.</para>
+	</sect2>
+
+    <sect2 id="totem-usage-take-screenshot">
+      <title>Pentru a face o captură de ecran</title>
+      <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Take Screenshot</guimenuitem>
+        </menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para><application>Playerul pentru filme Totem</application> va afișa o previzualizare a capturii de ecran ce va fi salvată în partea stângă a dialogului <application>Salvare captură de ecran</application></para></tip>
+    </sect2>
+
+    <sect2 id="totem-usage-create-screenshot-gallery">
+      <title>Pentru a crea o galerie de capturi de ecran</title>
+      <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
+        <menuchoice>
+          <guimenu>Edit</guimenu>
+          <guimenuitem>Create Screenshot Gallery</guimenuitem>
+        </menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and
+	insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button
+	to save the screenshot.
+      </para>
+      <tip><para>Puteți specifica lățimea unei capturi de ecran din galerie utilizând intrarea <guilabel>Lățime captură de ecran (în pixeli)</guilabel>. Lățimea implicită este de 128 de pixeli.</para>
+      <para>Puteți de asemenea specifica numărul de capturi de ecran care să fie pus în galerie. În mod implicit, acesta este calculat în funcție de lungimea filmului; totuși, acesta poate fi suprascris deselectând căsuța de selecție <guilabel>Calculează numărul capturilor de ecran</guilabel> și introducând noul număr în căsuța de incrementare <guilabel>Număr capturi de ecran</guilabel>.</para></tip>
+    </sect2>
+  </sect1>
+
+<!-- =========== Plugins ======================================= -->
+  <sect1 id="totem-plugins">
+    <title>Module</title>
+    <para><application>Playerul pentru filme Totem</application> are multe caracteristici prezente sub formă de module — componente software care sunt încărcate doar dacă este necesar.</para>
+    <sect2 id="totem-plugins-load">
+      <title>Pentru a activa un modul</title>
+      <para>Pentru a vizualiza lista modulelor instalate, selectați <menuchoice><guimenu>Editare</guimenu><guimenuitem>Module</guimenuitem></menuchoice>. Dialogul <application>Configurare module</application> va fi afișat. În stânga este o listă cu toate modulele pe care le-ați instalat, iar în dreapta este o descriere a modulului selectat. Modulele care au opțiuni ce pot fi modificate vor avea un buton <guibutton>Configurare</guibutton> în dreapta.</para>
+      <para>Pentru a activa un modul, selectați căsuța de bifare din stânga numelui din lista de module, și modulul va fi încărcat imediat. Dacă apare vreo eroare la încărcarea modulului, un dialog de eroare va fi afișat imediat. </para>
+      <para>Pentru a dezactiva un modul din nou, deselectați-i căsuța de bifare. Modulele vor rămâne active/inactive (după cum sunt selectate) chiar și când <application>Playerul pentru filme Totem</application> este închis.</para>
+    </sect2>
+    <sect2 id="totem-plugins-always-on-top">
+      <title>Întotdeauna deasupra</title>
+      <para>Când este activat, modulul <guilabel>Întotdeauna deasupra</guilabel> va forța fereastra principală a <application>playerului pentru filme Totem</application> să fie deasupra tuturor celorlalte ferestre când se redă un film, dar nu și când sunt redate melodii sau vizualizări. Pentru a opri fereastra să fie deasupra, dezactivați modulul.</para>
+    </sect2>
+    <sect2 id="totem-plugins-coherence">
+      <title>Client DLNA/UPnP Coherence</title>
+      <para>Modulul <guilabel>Client DLNA/UPnP Coherence</guilabel> permite <application>Playerului pentru filme Totem</application> să redea conținut multimedia de pe servere media (precum serverele Coherence) din rețeaua locală.</para>
+      <para>Cu modulul <guilabel>Client DLNA/UPnP Coherence</guilabel> activat, selectați <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Afișare</guimenu><guimenuitem>Bară laterală</guimenuitem></menuchoice> sau apăsați butonul <guibutton>Bară laterală</guibutton> pentru a afișa bara laterală. Selectați <guilabel>Client DLNA/UPnP Coherence</guilabel> din lista derulantă din partea de sus a barei laterale pentru a afișa bara laterală <guilabel>Client DLNA/UPnP Coherence</guilabel>.</para>
+      <para>Vizualizarea arborescentă din bara laterală va lista serverele media disponibile. Apăsarea unia va afișa tipurile mediilor pe care le poate servi, și apăsarea unui dosar media va afișa tipurile media disponibile. Apăsând dublu-clic pe un fișier media acesta se va adăuga la lista de redare a <application>Playerul pentru filme Totem</application> și se va reda. Puteți, alternativ, să apăsați clic-dreapta pe un fișier și să alegeți <menuchoice><guimenuitem>Redare</guimenuitem></menuchoice> sau <menuchoice><guimenuitem>Pune la coadă</guimenuitem></menuchoice> respectiv pentru a reda fișierul imediat sau a-l adăuga în lista de redare.</para>
+      <para>Dacă serverul media permite, selectarea lui <menuchoice><guimenuitem>Șterge</guimenuitem></menuchoice> din meniul contextual al unui fișier, vă va permite să ștergeți acel fișier de pe serverul media.</para>
+    </sect2>
+    <sect2 id="totem-plugins-gromit">
+      <title>Notițe Gromit</title>
+      <para>Modulul <guilabel>Notițe Gromit</guilabel> vă permite să desenați deasupra filmelor în timp ce acestea sunt redate utilizând <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. Trebuie să aveți <application>Gromit</application> instalat înainte să puteți activa acest modul – consultați documentația sistemului de operare pentru informați despre cum se realizează aceasta.</para>
+      <para>Cu modulul activat, apăsați <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> pentru a comuta <application>Gromit</application>. Când <application>Gromit</application> este activat, cursorul mausului se va schimba într-un reticul. Pentru a desena pe ecran, țineți apăsat butonul mausului și trageți cursorul de-jur-împrejur, înainte de a elibera butonul mausului. Apăsați <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> din nou pentru a opri <application>Gromit</application>.</para>
+      <para>Pentru a curăța ecranul de notițe, apăsați <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, sau închideți <application>Playerul pentru filme Totem</application>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-jamendo">
+      <title>Jamendo</title>
+      <para>Modulul <guilabel>Jamendo</guilabel> vă permite să ascultați colecția de muzică sub licența Creative Commons de pe serviciul <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>.</para>
+      <sect3 id="totem-plugins-jamendo-configuration">
+        <title>Configurarea modulului</title>
+        <para>Modulul <guilabel>Jamendo</guilabel> poate fi configurat. Apăsați butonul <guibutton>Configurare</guibutton> când activați modulul, și dialogul <application>Configurarea modulului Jamendo</application> va fi afișat. De aici puteți alege dacă doriți să descărcați melodii în format Ogg sau MP3 (Ogg este de preferat deoarece este software liber); și numărul de albume de returnat când se efectuează o căutare (alegeți mai multe albume dacă aveți o conexiune mai rapidă la Internet).</para>
+        <para>Odată ce ați terminat, apăsați <guibutton>OK</guibutton>.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-setup">
+        <title>Pentru a afișa bara laterală Jamedo</title>
+        <para>Cu modulul <guilabel>Jamendo</guilabel> activat, selectați <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Afișare</guimenu><guimenuitem>Bară laterală</guimenuitem></menuchoice> sau apăsați butonul <guibutton>Bară laterală</guibutton> pentru a afișa bara laterală. Selectați <guilabel>Jamendo</guilabel> din lista derulantă din partea de sus a barei laterale pentru a afișa bara laterală <guilabel>Jamendo</guilabel>.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-search">
+        <title>Pentru a căuta muzică</title>
+        <para>Introduceți termenii de căutare în intrarea de căutare din partea de sus a barei laterale <guilabel>Jamendo</guilabel>. Puteți căuta fie un artist, fie o etichetă. Apăsați butonul de căutare pentru a începe căutarea.</para>
+        <para>Rezultatele căutării vor fi afișate în vizualizarea arborescentă din pagina <guilabel>Rezultate căutare</guilabel> a barei laterale, și pot fi navigate utilizând butoanele săgeată din partea de jos a barei laterale. Albumele sunt listate, și dacă apăsați un album, piesele sale vor fi listate sub el. Apăsați din nou pentru a ascunde piesele albumului.</para>
+        <para>Cu un artist selectat, puteți apăsa butonul <guibutton>Pagină album Jamendo</guibutton> pentru a deschide pagina web a acelui album. Apăsând dublu-clic pe album, sau alegând <menuchoice><guimenuitem>Adaugă la lista de redare</guimenuitem></menuchoice> din meniul contextual al albumului, se va înlocui lista de redare cu toate piesele acelui album și se va începe redarea primei piese de pe pagina Jamendo. Apăsând dublu-click pe o singură piesă se va înlocui lista de redare doar cu acea piesă.</para>
+      </sect3>
+      <sect3 id="totem-plugins-jamendo-popular">
+        <title>Albumele populare și ultimele lansări</title>
+        <para>Vizualizarea paginii <guilabel>Popular</guilabel> în bara laterală <guilabel>Jamendo</guilabel> va încărca o listă cu cele mai populare albume de pe Jamendo la momentul respectiv, care pot fi redate precum rezultatele de căutare. Vizualizarea paginii <guilabel>Ultimele lansări</guilabel>, de asemenea, va încărca o listă cu cele mai recente albume lansate pe Jamendo.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-tracker">
+      <title>Căutare locală</title>
+      <para>Modulul <guilabel>Căutare locală</guilabel> vă permite să căutați filme sau fișiere audio care pot fi redate, pe calculator, cu ajutorul <application>Playerului pentru filme Totem</application>. Cu modulul activat, selectați <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Afișare</guimenu><guimenuitem>Bară laterală</guimenuitem></menuchoice> sau apăsați pe butonul <guibutton>Bară laterală</guibutton> pentru a afișa bara laterală. Selectați din lista derulantă din partea de sus a barei laterale pentru a afișa bara laterală <guilabel>Căutare locală</guilabel>.</para>
+      <para>Pentru a efectua o căutare, introduceți termenii de căutare în intrarea de căutare din partea de sus a barei laterale și apăsați <guibutton>Caută</guibutton>. Termenii de căutare pot include metacaractere precum <literal>*</literal>, care vor înlocui orice caracter. De exemplu, căutarea <userinput>*.mpg</userinput> va găsi toate filmele cu extensia <filename class="extension">.mpg</filename>.</para>
+      <para>Rezultatele căutării pot fi navigate utilizând butoanele <guibutton>Înapoi</guibutton> și <guibutton>Înainte</guibutton> din partea de jos a barei laterale, și puteți să săriți la o anumită pagină cu rezultate introducându-i numărul în căsuța de incrementare.</para>
+    </sect2>
+    <sect2 id="totem-plugins-publish">
+      <title>Publicare listă de redare</title>
+      <para>Modulul <guilabel>Publicare listă de redare</guilabel> vă permite să publicați liste de redare pe rețeaua locală pentru a le permite altor calculatoare să le acceseze și să le redea.</para>
+      <sect3 id="totem-plugins-publish-configuration">
+        <title>Configurarea modulului</title>
+        <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
+          plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
+          strings will be replaced when playlists are published:
+          <variablelist>
+	    <varlistentry>
+	      <term lang="en"><literal>%a</literal></term>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%h</literal></term>
+	      <listitem><para lang="en">Replaced with your computer's host name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%u</literal></term>
+	      <listitem><para lang="en">Replaced with your username.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%U</literal></term>
+	      <listitem><para lang="en">Replaced with your real name.</para></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term lang="en"><literal>%%</literal></term>
+	      <listitem><para lang="en">Replaced with a literal percent sign.</para></listitem>
+	    </varlistentry>
+	  </variablelist>
+	</para>
+	<para>Puteți de asemenea selecta căsuța de selecție <guilabel>Folosește protocol de transport criptat</guilabel> dacă doriți să criptați listele de redare partajate când sunt transmise în rețea.</para>
+        <para>Odată ce ați terminat, apăsați <guibutton>Închide</guibutton>.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-publishing">
+        <title>Pentru a publica listele de redare</title>
+        <para>Cu modulul activat, nu trebuie să publicați listele de redare în mod explicit; ele sunt făcute disponibile în mod automat sub forma unei pagini web Zeroconf.</para>
+      </sect3>
+      <sect3 id="totem-plugins-publish-neighborhood">
+        <title>Pentru a naviga vecinătatea</title>
+        <para>Pentru a vizualiza listele partajate de alții în rețea, selectați <guilabel>Vecinătate</guilabel> din lista derulantă din partea de sus a barei laterale. Dacă liste de redare au fost publicate pe rețea, ele vor fi listate aici. Apăsați dublu-clic pe o listă de redare pentru a o încărca și reda pe calculator.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="totem-plugins-opensubtitles">
+      <title>Descărcare subtitrări</title>
+      <para>Modulul <guilabel>Descărcare subtitrări</guilabel> vă permite să găsiți și să descărcați fișiere de subtitrare de la serviciul <ulink type="http" url="http://www.opensubtitles.org/ro">OpenSubtitles</ulink>.</para>
+      <para>Subtitrările pot fi descărcare numai pentru filme locale; nu și pentru fișiere audio, DVD-uri, fluxuri DVB, VCD-uri sau fluxuri HTTP. Pentru a căuta subtitrări pentru filmul care este redat, selectați <menuchoice><guimenu>Afișare</guimenu><guimenuitem>Descarcă subtitrări pentru film</guimenuitem></menuchoice>, care va afișa dialogul <application>Descărcă subtitrări pentru film</application>.</para>
+      <para>Selectați limba în care doriți să aveți subtitrările, din lista derulantă din partea de sus a dialogului, apoi apăsați butonul <guibutton>Caută</guibutton> pentru a căuta subtitrări pentru filmul curent. Subtitrările sunt găsite pe baza conținutului filmul, nu pe baza numelui sau etichetelor.</para>
+      <para>Rezultatele căutării sunt listate în vizualizarea arborescentă din mijlocul dialogului. În prezent, subtitrările pot fi folosite cu un film, <emphasis>reîncărcând</emphasis> filmul cu tot cu subtitrări, deci după selectarea fișierului subtitrare pe care doriți să-l descărcați, apăsați butonul <guibutton>Redă cu subtitrare</guibutton> pentru a descărca subtitrarea și a reîncărca filmul.</para>
+        <note><para>Fișierele subtitrare sunt salvate temporar (în <filename>~/.cache/totem/subtitles</filename>, în mod implicit) pentru a nu trebui să fie descărcate din nou la următoarea redare a filmului. Când se descarcă subtitrări noi pentru un film, orice subtitrări descărcate anterior pentru acel film vor fi șterse.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-thumbnail">
+      <title>Miniaturi</title>
+      <para>Modulul <guilabel>Miniaturi</guilabel> transformă iconița ferestrei principale a <application>Playerul pentru filme Totem</application> într-o miniatură a filmului curent, și actualizează iconița când sunt încărcate filme noi.</para>
+      <note><para>Dacă nu există o miniatură pentru filmul curent (sau dacă redați un fișier audio), iconița ferestrei principale va fi transformată înapoi în sigla <application>Playerul pentru filme Totem</application>.</para></note>
+    </sect2>
+    <sect2 id="totem-plugins-brasero">
+      <title>Înregistrare discuri video</title>
+      <para>Modulul <guilabel>Înregistrare discuri video</guilabel> vă permite să inscripționați lista de redare curentă pe un DVD sau VCD utilizând <application>Brasero</application>.</para>
+      <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
+        A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
+        information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
+    </sect2>
+    <sect2 id="totem-plugins-youtube">
+      <title>Navigator YouTube</title>
+      <para>Modulul <guilabel>Navigator YouTube</guilabel> vă permite să căutați și să navigați <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, și să redați videouri Youtube direct în <application>Playerul pentru filme Totem</application>. Cu modulul activat, selectați <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Afișare</guimenu><guimenuitem>Bară laterală</guimenuitem></menuchoice> sau apăsați butonul <guibutton>Bară laterală</guibutton> pentru a afișa bara laterală. Selectați <guilabel>YouTube</guilabel> din lista derulantă din partea de sus a barei laterale pentru a afișa bara laterală <guilabel>YouTube</guilabel>.</para>
+      <para>Pentru a căuta un video YouTube, introduceți termenii de căutare în intrarea din partea de sus a barei laterale, apoi apăsați <guibutton>Caută</guibutton>. Rezultatele căutării vor fi listate în vizualizarea arborescentă de dedesubt. Mai multe rezultate vor fi încărcate automat pe măsură ce derulați lista.</para>
+      <para>Pentru a reda un video, apăsați dublu-clic pe el în lista de rezultate, sau selectați <menuchoice><guimenuitem>Adaugă la lista de redare</guimenuitem></menuchoice> din meniul contextual. Când un video este redat, o listă de videouri asemănătoare va fi încărcată automat în pagina <guilabel>Filmulețe asemănătoare</guilabel> a barei laterale <guilabel>YouTube</guilabel>.</para>
+      <para>Videourile YouTube pot fi deschise într-un navigator web alegând <menuchoice><guimenuitem>Deschide în navigatorul web</guimenuitem></menuchoice> din meniul contextual. Aceasta va deschide videoul în locația lui originală pe pagina YouTube.</para>
+    </sect2>
+    <sect2 id="totem-plugins-dbus-service">
+      <title>Serviciu D-Bus</title>
+      <para>Modulul <guilabel>Serviciu D-Bus</guilabel> difuzează înștiințări despre piesa redată în <application>Playerul pentru filme Totem</application> pe magistrala de sesiune D-Bus. Aplicațiile precum <application>Gajim</application> pot aștepta asemenea înștiințări și să răspundă corespunzător, de exemplu, actualizând starea clientului de mesagerie instant ca să afișeze videoul care este redat în <application>Playerul pentru filme Totem</application>.</para>
+    </sect2>
+  </sect1>
+
+<!-- =========== Usage ======================================= -->
+<!-- Use this section to describe how to customize the
+     application. -->
+  <sect1 id="totem-prefs">
+    <title>Preferințe</title>
+    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+      <menuchoice>
+        <guimenu>Edit</guimenu>
+	<guimenuitem>Preferences</guimenuitem>
+      </menuchoice>.</para>
+
+    <sect2 id="totem-prefs-general">
+      <title>Generale</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Rețea</term>
+	  <listitem>
+	    <para>Selectați viteza conexiunii de rețea din lista derulantă <guilabel>Viteză conexiune</guilabel>.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Subtitrări text</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	      	<para><guilabel>Încarcă automat fișiere de subtitrări</guilabel>: selectați această opțiune pentru a încărca automat orice fișiere de subtitrări cu același nume ca și filmul când acesta este încărcat.</para>
+	      </listitem>
+	      <listitem>
+                <para><guilabel>Font</guilabel>: selectați această opțiune pentru a modifica fontul utilizat la afișarea subtitrărilor.</para>
+              </listitem>
+	          <listitem>
+				<para><guilabel>Codare</guilabel>: selectați această opțiune pentru schimba codarea utilizată la afișarea subtitrărilor.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-display">
+      <title>Afișaj</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Afișaj</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+	        <para>Selectați opțiunea de redimensionare dacă doriți ca <application>Playerul pentru filme Totem</application> să redimensioneze automat fereastra la dimensiunea videoului când acesta este încărcat.</para>
+              </listitem>
+              <listitem>
+                <para>Selectați opțiunea pentru salvatorul de ecran dacă doriți să permiteți salvatorului de ecran să se activeze în timpul redării fișierelor audio. Unele monitoare cu boxe integrate pot opri redarea muzicii când salvatorul de ecran este activat.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Efecte vizuale</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+                <para><guilabel>Vizual</guilabel>: Selectați această opțiune pentru a afișa efecte vizuale în timpul redării unui fișier audio.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Tip de vizualizare</guilabel>: selectați tipul vizualizării din lista derulantă.</para>
+              </listitem>
+	      <listitem>
+		<para><guilabel>Dimensiunea vizualizării</guilabel>: selectați dimensiunea vizualizării din lista derulantă.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Balanța culorilor</term>
+	  <listitem>
+	    <itemizedlist>
+	      <listitem>
+		    <para><guilabel>Luminozitate</guilabel>: utilizați glisorul pentru a specifica nivelul luminozității.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Contrast</guilabel>: utilizați glisorul pentru a specifica nivelul contrastului.</para>
+          </listitem>
+	      <listitem>
+		    <para><guilabel>Saturație</guilabel>: utilizați glisorul pentru a specifica nivelul saturației.</para>
+          </listitem>
+	      <listitem>
+		     <para><guilabel>Nuanță</guilabel>: utilizați glisorul pentru a specifica nivelul nuanței.</para>
+          </listitem>
+	    </itemizedlist>
+	    <tip><para>Puteți utiliza butonul <guilabel>Revino la valorile implicite</guilabel> pentru a reveni la valorile inițiale ale ale balanței de culori.</para></tip>
+      </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="totem-prefs-audio">
+      <title>Audio</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Ieșire audio</term>
+	  <listitem>
+	    <para>Selectați tipul ieșirii audio din lista derulantă <guilabel>Tip de ieșire audio</guilabel>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default.
+     You can use it to describe known bugs and limitations of the
+	  program if there are any - please be frank and list all
+     problems you know of.
+
+  <sect1 id="mayapp-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="totem-about">
+    <title>Despre <application>Playerul pentru filme Totem</application></title>
+    <para><application>Playerul pentru filme Totem</application> este scris de Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) pentru suportul GStreamer, și Michael Bartsch (<email>guenter@users.sourceforge.net</email>). Pentru a afla mai multe informații despre <application>Playerul pentru filme Totem</application>, vizitați <ulink url="http://projects.gnome.org/totem/" type="http">pagina web <application>Totem Movie Player</application></ulink>.</para>
+    <para lang="en">
+      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      this manual, follow the directions in the
+      <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
+    </para>
+    <para lang="en"> This program is distributed under the terms of the GNU
+      General Public license as published by the Free Software
+      Foundation; either version 2 of the License, or (at your option)
+      any later version. A copy of this license can be found at this
+      <ulink url="help:gpl" type="help">link</ulink>, or in the file
+      COPYING included with the source code of this program. </para>
+  </sect1>
+</article>

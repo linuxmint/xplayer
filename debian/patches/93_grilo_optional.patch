@@ -1,0 +1,16 @@
+Description: Don't die if we can't build the grilo plugin. We should be MIRing grilo soon to make this no longer required.
+Forwarded: not-needed
+
+Index: b/configure.ac
+===================================================================
+--- a/configure.ac
++++ b/configure.ac
+@@ -466,7 +466,7 @@
+ 			PKG_CHECK_MODULES(LIBGRILO, grilo-0.2 >= $GRILO_REQS,
+ 				[HAVE_LIBGRILO=yes], [HAVE_LIBGRILO=no])
+ 			if test "${HAVE_LIBGRILO}" != "yes" ; then
+-				plugin_error "you need libgrilo >= $GRILO_REQS installed for the Grilo plugin"
++				plugin_error_or_ignore "you need libgrilo >= $GRILO_REQS installed for the Grilo plugin"
+ 				add_plugin="0"
+ 			fi
+ 		;;

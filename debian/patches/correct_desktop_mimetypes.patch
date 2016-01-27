@@ -1,0 +1,25 @@
+Index: totem-3.4.2/data/Makefile.am
+===================================================================
+--- totem-3.4.2.orig/data/Makefile.am	2012-05-15 19:33:09.509491282 -0400
++++ totem-3.4.2/data/Makefile.am	2012-05-15 19:33:11.465500977 -0400
+@@ -58,7 +58,7 @@
+ 
+ totem.desktop.in: totem.desktop.in.in mime-type-list.txt uri-schemes-list.txt desktop.sh
+ 	$(AM_V_GEN) cat totem.desktop.in.in | sed 's,@FULL_LIBEXECDIR@,$(FULL_LIBEXECDIR),' > $@ &&\
+-	$(SHELL) $(srcdir)/desktop.sh $(srcdir)/mime-type-list.txt $(srcdir)/uri-schemes-list.txt >> $@
++	$(AM_V_GEN) cat totem.desktop.in.in | sed 's,@MIMETYPES@,$(shell $(srcdir)/desktop.sh $(srcdir)/mime-type-list.txt $(srcdir)/uri-schemes-list.txt),' > $@
+ 
+ EXTRA_DIST += desktop.sh
+ CLEANFILES += \
+Index: totem-3.4.2/data/totem.desktop.in.in.in
+===================================================================
+--- totem-3.4.2.orig/data/totem.desktop.in.in.in	2012-05-15 19:33:09.509491282 -0400
++++ totem-3.4.2/data/totem.desktop.in.in.in	2012-05-15 19:33:11.465500977 -0400
+@@ -6,6 +6,7 @@
+ Terminal=false
+ Type=Application
+ Categories=GTK;GNOME;AudioVideo;Player;Video;
++@MIMETYPES@
+ X-GNOME-DocPath=totem/totem.xml
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=totem

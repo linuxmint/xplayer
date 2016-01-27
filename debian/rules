@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+#-*- makefile -*-
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+include /usr/share/cdbs/1/rules/autoreconf.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+
+DEB_CONFIGURE_EXTRA_FLAGS += \
+	--enable-vala=yes \
+	--disable-run-in-source-tree \
+	--disable-vegas-plugin
+
+DEB_DH_STRIP_ARGS := --dbg-package=totem-dbg
+DEB_DH_MAKESHLIBS_ARGS += -Xplugins/
+DEB_DH_GIREPOSITORY_ARGS += -lsrc
+DEB_DH_MAKESHLIBS_ARGS_totem += -X/usr/lib/nautilus/
+DEB_DH_MAKESHLIBS_ARGS_libtotem0 += -V'libtotem0 (>= $(DEB_VERSION)), libtotem0 (<< $(DEB_GNOME_NEXTVERSION))'
+DEB_DH_INSTALL_ARGS += --fail-missing -Xlibtotem.a -Xlibtotem.la
+
+binary-install/totem::
+	dh_python2 -ptotem /usr/lib/totem/totem
+binary-install/totem-plugins::
+	dh_python2 -ptotem-plugins /usr/lib/totem/plugins
+binary-install/totem-plugins-extra::
+	dh_python2 -ptotem-plugins-extra /usr/lib/totem/plugins
+
+common-binary-predeb-arch::
+	find debian -name *.a -exec rm '{}' \;
+	find debian -name *.la -exec rm '{}' \;

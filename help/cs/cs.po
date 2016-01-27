@@ -1,0 +1,2339 @@
+# Czech translation of totem help.
+# Copyright (C) 2009 the author(s) of totem.
+# This file is distributed under the same license as the totem help.
+#
+# Martin Picek <picek.martin@gnome-cesko.cz>, 2009.
+# Lucas Lommer <llommer@svn.gnome.org>, 2009. (minor fixes)
+# Marek Černocký <marek@manet.cz>, 2009, 2010, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: totem gnome-2-28\n"
+"POT-Creation-Date: 2012-09-03 19:24+0000\n"
+"PO-Revision-Date: 2013-07-14 21:39+0200\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Martin Picek <picek.martin@gnome-cesko.cz>, 2009\n"
+"Marek Černocký <marek@manet.cz>, 2013"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:258(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/totem_start_window.png' "
+"md5='85daf6f6aaae9262482c8f1b0b6d67b0'"
+msgstr ""
+"external ref='figures/totem_start_window.png' "
+"md5='85daf6f6aaae9262482c8f1b0b6d67b0'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:405(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/totem_pause_button.png' "
+"md5='8af1d98e40e2ebda89cc2cd86550c5f2'"
+msgstr ""
+"external ref='figures/totem_pause_button.png' "
+"md5='8af1d98e40e2ebda89cc2cd86550c5f2'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:416(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/totem_play_button.png' "
+"md5='feb4dec4237e6eb7ce571af2dbd0cf79'"
+msgstr ""
+"external ref='figures/totem_play_button.png' "
+"md5='feb4dec4237e6eb7ce571af2dbd0cf79'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:493(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/totem_next_button.png' "
+"md5='c7f9041dc1804edc6777cfe68456e703'"
+msgstr ""
+"external ref='figures/totem_next_button.png' "
+"md5='c7f9041dc1804edc6777cfe68456e703'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:509(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/totem_previous_button.png' "
+"md5='a966195040a035bf48daab94c9320afc'"
+msgstr ""
+"external ref='figures/totem_previous_button.png' "
+"md5='a966195040a035bf48daab94c9320afc'"
+
+#: C/index.docbook:30(articleinfo/title)
+msgid "<application>Totem Movie Player</application> Manual"
+msgstr "Příručka k <application>přehrávači filmů Totem</application>"
+
+#: C/index.docbook:31(articleinfo/copyright)
+msgid "<year>2003</year> <holder>Chee Bin HOH</holder>"
+msgstr "<year>2003</year> <holder>Chee Bin HOH</holder>"
+
+#: C/index.docbook:35(articleinfo/copyright)
+msgid "<year>2009</year> <holder>Philip Withnall</holder>"
+msgstr "<year>2009</year> <holder>Philip Withnall</holder>"
+
+#: C/index.docbook:44(abstract/para)
+msgid ""
+"<application>Totem Movie Player</application> is a media player for GNOME "
+"that runs on GStreamer by default, but can also be run on xine. It has "
+"support for most audio and video codecs including DVDs among many others. "
+"Features include TV-out, fullscreen, subtitles, and more."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> je multimediální přehrávač "
+"pro prostředí GNOME používající standardně GStreamer, ale fungující i s "
+"Xine. Pracuje s většinou video i zvukových kodeků včetně DVD. Podporuje "
+"televizní výstup, režim celé obrazovky, titulky a mnoho dalšího."
+
+#: C/index.docbook:51(publisher/publishername)
+#: C/index.docbook:117(revdescription/para)
+#: C/index.docbook:127(revdescription/para)
+msgid "GNOME Documentation Project"
+msgstr "Dokumentační projekt GNOME"
+
+#: C/index.docbook:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"<ulink type=\"help\" url=\"help:fdl\">tímto odkazem</ulink> nebo v souboru "
+"COPYING-DOCS dodávaném s touto příručkou."
+
+#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Tato příručka je součástí sbírky příruček GNOME šířených za podmínek licence "
+"GNU FDL. Pokud chcete tento dokument šířit odděleně od sbírky, musíte "
+"přiložit kopii licence dle popisu v oddílu 6 dané licence."
+
+#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Mnoho užívaných názvů určených k zviditelnění produktů nebo služeb jsou "
+"ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a "
+"členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se "
+"jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s "
+"velkým písmenem na začátku."
+
+#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“, BEZ ZÁRUKY JAKÉHOKOLIV DRUHU, "
+"NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ "
+"VERZE, JE BEZCHYBNÝ, NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL, "
+"NEBO NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ "
+"DOKUMENTU, NEBO JEHO UPRAVENÉ VERZE, NESETE VY. POKUD JE TENTO DOKUMENT NEBO "
+"JEHO UPRAVENÁ VERZE VADNÁ V JAKÉMKOLIV SMYSLU, VY (NIKOLIV PŮVODCE, AUTOR "
+"NEBO JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE ODPOVĚDNOST ZA JAKÉKOLIV NÁKLADY NA "
+"NUTNÉ ÚPRAVY, OPRAVY ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE "
+"ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ PODLE TÉTO DOHODY "
+"POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
+
+#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"ZA ŽÁDNÝCH OKOLNOSTÍ A ŽÁDNÝCH PRÁVNÍCH PŘEDPOKLADŮ, AŤ SE JEDNÁ O PŘEČIN "
+"(VČETNĚ NEDBALOSTNÍCH), SMLOUVU NEBO JINÉ, NENÍ AUTOR, PŮVODNÍ PISATEL, "
+"KTERÝKOLIV PŘISPĚVATEL NEBO KTERÝKOLIV DISTRIBUTOR TOHOTO DOKUMENTU NEBO "
+"UPRAVENÉ VERZE DOKUMENTU NEBO KTERÝKOLIV DODAVATEL NĚKTERÉ Z TĚCHTO STRAN "
+"ODPOVĚDNÝ NĚJAKÉ OSOBĚ ZA PŘÍMÉ, NEPŘÍMÉ, SPECIÁLNÍ, NAHODILÉ NEBO NÁSLEDNÉ "
+"ŠKODY JAKÉHOKOLIV CHARAKTERU, VČETNĚ, ALE NEJEN, ZA POŠKOZENÍ ZE ZTRÁTY "
+"DOBRÉHO JMÉNA, PŘERUŠENÍ PRÁCE, PORUCHY NEBO NESPRÁVNÉ FUNKCE POČÍTAČE NEBO "
+"JINÉHO A VŠECH DALŠÍCH ŠKOD NEBO ZTRÁT VYVSTÁVAJÍCÍCH Z NEBO VZTAHUJÍCÍCH SE "
+"K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY "
+"TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ."
+
+#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU "
+"FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <_:orderedlist-1/>"
+
+#: C/index.docbook:60(authorgroup/author)
+msgid ""
+"<firstname>Chee Bin</firstname> <surname>HOH</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> </affiliation> "
+"<email>cbhoh@gnome.org</email>"
+msgstr ""
+"<firstname>Chee Bin</firstname> <surname>HOH</surname> <affiliation> "
+"<orgname>Dokumentační projekt GNOME</orgname> </affiliation> "
+"<email>cbhoh@gnome.org</email>"
+
+#: C/index.docbook:68(authorgroup/author)
+msgid ""
+"<firstname>Baptiste</firstname> <surname>Mille-Mathias</surname> "
+"<affiliation> <orgname>GNOME Documentation project</orgname> </affiliation> "
+"<contrib>Update documentation</contrib> <email>baptiste.millemathias@gmail."
+"org</email>"
+msgstr ""
+"<firstname>Baptiste</firstname> <surname>Mille-Mathias</surname> "
+"<affiliation> <orgname>Dokumentační projekt GNOME</orgname> </affiliation> "
+"<contrib>Aktualizace dokumentace</contrib> <email>baptiste."
+"millemathias@gmail.org</email>"
+
+#: C/index.docbook:77(authorgroup/author)
+msgid ""
+"<firstname>Philip</firstname> <surname>Withnall</surname> <contrib>Update "
+"documentation</contrib> <email>philip@tecnocode.co.uk</email>"
+msgstr ""
+"<firstname>Philip</firstname> <surname>Withnall</surname> "
+"<contrib>Aktualizace dokumentace</contrib> <email>philip@tecnocode.co.uk</"
+"email>"
+
+#: C/index.docbook:114(revdescription/para)
+msgid "Chee Bin HOH <email>cbhoh@gnome.org</email>"
+msgstr "Chee Bin HOH <email>cbhoh@gnome.org</email>"
+
+#: C/index.docbook:110(revhistory/revision)
+msgid ""
+"<revnumber>Totem Movie Player Manual V2.0</revnumber> <date>August 2006</"
+"date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Příručka V2.0 k přehrávači filmů Totem</revnumber> <date>srpen "
+"2006</date> <_:revdescription-1/>"
+
+#: C/index.docbook:124(revdescription/para)
+msgid "Philip Withnall <email>philip@tecnocode.co.uk</email>"
+msgstr "Philip Withnall <email>philip@tecnocode.co.uk</email>"
+
+#: C/index.docbook:120(revhistory/revision)
+msgid ""
+"<revnumber>Totem Movie Player Manual V3.0</revnumber> <date>February 2009</"
+"date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Příručka V3.0 k přehrávači filmů Totem</revnumber> <date>únor "
+"2009</date> <_:revdescription-1/>"
+
+#: C/index.docbook:132(articleinfo/releaseinfo)
+msgid "This manual describes version 2.26 of Totem Movie Player."
+msgstr "Tato příručka popisuje Přehrávač filmů Totem ve verzi 2.26."
+
+#: C/index.docbook:135(legalnotice/title)
+msgid "Feedback"
+msgstr "Ohlasy"
+
+#: C/index.docbook:136(legalnotice/para) C/index.docbook:1100(sect1/para)
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Totem Movie "
+"Player</application> application or this manual, follow the directions in "
+"the <ulink url=\"help:user-guide#feedback\" type=\"help\">GNOME Feedback "
+"Page</ulink>."
+msgstr ""
+"Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci "
+"<application>přehrávač filmů Totem</application> nebo této příručce, "
+"postupujte dle instrukcí na <ulink url=\"help:user-guide#feedback\" type="
+"\"help\">stránce s ohlasy na GNOME</ulink>."
+
+#: C/index.docbook:143(article/indexterm)
+msgid "<primary>Totem Movie Player</primary>"
+msgstr "<primary>Přehrávač filmů Totem</primary>"
+
+#: C/index.docbook:146(article/indexterm)
+msgid "<primary>totem</primary>"
+msgstr "<primary>totem</primary>"
+
+#: C/index.docbook:156(sect1/title)
+msgid "Introduction"
+msgstr "Úvod"
+
+#: C/index.docbook:157(sect1/para)
+msgid ""
+"The <application>Totem Movie Player</application> application is a movie "
+"player for the GNOME desktop based on the GStreamer framework and xine "
+"library, and enables you to play movies or songs."
+msgstr ""
+"Aplikace <application>přehrávač filmů Totem</application> je multimediální "
+"přehrávač pro prostředí GNOME založený na frameworku GStreamer a knihovně "
+"Xine."
+
+#: C/index.docbook:160(sect1/para)
+msgid ""
+"<application>Totem Movie Player</application> provides the following "
+"features:"
+msgstr ""
+"<application>Přehrávač filmů Totem</application> má následující funkce, "
+"vlastnosti a schopnosti:"
+
+#: C/index.docbook:163(listitem/para)
+msgid "Support for a variety of video and audio files."
+msgstr "Podpora pro různé filmové a hudební soubory."
+
+#: C/index.docbook:166(listitem/para)
+msgid "A variety of zoom levels and aspect ratios, and a fullscreen view."
+msgstr "Různé úrovně přiblížení, poměry stran a režim přes celou obrazovku."
+
+#: C/index.docbook:169(listitem/para)
+msgid "Seek and volume controls."
+msgstr "Ovládací prvky hlasitosti a přehrávání."
+
+#: C/index.docbook:172(listitem/para)
+msgid "A playlist."
+msgstr "Seznam stop."
+
+#: C/index.docbook:175(listitem/para)
+msgid "Subtitle support."
+msgstr "Podpora titulků."
+
+#: C/index.docbook:178(listitem/para)
+msgid "Complete keyboard navigation."
+msgstr "Plnohodnotné ovládání klávesnicí."
+
+#: C/index.docbook:181(listitem/para)
+msgid ""
+"Comprehensive set of plugins, including a subtitle downloader, YouTube "
+"browser, and disc burner."
+msgstr ""
+"Velká sada zásuvných modulů včetně nástroje pro stahování titulků, "
+"prohlížeče YouTube a vypalování disků."
+
+#: C/index.docbook:185(note/para)
+msgid ""
+"<application>Totem Movie Player</application> also comes with additional "
+"functionality such as:"
+msgstr ""
+"<application>Přehrávač filmů Totem</application> také nabízí dodatečné "
+"funkce, například:"
+
+#: C/index.docbook:189(listitem/para)
+msgid "Video thumbnailer for GNOME."
+msgstr "Náhledy filmů v GNOME."
+
+#: C/index.docbook:192(listitem/para)
+msgid "Audio preview application for GNOME."
+msgstr "Aplikace pro ukázky hudby v GNOME."
+
+#: C/index.docbook:195(listitem/para)
+msgid "Nautilus properties tab."
+msgstr "Karta s vlastnostmi souboru v Nautilu."
+
+#: C/index.docbook:212(sect1/title)
+msgid "Getting Started"
+msgstr "Začínáme"
+
+#: C/index.docbook:215(sect2/title)
+msgid "To Start <application>Totem Movie Player</application>"
+msgstr "Spuštění <application>přehrávače filmů Totem</application>"
+
+#: C/index.docbook:216(sect2/para)
+msgid ""
+"You can start <application>Totem Movie Player</application> in the following "
+"ways:"
+msgstr ""
+"<application>Přehrávač filmů Totem</application> lze spustit následujícími "
+"způsoby:"
+
+#: C/index.docbook:220(varlistentry/term)
+msgid "<guimenu>Applications</guimenu> menu"
+msgstr "Nabídka <guimenu>Aplikace</guimenu>"
+
+#: C/index.docbook:222(listitem/para)
+msgid ""
+"Choose <menuchoice> <guisubmenu>Sound &amp; Video</guisubmenu> "
+"<guimenuitem>Movie Player</guimenuitem> </menuchoice>."
+msgstr ""
+"Vyberte <menuchoice><guisubmenu>Zvuk a video</guisubmenu> "
+"<guimenuitem>Přehrávač filmů</guimenuitem></menuchoice>."
+
+#: C/index.docbook:231(varlistentry/term)
+msgid "Command line"
+msgstr "Příkazová řádka"
+
+#: C/index.docbook:233(listitem/para)
+msgid ""
+"To start <application>Totem Movie Player</application> from a command line, "
+"type the following command, then press <keycap>Return</keycap>:"
+msgstr ""
+"Chcete-li spustit <application>přehrávač filmů Totem</application> z "
+"příkazové řádky, zadejte následující příkaz a zmáčkněte <keycap>Enter</"
+"keycap>:"
+
+#: C/index.docbook:235(listitem/para)
+msgid "<command>totem</command>"
+msgstr "<command>totem</command>"
+
+#: C/index.docbook:239(tip/para)
+msgid ""
+"To view other command line options that are available, type <command>totem --"
+"help</command>, then press <keycap>Return</keycap>."
+msgstr ""
+"Chcete-li zobrazit další dostupné volby příkazové řádky, zadejte "
+"<command>totem --help</command> a zmáčkněte <keycap>Enter</keycap>."
+
+#: C/index.docbook:249(sect2/title)
+msgid "When You Start <application>Totem Movie Player</application>"
+msgstr "Když spustíte <application>přehrávač filmů Totem</application>…"
+
+#: C/index.docbook:250(sect2/para)
+msgid ""
+"When you start <application>Totem Movie Player</application>, the following "
+"window is displayed."
+msgstr ""
+"Když spustíte <application>přehrávač filmů Totem</application>, zobrazí se "
+"následující okno."
+
+#: C/index.docbook:254(figure/title)
+msgid "<application>Totem Movie Player</application> Start Up Window"
+msgstr "Úvodní okno <application>přehrávače filmů Totem</application>"
+
+#: C/index.docbook:256(screenshot/mediaobject)
+#| msgid ""
+#| "Shows <placeholder-1/> main window with sidebar opened on playlist. "
+#| "Contains menubar, display area, sidebar, elapsed time slider, seek "
+#| "control buttons, volume slider and statusbar."
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/totem_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Totem Movie "
+"Player</application> main window with sidebar opened on playlist. Contains "
+"menubar, display area, sidebar, elapsed time slider, seek control buttons, "
+"volume slider and statusbar. </phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/totem_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Ukazuje hlavní okno "
+"<application>přehrávače filmů Totem</application> s otevřeným seznamem k "
+"přehrání v postranní liště. Obsahuje lištu nabídek, oblast zobrazování, "
+"postranní panel, táhlo uplynulého času, tlačítka ovládání přehrávání, táhlo "
+"hlasitosti a stavovou lištu.</phrase> </textobject>"
+
+#: C/index.docbook:274(sect2/para)
+msgid ""
+"The <application>Totem Movie Player</application> window contains the "
+"following elements:"
+msgstr ""
+"Okno <application>přehrávače filmů Totem</application> obsahuje následující "
+"prvky:"
+
+#: C/index.docbook:278(varlistentry/term)
+msgid "Menubar."
+msgstr "Nabídková lišta."
+
+#: C/index.docbook:280(listitem/para)
+msgid ""
+"The menus on the menubar contain all of the commands you need to use in "
+"<application>Totem Movie Player</application>."
+msgstr ""
+"Nabídky této lišty obsahují všechny příkazy potřebné k používání "
+"<application>přehrávače filmů Totem</application>."
+
+#: C/index.docbook:285(varlistentry/term)
+msgid "Display area."
+msgstr "Oblast zobrazování."
+
+#: C/index.docbook:287(listitem/para)
+msgid ""
+"The display area displays the movie or a visualization of the current song."
+msgstr "V oblasti zobrazování se zobrazují filmy nebo vizualizace skladeb."
+
+#: C/index.docbook:292(varlistentry/term)
+msgid "Sidebar."
+msgstr "Postranní lišta."
+
+#: C/index.docbook:294(listitem/para)
+msgid ""
+"The sidebar displays properties of the file played and acts as playlist. It "
+"can also be used by various plugins, such as the MythTV, YouTube and Video "
+"Search plugins. They can be selected by clicking on the drop-down list at "
+"the top of the sidebar."
+msgstr ""
+"Postranní lišta zobrazuje vlastnosti přehrávaného souboru a funguje jako "
+"seznam stop. Mohou ji také využívat nejrůznější zásuvné moduly, například "
+"MythTV, YouTube a Místní hledání. Mezi zobrazenými moduly lze přepínat "
+"pomocí rozbalovacího seznamu v horní části postranní lišty."
+
+#: C/index.docbook:301(varlistentry/term)
+msgid "Elapsed time slider."
+msgstr "Táhlo uplynulého času."
+
+#: C/index.docbook:303(listitem/para)
+msgid ""
+"The elapsed time slider displays the elapsed time of the movie or song that "
+"is playing. It also enables you to skip forward or backward in a movie or "
+"song by dragging the slider's handle along the bar, or by clicking on a "
+"point on the bar."
+msgstr ""
+"Táhlo uplynulého času zobrazuje uplynulý čas přehrávaného filmu nebo "
+"přehrávané skladby. Pomocí přetahování táhla nebo kliknutím na určité místo "
+"dráhy táhla je též možné ve filmu nebo skladbě přecházet vpřed a zpět."
+
+#: C/index.docbook:310(varlistentry/term)
+msgid "Seek control buttons."
+msgstr "Tlačítka ovládání přehrávání."
+
+#: C/index.docbook:312(listitem/para)
+msgid ""
+"The seek control buttons enable you to move to the next or previous track, "
+"and to pause or play a movie or song."
+msgstr ""
+"Tlačítka ovládání přehrávání umožňují přejít na předchozí nebo následující "
+"stopu a přehrát nebo pozastavit film nebo skladbu."
+
+#: C/index.docbook:318(varlistentry/term)
+msgid "Volume button."
+msgstr "Tlačítko hlasitosti."
+
+#: C/index.docbook:320(listitem/para)
+msgid "The volume button enables you to adjust the volume."
+msgstr "Tlačítko hlasitosti umožňuje měnit hlasitost."
+
+#: C/index.docbook:324(varlistentry/term)
+msgid "Statusbar."
+msgstr "Stavová lišta."
+
+#: C/index.docbook:326(listitem/para)
+msgid ""
+"The statusbar displays status information about the movie or song that is "
+"playing."
+msgstr ""
+"Stavová lišta zobrazuje informace o stavu přehrávaného filmu nebo přehrávané "
+"skladby."
+
+#: C/index.docbook:338(sect1/title)
+msgid "Usage"
+msgstr "Používání"
+
+#: C/index.docbook:342(sect2/title)
+msgid "To Open a File"
+msgstr "Otevření souboru"
+
+#: C/index.docbook:343(sect2/para)
+#| msgid ""
+#| "To open a video or an audio file, choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></"
+#| "keycombo></shortcut><guimenu>Movie</guimenu><guisubmenu>Open</"
+#| "guisubmenu></menuchoice>. The <application>Select Movies or Playlists</"
+#| "application> dialog is displayed. Select the file or files you want to "
+#| "open, then click <guibutton>OK</guibutton>."
+msgid ""
+"To open a video or an audio file, choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></"
+"shortcut> <guimenu>Movie</guimenu> <guisubmenu>Open</guisubmenu> </"
+"menuchoice>. The <application>Select Movies or Playlists</application> "
+"dialog is displayed. Select the file or files you want to open, then click "
+"<guibutton>OK</guibutton>."
+msgstr ""
+"Chcete-li otevřít filmový nebo hudební soubor, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></"
+"keycombo></shortcut> <guimenu>Film</guimenu> <guisubmenu>Otevřít…</"
+"guisubmenu></menuchoice>. Zobrazí se dialogové okno <application>Zvolte "
+"filmy nebo seznamy k přehrání</application>. Zvolte soubor nebo soubory, "
+"které chcete otevřít, a klikněte na <guibutton>Budiž</guibutton>."
+
+#: C/index.docbook:353(sect2/para)
+msgid ""
+"You can drag a file from another application such as a file manager to the "
+"<application>Totem Movie Player</application> window. If you drag the file "
+"to the display area, the file will replace the current playlist and will "
+"start playing immediately. If you drag the file to the playlist in the "
+"sidebar, the file will be appended to the current playlist. The "
+"<application>Totem Movie Player</application> application will open the file "
+"and play the movie or song. <application>Totem Movie Player</application> "
+"displays the title of the movie or song in the titlebar of the window and in "
+"the playlist in the sidebar."
+msgstr ""
+"Soubory můžete do okna <application>přehrávače filmů Totem</application> "
+"také přetahovat z jiných aplikací, například ze správce souborů. Přetáhnete-"
+"li soubor do okna zobrazení, nahradí právě přehrávaný seznam stop a ihned se "
+"začne přehrávat. Přetáhnete-li soubor do seznamu stop v postranní liště, "
+"soubor se k němu připojí. Aplikace <application>přehrávač filmů Totem</"
+"application> otevře soubor a začne přehrávat film nebo skladbu. "
+"<application>Přehrávač filmů Totem</application> zobrazuje název filmu nebo "
+"skladby v záhlaví okna a v seznamu stop v postranní liště."
+
+#: C/index.docbook:361(sect2/para)
+msgid ""
+"If you try to open a file format that <application>Totem Movie Player</"
+"application> does not recognize, the application displays an error message. "
+"This error is most often encountered if you do not have the correct codecs "
+"installed. Information on getting codecs working can be found on the <ulink "
+"url=\"http://projects.gnome.org/totem/#codecs\" type=\"http"
+"\"><application>Totem Movie Player</application> website</ulink>."
+msgstr ""
+"Snažíte-li se přehrát formát souboru, se kterým <application>přehrávač filmů "
+"Totem</application> neumí pracovat, aplikace zobrazí chybovou zprávu. Chyba "
+"nejčastěji nastává, nemáte-li nainstalovány příslušné kodeky. Informace o "
+"získávání kodeků lze najít na <ulink url=\"http://projects.gnome.org/totem/"
+"#codecs\" type=\"http\">stránkách <application>přehrávače filmů Totem</"
+"application></ulink>."
+
+#: C/index.docbook:367(tip/para)
+msgid ""
+"You can double-click on a video or an audio file in the "
+"<application>Nautilus</application> file manager to open it in the "
+"<application>Totem Movie Player</application> window."
+msgstr ""
+"Na filmové nebo hudební soubory můžete dvakrát kliknout ve správci souborů "
+"<application>Nautilus</application> – otevřou se v okně "
+"<application>přehrávače filmů Totem</application>."
+
+#: C/index.docbook:374(sect2/title)
+msgid "To Open a Location"
+msgstr "Otevření umístění"
+
+#: C/index.docbook:375(sect2/para)
+#| msgid ""
+#| "To open a file by URI (location), choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></"
+#| "keycombo></shortcut><guimenu>Movie</guimenu><guimenuitem>Open Location</"
+#| "guimenuitem></menuchoice>. The <application>Open Location</application> "
+#| "dialog is displayed. Use the drop-down combination box to specify the URI "
+#| "you would like to open (it lists URIs which have previously been opened) "
+#| "– or type one in directly – then click on the <guibutton>Open</guibutton> "
+#| "button."
+msgid ""
+"To open a file by URI (location), choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></"
+"shortcut> <guimenu>Movie</guimenu> <guimenuitem>Open Location</guimenuitem> "
+"</menuchoice>. The <application>Open Location</application> dialog is "
+"displayed. Use the drop-down combination box to specify the URI you would "
+"like to open (it lists URIs which have previously been opened) – or type one "
+"in directly – then click on the <guibutton>Open</guibutton> button."
+msgstr ""
+"Chcete-li otevřít soubor na zadané adrese URI (umístění), vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></"
+"keycombo></shortcut> <guimenu>Film</guimenu> <guimenuitem>Otevřít umístění…</"
+"guimenuitem></menuchoice>. Zobrazí se dialogové okno <application>Otevřít "
+"umístění…</application>. Do vstupního políčka zadejte adresu URI, kterou si "
+"přejete otevřít, nebo vyberte nějakou již použitou (vypisuje již zadané "
+"URI). Po té klikněte na tlačítko <guibutton>Otevřít</guibutton>."
+
+#: C/index.docbook:384(sect2/para)
+msgid ""
+"If you have a URI in the clipboard already, it will automatically be pasted "
+"into the combination box."
+msgstr ""
+"Jestliže máte URI zkopírované ve schránce, bude automaticky vloženo do "
+"políčka."
+
+#: C/index.docbook:388(sect2/title)
+msgid "To Play a Movie (DVD or VCD)"
+msgstr "Přehrání filmu (z DVD nebo VCD)"
+
+#: C/index.docbook:389(sect2/para)
+msgid ""
+"Insert the disc in the optical device of your computer, then choose "
+"<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem> </"
+"menuchoice>."
+msgstr ""
+"Do optické mechaniky počítače vložte disk a vyberte "
+"<menuchoice><guimenu>Film</guimenu> <guimenuitem>Přehrát disk</guimenuitem></"
+"menuchoice>."
+
+#: C/index.docbook:392(sect2/para)
+msgid ""
+"To eject a DVD or VCD, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</"
+"keycap><keycap>E</keycap></keycombo></shortcut> <guimenu>Movie</guimenu> "
+"<guimenuitem>Eject</guimenuitem> </menuchoice>."
+msgstr ""
+"Chcete-li DVD nebo VCD vysunout z mechaniky, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></"
+"keycombo></shortcut> <guimenu>Film</guimenu> <guimenuitem>Vysunout</"
+"guimenuitem></menuchoice>."
+
+#: C/index.docbook:402(sect2/title)
+msgid "To Pause a Movie or Song"
+msgstr "Pozastavení filmu nebo skladby"
+
+#: C/index.docbook:403(sect2/para)
+#| msgid ""
+#| "To pause a movie or song that is playing, click on the <placeholder-1/> "
+#| "button, or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
+#| "keycap><keycap>Space</keycap></keycombo></shortcut><guimenu>Movie</"
+#| "guimenu><guimenuitem>Play / Pause</guimenuitem></menuchoice>. You may "
+#| "also use the <keycap>P</keycap> key to pause or play a movie."
+msgid ""
+"To pause a movie or song that is playing, click on the <inlinemediaobject> "
+"<imageobject><imagedata fileref=\"figures/totem_pause_button.png\" format="
+"\"PNG\"/></imageobject> <textobject><phrase>Shows pause button.</phrase></"
+"textobject> </inlinemediaobject> button, or choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></"
+"shortcut> <guimenu>Movie</guimenu> <guimenuitem>Play / Pause</guimenuitem> </"
+"menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a "
+"movie."
+msgstr ""
+"Chcete-li přehrávaný film nebo přehrávanou skladbu pozastavit, klikněte na "
+"tlačítko <inlinemediaobject> <imageobject><imagedata fileref=\"figures/"
+"totem_pause_button.png\" format=\"PNG\"/></imageobject> "
+"<textobject><phrase>Ukazuje tlačítko pro pozastavení.</phrase></textobject> "
+"</inlinemediaobject> nebo vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>mezerník</"
+"keycap></keycombo></shortcut> <guimenu>Film</guimenu> <guimenuitem>Přehrát/"
+"pozastavit</guimenuitem></menuchoice>. K pozastavení nebo přehrávání můžete "
+"také použít klávesu <keycap>P</keycap>."
+
+#: C/index.docbook:414(sect2/para)
+#| msgid ""
+#| "To resume playing a movie or song, click on the <placeholder-1/> button "
+#| "again, or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
+#| "keycap><keycap>Space</keycap></keycombo></shortcut><guimenu>Movie</"
+#| "guimenu><guimenuitem>Play / Pause</guimenuitem></menuchoice>."
+msgid ""
+"To resume playing a movie or song, click on the <inlinemediaobject> "
+"<imageobject><imagedata fileref=\"figures/totem_play_button.png\" format="
+"\"PNG\"/></imageobject> <textobject><phrase>Shows play button.</phrase></"
+"textobject> </inlinemediaobject> button again, or choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></"
+"shortcut> <guimenu>Movie</guimenu> <guimenuitem>Play / Pause</guimenuitem> </"
+"menuchoice>."
+msgstr ""
+"Chcete-li znovu spustit přehrávání, opět klikněte na tlačítko "
+"<inlinemediaobject> <imageobject><imagedata fileref=\"figures/"
+"totem_play_button.png\" format=\"PNG\"/></imageobject> "
+"<textobject><phrase>Ukazuje tlačítko pro přehrávání.</phrase></textobject> </"
+"inlinemediaobject> nebo vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>mezerník</"
+"keycap></keycombo></shortcut> <guimenu>Film</guimenu> <guimenuitem>Přehrát/"
+"pozastavit</guimenuitem></menuchoice>."
+
+#: C/index.docbook:428(sect2/title)
+msgid "To View Properties of a Movie or Song"
+msgstr "Zobrazení vlastností filmu nebo skladby"
+
+#: C/index.docbook:429(sect2/para)
+#| msgid ""
+#| "To view the properties of a movie or song, choose "
+#| "<menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></"
+#| "menuchoice> to make the sidebar appear, and choose <guimenu>Properties</"
+#| "guimenu> in the drop-down list at the top of the sidebar."
+msgid ""
+"To view the properties of a movie or song, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Sidebar</guimenuitem></menuchoice> to "
+"make the sidebar appear, and choose <guimenu>Properties</guimenu> in the "
+"drop-down list at the top of the sidebar."
+msgstr ""
+"Chcete-li zobrazit vlastnosti filmu nebo skladby, zvolte "
+"<menuchoice><guimenu>Zobrazit</guimenu> <guimenuitem>Postranní panel</"
+"guimenuitem></menuchoice>, aby se zobrazil postranní panel, a pak v "
+"rozbalovacím seznamu v její horní části vyberte <guimenu>Vlastnosti</"
+"guimenu>."
+
+#: C/index.docbook:437(sect2/title)
+msgid "To Seek Through Movies or Songs"
+msgstr "Pohyb filmy a skladbami"
+
+#: C/index.docbook:438(sect2/para)
+msgid "To seek through movies or songs, you can use the following methods:"
+msgstr "K pohybu filmy a skladbami můžete provést následující činnosti:"
+
+#: C/index.docbook:442(varlistentry/term)
+msgid "To skip forward"
+msgstr "Posun vpřed"
+
+#: C/index.docbook:444(listitem/para)
+msgid ""
+"To skip forward through a movie or song, choose <menuchoice> "
+"<shortcut><keycap>Right</keycap></shortcut> <guimenu>Go</guimenu> "
+"<guimenuitem>Skip Forward</guimenuitem> </menuchoice>."
+msgstr ""
+"Chcete-li ve filmu nebo skladbě přeskočit vpřed, vyberte "
+"<menuchoice><shortcut><keycap>šipka doprava</keycap> </"
+"shortcut><guimenu>Přejít</guimenu> <guimenuitem>Přeskočit vpřed</"
+"guimenuitem></menuchoice>."
+
+#: C/index.docbook:454(varlistentry/term)
+msgid "To skip backward"
+msgstr "Posun zpět"
+
+#: C/index.docbook:456(listitem/para)
+msgid ""
+"To skip backwards through a movie or song, choose <menuchoice> "
+"<shortcut><keycap>Left</keycap></shortcut> <guimenu>Go</guimenu> "
+"<guimenuitem>Skip Backwards</guimenuitem> </menuchoice>."
+msgstr ""
+"Chcete-li ve filmu nebo skladbě přeskočit zpět, vyberte "
+"<menuchoice><shortcut><keycap>šipka doleva</keycap></shortcut> "
+"<guimenu>Přejít</guimenu> <guimenuitem>Přeskočit zpět</guimenuitem></"
+"menuchoice>."
+
+#: C/index.docbook:466(varlistentry/term)
+msgid "To skip to a time"
+msgstr "Přechod na určitý čas"
+
+#: C/index.docbook:468(listitem/para)
+#| msgid ""
+#| "To skip to a specific elapsed time in the movie or song, choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></"
+#| "keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Skip to</"
+#| "guimenuitem></menuchoice>. The <application>Skip to</application> dialog "
+#| "is displayed. Use the spin box to specify the elapsed time (in seconds) "
+#| "to skip to, then click <guibutton>OK</guibutton>."
+msgid ""
+"To skip to a specific elapsed time in the movie or song, choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></"
+"shortcut> <guimenu>Go</guimenu> <guimenuitem>Skip to</guimenuitem> </"
+"menuchoice>. The <application>Skip to</application> dialog is displayed. Use "
+"the spin box to specify the elapsed time (in seconds) to skip to, then click "
+"<guibutton>OK</guibutton>."
+msgstr ""
+"Chcete-li ve filmu nebo skladbě přeskočit na určitý čas, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></"
+"keycombo></shortcut> <guimenu>Přejít</guimenu><guimenuitem>Přeskočit na…</"
+"guimenuitem></menuchoice>. Zobrazí se dialogové okno <application>Přeskočit "
+"na</application>, jehož číselník můžete použít k zadání času (v sekundách), "
+"na který se má přeskočit. Nakonec klikněte na <guibutton>Budiž</guibutton>."
+
+#: C/index.docbook:477(listitem/para)
+msgid ""
+"The spin box also allows more natural language to be used. You can enter a "
+"time in the formats \"hh:mm:ss\", \"mm:ss\" or \"ss\"; where \"hh\" is the "
+"hour, \"mm\" is the minute and \"ss\" is the second to skip to."
+msgstr ""
+"Číselník umožňuje i přirozenější použití – čas lze zadat i ve formátech „hh:"
+"mm:ss“, „mm:ss“ nebo „ss“, kde „hh“ jsou hodiny, „mm“ minuty a „ss“ sekundy, "
+"na které se má přejít."
+
+#: C/index.docbook:484(varlistentry/term)
+msgid "To move to the next movie or song"
+msgstr "Přechod na následující film nebo skladbu"
+
+#: C/index.docbook:486(listitem/para)
+#| msgid ""
+#| "To move to the next movie or song, choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Right</"
+#| "keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Next "
+#| "Chapter/Movie</guimenuitem></menuchoice> or click on the <placeholder-1/> "
+#| "button."
+msgid ""
+"To move to the next movie or song, choose <menuchoice> "
+"<shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></"
+"shortcut> <guimenu>Go</guimenu> <guimenuitem>Next Chapter/Movie</"
+"guimenuitem> </menuchoice> or click on the <inlinemediaobject> "
+"<imageobject><imagedata fileref=\"figures/totem_next_button.png\" format="
+"\"PNG\"/></imageobject> <textobject><phrase>Shows a seek next button</"
+"phrase></textobject> </inlinemediaobject> button."
+msgstr ""
+"Chcete-li přejít na následující film nebo skladbu, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>šipka doprava</"
+"keycap></keycombo></shortcut> <guimenu>Přejít</guimenu> "
+"<guimenuitem>Následující kapitola/film</guimenuitem></menuchoice>, nebo "
+"klikněte na tlačítko <inlinemediaobject> <imageobject><imagedata fileref="
+"\"figures/totem_next_button.png\" format=\"PNG\"/></imageobject> "
+"<textobject><phrase>Ukazuje tlačítko pro přeskočení na následující</phrase></"
+"textobject> </inlinemediaobject>."
+
+#: C/index.docbook:500(varlistentry/term)
+msgid "To move to the previous movie or song"
+msgstr "Přechod na předchozí film nebo skladbu"
+
+#: C/index.docbook:502(listitem/para)
+#| msgid ""
+#| "To move to the previous movie or song, choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Left</"
+#| "keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Previous "
+#| "Chapter/Movie</guimenuitem></menuchoice> or click on the <placeholder-1/> "
+#| "button."
+msgid ""
+"To move to the previous movie or song, choose <menuchoice> "
+"<shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></"
+"shortcut> <guimenu>Go</guimenu> <guimenuitem>Previous Chapter/Movie</"
+"guimenuitem> </menuchoice> or click on the <inlinemediaobject> "
+"<imageobject><imagedata fileref=\"figures/totem_previous_button.png\" format="
+"\"PNG\"/></imageobject> <textobject><phrase>Shows a seek previous button</"
+"phrase></textobject> </inlinemediaobject> button."
+msgstr ""
+"Chcete-li přejít na předchozí film nebo skladbu, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>šipka doleva</"
+"keycap></keycombo></shortcut> <guimenu>Přejít</guimenu> "
+"<guimenuitem>Předchozí kapitola/film</guimenuitem></menuchoice>, nebo "
+"klikněte na tlačítko <inlinemediaobject> <imageobject><imagedata fileref="
+"\"figures/totem_previous_button.png\" format=\"PNG\"/></imageobject> "
+"<textobject><phrase>Ukazuje tlačítko pro přeskočení na předchozí</phrase></"
+"textobject> </inlinemediaobject>."
+
+#: C/index.docbook:519(sect2/title)
+msgid "To Change the Zoom Factor"
+msgstr "Změna úrovně přiblížení"
+
+#: C/index.docbook:521(sect3/title)
+msgid "To Change the Video Size"
+msgstr "Změna velikosti videa"
+
+#: C/index.docbook:522(sect3/para)
+msgid ""
+"To change the zoom factor of the display area, you can use the following "
+"methods:"
+msgstr ""
+"Chcete-li změnit přiblížení oblasti zobrazování, můžete provést následující "
+"činnosti:"
+
+#: C/index.docbook:527(listitem/para)
+#| msgid ""
+#| "To zoom to fullscreen mode, choose <menuchoice><shortcut><keycap>F11</"
+#| "keycap></shortcut><guimenu>View</guimenu><guimenuitem>Fullscreen</"
+#| "guimenuitem></menuchoice>. You can also use the <keycap>F</keycap> key to "
+#| "toggle fullscreen mode. To exit fullscreen mode, click on the "
+#| "<guibutton>Leave Fullscreen</guibutton> button or press <keycap>Esc</"
+#| "keycap>, <keycap>F11</keycap> or <keycap>F</keycap>."
+msgid ""
+"To zoom to fullscreen mode, choose <menuchoice><shortcut><keycap>F11</"
+"keycap></shortcut> <guimenu>View</guimenu><guimenuitem>Fullscreen</"
+"guimenuitem></menuchoice>. You can also use the <keycap>F</keycap> key to "
+"toggle fullscreen mode. To exit fullscreen mode, click on the "
+"<guibutton>Leave Fullscreen</guibutton> button or press <keycap>Esc</"
+"keycap>, <keycap>F11</keycap> or <keycap>F</keycap>."
+msgstr ""
+"Chcete-li se přepnout do režimu celé obrazovky, vyberte "
+"<menuchoice><shortcut><keycap>F11</keycap></shortcut> <guimenu>Zobrazit</"
+"guimenu> <guimenuitem>Celá obrazovka</guimenuitem></menuchoice>. Ke stejnému "
+"účelu můžete použít také klávesu <keycap>F</keycap>. Pro ukončení režimu "
+"celé obrazovky klikněte na tlačítko <guibutton>Opustit celou obrazovku</"
+"guibutton> nebo zmáčkněte klávesu <keycap>Esc</keycap>, <keycap>F11</keycap> "
+"nebo <keycap>F</keycap>."
+
+#: C/index.docbook:537(listitem/para)
+#| msgid ""
+#| "To change the size of the original movie or visualization, choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></"
+#| "keycombo></shortcut><guimenu>View</guimenu><guimenuitem>Fit Window to "
+#| "Movie</guimenuitem></menuchoice> and choose a scale ratio."
+msgid ""
+"To change the size of the original movie or visualization, choose "
+"<menuchoice> <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></"
+"keycombo></shortcut> <guimenu>View</guimenu><guimenuitem>Fit Window to "
+"Movie</guimenuitem> </menuchoice> and choose a scale ratio."
+msgstr ""
+"Chcete-li změnit velikost videa nebo vizualizace, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></"
+"keycombo></shortcut> <guimenu>Zobrazit</guimenu> <guimenuitem>Přizpůsobit "
+"okno filmu</guimenuitem></menuchoice> a pak vyberte velikost."
+
+#: C/index.docbook:548(sect3/title)
+msgid "To Change the Video Aspect Ratio"
+msgstr "Změna poměru stran videa"
+
+#: C/index.docbook:549(sect3/para)
+msgid ""
+"To switch between different aspect ratios, choose <menuchoice> "
+"<shortcut><keycap>A</keycap></shortcut> <guimenu>View</guimenu> "
+"<guisubmenu>Aspect Ratio</guisubmenu> </menuchoice>."
+msgstr ""
+"Chcete-li přepnout na jiný poměr stran, vyberte požadovaný z nabídky "
+"<menuchoice><shortcut><keycap>A</keycap></shortcut> <guimenu>Zobrazit</"
+"guimenu> <guisubmenu>Poměr stran</guisubmenu></menuchoice>."
+
+#: C/index.docbook:559(sect2/title)
+msgid "To Adjust the Volume"
+msgstr "Změna hlasitosti"
+
+#: C/index.docbook:560(sect2/para)
+#| msgid ""
+#| "To increase the volume, choose <menuchoice><shortcut><keycap>Up</keycap></"
+#| "shortcut><guimenu>Sound</guimenu><guimenuitem>Volume Up</guimenuitem></"
+#| "menuchoice>. To decrease the volume, choose "
+#| "<menuchoice><shortcut><keycap>Down</keycap></shortcut><guimenu>Sound</"
+#| "guimenu><guimenuitem>Volume Down</guimenuitem></menuchoice>."
+msgid ""
+"To increase the volume, choose <menuchoice> <shortcut><keycap>Up</keycap></"
+"shortcut> <guimenu>Sound</guimenu> <guimenuitem>Volume Up</guimenuitem> </"
+"menuchoice>. To decrease the volume, choose <menuchoice> "
+"<shortcut><keycap>Down</keycap></shortcut> <guimenu>Sound</guimenu> "
+"<guimenuitem>Volume Down</guimenuitem> </menuchoice>."
+msgstr ""
+"Chcete-li zvýšit hlasitost, vyberte <menuchoice><shortcut><keycap>šipka "
+"nahoru</keycap></shortcut> <guimenu>Zvuk</guimenu> <guimenuitem>Zvýšit "
+"hlasitost</guimenuitem></menuchoice>. Chcete-li snížit hlasitost, vyberte "
+"<menuchoice><shortcut><keycap>šipka dolů</keycap></shortcut><guimenu>Zvuk</"
+"guimenu> <guimenuitem>Snížit hlasitost</guimenuitem></menuchoice>."
+
+#: C/index.docbook:573(sect2/para)
+msgid ""
+"You can also use the volume button: click on the volume button and choose "
+"the volume level with the slider."
+msgstr ""
+"Můžete také použít tlačítko hlasitosti – klikněte na něj a pomocí táhla "
+"zvolte požadovanou hlasitost."
+
+#: C/index.docbook:577(sect2/title)
+msgid "To Make the Window Always on Top"
+msgstr "Zobrazení okna vždy navrchu"
+
+#: C/index.docbook:578(sect2/para)
+#| msgid ""
+#| "To make the <application>Totem Movie Player</application> window always "
+#| "on top of other application windows, choose <menuchoice><guimenu>Edit</"
+#| "guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. Select the "
+#| "<guilabel>Always on Top</guilabel> plugin to enable it. The "
+#| "<application>Totem Movie Player</application> window will now stay on top "
+#| "of all other windows while a movie is playing, but not while audio or "
+#| "visualizations are playing."
+msgid ""
+"To make the <application>Totem Movie Player</application> window always on "
+"top of other application windows, choose <menuchoice> <guimenu>Edit</"
+"guimenu> <guimenuitem>Plugins</guimenuitem> </menuchoice>. Select the "
+"<guilabel>Always on Top</guilabel> plugin to enable it. The "
+"<application>Totem Movie Player</application> window will now stay on top of "
+"all other windows while a movie is playing, but not while audio or "
+"visualizations are playing."
+msgstr ""
+"Chcete-li okno <application>přehrávače filmů Totem</application> zobrazovat "
+"vždy nad okny jiných aplikací, vyberte <menuchoice><guimenu>Upravit</"
+"guimenu><guimenuitem>Zásuvné moduly…</guimenuitem></menuchoice> a povolte "
+"modul <guilabel>Vždy nahoře</guilabel>. Okno <application>přehrávače filmů "
+"Totem</application> nyní bude při přehrávání filmu (ale nikoli při "
+"přehrávání hudby) vždy nad okny jiných aplikací."
+
+#: C/index.docbook:586(sect2/para)
+msgid ""
+"To stop the window from always being on top, disable the <guilabel>Always on "
+"Top</guilabel> plugin again. See <xref linkend=\"totem-plugins-always-on-top"
+"\"/> for more information."
+msgstr ""
+"Chcete-li přestat zobrazovat okno vždy nahoře, zakažte modul <guilabel>Vždy "
+"navrchu</guilabel>. Chcete-li se dovědět více informací, přečtěte si <xref "
+"linkend=\"totem-plugins-always-on-top\"/>."
+
+#: C/index.docbook:591(sect2/title)
+msgid "To Show or Hide Controls"
+msgstr "Zobrazení nebo skrytí ovládacích prvků"
+
+#: C/index.docbook:592(sect2/para)
+#| msgid ""
+#| "To show or hide the <application>Totem Movie Player</application> window "
+#| "controls, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
+#| "keycap><keycap>H</keycap></keycombo></shortcut><guimenu>View</"
+#| "guimenu><guimenuitem>Show Controls</guimenuitem></menuchoice>, or press "
+#| "the <keycap>H</keycap> key. You can also right-click on the "
+#| "<application>Totem Movie Player</application> window, then choose "
+#| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></"
+#| "keycombo></shortcut><guimenuitem>Show Controls</guimenuitem></menuchoice> "
+#| "from the popup menu."
+msgid ""
+"To show or hide the <application>Totem Movie Player</application> window "
+"controls, choose <menuchoice> <shortcut><keycombo><keycap>Ctrl</"
+"keycap><keycap>H</keycap></keycombo></shortcut> <guimenu>View</guimenu> "
+"<guimenuitem>Show Controls</guimenuitem> </menuchoice>, or press the "
+"<keycap>H</keycap> key. You can also right-click on the <application>Totem "
+"Movie Player</application> window, then choose <menuchoice> "
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></"
+"shortcut> <guimenuitem>Show Controls</guimenuitem> </menuchoice> from the "
+"popup menu."
+msgstr ""
+"Chcete-li zobrazit nebo skrýt ovládací prvky okna <application>přehrávače "
+"filmů Totem</application>, vyberte "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></"
+"keycombo></shortcut> <guimenu>Zobrazit</guimenu> <guimenuitem>Zobrazovat "
+"ovládací prvky</guimenuitem></menuchoice>, nebo stiskněte klávesu <keycap>H</"
+"keycap>. Můžete také v okně <application>přehrávače filmů Totem</"
+"application> kliknout pravým tlačítkem a v kontextové nabídce vybrat "
+"<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></"
+"keycombo></shortcut> <guimenuitem>Zobrazovat ovládací prvky</guimenuitem></"
+"menuchoice>."
+
+#: C/index.docbook:604(sect2/para)
+msgid ""
+"If the <guilabel>Show Controls</guilabel> option is selected, "
+"<application>Totem Movie Player</application> will show the menubar, elapsed "
+"time slider, seek control buttons, volume slider and statusbar on the "
+"window. If the <guilabel>Show Controls</guilabel> option is unselected, the "
+"application will hide these controls and show only the display area."
+msgstr ""
+"Je-li volba <guilabel>Zobrazovat ovládací prvky</guilabel> zaškrtnuta, okno "
+"<application>přehrávače filmů Totem</application> bude zobrazovat nabídkovou "
+"lištu, táhlo uplynulého času, tlačítka ovládání přehrávání, táhlo hlasitosti "
+"a stavovou lištu. Není-li volba <guilabel>Zobrazovat ovládací prvky</"
+"guilabel> zaškrtnuta, aplikace tyto prvky bude skrývat a viditelná zůstane "
+"jen oblast zobrazování."
+
+#: C/index.docbook:613(sect2/title)
+msgid "To Manage the Playlist"
+msgstr "Správa seznamu stop"
+
+#: C/index.docbook:616(sect3/title)
+msgid "To Show or Hide the Playlist"
+msgstr "Zobrazení a skrytí seznamu stop"
+
+#: C/index.docbook:617(sect3/para)
+#| msgid ""
+#| "To show or hide the playlist, choose <menuchoice><guimenu>View</"
+#| "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
+#| "<guibutton>Sidebar</guibutton> button, and choose <guimenu>Playlist</"
+#| "guimenu> on the top of the sidebar."
+msgid ""
+"To show or hide the playlist, choose <menuchoice> <guimenu>View</"
+"guimenu><guimenuitem>Sidebar</guimenuitem> </menuchoice> or click on the "
+"<guibutton>Sidebar</guibutton> button, and choose <guimenu>Playlist</"
+"guimenu> on the top of the sidebar."
+msgstr ""
+"Chcete-li zobrazit či skrýt seznam stop, vyberte "
+"<menuchoice><guimenu>Zobrazit</guimenu> <guimenuitem>Postranní panel</"
+"guimenuitem></menuchoice> nebo klikněte na stejnojmenné tlačítko. V "
+"rozbalovacím seznamu v horní části panelu zvolte <guimenu>Seznam stop</"
+"guimenu>."
+
+#: C/index.docbook:626(sect3/title)
+msgid "Manage a Playlist"
+msgstr "Práce se seznamem stop"
+
+#: C/index.docbook:630(varlistentry/term)
+msgid "To add a track or movie"
+msgstr "Přidání skladby nebo filmu"
+
+#: C/index.docbook:632(listitem/para)
+msgid ""
+"To add a track or movie to the playlist, click on the <guibutton>Add</"
+"guibutton> button. The <application>Select Movies or Playlists</application> "
+"dialog is displayed. Select the file that you want to add to the playlist, "
+"then click <guibutton>Add</guibutton>."
+msgstr ""
+"Chcete-li do seznamu stop přidat skladbu nebo film, klikněte na tlačítko "
+"<guibutton>Přidat</guibutton>. Zobrazí se dialogové okno <application>Zvolte "
+"filmy nebo seznamy stop</application>, kde vyberete požadovaný soubor. Pak "
+"klikněte na <guibutton>Přidat</guibutton>."
+
+#: C/index.docbook:639(varlistentry/term)
+msgid "To remove a track or movie"
+msgstr "Odstranění skladby nebo filmu"
+
+#: C/index.docbook:641(listitem/para)
+msgid ""
+"To remove a track or movie from the playlist, select the item or items to "
+"remove from the playlist, then click on the <guibutton>Remove</guibutton> "
+"button."
+msgstr ""
+"Chcete-li ze seznamu stop odstranit některé ze skladeb nebo filmů, vyberte "
+"je a pak klikněte na tlačítko <guibutton>Odstranit</guibutton>."
+
+#: C/index.docbook:647(varlistentry/term)
+msgid "To save the playlist to a file"
+msgstr "Uložení seznamu stop do souboru"
+
+#: C/index.docbook:649(listitem/para)
+msgid ""
+"To save the playlist to a file, click on the <guibutton>Save Playlist</"
+"guibutton> button. The <application>Save Playlist</application> dialog is "
+"displayed; specify the filename as which you want to save the playlist, and "
+"click <guibutton>Save</guibutton>."
+msgstr ""
+"Chcete-li seznam stop uložit do souboru, klikněte na tlačítko "
+"<guibutton>Uložit seznam stop</guibutton>. Zobrazí se dialogové okno "
+"<application>Uložit seznam stop</application> – v něm zadejte název souboru, "
+"do kterého chcete seznam stop uložit, a klikněte na tlačítko "
+"<guibutton>Uložit</guibutton>."
+
+#: C/index.docbook:656(varlistentry/term)
+msgid "To move a track or movie up the playlist"
+msgstr "Posunutí skladby nebo filmu v seznamu stop nahoru"
+
+#: C/index.docbook:658(listitem/para)
+msgid ""
+"To move a track or movie up the playlist, select the item from the playlist, "
+"then click on the <guibutton>Move Up</guibutton> button."
+msgstr ""
+"Chcete-li v seznamu stop posunout skladbu nebo film nahoru, vyberte je a pak "
+"klikněte na tlačítko <guibutton>Posunout nahoru</guibutton>."
+
+#: C/index.docbook:664(varlistentry/term)
+msgid "To move a track or movie down the playlist"
+msgstr "Posunutí skladby nebo filmu v seznamu stop dolů"
+
+#: C/index.docbook:666(listitem/para)
+msgid ""
+"To move a track or movie down the playlist, select the item from the "
+"playlist, then click on the <guibutton>Move Down</guibutton> button."
+msgstr ""
+"Chcete-li v seznamu stop posunout skladbu nebo film dolů, vyberte je a pak "
+"klikněte na tlačítko <guibutton>Posunout dolů</guibutton>."
+
+#: C/index.docbook:627(sect3/para)
+msgid ""
+"You can use the <application>Playlist</application> dialog to do the "
+"following: <_:variablelist-1/>"
+msgstr ""
+"<application>Seznam k přehrání</application> lze používat k následujícím "
+"činnostem: <_:variablelist-1/>"
+
+#: C/index.docbook:675(sect3/title)
+msgid "To Select or Unselect Repeat Mode"
+msgstr "Povolení a zákaz režimu opakování"
+
+#: C/index.docbook:676(sect3/para)
+msgid ""
+"To enable or disable repeat mode, choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Repeat Mode</guimenuitem></menuchoice>."
+msgstr ""
+"Chcete-li povolit (zakázat) režim opakování, zaškrtněte (odškrtněte) "
+"<menuchoice><guimenu>Upravit</guimenu><guimenuitem>Režim opakování</"
+"guimenuitem></menuchoice>."
+
+#: C/index.docbook:681(sect3/title)
+msgid "To Select or Unselect Shuffle Mode"
+msgstr "Povolení a zákaz náhodného režimu"
+
+#: C/index.docbook:682(sect3/para)
+msgid ""
+"To enable or disable shuffle mode, choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Shuffle Mode</guimenuitem></menuchoice>."
+msgstr ""
+"Chcete-li povolit (zakázat) náhodný režim, zaškrtněte (odškrtněte) "
+"<menuchoice><guimenu>Upravit</guimenu><guimenuitem>Náhodný režim</"
+"guimenuitem></menuchoice>."
+
+#: C/index.docbook:690(sect2/title)
+msgid "To Choose Subtitles"
+msgstr "Výběr titulků"
+
+#: C/index.docbook:691(sect2/para)
+msgid ""
+"To choose the language of the subtitles, select <menuchoice><guimenu>View</"
+"guimenu><guisubmenu>Subtitles</guisubmenu></menuchoice> and choose the "
+"subtitle language you want to display."
+msgstr ""
+"Chcete-li vybrat jazyk titulků, vyberte <menuchoice><guimenu>Zobrazit</"
+"guimenu><guisubmenu>Titulky</guisubmenu></menuchoice> a pak jazyk, který "
+"chcete zobrazit."
+
+#: C/index.docbook:695(sect2/para)
+msgid ""
+"To disable the display of subtitles, select <menuchoice><guimenu>View</"
+"guimenu><guisubmenu>Subtitles</guisubmenu><guimenuitem>None</guimenuitem></"
+"menuchoice>."
+msgstr ""
+"Chcete-li zakázat zobrazování titulků, vyberte "
+"<menuchoice><guimenu>Zobrazit</guimenu><guisubmenu>Titulky</"
+"guisubmenu><guimenuitem>Žádné</guimenuitem></menuchoice>."
+
+#: C/index.docbook:697(note/para)
+msgid ""
+"By default, <application>Totem Movie Player</application> will choose the "
+"same language for the subtitles as the one you normally use on your computer."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> standardně vybírá stejný "
+"jazyk titulků, jako je jazyk používaný ve vašem sezení."
+
+#: C/index.docbook:699(sect2/para)
+msgid ""
+"<application>Totem Movie Player</application> will automatically load and "
+"display subtitles for a video if it finds a subtitle file with the same name "
+"as the video being played, and the extension <filename class=\"extension"
+"\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename "
+"class=\"extension\">sub</filename>, <filename class=\"extension\">srt</"
+"filename>, <filename class=\"extension\">smi</filename>, <filename class="
+"\"extension\">ssa</filename> or <filename class=\"extension\">ass</filename>."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> automaticky načítá a "
+"zobrazuje titulky k filmu, pokud soubor, ve kterém jsou uložené, má stejný "
+"název jako soubor s přehrávaným filmem a navíc příponu <filename>asc</"
+"filename>, <filename>txt</filename>, <filename>sub</filename>, "
+"<filename>srt</filename>, <filename>smi</filename>, <filename>ssa</filename> "
+"nebo <filename>ass</filename>."
+
+#: C/index.docbook:704(sect2/para)
+msgid ""
+"If the file containing the subtitles has a different name from the video "
+"being played, you can right-click on the video in the playlist and choose "
+"<menuchoice><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice> "
+"from the popup menu to load the correct subtitle file. You may also choose "
+"subtitles by choosing <menuchoice><guimenu>View</guimenu><guimenuitem>Select "
+"Text Subtitles</guimenuitem></menuchoice>."
+msgstr ""
+"Má-li soubor s titulky jiný název než přehrávaný film, můžete na film v "
+"seznamu stop kliknout pravým tlačítkem, v kontextové nabídce vybrat "
+"<menuchoice><guimenuitem>Zvolit textové titulky</guimenuitem></menuchoice> a "
+"zvolit požadované titulky. Titulky můžete zvolit také vybráním "
+"<menuchoice><guimenu>Zobrazit</guimenu><guimenuitem>Zvolit textové titulky</"
+"guimenuitem></menuchoice>."
+
+#: C/index.docbook:708(sect2/para)
+msgid ""
+"Using the <guilabel>Subtitle Downloader</guilabel> plugin, you can also "
+"download subtitles from the OpenSubtitles service. See <xref linkend=\"totem-"
+"plugins-opensubtitles\"/> for more information."
+msgstr ""
+"Pomocí zásuvného modulu <guilabel>Stahování titulků</guilabel> také můžete "
+"stahovat titulky ze služby OpenSubtitles. Chcete-li se dovědět více "
+"informací, přečtěte si <xref linkend=\"totem-plugins-opensubtitles\"/>."
+
+#: C/index.docbook:713(sect2/title)
+msgid "To Take a Screenshot"
+msgstr "Vytvoření snímku obrazovky"
+
+#: C/index.docbook:714(sect2/para)
+#| msgid ""
+#| "To take a screenshot of the movie or visualization that is playing, "
+#| "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Take Screenshot</"
+#| "guimenuitem></menuchoice>. The <application>Save Screenshot</application> "
+#| "dialog is displayed. Choose a location and insert the filename as which "
+#| "you want to save the screenshot, then click on the <guibutton>Save</"
+#| "guibutton> button to save the screenshot."
+msgid ""
+"To take a screenshot of the movie or visualization that is playing, choose "
+"<menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Take Screenshot</"
+"guimenuitem> </menuchoice>. The <application>Save Screenshot</application> "
+"dialog is displayed. Choose a location and insert the filename as which you "
+"want to save the screenshot, then click on the <guibutton>Save</guibutton> "
+"button to save the screenshot."
+msgstr ""
+"Chcete-li pořídit snímek filmu nebo vizualizace, vyberte "
+"<menuchoice><guimenu>Upravit</guimenu> <guimenuitem>Zachytit snímek "
+"obrazovky</guimenuitem></menuchoice> – zobrazí se dialogové okno "
+"<application>Uložit snímek obrazovky</application>. Zvolte umístění, kam se "
+"má snímek uložit, a zadejte název souboru. Nakonec klikněte na tlačítko "
+"<guibutton>Uložit</guibutton> a snímek se uloží."
+
+#: C/index.docbook:722(tip/para)
+msgid ""
+"<application>Totem Movie Player</application> will display a preview of the "
+"screenshot which is to be saved on the left-hand side of the "
+"<application>Save Screenshot</application> dialog."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> zobrazuje v levé části "
+"dialogového okna <application>Uložit snímek obrazovky</application> náhled "
+"ukládaného snímku."
+
+#: C/index.docbook:726(sect2/title)
+msgid "To Create a Screenshot Gallery"
+msgstr "Vytvoření galerie snímků obrazovky"
+
+#: C/index.docbook:727(sect2/para)
+#| msgid ""
+#| "To create a gallery of screenshots of the movie or visualization that is "
+#| "playing, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Create "
+#| "Screenshot Gallery</guimenuitem></menuchoice>. The <application>Save "
+#| "Gallery</application> dialog is displayed. Choose a location and insert "
+#| "the filename as which you want to save the gallery image, then click on "
+#| "the <guibutton>Save</guibutton> button to save the screenshot."
+msgid ""
+"To create a gallery of screenshots of the movie or visualization that is "
+"playing, choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Create "
+"Screenshot Gallery</guimenuitem> </menuchoice>. The <application>Save "
+"Gallery</application> dialog is displayed. Choose a location and insert the "
+"filename as which you want to save the gallery image, then click on the "
+"<guibutton>Save</guibutton> button to save the screenshot."
+msgstr ""
+"Chcete-li vytvořit galerii snímků obrazovek přehrávaného filmu nebo "
+"vizualizace, vyberte <menuchoice><guimenu>Upravit</guimenu> "
+"<guimenuitem>Vytvořit galerii snímků…</guimenuitem></menuchoice> – zobrazí "
+"se dialogové okno <application>Uložit galerii</application>. Zvolte "
+"umístění, kam se má galerie uložit, a zadejte název souboru. Nakonec "
+"klikněte na tlačítko <guibutton>Uložit</guibutton> a galerie se uloží."
+
+#: C/index.docbook:735(tip/para)
+msgid ""
+"You may specify the width of the individual screenshots in the gallery using "
+"the <guilabel>Screenshot width</guilabel> entry. The default width is 128 "
+"pixels."
+msgstr ""
+"Do políčka <guilabel>Šířka snímku</guilabel> můžete zadat šířku jednotlivých "
+"snímků v galerii. Výchozí šířka je 128 pixelů."
+
+#: C/index.docbook:737(tip/para)
+msgid ""
+"You may also specify the number of screenshots to be put in the gallery. By "
+"default, this is calculated based on the length of the movie; however, this "
+"may be overridden by deselecting the <guilabel>Calculate the number of "
+"screenshots</guilabel> checkbox and entering the new number in the "
+"<guilabel>Number of screenshots</guilabel> spin box."
+msgstr ""
+"Můžete také zadat počet snímků v galerii. Ve výchozím nastavení je počet "
+"snímků vypočítán v závislosti na délce filmu, nicméně můžete toto nastavení "
+"upravit, pokud odškrtnete zaškrtávací políčko <guilabel>Vypočítat počet "
+"snímků</guilabel> a vložíte vlastní počet do číselníku <guilabel>Počet "
+"snímků</guilabel>."
+
+#: C/index.docbook:745(sect1/title)
+msgid "Plugins"
+msgstr "Zásuvné moduly"
+
+#: C/index.docbook:746(sect1/para)
+msgid ""
+"<application>Totem Movie Player</application> has many features which are "
+"present in the form of plugins — pieces of the software which are only "
+"loaded if necessary."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> má mnoho funkcí dostupných "
+"ve formě zásuvných modulů – částí softwaru načtených pouze tehdy, je-li to "
+"potřeba."
+
+#: C/index.docbook:749(sect2/title)
+msgid "To Enable a Plugin"
+msgstr "Povolení zásuvného modulu"
+
+#: C/index.docbook:750(sect2/para)
+msgid ""
+"To view the list of installed plugins, choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. The "
+"<application>Configure Plugins</application> dialog is displayed. On the "
+"left is a list of all the plugins you have installed, while on the right is "
+"a description of the currently selected plugin. Plugins which have options "
+"which can be changed will have a sensitive <guibutton>Configure</guibutton> "
+"button on the right."
+msgstr ""
+"Chcete-li zobrazit seznam instalovaných zásuvných modulů, vyberte "
+"<menuchoice><guimenu>Upravit</guimenu><guimenuitem>Zásuvné moduly…</"
+"guimenuitem></menuchoice> – zobrazí se dialogové okno <application>Nastavení "
+"zásuvných modulů</application>. Vlevo je seznam všech instalovaných modulů, "
+"vpravo se zobrazuje popis vlevo vybraného modulu. U modulů, které mají "
+"upravitelná nastavení, je vpravo aktivováno tlačítko <guibutton>Nastavit…</"
+"guibutton>."
+
+#: C/index.docbook:754(sect2/para)
+msgid ""
+"To enable a plugin, simply select the checkbox to the left of its name in "
+"the plugin list, and the plugin will be loaded immediately. If there is any "
+"error loading the plugin, an error dialog will also be displayed immediately."
+msgstr ""
+"Chcete-li modul povolit, v seznamu modulů zaškrtněte zaškrtávací políčko "
+"umístěné nalevo od jeho názvu. Pokud se při načítání modulu vyskytne nějaká "
+"chyba, ihned se zobrazí dialogové okno s chybovou zprávou."
+
+#: C/index.docbook:756(sect2/para)
+msgid ""
+"To disable a plugin again, deselect its checkbox. Plugins will remain "
+"enabled or disabled as set even when <application>Totem Movie Player</"
+"application> is closed."
+msgstr ""
+"Chcete-li modul zakázat, odškrtněte zaškrtávací políčko. Zásuvné moduly "
+"zůstávají povolené nebo zakázené tak, jak byly nastaveny, i po ukončení "
+"<application>přehrávače filmů Totem</application>."
+
+#: C/index.docbook:760(sect2/title)
+msgid "Always on Top"
+msgstr "Vždy navrchu"
+
+#: C/index.docbook:761(sect2/para)
+msgid ""
+"When enabled, the <guilabel>Always on Top</guilabel> plugin will force the "
+"main <application>Totem Movie Player</application> window to be on top of "
+"all other windows while a movie is playing, but not while audio or "
+"visualizations are playing. To stop the window being on top, disable the "
+"plugin again."
+msgstr ""
+"Je-li povolen, zásuvný modul <guilabel>Vždy navrchu</guilabel> bude "
+"zajišťovat, aby hlavní okno <application>přehrávače filmů Totem</"
+"application> bylo nad všemi ostatními okny, pokud probíhá přehrávání filmu "
+"(ale nikoli přehrávání hudby nebo vizualizace). Chcete-li, aby se "
+"<application>přehrávač filmů Totem</application> přestal zobrazovat vždy "
+"navrchu, zásuvný modul zakažte."
+
+#: C/index.docbook:766(sect2/title)
+msgid "Coherence DLNA/UPnP Client"
+msgstr "Klient Coherence DLNA/UPnP"
+
+#: C/index.docbook:767(sect2/para)
+msgid ""
+"The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows "
+"<application>Totem Movie Player</application> to play multimedia content "
+"from UPnP media servers (such as Coherence servers) on the local network."
+msgstr ""
+"Zásuvný modul <guilabel>Klient Coherence DLNA/UPnP</guilabel> umožňuje "
+"<application>přehrávači filmů Totem</application> přehrávat multimediální "
+"obsah ze serverů UPnP (jako například Coherence) na lokální síti."
+
+#: C/index.docbook:769(sect2/para)
+msgid ""
+"With the <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin enabled, "
+"choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
+"guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
+"<guibutton>Sidebar</guibutton> button to show the sidebar. Select "
+"<guilabel>Coherence DLNA/UPnP Client</guilabel> from the drop-down list at "
+"the top of the sidebar to display the <guilabel>Coherence DLNA/UPnP Client</"
+"guilabel> sidebar."
+msgstr ""
+"Je-li modul <guilabel>Klient Coherence DLNA/UPnP</guilabel> povolen, "
+"zaškrtněte <menuchoice><shortcut><keycap>F9</keycap></"
+"shortcut><guimenu>Zobrazit</guimenu><guimenuitem>Postranní lišta</"
+"guimenuitem></menuchoice>, nebo klikněte na tlačítko <guibutton>Postranní "
+"lišta</guibutton>, aby se zobrazila postranní lišta. V rozbalovacím seznamu "
+"v horní části postranní lišty zvolte <guilabel>Klient Coherence DLNA/UPnP "
+"Client</guilabel>."
+
+#: C/index.docbook:773(sect2/para)
+msgid ""
+"The tree view in the sidebar will list the available media servers. Clicking "
+"on one will expand it to show the types of media it can serve, and clicking "
+"on a media folder will expand it to list the media files available. Double-"
+"clicking on a media file will add it to <application>Totem Movie Player</"
+"application>'s playlist and play it. You may alternatively right-click on a "
+"file and choose <menuchoice><guimenuitem>Play</guimenuitem></menuchoice> or "
+"<menuchoice><guimenuitem>Enqueue</guimenuitem></menuchoice> to play the file "
+"immediately or add it to the playlist, respectively."
+msgstr ""
+"V postranní liště je vypsán strom s dostupnými multimediálními servery. "
+"Kliknutím na některý ze serverů se rozbalí seznam typů médií, které může "
+"server obsluhovat. Kliknutím na složku se rozbalí seznam dotupných souborů. "
+"Pokud na soubor dvakrát kliknete, bude přidán do seznamu stop "
+"<application>přehrávače filmů Totem</application> a začne se přehrávat. "
+"Případně na soubor můžete kliknout pravým tlačítkem a vybrat "
+"<menuchoice><guimenuitem>Přehrát</guimenuitem></menuchoice> (začne se "
+"přehrávat ihned) nebo <menuchoice><guimenuitem>Zařadit</guimenuitem></"
+"menuchoice> (přidá se do seznamu stop)."
+
+#: C/index.docbook:778(sect2/para)
+msgid ""
+"If the media server allows it, choosing <menuchoice><guimenuitem>Delete</"
+"guimenuitem></menuchoice> from a file's context menu allows you to delete "
+"that file from the media server."
+msgstr ""
+"Pokud to server povoluje, vybráním <menuchoice><guimenuitem>Odstranit</"
+"guimenuitem></menuchoice> z kontextové nabídky souboru odstraníte soubor ze "
+"serveru."
+
+#: C/index.docbook:782(sect2/title)
+msgid "Gromit Annotations"
+msgstr "Poznámky Gromit"
+
+#: C/index.docbook:783(sect2/para)
+msgid ""
+"The <guilabel>Gromit Annotations</guilabel> plugin allows you to draw on top "
+"of movies as they are played using <ulink type=\"http\" url=\"http://www."
+"home.unix-ag.org/simon/gromit/\"><application>Gromit</application></ulink>. "
+"You must have <application>Gromit</application> installed before you can "
+"enable the plugin — consult your operating system documentation for "
+"information on how to do this."
+msgstr ""
+"Zásuvný modul <guilabel>Poznámky Gromit</guilabel> vám pomocí technologie "
+"<ulink type=\"http\" url=\"http://www.home.unix-ag.org/simon/gromit/"
+"\"><application>Gromit</application></ulink> umožňuje kreslit na film při "
+"jeho přehrávání. Než budete moci povolit tento modul, musíte "
+"<application>Gromit</application> nainstalovat. Nahlédněte do dokumentace "
+"vašeho operačního systému, chcete-li se dovědět, jak to provést."
+
+#: C/index.docbook:787(sect2/para)
+msgid ""
+"With the plugin enabled, press <keycombo><keycap>Ctrl</keycap><keycap>D</"
+"keycap></keycombo> to toggle <application>Gromit</application> on or off. "
+"When <application>Gromit</application> is enabled, your pointer will change "
+"to a crosshair. To draw on the screen, hold down your mouse button and drag "
+"your pointer around, before releasing your mouse button. Press "
+"<keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> again to toggle "
+"<application>Gromit</application> off."
+msgstr ""
+"Máte-li modul povolen, pomocí <keycombo><keycap>Ctrl</keycap><keycap>D</"
+"keycap></keycombo> můžete <application>Gromit</application> spouštět a "
+"ukončovat. Je-li <application>Gromit</application> spuštěný, váš kurzor se "
+"změní na zaměřovač. Kreslení na obrazovku provedete tak, že zmáčknete "
+"tlačítko myši a se stále zmáčknutým tlačítkem potáhnete zaměřovačem. Chcete-"
+"li <application>Gromit</application> ukončit, zmáčkněte znovu "
+"<keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo>."
+
+#: C/index.docbook:791(sect2/para)
+msgid ""
+"To clear the screen of annotations, press <keycombo><keycap>Ctrl</"
+"keycap><keycap>E</keycap></keycombo>, or close <application>Totem Movie "
+"Player</application>."
+msgstr ""
+"Chcete-li obrazovku od poznámek vyčistit, zmáčkněte <keycombo><keycap>Ctrl</"
+"keycap><keycap>E</keycap></keycombo> nebo zavřete okno "
+"<application>přehrávače filmů Totem</application>."
+
+#: C/index.docbook:795(sect2/title)
+msgid "Jamendo"
+msgstr "Jamendo"
+
+#: C/index.docbook:796(sect2/para)
+msgid ""
+"The <guilabel>Jamendo</guilabel> plugin allows you to listen to the "
+"collection of Creative Commons-licensed music on the <ulink type=\"http\" "
+"url=\"http://www.jamendo.com/en/\">Jamendo</ulink> service."
+msgstr ""
+"Zásuvný modul <guilabel>Jamendo</guilabel> umožňuje poslouchat kolekci hudby "
+"ze služby <ulink type=\"http\" url=\"http://www.jamendo.com/en/\">Jamendo</"
+"ulink>, šířenou za podmínek licence Creative Commons."
+
+#: C/index.docbook:799(sect3/title) C/index.docbook:850(sect3/title)
+msgid "To Configure the Plugin"
+msgstr "Nastavení zásuvného modulu"
+
+#: C/index.docbook:800(sect3/para)
+msgid ""
+"The <guilabel>Jamendo</guilabel> plugin can be configured. Click on the "
+"<guibutton>Configure</guibutton> button when enabling the plugin, and the "
+"<application>Jamendo Plugin Configuration</application> dialog will be "
+"displayed. Here, you can choose whether to download songs in Ogg or MP3 "
+"format (Ogg is preferred due to its open-source nature); and the number of "
+"albums to retrieve when doing a search (choose more albums if you have a "
+"faster Internet connection)."
+msgstr ""
+"Zásuvný modul <guilabel>Jamendo</guilabel> lze nastavit. Při jeho povolování "
+"klikněte na tlačítko <guibutton>Nastavit…</guibutton> – zobrazí se dialogové "
+"okno <application>Nastavení zásuvného modulu Jamendo</application>. V něm "
+"můžete nastavit, jestli se skladby mají stahovat ve formátu Ogg nebo MP3 "
+"(Ogg je preferován kvůli jeho kořenům v otevřeném softwaru), a počet alb "
+"získávaných jako výsledek vyhledávání (zvolte tím více alb, čím máte "
+"rychlejší připojení k Internetu)."
+
+#: C/index.docbook:804(sect3/para)
+msgid "Once you're done, click <guibutton>OK</guibutton>."
+msgstr "Jste-li hotovi, klikněte na <guibutton>Budiž</guibutton>."
+
+#: C/index.docbook:807(sect3/title)
+msgid "To Display the Jamendo Sidebar"
+msgstr "Zobrazení služby Jamendo v postranní liště"
+
+#: C/index.docbook:808(sect3/para)
+msgid ""
+"With the <guilabel>Jamendo</guilabel> plugin enabled, choose "
+"<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
+"guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
+"<guibutton>Sidebar</guibutton> button to show the sidebar. Select "
+"<guilabel>Jamendo</guilabel> from the drop-down list at the top of the "
+"sidebar to display the <guilabel>Jamendo</guilabel> sidebar."
+msgstr ""
+"Máte-li modul <guilabel>Jamendo</guilabel> povolen, zaškrtněte "
+"<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Zobrazit</"
+"guimenu><guimenuitem>Postranní lišta</guimenuitem></menuchoice>, nebo "
+"klikněte na tlačítko <guibutton>Postranní lišta</guibutton> – zobrazí se "
+"postranní lišta. Pak v rozbalovacím seznamu v horní části postranní lišty "
+"zvolte <guilabel>Jamendo</guilabel>."
+
+#: C/index.docbook:814(sect3/title)
+msgid "To Search for Music"
+msgstr "Vyhledávání hudby"
+
+#: C/index.docbook:815(sect3/para)
+msgid ""
+"Enter your search terms in the search entry at the top of the "
+"<guilabel>Jamendo</guilabel> sidebar. You can search by either artist or by "
+"tags. Click on the search button to start your search."
+msgstr ""
+"Do vyhledávacího políčka v horní části postranní lišty zadejte hledaný výraz "
+"(můžete hledat umělce a štítky). Pak klikněte na tlačítko <guibutton>Hledat</"
+"guibutton>."
+
+#: C/index.docbook:817(sect3/para)
+msgid ""
+"Search results will be displayed in the tree view in the <guilabel>Search "
+"Results</guilabel> page of the sidebar, and can be browsed through using the "
+"arrow buttons at the bottom of the sidebar. Albums are listed, and if you "
+"click on an album, its tracks will be listed below it. Click again to hide "
+"the album's tracks."
+msgstr ""
+"Strom s výsledky hledání se zobrazí v kartě <guilabel>Výsledky hledání</"
+"guilabel> v postranní liště. Pomocí šipek v dolní části postranní lišty lze "
+"výsledky listovat. Ve výsledcích jsou vypsána alba. Pokud na album kliknete, "
+"zobrazí se pod ním jeho skladby. Chcete-li skladby skrýt, klikněte znovu na "
+"album."
+
+#: C/index.docbook:820(sect3/para)
+msgid ""
+"With an artist selected, you can click on the <guibutton>Jamendo Album Page</"
+"guibutton> button to open that album's page on the Jamendo website. Double-"
+"clicking an album, or choosing <menuchoice><guimenuitem>Add to Playlist</"
+"guimenuitem></menuchoice> from the album's context menu, will replace your "
+"playlist with all the tracks on that album and begin streaming the first "
+"track from Jamendo's website. Double-clicking an individual track will "
+"replace your playlist with just that track."
+msgstr ""
+"Je-li vybrán umělec, můžete kliknout na tlačítko <guibutton>Stránka alba na "
+"Jamendo</guibutton>, kterým otevřete webovou stránku alba na službě Jamendo. "
+"Dvojité kliknutí na album nebo vybrání <menuchoice><guimenuitem>Přidat do "
+"seznamu stop</guimenuitem></menuchoice> z kontextové nabídky alba nahradí "
+"aktuální seznam stop skladbami na tomto albu a spustí přehrávání první "
+"skladby. Dvojité kliknutí na jednu skladbu nahradí seznam stop pouze touto "
+"skladbou."
+
+#: C/index.docbook:826(sect3/title)
+msgid "Popular Albums and Latest Releases"
+msgstr "Populární a nejnovější alba"
+
+#: C/index.docbook:827(sect3/para)
+msgid ""
+"Viewing the <guilabel>Popular</guilabel> page in the <guilabel>Jamendo</"
+"guilabel> sidebar will load a list of the most popular albums on Jamendo at "
+"the moment, which can be played as with search results. Viewing the "
+"<guilabel>Latest Releases</guilabel> page will likewise load a list of the "
+"latest albums released on Jamendo."
+msgstr ""
+"Zobrazením karty <guilabel>Popularní</guilabel> v postranní liště "
+"<guilabel>Jamendo</guilabel> se načte aktuální seznam nejpopulárnějších alb "
+"na službě Jamendo, který lze přehrávat jako výsledky vyhledávání. Zobrazením "
+"karty <guilabel>Nejnovější alba</guilabel> se obdobným způsobem načte seznam "
+"nejnovějších alb vydaných na službě Jamendo."
+
+#: C/index.docbook:833(sect2/title)
+msgid "Local Search"
+msgstr "Místní hledání"
+
+#: C/index.docbook:834(sect2/para)
+msgid ""
+"The <guilabel>Local Search</guilabel> plugin allows you to search for "
+"playable movies and audio files on your computer from within "
+"<application>Totem Movie Player</application>. With the plugin enabled, "
+"choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
+"guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
+"<guibutton>Sidebar</guibutton> button to show the sidebar. Select "
+"<guilabel>Local Search</guilabel> from the drop-down list at the top of the "
+"sidebar to display the <guilabel>Local Search</guilabel> sidebar."
+msgstr ""
+"Zásuvný modul <guilabel>Místní hledání</guilabel> umožňuje přímo z "
+"<application>přehrávače filmů Totem</application> vyhledávat filmové a "
+"hudební soubory uložené na vašem počítači. Máte-li tento modul povolen, "
+"zaškrtněte <menuchoice><shortcut><keycap>F9</keycap></"
+"shortcut><guimenu>Zobrazit</guimenu><guimenuitem>Postranní lišta</"
+"guimenuitem></menuchoice>, nebo klikněte na tlačítko <guibutton>Postranní "
+"lišta</guibutton>, aby se zobrazila postranní lišta. V rozbalovacím seznamu "
+"v horní části postranní lišty zvolte <guilabel>Místní hledání</guilabel>."
+
+#: C/index.docbook:839(sect2/para)
+msgid ""
+"To perform a search, enter your search terms in the search entry at the top "
+"of the sidebar and click <guibutton>Find</guibutton>. Your search terms may "
+"include wildcards such as <literal>*</literal>, which will match any "
+"character. For example, the search <userinput>*.mpg</userinput> will find "
+"all movies with the <filename class=\"extension\">.mpg</filename> file "
+"extension."
+msgstr ""
+"Chcete-li vyhledávat, zadejte hledaný výraz do vyhledávacího políčka v horní "
+"šásti postranní lišty a klikněte na <guibutton>Hledat</guibutton>. Hledané "
+"výrazy mohou obsahovat žolíkové znaky, například <literal>*</literal>, "
+"kterému odpovídá libovolný znak. Například, výraz <userinput>*.mpg</"
+"userinput> najde všechny filmy s příponou souboru <filename class=\"extension"
+"\">.mpg</filename>."
+
+#: C/index.docbook:842(sect2/para)
+msgid ""
+"Search results may be browsed using the <guibutton>Back</guibutton> and "
+"<guibutton>Forward</guibutton> buttons at the bottom of the sidebar, and you "
+"may jump to a specific results page by entering its number in the spin box."
+msgstr ""
+"Výsledky hledání lze listovat pomocí tlačítek <guibutton>Předchozí</"
+"guibutton> a <guibutton>Další</guibutton> v dolní části postranní lišty. "
+"Pomocí číselníku <guilabel>Stránka</guilabel> lze také přejít na určitou "
+"stránku s výsledky hledání."
+
+#: C/index.docbook:846(sect2/title)
+msgid "Publish Playlist"
+msgstr "Publikování seznamu stop"
+
+#: C/index.docbook:847(sect2/para)
+msgid ""
+"The <guilabel>Publish Playlist</guilabel> plugin allows you to publish "
+"playlists on your local network to allow other computers to access and play "
+"them."
+msgstr ""
+"Zásuvný modul <guilabel>Publikování seznamu stop</guilabel> umožňuje "
+"publikovat seznamy stop po vaší lokální síti, aby k nim mohly jiné počítače "
+"přistupovat a přehrávat je."
+
+#: C/index.docbook:856(varlistentry/term)
+msgid "<literal>%a</literal>"
+msgstr "<literal>%a</literal>"
+
+#: C/index.docbook:857(listitem/para)
+msgid ""
+"Replaced with the program's name: <application>Totem Movie Player</"
+"application>."
+msgstr ""
+"Nahrazeno názvem aplikace – <application>Přehrávač filmů Totem</application>."
+
+#: C/index.docbook:860(varlistentry/term)
+msgid "<literal>%h</literal>"
+msgstr "<literal>%h</literal>"
+
+#: C/index.docbook:861(listitem/para)
+msgid "Replaced with your computer's host name."
+msgstr "Nahrazeno názvem vašeho počítače."
+
+#: C/index.docbook:864(varlistentry/term)
+msgid "<literal>%u</literal>"
+msgstr "<literal>%u</literal>"
+
+#: C/index.docbook:865(listitem/para)
+msgid "Replaced with your username."
+msgstr "Nahrazeno vaším uživatelským jménem."
+
+#: C/index.docbook:868(varlistentry/term)
+msgid "<literal>%U</literal>"
+msgstr "<literal>%U</literal>"
+
+#: C/index.docbook:869(listitem/para)
+msgid "Replaced with your real name."
+msgstr "Nahrazeno vaším celým jménem."
+
+#: C/index.docbook:872(varlistentry/term)
+msgid "<literal>%%</literal>"
+msgstr "<literal>%%</literal>"
+
+#: C/index.docbook:873(listitem/para)
+msgid "Replaced with a literal percent sign."
+msgstr "Nahrazeno znakem procenta."
+
+#: C/index.docbook:851(sect3/para)
+#| msgid ""
+#| "The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click "
+#| "on the <guibutton>Configure</guibutton> button when enabling the plugin, "
+#| "and the configuration dialog will be displayed. Here, you can change the "
+#| "name which will appear for your playlist share. The following strings "
+#| "will be replaced when playlists are published: <placeholder-1/>"
+msgid ""
+"The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on "
+"the <guibutton>Configure</guibutton> button when enabling the plugin, and "
+"the configuration dialog will be displayed. Here, you can change the name "
+"which will appear for your playlist share. The following strings will be "
+"replaced when playlists are published: <_:variablelist-1/>"
+msgstr ""
+"Zásuvný modul <guilabel>Publikování seznamu stop</guilabel> lze nastavit. "
+"Při jeho povolování klikněte na tlačítko <guibutton>Nastavit…</guibutton> – "
+"zobrazí se dialogové okno s nastavením zásuvného modulu. V něm můžete "
+"nastavit název, který se u vašeho sdílení seznamu stop zobrazí. Následující "
+"řetězce jsou při publikování seznamu stop nahrazovány: <_:variablelist-1/>"
+
+#: C/index.docbook:877(sect3/para)
+msgid ""
+"You can also select the <guilabel>Use encrypted transport protocol</"
+"guilabel> checkbox if you wish to encrypt the shared playlists when they're "
+"transmitted over the network."
+msgstr ""
+"Můžete také zaškrtnout zaškrtávací políčko <guilabel>Používat šifrovaný "
+"přenosový protokol</guilabel>, pokud chcete, aby sdílené seznamy skladeb "
+"byly při přenosu po síti šifrovány."
+
+#: C/index.docbook:879(sect3/para)
+msgid "Once you're done, click <guibutton>Close</guibutton>."
+msgstr "Jste-li hotovi, klikněte na <guibutton>Zavřít</guibutton>."
+
+#: C/index.docbook:882(sect3/title)
+msgid "To Publish Playlists"
+msgstr "Publikování seznamů stop"
+
+#: C/index.docbook:883(sect3/para)
+msgid ""
+"With the plugin enabled, you do not need to explicitly publish playlists; "
+"they are automatically made available on the network as a Zeroconf website."
+msgstr ""
+"Pokud je tento zásuvný modul povolen, nemusíte publikovat seznamy stop sami "
+"– jsou na síti zpřístupněny automaticky jako webová stránka Zeroconf."
+
+#: C/index.docbook:887(sect3/title)
+msgid "To Browse your Neighborhood"
+msgstr "Procházení okolí"
+
+#: C/index.docbook:888(sect3/para)
+msgid ""
+"To view the shared playlists of others on your network, select "
+"<guilabel>Neighborhood</guilabel> from the drop-down list at the top of the "
+"sidebar. If any playlists have been published on the network, they will be "
+"listed here. Double-click on a playlist to load and play it on your computer."
+msgstr ""
+"Chcete-li si prohlížet sdílené seznamy stop ostatních lidí na vaší síti, v "
+"rozbalovacím seznamu v horní části postranní lišty zvolte <guilabel>Okolí</"
+"guilabel>. Pokud jsou na síti publikovány nějaké seznamy stop, budou zde "
+"zobrazeny. Chcete-li seznam stop načíst a přehrát ve svém počítači, dvakrát "
+"na něj klikněte."
+
+#: C/index.docbook:894(sect2/title)
+msgid "Subtitle Downloader"
+msgstr "Stahování titulků"
+
+#: C/index.docbook:895(sect2/para)
+msgid ""
+"The <guilabel>Subtitle Downloader</guilabel> plugin allows you to find and "
+"download subtitle files from the <ulink type=\"http\" url=\"http://www."
+"opensubtitles.org/en\">OpenSubtitles</ulink> service."
+msgstr ""
+"Zásuvný modul <guilabel>Stahování titulků</guilabel> umožňuje hledat a "
+"stahovat titulky prostřednictvím služby <ulink type=\"http\" url=\"http://"
+"www.opensubtitles.org/en\">OpenSubtitles</ulink>."
+
+#: C/index.docbook:897(sect2/para)
+msgid ""
+"Subtitles can only be downloaded for local movies; not audio files, DVDs, "
+"DVB streams, VCDs or HTTP streams. To search for subtitles for the currently "
+"playing movie, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Download Movie Subtitles</guimenuitem></menuchoice>, "
+"which will display the <application>Download Movie Subtitles</application> "
+"dialog."
+msgstr ""
+"Titulky mohou být stahovány pouze pro místní filmy, nikoli pro huební "
+"soubory, disky DVD, vysílání DVB, disky VCD nebo proudy HTTP. Chcete-li "
+"najít titulky pro právě přehrávaný film, vyberte "
+"<menuchoice><guimenu>Zobrazit</guimenu><guimenuitem>Stáhnout titulky</"
+"guimenuitem></menuchoice> – zobrazí se dialogové okno <application>Stáhnout "
+"titulky</application>."
+
+#: C/index.docbook:900(sect2/para)
+msgid ""
+"Select the language in which you wish to have your subtitles from the drop-"
+"down list at the top of the dialog, then click on the <guibutton>Find</"
+"guibutton> button to search for subtitles for the current movie. Subtitles "
+"are found on the basis of the movie's content, rather than its filename or "
+"tags."
+msgstr ""
+"V rozbalovacím seznamu v horní části okna zvolte jazyk, v němž chcete "
+"titulky stáhnout, a pak klikněte na tlačítko <guibutton>Hledat</guibutton>. "
+"Titulky jsou hledány podle obsahu filmu, ne podle názvu souboru nebo štítků."
+
+#: C/index.docbook:903(sect2/para)
+msgid ""
+"Search results are listed in the tree view in the middle of the dialog. "
+"Currently, subtitles can only be used with a movie by <emphasis>reloading</"
+"emphasis> the movie with the subtitles, so after selecting the subtitle file "
+"you wish to download, click on the <guibutton>Play with Subtitle</guibutton> "
+"button to download the subtitles and reload the movie."
+msgstr ""
+"Strom s výsledky hledání je vypsaný ve střední části dialogového okna. V "
+"současné době lze titulky použít pouze tehdy, když se film <emphasis>znovu "
+"načte</emphasis>, proto po výběru titulků, které chcete stáhnout, klikněte "
+"na tlačítko <guibutton>Přehrát s titulky</guibutton>, aby se titulky stáhly "
+"a film znovu načetl."
+
+#: C/index.docbook:906(note/para)
+msgid ""
+"Downloaded subtitle files are cached (in <filename>~/.cache/totem/subtitles</"
+"filename>, by default) so that they do not need to be downloaded again when "
+"playing the movie again. When downloading new subtitles for a movie, any "
+"previously downloaded subtitles for that movie are deleted."
+msgstr ""
+"Stažené soubory s titulky jsou ukládány do mezipaměti (výchozí místo je "
+"<filename>~/.cache/totem/subtitles</filename>), takže není třeba je znovu "
+"stahovat při dalším přehrávání stejného filmu. Při stahování nových titulků "
+"pro určitý film jsou všechny dříve stažené titulky pro tento film odstraněny."
+
+#: C/index.docbook:910(sect2/title)
+msgid "Thumbnail"
+msgstr "Náhled"
+
+#: C/index.docbook:911(sect2/para)
+msgid ""
+"The <guilabel>Thumbnail</guilabel> plugin sets <application>Totem Movie "
+"Player</application>'s main window icon to a thumbnail of the current movie, "
+"and updates the icon when new movies are loaded."
+msgstr ""
+"Zásuvný modul <guilabel>Náhled</guilabel> nastavuje ikonku hlavního okna "
+"<application>přehrávače filmů Totem</application> na náhled právě "
+"přehrávaného filmu. Při načtení dalšího filmu se ikonka aktualizuje."
+
+#: C/index.docbook:913(note/para)
+msgid ""
+"If a thumbnail doesn't exist for the current movie (or if you're playing an "
+"audio file), the main window icon will be reset to the <application>Totem "
+"Movie Player</application> logo."
+msgstr ""
+"Pokud pro přehrávaný film neexistuje náhled (nebo při přehrávání hudby), "
+"ikonka hlavního okna bude nastavena na logo <application>přehrávače filmů "
+"Totem</application>."
+
+#: C/index.docbook:917(sect2/title)
+msgid "Video Disc Recorder"
+msgstr "Vypalování filmových disků"
+
+#: C/index.docbook:918(sect2/para)
+msgid ""
+"The <guilabel>Video Disc Recorder</guilabel> plugin allows you to burn the "
+"current playlist to a DVD or VCD using <application>Brasero</application>."
+msgstr ""
+"Zásuvný modul <guilabel>Vypalování filmových disků</guilabel> umožňuje "
+"vypalovat právě otevřený seznam stop na disky DVD nebo VCD pomocí aplikace "
+"<application>Brasero</application>."
+
+#: C/index.docbook:919(sect2/para)
+#| msgid ""
+#| "To burn the current playlist, choose <menuchoice><guimenu>Movie</"
+#| "guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>. A "
+#| "<application>Brasero</application> dialog will be displayed, giving "
+#| "options for converting the movies to the appropriate format and burning "
+#| "them to disc. For more information, see the <ulink type=\"help\" url="
+#| "\"ghelp:brasero?brasero-new-project-video\">Brasero documentation</ulink>."
+msgid ""
+"To burn the current playlist, choose <menuchoice><guimenu>Movie</"
+"guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>. A "
+"<application>Brasero</application> dialog will be displayed, giving options "
+"for converting the movies to the appropriate format and burning them to "
+"disc. For more information, see the <ulink type=\"help\" url=\"help:brasero/"
+"brasero-new-project-video\">Brasero documentation</ulink>."
+msgstr ""
+"Chcete-li vypálit aktuální seznam stop, vyberte <menuchoice><guimenu>Film</"
+"guimenu> <guimenuitem>Vytvořit filmový disk</guimenuitem></menuchoice>. "
+"Zobrazí se dialogové okno aplikace <application>Brasero</application> "
+"nabízející volby týkající se převodu filmů do příslušného formátu a "
+"umožňující vypálení stop na disk. Chcete-li se dovědět více informací, "
+"přečtěte si <ulink type=\"help\" url=\"help:brasero/brasero-new-project-"
+"video\">příručku k aplikaci Brasero</ulink>."
+
+#: C/index.docbook:924(sect2/title)
+msgid "YouTube Browser"
+msgstr "Prohlížeč YouTube"
+
+#: C/index.docbook:925(sect2/para)
+msgid ""
+"The <guilabel>YouTube Browser</guilabel> plugin allows you to search and "
+"browse <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink>, "
+"and play YouTube videos directly in <application>Totem Movie Player</"
+"application>. With the plugin enabled, choose "
+"<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
+"guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
+"<guibutton>Sidebar</guibutton> button to show the sidebar. Select "
+"<guilabel>YouTube</guilabel> from the drop-down list at the top of the "
+"sidebar to display the <guilabel>YouTube</guilabel> sidebar."
+msgstr ""
+"Zásuvný modul <guilabel>Prohlížeč YouTube</guilabel> umožňuje vyhledávání, "
+"procházení a přehrávání videí ze služby <ulink type=\"http\" url=\"http://"
+"www.youtube.com/\">YouTube</ulink> přímo v <application>přehrávači filmů "
+"Totem</application>. Je-li tento modul povolen, zaškrtněte "
+"<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Zobrazit</"
+"guimenu><guimenuitem>Postranní lišta</guimenuitem></menuchoice>, nebo "
+"klikněte na tlačítko <guibutton>Postranní lišta</guibutton>, aby se "
+"zobrazila postranní lišta. Pak v rozbalovacím seznamu v horní části "
+"postranní lišty zvolte <guilabel>YouTube</guilabel>."
+
+#: C/index.docbook:931(sect2/para)
+msgid ""
+"To search for a YouTube video, enter your search terms in the entry at the "
+"top of the sidebar, then click <guibutton>Find</guibutton>. The search "
+"results will be listed in the tree view below. More results will be loaded "
+"automatically as you scroll down the list."
+msgstr ""
+"Chcete-li na YouTube vyhledat video, zadejte hledaný výraz do vyhledávacího "
+"políčka v horní části postranní lišty a klikněte na <guibutton>Hledat</"
+"guibutton>. Strom s výsledky hledání bude zobrazen dole. Další výsledky "
+"budou automaticky načteny při posouvání seznamu dolů."
+
+#: C/index.docbook:933(sect2/para)
+msgid ""
+"To play a video, double-click it in the results list, or choose "
+"<menuchoice><guimenuitem>Add to Playlist</guimenuitem></menuchoice> from its "
+"context menu. When a video is played, a list of related videos will "
+"automatically be loaded in the <guilabel>Related Videos</guilabel> page of "
+"the <guilabel>YouTube</guilabel> sidebar."
+msgstr ""
+"Chcete-li video přehrát, dvakrát na něj klikněte ve výsledcích hledání, nebo "
+"vyberte <menuchoice><guimenuitem>Přidat do seznamu stop</guimenuitem></"
+"menuchoice> z kontextové nabídky. Když se video přehrává, je do karty "
+"<guilabel>Podobná videa</guilabel> načten seznam podobných videí."
+
+#: C/index.docbook:936(sect2/para)
+msgid ""
+"YouTube videos can be opened in a web browser by choosing "
+"<menuchoice><guimenuitem>Open in Web Browser</guimenuitem></menuchoice> from "
+"their context menu. This will open the video in its original location on the "
+"YouTube website."
+msgstr ""
+"Videa z YouTube mohou být otevřena ve webovém prohlížeči – vyberte "
+"<menuchoice><guimenuitem>Otevřít ve webovém prohlížeči</guimenuitem></"
+"menuchoice> z jejich kontextové nabídky. Tímto se načte původní umístění "
+"videa na webové stránce YouTube."
+
+#: C/index.docbook:940(sect2/title)
+msgid "D-Bus Service"
+msgstr "Služba D-Bus"
+
+#: C/index.docbook:941(sect2/para)
+msgid ""
+"The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of "
+"which track is playing in <application>Totem Movie Player</application> on "
+"the D-Bus session bus. Applications such as <application>Gajim</application> "
+"can listen for such notifications and respond accordingly by, for example, "
+"updating your instant messaging status message to display the video "
+"currently being played in <application>Totem Movie Player</application>."
+msgstr ""
+"Zásuvný modul <guilabel>Služba D-Bus</guilabel> rozesílá na sběrnici sezení "
+"D-Bus hromadné oznámení o tom, která skladba se v <application>Přehrávači "
+"film Totem</application> právě přehrává. Aplikace, jako je např. "
+"<application>Gajim</application>, mohou těmto oznámením naslouchat a "
+"patřičně zareagovat, např. aktualizovat stavovou zprávu o tom, které video "
+"se právě v <application>Přehrávači film Totem</application> přehrává."
+
+#: C/index.docbook:952(sect1/title)
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: C/index.docbook:953(sect1/para)
+msgid ""
+"To modify the preferences of <application>Totem Movie Player</application>, "
+"choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Preferences</"
+"guimenuitem> </menuchoice>."
+msgstr ""
+"Chcete-li upravit nastavení <application>přehrávače filmů Totem</"
+"application>, vyberte <menuchoice><guimenu>Upravit</guimenu> "
+"<guimenuitem>Předvolby</guimenuitem></menuchoice>."
+
+#: C/index.docbook:960(sect2/title)
+msgid "General"
+msgstr "Obecné"
+
+#: C/index.docbook:963(varlistentry/term)
+msgid "Networking"
+msgstr "Síť"
+
+#: C/index.docbook:965(listitem/para)
+msgid ""
+"Select network connection speed from the <guilabel>Connection speed</"
+"guilabel> drop-down list."
+msgstr ""
+"V rozbalovacím seznamu <guilabel>Rychlost připojení</guilabel> zvolte "
+"rychlost připojení k síti."
+
+#: C/index.docbook:971(varlistentry/term)
+msgid "Text Subtitles"
+msgstr "Textové titulky"
+
+#: C/index.docbook:975(listitem/para)
+msgid ""
+"<guilabel>Automatically load subtitle files</guilabel>: select this option "
+"to automatically load any subtitle files with the same filename as a movie "
+"when the movie is loaded."
+msgstr ""
+"<guilabel>Automaticky načítat soubory s titulky</guilabel> – zaškrtněte tuto "
+"volbu, aby se při přehrávání filmu automaticky načítaly titulky se stejným "
+"názvem souboru, jako má soubor s filmem."
+
+#: C/index.docbook:979(listitem/para)
+msgid ""
+"<guilabel>Font</guilabel>: select this option to change the font used to "
+"display subtitles."
+msgstr ""
+"<guilabel>Písmo</guilabel> – pomocí této volby můžete měnit písmo použité k "
+"zobrazování titulků."
+
+#: C/index.docbook:983(listitem/para)
+msgid ""
+"<guilabel>Encoding</guilabel>: select this option to change the encoding "
+"used to display subtitles."
+msgstr ""
+"<guilabel>Kódování</guilabel> – pomocí této volby můžete nastavit kódování, "
+"ve kterém se budou titulky zobrazovat."
+
+#: C/index.docbook:992(sect2/title) C/index.docbook:995(varlistentry/term)
+msgid "Display"
+msgstr "Zobrazení"
+
+#: C/index.docbook:999(listitem/para)
+msgid ""
+"Select the resize option if you want <application>Totem Movie Player</"
+"application> to automatically resize the window to the size of the video "
+"when a new video is loaded."
+msgstr ""
+"Zaškrtněte volbu změny velikosti okna, pokud chcete, aby "
+"<application>přehrávač filmů Totem</application> při načtení nového filmu "
+"automaticky měnil velikost okna na velikost filmu."
+
+#: C/index.docbook:1004(listitem/para)
+msgid ""
+"Select the screensaver option if you want to allow the screensaver to "
+"activate when playing audio files. Some monitors with integrated speakers "
+"may stop playing music when the screensaver is activated."
+msgstr ""
+"Zaškrtněte volbu šetřiče obrazovky, pokud chcete povolit spouštění šetřiče "
+"obrazovky při přehrávání hudby. Některé monitory s integrovanými "
+"reproduktory mohou pozastavit přehrávání hudby při aktivaci šetřiče "
+"obrazovky."
+
+#: C/index.docbook:1011(varlistentry/term)
+msgid "Visual Effects"
+msgstr "Vizuální efekty"
+
+#: C/index.docbook:1015(listitem/para)
+msgid ""
+"<guilabel>Visual</guilabel>: select this option to show visual effects while "
+"an audio file is playing."
+msgstr ""
+"<guilabel>Vizualizovat</guilabel> – zaškrtněte tuto volbu, mají-li se při "
+"přehrávání hudby zobrazovat vizuální efekty."
+
+#: C/index.docbook:1020(listitem/para)
+msgid ""
+"<guilabel>Type of visualization</guilabel>: select type of visualization "
+"from the drop-down list."
+msgstr ""
+"<guilabel>Typ vizualizace</guilabel> – v rozbalovacím seznamu zvolte typ "
+"vizualizace."
+
+#: C/index.docbook:1025(listitem/para)
+msgid ""
+"<guilabel>Visualization size</guilabel>: select visualization size from the "
+"drop-down list."
+msgstr ""
+"<guilabel>Velikost vizualizace</guilabel> – v rozbalovacím seznamu zvolte "
+"velikost vizualizace."
+
+#: C/index.docbook:1033(varlistentry/term)
+msgid "Color balance"
+msgstr "Vyvážení barev"
+
+#: C/index.docbook:1037(listitem/para)
+msgid ""
+"<guilabel>Brightness</guilabel>: use the slider to specify the level of "
+"brightness."
+msgstr "<guilabel>Jas</guilabel> – použijte táhlo k nastavení jasu."
+
+#: C/index.docbook:1040(listitem/para)
+msgid ""
+"<guilabel>Contrast</guilabel>: use the slider to specify the level of "
+"contrast."
+msgstr "<guilabel>Kontrast</guilabel> – použijte táhlo k nastavení kontrastu."
+
+#: C/index.docbook:1043(listitem/para)
+msgid ""
+"<guilabel>Saturation</guilabel>: use the slider to specify the level of "
+"saturation."
+msgstr "<guilabel>Sytost</guilabel> – použijte táhlo k nastavení sytosti."
+
+#: C/index.docbook:1047(listitem/para)
+msgid "<guilabel>Hue</guilabel>: use the slider to specify the level of hue."
+msgstr "<guilabel>Odstín</guilabel> – použijte táhlo k nastavení odstínu."
+
+#: C/index.docbook:1051(tip/para)
+msgid ""
+"You may use the <guilabel>Reset to Defaults</guilabel> button to reset the "
+"color balance controls to their default positions."
+msgstr ""
+"Chcete-li vyvážení barev nastavit na výchozí hodnoty, můžete použít tlačítko "
+"<guilabel>Vrátit na výchozí</guilabel>."
+
+#: C/index.docbook:1058(sect2/title)
+msgid "Audio"
+msgstr "Zvuk"
+
+#: C/index.docbook:1061(varlistentry/term)
+msgid "Audio Output"
+msgstr "Zvukový výstup"
+
+#: C/index.docbook:1063(listitem/para)
+msgid ""
+"Select audio output type from the <guilabel>Audio output type</guilabel> "
+"drop-down list."
+msgstr ""
+"V rozbalovacím seznamu <guilabel>Typ zvukového výstupu</guilabel> zvolte typ "
+"zvukového výstupu."
+
+#: C/index.docbook:1091(sect1/title)
+msgid "About <application>Totem Movie Player</application>"
+msgstr "O aplikaci <application>přehrávač filmů Totem</application>"
+
+#: C/index.docbook:1092(sect1/para)
+msgid ""
+"<application>Totem Movie Player</application> is written by Bastien Nocera "
+"(<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</"
+"email>) for the GStreamer backend, and Guenter Bartsch (<email>guenter@users."
+"sourceforge.net</email>). To find more information about <application>Totem "
+"Movie Player</application>, please visit the <ulink url=\"http://projects."
+"gnome.org/totem/\" type=\"http\"><application>Totem Movie Player</"
+"application> website</ulink>."
+msgstr ""
+"<application>Přehrávač filmů Totem</application> je napsán Bastienem Nocerou "
+"(<email>hadess@hadess.net</email>), Julienem Mouttem (<email>julien@moutte."
+"net</email>) pro podpůrnou vrstvu GStreamer a Guenterem Bartschem "
+"(<email>guenter@users.sourceforge.net</email>). Chcete-li se o "
+"<application>přehrávači filmů Totem</application> dovědět více, navštivte "
+"jeho <ulink url=\"http://projects.gnome.org/totem/\" type=\"http\">webové "
+"stránky</ulink>."
+
+#: C/index.docbook:1105(sect1/para)
+msgid ""
+"This program is distributed under the terms of the GNU General Public "
+"license as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version. A copy of this license "
+"can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or "
+"in the file COPYING included with the source code of this program."
+msgstr ""
+"Tento program je šířen za podmínek licence GNU General Public License, "
+"vydávané Free Software Foundation; a to buď verze 2 této licence a nebo "
+"(podle vlastního uvážení) kterékoliv pozdější verze. Kopii této licence "
+"naleznete pod tímto <ulink url=\"help:gpl\" type=\"help\">odkazem</ulink> "
+"nebo v souboru COPYING přiloženém ke zdrojovým kódům tohoto programu."
+
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "odkazem"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"tímto <_:ulink-1/> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."

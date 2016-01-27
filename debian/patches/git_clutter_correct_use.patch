@@ -1,0 +1,32 @@
+From 4a7e14f2fe4aaba751a5de427233a32024f3eb81 Mon Sep 17 00:00:00 2001
+From: Alban Browaeys <prahal@yahoo.com>
+Date: Sat, 29 Jun 2013 05:36:29 +0000
+Subject: backend: Fix pick in the aspect frame
+
+Fixes:
+(totem:24473): Clutter-WARNING **: The required ID of 2 does not refer
+to an existing actor; this usually implies that the pick() of an actor
+is not correctly implemented or that there is an error in the
+glReadPixels() implementation of the GL driver.
+
+Let parent do the pick "draw" for the container as per
+Example 24. Pick implementation of a container of the clutter
+reference manual version 1.8, Section "Implementing a new actor".
+
+https://bugzilla.gnome.org/show_bug.cgi?id=703368
+---
+diff --git a/src/backend/totem-aspect-frame.c b/src/backend/totem-aspect-frame.c
+index 7dee217..7e72e08 100644
+--- a/src/backend/totem-aspect-frame.c
++++ b/src/backend/totem-aspect-frame.c
+@@ -320,9 +320,7 @@ totem_aspect_frame_pick (ClutterActor       *actor,
+ 
+   clutter_actor_get_allocation_box (actor, &box);
+ 
+-  cogl_set_source_color4ub (color->red, color->green,
+-                            color->blue, color->alpha);
+-  cogl_rectangle (box.x1, box.y1, box.x2, box.y2);
++  CLUTTER_ACTOR_CLASS (totem_aspect_frame_parent_class)->pick (actor, color);
+ 
+   child = clutter_actor_get_child_at_index (actor, 0);
+ 

@@ -1,0 +1,18 @@
+Description: Build without gstreamer1.0-plugins-bad
+Forwarded: no
+
+Index: totem-3.8.0/configure.ac
+===================================================================
+--- totem-3.8.0.orig/configure.ac	2013-05-25 23:04:04.000000000 -0400
++++ totem-3.8.0/configure.ac	2013-05-25 23:05:34.814379307 -0400
+@@ -187,10 +187,6 @@
+ 	shift;
+ done
+ 
+-dnl Check for elements from gst-plugins-bad
+-dnl Set plugins which contain below elements
+-PKG_CHECK_MODULES(GST_PLUGINS_BAD, gstreamer-plugins-bad-1.0 >= 1.0.2)
+-
+ dnl Check the smclient backend
+ AC_MSG_CHECKING([which smclient backend to use])
+ AC_ARG_WITH([smclient],
