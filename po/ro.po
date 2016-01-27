@@ -1,6 +1,6 @@
-# Romanian translation of totem.
-# Copyright (C) 2003 THE totem'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem package.
+# Romanian translation of xplayer.
+# Copyright (C) 2003 THE xplayer'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer package.
 # Mugurel Tudor <mugurelu@gnome.ro>, 2003, 2005, 2006.
 # Adi Roiban https://launchpad.net/~adiroiban, 2008, 2009.
 # Mișu Moldovan <dumol@gnome.ro>, 2009.
@@ -8,9 +8,9 @@
 # Daniel Șerbănescu <cyber19rider@gmail.com>, 2010, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.HEAD.ro\n"
+"Project-Id-Version: xplayer.HEAD.ro\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=general\n"
+"product=xplayer&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-03-13 01:47+0000\n"
 "PO-Revision-Date: 2011-02-13 17:26+0200\n"
 "Last-Translator: Daniel Șerbănescu <cyber19rider@gmail.com>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Leave Fullscreen"
 msgstr "Părăsește modul pe tot ecranul"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:102
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:102
 msgid "Time:"
 msgstr "Timp:"
 
@@ -59,7 +59,7 @@ msgstr "Elimină fișierul din lista de redare"
 msgid "Save Playlist..."
 msgstr "Salvează lista de redare..."
 
-#: ../data/playlist.ui.h:8 ../data/totem.ui.h:77
+#: ../data/playlist.ui.h:8 ../data/xplayer.ui.h:77
 msgid "Select a file to use for text subtitles"
 msgstr "Alegeți un fișier pentru a fi folosit ca subtitrare"
 
@@ -71,7 +71,7 @@ msgstr "_Copiază locația"
 msgid "_Remove"
 msgstr "_Elimină"
 
-#: ../data/playlist.ui.h:11 ../data/totem.ui.h:145
+#: ../data/playlist.ui.h:11 ../data/xplayer.ui.h:145
 msgid "_Select Text Subtitles..."
 msgstr "Alegeți textul _subtitrărilor..."
 
@@ -112,8 +112,8 @@ msgstr "Album:"
 msgid "Artist:"
 msgstr "Artist:"
 
-#: ../data/properties.ui.h:9 ../data/totem.ui.h:23
-#: ../src/totem-properties-view.c:89
+#: ../data/properties.ui.h:9 ../data/xplayer.ui.h:23
+#: ../src/xplayer-properties-view.c:89
 msgid "Audio"
 msgstr "Sunet"
 
@@ -152,7 +152,7 @@ msgstr "Durată:"
 msgid "Framerate:"
 msgstr "Frecvență cadre:"
 
-#: ../data/properties.ui.h:18 ../data/totem.ui.h:41
+#: ../data/properties.ui.h:18 ../data/xplayer.ui.h:41
 msgid "General"
 msgstr "General"
 
@@ -176,8 +176,8 @@ msgstr "Titlu:"
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../data/properties.ui.h:22 ../data/totem.ui.h:104
-#: ../src/totem-properties-view.c:85
+#: ../data/properties.ui.h:22 ../data/xplayer.ui.h:104
+#: ../src/xplayer-properties-view.c:85
 msgid "Video"
 msgstr "Video"
 
@@ -196,579 +196,579 @@ msgstr "An:"
 msgid "Add the video to the playlist"
 msgstr "Adaugă fișierul video la lista de redare"
 
-#: ../data/video-list.ui.h:3 ../src/totem-dnd-menu.c:97
+#: ../data/video-list.ui.h:3 ../src/xplayer-dnd-menu.c:97
 #: ../src/plugins/jamendo/jamendo.ui.h:9
 msgid "_Add to Playlist"
 msgstr "_Adaugă la lista de redare"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:53
-#: ../src/totem-object.c:1667
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:53
+#: ../src/xplayer-object.c:1667
 msgid "Movie Player"
 msgstr "Player pentru filme"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies and songs"
 msgstr "Redă fișiere multimedia"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "1.5 Mbps T1/Intranet/LAN"
 msgstr "1.5 Mbps T1/Intranet/LAN"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "112 Kbps Dual ISDN/DSL"
 msgstr "112 Kbps ISDN dual/DSL"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "14.4 Kbps Modem"
 msgstr "14.4 Kbps modem"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "16:9 (Widescreen)"
 msgstr "16:9 (ecran lat)"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "19.2 Kbps Modem"
 msgstr "19.2 Kbps modem"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "2.11:1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "256 Kbps DSL/Cable"
 msgstr "256 Kbps DSL/cablu"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "28.8 Kbps Modem"
 msgstr "28.8 Kbps modem"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "33.6 Kbps Modem"
 msgstr "33.6 Kbps modem"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "34.4 Kbps Modem"
 msgstr "34.4 Kbps modem"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "384 Kbps DSL/Cable"
 msgstr "384 Kbps DSL/cablu"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "4-channel"
 msgstr "4-canale"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "4.1-channel"
 msgstr "4.1-canale"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "4:3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "5.0-channel"
 msgstr "5.0-canale"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "5.1-channel"
 msgstr "5.1-canale"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "512 Kbps DSL/Cable"
 msgstr "512 Kbps DSL/cablu"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "56 Kbps Modem/ISDN"
 msgstr "56 Kbps modem/ISDN"
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "AC3 Passthrough"
 msgstr "Filtru AC3"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "A_udio Menu"
 msgstr "Meniu s_unet"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "About this application"
 msgstr "Despre această aplicație"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Automat"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Audio Output"
 msgstr "Ieșire audio"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Clear the playlist"
 msgstr "Golește lista de redare"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Co_ntrast:"
 msgstr "Co_ntrast:"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Color Balance"
 msgstr "Balanță culori"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "Configure plugins to extend the application"
 msgstr "Configurați module ce extind funcționalitățile aplicației"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Configure the application"
 msgstr "Configurați aplicația"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Connection _speed:"
 msgstr "_Viteza conexiunii:"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "Decrease volume"
 msgstr "Redu volumul"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr "Dezactivează _deîntrețeserea videoclipurilor întrețesute"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Disable screensaver when playing "
 msgstr "Dezactivează protectorul de ecran în timpul redării "
 
 #. Tab label in the Preferences dialogue
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Display"
 msgstr "Afișare"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "Eject the current disc"
 msgstr "Scoate discul curent"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "External Chapters"
 msgstr "Capitolele externe"
 
 #. Audio visualization dimensions
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Extra Large"
 msgstr "Foarte mare"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "Fit Window to Movie"
 msgstr "Potrivește fereastra la film"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "Go to the DVD menu"
 msgstr "Navighează la meniul DVD"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Go to the angle menu"
 msgstr "Navighează la meniul unghiular"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "Go to the audio menu"
 msgstr "Navighează la meniul audio"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Go to the chapter menu"
 msgstr "Navighează la meniul capitol"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "Go to the title menu"
 msgstr "Navighează la meniul titlu"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Help contents"
 msgstr "Conținut ajutor"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "Crește volumul"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Intranet/LAN"
 msgstr "Intranet/LAN"
 
 #. Audio visualization dimensions
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "Large"
 msgstr "Mare"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "Load _chapter files when movie is loaded"
 msgstr "Încarcă automat fișierele _capitolului la încărcarea filmului"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "Networking"
 msgstr "Rețea"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "Next chapter or movie"
 msgstr "Următorul capitol sau film"
 
 #. Audio visualization dimensions
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Normal"
 msgstr "Normală"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "Open _Location..."
 msgstr "Deschide o _locație..."
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Open a file"
 msgstr "Deschide un fișier"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgid "Open a non-local file"
 msgstr "Deschide un fișier la distanță"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Play / P_ause"
 msgstr "Redă / P_auză"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Play or pause the movie"
 msgstr "Redă sau întrerupe filmul"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Playback"
 msgstr "Redare"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "Plugins..."
 msgstr "Module..."
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Prefere_nces"
 msgstr "Preferi_nțe"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "Previous chapter or movie"
 msgstr "Precedentul capitol sau film"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Quit the program"
 msgstr "Închide aplicația"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "Reset to _Defaults"
 msgstr "Revenire la _valorile implicite"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Resize _1:1"
 msgstr "Redimensionează _1:1"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "Resize _2:1"
 msgstr "Redimensionează _2:1"
 
-#: ../data/totem.ui.h:71
+#: ../data/xplayer.ui.h:71
 msgid "Resize to double the original video size"
 msgstr "Redimensionează la dublul dimensiunii originale"
 
-#: ../data/totem.ui.h:72
+#: ../data/xplayer.ui.h:72
 msgid "Resize to half the original video size"
 msgstr "Redimensionează la jumătate din dimensiunea originală"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "Resize to the original video size"
 msgstr "Redimensionează la dimensiunea originală"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "S_idebar"
 msgstr "Bară _laterală"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "S_ubtitles"
 msgstr "S_ubtitrări"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Sat_uration:"
 msgstr "Sat_urație:"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Set the repeat mode"
 msgstr "Setează modul de repetare"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Set the shuffle mode"
 msgstr "Setează modul amestecat"
 
-#: ../data/totem.ui.h:80
+#: ../data/xplayer.ui.h:80
 msgid "Sets 16:9 (widescreen) aspect ratio"
 msgstr "Setează raportul de aspect la 16:9 (ecran lat)"
 
-#: ../data/totem.ui.h:81
+#: ../data/xplayer.ui.h:81
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr "Setează raportul de aspect la 2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "Setează raportul de aspect la 4:3 (TV)"
 
-#: ../data/totem.ui.h:83
+#: ../data/xplayer.ui.h:83
 msgid "Sets automatic aspect ratio"
 msgstr "Setează raportul de aspect în mod automat"
 
-#: ../data/totem.ui.h:84
+#: ../data/xplayer.ui.h:84
 msgid "Sets square aspect ratio"
 msgstr "Setează un raport de aspect pătrat"
 
-#: ../data/totem.ui.h:85
+#: ../data/xplayer.ui.h:85
 msgid "Show _Controls"
 msgstr "Arată _controalele"
 
-#: ../data/totem.ui.h:86
+#: ../data/xplayer.ui.h:86
 msgid "Show _visual effects when an audio file is played"
 msgstr "Afișează efecte vi_zuale la redarea unui fișier audio"
 
-#: ../data/totem.ui.h:87
+#: ../data/xplayer.ui.h:87
 msgid "Show controls"
 msgstr "Arată controalele"
 
-#: ../data/totem.ui.h:88
+#: ../data/xplayer.ui.h:88
 msgid "Show or hide the sidebar"
 msgstr "Afișează sau ascunde bara laterală"
 
-#: ../data/totem.ui.h:89
+#: ../data/xplayer.ui.h:89
 msgid "Shuff_le Mode"
 msgstr "Mod a_mestecat"
 
-#: ../data/totem.ui.h:90
+#: ../data/xplayer.ui.h:90
 msgid "Skip _Backwards"
 msgstr "Derulează î_napoi"
 
-#: ../data/totem.ui.h:91
+#: ../data/xplayer.ui.h:91
 msgid "Skip _Forward"
 msgstr "Derulează înain_te"
 
-#: ../data/totem.ui.h:92
+#: ../data/xplayer.ui.h:92
 msgid "Skip backwards"
 msgstr "Derulează înapoi"
 
-#: ../data/totem.ui.h:93
+#: ../data/xplayer.ui.h:93
 msgid "Skip forward"
 msgstr "Derulează înainte"
 
-#: ../data/totem.ui.h:94
+#: ../data/xplayer.ui.h:94
 msgid "Square"
 msgstr "Pătrat"
 
-#: ../data/totem.ui.h:95
+#: ../data/xplayer.ui.h:95
 msgid "Start playing files from last position"
 msgstr "Pornește redarea fișierelor de la ultima poziție"
 
-#: ../data/totem.ui.h:96 ../src/backend/bacon-video-widget-gst-0.10.c:6008
+#: ../data/xplayer.ui.h:96 ../src/backend/bacon-video-widget-gst-0.10.c:6008
 msgid "Stereo"
 msgstr "Stereo"
 
-#: ../data/totem.ui.h:97
+#: ../data/xplayer.ui.h:97
 msgid "Switch An_gles"
 msgstr "Schimbă un_ghiul"
 
-#: ../data/totem.ui.h:98
+#: ../data/xplayer.ui.h:98
 msgid "Switch camera angles"
 msgstr "Schimbă unghiul camerei"
 
-#: ../data/totem.ui.h:99
+#: ../data/xplayer.ui.h:99
 msgid "Switch to fullscreen"
 msgstr "Comută pe tot ecranul"
 
-#: ../data/totem.ui.h:100
+#: ../data/xplayer.ui.h:100
 msgid "Text Subtitles"
 msgstr "Subtitrări text"
 
-#: ../data/totem.ui.h:101
+#: ../data/xplayer.ui.h:101
 msgid "Time seek bar"
 msgstr "Bară de derulare"
 
-#: ../data/totem.ui.h:103
-msgid "Totem Preferences"
-msgstr "Preferințe Totem"
+#: ../data/xplayer.ui.h:103
+msgid "Xplayer Preferences"
+msgstr "Preferințe Xplayer"
 
-#: ../data/totem.ui.h:105
+#: ../data/xplayer.ui.h:105
 msgid "Video or Audio"
 msgstr "Video sau audio"
 
-#: ../data/totem.ui.h:106
+#: ../data/xplayer.ui.h:106
 msgid "View the properties of the current stream"
 msgstr "Arată proprietățile fluxului curent"
 
-#: ../data/totem.ui.h:107
+#: ../data/xplayer.ui.h:107
 msgid "Visual Effects"
 msgstr "Efecte vizuale"
 
-#: ../data/totem.ui.h:108
+#: ../data/xplayer.ui.h:108
 msgid "Visualization _size:"
 msgstr "Dimen_siunea vizualizării:"
 
-#: ../data/totem.ui.h:109
+#: ../data/xplayer.ui.h:109
 msgid "Volume _Down"
 msgstr "Re_du volumul"
 
-#: ../data/totem.ui.h:110
+#: ../data/xplayer.ui.h:110
 msgid "Volume _Up"
 msgstr "Crește vol_umul"
 
-#: ../data/totem.ui.h:111
+#: ../data/xplayer.ui.h:111
 msgid "Zoom In"
 msgstr "Mărește"
 
-#: ../data/totem.ui.h:112
+#: ../data/xplayer.ui.h:112
 msgid "Zoom Out"
 msgstr "Micșorează"
 
-#: ../data/totem.ui.h:113
+#: ../data/xplayer.ui.h:113
 msgid "Zoom Reset"
 msgstr "Mărime originală"
 
-#: ../data/totem.ui.h:114
+#: ../data/xplayer.ui.h:114
 msgid "Zoom in"
 msgstr "Mărește"
 
-#: ../data/totem.ui.h:115
+#: ../data/xplayer.ui.h:115
 msgid "Zoom out"
 msgstr "Micșorează"
 
-#: ../data/totem.ui.h:116
+#: ../data/xplayer.ui.h:116
 msgid "Zoom reset"
 msgstr "Mărime originală"
 
-#: ../data/totem.ui.h:117
+#: ../data/xplayer.ui.h:117
 msgid "_About"
 msgstr "_Despre"
 
-#: ../data/totem.ui.h:118
+#: ../data/xplayer.ui.h:118
 msgid "_Angle Menu"
 msgstr "Meniul _unghi"
 
-#: ../data/totem.ui.h:119
+#: ../data/xplayer.ui.h:119
 msgid "_Aspect Ratio"
 msgstr "_Proporție"
 
-#: ../data/totem.ui.h:120
+#: ../data/xplayer.ui.h:120
 msgid "_Audio output type:"
 msgstr "Tip de ieșire _audio:"
 
-#: ../data/totem.ui.h:121
+#: ../data/xplayer.ui.h:121
 msgid "_Brightness:"
 msgstr "_Luminozitate:"
 
-#: ../data/totem.ui.h:122
+#: ../data/xplayer.ui.h:122
 msgid "_Chapter Menu"
 msgstr "Meniul _capitol"
 
-#: ../data/totem.ui.h:123
+#: ../data/xplayer.ui.h:123
 msgid "_Clear Playlist"
 msgstr "Gol_ește lista de redare"
 
-#: ../data/totem.ui.h:124
+#: ../data/xplayer.ui.h:124
 msgid "_Contents"
 msgstr "_Conținut"
 
-#: ../data/totem.ui.h:125
+#: ../data/xplayer.ui.h:125
 msgid "_DVD Menu"
 msgstr "Meniul _DVD"
 
-#: ../data/totem.ui.h:126
+#: ../data/xplayer.ui.h:126
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../data/totem.ui.h:127
+#: ../data/xplayer.ui.h:127
 msgid "_Eject"
 msgstr "_Scoate"
 
-#: ../data/totem.ui.h:128
+#: ../data/xplayer.ui.h:128
 msgid "_Encoding:"
 msgstr "Codar_e:"
 
-#: ../data/totem.ui.h:129
+#: ../data/xplayer.ui.h:129
 msgid "_Font:"
 msgstr "_Font:"
 
-#: ../data/totem.ui.h:130
+#: ../data/xplayer.ui.h:130
 msgid "_Fullscreen"
 msgstr "_Pe tot ecranul"
 
-#: ../data/totem.ui.h:131
+#: ../data/xplayer.ui.h:131
 msgid "_Go"
 msgstr "_Navigare"
 
-#: ../data/totem.ui.h:132
+#: ../data/xplayer.ui.h:132
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: ../data/totem.ui.h:133
+#: ../data/xplayer.ui.h:133
 msgid "_Hue:"
 msgstr "N_uanță:"
 
-#: ../data/totem.ui.h:134
+#: ../data/xplayer.ui.h:134
 msgid "_Languages"
 msgstr "_Limbi"
 
-#: ../data/totem.ui.h:135
+#: ../data/xplayer.ui.h:135
 msgid "_Load subtitle files when movie is loaded"
 msgstr "Încarcă automat subtitrările _la încărcarea filmului"
 
-#: ../data/totem.ui.h:136
+#: ../data/xplayer.ui.h:136
 msgid "_Movie"
 msgstr "_Film"
 
-#: ../data/totem.ui.h:137
+#: ../data/xplayer.ui.h:137
 msgid "_Next Chapter/Movie"
 msgstr "_Următorul capitol/film"
 
-#: ../data/totem.ui.h:138
+#: ../data/xplayer.ui.h:138
 msgid "_Open..."
 msgstr "_Deschide..."
 
-#: ../data/totem.ui.h:139
+#: ../data/xplayer.ui.h:139
 msgid "_Previous Chapter/Movie"
 msgstr "_Precedentul capitol/film"
 
-#: ../data/totem.ui.h:140
+#: ../data/xplayer.ui.h:140
 msgid "_Properties"
 msgstr "_Proprietăți"
 
-#: ../data/totem.ui.h:141
+#: ../data/xplayer.ui.h:141
 msgid "_Quit"
 msgstr "_Ieșire"
 
-#: ../data/totem.ui.h:142
+#: ../data/xplayer.ui.h:142
 msgid "_Repeat Mode"
 msgstr "Mod _repetitiv"
 
-#: ../data/totem.ui.h:143
+#: ../data/xplayer.ui.h:143
 msgid "_Resize 1:2"
 msgstr "_Redimensionează 1:2"
 
-#: ../data/totem.ui.h:144
+#: ../data/xplayer.ui.h:144
 msgid "_Resize the window when a new video is loaded"
 msgstr "_Redimensionează automat fereastra la încărcarea unui nou fișier video"
 
-#: ../data/totem.ui.h:146
+#: ../data/xplayer.ui.h:146
 msgid "_Sound"
 msgstr "_Sunet"
 
-#: ../data/totem.ui.h:147
+#: ../data/xplayer.ui.h:147
 msgid "_Title Menu"
 msgstr "Meniul _titlu"
 
-#: ../data/totem.ui.h:148
+#: ../data/xplayer.ui.h:148
 msgid "_Type of visualization:"
 msgstr "_Tipul vizualizării:"
 
-#: ../data/totem.ui.h:149
+#: ../data/xplayer.ui.h:149
 msgid "_View"
 msgstr "_Vizualizare"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -776,15 +776,15 @@ msgstr ""
 "O listă cu numele modulelor care sunt în prezent active (care sunt încărcate "
 "și care rulează)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid "Active plugins list"
 msgstr "Lista modulelor active"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "Permite activarea protectorului de ecran când se redau fișiere audio"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
@@ -792,7 +792,7 @@ msgstr ""
 "Permite activarea protectorului de ecran când se redau fișiere audio. "
 "Dezactivați dacă aveți difuzoare alimentate de la monitor."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -800,7 +800,7 @@ msgstr ""
 "Cantitatea de date păstrate ca memorie tampon pentru fluxurile de rețea "
 "înainte de a porni afișarea fluxului (în secunde)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid ""
 "Approximate network connection speed, used to select quality on media over "
 "the network."
@@ -808,11 +808,11 @@ msgstr ""
 "Viteza aproximativă a conexiunii la rețea, folosită pentru a defini "
 "calitatea elementelor multimedia transmise prin rețea."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Locația implicită pentru dialogurile „Deschide...”"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -820,11 +820,11 @@ msgstr ""
 "Locația implicită pentru dialogurile „Deschide...”. Implicit este dosarul "
 "curent."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Locația implicită pentru dialogurile „Captură ecran”"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -832,109 +832,109 @@ msgstr ""
 "Locația implicită pentru dialogurile „Captură ecran”. Implicit este dosarul "
 "Poze."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Encoding character set for subtitle."
 msgstr "Set codare caractere pentru subtitrare."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Name of the visual effects plugin"
 msgstr "Numele modulului pentru efectele vizuale"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "Prag memorie tampon pe rețea"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Network connection speed"
 msgstr "Viteza conexiunii la rețea"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Pango font description for subtitle rendering."
 msgstr "Descrierea fontului pango pentru randarea subtitrării."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Quality setting for the audio visualization."
 msgstr "Configurările de calitate pentru vizualizarea audio."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Repeat mode"
 msgstr "Mod repetitiv"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Resize the canvas automatically on file load"
 msgstr "Redimensionează afișarea la încărcarea fișierelor"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid "Show visual effects when no video is displayed"
 msgstr "Afișează efecte vizuale când nu este redată partea video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Show visual effects when playing an audio only file."
 msgstr "Afișează efecte vizuale când este redat un fișier audio."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Shuffle mode"
 msgstr "Mod amestecat"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "Codarea subtitrării"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Subtitle font"
 msgstr "Fontul subtitrării"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "The brightness of the video"
 msgstr "Luminozitatea video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid "The contrast of the video"
 msgstr "Contrastul video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "The hue of the video"
 msgstr "Nuanța pentru video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid "The saturation of the video"
 msgstr "Saturația video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Type of audio output to use"
 msgstr "Tipul ieșirii audio de folosit"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Visualization quality setting"
 msgstr "Configurare de calitate a vizualizării"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "Dacă să fie încărcate automat fișierele capitolului la pornirea unui film"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "Dacă să fie încărcate automat fișierele de subtitrare la pornirea unui film"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "Dacă să fie dezactivată deîntrețeserea filmelor întrețesute"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "Dacă se dezactivează combinațiile de taste"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "Dacă se dezactivează modulele în dosarul personal al utilizatorului"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:35
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:35
 msgid "Whether to enable debug for the playback engine"
 msgstr "Dacă să fie activată depanarea pentru motorul de redare"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:36
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:36
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -1104,88 +1104,88 @@ msgctxt "Sample rate"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/totem-audio-preview.c:82
+#: ../src/xplayer-audio-preview.c:82
 msgid "Audio Preview"
 msgstr "Previzualizare audio"
 
-#: ../src/totem-cell-renderer-video.c:126
+#: ../src/xplayer-cell-renderer-video.c:126
 msgid "Unknown video"
 msgstr "Video necunoscut"
 
-#: ../src/totem-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:94
 msgid "_Play Now"
 msgstr "_Redă acum"
 
-#: ../src/totem-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:103
 msgid "Cancel"
 msgstr "Renunță"
 
-#: ../src/totem-fullscreen.c:619
+#: ../src/xplayer-fullscreen.c:619
 msgid "No File"
 msgstr "Niciun fișier"
 
-#: ../src/totem-interface.c:180 ../src/totem-interface.c:223
+#: ../src/xplayer-interface.c:180 ../src/xplayer-interface.c:223
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "Nu s-a putut încărca interfața „%s”. %s"
 
-#: ../src/totem-interface.c:180
+#: ../src/xplayer-interface.c:180
 msgid "The file does not exist."
 msgstr "Fișierul nu există."
 
-#: ../src/totem-interface.c:182 ../src/totem-interface.c:184
-#: ../src/totem-interface.c:225 ../src/totem-interface.c:227
-msgid "Make sure that Totem is properly installed."
-msgstr "Verificați dacă Totem este instalat corect."
+#: ../src/xplayer-interface.c:182 ../src/xplayer-interface.c:184
+#: ../src/xplayer-interface.c:225 ../src/xplayer-interface.c:227
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Verificați dacă Xplayer este instalat corect."
 
-#: ../src/totem-interface.c:346
+#: ../src/xplayer-interface.c:346
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Totem este un software liber, poate fi redistribuit și/sau modificat sub "
+"Xplayer este un software liber, poate fi redistribuit și/sau modificat sub "
 "termenii GNU General Public License aṣa cum a fost publicat de Free Software "
 "Foundation, versiunea 2 sau orice versiune ulterioară."
 
-#: ../src/totem-interface.c:350
+#: ../src/xplayer-interface.c:350
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Totem este distribuit în speranța că va fi folositor, dar FĂRĂ NICIO "
+"Xplayer este distribuit în speranța că va fi folositor, dar FĂRĂ NICIO "
 "GARANȚIE, nici măcar garanție pentru VANDABILITATE sau FOLOSIRE ÎNTR-UN SCOP "
 "PARTICULAR. Consultați licența GPL a GNU pentru mai multe detalii."
 
-#: ../src/totem-interface.c:354
+#: ../src/xplayer-interface.c:354
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Ar trebui să fi primit o copie a GNU General Public Licence odată cu "
-"programul Totem. Dacă nu ați primit-o deja, contactați Free Software "
+"programul Xplayer. Dacă nu ați primit-o deja, contactați Free Software "
 "Foundation Inc. la adresa 59 Temple Place, Suite 330, Boston, MA 02111-1307 "
 "USA."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Totem conține o excepție pentru a permite folosirea modulelor proprietare "
+"Xplayer conține o excepție pentru a permite folosirea modulelor proprietare "
 "GStreamer."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:192
+#: ../src/xplayer-menu.c:192
 msgid "None"
 msgstr "Niciuna"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:197
+#: ../src/xplayer-menu.c:197
 msgctxt "Language"
 msgid "Auto"
 msgstr "Automată"
@@ -1193,33 +1193,33 @@ msgstr "Automată"
 #. Translators:
 #. * This is not a JPEG image, but a disc image, for example,
 #. * an ISO file
-#: ../src/totem-menu.c:739
+#: ../src/xplayer-menu.c:739
 #, c-format
 msgid "Play Image '%s'"
 msgstr "Redare imagine „%s”"
 
-#: ../src/totem-menu.c:742 ../src/totem-menu.c:825
+#: ../src/xplayer-menu.c:742 ../src/xplayer-menu.c:825
 #, c-format
 msgid "device%d"
 msgstr "dispozitiv %d"
 
-#: ../src/totem-menu.c:822
+#: ../src/xplayer-menu.c:822
 #, c-format
 msgid "Play Disc '%s'"
 msgstr "Redare disc „%s”"
 
 #. This lists the back-end type and version, such as
 #. * Movie Player using GStreamer 0.10.1
-#: ../src/totem-menu.c:1173
+#: ../src/xplayer-menu.c:1173
 #, c-format
 msgid "Movie Player using %s"
 msgstr "Player pentru filme folosind %s"
 
-#: ../src/totem-menu.c:1177
+#: ../src/xplayer-menu.c:1177
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "Drepturi de autor © 2002-2009 Bastien Nocera"
 
-#: ../src/totem-menu.c:1182 ../browser-plugin/totem-plugin-viewer.c:1163
+#: ../src/xplayer-menu.c:1182 ../browser-plugin/xplayer-plugin-viewer.c:1163
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
@@ -1229,61 +1229,61 @@ msgstr ""
 "  Alex Eftimie https://launchpad.net/~alexeftimie\n"
 "  Doru Horișco https://launchpad.net/~doruhushhush"
 
-#: ../src/totem-menu.c:1186
-msgid "Totem Website"
-msgstr "Pagina web Totem"
+#: ../src/xplayer-menu.c:1186
+msgid "Xplayer Website"
+msgstr "Pagina web Xplayer"
 
-#: ../src/totem-menu.c:1220
+#: ../src/xplayer-menu.c:1220
 msgid "Configure Plugins"
 msgstr "Configurare module"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:473
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:473
 #, c-format
-msgid "Totem %s"
-msgstr "Totem %s"
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/totem-object.c:1047 ../browser-plugin/totem-plugin-viewer.c:368
+#: ../src/xplayer-object.c:1047 ../browser-plugin/xplayer-plugin-viewer.c:368
 msgid "Playing"
 msgstr "Redare"
 
-#: ../src/totem-object.c:1049 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1049 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pauză"
 
-#: ../src/totem-object.c:1054 ../browser-plugin/totem-plugin-viewer.c:364
+#: ../src/xplayer-object.c:1054 ../browser-plugin/xplayer-plugin-viewer.c:364
 msgid "Paused"
 msgstr "Pauză"
 
 #. Translators: this refers to a media file
-#: ../src/totem-object.c:1056 ../src/totem-object.c:1066
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1056 ../src/xplayer-object.c:1066
+#: ../src/xplayer-options.c:51
 #: ../src/plugins/coherence_upnp/coherence_upnp.py:84
 #: ../src/plugins/coherence_upnp/coherence_upnp.py:96
 msgid "Play"
 msgstr "Redare"
 
-#: ../src/totem-object.c:1061 ../src/totem-object.c:1659
-#: ../src/totem-statusbar.c:115 ../browser-plugin/totem-plugin-viewer.c:352
+#: ../src/xplayer-object.c:1061 ../src/xplayer-object.c:1659
+#: ../src/xplayer-statusbar.c:115 ../browser-plugin/xplayer-plugin-viewer.c:352
 msgid "Stopped"
 msgstr "Oprit"
 
-#: ../src/totem-object.c:1142 ../src/totem-object.c:1169
-#: ../src/totem-object.c:1799 ../src/totem-object.c:1962
+#: ../src/xplayer-object.c:1142 ../src/xplayer-object.c:1169
+#: ../src/xplayer-object.c:1799 ../src/xplayer-object.c:1962
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem nu a putut reda „%s”."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer nu a putut reda „%s”."
 
-#: ../src/totem-object.c:1246
+#: ../src/xplayer-object.c:1246
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
 msgstr ""
-"Totem nu a putut reda acest fișier media (%s) deși un modul pentru "
+"Xplayer nu a putut reda acest fișier media (%s) deși un modul pentru "
 "gestionarea sa este deja instalat."
 
-#: ../src/totem-object.c:1247
+#: ../src/xplayer-object.c:1247
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
@@ -1291,432 +1291,432 @@ msgstr ""
 "Verificați dacă discul este introdus în unitate și dacă unitatea este "
 "configurată corect."
 
-#: ../src/totem-object.c:1255
+#: ../src/xplayer-object.c:1255
 msgid "More information about media plugins"
 msgstr "Mai multe informații despre modulele media"
 
-#: ../src/totem-object.c:1256
+#: ../src/xplayer-object.c:1256
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr ""
-"Instalați modulele necesare și reporniți Totem pentru a putea reda acest tip "
+"Instalați modulele necesare și reporniți Xplayer pentru a putea reda acest tip "
 "de fișier media."
 
-#: ../src/totem-object.c:1258
+#: ../src/xplayer-object.c:1258
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because it does not have the "
+"Xplayer cannot play this type of media (%s) because it does not have the "
 "appropriate plugins to be able to read from the disc."
 msgstr ""
-"Totem nu poate reda acest tip de fișier media (%s) deoarece nu are modulele "
+"Xplayer nu poate reda acest tip de fișier media (%s) deoarece nu are modulele "
 "necesare pentru a putea citi de pe disc."
 
-#: ../src/totem-object.c:1260
+#: ../src/xplayer-object.c:1260
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr ""
-"Totem nu a putut reda acest tip de fișier media (%s) deoarece nu aveți "
+"Xplayer nu a putut reda acest tip de fișier media (%s) deoarece nu aveți "
 "modulele necesare pentru a-l gestiona."
 
-#: ../src/totem-object.c:1263
+#: ../src/xplayer-object.c:1263
 #, c-format
-msgid "Totem cannot play this type of media (%s) because it is not supported."
+msgid "Xplayer cannot play this type of media (%s) because it is not supported."
 msgstr ""
-"Totem nu poate reda acest tip de fișier media (%s) deoarece nu este suportat."
+"Xplayer nu poate reda acest tip de fișier media (%s) deoarece nu este suportat."
 
-#: ../src/totem-object.c:1264
+#: ../src/xplayer-object.c:1264
 msgid "Please insert another disc to play back."
 msgstr "Introduceți alt disc de redat."
 
-#: ../src/totem-object.c:1300
-msgid "Totem was not able to play this disc."
-msgstr "Totem nu a putut reda acest disc."
+#: ../src/xplayer-object.c:1300
+msgid "Xplayer was not able to play this disc."
+msgstr "Xplayer nu a putut reda acest disc."
 
-#: ../src/totem-object.c:1301 ../src/totem-object.c:4280
+#: ../src/xplayer-object.c:1301 ../src/xplayer-object.c:4280
 msgid "No reason."
 msgstr "Fără motiv."
 
-#: ../src/totem-object.c:1315
-msgid "Totem does not support playback of Audio CDs"
-msgstr "Totem nu suportă redarea CD-urilor audio"
+#: ../src/xplayer-object.c:1315
+msgid "Xplayer does not support playback of Audio CDs"
+msgstr "Xplayer nu suportă redarea CD-urilor audio"
 
-#: ../src/totem-object.c:1316
+#: ../src/xplayer-object.c:1316
 msgid "Please consider using a music player or a CD extractor to play this CD"
 msgstr ""
 "Pentru a reda acest CD folosiți un player de muzică sau o unealtă de "
 "extragere CD"
 
-#: ../src/totem-object.c:1805
+#: ../src/xplayer-object.c:1805
 msgid "No error message"
 msgstr "Niciun mesaj de eroare"
 
-#: ../src/totem-object.c:2197
-msgid "Totem could not display the help contents."
-msgstr "Totem nu a putut afișa conținutul ajutorului."
+#: ../src/xplayer-object.c:2197
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer nu a putut afișa conținutul ajutorului."
 
-#: ../src/totem-object.c:2535 ../src/totem-object.c:2537
-#: ../browser-plugin/totem-plugin-viewer.c:1466
+#: ../src/xplayer-object.c:2535 ../src/xplayer-object.c:2537
+#: ../browser-plugin/xplayer-plugin-viewer.c:1466
 msgid "An error occurred"
 msgstr "A intervenit o eroare"
 
-#: ../src/totem-object.c:4114 ../src/totem-object.c:4116
+#: ../src/xplayer-object.c:4114 ../src/xplayer-object.c:4116
 msgid "Previous Chapter/Movie"
 msgstr "Precedentul capitol/film"
 
-#: ../src/totem-object.c:4123 ../src/totem-object.c:4125
+#: ../src/xplayer-object.c:4123 ../src/xplayer-object.c:4125
 msgid "Play / Pause"
 msgstr "Redare / Pauză"
 
-#: ../src/totem-object.c:4133 ../src/totem-object.c:4135
+#: ../src/xplayer-object.c:4133 ../src/xplayer-object.c:4135
 msgid "Next Chapter/Movie"
 msgstr "Următorul capitol/film"
 
-#. Translators: this is the tooltip text for the fullscreen button in the controls box in Totem's main window.
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4147 ../src/totem-object.c:4149
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4147 ../src/xplayer-object.c:4149
 msgid "Fullscreen"
 msgstr "Pe tot ecranul"
 
-#: ../src/totem-object.c:4280
-msgid "Totem could not startup."
-msgstr "Totem nu a putut porni."
+#: ../src/xplayer-object.c:4280
+msgid "Xplayer could not startup."
+msgstr "Xplayer nu a putut porni."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "Deschide locația..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Activează depanarea"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "Redare/Pauză"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "Următor"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "Precedent"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "Derulează înainte"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "Derulează înapoi"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "Crește volumul"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "Redu volumul"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "Sunet oprit"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "Comută modul pe tot ecranul"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "Arată/ascunde controalele"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "Ieșire"
 
 #. Translators: this refers to a media file
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 #: ../src/plugins/coherence_upnp/coherence_upnp.py:87
 #: ../src/plugins/coherence_upnp/coherence_upnp.py:99
 msgid "Enqueue"
 msgstr "Pune la coadă"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "Înlocuiește"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "Derulează"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "Index listă de redare"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "Filme de redat"
 
-#: ../src/totem-options.c:117
+#: ../src/xplayer-options.c:117
 msgid "Can't enqueue and replace at the same time"
 msgstr "Nu se poate adăuga la coadă și înlocui în același timp"
 
 #. By extension entry
-#: ../src/totem-playlist.c:157
+#: ../src/xplayer-playlist.c:157
 msgid "MP3 ShoutCast playlist"
 msgstr "Listă de redare MP3 ShoutCast"
 
-#: ../src/totem-playlist.c:158
+#: ../src/xplayer-playlist.c:158
 msgid "MP3 audio (streamed)"
 msgstr "MP3 audio (flux)"
 
-#: ../src/totem-playlist.c:159
+#: ../src/xplayer-playlist.c:159
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 audio (flux, format DOS)"
 
-#: ../src/totem-playlist.c:160
+#: ../src/xplayer-playlist.c:160
 msgid "XML Shareable Playlist"
 msgstr "Listă de redare partajabilă XML"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:359
+#: ../src/xplayer-playlist.c:359
 #, c-format
 msgid "Title %d"
 msgstr "Titlul %d"
 
-#: ../src/totem-playlist.c:458
+#: ../src/xplayer-playlist.c:458
 msgid "Could not save the playlist"
 msgstr "Nu s-a putut salva lista de redare"
 
-#: ../src/totem-playlist.c:1033
+#: ../src/xplayer-playlist.c:1033
 msgid "Save Playlist"
 msgstr "Salvează lista de redare"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1045 ../src/totem-sidebar.c:140
+#: ../src/xplayer-playlist.c:1045 ../src/xplayer-sidebar.c:140
 msgid "Playlist"
 msgstr "Listă de redare"
 
-#: ../src/totem-playlist.c:1862
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "Lista de redare „%s” nu a putut fi procesată, ar putea fi deteriorată."
 
-#: ../src/totem-playlist.c:1863
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "Eroare listă de redare"
 
-#: ../src/totem-preferences.c:295
+#: ../src/xplayer-preferences.c:295
 msgid "Preferences"
 msgstr "Preferințe"
 
-#: ../src/totem-preferences.c:451
+#: ../src/xplayer-preferences.c:451
 msgid "Select Subtitle Font"
 msgstr "Alegeți fontul pentru subtitrări"
 
 #. FIXME this should be setting an error?
-#: ../src/totem-properties-main.c:114 ../src/totem-properties-view.c:83
-#: ../src/totem-properties-view.c:91
+#: ../src/xplayer-properties-main.c:114 ../src/xplayer-properties-view.c:83
+#: ../src/xplayer-properties-view.c:91
 msgid "Audio/Video"
 msgstr "Audio/Video"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (în flux)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Derulare la %s / %s"
 
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "Se creează memoria tampon"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %d %%"
 msgstr "%s, %d %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Configurările locale curente"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabă"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "Armeană"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltică"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "Celtă"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Central-Europeană"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Chineză simplificată"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Chineză tradițională"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "Croată"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Chilirică"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "Chilirică/Rusă"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Chilirică/Ucraineană"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "Georgiană"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Greacă"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Ebraică"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "Ebraică vizuală"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "Hindusă"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "Islandeză"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japoneză"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Coreeană"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "Nordică"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "Persană"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Română"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "Sud-Europeană"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "Thailandeză"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turcă"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Vestică"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnameză"
 
-#: ../src/totem-video-list.c:329
+#: ../src/xplayer-video-list.c:329
 msgid "No video URI"
 msgstr "Niciun URI video"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:686
+#: ../src/xplayer-video-thumbnailer.c:686
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1727,52 +1727,52 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:687
+#: ../src/xplayer-video-thumbnailer.c:687
 msgid "Filename"
 msgstr "Nume fișier"
 
-#: ../src/totem-video-thumbnailer.c:689
+#: ../src/xplayer-video-thumbnailer.c:689
 msgid "Resolution"
 msgstr "Rezoluție"
 
-#: ../src/totem-video-thumbnailer.c:692
+#: ../src/xplayer-video-thumbnailer.c:692
 msgid "Duration"
 msgstr "Durată"
 
-#: ../src/totem-uri.c:502 ../src/plugins/chapters/totem-chapters.c:998
+#: ../src/xplayer-uri.c:502 ../src/plugins/chapters/xplayer-chapters.c:998
 msgid "All files"
 msgstr "Toate fișierele"
 
-#: ../src/totem-uri.c:507 ../src/plugins/chapters/totem-chapters.c:995
+#: ../src/xplayer-uri.c:507 ../src/plugins/chapters/xplayer-chapters.c:995
 msgid "Supported files"
 msgstr "Fișiere suportate"
 
-#: ../src/totem-uri.c:519
+#: ../src/xplayer-uri.c:519
 msgid "Audio files"
 msgstr "Fișiere audio"
 
-#: ../src/totem-uri.c:527
+#: ../src/xplayer-uri.c:527
 msgid "Video files"
 msgstr "Fișiere video"
 
-#: ../src/totem-uri.c:537
+#: ../src/xplayer-uri.c:537
 msgid "Subtitle files"
 msgstr "Fișiere subtitrare"
 
-#: ../src/totem-uri.c:589
+#: ../src/xplayer-uri.c:589
 msgid "Select Text Subtitles"
 msgstr "Selectați textul subtitrărilor"
 
-#: ../src/totem-uri.c:652
+#: ../src/xplayer-uri.c:652
 msgid "Select Movies or Playlists"
 msgstr "Selectați filme sau liste de redare"
 
 #. Options parsing
-#: ../src/totem.c:201
+#: ../src/xplayer.c:201
 msgid "- Play movies and songs"
 msgstr "- Redă filme și melodii"
 
-#: ../src/totem.c:212
+#: ../src/xplayer.c:212
 #, c-format
 msgid ""
 "%s\n"
@@ -1781,19 +1781,19 @@ msgstr ""
 "%s\n"
 "Rulați „%s --help” pentru a vedea lista tuturor opțiunilor comenzii.\n"
 
-#: ../src/totem.c:254 ../src/totem.c:263
-#: ../browser-plugin/totem-plugin-viewer.c:663
-#: ../browser-plugin/totem-plugin-viewer.c:1861
-msgid "Totem Movie Player"
-msgstr "Totem Player pentru filme"
+#: ../src/xplayer.c:254 ../src/xplayer.c:263
+#: ../browser-plugin/xplayer-plugin-viewer.c:663
+#: ../browser-plugin/xplayer-plugin-viewer.c:1861
+msgid "Xplayer Movie Player"
+msgstr "Xplayer Player pentru filme"
 
-#: ../src/totem.c:255 ../browser-plugin/totem-plugin-viewer.c:2302
+#: ../src/xplayer.c:255 ../browser-plugin/xplayer-plugin-viewer.c:2302
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Nu s-au putut inițializa bibliotecile thread-safe."
 
-#: ../src/totem.c:255
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Verificați configurarea sistemului. Totem va ieși acum."
+#: ../src/xplayer.c:255
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Verificați configurarea sistemului. Xplayer va ieși acum."
 
 #: ../src/backend/bacon-video-widget-gst-0.10.c:1848
 msgid "Password requested for RTSP server"
@@ -2017,60 +2017,60 @@ msgid "Bemused"
 msgstr "Bemused"
 
 #: ../src/plugins/bemused/bemused.plugin.in.h:2
-msgid "Control Totem through a mobile phone with a Bemused client"
-msgstr "Controlați Totem printr-un telefon mobil cu un client Bemused"
+msgid "Control Xplayer through a mobile phone with a Bemused client"
+msgstr "Controlați Xplayer printr-un telefon mobil cu un client Bemused"
 
 #. Translators: the parameter is a number used to identify this playlist entry
-#: ../src/plugins/bemused/totem-bemused.c:171
+#: ../src/plugins/bemused/xplayer-bemused.c:171
 #, c-format
 msgid "Untitled %d"
 msgstr "Fără titlu %d"
 
-#: ../src/plugins/bemused/totem-bemused.c:597
-msgid "Totem Bemused Server"
-msgstr "Server Bemused Totem"
+#: ../src/plugins/bemused/xplayer-bemused.c:597
+msgid "Xplayer Bemused Server"
+msgstr "Server Bemused Xplayer"
 
 #. FIXME version
-#: ../src/plugins/bemused/totem-bemused.c:599
-msgid "Totem Bemused Server version 1.0"
-msgstr "Server Bemused Totem versiunea 1.0"
+#: ../src/plugins/bemused/xplayer-bemused.c:599
+msgid "Xplayer Bemused Server version 1.0"
+msgstr "Server Bemused Xplayer versiunea 1.0"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "_Creează disc video..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "Creează un DVD video sau un (S)VCD din filmul deschis curent"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "Copiază DVD-ul vide_o..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "Copiază DVD-ul video ce rulează acum"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "Copiază (S)VCD-ul..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "Copiază (S)VCD-ul ce rulează acum"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:129
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:129
 msgid "The video disc could not be duplicated."
 msgstr "Discul video nu a putut fi duplicat."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:131
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:276
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:131
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:276
 msgid "The movie could not be recorded."
 msgstr "Filmul nu a putut fi înregistrat."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:157
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:167
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:263
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:157
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:167
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:263
 msgid "Unable to write a project."
 msgstr "Nu s-a putut scrie un proiect."
 
@@ -2083,7 +2083,7 @@ msgid "Video Disc Recorder"
 msgstr "Înregistrator de discuri video"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1137
+#: ../src/plugins/chapters/xplayer-chapters.c:1137
 msgid "Chapters"
 msgstr "Capitole"
 
@@ -2147,7 +2147,7 @@ msgstr "_Navighează la capitol"
 msgid "_Remove Chapter"
 msgstr "_Elimină capitol"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -2156,64 +2156,64 @@ msgstr ""
 "<b>Titlu: </b>%s\n"
 "<b>Începe la: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:328
+#: ../src/plugins/chapters/xplayer-chapters.c:328
 msgid "Error while reading file with chapters"
 msgstr "Eroare la citirea fișierului cu capitole"
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Chapter with the same time already exists"
 msgstr "Un capitol cu același timp există deja"
 
-#: ../src/plugins/chapters/totem-chapters.c:544
+#: ../src/plugins/chapters/xplayer-chapters.c:544
 msgid "Try another name or remove an existing chapter."
 msgstr "Încercați un alt nume sau eliminați un capitol existent."
 
-#: ../src/plugins/chapters/totem-chapters.c:717
+#: ../src/plugins/chapters/xplayer-chapters.c:717
 msgid "Error while writing file with chapters"
 msgstr "Eroare în timpul scrierii fișierului cu capitole"
 
-#: ../src/plugins/chapters/totem-chapters.c:842
+#: ../src/plugins/chapters/xplayer-chapters.c:842
 msgid "Error occurred while saving chapters"
 msgstr "S-a produs o eroare la salvarea capitolelor"
 
-#: ../src/plugins/chapters/totem-chapters.c:843
+#: ../src/plugins/chapters/xplayer-chapters.c:843
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Verificați dacă aveți permisiunea să scrieți în dosarul ce conține filmul."
 
-#: ../src/plugins/chapters/totem-chapters.c:976
+#: ../src/plugins/chapters/xplayer-chapters.c:976
 msgid "Open Chapter File"
 msgstr "Deschide fișierul capitolului"
 
-#: ../src/plugins/chapters/totem-chapters.c:1093
+#: ../src/plugins/chapters/xplayer-chapters.c:1093
 msgid "Chapter Screenshot"
 msgstr "Captura de ecran a capitolului"
 
-#: ../src/plugins/chapters/totem-chapters.c:1104
+#: ../src/plugins/chapters/xplayer-chapters.c:1104
 msgid "Chapter Title"
 msgstr "Titlul capitolului"
 
-#: ../src/plugins/chapters/totem-chapters.c:1182
+#: ../src/plugins/chapters/xplayer-chapters.c:1182
 msgid "Save changes to chapter list before closing?"
 msgstr "Salvați modificările listei de capitole înainte de a închide?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1187
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1187
 msgid "Close without Saving"
 msgstr "Închide fără a salva"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1189
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1189
 msgid "Save"
 msgstr "Salvează"
 
-#: ../src/plugins/chapters/totem-chapters.c:1192
+#: ../src/plugins/chapters/xplayer-chapters.c:1192
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
 "Dacă nu salvați, schimbările efectuate listei de capitole vor fi pierdute."
 
-#: ../src/plugins/chapters/totem-cmml-parser.c:642
+#: ../src/plugins/chapters/xplayer-cmml-parser.c:642
 msgid "Failed to parse CMML file"
 msgstr "Nu s-a reușit analizarea fișierului CMML"
 
@@ -2228,8 +2228,8 @@ msgid "Coherence DLNA/UPnP Client"
 msgstr "Client DLNA/UPnP Coherence"
 
 #: ../src/plugins/coherence_upnp/coherence_upnp.plugin.in.h:1
-msgid "A DLNA/UPnP client for Totem powered by Coherence"
-msgstr "Un client DLNA/UPnP pentru Totem oferit de Coherence"
+msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
+msgstr "Un client DLNA/UPnP pentru Xplayer oferit de Coherence"
 
 #: ../src/plugins/dbus-service/dbus-service.plugin.in.h:1
 msgid "D-Bus Service"
@@ -2243,11 +2243,11 @@ msgstr ""
 "Modul pentru trimiterea de notificări despre filmele rulate curent către "
 "subsistemul D-Bus."
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger status"
 msgstr "Mesaj de stare pentru mesageria instant"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Setează mesajul de stare al mesageriei instant ca „Absent” atunci când se "
@@ -2261,11 +2261,11 @@ msgstr "Notițe Gromit"
 msgid "Presentation helper to make annotations on screen"
 msgstr "Utilitar de prezentare pentru crearea de notițe pe ecran"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "Programul gromit nu a fost găsit."
 
-#. Add the interface to Totem's sidebar
+#. Add the interface to Xplayer's sidebar
 #: ../src/plugins/iplayer/iplayer.plugin.in.h:1
 #: ../src/plugins/iplayer/iplayer.py:41
 msgid "BBC iPlayer"
@@ -2344,7 +2344,7 @@ msgid "Preferred audio _format:"
 msgstr "_Formatul audio preferat:"
 
 #: ../src/plugins/jamendo/jamendo.ui.h:8
-#: ../src/plugins/tracker/totem-tracker-widget.c:761
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:761
 #: ../src/plugins/youtube/youtube.ui.h:2
 msgid "Search Results"
 msgstr "Rezultatele căutării"
@@ -2462,22 +2462,22 @@ msgstr "%M:%S"
 msgid "en"
 msgstr "en"
 
-#: ../src/plugins/jamendo/org.gnome.totem.plugins.jamendo.gschema.xml.in.in.h:1
+#: ../src/plugins/jamendo/org.gnome.xplayer.plugins.jamendo.gschema.xml.in.in.h:1
 msgid "Audio format to download from Jamendo"
 msgstr "Formatul audio pentru descărcările de la Jamendo"
 
-#: ../src/plugins/jamendo/org.gnome.totem.plugins.jamendo.gschema.xml.in.in.h:2
+#: ../src/plugins/jamendo/org.gnome.xplayer.plugins.jamendo.gschema.xml.in.in.h:2
 msgid "Number of results per page"
 msgstr "Numărul de rezultate pe pagină"
 
-#: ../src/plugins/jamendo/org.gnome.totem.plugins.jamendo.gschema.xml.in.in.h:3
+#: ../src/plugins/jamendo/org.gnome.xplayer.plugins.jamendo.gschema.xml.in.in.h:3
 msgid ""
 "The number of Jamendo search results to display in each page of results."
 msgstr ""
 "Numărul de rezultate de căutare Jamendo de afișat în fiecare pagină cu "
 "rezultate."
 
-#: ../src/plugins/jamendo/org.gnome.totem.plugins.jamendo.gschema.xml.in.in.h:4
+#: ../src/plugins/jamendo/org.gnome.xplayer.plugins.jamendo.gschema.xml.in.in.h:4
 msgid "The preferred audio format to download tracks from Jamendo in."
 msgstr "Formatul preferat audio în care se vor descărca piesele de la Jamendo."
 
@@ -2489,11 +2489,11 @@ msgstr "Telecomandă prin infraroșu"
 msgid "Support infrared remote control"
 msgstr "Suport pentru telecomandă prin infraroșu"
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "Nu s-a putut inițializa lirc."
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "Nu s-a putut citi configurația lirc."
 
@@ -2568,11 +2568,11 @@ msgstr "Se caută subtitrările…"
 msgid "Downloading the subtitles…"
 msgstr "Se descarcă subtitrările…"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Limba subtitrării"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "Limba în care se vor căuta subtitrări pentru filme."
 
@@ -2586,11 +2586,11 @@ msgstr ""
 "Menține fereastra principală deasupra celorlalte ferestre când se redă un "
 "film"
 
-#: ../src/plugins/properties/totem-movie-properties.c:128
+#: ../src/plugins/properties/xplayer-movie-properties.c:128
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: ../src/plugins/publish/org.gnome.totem.plugins.publish.gschema.xml.in.in.h:2
+#: ../src/plugins/publish/org.gnome.xplayer.plugins.publish.gschema.xml.in.in.h:2
 #, no-c-format
 msgid ""
 "A format string used to build the network service name used when publishing "
@@ -2606,15 +2606,15 @@ msgstr ""
 "majusculă • %u: numele de autentificare al utilizatorului • %U: numele real "
 "al utilizatorului • %%: caracterul procent"
 
-#: ../src/plugins/publish/org.gnome.totem.plugins.publish.gschema.xml.in.in.h:3
+#: ../src/plugins/publish/org.gnome.xplayer.plugins.publish.gschema.xml.in.in.h:3
 msgid "Format for network service name"
 msgstr "Formatul pentru numele serviciului de rețea"
 
-#: ../src/plugins/publish/org.gnome.totem.plugins.publish.gschema.xml.in.in.h:4
+#: ../src/plugins/publish/org.gnome.xplayer.plugins.publish.gschema.xml.in.in.h:4
 msgid "Publisher protocol to use"
 msgstr "Protocolul de publicare de folosit"
 
-#: ../src/plugins/publish/org.gnome.totem.plugins.publish.gschema.xml.in.in.h:5
+#: ../src/plugins/publish/org.gnome.xplayer.plugins.publish.gschema.xml.in.in.h:5
 msgid ""
 "The transport protocol to use when publishing playlists over the network."
 msgstr ""
@@ -2622,7 +2622,7 @@ msgstr ""
 "intermediul rețelei."
 
 #. Translators: computers on the local network which are publishing their playlists over the network
-#: ../src/plugins/publish/totem-publish.c:552
+#: ../src/plugins/publish/xplayer-publish.c:552
 msgid "Neighbors"
 msgstr "Vecini"
 
@@ -2653,42 +2653,42 @@ msgstr ""
 msgid "Use _encrypted transport protocol (HTTPS)"
 msgstr "Folos_ește transport criptat (HTTPS)"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
-"O parolă pentru a proteja serverul rpdb2 pentru depanarea Totem de la acces "
-"neautorizat. Dacă câmpul este gol, implicit se va folosi parola „totem”."
+"O parolă pentru a proteja serverul rpdb2 pentru depanarea Xplayer de la acces "
+"neautorizat. Dacă câmpul este gol, implicit se va folosi parola „xplayer”."
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid "rpdb2 password"
 msgstr "parolă rdpb2"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "Salvează o copie..."
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "Salvează o copie a filmului"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "Salvează o copie"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "Film"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "Flux video"
 
-#: ../src/plugins/screensaver/totem-screensaver.c:116
-#: ../browser-plugin/totem-plugin-viewer.c:1961
+#: ../src/plugins/screensaver/xplayer-screensaver.c:116
+#: ../browser-plugin/xplayer-plugin-viewer.c:1961
 msgid "Playing a movie"
 msgstr "Rularea unui film"
 
@@ -2718,11 +2718,11 @@ msgstr "_Nume:"
 
 #. Write the screenshot to the temporary file
 #: ../src/plugins/screenshot/gnome-screenshot-widget.c:387
-#: ../src/plugins/screenshot/totem-screenshot.c:64
+#: ../src/plugins/screenshot/xplayer-screenshot.c:64
 msgid "Screenshot.png"
 msgstr "Captură_de_ecran.png"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "Salvează galeria"
 
@@ -2730,65 +2730,65 @@ msgstr "Salvează galeria"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "Galerie-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "Se creează galeria..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Se salvează galeria ca „%s”"
 
-#: ../src/plugins/screenshot/totem-screenshot.c:113
+#: ../src/plugins/screenshot/xplayer-screenshot.c:113
 msgid "There was an error saving the screenshot."
 msgstr "A intervenit o eroare la salvarea capturii de ecran."
 
-#: ../src/plugins/screenshot/totem-screenshot.c:139
+#: ../src/plugins/screenshot/xplayer-screenshot.c:139
 msgid "Save Screenshot"
 msgstr "Salvează captura de ecran"
 
 #. Create the screenshot widget
 #. Translators: %s is the movie title and %d is an auto-incrementing number to make filename unique
-#: ../src/plugins/screenshot/totem-screenshot.c:160
+#: ../src/plugins/screenshot/xplayer-screenshot.c:160
 #, c-format
 msgid "Screenshot-%s-%d.png"
 msgstr "Captură_de_ecran-%s-%d.png"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:88
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:95
-msgid "Totem could not get a screenshot of the video."
-msgstr "Totem nu a putut face o captură de ecran pentru acest fișier video."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:88
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:95
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer nu a putut face o captură de ecran pentru acest fișier video."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:95
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:95
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "Acest lucru nu ar fi trebuit să se întâmple, raportați eroarea."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:197
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:197
 msgid "Take _Screenshot..."
 msgstr "_Capturează ecranul..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:197
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:197
 msgid "Take a screenshot"
 msgstr "Realizează o captură de ecran"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:198
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:198
 msgid "Create Screenshot _Gallery..."
 msgstr "Creează o _galerie cu capturi de ecran..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:198
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:198
 msgid "Create a gallery of screenshots"
 msgstr "Creează o galerie cu capturi de ecran"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:160
+#: ../src/plugins/skipto/xplayer-skipto.c:160
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "secundă"
@@ -2799,20 +2799,20 @@ msgstr[2] "de secunde"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:190
+#: ../src/plugins/skipto/xplayer-skipto.c:190
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "7"
 
-#: ../src/plugins/skipto/totem-skipto.c:197
+#: ../src/plugins/skipto/xplayer-skipto.c:197
 msgid "Skip To"
 msgstr "Derulează la"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "_Derulează la..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "Derulează la un moment specific de timp"
 
@@ -2820,12 +2820,12 @@ msgstr "Derulează la un moment specific de timp"
 msgid "_Skip to:"
 msgstr "D_erulează la:"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:587
-#: ../src/plugins/tracker/totem-tracker-widget.c:676
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:587
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:676
 msgid "Could not connect to Tracker"
 msgstr "Nu s-a putut face conectarea la serviciul Tracker"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:594
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:594
 msgid "No results"
 msgstr "Fără rezultate"
 
@@ -2842,7 +2842,7 @@ msgstr "Fără rezultate"
 #. *   Personalized Results 1 - 10 of about 4,130,000 for foobar
 #. *
 #.
-#: ../src/plugins/tracker/totem-tracker-widget.c:618
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:618
 #, c-format
 msgid "Showing %i - %i of %i match"
 msgid_plural "Showing %i - %i of %i matches"
@@ -2850,11 +2850,11 @@ msgstr[0] "Sunt afișate %i - %i din %i rezultat"
 msgstr[1] "Sunt afișate %i - %i din %i rezultate"
 msgstr[2] "Sunt afișate %i - %i din %i de rezultate"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:823
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:823
 msgid "Page"
 msgstr "Pagină"
 
-#: ../src/plugins/tracker/totem-tracker.c:65
+#: ../src/plugins/tracker/xplayer-tracker.c:65
 #: ../src/plugins/tracker/tracker.plugin.in.h:1
 msgid "Local Search"
 msgstr "Căutare locală"
@@ -2887,33 +2887,33 @@ msgstr "Filmulețe asemănătoare"
 msgid "Videos"
 msgstr "Filmulețe"
 
-#: ../src/plugins/youtube/totem-youtube.c:144
-#: ../src/plugins/youtube/totem-youtube.c:803
+#: ../src/plugins/youtube/xplayer-youtube.c:144
+#: ../src/plugins/youtube/xplayer-youtube.c:803
 msgid "_Open in Web Browser"
 msgstr "Deschide în navigat_orul de internet"
 
-#: ../src/plugins/youtube/totem-youtube.c:144
+#: ../src/plugins/youtube/xplayer-youtube.c:144
 msgid "Open the video in your web browser"
 msgstr "Deschide fișierul în navigatorul de internet"
 
 #. Add the sidebar page
-#: ../src/plugins/youtube/totem-youtube.c:195
+#: ../src/plugins/youtube/xplayer-youtube.c:195
 msgid "YouTube"
 msgstr "YouTube"
 
-#: ../src/plugins/youtube/totem-youtube.c:279
+#: ../src/plugins/youtube/xplayer-youtube.c:279
 msgid "Cancelling query…"
 msgstr "Se anulează cererea..."
 
 #. Hide the ugly technical message libgdata gives behind a nice one telling them it's out of date (which it likely is
 #. * if we're receiving a protocol error).
 #. Spew out the error message as provided
-#: ../src/plugins/youtube/totem-youtube.c:424
-#: ../src/plugins/youtube/totem-youtube.c:429
+#: ../src/plugins/youtube/xplayer-youtube.c:424
+#: ../src/plugins/youtube/xplayer-youtube.c:429
 msgid "Error Searching for Videos"
 msgstr "Eroare la căutarea fișierelor video"
 
-#: ../src/plugins/youtube/totem-youtube.c:425
+#: ../src/plugins/youtube/xplayer-youtube.c:425
 msgid ""
 "The response from the server could not be understood. Please check you are "
 "running the latest version of libgdata."
@@ -2922,67 +2922,67 @@ msgstr ""
 "ultima versiune de libgdata."
 
 #. Update the UI
-#: ../src/plugins/youtube/totem-youtube.c:618
+#: ../src/plugins/youtube/xplayer-youtube.c:618
 msgid "Fetching search results…"
 msgstr "Se obțin rezultatele căutării..."
 
 #. Update the UI
-#: ../src/plugins/youtube/totem-youtube.c:680
+#: ../src/plugins/youtube/xplayer-youtube.c:680
 msgid "Fetching related videos…"
 msgstr "Se obțin fișierele video asemănătoare..."
 
-#: ../src/plugins/youtube/totem-youtube.c:732
+#: ../src/plugins/youtube/xplayer-youtube.c:732
 msgid "Error Opening Video in Web Browser"
 msgstr "Eroare la deschiderea fișierului video în navigatorul web"
 
-#: ../src/plugins/youtube/totem-youtube.c:752
+#: ../src/plugins/youtube/xplayer-youtube.c:752
 msgid "Fetching more videos…"
 msgstr "Se obțin mai multe filmulețe..."
 
-#: ../src/plugins/youtube/totem-youtube.c:797
+#: ../src/plugins/youtube/xplayer-youtube.c:797
 msgid "Video Format Not Supported"
 msgstr "Formatul video nu este suportat"
 
-#: ../src/plugins/youtube/totem-youtube.c:799
+#: ../src/plugins/youtube/xplayer-youtube.c:799
 msgid ""
-"This video is not available in any formats which Totem supports. Would you "
+"This video is not available in any formats which Xplayer supports. Would you "
 "like to open it in your web browser instead?"
 msgstr ""
-"Acest video nu este disponibil în niciun format suportat de Totem. Doriți să-"
+"Acest video nu este disponibil în niciun format suportat de Xplayer. Doriți să-"
 "l deschideți în navigatorul de internet?"
 
-#: ../browser-plugin/totem-plugin-viewer.c:431
+#: ../browser-plugin/xplayer-plugin-viewer.c:431
 msgid "No URI to play"
 msgstr "Nu există un URI de redat"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1101
+#: ../browser-plugin/xplayer-plugin-viewer.c:1101
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Deschide cu „%s”"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1152
+#: ../browser-plugin/xplayer-plugin-viewer.c:1152
 #, c-format
 msgid "Browser Plugin using %s"
 msgstr "Modul Navigator folosind %s"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1157
-msgid "Totem Browser Plugin"
-msgstr "Modulul Navigator Totem"
+#: ../browser-plugin/xplayer-plugin-viewer.c:1157
+msgid "Xplayer Browser Plugin"
+msgstr "Modulul Navigator Xplayer"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2195
+#: ../browser-plugin/xplayer-plugin-viewer.c:2195
 msgid "No playlist or playlist empty"
 msgstr "Nu există o listă de redare sau aceasta este goală"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2286
+#: ../browser-plugin/xplayer-plugin-viewer.c:2286
 msgid "Movie browser plugin"
 msgstr "Modul Navigator filme"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2302
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "Verificați configurarea sistemului. Modulul Totem va ieși acum."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2302
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Verificați configurarea sistemului. Modulul Xplayer va ieși acum."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Interactive Python console."
@@ -3001,8 +3001,8 @@ msgid "_Python Console"
 msgstr "Consola _Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:89
-msgid "Show Totem's Python console"
-msgstr "Afișează consola Python Totem"
+msgid "Show Xplayer's Python console"
+msgstr "Afișează consola Python Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Python Debugger"
@@ -3014,31 +3014,31 @@ msgstr "Activează depanarea la distanță Python cu rpdb2"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:116
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "Puteți accesa obiectul Totem prin „totem_object”:\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "Puteți accesa obiectul Xplayer prin „xplayer_object”:\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:120
-msgid "Totem Python Console"
-msgstr "Consolă Python Totem"
+msgid "Xplayer Python Console"
+msgstr "Consolă Python Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
-"După ce apăsați OK, Totem va aștepta până ce vă veți conecta cu winpdb sau "
+"După ce apăsați OK, Xplayer va aștepta până ce vă veți conecta cu winpdb sau "
 "rpdb2. În cazul în care nu ați definit o parolă de depanare în DConf, se va "
-"folosi parola implicită: „totem”."
+"folosi parola implicită: „xplayer”."
 
 #~ msgid "Enable visual effects?"
 #~ msgstr "Activați efectele vizuale?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Se pare că rulați Totem la distanță.\n"
+#~ "Se pare că rulați Xplayer la distanță.\n"
 #~ "Sigur doriți să activați efectele vizuale?"
 
 #~ msgid "Error loading Galago plugin"
@@ -3053,7 +3053,7 @@ msgstr ""
 #~ msgid "Could not open link"
 #~ msgstr "Nu s-a putut deschide legătura"
 
-#~ msgid "Totem could not initialize the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
 #~ msgstr "Nu s-a putut inițializa motorul de configurare."
 
 #~ msgid "Make sure that GNOME is properly installed."
@@ -3159,11 +3159,11 @@ msgstr ""
 #~ "pentru intrarea în acțiune."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "Schimbarea ieșirii audio va avea efect pentru următorul film sau după ce "
-#~ "reporniți Totem."
+#~ "reporniți Xplayer."
 
 #~ msgid "Plugin"
 #~ msgstr "Modul"
@@ -3229,10 +3229,10 @@ msgstr ""
 #~ msgstr "Vizionare TV prin '%s'"
 
 #~ msgid ""
-#~ "Totem cannot play TV, because no TV adapters are present or they are not "
+#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
 #~ "supported."
 #~ msgstr ""
-#~ "Totem nu poate reda emisiuni TV pentru că nu este instalat nici un "
+#~ "Xplayer nu poate reda emisiuni TV pentru că nu este instalat nici un "
 #~ "adaptor TV sau adaptorul nu este suportat."
 
 #~ msgid "Please insert a supported TV adapter."
@@ -3241,9 +3241,9 @@ msgstr ""
 #~ msgid "More information about watching TV"
 #~ msgstr "Mai multe informații despre vizionarea TV"
 
-#~ msgid "Totem is missing a channels listing to be able to tune the receiver."
+#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
 #~ msgstr ""
-#~ "Totem nu are o listă cu canale pentru a putea regla dispozitivul de "
+#~ "Xplayer nu are o listă cu canale pentru a putea regla dispozitivul de "
 #~ "recepție."
 
 #~ msgid ""
@@ -3254,9 +3254,9 @@ msgstr ""
 #~ "legătură."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because the TV device is busy."
+#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
 #~ msgstr ""
-#~ "Totem nu poate reda acest tip de fișier media (%s) pentru că dispozitivul "
+#~ "Xplayer nu poate reda acest tip de fișier media (%s) pentru că dispozitivul "
 #~ "TV este ocupat."
 
 #~ msgid "Please try again later."
@@ -3268,8 +3268,8 @@ msgstr ""
 #~ msgid "Please verify your hardware setup."
 #~ msgstr "Verificați configurările hardware."
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem nu a reușit redarea „%s”"
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer nu a reușit redarea „%s”"
 
 #~ msgid "Sets 16:9 (Anamorphic) aspect ratio"
 #~ msgstr "Definește la proporția 16:9 (Anamorphic)"
@@ -3286,5 +3286,5 @@ msgstr ""
 #~ msgid "<b>Language</b>"
 #~ msgstr "<b>Limbă</b>"
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Modulul Totem nu a putut fi pornit"
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Modulul Xplayer nu a putut fi pornit"

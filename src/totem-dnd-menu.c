@@ -13,10 +13,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
 #include "config.h"
@@ -26,8 +26,8 @@
 #include <glib.h>
 #include <gdk/gdkkeysyms.h>
 
-#include "totem-dnd-menu.h"
-#include "totem-rtl-helpers.h"
+#include "xplayer-dnd-menu.h"
+#include "xplayer-rtl-helpers.h"
 
 typedef struct
 {
@@ -82,7 +82,7 @@ drag_append_drop_action_menu_item (GtkWidget          *menu,
 }
 
 GdkDragAction
-totem_drag_ask (gboolean show_add_to)
+xplayer_drag_ask (gboolean show_add_to)
 {
 	GtkWidget *menu;
 	GtkWidget *menu_item;
@@ -92,7 +92,7 @@ totem_drag_ask (gboolean show_add_to)
 
 	menu = gtk_menu_new ();
 
-	drag_append_drop_action_menu_item (menu, _("_Play Now"), totem_get_rtl_icon_name ("media-playback-start"), GDK_ACTION_MOVE, &dt);
+	drag_append_drop_action_menu_item (menu, _("_Play Now"), xplayer_get_rtl_icon_name ("media-playback-start"), GDK_ACTION_MOVE, &dt);
 
 	if (show_add_to != FALSE)
 		drag_append_drop_action_menu_item (menu, _("_Add to Playlist"), "gtk-add", GDK_ACTION_COPY, &dt);

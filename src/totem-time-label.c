@@ -1,26 +1,26 @@
 
 #include "config.h"
 
-#include "totem-time-label.h"
+#include "xplayer-time-label.h"
 #include <glib/gi18n.h>
-#include "totem-time-helpers.h"
+#include "xplayer-time-helpers.h"
 
-struct _TotemTimeLabelPrivate {
+struct _XplayerTimeLabelPrivate {
 	gint64 time;
 	gint64 length;
 	gboolean seeking;
 };
 
-G_DEFINE_TYPE (TotemTimeLabel, totem_time_label, GTK_TYPE_LABEL)
-#define TOTEM_TIME_LABEL_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_TIME_LABEL, TotemTimeLabelPrivate))
+G_DEFINE_TYPE (XplayerTimeLabel, xplayer_time_label, GTK_TYPE_LABEL)
+#define XPLAYER_TIME_LABEL_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_TIME_LABEL, XplayerTimeLabelPrivate))
 
 static void
-totem_time_label_init (TotemTimeLabel *label)
+xplayer_time_label_init (XplayerTimeLabel *label)
 {
 	char *time_string;
-	label->priv = G_TYPE_INSTANCE_GET_PRIVATE (label, TOTEM_TYPE_TIME_LABEL, TotemTimeLabelPrivate);
+	label->priv = G_TYPE_INSTANCE_GET_PRIVATE (label, XPLAYER_TYPE_TIME_LABEL, XplayerTimeLabelPrivate);
 
-	time_string = totem_time_to_string (0);
+	time_string = xplayer_time_to_string (0);
 	gtk_label_set_text (GTK_LABEL (label), time_string);
 	g_free (time_string);
 
@@ -30,35 +30,35 @@ totem_time_label_init (TotemTimeLabel *label)
 }
 
 GtkWidget*
-totem_time_label_new (void)
+xplayer_time_label_new (void)
 {
-	return GTK_WIDGET (g_object_new (TOTEM_TYPE_TIME_LABEL, NULL));
+	return GTK_WIDGET (g_object_new (XPLAYER_TYPE_TIME_LABEL, NULL));
 }
 
 static void
-totem_time_label_class_init (TotemTimeLabelClass *klass)
+xplayer_time_label_class_init (XplayerTimeLabelClass *klass)
 {
-	g_type_class_add_private (klass, sizeof (TotemTimeLabelPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerTimeLabelPrivate));
 }
 
 void
-totem_time_label_set_time (TotemTimeLabel *label, gint64 _time, gint64 length)
+xplayer_time_label_set_time (XplayerTimeLabel *label, gint64 _time, gint64 length)
 {
 	char *label_str;
 
-	g_return_if_fail (TOTEM_IS_TIME_LABEL (label));
+	g_return_if_fail (XPLAYER_IS_TIME_LABEL (label));
 
 	if (_time / 1000 == label->priv->time / 1000 &&
 	    length / 1000 == label->priv->length / 1000)
 		return;
 
 	if (length <= 0) {
-		label_str = totem_time_to_string (_time);
+		label_str = xplayer_time_to_string (_time);
 	} else {
 		char *time_str, *length_str;
 
-		time_str = totem_time_to_string (_time);
-		length_str = totem_time_to_string (length);
+		time_str = xplayer_time_to_string (_time);
+		length_str = xplayer_time_to_string (length);
 		if (label->priv->seeking == FALSE) {
 			/* Elapsed / Total Length */
 			label_str = g_strdup_printf (_("%s / %s"), time_str, length_str);
@@ -78,9 +78,9 @@ totem_time_label_set_time (TotemTimeLabel *label, gint64 _time, gint64 length)
 }
 
 void
-totem_time_label_set_seeking (TotemTimeLabel *label, gboolean seeking)
+xplayer_time_label_set_seeking (XplayerTimeLabel *label, gboolean seeking)
 {
-	g_return_if_fail (TOTEM_IS_TIME_LABEL (label));
+	g_return_if_fail (XPLAYER_IS_TIME_LABEL (label));
 
 	label->priv->seeking = seeking;
 }

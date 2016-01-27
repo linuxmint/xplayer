@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *
- * Plugin engine for Totem, heavily based on the code from Rhythmbox,
- * which is based heavily on the code from totem.
+ * Plugin engine for Xplayer, heavily based on the code from Rhythmbox,
+ * which is based heavily on the code from xplayer.
  *
  * Copyright (C) 2002-2005 Paolo Maggi
  *               2006 James Livingston  <jrl@ids.org.au>
@@ -27,42 +27,42 @@
  *
  */
 
-#ifndef __TOTEM_PLUGINS_ENGINE_H__
-#define __TOTEM_PLUGINS_ENGINE_H__
+#ifndef __XPLAYER_PLUGINS_ENGINE_H__
+#define __XPLAYER_PLUGINS_ENGINE_H__
 
 #include <glib.h>
 #include <libpeas/peas-engine.h>
-#include <totem.h>
+#include <xplayer.h>
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_PLUGINS_ENGINE              (totem_plugins_engine_get_type ())
-#define TOTEM_PLUGINS_ENGINE(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), TOTEM_TYPE_PLUGINS_ENGINE, TotemPluginsEngine))
-#define TOTEM_PLUGINS_ENGINE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass), TOTEM_TYPE_PLUGINS_ENGINE, TotemPluginsEngineClass))
-#define TOTEM_IS_PLUGINS_ENGINE(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), TOTEM_TYPE_PLUGINS_ENGINE))
-#define TOTEM_IS_PLUGINS_ENGINE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_PLUGINS_ENGINE))
-#define TOTEM_PLUGINS_ENGINE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj), TOTEM_TYPE_PLUGINS_ENGINE, TotemPluginsEngineClass))
+#define XPLAYER_TYPE_PLUGINS_ENGINE              (xplayer_plugins_engine_get_type ())
+#define XPLAYER_PLUGINS_ENGINE(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), XPLAYER_TYPE_PLUGINS_ENGINE, XplayerPluginsEngine))
+#define XPLAYER_PLUGINS_ENGINE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass), XPLAYER_TYPE_PLUGINS_ENGINE, XplayerPluginsEngineClass))
+#define XPLAYER_IS_PLUGINS_ENGINE(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), XPLAYER_TYPE_PLUGINS_ENGINE))
+#define XPLAYER_IS_PLUGINS_ENGINE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_PLUGINS_ENGINE))
+#define XPLAYER_PLUGINS_ENGINE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj), XPLAYER_TYPE_PLUGINS_ENGINE, XplayerPluginsEngineClass))
 
-typedef struct _TotemPluginsEngine		TotemPluginsEngine;
-typedef struct _TotemPluginsEnginePrivate	TotemPluginsEnginePrivate;
-typedef struct _TotemPluginsEngineClass		TotemPluginsEngineClass;
+typedef struct _XplayerPluginsEngine		XplayerPluginsEngine;
+typedef struct _XplayerPluginsEnginePrivate	XplayerPluginsEnginePrivate;
+typedef struct _XplayerPluginsEngineClass		XplayerPluginsEngineClass;
 
-struct _TotemPluginsEngine
+struct _XplayerPluginsEngine
 {
 	PeasEngine parent;
-	TotemPluginsEnginePrivate *priv;
+	XplayerPluginsEnginePrivate *priv;
 };
 
-struct _TotemPluginsEngineClass
+struct _XplayerPluginsEngineClass
 {
 	PeasEngineClass parent_class;
 };
 
-GType			totem_plugins_engine_get_type			(void) G_GNUC_CONST;
-TotemPluginsEngine	*totem_plugins_engine_get_default		(TotemObject *totem);
-void			totem_plugins_engine_shut_down			(TotemPluginsEngine *self);
+GType			xplayer_plugins_engine_get_type			(void) G_GNUC_CONST;
+XplayerPluginsEngine	*xplayer_plugins_engine_get_default		(XplayerObject *xplayer);
+void			xplayer_plugins_engine_shut_down			(XplayerPluginsEngine *self);
 
 G_END_DECLS
 
-#endif  /* __TOTEM_PLUGINS_ENGINE_H__ */
+#endif  /* __XPLAYER_PLUGINS_ENGINE_H__ */
 

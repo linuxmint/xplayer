@@ -1,13 +1,13 @@
-# Icelandic translation of totem.
-# Copyright (C) 2004 THE totem'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the totem package.
+# Icelandic translation of xplayer.
+# Copyright (C) 2004 THE xplayer'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xplayer package.
 # Áki G. Karlsson <aki@akademia.is>, 2004.
 # , fuzzy
 # 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: totem 0.99\n"
+"Project-Id-Version: xplayer 0.99\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-10 20:55+0000\n"
 "PO-Revision-Date: 2004-05-09 22:17+0000\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: data/playlist.glade.h:1 src/totem-playlist.c:1444
+#: data/playlist.glade.h:1 src/xplayer-playlist.c:1444
 msgid "Playlist"
 msgstr "Spilunarlisti"
 
@@ -43,7 +43,7 @@ msgstr "Opna _slóð..."
 msgid "_Save..."
 msgstr "_Vista"
 
-#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/totem.glade.h:1
+#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/xplayer.glade.h:1
 msgid "    "
 msgstr "    "
 
@@ -57,7 +57,7 @@ msgid "0 kbps"
 msgstr "0 kb/s"
 
 #. 0 seconds
-#: data/properties.glade.h:4 data/totem.glade.h:2
+#: data/properties.glade.h:4 data/xplayer.glade.h:2
 #: src/bacon-video-widget-properties.c:142
 msgid "0 seconds"
 msgstr "0 sekúndur"
@@ -111,7 +111,7 @@ msgstr "Rammatíðni:"
 msgid "N/A"
 msgstr "N/A"
 
-#: data/properties.glade.h:16 src/totem.c:2030
+#: data/properties.glade.h:16 src/xplayer.c:2030
 msgid "Properties"
 msgstr "Eiginleikar"
 
@@ -141,7 +141,7 @@ msgstr "*"
 msgid "<b>Preview</b>"
 msgstr "<b>Forsýn</b>"
 
-#: data/screenshot.glade.h:4 src/totem-screenshot.c:308
+#: data/screenshot.glade.h:4 src/xplayer-screenshot.c:308
 msgid "Save Screenshot"
 msgstr "Vista skjámynd:"
 
@@ -159,678 +159,678 @@ msgstr "Vista skjámynd á skjá_borðið"
 msgid "Save screenshot to _file:"
 msgstr "Vista skjámynd í _skrá:"
 
-#: data/totem.desktop.in.h:1
+#: data/xplayer.desktop.in.h:1
 msgid "Play movies and songs"
 msgstr "Leika kvikmyndir og tónlist"
 
 #. Title
-#: data/totem.desktop.in.h:2 data/totem.glade.h:101 src/totem.c:694
-#: src/totem.c:3637
-msgid "Totem Movie Player"
-msgstr "Totem myndspilari"
+#: data/xplayer.desktop.in.h:2 data/xplayer.glade.h:101 src/xplayer.c:694
+#: src/xplayer.c:3637
+msgid "Xplayer Movie Player"
+msgstr "Xplayer myndspilari"
 
-#: data/totem.glade.h:3
+#: data/xplayer.glade.h:3
 msgid "1.5 Mbps T1/Intranet/LAN"
 msgstr "1.5 Mb/s T1/Intranet/LAN"
 
-#: data/totem.glade.h:4
+#: data/xplayer.glade.h:4
 msgid "112 Kbps Dual ISDN/DSL"
 msgstr "112 Kb/s Dual ISDN/DSL"
 
-#: data/totem.glade.h:5
+#: data/xplayer.glade.h:5
 msgid "14.4 Kbps Modem"
 msgstr "14.4 Kb/s mótald"
 
-#: data/totem.glade.h:6
+#: data/xplayer.glade.h:6
 msgid "16:9 (Widescreen)"
 msgstr ""
 
-#: data/totem.glade.h:7
+#: data/xplayer.glade.h:7
 msgid "19.2 Kbps Modem"
 msgstr "19.2 Kb/s mótald"
 
-#: data/totem.glade.h:8
+#: data/xplayer.glade.h:8
 msgid "2.11:1 (DVB)"
 msgstr ""
 
-#: data/totem.glade.h:9
+#: data/xplayer.glade.h:9
 msgid "256 Kbps DSL/Cable"
 msgstr "256 Kb/s DSL/Kapall"
 
-#: data/totem.glade.h:10
+#: data/xplayer.glade.h:10
 msgid "28.8 Kbps Modem"
 msgstr "28.8 Kb/s mótald"
 
-#: data/totem.glade.h:11
+#: data/xplayer.glade.h:11
 msgid "33.6 Kbps Modem"
 msgstr "33.6 Kb/s mótald"
 
-#: data/totem.glade.h:12
+#: data/xplayer.glade.h:12
 msgid "34.4 Kbps Modem"
 msgstr "34.4 Kb/s mótald"
 
-#: data/totem.glade.h:13
+#: data/xplayer.glade.h:13
 msgid "384 Kbps DSL/Cable"
 msgstr "384 Kb/s DSL/Kapall"
 
-#: data/totem.glade.h:14
+#: data/xplayer.glade.h:14
 msgid "4-channel"
 msgstr "4ra rása"
 
-#: data/totem.glade.h:15
+#: data/xplayer.glade.h:15
 msgid "4:3 (TV)"
 msgstr ""
 
-#: data/totem.glade.h:16
+#: data/xplayer.glade.h:16
 msgid "5.0-channel"
 msgstr "5.0 rása"
 
-#: data/totem.glade.h:17
+#: data/xplayer.glade.h:17
 msgid "5.1-channel"
 msgstr "5.1 rása"
 
-#: data/totem.glade.h:18
+#: data/xplayer.glade.h:18
 msgid "512 Kbps DSL/Cable"
 msgstr "512 Kb/s DSL/Kapall"
 
-#: data/totem.glade.h:19
+#: data/xplayer.glade.h:19
 msgid "56 Kbps Modem/ISDN"
 msgstr "56 Kb/s mótald/ISDN"
 
-#: data/totem.glade.h:20
+#: data/xplayer.glade.h:20
 msgid "<b>Audio Output</b>"
 msgstr "<b>Hljóðúttak</b>"
 
-#: data/totem.glade.h:21
+#: data/xplayer.glade.h:21
 msgid "<b>Color balance</b>"
 msgstr "<b>Litajafnvægi</b>"
 
-#: data/totem.glade.h:22
+#: data/xplayer.glade.h:22
 msgid "<b>Display</b>"
 msgstr "<b>Sýn</b>"
 
-#: data/totem.glade.h:23
+#: data/xplayer.glade.h:23
 msgid "<b>Networking</b>"
 msgstr "<b>Net</b>"
 
-#: data/totem.glade.h:24
+#: data/xplayer.glade.h:24
 msgid "<b>Optical Device</b>"
 msgstr "<b>Sjóntæki</b>"
 
-#: data/totem.glade.h:25
+#: data/xplayer.glade.h:25
 msgid "<b>Proprietary Plugins</b>"
 msgstr "<b>Ófrjáls íforrit</b>"
 
-#: data/totem.glade.h:26
+#: data/xplayer.glade.h:26
 msgid "<b>TV-Out</b>"
 msgstr "<b>Sjónvarpsúttak</b>"
 
-#: data/totem.glade.h:27
+#: data/xplayer.glade.h:27
 msgid "<b>Visual Effects</b>"
 msgstr "<b>Sjónrænir effektar</b>"
 
-#: data/totem.glade.h:28
+#: data/xplayer.glade.h:28
 msgid "AC3 Passthrough"
 msgstr "AC3 gegnumstreymi"
 
-#: data/totem.glade.h:29
+#: data/xplayer.glade.h:29
 msgid "A_udio Menu"
 msgstr "_Hljóðvalmynd"
 
-#: data/totem.glade.h:30
+#: data/xplayer.glade.h:30
 msgid "Always on _Top"
 msgstr "Alltaf _efst"
 
-#: data/totem.glade.h:31
+#: data/xplayer.glade.h:31
 msgid "Always on top"
 msgstr "Alltaf efst"
 
-#: data/totem.glade.h:32
+#: data/xplayer.glade.h:32
 msgid "Audio"
 msgstr "Hljóð"
 
-#: data/totem.glade.h:33 src/totem.c:2879 src/totem.c:2900
+#: data/xplayer.glade.h:33 src/xplayer.c:2879 src/xplayer.c:2900
 msgid "Auto"
 msgstr "Sjálfvirkt"
 
-#: data/totem.glade.h:34
+#: data/xplayer.glade.h:34
 msgid "Automatically _resize the window when a new video is loaded"
 msgstr "_Endurstilla stærð gluggans þegar ný kvikmynd er spiluð"
 
-#: data/totem.glade.h:35
+#: data/xplayer.glade.h:35
 msgid "Co_ntrast:"
 msgstr "_Birtuskil:"
 
-#: data/totem.glade.h:36
+#: data/xplayer.glade.h:36
 msgid "Connection _speed:"
 msgstr "_Hraði tengingar:"
 
-#: data/totem.glade.h:37
+#: data/xplayer.glade.h:37
 msgid "Deinterlace"
 msgstr "Aftvinna"
 
-#: data/totem.glade.h:38
+#: data/xplayer.glade.h:38
 msgid "Display"
 msgstr "Skjár"
 
-#: data/totem.glade.h:39
+#: data/xplayer.glade.h:39
 msgid "Exit Fullscreen"
 msgstr "Fara úr heilskjá"
 
-#: data/totem.glade.h:40
+#: data/xplayer.glade.h:40
 msgid "Extra Large"
 msgstr "Mjög stór"
 
-#: data/totem.glade.h:41
+#: data/xplayer.glade.h:41
 msgid "File name"
 msgstr "Skráarheiti"
 
-#: data/totem.glade.h:42
+#: data/xplayer.glade.h:42
 msgid "General"
 msgstr "Almennt"
 
-#: data/totem.glade.h:43
+#: data/xplayer.glade.h:43
 msgid "Go to the DVD menu"
 msgstr "Fara í DVD-valmynd"
 
-#: data/totem.glade.h:44
+#: data/xplayer.glade.h:44
 msgid "Go to the angle menu"
 msgstr "Fara í sjónarhornsvalmynd"
 
-#: data/totem.glade.h:45
+#: data/xplayer.glade.h:45
 msgid "Go to the audio menu"
 msgstr "Fara í hljóðvalmynd"
 
-#: data/totem.glade.h:46
+#: data/xplayer.glade.h:46
 msgid "Go to the chapter menu"
 msgstr "Fara í kaflavalmynd"
 
-#: data/totem.glade.h:47
+#: data/xplayer.glade.h:47
 msgid "Go to the title menu"
 msgstr "Fara í titilvalmynd"
 
-#: data/totem.glade.h:48
+#: data/xplayer.glade.h:48
 msgid "Help contents"
 msgstr "Hjálp"
 
-#: data/totem.glade.h:49
+#: data/xplayer.glade.h:49
 msgid "Intranet/LAN"
 msgstr "Innranet/LAN"
 
-#: data/totem.glade.h:50
+#: data/xplayer.glade.h:50
 msgid "Languages"
 msgstr "Tungumál"
 
-#: data/totem.glade.h:51
+#: data/xplayer.glade.h:51
 msgid "Large"
 msgstr "Stór"
 
-#: data/totem.glade.h:52 src/totem.c:81
+#: data/xplayer.glade.h:52 src/xplayer.c:81
 msgid "Next"
 msgstr "Næsta"
 
-#: data/totem.glade.h:53
+#: data/xplayer.glade.h:53
 msgid "Next chapter or movie"
 msgstr "Næsti kafli eða mynd"
 
-#: data/totem.glade.h:54
+#: data/xplayer.glade.h:54
 msgid "No Language Selection Available"
 msgstr "Engin tungumál til staðar"
 
-#: data/totem.glade.h:55
+#: data/xplayer.glade.h:55
 msgid "No subtitles selection available"
 msgstr "Engir textar"
 
-#: data/totem.glade.h:56
+#: data/xplayer.glade.h:56
 msgid "Normal"
 msgstr "Venjuleg"
 
-#: data/totem.glade.h:57
+#: data/xplayer.glade.h:57
 msgid "Open _Location..."
 msgstr "Opna _slóð..."
 
-#: data/totem.glade.h:58
+#: data/xplayer.glade.h:58
 msgid "Open a non-local file"
 msgstr "Opna útværa skrá"
 
-#: data/totem.glade.h:59
+#: data/xplayer.glade.h:59
 msgid "Play / Pa_use"
 msgstr "Spila / s_töðva"
 
-#: data/totem.glade.h:60
+#: data/xplayer.glade.h:60
 msgid "Play _Audio CD"
 msgstr "Spila _hljóðdisk"
 
-#: data/totem.glade.h:61
+#: data/xplayer.glade.h:61
 msgid "Play _DVD"
 msgstr "Spila _DVD"
 
-#: data/totem.glade.h:62
+#: data/xplayer.glade.h:62
 msgid "Play _VCD"
 msgstr "Spila _VCD"
 
-#: data/totem.glade.h:63
+#: data/xplayer.glade.h:63
 msgid "Play a Video CD"
 msgstr "Spila mynddisk"
 
-#: data/totem.glade.h:64
+#: data/xplayer.glade.h:64
 msgid "Play a Video DVD"
 msgstr "Spila DVD-mynddisk"
 
-#: data/totem.glade.h:65
+#: data/xplayer.glade.h:65
 msgid "Play an audio CD"
 msgstr "Spila hljóðdisk"
 
-#: data/totem.glade.h:66
+#: data/xplayer.glade.h:66
 msgid "Play or pause the movie"
 msgstr "Spila eða stöðva myndina"
 
-#: data/totem.glade.h:67 src/totem.c:80
+#: data/xplayer.glade.h:67 src/xplayer.c:80
 msgid "Play/Pause"
 msgstr "Spila/stöðva"
 
-#: data/totem.glade.h:68 src/totem.c:82
+#: data/xplayer.glade.h:68 src/xplayer.c:82
 msgid "Previous"
 msgstr "Fyrri"
 
-#: data/totem.glade.h:69
+#: data/xplayer.glade.h:69
 msgid "Previous chapter or movie"
 msgstr "Fyrri kafli eða kvikmynd"
 
-#: data/totem.glade.h:70
+#: data/xplayer.glade.h:70
 msgid "S_ubtitles"
 msgstr "T_extar"
 
-#: data/totem.glade.h:71
+#: data/xplayer.glade.h:71
 msgid "Sat_uration:"
 msgstr "_Mettun:"
 
-#: data/totem.glade.h:72
+#: data/xplayer.glade.h:72
 #, fuzzy
 msgid "Set the aspect ratio"
 msgstr "Skipta hlutföllum"
 
-#: data/totem.glade.h:73
+#: data/xplayer.glade.h:73
 msgid "Set the repeat mode"
 msgstr "Stilla á endurtekningu"
 
-#: data/totem.glade.h:74
+#: data/xplayer.glade.h:74
 msgid "Set the shuffle mode"
 msgstr "Stilla á stokkun"
 
-#: data/totem.glade.h:75
+#: data/xplayer.glade.h:75
 msgid "Sets 16:9 (Anamorphic) aspect ratio"
 msgstr ""
 
-#: data/totem.glade.h:76
+#: data/xplayer.glade.h:76
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr ""
 
-#: data/totem.glade.h:77
+#: data/xplayer.glade.h:77
 #, fuzzy
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "Skipta hlutföllum"
 
-#: data/totem.glade.h:78
+#: data/xplayer.glade.h:78
 #, fuzzy
 msgid "Sets automatic aspect ratio"
 msgstr "Skipta hlutföllum"
 
-#: data/totem.glade.h:79
+#: data/xplayer.glade.h:79
 #, fuzzy
 msgid "Sets square aspect ratio"
 msgstr "Skipta hlutföllum"
 
-#: data/totem.glade.h:80
+#: data/xplayer.glade.h:80
 msgid "Show _Controls"
 msgstr "Sýna Stjórn_tæki"
 
-#: data/totem.glade.h:81
+#: data/xplayer.glade.h:81
 msgid "Show _visual effects when an audio file is played"
 msgstr "Sýna sjónræna _effekta þegar hljóðskrá er spiluð"
 
-#: data/totem.glade.h:82
+#: data/xplayer.glade.h:82
 msgid "Show controls"
 msgstr "Sýna stjórntæki"
 
-#: data/totem.glade.h:83
+#: data/xplayer.glade.h:83
 msgid "Show or hide the playlist"
 msgstr "Sýna eða fela spilunarlistann"
 
-#: data/totem.glade.h:84
+#: data/xplayer.glade.h:84
 msgid "Show/Hide Playlist"
 msgstr "Sýna/fela spilunarlista"
 
-#: data/totem.glade.h:85
+#: data/xplayer.glade.h:85
 msgid "Shuff_le Mode"
 msgstr "S_tokkun"
 
-#: data/totem.glade.h:86
+#: data/xplayer.glade.h:86
 msgid "Skip _Backwards"
 msgstr "Stökkva _aftur"
 
-#: data/totem.glade.h:87
+#: data/xplayer.glade.h:87
 msgid "Skip _Forward"
 msgstr "Stökkva á_fram"
 
-#: data/totem.glade.h:88
+#: data/xplayer.glade.h:88
 msgid "Skip backwards"
 msgstr "Stökkva aftur"
 
-#: data/totem.glade.h:89
+#: data/xplayer.glade.h:89
 msgid "Skip forward"
 msgstr "Stökkva áfram"
 
-#: data/totem.glade.h:90
+#: data/xplayer.glade.h:90
 msgid "Skip to"
 msgstr "Stökkva til"
 
-#: data/totem.glade.h:91
+#: data/xplayer.glade.h:91
 msgid "Skip to a specific time"
 msgstr "Stökkva að tilgreindum stað"
 
-#: data/totem.glade.h:92
+#: data/xplayer.glade.h:92
 msgid "Small"
 msgstr "Lítil"
 
-#: data/totem.glade.h:93
+#: data/xplayer.glade.h:93
 msgid "Square"
 msgstr ""
 
-#: data/totem.glade.h:94
+#: data/xplayer.glade.h:94
 msgid "Stereo"
 msgstr "Víðóma"
 
-#: data/totem.glade.h:95
+#: data/xplayer.glade.h:95
 msgid "Subtitles"
 msgstr "Textar"
 
-#: data/totem.glade.h:96
+#: data/xplayer.glade.h:96
 msgid "Switch to double size"
 msgstr "Stilla á tvöfalda stærð"
 
-#: data/totem.glade.h:97
+#: data/xplayer.glade.h:97
 msgid "Switch to fullscreen"
 msgstr "Stilla á heilskjá"
 
-#: data/totem.glade.h:98
+#: data/xplayer.glade.h:98
 msgid "Take _Screenshot"
 msgstr "Taka _skjámynd"
 
-#: data/totem.glade.h:99
+#: data/xplayer.glade.h:99
 msgid "Take a screenshot"
 msgstr "Taka skjámynd"
 
-#: data/totem.glade.h:100
+#: data/xplayer.glade.h:100
 msgid "Time:"
 msgstr "Tími:"
 
-#: data/totem.glade.h:102
-msgid "Totem Preferences"
-msgstr "Totem stillingar"
+#: data/xplayer.glade.h:102
+msgid "Xplayer Preferences"
+msgstr "Xplayer stillingar"
 
-#: data/totem.glade.h:103
+#: data/xplayer.glade.h:103
 msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 msgstr ""
 
-#: data/totem.glade.h:104
+#: data/xplayer.glade.h:104
 msgid "Tv-out in fullscreen by Nvidia (PAL)"
 msgstr ""
 
-#: data/totem.glade.h:105
+#: data/xplayer.glade.h:105
 msgid "Visualisation _size:"
 msgstr "Stærð sýningar:"
 
-#: data/totem.glade.h:106
+#: data/xplayer.glade.h:106
 msgid "Volume _Down"
 msgstr "_Lækka hljóðstyrk"
 
-#: data/totem.glade.h:107
+#: data/xplayer.glade.h:107
 msgid "Volume _Up"
 msgstr "_Hækka hljóðstyrk"
 
-#: data/totem.glade.h:108
+#: data/xplayer.glade.h:108
 msgid "Volume down"
 msgstr "Lækka hljóðstyrk"
 
-#: data/totem.glade.h:109
+#: data/xplayer.glade.h:109
 msgid "Volume up"
 msgstr "Hækka hljóðstyrk"
 
-#: data/totem.glade.h:110 data/vanity.glade.h:7
+#: data/xplayer.glade.h:110 data/vanity.glade.h:7
 msgid "Zoom _1:1"
 msgstr "Stækkun _1:1"
 
-#: data/totem.glade.h:111 data/vanity.glade.h:8
+#: data/xplayer.glade.h:111 data/vanity.glade.h:8
 msgid "Zoom _2:1"
 msgstr "Stækkun _2:1"
 
-#: data/totem.glade.h:112
+#: data/xplayer.glade.h:112
 msgid "Zoom to half size"
 msgstr "Hálf stærð"
 
-#: data/totem.glade.h:113
+#: data/xplayer.glade.h:113
 msgid "Zoom to one for one size"
 msgstr "Stærð einn móti einum"
 
-#: data/totem.glade.h:114
+#: data/xplayer.glade.h:114
 msgid "_Add Proprietary Plugins..."
 msgstr "_Bæta við ófrjálsum íforritum..."
 
-#: data/totem.glade.h:115
+#: data/xplayer.glade.h:115
 msgid "_Angle Menu"
 msgstr "_Sjónarhornsvalmynd"
 
-#: data/totem.glade.h:116
+#: data/xplayer.glade.h:116
 #, fuzzy
 msgid "_Aspect Ratio"
 msgstr "Skipta _hlutföllum"
 
-#: data/totem.glade.h:117
+#: data/xplayer.glade.h:117
 msgid "_Audio output type:"
 msgstr "Tegund _hljóðúttaks:"
 
-#: data/totem.glade.h:118
+#: data/xplayer.glade.h:118
 msgid "_Brightness:"
 msgstr "_Lýsing"
 
-#: data/totem.glade.h:119
+#: data/xplayer.glade.h:119
 msgid "_Chapter Menu"
 msgstr "_Kaflavalmynd"
 
-#: data/totem.glade.h:120
+#: data/xplayer.glade.h:120
 msgid "_Contents"
 msgstr "_Innihald"
 
-#: data/totem.glade.h:121
+#: data/xplayer.glade.h:121
 msgid "_DVD Menu"
 msgstr "_DVD-valmynd"
 
-#: data/totem.glade.h:122
+#: data/xplayer.glade.h:122
 msgid "_DXR3 TV-out"
 msgstr "_DXR3-sjónvarpsúttak"
 
-#: data/totem.glade.h:123
+#: data/xplayer.glade.h:123
 msgid "_Deinterlace"
 msgstr "_Aftvinna"
 
-#: data/totem.glade.h:124
+#: data/xplayer.glade.h:124
 msgid "_Eject"
 msgstr "_Spýta út"
 
-#: data/totem.glade.h:125
+#: data/xplayer.glade.h:125
 msgid "_Fullscreen"
 msgstr "_Heilskjár"
 
-#: data/totem.glade.h:126
+#: data/xplayer.glade.h:126
 msgid "_Go"
 msgstr "Á_fram"
 
-#: data/totem.glade.h:127
+#: data/xplayer.glade.h:127
 msgid "_Hue:"
 msgstr "_Litblær:"
 
-#: data/totem.glade.h:128
+#: data/xplayer.glade.h:128
 msgid "_Languages"
 msgstr "_Tungumál"
 
-#: data/totem.glade.h:129
+#: data/xplayer.glade.h:129
 msgid "_Movie"
 msgstr "Kvik_mynd"
 
-#: data/totem.glade.h:130
+#: data/xplayer.glade.h:130
 msgid "_Next Chapter/Movie"
 msgstr "_Næsti kafli/kvikmynd"
 
-#: data/totem.glade.h:131
+#: data/xplayer.glade.h:131
 msgid "_No TV-out"
 msgstr "_Ekkert sjónvarpsúttak"
 
-#: data/totem.glade.h:132
+#: data/xplayer.glade.h:132
 msgid "_Optical device path:"
 msgstr "Slóð að _sjóntæki:"
 
-#: data/totem.glade.h:133
+#: data/xplayer.glade.h:133
 msgid "_Previous Chapter/Movie"
 msgstr "_Fyrri kafli/kvikmynd"
 
-#: data/totem.glade.h:134
+#: data/xplayer.glade.h:134
 msgid "_Repeat Mode"
 msgstr "_Endurtekning"
 
-#: data/totem.glade.h:135
+#: data/xplayer.glade.h:135
 msgid "_Reset defaults"
 msgstr ""
 
-#: data/totem.glade.h:136
+#: data/xplayer.glade.h:136
 msgid "_Show/Hide Playlist"
 msgstr "_Sýna/fela spilunarlista"
 
-#: data/totem.glade.h:137
+#: data/xplayer.glade.h:137
 msgid "_Skip to..."
 msgstr "_Stökkva til..."
 
-#: data/totem.glade.h:138
+#: data/xplayer.glade.h:138
 msgid "_Skip to:"
 msgstr "_Stökkva til:"
 
-#: data/totem.glade.h:139
+#: data/xplayer.glade.h:139
 msgid "_Sound"
 msgstr "_Hljóð"
 
-#: data/totem.glade.h:140
+#: data/xplayer.glade.h:140
 msgid "_Title Menu"
 msgstr "_Titilvalmynd"
 
-#: data/totem.glade.h:141
+#: data/xplayer.glade.h:141
 msgid "_Type of visualisation:"
 msgstr "_Tegund skoðunar"
 
-#: data/totem.glade.h:142 data/vanity.glade.h:10
+#: data/xplayer.glade.h:142 data/vanity.glade.h:10
 msgid "_Zoom 1:2"
 msgstr "_Stækkun 1:2"
 
-#: data/totem.glade.h:143
+#: data/xplayer.glade.h:143
 msgid "seconds"
 msgstr "sekúndur"
 
-#: data/totem.schemas.in.h:1
+#: data/xplayer.schemas.in.h:1
 msgid "Enable deinterlacing"
 msgstr "Virkja aftvinnun"
 
-#: data/totem.schemas.in.h:2
+#: data/xplayer.schemas.in.h:2
 msgid "Enable deinterlacing."
 msgstr "Virkja aftvinnun."
 
-#: data/totem.schemas.in.h:3
+#: data/xplayer.schemas.in.h:3
 msgid "Height of the video widget"
 msgstr "Hæð myndspilaraviðfangs"
 
-#: data/totem.schemas.in.h:4
+#: data/xplayer.schemas.in.h:4
 msgid "Name of the visual effects plugins"
 msgstr "Heiti íforrits fyrir sjónræna effekta"
 
-#: data/totem.schemas.in.h:5
+#: data/xplayer.schemas.in.h:5
 msgid "Name of the visual effects plugins."
 msgstr "Heiti íforrita fyrir sjónræna effekta."
 
-#: data/totem.schemas.in.h:6
+#: data/xplayer.schemas.in.h:6
 msgid "Path to the optical media device"
 msgstr "Slóð að sjónmiðlatæki"
 
-#: data/totem.schemas.in.h:7
+#: data/xplayer.schemas.in.h:7
 msgid "Path to the optical media device."
 msgstr "Slóð að sjónmiðlatæki."
 
-#: data/totem.schemas.in.h:8
+#: data/xplayer.schemas.in.h:8
 msgid "Repeat mode"
 msgstr "Endurtekning"
 
-#: data/totem.schemas.in.h:9
+#: data/xplayer.schemas.in.h:9
 msgid "Repeat mode."
 msgstr "Endurtekningarhamur."
 
-#: data/totem.schemas.in.h:10
+#: data/xplayer.schemas.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Endurstilla stærð tjalds þegar skrá er hlaðið inn"
 
-#: data/totem.schemas.in.h:11
+#: data/xplayer.schemas.in.h:11
 msgid "Resize the canvas automatically on file load."
 msgstr "Endurstilla stærð tjalds þegar skrá er hlaðið inn."
 
-#: data/totem.schemas.in.h:12
+#: data/xplayer.schemas.in.h:12
 msgid "Show visual effects when no video is displayed"
 msgstr "Sýna sjónræna effekta þegar engin mynd er"
 
-#: data/totem.schemas.in.h:13
+#: data/xplayer.schemas.in.h:13
 msgid "Show visual effects when playing an audio only file."
 msgstr "Sýna sjónræna effekta þegar hljóðskrá er spiluð."
 
-#: data/totem.schemas.in.h:14
+#: data/xplayer.schemas.in.h:14
 msgid "Shuffle mode"
 msgstr "Stokkun"
 
-#: data/totem.schemas.in.h:15
+#: data/xplayer.schemas.in.h:15
 msgid "Shuffle mode."
 msgstr "Stokkunarhamur."
 
-#: data/totem.schemas.in.h:16
+#: data/xplayer.schemas.in.h:16
 msgid "The brightness of the video"
 msgstr "Lýsing myndar"
 
-#: data/totem.schemas.in.h:17
+#: data/xplayer.schemas.in.h:17
 msgid "The brightness of the video."
 msgstr "Lýsing myndar."
 
-#: data/totem.schemas.in.h:18
+#: data/xplayer.schemas.in.h:18
 msgid "The contrast of the video"
 msgstr "Birtuskil myndar"
 
-#: data/totem.schemas.in.h:19
+#: data/xplayer.schemas.in.h:19
 msgid "The contrast of the video."
 msgstr "Birtuskil myndar."
 
-#: data/totem.schemas.in.h:20
+#: data/xplayer.schemas.in.h:20
 msgid "The hue of the video"
 msgstr "Litblær myndar"
 
-#: data/totem.schemas.in.h:21
+#: data/xplayer.schemas.in.h:21
 msgid "The hue of the video."
 msgstr "Litblær myndar."
 
-#: data/totem.schemas.in.h:22
+#: data/xplayer.schemas.in.h:22
 msgid "The saturation of the video"
 msgstr "Mettun myndar"
 
-#: data/totem.schemas.in.h:23
+#: data/xplayer.schemas.in.h:23
 msgid "The saturation of the video."
 msgstr "Mettun myndar."
 
-#: data/totem.schemas.in.h:24
+#: data/xplayer.schemas.in.h:24
 msgid "Type of audio output to use"
 msgstr "Tegund hljóðúttaks sem á að nota"
 
-#: data/totem.schemas.in.h:25
+#: data/xplayer.schemas.in.h:25
 msgid ""
 "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
 "\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
@@ -839,39 +839,39 @@ msgstr ""
 "Tegund hljóðs: \"0\" fyrir víðóma, \"1\" fyrir 4ra rása úttak,\"2\" fyrir "
 "5.0 rása úttak, \"3\" fyrir 5.1 rása úttak, \"4\" fyrir AC3gegnumstreymi."
 
-#: data/totem.schemas.in.h:26
+#: data/xplayer.schemas.in.h:26
 msgid "Whether the main window should stay on top"
 msgstr "Hvort aðalglugginn á að halda sér efst"
 
-#: data/totem.schemas.in.h:27
+#: data/xplayer.schemas.in.h:27
 msgid "Whether the main window should stay on top of the other ones"
 msgstr "Hvort aðalglugginn á að haldast yfir öllum hinum."
 
-#: data/totem.schemas.in.h:28
+#: data/xplayer.schemas.in.h:28
 msgid "Whether to enable debug for the playback engine"
 msgstr "Hvort á að heimila aflúsun fyrir afspilunarvélina"
 
-#: data/totem.schemas.in.h:29
+#: data/xplayer.schemas.in.h:29
 msgid "Whether to enable debug for the playback engine."
 msgstr "Hvort á að heimila aflúsun fyrir afspilunarvélina."
 
-#: data/totem.schemas.in.h:30
+#: data/xplayer.schemas.in.h:30
 msgid "Width of the video widget"
 msgstr "Breidd myndspilaraviðfangs"
 
-#: data/totem.schemas.in.h:31
+#: data/xplayer.schemas.in.h:31
 msgid "X coordinate for the Playlist"
 msgstr "X-hnit spilunarlista"
 
-#: data/totem.schemas.in.h:32
+#: data/xplayer.schemas.in.h:32
 msgid "X coordinate for the Playlist."
 msgstr "X-hnit spilunarlista."
 
-#: data/totem.schemas.in.h:33
+#: data/xplayer.schemas.in.h:33
 msgid "Y coordinate for the Playlist"
 msgstr "Y-hnit spilunarlista"
 
-#: data/totem.schemas.in.h:34
+#: data/xplayer.schemas.in.h:34
 msgid "Y coordinate for the Playlist."
 msgstr "Y-hnit spilunarlista."
 
@@ -932,8 +932,8 @@ msgid "Unnamed Video Device"
 msgstr "Ónefnt vídeótæki"
 
 #: src/bacon-video-widget-gst.c:62
-msgid "Totem Video Window"
-msgstr "Totem vídeógluggi"
+msgid "Xplayer Video Window"
+msgstr "Xplayer vídeógluggi"
 
 #: src/bacon-video-widget-properties.c:122
 #, c-format
@@ -1001,7 +1001,7 @@ msgstr ""
 msgid ""
 "No video output is available. Make sure that the program is correctly "
 "installed."
-msgstr "Athugaðu hvort Totem er rétt uppsett."
+msgstr "Athugaðu hvort Xplayer er rétt uppsett."
 
 #: src/bacon-video-widget-xine.c:1284
 msgid "The server you are trying to connect to is not known."
@@ -1127,54 +1127,54 @@ msgstr "Ónefndur SCSI-geisladiskur (%s)"
 msgid "File image"
 msgstr "Skráarmynd"
 
-#. disp = gnome_vfs_unescape_string_for_display (totem->mrl);
-#: src/totem-mozilla-viewer.c:72 src/totem.c:363 src/totem.c:391
-#: src/totem.c:816 src/totem.c:925
+#. disp = gnome_vfs_unescape_string_for_display (xplayer->mrl);
+#: src/xplayer-mozilla-viewer.c:72 src/xplayer.c:363 src/xplayer.c:391
+#: src/xplayer.c:816 src/xplayer.c:925
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem tókst ekki að spila '%s'."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer tókst ekki að spila '%s'."
 
-#: src/totem-mozilla-viewer.c:104 src/totem-mozilla-viewer.c:111
+#: src/xplayer-mozilla-viewer.c:104 src/xplayer-mozilla-viewer.c:111
 #, fuzzy
 msgid "Couldn't load the main interface (mozilla-viewer.glade)."
-msgstr "Tókst ekki að hlaða inn aðalviðmótið (totem.glade)."
+msgstr "Tókst ekki að hlaða inn aðalviðmótið (xplayer.glade)."
 
-#: src/totem-mozilla-viewer.c:104 src/totem-mozilla-viewer.c:111
+#: src/xplayer-mozilla-viewer.c:104 src/xplayer-mozilla-viewer.c:111
 #, fuzzy
-msgid "Make sure that the Totem plugin is properly installed."
-msgstr "Athugaðu hvort Totem er rétt uppsett."
+msgid "Make sure that the Xplayer plugin is properly installed."
+msgstr "Athugaðu hvort Xplayer er rétt uppsett."
 
-#: src/totem-mozilla-viewer.c:122
+#: src/xplayer-mozilla-viewer.c:122
 #, fuzzy
-msgid "The Totem plugin could not startup."
-msgstr "Totem tókst ekki að ræsa sig."
+msgid "The Xplayer plugin could not startup."
+msgstr "Xplayer tókst ekki að ræsa sig."
 
-#: src/totem-mozilla-viewer.c:122 src/totem.c:3347
+#: src/xplayer-mozilla-viewer.c:122 src/xplayer.c:3347
 msgid "No reason."
 msgstr "Engin ástæða gefin."
 
-#: src/totem-mozilla-viewer.c:154 src/totem.c:3642
+#: src/xplayer-mozilla-viewer.c:154 src/xplayer.c:3642
 msgid "Could not initialise the thread-safe libraries."
 msgstr "Tókst ekki að frumstilla þráðviss aðgerðasöfn."
 
-#: src/totem-mozilla-viewer.c:154
+#: src/xplayer-mozilla-viewer.c:154
 #, fuzzy
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "Athugaðu kerfisuppsetningu. Totem kveður núna."
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Athugaðu kerfisuppsetningu. Xplayer kveður núna."
 
-#: src/totem-playlist.c:339
+#: src/xplayer-playlist.c:339
 msgid "Could not save the playlist"
 msgstr "Tókst ekki að vista spilunarlistann"
 
-#: src/totem-playlist.c:613 src/totem.c:1560
+#: src/xplayer-playlist.c:613 src/xplayer.c:1560
 msgid "Select files"
 msgstr "Velja skrár"
 
-#: src/totem-playlist.c:794
+#: src/xplayer-playlist.c:794
 msgid "Save playlist"
 msgstr "Vista spilunarlista"
 
-#: src/totem-playlist.c:839
+#: src/xplayer-playlist.c:839
 #, c-format
 msgid ""
 "A file named '%s' already exists.\n"
@@ -1183,210 +1183,210 @@ msgstr ""
 "Skrá með heitinu '%s' er þegar til.\n"
 "Ert viss um að þú viljir skrifa yfir hana?"
 
-#: src/totem-playlist.c:1024
+#: src/xplayer-playlist.c:1024
 msgid "Filename"
 msgstr "Skráarheiti"
 
-#: src/totem-pl-parser.c:225
+#: src/xplayer-pl-parser.c:225
 #, c-format
 msgid "Couldn't write parser: %s"
 msgstr "Tókst ekki að skrifa þáttara. %s"
 
-#: src/totem-pl-parser.c:289
+#: src/xplayer-pl-parser.c:289
 #, c-format
 msgid "Couldn't open parser: %s"
 msgstr "Tókst ekki að opna þáttara: %s"
 
-#: src/totem-preferences.c:82
+#: src/xplayer-preferences.c:82
 msgid ""
-"It seems you are running Totem remotely.\n"
+"It seems you are running Xplayer remotely.\n"
 "Are you sure you want to enable the visual effects?"
 msgstr ""
-"Þú virðist vera að nota Totem í gegnum net.\n"
+"Þú virðist vera að nota Xplayer í gegnum net.\n"
 "Ertu viss um að þú viljir heimila sjónræna effekta?"
 
-#: src/totem-preferences.c:135
+#: src/xplayer-preferences.c:135
 msgid ""
 "The change of this setting will only take effect for the next movie, or when "
-"Totem is restarted"
+"Xplayer is restarted"
 msgstr ""
 "Breyting á þessari stillingu tekur aðeins gildi fyrir næstu kvikmynd eða "
-"þegarTotem er endurræst"
+"þegarXplayer er endurræst"
 
-#: src/totem-preferences.c:179
+#: src/xplayer-preferences.c:179
 msgid ""
 "Switching on or off this type of TV-Out requires a restart to take effect."
 msgstr ""
 "Til að slökkva eða kveikja á þessari tegund sjónvarpsúttaks þarf að "
 "endurræsa."
 
-#: src/totem-preferences.c:312
-msgid "Totem could not start the file manager."
-msgstr "Totem tókst ekki að ræsa skráarstjórann."
+#: src/xplayer-preferences.c:312
+msgid "Xplayer could not start the file manager."
+msgstr "Xplayer tókst ekki að ræsa skráarstjórann."
 
-#: src/totem-preferences.c:340
+#: src/xplayer-preferences.c:340
 msgid "Changing the visuals effect type will require a restart to take effect."
 msgstr ""
 "Það þarf að endurræsa til að breytingar á tegund sjónrænna effekta taki "
 "gildi."
 
-#: src/totem-properties-page.c:123
+#: src/xplayer-properties-page.c:123
 msgid "URI currently displayed"
 msgstr "URI sem verið er að sýna"
 
-#: src/totem-properties-page.c:193
+#: src/xplayer-properties-page.c:193
 msgid "Video and Audio information properties page"
 msgstr "Upplýsingasíða um eiginleika myndar og hljóðs"
 
-#: src/totem-screenshot.c:186 src/totem-screenshot.c:197
+#: src/xplayer-screenshot.c:186 src/xplayer-screenshot.c:197
 #, c-format
 msgid "Screenshot%d.png"
 msgstr "Skjámynd%d.png"
 
-#: src/totem-screenshot.c:239
+#: src/xplayer-screenshot.c:239
 #, c-format
 msgid "File '%s' already exists."
 msgstr "Skráin '%s' er þegar til."
 
-#: src/totem-screenshot.c:241
+#: src/xplayer-screenshot.c:241
 msgid "The screenshot was not saved"
 msgstr "Skjámyndin var ekki vistuð"
 
-#: src/totem-screenshot.c:252
+#: src/xplayer-screenshot.c:252
 msgid "There was an error saving the screenshot."
 msgstr "Villa kom upp við vistun skjámyndar."
 
-#: src/totem-statusbar.c:154
+#: src/xplayer-statusbar.c:154
 msgid "Shadow type"
 msgstr "Tegund skugga"
 
-#: src/totem-statusbar.c:155
+#: src/xplayer-statusbar.c:155
 msgid "Style of bevel around the statusbar text"
 msgstr "Tegund fláa kringum texta á stöðustiku"
 
-#: src/totem-statusbar.c:187 src/totem.c:307 src/totem.c:676
+#: src/xplayer-statusbar.c:187 src/xplayer.c:307 src/xplayer.c:676
 msgid "Stopped"
 msgstr "Stöðvað"
 
-#: src/totem-statusbar.c:196
+#: src/xplayer-statusbar.c:196
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: src/totem-statusbar.c:224
+#: src/xplayer-statusbar.c:224
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (flæði)"
 
-#: src/totem-statusbar.c:232
+#: src/xplayer-statusbar.c:232
 msgid "Seek to"
 msgstr "Sækja til"
 
-#: src/totem-statusbar.c:294
+#: src/xplayer-statusbar.c:294
 msgid "Buffering"
 msgstr "Hleð í minni"
 
 #. eg: 75 %
-#: src/totem-statusbar.c:297
+#: src/xplayer-statusbar.c:297
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
-#: src/totem.c:78
+#: src/xplayer.c:78
 msgid "Backend options"
 msgstr ""
 
-#: src/totem.c:79
+#: src/xplayer.c:79
 #, fuzzy
 msgid "Enable debug"
 msgstr "Virkja aftvinnun"
 
-#: src/totem.c:83
+#: src/xplayer.c:83
 msgid "Seek Forwards"
 msgstr "Sækja áfram"
 
-#: src/totem.c:84
+#: src/xplayer.c:84
 msgid "Seek Backwards"
 msgstr "Sækja aftur"
 
-#: src/totem.c:85
+#: src/xplayer.c:85
 msgid "Volume Up"
 msgstr "Hækka hljóðstyrk"
 
-#: src/totem.c:86
+#: src/xplayer.c:86
 msgid "Volume Down"
 msgstr "Lækka hljóðstyrk"
 
-#: src/totem.c:87
+#: src/xplayer.c:87
 msgid "Toggle Fullscreen"
 msgstr "Skipta heilskjá"
 
-#: src/totem.c:88
+#: src/xplayer.c:88
 msgid "Quit"
 msgstr "Hætta"
 
-#: src/totem.c:89
+#: src/xplayer.c:89
 msgid "Enqueue"
 msgstr "Setja í bið"
 
-#: src/totem.c:90
+#: src/xplayer.c:90
 msgid "Replace"
 msgstr "Skipta út"
 
-#: src/totem.c:297
+#: src/xplayer.c:297
 msgid "Playing"
 msgstr "Spila"
 
-#: src/totem.c:302
+#: src/xplayer.c:302
 msgid "Paused"
 msgstr "Hlé"
 
-#: src/totem.c:342
-msgid "Totem could not eject the optical media."
-msgstr "Totem tókst ekki að spýta myndmiðlinum út."
+#: src/xplayer.c:342
+msgid "Xplayer could not eject the optical media."
+msgstr "Xplayer tókst ekki að spýta myndmiðlinum út."
 
-#: src/totem.c:342
+#: src/xplayer.c:342
 #, fuzzy
 msgid "No reason given."
 msgstr "Engin ástæða gefin"
 
-#: src/totem.c:411
+#: src/xplayer.c:411
 msgid "DVD"
 msgstr "DVD"
 
-#: src/totem.c:412
+#: src/xplayer.c:412
 msgid "Video CD"
 msgstr "Mynddiskur"
 
-#: src/totem.c:413
+#: src/xplayer.c:413
 msgid "Audio CD"
 msgstr "Hljóðdiskur"
 
-#: src/totem.c:424
+#: src/xplayer.c:424
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr ""
-"Totem getur ekki spilað þessa tegund skráar (%s) af því að þú ert ekki "
+"Xplayer getur ekki spilað þessa tegund skráar (%s) af því að þú ert ekki "
 "meðrétt íforrit fyrir hana."
 
-#: src/totem.c:425
+#: src/xplayer.c:425
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr ""
-"Vinsamlega settu upp nauðsynleg íforrit og endurræstu Totem til að geta "
+"Vinsamlega settu upp nauðsynleg íforrit og endurræstu Xplayer til að geta "
 "spilaðþessa skrá."
 
-#: src/totem.c:433
+#: src/xplayer.c:433
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
 msgstr ""
-"Totem tókst ekki að spila þessa skrá (%s) þótt íforrit sé til fyrir hana."
+"Xplayer tókst ekki að spila þessa skrá (%s) þótt íforrit sé til fyrir hana."
 
-#: src/totem.c:434
+#: src/xplayer.c:434
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
@@ -1395,97 +1395,97 @@ msgstr ""
 "stilltur."
 
 #. Title
-#: src/totem.c:669
+#: src/xplayer.c:669
 #, c-format
-msgid "%s - Totem Movie Player"
-msgstr "%s - Totem myndspilari"
+msgid "%s - Xplayer Movie Player"
+msgstr "%s - Xplayer myndspilari"
 
-#: src/totem.c:683 src/totem.c:3442
+#: src/xplayer.c:683 src/xplayer.c:3442
 msgid "No file"
 msgstr "Engin skrá"
 
-#: src/totem.c:720 src/totem.c:1948
-msgid "Totem"
-msgstr "Totem"
+#: src/xplayer.c:720 src/xplayer.c:1948
+msgid "Xplayer"
+msgstr "Xplayer"
 
-#: src/totem.c:1228
+#: src/xplayer.c:1228
 msgid "An error occured"
 msgstr "Villa átti sér stað"
 
-#: src/totem.c:1637 src/totem.c:1645
+#: src/xplayer.c:1637 src/xplayer.c:1645
 msgid "Couldn't load the 'Open Location...' interface."
 msgstr "Tókst ekki að hlaða inn 'opna slóð...' viðmótið."
 
-#: src/totem.c:1637 src/totem.c:1645 src/totem.c:3677 src/totem.c:3702
-#: src/totem.c:3727
-msgid "Make sure that Totem is properly installed."
-msgstr "Athugaðu hvort Totem er rétt uppsett."
+#: src/xplayer.c:1637 src/xplayer.c:1645 src/xplayer.c:3677 src/xplayer.c:3702
+#: src/xplayer.c:3727
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Athugaðu hvort Xplayer er rétt uppsett."
 
-#: src/totem.c:1901
-msgid "Totem could not display the help contents."
-msgstr "Totem tókst ekki að sýna hjálpina."
+#: src/xplayer.c:1901
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer tókst ekki að sýna hjálpina."
 
-#: src/totem.c:1919 src/vanity.c:251
+#: src/xplayer.c:1919 src/vanity.c:251
 msgid "translator_credits"
 msgstr "þýðing"
 
-#: src/totem.c:1945
+#: src/xplayer.c:1945
 #, c-format
 msgid "Movie Player using %s"
 msgstr "Myndspilari sem notar %s"
 
-#: src/totem.c:1985 src/totem.c:1993 src/vanity.c:316 src/vanity.c:324
-msgid "Totem could not get a screenshot of that film."
-msgstr "Totem náði ekki skjámynd af kvikmyndinni."
+#: src/xplayer.c:1985 src/xplayer.c:1993 src/vanity.c:316 src/vanity.c:324
+msgid "Xplayer could not get a screenshot of that film."
+msgstr "Xplayer náði ekki skjámynd af kvikmyndinni."
 
-#: src/totem.c:1993
+#: src/xplayer.c:1993
 #, fuzzy
 msgid "Please file a bug, this isn't supposed to happen."
 msgstr "Vinsamlega skráðu villu. Þetta á ekki að gerast."
 
-#: src/totem.c:2020
-msgid "Totem couldn't show the movie properties window."
-msgstr "Totem tókst ekki að sýna eiginleika myndar."
+#: src/xplayer.c:2020
+msgid "Xplayer couldn't show the movie properties window."
+msgstr "Xplayer tókst ekki að sýna eiginleika myndar."
 
-#: src/totem.c:2020
-msgid "Make sure that Totem is correctly installed."
-msgstr "Athugaðu hvort Totem er rétt uppsett."
+#: src/xplayer.c:2020
+msgid "Make sure that Xplayer is correctly installed."
+msgstr "Athugaðu hvort Xplayer er rétt uppsett."
 
-#: src/totem.c:2105
+#: src/xplayer.c:2105
 #, c-format
-msgid "Totem could not seek in '%s'."
-msgstr "Totem gat ekki sótt í '%s'."
+msgid "Xplayer could not seek in '%s'."
+msgstr "Xplayer gat ekki sótt í '%s'."
 
-#: src/totem.c:2875 src/totem.c:2897
+#: src/xplayer.c:2875 src/xplayer.c:2897
 msgid "None"
 msgstr "Ekkert"
 
-#: src/totem.c:3347
-msgid "Totem could not startup."
-msgstr "Totem tókst ekki að ræsa sig."
+#: src/xplayer.c:3347
+msgid "Xplayer could not startup."
+msgstr "Xplayer tókst ekki að ræsa sig."
 
-#: src/totem.c:3547
+#: src/xplayer.c:3547
 #, c-format
 msgid "Option '%s' is unknown and was ignored\n"
 msgstr ""
 
-#: src/totem.c:3642
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Athugaðu kerfisuppsetningu. Totem kveður núna."
+#: src/xplayer.c:3642
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Athugaðu kerfisuppsetningu. Xplayer kveður núna."
 
-#: src/totem.c:3665
-msgid "Totem couln't initialise the configuration engine."
-msgstr "Totem tókst ekki að frumstilla stillingavélina."
+#: src/xplayer.c:3665
+msgid "Xplayer couln't initialise the configuration engine."
+msgstr "Xplayer tókst ekki að frumstilla stillingavélina."
 
-#: src/totem.c:3665
+#: src/xplayer.c:3665
 msgid "Make sure that GNOME is properly installed."
 msgstr "Athugaðu hvort GNOME er rétt uppsett."
 
-#: src/totem.c:3677 src/totem.c:3702
-msgid "Couldn't load the main interface (totem.glade)."
-msgstr "Tókst ekki að hlaða inn aðalviðmótið (totem.glade)."
+#: src/xplayer.c:3677 src/xplayer.c:3702
+msgid "Couldn't load the main interface (xplayer.glade)."
+msgstr "Tókst ekki að hlaða inn aðalviðmótið (xplayer.glade)."
 
-#: src/totem.c:3727
+#: src/xplayer.c:3727
 msgid "Couldn't load the interface for the playlist."
 msgstr "Tókst ekki að hlaða inn viðmótið fyrir spilunarlistann."
 

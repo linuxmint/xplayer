@@ -1,4 +1,4 @@
-/* Totem Plugin Viewer constants
+/* Xplayer Plugin Viewer constants
  *
  * Copyright © 2006 Christian Persch
  * Copyright © 2007 Bastien Nocera <hadess@hadess.net>
@@ -19,28 +19,28 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_PLUGIN_VIEWER_CONSTANTS__
-#define __TOTEM_PLUGIN_VIEWER_CONSTANTS__
+#ifndef __XPLAYER_PLUGIN_VIEWER_CONSTANTS__
+#define __XPLAYER_PLUGIN_VIEWER_CONSTANTS__
 
-#define TOTEM_COMMAND_PLAY		"Play"
-#define TOTEM_COMMAND_PAUSE		"Pause"
-#define TOTEM_COMMAND_STOP		"Stop"
+#define XPLAYER_COMMAND_PLAY		"Play"
+#define XPLAYER_COMMAND_PAUSE		"Pause"
+#define XPLAYER_COMMAND_STOP		"Stop"
 
 typedef enum {
-	TOTEM_STATE_PLAYING,
-	TOTEM_STATE_PAUSED,
-	TOTEM_STATE_STOPPED,
-	TOTEM_STATE_INVALID
-} TotemStates;
+	XPLAYER_STATE_PLAYING,
+	XPLAYER_STATE_PAUSED,
+	XPLAYER_STATE_STOPPED,
+	XPLAYER_STATE_INVALID
+} XplayerStates;
 
-static const char *totem_states[] = {
+static const char *xplayer_states[] = {
 	"PLAYING",
 	"PAUSED",
 	"STOPPED",
 	"INVALID"
 };
 
-#define TOTEM_PROPERTY_VOLUME		"volume"
-#define TOTEM_PROPERTY_ISFULLSCREEN	"is-fullscreen"
+#define XPLAYER_PROPERTY_VOLUME		"volume"
+#define XPLAYER_PROPERTY_ISFULLSCREEN	"is-fullscreen"
 
-#endif /* !__TOTEM_PLUGIN_VIEWER_CONSTANTS__ */
+#endif /* !__XPLAYER_PLUGIN_VIEWER_CONSTANTS__ */

@@ -81,7 +81,7 @@ build_triplet = @build@
 host_triplet = @host@
 DIST_COMMON = $(top_srcdir)/src/plugins/Makefile.plugins \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	totem-sample-vala-plugin.c $(top_srcdir)/build-aux/depcomp \
+	xplayer-sample-vala-plugin.c $(top_srcdir)/build-aux/depcomp \
 	$(srcdir)/libsample_vala_la_vala.stamp
 subdir = src/plugins/sample-vala
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -127,7 +127,7 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 libsample_vala_la_DEPENDENCIES = $(plugin_libadd)
 am_libsample_vala_la_OBJECTS =  \
-	libsample_vala_la-totem-sample-vala-plugin.lo
+	libsample_vala_la-xplayer-sample-vala-plugin.lo
 libsample_vala_la_OBJECTS = $(am_libsample_vala_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -213,7 +213,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -395,11 +395,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -482,7 +482,7 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/sample-vala
 plugin_LTLIBRARIES = libsample-vala.la
@@ -492,9 +492,9 @@ plugin_in_files = sample-vala.plugin.in
 # cannot parse the gir
 AM_VALAFLAGS = \
 	--girdir=$(top_srcdir)/src	\
-	--pkg Totem-1.0 --pkg libpeas-1.0 --pkg gtk+-3.0
+	--pkg Xplayer-1.0 --pkg libpeas-1.0 --pkg gtk+-3.0
 
-libsample_vala_la_SOURCES = totem-sample-vala-plugin.vala
+libsample_vala_la_SOURCES = xplayer-sample-vala-plugin.vala
 libsample_vala_la_LDFLAGS = $(plugin_ldflags)
 libsample_vala_la_CFLAGS = $(plugin_cflags)
 libsample_vala_la_LIBADD = $(plugin_libadd)
@@ -559,7 +559,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsample_vala_la-totem-sample-vala-plugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsample_vala_la-xplayer-sample-vala-plugin.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -582,20 +582,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libsample_vala_la-totem-sample-vala-plugin.lo: totem-sample-vala-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsample_vala_la_CFLAGS) $(CFLAGS) -MT libsample_vala_la-totem-sample-vala-plugin.lo -MD -MP -MF $(DEPDIR)/libsample_vala_la-totem-sample-vala-plugin.Tpo -c -o libsample_vala_la-totem-sample-vala-plugin.lo `test -f 'totem-sample-vala-plugin.c' || echo '$(srcdir)/'`totem-sample-vala-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsample_vala_la-totem-sample-vala-plugin.Tpo $(DEPDIR)/libsample_vala_la-totem-sample-vala-plugin.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-sample-vala-plugin.c' object='libsample_vala_la-totem-sample-vala-plugin.lo' libtool=yes @AMDEPBACKSLASH@
+libsample_vala_la-xplayer-sample-vala-plugin.lo: xplayer-sample-vala-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsample_vala_la_CFLAGS) $(CFLAGS) -MT libsample_vala_la-xplayer-sample-vala-plugin.lo -MD -MP -MF $(DEPDIR)/libsample_vala_la-xplayer-sample-vala-plugin.Tpo -c -o libsample_vala_la-xplayer-sample-vala-plugin.lo `test -f 'xplayer-sample-vala-plugin.c' || echo '$(srcdir)/'`xplayer-sample-vala-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsample_vala_la-xplayer-sample-vala-plugin.Tpo $(DEPDIR)/libsample_vala_la-xplayer-sample-vala-plugin.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-sample-vala-plugin.c' object='libsample_vala_la-xplayer-sample-vala-plugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsample_vala_la_CFLAGS) $(CFLAGS) -c -o libsample_vala_la-totem-sample-vala-plugin.lo `test -f 'totem-sample-vala-plugin.c' || echo '$(srcdir)/'`totem-sample-vala-plugin.c
-$(srcdir)/totem-sample-vala-plugin.c: $(srcdir)/libsample_vala_la_vala.stamp
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsample_vala_la_CFLAGS) $(CFLAGS) -c -o libsample_vala_la-xplayer-sample-vala-plugin.lo `test -f 'xplayer-sample-vala-plugin.c' || echo '$(srcdir)/'`xplayer-sample-vala-plugin.c
+$(srcdir)/xplayer-sample-vala-plugin.c: $(srcdir)/libsample_vala_la_vala.stamp
 	@if test -f $@; then :; else rm -f $(srcdir)/libsample_vala_la_vala.stamp; fi
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/libsample_vala_la_vala.stamp; \
 	fi
-$(srcdir)/libsample_vala_la_vala.stamp: totem-sample-vala-plugin.vala
+$(srcdir)/libsample_vala_la_vala.stamp: xplayer-sample-vala-plugin.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C totem-sample-vala-plugin.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C xplayer-sample-vala-plugin.vala
 	$(AM_V_at)mv -f $@-t $@
 
 mostlyclean-libtool:
@@ -726,8 +726,8 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-rm -f $(srcdir)/libsample_vala_la_vala.stamp
-	-rm -f $(srcdir)/totem-sample-vala-plugin.c
-	-rm -f totem-sample-vala-plugin.c
+	-rm -f $(srcdir)/xplayer-sample-vala-plugin.c
+	-rm -f xplayer-sample-vala-plugin.c
 clean: clean-am
 
 clean-am: clean-generic clean-libtool clean-pluginLTLIBRARIES \

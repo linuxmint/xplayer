@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add excemption clause.
  * See license_change file for details.
@@ -27,43 +27,43 @@
  * Author: Bastien Nocera <hadess@hadess.net>, Philip Withnall <philip@tecnocode.co.uk>
  */
 
-#ifndef TOTEM_SKIPTO_H
-#define TOTEM_SKIPTO_H
+#ifndef XPLAYER_SKIPTO_H
+#define XPLAYER_SKIPTO_H
 
 #include <gtk/gtk.h>
 
-#include "totem.h"
+#include "xplayer.h"
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_SKIPTO		(totem_skipto_get_type ())
-#define TOTEM_SKIPTO(obj)		(G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_SKIPTO, TotemSkipto))
-#define TOTEM_SKIPTO_CLASS(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_SKIPTO, TotemSkiptoClass))
-#define TOTEM_IS_SKIPTO(obj)		(G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_SKIPTO))
-#define TOTEM_IS_SKIPTO_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_SKIPTO))
+#define XPLAYER_TYPE_SKIPTO		(xplayer_skipto_get_type ())
+#define XPLAYER_SKIPTO(obj)		(G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_SKIPTO, XplayerSkipto))
+#define XPLAYER_SKIPTO_CLASS(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_SKIPTO, XplayerSkiptoClass))
+#define XPLAYER_IS_SKIPTO(obj)		(G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_SKIPTO))
+#define XPLAYER_IS_SKIPTO_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_SKIPTO))
 
-GType totem_skipto_register_type	(GTypeModule *module);
+GType xplayer_skipto_register_type	(GTypeModule *module);
 
-typedef struct TotemSkipto		TotemSkipto;
-typedef struct TotemSkiptoClass		TotemSkiptoClass;
-typedef struct TotemSkiptoPrivate	TotemSkiptoPrivate;
+typedef struct XplayerSkipto		XplayerSkipto;
+typedef struct XplayerSkiptoClass		XplayerSkiptoClass;
+typedef struct XplayerSkiptoPrivate	XplayerSkiptoPrivate;
 
-struct TotemSkipto {
+struct XplayerSkipto {
 	GtkDialog parent;
-	TotemSkiptoPrivate *priv;
+	XplayerSkiptoPrivate *priv;
 };
 
-struct TotemSkiptoClass {
+struct XplayerSkiptoClass {
 	GtkDialogClass parent_class;
 };
 
-GType totem_skipto_get_type	(void);
-GtkWidget *totem_skipto_new	(TotemObject *totem);
-gint64 totem_skipto_get_range	(TotemSkipto *skipto);
-void totem_skipto_update_range	(TotemSkipto *skipto, gint64 _time);
-void totem_skipto_set_seekable	(TotemSkipto *skipto, gboolean seekable);
-void totem_skipto_set_current	(TotemSkipto *skipto, gint64 _time);
+GType xplayer_skipto_get_type	(void);
+GtkWidget *xplayer_skipto_new	(XplayerObject *xplayer);
+gint64 xplayer_skipto_get_range	(XplayerSkipto *skipto);
+void xplayer_skipto_update_range	(XplayerSkipto *skipto, gint64 _time);
+void xplayer_skipto_set_seekable	(XplayerSkipto *skipto, gboolean seekable);
+void xplayer_skipto_set_current	(XplayerSkipto *skipto, gint64 _time);
 
 G_END_DECLS
 
-#endif /* TOTEM_SKIPTO_H */
+#endif /* XPLAYER_SKIPTO_H */

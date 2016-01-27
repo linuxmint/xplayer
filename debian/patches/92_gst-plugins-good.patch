@@ -1,10 +1,10 @@
 Description: Build without gstreamer1.0-plugins-bad
 Forwarded: no
 
-Index: totem-3.8.0/configure.ac
+Index: xplayer-3.8.0/configure.ac
 ===================================================================
---- totem-3.8.0.orig/configure.ac	2013-05-25 23:04:04.000000000 -0400
-+++ totem-3.8.0/configure.ac	2013-05-25 23:05:34.814379307 -0400
+--- xplayer-3.8.0.orig/configure.ac	2013-05-25 23:04:04.000000000 -0400
++++ xplayer-3.8.0/configure.ac	2013-05-25 23:05:34.814379307 -0400
 @@ -187,10 +187,6 @@
  	shift;
  done

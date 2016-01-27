@@ -1,16 +1,16 @@
 =head1 NAME
 
-totem-video-thumbnailer - video thumbnailer for the GNOME desktop
+xplayer-video-thumbnailer - video thumbnailer for the GNOME desktop
 
 =head1 SYNOPSYS
 
-B<totem-video-thumbnailer> [-j|--jpeg] [-l|--no-limit] [-g num|--gallery num] [-s size] input output [backend options]
+B<xplayer-video-thumbnailer> [-j|--jpeg] [-l|--no-limit] [-g num|--gallery num] [-s size] input output [backend options]
 
 =head1 DESCRIPTION
 
-This manual page documents briefly the B<totem-video-thumbnailer> command. This manual page was written for the Debian Project because  the original program does not have a manual page.
+This manual page documents briefly the B<xplayer-video-thumbnailer> command. This manual page was written for the Debian Project because  the original program does not have a manual page.
 
-B<totem-video-thumbnailer> is used internally by GNOME applications such as B<nautilus> to generate PNG thumbnails of video files. While it is possible to invoke it manually, it is usually done automatically by B<nautilus>.
+B<xplayer-video-thumbnailer> is used internally by GNOME applications such as B<nautilus> to generate PNG thumbnails of video files. While it is possible to invoke it manually, it is usually done automatically by B<nautilus>.
 
 =head1 ARGUMENTS
 
@@ -18,7 +18,7 @@ B<totem-video-thumbnailer> is used internally by GNOME applications such as B<na
 
 =item B<input>
 
-The input filename. This can be in any format that B<totem> can play.
+The input filename. This can be in any format that B<xplayer> can play.
 
 =item B<output>
 
@@ -54,7 +54,7 @@ The size of the thumbnail. Example: "64x64". The default is "128x96".
 
 =head1 AUTHOR
 
-B<totem-video-thumbnailer> was written by Bastien Nocera <hadess@hadess.net>.
+B<xplayer-video-thumbnailer> was written by Bastien Nocera <hadess@hadess.net>.
 
 This manual page was written by Zack Cerza <zcerza@coe.neu.edu> for the Debian Project (but may be used by others).
 
@@ -62,4 +62,4 @@ This manual page was written by Zack Cerza <zcerza@coe.neu.edu> for the Debian P
 
 =over 8
 
-=item B<totem>, B<nautilus>
+=item B<xplayer>, B<nautilus>

@@ -98,15 +98,15 @@ CONFIG_CLEAN_VPATH_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 libbaconvideowidget_la_DEPENDENCIES =  \
-	$(top_builddir)/src/gst/libtotemgsthelpers.la \
-	$(top_builddir)/src/gst/libtotemgstpixbufhelpers.la \
+	$(top_builddir)/src/gst/libxplayergsthelpers.la \
+	$(top_builddir)/src/gst/libxplayergstpixbufhelpers.la \
 	$(am__DEPENDENCIES_1)
 am__objects_1 = libbaconvideowidget_la-bacon-video-widget-enums.lo
 am_libbaconvideowidget_la_OBJECTS = $(am__objects_1) \
 	libbaconvideowidget_la-video-utils.lo \
 	libbaconvideowidget_la-bacon-video-widget.lo \
 	libbaconvideowidget_la-bacon-video-widget-gst-missing-plugins.lo \
-	libbaconvideowidget_la-totem-aspect-frame.lo \
+	libbaconvideowidget_la-xplayer-aspect-frame.lo \
 	libbaconvideowidget_la-gsd-osd-window.lo \
 	libbaconvideowidget_la-bacon-video-osd-actor.lo
 libbaconvideowidget_la_OBJECTS = $(am_libbaconvideowidget_la_OBJECTS)
@@ -367,11 +367,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -443,7 +443,7 @@ noinst_LTLIBRARIES = libbaconvideowidget.la
 bvw_test_SOURCES = bvw-test.c
 bvw_test_CPPFLAGS = \
 	-DDATADIR=\"$(pkgdatadir)\"	\
-	-DLOGO_PATH=DATADIR\"\"G_DIR_SEPARATOR_S\"totem\"G_DIR_SEPARATOR_S\"totem_logo.png\"	\
+	-DLOGO_PATH=DATADIR\"\"G_DIR_SEPARATOR_S\"xplayer\"G_DIR_SEPARATOR_S\"xplayer_logo.png\"	\
 	-DG_LOG_DOMAIN="\"bvw-test\"" \
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
@@ -467,8 +467,8 @@ libbaconvideowidget_la_SOURCES = \
 	bacon-video-widget.c				\
 	bacon-video-widget-gst-missing-plugins.c	\
 	bacon-video-widget-gst-missing-plugins.h	\
-	totem-aspect-frame.h				\
-	totem-aspect-frame.c				\
+	xplayer-aspect-frame.h				\
+	xplayer-aspect-frame.c				\
 	gsd-osd-window.c				\
 	gsd-osd-window.h				\
 	gsd-osd-window-private.h			\
@@ -487,8 +487,8 @@ libbaconvideowidget_la_CFLAGS = \
 	$(AM_CFLAGS)
 
 libbaconvideowidget_la_LIBADD = \
-	$(top_builddir)/src/gst/libtotemgsthelpers.la		\
-	$(top_builddir)/src/gst/libtotemgstpixbufhelpers.la	\
+	$(top_builddir)/src/gst/libxplayergsthelpers.la		\
+	$(top_builddir)/src/gst/libxplayergstpixbufhelpers.la	\
 	$(BACKEND_LIBS)						\
 	-lm
 
@@ -573,7 +573,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-bacon-video-widget-gst-missing-plugins.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-bacon-video-widget.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-gsd-osd-window.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-totem-aspect-frame.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-video-utils.Plo@am__quote@
 
 .c.o:
@@ -625,12 +625,12 @@ libbaconvideowidget_la-bacon-video-widget-gst-missing-plugins.lo: bacon-video-wi
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -c -o libbaconvideowidget_la-bacon-video-widget-gst-missing-plugins.lo `test -f 'bacon-video-widget-gst-missing-plugins.c' || echo '$(srcdir)/'`bacon-video-widget-gst-missing-plugins.c
 
-libbaconvideowidget_la-totem-aspect-frame.lo: totem-aspect-frame.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -MT libbaconvideowidget_la-totem-aspect-frame.lo -MD -MP -MF $(DEPDIR)/libbaconvideowidget_la-totem-aspect-frame.Tpo -c -o libbaconvideowidget_la-totem-aspect-frame.lo `test -f 'totem-aspect-frame.c' || echo '$(srcdir)/'`totem-aspect-frame.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libbaconvideowidget_la-totem-aspect-frame.Tpo $(DEPDIR)/libbaconvideowidget_la-totem-aspect-frame.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-aspect-frame.c' object='libbaconvideowidget_la-totem-aspect-frame.lo' libtool=yes @AMDEPBACKSLASH@
+libbaconvideowidget_la-xplayer-aspect-frame.lo: xplayer-aspect-frame.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -MT libbaconvideowidget_la-xplayer-aspect-frame.lo -MD -MP -MF $(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Tpo -c -o libbaconvideowidget_la-xplayer-aspect-frame.lo `test -f 'xplayer-aspect-frame.c' || echo '$(srcdir)/'`xplayer-aspect-frame.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Tpo $(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-aspect-frame.c' object='libbaconvideowidget_la-xplayer-aspect-frame.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -c -o libbaconvideowidget_la-totem-aspect-frame.lo `test -f 'totem-aspect-frame.c' || echo '$(srcdir)/'`totem-aspect-frame.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -c -o libbaconvideowidget_la-xplayer-aspect-frame.lo `test -f 'xplayer-aspect-frame.c' || echo '$(srcdir)/'`xplayer-aspect-frame.c
 
 libbaconvideowidget_la-gsd-osd-window.lo: gsd-osd-window.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbaconvideowidget_la_CPPFLAGS) $(CPPFLAGS) $(libbaconvideowidget_la_CFLAGS) $(CFLAGS) -MT libbaconvideowidget_la-gsd-osd-window.lo -MD -MP -MF $(DEPDIR)/libbaconvideowidget_la-gsd-osd-window.Tpo -c -o libbaconvideowidget_la-gsd-osd-window.lo `test -f 'gsd-osd-window.c' || echo '$(srcdir)/'`gsd-osd-window.c

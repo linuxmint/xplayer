@@ -20,10 +20,10 @@
 #include <config.h>
 #include <string.h>
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-totemNPClass_base::totemNPClass_base (const char *aPropertNames[],
+xplayerNPClass_base::xplayerNPClass_base (const char *aPropertNames[],
                                       uint32_t aPropertyCount,
                                       const char *aMethodNames[],
                                       uint32_t aMethodCount,
@@ -55,14 +55,14 @@ totemNPClass_base::totemNPClass_base (const char *aPropertNames[],
 #endif
 }
 
-totemNPClass_base::~totemNPClass_base ()
+xplayerNPClass_base::~xplayerNPClass_base ()
 {
   NPN_MemFree (mPropertyNameIdentifiers);
   NPN_MemFree (mMethodNameIdentifiers);
 }
 
 NPIdentifier*
-totemNPClass_base::GetIdentifiersForNames (const char *aNames[],
+xplayerNPClass_base::GetIdentifiersForNames (const char *aNames[],
                                            uint32_t aCount)
 {
   if (aCount == 0)
@@ -78,7 +78,7 @@ totemNPClass_base::GetIdentifiersForNames (const char *aNames[],
 }
 
 int
-totemNPClass_base::GetPropertyIndex (NPIdentifier aName)
+xplayerNPClass_base::GetPropertyIndex (NPIdentifier aName)
 {
   if (!mPropertyNameIdentifiers)
     return -1;
@@ -92,7 +92,7 @@ totemNPClass_base::GetPropertyIndex (NPIdentifier aName)
 }
 
 int
-totemNPClass_base::GetMethodIndex (NPIdentifier aName)
+xplayerNPClass_base::GetMethodIndex (NPIdentifier aName)
 {
   if (!mMethodNameIdentifiers)
     return -1;
@@ -106,7 +106,7 @@ totemNPClass_base::GetMethodIndex (NPIdentifier aName)
 }
 
 bool
-totemNPClass_base::EnumerateProperties (NPIdentifier **_result, uint32_t *_count)
+xplayerNPClass_base::EnumerateProperties (NPIdentifier **_result, uint32_t *_count)
 {
   if (!mPropertyNameIdentifiers)
     return false;
@@ -125,85 +125,85 @@ totemNPClass_base::EnumerateProperties (NPIdentifier **_result, uint32_t *_count
 }
 
 NPObject*
-totemNPClass_base::Allocate (NPP aNPP, NPClass *aClass)
+xplayerNPClass_base::Allocate (NPP aNPP, NPClass *aClass)
 {
-  totemNPClass_base* _class = static_cast<totemNPClass_base*>(aClass);
+  xplayerNPClass_base* _class = static_cast<xplayerNPClass_base*>(aClass);
   return _class->InternalCreate (aNPP);
 }
 
 void
-totemNPClass_base::Deallocate (NPObject *aObject)
+xplayerNPClass_base::Deallocate (NPObject *aObject)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   delete object;
 }
 
 void
-totemNPClass_base::Invalidate (NPObject *aObject)
+xplayerNPClass_base::Invalidate (NPObject *aObject)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   object->Invalidate ();
 }
 
 bool
-totemNPClass_base::HasMethod (NPObject *aObject, NPIdentifier aName)
+xplayerNPClass_base::HasMethod (NPObject *aObject, NPIdentifier aName)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->HasMethod (aName);
 }
 
 bool
-totemNPClass_base::Invoke (NPObject *aObject, NPIdentifier aName, const NPVariant *argv, uint32_t argc, NPVariant *_result)
+xplayerNPClass_base::Invoke (NPObject *aObject, NPIdentifier aName, const NPVariant *argv, uint32_t argc, NPVariant *_result)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->Invoke (aName, argv, argc, _result);
 }
 
 bool
-totemNPClass_base::InvokeDefault (NPObject *aObject, const NPVariant *argv, uint32_t argc, NPVariant *_result)
+xplayerNPClass_base::InvokeDefault (NPObject *aObject, const NPVariant *argv, uint32_t argc, NPVariant *_result)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->InvokeDefault (argv, argc, _result);
 }
 
 bool
-totemNPClass_base::HasProperty (NPObject *aObject, NPIdentifier aName)
+xplayerNPClass_base::HasProperty (NPObject *aObject, NPIdentifier aName)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->HasProperty (aName);
 }
 
 bool
-totemNPClass_base::GetProperty (NPObject *aObject, NPIdentifier aName, NPVariant *_result)
+xplayerNPClass_base::GetProperty (NPObject *aObject, NPIdentifier aName, NPVariant *_result)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->GetProperty (aName, _result);
 }
 
 bool
-totemNPClass_base::SetProperty (NPObject *aObject, NPIdentifier aName, const NPVariant *aValue)
+xplayerNPClass_base::SetProperty (NPObject *aObject, NPIdentifier aName, const NPVariant *aValue)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->SetProperty (aName, aValue);
 }
 
 bool
-totemNPClass_base::RemoveProperty (NPObject *aObject, NPIdentifier aName)
+xplayerNPClass_base::RemoveProperty (NPObject *aObject, NPIdentifier aName)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->RemoveProperty (aName);
 }
 
 bool
-totemNPClass_base::Enumerate (NPObject *aObject, NPIdentifier **_result, uint32_t *_count)
+xplayerNPClass_base::Enumerate (NPObject *aObject, NPIdentifier **_result, uint32_t *_count)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->Enumerate (_result, _count);
 }
 
 bool
-totemNPClass_base::Construct (NPObject *aObject, const NPVariant *argv, uint32_t argc, NPVariant *_result)
+xplayerNPClass_base::Construct (NPObject *aObject, const NPVariant *argv, uint32_t argc, NPVariant *_result)
 {
-  totemNPObject* object = static_cast<totemNPObject*> (aObject);
+  xplayerNPObject* object = static_cast<xplayerNPObject*> (aObject);
   return object->Construct (argv, argc, _result);
 }

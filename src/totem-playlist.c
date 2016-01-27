@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* totem-playlist.c
+/* xplayer-playlist.c
 
    Copyright (C) 2002, 2003, 2004, 2005 Bastien Nocera
 
@@ -22,7 +22,7 @@
  */
 
 #include "config.h"
-#include "totem-playlist.h"
+#include "xplayer-playlist.h"
 
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
@@ -31,50 +31,50 @@
 #include <string.h>
 
 #include "eggfileformatchooser.h"
-#include "totem-dnd-menu.h"
-#include "totem-uri.h"
-#include "totem-interface.h"
-#include "totem-rtl-helpers.h"
+#include "xplayer-dnd-menu.h"
+#include "xplayer-uri.h"
+#include "xplayer-interface.h"
+#include "xplayer-rtl-helpers.h"
 #include "video-utils.h"
 
 #define PL_LEN (gtk_tree_model_iter_n_children (playlist->priv->model, NULL))
 
-static void ensure_shuffled (TotemPlaylist *playlist);
-static gboolean totem_playlist_add_one_mrl (TotemPlaylist *playlist,
+static void ensure_shuffled (XplayerPlaylist *playlist);
+static gboolean xplayer_playlist_add_one_mrl (XplayerPlaylist *playlist,
 					    const char    *mrl,
 					    const char    *display_name,
 					    const char    *content_type);
 
-typedef gboolean (*ClearComparisonFunc) (TotemPlaylist *playlist, GtkTreeIter *iter, gconstpointer data);
+typedef gboolean (*ClearComparisonFunc) (XplayerPlaylist *playlist, GtkTreeIter *iter, gconstpointer data);
 
-static void totem_playlist_clear_with_compare (TotemPlaylist *playlist,
+static void xplayer_playlist_clear_with_compare (XplayerPlaylist *playlist,
 					       ClearComparisonFunc func,
 					       gconstpointer data);
 
 /* Callback function for GtkBuilder */
-G_MODULE_EXPORT void totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist);
-G_MODULE_EXPORT void totem_playlist_add_files (GtkWidget *widget, TotemPlaylist *playlist);
-G_MODULE_EXPORT void playlist_remove_button_clicked (GtkWidget *button, TotemPlaylist *playlist);
-G_MODULE_EXPORT void totem_playlist_up_files (GtkWidget *widget, TotemPlaylist *playlist);
-G_MODULE_EXPORT void totem_playlist_down_files (GtkWidget *widget, TotemPlaylist *playlist);
-G_MODULE_EXPORT void playlist_copy_location_action_callback (GtkAction *action, TotemPlaylist *playlist);
-G_MODULE_EXPORT void playlist_select_subtitle_action_callback (GtkAction *action, TotemPlaylist *playlist);
-G_MODULE_EXPORT void playlist_remove_action_callback (GtkAction *action, TotemPlaylist *playlist);
+G_MODULE_EXPORT void xplayer_playlist_save_files (GtkWidget *widget, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void xplayer_playlist_add_files (GtkWidget *widget, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void playlist_remove_button_clicked (GtkWidget *button, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void xplayer_playlist_up_files (GtkWidget *widget, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void xplayer_playlist_down_files (GtkWidget *widget, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void playlist_copy_location_action_callback (GtkAction *action, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void playlist_select_subtitle_action_callback (GtkAction *action, XplayerPlaylist *playlist);
+G_MODULE_EXPORT void playlist_remove_action_callback (GtkAction *action, XplayerPlaylist *playlist);
 
 
 typedef struct {
-	TotemPlaylist *playlist;
-	TotemPlaylistForeachFunc callback;
+	XplayerPlaylist *playlist;
+	XplayerPlaylistForeachFunc callback;
 	gpointer user_data;
 } PlaylistForeachContext;
 
-struct TotemPlaylistPrivate
+struct XplayerPlaylistPrivate
 {
 	GtkWidget *treeview;
 	GtkTreeModel *model;
 	GtkTreePath *current;
 	GtkTreeSelection *selection;
-	TotemPlParser *parser;
+	XplayerPlParser *parser;
 
 	GtkActionGroup *action_group;
 	GtkUIManager *ui_manager;
@@ -154,18 +154,18 @@ enum {
 typedef struct {
 	const char *name;
 	const char *suffix;
-	TotemPlParserType type;
+	XplayerPlParserType type;
 } PlaylistSaveType;
 
 static const PlaylistSaveType save_types [] = {
 	{ NULL, NULL, -1 }, /* By extension entry */
-	{ N_("MP3 ShoutCast playlist"), "pls", TOTEM_PL_PARSER_PLS },
-	{ N_("MP3 audio (streamed)"), "m3u", TOTEM_PL_PARSER_M3U },
-	{ N_("MP3 audio (streamed, DOS format)"), "m3u", TOTEM_PL_PARSER_M3U_DOS },
-	{ N_("XML Shareable Playlist"), "xspf", TOTEM_PL_PARSER_XSPF }
+	{ N_("MP3 ShoutCast playlist"), "pls", XPLAYER_PL_PARSER_PLS },
+	{ N_("MP3 audio (streamed)"), "m3u", XPLAYER_PL_PARSER_M3U },
+	{ N_("MP3 audio (streamed, DOS format)"), "m3u", XPLAYER_PL_PARSER_M3U_DOS },
+	{ N_("XML Shareable Playlist"), "xspf", XPLAYER_PL_PARSER_XSPF }
 };
 
-static int totem_playlist_table_signals[LAST_SIGNAL];
+static int xplayer_playlist_table_signals[LAST_SIGNAL];
 
 /* casts are to shut gcc up */
 static const GtkTargetEntry target_table[] = {
@@ -173,15 +173,15 @@ static const GtkTargetEntry target_table[] = {
 	{ (gchar*) "_NETSCAPE_URL", 0, 1 }
 };
 
-static void init_treeview (GtkWidget *treeview, TotemPlaylist *playlist);
+static void init_treeview (GtkWidget *treeview, XplayerPlaylist *playlist);
 
-#define totem_playlist_unset_playing(x) totem_playlist_set_playing(x, TOTEM_PLAYLIST_STATUS_NONE)
+#define xplayer_playlist_unset_playing(x) xplayer_playlist_set_playing(x, XPLAYER_PLAYLIST_STATUS_NONE)
 
-G_DEFINE_TYPE (TotemPlaylist, totem_playlist, GTK_TYPE_BOX)
+G_DEFINE_TYPE (XplayerPlaylist, xplayer_playlist, GTK_TYPE_BOX)
 
 /* Helper functions */
 static gboolean
-totem_playlist_gtk_tree_path_equals (GtkTreePath *path1, GtkTreePath *path2)
+xplayer_playlist_gtk_tree_path_equals (GtkTreePath *path1, GtkTreePath *path2)
 {
 	char *str1, *str2;
 	gboolean retval;
@@ -206,32 +206,32 @@ totem_playlist_gtk_tree_path_equals (GtkTreePath *path1, GtkTreePath *path2)
 }
 
 static GtkWindow *
-totem_playlist_get_toplevel (TotemPlaylist *playlist)
+xplayer_playlist_get_toplevel (XplayerPlaylist *playlist)
 {
 	return GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (playlist)));
 }
 
 static void
-set_waiting_cursor (TotemPlaylist *playlist)
+set_waiting_cursor (XplayerPlaylist *playlist)
 {
-	totem_gdk_window_set_waiting_cursor (gtk_widget_get_window (GTK_WIDGET (totem_playlist_get_toplevel (playlist))));
+	xplayer_gdk_window_set_waiting_cursor (gtk_widget_get_window (GTK_WIDGET (xplayer_playlist_get_toplevel (playlist))));
 	playlist->priv->cursor_ref++;
 }
 
 static void
-unset_waiting_cursor (TotemPlaylist *playlist)
+unset_waiting_cursor (XplayerPlaylist *playlist)
 {
 	if (--playlist->priv->cursor_ref < 1)
-		gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (totem_playlist_get_toplevel (playlist))), NULL);
+		gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (xplayer_playlist_get_toplevel (playlist))), NULL);
 }
 
 static void
-totem_playlist_error (char *title, char *reason, TotemPlaylist *playlist)
+xplayer_playlist_error (char *title, char *reason, XplayerPlaylist *playlist)
 {
 	GtkWidget *error_dialog;
 
 	error_dialog =
-		gtk_message_dialog_new (totem_playlist_get_toplevel (playlist),
+		gtk_message_dialog_new (xplayer_playlist_get_toplevel (playlist),
 				GTK_DIALOG_MODAL,
 				GTK_MESSAGE_ERROR,
 				GTK_BUTTONS_OK,
@@ -252,17 +252,17 @@ totem_playlist_error (char *title, char *reason, TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_select_subtitle_dialog(TotemPlaylist *playlist, TotemPlaylistSelectDialog mode)
+xplayer_playlist_select_subtitle_dialog(XplayerPlaylist *playlist, XplayerPlaylistSelectDialog mode)
 {
 	char *subtitle, *current, *uri;
 	GFile *file, *dir;
-	TotemPlaylistStatus playing;
+	XplayerPlaylistStatus playing;
 	GtkTreeIter iter;
 
-	if (mode == TOTEM_PLAYLIST_DIALOG_PLAYING) {
+	if (mode == XPLAYER_PLAYLIST_DIALOG_PLAYING) {
 		/* Set subtitle file for the currently playing movie */
 		gtk_tree_model_get_iter (playlist->priv->model, &iter, playlist->priv->current);
-	} else if (mode == TOTEM_PLAYLIST_DIALOG_SELECTED) {
+	} else if (mode == XPLAYER_PLAYLIST_DIALOG_SELECTED) {
 		/* Set subtitle file in for the first selected playlist item */
 		GList *l;
 
@@ -291,7 +291,7 @@ totem_playlist_select_subtitle_dialog(TotemPlaylist *playlist, TotemPlaylistSele
 		g_object_unref (dir);
 	}
 
-	subtitle = totem_add_subtitle (totem_playlist_get_toplevel (playlist), uri);
+	subtitle = xplayer_add_subtitle (xplayer_playlist_get_toplevel (playlist), uri);
 	g_free (uri);
 
 	if (subtitle == NULL)
@@ -305,9 +305,9 @@ totem_playlist_select_subtitle_dialog(TotemPlaylist *playlist, TotemPlaylistSele
 			    SUBTITLE_URI_COL, subtitle,
 			    -1);
 
-	if (playing != TOTEM_PLAYLIST_STATUS_NONE) {
+	if (playing != XPLAYER_PLAYLIST_STATUS_NONE) {
 		g_signal_emit (G_OBJECT (playlist),
-			       totem_playlist_table_signals[SUBTITLE_CHANGED], 0,
+			       xplayer_playlist_table_signals[SUBTITLE_CHANGED], 0,
 			       NULL);
 	}
 
@@ -315,7 +315,7 @@ totem_playlist_select_subtitle_dialog(TotemPlaylist *playlist, TotemPlaylistSele
 }
 
 void
-totem_playlist_set_current_subtitle (TotemPlaylist *playlist, const char *subtitle_uri)
+xplayer_playlist_set_current_subtitle (XplayerPlaylist *playlist, const char *subtitle_uri)
 {
 	GtkTreeIter iter;
 
@@ -329,7 +329,7 @@ totem_playlist_set_current_subtitle (TotemPlaylist *playlist, const char *subtit
 			    -1);
 
 	g_signal_emit (G_OBJECT (playlist),
-		       totem_playlist_table_signals[SUBTITLE_CHANGED], 0,
+		       xplayer_playlist_table_signals[SUBTITLE_CHANGED], 0,
 		       NULL);
 }
 
@@ -337,7 +337,7 @@ totem_playlist_set_current_subtitle (TotemPlaylist *playlist, const char *subtit
  * in the locale's encoding
  */
 static char *
-totem_playlist_mrl_to_title (const gchar *mrl)
+xplayer_playlist_mrl_to_title (const gchar *mrl)
 {
 	GFile *file;
 	char *filename_for_display, *unescaped;
@@ -379,7 +379,7 @@ totem_playlist_mrl_to_title (const gchar *mrl)
 }
 
 static void
-totem_playlist_update_save_button (TotemPlaylist *playlist)
+xplayer_playlist_update_save_button (XplayerPlaylist *playlist)
 {
 	gboolean state;
 
@@ -388,13 +388,13 @@ totem_playlist_update_save_button (TotemPlaylist *playlist)
 }
 
 static gboolean
-totem_playlist_save_iter_foreach (GtkTreeModel *model,
+xplayer_playlist_save_iter_foreach (GtkTreeModel *model,
 				  GtkTreePath  *path,
 				  GtkTreeIter  *iter,
 				  gpointer      user_data)
 {
-	TotemPlPlaylist *playlist = user_data;
-	TotemPlPlaylistIter pl_iter;
+	XplayerPlPlaylist *playlist = user_data;
+	XplayerPlPlaylistIter pl_iter;
 	gchar *uri, *title;
 	gboolean custom_title;
 
@@ -404,10 +404,10 @@ totem_playlist_save_iter_foreach (GtkTreeModel *model,
 			    TITLE_CUSTOM_COL, &custom_title,
 			    -1);
 
-	totem_pl_playlist_append (playlist, &pl_iter);
-	totem_pl_playlist_set (playlist, &pl_iter,
-			       TOTEM_PL_PARSER_FIELD_URI, uri,
-			       TOTEM_PL_PARSER_FIELD_TITLE, (custom_title) ? title : NULL,
+	xplayer_pl_playlist_append (playlist, &pl_iter);
+	xplayer_pl_playlist_set (playlist, &pl_iter,
+			       XPLAYER_PL_PARSER_FIELD_URI, uri,
+			       XPLAYER_PL_PARSER_FIELD_TITLE, (custom_title) ? title : NULL,
 			       NULL);
 
 	g_free (uri);
@@ -417,34 +417,34 @@ totem_playlist_save_iter_foreach (GtkTreeModel *model,
 }
 
 void
-totem_playlist_save_current_playlist (TotemPlaylist *playlist, const char *output)
+xplayer_playlist_save_current_playlist (XplayerPlaylist *playlist, const char *output)
 {
-	totem_playlist_save_current_playlist_ext (playlist, output, TOTEM_PL_PARSER_PLS);
+	xplayer_playlist_save_current_playlist_ext (playlist, output, XPLAYER_PL_PARSER_PLS);
 }
 
 void
-totem_playlist_save_current_playlist_ext (TotemPlaylist *playlist, const char *output, TotemPlParserType type)
+xplayer_playlist_save_current_playlist_ext (XplayerPlaylist *playlist, const char *output, XplayerPlParserType type)
 {
-	TotemPlPlaylist *pl_playlist;
+	XplayerPlPlaylist *pl_playlist;
 	GError *error = NULL;
 	GFile *output_file;
 	gboolean retval;
 
-	pl_playlist = totem_pl_playlist_new ();
+	pl_playlist = xplayer_pl_playlist_new ();
 	output_file = g_file_new_for_commandline_arg (output);
 
 	gtk_tree_model_foreach (playlist->priv->model,
-				totem_playlist_save_iter_foreach,
+				xplayer_playlist_save_iter_foreach,
 				pl_playlist);
 
-	retval = totem_pl_parser_save (playlist->priv->parser,
+	retval = xplayer_pl_parser_save (playlist->priv->parser,
 				       pl_playlist,
 				       output_file,
 				       NULL, type, &error);
 
 	if (retval == FALSE)
 	{
-		totem_playlist_error (_("Could not save the playlist"),
+		xplayer_playlist_error (_("Could not save the playlist"),
 				error->message, playlist);
 		g_error_free (error);
 	}
@@ -476,15 +476,15 @@ gtk_tree_selection_has_selected (GtkTreeSelection *selection)
 }
 
 static void
-drop_finished_cb (TotemPlaylist *playlist, GAsyncResult *result, gpointer user_data)
+drop_finished_cb (XplayerPlaylist *playlist, GAsyncResult *result, gpointer user_data)
 {
-	totem_playlist_add_mrls_finish (playlist, result, NULL);
+	xplayer_playlist_add_mrls_finish (playlist, result, NULL);
 
 	g_clear_pointer (&playlist->priv->tree_path, gtk_tree_path_free);
 
 	/* Emit the "changed" signal once the last dropped MRL has been added to the playlist */
 	g_signal_emit (G_OBJECT (playlist),
-	               totem_playlist_table_signals[CHANGED], 0,
+	               xplayer_playlist_table_signals[CHANGED], 0,
 	               NULL);
 }
 
@@ -496,7 +496,7 @@ drop_cb (GtkWidget        *widget,
 	 GtkSelectionData *data,
 	 guint             info,
 	 guint             _time,
-	 TotemPlaylist    *playlist)
+	 XplayerPlaylist    *playlist)
 {
 	char **list;
 	GList *p, *file_list, *mrl_list = NULL;
@@ -504,7 +504,7 @@ drop_cb (GtkWidget        *widget,
 	GdkDragAction action;
 
 	if (gdk_drag_context_get_suggested_action (context) == GDK_ACTION_ASK) {
-		action = totem_drag_ask (PL_LEN != 0);
+		action = xplayer_drag_ask (PL_LEN != 0);
 		gdk_drag_status (context, action, GDK_CURRENT_TIME);
 		if (action == GDK_ACTION_DEFAULT) {
 			gtk_drag_finish (context, FALSE, FALSE, _time);
@@ -514,7 +514,7 @@ drop_cb (GtkWidget        *widget,
 
 	action = gdk_drag_context_get_selected_action (context);
 	if (action == GDK_ACTION_MOVE)
-		totem_playlist_clear (playlist);
+		xplayer_playlist_clear (playlist);
 
 	list = g_uri_list_extract_uris ((char *) gtk_selection_data_get_data (data));
 	file_list = NULL;
@@ -548,7 +548,7 @@ drop_cb (GtkWidget        *widget,
 		if (p->data == NULL)
 			continue;
 
-		filename = totem_create_full_path (p->data);
+		filename = xplayer_create_full_path (p->data);
 		if (filename == NULL)
 			filename = g_strdup (p->data);
 		title = NULL;
@@ -564,14 +564,14 @@ drop_cb (GtkWidget        *widget,
 		}
 
 		/* Add the MRL to the list of MRLs to be added to the playlist */
-		mrl_list = g_list_prepend (mrl_list, totem_playlist_mrl_data_new (filename, title));
+		mrl_list = g_list_prepend (mrl_list, xplayer_playlist_mrl_data_new (filename, title));
 		g_free (filename);
 	}
 
 	/* Add all the MRLs to the playlist asynchronously, emitting the "changed" signal once we're done.
 	 * Note that this takes ownership of @mrl_list. */
 	if (mrl_list != NULL)
-		totem_playlist_add_mrls (playlist, g_list_reverse (mrl_list), TRUE, NULL, (GAsyncReadyCallback) drop_finished_cb, NULL);
+		xplayer_playlist_add_mrls (playlist, g_list_reverse (mrl_list), TRUE, NULL, (GAsyncReadyCallback) drop_finished_cb, NULL);
 
 	g_strfreev (list);
 	g_list_free (file_list);
@@ -579,13 +579,13 @@ drop_cb (GtkWidget        *widget,
 }
 
 void
-playlist_select_subtitle_action_callback (GtkAction *action, TotemPlaylist *playlist)
+playlist_select_subtitle_action_callback (GtkAction *action, XplayerPlaylist *playlist)
 {
-	totem_playlist_select_subtitle_dialog (playlist, TOTEM_PLAYLIST_DIALOG_SELECTED);
+	xplayer_playlist_select_subtitle_dialog (playlist, XPLAYER_PLAYLIST_DIALOG_SELECTED);
 }
 
 void
-playlist_copy_location_action_callback (GtkAction *action, TotemPlaylist *playlist)
+playlist_copy_location_action_callback (GtkAction *action, XplayerPlaylist *playlist)
 {
 	GList *l;
 	GtkClipboard *clip;
@@ -615,7 +615,7 @@ playlist_copy_location_action_callback (GtkAction *action, TotemPlaylist *playli
 }
 
 static gboolean
-playlist_show_popup_menu (TotemPlaylist *playlist, GdkEventButton *event)
+playlist_show_popup_menu (XplayerPlaylist *playlist, GdkEventButton *event)
 {
 	guint button = 0;
 	guint32 _time;
@@ -654,7 +654,7 @@ playlist_show_popup_menu (TotemPlaylist *playlist, GdkEventButton *event)
 	gtk_action_set_sensitive (copy_location, count == 1);
 	gtk_action_set_sensitive (select_subtitle, count == 1);
 
-	menu = gtk_ui_manager_get_widget (playlist->priv->ui_manager, "/totem-playlist-popup");
+	menu = gtk_ui_manager_get_widget (playlist->priv->ui_manager, "/xplayer-playlist-popup");
 
 	gtk_menu_shell_select_first (GTK_MENU_SHELL (menu), FALSE);
 
@@ -666,7 +666,7 @@ playlist_show_popup_menu (TotemPlaylist *playlist, GdkEventButton *event)
 
 static gboolean
 treeview_button_pressed (GtkTreeView *treeview, GdkEventButton *event,
-		TotemPlaylist *playlist)
+		XplayerPlaylist *playlist)
 {
 	if (event->type == GDK_BUTTON_PRESS && event->button == 3) {
 		return playlist_show_popup_menu (playlist, event);
@@ -676,13 +676,13 @@ treeview_button_pressed (GtkTreeView *treeview, GdkEventButton *event,
 }
 
 static gboolean
-playlist_treeview_popup_menu (GtkTreeView *treeview, TotemPlaylist *playlist)
+playlist_treeview_popup_menu (GtkTreeView *treeview, XplayerPlaylist *playlist)
 {
 	return playlist_show_popup_menu (playlist, NULL);
 }
 
 static void
-totem_playlist_set_reorderable (TotemPlaylist *playlist, gboolean set)
+xplayer_playlist_set_reorderable (XplayerPlaylist *playlist, gboolean set)
 {
 	guint num_items, i;
 
@@ -698,7 +698,7 @@ totem_playlist_set_reorderable (TotemPlaylist *playlist, gboolean set)
 		GtkTreeIter iter;
 		char *playlist_index;
 		GtkTreePath *path;
-		TotemPlaylistStatus playing;
+		XplayerPlaylistStatus playing;
 
 		playlist_index = g_strdup_printf ("%d", i);
 		if (gtk_tree_model_get_iter_from_string
@@ -711,7 +711,7 @@ totem_playlist_set_reorderable (TotemPlaylist *playlist, gboolean set)
 		g_free (playlist_index);
 
 		gtk_tree_model_get (playlist->priv->model, &iter, PLAYING_COL, &playing, -1);
-		if (playing == TOTEM_PLAYLIST_STATUS_NONE)
+		if (playing == XPLAYER_PLAYLIST_STATUS_NONE)
 			continue;
 
 		/* Only emit the changed signal if we changed the ->current */
@@ -722,7 +722,7 @@ totem_playlist_set_reorderable (TotemPlaylist *playlist, gboolean set)
 			gtk_tree_path_free (playlist->priv->current);
 			playlist->priv->current = path;
 			g_signal_emit (G_OBJECT (playlist),
-					totem_playlist_table_signals[CHANGED],
+					xplayer_playlist_table_signals[CHANGED],
 					0, NULL);
 		}
 
@@ -733,7 +733,7 @@ totem_playlist_set_reorderable (TotemPlaylist *playlist, gboolean set)
 static gboolean
 button_press_cb (GtkWidget *treeview, GdkEventButton *event, gpointer data)
 {
-	TotemPlaylist *playlist = (TotemPlaylist *)data;
+	XplayerPlaylist *playlist = (XplayerPlaylist *)data;
 
 	if (playlist->priv->drop_disabled)
 		return FALSE;
@@ -742,7 +742,7 @@ button_press_cb (GtkWidget *treeview, GdkEventButton *event, gpointer data)
 	gtk_drag_dest_unset (treeview);
 	g_signal_handlers_block_by_func (treeview, (GFunc) drop_cb, data);
 
-	totem_playlist_set_reorderable (playlist, TRUE);
+	xplayer_playlist_set_reorderable (playlist, TRUE);
 
 	return FALSE;
 }
@@ -750,12 +750,12 @@ button_press_cb (GtkWidget *treeview, GdkEventButton *event, gpointer data)
 static gboolean
 button_release_cb (GtkWidget *treeview, GdkEventButton *event, gpointer data)
 {
-	TotemPlaylist *playlist = (TotemPlaylist *)data;
+	XplayerPlaylist *playlist = (XplayerPlaylist *)data;
 
 	if (!playlist->priv->drag_started && playlist->priv->drop_disabled)
 	{
 		playlist->priv->drop_disabled = FALSE;
-		totem_playlist_set_reorderable (playlist, FALSE);
+		xplayer_playlist_set_reorderable (playlist, FALSE);
 		gtk_tree_view_enable_model_drag_dest (GTK_TREE_VIEW (treeview),
 						      target_table, G_N_ELEMENTS (target_table),
 						      GDK_ACTION_COPY | GDK_ACTION_MOVE);
@@ -770,7 +770,7 @@ button_release_cb (GtkWidget *treeview, GdkEventButton *event, gpointer data)
 static void
 drag_begin_cb (GtkWidget *treeview, GdkDragContext *context, gpointer data)
 {
-	TotemPlaylist *playlist = (TotemPlaylist *)data;
+	XplayerPlaylist *playlist = (XplayerPlaylist *)data;
 
 	playlist->priv->drag_started = TRUE;
 
@@ -780,11 +780,11 @@ drag_begin_cb (GtkWidget *treeview, GdkDragContext *context, gpointer data)
 static void
 drag_end_cb (GtkWidget *treeview, GdkDragContext *context, gpointer data)
 {
-	TotemPlaylist *playlist = (TotemPlaylist *)data;
+	XplayerPlaylist *playlist = (XplayerPlaylist *)data;
 
 	playlist->priv->drop_disabled = FALSE;
 	playlist->priv->drag_started = FALSE;
-	totem_playlist_set_reorderable (playlist, FALSE);
+	xplayer_playlist_set_reorderable (playlist, FALSE);
 
 	gtk_tree_view_enable_model_drag_dest (GTK_TREE_VIEW (treeview),
 					      target_table, G_N_ELEMENTS (target_table),
@@ -796,7 +796,7 @@ drag_end_cb (GtkWidget *treeview, GdkDragContext *context, gpointer data)
 }
 
 static void
-selection_changed (GtkTreeSelection *treeselection, TotemPlaylist *playlist)
+selection_changed (GtkTreeSelection *treeselection, XplayerPlaylist *playlist)
 {
 	gboolean sensitivity;
 
@@ -814,7 +814,7 @@ selection_changed (GtkTreeSelection *treeselection, TotemPlaylist *playlist)
  * as the first item of the playlist if so. It returns TRUE if there is a
  * current item */
 static gboolean
-update_current_from_playlist (TotemPlaylist *playlist)
+update_current_from_playlist (XplayerPlaylist *playlist)
 {
 	int indice;
 
@@ -841,32 +841,32 @@ update_current_from_playlist (TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_add_files (GtkWidget *widget, TotemPlaylist *playlist)
+xplayer_playlist_add_files (GtkWidget *widget, XplayerPlaylist *playlist)
 {
 	GSList *filenames, *l;
 	GList *mrl_list = NULL;
 
-	filenames = totem_add_files (totem_playlist_get_toplevel (playlist), NULL);
+	filenames = xplayer_add_files (xplayer_playlist_get_toplevel (playlist), NULL);
 	if (filenames == NULL)
 		return;
 
 	for (l = filenames; l != NULL; l = l->next) {
 		char *mrl = l->data;
-		mrl_list = g_list_prepend (mrl_list, totem_playlist_mrl_data_new (mrl, NULL));
+		mrl_list = g_list_prepend (mrl_list, xplayer_playlist_mrl_data_new (mrl, NULL));
 		g_free (mrl);
 	}
 
 	g_slist_free (filenames);
 
 	if (mrl_list != NULL)
-		totem_playlist_add_mrls (playlist, g_list_reverse (mrl_list), TRUE, NULL, NULL, NULL);
+		xplayer_playlist_add_mrls (playlist, g_list_reverse (mrl_list), TRUE, NULL, NULL, NULL);
 }
 
 static void
-totem_playlist_foreach_selected (GtkTreeModel *model, GtkTreePath *path,
+xplayer_playlist_foreach_selected (GtkTreeModel *model, GtkTreePath *path,
 		GtkTreeIter *iter, gpointer data)
 {
-	TotemPlaylist *playlist = (TotemPlaylist *)data;
+	XplayerPlaylist *playlist = (XplayerPlaylist *)data;
 	GtkTreeRowReference *ref;
 
 	/* We can't use gtk_list_store_remove() here
@@ -881,7 +881,7 @@ totem_playlist_foreach_selected (GtkTreeModel *model, GtkTreePath *path,
 }
 
 static void
-totem_playlist_emit_item_removed (TotemPlaylist *playlist,
+xplayer_playlist_emit_item_removed (XplayerPlaylist *playlist,
 				  GtkTreeIter   *iter)
 {
 	gchar *filename = NULL;
@@ -891,7 +891,7 @@ totem_playlist_emit_item_removed (TotemPlaylist *playlist,
 			    URI_COL, &uri, FILENAME_COL, &filename, -1);
 
 	g_signal_emit (playlist,
-		       totem_playlist_table_signals[ITEM_REMOVED],
+		       xplayer_playlist_table_signals[ITEM_REMOVED],
 		       0, filename, uri);
 
 	g_free (filename);
@@ -899,30 +899,30 @@ totem_playlist_emit_item_removed (TotemPlaylist *playlist,
 }
 
 static void
-playlist_remove_files (TotemPlaylist *playlist)
+playlist_remove_files (XplayerPlaylist *playlist)
 {
-	totem_playlist_clear_with_compare (playlist, NULL, NULL);
+	xplayer_playlist_clear_with_compare (playlist, NULL, NULL);
 }
 
 void
-playlist_remove_button_clicked (GtkWidget *button, TotemPlaylist *playlist)
+playlist_remove_button_clicked (GtkWidget *button, XplayerPlaylist *playlist)
 {
 	playlist_remove_files (playlist);
 }
 
 void
-playlist_remove_action_callback (GtkAction *action, TotemPlaylist *playlist)
+playlist_remove_action_callback (GtkAction *action, XplayerPlaylist *playlist)
 {
 	playlist_remove_files (playlist);
 }
 
 static void
-totem_playlist_save_playlist (TotemPlaylist *playlist, char *filename, gint active_format)
+xplayer_playlist_save_playlist (XplayerPlaylist *playlist, char *filename, gint active_format)
 {
 	if (active_format == 0)
 		active_format = 1;
 
-	totem_playlist_save_current_playlist_ext (playlist, filename,
+	xplayer_playlist_save_current_playlist_ext (playlist, filename,
 						  save_types[active_format].type);
 }
 
@@ -948,7 +948,7 @@ suffix_match_replace (const char *fname, guint old_format, guint new_format)
 }
 
 static void
-format_selection_changed (EggFileFormatChooser *chooser, TotemPlaylist *playlist)
+format_selection_changed (EggFileFormatChooser *chooser, XplayerPlaylist *playlist)
 {
 	guint format;
 
@@ -986,7 +986,7 @@ format_selection_changed (EggFileFormatChooser *chooser, TotemPlaylist *playlist
 }
 
 static GtkWidget *
-totem_playlist_save_add_format_chooser (GtkFileChooser *fc, TotemPlaylist *playlist)
+xplayer_playlist_save_add_format_chooser (GtkFileChooser *fc, XplayerPlaylist *playlist)
 {
 	GtkWidget *format_chooser;
 	guint i;
@@ -1011,7 +1011,7 @@ totem_playlist_save_add_format_chooser (GtkFileChooser *fc, TotemPlaylist *playl
 }
 
 void
-totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist)
+xplayer_playlist_save_files (GtkWidget *widget, XplayerPlaylist *playlist)
 {
 	GtkWidget *fs, *format_chooser;
 	char *filename;
@@ -1020,7 +1020,7 @@ totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist)
 	g_assert (playlist->priv->file_chooser == NULL);
 
 	fs = gtk_file_chooser_dialog_new (_("Save Playlist"),
-					  totem_playlist_get_toplevel (playlist),
+					  xplayer_playlist_get_toplevel (playlist),
 					  GTK_FILE_CHOOSER_ACTION_SAVE,
 					  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 					  GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
@@ -1034,7 +1034,7 @@ totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist)
 	filename = g_strconcat (_("Playlist"), ".", save_types[1].suffix, NULL);
 	gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fs), filename);
 	g_free (filename);
-	format_chooser = totem_playlist_save_add_format_chooser (GTK_FILE_CHOOSER (fs), playlist);
+	format_chooser = xplayer_playlist_save_add_format_chooser (GTK_FILE_CHOOSER (fs), playlist);
 
 	if (playlist->priv->save_path != NULL) {
 		gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (fs),
@@ -1063,7 +1063,7 @@ totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist)
 		g_free (playlist->priv->save_path);
 		playlist->priv->save_path = g_path_get_dirname (fname);
 
-		totem_playlist_save_playlist (playlist, fname, active_format);
+		xplayer_playlist_save_playlist (playlist, fname, active_format);
 		g_free (fname);
 	} else {
 		playlist->priv->file_chooser = NULL;
@@ -1072,7 +1072,7 @@ totem_playlist_save_files (GtkWidget *widget, TotemPlaylist *playlist)
 }
 
 static void
-totem_playlist_move_files (TotemPlaylist *playlist, gboolean direction_up)
+xplayer_playlist_move_files (XplayerPlaylist *playlist, gboolean direction_up)
 {
 	GtkTreeSelection *selection;
 	GtkTreeModel *model;
@@ -1178,24 +1178,24 @@ totem_playlist_move_files (TotemPlaylist *playlist, gboolean direction_up)
 	}
 
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[CHANGED], 0,
+			xplayer_playlist_table_signals[CHANGED], 0,
 			NULL);
 }
 
 void
-totem_playlist_up_files (GtkWidget *widget, TotemPlaylist *playlist)
+xplayer_playlist_up_files (GtkWidget *widget, XplayerPlaylist *playlist)
 {
-	totem_playlist_move_files (playlist, TRUE);
+	xplayer_playlist_move_files (playlist, TRUE);
 }
 
 void
-totem_playlist_down_files (GtkWidget *widget, TotemPlaylist *playlist)
+xplayer_playlist_down_files (GtkWidget *widget, XplayerPlaylist *playlist)
 {
-	totem_playlist_move_files (playlist, FALSE);
+	xplayer_playlist_move_files (playlist, FALSE);
 }
 
 static int
-totem_playlist_key_press (GtkWidget *win, GdkEventKey *event, TotemPlaylist *playlist)
+xplayer_playlist_key_press (GtkWidget *win, GdkEventKey *event, XplayerPlaylist *playlist)
 {
 	/* Special case some shortcuts */
 	if (event->state != 0) {
@@ -1229,21 +1229,21 @@ totem_playlist_key_press (GtkWidget *win, GdkEventKey *event, TotemPlaylist *pla
 
 static void
 set_playing_icon (GtkTreeViewColumn *column, GtkCellRenderer *renderer,
-		  GtkTreeModel *model, GtkTreeIter *iter, TotemPlaylist *playlist)
+		  GtkTreeModel *model, GtkTreeIter *iter, XplayerPlaylist *playlist)
 {
-	TotemPlaylistStatus playing;
+	XplayerPlaylistStatus playing;
 	const char *icon_name;
 
 	gtk_tree_model_get (model, iter, PLAYING_COL, &playing, -1);
 
 	switch (playing) {
-		case TOTEM_PLAYLIST_STATUS_PLAYING:
-			icon_name = totem_get_rtl_icon_name ("media-playback-start");
+		case XPLAYER_PLAYLIST_STATUS_PLAYING:
+			icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 			break;
-		case TOTEM_PLAYLIST_STATUS_PAUSED:
+		case XPLAYER_PLAYLIST_STATUS_PAUSED:
 			icon_name = "media-playback-pause-symbolic";
 			break;
-		case TOTEM_PLAYLIST_STATUS_NONE:
+		case XPLAYER_PLAYLIST_STATUS_NONE:
 		default:
 			icon_name = NULL;
 	}
@@ -1252,7 +1252,7 @@ set_playing_icon (GtkTreeViewColumn *column, GtkCellRenderer *renderer,
 }
 
 static void
-init_columns (GtkTreeView *treeview, TotemPlaylist *playlist)
+init_columns (GtkTreeView *treeview, XplayerPlaylist *playlist)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -1276,18 +1276,18 @@ init_columns (GtkTreeView *treeview, TotemPlaylist *playlist)
 
 static void
 treeview_row_changed (GtkTreeView *treeview, GtkTreePath *arg1,
-		GtkTreeViewColumn *arg2, TotemPlaylist *playlist)
+		GtkTreeViewColumn *arg2, XplayerPlaylist *playlist)
 {
-	if (totem_playlist_gtk_tree_path_equals
+	if (xplayer_playlist_gtk_tree_path_equals
 	    (arg1, playlist->priv->current) != FALSE) {
 		g_signal_emit (G_OBJECT (playlist),
-				totem_playlist_table_signals[ITEM_ACTIVATED], 0,
+				xplayer_playlist_table_signals[ITEM_ACTIVATED], 0,
 				NULL);
 		return;
 	}
 
 	if (playlist->priv->current != NULL) {
-		totem_playlist_unset_playing (playlist);
+		xplayer_playlist_unset_playing (playlist);
 		gtk_tree_path_free (playlist->priv->current);
 	}
 
@@ -1309,12 +1309,12 @@ treeview_row_changed (GtkTreeView *treeview, GtkTreePath *arg1,
 		}
 	}
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[CHANGED], 0,
+			xplayer_playlist_table_signals[CHANGED], 0,
 			NULL);
 
 	if (playlist->priv->drop_disabled) {
 		playlist->priv->drop_disabled = FALSE;
-		totem_playlist_set_reorderable (playlist, FALSE);
+		xplayer_playlist_set_reorderable (playlist, FALSE);
 
 		gtk_tree_view_enable_model_drag_dest (GTK_TREE_VIEW (treeview),
 						      target_table, G_N_ELEMENTS (target_table),
@@ -1371,7 +1371,7 @@ search_equal_func (GtkTreeModel *model, gint col, const gchar *key,
 }
 
 static void
-init_treeview (GtkWidget *treeview, TotemPlaylist *playlist)
+init_treeview (GtkWidget *treeview, XplayerPlaylist *playlist)
 {
 	GtkTreeSelection *selection;
 
@@ -1414,15 +1414,15 @@ init_treeview (GtkWidget *treeview, TotemPlaylist *playlist)
 }
 
 static void
-update_repeat_cb (GSettings *settings, const gchar *key, TotemPlaylist *playlist)
+update_repeat_cb (GSettings *settings, const gchar *key, XplayerPlaylist *playlist)
 {
 	playlist->priv->repeat = g_settings_get_boolean (settings, "repeat");
 
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[CHANGED], 0,
+			xplayer_playlist_table_signals[CHANGED], 0,
 			NULL);
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[REPEAT_TOGGLED], 0,
+			xplayer_playlist_table_signals[REPEAT_TOGGLED], 0,
 			playlist->priv->repeat, NULL);
 }
 
@@ -1446,7 +1446,7 @@ compare_random (gconstpointer ptr_a, gconstpointer ptr_b)
 }
 
 static void
-ensure_shuffled (TotemPlaylist *playlist)
+ensure_shuffled (XplayerPlaylist *playlist)
 {
 	RandomData data;
 	GArray *array;
@@ -1499,7 +1499,7 @@ ensure_shuffled (TotemPlaylist *playlist)
 }
 
 static void
-update_shuffle_cb (GSettings *settings, const gchar *key, TotemPlaylist *playlist)
+update_shuffle_cb (GSettings *settings, const gchar *key, XplayerPlaylist *playlist)
 {
 	playlist->priv->shuffle = g_settings_get_boolean (settings, "shuffle");
 
@@ -1512,28 +1512,28 @@ update_shuffle_cb (GSettings *settings, const gchar *key, TotemPlaylist *playlis
 	}
 
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[CHANGED], 0,
+			xplayer_playlist_table_signals[CHANGED], 0,
 			NULL);
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[SHUFFLE_TOGGLED], 0,
+			xplayer_playlist_table_signals[SHUFFLE_TOGGLED], 0,
 			playlist->priv->shuffle, NULL);
 }
 
 static void
-update_lockdown_cb (GSettings *settings, const gchar *key, TotemPlaylist *playlist)
+update_lockdown_cb (GSettings *settings, const gchar *key, XplayerPlaylist *playlist)
 {
 	playlist->priv->disable_save_to_disk = g_settings_get_boolean (settings, "disable-save-to-disk");
-	totem_playlist_update_save_button (playlist);
+	xplayer_playlist_update_save_button (playlist);
 }
 
 static void
-init_config (TotemPlaylist *playlist)
+init_config (XplayerPlaylist *playlist)
 {
-	playlist->priv->settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	playlist->priv->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	playlist->priv->lockdown_settings = g_settings_new ("org.gnome.desktop.lockdown");
 
 	playlist->priv->disable_save_to_disk = g_settings_get_boolean (playlist->priv->lockdown_settings, "disable-save-to-disk");
-	totem_playlist_update_save_button (playlist);
+	xplayer_playlist_update_save_button (playlist);
 
 	g_signal_connect (playlist->priv->lockdown_settings, "changed::disable-save-to-disk", (GCallback) update_lockdown_cb, playlist);
 
@@ -1545,26 +1545,26 @@ init_config (TotemPlaylist *playlist)
 }
 
 static void
-totem_playlist_entry_parsed (TotemPlParser *parser,
+xplayer_playlist_entry_parsed (XplayerPlParser *parser,
 			     const char *uri,
 			     GHashTable *metadata,
-			     TotemPlaylist *playlist)
+			     XplayerPlaylist *playlist)
 {
 	const char *title, *content_type;
 	gint64 duration;
 
 	/* We ignore 0-length items in playlists, they're usually just banners */
-	duration = totem_pl_parser_parse_duration
-		(g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_DURATION), FALSE);
+	duration = xplayer_pl_parser_parse_duration
+		(g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_DURATION), FALSE);
 	if (duration == 0)
 		return;
-	title = g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_TITLE);
-	content_type = g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_CONTENT_TYPE);
-	totem_playlist_add_one_mrl (playlist, uri, title, content_type);
+	title = g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_TITLE);
+	content_type = g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_CONTENT_TYPE);
+	xplayer_playlist_add_one_mrl (playlist, uri, title, content_type);
 }
 
 static gboolean
-totem_playlist_compare_with_monitor (TotemPlaylist *playlist, GtkTreeIter *iter, gconstpointer data)
+xplayer_playlist_compare_with_monitor (XplayerPlaylist *playlist, GtkTreeIter *iter, gconstpointer data)
 {
 	GFileMonitor *monitor = (GFileMonitor *) data;
 	GFileMonitor *_monitor;
@@ -1583,24 +1583,24 @@ totem_playlist_compare_with_monitor (TotemPlaylist *playlist, GtkTreeIter *iter,
 }
 
 static void
-totem_playlist_file_changed (GFileMonitor *monitor,
+xplayer_playlist_file_changed (GFileMonitor *monitor,
 			     GFile *file,
 			     GFile *other_file,
 			     GFileMonitorEvent event_type,
-			     TotemPlaylist *playlist)
+			     XplayerPlaylist *playlist)
 {
 	if (event_type == G_FILE_MONITOR_EVENT_PRE_UNMOUNT ||
 	    event_type == G_FILE_MONITOR_EVENT_UNMOUNTED) {
-		totem_playlist_clear_with_compare (playlist,
-						   (ClearComparisonFunc) totem_playlist_compare_with_monitor,
+		xplayer_playlist_clear_with_compare (playlist,
+						   (ClearComparisonFunc) xplayer_playlist_compare_with_monitor,
 						   monitor);
 	}
 }
 
 static void
-totem_playlist_dispose (GObject *object)
+xplayer_playlist_dispose (GObject *object)
 {
-	TotemPlaylist *playlist = TOTEM_PLAYLIST (object);
+	XplayerPlaylist *playlist = XPLAYER_PLAYLIST (object);
 
 	if (playlist->priv->parser != NULL) {
 		g_object_unref (playlist->priv->parser);
@@ -1625,24 +1625,24 @@ totem_playlist_dispose (GObject *object)
 		g_object_unref (playlist->priv->lockdown_settings);
 	playlist->priv->lockdown_settings = NULL;
 
-	G_OBJECT_CLASS (totem_playlist_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xplayer_playlist_parent_class)->dispose (object);
 }
 
 static void
-totem_playlist_finalize (GObject *object)
+xplayer_playlist_finalize (GObject *object)
 {
-	TotemPlaylist *playlist = TOTEM_PLAYLIST (object);
+	XplayerPlaylist *playlist = XPLAYER_PLAYLIST (object);
 
 	if (playlist->priv->current != NULL)
 		gtk_tree_path_free (playlist->priv->current);
 
 	g_clear_pointer (&playlist->priv->tree_path, gtk_tree_path_free);
 
-	G_OBJECT_CLASS (totem_playlist_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xplayer_playlist_parent_class)->finalize (object);
 }
 
 static void
-totem_playlist_init (TotemPlaylist *playlist)
+xplayer_playlist_init (XplayerPlaylist *playlist)
 {
 	GtkWidget *container;
 	GtkBuilder *xml;
@@ -1652,21 +1652,21 @@ totem_playlist_init (TotemPlaylist *playlist)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (playlist),
 					GTK_ORIENTATION_VERTICAL);
 
-	playlist->priv = G_TYPE_INSTANCE_GET_PRIVATE (playlist, TOTEM_TYPE_PLAYLIST, TotemPlaylistPrivate);
-	playlist->priv->parser = totem_pl_parser_new ();
+	playlist->priv = G_TYPE_INSTANCE_GET_PRIVATE (playlist, XPLAYER_TYPE_PLAYLIST, XplayerPlaylistPrivate);
+	playlist->priv->parser = xplayer_pl_parser_new ();
 
-	totem_pl_parser_add_ignored_scheme (playlist->priv->parser, "dvd:");
-	totem_pl_parser_add_ignored_scheme (playlist->priv->parser, "vcd:");
-	totem_pl_parser_add_ignored_scheme (playlist->priv->parser, "cd:");
-	totem_pl_parser_add_ignored_scheme (playlist->priv->parser, "dvb:");
-	totem_pl_parser_add_ignored_mimetype (playlist->priv->parser, "application/x-trash");
+	xplayer_pl_parser_add_ignored_scheme (playlist->priv->parser, "dvd:");
+	xplayer_pl_parser_add_ignored_scheme (playlist->priv->parser, "vcd:");
+	xplayer_pl_parser_add_ignored_scheme (playlist->priv->parser, "cd:");
+	xplayer_pl_parser_add_ignored_scheme (playlist->priv->parser, "dvb:");
+	xplayer_pl_parser_add_ignored_mimetype (playlist->priv->parser, "application/x-trash");
 
 	g_signal_connect (G_OBJECT (playlist->priv->parser),
 			"entry-parsed",
-			G_CALLBACK (totem_playlist_entry_parsed),
+			G_CALLBACK (xplayer_playlist_entry_parsed),
 			playlist);
 
-	xml = totem_interface_load ("playlist.ui", TRUE, NULL, playlist);
+	xml = xplayer_interface_load ("playlist.ui", TRUE, NULL, playlist);
 
 	if (xml == NULL)
 		return;
@@ -1674,12 +1674,12 @@ totem_playlist_init (TotemPlaylist *playlist)
 	/* popup menu */
 	playlist->priv->action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xml, "playlist-action-group"));
 	g_object_ref (playlist->priv->action_group);
-	playlist->priv->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (xml, "totem-playlist-ui-manager"));
+	playlist->priv->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (xml, "xplayer-playlist-ui-manager"));
 	g_object_ref (playlist->priv->ui_manager);
 
 	gtk_widget_add_events (GTK_WIDGET (playlist), GDK_KEY_PRESS_MASK);
 	g_signal_connect (G_OBJECT (playlist), "key_press_event",
-			  G_CALLBACK (totem_playlist_key_press), playlist);
+			  G_CALLBACK (xplayer_playlist_key_press), playlist);
 
 	/* Buttons */
 	playlist->priv->save_button = GTK_WIDGET (gtk_builder_get_object (xml, "save_button"));;
@@ -1723,11 +1723,11 @@ totem_playlist_init (TotemPlaylist *playlist)
 }
 
 GtkWidget*
-totem_playlist_new (void)
+xplayer_playlist_new (void)
 {
-	TotemPlaylist *playlist;
+	XplayerPlaylist *playlist;
 
-	playlist = TOTEM_PLAYLIST (g_object_new (TOTEM_TYPE_PLAYLIST, NULL));
+	playlist = XPLAYER_PLAYLIST (g_object_new (XPLAYER_TYPE_PLAYLIST, NULL));
 	if (playlist->priv->ui_manager == NULL) {
 		g_object_unref (playlist);
 		return NULL;
@@ -1737,7 +1737,7 @@ totem_playlist_new (void)
 }
 
 static gboolean
-totem_playlist_add_one_mrl (TotemPlaylist *playlist,
+xplayer_playlist_add_one_mrl (XplayerPlaylist *playlist,
 			    const char *mrl,
 			    const char *display_name,
 			    const char *content_type)
@@ -1751,18 +1751,18 @@ totem_playlist_add_one_mrl (TotemPlaylist *playlist,
 	GFile *file;
 	int pos;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 	g_return_val_if_fail (mrl != NULL, FALSE);
 
 	if (display_name == NULL || *display_name == '\0')
-		filename_for_display = totem_playlist_mrl_to_title (mrl);
+		filename_for_display = xplayer_playlist_mrl_to_title (mrl);
 	else
 		filename_for_display = g_strdup (display_name);
 
 	ref = NULL;
-	uri = totem_create_full_path (mrl);
+	uri = xplayer_create_full_path (mrl);
 
-	g_debug ("totem_playlist_add_one_mrl (): %s %s %s\n", filename_for_display, uri, display_name);
+	g_debug ("xplayer_playlist_add_one_mrl (): %s %s %s\n", filename_for_display, uri, display_name);
 
 	if (playlist->priv->tree_path != NULL && playlist->priv->current != NULL) {
 		int *indices;
@@ -1784,17 +1784,17 @@ totem_playlist_add_one_mrl (TotemPlaylist *playlist,
 					       NULL);
 		g_signal_connect (G_OBJECT (monitor),
 				  "changed",
-				  G_CALLBACK (totem_playlist_file_changed),
+				  G_CALLBACK (xplayer_playlist_file_changed),
 				  playlist);
 		mount = NULL;
 	} else {
-		mount = totem_get_mount_for_media (uri ? uri : mrl);
+		mount = xplayer_get_mount_for_media (uri ? uri : mrl);
 		monitor = NULL;
 	}
 
 	escaped_filename = g_markup_escape_text (filename_for_display, -1);
 	gtk_list_store_insert_with_values (store, &iter, pos,
-					   PLAYING_COL, TOTEM_PLAYLIST_STATUS_NONE,
+					   PLAYING_COL, XPLAYER_PLAYLIST_STATUS_NONE,
 					   FILENAME_COL, filename_for_display,
 					   FILENAME_ESCAPED_COL, escaped_filename,
 					   URI_COL, uri ? uri : mrl,
@@ -1806,7 +1806,7 @@ totem_playlist_add_one_mrl (TotemPlaylist *playlist,
 	g_free (escaped_filename);
 
 	g_signal_emit (playlist,
-		       totem_playlist_table_signals[ITEM_ADDED],
+		       xplayer_playlist_table_signals[ITEM_ADDED],
 		       0, filename_for_display, uri ? uri : mrl);
 
 	g_free (filename_for_display);
@@ -1825,9 +1825,9 @@ totem_playlist_add_one_mrl (TotemPlaylist *playlist,
 	}
 
 	g_signal_emit (G_OBJECT (playlist),
-			totem_playlist_table_signals[CHANGED], 0,
+			xplayer_playlist_table_signals[CHANGED], 0,
 			NULL);
-	totem_playlist_update_save_button (playlist);
+	xplayer_playlist_update_save_button (playlist);
 
 	return TRUE;
 }
@@ -1836,7 +1836,7 @@ typedef struct {
 	GAsyncReadyCallback callback;
 	gpointer user_data;
 	gboolean cursor;
-	TotemPlaylist *playlist;
+	XplayerPlaylist *playlist;
 	gchar *mrl;
 	gchar *display_name;
 } AddMrlData;
@@ -1851,44 +1851,44 @@ add_mrl_data_free (AddMrlData *data)
 }
 
 static gboolean
-handle_parse_result (TotemPlParserResult res, TotemPlaylist *playlist, const gchar *mrl, const gchar *display_name)
+handle_parse_result (XplayerPlParserResult res, XplayerPlaylist *playlist, const gchar *mrl, const gchar *display_name)
 {
-	if (res == TOTEM_PL_PARSER_RESULT_UNHANDLED)
-		return totem_playlist_add_one_mrl (playlist, mrl, display_name, NULL);
-	if (res == TOTEM_PL_PARSER_RESULT_ERROR) {
+	if (res == XPLAYER_PL_PARSER_RESULT_UNHANDLED)
+		return xplayer_playlist_add_one_mrl (playlist, mrl, display_name, NULL);
+	if (res == XPLAYER_PL_PARSER_RESULT_ERROR) {
 		char *msg;
 
 		msg = g_strdup_printf (_("The playlist '%s' could not be parsed. It might be damaged."), display_name ? display_name : mrl);
-		totem_playlist_error (_("Playlist error"), msg, playlist);
+		xplayer_playlist_error (_("Playlist error"), msg, playlist);
 		g_free (msg);
 
 		return FALSE;
 	}
-	if (res == TOTEM_PL_PARSER_RESULT_IGNORED)
+	if (res == XPLAYER_PL_PARSER_RESULT_IGNORED)
 		return FALSE;
 
 	return TRUE;
 }
 
 static void
-add_mrl_cb (TotemPlParser *parser, GAsyncResult *result, AddMrlData *data)
+add_mrl_cb (XplayerPlParser *parser, GAsyncResult *result, AddMrlData *data)
 {
-	TotemPlParserResult res;
+	XplayerPlParserResult res;
 	GSimpleAsyncResult *async_result;
 	GError *error = NULL;
 
 	/* Finish parsing the playlist */
-	res = totem_pl_parser_parse_finish (parser, result, &error);
+	res = xplayer_pl_parser_parse_finish (parser, result, &error);
 
 	/* Remove the cursor, if one was set */
 	if (data->cursor)
 		unset_waiting_cursor (data->playlist);
 
-	/* Create an async result which will return the result to the code which called totem_playlist_add_mrl() */
+	/* Create an async result which will return the result to the code which called xplayer_playlist_add_mrl() */
 	if (error != NULL)
 		async_result = g_simple_async_result_new_from_error (G_OBJECT (data->playlist), data->callback, data->user_data, error);
 	else
-		async_result = g_simple_async_result_new (G_OBJECT (data->playlist), data->callback, data->user_data, totem_playlist_add_mrl);
+		async_result = g_simple_async_result_new (G_OBJECT (data->playlist), data->callback, data->user_data, xplayer_playlist_add_mrl);
 
 	/* Handle the various return cases from the playlist parser */
 	g_simple_async_result_set_op_res_gboolean (async_result, handle_parse_result (res, data->playlist, data->mrl, data->display_name));
@@ -1896,13 +1896,13 @@ add_mrl_cb (TotemPlParser *parser, GAsyncResult *result, AddMrlData *data)
 	/* Free the closure's data, now that we're finished with it */
 	add_mrl_data_free (data);
 
-	/* Synchronously call the calling code's callback function (i.e. what was passed to totem_playlist_add_mrl()'s @callback parameter)
+	/* Synchronously call the calling code's callback function (i.e. what was passed to xplayer_playlist_add_mrl()'s @callback parameter)
 	 * in the main thread to return the result */
 	g_simple_async_result_complete (async_result);
 }
 
 void
-totem_playlist_add_mrl (TotemPlaylist *playlist, const char *mrl, const char *display_name, gboolean cursor,
+xplayer_playlist_add_mrl (XplayerPlaylist *playlist, const char *mrl, const char *display_name, gboolean cursor,
                         GCancellable *cancellable, GAsyncReadyCallback callback, gpointer user_data)
 {
 	AddMrlData *data;
@@ -1924,34 +1924,34 @@ totem_playlist_add_mrl (TotemPlaylist *playlist, const char *mrl, const char *di
 
 	/* Start parsing the playlist. Once this is complete, add_mrl_cb() is called, which will interpret the results and call @callback to
 	 * finish the process. */
-	totem_pl_parser_parse_async (playlist->priv->parser, mrl, FALSE, cancellable, (GAsyncReadyCallback) add_mrl_cb, data);
+	xplayer_pl_parser_parse_async (playlist->priv->parser, mrl, FALSE, cancellable, (GAsyncReadyCallback) add_mrl_cb, data);
 }
 
 gboolean
-totem_playlist_add_mrl_finish (TotemPlaylist *playlist, GAsyncResult *result)
+xplayer_playlist_add_mrl_finish (XplayerPlaylist *playlist, GAsyncResult *result)
 {
-	g_assert (g_simple_async_result_get_source_tag (G_SIMPLE_ASYNC_RESULT (result)) == totem_playlist_add_mrl);
+	g_assert (g_simple_async_result_get_source_tag (G_SIMPLE_ASYNC_RESULT (result)) == xplayer_playlist_add_mrl);
 
 	return g_simple_async_result_get_op_res_gboolean (G_SIMPLE_ASYNC_RESULT (result));
 }
 
 gboolean
-totem_playlist_add_mrl_sync (TotemPlaylist *playlist, const char *mrl, const char *display_name)
+xplayer_playlist_add_mrl_sync (XplayerPlaylist *playlist, const char *mrl, const char *display_name)
 {
 	g_return_val_if_fail (mrl != NULL, FALSE);
 
-	return handle_parse_result (totem_pl_parser_parse (playlist->priv->parser, mrl, FALSE), playlist, mrl, display_name);
+	return handle_parse_result (xplayer_pl_parser_parse (playlist->priv->parser, mrl, FALSE), playlist, mrl, display_name);
 }
 
 typedef struct {
-	TotemPlaylist *playlist;
-	GList *mrls; /* list of TotemPlaylistMrlDatas */
+	XplayerPlaylist *playlist;
+	GList *mrls; /* list of XplayerPlaylistMrlDatas */
 	gboolean cursor;
 	GAsyncReadyCallback callback;
 	gpointer user_data;
 
 	guint next_index_to_add;
-	GList *unadded_entries; /* list of TotemPlaylistMrlDatas */
+	GList *unadded_entries; /* list of XplayerPlaylistMrlDatas */
 	volatile gint entries_remaining;
 } AddMrlsOperationData;
 
@@ -1962,17 +1962,17 @@ add_mrls_operation_data_free (AddMrlsOperationData *data)
 	if (data->cursor)
 		unset_waiting_cursor (data->playlist);
 
-	g_list_foreach (data->mrls, (GFunc) totem_playlist_mrl_data_free, NULL);
+	g_list_foreach (data->mrls, (GFunc) xplayer_playlist_mrl_data_free, NULL);
 	g_list_free (data->mrls);
 	g_object_unref (data->playlist);
 
 	g_slice_free (AddMrlsOperationData, data);
 }
 
-struct TotemPlaylistMrlData {
+struct XplayerPlaylistMrlData {
 	gchar *mrl;
 	gchar *display_name;
-	TotemPlParserResult res;
+	XplayerPlParserResult res;
 
 	/* Implementation details */
 	AddMrlsOperationData *operation_data;
@@ -1980,27 +1980,27 @@ struct TotemPlaylistMrlData {
 };
 
 /**
- * totem_playlist_mrl_data_new:
+ * xplayer_playlist_mrl_data_new:
  * @mrl: a MRL
  * @display_name: (allow-none): a human-readable display name for the MRL, or %NULL
  *
- * Create a new #TotemPlaylistMrlData struct storing the given @mrl and @display_name.
+ * Create a new #XplayerPlaylistMrlData struct storing the given @mrl and @display_name.
  *
- * This will typically be immediately appended to a #GList to be passed to totem_playlist_add_mrls().
+ * This will typically be immediately appended to a #GList to be passed to xplayer_playlist_add_mrls().
  *
- * Return value: (transfer full): a new #TotemPlaylistMrlData; free with totem_playlist_mrl_data_free()
+ * Return value: (transfer full): a new #XplayerPlaylistMrlData; free with xplayer_playlist_mrl_data_free()
  *
  * Since: 3.0
  */
-TotemPlaylistMrlData *
-totem_playlist_mrl_data_new (const gchar *mrl,
+XplayerPlaylistMrlData *
+xplayer_playlist_mrl_data_new (const gchar *mrl,
                              const gchar *display_name)
 {
-	TotemPlaylistMrlData *data;
+	XplayerPlaylistMrlData *data;
 
 	g_return_val_if_fail (mrl != NULL && *mrl != '\0', NULL);
 
-	data = g_slice_new (TotemPlaylistMrlData);
+	data = g_slice_new (XplayerPlaylistMrlData);
 	data->mrl = g_strdup (mrl);
 	data->display_name = g_strdup (display_name);
 
@@ -2008,24 +2008,24 @@ totem_playlist_mrl_data_new (const gchar *mrl,
 }
 
 /**
- * totem_playlist_mrl_data_free:
- * @data: (transfer full): a #TotemPlaylistMrlData
+ * xplayer_playlist_mrl_data_free:
+ * @data: (transfer full): a #XplayerPlaylistMrlData
  *
- * Free the given #TotemPlaylistMrlData struct. This should not generally be called by code outside #TotemPlaylist.
+ * Free the given #XplayerPlaylistMrlData struct. This should not generally be called by code outside #XplayerPlaylist.
  *
  * Since: 3.0
  */
 void
-totem_playlist_mrl_data_free (TotemPlaylistMrlData *data)
+xplayer_playlist_mrl_data_free (XplayerPlaylistMrlData *data)
 {
 	g_return_if_fail (data != NULL);
 
 	/* NOTE: This doesn't call add_mrls_operation_data_free() on @data->operation_data, since it's shared with other instances of
-	 * TotemPlaylistMrlData, and not truly reference counted. */
+	 * XplayerPlaylistMrlData, and not truly reference counted. */
 	g_free (data->display_name);
 	g_free (data->mrl);
 
-	g_slice_free (TotemPlaylistMrlData, data);
+	g_slice_free (XplayerPlaylistMrlData, data);
 }
 
 static void
@@ -2037,7 +2037,7 @@ add_mrls_finish_operation (AddMrlsOperationData *operation_data)
 		GSimpleAsyncResult *async_result;
 
 		async_result = g_simple_async_result_new (G_OBJECT (operation_data->playlist), operation_data->callback, operation_data->user_data,
-		                                          totem_playlist_add_mrls);
+		                                          xplayer_playlist_add_mrls);
 		g_simple_async_result_complete (async_result);
 		g_object_unref (async_result);
 
@@ -2045,20 +2045,20 @@ add_mrls_finish_operation (AddMrlsOperationData *operation_data)
 	}
 }
 
-/* Called exactly once for each MRL in a totem_playlist_add_mrls() operation. Called in the thread running the main loop. If the MRL which has just
- * been parsed is the next one in the sequence (of entries in @mrls as passed to totem_playlist_add_mrls()), it's added to the playlist proper.
+/* Called exactly once for each MRL in a xplayer_playlist_add_mrls() operation. Called in the thread running the main loop. If the MRL which has just
+ * been parsed is the next one in the sequence (of entries in @mrls as passed to xplayer_playlist_add_mrls()), it's added to the playlist proper.
  * Otherwise, it's added to a sorted queue of MRLs which have had their callbacks called out of order.
  * When a MRL is added to the playlist proper, any successor MRLs which are in the sorted queue are also added to the playlist proper.
- * When add_mrls_cb() is called for the last time for a given call to totem_playlist_add_mrls(), it calls the user's callback for the operation
- * (passed as @callback to totem_playlist_add_mrls()) and frees the #AddMrlsOperationData struct. This is handled by add_mrls_finish_operation().
- * The #TotemPlaylistMrlData for each MRL is freed by add_mrls_operation_data_free() at the end of the entire operation. */
+ * When add_mrls_cb() is called for the last time for a given call to xplayer_playlist_add_mrls(), it calls the user's callback for the operation
+ * (passed as @callback to xplayer_playlist_add_mrls()) and frees the #AddMrlsOperationData struct. This is handled by add_mrls_finish_operation().
+ * The #XplayerPlaylistMrlData for each MRL is freed by add_mrls_operation_data_free() at the end of the entire operation. */
 static void
-add_mrls_cb (TotemPlParser *parser, GAsyncResult *result, TotemPlaylistMrlData *mrl_data)
+add_mrls_cb (XplayerPlParser *parser, GAsyncResult *result, XplayerPlaylistMrlData *mrl_data)
 {
 	AddMrlsOperationData *operation_data = mrl_data->operation_data;
 
 	/* Finish parsing the playlist */
-	mrl_data->res = totem_pl_parser_parse_finish (parser, result, NULL);
+	mrl_data->res = xplayer_pl_parser_parse_finish (parser, result, NULL);
 
 	g_assert (mrl_data->index >= operation_data->next_index_to_add);
 
@@ -2071,9 +2071,9 @@ add_mrls_cb (TotemPlParser *parser, GAsyncResult *result, TotemPlaylistMrlData *
 
 		/* See if we can now add any other entries which have already been processed */
 		for (i = operation_data->unadded_entries;
-		     i != NULL && ((TotemPlaylistMrlData*) i->data)->index == operation_data->next_index_to_add;
+		     i != NULL && ((XplayerPlaylistMrlData*) i->data)->index == operation_data->next_index_to_add;
 		     i = g_list_delete_link (i, i)) {
-			TotemPlaylistMrlData *_mrl_data = (TotemPlaylistMrlData*) i->data;
+			XplayerPlaylistMrlData *_mrl_data = (XplayerPlaylistMrlData*) i->data;
 
 			operation_data->next_index_to_add++;
 			handle_parse_result (_mrl_data->res, operation_data->playlist, _mrl_data->mrl, _mrl_data->display_name);
@@ -2085,7 +2085,7 @@ add_mrls_cb (TotemPlParser *parser, GAsyncResult *result, TotemPlaylistMrlData *
 
 		/* The entry has been parsed out of order, so needs to be added (in the correct position) to the unadded list for latter addition to
 		 * the playlist proper */
-		for (i = operation_data->unadded_entries; i != NULL && mrl_data->index > ((TotemPlaylistMrlData*) i->data)->index; i = i->next);
+		for (i = operation_data->unadded_entries; i != NULL && mrl_data->index > ((XplayerPlaylistMrlData*) i->data)->index; i = i->next);
 		operation_data->unadded_entries = g_list_insert_before (operation_data->unadded_entries, i, mrl_data);
 	}
 
@@ -2094,9 +2094,9 @@ add_mrls_cb (TotemPlParser *parser, GAsyncResult *result, TotemPlaylistMrlData *
 }
 
 /**
- * totem_playlist_add_mrls:
- * @self: a #TotemPlaylist
- * @mrls: (element-type TotemPlaylistMrlData) (transfer full): a list of #TotemPlaylistMrlData structs
+ * xplayer_playlist_add_mrls:
+ * @self: a #XplayerPlaylist
+ * @mrls: (element-type XplayerPlaylistMrlData) (transfer full): a list of #XplayerPlaylistMrlData structs
  * @cursor: %TRUE to set a waiting cursor on the playlist for the duration of the operation, %FALSE otherwise
  * @cancellable: (allow-none): a #Cancellable, or %NULL
  * @callback: (scope async) (allow-none): callback to call once all the MRLs have been added to the playlist, or %NULL
@@ -2105,16 +2105,16 @@ add_mrls_cb (TotemPlParser *parser, GAsyncResult *result, TotemPlaylistMrlData *
  * Add the MRLs listed in @mrls to the playlist asynchronously, and ensuring that they're added to the playlist in the order they appear in the
  * input #GList.
  *
- * @mrls should be a #GList of #TotemPlaylistMrlData structs, each created with totem_playlist_mrl_data_new(). This function takes ownership of both
- * the list and its elements when called, so don't free either after calling totem_playlist_add_mrls().
+ * @mrls should be a #GList of #XplayerPlaylistMrlData structs, each created with xplayer_playlist_mrl_data_new(). This function takes ownership of both
+ * the list and its elements when called, so don't free either after calling xplayer_playlist_add_mrls().
  *
  * @callback will be called after all the MRLs in @mrls have been parsed and (if they were parsed successfully) added to the playlist. In the
- * callback function, totem_playlist_add_mrls_finish() should be called to check for errors.
+ * callback function, xplayer_playlist_add_mrls_finish() should be called to check for errors.
  *
  * Since: 3.0
  */
 void
-totem_playlist_add_mrls (TotemPlaylist *self,
+xplayer_playlist_add_mrls (XplayerPlaylist *self,
                          GList *mrls,
                          gboolean cursor,
                          GCancellable *cancellable,
@@ -2125,7 +2125,7 @@ totem_playlist_add_mrls (TotemPlaylist *self,
 	GList *i;
 	guint mrl_index = 0;
 
-	g_return_if_fail (TOTEM_IS_PLAYLIST (self));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (self));
 	g_return_if_fail (mrls != NULL);
 	g_return_if_fail (cancellable == NULL || G_IS_CANCELLABLE (cancellable));
 
@@ -2145,7 +2145,7 @@ totem_playlist_add_mrls (TotemPlaylist *self,
 		set_waiting_cursor (self);
 
 	for (i = mrls; i != NULL; i = i->next) {
-		TotemPlaylistMrlData *mrl_data = (TotemPlaylistMrlData*) i->data;
+		XplayerPlaylistMrlData *mrl_data = (XplayerPlaylistMrlData*) i->data;
 
 		if (mrl_data == NULL)
 			continue;
@@ -2160,7 +2160,7 @@ totem_playlist_add_mrls (TotemPlaylist *self,
 		 * @mrls).
 		 * TODO: Cancellation is currently not supoprted, since no consumers of this API make use of it, and it needs careful thought when
 		 * being implemented, as a separate #GCancellable instance will have to be created for each parallel computation. */
-		totem_pl_parser_parse_async (self->priv->parser, mrl_data->mrl, FALSE, NULL, (GAsyncReadyCallback) add_mrls_cb, mrl_data);
+		xplayer_pl_parser_parse_async (self->priv->parser, mrl_data->mrl, FALSE, NULL, (GAsyncReadyCallback) add_mrls_cb, mrl_data);
 	}
 
 	/* Deal with the case that all async operations completed before we got to this point (since we've held a reference to the operation data so
@@ -2169,53 +2169,53 @@ totem_playlist_add_mrls (TotemPlaylist *self,
 }
 
 /**
- * totem_playlist_add_mrls_finish:
- * @self: a #TotemPlaylist
+ * xplayer_playlist_add_mrls_finish:
+ * @self: a #XplayerPlaylist
  * @result: the #GAsyncResult that was provided to the callback
  * @error: (allow-none): a #GError for error reporting, or %NULL
  *
- * Finish an asynchronous batch MRL addition operation started by totem_playlist_add_mrls().
+ * Finish an asynchronous batch MRL addition operation started by xplayer_playlist_add_mrls().
  *
  * Return value: %TRUE on success, %FALSE otherwise
  *
  * Since: 3.0
  */
 gboolean
-totem_playlist_add_mrls_finish (TotemPlaylist *self,
+xplayer_playlist_add_mrls_finish (XplayerPlaylist *self,
                                 GAsyncResult *result,
                                 GError **error)
 {
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (self), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (self), FALSE);
 	g_return_val_if_fail (G_IS_ASYNC_RESULT (result), FALSE);
 	g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
-	g_return_val_if_fail (g_simple_async_result_is_valid (result, G_OBJECT (self), totem_playlist_add_mrls), FALSE);
+	g_return_val_if_fail (g_simple_async_result_is_valid (result, G_OBJECT (self), xplayer_playlist_add_mrls), FALSE);
 
 	/* We don't have anything to return at the moment. */
 	return TRUE;
 }
 
 static gboolean
-totem_playlist_clear_cb (GtkTreeModel *model,
+xplayer_playlist_clear_cb (GtkTreeModel *model,
 			 GtkTreePath  *path,
 			 GtkTreeIter  *iter,
 			 gpointer      data)
 {
-	totem_playlist_emit_item_removed (data, iter);
+	xplayer_playlist_emit_item_removed (data, iter);
 	return FALSE;
 }
 
 gboolean
-totem_playlist_clear (TotemPlaylist *playlist)
+xplayer_playlist_clear (XplayerPlaylist *playlist)
 {
 	GtkListStore *store;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	if (PL_LEN == 0)
 		return FALSE;
 
 	gtk_tree_model_foreach (playlist->priv->model,
-				totem_playlist_clear_cb,
+				xplayer_playlist_clear_cb,
 				playlist);
 
 	store = GTK_LIST_STORE (playlist->priv->model);
@@ -2225,7 +2225,7 @@ totem_playlist_clear (TotemPlaylist *playlist)
 		gtk_tree_path_free (playlist->priv->current);
 	playlist->priv->current = NULL;
 
-	totem_playlist_update_save_button (playlist);
+	xplayer_playlist_update_save_button (playlist);
 
 	return TRUE;
 }
@@ -2245,7 +2245,7 @@ compare_removal (GtkTreeRowReference *ref, GtkTreePath *path)
 
 /* Whether the item in question will be removed */
 static gboolean
-totem_playlist_item_to_be_removed (TotemPlaylist *playlist,
+xplayer_playlist_item_to_be_removed (XplayerPlaylist *playlist,
 				   GtkTreePath *path,
 				   ClearComparisonFunc func)
 {
@@ -2263,7 +2263,7 @@ totem_playlist_item_to_be_removed (TotemPlaylist *playlist,
 }
 
 static void
-totem_playlist_clear_with_compare (TotemPlaylist *playlist,
+xplayer_playlist_clear_with_compare (XplayerPlaylist *playlist,
 				   ClearComparisonFunc func,
 				   gconstpointer data)
 {
@@ -2282,7 +2282,7 @@ totem_playlist_clear_with_compare (TotemPlaylist *playlist,
 			return;
 
 		gtk_tree_selection_selected_foreach (selection,
-						     totem_playlist_foreach_selected,
+						     xplayer_playlist_foreach_selected,
 						     (gpointer) playlist);
 	} else {
 		guint num_items, i;
@@ -2335,7 +2335,7 @@ totem_playlist_clear_with_compare (TotemPlaylist *playlist,
 		gtk_tree_path_next (item);
 		next = gtk_tree_row_reference_new (playlist->priv->model, item);
 		while (next != NULL) {
-			if (totem_playlist_item_to_be_removed (playlist, item, func) == FALSE) {
+			if (xplayer_playlist_item_to_be_removed (playlist, item, func) == FALSE) {
 				/* Found the item after the current one that
 				 * won't be removed, thus the new current */
 				break;
@@ -2356,7 +2356,7 @@ totem_playlist_clear_with_compare (TotemPlaylist *playlist,
 		gtk_tree_model_get_iter (playlist->priv->model, &iter, path);
 		gtk_tree_path_free (path);
 
-		totem_playlist_emit_item_removed (playlist, &iter);
+		xplayer_playlist_emit_item_removed (playlist, &iter);
 		gtk_list_store_remove (GTK_LIST_STORE (playlist->priv->model), &iter);
 
 		gtk_tree_row_reference_free
@@ -2381,7 +2381,7 @@ totem_playlist_clear_with_compare (TotemPlaylist *playlist,
 			ensure_shuffled (playlist);
 
 		g_signal_emit (G_OBJECT (playlist),
-				totem_playlist_table_signals[CURRENT_REMOVED],
+				xplayer_playlist_table_signals[CURRENT_REMOVED],
 				0, NULL);
 	} else {
 		if (ref != NULL) {
@@ -2393,12 +2393,12 @@ totem_playlist_clear_with_compare (TotemPlaylist *playlist,
 			ensure_shuffled (playlist);
 
 		g_signal_emit (G_OBJECT (playlist),
-				totem_playlist_table_signals[CHANGED], 0,
+				xplayer_playlist_table_signals[CHANGED], 0,
 				NULL);
 	}
 	if (ref != NULL)
 		gtk_tree_row_reference_free (ref);
-	totem_playlist_update_save_button (playlist);
+	xplayer_playlist_update_save_button (playlist);
 	gtk_tree_view_columns_autosize (GTK_TREE_VIEW (playlist->priv->treeview));
 
 	playlist->priv->current_to_be_removed = FALSE;
@@ -2419,7 +2419,7 @@ get_mount_default_location (GMount *mount)
 }
 
 static gboolean
-totem_playlist_compare_with_mount (TotemPlaylist *playlist, GtkTreeIter *iter, gconstpointer data)
+xplayer_playlist_compare_with_mount (XplayerPlaylist *playlist, GtkTreeIter *iter, gconstpointer data)
 {
 	GMount *clear_mount = (GMount *) data;
 	GMount *mount;
@@ -2456,18 +2456,18 @@ bail:
 }
 
 void
-totem_playlist_clear_with_g_mount (TotemPlaylist *playlist,
+xplayer_playlist_clear_with_g_mount (XplayerPlaylist *playlist,
 				   GMount *mount)
 {
 	g_return_if_fail (mount != NULL);
 
-	totem_playlist_clear_with_compare (playlist,
-					   (ClearComparisonFunc) totem_playlist_compare_with_mount,
+	xplayer_playlist_clear_with_compare (playlist,
+					   (ClearComparisonFunc) xplayer_playlist_compare_with_mount,
 					   mount);
 }
 
 char *
-totem_playlist_get_current_mrl (TotemPlaylist *playlist, char **subtitle)
+xplayer_playlist_get_current_mrl (XplayerPlaylist *playlist, char **subtitle)
 {
 	GtkTreeIter iter;
 	char *path;
@@ -2475,7 +2475,7 @@ totem_playlist_get_current_mrl (TotemPlaylist *playlist, char **subtitle)
 	if (subtitle != NULL)
 		*subtitle = NULL;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), NULL);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), NULL);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return NULL;
@@ -2499,12 +2499,12 @@ totem_playlist_get_current_mrl (TotemPlaylist *playlist, char **subtitle)
 }
 
 char *
-totem_playlist_get_current_title (TotemPlaylist *playlist)
+xplayer_playlist_get_current_title (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 	char *title;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), NULL);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), NULL);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return NULL;
@@ -2521,12 +2521,12 @@ totem_playlist_get_current_title (TotemPlaylist *playlist)
 }
 
 char *
-totem_playlist_get_current_content_type (TotemPlaylist *playlist)
+xplayer_playlist_get_current_content_type (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 	char *content_type;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), NULL);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), NULL);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return NULL;
@@ -2544,13 +2544,13 @@ totem_playlist_get_current_content_type (TotemPlaylist *playlist)
 }
 
 char *
-totem_playlist_get_title (TotemPlaylist *playlist, guint title_index)
+xplayer_playlist_get_title (XplayerPlaylist *playlist, guint title_index)
 {
 	GtkTreeIter iter;
 	GtkTreePath *path;
 	char *title;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), NULL);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), NULL);
 
 	path = gtk_tree_path_new_from_indices (title_index, -1);
 
@@ -2568,11 +2568,11 @@ totem_playlist_get_title (TotemPlaylist *playlist, guint title_index)
 }
 
 gboolean
-totem_playlist_has_previous_mrl (TotemPlaylist *playlist)
+xplayer_playlist_has_previous_mrl (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return FALSE;
@@ -2592,11 +2592,11 @@ totem_playlist_has_previous_mrl (TotemPlaylist *playlist)
 }
 
 gboolean
-totem_playlist_has_next_mrl (TotemPlaylist *playlist)
+xplayer_playlist_has_next_mrl (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return FALSE;
@@ -2616,13 +2616,13 @@ totem_playlist_has_next_mrl (TotemPlaylist *playlist)
 }
 
 gboolean
-totem_playlist_set_title (TotemPlaylist *playlist, const char *title)
+xplayer_playlist_set_title (XplayerPlaylist *playlist, const char *title)
 {
 	GtkListStore *store;
 	GtkTreeIter iter;
 	char *escaped_title;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return FALSE;
@@ -2641,19 +2641,19 @@ totem_playlist_set_title (TotemPlaylist *playlist, const char *title)
 	g_free (escaped_title);
 
 	g_signal_emit (playlist,
-		       totem_playlist_table_signals[ACTIVE_NAME_CHANGED], 0);
+		       xplayer_playlist_table_signals[ACTIVE_NAME_CHANGED], 0);
 
 	return TRUE;
 }
 
 gboolean
-totem_playlist_set_playing (TotemPlaylist *playlist, TotemPlaylistStatus state)
+xplayer_playlist_set_playing (XplayerPlaylist *playlist, XplayerPlaylistStatus state)
 {
 	GtkListStore *store;
 	GtkTreeIter iter;
 	GtkTreePath *path;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	if (update_current_from_playlist (playlist) == FALSE)
 		return FALSE;
@@ -2679,16 +2679,16 @@ totem_playlist_set_playing (TotemPlaylist *playlist, TotemPlaylistStatus state)
 	return TRUE;
 }
 
-TotemPlaylistStatus
-totem_playlist_get_playing (TotemPlaylist *playlist)
+XplayerPlaylistStatus
+xplayer_playlist_get_playing (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
-	TotemPlaylistStatus status;
+	XplayerPlaylistStatus status;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), TOTEM_PLAYLIST_STATUS_NONE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), XPLAYER_PLAYLIST_STATUS_NONE);
 
 	if (gtk_tree_model_get_iter (playlist->priv->model, &iter, playlist->priv->current) == FALSE)
-		return TOTEM_PLAYLIST_STATUS_NONE;
+		return XPLAYER_PLAYLIST_STATUS_NONE;
 
 	gtk_tree_model_get (playlist->priv->model,
 			    &iter,
@@ -2699,23 +2699,23 @@ totem_playlist_get_playing (TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_set_previous (TotemPlaylist *playlist)
+xplayer_playlist_set_previous (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
-	if (totem_playlist_has_previous_mrl (playlist) == FALSE)
+	if (xplayer_playlist_has_previous_mrl (playlist) == FALSE)
 		return;
 
-	totem_playlist_unset_playing (playlist);
+	xplayer_playlist_unset_playing (playlist);
 
 	if (playlist->priv->shuffle == FALSE) {
 		char *path;
 
 		path = gtk_tree_path_to_string (playlist->priv->current);
 		if (g_str_equal (path, "0")) {
-			totem_playlist_set_at_end (playlist);
+			xplayer_playlist_set_at_end (playlist);
 			g_free (path);
 			return;
 		}
@@ -2747,18 +2747,18 @@ totem_playlist_set_previous (TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_set_next (TotemPlaylist *playlist)
+xplayer_playlist_set_next (XplayerPlaylist *playlist)
 {
 	GtkTreeIter iter;
 
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
-	if (totem_playlist_has_next_mrl (playlist) == FALSE) {
-		totem_playlist_set_at_start (playlist);
+	if (xplayer_playlist_has_next_mrl (playlist) == FALSE) {
+		xplayer_playlist_set_at_start (playlist);
 		return;
 	}
 
-	totem_playlist_unset_playing (playlist);
+	xplayer_playlist_unset_playing (playlist);
 
 	if (playlist->priv->shuffle == FALSE) {
 		gtk_tree_model_get_iter (playlist->priv->model,
@@ -2783,43 +2783,43 @@ totem_playlist_set_next (TotemPlaylist *playlist)
 }
 
 gboolean
-totem_playlist_get_repeat (TotemPlaylist *playlist)
+xplayer_playlist_get_repeat (XplayerPlaylist *playlist)
 {
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	return playlist->priv->repeat;
 }
 
 void
-totem_playlist_set_repeat (TotemPlaylist *playlist, gboolean repeat)
+xplayer_playlist_set_repeat (XplayerPlaylist *playlist, gboolean repeat)
 {
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
 	g_settings_set_boolean (playlist->priv->settings, "repeat", repeat);
 }
 
 gboolean
-totem_playlist_get_shuffle (TotemPlaylist *playlist)
+xplayer_playlist_get_shuffle (XplayerPlaylist *playlist)
 {
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), FALSE);
 
 	return playlist->priv->shuffle;
 }
 
 void
-totem_playlist_set_shuffle (TotemPlaylist *playlist, gboolean shuffle)
+xplayer_playlist_set_shuffle (XplayerPlaylist *playlist, gboolean shuffle)
 {
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
 	g_settings_set_boolean (playlist->priv->settings, "shuffle", shuffle);
 }
 
 void
-totem_playlist_set_at_start (TotemPlaylist *playlist)
+xplayer_playlist_set_at_start (XplayerPlaylist *playlist)
 {
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
-	totem_playlist_unset_playing (playlist);
+	xplayer_playlist_unset_playing (playlist);
 
 	if (playlist->priv->current != NULL)
 	{
@@ -2830,13 +2830,13 @@ totem_playlist_set_at_start (TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_set_at_end (TotemPlaylist *playlist)
+xplayer_playlist_set_at_end (XplayerPlaylist *playlist)
 {
 	int indice;
 
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
-	totem_playlist_unset_playing (playlist);
+	xplayer_playlist_unset_playing (playlist);
 
 	if (playlist->priv->current != NULL)
 	{
@@ -2857,12 +2857,12 @@ totem_playlist_set_at_end (TotemPlaylist *playlist)
 }
 
 int
-totem_playlist_get_current (TotemPlaylist *playlist)
+xplayer_playlist_get_current (XplayerPlaylist *playlist)
 {
 	char *path;
 	double current_index;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), -1);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), -1);
 
 	if (playlist->priv->current == NULL)
 		return -1;
@@ -2877,11 +2877,11 @@ totem_playlist_get_current (TotemPlaylist *playlist)
 }
 
 int
-totem_playlist_get_last (TotemPlaylist *playlist)
+xplayer_playlist_get_last (XplayerPlaylist *playlist)
 {
 	guint len = PL_LEN;
 
-	g_return_val_if_fail (TOTEM_IS_PLAYLIST (playlist), -1);
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), -1);
 
 	if (len == 0)
 		return -1;
@@ -2890,104 +2890,104 @@ totem_playlist_get_last (TotemPlaylist *playlist)
 }
 
 void
-totem_playlist_set_current (TotemPlaylist *playlist, guint current_index)
+xplayer_playlist_set_current (XplayerPlaylist *playlist, guint current_index)
 {
-	g_return_if_fail (TOTEM_IS_PLAYLIST (playlist));
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
 
 	if (current_index >= (guint) PL_LEN)
 		return;
 
-	totem_playlist_unset_playing (playlist);
+	xplayer_playlist_unset_playing (playlist);
 	//FIXME problems when shuffled?
 	gtk_tree_path_free (playlist->priv->current);
 	playlist->priv->current = gtk_tree_path_new_from_indices (current_index, -1);
 }
 
 static void
-totem_playlist_class_init (TotemPlaylistClass *klass)
+xplayer_playlist_class_init (XplayerPlaylistClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	g_type_class_add_private (klass, sizeof (TotemPlaylistPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerPlaylistPrivate));
 
-	object_class->dispose = totem_playlist_dispose;
-	object_class->finalize = totem_playlist_finalize;
+	object_class->dispose = xplayer_playlist_dispose;
+	object_class->finalize = xplayer_playlist_finalize;
 
 	/* Signals */
-	totem_playlist_table_signals[CHANGED] =
+	xplayer_playlist_table_signals[CHANGED] =
 		g_signal_new ("changed",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass, changed),
+				G_STRUCT_OFFSET (XplayerPlaylistClass, changed),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__VOID,
 				G_TYPE_NONE, 0);
-	totem_playlist_table_signals[ITEM_ACTIVATED] =
+	xplayer_playlist_table_signals[ITEM_ACTIVATED] =
 		g_signal_new ("item-activated",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass, item_activated),
+				G_STRUCT_OFFSET (XplayerPlaylistClass, item_activated),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__VOID,
 				G_TYPE_NONE, 0);
-	totem_playlist_table_signals[ACTIVE_NAME_CHANGED] =
+	xplayer_playlist_table_signals[ACTIVE_NAME_CHANGED] =
 		g_signal_new ("active-name-changed",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass, active_name_changed),
+				G_STRUCT_OFFSET (XplayerPlaylistClass, active_name_changed),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__VOID,
 				G_TYPE_NONE, 0);
-	totem_playlist_table_signals[CURRENT_REMOVED] =
+	xplayer_playlist_table_signals[CURRENT_REMOVED] =
 		g_signal_new ("current-removed",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass,
+				G_STRUCT_OFFSET (XplayerPlaylistClass,
 						 current_removed),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__VOID,
 				G_TYPE_NONE, 0);
-	totem_playlist_table_signals[REPEAT_TOGGLED] =
+	xplayer_playlist_table_signals[REPEAT_TOGGLED] =
 		g_signal_new ("repeat-toggled",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass,
+				G_STRUCT_OFFSET (XplayerPlaylistClass,
 						 repeat_toggled),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__BOOLEAN,
 				G_TYPE_NONE, 1, G_TYPE_BOOLEAN);
-	totem_playlist_table_signals[SHUFFLE_TOGGLED] =
+	xplayer_playlist_table_signals[SHUFFLE_TOGGLED] =
 		g_signal_new ("shuffle-toggled",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass,
+				G_STRUCT_OFFSET (XplayerPlaylistClass,
 						 shuffle_toggled),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__BOOLEAN,
 				G_TYPE_NONE, 1, G_TYPE_BOOLEAN);
-	totem_playlist_table_signals[SUBTITLE_CHANGED] =
+	xplayer_playlist_table_signals[SUBTITLE_CHANGED] =
 		g_signal_new ("subtitle-changed",
 			      G_TYPE_FROM_CLASS (klass),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemPlaylistClass,
+			      G_STRUCT_OFFSET (XplayerPlaylistClass,
 					       subtitle_changed),
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__VOID,
 			      G_TYPE_NONE, 0);
-	totem_playlist_table_signals[ITEM_ADDED] =
+	xplayer_playlist_table_signals[ITEM_ADDED] =
 		g_signal_new ("item-added",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass,
+				G_STRUCT_OFFSET (XplayerPlaylistClass,
 					item_added),
 				NULL, NULL,
 				g_cclosure_marshal_generic,
 				G_TYPE_NONE, 2, G_TYPE_STRING, G_TYPE_STRING);
-	totem_playlist_table_signals[ITEM_REMOVED] =
+	xplayer_playlist_table_signals[ITEM_REMOVED] =
 		g_signal_new ("item-removed",
 				G_TYPE_FROM_CLASS (klass),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemPlaylistClass,
+				G_STRUCT_OFFSET (XplayerPlaylistClass,
 					item_removed),
 				NULL, NULL,
 				g_cclosure_marshal_generic,

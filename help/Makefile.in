@@ -293,11 +293,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -365,20 +365,20 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-HELP_ID = totem
+HELP_ID = xplayer
 HELP_FILES = \
 	index.docbook \
 	legal.xml
 
 HELP_MEDIA = \
-		figures/totem_show_playlist_button.png 	\
-		figures/totem_next_button.png		\
-		figures/totem_start_window.png		\
-		figures/totem_pause_button.png		\
-		figures/totem_volume_maximum_button.png	\
-		figures/totem_play_button.png		\
-		figures/totem_volume_mute_button.png	\
-		figures/totem_previous_button.png
+		figures/xplayer_show_playlist_button.png 	\
+		figures/xplayer_next_button.png		\
+		figures/xplayer_start_window.png		\
+		figures/xplayer_pause_button.png		\
+		figures/xplayer_volume_maximum_button.png	\
+		figures/xplayer_play_button.png		\
+		figures/xplayer_volume_mute_button.png	\
+		figures/xplayer_previous_button.png
 
 HELP_LINGUAS = bg ca cs da de el en_GB es eu fi fr gl it ja oc pa pl pt_BR ro ru sl sv te uk zh_CN zh_HK zh_TW
 all: all-am

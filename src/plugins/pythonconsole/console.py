@@ -24,10 +24,10 @@
 # Bits from gedit Python Console Plugin
 #     Copyrignt (C), 2005 Raphaël Slinckx
 #
-# The Totem project hereby grant permission for non-gpl compatible GStreamer
-# plugins to be used and distributed together with GStreamer and Totem. This
+# The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+# plugins to be used and distributed together with GStreamer and Xplayer. This
 # permission are above and beyond the permissions granted by the GPL license
-# Totem is covered by.
+# Xplayer is covered by.
 #
 # Monday 7th February 2005: Christian Schaller: Add exception clause.
 # See license_change file for details.

@@ -37,44 +37,44 @@
 #include <libxml/xmlstring.h>
 #include <libxml/xmlsave.h>
 
-#include "totem-plugin.h"
-#include "totem-interface.h"
+#include "xplayer-plugin.h"
+#include "xplayer-interface.h"
 
-#define TOTEM_TYPE_DISC_RECORDER_PLUGIN		(totem_disc_recorder_plugin_get_type ())
-#define TOTEM_DISC_RECORDER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_DISC_RECORDER_PLUGIN, TotemDiscRecorderPlugin))
-#define TOTEM_DISC_RECORDER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_DISC_RECORDER_PLUGIN, TotemDiscRecorderPluginClass))
-#define TOTEM_IS_DISC_RECORDER_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_DISC_RECORDER_PLUGIN))
-#define TOTEM_IS_DISC_RECORDER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_DISC_RECORDER_PLUGIN))
-#define TOTEM_DISC_RECORDER_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_DISC_RECORDER_PLUGIN, TotemDiscRecorderPluginClass))
+#define XPLAYER_TYPE_DISC_RECORDER_PLUGIN		(xplayer_disc_recorder_plugin_get_type ())
+#define XPLAYER_DISC_RECORDER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_DISC_RECORDER_PLUGIN, XplayerDiscRecorderPlugin))
+#define XPLAYER_DISC_RECORDER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_DISC_RECORDER_PLUGIN, XplayerDiscRecorderPluginClass))
+#define XPLAYER_IS_DISC_RECORDER_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_DISC_RECORDER_PLUGIN))
+#define XPLAYER_IS_DISC_RECORDER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_DISC_RECORDER_PLUGIN))
+#define XPLAYER_DISC_RECORDER_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_DISC_RECORDER_PLUGIN, XplayerDiscRecorderPluginClass))
 
 typedef struct {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 
 	GtkActionGroup *action_group;
 	guint ui_merge_id;
-} TotemDiscRecorderPluginPrivate;
+} XplayerDiscRecorderPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_DISC_RECORDER_PLUGIN, TotemDiscRecorderPlugin, totem_disc_recorder_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_DISC_RECORDER_PLUGIN, XplayerDiscRecorderPlugin, xplayer_disc_recorder_plugin)
 
-static void totem_disc_recorder_plugin_burn (GtkAction *action,
-					     TotemDiscRecorderPlugin *pi);
-static void totem_disc_recorder_plugin_copy (GtkAction *action,
-					     TotemDiscRecorderPlugin *pi);
+static void xplayer_disc_recorder_plugin_burn (GtkAction *action,
+					     XplayerDiscRecorderPlugin *pi);
+static void xplayer_disc_recorder_plugin_copy (GtkAction *action,
+					     XplayerDiscRecorderPlugin *pi);
 
-static GtkActionEntry totem_disc_recorder_plugin_actions [] = {
+static GtkActionEntry xplayer_disc_recorder_plugin_actions [] = {
 	{ "VideoBurnToDisc", "media-optical-video-new", N_("_Create Video Disc..."), NULL,
 		N_("Create a video DVD or a (S)VCD from the currently opened movie"),
-		G_CALLBACK (totem_disc_recorder_plugin_burn) },
+		G_CALLBACK (xplayer_disc_recorder_plugin_burn) },
 	{ "VideoDVDCopy", "media-optical-copy", N_("Copy Vide_o DVD..."), NULL,
 		N_("Copy the currently playing video DVD"),
-		G_CALLBACK (totem_disc_recorder_plugin_copy) },
+		G_CALLBACK (xplayer_disc_recorder_plugin_copy) },
 	{ "VideoVCDCopy", "media-optical-copy", N_("Copy (S)VCD..."), NULL,
 		N_("Copy the currently playing (S)VCD"),
-		G_CALLBACK (totem_disc_recorder_plugin_copy) },
+		G_CALLBACK (xplayer_disc_recorder_plugin_copy) },
 };
 
 static gboolean
-totem_disc_recorder_plugin_start_burning (TotemDiscRecorderPlugin *pi,
+xplayer_disc_recorder_plugin_start_burning (XplayerDiscRecorderPlugin *pi,
 					  const char *path,
 					  gboolean copy)
 {
@@ -88,7 +88,7 @@ totem_disc_recorder_plugin_start_burning (TotemDiscRecorderPlugin *pi,
 	GError *error = NULL;
 	char *xid_arg;
 
-	main_window = totem_get_main_window (pi->priv->totem);
+	main_window = xplayer_get_main_window (pi->priv->xplayer);
 	screen = gtk_widget_get_screen (GTK_WIDGET (main_window));
 	display = gdk_display_get_default ();
 
@@ -130,12 +130,12 @@ totem_disc_recorder_plugin_start_burning (TotemDiscRecorderPlugin *pi,
 	return TRUE;
 
 error:
-	main_window = totem_get_main_window (pi->priv->totem);
+	main_window = xplayer_get_main_window (pi->priv->xplayer);
 
 	if (copy != FALSE)
-		totem_interface_error (_("The video disc could not be duplicated."), error->message, main_window);
+		xplayer_interface_error (_("The video disc could not be duplicated."), error->message, main_window);
 	else
-		totem_interface_error (_("The movie could not be recorded."), error->message, main_window);
+		xplayer_interface_error (_("The movie could not be recorded."), error->message, main_window);
 
 	g_error_free (error);
 	g_object_unref (main_window);
@@ -144,7 +144,7 @@ error:
 }
 
 static char*
-totem_disc_recorder_plugin_write_video_project (TotemDiscRecorderPlugin *pi,
+xplayer_disc_recorder_plugin_write_video_project (XplayerDiscRecorderPlugin *pi,
 						char **error)
 {
 	xmlTextWriter *project;
@@ -196,7 +196,7 @@ totem_disc_recorder_plugin_write_video_project (TotemDiscRecorderPlugin *pi,
 	if (success < 0)
 		goto error;
 
-	title = totem_get_short_title (pi->priv->totem);
+	title = xplayer_get_short_title (pi->priv->xplayer);
 	if (title) {
 		success = xmlTextWriterWriteElement (project,
 						     (xmlChar *) "label",
@@ -215,7 +215,7 @@ totem_disc_recorder_plugin_write_video_project (TotemDiscRecorderPlugin *pi,
 	if (success < 0)
 		goto error;
 
-	uri = totem_get_current_mrl (pi->priv->totem);
+	uri = xplayer_get_current_mrl (pi->priv->xplayer);
 	escaped = (unsigned char *) g_uri_escape_string (uri, NULL, FALSE);
 	g_free (uri);
 
@@ -272,46 +272,46 @@ error:
 }
 
 static void
-totem_disc_recorder_plugin_burn (GtkAction *action,
-				 TotemDiscRecorderPlugin *pi)
+xplayer_disc_recorder_plugin_burn (GtkAction *action,
+				 XplayerDiscRecorderPlugin *pi)
 {
 	char *path;
 	char *error = NULL;
 
-	path = totem_disc_recorder_plugin_write_video_project (pi, &error);
+	path = xplayer_disc_recorder_plugin_write_video_project (pi, &error);
 	if (!path) {
-		totem_interface_error (_("The movie could not be recorded."),
+		xplayer_interface_error (_("The movie could not be recorded."),
 				       error,
-				       totem_get_main_window (pi->priv->totem));
+				       xplayer_get_main_window (pi->priv->xplayer));
 		g_free (error);
 		return;
 	}
 
-	if (!totem_disc_recorder_plugin_start_burning (pi, path, FALSE))
+	if (!xplayer_disc_recorder_plugin_start_burning (pi, path, FALSE))
 		g_remove (path);
 
 	g_free (path);
 }
 
 static void
-totem_disc_recorder_plugin_copy (GtkAction *action,
-				 TotemDiscRecorderPlugin *pi)
+xplayer_disc_recorder_plugin_copy (GtkAction *action,
+				 XplayerDiscRecorderPlugin *pi)
 {
 	char *mrl;
 
-	mrl = totem_get_current_mrl (pi->priv->totem);
+	mrl = xplayer_get_current_mrl (pi->priv->xplayer);
 	if (!g_str_has_prefix (mrl, "dvd:") && !g_str_has_prefix (mrl, "vcd:")) {
 		g_free (mrl);
 		g_assert_not_reached ();
 		return;
 	}
 
-	totem_disc_recorder_plugin_start_burning (pi, mrl + 6, TRUE);
+	xplayer_disc_recorder_plugin_start_burning (pi, mrl + 6, TRUE);
 }
 
 static void
-totem_disc_recorder_file_closed (TotemObject *totem,
-				 TotemDiscRecorderPlugin *pi)
+xplayer_disc_recorder_file_closed (XplayerObject *xplayer,
+				 XplayerDiscRecorderPlugin *pi)
 {
 	GtkAction *action;
 
@@ -324,11 +324,11 @@ totem_disc_recorder_file_closed (TotemObject *totem,
 }
 
 static void
-totem_disc_recorder_file_opened (TotemObject *totem,
+xplayer_disc_recorder_file_opened (XplayerObject *xplayer,
 				 const char *mrl,
-				 TotemDiscRecorderPlugin *pi)
+				 XplayerDiscRecorderPlugin *pi)
 {
-	TotemDiscRecorderPluginPrivate *priv = pi->priv;
+	XplayerDiscRecorderPluginPrivate *priv = pi->priv;
 	GtkAction *action;
 
 	/* Check if that stream is supported by brasero */
@@ -371,8 +371,8 @@ totem_disc_recorder_file_opened (TotemObject *totem,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemDiscRecorderPlugin *pi = TOTEM_DISC_RECORDER_PLUGIN (plugin);
-	TotemDiscRecorderPluginPrivate *priv = pi->priv;
+	XplayerDiscRecorderPlugin *pi = XPLAYER_DISC_RECORDER_PLUGIN (plugin);
+	XplayerDiscRecorderPluginPrivate *priv = pi->priv;
 	GtkUIManager *uimanager = NULL;
 	GtkAction *action;
 	char *path;
@@ -391,26 +391,26 @@ impl_activate (PeasActivatable *plugin)
 	g_free (path);
 #endif
 
-	priv->totem = g_object_get_data (G_OBJECT (plugin), "object");
+	priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");
 
-	g_signal_connect (priv->totem,
+	g_signal_connect (priv->xplayer,
 			  "file-opened",
-			  G_CALLBACK (totem_disc_recorder_file_opened),
+			  G_CALLBACK (xplayer_disc_recorder_file_opened),
 			  plugin);
-	g_signal_connect (priv->totem,
+	g_signal_connect (priv->xplayer,
 			  "file-closed",
-			  G_CALLBACK (totem_disc_recorder_file_closed),
+			  G_CALLBACK (xplayer_disc_recorder_file_closed),
 			  plugin);
 
 	/* add UI */
 	priv->action_group = gtk_action_group_new ("DiscRecorderActions");
 	gtk_action_group_set_translation_domain (priv->action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions (priv->action_group,
-				      totem_disc_recorder_plugin_actions,
-				      G_N_ELEMENTS (totem_disc_recorder_plugin_actions),
+				      xplayer_disc_recorder_plugin_actions,
+				      G_N_ELEMENTS (xplayer_disc_recorder_plugin_actions),
 				      pi);
 
-	uimanager = totem_get_ui_manager (priv->totem);
+	uimanager = xplayer_get_ui_manager (priv->xplayer);
 	gtk_ui_manager_insert_action_group (uimanager, priv->action_group, -1);
 	g_object_unref (priv->action_group);
 
@@ -440,7 +440,7 @@ impl_activate (PeasActivatable *plugin)
 			       GTK_UI_MANAGER_MENUITEM,
 			       TRUE);
 
-	if (!totem_is_paused (priv->totem) && !totem_is_playing (priv->totem)) {
+	if (!xplayer_is_paused (priv->xplayer) && !xplayer_is_playing (priv->xplayer)) {
 		action = gtk_action_group_get_action (priv->action_group, "VideoBurnToDisc");
 		gtk_action_set_visible (action, FALSE);
 		action = gtk_action_group_get_action (priv->action_group, "VideoDVDCopy");
@@ -450,8 +450,8 @@ impl_activate (PeasActivatable *plugin)
 	else {
 		char *mrl;
 
-		mrl = totem_get_current_mrl (priv->totem);
-		totem_disc_recorder_file_opened (priv->totem, mrl, pi);
+		mrl = xplayer_get_current_mrl (priv->xplayer);
+		xplayer_disc_recorder_file_opened (priv->xplayer, mrl, pi);
 		g_free (mrl);
 	}
 }
@@ -459,16 +459,16 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemDiscRecorderPlugin *pi = TOTEM_DISC_RECORDER_PLUGIN (plugin);
-	TotemDiscRecorderPluginPrivate *priv = pi->priv;
+	XplayerDiscRecorderPlugin *pi = XPLAYER_DISC_RECORDER_PLUGIN (plugin);
+	XplayerDiscRecorderPluginPrivate *priv = pi->priv;
 	GtkUIManager *uimanager = NULL;
 
-	g_signal_handlers_disconnect_by_func (priv->totem, totem_disc_recorder_file_opened, plugin);
-	g_signal_handlers_disconnect_by_func (priv->totem, totem_disc_recorder_file_closed, plugin);
+	g_signal_handlers_disconnect_by_func (priv->xplayer, xplayer_disc_recorder_file_opened, plugin);
+	g_signal_handlers_disconnect_by_func (priv->xplayer, xplayer_disc_recorder_file_closed, plugin);
 
-	uimanager = totem_get_ui_manager (priv->totem);
+	uimanager = xplayer_get_ui_manager (priv->xplayer);
 	gtk_ui_manager_remove_ui (uimanager, priv->ui_merge_id);
 	gtk_ui_manager_remove_action_group (uimanager, priv->action_group);
 
-	priv->totem = NULL;
+	priv->xplayer = NULL;
 }

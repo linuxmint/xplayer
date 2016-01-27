@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -28,8 +28,8 @@
 
 #include "npupp.h"
 
-#include "totemPlugin.h"
-#include "totemGMPPlayer.h"
+#include "xplayerPlugin.h"
+#include "xplayerGMPPlayer.h"
 
 static const char *propertyNames[] = {
   "cdromCollection",
@@ -67,40 +67,40 @@ static const char *methodNames[] = {
   "openPlayer"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPPlayer,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPPlayer,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPPlayer::totemGMPPlayer (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerGMPPlayer::xplayerGMPPlayer (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPPlayer::~totemGMPPlayer ()
+xplayerGMPPlayer::~xplayerGMPPlayer ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemGMPPlayer::InvokeByIndex (int aIndex,
+xplayerGMPPlayer::InvokeByIndex (int aIndex,
                                const NPVariant *argv,
                                uint32_t argc,
                                NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPPlayer);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPPlayer);
 
   switch (Methods (aIndex)) {
     case eNewPlaylist:
-      /* totemIGMPPlaylist newPlaylist (in AUTF8String name, in AUTF8String URL); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      /* xplayerIGMPPlaylist newPlaylist (in AUTF8String name, in AUTF8String URL); */
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return NullVariant (_result);
 
     case eClose:
       /* void close (); */
     case eNewMedia:
-      /* totemIGMPMedia newMedia (in AUTF8String URL); */
+      /* xplayerIGMPMedia newMedia (in AUTF8String URL); */
     case eOpenPlayer:
       /* void openPlayer (in AUTF8String URL); */
     case eLaunchURL:
@@ -112,27 +112,27 @@ totemGMPPlayer::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPPlayer::GetPropertyByIndex (int aIndex,
+xplayerGMPPlayer::GetPropertyByIndex (int aIndex,
                                     NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemGMPPlayer);
+  XPLAYER_LOG_GETTER (aIndex, xplayerGMPPlayer);
 
   switch (Properties (aIndex)) {
     case eControls:
-      /* readonly attribute totemIGMPControls controls; */
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eGMPControls));
+      /* readonly attribute xplayerIGMPControls controls; */
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eGMPControls));
 
     case eNetwork:
-      /* readonly attribute totemIGMPNetwork network; */
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eGMPNetwork));
+      /* readonly attribute xplayerIGMPNetwork network; */
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eGMPNetwork));
 
     case eSettings:
-      /* readonly attribute totemIGMPSettings settings; */
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eGMPSettings));
+      /* readonly attribute xplayerIGMPSettings settings; */
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eGMPSettings));
 
     case eVersionInfo:
       /* readonly attribute ACString versionInfo; */
-      return StringVariant (_result, TOTEM_GMP_VERSION_BUILD);
+      return StringVariant (_result, XPLAYER_GMP_VERSION_BUILD);
 
     case eFullScreen:
       /* attribute boolean fullScreen; */
@@ -144,7 +144,7 @@ totemGMPPlayer::GetPropertyByIndex (int aIndex,
 
     case eIsOnline:
       /* readonly attribute boolean isOnline; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return BoolVariant (_result, true);
 
     case eEnableContextMenu:
@@ -152,34 +152,34 @@ totemGMPPlayer::GetPropertyByIndex (int aIndex,
       return BoolVariant (_result, Plugin()->AllowContextMenu());
 
     case eClosedCaption:
-      /* readonly attribute totemIGMPClosedCaption closedCaption; */
+      /* readonly attribute xplayerIGMPClosedCaption closedCaption; */
     case eCurrentMedia:
-      /* attribute totemIGMPMedia currentMedia; */
+      /* attribute xplayerIGMPMedia currentMedia; */
     case eCurrentPlaylist:
-      /* attribute totemIGMPPlaylist currentPlaylist; */
+      /* attribute xplayerIGMPPlaylist currentPlaylist; */
     case eError:
-      /* readonly attribute totemIGMPError error; */
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      /* readonly attribute xplayerIGMPError error; */
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return NullVariant (_result);
 
     case eStatus:
       /* readonly attribute AUTF8String status; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return StringVariant (_result, "OK");
 
     case eURL:
       /* attribute AUTF8String URL; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return StringVariant (_result, Plugin()->Src()); /* FIXMEchpe use URL()? */
 
     case eEnabled:
       /* attribute boolean enabled; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return BoolVariant (_result, true);
 
     case eOpenState:
       /* readonly attribute long openState; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return Int32Variant (_result, 0);
 
     case ePlayState:
@@ -188,24 +188,24 @@ totemGMPPlayer::GetPropertyByIndex (int aIndex,
 
     case eStretchToFit:
       /* attribute boolean stretchToFit; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return BoolVariant (_result, false);
 
     case eUiMode:
       /* attribute ACString uiMode; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return VoidVariant (_result);
 
     case eCdromCollection:
-      /* readonly attribute totemIGMPCdromCollection cdromCollection; */
+      /* readonly attribute xplayerIGMPCdromCollection cdromCollection; */
     case eDvd:
-      /* readonly attribute totemIGMPDVD dvd; */
+      /* readonly attribute xplayerIGMPDVD dvd; */
     case eMediaCollection:
-      /* readonly attribute totemIGMPMediaCollection mediaCollection; */
+      /* readonly attribute xplayerIGMPMediaCollection mediaCollection; */
     case ePlayerApplication:
-      /* readonly attribute totemIGMPPlayerApplication playerApplication; */
+      /* readonly attribute xplayerIGMPPlayerApplication playerApplication; */
     case ePlaylistCollection:
-      /* readonly attribute totemIGMPPlaylistCollection playlistCollection; */
+      /* readonly attribute xplayerIGMPPlaylistCollection playlistCollection; */
     case eIsRemote:
       /* readonly attribute boolean isRemote; */
       return ThrowSecurityError ();
@@ -215,10 +215,10 @@ totemGMPPlayer::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPPlayer::SetPropertyByIndex (int aIndex,
+xplayerGMPPlayer::SetPropertyByIndex (int aIndex,
                                     const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPPlayer);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPPlayer);
 
   switch (Properties (aIndex)) {
     case eFullScreen: {
@@ -262,46 +262,46 @@ totemGMPPlayer::SetPropertyByIndex (int aIndex,
     }
 
     case eCurrentMedia:
-      /* attribute totemIGMPMedia currentMedia; */
+      /* attribute xplayerIGMPMedia currentMedia; */
     case eCurrentPlaylist:
-      /* attribute totemIGMPPlaylist currentPlaylist; */
+      /* attribute xplayerIGMPPlaylist currentPlaylist; */
     case eEnabled:
       /* attribute boolean enabled; */
     case eStretchToFit:
       /* attribute boolean stretchToFit; */
     case eUiMode:
       /* attribute ACString uiMode; */
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, totemGMPPlayer);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, xplayerGMPPlayer);
       return true;
 
     case eCdromCollection:
-      /* readonly attribute totemIGMPCdromCollection cdromCollection; */
+      /* readonly attribute xplayerIGMPCdromCollection cdromCollection; */
     case eClosedCaption:
-      /* readonly attribute totemIGMPClosedCaption closedCaption; */
+      /* readonly attribute xplayerIGMPClosedCaption closedCaption; */
     case eControls:
-      /* readonly attribute totemIGMPControls controls; */
+      /* readonly attribute xplayerIGMPControls controls; */
     case eDvd:
-      /* readonly attribute totemIGMPDVD dvd; */
+      /* readonly attribute xplayerIGMPDVD dvd; */
     case eError:
-      /* readonly attribute totemIGMPError error; */
+      /* readonly attribute xplayerIGMPError error; */
     case eIsOnline:
       /* readonly attribute boolean isOnline; */
     case eIsRemote:
       /* readonly attribute boolean isRemote; */
     case eMediaCollection:
-      /* readonly attribute totemIGMPMediaCollection mediaCollection; */
+      /* readonly attribute xplayerIGMPMediaCollection mediaCollection; */
     case eNetwork:
-      /* readonly attribute totemIGMPNetwork network; */
+      /* readonly attribute xplayerIGMPNetwork network; */
     case eOpenState:
       /* readonly attribute long openState; */
     case ePlayerApplication:
-      /* readonly attribute totemIGMPPlayerApplication playerApplication; */
+      /* readonly attribute xplayerIGMPPlayerApplication playerApplication; */
     case ePlaylistCollection:
-      /* readonly attribute totemIGMPPlaylistCollection playlistCollection; */
+      /* readonly attribute xplayerIGMPPlaylistCollection playlistCollection; */
     case ePlayState:
       /* readonly attribute long playState; */
     case eSettings:
-      /* readonly attribute totemIGMPSettings settings; */
+      /* readonly attribute xplayerIGMPSettings settings; */
     case eStatus:
       /* readonly attribute AUTF8String status; */
     case eVersionInfo:

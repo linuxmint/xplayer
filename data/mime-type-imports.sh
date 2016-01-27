@@ -7,8 +7,8 @@ echo_mime () {
 }
 
 
-echo "/* generated with mime-type-imports.sh in the totem module, don't edit or"
-echo "   commit in the sushi module without filing a bug against totem */"
+echo "/* generated with mime-type-imports.sh in the xplayer module, don't edit or"
+echo "   commit in the sushi module without filing a bug against xplayer */"
 
 echo "let audioTypes = ["
 get_audio_mimetypes $1;

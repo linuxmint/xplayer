@@ -17,8 +17,8 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TOTEM_NPVARIANT_WRAPPER_H__
-#define __TOTEM_NPVARIANT_WRAPPER_H__
+#ifndef __XPLAYER_NPVARIANT_WRAPPER_H__
+#define __XPLAYER_NPVARIANT_WRAPPER_H__
 
 #include <assert.h>
 #include <string.h>
@@ -26,21 +26,21 @@
 #include "npapi.h"
 #include "npruntime.h"
 
-class totemNPVariantWrapper {
+class xplayerNPVariantWrapper {
 
   public:
 
-    totemNPVariantWrapper ()                  : mOwned (false) { VOID_TO_NPVARIANT (mVariant); }
-    totemNPVariantWrapper (bool aValue)       : mOwned (false) { BOOLEAN_TO_NPVARIANT (aValue, mVariant); }
-    totemNPVariantWrapper (uint32_t aValue)   : mOwned (false) { INT32_TO_NPVARIANT (aValue, mVariant);   }
-    totemNPVariantWrapper (double aValue)     : mOwned (false) { DOUBLE_TO_NPVARIANT (aValue, mVariant);  }
-    totemNPVariantWrapper (char *aValue)      : mOwned (false) { STRINGZ_TO_NPVARIANT (aValue, mVariant); }
-//     totemNPVariantWrapper (NPString *aValue)  : mOwned (false) { STRINGN_TO_NPVARIANT (aValue, mVariant); }
-    totemNPVariantWrapper (NPObject *aObject) : mOwned (false) { OBJECT_TO_NPVARIANT (aObject, mVariant); }
+    xplayerNPVariantWrapper ()                  : mOwned (false) { VOID_TO_NPVARIANT (mVariant); }
+    xplayerNPVariantWrapper (bool aValue)       : mOwned (false) { BOOLEAN_TO_NPVARIANT (aValue, mVariant); }
+    xplayerNPVariantWrapper (uint32_t aValue)   : mOwned (false) { INT32_TO_NPVARIANT (aValue, mVariant);   }
+    xplayerNPVariantWrapper (double aValue)     : mOwned (false) { DOUBLE_TO_NPVARIANT (aValue, mVariant);  }
+    xplayerNPVariantWrapper (char *aValue)      : mOwned (false) { STRINGZ_TO_NPVARIANT (aValue, mVariant); }
+//     xplayerNPVariantWrapper (NPString *aValue)  : mOwned (false) { STRINGN_TO_NPVARIANT (aValue, mVariant); }
+    xplayerNPVariantWrapper (NPObject *aObject) : mOwned (false) { OBJECT_TO_NPVARIANT (aObject, mVariant); }
 
-    totemNPVariantWrapper (const totemNPVariantWrapper& aOther) : mVariant (aOther.mVariant), mOwned (false) { }
+    xplayerNPVariantWrapper (const xplayerNPVariantWrapper& aOther) : mVariant (aOther.mVariant), mOwned (false) { }
 
-    ~totemNPVariantWrapper () { Clear (); }
+    ~xplayerNPVariantWrapper () { Clear (); }
 
     bool IsVoid    () const { return NPVARIANT_IS_VOID (mVariant);    }
     bool IsNull    () const { return NPVARIANT_IS_NULL (mVariant);    }
@@ -75,18 +75,18 @@ class totemNPVariantWrapper {
 
     class GetterCopies {
       public:
-       explicit GetterCopies (totemNPVariantWrapper& aTarget) : mTarget (aTarget) { }
+       explicit GetterCopies (xplayerNPVariantWrapper& aTarget) : mTarget (aTarget) { }
         ~GetterCopies () { }
 
        operator NPVariant*() { return mTarget.StartAssignment (); }
 
       private:
-        totemNPVariantWrapper& mTarget;
+        xplayerNPVariantWrapper& mTarget;
     };
 
   private:
 
-    totemNPVariantWrapper& operator= (const totemNPVariantWrapper&); // not implemented
+    xplayerNPVariantWrapper& operator= (const xplayerNPVariantWrapper&); // not implemented
 
     void Clear () {
       if (mOwned) {
@@ -104,10 +104,10 @@ class totemNPVariantWrapper {
     bool mOwned;
 };
 
-inline totemNPVariantWrapper::GetterCopies
-getter_Copies (totemNPVariantWrapper &aTarget)
+inline xplayerNPVariantWrapper::GetterCopies
+getter_Copies (xplayerNPVariantWrapper &aTarget)
 {
-  return totemNPVariantWrapper::GetterCopies (aTarget);
+  return xplayerNPVariantWrapper::GetterCopies (aTarget);
 }
 
-#endif /* __TOTEM_NPVARIANT_WRAPPER_H__ */
+#endif /* __XPLAYER_NPVARIANT_WRAPPER_H__ */

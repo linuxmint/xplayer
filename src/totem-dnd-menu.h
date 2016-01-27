@@ -13,17 +13,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
-#ifndef __TOTEM_DND_MENU_H__
-#define __TOTEM_DND_MENU_H__
+#ifndef __XPLAYER_DND_MENU_H__
+#define __XPLAYER_DND_MENU_H__
 
 #include <gdk/gdkkeysyms.h>
 
-GdkDragAction totem_drag_ask (gboolean show_add_to);
+GdkDragAction xplayer_drag_ask (gboolean show_add_to);
 
 #endif

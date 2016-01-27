@@ -1,6 +1,6 @@
 /* GTK - The GIMP Toolkit
  * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
- * TotemStatusbar Copyright (C) 1998 Shawn T. Amundson
+ * XplayerStatusbar Copyright (C) 1998 Shawn T. Amundson
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,49 +25,49 @@
  * GTK+ at ftp://ftp.gtk.org/pub/gtk/. 
  */
 
-#ifndef __TOTEM_STATUSBAR_H__
-#define __TOTEM_STATUSBAR_H__
+#ifndef __XPLAYER_STATUSBAR_H__
+#define __XPLAYER_STATUSBAR_H__
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_STATUSBAR            (totem_statusbar_get_type ())
-#define TOTEM_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_STATUSBAR, TotemStatusbar))
-#define TOTEM_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_STATUSBAR, TotemStatusbarClass))
-#define TOTEM_IS_STATUSBAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_STATUSBAR))
-#define TOTEM_IS_STATUSBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_STATUSBAR))
-#define TOTEM_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TOTEM_TYPE_STATUSBAR, TotemStatusbarClass))
+#define XPLAYER_TYPE_STATUSBAR            (xplayer_statusbar_get_type ())
+#define XPLAYER_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_STATUSBAR, XplayerStatusbar))
+#define XPLAYER_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_STATUSBAR, XplayerStatusbarClass))
+#define XPLAYER_IS_STATUSBAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_STATUSBAR))
+#define XPLAYER_IS_STATUSBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_STATUSBAR))
+#define XPLAYER_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XPLAYER_TYPE_STATUSBAR, XplayerStatusbarClass))
 
-typedef struct _TotemStatusbarPrivate TotemStatusbarPrivate;
+typedef struct _XplayerStatusbarPrivate XplayerStatusbarPrivate;
 
 typedef struct
 {
   GtkStatusbar parent_instance;
-  TotemStatusbarPrivate *priv;
-} TotemStatusbar;
+  XplayerStatusbarPrivate *priv;
+} XplayerStatusbar;
 
-typedef GtkStatusbarClass TotemStatusbarClass;
+typedef GtkStatusbarClass XplayerStatusbarClass;
 
-G_MODULE_EXPORT GType totem_statusbar_get_type  (void) G_GNUC_CONST;
-GtkWidget* totem_statusbar_new          	(void);
+G_MODULE_EXPORT GType xplayer_statusbar_get_type  (void) G_GNUC_CONST;
+GtkWidget* xplayer_statusbar_new          	(void);
 
-void       totem_statusbar_set_time		(TotemStatusbar *statusbar,
+void       xplayer_statusbar_set_time		(XplayerStatusbar *statusbar,
 						 gint time);
-void       totem_statusbar_set_time_and_length	(TotemStatusbar *statusbar,
+void       xplayer_statusbar_set_time_and_length	(XplayerStatusbar *statusbar,
 						 gint time, gint length);
-void       totem_statusbar_set_seeking          (TotemStatusbar *statusbar,
+void       xplayer_statusbar_set_seeking          (XplayerStatusbar *statusbar,
 						 gboolean seeking);
 
-void       totem_statusbar_set_text             (TotemStatusbar *statusbar,
+void       xplayer_statusbar_set_text             (XplayerStatusbar *statusbar,
 						 const char *label);
-void       totem_statusbar_push_help            (TotemStatusbar *statusbar,
+void       xplayer_statusbar_push_help            (XplayerStatusbar *statusbar,
 						 const char *message);
-void       totem_statusbar_pop_help             (TotemStatusbar *statusbar);
-void	   totem_statusbar_push			(TotemStatusbar *statusbar,
+void       xplayer_statusbar_pop_help             (XplayerStatusbar *statusbar);
+void	   xplayer_statusbar_push			(XplayerStatusbar *statusbar,
 						 gdouble percentage);
-void       totem_statusbar_pop			(TotemStatusbar *statusbar);
+void       xplayer_statusbar_pop			(XplayerStatusbar *statusbar);
 
 G_END_DECLS
 
-#endif /* __TOTEM_STATUSBAR_H__ */
+#endif /* __XPLAYER_STATUSBAR_H__ */

@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * See license_change file for details.
  *
@@ -34,16 +34,16 @@
 #include <libpeas/peas-object-module.h>
 #include <libpeas/peas-activatable.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 #include "backend/bacon-video-widget.h"
 
-#define TOTEM_TYPE_ONTOP_PLUGIN		(totem_ontop_plugin_get_type ())
-#define TOTEM_ONTOP_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_ONTOP_PLUGIN, TotemOntopPlugin))
-#define TOTEM_ONTOP_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_ONTOP_PLUGIN, TotemOntopPluginClass))
-#define TOTEM_IS_ONTOP_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_ONTOP_PLUGIN))
-#define TOTEM_IS_ONTOP_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_ONTOP_PLUGIN))
-#define TOTEM_ONTOP_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_ONTOP_PLUGIN, TotemOntopPluginClass))
+#define XPLAYER_TYPE_ONTOP_PLUGIN		(xplayer_ontop_plugin_get_type ())
+#define XPLAYER_ONTOP_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_ONTOP_PLUGIN, XplayerOntopPlugin))
+#define XPLAYER_ONTOP_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_ONTOP_PLUGIN, XplayerOntopPluginClass))
+#define XPLAYER_IS_ONTOP_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_ONTOP_PLUGIN))
+#define XPLAYER_IS_ONTOP_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_ONTOP_PLUGIN))
+#define XPLAYER_ONTOP_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_ONTOP_PLUGIN, XplayerOntopPluginClass))
 
 typedef struct
 {
@@ -51,34 +51,34 @@ typedef struct
 	guint handler_id_metadata;
 	GtkWindow *window;
 	BaconVideoWidget *bvw;
-	TotemObject *totem;
-} TotemOntopPluginPrivate;
+	XplayerObject *xplayer;
+} XplayerOntopPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_ONTOP_PLUGIN, TotemOntopPlugin, totem_ontop_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_ONTOP_PLUGIN, XplayerOntopPlugin, xplayer_ontop_plugin)
 
 static void
-update_from_state (TotemOntopPluginPrivate *priv)
+update_from_state (XplayerOntopPluginPrivate *priv)
 {
 	GValue has_video = { 0, };
 
 	bacon_video_widget_get_metadata (priv->bvw, BVW_INFO_HAS_VIDEO, &has_video);
 
 	gtk_window_set_keep_above (priv->window,
-				   (totem_is_playing (priv->totem) != FALSE &&
+				   (xplayer_is_playing (priv->xplayer) != FALSE &&
 				    g_value_get_boolean (&has_video) != FALSE));
 	g_value_unset (&has_video);
 }
 
 static void
-got_metadata_cb (BaconVideoWidget *bvw, TotemOntopPlugin *pi)
+got_metadata_cb (BaconVideoWidget *bvw, XplayerOntopPlugin *pi)
 {
 	update_from_state (pi->priv);
 }
 
 static void
-property_notify_cb (TotemObject *totem,
+property_notify_cb (XplayerObject *xplayer,
 		    GParamSpec *spec,
-		    TotemOntopPlugin *pi)
+		    XplayerOntopPlugin *pi)
 {
 	update_from_state (pi->priv);
 }
@@ -86,13 +86,13 @@ property_notify_cb (TotemObject *totem,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemOntopPlugin *pi = TOTEM_ONTOP_PLUGIN (plugin);
+	XplayerOntopPlugin *pi = XPLAYER_ONTOP_PLUGIN (plugin);
 
-	pi->priv->totem = g_object_get_data (G_OBJECT (plugin), "object");
-	pi->priv->window = totem_get_main_window (pi->priv->totem);
-	pi->priv->bvw = BACON_VIDEO_WIDGET (totem_get_video_widget (pi->priv->totem));
+	pi->priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	pi->priv->window = xplayer_get_main_window (pi->priv->xplayer);
+	pi->priv->bvw = BACON_VIDEO_WIDGET (xplayer_get_video_widget (pi->priv->xplayer));
 
-	pi->priv->handler_id = g_signal_connect (G_OBJECT (pi->priv->totem),
+	pi->priv->handler_id = g_signal_connect (G_OBJECT (pi->priv->xplayer),
 					   "notify::playing",
 					   G_CALLBACK (property_notify_cb),
 					   pi);
@@ -107,9 +107,9 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemOntopPlugin *pi = TOTEM_ONTOP_PLUGIN (plugin);
+	XplayerOntopPlugin *pi = XPLAYER_ONTOP_PLUGIN (plugin);
 
-	g_signal_handler_disconnect (G_OBJECT (pi->priv->totem), pi->priv->handler_id);
+	g_signal_handler_disconnect (G_OBJECT (pi->priv->xplayer), pi->priv->handler_id);
 	g_signal_handler_disconnect (G_OBJECT (pi->priv->bvw), pi->priv->handler_id_metadata);
 
 	g_object_unref (pi->priv->bvw);

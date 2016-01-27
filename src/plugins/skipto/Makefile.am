@@ -10,11 +10,11 @@ ui_DATA = skipto.ui
 EXTRA_DIST += $(ui_DATA)
 
 libskipto_la_SOURCES = \
-	totem-skipto-plugin.c	\
-	totem-time-entry.c	\
-	totem-time-entry.h	\
-	totem-skipto.c		\
-	totem-skipto.h
+	xplayer-skipto-plugin.c	\
+	xplayer-time-entry.c	\
+	xplayer-time-entry.h	\
+	xplayer-skipto.c		\
+	xplayer-skipto.h
 libskipto_la_LDFLAGS = $(plugin_ldflags)
 libskipto_la_CFLAGS = $(plugin_cflags)
 libskipto_la_LIBADD = $(plugin_libadd)

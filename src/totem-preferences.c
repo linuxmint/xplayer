@@ -17,10 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -36,31 +36,31 @@
 #include <sys/types.h>
 
 #include "bacon-video-widget-enums.h"
-#include "totem.h"
-#include "totem-private.h"
-#include "totem-preferences.h"
-#include "totem-interface.h"
+#include "xplayer.h"
+#include "xplayer-private.h"
+#include "xplayer-preferences.h"
+#include "xplayer-interface.h"
 #include "video-utils.h"
-#include "totem-subtitle-encoding.h"
-#include "totem-plugins-engine.h"
+#include "xplayer-subtitle-encoding.h"
+#include "xplayer-plugins-engine.h"
 
-#define PWID(x) (GtkWidget *) gtk_builder_get_object (totem->prefs_xml, x)
-#define POBJ(x) gtk_builder_get_object (totem->prefs_xml, x)
+#define PWID(x) (GtkWidget *) gtk_builder_get_object (xplayer->prefs_xml, x)
+#define POBJ(x) gtk_builder_get_object (xplayer->prefs_xml, x)
 
 /* Callback functions for GtkBuilder */
-G_MODULE_EXPORT void checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Totem *totem);
-G_MODULE_EXPORT void audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Totem *totem);
-G_MODULE_EXPORT void visual_menu_changed (GtkComboBox *combobox, Totem *totem);
-G_MODULE_EXPORT void tpw_color_reset_clicked_cb (GtkButton *button, Totem *totem);
-G_MODULE_EXPORT void font_set_cb (GtkFontButton * fb, Totem * totem);
-G_MODULE_EXPORT void encoding_set_cb (GtkComboBox *cb, Totem *totem);
+G_MODULE_EXPORT void checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer);
+G_MODULE_EXPORT void audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer);
+G_MODULE_EXPORT void visual_menu_changed (GtkComboBox *combobox, Xplayer *xplayer);
+G_MODULE_EXPORT void tpw_color_reset_clicked_cb (GtkButton *button, Xplayer *xplayer);
+G_MODULE_EXPORT void font_set_cb (GtkFontButton * fb, Xplayer * xplayer);
+G_MODULE_EXPORT void encoding_set_cb (GtkComboBox *cb, Xplayer *xplayer);
 
 static void
-totem_prefs_set_show_visuals (Totem *totem, gboolean value)
+xplayer_prefs_set_show_visuals (Xplayer *xplayer, gboolean value)
 {
 	GtkWidget *item;
 
-	g_settings_set_boolean (totem->settings, "show-visualizations", value);
+	g_settings_set_boolean (xplayer->settings, "show-visualizations", value);
 
 	item = PWID ("tpw_visuals_type_label");
 	gtk_widget_set_sensitive (item, value);
@@ -72,59 +72,59 @@ totem_prefs_set_show_visuals (Totem *totem, gboolean value)
 	gtk_widget_set_sensitive (item, value);
 
 	bacon_video_widget_set_show_visualizations
-		(BACON_VIDEO_WIDGET (totem->bvw), value);
+		(BACON_VIDEO_WIDGET (xplayer->bvw), value);
 }
 
 void
-checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Totem *totem)
+checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer)
 {
 	gboolean value;
 
 	value = gtk_toggle_button_get_active (togglebutton);
-	totem_prefs_set_show_visuals (totem, value);
+	xplayer_prefs_set_show_visuals (xplayer, value);
 }
 
 void
-audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Totem *totem)
+audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer)
 {
 	gboolean value;
 
 	value = gtk_toggle_button_get_active (togglebutton);
-	g_settings_set_boolean (totem->settings, "lock-screensaver-on-audio", value);
+	g_settings_set_boolean (xplayer->settings, "lock-screensaver-on-audio", value);
 }
 
 static void
-show_vfx_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+show_vfx_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
 	GObject *item;
 
 	item = POBJ ("tpw_visuals_checkbutton");
 	g_signal_handlers_disconnect_by_func (item,
-			checkbutton2_toggled_cb, totem);
+			checkbutton2_toggled_cb, xplayer);
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (item), g_settings_get_boolean (totem->settings, "show-visualizations"));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (item), g_settings_get_boolean (xplayer->settings, "show-visualizations"));
 
 	g_signal_connect (item, "toggled",
-			G_CALLBACK (checkbutton2_toggled_cb), totem);
+			G_CALLBACK (checkbutton2_toggled_cb), xplayer);
 }
 
 static void
-disable_kbd_shortcuts_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+disable_kbd_shortcuts_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
-	totem->disable_kbd_shortcuts = g_settings_get_boolean (totem->settings, "disable-keyboard-shortcuts");
+	xplayer->disable_kbd_shortcuts = g_settings_get_boolean (xplayer->settings, "disable-keyboard-shortcuts");
 }
 
 static void
-lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
 	GObject *item, *radio;
 	gboolean value;
 
 	item = POBJ ("tpw_audio_toggle_button");
 	g_signal_handlers_disconnect_by_func (item,
-					      audio_screensaver_button_toggled_cb, totem);
+					      audio_screensaver_button_toggled_cb, xplayer);
 
-	value = g_settings_get_boolean (totem->settings, "lock-screensaver-on-audio");
+	value = g_settings_get_boolean (xplayer->settings, "lock-screensaver-on-audio");
 	if (value != FALSE) {
 		radio = POBJ ("tpw_audio_toggle_button");
 	} else {
@@ -133,26 +133,26 @@ lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, Tot
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), TRUE);
 
 	g_signal_connect (item, "toggled",
-			  G_CALLBACK (audio_screensaver_button_toggled_cb), totem);
+			  G_CALLBACK (audio_screensaver_button_toggled_cb), xplayer);
 }
 
 void
-visual_menu_changed (GtkComboBox *combobox, Totem *totem)
+visual_menu_changed (GtkComboBox *combobox, Xplayer *xplayer)
 {
 	GList *list;
 	const gchar *name;
 	int i;
 
 	i = gtk_combo_box_get_active (combobox);
-	list = bacon_video_widget_get_visualization_list (totem->bvw);
+	list = bacon_video_widget_get_visualization_list (xplayer->bvw);
 	name = g_list_nth_data (list, i);
 
-	g_settings_set_string (totem->settings, "visualization-name", name);
-	bacon_video_widget_set_visualization (totem->bvw, name);
+	g_settings_set_string (xplayer->settings, "visualization-name", name);
+	bacon_video_widget_set_visualization (xplayer->bvw, name);
 }
 
 void
-tpw_color_reset_clicked_cb (GtkButton *button, Totem *totem)
+tpw_color_reset_clicked_cb (GtkButton *button, Xplayer *xplayer)
 {
 	guint i;
 	const char *scales[] = {
@@ -170,26 +170,26 @@ tpw_color_reset_clicked_cb (GtkButton *button, Totem *totem)
 }
 
 void
-font_set_cb (GtkFontButton * fb, Totem * totem)
+font_set_cb (GtkFontButton * fb, Xplayer * xplayer)
 {
 	const gchar *font;
 
 	font = gtk_font_button_get_font_name (fb);
-	g_settings_set_string (totem->settings, "subtitle-font", font);
+	g_settings_set_string (xplayer->settings, "subtitle-font", font);
 }
 
 void
-encoding_set_cb (GtkComboBox *cb, Totem *totem)
+encoding_set_cb (GtkComboBox *cb, Xplayer *xplayer)
 {
 	const gchar *encoding;
 
-	encoding = totem_subtitle_encoding_get_selected (cb);
+	encoding = xplayer_subtitle_encoding_get_selected (cb);
 	if (encoding)
-		g_settings_set_string (totem->settings, "subtitle-encoding", encoding);
+		g_settings_set_string (xplayer->settings, "subtitle-encoding", encoding);
 }
 
 static void
-font_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+font_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
 	gchar *font;
 	GtkFontButton *item;
@@ -197,20 +197,20 @@ font_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
 	item = GTK_FONT_BUTTON (POBJ ("font_sel_button"));
 	font = g_settings_get_string (settings, "subtitle-font");
 	gtk_font_button_set_font_name (item, font);
-	bacon_video_widget_set_subtitle_font (totem->bvw, font);
+	bacon_video_widget_set_subtitle_font (xplayer->bvw, font);
 	g_free (font);
 }
 
 static void
-encoding_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+encoding_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
 	gchar *encoding;
 	GtkComboBox *item;
 
 	item = GTK_COMBO_BOX (POBJ ("subtitle_encoding_combo"));
 	encoding = g_settings_get_string (settings, "subtitle-encoding");
-	totem_subtitle_encoding_set (item, encoding);
-	bacon_video_widget_set_subtitle_encoding (totem->bvw, encoding);
+	xplayer_subtitle_encoding_set (item, encoding);
+	bacon_video_widget_set_subtitle_encoding (xplayer->bvw, encoding);
 	g_free (encoding);
 }
 
@@ -249,7 +249,7 @@ int_enum_set_mapping (const GValue *value, const GVariantType *expected_type, GE
 }
 
 static void
-visualization_quality_writable_changed_cb (GSettings *settings, const gchar *key, TotemObject *totem)
+visualization_quality_writable_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
 {
 	gboolean writable, show_visualizations;
 
@@ -264,7 +264,7 @@ visualization_quality_writable_changed_cb (GSettings *settings, const gchar *key
 }
 
 void
-totem_setup_preferences (Totem *totem)
+xplayer_setup_preferences (Xplayer *xplayer)
 {
 	GtkWidget *menu, *content_area, *bvw;
 	gboolean show_visuals, lock_screensaver_on_audio;
@@ -287,85 +287,85 @@ totem_setup_preferences (Totem *totem)
 		{ "tpw_hue_scale", BVW_VIDEO_HUE, "tpw_hue_label", "hue", "tpw_hue_adjustment" }
 	};
 
-	g_return_if_fail (totem->settings != NULL);
+	g_return_if_fail (xplayer->settings != NULL);
 
-	bvw = totem_get_video_widget (totem);
+	bvw = xplayer_get_video_widget (xplayer);
 
 	/* Work-around builder dialogue not parenting properly for
 	 * On top windows */
 	widget = PWID ("tpw_notebook");
-	totem->prefs = gtk_dialog_new_with_buttons (_("Preferences"),
-			GTK_WINDOW (totem->win),
+	xplayer->prefs = gtk_dialog_new_with_buttons (_("Preferences"),
+			GTK_WINDOW (xplayer->win),
 			GTK_DIALOG_DESTROY_WITH_PARENT,
 			GTK_STOCK_CLOSE,
 			GTK_RESPONSE_ACCEPT,
 			NULL);
-	gtk_container_set_border_width (GTK_CONTAINER (totem->prefs), 5);
-	content_area = gtk_dialog_get_content_area (GTK_DIALOG (totem->prefs));
+	gtk_container_set_border_width (GTK_CONTAINER (xplayer->prefs), 5);
+	content_area = gtk_dialog_get_content_area (GTK_DIALOG (xplayer->prefs));
 	gtk_box_set_spacing (GTK_BOX (content_area), 2);
 	gtk_widget_reparent (widget, content_area);
 	gtk_widget_show_all (content_area);
-	widget = PWID ("totem_preferences_window");
+	widget = PWID ("xplayer_preferences_window");
 	gtk_widget_destroy (widget);
 
-	g_signal_connect (G_OBJECT (totem->prefs), "response",
+	g_signal_connect (G_OBJECT (xplayer->prefs), "response",
 			G_CALLBACK (gtk_widget_hide), NULL);
-	g_signal_connect (G_OBJECT (totem->prefs), "delete-event",
+	g_signal_connect (G_OBJECT (xplayer->prefs), "delete-event",
 			G_CALLBACK (gtk_widget_hide_on_delete), NULL);
-        g_signal_connect (totem->prefs, "destroy",
-                          G_CALLBACK (gtk_widget_destroyed), &totem->prefs);
+        g_signal_connect (xplayer->prefs, "destroy",
+                          G_CALLBACK (gtk_widget_destroyed), &xplayer->prefs);
 
 	/* Remember position */
 	item = POBJ ("tpw_remember_position_checkbutton");
-	g_settings_bind (totem->settings, "remember-position", item, "active", G_SETTINGS_BIND_DEFAULT);
-	g_settings_bind (totem->settings, "remember-position", totem, "remember-position", G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
+	g_settings_bind (xplayer->settings, "remember-position", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (xplayer->settings, "remember-position", xplayer, "remember-position", G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
 
 	/* Auto-resize */
 	item = POBJ ("tpw_display_checkbutton");
-	g_settings_bind (totem->settings, "auto-resize", item, "active", G_SETTINGS_BIND_DEFAULT);
-	g_settings_bind (totem->settings, "auto-resize", bvw, "auto-resize", G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
+	g_settings_bind (xplayer->settings, "auto-resize", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (xplayer->settings, "auto-resize", bvw, "auto-resize", G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
 
 	/* Screensaver audio locking */
-	lock_screensaver_on_audio = g_settings_get_boolean (totem->settings, "lock-screensaver-on-audio");
+	lock_screensaver_on_audio = g_settings_get_boolean (xplayer->settings, "lock-screensaver-on-audio");
 	if (lock_screensaver_on_audio != FALSE)
 		item = POBJ ("tpw_audio_toggle_button");
 	else
 		item = POBJ ("tpw_video_toggle_button");
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (item), TRUE);
-	g_signal_connect (totem->settings, "changed::lock-screensaver-on-audio", (GCallback) lock_screensaver_on_audio_changed_cb, totem);
+	g_signal_connect (xplayer->settings, "changed::lock-screensaver-on-audio", (GCallback) lock_screensaver_on_audio_changed_cb, xplayer);
 
 	/* Disable deinterlacing */
 	item = POBJ ("tpw_no_deinterlace_checkbutton");
-	g_settings_bind (totem->settings, "disable-deinterlacing", item, "active", G_SETTINGS_BIND_DEFAULT);
-	g_settings_bind (totem->settings, "disable-deinterlacing", bvw, "deinterlacing",
+	g_settings_bind (xplayer->settings, "disable-deinterlacing", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (xplayer->settings, "disable-deinterlacing", bvw, "deinterlacing",
 	                 G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY | G_SETTINGS_BIND_INVERT_BOOLEAN);
 
 	/* Enable visuals */
 	item = POBJ ("tpw_visuals_checkbutton");
-	show_visuals = g_settings_get_boolean (totem->settings, "show-visualizations");
+	show_visuals = g_settings_get_boolean (xplayer->settings, "show-visualizations");
 
-	g_signal_handlers_disconnect_by_func (item, checkbutton2_toggled_cb, totem);
+	g_signal_handlers_disconnect_by_func (item, checkbutton2_toggled_cb, xplayer);
 	gtk_toggle_button_set_active
 		(GTK_TOGGLE_BUTTON (item), show_visuals);
-	totem_prefs_set_show_visuals (totem, show_visuals);
-	g_signal_connect (item, "toggled", G_CALLBACK (checkbutton2_toggled_cb), totem);
+	xplayer_prefs_set_show_visuals (xplayer, show_visuals);
+	g_signal_connect (item, "toggled", G_CALLBACK (checkbutton2_toggled_cb), xplayer);
 
-	g_signal_connect (totem->settings, "changed::show-visualizations", (GCallback) show_vfx_changed_cb, totem);
+	g_signal_connect (xplayer->settings, "changed::show-visualizations", (GCallback) show_vfx_changed_cb, xplayer);
 
 	/* Auto-load subtitles */
 	item = POBJ ("tpw_auto_subtitles_checkbutton");
-	g_settings_bind (totem->settings, "autoload-subtitles", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (xplayer->settings, "autoload-subtitles", item, "active", G_SETTINGS_BIND_DEFAULT);
 
 	/* Auto-load external chapters */
 	item = POBJ ("tpw_auto_chapters_checkbutton");
-	g_settings_bind (totem->settings, "autoload-chapters", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (xplayer->settings, "autoload-chapters", item, "active", G_SETTINGS_BIND_DEFAULT);
 
 	/* Visuals list */
-	list = bacon_video_widget_get_visualization_list (totem->bvw);
+	list = bacon_video_widget_get_visualization_list (xplayer->bvw);
 	menu = gtk_menu_new ();
 	gtk_widget_show (menu);
 
-	visual = g_settings_get_string (totem->settings, "visualization-name");
+	visual = g_settings_get_string (xplayer->settings, "visualization-name");
 	if (*visual == '\0') {
 		g_free (visual);
 		visual = g_strdup ("goom");
@@ -396,13 +396,13 @@ totem_setup_preferences (Totem *totem)
 	/* Visualisation quality. We have to bind the writability separately, as the sensitivity of the size combobox is also affected by whether
 	 * visualizations are enabled. */
 	item = POBJ ("tpw_visuals_size_combobox");
-	g_settings_bind (totem->settings, "visualization-quality", bvw, "visualization-quality",
+	g_settings_bind (xplayer->settings, "visualization-quality", bvw, "visualization-quality",
 	                 G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
-	g_settings_bind_with_mapping (totem->settings, "visualization-quality", item, "active",
+	g_settings_bind_with_mapping (xplayer->settings, "visualization-quality", item, "active",
 	                              G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY,
 	                              (GSettingsBindGetMapping) int_enum_get_mapping, (GSettingsBindSetMapping) int_enum_set_mapping,
 	                              g_type_class_ref (BVW_TYPE_VISUALIZATION_QUALITY), (GDestroyNotify) g_type_class_unref);
-	g_signal_connect (totem->settings, "writable-changed::visualization-quality", (GCallback) visualization_quality_writable_changed_cb, totem);
+	g_signal_connect (xplayer->settings, "writable-changed::visualization-quality", (GCallback) visualization_quality_writable_changed_cb, xplayer);
 
 	/* Brightness and all */
 	hidden = 0;
@@ -410,10 +410,10 @@ totem_setup_preferences (Totem *totem)
 		int prop_value;
 
 		item = POBJ (props[i].adjustment);
-		g_settings_bind (totem->settings, props[i].key, item, "value", G_SETTINGS_BIND_DEFAULT);
-		g_settings_bind (totem->settings, props[i].key, bvw, props[i].key, G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
+		g_settings_bind (xplayer->settings, props[i].key, item, "value", G_SETTINGS_BIND_DEFAULT);
+		g_settings_bind (xplayer->settings, props[i].key, bvw, props[i].key, G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
 
-		prop_value = bacon_video_widget_get_video_property (totem->bvw, props[i].prop);
+		prop_value = bacon_video_widget_get_video_property (xplayer->bvw, props[i].prop);
 		if (prop_value < 0) {
 			/* The property's unsupported, so hide the widget and its label */
 			item = POBJ (props[i].name);
@@ -433,9 +433,9 @@ totem_setup_preferences (Totem *totem)
 
 	/* Sound output type */
 	item = POBJ ("tpw_sound_output_combobox");
-	g_settings_bind (totem->settings, "audio-output-type", bvw, "audio-output-type",
+	g_settings_bind (xplayer->settings, "audio-output-type", bvw, "audio-output-type",
 	                 G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
-	g_settings_bind_with_mapping (totem->settings, "audio-output-type", item, "active", G_SETTINGS_BIND_DEFAULT,
+	g_settings_bind_with_mapping (xplayer->settings, "audio-output-type", item, "active", G_SETTINGS_BIND_DEFAULT,
 	                              (GSettingsBindGetMapping) int_enum_get_mapping, (GSettingsBindSetMapping) int_enum_set_mapping,
 	                              g_type_class_ref (BVW_TYPE_AUDIO_OUTPUT_TYPE), (GDestroyNotify) g_type_class_unref);
 
@@ -443,48 +443,48 @@ totem_setup_preferences (Totem *totem)
 	item = POBJ ("font_sel_button");
 	gtk_font_button_set_title (GTK_FONT_BUTTON (item),
 				   _("Select Subtitle Font"));
-	font = g_settings_get_string (totem->settings, "subtitle-font");
+	font = g_settings_get_string (xplayer->settings, "subtitle-font");
 	if (*font != '\0') {
 		gtk_font_button_set_font_name (GTK_FONT_BUTTON (item), font);
-		bacon_video_widget_set_subtitle_font (totem->bvw, font);
+		bacon_video_widget_set_subtitle_font (xplayer->bvw, font);
 	}
 	g_free (font);
-	g_signal_connect (totem->settings, "changed::subtitle-font", (GCallback) font_changed_cb, totem);
+	g_signal_connect (xplayer->settings, "changed::subtitle-font", (GCallback) font_changed_cb, xplayer);
 
 	/* Subtitle encoding selection */
 	item = POBJ ("subtitle_encoding_combo");
-	totem_subtitle_encoding_init (GTK_COMBO_BOX (item));
-	encoding = g_settings_get_string (totem->settings, "subtitle-encoding");
+	xplayer_subtitle_encoding_init (GTK_COMBO_BOX (item));
+	encoding = g_settings_get_string (xplayer->settings, "subtitle-encoding");
 	/* Make sure the default is UTF-8 */
 	if (*encoding == '\0') {
 		g_free (encoding);
 		encoding = g_strdup ("UTF-8");
 	}
-	totem_subtitle_encoding_set (GTK_COMBO_BOX(item), encoding);
+	xplayer_subtitle_encoding_set (GTK_COMBO_BOX(item), encoding);
 	if (encoding && strcasecmp (encoding, "") != 0) {
-		bacon_video_widget_set_subtitle_encoding (totem->bvw, encoding);
+		bacon_video_widget_set_subtitle_encoding (xplayer->bvw, encoding);
 	}
 	g_free (encoding);
-	g_signal_connect (totem->settings, "changed::subtitle-encoding", (GCallback) encoding_changed_cb, totem);
+	g_signal_connect (xplayer->settings, "changed::subtitle-encoding", (GCallback) encoding_changed_cb, xplayer);
 
 	/* Disable keyboard shortcuts */
-	totem->disable_kbd_shortcuts = g_settings_get_boolean (totem->settings, "disable-keyboard-shortcuts");
-	g_signal_connect (totem->settings, "changed::disable-keyboard-shortcuts", (GCallback) disable_kbd_shortcuts_changed_cb, totem);
+	xplayer->disable_kbd_shortcuts = g_settings_get_boolean (xplayer->settings, "disable-keyboard-shortcuts");
+	g_signal_connect (xplayer->settings, "changed::disable-keyboard-shortcuts", (GCallback) disable_kbd_shortcuts_changed_cb, xplayer);
 
 	g_object_unref (bvw);
 }
 
 void
-totem_preferences_visuals_setup (Totem *totem)
+xplayer_preferences_visuals_setup (Xplayer *xplayer)
 {
 	char *visual;
 
-	visual = g_settings_get_string (totem->settings, "visualization-name");
+	visual = g_settings_get_string (xplayer->settings, "visualization-name");
 	if (*visual == '\0') {
 		g_free (visual);
 		visual = g_strdup ("goom");
 	}
 
-	bacon_video_widget_set_visualization (totem->bvw, visual);
+	bacon_video_widget_set_visualization (xplayer->bvw, visual);
 	g_free (visual);
 }

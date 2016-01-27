@@ -20,10 +20,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -37,8 +37,8 @@
  * @include: bacon-video-widget.h
  *
  * #BaconVideoWidget is a widget to play audio or video streams, with support for visualisations for audio-only streams. It has a GStreamer
- * backend, and abstracts away the differences to provide a simple interface to the functionality required by Totem. It handles all the low-level
- * audio and video work for Totem (or passes the work off to the backend).
+ * backend, and abstracts away the differences to provide a simple interface to the functionality required by Xplayer. It handles all the low-level
+ * audio and video work for Xplayer (or passes the work off to the backend).
  **/
 
 #include <config.h>
@@ -63,7 +63,7 @@
 #include <gst/tag/tag.h>
 
 #include <clutter-gst/clutter-gst.h>
-#include "totem-aspect-frame.h"
+#include "xplayer-aspect-frame.h"
 
 /* system */
 #include <unistd.h>
@@ -82,8 +82,8 @@
 #include <gtk/gtkx.h>
 #endif /* GDK_WINDOWING_X11 */
 
-#include "totem-gst-helpers.h"
-#include "totem-gst-pixbuf-helpers.h"
+#include "xplayer-gst-helpers.h"
+#include "xplayer-gst-pixbuf-helpers.h"
 #include "bacon-video-widget.h"
 #include "bacon-video-widget-gst-missing-plugins.h"
 #include "bacon-video-osd-actor.h"
@@ -320,8 +320,8 @@ static GtkWidgetClass *parent_class = NULL;
 
 static int bvw_signals[LAST_SIGNAL] = { 0 };
 
-GST_DEBUG_CATEGORY (_totem_gst_debug_cat);
-#define GST_CAT_DEFAULT _totem_gst_debug_cat
+GST_DEBUG_CATEGORY (_xplayer_gst_debug_cat);
+#define GST_CAT_DEFAULT _xplayer_gst_debug_cat
 
 typedef gchar * (* MsgToStrFunc) (GstMessage * msg);
 
@@ -1491,7 +1491,7 @@ done:
 }
 
 /* This is a hack to avoid doing poll_for_state_change() indirectly
- * from the bus message callback (via EOS => totem => close => wait for READY)
+ * from the bus message callback (via EOS => xplayer => close => wait for READY)
  * and deadlocking there. We need something like a
  * gst_bus_set_auto_flushing(bus, FALSE) ... */
 static gboolean
@@ -1980,7 +1980,7 @@ bvw_bus_message_cb (GstBus * bus, GstMessage * message, BaconVideoWidget *bvw)
 
   switch (msg_type) {
     case GST_MESSAGE_ERROR: {
-      totem_gst_message_print (message, bvw->priv->play, "totem-error");
+      xplayer_gst_message_print (message, bvw->priv->play, "xplayer-error");
 
       if (!bvw_check_missing_plugins_error (bvw, message) &&
 	  !bvw_check_missing_auth (bvw, message)) {
@@ -2059,7 +2059,7 @@ bvw_bus_message_cb (GstBus * bus, GstMessage * message, BaconVideoWidget *bvw)
       if (old_state == GST_STATE_READY && new_state == GST_STATE_PAUSED) {
         GST_DEBUG_BIN_TO_DOT_FILE (GST_BIN_CAST (bvw->priv->play),
             GST_DEBUG_GRAPH_SHOW_ALL ^ GST_DEBUG_GRAPH_SHOW_NON_DEFAULT_PARAMS,
-            "totem-prerolled");
+            "xplayer-prerolled");
 	bacon_video_widget_get_stream_length (bvw);
         bvw_update_stream_info (bvw);
         if (!bvw_check_missing_plugins_on_preroll (bvw)) {
@@ -4332,7 +4332,7 @@ bacon_video_widget_set_show_cursor (BaconVideoWidget * bvw,
   }
 
   if (show_cursor == FALSE) {
-    totem_gdk_window_set_invisible_cursor (window);
+    xplayer_gdk_window_set_invisible_cursor (window);
   } else {
     gdk_window_set_cursor (window, bvw->priv->cursor);
   }
@@ -4789,16 +4789,16 @@ bacon_video_widget_set_scale_ratio (BaconVideoWidget * bvw, gfloat ratio)
   }
 
   if (ratio == 0.0) {
-    if (totem_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 2.0))
+    if (xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 2.0))
       ratio = 2.0;
-    else if (totem_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 1.0))
+    else if (xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 1.0))
       ratio = 1.0;
-    else if (totem_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 0.5))
+    else if (xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 0.5))
       ratio = 0.5;
     else
       return;
   } else {
-    if (!totem_ratio_fits_screen (GTK_WIDGET (bvw), w, h, ratio)) {
+    if (!xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, ratio)) {
       GST_DEBUG ("movie doesn't fit on screen @ %.1fx (%dx%d)", w, h, ratio);
       return;
     }
@@ -4829,7 +4829,7 @@ bacon_video_widget_set_zoom (BaconVideoWidget *bvw,
   if (bvw->priv->frame == NULL)
     return;
 
-  totem_aspect_frame_set_expand (TOTEM_ASPECT_FRAME (bvw->priv->frame),
+  xplayer_aspect_frame_set_expand (XPLAYER_ASPECT_FRAME (bvw->priv->frame),
 			      (mode == BVW_ZOOM_EXPAND));
 }
 
@@ -4848,7 +4848,7 @@ bacon_video_widget_get_zoom (BaconVideoWidget *bvw)
 
   g_return_val_if_fail (BACON_IS_VIDEO_WIDGET (bvw), 1.0);
 
-  expand = totem_aspect_frame_get_expand (TOTEM_ASPECT_FRAME (bvw->priv->frame));
+  expand = xplayer_aspect_frame_get_expand (XPLAYER_ASPECT_FRAME (bvw->priv->frame));
   return expand ? BVW_ZOOM_EXPAND : BVW_ZOOM_NONE;
 }
 
@@ -4878,7 +4878,7 @@ bacon_video_widget_set_rotation (BaconVideoWidget *bvw,
   bvw->priv->rotation = rotation;
 
   angle = rotation * 90.0;
-  totem_aspect_frame_set_rotation (TOTEM_ASPECT_FRAME (bvw->priv->frame), angle);
+  xplayer_aspect_frame_set_rotation (XPLAYER_ASPECT_FRAME (bvw->priv->frame), angle);
 }
 
 /**
@@ -5712,7 +5712,7 @@ bacon_video_widget_get_metadata (BaconVideoWidget * bvw,
 	if (!bvw->priv->tagcache)
 	  break;
 
-	pixbuf = totem_gst_tag_list_get_cover (bvw->priv->tagcache);
+	pixbuf = xplayer_gst_tag_list_get_cover (bvw->priv->tagcache);
 	if (pixbuf) {
 	  g_value_init (value, GDK_TYPE_PIXBUF);
 	  g_value_take_object (value, pixbuf);
@@ -5780,7 +5780,7 @@ bacon_video_widget_get_current_frame (BaconVideoWidget * bvw)
     return NULL;
   }
 
-  return totem_gst_playbin_get_frame (bvw->priv->play);
+  return xplayer_gst_playbin_get_frame (bvw->priv->play);
 }
 
 /* =========================================== */
@@ -5900,9 +5900,9 @@ bacon_video_widget_initable_init (GInitable     *initable,
   bvw = BACON_VIDEO_WIDGET (initable);
 
 #ifndef GST_DISABLE_GST_DEBUG
-  if (_totem_gst_debug_cat == NULL) {
-    GST_DEBUG_CATEGORY_INIT (_totem_gst_debug_cat, "totem", 0,
-        "Totem GStreamer Backend");
+  if (_xplayer_gst_debug_cat == NULL) {
+    GST_DEBUG_CATEGORY_INIT (_xplayer_gst_debug_cat, "xplayer", 0,
+        "Xplayer GStreamer Backend");
   }
 #endif
 
@@ -5977,17 +5977,17 @@ bacon_video_widget_initable_init (GInitable     *initable,
   g_object_set (G_OBJECT (video_sink), "texture", bvw->priv->texture, NULL);
 
   /* The logo */
-  bvw->priv->logo_frame = totem_aspect_frame_new ();
+  bvw->priv->logo_frame = xplayer_aspect_frame_new ();
   clutter_actor_set_name (bvw->priv->logo_frame, "logo-frame");
   bvw->priv->logo = clutter_texture_new ();
-  totem_aspect_frame_set_child (TOTEM_ASPECT_FRAME (bvw->priv->logo_frame), bvw->priv->logo);
+  xplayer_aspect_frame_set_child (XPLAYER_ASPECT_FRAME (bvw->priv->logo_frame), bvw->priv->logo);
   clutter_actor_add_child (CLUTTER_ACTOR (bvw->priv->stage), bvw->priv->logo_frame);
   clutter_actor_hide (CLUTTER_ACTOR (bvw->priv->logo_frame));
 
   /* The video */
-  bvw->priv->frame = totem_aspect_frame_new ();
+  bvw->priv->frame = xplayer_aspect_frame_new ();
   clutter_actor_set_name (bvw->priv->frame, "frame");
-  totem_aspect_frame_set_child (TOTEM_ASPECT_FRAME (bvw->priv->frame), bvw->priv->texture);
+  xplayer_aspect_frame_set_child (XPLAYER_ASPECT_FRAME (bvw->priv->frame), bvw->priv->texture);
 
   clutter_actor_add_child (CLUTTER_ACTOR (bvw->priv->stage), bvw->priv->frame);
 

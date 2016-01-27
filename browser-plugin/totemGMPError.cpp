@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,7 +26,7 @@
 
 #include <glib.h>
 
-#include "totemGMPError.h"
+#include "xplayerGMPError.h"
 
 static const char *propertyNames[] = {
   "errorCount",
@@ -38,41 +38,41 @@ static const char *methodNames[] = {
   "webHelp"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPError,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPError,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPError::totemGMPError (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerGMPError::xplayerGMPError (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPError::~totemGMPError ()
+xplayerGMPError::~xplayerGMPError ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemGMPError::InvokeByIndex (int aIndex,
+xplayerGMPError::InvokeByIndex (int aIndex,
                               const NPVariant *argv,
                               uint32_t argc,
                               NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPError);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPError);
 
   switch (Methods (aIndex)) {
     case eClearErrorQueue:
       /* void clearErrorQueue (); */
     case eWebHelp:
       /* void webHelp (); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemGMPError);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPError);
       return VoidVariant (_result);
 
     case eItem:
-      /* totemIGMPErrorItem item (in long index); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemGMPError);
+      /* xplayerIGMPErrorItem item (in long index); */
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPError);
       return NullVariant (_result);
   }
 
@@ -80,10 +80,10 @@ totemGMPError::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPError::GetPropertyByIndex (int aIndex,
+xplayerGMPError::GetPropertyByIndex (int aIndex,
                                    NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemGMPError);
+  XPLAYER_LOG_GETTER (aIndex, xplayerGMPError);
 
   switch (Properties (aIndex)) {
     case eErrorCount:
@@ -95,10 +95,10 @@ totemGMPError::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPError::SetPropertyByIndex (int aIndex,
+xplayerGMPError::SetPropertyByIndex (int aIndex,
                                    const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPError);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPError);
 
   return ThrowPropertyNotWritable ();
 }

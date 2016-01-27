@@ -5,7 +5,7 @@ plugin_LTLIBRARIES = libsidebar-test.la
 
 plugin_in_files = sidebar-test.plugin.in
 
-libsidebar_test_la_SOURCES = totem-sidebar-test.c
+libsidebar_test_la_SOURCES = xplayer-sidebar-test.c
 libsidebar_test_la_LDFLAGS = $(plugin_ldflags)
 libsidebar_test_la_CFLAGS = $(plugin_cflags)
 libsidebar_test_la_LIBADD = $(plugin_libadd)

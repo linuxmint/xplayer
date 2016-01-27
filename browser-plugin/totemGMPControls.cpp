@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemGMPControls.h"
+#include "xplayerPlugin.h"
+#include "xplayerGMPControls.h"
 
 static const char *propertyNames[] = {
   "audioLanguageCount",
@@ -56,54 +56,54 @@ static const char *methodNames[] = {
   "stop"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPControls,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPControls,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPControls::totemGMPControls (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerGMPControls::xplayerGMPControls (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPControls::~totemGMPControls ()
+xplayerGMPControls::~xplayerGMPControls ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemGMPControls::InvokeByIndex (int aIndex,
+xplayerGMPControls::InvokeByIndex (int aIndex,
                                  const NPVariant *argv,
                                  uint32_t argc,
                                  NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPControls);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPControls);
 
   switch (Methods (aIndex)) {
     case ePause:
       /* void pause (); */
-      Plugin()->Command (TOTEM_COMMAND_PAUSE);
+      Plugin()->Command (XPLAYER_COMMAND_PAUSE);
       return VoidVariant (_result);
 
     case ePlay:
       /* void play (); */
-      Plugin()->Command (TOTEM_COMMAND_PLAY);
+      Plugin()->Command (XPLAYER_COMMAND_PLAY);
       return VoidVariant (_result);
 
     case eStop:
       /* void stop (); */
-      Plugin()->Command (TOTEM_COMMAND_PAUSE);
+      Plugin()->Command (XPLAYER_COMMAND_PAUSE);
       return VoidVariant (_result);
 
     case eGetAudioLanguageDescription:
       /* AUTF8String getAudioLanguageDescription (in long index); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex,totemGMPControls);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex,xplayerGMPControls);
       return StringVariant (_result, "English");
 
     case eGetLanguageName:
       /* AUTF8String getLanguageName (in long LCID); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex,totemGMPControls);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex,xplayerGMPControls);
       return StringVariant (_result, "English");
 
     case eIsAvailable:
@@ -129,12 +129,12 @@ totemGMPControls::InvokeByIndex (int aIndex,
     case eNext:
       /* void next (); */
     case ePlayItem:
-      /* void playItem (in totemIGMPMedia theMediaItem); */
+      /* void playItem (in xplayerIGMPMedia theMediaItem); */
     case ePrevious:
       /* void previous (); */
     case eStep:
       /* void step (in long frameCount); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex,totemGMPControls);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex,xplayerGMPControls);
       return VoidVariant (_result);
   }
 
@@ -142,10 +142,10 @@ totemGMPControls::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPControls::GetPropertyByIndex (int aIndex,
+xplayerGMPControls::GetPropertyByIndex (int aIndex,
                                       NPVariant *_result)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPControls);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPControls);
 
   switch (Properties (aIndex)) {
     case eCurrentPosition:
@@ -153,12 +153,12 @@ totemGMPControls::GetPropertyByIndex (int aIndex,
       return DoubleVariant (_result, double (Plugin()->GetTime()) / 1000.0);
 
     case eCurrentItem:
-      /* attribute totemIGMPMedia currentItem; */
+      /* attribute xplayerIGMPMedia currentItem; */
     case eCurrentPositionTimecode:
       /* attribute ACString currentPositionTimecode; */
     case eCurrentPositionString:
       /* readonly attribute ACString currentPositionString; */
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, totemGMPControls);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPControls);
       return StringVariant (_result, "");
 
     case eAudioLanguageCount:
@@ -169,7 +169,7 @@ totemGMPControls::GetPropertyByIndex (int aIndex,
       /* attribute long currentAudioLanguageIndex; */
     case eCurrentMarker:
       /* attribute long currentMarker; */
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, totemGMPControls);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPControls);
       return Int32Variant (_result, 0);
   }
 
@@ -177,10 +177,10 @@ totemGMPControls::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPControls::SetPropertyByIndex (int aIndex,
+xplayerGMPControls::SetPropertyByIndex (int aIndex,
                                       const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPControls);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPControls);
 
   switch (Properties (aIndex)) {
     case eCurrentAudioLanguage:
@@ -188,14 +188,14 @@ totemGMPControls::SetPropertyByIndex (int aIndex,
     case eCurrentAudioLanguageIndex:
       /* attribute long currentAudioLanguageIndex; */
     case eCurrentItem:
-      /* attribute totemIGMPMedia currentItem; */
+      /* attribute xplayerIGMPMedia currentItem; */
     case eCurrentMarker:
       /* attribute long currentMarker; */
     case eCurrentPosition:
       /* attribute double currentPosition; */
     case eCurrentPositionTimecode:
       /* attribute ACString currentPositionTimecode; */
-      TOTEM_WARN_SETTER_UNIMPLEMENTED(aIndex, totemGMPControls);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED(aIndex, xplayerGMPControls);
       return true;
 
     case eAudioLanguageCount:

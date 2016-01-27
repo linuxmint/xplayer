@@ -17,10 +17,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-GPL compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-GPL compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * See license_change file for details.
  */
@@ -39,28 +39,28 @@
 #include <libpeas/peas-activatable.h>
 #include <libpeas-gtk/peas-gtk-configurable.h>
 
-#include <totem-plugin.h>
-#include <totem-interface.h>
-#include <totem-dirs.h>
-#include <totem.h>
+#include <xplayer-plugin.h>
+#include <xplayer-interface.h>
+#include <xplayer-dirs.h>
+#include <xplayer.h>
 
-#include <totem-time-helpers.h>
+#include <xplayer-time-helpers.h>
 
-#include "totem-search-entry.h"
+#include "xplayer-search-entry.h"
 #include <libgd/gd.h>
 
-#define TOTEM_TYPE_GRILO_PLUGIN                                         \
-	(totem_grilo_plugin_get_type ())
-#define TOTEM_GRILO_PLUGIN(o)                                           \
-	(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_GRILO_PLUGIN, TotemGriloPlugin))
-#define TOTEM_GRILO_PLUGIN_CLASS(k)                                     \
-	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_GRILO_PLUGIN, TotemGriloPluginClass))
-#define TOTEM_IS_GRILO_PLUGIN(o)                                        \
-	(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_GRILO_PLUGIN))
-#define TOTEM_IS_GRILO_PLUGIN_CLASS(k)                                  \
-	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_GRILO_PLUGIN))
-#define TOTEM_GRILO_PLUGIN_GET_CLASS(o)                                 \
-	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_GRILO_PLUGIN, TotemGriloPluginClass))
+#define XPLAYER_TYPE_GRILO_PLUGIN                                         \
+	(xplayer_grilo_plugin_get_type ())
+#define XPLAYER_GRILO_PLUGIN(o)                                           \
+	(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_GRILO_PLUGIN, XplayerGriloPlugin))
+#define XPLAYER_GRILO_PLUGIN_CLASS(k)                                     \
+	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_GRILO_PLUGIN, XplayerGriloPluginClass))
+#define XPLAYER_IS_GRILO_PLUGIN(o)                                        \
+	(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_GRILO_PLUGIN))
+#define XPLAYER_IS_GRILO_PLUGIN_CLASS(k)                                  \
+	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_GRILO_PLUGIN))
+#define XPLAYER_GRILO_PLUGIN_GET_CLASS(o)                                 \
+	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_GRILO_PLUGIN, XplayerGriloPluginClass))
 
 #define GRILO_POPUP_MENU                                                \
 	"<ui>" \
@@ -77,7 +77,7 @@
 #define THUMB_BROWSE_SIZE     32
 #define SCROLL_GET_MORE_LIMIT 0.8
 
-#define TOTEM_GRILO_CONFIG_FILE "totem-grilo.conf"
+#define XPLAYER_GRILO_CONFIG_FILE "xplayer-grilo.conf"
 
 const gchar *BLACKLIST_SOURCES[] = { "grl-filesystem",
                                      "grl-bookmarks",
@@ -91,7 +91,7 @@ typedef enum {
 } IconType;
 
 typedef struct {
-	Totem *totem;
+	Xplayer *xplayer;
 
 	/* Current media selected in results*/
 	GrlMedia *selected_media;
@@ -123,17 +123,17 @@ typedef struct {
 
 	/* Configuration */
 	guint max_items;
-} TotemGriloPluginPrivate;
+} XplayerGriloPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER (TOTEM_TYPE_GRILO_PLUGIN, TotemGriloPlugin, totem_grilo_plugin)
+XPLAYER_PLUGIN_REGISTER (XPLAYER_TYPE_GRILO_PLUGIN, XplayerGriloPlugin, xplayer_grilo_plugin)
 
 typedef struct {
-	TotemGriloPlugin *totem_grilo;
+	XplayerGriloPlugin *xplayer_grilo;
 	GtkTreeRowReference *ref_parent;
 } BrowseUserData;
 
 typedef struct {
-	TotemGriloPlugin *totem_grilo;
+	XplayerGriloPlugin *xplayer_grilo;
 	GrlMedia *media;
 	GFile *file;
 	GtkTreeRowReference *reference;
@@ -153,7 +153,7 @@ enum {
 	MODEL_RESULTS_REMAINING,
 };
 
-static void play (TotemGriloPlugin *self,
+static void play (XplayerGriloPlugin *self,
                   GrlSource *source,
                   GrlMedia *media,
                   gboolean resolve_url);
@@ -169,7 +169,7 @@ get_secondary_text (GrlMedia *media)
 		return g_strdup (artist);
 	duration = grl_media_get_duration (media);
 	if (duration > 0)
-		return totem_time_to_string (duration * 1000);
+		return xplayer_time_to_string (duration * 1000);
 	return NULL;
 }
 
@@ -210,7 +210,7 @@ search_keys (void)
 }
 
 static GdkPixbuf *
-load_icon (TotemGriloPlugin *self, IconType icon_type, gint thumb_size)
+load_icon (XplayerGriloPlugin *self, IconType icon_type, gint thumb_size)
 {
 	GdkScreen *screen;
 	GtkIconTheme *theme;
@@ -221,7 +221,7 @@ load_icon (TotemGriloPlugin *self, IconType icon_type, gint thumb_size)
 	static GdkPixbuf *pixbuf[G_N_ELEMENTS(icon_name)] = { NULL };
 
 	if (pixbuf[icon_type] == NULL) {
-		screen = gtk_window_get_screen (totem_get_main_window (self->priv->totem));
+		screen = gtk_window_get_screen (xplayer_get_main_window (self->priv->xplayer));
 		theme = gtk_icon_theme_get_for_screen (screen);
 		pixbuf[icon_type] = gtk_icon_theme_load_icon (theme,
 		                                              icon_name[icon_type],
@@ -235,7 +235,7 @@ load_icon (TotemGriloPlugin *self, IconType icon_type, gint thumb_size)
 }
 
 static GdkPixbuf *
-get_icon (TotemGriloPlugin *self, GrlMedia *media, gint thumb_size)
+get_icon (XplayerGriloPlugin *self, GrlMedia *media, gint thumb_size)
 {
 	if (GRL_IS_MEDIA_BOX (media)) {
 		return load_icon (self, ICON_BOX, thumb_size);
@@ -264,23 +264,23 @@ get_stream_thumbnail_cb (GObject *source_object,
 		g_object_unref (stream);
 	}
 
-	gtk_tree_model_get_iter (thumb_data->totem_grilo->priv->search_results_model,
+	gtk_tree_model_get_iter (thumb_data->xplayer_grilo->priv->search_results_model,
 	                         &iter,
 	                         gtk_tree_row_reference_get_path (thumb_data->reference));
 
 	if (thumbnail) {
-		gtk_list_store_set (GTK_LIST_STORE (thumb_data->totem_grilo->priv->search_results_model),
+		gtk_list_store_set (GTK_LIST_STORE (thumb_data->xplayer_grilo->priv->search_results_model),
 		                    &iter,
 		                    GD_MAIN_COLUMN_ICON, thumbnail,
 		                    -1);
 		/* Cache it */
-		g_hash_table_insert (thumb_data->totem_grilo->priv->cache_thumbnails,
+		g_hash_table_insert (thumb_data->xplayer_grilo->priv->cache_thumbnails,
 		                     g_file_get_uri (thumb_data->file),
 		                     thumbnail);
 	}
 
 	/* Free thumb data */
-	g_object_unref (thumb_data->totem_grilo);
+	g_object_unref (thumb_data->xplayer_grilo);
 	g_object_unref (thumb_data->media);
 	g_object_unref (thumb_data->file);
 	gtk_tree_row_reference_free (thumb_data->reference);
@@ -288,7 +288,7 @@ get_stream_thumbnail_cb (GObject *source_object,
 }
 
 static void
-set_thumbnail_async (TotemGriloPlugin *self, GrlMedia *media, GtkTreePath *path, gint thumb_size)
+set_thumbnail_async (XplayerGriloPlugin *self, GrlMedia *media, GtkTreePath *path, gint thumb_size)
 {
 	const gchar *url_thumb;
 	GFile *file_uri;
@@ -305,7 +305,7 @@ set_thumbnail_async (TotemGriloPlugin *self, GrlMedia *media, GtkTreePath *path,
 			/* Let's read the thumbnail stream and set the thumbnail */
 			file_uri = g_file_new_for_uri (url_thumb);
 			thumb_data = g_slice_new (SetThumbnailData);
-			thumb_data->totem_grilo = g_object_ref (self);
+			thumb_data->xplayer_grilo = g_object_ref (self);
 			thumb_data->media = g_object_ref (media);
 			thumb_data->file = g_object_ref (file_uri);
 			thumb_data->reference = gtk_tree_row_reference_new (self->priv->search_results_model, path);
@@ -332,7 +332,7 @@ set_thumbnail_async (TotemGriloPlugin *self, GrlMedia *media, GtkTreePath *path,
 }
 
 static gboolean
-update_search_thumbnails_idle (TotemGriloPlugin *self)
+update_search_thumbnails_idle (XplayerGriloPlugin *self)
 {
 	GtkTreePath *start_path;
 	GtkTreePath *end_path;
@@ -372,13 +372,13 @@ update_search_thumbnails_idle (TotemGriloPlugin *self)
 }
 
 static void
-update_search_thumbnails (TotemGriloPlugin *self)
+update_search_thumbnails (XplayerGriloPlugin *self)
 {
 	g_idle_add ((GSourceFunc) update_search_thumbnails_idle, self);
 }
 
 static void
-show_sources (TotemGriloPlugin *self)
+show_sources (XplayerGriloPlugin *self)
 {
 	GList *sources, *source;
 	GtkTreeIter iter;
@@ -420,21 +420,21 @@ browse_cb (GrlSource *source,
 	GtkTreeIter iter;
 	GdkPixbuf *thumbnail;
 	BrowseUserData *bud;
-	TotemGriloPlugin *self;
+	XplayerGriloPlugin *self;
 	GtkTreeIter parent;
 	GtkTreePath *path;
 	GtkWindow *window;
 	gint remaining_expected;
 
 	bud = (BrowseUserData *) user_data;
-	self = bud->totem_grilo;
+	self = bud->xplayer_grilo;
 
 	if (error != NULL &&
 	    g_error_matches (error,
 	                     GRL_CORE_ERROR,
 	                     GRL_CORE_ERROR_OPERATION_CANCELLED) == FALSE) {
-		window = totem_get_main_window (self->priv->totem);
-		totem_interface_error (_("Browse Error"), error->message, window);
+		window = xplayer_get_main_window (self->priv->xplayer);
+		xplayer_interface_error (_("Browse Error"), error->message, window);
 	}
 
 	if (media != NULL) {
@@ -482,13 +482,13 @@ browse_cb (GrlSource *source,
 out:
 	if (remaining == 0) {
 		gtk_tree_row_reference_free (bud->ref_parent);
-		g_object_unref (bud->totem_grilo);
+		g_object_unref (bud->xplayer_grilo);
 		g_slice_free (BrowseUserData, bud);
 	}
 }
 
 static void
-browse (TotemGriloPlugin *self,
+browse (XplayerGriloPlugin *self,
         GtkTreePath *path,
         GrlSource *source,
         GrlMedia *container,
@@ -509,7 +509,7 @@ browse (TotemGriloPlugin *self,
 			grl_operation_options_set_type_filter (default_options, GRL_TYPE_FILTER_VIDEO);
 
 		bud = g_slice_new (BrowseUserData);
-		bud->totem_grilo = g_object_ref (self);
+		bud->xplayer_grilo = g_object_ref (self);
 		bud->ref_parent = gtk_tree_row_reference_new (self->priv->browser_model, path);
 		grl_source_browse (source,
 		                   container,
@@ -536,11 +536,11 @@ resolve_url_cb (GrlSource *source,
 		return;
 	}
 
-	play (TOTEM_GRILO_PLUGIN (user_data), source, media, FALSE);
+	play (XPLAYER_GRILO_PLUGIN (user_data), source, media, FALSE);
 }
 
 static void
-play (TotemGriloPlugin *self,
+play (XplayerGriloPlugin *self,
       GrlSource *source,
       GrlMedia *media,
       gboolean resolve_url)
@@ -549,7 +549,7 @@ play (TotemGriloPlugin *self,
 
 	url = grl_media_get_url (media);
 	if (url != NULL) {
-		totem_add_to_playlist_and_play (self->priv->totem, url,
+		xplayer_add_to_playlist_and_play (self->priv->xplayer, url,
 		                                grl_media_get_title (media));
 		return;
 	}
@@ -594,16 +594,16 @@ search_cb (GrlSource *source,
 {
 	GdkPixbuf *thumbnail;
 	GtkWindow *window;
-	TotemGriloPlugin *self;
+	XplayerGriloPlugin *self;
 
-	self = TOTEM_GRILO_PLUGIN (user_data);
+	self = XPLAYER_GRILO_PLUGIN (user_data);
 
 	if (error != NULL &&
 	    g_error_matches (error,
 	                     GRL_CORE_ERROR,
 	                     GRL_CORE_ERROR_OPERATION_CANCELLED) == FALSE) {
-		window = totem_get_main_window (self->priv->totem);
-		totem_interface_error (_("Search Error"), error->message, window);
+		window = xplayer_get_main_window (self->priv->xplayer);
+		xplayer_interface_error (_("Search Error"), error->message, window);
 	}
 
 	if (media != NULL) {
@@ -645,7 +645,7 @@ out:
 }
 
 static GrlOperationOptions *
-get_search_options (TotemGriloPlugin *self)
+get_search_options (XplayerGriloPlugin *self)
 {
 	GrlOperationOptions *default_options;
 	GrlOperationOptions *supported_options;
@@ -667,7 +667,7 @@ get_search_options (TotemGriloPlugin *self)
 }
 
 static void
-search_more (TotemGriloPlugin *self)
+search_more (XplayerGriloPlugin *self)
 {
 	GrlOperationOptions *search_options;
 
@@ -700,7 +700,7 @@ search_more (TotemGriloPlugin *self)
 }
 
 static void
-search (TotemGriloPlugin *self, GrlSource *source, const gchar *text)
+search (XplayerGriloPlugin *self, GrlSource *source, const gchar *text)
 {
 	gtk_list_store_clear (GTK_LIST_STORE (self->priv->search_results_model));
 	g_hash_table_remove_all (self->priv->cache_thumbnails);
@@ -713,20 +713,20 @@ search (TotemGriloPlugin *self, GrlSource *source, const gchar *text)
 }
 
 static void
-search_entry_activate_cb (GtkEntry *entry, TotemGriloPlugin *self)
+search_entry_activate_cb (GtkEntry *entry, XplayerGriloPlugin *self)
 {
 	GrlRegistry *registry;
 	const char *id;
 	const char *text;
 	GrlSource *source;
 
-	id = totem_search_entry_get_selected_id (TOTEM_SEARCH_ENTRY (self->priv->search_entry));
+	id = xplayer_search_entry_get_selected_id (XPLAYER_SEARCH_ENTRY (self->priv->search_entry));
 	g_return_if_fail (id != NULL);
 	registry = grl_registry_get_default ();
 	source = grl_registry_lookup_source (registry, id);
 	g_return_if_fail (source != NULL);
 
-	text = totem_search_entry_get_text (TOTEM_SEARCH_ENTRY (self->priv->search_entry));
+	text = xplayer_search_entry_get_text (XPLAYER_SEARCH_ENTRY (self->priv->search_entry));
 	g_return_if_fail (text != NULL);
 	search (self, source, text);
 }
@@ -743,7 +743,7 @@ browser_activated_cb (GtkTreeView *tree_view,
 	GtkTreeIter iter;
 	GrlMedia *content;
 	GrlSource *source;
-	TotemGriloPlugin *self = TOTEM_GRILO_PLUGIN (user_data);
+	XplayerGriloPlugin *self = XPLAYER_GRILO_PLUGIN (user_data);
 
 	model = gtk_tree_view_get_model (tree_view);
 	gtk_tree_model_get_iter (model, &iter, path);
@@ -786,7 +786,7 @@ free_data:
 static void
 search_entry_source_changed_cb (GObject          *object,
                                 GParamSpec       *pspec,
-                                TotemGriloPlugin *self)
+                                XplayerGriloPlugin *self)
 {
 	/* FIXME: Do we actually want to do that? */
 	if (self->priv->search_id > 0) {
@@ -813,7 +813,7 @@ search_activated_cb (GtkIconView *icon_view,
 	                    MODEL_RESULTS_CONTENT, &content,
 	                    -1);
 
-	play (TOTEM_GRILO_PLUGIN (user_data), source, content, TRUE);
+	play (XPLAYER_GRILO_PLUGIN (user_data), source, content, TRUE);
 
 	g_clear_object (&source);
 	g_clear_object (&content);
@@ -840,7 +840,7 @@ source_added_cb (GrlRegistry *registry,
                  gpointer user_data)
 {
 	const gchar *name;
-	TotemGriloPlugin *self;
+	XplayerGriloPlugin *self;
 	GrlSupportedOps ops;
 
 	if (source_is_blacklisted (source)) {
@@ -850,7 +850,7 @@ source_added_cb (GrlRegistry *registry,
 		return;
 	}
 
-	self = TOTEM_GRILO_PLUGIN (user_data);
+	self = XPLAYER_GRILO_PLUGIN (user_data);
 	name = grl_source_get_name (source);
 	ops = grl_source_supported_operations (source);
 	if (ops & GRL_OP_BROWSE) {
@@ -872,7 +872,7 @@ source_added_cb (GrlRegistry *registry,
 	if (ops & GRL_OP_SEARCH) {
 		/* FIXME:
 		 * Handle tracker/filesystem specifically, so that we have a "local" entry here */
-		totem_search_entry_add_source (TOTEM_SEARCH_ENTRY (self->priv->search_entry),
+		xplayer_search_entry_add_source (XPLAYER_SEARCH_ENTRY (self->priv->search_entry),
 					       grl_source_get_id (source),
 					       name,
 					       0); /* FIXME: Use correct priority */
@@ -909,7 +909,7 @@ source_removed_cb (GrlRegistry *registry,
                    gpointer user_data)
 {
 	GrlSupportedOps ops;
-	TotemGriloPlugin *self = TOTEM_GRILO_PLUGIN (user_data);
+	XplayerGriloPlugin *self = XPLAYER_GRILO_PLUGIN (user_data);
 
 	ops = grl_source_supported_operations (source);
 
@@ -931,12 +931,12 @@ source_removed_cb (GrlRegistry *registry,
 		}
 
 		id = grl_source_get_id (source);
-		totem_search_entry_remove_source (TOTEM_SEARCH_ENTRY (self->priv->search_entry), id);
+		xplayer_search_entry_remove_source (XPLAYER_SEARCH_ENTRY (self->priv->search_entry), id);
 	}
 }
 
 static void
-load_grilo_plugins (TotemGriloPlugin *self)
+load_grilo_plugins (XplayerGriloPlugin *self)
 {
 	GrlRegistry *registry;
 	GError *error = NULL;
@@ -955,7 +955,7 @@ load_grilo_plugins (TotemGriloPlugin *self)
 }
 
 static gboolean
-show_popup_menu (TotemGriloPlugin *self, GtkWidget *view, GdkEventButton *event)
+show_popup_menu (XplayerGriloPlugin *self, GtkWidget *view, GdkEventButton *event)
 {
 	GtkWidget *menu;
 	gint button = 0;
@@ -1026,7 +1026,7 @@ show_popup_menu (TotemGriloPlugin *self, GtkWidget *view, GdkEventButton *event)
 }
 
 static gboolean
-popup_menu_cb (GtkWidget *view, TotemGriloPlugin *self)
+popup_menu_cb (GtkWidget *view, XplayerGriloPlugin *self)
 {
 	return show_popup_menu (self, view, NULL);
 }
@@ -1034,7 +1034,7 @@ popup_menu_cb (GtkWidget *view, TotemGriloPlugin *self)
 static gboolean
 context_button_pressed_cb (GtkWidget *view,
                            GdkEventButton *event,
-                           TotemGriloPlugin *self)
+                           XplayerGriloPlugin *self)
 {
 	if (event->type == GDK_BUTTON_PRESS && event->button == 3) {
 		return show_popup_menu (self, view, event);
@@ -1055,7 +1055,7 @@ adjustment_over_limit (GtkAdjustment *adjustment)
 
 static void
 adjustment_value_changed_cb (GtkAdjustment *adjustment,
-                             TotemGriloPlugin *self)
+                             XplayerGriloPlugin *self)
 {
 	update_search_thumbnails (self);
 
@@ -1073,14 +1073,14 @@ adjustment_value_changed_cb (GtkAdjustment *adjustment,
 
 static void
 adjustment_changed_cb (GtkAdjustment *adjustment,
-                       TotemGriloPlugin *self)
+                       XplayerGriloPlugin *self)
 {
 	update_search_thumbnails (self);
 }
 
 static void
 get_more_browse_results_cb (GtkAdjustment *adjustment,
-                            TotemGriloPlugin *self)
+                            XplayerGriloPlugin *self)
 {
 	GtkTreePath *start_path;
 	GtkTreePath *end_path;
@@ -1153,7 +1153,7 @@ get_more_browse_results_cb (GtkAdjustment *adjustment,
 }
 
 static void
-setup_sidebar_browse (TotemGriloPlugin *self,
+setup_sidebar_browse (XplayerGriloPlugin *self,
                       GtkBuilder *builder)
 {
 	self->priv->browser_model = GTK_TREE_MODEL (gtk_builder_get_object (builder, "gw_browse_store_results"));
@@ -1171,13 +1171,13 @@ setup_sidebar_browse (TotemGriloPlugin *self,
 	                  G_CALLBACK (get_more_browse_results_cb),
 	                  self);
 
-	totem_add_sidebar_page (self->priv->totem,
+	xplayer_add_sidebar_page (self->priv->xplayer,
 	                        "grilo-browse", _("Browse"),
 	                        GTK_WIDGET (gtk_builder_get_object (builder, "gw_browse_window")));
 }
 
 static void
-setup_sidebar_search (TotemGriloPlugin *self,
+setup_sidebar_search (XplayerGriloPlugin *self,
                       GtkBuilder *builder)
 {
 	self->priv->search_results_model = GTK_TREE_MODEL (gtk_builder_get_object (builder, "gw_search_store_results"));
@@ -1214,21 +1214,21 @@ setup_sidebar_search (TotemGriloPlugin *self,
 	                  G_CALLBACK (adjustment_changed_cb),
 	                  self);
 
-	totem_add_sidebar_page (self->priv->totem,
+	xplayer_add_sidebar_page (self->priv->xplayer,
 	                        "grilo-search", _("Search"),
 	                        GTK_WIDGET (gtk_builder_get_object (builder, "gw_search")));
 }
 
 static void
-add_to_pls_cb (GtkAction *action, TotemGriloPlugin *self)
+add_to_pls_cb (GtkAction *action, XplayerGriloPlugin *self)
 {
-	totem_add_to_playlist_and_play (self->priv->totem,
+	xplayer_add_to_playlist_and_play (self->priv->xplayer,
 	                                grl_media_get_url (self->priv->selected_media),
 	                                grl_media_get_title (self->priv->selected_media));
 }
 
 static void
-copy_location_cb (GtkAction *action, TotemGriloPlugin *self)
+copy_location_cb (GtkAction *action, XplayerGriloPlugin *self)
 {
 	GtkClipboard *clip;
 	const gchar *url;
@@ -1245,7 +1245,7 @@ copy_location_cb (GtkAction *action, TotemGriloPlugin *self)
 }
 
 static void
-setup_menus (TotemGriloPlugin *self,
+setup_menus (XplayerGriloPlugin *self,
              GtkBuilder *builder)
 {
 	GtkAction *action;
@@ -1273,7 +1273,7 @@ setup_menus (TotemGriloPlugin *self,
 }
 
 static void
-setup_ui (TotemGriloPlugin *self,
+setup_ui (XplayerGriloPlugin *self,
           GtkBuilder *builder)
 {
 	setup_sidebar_browse (self, builder);
@@ -1282,13 +1282,13 @@ setup_ui (TotemGriloPlugin *self,
 }
 
 static void
-setup_config (TotemGriloPlugin *self)
+setup_config (XplayerGriloPlugin *self)
 {
 	gchar *config_file;
 	GrlRegistry *registry = grl_registry_get_default ();
 
 	/* Setup system-wide plugins configuration */
-	config_file = totem_plugin_find_file ("grilo", TOTEM_GRILO_CONFIG_FILE);
+	config_file = xplayer_plugin_find_file ("grilo", XPLAYER_GRILO_CONFIG_FILE);
 
 	if (g_file_test (config_file, G_FILE_TEST_EXISTS))
 		grl_registry_add_config_from_file (registry, config_file, NULL);
@@ -1298,7 +1298,7 @@ setup_config (TotemGriloPlugin *self)
 	config_file = g_build_path (G_DIR_SEPARATOR_S,
 	                            g_get_user_config_dir (),
 	                            g_get_prgname (),
-	                            TOTEM_GRILO_CONFIG_FILE,
+	                            XPLAYER_GRILO_CONFIG_FILE,
 	                            NULL);
 
 	if (g_file_test (config_file, G_FILE_TEST_EXISTS))
@@ -1312,16 +1312,16 @@ impl_activate (PeasActivatable *plugin)
 	GtkBuilder *builder;
 	GtkWindow *main_window;
 
-	TotemGriloPlugin *self = TOTEM_GRILO_PLUGIN (plugin);
-	TotemGriloPluginPrivate *priv = self->priv;
-	priv->totem = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
-	main_window = totem_get_main_window (priv->totem);
+	XplayerGriloPlugin *self = XPLAYER_GRILO_PLUGIN (plugin);
+	XplayerGriloPluginPrivate *priv = self->priv;
+	priv->xplayer = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
+	main_window = xplayer_get_main_window (priv->xplayer);
 	priv->cache_thumbnails = g_hash_table_new_full (g_str_hash,
 	                                                g_str_equal,
 	                                                g_free,
 	                                                g_object_unref);
 
-	builder = totem_plugin_load_interface ("grilo", "grilo.ui", TRUE, main_window, self);
+	builder = xplayer_plugin_load_interface ("grilo", "grilo.ui", TRUE, main_window, self);
 	g_object_unref (main_window);
 	setup_ui (self, builder);
 	grl_init (0, NULL);
@@ -1332,13 +1332,13 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemGriloPlugin *self = TOTEM_GRILO_PLUGIN (plugin);
+	XplayerGriloPlugin *self = XPLAYER_GRILO_PLUGIN (plugin);
 	GList *sources;
 	GList *s;
 	GrlRegistry *registry;
 
-	totem_remove_sidebar_page (self->priv->totem, "grilo-browse");
-	totem_remove_sidebar_page (self->priv->totem, "grilo-search");
+	xplayer_remove_sidebar_page (self->priv->xplayer, "grilo-browse");
+	xplayer_remove_sidebar_page (self->priv->xplayer, "grilo-search");
 
 	registry = grl_registry_get_default ();
 	g_signal_handlers_disconnect_by_func (registry, source_added_cb, self);
@@ -1357,5 +1357,5 @@ impl_deactivate (PeasActivatable *plugin)
 	gtk_tree_store_clear (GTK_TREE_STORE (self->priv->browser_model));
 	gtk_list_store_clear (GTK_LIST_STORE (self->priv->search_results_model));
 
-	g_object_unref (self->priv->totem);
+	g_object_unref (self->priv->xplayer);
 }

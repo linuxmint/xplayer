@@ -1,4 +1,4 @@
-/* totem-missing-plugins.c
+/* xplayer-missing-plugins.c
 
    Copyright (C) 2007 Tim-Philipp Müller <tim centricular net>
 
@@ -42,8 +42,8 @@
 
 #include <string.h>
 
-GST_DEBUG_CATEGORY_EXTERN (_totem_gst_debug_cat);
-#define GST_CAT_DEFAULT _totem_gst_debug_cat
+GST_DEBUG_CATEGORY_EXTERN (_xplayer_gst_debug_cat);
+#define GST_CAT_DEFAULT _xplayer_gst_debug_cat
 
 /* list of blacklisted detail strings */
 static GList *blacklisted_plugins = NULL;
@@ -55,10 +55,10 @@ typedef struct
 	gchar    **details;
 	BaconVideoWidget *bvw;
 }
-TotemCodecInstallContext;
+XplayerCodecInstallContext;
 
 #ifdef GDK_WINDOWING_X11
-/* Adapted from totem-interface.c */
+/* Adapted from xplayer-interface.c */
 static Window
 bacon_video_widget_gtk_plug_get_toplevel (GtkPlug *plug)
 {
@@ -127,7 +127,7 @@ bacon_video_widget_gst_codec_install_blacklist_plugin (const gchar * detail)
 }
 
 static void
-bacon_video_widget_gst_codec_install_context_free (TotemCodecInstallContext *ctx)
+bacon_video_widget_gst_codec_install_context_free (XplayerCodecInstallContext *ctx)
 {
 	g_strfreev (ctx->descriptions);
 	g_strfreev (ctx->details);
@@ -137,7 +137,7 @@ bacon_video_widget_gst_codec_install_context_free (TotemCodecInstallContext *ctx
 static void
 on_plugin_installation_done (GstInstallPluginsReturn res, gpointer user_data)
 {
-	TotemCodecInstallContext *ctx = (TotemCodecInstallContext *) user_data;
+	XplayerCodecInstallContext *ctx = (XplayerCodecInstallContext *) user_data;
 	gchar **p;
 
 	GST_INFO ("res = %d (%s)", res, gst_install_plugins_return_get_name (res));
@@ -242,7 +242,7 @@ bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **d
 						 gpointer user_data)
 {
 	GstInstallPluginsContext *install_ctx;
-	TotemCodecInstallContext *ctx;
+	XplayerCodecInstallContext *ctx;
 	GstInstallPluginsReturn status;
 	guint i, num;
 #ifdef GDK_WINDOWING_X11
@@ -252,7 +252,7 @@ bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **d
 	num = g_strv_length (details);
 	g_return_val_if_fail (num > 0 && g_strv_length (descriptions) == num, FALSE);
 
-	ctx = g_new0 (TotemCodecInstallContext, 1);
+	ctx = g_new0 (XplayerCodecInstallContext, 1);
 	ctx->descriptions = g_strdupv (descriptions);
 	ctx->details = g_strdupv (details);
 	ctx->playing = playing;
@@ -323,7 +323,7 @@ bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **d
 
 	/* if we managed to start playing, pause playback, since some install
 	 * wizard should now take over in a second anyway and the user might not
-	 * be able to use totem's controls while the wizard is running */
+	 * be able to use xplayer's controls while the wizard is running */
 	if (playing)
 		bacon_video_widget_pause (bvw);
 

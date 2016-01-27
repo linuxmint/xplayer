@@ -1,21 +1,21 @@
 AC_PREREQ[(2.64)]
 
-m4_define(totem_version_major, 3)
-m4_define(totem_version_minor, 10)
-m4_define(totem_version_micro, 1)
+m4_define(xplayer_version_major, 3)
+m4_define(xplayer_version_minor, 10)
+m4_define(xplayer_version_micro, 1)
 
 # The version of the API exposed to plugins
-m4_define(totem_api_version_major, 1)
-m4_define(totem_api_version_minor, 0)
+m4_define(xplayer_api_version_major, 1)
+m4_define(xplayer_api_version_minor, 0)
 
-AC_INIT([totem],
-        [totem_version_major.totem_version_minor.totem_version_micro],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=totem],
-        [totem],
-        [http://projects.gnome.org/totem/])
+AC_INIT([xplayer],
+        [xplayer_version_major.xplayer_version_minor.xplayer_version_micro],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer],
+        [xplayer],
+        [http://projects.gnome.org/xplayer/])
 
 AM_MAINTAINER_MODE([enable])
-AC_CONFIG_SRCDIR([src/totem.c])
+AC_CONFIG_SRCDIR([src/xplayer.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -26,7 +26,7 @@ AM_INIT_AUTOMAKE([1.11 dist-xz tar-ustar no-dist-gzip check-news])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 dnl Add the languages which your application supports to po/LINGUAS
-GETTEXT_PACKAGE=totem
+GETTEXT_PACKAGE=xplayer
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, ["$GETTEXT_PACKAGE"], [Define to the Gettext package name])
 AC_SUBST(GETTEXT_PACKAGE)
 IT_PROG_INTLTOOL([0.40.0])
@@ -52,7 +52,7 @@ AC_PATH_PROG([GLIB_MKENUMS],[glib-mkenums])
 GLIB_REQS=2.33.0
 GIO_REQS=2.27.92
 GTK_REQS=3.5.2
-TOTEM_PLPARSER_REQS=3.9.92
+XPLAYER_PLPARSER_REQS=3.9.92
 GNOMEICON_REQS=2.15.90
 DBUS_REQS=0.82
 VALA_REQS=0.14.1
@@ -65,23 +65,23 @@ LIBXML_REQS=2.6.0
 # Used in the pkg-config file for plugins
 AC_SUBST(GLIB_REQS)
 AC_SUBST(GTK_REQS)
-AC_SUBST(TOTEM_PLPARSER_REQS)
+AC_SUBST(XPLAYER_PLPARSER_REQS)
 
-TOTEM_VERSION_MAJOR=totem_version_major
-TOTEM_VERSION_MINOR=totem_version_minor
-TOTEM_VERSION_MICRO=totem_version_micro
-AC_SUBST(TOTEM_VERSION_MAJOR)
-AC_SUBST(TOTEM_VERSION_MINOR)
-AC_SUBST(TOTEM_VERSION_MICRO)
+XPLAYER_VERSION_MAJOR=xplayer_version_major
+XPLAYER_VERSION_MINOR=xplayer_version_minor
+XPLAYER_VERSION_MICRO=xplayer_version_micro
+AC_SUBST(XPLAYER_VERSION_MAJOR)
+AC_SUBST(XPLAYER_VERSION_MINOR)
+AC_SUBST(XPLAYER_VERSION_MICRO)
 
-TOTEM_API_VERSION=totem_api_version_major.totem_api_version_minor
-AC_SUBST(TOTEM_API_VERSION)
-AC_DEFINE_UNQUOTED(TOTEM_API_VERSION, ["$TOTEM_API_VERSION"], [Define to the Totem plugin API version])
+XPLAYER_API_VERSION=xplayer_api_version_major.xplayer_api_version_minor
+AC_SUBST(XPLAYER_API_VERSION)
+AC_DEFINE_UNQUOTED(XPLAYER_API_VERSION, ["$XPLAYER_API_VERSION"], [Define to the Xplayer plugin API version])
 
 # The full list of plugins
 allowed_plugins="apple-trailers autoload-subtitles brasero-disc-recorder chapters dbusservice im-status gromit lirc media-player-keys ontop opensubtitles properties pythonconsole recent rotation save-file samplepython sample-vala screensaver screenshot sidebar-test skipto zeitgeist-dp grilo vimeo"
 
-PLUGINDIR='${libdir}/totem/plugins'
+PLUGINDIR='${libdir}/xplayer/plugins'
 AC_SUBST(PLUGINDIR)
 
 dnl the two versions here implicate the gstreamer core and gst-plugins
@@ -279,13 +279,13 @@ AM_CONDITIONAL([ENABLE_PYTHON],[test "x$enable_python" = "xyes"])
 # Player requirements
 #================================================================
 
-PKG_CHECK_MODULES(PLAYER, $BACKEND_MODULES glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS gmodule-2.0 totem-plparser >= $TOTEM_PLPARSER_REQS libpeas-1.0 >= $PEAS_REQS libpeas-gtk-1.0 >= $PEAS_REQS $PYTHON_MODULES)
+PKG_CHECK_MODULES(PLAYER, $BACKEND_MODULES glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS gmodule-2.0 xplayer-plparser >= $XPLAYER_PLPARSER_REQS libpeas-1.0 >= $PEAS_REQS libpeas-gtk-1.0 >= $PEAS_REQS $PYTHON_MODULES)
 PKG_CHECK_MODULES(LIBPLAYER, glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS clutter-gtk-1.0)
 PKG_CHECK_MODULES(HELPER, gstreamer-1.0 gstreamer-tag-1.0)
 PKG_CHECK_MODULES(TIME_HELPER, glib-2.0)
 PKG_CHECK_MODULES(RTL_HELPER, glib-2.0 gtk+-3.0 >= $GTK_REQS)
 PKG_CHECK_MODULES(PIXBUF_HELPER, gdk-pixbuf-2.0 gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0)
-PKG_CHECK_MODULES(THUMBNAILER, gtk+-3.0 >= $GTK_REQS totem-plparser >= $TOTEM_PLPARSER_REQS gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0)
+PKG_CHECK_MODULES(THUMBNAILER, gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0)
 PKG_CHECK_MODULES(PREVIEW, gstreamer-1.0 >= $GST_REQS gio-2.0 >= $GIO_REQS gdk-pixbuf-2.0)
 PKG_CHECK_MODULES(PROPERTIES, gtk+-3.0 >= $GTK_REQS)
 
@@ -338,7 +338,7 @@ plugin_error()
 }
 
 AC_ARG_WITH([plugins],
-	[AS_HELP_STRING([--with-plugins],[Which Totem plugins to compile (default: auto; "all", "none" and "autodetect" are valid)])],
+	[AS_HELP_STRING([--with-plugins],[Which Xplayer plugins to compile (default: auto; "all", "none" and "autodetect" are valid)])],
 	[], [with_plugins=autodetect])
 
 used_plugins=""
@@ -510,7 +510,7 @@ AC_SUBST([PLUGINS])
 AC_MSG_CHECKING([whether to compile the browser plugins])
 
 AC_ARG_ENABLE([browser-plugins],
-	[AS_HELP_STRING([--enable-browser-plugins],[compile the totem browser plugins])],
+	[AS_HELP_STRING([--enable-browser-plugins],[compile the xplayer browser plugins])],
 	[],[enable_browser_plugins=yes])
 AC_MSG_RESULT([$enable_browser_plugins])
 
@@ -525,7 +525,7 @@ if test "$enable_browser_plugins" = "yes" ; then
 		 gio-2.0 >= $GIO_REQS
 		 gmodule-export-2.0
 		 x11
-		 totem-plparser-mini >= $TOTEM_PLPARSER_REQS],
+		 xplayer-plparser-mini >= $XPLAYER_PLPARSER_REQS],
 		[],[enable_browser_plugins=no])
 
 	AC_SUBST([BROWSER_PLUGIN_CFLAGS])
@@ -565,7 +565,7 @@ if test "$enable_browser_plugins" = "yes" ; then
 		AM_CXXFLAGS="-fno-rtti $AM_CXXFLAGS"
 	fi
 
-	PKG_CHECK_MODULES(PLUGIN_VIEWER, $BACKEND_MODULES gtk+-3.0 >= $GTK_REQS totem-plparser >= $TOTEM_PLPARSER_REQS gdk-x11-3.0 >= $GTK_REQS dbus-glib-1 >= $DBUS_REQS)
+	PKG_CHECK_MODULES(PLUGIN_VIEWER, $BACKEND_MODULES gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gdk-x11-3.0 >= $GTK_REQS dbus-glib-1 >= $DBUS_REQS)
 	PKG_CHECK_MODULES(GLOW_BUTTON, gtk+-3.0)
 fi
 
@@ -660,7 +660,7 @@ GTK_DOC_CHECK([1.14],[--flavour no-tmpl])
 # This macro expands DIR and assigns it to RET.
 # If DIR is NONE, then it's replaced by DEFAULT.
 # Based on AC_DEFINE_DIR
-AC_DEFUN([TOTEM_FULLPATH], [
+AC_DEFUN([XPLAYER_FULLPATH], [
   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
   ac_expand=[$]$1
@@ -670,8 +670,8 @@ AC_DEFUN([TOTEM_FULLPATH], [
 ])
 
 dnl FULL_LIBEXECDIR is used for X-GNOME-Bugzilla-ExtraInfoScript expansion
-dnl in data/totem.desktop.in.in.in
-TOTEM_FULLPATH(libexecdir, NONE, FULL_LIBEXECDIR)
+dnl in data/xplayer.desktop.in.in.in
+XPLAYER_FULLPATH(libexecdir, NONE, FULL_LIBEXECDIR)
 AC_SUBST(FULL_LIBEXECDIR)
 
 dnl run in source tree
@@ -684,7 +684,7 @@ AC_ARG_ENABLE(run-in-source-tree,
 	esac],
 [ENABLE_RUN_IN_SOURCE_TREE=yes]) dnl Default value
 if test x$ENABLE_RUN_IN_SOURCE_TREE = xyes; then
-	AC_DEFINE(TOTEM_RUN_IN_SOURCE_TREE, 1, [enable search for UI files and plugins in local directory])
+	AC_DEFINE(XPLAYER_RUN_IN_SOURCE_TREE, 1, [enable search for UI files and plugins in local directory])
 fi
 
 if test "$GCC" = "yes" ; then
@@ -704,7 +704,7 @@ AC_SUBST([AM_LDFLAGS])
 
 AC_CONFIG_FILES([
 Makefile
-totem.spec
+xplayer.spec
 libgd/Makefile
 src/Makefile
 src/gst/Makefile
@@ -721,7 +721,7 @@ src/plugins/gromit/Makefile
 src/plugins/lirc/Makefile
 src/plugins/media-player-keys/Makefile
 src/plugins/opensubtitles/Makefile
-src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in
+src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in
 src/plugins/properties/Makefile
 src/plugins/recent/Makefile
 src/plugins/rotation/Makefile
@@ -731,7 +731,7 @@ src/plugins/skipto/Makefile
 src/plugins/samplepython/Makefile
 src/plugins/sample-vala/Makefile
 src/plugins/pythonconsole/Makefile
-src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in
+src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in
 src/plugins/brasero-disc-recorder/Makefile
 src/plugins/chapters/Makefile
 src/plugins/zeitgeist-dp/Makefile
@@ -740,9 +740,9 @@ src/plugins/vimeo/Makefile
 src/backend/Makefile
 browser-plugin/Makefile
 data/Makefile
-data/org.gnome.totem.gschema.xml.in
-data/totem.desktop.in.in
-data/totem.pc
+data/org.gnome.xplayer.gschema.xml.in
+data/xplayer.desktop.in.in
+data/xplayer.pc
 data/icons/Makefile
 data/icons/16x16/Makefile
 data/icons/22x22/Makefile
@@ -759,7 +759,7 @@ docs/reference/version.xml
 ])
 AC_OUTPUT
 
-AC_MSG_NOTICE([Totem was configured with the following options:])
+AC_MSG_NOTICE([Xplayer was configured with the following options:])
 AC_MSG_NOTICE([** Using the GStreamer-$GST_MAJORMINOR backend])
 if test "x$MISSING_PLUGINS_LIBS" != "x"; then
 	AC_MSG_NOTICE([** Easy codec installation support enabled])
@@ -790,7 +790,7 @@ if test "x${PLUGINS}" != "x" ; then
 		AC_MSG_NOTICE([   ${allowed_plugin} plugin disabled])
 	done
 else
-	AC_MSG_NOTICE([   No Totem plugins enabled])
+	AC_MSG_NOTICE([   No Xplayer plugins enabled])
 fi
 if test x$enable_browser_plugins = xyes ; then
 	AC_MSG_NOTICE([** Browser plugin enabled])

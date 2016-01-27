@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -27,12 +27,12 @@
  */
 
 /**
- * SECTION:totem-object
- * @short_description: main Totem object
+ * SECTION:xplayer-object
+ * @short_description: main Xplayer object
  * @stability: Unstable
- * @include: totem.h
+ * @include: xplayer.h
  *
- * #TotemObject is the core object of Totem; a singleton which controls all Totem's main functions.
+ * #XplayerObject is the core object of Xplayer; a singleton which controls all Xplayer's main functions.
  **/
 
 #include "config.h"
@@ -47,25 +47,25 @@
 
 #include <string.h>
 
-#include "totem.h"
-#include "totem-private.h"
-#include "totem-options.h"
-#include "totem-plugins-engine.h"
-#include "totem-playlist.h"
+#include "xplayer.h"
+#include "xplayer-private.h"
+#include "xplayer-options.h"
+#include "xplayer-plugins-engine.h"
+#include "xplayer-playlist.h"
 #include "bacon-video-widget.h"
-#include "totem-statusbar.h"
-#include "totem-time-label.h"
-#include "totem-sidebar.h"
-#include "totem-menu.h"
-#include "totem-uri.h"
-#include "totem-interface.h"
+#include "xplayer-statusbar.h"
+#include "xplayer-time-label.h"
+#include "xplayer-sidebar.h"
+#include "xplayer-menu.h"
+#include "xplayer-uri.h"
+#include "xplayer-interface.h"
 #include "video-utils.h"
-#include "totem-dnd-menu.h"
-#include "totem-preferences.h"
-#include "totem-rtl-helpers.h"
+#include "xplayer-dnd-menu.h"
+#include "xplayer-preferences.h"
+#include "xplayer-rtl-helpers.h"
 
-#include "totem-mime-types.h"
-#include "totem-uri-schemes.h"
+#include "xplayer-mime-types.h"
+#include "xplayer-uri-schemes.h"
 
 #define REWIND_OR_PREVIOUS 4000
 
@@ -86,24 +86,24 @@ static const GtkTargetEntry target_table[] = {
 	{ (gchar*) "_NETSCAPE_URL", 0, 1 }
 };
 
-static gboolean totem_action_open_files_list (TotemObject *totem, GSList *list);
-static void update_buttons (TotemObject *totem);
-static void update_fill (TotemObject *totem, gdouble level);
-static void update_media_menu_items (TotemObject *totem);
-static void playlist_changed_cb (GtkWidget *playlist, TotemObject *totem);
-static void play_pause_set_label (TotemObject *totem, TotemStates state);
+static gboolean xplayer_action_open_files_list (XplayerObject *xplayer, GSList *list);
+static void update_buttons (XplayerObject *xplayer);
+static void update_fill (XplayerObject *xplayer, gdouble level);
+static void update_media_menu_items (XplayerObject *xplayer);
+static void playlist_changed_cb (GtkWidget *playlist, XplayerObject *xplayer);
+static void play_pause_set_label (XplayerObject *xplayer, XplayerStates state);
 
 /* Callback functions for GtkBuilder */
-G_MODULE_EXPORT gboolean main_window_destroy_cb (GtkWidget *widget, GdkEvent *event, TotemObject *totem);
-G_MODULE_EXPORT gboolean window_state_event_cb (GtkWidget *window, GdkEventWindowState *event, TotemObject *totem);
-G_MODULE_EXPORT gboolean seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *totem);
-G_MODULE_EXPORT void seek_slider_changed_cb (GtkAdjustment *adj, TotemObject *totem);
-G_MODULE_EXPORT gboolean seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *totem);
-G_MODULE_EXPORT void volume_button_value_changed_cb (GtkScaleButton *button, gdouble value, TotemObject *totem);
-G_MODULE_EXPORT gboolean window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, TotemObject *totem);
-G_MODULE_EXPORT int window_scroll_event_cb (GtkWidget *win, GdkEvent *event, TotemObject *totem);
-G_MODULE_EXPORT void main_pane_size_allocated (GtkWidget *main_pane, GtkAllocation *allocation, TotemObject *totem);
-G_MODULE_EXPORT void fs_exit1_activate_cb (GtkButton *button, TotemObject *totem);
+G_MODULE_EXPORT gboolean main_window_destroy_cb (GtkWidget *widget, GdkEvent *event, XplayerObject *xplayer);
+G_MODULE_EXPORT gboolean window_state_event_cb (GtkWidget *window, GdkEventWindowState *event, XplayerObject *xplayer);
+G_MODULE_EXPORT gboolean seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject *xplayer);
+G_MODULE_EXPORT void seek_slider_changed_cb (GtkAdjustment *adj, XplayerObject *xplayer);
+G_MODULE_EXPORT gboolean seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject *xplayer);
+G_MODULE_EXPORT void volume_button_value_changed_cb (GtkScaleButton *button, gdouble value, XplayerObject *xplayer);
+G_MODULE_EXPORT gboolean window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, XplayerObject *xplayer);
+G_MODULE_EXPORT int window_scroll_event_cb (GtkWidget *win, GdkEvent *event, XplayerObject *xplayer);
+G_MODULE_EXPORT void main_pane_size_allocated (GtkWidget *main_pane, GtkAllocation *allocation, XplayerObject *xplayer);
+G_MODULE_EXPORT void fs_exit1_activate_cb (GtkButton *button, XplayerObject *xplayer);
 
 enum {
 	PROP_0,
@@ -128,22 +128,22 @@ enum {
 	LAST_SIGNAL
 };
 
-static void totem_object_set_property		(GObject *object,
+static void xplayer_object_set_property		(GObject *object,
 						 guint property_id,
 						 const GValue *value,
 						 GParamSpec *pspec);
-static void totem_object_get_property		(GObject *object,
+static void xplayer_object_get_property		(GObject *object,
 						 guint property_id,
 						 GValue *value,
 						 GParamSpec *pspec);
-static void totem_object_finalize (GObject *totem);
+static void xplayer_object_finalize (GObject *xplayer);
 
-static int totem_table_signals[LAST_SIGNAL] = { 0 };
+static int xplayer_table_signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE(TotemObject, totem_object, GTK_TYPE_APPLICATION)
+G_DEFINE_TYPE(XplayerObject, xplayer_object, GTK_TYPE_APPLICATION)
 
 static gboolean
-totem_object_local_command_line (GApplication              *application,
+xplayer_object_local_command_line (GApplication              *application,
 				 gchar                   ***arguments,
 				 int                       *exit_status)
 {
@@ -157,7 +157,7 @@ totem_object_local_command_line (GApplication              *application,
 	argv = g_strdupv (*arguments);
 	argc = g_strv_length (argv);
 
-	context = totem_options_get_context ();
+	context = xplayer_options_get_context ();
 	if (g_option_context_parse (context, &argc, &argv, &error) == FALSE) {
 		g_print (_("%s\nRun '%s --help' to see a full list of available command line options.\n"),
 				error->message, argv[0]);
@@ -178,7 +178,7 @@ totem_object_local_command_line (GApplication              *application,
 		for ( ; i < n_args; i++) {
 			char *new_path;
 
-			new_path = totem_create_full_path ((*arguments)[i]);
+			new_path = xplayer_create_full_path ((*arguments)[i]);
 			if (new_path == NULL)
 				continue;
 
@@ -215,7 +215,7 @@ accumulator_first_non_null_wins (GSignalInvocationHint *ihint,
 }
 
 static void
-totem_object_class_init (TotemObjectClass *klass)
+xplayer_object_class_init (XplayerObjectClass *klass)
 {
 	GObjectClass *object_class;
 	GApplicationClass *app_class;
@@ -223,32 +223,32 @@ totem_object_class_init (TotemObjectClass *klass)
 	object_class = (GObjectClass *) klass;
 	app_class = (GApplicationClass *) klass;
 
-	object_class->set_property = totem_object_set_property;
-	object_class->get_property = totem_object_get_property;
-	object_class->finalize = totem_object_finalize;
+	object_class->set_property = xplayer_object_set_property;
+	object_class->get_property = xplayer_object_get_property;
+	object_class->finalize = xplayer_object_finalize;
 
-	app_class->local_command_line = totem_object_local_command_line;
+	app_class->local_command_line = xplayer_object_local_command_line;
 
 	/**
-	 * TotemObject:fullscreen:
+	 * XplayerObject:fullscreen:
 	 *
-	 * If %TRUE, Totem is in fullscreen mode.
+	 * If %TRUE, Xplayer is in fullscreen mode.
 	 **/
 	g_object_class_install_property (object_class, PROP_FULLSCREEN,
-					 g_param_spec_boolean ("fullscreen", "Fullscreen?", "Whether Totem is in fullscreen mode.",
+					 g_param_spec_boolean ("fullscreen", "Fullscreen?", "Whether Xplayer is in fullscreen mode.",
 							       FALSE, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:playing:
+	 * XplayerObject:playing:
 	 *
-	 * If %TRUE, Totem is playing an audio or video file.
+	 * If %TRUE, Xplayer is playing an audio or video file.
 	 **/
 	g_object_class_install_property (object_class, PROP_PLAYING,
-					 g_param_spec_boolean ("playing", "Playing?", "Whether Totem is currently playing a file.",
+					 g_param_spec_boolean ("playing", "Playing?", "Whether Xplayer is currently playing a file.",
 							       FALSE, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:stream-length:
+	 * XplayerObject:stream-length:
 	 *
 	 * The length of the current stream, in milliseconds.
 	 **/
@@ -258,7 +258,7 @@ totem_object_class_init (TotemObjectClass *klass)
 							     G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:current-time:
+	 * XplayerObject:current-time:
 	 *
 	 * The player's position (time) in the current stream, in milliseconds.
 	 **/
@@ -268,7 +268,7 @@ totem_object_class_init (TotemObjectClass *klass)
 							     G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:seekable:
+	 * XplayerObject:seekable:
 	 *
 	 * If %TRUE, the current stream is seekable.
 	 **/
@@ -277,7 +277,7 @@ totem_object_class_init (TotemObjectClass *klass)
 							       FALSE, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:current-mrl:
+	 * XplayerObject:current-mrl:
 	 *
 	 * The MRL of the current stream.
 	 **/
@@ -286,7 +286,7 @@ totem_object_class_init (TotemObjectClass *klass)
 							      NULL, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:current-content-type:
+	 * XplayerObject:current-content-type:
 	 *
 	 * The content-type of the current stream.
 	 **/
@@ -297,7 +297,7 @@ totem_object_class_init (TotemObjectClass *klass)
 							      NULL, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:current-display-name:
+	 * XplayerObject:current-display-name:
 	 *
 	 * The display name of the current stream.
 	 **/
@@ -308,9 +308,9 @@ totem_object_class_init (TotemObjectClass *klass)
 							      NULL, G_PARAM_READABLE));
 
 	/**
-	 * TotemObject:remember-position:
+	 * XplayerObject:remember-position:
 	 *
-	 * If %TRUE, Totem will remember the position it was at last time a given file was opened.
+	 * If %TRUE, Xplayer will remember the position it was at last time a given file was opened.
 	 **/
 	g_object_class_install_property (object_class, PROP_REMEMBER_POSITION,
 					 g_param_spec_boolean ("remember-position", "Remember position?",
@@ -318,135 +318,135 @@ totem_object_class_init (TotemObjectClass *klass)
 							       FALSE, G_PARAM_READWRITE));
 
 	/**
-	 * TotemObject::file-opened:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::file-opened:
+	 * @xplayer: the #XplayerObject which received the signal
 	 * @mrl: the MRL of the opened stream
 	 *
-	 * The #TotemObject::file-opened signal is emitted when a new stream is opened by Totem.
+	 * The #XplayerObject::file-opened signal is emitted when a new stream is opened by Xplayer.
 	 */
-	totem_table_signals[FILE_OPENED] =
+	xplayer_table_signals[FILE_OPENED] =
 		g_signal_new ("file-opened",
 				G_TYPE_FROM_CLASS (object_class),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemObjectClass, file_opened),
+				G_STRUCT_OFFSET (XplayerObjectClass, file_opened),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__STRING,
 				G_TYPE_NONE, 1, G_TYPE_STRING);
 
 	/**
-	 * TotemObject::file-has-played:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::file-has-played:
+	 * @xplayer: the #XplayerObject which received the signal
 	 * @mrl: the MRL of the opened stream
 	 *
-	 * The #TotemObject::file-has-played signal is emitted when a new stream has started playing in Totem.
+	 * The #XplayerObject::file-has-played signal is emitted when a new stream has started playing in Xplayer.
 	 */
-	totem_table_signals[FILE_HAS_PLAYED] =
+	xplayer_table_signals[FILE_HAS_PLAYED] =
 		g_signal_new ("file-has-played",
 				G_TYPE_FROM_CLASS (object_class),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemObjectClass, file_has_played),
+				G_STRUCT_OFFSET (XplayerObjectClass, file_has_played),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__STRING,
 				G_TYPE_NONE, 1, G_TYPE_STRING);
 
 	/**
-	 * TotemObject::file-closed:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::file-closed:
+	 * @xplayer: the #XplayerObject which received the signal
 	 *
-	 * The #TotemObject::file-closed signal is emitted when Totem closes a stream.
+	 * The #XplayerObject::file-closed signal is emitted when Xplayer closes a stream.
 	 */
-	totem_table_signals[FILE_CLOSED] =
+	xplayer_table_signals[FILE_CLOSED] =
 		g_signal_new ("file-closed",
 				G_TYPE_FROM_CLASS (object_class),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemObjectClass, file_closed),
+				G_STRUCT_OFFSET (XplayerObjectClass, file_closed),
 				NULL, NULL,
 				g_cclosure_marshal_VOID__VOID,
 				G_TYPE_NONE, 0, G_TYPE_NONE);
 
 	/**
-	 * TotemObject::metadata-updated:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::metadata-updated:
+	 * @xplayer: the #XplayerObject which received the signal
 	 * @artist: the name of the artist, or %NULL
 	 * @title: the stream title, or %NULL
 	 * @album: the name of the stream's album, or %NULL
 	 * @track_number: the stream's track number
 	 *
-	 * The #TotemObject::metadata-updated signal is emitted when the metadata of a stream is updated, typically
+	 * The #XplayerObject::metadata-updated signal is emitted when the metadata of a stream is updated, typically
 	 * when it's being loaded.
 	 */
-	totem_table_signals[METADATA_UPDATED] =
+	xplayer_table_signals[METADATA_UPDATED] =
 		g_signal_new ("metadata-updated",
 				G_TYPE_FROM_CLASS (object_class),
 				G_SIGNAL_RUN_LAST,
-				G_STRUCT_OFFSET (TotemObjectClass, metadata_updated),
+				G_STRUCT_OFFSET (XplayerObjectClass, metadata_updated),
 				NULL, NULL,
 	                        g_cclosure_marshal_generic,
 				G_TYPE_NONE, 4, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_UINT);
 
 	/**
-	 * TotemObject::get-user-agent:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::get-user-agent:
+	 * @xplayer: the #XplayerObject which received the signal
 	 * @mrl: the MRL of the opened stream
 	 *
-	 * The #TotemObject::get-user-agent signal is emitted before opening a stream, so that plugins
+	 * The #XplayerObject::get-user-agent signal is emitted before opening a stream, so that plugins
 	 * have the opportunity to return the user-agent to be set.
 	 *
 	 * Return value: allocated string representing the user-agent to use for @mrl
 	 */
-	totem_table_signals[GET_USER_AGENT] =
+	xplayer_table_signals[GET_USER_AGENT] =
 		g_signal_new ("get-user-agent",
 			      G_TYPE_FROM_CLASS (object_class),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemObjectClass, get_user_agent),
+			      G_STRUCT_OFFSET (XplayerObjectClass, get_user_agent),
 			      accumulator_first_non_null_wins, NULL,
 	                      g_cclosure_marshal_generic,
 			      G_TYPE_STRING, 1, G_TYPE_STRING);
 
 	/**
-	 * TotemObject::get-text-subtitle:
-	 * @totem: the #TotemObject which received the signal
+	 * XplayerObject::get-text-subtitle:
+	 * @xplayer: the #XplayerObject which received the signal
 	 * @mrl: the MRL of the opened stream
 	 *
-	 * The #TotemObject::get-text-subtitle signal is emitted before opening a stream, so that plugins
+	 * The #XplayerObject::get-text-subtitle signal is emitted before opening a stream, so that plugins
 	 * have the opportunity to detect or download text subtitles for the stream if necessary.
 	 *
 	 * Return value: allocated string representing the URI of the subtitle to use for @mrl
 	 */
-	totem_table_signals[GET_TEXT_SUBTITLE] =
+	xplayer_table_signals[GET_TEXT_SUBTITLE] =
 		g_signal_new ("get-text-subtitle",
 			      G_TYPE_FROM_CLASS (object_class),
 			      G_SIGNAL_RUN_LAST,
-			      G_STRUCT_OFFSET (TotemObjectClass, get_text_subtitle),
+			      G_STRUCT_OFFSET (XplayerObjectClass, get_text_subtitle),
 			      accumulator_first_non_null_wins, NULL,
 	                      g_cclosure_marshal_generic,
 			      G_TYPE_STRING, 1, G_TYPE_STRING);
 }
 
 static void
-totem_object_init (TotemObject *totem)
+xplayer_object_init (XplayerObject *xplayer)
 {
 	//FIXME nothing yet
 }
 
 static void
-totem_object_finalize (GObject *object)
+xplayer_object_finalize (GObject *object)
 {
 
-	G_OBJECT_CLASS (totem_object_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xplayer_object_parent_class)->finalize (object);
 }
 
 static void
-totem_object_set_property (GObject *object,
+xplayer_object_set_property (GObject *object,
 			   guint property_id,
 			   const GValue *value,
 			   GParamSpec *pspec)
 {
-	TotemObject *totem = TOTEM_OBJECT (object);
+	XplayerObject *xplayer = XPLAYER_OBJECT (object);
 
 	switch (property_id) {
 		case PROP_REMEMBER_POSITION:
-			totem->remember_position = g_value_get_boolean (value);
+			xplayer->remember_position = g_value_get_boolean (value);
 			break;
 		default:
 			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -454,43 +454,43 @@ totem_object_set_property (GObject *object,
 }
 
 static void
-totem_object_get_property (GObject *object,
+xplayer_object_get_property (GObject *object,
 			   guint property_id,
 			   GValue *value,
 			   GParamSpec *pspec)
 {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 
-	totem = TOTEM_OBJECT (object);
+	xplayer = XPLAYER_OBJECT (object);
 
 	switch (property_id)
 	{
 	case PROP_FULLSCREEN:
-		g_value_set_boolean (value, totem_is_fullscreen (totem));
+		g_value_set_boolean (value, xplayer_is_fullscreen (xplayer));
 		break;
 	case PROP_PLAYING:
-		g_value_set_boolean (value, totem_is_playing (totem));
+		g_value_set_boolean (value, xplayer_is_playing (xplayer));
 		break;
 	case PROP_STREAM_LENGTH:
-		g_value_set_int64 (value, bacon_video_widget_get_stream_length (totem->bvw));
+		g_value_set_int64 (value, bacon_video_widget_get_stream_length (xplayer->bvw));
 		break;
 	case PROP_CURRENT_TIME:
-		g_value_set_int64 (value, bacon_video_widget_get_current_time (totem->bvw));
+		g_value_set_int64 (value, bacon_video_widget_get_current_time (xplayer->bvw));
 		break;
 	case PROP_SEEKABLE:
-		g_value_set_boolean (value, totem_is_seekable (totem));
+		g_value_set_boolean (value, xplayer_is_seekable (xplayer));
 		break;
 	case PROP_CURRENT_MRL:
-		g_value_set_string (value, totem->mrl);
+		g_value_set_string (value, xplayer->mrl);
 		break;
 	case PROP_CURRENT_CONTENT_TYPE:
-		g_value_take_string (value, totem_playlist_get_current_content_type (totem->playlist));
+		g_value_take_string (value, xplayer_playlist_get_current_content_type (xplayer->playlist));
 		break;
 	case PROP_CURRENT_DISPLAY_NAME:
-		g_value_take_string (value, totem_playlist_get_current_title (totem->playlist));
+		g_value_take_string (value, xplayer_playlist_get_current_title (xplayer->playlist));
 		break;
 	case PROP_REMEMBER_POSITION:
-		g_value_set_boolean (value, totem->remember_position);
+		g_value_set_boolean (value, xplayer->remember_position);
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -498,160 +498,160 @@ totem_object_get_property (GObject *object,
 }
 
 /**
- * totem_object_plugins_init:
- * @totem: a #TotemObject
+ * xplayer_object_plugins_init:
+ * @xplayer: a #XplayerObject
  *
  * Initialises the plugin engine and activates all the
  * enabled plugins.
  **/
 void
-totem_object_plugins_init (TotemObject *totem)
+xplayer_object_plugins_init (XplayerObject *xplayer)
 {
-	if (totem->engine == NULL)
-		totem->engine = totem_plugins_engine_get_default (totem);
+	if (xplayer->engine == NULL)
+		xplayer->engine = xplayer_plugins_engine_get_default (xplayer);
 }
 
 /**
- * totem_object_plugins_shutdown:
- * @totem: a #TotemObject
+ * xplayer_object_plugins_shutdown:
+ * @xplayer: a #XplayerObject
  *
  * Shuts down the plugin engine and deactivates all the
  * plugins.
  **/
 void
-totem_object_plugins_shutdown (TotemObject *totem)
+xplayer_object_plugins_shutdown (XplayerObject *xplayer)
 {
-	g_clear_object (&totem->engine);
+	g_clear_object (&xplayer->engine);
 }
 
 /**
- * totem_object_get_main_window:
- * @totem: a #TotemObject
+ * xplayer_object_get_main_window:
+ * @xplayer: a #XplayerObject
  *
- * Gets Totem's main window and increments its reference count.
+ * Gets Xplayer's main window and increments its reference count.
  *
- * Return value: (transfer full): Totem's main window
+ * Return value: (transfer full): Xplayer's main window
  **/
 GtkWindow *
-totem_object_get_main_window (TotemObject *totem)
+xplayer_object_get_main_window (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), NULL);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), NULL);
 
-	g_object_ref (G_OBJECT (totem->win));
+	g_object_ref (G_OBJECT (xplayer->win));
 
-	return GTK_WINDOW (totem->win);
+	return GTK_WINDOW (xplayer->win);
 }
 
 /**
- * totem_object_get_ui_manager:
- * @totem: a #TotemObject
+ * xplayer_object_get_ui_manager:
+ * @xplayer: a #XplayerObject
  *
- * Gets Totem's UI manager, but does not change its reference count.
+ * Gets Xplayer's UI manager, but does not change its reference count.
  *
- * Return value: (transfer none): Totem's UI manager
+ * Return value: (transfer none): Xplayer's UI manager
  **/
 GtkUIManager *
-totem_object_get_ui_manager (TotemObject *totem)
+xplayer_object_get_ui_manager (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), NULL);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), NULL);
 
-	return totem->ui_manager;
+	return xplayer->ui_manager;
 }
 
 /**
- * totem_object_get_video_widget:
- * @totem: a #TotemObject
+ * xplayer_object_get_video_widget:
+ * @xplayer: a #XplayerObject
  *
- * Gets Totem's video widget and increments its reference count.
+ * Gets Xplayer's video widget and increments its reference count.
  *
- * Return value: (transfer full): Totem's video widget
+ * Return value: (transfer full): Xplayer's video widget
  **/
 GtkWidget *
-totem_object_get_video_widget (TotemObject *totem)
+xplayer_object_get_video_widget (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), NULL);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), NULL);
 
-	g_object_ref (G_OBJECT (totem->bvw));
+	g_object_ref (G_OBJECT (xplayer->bvw));
 
-	return GTK_WIDGET (totem->bvw);
+	return GTK_WIDGET (xplayer->bvw);
 }
 
 /**
- * totem_object_get_version:
+ * xplayer_object_get_version:
  *
- * Gets the application name and version (e.g. "Totem 2.28.0").
+ * Gets the application name and version (e.g. "Xplayer 2.28.0").
  *
  * Return value: a newly-allocated string of the name and version of the application
  **/
 char *
-totem_object_get_version (void)
+xplayer_object_get_version (void)
 {
-	/* Translators: %s is the totem version number */
-	return g_strdup_printf (_("Totem %s"), VERSION);
+	/* Translators: %s is the xplayer version number */
+	return g_strdup_printf (_("Xplayer %s"), VERSION);
 }
 
 /**
- * totem_get_current_time:
- * @totem: a #TotemObject
+ * xplayer_get_current_time:
+ * @xplayer: a #XplayerObject
  *
  * Gets the current position's time in the stream as a gint64.
  *
  * Return value: the current position in the stream
  **/
 gint64
-totem_get_current_time (TotemObject *totem)
+xplayer_get_current_time (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), 0);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), 0);
 
-	return bacon_video_widget_get_current_time (totem->bvw);
+	return bacon_video_widget_get_current_time (xplayer->bvw);
 }
 
 typedef struct {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 	gchar *uri;
 	gchar *display_name;
 } AddToPlaylistData;
 
 static void
-add_to_playlist_and_play_cb (TotemPlaylist *playlist, GAsyncResult *async_result, AddToPlaylistData *data)
+add_to_playlist_and_play_cb (XplayerPlaylist *playlist, GAsyncResult *async_result, AddToPlaylistData *data)
 {
 	int end;
 	gboolean playlist_changed;
 
-	playlist_changed = totem_playlist_add_mrl_finish (playlist, async_result);
+	playlist_changed = xplayer_playlist_add_mrl_finish (playlist, async_result);
 
-	end = totem_playlist_get_last (playlist);
+	end = xplayer_playlist_get_last (playlist);
 
-	totem_signal_unblock_by_data (playlist, data->totem);
+	xplayer_signal_unblock_by_data (playlist, data->xplayer);
 
 	if (playlist_changed && end != -1) {
 		char *mrl, *subtitle;
 
 		subtitle = NULL;
-		totem_playlist_set_current (playlist, end);
-		mrl = totem_playlist_get_current_mrl (playlist, &subtitle);
-		totem_action_set_mrl_and_play (data->totem, mrl, subtitle);
+		xplayer_playlist_set_current (playlist, end);
+		mrl = xplayer_playlist_get_current_mrl (playlist, &subtitle);
+		xplayer_action_set_mrl_and_play (data->xplayer, mrl, subtitle);
 		g_free (mrl);
 		g_free (subtitle);
 	}
 
 	/* Free the closure data */
-	g_object_unref (data->totem);
+	g_object_unref (data->xplayer);
 	g_free (data->uri);
 	g_free (data->display_name);
 	g_slice_free (AddToPlaylistData, data);
 }
 
 /**
- * totem_object_add_to_playlist_and_play:
- * @totem: a #TotemObject
+ * xplayer_object_add_to_playlist_and_play:
+ * @xplayer: a #XplayerObject
  * @uri: the URI to add to the playlist
  * @display_name: the display name of the URI
  *
  * Add @uri to the playlist and play it immediately.
  **/
 void
-totem_object_add_to_playlist_and_play (TotemObject *totem,
+xplayer_object_add_to_playlist_and_play (XplayerObject *xplayer,
 				const char *uri,
 				const char *display_name)
 {
@@ -660,20 +660,20 @@ totem_object_add_to_playlist_and_play (TotemObject *totem,
 	/* Block all signals from the playlist until we're finished. They're unblocked in the callback, add_to_playlist_and_play_cb.
 	 * There are no concurrency issues here, since blocking the signals multiple times should require them to be unblocked the
 	 * same number of times before they fire again. */
-	totem_signal_block_by_data (totem->playlist, totem);
+	xplayer_signal_block_by_data (xplayer->playlist, xplayer);
 
 	data = g_slice_new (AddToPlaylistData);
-	data->totem = g_object_ref (totem);
+	data->xplayer = g_object_ref (xplayer);
 	data->uri = g_strdup (uri);
 	data->display_name = g_strdup (display_name);
 
-	totem_playlist_add_mrl (totem->playlist, uri, display_name, TRUE,
+	xplayer_playlist_add_mrl (xplayer->playlist, uri, display_name, TRUE,
 	                        NULL, (GAsyncReadyCallback) add_to_playlist_and_play_cb, data);
 }
 
 /**
- * totem_object_get_current_mrl:
- * @totem: a #TotemObject
+ * xplayer_object_get_current_mrl:
+ * @xplayer: a #XplayerObject
  *
  * Get the MRL of the current stream, or %NULL if nothing's playing.
  * Free with g_free().
@@ -681,33 +681,33 @@ totem_object_add_to_playlist_and_play (TotemObject *totem,
  * Return value: a newly-allocated string containing the MRL of the current stream
  **/
 char *
-totem_object_get_current_mrl (TotemObject *totem)
+xplayer_object_get_current_mrl (XplayerObject *xplayer)
 {
-	return totem_playlist_get_current_mrl (totem->playlist, NULL);
+	return xplayer_playlist_get_current_mrl (xplayer->playlist, NULL);
 }
 
 /**
- * totem_object_get_playlist_length:
- * @totem: a #TotemObject
+ * xplayer_object_get_playlist_length:
+ * @xplayer: a #XplayerObject
  *
  * Returns the length of the current playlist.
  *
  * Return value: the playlist length
  **/
 guint
-totem_object_get_playlist_length (TotemObject *totem)
+xplayer_object_get_playlist_length (XplayerObject *xplayer)
 {
 	int last;
 
-	last = totem_playlist_get_last (totem->playlist);
+	last = xplayer_playlist_get_last (xplayer->playlist);
 	if (last == -1)
 		return 0;
 	return last + 1;
 }
 
 /**
- * totem_object_get_playlist_pos:
- * @totem: a #TotemObject
+ * xplayer_object_get_playlist_pos:
+ * @xplayer: a #XplayerObject
  *
  * Returns the <code class="literal">0</code>-based index of the current entry in the playlist. If
  * there is no current entry in the playlist, <code class="literal">-1</code> is returned.
@@ -715,14 +715,14 @@ totem_object_get_playlist_length (TotemObject *totem)
  * Return value: the index of the current playlist entry, or <code class="literal">-1</code>
  **/
 int
-totem_object_get_playlist_pos (TotemObject *totem)
+xplayer_object_get_playlist_pos (XplayerObject *xplayer)
 {
-	return totem_playlist_get_current (totem->playlist);
+	return xplayer_playlist_get_current (xplayer->playlist);
 }
 
 /**
- * totem_object_get_title_at_playlist_pos:
- * @totem: a #TotemObject
+ * xplayer_object_get_title_at_playlist_pos:
+ * @xplayer: a #XplayerObject
  * @playlist_index: the <code class="literal">0</code>-based entry index
  *
  * Gets the title of the playlist entry at @index.
@@ -730,57 +730,57 @@ totem_object_get_playlist_pos (TotemObject *totem)
  * Return value: the entry title at @index, or %NULL; free with g_free()
  **/
 char *
-totem_object_get_title_at_playlist_pos (TotemObject *totem, guint playlist_index)
+xplayer_object_get_title_at_playlist_pos (XplayerObject *xplayer, guint playlist_index)
 {
-	return totem_playlist_get_title (totem->playlist, playlist_index);
+	return xplayer_playlist_get_title (xplayer->playlist, playlist_index);
 }
 
 /**
- * totem_get_short_title:
- * @totem: a #TotemObject
+ * xplayer_get_short_title:
+ * @xplayer: a #XplayerObject
  *
  * Gets the title of the current entry in the playlist.
  *
  * Return value: the current entry's title, or %NULL; free with g_free()
  **/
 char *
-totem_get_short_title (TotemObject *totem)
+xplayer_get_short_title (XplayerObject *xplayer)
 {
-	return totem_playlist_get_current_title (totem->playlist);
+	return xplayer_playlist_get_current_title (xplayer->playlist);
 }
 
 /**
- * totem_object_set_current_subtitle:
- * @totem: a #TotemObject
+ * xplayer_object_set_current_subtitle:
+ * @xplayer: a #XplayerObject
  * @subtitle_uri: the URI of the subtitle file to add
  *
  * Add the @subtitle_uri subtitle file to the playlist, setting it as the subtitle for the current
  * playlist entry.
  **/
 void
-totem_object_set_current_subtitle (TotemObject *totem, const char *subtitle_uri)
+xplayer_object_set_current_subtitle (XplayerObject *xplayer, const char *subtitle_uri)
 {
-	totem_playlist_set_current_subtitle (totem->playlist, subtitle_uri);
+	xplayer_playlist_set_current_subtitle (xplayer->playlist, subtitle_uri);
 }
 
 /**
- * totem_object_add_sidebar_page:
- * @totem: a #TotemObject
+ * xplayer_object_add_sidebar_page:
+ * @xplayer: a #XplayerObject
  * @page_id: a string used to identify the page
  * @title: the page's title
  * @main_widget: the main widget for the page
  *
- * Adds a sidebar page to Totem's sidebar with the given @page_id.
+ * Adds a sidebar page to Xplayer's sidebar with the given @page_id.
  * @main_widget is added into the page and shown automatically, while
  * @title is displayed as the page's title in the tab bar.
  **/
 void
-totem_object_add_sidebar_page (TotemObject *totem,
+xplayer_object_add_sidebar_page (XplayerObject *xplayer,
 			       const char *page_id,
 			       const char *title,
 			       GtkWidget *main_widget)
 {
-	totem_sidebar_add_page (totem,
+	xplayer_sidebar_add_page (xplayer,
 				page_id,
 				title,
 				NULL,
@@ -788,88 +788,88 @@ totem_object_add_sidebar_page (TotemObject *totem,
 }
 
 /**
- * totem_object_remove_sidebar_page:
- * @totem: a #TotemObject
+ * xplayer_object_remove_sidebar_page:
+ * @xplayer: a #XplayerObject
  * @page_id: a string used to identify the page
  *
- * Removes the page identified by @page_id from Totem's sidebar.
+ * Removes the page identified by @page_id from Xplayer's sidebar.
  * If @page_id doesn't exist in the sidebar, this function does
  * nothing.
  **/
 void
-totem_object_remove_sidebar_page (TotemObject *totem,
+xplayer_object_remove_sidebar_page (XplayerObject *xplayer,
 			   const char *page_id)
 {
-	totem_sidebar_remove_page (totem, page_id);
+	xplayer_sidebar_remove_page (xplayer, page_id);
 }
 
 /**
- * totem_file_opened:
- * @totem: a #TotemObject
+ * xplayer_file_opened:
+ * @xplayer: a #XplayerObject
  * @mrl: the MRL opened
  *
- * Emits the #TotemObject::file-opened signal on @totem, with the
+ * Emits the #XplayerObject::file-opened signal on @xplayer, with the
  * specified @mrl.
  **/
 void
-totem_file_opened (TotemObject *totem,
+xplayer_file_opened (XplayerObject *xplayer,
 		   const char *mrl)
 {
-	g_signal_emit (G_OBJECT (totem),
-		       totem_table_signals[FILE_OPENED],
+	g_signal_emit (G_OBJECT (xplayer),
+		       xplayer_table_signals[FILE_OPENED],
 		       0, mrl);
 }
 
 /**
- * totem_file_closed:
- * @totem: a #TotemObject
+ * xplayer_file_closed:
+ * @xplayer: a #XplayerObject
  *
- * Emits the #TotemObject::file-closed signal on @totem.
+ * Emits the #XplayerObject::file-closed signal on @xplayer.
  **/
 void
-totem_file_closed (TotemObject *totem)
+xplayer_file_closed (XplayerObject *xplayer)
 {
-	g_signal_emit (G_OBJECT (totem),
-		       totem_table_signals[FILE_CLOSED],
+	g_signal_emit (G_OBJECT (xplayer),
+		       xplayer_table_signals[FILE_CLOSED],
 		       0);
 
 }
 
 /**
- * totem_file_has_played:
- * @totem: a #TotemObject
+ * xplayer_file_has_played:
+ * @xplayer: a #XplayerObject
  *
- * Emits the #TotemObject::file-played signal on @totem.
+ * Emits the #XplayerObject::file-played signal on @xplayer.
  **/
 void
-totem_file_has_played (TotemObject *totem,
+xplayer_file_has_played (XplayerObject *xplayer,
 		       const char  *mrl)
 {
-	g_signal_emit (G_OBJECT (totem),
-		       totem_table_signals[FILE_HAS_PLAYED],
+	g_signal_emit (G_OBJECT (xplayer),
+		       xplayer_table_signals[FILE_HAS_PLAYED],
 		       0, mrl);
 }
 
 /**
- * totem_metadata_updated:
- * @totem: a #TotemObject
+ * xplayer_metadata_updated:
+ * @xplayer: a #XplayerObject
  * @artist: the stream's artist, or %NULL
  * @title: the stream's title, or %NULL
  * @album: the stream's album, or %NULL
  * @track_num: the track number of the stream
  *
- * Emits the #TotemObject::metadata-updated signal on @totem,
+ * Emits the #XplayerObject::metadata-updated signal on @xplayer,
  * with the specified stream data.
  **/
 void
-totem_metadata_updated (TotemObject *totem,
+xplayer_metadata_updated (XplayerObject *xplayer,
 			const char *artist,
 			const char *title,
 			const char *album,
 			guint track_num)
 {
-	g_signal_emit (G_OBJECT (totem),
-		       totem_table_signals[METADATA_UPDATED],
+	g_signal_emit (G_OBJECT (xplayer),
+		       xplayer_table_signals[METADATA_UPDATED],
 		       0,
 		       artist,
 		       title,
@@ -878,11 +878,11 @@ totem_metadata_updated (TotemObject *totem,
 }
 
 GQuark
-totem_remote_command_quark (void)
+xplayer_remote_command_quark (void)
 {
 	static GQuark quark = 0;
 	if (!quark)
-		quark = g_quark_from_static_string ("totem_remote_command");
+		quark = g_quark_from_static_string ("xplayer_remote_command");
 
 	return quark;
 }
@@ -891,96 +891,96 @@ totem_remote_command_quark (void)
 #define ENUM_ENTRY(NAME, DESC) { NAME, "" #NAME "", DESC }
 
 GType
-totem_remote_command_get_type (void)
+xplayer_remote_command_get_type (void)
 {
 	static GType etype = 0;
 
 	if (etype == 0) {
 		static const GEnumValue values[] = {
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_UNKNOWN, "unknown"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_PLAY, "play"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_PAUSE, "pause"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_STOP, "stop"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_PLAYPAUSE, "play-pause"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_NEXT, "next"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_PREVIOUS, "previous"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_SEEK_FORWARD, "seek-forward"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_SEEK_BACKWARD, "seek-backward"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_VOLUME_UP, "volume-up"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_VOLUME_DOWN, "volume-down"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_FULLSCREEN, "fullscreen"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_QUIT, "quit"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_ENQUEUE, "enqueue"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_REPLACE, "replace"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_SHOW, "show"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS, "toggle-controls"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_UP, "up"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_DOWN, "down"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_LEFT, "left"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_RIGHT, "right"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_SELECT, "select"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_DVD_MENU, "dvd-menu"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_ZOOM_UP, "zoom-up"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_ZOOM_DOWN, "zoom-down"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_EJECT, "eject"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_PLAY_DVD, "play-dvd"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_MUTE, "mute"),
-			ENUM_ENTRY (TOTEM_REMOTE_COMMAND_TOGGLE_ASPECT, "toggle-aspect-ratio"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_UNKNOWN, "unknown"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_PLAY, "play"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_PAUSE, "pause"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_STOP, "stop"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_PLAYPAUSE, "play-pause"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_NEXT, "next"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_PREVIOUS, "previous"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_SEEK_FORWARD, "seek-forward"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD, "seek-backward"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_VOLUME_UP, "volume-up"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_VOLUME_DOWN, "volume-down"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_FULLSCREEN, "fullscreen"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_QUIT, "quit"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_ENQUEUE, "enqueue"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_REPLACE, "replace"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_SHOW, "show"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS, "toggle-controls"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_UP, "up"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_DOWN, "down"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_LEFT, "left"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_RIGHT, "right"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_SELECT, "select"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_DVD_MENU, "dvd-menu"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_ZOOM_UP, "zoom-up"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_ZOOM_DOWN, "zoom-down"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_EJECT, "eject"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_PLAY_DVD, "play-dvd"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_MUTE, "mute"),
+			ENUM_ENTRY (XPLAYER_REMOTE_COMMAND_TOGGLE_ASPECT, "toggle-aspect-ratio"),
 			{ 0, NULL, NULL }
 		};
 
-		etype = g_enum_register_static ("TotemRemoteCommand", values);
+		etype = g_enum_register_static ("XplayerRemoteCommand", values);
 	}
 
 	return etype;
 }
 
 GQuark
-totem_remote_setting_quark (void)
+xplayer_remote_setting_quark (void)
 {
 	static GQuark quark = 0;
 	if (!quark)
-		quark = g_quark_from_static_string ("totem_remote_setting");
+		quark = g_quark_from_static_string ("xplayer_remote_setting");
 
 	return quark;
 }
 
 GType
-totem_remote_setting_get_type (void)
+xplayer_remote_setting_get_type (void)
 {
 	static GType etype = 0;
 
 	if (etype == 0) {
 		static const GEnumValue values[] = {
-			ENUM_ENTRY (TOTEM_REMOTE_SETTING_SHUFFLE, "shuffle"),
-			ENUM_ENTRY (TOTEM_REMOTE_SETTING_REPEAT, "repeat"),
+			ENUM_ENTRY (XPLAYER_REMOTE_SETTING_SHUFFLE, "shuffle"),
+			ENUM_ENTRY (XPLAYER_REMOTE_SETTING_REPEAT, "repeat"),
 			{ 0, NULL, NULL }
 		};
 
-		etype = g_enum_register_static ("TotemRemoteSetting", values);
+		etype = g_enum_register_static ("XplayerRemoteSetting", values);
 	}
 
 	return etype;
 }
 
 static void
-reset_seek_status (TotemObject *totem)
+reset_seek_status (XplayerObject *xplayer)
 {
 	/* Release the lock and reset everything so that we
 	 * avoid being "stuck" seeking on errors */
 
-	if (totem->seek_lock != FALSE) {
-		totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), FALSE);
-		totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label), FALSE);
-		totem->seek_lock = FALSE;
-		bacon_video_widget_seek (totem->bvw, 0, NULL);
-		totem_action_stop (totem);
+	if (xplayer->seek_lock != FALSE) {
+		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
+		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
+		xplayer->seek_lock = FALSE;
+		bacon_video_widget_seek (xplayer->bvw, 0, NULL);
+		xplayer_action_stop (xplayer);
 	}
 }
 
 /**
- * totem_object_action_error:
- * @totem: a #TotemObject
+ * xplayer_object_action_error:
+ * @xplayer: a #XplayerObject
  * @title: the error dialog title
  * @reason: the error dialog text
  *
@@ -988,72 +988,72 @@ reset_seek_status (TotemObject *totem)
  * given @title and @reason.
  **/
 void
-totem_object_action_error (TotemObject *totem, const char *title, const char *reason)
+xplayer_object_action_error (XplayerObject *xplayer, const char *title, const char *reason)
 {
-	reset_seek_status (totem);
-	totem_interface_error (title, reason,
-			GTK_WINDOW (totem->win));
+	reset_seek_status (xplayer);
+	xplayer_interface_error (title, reason,
+			GTK_WINDOW (xplayer->win));
 }
 
 G_GNUC_NORETURN void
-totem_action_error_and_exit (const char *title,
-		const char *reason, TotemObject *totem)
+xplayer_action_error_and_exit (const char *title,
+		const char *reason, XplayerObject *xplayer)
 {
-	reset_seek_status (totem);
-	totem_interface_error_blocking (title, reason,
-			GTK_WINDOW (totem->win));
-	totem_action_exit (totem);
+	reset_seek_status (xplayer);
+	xplayer_interface_error_blocking (title, reason,
+			GTK_WINDOW (xplayer->win));
+	xplayer_action_exit (xplayer);
 }
 
 static void
-totem_action_save_size (TotemObject *totem)
+xplayer_action_save_size (XplayerObject *xplayer)
 {
 	GtkPaned *item;
 
-	if (totem->bvw == NULL)
+	if (xplayer->bvw == NULL)
 		return;
 
-	if (totem_is_fullscreen (totem) != FALSE)
+	if (xplayer_is_fullscreen (xplayer) != FALSE)
 		return;
 
 	/* Save the size of the video widget */
-	item = GTK_PANED (gtk_builder_get_object (totem->xml, "tmw_main_pane"));
-	gtk_window_get_size (GTK_WINDOW (totem->win), &totem->window_w,
-			&totem->window_h);
-	totem->sidebar_w = totem->window_w
+	item = GTK_PANED (gtk_builder_get_object (xplayer->xml, "tmw_main_pane"));
+	gtk_window_get_size (GTK_WINDOW (xplayer->win), &xplayer->window_w,
+			&xplayer->window_h);
+	xplayer->sidebar_w = xplayer->window_w
 		- gtk_paned_get_position (item);
 }
 
 static void
-totem_action_save_state (TotemObject *totem, const char *page_id)
+xplayer_action_save_state (XplayerObject *xplayer, const char *page_id)
 {
 	GKeyFile *keyfile;
 	char *contents, *filename;
 
-	if (totem->win == NULL)
+	if (xplayer->win == NULL)
 		return;
-	if (totem->window_w == 0
-	    || totem->window_h == 0)
+	if (xplayer->window_w == 0
+	    || xplayer->window_h == 0)
 		return;
 
 	keyfile = g_key_file_new ();
 	g_key_file_set_integer (keyfile, "State",
-				"window_w", totem->window_w);
+				"window_w", xplayer->window_w);
 	g_key_file_set_integer (keyfile, "State",
-			"window_h", totem->window_h);
+			"window_h", xplayer->window_h);
 	g_key_file_set_boolean (keyfile, "State",
-			"show_sidebar", totem_sidebar_is_visible (totem));
+			"show_sidebar", xplayer_sidebar_is_visible (xplayer));
 	g_key_file_set_boolean (keyfile, "State",
-			"maximised", totem->maximised);
+			"maximised", xplayer->maximised);
 	g_key_file_set_integer (keyfile, "State",
-			"sidebar_w", totem->sidebar_w);
+			"sidebar_w", xplayer->sidebar_w);
 
 	g_key_file_set_string (keyfile, "State",
 			"sidebar_page", page_id);
 
 	contents = g_key_file_to_data (keyfile, NULL, NULL);
 	g_key_file_free (keyfile);
-	filename = g_build_filename (totem_dot_dir (), "state.ini", NULL);
+	filename = g_build_filename (xplayer_dot_dir (), "state.ini", NULL);
 	g_file_set_contents (filename, contents, -1, NULL);
 
 	g_free (filename);
@@ -1061,128 +1061,128 @@ totem_action_save_state (TotemObject *totem, const char *page_id)
 }
 
 G_GNUC_NORETURN static void
-totem_action_wait_force_exit (gpointer user_data)
+xplayer_action_wait_force_exit (gpointer user_data)
 {
 	g_usleep (10 * G_USEC_PER_SEC);
 	exit (1);
 }
 
 /**
- * totem_object_action_exit:
- * @totem: a #TotemObject
+ * xplayer_object_action_exit:
+ * @xplayer: a #XplayerObject
  *
- * Closes Totem.
+ * Closes Xplayer.
  **/
 void
-totem_object_action_exit (TotemObject *totem)
+xplayer_object_action_exit (XplayerObject *xplayer)
 {
 	GdkDisplay *display = NULL;
 	char *page_id;
 
 	/* Save the page ID before we close the plugins, otherwise
 	 * we'll never save it properly */
-	page_id = totem_sidebar_get_current_page (totem);
+	page_id = xplayer_sidebar_get_current_page (xplayer);
 
 	/* Shut down the plugins first, allowing them to display modal dialogues (etc.) without threat of being killed from another thread */
-	if (totem != NULL && totem->engine != NULL)
-		totem_object_plugins_shutdown (totem);
+	if (xplayer != NULL && xplayer->engine != NULL)
+		xplayer_object_plugins_shutdown (xplayer);
 
 	/* Exit forcefully if we can't do the shutdown in 10 seconds */
-	g_thread_new ("force-exit", (GThreadFunc) totem_action_wait_force_exit, NULL);
+	g_thread_new ("force-exit", (GThreadFunc) xplayer_action_wait_force_exit, NULL);
 
 	if (gtk_main_level () > 0)
 		gtk_main_quit ();
 
-	if (totem == NULL)
+	if (xplayer == NULL)
 		exit (0);
 
-	if (totem->bvw)
-		totem_action_save_size (totem);
+	if (xplayer->bvw)
+		xplayer_action_save_size (xplayer);
 
-	if (totem->win != NULL) {
-		gtk_widget_hide (totem->win);
-		display = gtk_widget_get_display (totem->win);
+	if (xplayer->win != NULL) {
+		gtk_widget_hide (xplayer->win);
+		display = gtk_widget_get_display (xplayer->win);
 	}
 
-	if (totem->prefs != NULL)
-		gtk_widget_hide (totem->prefs);
+	if (xplayer->prefs != NULL)
+		gtk_widget_hide (xplayer->prefs);
 
 	if (display != NULL)
 		gdk_display_sync (display);
 
-	if (totem->bvw) {
-		totem_save_position (totem);
-		bacon_video_widget_close (totem->bvw);
+	if (xplayer->bvw) {
+		xplayer_save_position (xplayer);
+		bacon_video_widget_close (xplayer->bvw);
 	}
 
-	totem_action_save_state (totem, page_id);
+	xplayer_action_save_state (xplayer, page_id);
 	g_free (page_id);
 
-	totem_sublang_exit (totem);
-	totem_destroy_file_filters ();
+	xplayer_sublang_exit (xplayer);
+	xplayer_destroy_file_filters ();
 
-	g_clear_object (&totem->settings);
-	g_clear_object (&totem->fs);
+	g_clear_object (&xplayer->settings);
+	g_clear_object (&xplayer->fs);
 
-	if (totem->win)
-		gtk_widget_destroy (GTK_WIDGET (totem->win));
+	if (xplayer->win)
+		gtk_widget_destroy (GTK_WIDGET (xplayer->win));
 
-	g_object_unref (totem);
+	g_object_unref (xplayer);
 
 	exit (0);
 }
 
 static void
-totem_action_menu_popup (TotemObject *totem, guint button)
+xplayer_action_menu_popup (XplayerObject *xplayer, guint button)
 {
 	GtkWidget *menu;
 
-	menu = gtk_ui_manager_get_widget (totem->ui_manager,
-			"/totem-main-popup");
+	menu = gtk_ui_manager_get_widget (xplayer->ui_manager,
+			"/xplayer-main-popup");
 	gtk_menu_popup (GTK_MENU (menu), NULL, NULL, NULL, NULL,
 			button, gtk_get_current_event_time ());
 	gtk_menu_shell_select_first (GTK_MENU_SHELL (menu), FALSE);
 }
 
 G_GNUC_NORETURN gboolean
-main_window_destroy_cb (GtkWidget *widget, GdkEvent *event, TotemObject *totem)
+main_window_destroy_cb (GtkWidget *widget, GdkEvent *event, XplayerObject *xplayer)
 {
-	totem_action_exit (totem);
+	xplayer_action_exit (xplayer);
 }
 
 static void
-play_pause_set_label (TotemObject *totem, TotemStates state)
+play_pause_set_label (XplayerObject *xplayer, XplayerStates state)
 {
 	GtkAction *action;
 	const char *id, *tip;
 	GSList *l, *proxies;
 
-	if (state == totem->state)
+	if (state == xplayer->state)
 		return;
 
 	switch (state)
 	{
 	case STATE_PLAYING:
-		totem_statusbar_set_text (TOTEM_STATUSBAR (totem->statusbar),
+		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
 				_("Playing"));
 		id = "media-playback-pause-symbolic";
 		tip = N_("Pause");
-		totem_playlist_set_playing (totem->playlist, TOTEM_PLAYLIST_STATUS_PLAYING);
+		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PLAYING);
 		break;
 	case STATE_PAUSED:
-		totem_statusbar_set_text (TOTEM_STATUSBAR (totem->statusbar),
+		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
 				_("Paused"));
-		id = totem_get_rtl_icon_name ("media-playback-start");
+		id = xplayer_get_rtl_icon_name ("media-playback-start");
 		tip = N_("Play");
-		totem_playlist_set_playing (totem->playlist, TOTEM_PLAYLIST_STATUS_PAUSED);
+		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PAUSED);
 		break;
 	case STATE_STOPPED:
-		totem_statusbar_set_text (TOTEM_STATUSBAR (totem->statusbar),
+		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
 				_("Stopped"));
-		totem_statusbar_set_time_and_length
-			(TOTEM_STATUSBAR (totem->statusbar), 0, 0);
-		id = totem_get_rtl_icon_name ("media-playback-start");
-		totem_playlist_set_playing (totem->playlist, TOTEM_PLAYLIST_STATUS_NONE);
+		xplayer_statusbar_set_time_and_length
+			(XPLAYER_STATUSBAR (xplayer->statusbar), 0, 0);
+		id = xplayer_get_rtl_icon_name ("media-playback-start");
+		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_NONE);
 		tip = N_("Play");
 		break;
 	default:
@@ -1190,7 +1190,7 @@ play_pause_set_label (TotemObject *totem, TotemStates state)
 		return;
 	}
 
-	action = gtk_action_group_get_action (totem->main_action_group, "play");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
 	g_object_set (G_OBJECT (action),
 			"tooltip", _(tip),
 			"icon-name", id, NULL);
@@ -1201,25 +1201,25 @@ play_pause_set_label (TotemObject *totem, TotemStates state)
 				_(tip));
 	}
 
-	totem->state = state;
+	xplayer->state = state;
 
-	g_object_notify (G_OBJECT (totem), "playing");
+	g_object_notify (G_OBJECT (xplayer), "playing");
 }
 
 void
-totem_action_eject (TotemObject *totem)
+xplayer_action_eject (XplayerObject *xplayer)
 {
 	GMount *mount;
 
-	mount = totem_get_mount_for_media (totem->mrl);
+	mount = xplayer_get_mount_for_media (xplayer->mrl);
 	if (mount == NULL)
 		return;
 
-	g_free (totem->mrl);
-	totem->mrl = NULL;
-	bacon_video_widget_close (totem->bvw);
-	totem_file_closed (totem);
-	totem->has_played_emitted = FALSE;
+	g_free (xplayer->mrl);
+	xplayer->mrl = NULL;
+	bacon_video_widget_close (xplayer->bvw);
+	xplayer_file_closed (xplayer);
+	xplayer->has_played_emitted = FALSE;
 
 	/* The volume monitoring will take care of removing the items */
 	g_mount_eject_with_operation (mount, G_MOUNT_UNMOUNT_NONE, NULL, NULL, NULL, NULL);
@@ -1227,111 +1227,111 @@ totem_action_eject (TotemObject *totem)
 }
 
 void
-totem_action_show_properties (TotemObject *totem)
+xplayer_action_show_properties (XplayerObject *xplayer)
 {
-	if (totem_is_fullscreen (totem) == FALSE)
-		totem_sidebar_set_current_page (totem, "properties", TRUE);
+	if (xplayer_is_fullscreen (xplayer) == FALSE)
+		xplayer_sidebar_set_current_page (xplayer, "properties", TRUE);
 }
 
 /**
- * totem_object_action_play:
- * @totem: a #TotemObject
+ * xplayer_object_action_play:
+ * @xplayer: a #XplayerObject
  *
- * Plays the current stream. If Totem is already playing, it continues
+ * Plays the current stream. If Xplayer is already playing, it continues
  * to play. If the stream cannot be played, and error dialog is displayed.
  **/
 void
-totem_object_action_play (TotemObject *totem)
+xplayer_object_action_play (XplayerObject *xplayer)
 {
 	GError *err = NULL;
 	int retval;
 	char *msg, *disp;
 
-	if (totem->mrl == NULL)
+	if (xplayer->mrl == NULL)
 		return;
 
-	if (bacon_video_widget_is_playing (totem->bvw) != FALSE)
+	if (bacon_video_widget_is_playing (xplayer->bvw) != FALSE)
 		return;
 
-	retval = bacon_video_widget_play (totem->bvw,  &err);
-	play_pause_set_label (totem, retval ? STATE_PLAYING : STATE_STOPPED);
+	retval = bacon_video_widget_play (xplayer->bvw,  &err);
+	play_pause_set_label (xplayer, retval ? STATE_PLAYING : STATE_STOPPED);
 
 	if (retval != FALSE) {
-		if (totem->has_played_emitted == FALSE) {
-			totem_file_has_played (totem, totem->mrl);
-			totem->has_played_emitted = TRUE;
+		if (xplayer->has_played_emitted == FALSE) {
+			xplayer_file_has_played (xplayer, xplayer->mrl);
+			xplayer->has_played_emitted = TRUE;
 		}
 		return;
 	}
 
-	disp = totem_uri_escape_for_display (totem->mrl);
-	msg = g_strdup_printf(_("Totem could not play '%s'."), disp);
+	disp = xplayer_uri_escape_for_display (xplayer->mrl);
+	msg = g_strdup_printf(_("Xplayer could not play '%s'."), disp);
 	g_free (disp);
 
-	totem_action_error (totem, msg, err->message);
-	totem_action_stop (totem);
+	xplayer_action_error (xplayer, msg, err->message);
+	xplayer_action_stop (xplayer);
 	g_free (msg);
 	g_error_free (err);
 }
 
 static void
-totem_action_seek (TotemObject *totem, double pos)
+xplayer_action_seek (XplayerObject *xplayer, double pos)
 {
 	GError *err = NULL;
 	int retval;
 
-	if (totem->mrl == NULL)
+	if (xplayer->mrl == NULL)
 		return;
-	if (bacon_video_widget_is_seekable (totem->bvw) == FALSE)
+	if (bacon_video_widget_is_seekable (xplayer->bvw) == FALSE)
 		return;
 
-	retval = bacon_video_widget_seek (totem->bvw, pos, &err);
+	retval = bacon_video_widget_seek (xplayer->bvw, pos, &err);
 
 	if (retval == FALSE)
 	{
 		char *msg, *disp;
 
-		disp = totem_uri_escape_for_display (totem->mrl);
-		msg = g_strdup_printf(_("Totem could not play '%s'."), disp);
+		disp = xplayer_uri_escape_for_display (xplayer->mrl);
+		msg = g_strdup_printf(_("Xplayer could not play '%s'."), disp);
 		g_free (disp);
 
-		reset_seek_status (totem);
+		reset_seek_status (xplayer);
 
-		totem_action_error (totem, msg, err->message);
+		xplayer_action_error (xplayer, msg, err->message);
 		g_free (msg);
 		g_error_free (err);
 	}
 }
 
 /**
- * totem_action_set_mrl_and_play:
- * @totem: a #TotemObject
+ * xplayer_action_set_mrl_and_play:
+ * @xplayer: a #XplayerObject
  * @mrl: the MRL to play
  * @subtitle: a subtitle file to load, or %NULL
  *
  * Loads the specified @mrl and plays it, if possible.
- * Calls totem_action_set_mrl() then totem_action_play().
- * For more information, see the documentation for totem_action_set_mrl_with_warning().
+ * Calls xplayer_action_set_mrl() then xplayer_action_play().
+ * For more information, see the documentation for xplayer_action_set_mrl_with_warning().
  **/
 void
-totem_action_set_mrl_and_play (TotemObject *totem, const char *mrl, const char *subtitle)
+xplayer_action_set_mrl_and_play (XplayerObject *xplayer, const char *mrl, const char *subtitle)
 {
-	if (totem_action_set_mrl (totem, mrl, subtitle) != FALSE)
-		totem_action_play (totem);
+	if (xplayer_action_set_mrl (xplayer, mrl, subtitle) != FALSE)
+		xplayer_action_play (xplayer);
 }
 
 static gboolean
-totem_action_open_dialog (TotemObject *totem, const char *path, gboolean play)
+xplayer_action_open_dialog (XplayerObject *xplayer, const char *path, gboolean play)
 {
 	GSList *filenames;
 	gboolean playlist_modified;
 
-	filenames = totem_add_files (GTK_WINDOW (totem->win), path);
+	filenames = xplayer_add_files (GTK_WINDOW (xplayer->win), path);
 
 	if (filenames == NULL)
 		return FALSE;
 
-	playlist_modified = totem_action_open_files_list (totem,
+	playlist_modified = xplayer_action_open_files_list (xplayer,
 			filenames);
 
 	if (playlist_modified == FALSE) {
@@ -1346,8 +1346,8 @@ totem_action_open_dialog (TotemObject *totem, const char *path, gboolean play)
 	if (play != FALSE) {
 		char *mrl, *subtitle;
 
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-		totem_action_set_mrl_and_play (totem, mrl, subtitle);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+		xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 		g_free (mrl);
 		g_free (subtitle);
 	}
@@ -1356,88 +1356,88 @@ totem_action_open_dialog (TotemObject *totem, const char *path, gboolean play)
 }
 
 /**
- * totem_object_action_stop:
- * @totem: a #TotemObject
+ * xplayer_object_action_stop:
+ * @xplayer: a #XplayerObject
  *
  * Stops the current stream.
  **/
 void
-totem_object_action_stop (TotemObject *totem)
+xplayer_object_action_stop (XplayerObject *xplayer)
 {
-	bacon_video_widget_stop (totem->bvw);
-	play_pause_set_label (totem, STATE_STOPPED);
+	bacon_video_widget_stop (xplayer->bvw);
+	play_pause_set_label (xplayer, STATE_STOPPED);
 }
 
 /**
- * totem_object_action_play_pause:
- * @totem: a #TotemObject
+ * xplayer_object_action_play_pause:
+ * @xplayer: a #XplayerObject
  *
  * Gets the current MRL from the playlist and attempts to play it.
  * If the stream is already playing, playback is paused.
  **/
 void
-totem_object_action_play_pause (TotemObject *totem)
+xplayer_object_action_play_pause (XplayerObject *xplayer)
 {
-	if (totem->mrl == NULL) {
+	if (xplayer->mrl == NULL) {
 		char *mrl, *subtitle;
 
 		/* Try to pull an mrl from the playlist */
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 		if (mrl == NULL) {
-			play_pause_set_label (totem, STATE_STOPPED);
+			play_pause_set_label (xplayer, STATE_STOPPED);
 			return;
 		} else {
-			totem_action_set_mrl_and_play (totem, mrl, subtitle);
+			xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 			g_free (mrl);
 			g_free (subtitle);
 			return;
 		}
 	}
 
-	if (bacon_video_widget_is_playing (totem->bvw) == FALSE) {
-		if (bacon_video_widget_play (totem->bvw, NULL) != FALSE &&
-		    totem->has_played_emitted == FALSE) {
-			totem_file_has_played (totem, totem->mrl);
-			totem->has_played_emitted = TRUE;
+	if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE) {
+		if (bacon_video_widget_play (xplayer->bvw, NULL) != FALSE &&
+		    xplayer->has_played_emitted == FALSE) {
+			xplayer_file_has_played (xplayer, xplayer->mrl);
+			xplayer->has_played_emitted = TRUE;
 		}
-		play_pause_set_label (totem, STATE_PLAYING);
+		play_pause_set_label (xplayer, STATE_PLAYING);
 	} else {
-		bacon_video_widget_pause (totem->bvw);
-		play_pause_set_label (totem, STATE_PAUSED);
+		bacon_video_widget_pause (xplayer->bvw);
+		play_pause_set_label (xplayer, STATE_PAUSED);
 
 		/* Save the stream position */
-		totem_save_position (totem);
+		xplayer_save_position (xplayer);
 	}
 }
 
 /**
- * totem_action_pause:
- * @totem: a #TotemObject
+ * xplayer_action_pause:
+ * @xplayer: a #XplayerObject
  *
- * Pauses the current stream. If Totem is already paused, it continues
+ * Pauses the current stream. If Xplayer is already paused, it continues
  * to be paused.
  **/
 void
-totem_action_pause (TotemObject *totem)
+xplayer_action_pause (XplayerObject *xplayer)
 {
-	if (bacon_video_widget_is_playing (totem->bvw) != FALSE) {
-		bacon_video_widget_pause (totem->bvw);
-		play_pause_set_label (totem, STATE_PAUSED);
+	if (bacon_video_widget_is_playing (xplayer->bvw) != FALSE) {
+		bacon_video_widget_pause (xplayer->bvw);
+		play_pause_set_label (xplayer, STATE_PAUSED);
 
 		/* Save the stream position */
-		totem_save_position (totem);
+		xplayer_save_position (xplayer);
 	}
 }
 
 gboolean
 window_state_event_cb (GtkWidget *window, GdkEventWindowState *event,
-		       TotemObject *totem)
+		       XplayerObject *xplayer)
 {
 	if (event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) {
-		totem->maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
-		totem_action_set_sensitivity ("zoom-1-2", !totem->maximised);
-		totem_action_set_sensitivity ("zoom-1-1", !totem->maximised);
-		totem_action_set_sensitivity ("zoom-2-1", !totem->maximised);
+		xplayer->maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
+		xplayer_action_set_sensitivity ("zoom-1-2", !xplayer->maximised);
+		xplayer_action_set_sensitivity ("zoom-1-1", !xplayer->maximised);
+		xplayer_action_set_sensitivity ("zoom-2-1", !xplayer->maximised);
 		return FALSE;
 	}
 
@@ -1445,93 +1445,93 @@ window_state_event_cb (GtkWidget *window, GdkEventWindowState *event,
 		return FALSE;
 
 	if (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) {
-		if (totem->controls_visibility != TOTEM_CONTROLS_UNDEFINED)
-			totem_action_save_size (totem);
-		totem_fullscreen_set_fullscreen (totem->fs, TRUE);
+		if (xplayer->controls_visibility != XPLAYER_CONTROLS_UNDEFINED)
+			xplayer_action_save_size (xplayer);
+		xplayer_fullscreen_set_fullscreen (xplayer->fs, TRUE);
 
-		totem->controls_visibility = TOTEM_CONTROLS_FULLSCREEN;
-		show_controls (totem, FALSE);
-		totem_action_set_sensitivity ("fullscreen", FALSE);
+		xplayer->controls_visibility = XPLAYER_CONTROLS_FULLSCREEN;
+		show_controls (xplayer, FALSE);
+		xplayer_action_set_sensitivity ("fullscreen", FALSE);
 	} else {
 		GtkAction *action;
 
-		totem_fullscreen_set_fullscreen (totem->fs, FALSE);
+		xplayer_fullscreen_set_fullscreen (xplayer->fs, FALSE);
 
-		action = gtk_action_group_get_action (totem->main_action_group,
+		action = gtk_action_group_get_action (xplayer->main_action_group,
 				"show-controls");
 
 		if (gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)))
-			totem->controls_visibility = TOTEM_CONTROLS_VISIBLE;
+			xplayer->controls_visibility = XPLAYER_CONTROLS_VISIBLE;
 		else
-			totem->controls_visibility = TOTEM_CONTROLS_HIDDEN;
+			xplayer->controls_visibility = XPLAYER_CONTROLS_HIDDEN;
 
-		show_controls (totem, TRUE);
-		totem_action_set_sensitivity ("fullscreen", TRUE);
+		show_controls (xplayer, TRUE);
+		xplayer_action_set_sensitivity ("fullscreen", TRUE);
 	}
 
-	g_object_notify (G_OBJECT (totem), "fullscreen");
+	g_object_notify (G_OBJECT (xplayer), "fullscreen");
 
 	return FALSE;
 }
 
 /**
- * totem_object_action_fullscreen_toggle:
- * @totem: a #TotemObject
+ * xplayer_object_action_fullscreen_toggle:
+ * @xplayer: a #XplayerObject
  *
- * Toggles Totem's fullscreen state; if Totem is fullscreened, calling
+ * Toggles Xplayer's fullscreen state; if Xplayer is fullscreened, calling
  * this makes it unfullscreened and vice-versa.
  **/
 void
-totem_object_action_fullscreen_toggle (TotemObject *totem)
+xplayer_object_action_fullscreen_toggle (XplayerObject *xplayer)
 {
-	if (totem_is_fullscreen (totem) != FALSE)
-		gtk_window_unfullscreen (GTK_WINDOW (totem->win));
+	if (xplayer_is_fullscreen (xplayer) != FALSE)
+		gtk_window_unfullscreen (GTK_WINDOW (xplayer->win));
 	else
-		gtk_window_fullscreen (GTK_WINDOW (totem->win));
+		gtk_window_fullscreen (GTK_WINDOW (xplayer->win));
 }
 
 /**
- * totem_action_fullscreen:
- * @totem: a #TotemObject
- * @state: %TRUE if Totem should be fullscreened
+ * xplayer_action_fullscreen:
+ * @xplayer: a #XplayerObject
+ * @state: %TRUE if Xplayer should be fullscreened
  *
- * Sets Totem's fullscreen state according to @state.
+ * Sets Xplayer's fullscreen state according to @state.
  **/
 void
-totem_action_fullscreen (TotemObject *totem, gboolean state)
+xplayer_action_fullscreen (XplayerObject *xplayer, gboolean state)
 {
-	if (totem_is_fullscreen (totem) == state)
+	if (xplayer_is_fullscreen (xplayer) == state)
 		return;
 
-	totem_action_fullscreen_toggle (totem);
+	xplayer_action_fullscreen_toggle (xplayer);
 }
 
 void
-fs_exit1_activate_cb (GtkButton *button, TotemObject *totem)
+fs_exit1_activate_cb (GtkButton *button, XplayerObject *xplayer)
 {
-	totem_action_fullscreen (totem, FALSE);
+	xplayer_action_fullscreen (xplayer, FALSE);
 }
 
 void
-totem_action_open (TotemObject *totem)
+xplayer_action_open (XplayerObject *xplayer)
 {
-	totem_action_open_dialog (totem, NULL, TRUE);
+	xplayer_action_open_dialog (xplayer, NULL, TRUE);
 }
 
 static void
-totem_open_location_response_cb (GtkDialog *dialog, gint response, TotemObject *totem)
+xplayer_open_location_response_cb (GtkDialog *dialog, gint response, XplayerObject *xplayer)
 {
 	char *uri;
 
 	if (response != GTK_RESPONSE_OK) {
-		gtk_widget_destroy (GTK_WIDGET (totem->open_location));
+		gtk_widget_destroy (GTK_WIDGET (xplayer->open_location));
 		return;
 	}
 
 	gtk_widget_hide (GTK_WIDGET (dialog));
 
 	/* Open the specified URI */
-	uri = totem_open_location_get_uri (totem->open_location);
+	uri = xplayer_open_location_get_uri (xplayer->open_location);
 
 	if (uri != NULL)
 	{
@@ -1540,41 +1540,41 @@ totem_open_location_response_cb (GtkDialog *dialog, gint response, TotemObject *
 
 		filenames[0] = uri;
 		filenames[1] = NULL;
-		totem_action_open_files (totem, (char **) filenames);
+		xplayer_action_open_files (xplayer, (char **) filenames);
 
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-		totem_action_set_mrl_and_play (totem, mrl, subtitle);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+		xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 		g_free (mrl);
 		g_free (subtitle);
 	}
  	g_free (uri);
 
-	gtk_widget_destroy (GTK_WIDGET (totem->open_location));
+	gtk_widget_destroy (GTK_WIDGET (xplayer->open_location));
 }
 
 void
-totem_action_open_location (TotemObject *totem)
+xplayer_action_open_location (XplayerObject *xplayer)
 {
-	if (totem->open_location != NULL) {
-		gtk_window_present (GTK_WINDOW (totem->open_location));
+	if (xplayer->open_location != NULL) {
+		gtk_window_present (GTK_WINDOW (xplayer->open_location));
 		return;
 	}
 
-	totem->open_location = TOTEM_OPEN_LOCATION (totem_open_location_new ());
+	xplayer->open_location = XPLAYER_OPEN_LOCATION (xplayer_open_location_new ());
 
-	g_signal_connect (G_OBJECT (totem->open_location), "delete-event",
+	g_signal_connect (G_OBJECT (xplayer->open_location), "delete-event",
 			G_CALLBACK (gtk_widget_destroy), NULL);
-	g_signal_connect (G_OBJECT (totem->open_location), "response",
-			G_CALLBACK (totem_open_location_response_cb), totem);
-	g_object_add_weak_pointer (G_OBJECT (totem->open_location), (gpointer *)&(totem->open_location));
+	g_signal_connect (G_OBJECT (xplayer->open_location), "response",
+			G_CALLBACK (xplayer_open_location_response_cb), xplayer);
+	g_object_add_weak_pointer (G_OBJECT (xplayer->open_location), (gpointer *)&(xplayer->open_location));
 
-	gtk_window_set_transient_for (GTK_WINDOW (totem->open_location),
-			GTK_WINDOW (totem->win));
-	gtk_widget_show (GTK_WIDGET (totem->open_location));
+	gtk_window_set_transient_for (GTK_WINDOW (xplayer->open_location),
+			GTK_WINDOW (xplayer->win));
+	gtk_widget_show (GTK_WIDGET (xplayer->open_location));
 }
 
 static char *
-totem_get_nice_name_for_stream (TotemObject *totem)
+xplayer_get_nice_name_for_stream (XplayerObject *xplayer)
 {
 	GValue title_value = { 0, };
 	GValue album_value = { 0, };
@@ -1583,17 +1583,17 @@ totem_get_nice_name_for_stream (TotemObject *totem)
 	char *retval;
 	int tracknum;
 
-	bacon_video_widget_get_metadata (totem->bvw, BVW_INFO_TITLE, &title_value);
-	bacon_video_widget_get_metadata (totem->bvw, BVW_INFO_ARTIST, &artist_value);
-	bacon_video_widget_get_metadata (totem->bvw, BVW_INFO_ALBUM, &album_value);
-	bacon_video_widget_get_metadata (totem->bvw,
+	bacon_video_widget_get_metadata (xplayer->bvw, BVW_INFO_TITLE, &title_value);
+	bacon_video_widget_get_metadata (xplayer->bvw, BVW_INFO_ARTIST, &artist_value);
+	bacon_video_widget_get_metadata (xplayer->bvw, BVW_INFO_ALBUM, &album_value);
+	bacon_video_widget_get_metadata (xplayer->bvw,
 					 BVW_INFO_TRACK_NUMBER,
 					 &value);
 
 	tracknum = g_value_get_int (&value);
 	g_value_unset (&value);
 
-	totem_metadata_updated (totem,
+	xplayer_metadata_updated (xplayer,
 				g_value_get_string (&artist_value),
 				g_value_get_string (&title_value),
 				g_value_get_string (&album_value),
@@ -1628,40 +1628,40 @@ bail:
 }
 
 static void
-update_mrl_label (TotemObject *totem, const char *name)
+update_mrl_label (XplayerObject *xplayer, const char *name)
 {
 	if (name != NULL)
 	{
 		/* Update the mrl label */
-		totem_fullscreen_set_title (totem->fs, name);
+		xplayer_fullscreen_set_title (xplayer->fs, name);
 
 		/* Title */
-		gtk_window_set_title (GTK_WINDOW (totem->win), name);
+		gtk_window_set_title (GTK_WINDOW (xplayer->win), name);
 	} else {
-		totem_statusbar_set_time_and_length (TOTEM_STATUSBAR
-				(totem->statusbar), 0, 0);
-		totem_statusbar_set_text (TOTEM_STATUSBAR (totem->statusbar),
+		xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR
+				(xplayer->statusbar), 0, 0);
+		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
 				_("Stopped"));
 
-		g_object_notify (G_OBJECT (totem), "stream-length");
+		g_object_notify (G_OBJECT (xplayer), "stream-length");
 
 		/* Update the mrl label */
-		totem_fullscreen_set_title (totem->fs, NULL);
+		xplayer_fullscreen_set_title (xplayer->fs, NULL);
 
 		/* Title */
-		gtk_window_set_title (GTK_WINDOW (totem->win), _("Videos"));
+		gtk_window_set_title (GTK_WINDOW (xplayer->win), _("Videos"));
 	}
 }
 
 /**
- * totem_action_set_mrl_with_warning:
- * @totem: a #TotemObject
+ * xplayer_action_set_mrl_with_warning:
+ * @xplayer: a #XplayerObject
  * @mrl: the MRL to play
  * @subtitle: a subtitle file to load, or %NULL
  * @warn: %TRUE if error dialogs should be displayed
  *
  * Loads the specified @mrl and optionally the specified subtitle
- * file. If @subtitle is %NULL Totem will attempt to auto-locate
+ * file. If @subtitle is %NULL Xplayer will attempt to auto-locate
  * any subtitle files for @mrl.
  *
  * If a stream is already playing, it will be stopped and closed.
@@ -1672,64 +1672,64 @@ update_mrl_label (TotemObject *totem, const char *name)
  * Return value: %TRUE on success
  **/
 gboolean
-totem_action_set_mrl_with_warning (TotemObject *totem,
+xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 				   const char *mrl,
 				   const char *subtitle,
 				   gboolean warn)
 {
 	gboolean retval = TRUE;
 
-	if (totem->mrl != NULL) {
-		totem->seek_to = 0;
-		totem->seek_to_start = 0;
+	if (xplayer->mrl != NULL) {
+		xplayer->seek_to = 0;
+		xplayer->seek_to_start = 0;
 
-		totem_save_position (totem);
-		g_free (totem->mrl);
-		totem->mrl = NULL;
-		bacon_video_widget_close (totem->bvw);
-		totem_file_closed (totem);
-		totem->has_played_emitted = FALSE;
-		play_pause_set_label (totem, STATE_STOPPED);
-		update_fill (totem, -1.0);
+		xplayer_save_position (xplayer);
+		g_free (xplayer->mrl);
+		xplayer->mrl = NULL;
+		bacon_video_widget_close (xplayer->bvw);
+		xplayer_file_closed (xplayer);
+		xplayer->has_played_emitted = FALSE;
+		play_pause_set_label (xplayer, STATE_STOPPED);
+		update_fill (xplayer, -1.0);
 	}
 
 	if (mrl == NULL) {
 		retval = FALSE;
 
-		play_pause_set_label (totem, STATE_STOPPED);
+		play_pause_set_label (xplayer, STATE_STOPPED);
 
 		/* Play/Pause */
-		totem_action_set_sensitivity ("play", FALSE);
+		xplayer_action_set_sensitivity ("play", FALSE);
 
 		/* Volume */
-		totem_main_set_sensitivity ("tmw_volume_button", FALSE);
-		totem_action_set_sensitivity ("volume-up", FALSE);
-		totem_action_set_sensitivity ("volume-down", FALSE);
-		totem->volume_sensitive = FALSE;
+		xplayer_main_set_sensitivity ("tmw_volume_button", FALSE);
+		xplayer_action_set_sensitivity ("volume-up", FALSE);
+		xplayer_action_set_sensitivity ("volume-down", FALSE);
+		xplayer->volume_sensitive = FALSE;
 
 		/* Control popup */
-		totem_fullscreen_set_can_set_volume (totem->fs, FALSE);
-		totem_fullscreen_set_seekable (totem->fs, FALSE);
-		totem_action_set_sensitivity ("next-chapter", FALSE);
-		totem_action_set_sensitivity ("previous-chapter", FALSE);
+		xplayer_fullscreen_set_can_set_volume (xplayer->fs, FALSE);
+		xplayer_fullscreen_set_seekable (xplayer->fs, FALSE);
+		xplayer_action_set_sensitivity ("next-chapter", FALSE);
+		xplayer_action_set_sensitivity ("previous-chapter", FALSE);
 
 		/* Clear the playlist */
-		totem_action_set_sensitivity ("clear-playlist", FALSE);
+		xplayer_action_set_sensitivity ("clear-playlist", FALSE);
 
 		/* Subtitle selection */
-		totem_action_set_sensitivity ("select-subtitle", FALSE);
+		xplayer_action_set_sensitivity ("select-subtitle", FALSE);
 
 		/* Fullscreen */
-		totem_action_set_sensitivity ("fullscreen", FALSE);
+		xplayer_action_set_sensitivity ("fullscreen", FALSE);
 
 		/* Set the logo */
-		bacon_video_widget_set_logo_mode (totem->bvw, TRUE);
-		update_mrl_label (totem, NULL);
+		bacon_video_widget_set_logo_mode (xplayer->bvw, TRUE);
+		update_mrl_label (xplayer, NULL);
 
 		/* Unset the drag */
-		gtk_drag_source_unset (GTK_WIDGET (totem->bvw));
+		gtk_drag_source_unset (GTK_WIDGET (xplayer->bvw));
 
-		g_object_notify (G_OBJECT (totem), "playing");
+		g_object_notify (G_OBJECT (xplayer), "playing");
 	} else {
 		gboolean caps;
 		gdouble volume;
@@ -1741,194 +1741,194 @@ totem_action_set_mrl_with_warning (TotemObject *totem,
 			{ (gchar*) "text/uri-list", 0, 0 }
 		};
 
-		bacon_video_widget_set_logo_mode (totem->bvw, FALSE);
+		bacon_video_widget_set_logo_mode (xplayer->bvw, FALSE);
 
 		autoload_sub = NULL;
 		if (subtitle == NULL)
-			g_signal_emit (G_OBJECT (totem), totem_table_signals[GET_TEXT_SUBTITLE], 0, mrl, &autoload_sub);
+			g_signal_emit (G_OBJECT (xplayer), xplayer_table_signals[GET_TEXT_SUBTITLE], 0, mrl, &autoload_sub);
 
 		user_agent = NULL;
-		g_signal_emit (G_OBJECT (totem), totem_table_signals[GET_USER_AGENT], 0, mrl, &user_agent);
-		bacon_video_widget_set_user_agent (totem->bvw, user_agent);
+		g_signal_emit (G_OBJECT (xplayer), xplayer_table_signals[GET_USER_AGENT], 0, mrl, &user_agent);
+		bacon_video_widget_set_user_agent (xplayer->bvw, user_agent);
 		g_free (user_agent);
 
-		totem_gdk_window_set_waiting_cursor (gtk_widget_get_window (totem->win));
-		totem_try_restore_position (totem, mrl);
-		bacon_video_widget_open (totem->bvw, mrl);
-		bacon_video_widget_set_text_subtitle (totem->bvw, subtitle ? subtitle : autoload_sub);
+		xplayer_gdk_window_set_waiting_cursor (gtk_widget_get_window (xplayer->win));
+		xplayer_try_restore_position (xplayer, mrl);
+		bacon_video_widget_open (xplayer->bvw, mrl);
+		bacon_video_widget_set_text_subtitle (xplayer->bvw, subtitle ? subtitle : autoload_sub);
 		g_free (autoload_sub);
-		gdk_window_set_cursor (gtk_widget_get_window (totem->win), NULL);
-		totem->mrl = g_strdup (mrl);
+		gdk_window_set_cursor (gtk_widget_get_window (xplayer->win), NULL);
+		xplayer->mrl = g_strdup (mrl);
 
 		/* Play/Pause */
-		totem_action_set_sensitivity ("play", TRUE);
+		xplayer_action_set_sensitivity ("play", TRUE);
 
 		/* Volume */
-		caps = bacon_video_widget_can_set_volume (totem->bvw);
-		totem_main_set_sensitivity ("tmw_volume_button", caps);
-		totem_fullscreen_set_can_set_volume (totem->fs, caps);
-		volume = bacon_video_widget_get_volume (totem->bvw);
-		totem_action_set_sensitivity ("volume-up", caps && volume < (1.0 - VOLUME_EPSILON));
-		totem_action_set_sensitivity ("volume-down", caps && volume > VOLUME_EPSILON);
-		totem->volume_sensitive = caps;
+		caps = bacon_video_widget_can_set_volume (xplayer->bvw);
+		xplayer_main_set_sensitivity ("tmw_volume_button", caps);
+		xplayer_fullscreen_set_can_set_volume (xplayer->fs, caps);
+		volume = bacon_video_widget_get_volume (xplayer->bvw);
+		xplayer_action_set_sensitivity ("volume-up", caps && volume < (1.0 - VOLUME_EPSILON));
+		xplayer_action_set_sensitivity ("volume-down", caps && volume > VOLUME_EPSILON);
+		xplayer->volume_sensitive = caps;
 
 		/* Clear the playlist */
-		totem_action_set_sensitivity ("clear-playlist", TRUE);
+		xplayer_action_set_sensitivity ("clear-playlist", TRUE);
 
 		/* Subtitle selection */
-		totem_action_set_sensitivity ("select-subtitle", !totem_is_special_mrl (mrl));
+		xplayer_action_set_sensitivity ("select-subtitle", !xplayer_is_special_mrl (mrl));
 
 		/* Fullscreen */
-		window_state = gdk_window_get_state (gtk_widget_get_window (totem->win));
-		totem_action_set_sensitivity ("fullscreen", !(window_state & GDK_WINDOW_STATE_FULLSCREEN));
+		window_state = gdk_window_get_state (gtk_widget_get_window (xplayer->win));
+		xplayer_action_set_sensitivity ("fullscreen", !(window_state & GDK_WINDOW_STATE_FULLSCREEN));
 
 		/* Set the playlist */
-		play_pause_set_label (totem, STATE_PAUSED);
+		play_pause_set_label (xplayer, STATE_PAUSED);
 
-		totem_file_opened (totem, totem->mrl);
+		xplayer_file_opened (xplayer, xplayer->mrl);
 
 		/* Set the drag source */
-		gtk_drag_source_set (GTK_WIDGET (totem->bvw),
+		gtk_drag_source_set (GTK_WIDGET (xplayer->bvw),
 				     GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
 				     source_table, G_N_ELEMENTS (source_table),
 				     GDK_ACTION_COPY);
 	}
-	update_buttons (totem);
-	update_media_menu_items (totem);
+	update_buttons (xplayer);
+	update_media_menu_items (xplayer);
 
 	return retval;
 }
 
 /**
- * totem_action_set_mrl:
- * @totem: a #TotemObject
+ * xplayer_action_set_mrl:
+ * @xplayer: a #XplayerObject
  * @mrl: the MRL to load
  * @subtitle: a subtitle file to load, or %NULL
  *
- * Calls totem_action_set_mrl_with_warning() with warnings enabled.
- * For more information, see the documentation for totem_action_set_mrl_with_warning().
+ * Calls xplayer_action_set_mrl_with_warning() with warnings enabled.
+ * For more information, see the documentation for xplayer_action_set_mrl_with_warning().
  *
  * Return value: %TRUE on success
  **/
 gboolean
-totem_action_set_mrl (TotemObject *totem, const char *mrl, const char *subtitle)
+xplayer_action_set_mrl (XplayerObject *xplayer, const char *mrl, const char *subtitle)
 {
-	return totem_action_set_mrl_with_warning (totem, mrl, subtitle, TRUE);
+	return xplayer_action_set_mrl_with_warning (xplayer, mrl, subtitle, TRUE);
 }
 
 static gboolean
-totem_time_within_seconds (TotemObject *totem)
+xplayer_time_within_seconds (XplayerObject *xplayer)
 {
 	gint64 _time;
 
-	_time = bacon_video_widget_get_current_time (totem->bvw);
+	_time = bacon_video_widget_get_current_time (xplayer->bvw);
 
 	return (_time < REWIND_OR_PREVIOUS);
 }
 
 static void
-totem_action_direction (TotemObject *totem, TotemPlaylistDirection dir)
+xplayer_action_direction (XplayerObject *xplayer, XplayerPlaylistDirection dir)
 {
-	if (bacon_video_widget_has_next_track (totem->bvw) == FALSE &&
-	    totem_playlist_has_direction (totem->playlist, dir) == FALSE &&
-	    totem_playlist_get_repeat (totem->playlist) == FALSE)
+	if (bacon_video_widget_has_next_track (xplayer->bvw) == FALSE &&
+	    xplayer_playlist_has_direction (xplayer->playlist, dir) == FALSE &&
+	    xplayer_playlist_get_repeat (xplayer->playlist) == FALSE)
 		return;
 
-	if (bacon_video_widget_has_next_track (totem->bvw) != FALSE) {
+	if (bacon_video_widget_has_next_track (xplayer->bvw) != FALSE) {
 		BvwDVDEvent event;
-		event = (dir == TOTEM_PLAYLIST_DIRECTION_NEXT ? BVW_DVD_NEXT_CHAPTER : BVW_DVD_PREV_CHAPTER);
-		bacon_video_widget_dvd_event (totem->bvw, event);
+		event = (dir == XPLAYER_PLAYLIST_DIRECTION_NEXT ? BVW_DVD_NEXT_CHAPTER : BVW_DVD_PREV_CHAPTER);
+		bacon_video_widget_dvd_event (xplayer->bvw, event);
 		return;
 	}
 
-	if (dir == TOTEM_PLAYLIST_DIRECTION_NEXT ||
-	    bacon_video_widget_is_seekable (totem->bvw) == FALSE ||
-	    totem_time_within_seconds (totem) != FALSE) {
+	if (dir == XPLAYER_PLAYLIST_DIRECTION_NEXT ||
+	    bacon_video_widget_is_seekable (xplayer->bvw) == FALSE ||
+	    xplayer_time_within_seconds (xplayer) != FALSE) {
 		char *mrl, *subtitle;
 
-		totem_playlist_set_direction (totem->playlist, dir);
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-		totem_action_set_mrl_and_play (totem, mrl, subtitle);
+		xplayer_playlist_set_direction (xplayer->playlist, dir);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+		xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 
 		g_free (subtitle);
 		g_free (mrl);
 	} else {
-		totem_action_seek (totem, 0);
+		xplayer_action_seek (xplayer, 0);
 	}
 }
 
 /**
- * totem_object_action_previous:
- * @totem: a #TotemObject
+ * xplayer_object_action_previous:
+ * @xplayer: a #XplayerObject
  *
  * If a DVD is being played, goes to the previous chapter. If a normal stream
  * is being played, goes to the start of the stream if possible. If seeking is
  * not possible, plays the previous entry in the playlist.
  **/
 void
-totem_object_action_previous (TotemObject *totem)
+xplayer_object_action_previous (XplayerObject *xplayer)
 {
-	totem_action_direction (totem, TOTEM_PLAYLIST_DIRECTION_PREVIOUS);
+	xplayer_action_direction (xplayer, XPLAYER_PLAYLIST_DIRECTION_PREVIOUS);
 }
 
 /**
- * totem_object_action_next:
- * @totem: a #TotemObject
+ * xplayer_object_action_next:
+ * @xplayer: a #XplayerObject
  *
  * If a DVD is being played, goes to the next chapter. If a normal stream
  * is being played, plays the next entry in the playlist.
  **/
 void
-totem_object_action_next (TotemObject *totem)
+xplayer_object_action_next (XplayerObject *xplayer)
 {
-	totem_action_direction (totem, TOTEM_PLAYLIST_DIRECTION_NEXT);
+	xplayer_action_direction (xplayer, XPLAYER_PLAYLIST_DIRECTION_NEXT);
 }
 
 static void
-totem_seek_time_rel (TotemObject *totem, gint64 _time, gboolean relative, gboolean accurate)
+xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, gboolean accurate)
 {
 	GError *err = NULL;
 	gint64 sec;
 
-	if (totem->mrl == NULL)
+	if (xplayer->mrl == NULL)
 		return;
-	if (bacon_video_widget_is_seekable (totem->bvw) == FALSE)
+	if (bacon_video_widget_is_seekable (xplayer->bvw) == FALSE)
 		return;
 
-	totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), TRUE);
-	totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label), TRUE);
+	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 
 	if (relative != FALSE) {
 		gint64 oldmsec;
-		oldmsec = bacon_video_widget_get_current_time (totem->bvw);
+		oldmsec = bacon_video_widget_get_current_time (xplayer->bvw);
 		sec = MAX (0, oldmsec + _time);
 	} else {
 		sec = _time;
 	}
 
-	bacon_video_widget_seek_time (totem->bvw, sec, accurate, &err);
+	bacon_video_widget_seek_time (xplayer->bvw, sec, accurate, &err);
 
-	totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), FALSE);
-	totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label), FALSE);
+	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 
 	if (err != NULL)
 	{
 		char *msg, *disp;
 
-		disp = totem_uri_escape_for_display (totem->mrl);
-		msg = g_strdup_printf(_("Totem could not play '%s'."), disp);
+		disp = xplayer_uri_escape_for_display (xplayer->mrl);
+		msg = g_strdup_printf(_("Xplayer could not play '%s'."), disp);
 		g_free (disp);
 
-		totem_action_stop (totem);
-		totem_action_error (totem, msg, err->message);
+		xplayer_action_stop (xplayer);
+		xplayer_action_error (xplayer, msg, err->message);
 		g_free (msg);
 		g_error_free (err);
 	}
 }
 
 /**
- * totem_action_seek_relative:
- * @totem: a #TotemObject
+ * xplayer_action_seek_relative:
+ * @xplayer: a #XplayerObject
  * @offset: the time offset to seek to
  * @accurate: whether to use accurate seek, an accurate seek might be slower for some formats (see GStreamer docs)
  *
@@ -1936,14 +1936,14 @@ totem_seek_time_rel (TotemObject *totem, gint64 _time, gboolean relative, gboole
  * or displays an error dialog if that's not possible.
  **/
 void
-totem_action_seek_relative (TotemObject *totem, gint64 offset, gboolean accurate)
+xplayer_action_seek_relative (XplayerObject *xplayer, gint64 offset, gboolean accurate)
 {
-	totem_seek_time_rel (totem, offset, TRUE, accurate);
+	xplayer_seek_time_rel (xplayer, offset, TRUE, accurate);
 }
 
 /**
- * totem_object_action_seek_time:
- * @totem: a #TotemObject
+ * xplayer_object_action_seek_time:
+ * @xplayer: a #XplayerObject
  * @msec: the time to seek to
  * @accurate: whether to use accurate seek, an accurate seek might be slower for some formats (see GStreamer docs)
  *
@@ -1951,185 +1951,185 @@ totem_action_seek_relative (TotemObject *totem, gint64 offset, gboolean accurate
  * error dialog if that's not possible.
  **/
 void
-totem_object_action_seek_time (TotemObject *totem, gint64 msec, gboolean accurate)
+xplayer_object_action_seek_time (XplayerObject *xplayer, gint64 msec, gboolean accurate)
 {
-	totem_seek_time_rel (totem, msec, FALSE, accurate);
+	xplayer_seek_time_rel (xplayer, msec, FALSE, accurate);
 }
 
 void
-totem_action_set_zoom (TotemObject *totem,
+xplayer_action_set_zoom (XplayerObject *xplayer,
 		       gboolean     zoom)
 {
 	GtkAction *action;
 
-	action = gtk_action_group_get_action (totem->main_action_group, "zoom-toggle");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "zoom-toggle");
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), zoom);
 }
 
 /**
- * totem_object_get_volume:
- * @totem: a #TotemObject
+ * xplayer_object_get_volume:
+ * @xplayer: a #XplayerObject
  *
  * Gets the current volume level, as a value between <code class="literal">0.0</code> and <code class="literal">1.0</code>.
  *
  * Return value: the volume level
  **/
 double
-totem_object_get_volume (TotemObject *totem)
+xplayer_object_get_volume (XplayerObject *xplayer)
 {
-	return bacon_video_widget_get_volume (totem->bvw);
+	return bacon_video_widget_get_volume (xplayer->bvw);
 }
 
 /**
- * totem_object_action_volume:
- * @totem: a #TotemObject
+ * xplayer_object_action_volume:
+ * @xplayer: a #XplayerObject
  * @volume: the new absolute volume value
  *
  * Sets the volume, with <code class="literal">1.0</code> being the maximum, and <code class="literal">0.0</code> being the minimum level.
  **/
 void
-totem_object_action_volume (TotemObject *totem, double volume)
+xplayer_object_action_volume (XplayerObject *xplayer, double volume)
 {
-	if (bacon_video_widget_can_set_volume (totem->bvw) == FALSE)
+	if (bacon_video_widget_can_set_volume (xplayer->bvw) == FALSE)
 		return;
 
-	bacon_video_widget_set_volume (totem->bvw, volume);
+	bacon_video_widget_set_volume (xplayer->bvw, volume);
 }
 
 /**
- * totem_action_volume_relative:
- * @totem: a #TotemObject
+ * xplayer_action_volume_relative:
+ * @xplayer: a #XplayerObject
  * @off_pct: the value by which to increase or decrease the volume
  *
  * Sets the volume relative to its current level, with <code class="literal">1.0</code> being the
  * maximum, and <code class="literal">0.0</code> being the minimum level.
  **/
 void
-totem_action_volume_relative (TotemObject *totem, double off_pct)
+xplayer_action_volume_relative (XplayerObject *xplayer, double off_pct)
 {
 	double vol;
 
-	if (bacon_video_widget_can_set_volume (totem->bvw) == FALSE)
+	if (bacon_video_widget_can_set_volume (xplayer->bvw) == FALSE)
 		return;
-	if (totem->muted != FALSE)
-		totem_action_volume_toggle_mute (totem);
+	if (xplayer->muted != FALSE)
+		xplayer_action_volume_toggle_mute (xplayer);
 
-	vol = bacon_video_widget_get_volume (totem->bvw);
-	bacon_video_widget_set_volume (totem->bvw, vol + off_pct);
+	vol = bacon_video_widget_get_volume (xplayer->bvw);
+	bacon_video_widget_set_volume (xplayer->bvw, vol + off_pct);
 }
 
 /**
- * totem_action_volume_toggle_mute:
- * @totem: a #TotemObject
+ * xplayer_action_volume_toggle_mute:
+ * @xplayer: a #XplayerObject
  *
  * Toggles the mute status.
  **/
 void
-totem_action_volume_toggle_mute (TotemObject *totem)
+xplayer_action_volume_toggle_mute (XplayerObject *xplayer)
 {
-	if (totem->muted == FALSE) {
-		totem->muted = TRUE;
-		totem->prev_volume = bacon_video_widget_get_volume (totem->bvw);
-		bacon_video_widget_set_volume (totem->bvw, 0.0);
+	if (xplayer->muted == FALSE) {
+		xplayer->muted = TRUE;
+		xplayer->prev_volume = bacon_video_widget_get_volume (xplayer->bvw);
+		bacon_video_widget_set_volume (xplayer->bvw, 0.0);
 	} else {
-		totem->muted = FALSE;
-		bacon_video_widget_set_volume (totem->bvw, totem->prev_volume);
+		xplayer->muted = FALSE;
+		bacon_video_widget_set_volume (xplayer->bvw, xplayer->prev_volume);
 	}
 }
 
 /**
- * totem_action_toggle_aspect_ratio:
- * @totem: a #TotemObject
+ * xplayer_action_toggle_aspect_ratio:
+ * @xplayer: a #XplayerObject
  *
  * Toggles the aspect ratio selected in the menu to the
  * next one in the list.
  **/
 void
-totem_action_toggle_aspect_ratio (TotemObject *totem)
+xplayer_action_toggle_aspect_ratio (XplayerObject *xplayer)
 {
 	GtkAction *action;
 	int tmp;
 
-	tmp = totem_action_get_aspect_ratio (totem);
+	tmp = xplayer_action_get_aspect_ratio (xplayer);
 	tmp++;
 	if (tmp > BVW_RATIO_DVB)
 		tmp = BVW_RATIO_AUTO;
 
-	action = gtk_action_group_get_action (totem->main_action_group, "aspect-ratio-auto");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "aspect-ratio-auto");
 	gtk_radio_action_set_current_value (GTK_RADIO_ACTION (action), tmp);
 }
 
 /**
- * totem_action_set_aspect_ratio:
- * @totem: a #TotemObject
+ * xplayer_action_set_aspect_ratio:
+ * @xplayer: a #XplayerObject
  * @ratio: the aspect ratio to use
  *
  * Sets the aspect ratio selected in the menu to @ratio,
  * as defined in #BvwAspectRatio.
  **/
 void
-totem_action_set_aspect_ratio (TotemObject *totem, int ratio)
+xplayer_action_set_aspect_ratio (XplayerObject *xplayer, int ratio)
 {
-	bacon_video_widget_set_aspect_ratio (totem->bvw, ratio);
+	bacon_video_widget_set_aspect_ratio (xplayer->bvw, ratio);
 }
 
 /**
- * totem_action_get_aspect_ratio:
- * @totem: a #TotemObject
+ * xplayer_action_get_aspect_ratio:
+ * @xplayer: a #XplayerObject
  *
  * Gets the current aspect ratio as defined in #BvwAspectRatio.
  *
  * Return value: the current aspect ratio
  **/
 int
-totem_action_get_aspect_ratio (TotemObject *totem)
+xplayer_action_get_aspect_ratio (XplayerObject *xplayer)
 {
-	return (bacon_video_widget_get_aspect_ratio (totem->bvw));
+	return (bacon_video_widget_get_aspect_ratio (xplayer->bvw));
 }
 
 /**
- * totem_action_set_scale_ratio:
- * @totem: a #TotemObject
+ * xplayer_action_set_scale_ratio:
+ * @xplayer: a #XplayerObject
  * @ratio: the scale ratio to use
  *
  * Sets the video scale ratio, as a float where, for example,
  * 1.0 is 1:1 and 2.0 is 2:1.
  **/
 void
-totem_action_set_scale_ratio (TotemObject *totem, gfloat ratio)
+xplayer_action_set_scale_ratio (XplayerObject *xplayer, gfloat ratio)
 {
-	bacon_video_widget_set_scale_ratio (totem->bvw, ratio);
+	bacon_video_widget_set_scale_ratio (xplayer->bvw, ratio);
 }
 
 void
-totem_action_show_help (TotemObject *totem)
+xplayer_action_show_help (XplayerObject *xplayer)
 {
 	GError *error = NULL;
 
-	if (gtk_show_uri (gtk_widget_get_screen (totem->win), "help:totem", gtk_get_current_event_time (), &error) == FALSE) {
-		totem_action_error (totem, _("Totem could not display the help contents."), error->message);
+	if (gtk_show_uri (gtk_widget_get_screen (xplayer->win), "help:xplayer", gtk_get_current_event_time (), &error) == FALSE) {
+		xplayer_action_error (xplayer, _("Xplayer could not display the help contents."), error->message);
 		g_error_free (error);
 	}
 }
 
 /* This is called in the main thread */
 static void
-totem_action_drop_files_finished (TotemPlaylist *playlist, GAsyncResult *result, TotemObject *totem)
+xplayer_action_drop_files_finished (XplayerPlaylist *playlist, GAsyncResult *result, XplayerObject *xplayer)
 {
 	char *mrl, *subtitle;
 
-	/* Reconnect the playlist's changed signal (which was disconnected below in totem_action_drop_files(). */
-	g_signal_connect (G_OBJECT (playlist), "changed", G_CALLBACK (playlist_changed_cb), totem);
-	mrl = totem_playlist_get_current_mrl (playlist, &subtitle);
-	totem_action_set_mrl_and_play (totem, mrl, subtitle);
+	/* Reconnect the playlist's changed signal (which was disconnected below in xplayer_action_drop_files(). */
+	g_signal_connect (G_OBJECT (playlist), "changed", G_CALLBACK (playlist_changed_cb), xplayer);
+	mrl = xplayer_playlist_get_current_mrl (playlist, &subtitle);
+	xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 	g_free (mrl);
 	g_free (subtitle);
 
-	g_object_unref (totem);
+	g_object_unref (xplayer);
 }
 
 static gboolean
-totem_action_drop_files (TotemObject *totem, GtkSelectionData *data,
+xplayer_action_drop_files (XplayerObject *xplayer, GtkSelectionData *data,
 		int drop_type, gboolean empty_pl)
 {
 	char **list;
@@ -2146,7 +2146,7 @@ totem_action_drop_files (TotemObject *totem, GtkSelectionData *data,
 		if (list[i] == NULL)
 			continue;
 
-		filename = totem_create_full_path (list[i]);
+		filename = xplayer_create_full_path (list[i]);
 		file_list = g_list_prepend (file_list,
 					    filename ? filename : g_strdup (list[i]));
 	}
@@ -2163,16 +2163,16 @@ totem_action_drop_files (TotemObject *totem, GtkSelectionData *data,
 	/* How many files? Check whether those could be subtitles */
 	len = g_list_length (file_list);
 	if (len == 1 || (len == 2 && drop_type == 1)) {
-		if (totem_uri_is_subtitle (file_list->data) != FALSE) {
-			totem_playlist_set_current_subtitle (totem->playlist, file_list->data);
+		if (xplayer_uri_is_subtitle (file_list->data) != FALSE) {
+			xplayer_playlist_set_current_subtitle (xplayer->playlist, file_list->data);
 			goto bail;
 		}
 	}
 
 	if (empty_pl != FALSE) {
 		/* The function that calls us knows better if we should be doing something with the changed playlist... */
-		g_signal_handlers_disconnect_by_func (G_OBJECT (totem->playlist), playlist_changed_cb, totem);
-		totem_playlist_clear (totem->playlist);
+		g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer->playlist), playlist_changed_cb, xplayer);
+		xplayer_playlist_clear (xplayer->playlist);
 		cleared = TRUE;
 	}
 
@@ -2195,16 +2195,16 @@ totem_action_drop_files (TotemObject *totem, GtkSelectionData *data,
 		}
 
 		/* Add the MRL data to the list of MRLs to add to the playlist */
-		mrl_list = g_list_prepend (mrl_list, totem_playlist_mrl_data_new (filename, title));
+		mrl_list = g_list_prepend (mrl_list, xplayer_playlist_mrl_data_new (filename, title));
 	}
 
 	/* Add the MRLs to the playlist asynchronously and in order. We need to reconnect playlist's "changed" signal once all of the add-MRL
 	 * operations have completed. If we haven't cleared the playlist, there's no need to do this. */
 	if (mrl_list != NULL && cleared == TRUE) {
-		totem_playlist_add_mrls (totem->playlist, g_list_reverse (mrl_list), TRUE, NULL,
-		                         (GAsyncReadyCallback) totem_action_drop_files_finished, g_object_ref (totem));
+		xplayer_playlist_add_mrls (xplayer->playlist, g_list_reverse (mrl_list), TRUE, NULL,
+		                         (GAsyncReadyCallback) xplayer_action_drop_files_finished, g_object_ref (xplayer));
 	} else if (mrl_list != NULL) {
-		totem_playlist_add_mrls (totem->playlist, g_list_reverse (mrl_list), TRUE, NULL, NULL, NULL);
+		xplayer_playlist_add_mrls (xplayer->playlist, g_list_reverse (mrl_list), TRUE, NULL, NULL, NULL);
 	}
 
 bail:
@@ -2222,7 +2222,7 @@ drop_video_cb (GtkWidget     *widget,
 	 GtkSelectionData   *data,
 	 guint               info,
 	 guint               _time,
-	 Totem              *totem)
+	 Xplayer              *xplayer)
 {
 	GtkWidget *source_widget;
 	gboolean empty_pl;
@@ -2237,7 +2237,7 @@ drop_video_cb (GtkWidget     *widget,
 	}
 
 	if (action == GDK_ACTION_ASK) {
-		action = totem_drag_ask (totem_get_playlist_length (totem) > 0);
+		action = xplayer_drag_ask (xplayer_get_playlist_length (xplayer) > 0);
 		gdk_drag_status (context, action, GDK_CURRENT_TIME);
 	}
 
@@ -2248,7 +2248,7 @@ drop_video_cb (GtkWidget     *widget,
 	}
 
 	empty_pl = (action == GDK_ACTION_MOVE);
-	totem_action_drop_files (totem, data, info, empty_pl);
+	xplayer_action_drop_files (xplayer, data, info, empty_pl);
 	gtk_drag_finish (context, TRUE, FALSE, _time);
 	return;
 }
@@ -2259,7 +2259,7 @@ drag_motion_video_cb (GtkWidget      *widget,
                       gint            x,
                       gint            y,
                       guint           _time,
-                      Totem          *totem)
+                      Xplayer          *xplayer)
 {
 	GdkModifierType mask;
 
@@ -2281,13 +2281,13 @@ drop_playlist_cb (GtkWidget     *widget,
 	       GtkSelectionData   *data,
 	       guint               info,
 	       guint               _time,
-	       Totem              *totem)
+	       Xplayer              *xplayer)
 {
 	gboolean empty_pl;
 	GdkDragAction action = gdk_drag_context_get_selected_action (context);
 
 	if (action == GDK_ACTION_ASK) {
-		action = totem_drag_ask (totem_get_playlist_length (totem) > 0);
+		action = xplayer_drag_ask (xplayer_get_playlist_length (xplayer) > 0);
 		gdk_drag_status (context, action, GDK_CURRENT_TIME);
 	}
 
@@ -2298,7 +2298,7 @@ drop_playlist_cb (GtkWidget     *widget,
 
 	empty_pl = (action == GDK_ACTION_MOVE);
 
-	totem_action_drop_files (totem, data, info, empty_pl);
+	xplayer_action_drop_files (xplayer, data, info, empty_pl);
 	gtk_drag_finish (context, TRUE, FALSE, _time);
 }
 
@@ -2308,7 +2308,7 @@ drag_motion_playlist_cb (GtkWidget      *widget,
 			 gint            x,
 			 gint            y,
 			 guint           _time,
-			 Totem          *totem)
+			 Xplayer          *xplayer)
 {
 	GdkModifierType mask;
 
@@ -2325,18 +2325,18 @@ drag_video_cb (GtkWidget *widget,
 	       guint32 _time,
 	       gpointer callback_data)
 {
-	TotemObject *totem = TOTEM_OBJECT (callback_data);
+	XplayerObject *xplayer = XPLAYER_OBJECT (callback_data);
 	char *text;
 	int len;
 	GFile *file;
 
 	g_assert (selection_data != NULL);
 
-	if (totem->mrl == NULL)
+	if (xplayer->mrl == NULL)
 		return;
 
 	/* Canonicalise the MRL as a proper URI */
-	file = g_file_new_for_commandline_arg (totem->mrl);
+	file = g_file_new_for_commandline_arg (xplayer->mrl);
 	text = g_file_get_uri (file);
 	g_object_unref (file);
 
@@ -2351,7 +2351,7 @@ drag_video_cb (GtkWidget *widget,
 }
 
 static void
-on_got_redirect (BaconVideoWidget *bvw, const char *mrl, TotemObject *totem)
+on_got_redirect (BaconVideoWidget *bvw, const char *mrl, XplayerObject *xplayer)
 {
 	char *new_mrl;
 
@@ -2362,7 +2362,7 @@ on_got_redirect (BaconVideoWidget *bvw, const char *mrl, TotemObject *totem)
 		char *old_mrl;
 
 		/* Get the parent for the current MRL, that's our base */
-		old_mrl = totem_playlist_get_current_mrl (TOTEM_PLAYLIST (totem->playlist), NULL);
+		old_mrl = xplayer_playlist_get_current_mrl (XPLAYER_PLAYLIST (xplayer->playlist), NULL);
 		old_file = g_file_new_for_uri (old_mrl);
 		g_free (old_mrl);
 		parent = g_file_get_parent (old_file);
@@ -2376,133 +2376,133 @@ on_got_redirect (BaconVideoWidget *bvw, const char *mrl, TotemObject *totem)
 		g_object_unref (new_file);
 	}
 
-	bacon_video_widget_close (totem->bvw);
-	totem_file_closed (totem);
-	totem->has_played_emitted = FALSE;
-	totem_gdk_window_set_waiting_cursor (gtk_widget_get_window (totem->win));
-	bacon_video_widget_open (totem->bvw, new_mrl ? new_mrl : mrl);
-	totem_file_opened (totem, new_mrl ? new_mrl : mrl);
-	gdk_window_set_cursor (gtk_widget_get_window (totem->win), NULL);
+	bacon_video_widget_close (xplayer->bvw);
+	xplayer_file_closed (xplayer);
+	xplayer->has_played_emitted = FALSE;
+	xplayer_gdk_window_set_waiting_cursor (gtk_widget_get_window (xplayer->win));
+	bacon_video_widget_open (xplayer->bvw, new_mrl ? new_mrl : mrl);
+	xplayer_file_opened (xplayer, new_mrl ? new_mrl : mrl);
+	gdk_window_set_cursor (gtk_widget_get_window (xplayer->win), NULL);
 	if (bacon_video_widget_play (bvw, NULL) != FALSE) {
-		totem_file_has_played (totem, totem->mrl);
-		totem->has_played_emitted = TRUE;
+		xplayer_file_has_played (xplayer, xplayer->mrl);
+		xplayer->has_played_emitted = TRUE;
 	}
 	g_free (new_mrl);
 }
 
 static void
-on_channels_change_event (BaconVideoWidget *bvw, TotemObject *totem)
+on_channels_change_event (BaconVideoWidget *bvw, XplayerObject *xplayer)
 {
 	gchar *name;
 
-	totem_sublang_update (totem);
-	update_media_menu_items (totem);
+	xplayer_sublang_update (xplayer);
+	update_media_menu_items (xplayer);
 
 	/* updated stream info (new song) */
-	name = totem_get_nice_name_for_stream (totem);
+	name = xplayer_get_nice_name_for_stream (xplayer);
 
 	if (name != NULL) {
-		update_mrl_label (totem, name);
-		totem_playlist_set_title
-			(TOTEM_PLAYLIST (totem->playlist), name);
+		update_mrl_label (xplayer, name);
+		xplayer_playlist_set_title
+			(XPLAYER_PLAYLIST (xplayer->playlist), name);
 		g_free (name);
 	}
 }
 
 static void
-on_playlist_change_name (TotemPlaylist *playlist, TotemObject *totem)
+on_playlist_change_name (XplayerPlaylist *playlist, XplayerObject *xplayer)
 {
 	char *name;
 
-	name = totem_playlist_get_current_title (playlist);
+	name = xplayer_playlist_get_current_title (playlist);
 	if (name != NULL) {
-		update_mrl_label (totem, name);
+		update_mrl_label (xplayer, name);
 		g_free (name);
 	}
 }
 
 static void
-on_got_metadata_event (BaconVideoWidget *bvw, TotemObject *totem)
+on_got_metadata_event (BaconVideoWidget *bvw, XplayerObject *xplayer)
 {
         char *name = NULL;
 
-	name = totem_get_nice_name_for_stream (totem);
+	name = xplayer_get_nice_name_for_stream (xplayer);
 
 	if (name != NULL) {
-		totem_playlist_set_title
-			(TOTEM_PLAYLIST (totem->playlist), name);
+		xplayer_playlist_set_title
+			(XPLAYER_PLAYLIST (xplayer->playlist), name);
 		g_free (name);
 	}
 
-	on_playlist_change_name (TOTEM_PLAYLIST (totem->playlist), totem);
+	on_playlist_change_name (XPLAYER_PLAYLIST (xplayer->playlist), xplayer);
 }
 
 static void
 on_error_event (BaconVideoWidget *bvw, char *message,
-                gboolean playback_stopped, TotemObject *totem)
+                gboolean playback_stopped, XplayerObject *xplayer)
 {
 	/* Clear the seek if it's there, we only want to try and seek
 	 * the first file, even if it's not there */
-	totem->seek_to = 0;
-	totem->seek_to_start = 0;
+	xplayer->seek_to = 0;
+	xplayer->seek_to_start = 0;
 
 	if (playback_stopped)
-		play_pause_set_label (totem, STATE_STOPPED);
+		play_pause_set_label (xplayer, STATE_STOPPED);
 
-	totem_action_error (totem, _("An error occurred"), message);
+	xplayer_action_error (xplayer, _("An error occurred"), message);
 }
 
 static void
-on_buffering_event (BaconVideoWidget *bvw, gdouble percentage, TotemObject *totem)
+on_buffering_event (BaconVideoWidget *bvw, gdouble percentage, XplayerObject *xplayer)
 {
-	totem_statusbar_push (TOTEM_STATUSBAR (totem->statusbar), percentage);
+	xplayer_statusbar_push (XPLAYER_STATUSBAR (xplayer->statusbar), percentage);
 }
 
 static void
-on_download_buffering_event (BaconVideoWidget *bvw, gdouble level, TotemObject *totem)
+on_download_buffering_event (BaconVideoWidget *bvw, gdouble level, XplayerObject *xplayer)
 {
-	update_fill (totem, level);
+	update_fill (xplayer, level);
 }
 
 static void
-update_fill (TotemObject *totem, gdouble level)
+update_fill (XplayerObject *xplayer, gdouble level)
 {
 	if (level < 0.0) {
-		gtk_range_set_show_fill_level (GTK_RANGE (totem->seek), FALSE);
-		gtk_range_set_show_fill_level (GTK_RANGE (totem->fs->seek), FALSE);
+		gtk_range_set_show_fill_level (GTK_RANGE (xplayer->seek), FALSE);
+		gtk_range_set_show_fill_level (GTK_RANGE (xplayer->fs->seek), FALSE);
 	} else {
-		gtk_range_set_fill_level (GTK_RANGE (totem->seek), level * 65535.0f);
-		gtk_range_set_show_fill_level (GTK_RANGE (totem->seek), TRUE);
+		gtk_range_set_fill_level (GTK_RANGE (xplayer->seek), level * 65535.0f);
+		gtk_range_set_show_fill_level (GTK_RANGE (xplayer->seek), TRUE);
 
-		gtk_range_set_fill_level (GTK_RANGE (totem->fs->seek), level * 65535.0f);
-		gtk_range_set_show_fill_level (GTK_RANGE (totem->fs->seek), TRUE);
+		gtk_range_set_fill_level (GTK_RANGE (xplayer->fs->seek), level * 65535.0f);
+		gtk_range_set_show_fill_level (GTK_RANGE (xplayer->fs->seek), TRUE);
 	}
 }
 
 static void
-update_seekable (TotemObject *totem)
+update_seekable (XplayerObject *xplayer)
 {
 	GtkAction *action;
 	GtkActionGroup *action_group;
 	gboolean seekable;
 
-	seekable = bacon_video_widget_is_seekable (totem->bvw);
-	if (totem->seekable == seekable)
+	seekable = bacon_video_widget_is_seekable (xplayer->bvw);
+	if (xplayer->seekable == seekable)
 		return;
-	totem->seekable = seekable;
+	xplayer->seekable = seekable;
 
 	/* Check if the stream is seekable */
-	gtk_widget_set_sensitive (totem->seek, seekable);
+	gtk_widget_set_sensitive (xplayer->seek, seekable);
 
-	totem_main_set_sensitivity ("tmw_seek_hbox", seekable);
+	xplayer_main_set_sensitivity ("tmw_seek_hbox", seekable);
 
-	totem_fullscreen_set_seekable (totem->fs, seekable);
+	xplayer_fullscreen_set_seekable (xplayer->fs, seekable);
 
 	/* FIXME: We can use this code again once bug #457631 is fixed and
 	 * skip-* are back in the main action group. */
-	/*totem_action_set_sensitivity ("skip-forward", seekable);
-	totem_action_set_sensitivity ("skip-backwards", seekable);*/
-	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (totem->xml, "skip-action-group"));
+	/*xplayer_action_set_sensitivity ("skip-forward", seekable);
+	xplayer_action_set_sensitivity ("skip-backwards", seekable);*/
+	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xplayer->xml, "skip-action-group"));
 
 	action = gtk_action_group_get_action (action_group, "skip-forward");
 	gtk_action_set_sensitive (action, seekable);
@@ -2513,36 +2513,36 @@ update_seekable (TotemObject *totem)
 	/* This is for the session restore and the position saving
 	 * to seek to the saved time */
 	if (seekable != FALSE) {
-		if (totem->seek_to_start != 0) {
-			bacon_video_widget_seek_time (totem->bvw,
-						      totem->seek_to_start, FALSE, NULL);
-			totem_action_pause (totem);
-		} else if (totem->seek_to != 0) {
-			bacon_video_widget_seek_time (totem->bvw,
-						      totem->seek_to, FALSE, NULL);
+		if (xplayer->seek_to_start != 0) {
+			bacon_video_widget_seek_time (xplayer->bvw,
+						      xplayer->seek_to_start, FALSE, NULL);
+			xplayer_action_pause (xplayer);
+		} else if (xplayer->seek_to != 0) {
+			bacon_video_widget_seek_time (xplayer->bvw,
+						      xplayer->seek_to, FALSE, NULL);
 		}
 	}
-	totem->seek_to = 0;
-	totem->seek_to_start = 0;
+	xplayer->seek_to = 0;
+	xplayer->seek_to_start = 0;
 
-	g_object_notify (G_OBJECT (totem), "seekable");
+	g_object_notify (G_OBJECT (xplayer), "seekable");
 }
 
 static void
-update_slider_visibility (TotemObject *totem,
+update_slider_visibility (XplayerObject *xplayer,
 			  gint64 stream_length)
 {
-	if (totem->stream_length == stream_length)
+	if (xplayer->stream_length == stream_length)
 		return;
-	if (totem->stream_length > 0 &&
+	if (xplayer->stream_length > 0 &&
 	    stream_length > 0)
 		return;
 	if (stream_length != 0) {
-		gtk_range_set_range (GTK_RANGE (totem->seek), 0., 65535.);
-		gtk_range_set_range (GTK_RANGE (totem->fs->seek), 0., 65535.);
+		gtk_range_set_range (GTK_RANGE (xplayer->seek), 0., 65535.);
+		gtk_range_set_range (GTK_RANGE (xplayer->fs->seek), 0., 65535.);
 	} else {
-		gtk_range_set_range (GTK_RANGE (totem->seek), 0., 0.);
-		gtk_range_set_range (GTK_RANGE (totem->fs->seek), 0., 0.);
+		gtk_range_set_range (GTK_RANGE (xplayer->seek), 0., 0.);
+		gtk_range_set_range (GTK_RANGE (xplayer->fs->seek), 0., 0.);
 	}
 }
 
@@ -2551,77 +2551,77 @@ update_current_time (BaconVideoWidget *bvw,
 		gint64 current_time,
 		gint64 stream_length,
 		double current_position,
-		gboolean seekable, TotemObject *totem)
+		gboolean seekable, XplayerObject *xplayer)
 {
-	update_slider_visibility (totem, stream_length);
+	update_slider_visibility (xplayer, stream_length);
 
-	if (totem->seek_lock == FALSE) {
-		gtk_adjustment_set_value (totem->seekadj,
+	if (xplayer->seek_lock == FALSE) {
+		gtk_adjustment_set_value (xplayer->seekadj,
 					  current_position * 65535);
 
-		if (stream_length == 0 && totem->mrl != NULL)
+		if (stream_length == 0 && xplayer->mrl != NULL)
 		{
-			totem_statusbar_set_time_and_length
-				(TOTEM_STATUSBAR (totem->statusbar),
+			xplayer_statusbar_set_time_and_length
+				(XPLAYER_STATUSBAR (xplayer->statusbar),
 				(int) (current_time / 1000), -1);
 		} else {
-			totem_statusbar_set_time_and_length
-				(TOTEM_STATUSBAR (totem->statusbar),
+			xplayer_statusbar_set_time_and_length
+				(XPLAYER_STATUSBAR (xplayer->statusbar),
 				(int) (current_time / 1000),
 				(int) (stream_length / 1000));
 		}
 
-		totem_time_label_set_time
-			(TOTEM_TIME_LABEL (totem->fs->time_label),
+		xplayer_time_label_set_time
+			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 current_time, stream_length);
 	}
 
-	if (totem->stream_length != stream_length) {
-		g_object_notify (G_OBJECT (totem), "stream-length");
-		totem->stream_length = stream_length;
+	if (xplayer->stream_length != stream_length) {
+		g_object_notify (G_OBJECT (xplayer), "stream-length");
+		xplayer->stream_length = stream_length;
 	}
 }
 
 void
-volume_button_value_changed_cb (GtkScaleButton *button, gdouble value, TotemObject *totem)
+volume_button_value_changed_cb (GtkScaleButton *button, gdouble value, XplayerObject *xplayer)
 {
-	totem->muted = FALSE;
-	bacon_video_widget_set_volume (totem->bvw, value);
+	xplayer->muted = FALSE;
+	bacon_video_widget_set_volume (xplayer->bvw, value);
 }
 
 static void
-update_volume_sliders (TotemObject *totem)
+update_volume_sliders (XplayerObject *xplayer)
 {
 	double volume;
 	GtkAction *action;
 
-	volume = bacon_video_widget_get_volume (totem->bvw);
+	volume = bacon_video_widget_get_volume (xplayer->bvw);
 
-	g_signal_handlers_block_by_func (totem->volume, volume_button_value_changed_cb, totem);
-	gtk_scale_button_set_value (GTK_SCALE_BUTTON (totem->volume), volume);
-	g_signal_handlers_unblock_by_func (totem->volume, volume_button_value_changed_cb, totem);
+	g_signal_handlers_block_by_func (xplayer->volume, volume_button_value_changed_cb, xplayer);
+	gtk_scale_button_set_value (GTK_SCALE_BUTTON (xplayer->volume), volume);
+	g_signal_handlers_unblock_by_func (xplayer->volume, volume_button_value_changed_cb, xplayer);
   
-	action = gtk_action_group_get_action (totem->main_action_group, "volume-down");
-	gtk_action_set_sensitive (action, volume > VOLUME_EPSILON && totem->volume_sensitive);
+	action = gtk_action_group_get_action (xplayer->main_action_group, "volume-down");
+	gtk_action_set_sensitive (action, volume > VOLUME_EPSILON && xplayer->volume_sensitive);
 
-	action = gtk_action_group_get_action (totem->main_action_group, "volume-up");
-	gtk_action_set_sensitive (action, volume < (1.0 - VOLUME_EPSILON) && totem->volume_sensitive);
+	action = gtk_action_group_get_action (xplayer->main_action_group, "volume-up");
+	gtk_action_set_sensitive (action, volume < (1.0 - VOLUME_EPSILON) && xplayer->volume_sensitive);
 }
 
 static void
-property_notify_cb_volume (BaconVideoWidget *bvw, GParamSpec *spec, TotemObject *totem)
+property_notify_cb_volume (BaconVideoWidget *bvw, GParamSpec *spec, XplayerObject *xplayer)
 {
-	update_volume_sliders (totem);
+	update_volume_sliders (xplayer);
 }
 
 static void
-property_notify_cb_seekable (BaconVideoWidget *bvw, GParamSpec *spec, TotemObject *totem)
+property_notify_cb_seekable (BaconVideoWidget *bvw, GParamSpec *spec, XplayerObject *xplayer)
 {
-	update_seekable (totem);
+	update_seekable (xplayer);
 }
 
 gboolean
-seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *totem)
+seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject *xplayer)
 {
 	/* HACK: we want the behaviour you get with the left button, so we
 	 * mangle the event.  clicking with other buttons moves the slider in
@@ -2630,38 +2630,38 @@ seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *t
 	 */
 	event->button = GDK_BUTTON_PRIMARY;
 
-	totem->seek_lock = TRUE;
-	if (bacon_video_widget_can_direct_seek (totem->bvw) == FALSE) {
-		totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), TRUE);
-		totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label), TRUE);
+	xplayer->seek_lock = TRUE;
+	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE) {
+		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
+		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 	}
 
 	return FALSE;
 }
 
 void
-seek_slider_changed_cb (GtkAdjustment *adj, TotemObject *totem)
+seek_slider_changed_cb (GtkAdjustment *adj, XplayerObject *xplayer)
 {
 	double pos;
 	gint _time;
 
-	if (totem->seek_lock == FALSE)
+	if (xplayer->seek_lock == FALSE)
 		return;
 
 	pos = gtk_adjustment_get_value (adj) / 65535;
-	_time = bacon_video_widget_get_stream_length (totem->bvw);
-	totem_statusbar_set_time_and_length (TOTEM_STATUSBAR (totem->statusbar),
+	_time = bacon_video_widget_get_stream_length (xplayer->bvw);
+	xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR (xplayer->statusbar),
 			(int) (pos * _time / 1000), _time / 1000);
-	totem_time_label_set_time
-			(TOTEM_TIME_LABEL (totem->fs->time_label),
+	xplayer_time_label_set_time
+			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 (int) (pos * _time), _time);
 
-	if (bacon_video_widget_can_direct_seek (totem->bvw) != FALSE)
-		totem_action_seek (totem, pos);
+	if (bacon_video_widget_can_direct_seek (xplayer->bvw) != FALSE)
+		xplayer_action_seek (xplayer, pos);
 }
 
 gboolean
-seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *totem)
+seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject *xplayer)
 {
 	GtkAdjustment *adj;
 	gdouble val;
@@ -2671,23 +2671,23 @@ seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, TotemObject *
 
 	/* set to FALSE here to avoid triggering a final seek when
 	 * syncing the adjustments while being in direct seek mode */
-	totem->seek_lock = FALSE;
+	xplayer->seek_lock = FALSE;
 
 	/* sync both adjustments */
 	adj = gtk_range_get_adjustment (GTK_RANGE (widget));
 	val = gtk_adjustment_get_value (adj);
 
-	if (bacon_video_widget_can_direct_seek (totem->bvw) == FALSE)
-		totem_action_seek (totem, val / 65535.0);
+	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE)
+		xplayer_action_seek (xplayer, val / 65535.0);
 
-	totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), FALSE);
-	totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label),
+	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			FALSE);
 	return FALSE;
 }
 
 gboolean
-totem_action_open_files (TotemObject *totem, char **list)
+xplayer_action_open_files (XplayerObject *xplayer, char **list)
 {
 	GSList *slist = NULL;
 	int i, retval;
@@ -2696,14 +2696,14 @@ totem_action_open_files (TotemObject *totem, char **list)
 		slist = g_slist_prepend (slist, list[i]);
 
 	slist = g_slist_reverse (slist);
-	retval = totem_action_open_files_list (totem, slist);
+	retval = xplayer_action_open_files_list (xplayer, slist);
 	g_slist_free (slist);
 
 	return retval;
 }
 
 static gboolean
-totem_action_open_files_list (TotemObject *totem, GSList *list)
+xplayer_action_open_files_list (XplayerObject *xplayer, GSList *list)
 {
 	GSList *l;
 	GList *mrl_list = NULL;
@@ -2716,7 +2716,7 @@ totem_action_open_files_list (TotemObject *totem, GSList *list)
 	if (list == NULL)
 		return changed;
 
-	totem_gdk_window_set_waiting_cursor (gtk_widget_get_window (totem->win));
+	xplayer_gdk_window_set_waiting_cursor (gtk_widget_get_window (xplayer->win));
 
 	for (l = list ; l != NULL; l = l->next)
 	{
@@ -2731,7 +2731,7 @@ totem_action_open_files_list (TotemObject *totem, GSList *list)
 			continue;
 
 		/* Get the subtitle part out for our tests */
-		filename = totem_create_full_path (data);
+		filename = xplayer_create_full_path (data);
 		if (filename == NULL)
 			filename = g_strdup (data);
 
@@ -2748,20 +2748,20 @@ totem_action_open_files_list (TotemObject *totem, GSList *list)
 				 * if we should be doing something with the 
 				 * changed playlist ... */
 				g_signal_handlers_disconnect_by_func
-					(G_OBJECT (totem->playlist),
-					 playlist_changed_cb, totem);
-				changed = totem_playlist_clear (totem->playlist);
-				bacon_video_widget_close (totem->bvw);
-				totem_file_closed (totem);
-				totem->has_played_emitted = FALSE;
+					(G_OBJECT (xplayer->playlist),
+					 playlist_changed_cb, xplayer);
+				changed = xplayer_playlist_clear (xplayer->playlist);
+				bacon_video_widget_close (xplayer->bvw);
+				xplayer_file_closed (xplayer);
+				xplayer->has_played_emitted = FALSE;
 				cleared = TRUE;
 			}
 
 			if (g_str_has_prefix (filename, "dvb:/") != FALSE) {
-				mrl_list = g_list_prepend (mrl_list, totem_playlist_mrl_data_new (data, NULL));
+				mrl_list = g_list_prepend (mrl_list, xplayer_playlist_mrl_data_new (data, NULL));
 				changed = TRUE;
 			} else {
-				mrl_list = g_list_prepend (mrl_list, totem_playlist_mrl_data_new (filename, NULL));
+				mrl_list = g_list_prepend (mrl_list, xplayer_playlist_mrl_data_new (filename, NULL));
 				changed = TRUE;
 			}
 		}
@@ -2771,43 +2771,43 @@ totem_action_open_files_list (TotemObject *totem, GSList *list)
 
 	/* Add the MRLs to the playlist asynchronously and in order */
 	if (mrl_list != NULL)
-		totem_playlist_add_mrls (totem->playlist, g_list_reverse (mrl_list), FALSE, NULL, NULL, NULL);
+		xplayer_playlist_add_mrls (xplayer->playlist, g_list_reverse (mrl_list), FALSE, NULL, NULL, NULL);
 
-	gdk_window_set_cursor (gtk_widget_get_window (totem->win), NULL);
+	gdk_window_set_cursor (gtk_widget_get_window (xplayer->win), NULL);
 
 	/* ... and reconnect because we're nice people */
 	if (cleared != FALSE)
 	{
-		g_signal_connect (G_OBJECT (totem->playlist),
+		g_signal_connect (G_OBJECT (xplayer->playlist),
 				"changed", G_CALLBACK (playlist_changed_cb),
-				totem);
+				xplayer);
 	}
 
 	return changed;
 }
 
 void
-show_controls (TotemObject *totem, gboolean was_fullscreen)
+show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 {
 	GtkAction *action;
 	GtkWidget *menubar, *controlbar, *statusbar, *bvw_box, *widget;
 	GtkAllocation allocation;
 	int width = 0, height = 0;
 
-	if (totem->bvw == NULL)
+	if (xplayer->bvw == NULL)
 		return;
 
-	menubar = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_menubar_box"));
-	controlbar = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_controls_vbox"));
-	statusbar = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_statusbar"));
-	bvw_box = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_bvw_box"));
-	widget = GTK_WIDGET (totem->bvw);
+	menubar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_menubar_box"));
+	controlbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
+	statusbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_statusbar"));
+	bvw_box = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_bvw_box"));
+	widget = GTK_WIDGET (xplayer->bvw);
 
-	action = gtk_action_group_get_action (totem->main_action_group, "show-controls");
-	gtk_action_set_sensitive (action, !totem_is_fullscreen (totem));
+	action = gtk_action_group_get_action (xplayer->main_action_group, "show-controls");
+	gtk_action_set_sensitive (action, !xplayer_is_fullscreen (xplayer));
 	gtk_widget_get_allocation (widget, &allocation);
 
-	if (totem->controls_visibility == TOTEM_CONTROLS_VISIBLE) {
+	if (xplayer->controls_visibility == XPLAYER_CONTROLS_VISIBLE) {
 		if (was_fullscreen == FALSE) {
 			height = allocation.height;
 			width = allocation.width;
@@ -2817,7 +2817,7 @@ show_controls (TotemObject *totem, gboolean was_fullscreen)
 		gtk_widget_show (menubar);
 		gtk_widget_show (controlbar);
 		gtk_widget_show (statusbar);
-		if (totem_sidebar_is_visible (totem) != FALSE) {
+		if (xplayer_sidebar_is_visible (xplayer) != FALSE) {
 			/* This is uglier then you might expect because of the
 			   resize handle between the video and sidebar. There
 			   is no convenience method to get the handle's width.
@@ -2828,19 +2828,19 @@ show_controls (TotemObject *totem, gboolean was_fullscreen)
 			int handle_size;
 
 			g_value_init (&value, G_TYPE_INT);
-			pane = GTK_WIDGET (gtk_builder_get_object (totem->xml,
+			pane = GTK_WIDGET (gtk_builder_get_object (xplayer->xml,
 					"tmw_main_pane"));
 			gtk_widget_style_get_property (pane, "handle-size",
 					&value);
 			handle_size = g_value_get_int (&value);
 			g_value_unset (&value);
 
-			gtk_widget_show (totem->sidebar);
-			gtk_widget_get_allocation (totem->sidebar, &allocation_sidebar);
+			gtk_widget_show (xplayer->sidebar);
+			gtk_widget_get_allocation (xplayer->sidebar, &allocation_sidebar);
 			width += allocation_sidebar.width + handle_size;
 		} else {
-			totem_action_save_size (totem);
-			gtk_widget_hide (totem->sidebar);
+			xplayer_action_save_size (xplayer);
+			gtk_widget_hide (xplayer->sidebar);
 		}
 
 		if (was_fullscreen == FALSE) {
@@ -2854,11 +2854,11 @@ show_controls (TotemObject *totem, gboolean was_fullscreen)
 			height += allocation_menubar.height
 				+ allocation_controlbar.height
 				+ allocation_statusbar.height;
-			gtk_window_resize (GTK_WINDOW(totem->win),
+			gtk_window_resize (GTK_WINDOW(xplayer->win),
 					width, height);
 		}
 	} else {
-		if (totem->controls_visibility == TOTEM_CONTROLS_HIDDEN) {
+		if (xplayer->controls_visibility == XPLAYER_CONTROLS_HIDDEN) {
 			width = allocation.width;
 			height = allocation.height;
 		}
@@ -2869,91 +2869,91 @@ show_controls (TotemObject *totem, gboolean was_fullscreen)
 
 		gtk_widget_hide (controlbar);
 		gtk_widget_hide (statusbar);
-		gtk_widget_hide (totem->sidebar);
+		gtk_widget_hide (xplayer->sidebar);
 
 		 /* We won't show controls in fullscreen */
 		gtk_container_set_border_width (GTK_CONTAINER (bvw_box), 0);
 
-		if (totem->controls_visibility == TOTEM_CONTROLS_HIDDEN) {
-			gtk_window_resize (GTK_WINDOW(totem->win),
+		if (xplayer->controls_visibility == XPLAYER_CONTROLS_HIDDEN) {
+			gtk_window_resize (GTK_WINDOW(xplayer->win),
 					width, height);
 		}
 	}
 }
 
 /**
- * totem_action_toggle_controls:
- * @totem: a #TotemObject
+ * xplayer_action_toggle_controls:
+ * @xplayer: a #XplayerObject
  *
- * If Totem's not fullscreened, this toggles the state of the "Show Controls"
+ * If Xplayer's not fullscreened, this toggles the state of the "Show Controls"
  * menu entry, and consequently shows or hides the controls in the UI.
  **/
 void
-totem_action_toggle_controls (TotemObject *totem)
+xplayer_action_toggle_controls (XplayerObject *xplayer)
 {
 	GtkAction *action;
 	gboolean state;
 
-	if (totem_is_fullscreen (totem) != FALSE)
+	if (xplayer_is_fullscreen (xplayer) != FALSE)
 		return;
 
- 	action = gtk_action_group_get_action (totem->main_action_group,
+ 	action = gtk_action_group_get_action (xplayer->main_action_group,
  		"show-controls");
  	state = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
  	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), !state);
 }
 
 /**
- * totem_action_next_angle:
- * @totem: a #TotemObject
+ * xplayer_action_next_angle:
+ * @xplayer: a #XplayerObject
  *
  * Switches to the next angle, if watching a DVD. If not watching a DVD, this is a
  * no-op.
  **/
 void
-totem_action_next_angle (TotemObject *totem)
+xplayer_action_next_angle (XplayerObject *xplayer)
 {
-	bacon_video_widget_set_next_angle (totem->bvw);
+	bacon_video_widget_set_next_angle (xplayer->bvw);
 }
 
 /**
- * totem_action_set_playlist_index:
- * @totem: a #TotemObject
+ * xplayer_action_set_playlist_index:
+ * @xplayer: a #XplayerObject
  * @index: the new playlist index
  *
- * Sets the <code class="literal">0</code>-based playlist index to @index, causing Totem to load and
+ * Sets the <code class="literal">0</code>-based playlist index to @index, causing Xplayer to load and
  * start playing that playlist entry.
  *
  * If @index is higher than the current length of the playlist, this
  * has the effect of restarting the current playlist entry.
  **/
 void
-totem_action_set_playlist_index (TotemObject *totem, guint playlist_index)
+xplayer_action_set_playlist_index (XplayerObject *xplayer, guint playlist_index)
 {
 	char *mrl, *subtitle;
 
-	totem_playlist_set_current (totem->playlist, playlist_index);
-	mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-	totem_action_set_mrl_and_play (totem, mrl, subtitle);
+	xplayer_playlist_set_current (xplayer->playlist, playlist_index);
+	mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+	xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 	g_free (mrl);
 	g_free (subtitle);
 }
 
 /**
- * totem_object_action_remote:
- * @totem: a #TotemObject
- * @cmd: a #TotemRemoteCommand
+ * xplayer_object_action_remote:
+ * @xplayer: a #XplayerObject
+ * @cmd: a #XplayerRemoteCommand
  * @url: an MRL to play, or %NULL
  *
- * Executes the specified @cmd on this instance of Totem. If @cmd
+ * Executes the specified @cmd on this instance of Xplayer. If @cmd
  * is an operation requiring an MRL, @url is required; it can be %NULL
  * otherwise.
  *
- * If Totem's fullscreened and the operation is executed correctly,
+ * If Xplayer's fullscreened and the operation is executed correctly,
  * the controls will appear as if the user had moved the mouse.
  **/
 void
-totem_object_action_remote (TotemObject *totem, TotemRemoteCommand cmd, const char *url)
+xplayer_object_action_remote (XplayerObject *xplayer, XplayerRemoteCommand cmd, const char *url)
 {
 	const char *icon_name;
 	gboolean handled;
@@ -2962,178 +2962,178 @@ totem_object_action_remote (TotemObject *totem, TotemRemoteCommand cmd, const ch
 	handled = TRUE;
 
 	switch (cmd) {
-	case TOTEM_REMOTE_COMMAND_PLAY:
-		totem_action_play (totem);
-		icon_name = totem_get_rtl_icon_name ("media-playback-start");
+	case XPLAYER_REMOTE_COMMAND_PLAY:
+		xplayer_action_play (xplayer);
+		icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 		break;
-	case TOTEM_REMOTE_COMMAND_PLAYPAUSE:
-		if (bacon_video_widget_is_playing (totem->bvw) == FALSE)
-			icon_name = totem_get_rtl_icon_name ("media-playback-start");
+	case XPLAYER_REMOTE_COMMAND_PLAYPAUSE:
+		if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE)
+			icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 		else
 			icon_name = "media-playback-pause-symbolic";
-		totem_action_play_pause (totem);
+		xplayer_action_play_pause (xplayer);
 		break;
-	case TOTEM_REMOTE_COMMAND_PAUSE:
-		totem_action_pause (totem);
+	case XPLAYER_REMOTE_COMMAND_PAUSE:
+		xplayer_action_pause (xplayer);
 		icon_name = "media-playback-pause-symbolic";
 		break;
-	case TOTEM_REMOTE_COMMAND_STOP: {
+	case XPLAYER_REMOTE_COMMAND_STOP: {
 		char *mrl, *subtitle;
 
-		totem_playlist_set_at_start (totem->playlist);
-		update_buttons (totem);
-		totem_action_stop (totem);
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+		xplayer_playlist_set_at_start (xplayer->playlist);
+		update_buttons (xplayer);
+		xplayer_action_stop (xplayer);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 		if (mrl != NULL) {
-			totem_action_set_mrl_with_warning (totem, mrl, subtitle, FALSE);
-			bacon_video_widget_pause (totem->bvw);
+			xplayer_action_set_mrl_with_warning (xplayer, mrl, subtitle, FALSE);
+			bacon_video_widget_pause (xplayer->bvw);
 			g_free (mrl);
 			g_free (subtitle);
 		}
 		icon_name = "media-playback-stop-symbolic";
 		break;
 	};
-	case TOTEM_REMOTE_COMMAND_SEEK_FORWARD: {
+	case XPLAYER_REMOTE_COMMAND_SEEK_FORWARD: {
 		double offset = 0;
 
 		if (url != NULL)
 			offset = g_ascii_strtod (url, NULL);
 		if (offset == 0) {
-			totem_action_seek_relative (totem, SEEK_FORWARD_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_FORWARD_OFFSET * 1000, FALSE);
 		} else {
-			totem_action_seek_relative (totem, offset * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, offset * 1000, FALSE);
 		}
-		icon_name = totem_get_rtl_icon_name ("media-seek-forward");
+		icon_name = xplayer_get_rtl_icon_name ("media-seek-forward");
 		break;
 	}
-	case TOTEM_REMOTE_COMMAND_SEEK_BACKWARD: {
+	case XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD: {
 		double offset = 0;
 
 		if (url != NULL)
 			offset = g_ascii_strtod (url, NULL);
 		if (offset == 0)
-			totem_action_seek_relative (totem, SEEK_BACKWARD_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_OFFSET * 1000, FALSE);
 		else
-			totem_action_seek_relative (totem,  - (offset * 1000), FALSE);
-		icon_name = totem_get_rtl_icon_name ("media-seek-backward");
+			xplayer_action_seek_relative (xplayer,  - (offset * 1000), FALSE);
+		icon_name = xplayer_get_rtl_icon_name ("media-seek-backward");
 		break;
 	}
-	case TOTEM_REMOTE_COMMAND_VOLUME_UP:
-		totem_action_volume_relative (totem, VOLUME_UP_OFFSET);
+	case XPLAYER_REMOTE_COMMAND_VOLUME_UP:
+		xplayer_action_volume_relative (xplayer, VOLUME_UP_OFFSET);
 		break;
-	case TOTEM_REMOTE_COMMAND_VOLUME_DOWN:
-		totem_action_volume_relative (totem, VOLUME_DOWN_OFFSET);
+	case XPLAYER_REMOTE_COMMAND_VOLUME_DOWN:
+		xplayer_action_volume_relative (xplayer, VOLUME_DOWN_OFFSET);
 		break;
-	case TOTEM_REMOTE_COMMAND_NEXT:
-		totem_action_next (totem);
-		icon_name = totem_get_rtl_icon_name ("media-skip-forward");
+	case XPLAYER_REMOTE_COMMAND_NEXT:
+		xplayer_action_next (xplayer);
+		icon_name = xplayer_get_rtl_icon_name ("media-skip-forward");
 		break;
-	case TOTEM_REMOTE_COMMAND_PREVIOUS:
-		totem_action_previous (totem);
-		icon_name = totem_get_rtl_icon_name ("media-skip-backward");
+	case XPLAYER_REMOTE_COMMAND_PREVIOUS:
+		xplayer_action_previous (xplayer);
+		icon_name = xplayer_get_rtl_icon_name ("media-skip-backward");
 		break;
-	case TOTEM_REMOTE_COMMAND_FULLSCREEN:
-		totem_action_fullscreen_toggle (totem);
+	case XPLAYER_REMOTE_COMMAND_FULLSCREEN:
+		xplayer_action_fullscreen_toggle (xplayer);
 		break;
-	case TOTEM_REMOTE_COMMAND_QUIT:
-		totem_action_exit (totem);
+	case XPLAYER_REMOTE_COMMAND_QUIT:
+		xplayer_action_exit (xplayer);
 		break;
-	case TOTEM_REMOTE_COMMAND_ENQUEUE:
+	case XPLAYER_REMOTE_COMMAND_ENQUEUE:
 		g_assert (url != NULL);
-		totem_playlist_add_mrl (totem->playlist, url, NULL, TRUE, NULL, NULL, NULL);
+		xplayer_playlist_add_mrl (xplayer->playlist, url, NULL, TRUE, NULL, NULL, NULL);
 		break;
-	case TOTEM_REMOTE_COMMAND_REPLACE:
-		totem_playlist_clear (totem->playlist);
+	case XPLAYER_REMOTE_COMMAND_REPLACE:
+		xplayer_playlist_clear (xplayer->playlist);
 		if (url == NULL) {
-			bacon_video_widget_close (totem->bvw);
-			totem_file_closed (totem);
-			totem->has_played_emitted = FALSE;
-			totem_action_set_mrl (totem, NULL, NULL);
+			bacon_video_widget_close (xplayer->bvw);
+			xplayer_file_closed (xplayer);
+			xplayer->has_played_emitted = FALSE;
+			xplayer_action_set_mrl (xplayer, NULL, NULL);
 			break;
 		}
-		totem_playlist_add_mrl (totem->playlist, url, NULL, TRUE, NULL, NULL, NULL);
+		xplayer_playlist_add_mrl (xplayer->playlist, url, NULL, TRUE, NULL, NULL, NULL);
 		break;
-	case TOTEM_REMOTE_COMMAND_SHOW:
-		gtk_window_present_with_time (GTK_WINDOW (totem->win), GDK_CURRENT_TIME);
+	case XPLAYER_REMOTE_COMMAND_SHOW:
+		gtk_window_present_with_time (GTK_WINDOW (xplayer->win), GDK_CURRENT_TIME);
 		break;
-	case TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS:
-		if (totem->controls_visibility != TOTEM_CONTROLS_FULLSCREEN)
+	case XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS:
+		if (xplayer->controls_visibility != XPLAYER_CONTROLS_FULLSCREEN)
 		{
 			GtkToggleAction *action;
 			gboolean state;
 
 			action = GTK_TOGGLE_ACTION (gtk_action_group_get_action
-					(totem->main_action_group,
+					(xplayer->main_action_group,
 					 "show-controls"));
 			state = gtk_toggle_action_get_active (action);
 			gtk_toggle_action_set_active (action, !state);
 		}
 		break;
-	case TOTEM_REMOTE_COMMAND_UP:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_UP:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU_UP);
 		break;
-	case TOTEM_REMOTE_COMMAND_DOWN:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_DOWN:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU_DOWN);
 		break;
-	case TOTEM_REMOTE_COMMAND_LEFT:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_LEFT:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU_LEFT);
 		break;
-	case TOTEM_REMOTE_COMMAND_RIGHT:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_RIGHT:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU_RIGHT);
 		break;
-	case TOTEM_REMOTE_COMMAND_SELECT:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_SELECT:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU_SELECT);
 		break;
-	case TOTEM_REMOTE_COMMAND_DVD_MENU:
-		bacon_video_widget_dvd_event (totem->bvw,
+	case XPLAYER_REMOTE_COMMAND_DVD_MENU:
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_ROOT_MENU);
 		break;
-	case TOTEM_REMOTE_COMMAND_ZOOM_UP:
-		totem_action_set_zoom (totem, TRUE);
+	case XPLAYER_REMOTE_COMMAND_ZOOM_UP:
+		xplayer_action_set_zoom (xplayer, TRUE);
 		break;
-	case TOTEM_REMOTE_COMMAND_ZOOM_DOWN:
-		totem_action_set_zoom (totem, FALSE);
+	case XPLAYER_REMOTE_COMMAND_ZOOM_DOWN:
+		xplayer_action_set_zoom (xplayer, FALSE);
 		break;
-	case TOTEM_REMOTE_COMMAND_EJECT:
-		totem_action_eject (totem);
+	case XPLAYER_REMOTE_COMMAND_EJECT:
+		xplayer_action_eject (xplayer);
 		icon_name = "media-eject";
 		break;
-	case TOTEM_REMOTE_COMMAND_PLAY_DVD:
+	case XPLAYER_REMOTE_COMMAND_PLAY_DVD:
 		/* FIXME - focus the "Optical Media" section in Grilo */
 		break;
-	case TOTEM_REMOTE_COMMAND_MUTE:
-		totem_action_volume_toggle_mute (totem);
+	case XPLAYER_REMOTE_COMMAND_MUTE:
+		xplayer_action_volume_toggle_mute (xplayer);
 		break;
-	case TOTEM_REMOTE_COMMAND_TOGGLE_ASPECT:
-		totem_action_toggle_aspect_ratio (totem);
+	case XPLAYER_REMOTE_COMMAND_TOGGLE_ASPECT:
+		xplayer_action_toggle_aspect_ratio (xplayer);
 		break;
-	case TOTEM_REMOTE_COMMAND_UNKNOWN:
+	case XPLAYER_REMOTE_COMMAND_UNKNOWN:
 	default:
 		handled = FALSE;
 		break;
 	}
 
 	if (handled != FALSE
-	    && gtk_window_is_active (GTK_WINDOW (totem->win))) {
-		totem_fullscreen_show_popups_or_osd (totem->fs, icon_name, TRUE);
+	    && gtk_window_is_active (GTK_WINDOW (xplayer->win))) {
+		xplayer_fullscreen_show_popups_or_osd (xplayer->fs, icon_name, TRUE);
 	}
 }
 
 /**
- * totem_object_action_remote_set_setting:
- * @totem: a #TotemObject
- * @setting: a #TotemRemoteSetting
+ * xplayer_object_action_remote_set_setting:
+ * @xplayer: a #XplayerObject
+ * @setting: a #XplayerRemoteSetting
  * @value: the new value for the setting
  *
- * Sets @setting to @value on this instance of Totem.
+ * Sets @setting to @value on this instance of Xplayer.
  **/
-void totem_object_action_remote_set_setting (TotemObject *totem,
-					     TotemRemoteSetting setting,
+void xplayer_object_action_remote_set_setting (XplayerObject *xplayer,
+					     XplayerRemoteSetting setting,
 					     gboolean value)
 {
 	GtkAction *action;
@@ -3141,11 +3141,11 @@ void totem_object_action_remote_set_setting (TotemObject *totem,
 	action = NULL;
 
 	switch (setting) {
-	case TOTEM_REMOTE_SETTING_SHUFFLE:
-		action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
+	case XPLAYER_REMOTE_SETTING_SHUFFLE:
+		action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 		break;
-	case TOTEM_REMOTE_SETTING_REPEAT:
-		action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
+	case XPLAYER_REMOTE_SETTING_REPEAT:
+		action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 		break;
 	default:
 		g_assert_not_reached ();
@@ -3155,27 +3155,27 @@ void totem_object_action_remote_set_setting (TotemObject *totem,
 }
 
 /**
- * totem_object_action_remote_get_setting:
- * @totem: a #TotemObject
- * @setting: a #TotemRemoteSetting
+ * xplayer_object_action_remote_get_setting:
+ * @xplayer: a #XplayerObject
+ * @setting: a #XplayerRemoteSetting
  *
- * Returns the value of @setting for this instance of Totem.
+ * Returns the value of @setting for this instance of Xplayer.
  *
  * Return value: %TRUE if the setting is enabled, %FALSE otherwise
  **/
-gboolean totem_object_action_remote_get_setting (TotemObject *totem,
-						 TotemRemoteSetting setting)
+gboolean xplayer_object_action_remote_get_setting (XplayerObject *xplayer,
+						 XplayerRemoteSetting setting)
 {
 	GtkAction *action;
 
 	action = NULL;
 
 	switch (setting) {
-	case TOTEM_REMOTE_SETTING_SHUFFLE:
-		action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
+	case XPLAYER_REMOTE_SETTING_SHUFFLE:
+		action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 		break;
-	case TOTEM_REMOTE_SETTING_REPEAT:
-		action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
+	case XPLAYER_REMOTE_SETTING_REPEAT:
+		action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 		break;
 	default:
 		g_assert_not_reached ();
@@ -3185,195 +3185,195 @@ gboolean totem_object_action_remote_get_setting (TotemObject *totem,
 }
 
 static void
-playlist_changed_cb (GtkWidget *playlist, TotemObject *totem)
+playlist_changed_cb (GtkWidget *playlist, XplayerObject *xplayer)
 {
 	char *mrl, *subtitle;
 
-	update_buttons (totem);
-	mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+	update_buttons (xplayer);
+	mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 
 	if (mrl == NULL)
 		return;
 
-	if (totem_playlist_get_playing (totem->playlist) == TOTEM_PLAYLIST_STATUS_NONE)
-		totem_action_set_mrl_and_play (totem, mrl, subtitle);
+	if (xplayer_playlist_get_playing (xplayer->playlist) == XPLAYER_PLAYLIST_STATUS_NONE)
+		xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 
 	g_free (mrl);
 	g_free (subtitle);
 }
 
 static void
-item_activated_cb (GtkWidget *playlist, TotemObject *totem)
+item_activated_cb (GtkWidget *playlist, XplayerObject *xplayer)
 {
-	totem_action_seek (totem, 0);
+	xplayer_action_seek (xplayer, 0);
 }
 
 static void
-current_removed_cb (GtkWidget *playlist, TotemObject *totem)
+current_removed_cb (GtkWidget *playlist, XplayerObject *xplayer)
 {
 	char *mrl, *subtitle;
 
 	/* Set play button status */
-	play_pause_set_label (totem, STATE_STOPPED);
-	mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+	play_pause_set_label (xplayer, STATE_STOPPED);
+	mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 
 	if (mrl == NULL) {
 		g_free (subtitle);
 		subtitle = NULL;
-		totem_playlist_set_at_start (totem->playlist);
-		update_buttons (totem);
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+		xplayer_playlist_set_at_start (xplayer->playlist);
+		update_buttons (xplayer);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 	} else {
-		update_buttons (totem);
+		update_buttons (xplayer);
 	}
 
-	totem_action_set_mrl_and_play (totem, mrl, subtitle);
+	xplayer_action_set_mrl_and_play (xplayer, mrl, subtitle);
 	g_free (mrl);
 	g_free (subtitle);
 }
 
 static void
-subtitle_changed_cb (GtkWidget *playlist, TotemObject *totem)
+subtitle_changed_cb (GtkWidget *playlist, XplayerObject *xplayer)
 {
 	char *mrl, *subtitle;
 
-	mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-	bacon_video_widget_set_text_subtitle (totem->bvw, subtitle);
+	mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+	bacon_video_widget_set_text_subtitle (xplayer->bvw, subtitle);
 
 	g_free (mrl);
 	g_free (subtitle);
 }
 
 static void
-playlist_repeat_toggle_cb (TotemPlaylist *playlist, gboolean repeat, TotemObject *totem)
+playlist_repeat_toggle_cb (XplayerPlaylist *playlist, gboolean repeat, XplayerObject *xplayer)
 {
 	GtkAction *action;
 
-	action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 
 	g_signal_handlers_block_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-			NULL, NULL, totem);
+			NULL, NULL, xplayer);
 
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), repeat);
 
 	g_signal_handlers_unblock_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-			NULL, NULL, totem);
+			NULL, NULL, xplayer);
 }
 
 static void
-playlist_shuffle_toggle_cb (TotemPlaylist *playlist, gboolean shuffle, TotemObject *totem)
+playlist_shuffle_toggle_cb (XplayerPlaylist *playlist, gboolean shuffle, XplayerObject *xplayer)
 {
 	GtkAction *action;
 
-	action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 
 	g_signal_handlers_block_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-			NULL, NULL, totem);
+			NULL, NULL, xplayer);
 
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), shuffle);
 
 	g_signal_handlers_unblock_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-			NULL, NULL, totem);
+			NULL, NULL, xplayer);
 }
 
 /**
- * totem_is_fullscreen:
- * @totem: a #TotemObject
+ * xplayer_is_fullscreen:
+ * @xplayer: a #XplayerObject
  *
- * Returns %TRUE if Totem is fullscreened.
+ * Returns %TRUE if Xplayer is fullscreened.
  *
- * Return value: %TRUE if Totem is fullscreened
+ * Return value: %TRUE if Xplayer is fullscreened
  **/
 gboolean
-totem_is_fullscreen (TotemObject *totem)
+xplayer_is_fullscreen (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), FALSE);
 
-	return (totem->controls_visibility == TOTEM_CONTROLS_FULLSCREEN);
+	return (xplayer->controls_visibility == XPLAYER_CONTROLS_FULLSCREEN);
 }
 
 /**
- * totem_object_is_playing:
- * @totem: a #TotemObject
+ * xplayer_object_is_playing:
+ * @xplayer: a #XplayerObject
  *
- * Returns %TRUE if Totem is playing a stream.
+ * Returns %TRUE if Xplayer is playing a stream.
  *
- * Return value: %TRUE if Totem is playing a stream
+ * Return value: %TRUE if Xplayer is playing a stream
  **/
 gboolean
-totem_object_is_playing (TotemObject *totem)
+xplayer_object_is_playing (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), FALSE);
 
-	if (totem->bvw == NULL)
+	if (xplayer->bvw == NULL)
 		return FALSE;
 
-	return bacon_video_widget_is_playing (totem->bvw) != FALSE;
+	return bacon_video_widget_is_playing (xplayer->bvw) != FALSE;
 }
 
 /**
- * totem_object_is_paused:
- * @totem: a #TotemObject
+ * xplayer_object_is_paused:
+ * @xplayer: a #XplayerObject
  *
  * Returns %TRUE if playback is paused.
  *
  * Return value: %TRUE if playback is paused, %FALSE otherwise
  **/
 gboolean
-totem_object_is_paused (TotemObject *totem)
+xplayer_object_is_paused (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), FALSE);
 
-	return totem->state == STATE_PAUSED;
+	return xplayer->state == STATE_PAUSED;
 }
 
 /**
- * totem_object_is_seekable:
- * @totem: a #TotemObject
+ * xplayer_object_is_seekable:
+ * @xplayer: a #XplayerObject
  *
  * Returns %TRUE if the current stream is seekable.
  *
  * Return value: %TRUE if the current stream is seekable
  **/
 gboolean
-totem_object_is_seekable (TotemObject *totem)
+xplayer_object_is_seekable (XplayerObject *xplayer)
 {
-	g_return_val_if_fail (TOTEM_IS_OBJECT (totem), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_OBJECT (xplayer), FALSE);
 
-	if (totem->bvw == NULL)
+	if (xplayer->bvw == NULL)
 		return FALSE;
 
-	return bacon_video_widget_is_seekable (totem->bvw) != FALSE;
+	return bacon_video_widget_is_seekable (xplayer->bvw) != FALSE;
 }
 
 static void
-on_mouse_click_fullscreen (GtkWidget *widget, TotemObject *totem)
+on_mouse_click_fullscreen (GtkWidget *widget, XplayerObject *xplayer)
 {
-	if (totem_fullscreen_is_fullscreen (totem->fs) != FALSE)
-		totem_fullscreen_show_popups (totem->fs, TRUE);
+	if (xplayer_fullscreen_is_fullscreen (xplayer->fs) != FALSE)
+		xplayer_fullscreen_show_popups (xplayer->fs, TRUE);
 }
 
 static gboolean
 on_video_button_press_event (BaconVideoWidget *bvw, GdkEventButton *event,
-		TotemObject *totem)
+		XplayerObject *xplayer)
 {
 	if (event->type == GDK_BUTTON_PRESS && event->button == 1) {
 		gtk_widget_grab_focus (GTK_WIDGET (bvw));
 		return TRUE;
 	} else if (event->type == GDK_2BUTTON_PRESS && event->button == 1) {
-		totem_action_fullscreen_toggle(totem);
+		xplayer_action_fullscreen_toggle(xplayer);
 		return TRUE;
 	} else if (event->type == GDK_BUTTON_PRESS && event->button == 2) {
 		const char *icon_name;
-		if (bacon_video_widget_is_playing (totem->bvw) == FALSE)
-			icon_name = totem_get_rtl_icon_name ("media-playback-start");
+		if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE)
+			icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 		else
 			icon_name = "media-playback-pause-symbolic";
-		totem_fullscreen_show_popups_or_osd (totem->fs, icon_name, FALSE);
-		totem_action_play_pause (totem);
+		xplayer_fullscreen_show_popups_or_osd (xplayer->fs, icon_name, FALSE);
+		xplayer_action_play_pause (xplayer);
 		return TRUE;
 	} else if (event->type == GDK_BUTTON_PRESS && event->button == 3) {
-		totem_action_menu_popup (totem, event->button);
+		xplayer_action_menu_popup (xplayer, event->button);
 		return TRUE;
 	}
 
@@ -3381,40 +3381,40 @@ on_video_button_press_event (BaconVideoWidget *bvw, GdkEventButton *event,
 }
 
 static gboolean
-on_eos_event (GtkWidget *widget, TotemObject *totem)
+on_eos_event (GtkWidget *widget, XplayerObject *xplayer)
 {
-	reset_seek_status (totem);
+	reset_seek_status (xplayer);
 
-	if (bacon_video_widget_get_logo_mode (totem->bvw) != FALSE)
+	if (bacon_video_widget_get_logo_mode (xplayer->bvw) != FALSE)
 		return FALSE;
 
-	if (totem_playlist_has_next_mrl (totem->playlist) == FALSE &&
-	    totem_playlist_get_repeat (totem->playlist) == FALSE &&
-	    (totem_playlist_get_last (totem->playlist) != 0 ||
-	     totem_is_seekable (totem) == FALSE)) {
+	if (xplayer_playlist_has_next_mrl (xplayer->playlist) == FALSE &&
+	    xplayer_playlist_get_repeat (xplayer->playlist) == FALSE &&
+	    (xplayer_playlist_get_last (xplayer->playlist) != 0 ||
+	     xplayer_is_seekable (xplayer) == FALSE)) {
 		char *mrl, *subtitle;
 
 		/* Set play button status */
-		totem_playlist_set_at_start (totem->playlist);
-		update_buttons (totem);
-		totem_action_stop (totem);
-		mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
-		totem_action_set_mrl_with_warning (totem, mrl, subtitle, FALSE);
-		bacon_video_widget_pause (totem->bvw);
+		xplayer_playlist_set_at_start (xplayer->playlist);
+		update_buttons (xplayer);
+		xplayer_action_stop (xplayer);
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+		xplayer_action_set_mrl_with_warning (xplayer, mrl, subtitle, FALSE);
+		bacon_video_widget_pause (xplayer->bvw);
 		g_free (mrl);
 		g_free (subtitle);
 	} else {
-		if (totem_playlist_get_last (totem->playlist) == 0 &&
-		    totem_is_seekable (totem)) {
-			if (totem_playlist_get_repeat (totem->playlist) != FALSE) {
-				totem_action_seek_time (totem, 0, FALSE);
-				totem_action_play (totem);
+		if (xplayer_playlist_get_last (xplayer->playlist) == 0 &&
+		    xplayer_is_seekable (xplayer)) {
+			if (xplayer_playlist_get_repeat (xplayer->playlist) != FALSE) {
+				xplayer_action_seek_time (xplayer, 0, FALSE);
+				xplayer_action_play (xplayer);
 			} else {
-				totem_action_pause (totem);
-				totem_action_seek_time (totem, 0, FALSE);
+				xplayer_action_pause (xplayer);
+				xplayer_action_seek_time (xplayer, 0, FALSE);
 			}
 		} else {
-			totem_action_next (totem);
+			xplayer_action_next (xplayer);
 		}
 	}
 
@@ -3422,15 +3422,15 @@ on_eos_event (GtkWidget *widget, TotemObject *totem)
 }
 
 static gboolean
-totem_action_handle_key_release (TotemObject *totem, GdkEventKey *event)
+xplayer_action_handle_key_release (XplayerObject *xplayer, GdkEventKey *event)
 {
 	gboolean retval = TRUE;
 
 	switch (event->keyval) {
 	case GDK_KEY_Left:
 	case GDK_KEY_Right:
-		totem_statusbar_set_seeking (TOTEM_STATUSBAR (totem->statusbar), FALSE);
-		totem_time_label_set_seeking (TOTEM_TIME_LABEL (totem->fs->time_label), FALSE);
+		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
+		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		break;
 	default:
 		retval = FALSE;
@@ -3440,27 +3440,27 @@ totem_action_handle_key_release (TotemObject *totem, GdkEventKey *event)
 }
 
 static void
-totem_action_handle_seek (TotemObject *totem, GdkEventKey *event, gboolean is_forward)
+xplayer_action_handle_seek (XplayerObject *xplayer, GdkEventKey *event, gboolean is_forward)
 {
 	if (is_forward != FALSE) {
 		if (event->state & GDK_SHIFT_MASK)
-			totem_action_seek_relative (totem, SEEK_FORWARD_SHORT_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_FORWARD_SHORT_OFFSET * 1000, FALSE);
 		else if (event->state & GDK_CONTROL_MASK)
-			totem_action_seek_relative (totem, SEEK_FORWARD_LONG_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_FORWARD_LONG_OFFSET * 1000, FALSE);
 		else
-			totem_action_seek_relative (totem, SEEK_FORWARD_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_FORWARD_OFFSET * 1000, FALSE);
 	} else {
 		if (event->state & GDK_SHIFT_MASK)
-			totem_action_seek_relative (totem, SEEK_BACKWARD_SHORT_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_SHORT_OFFSET * 1000, FALSE);
 		else if (event->state & GDK_CONTROL_MASK)
-			totem_action_seek_relative (totem, SEEK_BACKWARD_LONG_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_LONG_OFFSET * 1000, FALSE);
 		else
-			totem_action_seek_relative (totem, SEEK_BACKWARD_OFFSET * 1000, FALSE);
+			xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_OFFSET * 1000, FALSE);
 	}
 }
 
 static gboolean
-totem_action_handle_key_press (TotemObject *totem, GdkEventKey *event)
+xplayer_action_handle_key_press (XplayerObject *xplayer, GdkEventKey *event)
 {
 	gboolean retval;
 	const char *icon_name;
@@ -3471,120 +3471,120 @@ totem_action_handle_key_press (TotemObject *totem, GdkEventKey *event)
 	switch (event->keyval) {
 	case GDK_KEY_A:
 	case GDK_KEY_a:
-		totem_action_toggle_aspect_ratio (totem);
+		xplayer_action_toggle_aspect_ratio (xplayer);
 		break;
 	case GDK_KEY_AudioPrev:
 	case GDK_KEY_Back:
 	case GDK_KEY_B:
 	case GDK_KEY_b:
-		totem_action_previous (totem);
-		icon_name = totem_get_rtl_icon_name ("media-skip-backward");
+		xplayer_action_previous (xplayer);
+		icon_name = xplayer_get_rtl_icon_name ("media-skip-backward");
 		break;
 	case GDK_KEY_C:
 	case GDK_KEY_c:
-		bacon_video_widget_dvd_event (totem->bvw,
+		bacon_video_widget_dvd_event (xplayer->bvw,
 				BVW_DVD_CHAPTER_MENU);
 		break;
 	case GDK_KEY_F11:
 	case GDK_KEY_f:
 	case GDK_KEY_F:
-		totem_action_fullscreen_toggle (totem);
+		xplayer_action_fullscreen_toggle (xplayer);
 		break;
 	case GDK_KEY_g:
 	case GDK_KEY_G:
-		totem_action_next_angle (totem);
+		xplayer_action_next_angle (xplayer);
 		break;
 	case GDK_KEY_h:
 	case GDK_KEY_H:
-		totem_action_toggle_controls (totem);
+		xplayer_action_toggle_controls (xplayer);
 		break;
 	case GDK_KEY_M:
 	case GDK_KEY_m:
-		bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU);
+		bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU);
 		break;
 	case GDK_KEY_AudioNext:
 	case GDK_KEY_Forward:
 	case GDK_KEY_N:
 	case GDK_KEY_n:
 	case GDK_KEY_End:
-		totem_action_next (totem);
-		icon_name = totem_get_rtl_icon_name ("media-skip-forward");
+		xplayer_action_next (xplayer);
+		icon_name = xplayer_get_rtl_icon_name ("media-skip-forward");
 		break;
 	case GDK_KEY_OpenURL:
-		totem_action_fullscreen (totem, FALSE);
-		totem_action_open_location (totem);
+		xplayer_action_fullscreen (xplayer, FALSE);
+		xplayer_action_open_location (xplayer);
 		break;
 	case GDK_KEY_O:
 	case GDK_KEY_o:
 	case GDK_KEY_Open:
-		totem_action_fullscreen (totem, FALSE);
-		totem_action_open (totem);
+		xplayer_action_fullscreen (xplayer, FALSE);
+		xplayer_action_open (xplayer);
 		break;
 	case GDK_KEY_AudioPlay:
 	case GDK_KEY_p:
 	case GDK_KEY_P:
 		if (event->state & GDK_CONTROL_MASK) {
-			totem_action_show_properties (totem);
+			xplayer_action_show_properties (xplayer);
 		} else {
-			if (bacon_video_widget_is_playing (totem->bvw) == FALSE)
-				icon_name = totem_get_rtl_icon_name ("media-playback-start");
+			if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE)
+				icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 			else
 				icon_name = "media-playback-pause-symbolic";
-			totem_action_play_pause (totem);
+			xplayer_action_play_pause (xplayer);
 		}
 		break;
 	case GDK_KEY_comma:
-		totem_action_pause (totem);
-		bacon_video_widget_step (totem->bvw, FALSE, NULL);
+		xplayer_action_pause (xplayer);
+		bacon_video_widget_step (xplayer->bvw, FALSE, NULL);
 		break;
 	case GDK_KEY_period:
-		totem_action_pause (totem);
-		bacon_video_widget_step (totem->bvw, TRUE, NULL);
+		xplayer_action_pause (xplayer);
+		bacon_video_widget_step (xplayer->bvw, TRUE, NULL);
 		break;
 	case GDK_KEY_AudioPause:
 	case GDK_KEY_Pause:
 	case GDK_KEY_AudioStop:
-		totem_action_pause (totem);
+		xplayer_action_pause (xplayer);
 		icon_name = "media-playback-pause-symbolic";
 		break;
 	case GDK_KEY_q:
 	case GDK_KEY_Q:
-		totem_action_exit (totem);
+		xplayer_action_exit (xplayer);
 		break;
 	case GDK_KEY_r:
 	case GDK_KEY_R:
 	case GDK_KEY_ZoomIn:
-		totem_action_set_zoom (totem, TRUE);
+		xplayer_action_set_zoom (xplayer, TRUE);
 		break;
 	case GDK_KEY_t:
 	case GDK_KEY_T:
 	case GDK_KEY_ZoomOut:
-		totem_action_set_zoom (totem, FALSE);
+		xplayer_action_set_zoom (xplayer, FALSE);
 		break;
 	case GDK_KEY_Eject:
-		totem_action_eject (totem);
+		xplayer_action_eject (xplayer);
 		icon_name = "media-eject";
 		break;
 	case GDK_KEY_Escape:
 		if (event->state & GDK_SUPER_MASK)
-			bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU);
+			bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU);
 		else
-			totem_action_fullscreen (totem, FALSE);
+			xplayer_action_fullscreen (xplayer, FALSE);
 		break;
 	case GDK_KEY_space:
 	case GDK_KEY_Return:
 		if (!(event->state & GDK_CONTROL_MASK)) {
-			GtkWidget *focus = gtk_window_get_focus (GTK_WINDOW (totem->win));
-			if (totem_is_fullscreen (totem) != FALSE || focus == NULL ||
-			    focus == GTK_WIDGET (totem->bvw) || focus == totem->seek) {
+			GtkWidget *focus = gtk_window_get_focus (GTK_WINDOW (xplayer->win));
+			if (xplayer_is_fullscreen (xplayer) != FALSE || focus == NULL ||
+			    focus == GTK_WIDGET (xplayer->bvw) || focus == xplayer->seek) {
 				if (event->keyval == GDK_KEY_space) {
-					if (bacon_video_widget_is_playing (totem->bvw) == FALSE)
-						icon_name = totem_get_rtl_icon_name ("media-playback-start");
+					if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE)
+						icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 					else
 						icon_name = "media-playback-pause-symbolic";
-					totem_action_play_pause (totem);
-				} else if (bacon_video_widget_has_menus (totem->bvw) != FALSE) {
-					bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU_SELECT);
+					xplayer_action_play_pause (xplayer);
+				} else if (bacon_video_widget_has_menus (xplayer->bvw) != FALSE) {
+					bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU_SELECT);
 				}
 			} else
 				retval = FALSE;
@@ -3592,121 +3592,121 @@ totem_action_handle_key_press (TotemObject *totem, GdkEventKey *event)
 		break;
 	case GDK_KEY_Left:
 	case GDK_KEY_Right:
-		if (bacon_video_widget_has_menus (totem->bvw) == FALSE) {
+		if (bacon_video_widget_has_menus (xplayer->bvw) == FALSE) {
 			gboolean is_forward;
 
 			is_forward = (event->keyval == GDK_KEY_Right);
 			/* Switch direction in RTL environment */
-			if (gtk_widget_get_direction (totem->win) == GTK_TEXT_DIR_RTL)
+			if (gtk_widget_get_direction (xplayer->win) == GTK_TEXT_DIR_RTL)
 				is_forward = !is_forward;
-			icon_name = totem_get_rtl_icon_name (is_forward ? "media-seek-forward" : "media-seek-backward");
+			icon_name = xplayer_get_rtl_icon_name (is_forward ? "media-seek-forward" : "media-seek-backward");
 
-			totem_action_handle_seek (totem, event, is_forward);
+			xplayer_action_handle_seek (xplayer, event, is_forward);
 		} else {
 			if (event->keyval == GDK_KEY_Left)
-				bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU_LEFT);
+				bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU_LEFT);
 			else
-				bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU_RIGHT);
+				bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU_RIGHT);
 		}
 		break;
 	case GDK_KEY_Home:
-		totem_action_seek (totem, 0);
-		icon_name = totem_get_rtl_icon_name ("media-seek-backward");
+		xplayer_action_seek (xplayer, 0);
+		icon_name = xplayer_get_rtl_icon_name ("media-seek-backward");
 		break;
 	case GDK_KEY_Up:
-		if (bacon_video_widget_has_menus (totem->bvw) != FALSE)
-			bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU_UP);
+		if (bacon_video_widget_has_menus (xplayer->bvw) != FALSE)
+			bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU_UP);
 		else if (event->state & GDK_SHIFT_MASK)
-			totem_action_volume_relative (totem, VOLUME_UP_SHORT_OFFSET);
+			xplayer_action_volume_relative (xplayer, VOLUME_UP_SHORT_OFFSET);
 		else
-			totem_action_volume_relative (totem, VOLUME_UP_OFFSET);
+			xplayer_action_volume_relative (xplayer, VOLUME_UP_OFFSET);
 		break;
 	case GDK_KEY_Down:
-		if (bacon_video_widget_has_menus (totem->bvw) != FALSE)
-			bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU_DOWN);
+		if (bacon_video_widget_has_menus (xplayer->bvw) != FALSE)
+			bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU_DOWN);
 		else if (event->state & GDK_SHIFT_MASK)
-			totem_action_volume_relative (totem, VOLUME_DOWN_SHORT_OFFSET);
+			xplayer_action_volume_relative (xplayer, VOLUME_DOWN_SHORT_OFFSET);
 		else
-			totem_action_volume_relative (totem, VOLUME_DOWN_OFFSET);
+			xplayer_action_volume_relative (xplayer, VOLUME_DOWN_OFFSET);
 		break;
 	case GDK_KEY_0:
 		if (event->state & GDK_CONTROL_MASK)
-			totem_action_set_zoom (totem, FALSE);
+			xplayer_action_set_zoom (xplayer, FALSE);
 		else
-			totem_action_set_scale_ratio (totem, 0.5);
+			xplayer_action_set_scale_ratio (xplayer, 0.5);
 		break;
 	case GDK_KEY_onehalf:
-		totem_action_set_scale_ratio (totem, 0.5);
+		xplayer_action_set_scale_ratio (xplayer, 0.5);
 		break;
 	case GDK_KEY_1:
-		totem_action_set_scale_ratio (totem, 1);
+		xplayer_action_set_scale_ratio (xplayer, 1);
 		break;
 	case GDK_KEY_2:
-		totem_action_set_scale_ratio (totem, 2);
+		xplayer_action_set_scale_ratio (xplayer, 2);
 		break;
 	case GDK_KEY_Menu:
-		totem_action_menu_popup (totem, 0);
+		xplayer_action_menu_popup (xplayer, 0);
 		break;
 	case GDK_KEY_F10:
 		if (!(event->state & GDK_SHIFT_MASK))
 			return FALSE;
 
-		totem_action_menu_popup (totem, 0);
+		xplayer_action_menu_popup (xplayer, 0);
 		break;
 	case GDK_KEY_equal:
 		if (event->state & GDK_CONTROL_MASK)
-			totem_action_set_zoom (totem, TRUE);
+			xplayer_action_set_zoom (xplayer, TRUE);
 		break;
 	case GDK_KEY_hyphen:
 		if (event->state & GDK_CONTROL_MASK)
-			totem_action_set_zoom (totem, FALSE);
+			xplayer_action_set_zoom (xplayer, FALSE);
 		break;
 	case GDK_KEY_plus:
 	case GDK_KEY_KP_Add:
 		if (!(event->state & GDK_CONTROL_MASK)) {
-			totem_action_next (totem);
+			xplayer_action_next (xplayer);
 		} else {
-			totem_action_set_zoom (totem, TRUE);
+			xplayer_action_set_zoom (xplayer, TRUE);
 		}
 		break;
 	case GDK_KEY_minus:
 	case GDK_KEY_KP_Subtract:
 		if (!(event->state & GDK_CONTROL_MASK)) {
-			totem_action_previous (totem);
+			xplayer_action_previous (xplayer);
 		} else {
-			totem_action_set_zoom (totem, FALSE);
+			xplayer_action_set_zoom (xplayer, FALSE);
 		}
 		break;
 	case GDK_KEY_KP_Up:
 	case GDK_KEY_KP_8:
-		bacon_video_widget_dvd_event (totem->bvw, 
+		bacon_video_widget_dvd_event (xplayer->bvw, 
 					      BVW_DVD_ROOT_MENU_UP);
 		break;
 	case GDK_KEY_KP_Down:
 	case GDK_KEY_KP_2:
-		bacon_video_widget_dvd_event (totem->bvw, 
+		bacon_video_widget_dvd_event (xplayer->bvw, 
 					      BVW_DVD_ROOT_MENU_DOWN);
 		break;
 	case GDK_KEY_KP_Right:
 	case GDK_KEY_KP_6:
-		bacon_video_widget_dvd_event (totem->bvw, 
+		bacon_video_widget_dvd_event (xplayer->bvw, 
 					      BVW_DVD_ROOT_MENU_RIGHT);
 		break;
 	case GDK_KEY_KP_Left:
 	case GDK_KEY_KP_4:
-		bacon_video_widget_dvd_event (totem->bvw, 
+		bacon_video_widget_dvd_event (xplayer->bvw, 
 					      BVW_DVD_ROOT_MENU_LEFT);
 		break;
 	case GDK_KEY_KP_Begin:
 	case GDK_KEY_KP_5:
-		bacon_video_widget_dvd_event (totem->bvw,
+		bacon_video_widget_dvd_event (xplayer->bvw,
 					      BVW_DVD_ROOT_MENU_SELECT);
 	default:
 		retval = FALSE;
 	}
 
 	if (icon_name != NULL)
-		totem_fullscreen_show_popups_or_osd (totem->fs,
+		xplayer_fullscreen_show_popups_or_osd (xplayer->fs,
 						     icon_name,
 						     FALSE);
 
@@ -3714,7 +3714,7 @@ totem_action_handle_key_press (TotemObject *totem, GdkEventKey *event)
 }
 
 static gboolean
-totem_action_handle_scroll (TotemObject    *totem,
+xplayer_action_handle_scroll (XplayerObject    *xplayer,
 			    const GdkEvent *event)
 {
 	gboolean retval = TRUE;
@@ -3723,8 +3723,8 @@ totem_action_handle_scroll (TotemObject    *totem,
 
 	direction = sevent->direction;
 
-	if (totem_fullscreen_is_fullscreen (totem->fs) != FALSE)
-		totem_fullscreen_show_popups (totem->fs, TRUE);
+	if (xplayer_fullscreen_is_fullscreen (xplayer->fs) != FALSE)
+		xplayer_fullscreen_show_popups (xplayer->fs, TRUE);
 
 	if (direction == GDK_SCROLL_SMOOTH) {
 		gdouble y;
@@ -3734,10 +3734,10 @@ totem_action_handle_scroll (TotemObject    *totem,
 
 	switch (direction) {
 	case GDK_SCROLL_UP:
-		totem_action_seek_relative (totem, SEEK_FORWARD_SHORT_OFFSET * 1000, FALSE);
+		xplayer_action_seek_relative (xplayer, SEEK_FORWARD_SHORT_OFFSET * 1000, FALSE);
 		break;
 	case GDK_SCROLL_DOWN:
-		totem_action_seek_relative (totem, SEEK_BACKWARD_SHORT_OFFSET * 1000, FALSE);
+		xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_SHORT_OFFSET * 1000, FALSE);
 		break;
 	default:
 		retval = FALSE;
@@ -3747,25 +3747,25 @@ totem_action_handle_scroll (TotemObject    *totem,
 }
 
 gboolean
-window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, TotemObject *totem)
+window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, XplayerObject *xplayer)
 {
 	gboolean sidebar_handles_kbd;
 
 	/* Shortcuts disabled? */
-	if (totem->disable_kbd_shortcuts != FALSE)
+	if (xplayer->disable_kbd_shortcuts != FALSE)
 		return FALSE;
 
 	/* Check whether the sidebar needs the key events */
 	if (event->type == GDK_KEY_PRESS) {
-		if (totem_sidebar_is_focused (totem, &sidebar_handles_kbd) != FALSE) {
+		if (xplayer_sidebar_is_focused (xplayer, &sidebar_handles_kbd) != FALSE) {
 			/* Make Escape pass the focus to the video widget */
 			if (sidebar_handles_kbd == FALSE &&
 			    event->keyval == GDK_KEY_Escape)
-				gtk_widget_grab_focus (GTK_WIDGET (totem->bvw));
+				gtk_widget_grab_focus (GTK_WIDGET (xplayer->bvw));
 			return FALSE;
 		}
 	} else {
-		if (totem_sidebar_is_focused (totem, NULL) != FALSE)
+		if (xplayer_sidebar_is_focused (xplayer, NULL) != FALSE)
 			return FALSE;
 	}
 
@@ -3793,9 +3793,9 @@ window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, TotemObject *tote
 		case GDK_KEY_equal:
 		case GDK_KEY_hyphen:
 			if (event->type == GDK_KEY_PRESS)
-				return totem_action_handle_key_press (totem, event);
+				return xplayer_action_handle_key_press (xplayer, event);
 			else
-				return totem_action_handle_key_release (totem, event);
+				return xplayer_action_handle_key_release (xplayer, event);
 		default:
 			break;
 		}
@@ -3805,9 +3805,9 @@ window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, TotemObject *tote
 		switch (event->keyval) {
 		case GDK_KEY_Escape:
 			if (event->type == GDK_KEY_PRESS)
-				return totem_action_handle_key_press (totem, event);
+				return xplayer_action_handle_key_press (xplayer, event);
 			else
-				return totem_action_handle_key_release (totem, event);
+				return xplayer_action_handle_key_release (xplayer, event);
 		default:
 			break;
 		}
@@ -3825,77 +3825,77 @@ window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, TotemObject *tote
 		return FALSE;
 
 	if (event->type == GDK_KEY_PRESS) {
-		return totem_action_handle_key_press (totem, event);
+		return xplayer_action_handle_key_press (xplayer, event);
 	} else {
-		return totem_action_handle_key_release (totem, event);
+		return xplayer_action_handle_key_release (xplayer, event);
 	}
 }
 
 gboolean
-window_scroll_event_cb (GtkWidget *win, GdkEvent *event, TotemObject *totem)
+window_scroll_event_cb (GtkWidget *win, GdkEvent *event, XplayerObject *xplayer)
 {
-	return totem_action_handle_scroll (totem, event);
+	return xplayer_action_handle_scroll (xplayer, event);
 }
 
 static void
-update_media_menu_items (TotemObject *totem)
+update_media_menu_items (XplayerObject *xplayer)
 {
 	GMount *mount;
 	gboolean playing;
 
-	playing = totem_playing_dvd (totem->mrl);
+	playing = xplayer_playing_dvd (xplayer->mrl);
 
-	totem_action_set_sensitivity ("dvd-root-menu", playing);
-	totem_action_set_sensitivity ("dvd-title-menu", playing);
-	totem_action_set_sensitivity ("dvd-audio-menu", playing);
-	totem_action_set_sensitivity ("dvd-angle-menu", playing);
-	totem_action_set_sensitivity ("dvd-chapter-menu", playing);
+	xplayer_action_set_sensitivity ("dvd-root-menu", playing);
+	xplayer_action_set_sensitivity ("dvd-title-menu", playing);
+	xplayer_action_set_sensitivity ("dvd-audio-menu", playing);
+	xplayer_action_set_sensitivity ("dvd-angle-menu", playing);
+	xplayer_action_set_sensitivity ("dvd-chapter-menu", playing);
 
-	totem_action_set_sensitivity ("next-angle",
-				      bacon_video_widget_has_angles (totem->bvw));
+	xplayer_action_set_sensitivity ("next-angle",
+				      bacon_video_widget_has_angles (xplayer->bvw));
 
-	mount = totem_get_mount_for_media (totem->mrl);
-	totem_action_set_sensitivity ("eject", mount != NULL);
+	mount = xplayer_get_mount_for_media (xplayer->mrl);
+	xplayer_action_set_sensitivity ("eject", mount != NULL);
 	if (mount != NULL)
 		g_object_unref (mount);
 }
 
 static void
-update_buttons (TotemObject *totem)
+update_buttons (XplayerObject *xplayer)
 {
 	gboolean has_item;
 
 	/* Previous */
-	has_item = bacon_video_widget_has_previous_track (totem->bvw) ||
-		totem_playlist_has_previous_mrl (totem->playlist) ||
-		totem_playlist_get_repeat (totem->playlist);
-	totem_action_set_sensitivity ("previous-chapter", has_item);
+	has_item = bacon_video_widget_has_previous_track (xplayer->bvw) ||
+		xplayer_playlist_has_previous_mrl (xplayer->playlist) ||
+		xplayer_playlist_get_repeat (xplayer->playlist);
+	xplayer_action_set_sensitivity ("previous-chapter", has_item);
 
 	/* Next */
-	has_item = bacon_video_widget_has_next_track (totem->bvw) ||
-		totem_playlist_has_next_mrl (totem->playlist) ||
-		totem_playlist_get_repeat (totem->playlist);
-	totem_action_set_sensitivity ("next-chapter", has_item);
+	has_item = bacon_video_widget_has_next_track (xplayer->bvw) ||
+		xplayer_playlist_has_next_mrl (xplayer->playlist) ||
+		xplayer_playlist_get_repeat (xplayer->playlist);
+	xplayer_action_set_sensitivity ("next-chapter", has_item);
 }
 
 void
-main_pane_size_allocated (GtkWidget *main_pane, GtkAllocation *allocation, TotemObject *totem)
+main_pane_size_allocated (GtkWidget *main_pane, GtkAllocation *allocation, XplayerObject *xplayer)
 {
 	gulong handler_id;
 
-	if (!totem->maximised || gtk_widget_get_mapped (totem->win)) {
+	if (!xplayer->maximised || gtk_widget_get_mapped (xplayer->win)) {
 		handler_id = g_signal_handler_find (main_pane, 
 				G_SIGNAL_MATCH_FUNC | G_SIGNAL_MATCH_DATA,
 				0, 0, NULL,
-				main_pane_size_allocated, totem);
+				main_pane_size_allocated, xplayer);
 		g_signal_handler_disconnect (main_pane, handler_id);
 
-		gtk_paned_set_position (GTK_PANED (main_pane), allocation->width - totem->sidebar_w);
+		gtk_paned_set_position (GTK_PANED (main_pane), allocation->width - xplayer->sidebar_w);
 	}
 }
 
 char *
-totem_setup_window (TotemObject *totem)
+xplayer_setup_window (XplayerObject *xplayer)
 {
 	GKeyFile *keyfile;
 	int w, h;
@@ -3905,11 +3905,11 @@ totem_setup_window (TotemObject *totem)
 	GtkWidget *vbox;
 	GdkRGBA black;
 
-	filename = g_build_filename (totem_dot_dir (), "state.ini", NULL);
+	filename = g_build_filename (xplayer_dot_dir (), "state.ini", NULL);
 	keyfile = g_key_file_new ();
 	if (g_key_file_load_from_file (keyfile, filename,
 			G_KEY_FILE_NONE, NULL) == FALSE) {
-		totem->sidebar_w = 0;
+		xplayer->sidebar_w = 0;
 		w = DEFAULT_WINDOW_W;
 		h = DEFAULT_WINDOW_H;
 		show_sidebar = TRUE;
@@ -3940,7 +3940,7 @@ totem_setup_window (TotemObject *totem)
 			err = NULL;
 		}
 
-		totem->maximised = g_key_file_get_boolean (keyfile, "State",
+		xplayer->maximised = g_key_file_get_boolean (keyfile, "State",
 				"maximised", &err);
 		if (err != NULL) {
 			g_error_free (err);
@@ -3955,35 +3955,35 @@ totem_setup_window (TotemObject *totem)
 			err = NULL;
 		}
 
-		totem->sidebar_w = g_key_file_get_integer (keyfile, "State",
+		xplayer->sidebar_w = g_key_file_get_integer (keyfile, "State",
 				"sidebar_w", &err);
 		if (err != NULL) {
 			g_error_free (err);
-			totem->sidebar_w = 0;
+			xplayer->sidebar_w = 0;
 		}
 		g_key_file_free (keyfile);
 	}
 
-	if (w > 0 && h > 0 && totem->maximised == FALSE) {
-		gtk_window_set_default_size (GTK_WINDOW (totem->win),
+	if (w > 0 && h > 0 && xplayer->maximised == FALSE) {
+		gtk_window_set_default_size (GTK_WINDOW (xplayer->win),
 				w, h);
-		totem->window_w = w;
-		totem->window_h = h;
-	} else if (totem->maximised != FALSE) {
-		gtk_window_maximize (GTK_WINDOW (totem->win));
+		xplayer->window_w = w;
+		xplayer->window_h = h;
+	} else if (xplayer->maximised != FALSE) {
+		gtk_window_maximize (GTK_WINDOW (xplayer->win));
 	}
 
 	/* Set the vbox to be completely black */
-	vbox = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_bvw_box"));
+	vbox = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_bvw_box"));
 	gdk_rgba_parse (&black, "Black");
 	gtk_widget_override_background_color (vbox, (GTK_STATE_FLAG_FOCUSED << 1), &black);
 
-	totem_sidebar_setup (totem, show_sidebar);
+	xplayer_sidebar_setup (xplayer, show_sidebar);
 	return page_id;
 }
 
 void
-totem_callback_connect (TotemObject *totem)
+xplayer_callback_connect (XplayerObject *xplayer)
 {
 	GtkWidget *item, *image, *label;
 	GIcon *icon;
@@ -3992,18 +3992,18 @@ totem_callback_connect (TotemObject *totem)
 	GtkBox *box;
 
 	/* Menu items */
-	action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-		totem_playlist_get_repeat (totem->playlist));
-	action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
+		xplayer_playlist_get_repeat (xplayer->playlist));
+	action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-		totem_playlist_get_shuffle (totem->playlist));
+		xplayer_playlist_get_shuffle (xplayer->playlist));
 
 	/* Controls */
-	box = GTK_BOX (gtk_builder_get_object (totem->xml, "tmw_buttons_hbox"));
+	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_buttons_hbox"));
 
 	/* Previous */
-	action = gtk_action_group_get_action (totem->main_action_group,
+	action = gtk_action_group_get_action (xplayer->main_action_group,
 			"previous-chapter");
 	item = gtk_action_create_tool_item (action);
 	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
@@ -4013,7 +4013,7 @@ totem_callback_connect (TotemObject *totem)
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Play/Pause */
-	action = gtk_action_group_get_action (totem->main_action_group, "play");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
 	item = gtk_action_create_tool_item (action);
 	atk_object_set_name (gtk_widget_get_accessible (item),
 			_("Play / Pause"));
@@ -4022,7 +4022,7 @@ totem_callback_connect (TotemObject *totem)
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Next */
-	action = gtk_action_group_get_action (totem->main_action_group,
+	action = gtk_action_group_get_action (xplayer->main_action_group,
 			"next-chapter");
 	item = gtk_action_create_tool_item (action);
 	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
@@ -4036,18 +4036,18 @@ totem_callback_connect (TotemObject *totem)
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Fullscreen button */
-	action = gtk_action_group_get_action (totem->main_action_group,
+	action = gtk_action_group_get_action (xplayer->main_action_group,
 			"fullscreen");
 	item = gtk_action_create_tool_item (action);
-	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Totem's main window. */
+	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window. */
 	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), _("Fullscreen"));
-	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window. */
+	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window. */
 	atk_object_set_name (gtk_widget_get_accessible (item), _("Fullscreen"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Sidebar button (Drag'n'Drop) */
-	box = GTK_BOX (gtk_builder_get_object (totem->xml, "tmw_sidebar_button_hbox"));
-	action = gtk_action_group_get_action (totem->main_action_group, "sidebar");
+	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_sidebar_button_hbox"));
+	action = gtk_action_group_get_action (xplayer->main_action_group, "sidebar");
 	item = gtk_toggle_button_new ();
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
 
@@ -4063,63 +4063,63 @@ totem_callback_connect (TotemObject *totem)
 	gtk_container_add (GTK_CONTAINER (item), image);
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "drag_data_received",
-			G_CALLBACK (drop_playlist_cb), totem);
+			G_CALLBACK (drop_playlist_cb), xplayer);
 	g_signal_connect (G_OBJECT (item), "drag_motion",
-			G_CALLBACK (drag_motion_playlist_cb), totem);
+			G_CALLBACK (drag_motion_playlist_cb), xplayer);
 	gtk_drag_dest_set (item, GTK_DEST_DEFAULT_ALL,
 			target_table, G_N_ELEMENTS (target_table),
 			GDK_ACTION_COPY | GDK_ACTION_MOVE);
 
 	/* Fullscreen window buttons */
-	g_signal_connect (G_OBJECT (totem->fs->exit_button), "clicked",
-			  G_CALLBACK (fs_exit1_activate_cb), totem);
+	g_signal_connect (G_OBJECT (xplayer->fs->exit_button), "clicked",
+			  G_CALLBACK (fs_exit1_activate_cb), xplayer);
 
-	action = gtk_action_group_get_action (totem->main_action_group, "play");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
 	item = gtk_action_create_tool_item (action);
-	gtk_box_pack_start (GTK_BOX (totem->fs->buttons_box), item, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "clicked",
-			G_CALLBACK (on_mouse_click_fullscreen), totem);
+			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
 
-	action = gtk_action_group_get_action (totem->main_action_group, "previous-chapter");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
 	item = gtk_action_create_tool_item (action);
-	gtk_box_pack_start (GTK_BOX (totem->fs->buttons_box), item, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "clicked",
-			G_CALLBACK (on_mouse_click_fullscreen), totem);
+			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
 
-	action = gtk_action_group_get_action (totem->main_action_group, "next-chapter");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "next-chapter");
 	item = gtk_action_create_tool_item (action);
-	gtk_box_pack_start (GTK_BOX (totem->fs->buttons_box), item, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "clicked",
-			G_CALLBACK (on_mouse_click_fullscreen), totem);
+			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
 
 	/* Connect the keys */
-	gtk_widget_add_events (totem->win, GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK);
+	gtk_widget_add_events (xplayer->win, GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK);
 
 	/* Connect the mouse wheel */
-	gtk_widget_add_events (GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_main_vbox")), GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
-	gtk_widget_add_events (totem->seek, GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
-	gtk_widget_add_events (totem->fs->seek, GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
+	gtk_widget_add_events (GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_main_vbox")), GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
+	gtk_widget_add_events (xplayer->seek, GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
+	gtk_widget_add_events (xplayer->fs->seek, GDK_SCROLL_MASK | GDK_SMOOTH_SCROLL_MASK);
 
 	/* FIXME Hack to fix bug #462286 and #563894 */
-	g_signal_connect (G_OBJECT (totem->fs->seek), "button-press-event",
-			G_CALLBACK (seek_slider_pressed_cb), totem);
-	g_signal_connect (G_OBJECT (totem->fs->seek), "button-release-event",
-			G_CALLBACK (seek_slider_released_cb), totem);
-	g_signal_connect (G_OBJECT (totem->fs->seek), "scroll-event",
-			  G_CALLBACK (window_scroll_event_cb), totem);
+	g_signal_connect (G_OBJECT (xplayer->fs->seek), "button-press-event",
+			G_CALLBACK (seek_slider_pressed_cb), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->fs->seek), "button-release-event",
+			G_CALLBACK (seek_slider_released_cb), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->fs->seek), "scroll-event",
+			  G_CALLBACK (window_scroll_event_cb), xplayer);
 
 
 	/* Set sensitivity of the toolbar buttons */
-	totem_action_set_sensitivity ("play", FALSE);
-	totem_action_set_sensitivity ("next-chapter", FALSE);
-	totem_action_set_sensitivity ("previous-chapter", FALSE);
+	xplayer_action_set_sensitivity ("play", FALSE);
+	xplayer_action_set_sensitivity ("next-chapter", FALSE);
+	xplayer_action_set_sensitivity ("previous-chapter", FALSE);
 	/* FIXME: We can use this code again once bug #457631 is fixed
 	 * and skip-* are back in the main action group. */
-	/*totem_action_set_sensitivity ("skip-forward", FALSE);
-	totem_action_set_sensitivity ("skip-backwards", FALSE);*/
-	totem_action_set_sensitivity ("fullscreen", FALSE);
+	/*xplayer_action_set_sensitivity ("skip-forward", FALSE);
+	xplayer_action_set_sensitivity ("skip-backwards", FALSE);*/
+	xplayer_action_set_sensitivity ("fullscreen", FALSE);
 
-	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (totem->xml, "skip-action-group"));
+	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xplayer->xml, "skip-action-group"));
 
 	action = gtk_action_group_get_action (action_group, "skip-forward");
 	gtk_action_set_sensitive (action, FALSE);
@@ -4129,154 +4129,154 @@ totem_callback_connect (TotemObject *totem)
 }
 
 void
-playlist_widget_setup (TotemObject *totem)
+playlist_widget_setup (XplayerObject *xplayer)
 {
-	totem->playlist = TOTEM_PLAYLIST (totem_playlist_new ());
+	xplayer->playlist = XPLAYER_PLAYLIST (xplayer_playlist_new ());
 
-	if (totem->playlist == NULL)
-		totem_action_exit (totem);
+	if (xplayer->playlist == NULL)
+		xplayer_action_exit (xplayer);
 
-	gtk_widget_show_all (GTK_WIDGET (totem->playlist));
+	gtk_widget_show_all (GTK_WIDGET (xplayer->playlist));
 
-	g_signal_connect (G_OBJECT (totem->playlist), "active-name-changed",
-			  G_CALLBACK (on_playlist_change_name), totem);
-	g_signal_connect (G_OBJECT (totem->playlist), "item-activated",
-			  G_CALLBACK (item_activated_cb), totem);
-	g_signal_connect (G_OBJECT (totem->playlist),
+	g_signal_connect (G_OBJECT (xplayer->playlist), "active-name-changed",
+			  G_CALLBACK (on_playlist_change_name), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist), "item-activated",
+			  G_CALLBACK (item_activated_cb), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist),
 			  "changed", G_CALLBACK (playlist_changed_cb),
-			  totem);
-	g_signal_connect (G_OBJECT (totem->playlist),
+			  xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist),
 			  "current-removed", G_CALLBACK (current_removed_cb),
-			  totem);
-	g_signal_connect (G_OBJECT (totem->playlist),
+			  xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist),
 			  "repeat-toggled",
 			  G_CALLBACK (playlist_repeat_toggle_cb),
-			  totem);
-	g_signal_connect (G_OBJECT (totem->playlist),
+			  xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist),
 			  "shuffle-toggled",
 			  G_CALLBACK (playlist_shuffle_toggle_cb),
-			  totem);
-	g_signal_connect (G_OBJECT (totem->playlist),
+			  xplayer);
+	g_signal_connect (G_OBJECT (xplayer->playlist),
 			  "subtitle-changed",
 			  G_CALLBACK (subtitle_changed_cb),
-			  totem);
+			  xplayer);
 }
 
 void
-video_widget_create (TotemObject *totem)
+video_widget_create (XplayerObject *xplayer)
 {
 	GError *err = NULL;
 	GtkContainer *container;
 	BaconVideoWidget **bvw;
 
-	totem->bvw = BACON_VIDEO_WIDGET (bacon_video_widget_new (&err));
+	xplayer->bvw = BACON_VIDEO_WIDGET (bacon_video_widget_new (&err));
 
-	if (totem->bvw == NULL) {
-		totem_action_error_and_exit (_("Totem could not startup."), err != NULL ? err->message : _("No reason."), totem);
+	if (xplayer->bvw == NULL) {
+		xplayer_action_error_and_exit (_("Xplayer could not startup."), err != NULL ? err->message : _("No reason."), xplayer);
 		if (err != NULL)
 			g_error_free (err);
 	}
 
-	g_signal_connect_after (G_OBJECT (totem->bvw),
+	g_signal_connect_after (G_OBJECT (xplayer->bvw),
 			"button-press-event",
 			G_CALLBACK (on_video_button_press_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"eos",
 			G_CALLBACK (on_eos_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"got-redirect",
 			G_CALLBACK (on_got_redirect),
-			totem);
-	g_signal_connect (G_OBJECT(totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT(xplayer->bvw),
 			"channels-change",
 			G_CALLBACK (on_channels_change_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"tick",
 			G_CALLBACK (update_current_time),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"got-metadata",
 			G_CALLBACK (on_got_metadata_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"buffering",
 			G_CALLBACK (on_buffering_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"download-buffering",
 			G_CALLBACK (on_download_buffering_event),
-			totem);
-	g_signal_connect (G_OBJECT (totem->bvw),
+			xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"error",
 			G_CALLBACK (on_error_event),
-			totem);
+			xplayer);
 
-	container = GTK_CONTAINER (gtk_builder_get_object (totem->xml, "tmw_bvw_box"));
+	container = GTK_CONTAINER (gtk_builder_get_object (xplayer->xml, "tmw_bvw_box"));
 	gtk_container_add (container,
-			GTK_WIDGET (totem->bvw));
+			GTK_WIDGET (xplayer->bvw));
 
 	/* Events for the widget video window as well */
-	gtk_widget_add_events (GTK_WIDGET (totem->bvw),
+	gtk_widget_add_events (GTK_WIDGET (xplayer->bvw),
 			GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK);
-	g_signal_connect (G_OBJECT(totem->bvw), "key_press_event",
-			G_CALLBACK (window_key_press_event_cb), totem);
-	g_signal_connect (G_OBJECT(totem->bvw), "key_release_event",
-			G_CALLBACK (window_key_press_event_cb), totem);
+	g_signal_connect (G_OBJECT(xplayer->bvw), "key_press_event",
+			G_CALLBACK (window_key_press_event_cb), xplayer);
+	g_signal_connect (G_OBJECT(xplayer->bvw), "key_release_event",
+			G_CALLBACK (window_key_press_event_cb), xplayer);
 
-	g_signal_connect (G_OBJECT (totem->bvw), "drag_data_received",
-			G_CALLBACK (drop_video_cb), totem);
-	g_signal_connect (G_OBJECT (totem->bvw), "drag_motion",
-			G_CALLBACK (drag_motion_video_cb), totem);
-	gtk_drag_dest_set (GTK_WIDGET (totem->bvw), GTK_DEST_DEFAULT_ALL,
+	g_signal_connect (G_OBJECT (xplayer->bvw), "drag_data_received",
+			G_CALLBACK (drop_video_cb), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw), "drag_motion",
+			G_CALLBACK (drag_motion_video_cb), xplayer);
+	gtk_drag_dest_set (GTK_WIDGET (xplayer->bvw), GTK_DEST_DEFAULT_ALL,
 			target_table, G_N_ELEMENTS (target_table),
 			GDK_ACTION_COPY | GDK_ACTION_MOVE);
 
-	g_signal_connect (G_OBJECT (totem->bvw), "drag_data_get",
-			G_CALLBACK (drag_video_cb), totem);
+	g_signal_connect (G_OBJECT (xplayer->bvw), "drag_data_get",
+			G_CALLBACK (drag_video_cb), xplayer);
 
-	bvw = &(totem->bvw);
-	g_object_add_weak_pointer (G_OBJECT (totem->bvw),
+	bvw = &(xplayer->bvw);
+	g_object_add_weak_pointer (G_OBJECT (xplayer->bvw),
 				   (gpointer *) bvw);
 
-	gtk_widget_realize (GTK_WIDGET (totem->bvw));
-	gtk_widget_show (GTK_WIDGET (totem->bvw));
+	gtk_widget_realize (GTK_WIDGET (xplayer->bvw));
+	gtk_widget_show (GTK_WIDGET (xplayer->bvw));
 
-	totem_preferences_visuals_setup (totem);
+	xplayer_preferences_visuals_setup (xplayer);
 
-	g_signal_connect (G_OBJECT (totem->bvw), "notify::volume",
-			G_CALLBACK (property_notify_cb_volume), totem);
-	g_signal_connect (G_OBJECT (totem->bvw), "notify::seekable",
-			G_CALLBACK (property_notify_cb_seekable), totem);
-	update_volume_sliders (totem);
+	g_signal_connect (G_OBJECT (xplayer->bvw), "notify::volume",
+			G_CALLBACK (property_notify_cb_volume), xplayer);
+	g_signal_connect (G_OBJECT (xplayer->bvw), "notify::seekable",
+			G_CALLBACK (property_notify_cb_seekable), xplayer);
+	update_volume_sliders (xplayer);
 }
 
 /**
- * totem_object_get_supported_content_types:
+ * xplayer_object_get_supported_content_types:
  *
- * Get the full list of file content types which Totem supports playing.
+ * Get the full list of file content types which Xplayer supports playing.
  *
- * Return value: (array zero-terminated=1) (transfer none): a %NULL-terminated array of the content types Totem supports
+ * Return value: (array zero-terminated=1) (transfer none): a %NULL-terminated array of the content types Xplayer supports
  * Since: 3.1.5
  */
 const gchar * const *
-totem_object_get_supported_content_types (void)
+xplayer_object_get_supported_content_types (void)
 {
 	return mime_types;
 }
 
 /**
- * totem_object_get_supported_uri_schemes:
+ * xplayer_object_get_supported_uri_schemes:
  *
- * Get the full list of URI schemes which Totem supports accessing.
+ * Get the full list of URI schemes which Xplayer supports accessing.
  *
- * Return value: (array zero-terminated=1) (transfer none): a %NULL-terminated array of the URI schemes Totem supports
+ * Return value: (array zero-terminated=1) (transfer none): a %NULL-terminated array of the URI schemes Xplayer supports
  * Since: 3.1.5
  */
 const gchar * const *
-totem_object_get_supported_uri_schemes (void)
+xplayer_object_get_supported_uri_schemes (void)
 {
 	return uri_schemes;
 }

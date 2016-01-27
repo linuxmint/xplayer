@@ -125,7 +125,7 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 librecent_la_DEPENDENCIES = $(plugin_libadd)
-am_librecent_la_OBJECTS = librecent_la-totem-recent.lo
+am_librecent_la_OBJECTS = librecent_la-xplayer-recent.lo
 librecent_la_OBJECTS = $(am_librecent_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -202,7 +202,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -384,11 +384,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -471,12 +471,12 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/recent
 plugin_LTLIBRARIES = librecent.la
 plugin_in_files = recent.plugin.in
-librecent_la_SOURCES = totem-recent.c
+librecent_la_SOURCES = xplayer-recent.c
 librecent_la_LDFLAGS = $(plugin_ldflags)
 librecent_la_LIBADD = $(plugin_libadd)
 librecent_la_CFLAGS = $(plugin_cflags)
@@ -560,7 +560,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/librecent_la-totem-recent.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/librecent_la-xplayer-recent.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -583,12 +583,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-librecent_la-totem-recent.lo: totem-recent.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librecent_la_CFLAGS) $(CFLAGS) -MT librecent_la-totem-recent.lo -MD -MP -MF $(DEPDIR)/librecent_la-totem-recent.Tpo -c -o librecent_la-totem-recent.lo `test -f 'totem-recent.c' || echo '$(srcdir)/'`totem-recent.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/librecent_la-totem-recent.Tpo $(DEPDIR)/librecent_la-totem-recent.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-recent.c' object='librecent_la-totem-recent.lo' libtool=yes @AMDEPBACKSLASH@
+librecent_la-xplayer-recent.lo: xplayer-recent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librecent_la_CFLAGS) $(CFLAGS) -MT librecent_la-xplayer-recent.lo -MD -MP -MF $(DEPDIR)/librecent_la-xplayer-recent.Tpo -c -o librecent_la-xplayer-recent.lo `test -f 'xplayer-recent.c' || echo '$(srcdir)/'`xplayer-recent.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/librecent_la-xplayer-recent.Tpo $(DEPDIR)/librecent_la-xplayer-recent.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-recent.c' object='librecent_la-xplayer-recent.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librecent_la_CFLAGS) $(CFLAGS) -c -o librecent_la-totem-recent.lo `test -f 'totem-recent.c' || echo '$(srcdir)/'`totem-recent.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librecent_la_CFLAGS) $(CFLAGS) -c -o librecent_la-xplayer-recent.lo `test -f 'xplayer-recent.c' || echo '$(srcdir)/'`xplayer-recent.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

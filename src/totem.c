@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -40,21 +40,21 @@
 #include <X11/Xlib.h>
 #endif
 
-#include "totem.h"
-#include "totem-private.h"
-#include "totem-interface.h"
-#include "totem-options.h"
-#include "totem-menu.h"
-#include "totem-session.h"
-#include "totem-uri.h"
-#include "totem-preferences.h"
-#include "totem-rtl-helpers.h"
-#include "totem-sidebar.h"
+#include "xplayer.h"
+#include "xplayer-private.h"
+#include "xplayer-interface.h"
+#include "xplayer-options.h"
+#include "xplayer-menu.h"
+#include "xplayer-session.h"
+#include "xplayer-uri.h"
+#include "xplayer-preferences.h"
+#include "xplayer-rtl-helpers.h"
+#include "xplayer-sidebar.h"
 #include "video-utils.h"
 
 static gboolean startup_called = FALSE;
 
-/* Debug log message handler: discards debug messages unless Totem is run with TOTEM_DEBUG=1.
+/* Debug log message handler: discards debug messages unless Xplayer is run with XPLAYER_DEBUG=1.
  * If we're building in the source tree, enable debug messages by default. */
 static void
 debug_handler (const char *log_domain,
@@ -72,18 +72,18 @@ debug_handler (const char *log_domain,
 }
 
 static void
-set_rtl_icon_name (Totem *totem,
+set_rtl_icon_name (Xplayer *xplayer,
 		   const char *widget_name,
 		   const char *icon_name)
 {
 	GtkAction *action;
 
-	action = GTK_ACTION (gtk_builder_get_object (totem->xml, widget_name));
-	gtk_action_set_icon_name (action, totem_get_rtl_icon_name (icon_name));
+	action = GTK_ACTION (gtk_builder_get_object (xplayer->xml, widget_name));
+	gtk_action_set_icon_name (action, xplayer_get_rtl_icon_name (icon_name));
 }
 
 static void
-app_init (Totem *totem, char **argv)
+app_init (Xplayer *xplayer, char **argv)
 {
 	GtkSettings *gtk_settings;
 	char *sidebar_pageid;
@@ -95,103 +95,103 @@ app_init (Totem *totem, char **argv)
 	g_object_set (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme", TRUE, NULL);
 
 	/* Debug log handling */
-	g_log_set_handler (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, (GLogFunc) debug_handler, totem->settings);
+	g_log_set_handler (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, (GLogFunc) debug_handler, xplayer->settings);
 
 	/* Main window */
-	totem->xml = totem_interface_load ("totem.ui", TRUE, NULL, totem);
-	if (totem->xml == NULL)
-		totem_action_exit (NULL);
+	xplayer->xml = xplayer_interface_load ("xplayer.ui", TRUE, NULL, xplayer);
+	if (xplayer->xml == NULL)
+		xplayer_action_exit (NULL);
 
-	set_rtl_icon_name (totem, "play", "media-playback-start");
-	set_rtl_icon_name (totem, "next-chapter", "media-skip-forward");
-	set_rtl_icon_name (totem, "previous-chapter", "media-skip-backward");
-	set_rtl_icon_name (totem, "skip-forward", "media-seek-forward");
-	set_rtl_icon_name (totem, "skip-backwards", "media-seek-backward");
+	set_rtl_icon_name (xplayer, "play", "media-playback-start");
+	set_rtl_icon_name (xplayer, "next-chapter", "media-skip-forward");
+	set_rtl_icon_name (xplayer, "previous-chapter", "media-skip-backward");
+	set_rtl_icon_name (xplayer, "skip-forward", "media-seek-forward");
+	set_rtl_icon_name (xplayer, "skip-backwards", "media-seek-backward");
 
-	totem->win = GTK_WIDGET (gtk_builder_get_object (totem->xml, "totem_main_window"));
+	xplayer->win = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "xplayer_main_window"));
 
 	/* Menubar */
-	totem_ui_manager_setup (totem);
+	xplayer_ui_manager_setup (xplayer);
 
 	/* The sidebar */
-	playlist_widget_setup (totem);
+	playlist_widget_setup (xplayer);
 
 	/* The rest of the widgets */
-	totem->state = STATE_STOPPED;
-	totem->seek = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_seek_hscale"));
-	totem->seekadj = gtk_range_get_adjustment (GTK_RANGE (totem->seek));
-	totem->volume = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_volume_button"));
-	totem->statusbar = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_statusbar"));
-	totem->seek_lock = FALSE;
-	totem->fs = totem_fullscreen_new (GTK_WINDOW (totem->win));
-	gtk_scale_button_set_adjustment (GTK_SCALE_BUTTON (totem->fs->volume),
-					 gtk_scale_button_get_adjustment (GTK_SCALE_BUTTON (totem->volume)));
-	gtk_range_set_adjustment (GTK_RANGE (totem->fs->seek), totem->seekadj);
+	xplayer->state = STATE_STOPPED;
+	xplayer->seek = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_seek_hscale"));
+	xplayer->seekadj = gtk_range_get_adjustment (GTK_RANGE (xplayer->seek));
+	xplayer->volume = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_volume_button"));
+	xplayer->statusbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_statusbar"));
+	xplayer->seek_lock = FALSE;
+	xplayer->fs = xplayer_fullscreen_new (GTK_WINDOW (xplayer->win));
+	gtk_scale_button_set_adjustment (GTK_SCALE_BUTTON (xplayer->fs->volume),
+					 gtk_scale_button_get_adjustment (GTK_SCALE_BUTTON (xplayer->volume)));
+	gtk_range_set_adjustment (GTK_RANGE (xplayer->fs->seek), xplayer->seekadj);
 
-	totem_session_setup (totem, argv);
-	totem_setup_file_monitoring (totem);
-	totem_setup_file_filters ();
-	totem_callback_connect (totem);
+	xplayer_session_setup (xplayer, argv);
+	xplayer_setup_file_monitoring (xplayer);
+	xplayer_setup_file_filters ();
+	xplayer_callback_connect (xplayer);
 
-	sidebar_pageid = totem_setup_window (totem);
+	sidebar_pageid = xplayer_setup_window (xplayer);
 
 	/* Show ! */
 	if (optionstate.fullscreen == FALSE) {
-		gtk_widget_show (totem->win);
-		totem_gdk_window_set_waiting_cursor (gtk_widget_get_window (totem->win));
+		gtk_widget_show (xplayer->win);
+		xplayer_gdk_window_set_waiting_cursor (gtk_widget_get_window (xplayer->win));
 	} else {
-		gtk_widget_realize (totem->win);
+		gtk_widget_realize (xplayer->win);
 	}
 
-	totem->controls_visibility = TOTEM_CONTROLS_UNDEFINED;
+	xplayer->controls_visibility = XPLAYER_CONTROLS_UNDEFINED;
 
 	/* Show ! (again) the video widget this time. */
-	video_widget_create (totem);
-	gtk_widget_grab_focus (GTK_WIDGET (totem->bvw));
-	totem_fullscreen_set_video_widget (totem->fs, totem->bvw);
+	video_widget_create (xplayer);
+	gtk_widget_grab_focus (GTK_WIDGET (xplayer->bvw));
+	xplayer_fullscreen_set_video_widget (xplayer->fs, xplayer->bvw);
 
 	if (optionstate.fullscreen != FALSE) {
-		gtk_widget_show (totem->win);
+		gtk_widget_show (xplayer->win);
 		gdk_flush ();
-		totem_action_fullscreen (totem, TRUE);
+		xplayer_action_fullscreen (xplayer, TRUE);
 	}
 
 	/* The prefs after the video widget is connected */
-	totem->prefs_xml = totem_interface_load ("preferences.ui", TRUE, NULL, totem);
+	xplayer->prefs_xml = xplayer_interface_load ("preferences.ui", TRUE, NULL, xplayer);
 
-	totem_setup_preferences (totem);
+	xplayer_setup_preferences (xplayer);
 
-	totem_setup_recent (totem);
+	xplayer_setup_recent (xplayer);
 
 	/* Command-line handling */
-	totem_options_process_late (totem, &optionstate);
+	xplayer_options_process_late (xplayer, &optionstate);
 
 	/* Initialise all the plugins, and set the default page, in case
 	 * it comes from a plugin */
-	totem_object_plugins_init (totem);
-	totem_sidebar_set_current_page (totem, sidebar_pageid, FALSE);
+	xplayer_object_plugins_init (xplayer);
+	xplayer_sidebar_set_current_page (xplayer, sidebar_pageid, FALSE);
 	g_free (sidebar_pageid);
 
-	if (totem->session_restored != FALSE) {
-		totem_session_restore (totem, optionstate.filenames);
-	} else if (optionstate.filenames != NULL && totem_action_open_files (totem, optionstate.filenames)) {
-		totem_action_play_pause (totem);
+	if (xplayer->session_restored != FALSE) {
+		xplayer_session_restore (xplayer, optionstate.filenames);
+	} else if (optionstate.filenames != NULL && xplayer_action_open_files (xplayer, optionstate.filenames)) {
+		xplayer_action_play_pause (xplayer);
 	} else {
-		totem_action_set_mrl (totem, NULL, NULL);
+		xplayer_action_set_mrl (xplayer, NULL, NULL);
 	}
 
 	/* Set the logo at the last minute so we won't try to show it before a video */
-	bacon_video_widget_set_logo (totem->bvw, "totem");
+	bacon_video_widget_set_logo (xplayer->bvw, "xplayer");
 
 	if (optionstate.fullscreen == FALSE)
-		gdk_window_set_cursor (gtk_widget_get_window (totem->win), NULL);
+		gdk_window_set_cursor (gtk_widget_get_window (xplayer->win), NULL);
 
-	gtk_window_set_application (GTK_WINDOW (totem->win), GTK_APPLICATION (totem));
+	gtk_window_set_application (GTK_WINDOW (xplayer->win), GTK_APPLICATION (xplayer));
 }
 
 static void
 app_startup (GApplication *application,
-		Totem        *totem)
+		Xplayer        *xplayer)
 {
 	/* We don't do anything here, as we need to know the options
 	 * when we set everything up.
@@ -202,7 +202,7 @@ app_startup (GApplication *application,
 static int
 app_command_line (GApplication             *app,
 		  GApplicationCommandLine  *command_line,
-		  Totem                    *totem)
+		  Xplayer                    *xplayer)
 {
 	GOptionContext *context;
 	int argc;
@@ -214,7 +214,7 @@ app_command_line (GApplication             *app,
 	memset (&optionstate, 0, sizeof (optionstate));
 
 	/* Options parsing */
-	context = totem_options_get_context ();
+	context = xplayer_options_get_context ();
 	g_option_context_set_help_enabled (context, FALSE);
 	if (g_option_context_parse (context, &argc, &argv, NULL) == FALSE) {
 	        g_option_context_free (context);
@@ -222,23 +222,23 @@ app_command_line (GApplication             *app,
 	}
 	g_option_context_free (context);
 
-	totem_options_process_early (totem, &optionstate);
+	xplayer_options_process_early (xplayer, &optionstate);
 
 	/* Don't create another window if we're remote.
 	 * We can't use g_application_get_is_remote() because it's not registered yet */
 	if (startup_called != FALSE) {
-		app_init (totem, argv);
+		app_init (xplayer, argv);
 
 		gdk_notify_startup_complete ();
 
-		/* Don't add files again through totem_options_process_for_server() */
+		/* Don't add files again through xplayer_options_process_for_server() */
 		g_strfreev (optionstate.filenames);
 		optionstate.filenames = NULL;
 		startup_called = FALSE;
 	}
 
 	/* Now do something with it */
-	totem_options_process_for_server (totem, &optionstate);
+	xplayer_options_process_for_server (xplayer, &optionstate);
 
 	g_strfreev (argv);
 	return 0;
@@ -247,7 +247,7 @@ app_command_line (GApplication             *app,
 int
 main (int argc, char **argv)
 {
-	Totem *totem;
+	Xplayer *xplayer;
 
 	setlocale (LC_ALL, "");
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -259,31 +259,31 @@ main (int argc, char **argv)
 	{
 		gtk_init (&argc, &argv);
 		g_set_application_name (_("Videos"));
-		totem_action_error_and_exit (_("Could not initialize the thread-safe libraries."), _("Verify your system installation. Totem will now exit."), NULL);
+		xplayer_action_error_and_exit (_("Could not initialize the thread-safe libraries."), _("Verify your system installation. Xplayer will now exit."), NULL);
 	}
 #endif
 
 	g_type_init ();
 
-	g_set_prgname ("totem");
+	g_set_prgname ("xplayer");
 	g_set_application_name (_("Videos"));
-	gtk_window_set_default_icon_name ("totem");
+	gtk_window_set_default_icon_name ("xplayer");
 	g_setenv("PULSE_PROP_media.role", "video", TRUE);
 
 
-	/* Build the main Totem object */
-	totem = g_object_new (TOTEM_TYPE_OBJECT,
-			      "application-id", "org.gnome.Totem",
+	/* Build the main Xplayer object */
+	xplayer = g_object_new (XPLAYER_TYPE_OBJECT,
+			      "application-id", "org.gnome.Xplayer",
 			      "flags", G_APPLICATION_HANDLES_COMMAND_LINE,
 			      NULL);
-	totem->settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	xplayer->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 
-	g_signal_connect (G_OBJECT (totem), "startup",
-			  G_CALLBACK (app_startup), totem);
-	g_signal_connect (G_OBJECT (totem), "command-line",
-			  G_CALLBACK (app_command_line), totem);
+	g_signal_connect (G_OBJECT (xplayer), "startup",
+			  G_CALLBACK (app_startup), xplayer);
+	g_signal_connect (G_OBJECT (xplayer), "command-line",
+			  G_CALLBACK (app_command_line), xplayer);
 
-	g_application_run (G_APPLICATION (totem), argc, argv);
+	g_application_run (G_APPLICATION (xplayer), argc, argv);
 
 	return 0;
 }

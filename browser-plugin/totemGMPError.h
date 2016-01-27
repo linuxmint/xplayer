@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_GMP_ERROR_H__
-#define __TOTEM_GMP_ERROR_H__
+#ifndef __XPLAYER_GMP_ERROR_H__
+#define __XPLAYER_GMP_ERROR_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemGMPError : public totemNPObject
+class xplayerGMPError : public xplayerNPObject
 {
   public:
-    totemGMPError (NPP);
-    virtual ~totemGMPError ();
+    xplayerGMPError (NPP);
+    virtual ~xplayerGMPError ();
 
   private:
 
@@ -49,6 +49,6 @@ class totemGMPError : public totemNPObject
     virtual bool SetPropertyByIndex (int aIndex, const NPVariant *aValue);
 };
 
-TOTEM_DEFINE_NPCLASS (totemGMPError);
+XPLAYER_DEFINE_NPCLASS (xplayerGMPError);
 
-#endif /* __TOTEM_GMP_ERROR_H__ */
+#endif /* __XPLAYER_GMP_ERROR_H__ */

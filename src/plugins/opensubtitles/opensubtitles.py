@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from gi.repository import GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
-from gi.repository import GLib, Gio, Pango, Totem # pylint: disable-msg=E0611
+from gi.repository import GLib, Gio, Pango, Xplayer # pylint: disable-msg=E0611
 
 import xmlrpclib
 import threading
@@ -11,16 +11,16 @@ import gettext
 
 from hash import hash_file
 
-gettext.textdomain ("totem")
+gettext.textdomain ("xplayer")
 
 D_ = gettext.dgettext
 _ = gettext.gettext
 
 GObject.threads_init ()
 
-USER_AGENT = 'Totem'
+USER_AGENT = 'Xplayer'
 OK200 = '200 OK'
-TOTEM_REMOTE_COMMAND_REPLACE = 14
+XPLAYER_REMOTE_COMMAND_REPLACE = 14
 
 SUBTITLES_EXT = [
     "asc",
@@ -381,8 +381,8 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         GObject.Object.__init__ (self)
 
         self._dialog = None
-        self._totem = None
-        schema = 'org.gnome.totem.plugins.opensubtitles'
+        self._xplayer = None
+        schema = 'org.gnome.xplayer.plugins.opensubtitles'
         self._settings = Gio.Settings.new (schema)
 
         self._manager = None
@@ -401,25 +401,25 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         self._filename = None
         self._progress = None
 
-    # totem.Plugin methods
+    # xplayer.Plugin methods
 
     def do_activate (self):
         """
         Called when the plugin is activated.
         Here the sidebar page is initialized (set up the treeview, connect
-        the callbacks, ...) and added to totem.
+        the callbacks, ...) and added to xplayer.
         """
-        self._totem = self.object
+        self._xplayer = self.object
 
         # Name of the movie file which the most-recently-downloaded subtitles
         # are related to.
         self._filename = None
 
-        self._manager = self._totem.get_ui_manager ()
+        self._manager = self._xplayer.get_ui_manager ()
         self._append_menu ()
 
-        self._totem.connect ('file-opened', self.__on_totem__file_opened)
-        self._totem.connect ('file-closed', self.__on_totem__file_closed)
+        self._xplayer.connect ('file-opened', self.__on_xplayer__file_opened)
+        self._xplayer.connect ('file-closed', self.__on_xplayer__file_closed)
 
         # Obtain the ServerProxy and init the model
         server = xmlrpclib.Server ('http://api.opensubtitles.org/xml-rpc')
@@ -435,9 +435,9 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
     # UI related code
 
     def _build_dialog (self):
-        builder = Totem.plugin_load_interface ("opensubtitles",
+        builder = Xplayer.plugin_load_interface ("opensubtitles",
                                                "opensubtitles.ui", True,
-                                               self._totem.get_main_window (),
+                                               self._xplayer.get_main_window (),
                                                None)
 
         # Obtain all the widgets we need to initialize
@@ -500,7 +500,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
         combobox.connect ('changed', self.__on_combobox__changed)
         self._dialog.connect ('delete-event', self._dialog.hide_on_delete)
-        self._dialog.set_transient_for (self._totem.get_main_window ())
+        self._dialog.set_transient_for (self._xplayer.get_main_window ())
         self._dialog.set_position (Gtk.WindowPosition.CENTER_ON_PARENT)
 
         # Connect the callbacks
@@ -547,12 +547,12 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
         self._action.connect ('activate', self._show_dialog)
 
-        self._action.set_sensitive (self._totem.is_playing () and
+        self._action.set_sensitive (self._xplayer.is_playing () and
                   self._check_allowed_scheme () and
                                   not self._check_is_audio ())
 
     def _check_allowed_scheme (self):
-        current_file = Gio.file_new_for_uri (self._totem.get_current_mrl ())
+        current_file = Gio.file_new_for_uri (self._xplayer.get_current_mrl ())
         scheme = current_file.get_uri_scheme ()
 
         if (scheme == 'dvd' or scheme == 'http' or
@@ -565,7 +565,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         # FIXME need to use something else here
         # I think we must use video widget metadata but I don't found a way
         # to get this info from python
-        filename = self._totem.get_current_mrl ()
+        filename = self._xplayer.get_current_mrl ()
         if Gio.content_type_guess (filename, '')[0].split ('/')[0] == 'audio':
             return True
         return False
@@ -619,7 +619,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
             if not filename:
                 bpath = xdg.BaseDirectory.xdg_cache_home + sep
-                bpath += 'totem' + sep
+                bpath += 'xplayer' + sep
 
                 directory = Gio.file_new_for_path (bpath + 'subtitles' + sep)
 
@@ -672,7 +672,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         self._close_dialog ()
 
         if suburi:
-            self._totem.set_current_subtitle (suburi)
+            self._xplayer.set_current_subtitle (suburi)
 
         return False
 
@@ -723,7 +723,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
     def __on_treeview__row_activate (self, _tree_path, _column, _data):
         self._download_and_apply ()
 
-    def __on_totem__file_opened (self, _totem, new_mrl):
+    def __on_xplayer__file_opened (self, _xplayer, new_mrl):
         # Check if allows subtitles
         if self._check_allowed_scheme () and not self._check_is_audio ():
             self._action.set_sensitive (True)
@@ -744,7 +744,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
                 self._apply_button.set_sensitive (False)
                 self._find_button.set_sensitive (False)
 
-    def __on_totem__file_closed (self, _totem):
+    def __on_xplayer__file_closed (self, _xplayer):
         self._action.set_sensitive (False)
         if self._dialog:
             self._apply_button.set_sensitive (False)
@@ -765,7 +765,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
     def __on_find_clicked (self, _data):
         self._apply_button.set_sensitive (False)
         self._find_button.set_sensitive (False)
-        self._filename = self._totem.get_current_mrl ()
+        self._filename = self._xplayer.get_current_mrl ()
         (movie_hash, movie_size) = hash_file (self._filename)
 
         self._get_results (movie_hash, movie_size)

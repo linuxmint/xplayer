@@ -127,7 +127,7 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(configdir)" \
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 liblirc_la_DEPENDENCIES = $(plugin_libadd) $(am__DEPENDENCIES_1)
-am_liblirc_la_OBJECTS = liblirc_la-totem-lirc.lo
+am_liblirc_la_OBJECTS = liblirc_la-xplayer-lirc.lo
 liblirc_la_OBJECTS = $(am_liblirc_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -204,7 +204,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -386,11 +386,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -473,14 +473,14 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/lirc
 plugin_LTLIBRARIES = liblirc.la
 plugin_in_files = lirc.plugin.in
 configdir = $(PLUGINDIR)/lirc
-config_DATA = totem_lirc_default
-liblirc_la_SOURCES = totem-lirc.c
+config_DATA = xplayer_lirc_default
+liblirc_la_SOURCES = xplayer-lirc.c
 liblirc_la_LDFLAGS = $(plugin_ldflags)
 liblirc_la_LIBADD = \
 	$(plugin_libadd)	\
@@ -570,7 +570,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/liblirc_la-totem-lirc.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/liblirc_la-xplayer-lirc.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -593,12 +593,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-liblirc_la-totem-lirc.lo: totem-lirc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(liblirc_la_CFLAGS) $(CFLAGS) -MT liblirc_la-totem-lirc.lo -MD -MP -MF $(DEPDIR)/liblirc_la-totem-lirc.Tpo -c -o liblirc_la-totem-lirc.lo `test -f 'totem-lirc.c' || echo '$(srcdir)/'`totem-lirc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/liblirc_la-totem-lirc.Tpo $(DEPDIR)/liblirc_la-totem-lirc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-lirc.c' object='liblirc_la-totem-lirc.lo' libtool=yes @AMDEPBACKSLASH@
+liblirc_la-xplayer-lirc.lo: xplayer-lirc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(liblirc_la_CFLAGS) $(CFLAGS) -MT liblirc_la-xplayer-lirc.lo -MD -MP -MF $(DEPDIR)/liblirc_la-xplayer-lirc.Tpo -c -o liblirc_la-xplayer-lirc.lo `test -f 'xplayer-lirc.c' || echo '$(srcdir)/'`xplayer-lirc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/liblirc_la-xplayer-lirc.Tpo $(DEPDIR)/liblirc_la-xplayer-lirc.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-lirc.c' object='liblirc_la-xplayer-lirc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(liblirc_la_CFLAGS) $(CFLAGS) -c -o liblirc_la-totem-lirc.lo `test -f 'totem-lirc.c' || echo '$(srcdir)/'`totem-lirc.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(liblirc_la_CFLAGS) $(CFLAGS) -c -o liblirc_la-xplayer-lirc.lo `test -f 'xplayer-lirc.c' || echo '$(srcdir)/'`xplayer-lirc.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

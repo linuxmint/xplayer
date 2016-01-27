@@ -17,27 +17,27 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TOTEM_NPOBJECT_WRAPPER_H__
-#define __TOTEM_NPOBJECT_WRAPPER_H__
+#ifndef __XPLAYER_NPOBJECT_WRAPPER_H__
+#define __XPLAYER_NPOBJECT_WRAPPER_H__
 
 #include <npapi.h>
 #include <npruntime.h>
 
 #include <assert.h>
 
-class totemNPObjectWrapper {
+class xplayerNPObjectWrapper {
 
   public:
 
-    totemNPObjectWrapper () : mObject (0) { }
-    totemNPObjectWrapper (NPObject *aObject) : mObject (aObject) { } /* adopts */
-    totemNPObjectWrapper (const totemNPObjectWrapper& aOther) { Assign (aOther.mObject); }
+    xplayerNPObjectWrapper () : mObject (0) { }
+    xplayerNPObjectWrapper (NPObject *aObject) : mObject (aObject) { } /* adopts */
+    xplayerNPObjectWrapper (const xplayerNPObjectWrapper& aOther) { Assign (aOther.mObject); }
 
-    ~totemNPObjectWrapper () { Assign (0); }
+    ~xplayerNPObjectWrapper () { Assign (0); }
 
     bool IsNull () const { return mObject == 0; }
 
-    totemNPObjectWrapper& operator= (NPObject *aObject) { Assign (aObject); return *this; }
+    xplayerNPObjectWrapper& operator= (NPObject *aObject) { Assign (aObject); return *this; }
 
     operator void*() const { return reinterpret_cast<void*>(mObject); }
     operator NPObject*() const { return mObject; }
@@ -45,7 +45,7 @@ class totemNPObjectWrapper {
 
     class GetterRetains {
       public:
-       explicit GetterRetains (totemNPObjectWrapper& aTarget) : mTarget (aTarget) { VOID_TO_NPVARIANT (mVariant); }
+       explicit GetterRetains (xplayerNPObjectWrapper& aTarget) : mTarget (aTarget) { VOID_TO_NPVARIANT (mVariant); }
         ~GetterRetains () {
           if (!NPVARIANT_IS_VOID (mVariant)) {
             if (NPVARIANT_IS_OBJECT (mVariant)) {
@@ -63,7 +63,7 @@ class totemNPObjectWrapper {
        operator void*() { return reinterpret_cast<void*> (mTarget.StartAssignment ()); }
 
       private:
-        totemNPObjectWrapper& mTarget;
+        xplayerNPObjectWrapper& mTarget;
         NPVariant mVariant;
     };
 
@@ -77,11 +77,11 @@ class totemNPObjectWrapper {
         NPObject *mObject;
     };
 
-    totemNPObjectWrapper& operator= (const AlreadyRetained& aRetainer) { Adopt (aRetainer.Get()); return *this; }
+    xplayerNPObjectWrapper& operator= (const AlreadyRetained& aRetainer) { Adopt (aRetainer.Get()); return *this; }
 
   protected:
 
-    totemNPObjectWrapper& operator= (const totemNPObjectWrapper&); // not implemented
+    xplayerNPObjectWrapper& operator= (const xplayerNPObjectWrapper&); // not implemented
 
     void Assign (NPObject *aObject) {
       if (mObject) {
@@ -107,18 +107,18 @@ class totemNPObjectWrapper {
     NPObject *mObject;
 };
 
-inline totemNPObjectWrapper::GetterRetains
-getter_Retains (totemNPObjectWrapper &aTarget)
+inline xplayerNPObjectWrapper::GetterRetains
+getter_Retains (xplayerNPObjectWrapper &aTarget)
 {
-  return totemNPObjectWrapper::GetterRetains (aTarget);
+  return xplayerNPObjectWrapper::GetterRetains (aTarget);
 }
 
-inline totemNPObjectWrapper::AlreadyRetained
-do_CreateInstance (totemNPClass_base* aClass, NPP aNPP)
+inline xplayerNPObjectWrapper::AlreadyRetained
+do_CreateInstance (xplayerNPClass_base* aClass, NPP aNPP)
 {
   assert (aClass);
   assert (aNPP);
-  return totemNPObjectWrapper::AlreadyRetained (aClass->CreateInstance (aNPP));
+  return xplayerNPObjectWrapper::AlreadyRetained (aClass->CreateInstance (aNPP));
 }
 
-#endif /* __TOTEM_NPOBJECT_WRAPPER_H__ */
+#endif /* __XPLAYER_NPOBJECT_WRAPPER_H__ */

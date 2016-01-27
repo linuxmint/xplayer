@@ -16,17 +16,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
  */
 
-#ifndef TOTEM_GALLERY_PROGRESS_H
-#define TOTEM_GALLERY_PROGRESS_H
+#ifndef XPLAYER_GALLERY_PROGRESS_H
+#define XPLAYER_GALLERY_PROGRESS_H
 
 #include <glib.h>
 #include <glib-object.h>
@@ -34,28 +34,28 @@
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_GALLERY_PROGRESS		(totem_gallery_progress_get_type ())
-#define TOTEM_GALLERY_PROGRESS(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_GALLERY_PROGRESS, TotemGalleryProgress))
-#define TOTEM_GALLERY_PROGRESS_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_GALLERY_PROGRESS, TotemGalleryProgressClass))
-#define TOTEM_IS_GALLERY_PROGRESS(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_GALLERY_PROGRESS))
-#define TOTEM_IS_GALLERY_PROGRESS_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_GALLERY_PROGRESS))
-#define TOTEM_GALLERY_PROGRESS_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_GALLERY_PROGRESS, TotemGalleryProgressClass))
+#define XPLAYER_TYPE_GALLERY_PROGRESS		(xplayer_gallery_progress_get_type ())
+#define XPLAYER_GALLERY_PROGRESS(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_GALLERY_PROGRESS, XplayerGalleryProgress))
+#define XPLAYER_GALLERY_PROGRESS_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_GALLERY_PROGRESS, XplayerGalleryProgressClass))
+#define XPLAYER_IS_GALLERY_PROGRESS(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_GALLERY_PROGRESS))
+#define XPLAYER_IS_GALLERY_PROGRESS_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_GALLERY_PROGRESS))
+#define XPLAYER_GALLERY_PROGRESS_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_GALLERY_PROGRESS, XplayerGalleryProgressClass))
 
-typedef struct _TotemGalleryProgressPrivate	TotemGalleryProgressPrivate;
+typedef struct _XplayerGalleryProgressPrivate	XplayerGalleryProgressPrivate;
 
 typedef struct {
 	GtkDialog parent;
-	TotemGalleryProgressPrivate *priv;
-} TotemGalleryProgress;
+	XplayerGalleryProgressPrivate *priv;
+} XplayerGalleryProgress;
 
 typedef struct {
 	GtkDialogClass parent;
-} TotemGalleryProgressClass;
+} XplayerGalleryProgressClass;
 
-GType totem_gallery_progress_get_type (void);
-TotemGalleryProgress *totem_gallery_progress_new (GPid child_pid, const gchar *output_filename);
-void totem_gallery_progress_run (TotemGalleryProgress *self, gint stdout_fd);
+GType xplayer_gallery_progress_get_type (void);
+XplayerGalleryProgress *xplayer_gallery_progress_new (GPid child_pid, const gchar *output_filename);
+void xplayer_gallery_progress_run (XplayerGalleryProgress *self, gint stdout_fd);
 
 G_END_DECLS
 
-#endif /* !TOTEM_GALLERY_PROGRESS_H */
+#endif /* !XPLAYER_GALLERY_PROGRESS_H */

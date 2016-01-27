@@ -1,13 +1,13 @@
-# translation of totem.HEAD.po to Azerbaijani
-# translation of totem.HEAD.po to Azerbaijani Turkish
-# totem.HEAD.po faylının Azərbaycan dilinə tərcüməsi
-# This file is distributed under the same license as the totem package.
+# translation of xplayer.HEAD.po to Azerbaijani
+# translation of xplayer.HEAD.po to Azerbaijani Turkish
+# xplayer.HEAD.po faylının Azərbaycan dilinə tərcüməsi
+# This file is distributed under the same license as the xplayer package.
 # Copyright (C) 2003 Mətin Əmirov
 # Mətin Əmirov <metin@karegen.com>, 2003, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.HEAD\n"
+"Project-Id-Version: xplayer.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-13 04:36+0200\n"
 "PO-Revision-Date: 2004-06-17 12:36+0300\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: KBabel 1.3\n"
 
-#: data/playlist.glade.h:1 src/totem-playlist.c:1405
+#: data/playlist.glade.h:1 src/xplayer-playlist.c:1405
 msgid "Playlist"
 msgstr "Çalğı Siyahısı"
 
@@ -43,7 +43,7 @@ msgstr "Mövqeyi _Köçür"
 msgid "_Save..."
 msgstr "_Qeyd Et..."
 
-#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/totem.glade.h:1
+#: data/properties.glade.h:1 data/screenshot.glade.h:1 data/xplayer.glade.h:1
 msgid "    "
 msgstr "    "
 
@@ -57,7 +57,7 @@ msgid "0 kbps"
 msgstr "0 kbps"
 
 #. 0 seconds
-#: data/properties.glade.h:4 data/totem.glade.h:2
+#: data/properties.glade.h:4 data/xplayer.glade.h:2
 #: src/bacon-video-widget-properties.c:102
 msgid "0 seconds"
 msgstr "0 saniyə"
@@ -112,7 +112,7 @@ msgstr "Kadr sıxlığı:"
 msgid "N/A"
 msgstr "M/D"
 
-#: data/properties.glade.h:16 src/totem.c:2038
+#: data/properties.glade.h:16 src/xplayer.c:2038
 msgid "Properties"
 msgstr "Xüsusiyyətlər"
 
@@ -144,7 +144,7 @@ msgstr "*"
 msgid "<b>Preview</b>"
 msgstr "<b>Nümayiş</b>"
 
-#: data/screenshot.glade.h:4 src/totem-screenshot.c:268
+#: data/screenshot.glade.h:4 src/xplayer-screenshot.c:268
 msgid "Save Screenshot"
 msgstr "Ekran Görüntüsünü Qeyd Et"
 
@@ -160,673 +160,673 @@ msgstr "Ekran görüntüsünü _masa üstünə qeyd et"
 msgid "Save screenshot to _file:"
 msgstr "Ekran görüntüsünü fayla _qeyd et:"
 
-#: data/totem.desktop.in.h:1
+#: data/xplayer.desktop.in.h:1
 msgid "Play movies and songs"
 msgstr "Film və mahnlıarı seyr edin və dinləyin"
 
 #. Title
-#: data/totem.desktop.in.h:2 data/totem.glade.h:101 src/totem.c:709
-#: src/totem.c:3656
-msgid "Totem Movie Player"
-msgstr "Totem Video Çalğıcısı"
+#: data/xplayer.desktop.in.h:2 data/xplayer.glade.h:101 src/xplayer.c:709
+#: src/xplayer.c:3656
+msgid "Xplayer Movie Player"
+msgstr "Xplayer Video Çalğıcısı"
 
-#: data/totem.glade.h:3
+#: data/xplayer.glade.h:3
 msgid "1.5 Mbps T1/Intranet/LAN"
 msgstr "1.5 Mbps T1/Intranet/LAN"
 
-#: data/totem.glade.h:4
+#: data/xplayer.glade.h:4
 msgid "112 Kbps Dual ISDN/DSL"
 msgstr "112 Kbps Dual ISDN/DSL"
 
-#: data/totem.glade.h:5
+#: data/xplayer.glade.h:5
 msgid "14.4 Kbps Modem"
 msgstr "14.4 Kbps Modem"
 
-#: data/totem.glade.h:6
+#: data/xplayer.glade.h:6
 msgid "16:9 (Widescreen)"
 msgstr "16:9 (Geniş Ekran)"
 
-#: data/totem.glade.h:7
+#: data/xplayer.glade.h:7
 msgid "19.2 Kbps Modem"
 msgstr "19.2 Kbps Modem"
 
-#: data/totem.glade.h:8
+#: data/xplayer.glade.h:8
 msgid "2.11:1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: data/totem.glade.h:9
+#: data/xplayer.glade.h:9
 msgid "256 Kbps DSL/Cable"
 msgstr "256 Kbps DSL/Cable"
 
-#: data/totem.glade.h:10
+#: data/xplayer.glade.h:10
 msgid "28.8 Kbps Modem"
 msgstr "28.8 Kbps Modem"
 
-#: data/totem.glade.h:11
+#: data/xplayer.glade.h:11
 msgid "33.6 Kbps Modem"
 msgstr "33.6 Kbps Modem"
 
-#: data/totem.glade.h:12
+#: data/xplayer.glade.h:12
 msgid "34.4 Kbps Modem"
 msgstr "34.4 Kbps Modem"
 
-#: data/totem.glade.h:13
+#: data/xplayer.glade.h:13
 msgid "384 Kbps DSL/Cable"
 msgstr "384 Kbps DSL/Cable"
 
-#: data/totem.glade.h:14
+#: data/xplayer.glade.h:14
 msgid "4-channel"
 msgstr "4-kanal"
 
-#: data/totem.glade.h:15
+#: data/xplayer.glade.h:15
 msgid "4:3 (TV)"
 msgstr "4:3 (TV)"
 
-#: data/totem.glade.h:16
+#: data/xplayer.glade.h:16
 msgid "5.0-channel"
 msgstr "5.0-kanal"
 
-#: data/totem.glade.h:17
+#: data/xplayer.glade.h:17
 msgid "5.1-channel"
 msgstr "5.1-kanal"
 
-#: data/totem.glade.h:18
+#: data/xplayer.glade.h:18
 msgid "512 Kbps DSL/Cable"
 msgstr "512 Kbps DSL/Cable"
 
-#: data/totem.glade.h:19
+#: data/xplayer.glade.h:19
 msgid "56 Kbps Modem/ISDN"
 msgstr "56 Kbps Modem/ISDN"
 
-#: data/totem.glade.h:20
+#: data/xplayer.glade.h:20
 msgid "<b>Audio Output</b>"
 msgstr "<b>Audio Çıxış</b>"
 
-#: data/totem.glade.h:21
+#: data/xplayer.glade.h:21
 msgid "<b>Color balance</b>"
 msgstr "<b>Rəng tarazlığı</b>"
 
-#: data/totem.glade.h:22
+#: data/xplayer.glade.h:22
 msgid "<b>Display</b>"
 msgstr "<b>Displey</b>"
 
-#: data/totem.glade.h:23
+#: data/xplayer.glade.h:23
 msgid "<b>Networking</b>"
 msgstr "<b>Şəbəkə</b>"
 
-#: data/totem.glade.h:24
+#: data/xplayer.glade.h:24
 msgid "<b>Optical Device</b>"
 msgstr "<b>Optik Avadanlıq</b>"
 
-#: data/totem.glade.h:25
+#: data/xplayer.glade.h:25
 msgid "<b>Proprietary Plugins</b>"
 msgstr "<b>Əlavələr</b>"
 
-#: data/totem.glade.h:26
+#: data/xplayer.glade.h:26
 msgid "<b>TV-Out</b>"
 msgstr "<b>TV-Çıxışı</b>"
 
-#: data/totem.glade.h:27
+#: data/xplayer.glade.h:27
 msgid "<b>Visual Effects</b>"
 msgstr "<b>Əyani Effektlət</b>"
 
-#: data/totem.glade.h:28
+#: data/xplayer.glade.h:28
 msgid "AC3 Passthrough"
 msgstr "AC3 Passthrough"
 
-#: data/totem.glade.h:29
+#: data/xplayer.glade.h:29
 msgid "A_udio Menu"
 msgstr "A_udio Menyusu"
 
-#: data/totem.glade.h:30
+#: data/xplayer.glade.h:30
 msgid "Always on _Top"
 msgstr "Həmişə Ü_stdə"
 
-#: data/totem.glade.h:31
+#: data/xplayer.glade.h:31
 msgid "Always on top"
 msgstr "Hər zaman üstdə"
 
-#: data/totem.glade.h:32
+#: data/xplayer.glade.h:32
 msgid "Audio"
 msgstr "Audio"
 
-#: data/totem.glade.h:33 src/totem.c:2898 src/totem.c:2919
+#: data/xplayer.glade.h:33 src/xplayer.c:2898 src/xplayer.c:2919
 msgid "Auto"
 msgstr "Avtomatik"
 
-#: data/totem.glade.h:34
+#: data/xplayer.glade.h:34
 msgid "Automatically _resize the window when a new video is loaded"
 msgstr "Yeni video açılanda pəncərəni _avtomatik ölçüləndir"
 
-#: data/totem.glade.h:35
+#: data/xplayer.glade.h:35
 msgid "Co_ntrast:"
 msgstr "Ko_ntrast:"
 
-#: data/totem.glade.h:36
+#: data/xplayer.glade.h:36
 msgid "Connection _speed:"
 msgstr "Bağlantı_sürəti:"
 
-#: data/totem.glade.h:37
+#: data/xplayer.glade.h:37
 msgid "Deinterlace"
 msgstr "Qarışmanı Ləğv Et"
 
-#: data/totem.glade.h:38
+#: data/xplayer.glade.h:38
 msgid "Display"
 msgstr "Ekran"
 
-#: data/totem.glade.h:39
+#: data/xplayer.glade.h:39
 msgid "Exit Fullscreen"
 msgstr "Tam Ekran Modundan Çıx"
 
-#: data/totem.glade.h:40
+#: data/xplayer.glade.h:40
 msgid "Extra Large"
 msgstr "Çox Böyük"
 
-#: data/totem.glade.h:41
+#: data/xplayer.glade.h:41
 msgid "File name"
 msgstr "Fayl adı"
 
-#: data/totem.glade.h:42
+#: data/xplayer.glade.h:42
 msgid "General"
 msgstr "Ümumi"
 
-#: data/totem.glade.h:43
+#: data/xplayer.glade.h:43
 msgid "Go to the DVD menu"
 msgstr "DVD menyusuna get"
 
-#: data/totem.glade.h:44
+#: data/xplayer.glade.h:44
 msgid "Go to the angle menu"
 msgstr "Bucaq menyusuna get"
 
-#: data/totem.glade.h:45
+#: data/xplayer.glade.h:45
 msgid "Go to the audio menu"
 msgstr "Audio menyusuna get"
 
-#: data/totem.glade.h:46
+#: data/xplayer.glade.h:46
 msgid "Go to the chapter menu"
 msgstr "Fəsil menyusuna get"
 
-#: data/totem.glade.h:47
+#: data/xplayer.glade.h:47
 msgid "Go to the title menu"
 msgstr "Başlıq menyusuna get"
 
-#: data/totem.glade.h:48
+#: data/xplayer.glade.h:48
 msgid "Help contents"
 msgstr "Yardım məzmunu"
 
-#: data/totem.glade.h:49
+#: data/xplayer.glade.h:49
 msgid "Intranet/LAN"
 msgstr "Intranet/LAN"
 
-#: data/totem.glade.h:50
+#: data/xplayer.glade.h:50
 msgid "Languages"
 msgstr "Dillər"
 
-#: data/totem.glade.h:51
+#: data/xplayer.glade.h:51
 msgid "Large"
 msgstr "Geniş"
 
-#: data/totem.glade.h:52 src/totem.c:81
+#: data/xplayer.glade.h:52 src/xplayer.c:81
 msgid "Next"
 msgstr "Sonrakı"
 
-#: data/totem.glade.h:53
+#: data/xplayer.glade.h:53
 msgid "Next chapter or movie"
 msgstr "Sonrakı fəsil ya da film"
 
-#: data/totem.glade.h:54
+#: data/xplayer.glade.h:54
 msgid "No Language Selection Available"
 msgstr "Heç Bir Dil Seçimi Mövcud Seyil"
 
-#: data/totem.glade.h:55
+#: data/xplayer.glade.h:55
 msgid "No subtitles selection available"
 msgstr "Alt yazı seçimi mövcud deyil"
 
-#: data/totem.glade.h:56
+#: data/xplayer.glade.h:56
 msgid "Normal"
 msgstr "Normal"
 
-#: data/totem.glade.h:57
+#: data/xplayer.glade.h:57
 msgid "Open _Location..."
 msgstr "_Yeri Aç..."
 
-#: data/totem.glade.h:58
+#: data/xplayer.glade.h:58
 msgid "Open a non-local file"
 msgstr "Yerli olmayan fayl aç"
 
-#: data/totem.glade.h:59
+#: data/xplayer.glade.h:59
 msgid "Play / Pa_use"
 msgstr "Çal / _Fasilə ver"
 
-#: data/totem.glade.h:60
+#: data/xplayer.glade.h:60
 msgid "Play _Audio CD"
 msgstr "_Audio CD-ni çal"
 
-#: data/totem.glade.h:61
+#: data/xplayer.glade.h:61
 msgid "Play _DVD"
 msgstr " _DVD-ni oynat"
 
-#: data/totem.glade.h:62
+#: data/xplayer.glade.h:62
 msgid "Play _VCD"
 msgstr "_VCD-ni oynat"
 
-#: data/totem.glade.h:63
+#: data/xplayer.glade.h:63
 msgid "Play a Video CD"
 msgstr "Video CD-ni oynat"
 
-#: data/totem.glade.h:64
+#: data/xplayer.glade.h:64
 msgid "Play a Video DVD"
 msgstr "Video DVD-ni oynat"
 
-#: data/totem.glade.h:65
+#: data/xplayer.glade.h:65
 msgid "Play an audio CD"
 msgstr "Audio CD-ni çal"
 
-#: data/totem.glade.h:66
+#: data/xplayer.glade.h:66
 msgid "Play or pause the movie"
 msgstr "Filmə fasilə ver ya da oynat"
 
-#: data/totem.glade.h:67 src/totem.c:80
+#: data/xplayer.glade.h:67 src/xplayer.c:80
 msgid "Play/Pause"
 msgstr "Çal / Fasilə ver"
 
-#: data/totem.glade.h:68 src/totem.c:82
+#: data/xplayer.glade.h:68 src/xplayer.c:82
 msgid "Previous"
 msgstr "Əvvəlki"
 
-#: data/totem.glade.h:69
+#: data/xplayer.glade.h:69
 msgid "Previous chapter or movie"
 msgstr "Öncəki fəsil ya da film"
 
-#: data/totem.glade.h:70
+#: data/xplayer.glade.h:70
 msgid "S_ubtitles"
 msgstr "Alt _Yazılar"
 
-#: data/totem.glade.h:71
+#: data/xplayer.glade.h:71
 msgid "Sat_uration:"
 msgstr "_Doyğunluq"
 
-#: data/totem.glade.h:72
+#: data/xplayer.glade.h:72
 msgid "Set the aspect ratio"
 msgstr "Görünüş nisbətini seç"
 
-#: data/totem.glade.h:73
+#: data/xplayer.glade.h:73
 msgid "Set the repeat mode"
 msgstr "Təkrarlama modunu aç"
 
-#: data/totem.glade.h:74
+#: data/xplayer.glade.h:74
 msgid "Set the shuffle mode"
 msgstr "Qarışdırma modunu seç"
 
-#: data/totem.glade.h:75
+#: data/xplayer.glade.h:75
 msgid "Sets 16:9 (Anamorphic) aspect ratio"
 msgstr "16:9 (Anamorfik) görünüş nisbətini seçər"
 
-#: data/totem.glade.h:76
+#: data/xplayer.glade.h:76
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr "2.11:1 (DVB) görünüş nisbətini seçər"
 
-#: data/totem.glade.h:77
+#: data/xplayer.glade.h:77
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "4:3 (TV) görünüş nisbətini seçər"
 
-#: data/totem.glade.h:78
+#: data/xplayer.glade.h:78
 msgid "Sets automatic aspect ratio"
 msgstr "Avtomatik görünüş nisbətini seçər"
 
-#: data/totem.glade.h:79
+#: data/xplayer.glade.h:79
 msgid "Sets square aspect ratio"
 msgstr "Dörtbucaq görünüş nisbətini seçər"
 
-#: data/totem.glade.h:80
+#: data/xplayer.glade.h:80
 msgid "Show _Controls"
 msgstr "İdarələri _Göstər"
 
-#: data/totem.glade.h:81
+#: data/xplayer.glade.h:81
 msgid "Show _visual effects when an audio file is played"
 msgstr "Audio fayl çalınanda _əyani effektlər göstər"
 
-#: data/totem.glade.h:82
+#: data/xplayer.glade.h:82
 msgid "Show controls"
 msgstr "İdarələri göstər"
 
-#: data/totem.glade.h:83
+#: data/xplayer.glade.h:83
 msgid "Show or hide the playlist"
 msgstr "Çalğı siyahısını göstər ya da gizlət"
 
-#: data/totem.glade.h:84
+#: data/xplayer.glade.h:84
 msgid "Show/Hide Playlist"
 msgstr "Çalğı Siyahısını Göstər/Gizlət"
 
-#: data/totem.glade.h:85
+#: data/xplayer.glade.h:85
 msgid "Shuff_le Mode"
 msgstr "_Qarışdırma Modu"
 
-#: data/totem.glade.h:86
+#: data/xplayer.glade.h:86
 msgid "Skip _Backwards"
 msgstr "_Geri Sar"
 
-#: data/totem.glade.h:87
+#: data/xplayer.glade.h:87
 msgid "Skip _Forward"
 msgstr "_İrəli Sar"
 
-#: data/totem.glade.h:88
+#: data/xplayer.glade.h:88
 msgid "Skip backwards"
 msgstr "Geri sar"
 
-#: data/totem.glade.h:89
+#: data/xplayer.glade.h:89
 msgid "Skip forward"
 msgstr "İrəli sar"
 
-#: data/totem.glade.h:90
+#: data/xplayer.glade.h:90
 msgid "Skip to"
 msgstr "Buraya sar"
 
-#: data/totem.glade.h:91
+#: data/xplayer.glade.h:91
 msgid "Skip to a specific time"
 msgstr "Xüsusi zamana sar"
 
-#: data/totem.glade.h:92
+#: data/xplayer.glade.h:92
 msgid "Small"
 msgstr "Kiçik"
 
-#: data/totem.glade.h:93
+#: data/xplayer.glade.h:93
 msgid "Square"
 msgstr "Dörtbucaq"
 
-#: data/totem.glade.h:94
+#: data/xplayer.glade.h:94
 msgid "Stereo"
 msgstr "Stereo"
 
-#: data/totem.glade.h:95
+#: data/xplayer.glade.h:95
 msgid "Subtitles"
 msgstr "Alt Yazılar"
 
-#: data/totem.glade.h:96
+#: data/xplayer.glade.h:96
 msgid "Switch to double size"
 msgstr "İki qat böyüklüyə keç"
 
-#: data/totem.glade.h:97
+#: data/xplayer.glade.h:97
 msgid "Switch to fullscreen"
 msgstr "Tam ekran moduna keç"
 
-#: data/totem.glade.h:98
+#: data/xplayer.glade.h:98
 msgid "Take _Screenshot"
 msgstr "Ekran _Görüntüsünü Al"
 
-#: data/totem.glade.h:99
+#: data/xplayer.glade.h:99
 msgid "Take a screenshot"
 msgstr "Ekran görüntüsünü al"
 
-#: data/totem.glade.h:100
+#: data/xplayer.glade.h:100
 msgid "Time:"
 msgstr "Vaxt:"
 
-#: data/totem.glade.h:102
-msgid "Totem Preferences"
-msgstr "Totem Qurğuları"
+#: data/xplayer.glade.h:102
+msgid "Xplayer Preferences"
+msgstr "Xplayer Qurğuları"
 
-#: data/totem.glade.h:103
+#: data/xplayer.glade.h:103
 msgid "Tv-out in fullscreen by Nvidia (NTSC)"
 msgstr "Tam ekran modunda Tv-çıxış, Nvidia (NTSC)"
 
-#: data/totem.glade.h:104
+#: data/xplayer.glade.h:104
 msgid "Tv-out in fullscreen by Nvidia (PAL)"
 msgstr "Tam ekran modunda Tv-çıxış, Nvidia (PAL)"
 
-#: data/totem.glade.h:105
+#: data/xplayer.glade.h:105
 msgid "Visualization _size:"
 msgstr "Əyani effekt _böyüklüyü:"
 
-#: data/totem.glade.h:106
+#: data/xplayer.glade.h:106
 msgid "Volume _Down"
 msgstr "Səsi A_zalt"
 
-#: data/totem.glade.h:107
+#: data/xplayer.glade.h:107
 msgid "Volume _Up"
 msgstr "Səsi _Artır"
 
-#: data/totem.glade.h:108
+#: data/xplayer.glade.h:108
 msgid "Volume down"
 msgstr "Səsi azalt"
 
-#: data/totem.glade.h:109
+#: data/xplayer.glade.h:109
 msgid "Volume up"
 msgstr "Səsi artır"
 
-#: data/totem.glade.h:110 data/vanity.glade.h:7
+#: data/xplayer.glade.h:110 data/vanity.glade.h:7
 msgid "Zoom _1:1"
 msgstr "Yaxınlıq _1:1"
 
-#: data/totem.glade.h:111 data/vanity.glade.h:8
+#: data/xplayer.glade.h:111 data/vanity.glade.h:8
 msgid "Zoom _2:1"
 msgstr "Yaxınlıq _2:1"
 
-#: data/totem.glade.h:112
+#: data/xplayer.glade.h:112
 msgid "Zoom to half size"
 msgstr "Yarı böyüklüyə ölçüləndir"
 
-#: data/totem.glade.h:113
+#: data/xplayer.glade.h:113
 msgid "Zoom to one for one size"
 msgstr "Tam böyüklüyə ölçüləndir"
 
-#: data/totem.glade.h:114
+#: data/xplayer.glade.h:114
 msgid "_Add Proprietary Plugins..."
 msgstr "Əlavələr Əlavə _Et..."
 
-#: data/totem.glade.h:115
+#: data/xplayer.glade.h:115
 msgid "_Angle Menu"
 msgstr "_Bucaq Menyusu"
 
-#: data/totem.glade.h:116
+#: data/xplayer.glade.h:116
 msgid "_Aspect Ratio"
 msgstr "Görünüş _Nisbəti"
 
-#: data/totem.glade.h:117
+#: data/xplayer.glade.h:117
 msgid "_Audio output type:"
 msgstr "_Audio çıxış növü:"
 
-#: data/totem.glade.h:118
+#: data/xplayer.glade.h:118
 msgid "_Brightness:"
 msgstr "_Parlaqlıq:"
 
-#: data/totem.glade.h:119
+#: data/xplayer.glade.h:119
 msgid "_Chapter Menu"
 msgstr "_Fəsil Menyusu"
 
-#: data/totem.glade.h:120
+#: data/xplayer.glade.h:120
 msgid "_Contents"
 msgstr "_Məzmun"
 
-#: data/totem.glade.h:121
+#: data/xplayer.glade.h:121
 msgid "_DVD Menu"
 msgstr "_DVD Menyusu"
 
-#: data/totem.glade.h:122
+#: data/xplayer.glade.h:122
 msgid "_DXR3 TV-out"
 msgstr "_DXR3 TV-çıxışı"
 
-#: data/totem.glade.h:123
+#: data/xplayer.glade.h:123
 msgid "_Deinterlace"
 msgstr "_Qarışmanı Ləğv Et"
 
-#: data/totem.glade.h:124
+#: data/xplayer.glade.h:124
 msgid "_Eject"
 msgstr "Çı_xart"
 
-#: data/totem.glade.h:125
+#: data/xplayer.glade.h:125
 msgid "_Fullscreen"
 msgstr "_Tam Ekran"
 
-#: data/totem.glade.h:126
+#: data/xplayer.glade.h:126
 msgid "_Go"
 msgstr "_Get"
 
-#: data/totem.glade.h:127
+#: data/xplayer.glade.h:127
 msgid "_Hue:"
 msgstr "Çö_hrə"
 
-#: data/totem.glade.h:128
+#: data/xplayer.glade.h:128
 msgid "_Languages"
 msgstr "_Dillər"
 
-#: data/totem.glade.h:129
+#: data/xplayer.glade.h:129
 msgid "_Movie"
 msgstr "_Film"
 
-#: data/totem.glade.h:130
+#: data/xplayer.glade.h:130
 msgid "_Next Chapter/Movie"
 msgstr "_Sonrakı Fəsil/Film"
 
-#: data/totem.glade.h:131
+#: data/xplayer.glade.h:131
 msgid "_No TV-out"
 msgstr "TV-çıxışı Yoxdur"
 
-#: data/totem.glade.h:132
+#: data/xplayer.glade.h:132
 msgid "_Optical device path:"
 msgstr "_Optik avadanlığın yolu:"
 
-#: data/totem.glade.h:133
+#: data/xplayer.glade.h:133
 msgid "_Previous Chapter/Movie"
 msgstr "Ə_vvəlki Fəsil/Film"
 
-#: data/totem.glade.h:134
+#: data/xplayer.glade.h:134
 msgid "_Repeat Mode"
 msgstr "Tərkarlama _Modu"
 
-#: data/totem.glade.h:135
+#: data/xplayer.glade.h:135
 msgid "_Reset defaults"
 msgstr "Ön qurğuları _sıfırla"
 
-#: data/totem.glade.h:136
+#: data/xplayer.glade.h:136
 msgid "_Show/Hide Playlist"
 msgstr "Çalğı Siyahısını _Göstər/Gizlət"
 
-#: data/totem.glade.h:137
+#: data/xplayer.glade.h:137
 msgid "_Skip to..."
 msgstr "Buraya _sar..."
 
-#: data/totem.glade.h:138
+#: data/xplayer.glade.h:138
 msgid "_Skip to:"
 msgstr "Buraya _sar:"
 
-#: data/totem.glade.h:139
+#: data/xplayer.glade.h:139
 msgid "_Sound"
 msgstr "_Səs"
 
-#: data/totem.glade.h:140
+#: data/xplayer.glade.h:140
 msgid "_Title Menu"
 msgstr "_Başlıq Menyusu"
 
-#: data/totem.glade.h:141
+#: data/xplayer.glade.h:141
 msgid "_Type of visualization:"
 msgstr "Əyani bəzək _növü:"
 
-#: data/totem.glade.h:142 data/vanity.glade.h:10
+#: data/xplayer.glade.h:142 data/vanity.glade.h:10
 msgid "_Zoom 1:2"
 msgstr "_Yaxınlıq 1:2"
 
-#: data/totem.glade.h:143
+#: data/xplayer.glade.h:143
 msgid "seconds"
 msgstr "saniyə"
 
-#: data/totem.schemas.in.h:1
+#: data/xplayer.schemas.in.h:1
 msgid "Enable deinterlacing"
 msgstr "Qarışmanı ləğv etmə fəal"
 
-#: data/totem.schemas.in.h:2
+#: data/xplayer.schemas.in.h:2
 msgid "Enable deinterlacing."
 msgstr "Qarışmanı ləğv etməni fəallaşdır."
 
-#: data/totem.schemas.in.h:3
+#: data/xplayer.schemas.in.h:3
 msgid "Height of the video widget"
 msgstr "Video pəncərəsinin hündürlüyü"
 
-#: data/totem.schemas.in.h:4
+#: data/xplayer.schemas.in.h:4
 msgid "Name of the visual effects plugins"
 msgstr "Əyani effekt əlavələrinin adı"
 
-#: data/totem.schemas.in.h:5
+#: data/xplayer.schemas.in.h:5
 msgid "Name of the visual effects plugins."
 msgstr "Əyani effekt əlavələrinin adı."
 
-#: data/totem.schemas.in.h:6
+#: data/xplayer.schemas.in.h:6
 msgid "Path to the optical media device"
 msgstr "Optik medya avadanlığına yol"
 
-#: data/totem.schemas.in.h:7
+#: data/xplayer.schemas.in.h:7
 msgid "Path to the optical media device."
 msgstr "Optik medya avadanlığının cığırı."
 
-#: data/totem.schemas.in.h:8
+#: data/xplayer.schemas.in.h:8
 msgid "Repeat mode"
 msgstr "Tərkarlama modu"
 
-#: data/totem.schemas.in.h:9
+#: data/xplayer.schemas.in.h:9
 msgid "Repeat mode."
 msgstr "Tərkarlama modu."
 
-#: data/totem.schemas.in.h:10
+#: data/xplayer.schemas.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Fayl açılanda kanvası avtomatik ölçüləndir"
 
-#: data/totem.schemas.in.h:11
+#: data/xplayer.schemas.in.h:11
 msgid "Resize the canvas automatically on file load."
 msgstr "Fayl açılanda kanvası avtomatik ölçüləndir."
 
-#: data/totem.schemas.in.h:12
+#: data/xplayer.schemas.in.h:12
 msgid "Show visual effects when no video is displayed"
 msgstr "Əyani effektləri video göstərilməyəndə işlət"
 
-#: data/totem.schemas.in.h:13
+#: data/xplayer.schemas.in.h:13
 msgid "Show visual effects when playing an audio only file."
 msgstr "Əyani effektləri yalnız audio fayl çalınanda işlət."
 
-#: data/totem.schemas.in.h:14
+#: data/xplayer.schemas.in.h:14
 msgid "Shuffle mode"
 msgstr "Qarışdırma modu"
 
-#: data/totem.schemas.in.h:15
+#: data/xplayer.schemas.in.h:15
 msgid "Shuffle mode."
 msgstr "Qarışdırma modu."
 
-#: data/totem.schemas.in.h:16
+#: data/xplayer.schemas.in.h:16
 msgid "The brightness of the video"
 msgstr "Videonun parlaqlığı"
 
-#: data/totem.schemas.in.h:17
+#: data/xplayer.schemas.in.h:17
 msgid "The brightness of the video."
 msgstr "Videonun parlaqlığı."
 
-#: data/totem.schemas.in.h:18
+#: data/xplayer.schemas.in.h:18
 msgid "The contrast of the video"
 msgstr "Videonun kontrastı"
 
-#: data/totem.schemas.in.h:19
+#: data/xplayer.schemas.in.h:19
 msgid "The contrast of the video."
 msgstr "Videonun kontrastı."
 
-#: data/totem.schemas.in.h:20
+#: data/xplayer.schemas.in.h:20
 msgid "The hue of the video"
 msgstr "Videonun çöhrəsi"
 
-#: data/totem.schemas.in.h:21
+#: data/xplayer.schemas.in.h:21
 msgid "The hue of the video."
 msgstr "Videonun çöhrəsi."
 
-#: data/totem.schemas.in.h:22
+#: data/xplayer.schemas.in.h:22
 msgid "The saturation of the video"
 msgstr "Videonun doyğunluğu"
 
-#: data/totem.schemas.in.h:23
+#: data/xplayer.schemas.in.h:23
 msgid "The saturation of the video."
 msgstr "Videonun doyğunluğu."
 
-#: data/totem.schemas.in.h:24
+#: data/xplayer.schemas.in.h:24
 msgid "Type of audio output to use"
 msgstr "İstifadə ediləcək audio çıxış növü"
 
-#: data/totem.schemas.in.h:25
+#: data/xplayer.schemas.in.h:25
 msgid ""
 "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
 "\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
@@ -836,39 +836,39 @@ msgstr ""
 "çıxış üçün, \"2\" 5.0 kanallı çıxış üçün, \"3\" 5.1 kanallı çıxış üçün, \"4"
 "\"  AC3 Passthrough üçün."
 
-#: data/totem.schemas.in.h:26
+#: data/xplayer.schemas.in.h:26
 msgid "Whether the main window should stay on top"
 msgstr "Əsas pəncərənin həmişə üstdə olması"
 
-#: data/totem.schemas.in.h:27
+#: data/xplayer.schemas.in.h:27
 msgid "Whether the main window should stay on top of the other ones"
 msgstr "Əsas pəncərənin həmişə başqa pəncərələrin üstündə olması"
 
-#: data/totem.schemas.in.h:28
+#: data/xplayer.schemas.in.h:28
 msgid "Whether to enable debug for the playback engine"
 msgstr "Oxuma motoru üçün xəta ayırmanın fəal edilməsi"
 
-#: data/totem.schemas.in.h:29
+#: data/xplayer.schemas.in.h:29
 msgid "Whether to enable debug for the playback engine."
 msgstr "Oxuma mühərriki üçün xəta ayırmanın fəal edilməsi"
 
-#: data/totem.schemas.in.h:30
+#: data/xplayer.schemas.in.h:30
 msgid "Width of the video widget"
 msgstr "Video pəncərəsinin eni"
 
-#: data/totem.schemas.in.h:31
+#: data/xplayer.schemas.in.h:31
 msgid "X coordinate for the Playlist"
 msgstr "Çalğı siyahısı üçün X koordinatı"
 
-#: data/totem.schemas.in.h:32
+#: data/xplayer.schemas.in.h:32
 msgid "X coordinate for the Playlist."
 msgstr "Çalğı siyahısı üçün X mövqeyi."
 
-#: data/totem.schemas.in.h:33
+#: data/xplayer.schemas.in.h:33
 msgid "Y coordinate for the Playlist"
 msgstr "Çalğı siyahısı üçün Y koordinatı"
 
-#: data/totem.schemas.in.h:34
+#: data/xplayer.schemas.in.h:34
 msgid "Y coordinate for the Playlist."
 msgstr "Çalğı siyahısı üçün Y mövqeyi."
 
@@ -929,8 +929,8 @@ msgid "Unnamed Video Device"
 msgstr "Adsız Video Avadanlıq"
 
 #: src/bacon-video-widget-gst.c:62
-msgid "Totem Video Window"
-msgstr "Totem Video Pəncərəsi"
+msgid "Xplayer Video Window"
+msgstr "Xplayer Video Pəncərəsi"
 
 #: src/bacon-video-widget-properties.c:82
 #, c-format
@@ -998,7 +998,7 @@ msgstr ""
 msgid ""
 "No video output is available. Make sure that the program is correctly "
 "installed."
-msgstr "Heç bir video çıxış tapıla bilmədi. Xahiş edirik Totem-in düzgün qurulduğunu yoxlayın."
+msgstr "Heç bir video çıxış tapıla bilmədi. Xahiş edirik Xplayer-in düzgün qurulduğunu yoxlayın."
 
 #: src/bacon-video-widget-xine.c:1287
 msgid "The server you are trying to connect to is not known."
@@ -1113,50 +1113,50 @@ msgstr "Adsız SCSI CD-ROM (%s)"
 msgid "File image"
 msgstr "Fayl rəsmi"
 
-#. disp = gnome_vfs_unescape_string_for_display (totem->mrl);
-#: src/totem-mozilla-viewer.c:59 src/totem.c:378 src/totem.c:406
-#: src/totem.c:831 src/totem.c:939
+#. disp = gnome_vfs_unescape_string_for_display (xplayer->mrl);
+#: src/xplayer-mozilla-viewer.c:59 src/xplayer.c:378 src/xplayer.c:406
+#: src/xplayer.c:831 src/xplayer.c:939
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem '%s' faylını oxuya bilmədi."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer '%s' faylını oxuya bilmədi."
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
 msgid "Couldn't load the main interface (mozilla-viewer.glade)."
 msgstr "Əsas ara üz (mozilla-viewer.glade) yüklənə bilmədi."
 
-#: src/totem-mozilla-viewer.c:91 src/totem-mozilla-viewer.c:98
-msgid "Make sure that the Totem plugin is properly installed."
-msgstr "Totem-in düzgün quraşdırıldığını yoxlayın."
+#: src/xplayer-mozilla-viewer.c:91 src/xplayer-mozilla-viewer.c:98
+msgid "Make sure that the Xplayer plugin is properly installed."
+msgstr "Xplayer-in düzgün quraşdırıldığını yoxlayın."
 
-#: src/totem-mozilla-viewer.c:109
-msgid "The Totem plugin could not startup."
-msgstr "Totem əlavəsi başlaya bilmədi."
+#: src/xplayer-mozilla-viewer.c:109
+msgid "The Xplayer plugin could not startup."
+msgstr "Xplayer əlavəsi başlaya bilmədi."
 
-#: src/totem-mozilla-viewer.c:109 src/totem.c:3366
+#: src/xplayer-mozilla-viewer.c:109 src/xplayer.c:3366
 msgid "No reason."
 msgstr "Səbəb bildirilmədi."
 
-#: src/totem-mozilla-viewer.c:141 src/totem.c:3661
+#: src/xplayer-mozilla-viewer.c:141 src/xplayer.c:3661
 msgid "Could not initialise the thread-safe libraries."
 msgstr "Thread-safe kitabxanaları başladıla bilmədi."
 
-#: src/totem-mozilla-viewer.c:141
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "Sistem qurğularınızı yoxlayın. Totem əlavəsi indi bağlanacaqdır."
+#: src/xplayer-mozilla-viewer.c:141
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Sistem qurğularınızı yoxlayın. Xplayer əlavəsi indi bağlanacaqdır."
 
-#: src/totem-playlist.c:299
+#: src/xplayer-playlist.c:299
 msgid "Could not save the playlist"
 msgstr "Çalğı siyahısı qeyd edilə bilmədi"
 
-#: src/totem-playlist.c:573 src/totem.c:1574
+#: src/xplayer-playlist.c:573 src/xplayer.c:1574
 msgid "Select files"
 msgstr "Faylları seç"
 
-#: src/totem-playlist.c:754
+#: src/xplayer-playlist.c:754
 msgid "Save playlist"
 msgstr "Çalğı siyahısını qeyd et"
 
-#: src/totem-playlist.c:799
+#: src/xplayer-playlist.c:799
 #, c-format
 msgid ""
 "A file named '%s' already exists.\n"
@@ -1165,244 +1165,244 @@ msgstr ""
 "'%s' adlı fayl onsuz da mövcuddur.\n"
 "Üstündən qeyd etmək istəyirsiniz?"
 
-#: src/totem-playlist.c:984
+#: src/xplayer-playlist.c:984
 msgid "Filename"
 msgstr "Fayl adı"
 
-#: src/totem-pl-parser.c:185
+#: src/xplayer-pl-parser.c:185
 #, c-format
 msgid "Couldn't write parser: %s"
 msgstr "Oxuyucu yazıla bilmədi: %s"
 
-#: src/totem-pl-parser.c:249
+#: src/xplayer-pl-parser.c:249
 #, c-format
 msgid "Couldn't open parser: %s"
 msgstr "Oxuyucu açıla bilmədi: %s"
 
-#: src/totem-preferences.c:82
+#: src/xplayer-preferences.c:82
 msgid ""
-"It seems you are running Totem remotely.\n"
+"It seems you are running Xplayer remotely.\n"
 "Are you sure you want to enable the visual effects?"
 msgstr ""
-"Görünən odur ki Totem-i uzaqdan işlədirsiniz.\n"
+"Görünən odur ki Xplayer-i uzaqdan işlədirsiniz.\n"
 "Həqiqətən də əyani effektləri fəallaşdırmaq istəyirsiniz?"
 
-#: src/totem-preferences.c:135
+#: src/xplayer-preferences.c:135
 msgid ""
 "The change of this setting will only take effect for the next movie, or when "
-"Totem is restarted"
+"Xplayer is restarted"
 msgstr ""
-"Bu qurğunun dəyişdirilməsi ancaq bir sonrakı filmdə ya da Totem yenidən "
+"Bu qurğunun dəyişdirilməsi ancaq bir sonrakı filmdə ya da Xplayer yenidən "
 "başladılanda fəal olacaq"
 
-#: src/totem-preferences.c:179
+#: src/xplayer-preferences.c:179
 msgid "Switching on or off this type of TV-Out requires a restart to take effect."
 msgstr ""
 "Bu cür TV-Out'un bağlanıb açılması proqramın yenidən başladılmasını məcburi "
 "qılır."
 
-#: src/totem-preferences.c:312
-msgid "Totem could not start the file manager."
-msgstr "Totem fayl idarəçisini başlada bilmədi."
+#: src/xplayer-preferences.c:312
+msgid "Xplayer could not start the file manager."
+msgstr "Xplayer fayl idarəçisini başlada bilmədi."
 
-#: src/totem-preferences.c:340
+#: src/xplayer-preferences.c:340
 msgid "Changing the visuals effect type will require a restart to take effect."
 msgstr ""
 "Əyani effektin dəyişdirilməsi proqramın yenidən başladılmasını məcburi qıla "
 "bilər."
 
-#: src/totem-properties-page.c:123
+#: src/xplayer-properties-page.c:123
 msgid "URI currently displayed"
 msgstr "Hazırda göstərilən URI"
 
-#: src/totem-properties-page.c:193
+#: src/xplayer-properties-page.c:193
 msgid "Video and Audio information properties page"
 msgstr "Video və Audio xassələri mə'lumat səhifəsi"
 
-#: src/totem-screenshot.c:146 src/totem-screenshot.c:157
+#: src/xplayer-screenshot.c:146 src/xplayer-screenshot.c:157
 #, c-format
 msgid "Screenshot%d.png"
 msgstr "Foto%d.png"
 
-#: src/totem-screenshot.c:199
+#: src/xplayer-screenshot.c:199
 #, c-format
 msgid "File '%s' already exists."
 msgstr "'%s' faylı onsuzda mövcuddur."
 
-#: src/totem-screenshot.c:201
+#: src/xplayer-screenshot.c:201
 msgid "The screenshot was not saved"
 msgstr "Ekran görüntüsü qeyd edilmədi"
 
-#: src/totem-screenshot.c:212
+#: src/xplayer-screenshot.c:212
 msgid "There was an error saving the screenshot."
 msgstr "Ekran görüntüsü qeyd edilirkən xəta yarandı."
 
-#: src/totem-statusbar.c:138
+#: src/xplayer-statusbar.c:138
 msgid "Shadow type"
 msgstr "Kölgələmə növü"
 
-#: src/totem-statusbar.c:139
+#: src/xplayer-statusbar.c:139
 msgid "Style of bevel around the statusbar text"
 msgstr "Vəziyyət çubuğu mətni ətrafındakı qabartma sahə tərzi"
 
-#: src/totem-statusbar.c:171 src/totem.c:322 src/totem.c:691
+#: src/xplayer-statusbar.c:171 src/xplayer.c:322 src/xplayer.c:691
 msgid "Stopped"
 msgstr "Dayandırılıb"
 
-#: src/totem-statusbar.c:180
+#: src/xplayer-statusbar.c:180
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: src/totem-statusbar.c:208
+#: src/xplayer-statusbar.c:208
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (Axın)"
 
-#: src/totem-statusbar.c:216
+#: src/xplayer-statusbar.c:216
 msgid "Seek to"
 msgstr "Buraya sar"
 
-#: src/totem-statusbar.c:278
+#: src/xplayer-statusbar.c:278
 msgid "Buffering"
 msgstr "Bufferlənir"
 
 #  hour:minutes:seconds
 #. eg: 75 %
-#: src/totem-statusbar.c:281
+#: src/xplayer-statusbar.c:281
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
-#: src/totem.c:78
+#: src/xplayer.c:78
 msgid "Backend options"
 msgstr "Bəkend qurğuları"
 
-#: src/totem.c:79
+#: src/xplayer.c:79
 msgid "Enable debug"
 msgstr "Xəta ayırılmasını fəallaşdır"
 
-#: src/totem.c:83
+#: src/xplayer.c:83
 msgid "Seek Forwards"
 msgstr "İrəliyə Doğru Sar"
 
-#: src/totem.c:84
+#: src/xplayer.c:84
 msgid "Seek Backwards"
 msgstr "Geriyə Doğru Sar"
 
-#: src/totem.c:85
+#: src/xplayer.c:85
 msgid "Volume Up"
 msgstr "Səsi Artır"
 
-#: src/totem.c:86
+#: src/xplayer.c:86
 msgid "Volume Down"
 msgstr "Səsi Azalt"
 
-#: src/totem.c:87
+#: src/xplayer.c:87
 msgid "Toggle Fullscreen"
 msgstr "Tam Ekranda Göstər"
 
-#: src/totem.c:88
+#: src/xplayer.c:88
 msgid "Quit"
 msgstr "Çıx"
 
-#: src/totem.c:89
+#: src/xplayer.c:89
 msgid "Enqueue"
 msgstr "Növbəyə al"
 
-#: src/totem.c:90
+#: src/xplayer.c:90
 msgid "Replace"
 msgstr "Əvəz Et"
 
-#: src/totem.c:312
+#: src/xplayer.c:312
 msgid "Playing"
 msgstr "Çalınır"
 
-#: src/totem.c:317
+#: src/xplayer.c:317
 msgid "Paused"
 msgstr "Fasilədə"
 
-#: src/totem.c:357
-msgid "Totem could not eject the optical media."
-msgstr "Totem optik medianı çıxarda bilmədi."
+#: src/xplayer.c:357
+msgid "Xplayer could not eject the optical media."
+msgstr "Xplayer optik medianı çıxarda bilmədi."
 
-#: src/totem.c:357
+#: src/xplayer.c:357
 msgid "No reason given."
 msgstr "Səbəb bildirilmədi."
 
-#: src/totem.c:426
+#: src/xplayer.c:426
 msgid "DVD"
 msgstr "DVD"
 
-#: src/totem.c:427
+#: src/xplayer.c:427
 msgid "Video CD"
 msgstr "Video CD"
 
-#: src/totem.c:428
+#: src/xplayer.c:428
 msgid "Audio CD"
 msgstr "Audio CD"
 
-#: src/totem.c:439
+#: src/xplayer.c:439
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr ""
-"Totem (%s) mediasını oxuya bilmədi çünki bunun üçün lazım olan əlavələr "
+"Xplayer (%s) mediasını oxuya bilmədi çünki bunun üçün lazım olan əlavələr "
 "qurulu deyil."
 
-#: src/totem.c:440
+#: src/xplayer.c:440
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr ""
-"Xahiş edirik lazım olan əlavələri qurub Totem-i yenidən başladaraq bu "
+"Xahiş edirik lazım olan əlavələri qurub Xplayer-i yenidən başladaraq bu "
 "mediyanı oxudun."
 
-#: src/totem.c:448
+#: src/xplayer.c:448
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
-msgstr "Lazım olan əlavələr mövcuddur ancaq Totem (%s) mediyasını oxuya bilmədi."
+msgstr "Lazım olan əlavələr mövcuddur ancaq Xplayer (%s) mediyasını oxuya bilmədi."
 
-#: src/totem.c:449
+#: src/xplayer.c:449
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
 msgstr "Xahiş edirik diskin yerində olduğunu və düzgün quraşdırıldığını yoxlayın."
 
 #. Title
-#: src/totem.c:684
+#: src/xplayer.c:684
 #, c-format
-msgid "%s - Totem Movie Player"
-msgstr "%s - Totem Video Çalğıcısı"
+msgid "%s - Xplayer Movie Player"
+msgstr "%s - Xplayer Video Çalğıcısı"
 
-#: src/totem.c:698 src/totem.c:3461
+#: src/xplayer.c:698 src/xplayer.c:3461
 msgid "No file"
 msgstr "Fayl yoxdur"
 
-#: src/totem.c:735 src/totem.c:1956
-msgid "Totem"
-msgstr "Totem"
+#: src/xplayer.c:735 src/xplayer.c:1956
+msgid "Xplayer"
+msgstr "Xplayer"
 
-#: src/totem.c:1242
+#: src/xplayer.c:1242
 msgid "An error occured"
 msgstr "Bir xəta yarandı"
 
-#: src/totem.c:1651 src/totem.c:1659
+#: src/xplayer.c:1651 src/xplayer.c:1659
 msgid "Couldn't load the 'Open Location...' interface."
 msgstr "'Mövqe Aç...' ara üzü yüklənə bilmir."
 
-#: src/totem.c:1651 src/totem.c:1659 src/totem.c:3696 src/totem.c:3721
-#: src/totem.c:3746
-msgid "Make sure that Totem is properly installed."
-msgstr "Totem'in düzgün quraşdırıldığını yoxlayın."
+#: src/xplayer.c:1651 src/xplayer.c:1659 src/xplayer.c:3696 src/xplayer.c:3721
+#: src/xplayer.c:3746
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Xplayer'in düzgün quraşdırıldığını yoxlayın."
 
-#: src/totem.c:1909
-msgid "Totem could not display the help contents."
-msgstr "Totem yardım məzmununu göstərə bilmədi."
+#: src/xplayer.c:1909
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer yardım məzmununu göstərə bilmədi."
 
-#: src/totem.c:1927 src/vanity.c:235
+#: src/xplayer.c:1927 src/vanity.c:235
 msgid "translator_credits"
 msgstr ""
 "Vasif İsmailoğlu <linuxaz@azerimail.net>\n"
@@ -1411,62 +1411,62 @@ msgstr ""
 "Tərcümə işləri üzrə yazışma siyahısı ünvanımız:\n"
 "<translation-team-az@lists.sourceforge.net> "
 
-#: src/totem.c:1953
+#: src/xplayer.c:1953
 #, c-format
 msgid "Movie Player using %s"
 msgstr "%s işlədən film çalğıcısı"
 
-#: src/totem.c:1993 src/totem.c:2001 src/vanity.c:300 src/vanity.c:308
-msgid "Totem could not get a screenshot of that film."
-msgstr "Totem bu filmin ekran görüntüsünü ala bilmədi."
+#: src/xplayer.c:1993 src/xplayer.c:2001 src/vanity.c:300 src/vanity.c:308
+msgid "Xplayer could not get a screenshot of that film."
+msgstr "Xplayer bu filmin ekran görüntüsünü ala bilmədi."
 
-#: src/totem.c:2001
+#: src/xplayer.c:2001
 msgid "Please file a bug, this isn't supposed to happen."
 msgstr "Xahiş edirik xəta raportu göndərin, bu olmamalıydı."
 
-#: src/totem.c:2028
-msgid "Totem couldn't show the movie properties window."
-msgstr "Totem film xassələri pəncərəsini göstərə bilmədi."
+#: src/xplayer.c:2028
+msgid "Xplayer couldn't show the movie properties window."
+msgstr "Xplayer film xassələri pəncərəsini göstərə bilmədi."
 
-#: src/totem.c:2028
-msgid "Make sure that Totem is correctly installed."
-msgstr "Xahiş edirik Totem-in düzgün qurulduğunu yoxlayın."
+#: src/xplayer.c:2028
+msgid "Make sure that Xplayer is correctly installed."
+msgstr "Xahiş edirik Xplayer-in düzgün qurulduğunu yoxlayın."
 
-#: src/totem.c:2114
+#: src/xplayer.c:2114
 #, c-format
-msgid "Totem could not seek in '%s'."
-msgstr "Totem '%s' mövqeyinə gedə bilmədi."
+msgid "Xplayer could not seek in '%s'."
+msgstr "Xplayer '%s' mövqeyinə gedə bilmədi."
 
-#: src/totem.c:2894 src/totem.c:2916
+#: src/xplayer.c:2894 src/xplayer.c:2916
 msgid "None"
 msgstr "Yoxdur"
 
-#: src/totem.c:3366
-msgid "Totem could not startup."
-msgstr "Totem başlaya bilmədi."
+#: src/xplayer.c:3366
+msgid "Xplayer could not startup."
+msgstr "Xplayer başlaya bilmədi."
 
-#: src/totem.c:3566
+#: src/xplayer.c:3566
 #, c-format
 msgid "Option '%s' is unknown and was ignored\n"
 msgstr "'%s' naməlumdur və nəzərə alınmamışdır\n"
 
-#: src/totem.c:3661
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Sistem qurğularınızı yoxlayın. Totem indi bağlanacaqdır."
+#: src/xplayer.c:3661
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Sistem qurğularınızı yoxlayın. Xplayer indi bağlanacaqdır."
 
-#: src/totem.c:3684
-msgid "Totem couln't initialise the configuration engine."
-msgstr "Totem quraşdırma mühərrikini hazırlaya bilmədi."
+#: src/xplayer.c:3684
+msgid "Xplayer couln't initialise the configuration engine."
+msgstr "Xplayer quraşdırma mühərrikini hazırlaya bilmədi."
 
-#: src/totem.c:3684
+#: src/xplayer.c:3684
 msgid "Make sure that GNOME is properly installed."
 msgstr "GNOME-un düzgün qurulduğunu yoxlayın."
 
-#: src/totem.c:3696 src/totem.c:3721
-msgid "Couldn't load the main interface (totem.glade)."
-msgstr "Əsas ara üz (totem.glade) yüklənə bilmədi."
+#: src/xplayer.c:3696 src/xplayer.c:3721
+msgid "Couldn't load the main interface (xplayer.glade)."
+msgstr "Əsas ara üz (xplayer.glade) yüklənə bilmədi."
 
-#: src/totem.c:3746
+#: src/xplayer.c:3746
 msgid "Couldn't load the interface for the playlist."
 msgstr "Çalğı siyahıları üçün ara üz yüklənə bilmədi."
 

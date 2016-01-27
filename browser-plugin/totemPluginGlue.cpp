@@ -1,4 +1,4 @@
-/* Totem Mozilla plugin
+/* Xplayer Mozilla plugin
  *
  * Copyright © 2004-2006 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -29,14 +29,14 @@
 #include "npapi.h"
 #include "npupp.h"
 
-#include "totemPlugin.h"
+#include "xplayerPlugin.h"
 
 NPNetscapeFuncs NPNFuncs; /* used in npn_gate.cpp */
 
 static char *mime_list = NULL;
 
 static NPError
-totem_plugin_new_instance (NPMIMEType mimetype,
+xplayer_plugin_new_instance (NPMIMEType mimetype,
 			   NPP instance,
 			   uint16_t mode,
 			   int16_t argc,
@@ -47,7 +47,7 @@ totem_plugin_new_instance (NPMIMEType mimetype,
 	if (!instance)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
-	totemPlugin *plugin = new totemPlugin (instance);
+	xplayerPlugin *plugin = new xplayerPlugin (instance);
 	if (!plugin)
 		return NPERR_OUT_OF_MEMORY_ERROR;
 
@@ -63,13 +63,13 @@ totem_plugin_new_instance (NPMIMEType mimetype,
 }
 
 static NPError
-totem_plugin_destroy_instance (NPP instance,
+xplayer_plugin_destroy_instance (NPP instance,
 			       NPSavedData **save)
 {
 	if (!instance)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return NPERR_NO_ERROR;
 
@@ -81,13 +81,13 @@ totem_plugin_destroy_instance (NPP instance,
 }
 
 static NPError
-totem_plugin_set_window (NPP instance,
+xplayer_plugin_set_window (NPP instance,
 			 NPWindow* window)
 {
 	if (!instance)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
@@ -95,7 +95,7 @@ totem_plugin_set_window (NPP instance,
 }
 
 static NPError
-totem_plugin_new_stream (NPP instance,
+xplayer_plugin_new_stream (NPP instance,
 			 NPMIMEType type,
 			 NPStream* stream_ptr,
 			 NPBool seekable,
@@ -104,7 +104,7 @@ totem_plugin_new_stream (NPP instance,
 	if (!instance)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
@@ -112,17 +112,17 @@ totem_plugin_new_stream (NPP instance,
 }
 
 static NPError
-totem_plugin_destroy_stream (NPP instance,
+xplayer_plugin_destroy_stream (NPP instance,
 			     NPStream* stream,
 			     NPError reason)
 {
 	if (!instance) {
-		g_debug ("totem_plugin_destroy_stream instance is NULL");
+		g_debug ("xplayer_plugin_destroy_stream instance is NULL");
 		/* FIXME? */
 		return NPERR_NO_ERROR;
 	}
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return NPERR_INVALID_INSTANCE_ERROR;
 
@@ -130,13 +130,13 @@ totem_plugin_destroy_stream (NPP instance,
 }
 
 static int32_t
-totem_plugin_write_ready (NPP instance,
+xplayer_plugin_write_ready (NPP instance,
 			  NPStream *stream)
 {
 	if (!instance)
 		return -1;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return -1;
 
@@ -144,7 +144,7 @@ totem_plugin_write_ready (NPP instance,
 }
 
 static int32_t
-totem_plugin_write (NPP instance,
+xplayer_plugin_write (NPP instance,
 		    NPStream *stream,
 		    int32_t offset,
 		    int32_t len,
@@ -153,7 +153,7 @@ totem_plugin_write (NPP instance,
 	if (!instance)
 		return -1;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return -1;
 
@@ -161,14 +161,14 @@ totem_plugin_write (NPP instance,
 }
 
 static void
-totem_plugin_stream_as_file (NPP instance,
+xplayer_plugin_stream_as_file (NPP instance,
 			     NPStream *stream,
 			     const char* fname)
 {
 	if (!instance)
 		return;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return;
 
@@ -176,7 +176,7 @@ totem_plugin_stream_as_file (NPP instance,
 }
 
 static void
-totem_plugin_url_notify (NPP instance,
+xplayer_plugin_url_notify (NPP instance,
 			 const char* url,
 			 NPReason reason,
 			 void* notifyData)
@@ -184,7 +184,7 @@ totem_plugin_url_notify (NPP instance,
 	if (!instance)
 		return;
 
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	if (!plugin)
 		return;
 
@@ -192,14 +192,14 @@ totem_plugin_url_notify (NPP instance,
 }
 
 static void
-totem_plugin_print (NPP instance,
+xplayer_plugin_print (NPP instance,
                     NPPrint* platformPrint)
 {
 	g_debug ("Print");
 }
 
 static int16_t
-totem_plugin_handle_event (NPP instance,
+xplayer_plugin_handle_event (NPP instance,
                            void* event)
 {
 	g_debug ("Handle event");
@@ -207,24 +207,24 @@ totem_plugin_handle_event (NPP instance,
 }
 
 static NPError
-totem_plugin_get_value (NPP instance,
+xplayer_plugin_get_value (NPP instance,
 			NPPVariable variable,
 		        void *value)
 {
-	totemPlugin *plugin = 0;
+	xplayerPlugin *plugin = 0;
 	NPError err = NPERR_NO_ERROR;
 
 	if (instance) {
-                plugin = reinterpret_cast<totemPlugin*> (instance->pdata);
+                plugin = reinterpret_cast<xplayerPlugin*> (instance->pdata);
 	}
 
 	/* See NPPVariable in npapi.h */
 	switch (variable) {
 	case NPPVpluginNameString:
-		*((char **)value) = totemPlugin::PluginDescription ();
+		*((char **)value) = xplayerPlugin::PluginDescription ();
 		break;
 	case NPPVpluginDescriptionString:
-		*((char **)value) = totemPlugin::PluginLongDescription ();
+		*((char **)value) = xplayerPlugin::PluginLongDescription ();
 		break;
 	case NPPVpluginNeedsXEmbed:
                 // FIXMEchpe fix webkit which passes a (unsigned int*) here...
@@ -252,7 +252,7 @@ totem_plugin_get_value (NPP instance,
 }
 
 static NPError
-totem_plugin_set_value (NPP instance,
+xplayer_plugin_set_value (NPP instance,
 			NPNVariable variable,
 			void *value)
 {
@@ -266,11 +266,11 @@ NP_GetValue (void *future,
 	     NPPVariable variable,
 	     void *value)
 {
-	return totem_plugin_get_value (NULL, variable, value);
+	return xplayer_plugin_get_value (NULL, variable, value);
 }
 
 static gboolean
-totem_plugin_mimetype_is_disabled (const char *mimetype,
+xplayer_plugin_mimetype_is_disabled (const char *mimetype,
 				   GKeyFile *system,
 				   GKeyFile *user)
 {
@@ -325,7 +325,7 @@ NP_GetMIMEDescription (void)
 	user = g_key_file_new ();
 
 	if (g_key_file_load_from_file (system,
-				       SYSCONFDIR"/totem/browser-plugins.ini",
+				       SYSCONFDIR"/xplayer/browser-plugins.ini",
 				       G_KEY_FILE_NONE,
 				       NULL) == FALSE) {
 		g_key_file_free (system);
@@ -334,7 +334,7 @@ NP_GetMIMEDescription (void)
 
 	char *user_ini_file;
 	user_ini_file = g_build_filename (g_get_user_config_dir (),
-					  "totem",
+					  "xplayer",
 					  "browser-plugins.ini",
 					  NULL);
 	if (g_key_file_load_from_file (user,
@@ -346,13 +346,13 @@ NP_GetMIMEDescription (void)
 	}
 	g_free (user_ini_file);
 
-	const totemPluginMimeEntry *mimetypes;
+	const xplayerPluginMimeEntry *mimetypes;
 	uint32_t count;
-	totemPlugin::PluginMimeTypes (&mimetypes, &count);
+	xplayerPlugin::PluginMimeTypes (&mimetypes, &count);
 	for (uint32_t i = 0; i < count; ++i) {
 		char *desc;
 
-		if (totem_plugin_mimetype_is_disabled (mimetypes[i].mimetype, system, user))
+		if (xplayer_plugin_mimetype_is_disabled (mimetypes[i].mimetype, system, user))
 			continue;
 
 		desc = NULL;
@@ -438,24 +438,24 @@ NP_Initialize (NPNetscapeFuncs *aMozillaVTable,
 
 	aPluginVTable->size           = sizeof (NPPluginFuncs);
 	aPluginVTable->version        = (NP_VERSION_MAJOR << 8) + NP_VERSION_MINOR;
-	aPluginVTable->newp           = NewNPP_NewProc (totem_plugin_new_instance);
-	aPluginVTable->destroy        = NewNPP_DestroyProc (totem_plugin_destroy_instance);
-	aPluginVTable->setwindow      = NewNPP_SetWindowProc (totem_plugin_set_window);
-	aPluginVTable->newstream      = NewNPP_NewStreamProc (totem_plugin_new_stream);
-	aPluginVTable->destroystream  = NewNPP_DestroyStreamProc (totem_plugin_destroy_stream);
-	aPluginVTable->asfile         = NewNPP_StreamAsFileProc (totem_plugin_stream_as_file);
-	aPluginVTable->writeready     = NewNPP_WriteReadyProc (totem_plugin_write_ready);
-	aPluginVTable->write          = NewNPP_WriteProc (totem_plugin_write);
-	aPluginVTable->print          = NewNPP_PrintProc (totem_plugin_print);
-	aPluginVTable->event          = NewNPP_HandleEventProc (totem_plugin_handle_event);
-	aPluginVTable->urlnotify      = NewNPP_URLNotifyProc (totem_plugin_url_notify);
+	aPluginVTable->newp           = NewNPP_NewProc (xplayer_plugin_new_instance);
+	aPluginVTable->destroy        = NewNPP_DestroyProc (xplayer_plugin_destroy_instance);
+	aPluginVTable->setwindow      = NewNPP_SetWindowProc (xplayer_plugin_set_window);
+	aPluginVTable->newstream      = NewNPP_NewStreamProc (xplayer_plugin_new_stream);
+	aPluginVTable->destroystream  = NewNPP_DestroyStreamProc (xplayer_plugin_destroy_stream);
+	aPluginVTable->asfile         = NewNPP_StreamAsFileProc (xplayer_plugin_stream_as_file);
+	aPluginVTable->writeready     = NewNPP_WriteReadyProc (xplayer_plugin_write_ready);
+	aPluginVTable->write          = NewNPP_WriteProc (xplayer_plugin_write);
+	aPluginVTable->print          = NewNPP_PrintProc (xplayer_plugin_print);
+	aPluginVTable->event          = NewNPP_HandleEventProc (xplayer_plugin_handle_event);
+	aPluginVTable->urlnotify      = NewNPP_URLNotifyProc (xplayer_plugin_url_notify);
 	aPluginVTable->javaClass      = NULL;
-	aPluginVTable->getvalue       = NewNPP_GetValueProc (totem_plugin_get_value);
-	aPluginVTable->setvalue       = NewNPP_SetValueProc (totem_plugin_set_value);
+	aPluginVTable->getvalue       = NewNPP_GetValueProc (xplayer_plugin_get_value);
+	aPluginVTable->setvalue       = NewNPP_SetValueProc (xplayer_plugin_set_value);
 
 	g_debug ("NP_Initialize succeeded");
 
-	return totemPlugin::Initialise ();
+	return xplayerPlugin::Initialise ();
 }
 
 NPError
@@ -466,5 +466,5 @@ NP_Shutdown(void)
 	g_free (mime_list);
 	mime_list = NULL;
 
-	return totemPlugin::Shutdown ();
+	return xplayerPlugin::Shutdown ();
 }

@@ -1,4 +1,4 @@
-/* Totem MullY Plugin
+/* Xplayer MullY Plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -24,8 +24,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemMullYPlugin.h"
+#include "xplayerPlugin.h"
+#include "xplayerMullYPlugin.h"
 
 static const char *methodNames[] = {
   "GetVersion",
@@ -76,44 +76,44 @@ static const char *methodNames[] = {
   "SetCurrentSubtitleTrack"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemMullYPlayer,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerMullYPlayer,
                          NULL, 0,
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemMullYPlayer::totemMullYPlayer (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerMullYPlayer::xplayerMullYPlayer (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemMullYPlayer::~totemMullYPlayer ()
+xplayerMullYPlayer::~xplayerMullYPlayer ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemMullYPlayer::InvokeByIndex (int aIndex,
+xplayerMullYPlayer::InvokeByIndex (int aIndex,
                                  const NPVariant *argv,
                                  uint32_t argc,
                                  NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemMullYPlayer);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerMullYPlayer);
 
   switch (Methods (aIndex)) {
     case eGetVersion:
-      return StringVariant (_result, TOTEM_MULLY_VERSION);
+      return StringVariant (_result, XPLAYER_MULLY_VERSION);
 
     case ePlay:
-      Plugin()->Command (TOTEM_COMMAND_PLAY);
+      Plugin()->Command (XPLAYER_COMMAND_PLAY);
       return VoidVariant (_result);
 
     case ePause:
-      Plugin()->Command (TOTEM_COMMAND_PAUSE);
+      Plugin()->Command (XPLAYER_COMMAND_PAUSE);
       return VoidVariant (_result);
 
     case eStop:
-      Plugin()->Command (TOTEM_COMMAND_STOP);
+      Plugin()->Command (XPLAYER_COMMAND_STOP);
       return VoidVariant (_result);
 
     case eSetVolume: {
@@ -162,7 +162,7 @@ totemMullYPlayer::InvokeByIndex (int aIndex,
     case eGetCurrentSubtitleTrack:
     case eSetCurrentAudioTrack:
     case eSetCurrentSubtitleTrack:
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemMullYPlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerMullYPlayer);
       return VoidVariant (_result);
 
     case eGoEmbedded:

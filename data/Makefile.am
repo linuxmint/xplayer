@@ -4,17 +4,17 @@ EXTRA_DIST =
 CLEANFILES =
 
 # Bug reporting information script
-bugreportdir = $(libexecdir)/totem
-bugreport_SCRIPTS = totem-bugreport.py
+bugreportdir = $(libexecdir)/xplayer
+bugreport_SCRIPTS = xplayer-bugreport.py
 EXTRA_DIST += $(bugreport_SCRIPTS)
 
 # Man pages
-man_MANS = totem.1 totem-video-thumbnailer.1
-totem-video-thumbnailer.1: totem-video-thumbnailer.pod
-	$(AM_V_GEN) pod2man -c "" -s 1 -q none -n totem-video-thumbnailer -r GNOME $< > $@
+man_MANS = xplayer.1 xplayer-video-thumbnailer.1
+xplayer-video-thumbnailer.1: xplayer-video-thumbnailer.pod
+	$(AM_V_GEN) pod2man -c "" -s 1 -q none -n xplayer-video-thumbnailer -r GNOME $< > $@
 EXTRA_DIST += \
 	$(man_MANS)			\
-	totem-video-thumbnailer.pod
+	xplayer-video-thumbnailer.pod
 
 # UI files and images
 stuffdir = $(pkgdatadir)
@@ -22,7 +22,7 @@ stuff_DATA =				\
 	filmholes.png			\
 	filmholes-big-left.png		\
 	filmholes-big-right.png		\
-	totem.ui			\
+	xplayer.ui			\
 	fullscreen.ui			\
 	playlist.ui			\
 	mozilla-viewer.ui		\
@@ -47,18 +47,18 @@ update-icon-cache:
 	fi
 
 # Desktop file
-# totem.desktop.in.in.in = original
-# totem.desktop.in.in = by configure, includes the X-Gnome-Bugzilla
-# totem.desktop.in = includes the mime-types
-# totem.desktop = intltool-ised
-desktop_in_files = totem.desktop.in
+# xplayer.desktop.in.in.in = original
+# xplayer.desktop.in.in = by configure, includes the X-Gnome-Bugzilla
+# xplayer.desktop.in = includes the mime-types
+# xplayer.desktop = intltool-ised
+desktop_in_files = xplayer.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-totem.desktop.in: totem.desktop.in.in mime-type-list.txt uri-schemes-list.txt desktop.sh
-	$(AM_V_GEN) cat totem.desktop.in.in | sed 's,@FULL_LIBEXECDIR@,$(FULL_LIBEXECDIR),' > $@ &&\
-	$(AM_V_GEN) cat totem.desktop.in.in | sed 's,@MIMETYPES@,$(shell $(srcdir)/desktop.sh $(srcdir)/mime-type-list.txt $(srcdir)/uri-schemes-list.txt),' > $@
+xplayer.desktop.in: xplayer.desktop.in.in mime-type-list.txt uri-schemes-list.txt desktop.sh
+	$(AM_V_GEN) cat xplayer.desktop.in.in | sed 's,@FULL_LIBEXECDIR@,$(FULL_LIBEXECDIR),' > $@ &&\
+	$(AM_V_GEN) cat xplayer.desktop.in.in | sed 's,@MIMETYPES@,$(shell $(srcdir)/desktop.sh $(srcdir)/mime-type-list.txt $(srcdir)/uri-schemes-list.txt),' > $@
 
 EXTRA_DIST += desktop.sh
 CLEANFILES += \
@@ -67,10 +67,10 @@ CLEANFILES += \
 
 # Thumbnailer
 thumbnailerdir = $(datadir)/thumbnailers
-thumbnailer_in_files = totem.thumbnailer.in
+thumbnailer_in_files = xplayer.thumbnailer.in
 thumbnailer_DATA = $(thumbnailer_in_files:.thumbnailer.in=.thumbnailer)
 
-totem.thumbnailer: $(thumbnailer_in_files) mime-type-list.txt thumbnailer.sh
+xplayer.thumbnailer: $(thumbnailer_in_files) mime-type-list.txt thumbnailer.sh
 	$(AM_V_GEN)sed -e "s|\@BINDIR\@|$(bindir)|" $< > $@ &&\
 	$(SHELL) $(srcdir)/thumbnailer.sh $(srcdir)/mime-type-list.txt >> $@
 
@@ -82,14 +82,14 @@ CLEANFILES += \
 	$(thumbnailer_DATA)
 
 # Content type handling
-nodist_noinst_HEADERS = totem-mime-types.h nautilus-audio-mime-types.h totem-uri-schemes.h totemMimeTypes.js
-totem-mime-types.h: mime-type-include.sh mime-type-list.txt mime-functions.sh
+nodist_noinst_HEADERS = xplayer-mime-types.h nautilus-audio-mime-types.h xplayer-uri-schemes.h xplayerMimeTypes.js
+xplayer-mime-types.h: mime-type-include.sh mime-type-list.txt mime-functions.sh
 	$(AM_V_GEN) $(srcdir)/mime-type-include.sh $(srcdir)/mime-type-list.txt	> $@
 nautilus-audio-mime-types.h: mime-type-include.sh mime-type-list.txt mime-functions.sh
 	$(AM_V_GEN) $(srcdir)/mime-type-include.sh --nautilus $(srcdir)/mime-type-list.txt > $@
-totemMimeTypes.js: mime-type-imports.sh mime-type-list.txt mime-functions.sh
+xplayerMimeTypes.js: mime-type-imports.sh mime-type-list.txt mime-functions.sh
 	$(AM_V_GEN) $(srcdir)/mime-type-imports.sh $(srcdir)/mime-type-list.txt	> $@
-totem-uri-schemes.h: mime-type-include.sh mime-type-list.txt mime-functions.sh
+xplayer-uri-schemes.h: mime-type-include.sh mime-type-list.txt mime-functions.sh
 	$(AM_V_GEN) $(srcdir)/uri-scheme-include.sh $(srcdir)/uri-schemes-list.txt > $@
 
 EXTRA_DIST += \
@@ -100,27 +100,27 @@ EXTRA_DIST += \
 	uri-schemes-list.txt	\
 	mime-functions.sh
 CLEANFILES += \
-	totem-mime-types.h		\
-	totem-uri-schemes.h		\
+	xplayer-mime-types.h		\
+	xplayer-uri-schemes.h		\
 	nautilus-audio-mime-types.h	\
-	totem-uri-schemes.h		\
-	totemMimeTypes.js
+	xplayer-uri-schemes.h		\
+	xplayerMimeTypes.js
 
 # GSettings schemas, enum files and conversion file
-gsettings_ENUM_NAMESPACE = org.gnome.totem
+gsettings_ENUM_NAMESPACE = org.gnome.xplayer
 gsettings_ENUM_FILES = $(top_srcdir)/src/*.h $(top_srcdir)/src/backend/*.h
-gsettings_SCHEMAS = org.gnome.totem.gschema.xml
+gsettings_SCHEMAS = org.gnome.xplayer.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
 convertdir = $(datadir)/GConf/gsettings
-convert_DATA = totem.convert
+convert_DATA = xplayer.convert
 EXTRA_DIST += $(convert_DATA)
 
 # pkg-config file for the plugin API
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = totem.pc
+pkgconfig_DATA = xplayer.pc
 
 -include $(top_srcdir)/git.mk

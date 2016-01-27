@@ -1,6 +1,6 @@
-# Irish translations for totem package.
+# Irish translations for xplayer package.
 # Copyright (C) 2003-2013 Free Software Foundation, Inc.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Paul Duffy <dubhthach@frink.nuigalway.ie>, 2003.
 # David O'Callaghan <david.ocallaghan@cs.tcd.ie>, 2003.
 # Alastair McKinstry <mckinstry@debian.org>, 2004.
@@ -8,7 +8,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.master\n"
+"Project-Id-Version: xplayer.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-03 21:47-0600\n"
 "PO-Revision-Date: 2013-09-03 22:26-0600\n"
@@ -22,181 +22,181 @@ msgstr ""
 "4;\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:330
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:330
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Scannán á sheinm"
 
-#: ../browser-plugin/totem-plugin-viewer.c:399
+#: ../browser-plugin/xplayer-plugin-viewer.c:399
 msgid "No URI to play"
 msgstr "Gan URI le seinm"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1098
+#: ../browser-plugin/xplayer-plugin-viewer.c:1098
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Oscail le \"%s\""
 
-#: ../browser-plugin/totem-plugin-viewer.c:1319 ../src/totem-object.c:2353
+#: ../browser-plugin/xplayer-plugin-viewer.c:1319 ../src/xplayer-object.c:2353
 msgid "An error occurred"
 msgstr "Tharla earráid"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1675
-msgid "Totem Movie Player"
-msgstr "Seinnteoir Scannán Totem"
+#: ../browser-plugin/xplayer-plugin-viewer.c:1675
+msgid "Xplayer Movie Player"
+msgstr "Seinnteoir Scannán Xplayer"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1993
+#: ../browser-plugin/xplayer-plugin-viewer.c:1993
 msgid "No playlist or playlist empty"
 msgstr ""
 
-#: ../browser-plugin/totem-plugin-viewer.c:2224
+#: ../browser-plugin/xplayer-plugin-viewer.c:2224
 msgid "Movie browser plugin"
 msgstr ""
 
-#: ../browser-plugin/totem-plugin-viewer.c:2240 ../src/totem.c:257
+#: ../browser-plugin/xplayer-plugin-viewer.c:2240 ../src/xplayer.c:257
 msgid "Could not initialize the thread-safe libraries."
 msgstr ""
 
-#: ../browser-plugin/totem-plugin-viewer.c:2240
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2240
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Repeat mode"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Shuffle mode"
 msgstr "Mód suaithe"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to enable debug for the playback engine"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Type of audio output to use"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Visualization quality setting"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Quality setting for the audio visualization."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Network buffering threshold"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid "Subtitle font"
 msgstr "Cló fotheideal"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Pango font description for subtitle rendering."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Subtitle encoding"
 msgstr "Ionchódú fotheideal"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Encoding character set for subtitle."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Default location for the \"Open...\" dialogs"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the keyboard shortcuts"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 #, fuzzy
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr "_Luchtaigh comhaid fotheideal go huathoibríoch agus scannán á luchtú"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Active plugins list"
 msgstr ""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -218,7 +218,7 @@ msgstr "_Cóipeáil Suíomh"
 msgid "Copy the location to the clipboard"
 msgstr ""
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:18
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:18
 msgid "_Select Text Subtitles..."
 msgstr "_Roghnaigh Fotheidil Téacs..."
 
@@ -262,7 +262,7 @@ msgid "Extra Large"
 msgstr "An-mhór"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5607
-#: ../src/totem-properties-view.c:242
+#: ../src/xplayer-properties-view.c:242
 msgid "Stereo"
 msgstr "Steirió"
 
@@ -287,8 +287,8 @@ msgid "AC3 Passthrough"
 msgstr "Tríchur AC3"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
-msgstr "Sainroghanna Totem"
+msgid "Xplayer Preferences"
+msgstr "Sainroghanna Xplayer"
 
 #: ../data/preferences.ui.h:14
 msgid "Text Subtitles"
@@ -400,7 +400,7 @@ msgid "_Audio output type:"
 msgstr "Cineál aschurtha _fuaime:"
 
 #: ../data/preferences.ui.h:42 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:283
+#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr "Fuaim"
 
@@ -432,7 +432,7 @@ msgstr "Nóta:"
 msgid "Container:"
 msgstr "Coimeádán:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:285
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
 msgid "Video"
 msgstr "Físeán"
 
@@ -460,150 +460,150 @@ msgstr "Ráta samplála:"
 msgid "Channels:"
 msgstr "Cainéil:"
 
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:34 ../src/totem.c:256
-#: ../src/totem.c:262
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:34 ../src/xplayer.c:256
+#: ../src/xplayer.c:262
 msgid "Videos"
 msgstr "Físeáin"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "Seinn scannáin"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Físeán;Scannán;Gearrthóg;Sraith;Seinnteoir;DVD;TV;Teilifís;Diosca;"
 
-#: ../data/totem.ui.h:1 ../src/totem-open-location.c:185
-#: ../src/totem-uri.c:422 ../src/plugins/chapters/totem-chapters.c:962
+#: ../data/xplayer.ui.h:1 ../src/xplayer-open-location.c:185
+#: ../src/xplayer-uri.c:422 ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "_Open"
 msgstr "_Oscail"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Add Web Video..."
 msgstr "Cuir Físeán Gréasáin Leis..."
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "Prefere_nces"
 msgstr "_Sainroghanna"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Shuff_le"
 msgstr "S_uaith"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "_Repeat"
 msgstr "A_rís"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Help"
 msgstr "Cab_hair"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "_Scoir"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Aspect Ratio"
 msgstr "_Cóimheas Treoíochta"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Uath"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgctxt "Aspect ratio"
 msgid "Square"
 msgstr "Cearnógach"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgctxt "Aspect ratio"
 msgid "4:3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgctxt "Aspect ratio"
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (Scáileán Leathan)"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgctxt "Aspect ratio"
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Zoom In"
 msgstr "Súmáil Isteach"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "Switch An_gles"
 msgstr "Athraigh _Uillinn"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Languages"
 msgstr "_Teangacha"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "S_ubtitles"
 msgstr "_Fotheideal"
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "_Properties"
 msgstr "_Airíonna"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_Eject"
 msgstr "_Díchuir"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "_DVD Menu"
 msgstr "Roghchlár _DVD"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Title Menu"
 msgstr "Roghchlár _Teidil"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "A_udio Menu"
 msgstr "Roghchlár _Fuaime"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "_Angle Menu"
 msgstr "Roghchlár _Uillinneacha"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "_Chapter Menu"
 msgstr "Roghchlár _Caibidlí"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Play / P_ause"
 msgstr "Seinn / _Sos"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Play or pause the movie"
 msgstr "Cas nó stad an Scannán"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_View"
 msgstr "_Amharc"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "_Next Chapter/Movie"
 msgstr "An Chéad Chaibidil/Scannán _Eile"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Next chapter or movie"
 msgstr "An chéad chaibidil nó scannán eile"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Previous Chapter/Movie"
 msgstr "An Chaibidil/Scannán _Roimhe Seo"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "Previous chapter or movie"
 msgstr "An Caibidil nó Scannán roimhe"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "_Sound"
 msgstr "_Fuaim"
 
@@ -692,11 +692,11 @@ msgid ""
 "first."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5603 ../src/totem-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5603 ../src/xplayer-properties-view.c:238
 msgid "Surround"
 msgstr "Timpeallach"
 
-#: ../src/backend/bacon-video-widget.c:5605 ../src/totem-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5605 ../src/xplayer-properties-view.c:240
 msgid "Mono"
 msgstr "Mona"
 
@@ -754,8 +754,8 @@ msgstr ""
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:63
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:63
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -767,7 +767,7 @@ msgstr "%d:%02d:%02d"
 #. * change ":" to the separator that your locale uses or use
 #. * "%Id" instead of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:71
+#: ../src/gst/xplayer-time-helpers.c:71
 #, c-format
 msgctxt "long time format"
 msgid "-%d:%02d:%02d"
@@ -779,7 +779,7 @@ msgstr "-%d:%02d:%02d"
 #. * ":" to the separator that your locale uses or use "%Id"
 #. * instead of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:82
+#: ../src/gst/xplayer-time-helpers.c:82
 #, c-format
 msgctxt "short time format"
 msgid "-%d:%02d"
@@ -791,7 +791,7 @@ msgstr "-%d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:91
+#: ../src/gst/xplayer-time-helpers.c:91
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -913,91 +913,91 @@ msgstr[2] "%d fhráma sa soicind"
 msgstr[3] "%d bhfráma sa soicind"
 msgstr[4] "%d fráma sa soicind"
 
-#: ../src/totem-audio-preview.c:172
+#: ../src/xplayer-audio-preview.c:172
 msgid "Audio Preview"
 msgstr "Réamhamharc Fuaime"
 
-#: ../src/totem.c:257
-msgid "Verify your system installation. Totem will now exit."
+#: ../src/xplayer.c:257
+msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 
-#: ../src/totem-dnd-menu.c:86
+#: ../src/xplayer-dnd-menu.c:86
 msgid "_Play Now"
 msgstr "_Seinn Anois"
 
-#: ../src/totem-dnd-menu.c:89
+#: ../src/xplayer-dnd-menu.c:89
 msgid "_Add to Playlist"
 msgstr "Cuir le Seinm_liosta"
 
-#: ../src/totem-dnd-menu.c:95
+#: ../src/xplayer-dnd-menu.c:95
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr ""
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "Níl an comhad ann."
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
-msgstr "Bí cinnte gur suiteáladh Totem i gceart."
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Bí cinnte gur suiteáladh Xplayer i gceart."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Is bogearraí saor é Totem; is féidir leat é a athdháileadh nó a athrú faoi "
+"Is bogearraí saor é Xplayer; is féidir leat é a athdháileadh nó a athrú faoi "
 "théarmaí an GNU General Public License mar foilsíodh é ag an Free Software "
 "Foundation; leagan 2 an License, nó (de do rogha) aon leagan níos déanaí."
 
-#: ../src/totem-interface.c:361
+#: ../src/xplayer-interface.c:361
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Dáileadh Totem le súil go mbeidh sé úsáideach, ach GAN AON BHARÁNTA; gan an "
+"Dáileadh Xplayer le súil go mbeidh sé úsáideach, ach GAN AON BHARÁNTA; gan an "
 "baránta intuigthe INDÍOLTÓIREACHTA nó OIRIÚNACHTA D'FHEIDHM ÁIRITHE fiú. "
 "Féach an GNU General Public License le haghaidh tuilleadh mionsonraí."
 
-#: ../src/totem-interface.c:365
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Ba chóir go bhfuair tú cóip an GNU General Public License in éineacht le "
-"Totem; mura bhfuair tú é, scríobh chuig an Free Software Foundation, Inc., "
+"Xplayer; mura bhfuair tú é, scríobh chuig an Free Software Foundation, Inc., "
 "51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA."
 
-#: ../src/totem-interface.c:368
+#: ../src/xplayer-interface.c:368
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Tá eisceacht ann i Totem chun úsáid breiseán GStreamer dílsithe a cheadú."
+"Tá eisceacht ann i Xplayer chun úsáid breiseán GStreamer dílsithe a cheadú."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:391
+#: ../src/xplayer-menu.c:391
 msgid "None"
 msgstr "Neamhní"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:395
+#: ../src/xplayer-menu.c:395
 msgctxt "Language"
 msgid "Auto"
 msgstr "Uath"
 
-#: ../src/totem-object.c:162
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1007,440 +1007,440 @@ msgstr ""
 "Rith '%s --help' chun liosta iomlán de gach rogha líne na n-orduithe a "
 "fheiceáil.\n"
 
-#: ../src/totem-object.c:1251 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1251 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Sos"
 
-#: ../src/totem-object.c:1256 ../src/totem-object.c:1266
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1256 ../src/xplayer-object.c:1266
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Seinn"
 
-#: ../src/totem-object.c:1351 ../src/totem-object.c:1378
-#: ../src/totem-object.c:1905
+#: ../src/xplayer-object.c:1351 ../src/xplayer-object.c:1378
+#: ../src/xplayer-object.c:1905
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Ní raibh Totem in an '%s' a senim."
+msgid "Xplayer could not play '%s'."
+msgstr "Ní raibh Xplayer in an '%s' a senim."
 
-#: ../src/totem-object.c:2047
-msgid "Totem could not display the help contents."
+#: ../src/xplayer-object.c:2047
+msgid "Xplayer could not display the help contents."
 msgstr ""
 
-#: ../src/totem-object.c:3700
+#: ../src/xplayer-object.c:3700
 msgid "Previous Chapter/Movie"
 msgstr "An Chaibidil/Scannán Roimhe Seo"
 
-#: ../src/totem-object.c:3705
+#: ../src/xplayer-object.c:3705
 msgid "Play / Pause"
 msgstr "Seinn / Sos"
 
-#: ../src/totem-object.c:3710
+#: ../src/xplayer-object.c:3710
 msgid "Next Chapter/Movie"
 msgstr "An Chéad Chaibidil/Scannán Eile"
 
-#: ../src/totem-object.c:3749 ../src/plugins/grilo/totem-grilo.c:1185
-#: ../src/plugins/grilo/totem-grilo.c:1195
+#: ../src/xplayer-object.c:3749 ../src/plugins/grilo/xplayer-grilo.c:1185
+#: ../src/plugins/grilo/xplayer-grilo.c:1195
 msgid "Back"
 msgstr "Siar"
 
-#: ../src/totem-object.c:3820
-msgid "Totem could not startup."
-msgstr "Ní raibh Totem in an tosaigh."
+#: ../src/xplayer-object.c:3820
+msgid "Xplayer could not startup."
+msgstr "Ní raibh Xplayer in an tosaigh."
 
-#: ../src/totem-object.c:3820
+#: ../src/xplayer-object.c:3820
 msgid "No reason."
 msgstr "Gan cúis."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "Oscail Suíomh..."
 
-#: ../src/totem-open-location.c:184 ../src/totem-playlist.c:1064
-#: ../src/totem-uri.c:421 ../src/totem-uri.c:486
-#: ../src/plugins/chapters/totem-chapters.c:961
-#: ../src/plugins/chapters/totem-edit-chapter.c:98
-#: ../src/plugins/save-file/totem-save-file.c:122
-#: ../src/plugins/screenshot/totem-gallery.c:97
-#: ../src/plugins/screenshot/totem-gallery-progress.c:103
-#: ../src/plugins/skipto/totem-skipto.c:198
+#: ../src/xplayer-open-location.c:184 ../src/xplayer-playlist.c:1064
+#: ../src/xplayer-uri.c:421 ../src/xplayer-uri.c:486
+#: ../src/plugins/chapters/xplayer-chapters.c:961
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:98
+#: ../src/plugins/save-file/xplayer-save-file.c:122
+#: ../src/plugins/screenshot/xplayer-gallery.c:97
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:103
+#: ../src/plugins/skipto/xplayer-skipto.c:198
 msgid "_Cancel"
 msgstr "_Cealaigh"
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Cumasaigh dífhabhtú"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "Seinn/Sos"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "Ar Aghaidh"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "Roimhe Seo"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "Cuardaigh Ar Aghaidh"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "Cuardaigh Ar gCúl"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "Airde Suas"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "Airde Síos"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "Gan fuaim"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "Scoránaigh Scáileán Iomlán"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Quit"
 msgstr "Scoir"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Enqueue"
 msgstr "Ciúáil"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Replace"
 msgstr "Ionadaigh"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Seek"
 msgstr "Cuardaigh"
 
-#: ../src/totem-options.c:66
+#: ../src/xplayer-options.c:66
 msgid "Movies to play"
 msgstr "Scannáin le seinm"
 
-#: ../src/totem-options.c:76
+#: ../src/xplayer-options.c:76
 msgid "- Play movies and songs"
 msgstr "- Seinn scannáin agus amhráin"
 
-#: ../src/totem-options.c:123
+#: ../src/xplayer-options.c:123
 msgid "Can't enqueue and replace at the same time"
 msgstr ""
 
 #. By extension entry
-#: ../src/totem-playlist.c:173
+#: ../src/xplayer-playlist.c:173
 msgid "MP3 ShoutCast playlist"
 msgstr "Seinmliosta ShoutCast MP3"
 
-#: ../src/totem-playlist.c:174
+#: ../src/xplayer-playlist.c:174
 msgid "MP3 audio (streamed)"
 msgstr "Fuaim MP3 (sruthaithe)"
 
-#: ../src/totem-playlist.c:175
+#: ../src/xplayer-playlist.c:175
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "Fuaim MP3 (sruthaithe, formáid DOS)"
 
-#: ../src/totem-playlist.c:176
+#: ../src/xplayer-playlist.c:176
 msgid "XML Shareable Playlist"
 msgstr "Seinnliosta Inroinnte XML"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:333
+#: ../src/xplayer-playlist.c:333
 #, c-format
 msgid "Title %d"
 msgstr "Teideal %d"
 
-#: ../src/totem-playlist.c:487
+#: ../src/xplayer-playlist.c:487
 msgid "Could not save the playlist"
 msgstr "Níorbh fhéidir an seinmliosta a shábháil"
 
-#: ../src/totem-playlist.c:1061
+#: ../src/xplayer-playlist.c:1061
 msgid "Save Playlist"
 msgstr "Sábháil Seinmliosta"
 
-#: ../src/totem-playlist.c:1065 ../src/plugins/save-file/totem-save-file.c:123
-#: ../src/plugins/screenshot/totem-gallery.c:98
+#: ../src/xplayer-playlist.c:1065 ../src/plugins/save-file/xplayer-save-file.c:123
+#: ../src/plugins/screenshot/xplayer-gallery.c:98
 msgid "_Save"
 msgstr "_Sábháil"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1073 ../src/totem-playlist.c:1300
-#: ../src/totem-sidebar.c:127
+#: ../src/xplayer-playlist.c:1073 ../src/xplayer-playlist.c:1300
+#: ../src/xplayer-sidebar.c:127
 msgid "Playlist"
 msgstr "Seinmliosta"
 
-#: ../src/totem-playlist.c:1891
+#: ../src/xplayer-playlist.c:1891
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 
-#: ../src/totem-playlist.c:1892
+#: ../src/xplayer-playlist.c:1892
 msgid "Playlist error"
 msgstr "Earráid seinmliosta"
 
-#: ../src/totem-preferences.c:292
+#: ../src/xplayer-preferences.c:292
 msgid "Configure Plugins"
 msgstr "Cumraigh Breiseáin"
 
-#: ../src/totem-preferences.c:295 ../src/totem-preferences.c:354
+#: ../src/xplayer-preferences.c:295 ../src/xplayer-preferences.c:354
 msgid "_Close"
 msgstr "_Dún"
 
-#: ../src/totem-preferences.c:351
+#: ../src/xplayer-preferences.c:351
 msgid "Preferences"
 msgstr "Sainroghanna"
 
-#: ../src/totem-preferences.c:494
+#: ../src/xplayer-preferences.c:494
 msgid "Select Subtitle Font"
 msgstr "Roghnaigh Cló Fotheideal"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:281
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
 msgid "Audio/Video"
 msgstr "Fuaim/Fís"
 
-#: ../src/totem-properties-view.c:141
+#: ../src/xplayer-properties-view.c:141
 msgid "N/A"
 msgstr "N/A/F"
 
-#: ../src/totem-properties-view.c:170
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:170
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "N/A/F"
 
-#: ../src/totem-properties-view.c:173
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:173
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kbps"
 
-#: ../src/totem-properties-view.c:190
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:190
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:222
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:222
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/totem-properties-view.c:230
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:230
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "N/A/F"
 
-#: ../src/totem-properties-view.c:251
+#: ../src/xplayer-properties-view.c:251
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "N/A/F"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Logchaighdeán Reatha"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabach"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "Airméanach"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltach"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "Ceilteach"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Lár-Eorpach"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Síneach Simplithe"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Síneach Traidisiúnta"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "Crótach"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Coireallach"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "Coireallach/Rúiseach"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Coireallach/Úcránach"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "Seoirseach"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Gréagach"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Gúisearátach"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Gurmúcaíoch"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Eabhrach"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "Eabhrach Infheicthe"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "Hiondúch"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "Íoslannach"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Seapánach"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Cóiréach"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "Nordach"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "Peirseach"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Rómánach"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "Deisceart na hEorpa"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "Téallanach"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turcach"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Iartharach"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vítneamach"
 
 #. Elapsed / Total Length
-#: ../src/totem-time-label.c:64
+#: ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-time-label.c:67
+#: ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Cuardach go %s / %s"
 
-#: ../src/totem-uri.c:331 ../src/plugins/chapters/totem-chapters.c:982
+#: ../src/xplayer-uri.c:331 ../src/plugins/chapters/xplayer-chapters.c:982
 msgid "All files"
 msgstr "Gach comhad"
 
-#: ../src/totem-uri.c:336 ../src/plugins/chapters/totem-chapters.c:979
+#: ../src/xplayer-uri.c:336 ../src/plugins/chapters/xplayer-chapters.c:979
 msgid "Supported files"
 msgstr "Comhaid tacaithe"
 
-#: ../src/totem-uri.c:348
+#: ../src/xplayer-uri.c:348
 msgid "Audio files"
 msgstr "Comhaid fuaime"
 
-#: ../src/totem-uri.c:356
+#: ../src/xplayer-uri.c:356
 msgid "Video files"
 msgstr "Comhaid físe"
 
-#: ../src/totem-uri.c:366
+#: ../src/xplayer-uri.c:366
 msgid "Subtitle files"
 msgstr "Comhad fotheideal"
 
-#: ../src/totem-uri.c:418
+#: ../src/xplayer-uri.c:418
 msgid "Select Text Subtitles"
 msgstr "Roghnaigh Fotheidil Téacs"
 
-#: ../src/totem-uri.c:483
+#: ../src/xplayer-uri.c:483
 msgid "Select Movies or Playlists"
 msgstr "Roghnaigh Scannáin nó Seinmliostaí"
 
-#: ../src/totem-uri.c:487
+#: ../src/xplayer-uri.c:487
 msgid "Add Directory"
 msgstr "Cuir Comhadlann Leis"
 
-#: ../src/totem-uri.c:488 ../src/plugins/chapters/totem-edit-chapter.c:99
+#: ../src/xplayer-uri.c:488 ../src/plugins/chapters/xplayer-edit-chapter.c:99
 msgid "_Add"
 msgstr "Cuir _Leis"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:933
+#: ../src/xplayer-video-thumbnailer.c:933
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1451,15 +1451,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:934
+#: ../src/xplayer-video-thumbnailer.c:934
 msgid "Filename"
 msgstr "Ainm comhaid"
 
-#: ../src/totem-video-thumbnailer.c:936
+#: ../src/xplayer-video-thumbnailer.c:936
 msgid "Resolution"
 msgstr "Taifeach"
 
-#: ../src/totem-video-thumbnailer.c:939
+#: ../src/xplayer-video-thumbnailer.c:939
 msgid "Duration"
 msgstr "Aga"
 
@@ -1487,30 +1487,30 @@ msgstr ""
 msgid "Records (S)VCDs or video DVDs"
 msgstr ""
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:120
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:120
 msgid "The video disc could not be duplicated."
 msgstr "Níorbh fhéidir an diosca físe a dhúbailt."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:122
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:268
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:122
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:268
 msgid "The movie could not be recorded."
 msgstr "Níorbh fhéidir an scannán a thaifeadadh."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:148
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:158
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:254
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:148
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:158
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:254
 msgid "Unable to write a project."
 msgstr ""
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:380
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:380
 msgid "_Create Video Disc..."
 msgstr "_Cruthaigh Diosca Físe..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:381
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:381
 msgid "Copy Vide_o DVD..."
 msgstr "Cóipeáil DVD _Físe..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:382
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:382
 msgid "Copy (S)VCD..."
 msgstr "Cóipeáil (S)VCD..."
 
@@ -1572,7 +1572,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "An chéad chaibidil nó scannán eile"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1122
+#: ../src/plugins/chapters/xplayer-chapters.c:1122
 msgid "Chapters"
 msgstr "Caibidlí"
 
@@ -1581,7 +1581,7 @@ msgstr "Caibidlí"
 msgid "Support chapter markers in movies"
 msgstr "An chéad chaibidil nó scannán eile"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1590,62 +1590,62 @@ msgstr ""
 "<b>Teideal: </b>%s\n"
 "<b>Am tosaithe: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:324
+#: ../src/plugins/chapters/xplayer-chapters.c:324
 msgid "Error while reading file with chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:702
+#: ../src/plugins/chapters/xplayer-chapters.c:702
 msgid "Error while writing file with chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:826
+#: ../src/plugins/chapters/xplayer-chapters.c:826
 msgid "Error occurred while saving chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:827
+#: ../src/plugins/chapters/xplayer-chapters.c:827
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 
-#: ../src/plugins/chapters/totem-chapters.c:960
+#: ../src/plugins/chapters/xplayer-chapters.c:960
 msgid "Open Chapter File"
 msgstr "Oscail Comhad Caibidle"
 
-#: ../src/plugins/chapters/totem-chapters.c:1076
+#: ../src/plugins/chapters/xplayer-chapters.c:1076
 msgid "Chapter Screenshot"
 msgstr "Gabháil Scáileáin na Caibidle"
 
-#: ../src/plugins/chapters/totem-chapters.c:1087
+#: ../src/plugins/chapters/xplayer-chapters.c:1087
 msgid "Chapter Title"
 msgstr "Teideal Caibidle"
 
-#: ../src/plugins/chapters/totem-chapters.c:1167
+#: ../src/plugins/chapters/xplayer-chapters.c:1167
 msgid "Save changes to chapter list before closing?"
 msgstr ""
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1172
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1172
 msgid "Close without Saving"
 msgstr "Dún gan Sábháil"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1174
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1174
 msgid "Save"
 msgstr "Sábháil"
 
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr ""
 
@@ -1691,15 +1691,15 @@ msgstr "Cuir le Seinnliosta"
 msgid "Copy Location"
 msgstr "Cóipeáil Suíomh"
 
-#: ../src/plugins/grilo/totem-grilo.c:364
+#: ../src/plugins/grilo/xplayer-grilo.c:364
 msgid "Browse Error"
 msgstr "Earráid Bhrabhsála"
 
-#: ../src/plugins/grilo/totem-grilo.c:531
+#: ../src/plugins/grilo/xplayer-grilo.c:531
 msgid "Search Error"
 msgstr "Earráid Chuardaigh"
 
-#: ../src/plugins/grilo/totem-grilo.c:816
+#: ../src/plugins/grilo/xplayer-grilo.c:816
 msgid "Recent"
 msgstr "Le Déanaí"
 
@@ -1711,15 +1711,15 @@ msgstr ""
 msgid "Presentation helper to make annotations on screen"
 msgstr ""
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr ""
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr ""
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 
@@ -1731,11 +1731,11 @@ msgstr ""
 msgid "Support infrared remote control"
 msgstr ""
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr ""
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr ""
 
@@ -1828,11 +1828,11 @@ msgstr "Teanga _fhotheidil:"
 msgid "_Play with Subtitle"
 msgstr "_Seinn le Fotheideal"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Teanga fhotheidil"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr ""
 
@@ -1846,18 +1846,18 @@ msgstr "Airíonna"
 msgid "Adds movie properties to the sidebar"
 msgstr "Taispeáin nó folaigh an barra taoibh"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Airíonna"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr ""
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
@@ -1879,18 +1879,18 @@ msgstr ""
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:91
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:95
-msgid "Totem Python Console"
+msgid "Xplayer Python Console"
 msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:105
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
@@ -1910,11 +1910,11 @@ msgstr ""
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr ""
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:54
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:54
 msgid "_Rotate Clockwise"
 msgstr ""
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:58
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:58
 msgid "Rotate Counterc_lockwise"
 msgstr ""
 
@@ -1926,21 +1926,21 @@ msgstr "Sábháil Cóip"
 msgid "Save a copy of the currently playing movie"
 msgstr ""
 
-#: ../src/plugins/save-file/totem-save-file.c:119
+#: ../src/plugins/save-file/xplayer-save-file.c:119
 msgid "Save a Copy"
 msgstr "Sábháil Cóip"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:151
+#: ../src/plugins/save-file/xplayer-save-file.c:151
 msgid "Movie"
 msgstr "Scannán"
 
-#: ../src/plugins/save-file/totem-save-file.c:173
+#: ../src/plugins/save-file/xplayer-save-file.c:173
 msgid "Movie stream"
 msgstr "Sruth scannáin"
 
-#: ../src/plugins/save-file/totem-save-file.c:285
+#: ../src/plugins/save-file/xplayer-save-file.c:285
 msgid "Save a Copy..."
 msgstr "Sábháil Cóip..."
 
@@ -1987,7 +1987,7 @@ msgstr "Gabháil Scáileáin"
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr ""
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "Sábháil Gailearaí"
 
@@ -1995,41 +1995,41 @@ msgstr "Sábháil Gailearaí"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "Gailearaí-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "Gailearaí á Chruthú..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Gailearaí á shábháil mar \"%s\""
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:221
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:230
-msgid "Totem could not get a screenshot of the video."
-msgstr "Níorbh fhéidir le Totem gabháil scáileán an fhíseáin a fháil."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:221
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:230
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Níorbh fhéidir le Xplayer gabháil scáileán an fhíseáin a fháil."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:230
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:230
 msgid "This is not supposed to happen; please file a bug report."
 msgstr ""
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:339
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:339
 msgid "Take _Screenshot"
 msgstr "Gabháil an _Scáileán"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:342
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:342
 msgid "Create Screenshot _Gallery..."
 msgstr "Cruthaigh _Gailearaí Ghabhálacha Scáileáin..."
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "Scipeáil Go"
 
@@ -2043,7 +2043,7 @@ msgstr "_Scipeáil go:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "soicind"
@@ -2056,16 +2056,16 @@ msgstr[4] "soicind"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "8"
 
-#: ../src/plugins/skipto/totem-skipto.c:199
+#: ../src/plugins/skipto/xplayer-skipto.c:199
 msgid "_Skip To"
 msgstr "_Scipeáil Go"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:206
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:206
 msgid "_Skip To..."
 msgstr "_Scipeáil Go..."
 

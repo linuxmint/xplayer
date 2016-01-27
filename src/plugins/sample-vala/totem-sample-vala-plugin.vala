@@ -1,5 +1,5 @@
 using GLib;
-using Totem;
+using Xplayer;
 
 class SampleValaPlugin: GLib.Object, Peas.Activatable {
 	public GLib.Object object { owned get; construct; }

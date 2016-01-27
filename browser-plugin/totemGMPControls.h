@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_GMP_CONTROLS_H__
-#define __TOTEM_GMP_CONTROLS_H__
+#ifndef __XPLAYER_GMP_CONTROLS_H__
+#define __XPLAYER_GMP_CONTROLS_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemGMPControls : public totemNPObject
+class xplayerGMPControls : public xplayerNPObject
 {
   public:
-    totemGMPControls (NPP);
-    virtual ~totemGMPControls ();
+    xplayerGMPControls (NPP);
+    virtual ~xplayerGMPControls ();
 
   private:
 
@@ -66,6 +66,6 @@ class totemGMPControls : public totemNPObject
     virtual bool SetPropertyByIndex (int aIndex, const NPVariant *aValue);
 };
 
-TOTEM_DEFINE_NPCLASS (totemGMPControls);
+XPLAYER_DEFINE_NPCLASS (xplayerGMPControls);
 
-#endif /* __TOTEM_GMP_CONTROLS_H__ */
+#endif /* __XPLAYER_GMP_CONTROLS_H__ */

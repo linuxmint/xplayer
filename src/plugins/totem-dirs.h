@@ -28,10 +28,10 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 
-char ** totem_get_plugin_paths (void);
-char * totem_plugin_find_file (const char *plugin_name,
+char ** xplayer_get_plugin_paths (void);
+char * xplayer_plugin_find_file (const char *plugin_name,
 			       const char *file);
-GtkBuilder * totem_plugin_load_interface (const char *plugin_name,
+GtkBuilder * xplayer_plugin_load_interface (const char *plugin_name,
 					  const char *name,
 					  gboolean fatal,
 					  GtkWindow *parent,

@@ -20,23 +20,23 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
  *
  */
 
-#include "totem-gst-helpers.h"
+#include "xplayer-gst-helpers.h"
 
 #include <gst/tag/tag.h>
 #include <gst/video/video-format.h>
 
 void
-totem_gst_message_print (GstMessage *msg,
+xplayer_gst_message_print (GstMessage *msg,
 			 GstElement *play,
 			 const char *filename)
 {

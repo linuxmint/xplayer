@@ -1,5 +1,5 @@
 icondir = $(datadir)/icons/hicolor/256x256/apps
-icon_DATA = totem.png
+icon_DATA = xplayer.png
 
 EXTRA_DIST = $(icon_DATA)
 

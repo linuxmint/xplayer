@@ -1,4 +1,4 @@
-/* totem-session.h
+/* xplayer-session.h
 
    Copyright (C) 2004 Bastien Nocera <hadess@hadess.net>
 
@@ -20,17 +20,17 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_SESSION_H
-#define TOTEM_SESSION_H
+#ifndef XPLAYER_SESSION_H
+#define XPLAYER_SESSION_H
 
-#include "totem.h"
+#include "xplayer.h"
 
 G_BEGIN_DECLS
 
-void totem_session_add_options (GOptionContext *context);
-void totem_session_setup (Totem *totem, char **argv);
-void totem_session_restore (Totem *totem, char **filenames);
+void xplayer_session_add_options (GOptionContext *context);
+void xplayer_session_setup (Xplayer *xplayer, char **argv);
+void xplayer_session_restore (Xplayer *xplayer, char **filenames);
 
 G_END_DECLS
 
-#endif /* TOTEM_SESSION_H */
+#endif /* XPLAYER_SESSION_H */

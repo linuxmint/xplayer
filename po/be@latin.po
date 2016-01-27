@@ -1,11 +1,11 @@
-# Biełaruski pierakład Totem.
+# Biełaruski pierakład Xplayer.
 # Copyright (C) 2007 Free Software Foundation.
-# This file is distributed under the same license as the Totem package.
+# This file is distributed under the same license as the Xplayer package.
 # Ihar Hračyška <ihar.hrachyshka@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Totem\n"
+"Project-Id-Version: Xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-14 17:48+0200\n"
 "PO-Revision-Date: 2009-02-14 18:14+0200\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Leave Fullscreen"
 msgstr "Pakiń poŭny ekran"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:91
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:91
 msgid "Time:"
 msgstr "Čas:"
 
@@ -53,7 +53,7 @@ msgstr "Vydal fajł sa śpisu"
 msgid "Save Playlist..."
 msgstr "Zapišy śpis..."
 
-#: ../data/playlist.ui.h:8 ../data/totem.ui.h:67
+#: ../data/playlist.ui.h:8 ../data/xplayer.ui.h:67
 msgid "Select a file to use for text subtitles"
 msgstr "Abiary fajł z tekstavymi subtytrami"
 
@@ -65,7 +65,7 @@ msgstr "_Skapijuj pałažeńnie"
 msgid "_Remove"
 msgstr "_Vydal"
 
-#: ../data/playlist.ui.h:11 ../data/totem.ui.h:131
+#: ../data/playlist.ui.h:11 ../data/xplayer.ui.h:131
 msgid "_Select Text Subtitles..."
 msgstr "_Vybiery tekstavyja subtytry..."
 
@@ -126,8 +126,8 @@ msgstr "Albom:"
 msgid "Artist:"
 msgstr "Vykanaŭca:"
 
-#: ../data/properties.ui.h:9 ../data/totem.ui.h:21
-#: ../src/totem-properties-view.c:89
+#: ../data/properties.ui.h:9 ../data/xplayer.ui.h:21
+#: ../src/xplayer-properties-view.c:89
 msgid "Audio"
 msgstr "Aŭdyjo"
 
@@ -159,7 +159,7 @@ msgstr "Praciahłaść:"
 msgid "Framerate:"
 msgstr "Častata kadraŭ:"
 
-#: ../data/properties.ui.h:17 ../data/totem.ui.h:35
+#: ../data/properties.ui.h:17 ../data/xplayer.ui.h:35
 msgid "General"
 msgstr "Ahulnaje"
 
@@ -200,7 +200,7 @@ msgstr "Nazva:"
 msgid "Unknown"
 msgstr "Nieviadomy"
 
-#: ../data/properties.ui.h:22 ../src/totem-properties-view.c:85
+#: ../data/properties.ui.h:22 ../src/xplayer-properties-view.c:85
 msgid "Video"
 msgstr "Videa"
 
@@ -212,543 +212,543 @@ msgstr "Hod:"
 msgid "Add the video to the playlist"
 msgstr "Dadaj videa da śpisu"
 
-#: ../data/video-list.ui.h:3 ../src/totem-dnd-menu.c:97
+#: ../data/video-list.ui.h:3 ../src/xplayer-dnd-menu.c:97
 #: ../src/plugins/jamendo/jamendo.ui.h:10
 msgid "_Add to Playlist"
 msgstr "_Dadaj da śpisu"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:45
-#: ../src/totem-object.c:1593
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:45
+#: ../src/xplayer-object.c:1593
 msgid "Movie Player"
-msgstr "Videaplayer Totem"
+msgstr "Videaplayer Xplayer"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies and songs"
 msgstr "Hraje filmy j pieśni"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "1.5 Mbps T1/Intranet/LAN"
 msgstr "1.5 Mbps T1/Intranet/LAN"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "112 Kbps Dual ISDN/DSL"
 msgstr "112 Kbps Spałučanyja ISDN/DSL"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "14.4 Kbps Modem"
 msgstr "14.4 Kbps Madem"
 
-#: ../data/totem.ui.h:4 ../src/totem-menu.c:1337
+#: ../data/xplayer.ui.h:4 ../src/xplayer-menu.c:1337
 msgid "16:9 (Widescreen)"
 msgstr "16:9 (šyroki ekran)"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "19.2 Kbps Modem"
 msgstr "19.2 Kbps Madem"
 
-#: ../data/totem.ui.h:6 ../src/totem-menu.c:1338
+#: ../data/xplayer.ui.h:6 ../src/xplayer-menu.c:1338
 msgid "2.11:1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "256 Kbps DSL/Cable"
 msgstr "256 Kbps DSL/Cable"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "28.8 Kbps Modem"
 msgstr "28.8 Kbps Madem"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "33.6 Kbps Modem"
 msgstr "33.6 Kbps Madem"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "34.4 Kbps Modem"
 msgstr "34.4 Kbps Madem"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "384 Kbps DSL/Cable"
 msgstr "384 Kbps DSL/Cable"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "4-channel"
 msgstr "4-kanalny"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "4.1-channel"
 msgstr "4.1-kanalny"
 
-#: ../data/totem.ui.h:14 ../src/totem-menu.c:1336
+#: ../data/xplayer.ui.h:14 ../src/xplayer-menu.c:1336
 msgid "4:3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "5.0-channel"
 msgstr "5.0-kanalny"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "5.1-channel"
 msgstr "5.1-kanalny"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "512 Kbps DSL/Cable"
 msgstr "512 Kbps DSL/Cable"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "56 Kbps Modem/ISDN"
 msgstr "56 Kbps Madem/ISDN"
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "AC3 Passthrough"
 msgstr "AC3 Passthrough"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "A_udio Menu"
 msgstr "_Hukavoje menu"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "Audio Output"
 msgstr "Vyjście huku"
 
-#: ../data/totem.ui.h:23 ../src/totem-menu.c:342 ../src/totem-menu.c:1334
+#: ../data/xplayer.ui.h:23 ../src/xplayer-menu.c:342 ../src/xplayer-menu.c:1334
 msgid "Auto"
 msgstr "Aŭtamatyčna"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Automatically _load subtitle files when movie is loaded"
 msgstr "Aŭtamatyčna _zahružaj fajły z subtytrami, kali zahružajecca film"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Automatically _resize the window when a new video is loaded"
 msgstr "Aŭtamatyčna _źmianiaj pamiery vakna, kali zahružajecca novaje videa"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Clear the playlist"
 msgstr "Ačyść śpis"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Co_ntrast:"
 msgstr "_Kantrast:"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "Color Balance"
 msgstr "Balans koleraŭ"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Connection _speed:"
 msgstr "_Chutkaść spałučeńnia:"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Decrease volume"
 msgstr "Pamienš hučnaść"
 
-#: ../data/totem.ui.h:31 ../src/totem-menu.c:1328
+#: ../data/xplayer.ui.h:31 ../src/xplayer-menu.c:1328
 msgid "Deinterlace"
 msgstr "Užyj deinterlace"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "Display"
 msgstr "Dyspłej"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Extra Large"
 msgstr "Vializarny"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "Fit Window to Movie"
 msgstr "Dapasuj akno da filmu"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "Pierajdzi da menu DVD"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the angle menu"
 msgstr "Pierajdzi da menu kuta"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "Go to the audio menu"
 msgstr "Pierajdzi da menu huku"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the chapter menu"
 msgstr "Pierajdzi da menu raździełaŭ"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "Go to the title menu"
 msgstr "Pierajdzi da menu zahałoŭkaŭ"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Help contents"
 msgstr "Źmiest dapamohi"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "Increase volume"
 msgstr "Pavialič hučnaść"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Intranet/LAN"
 msgstr "Intranet/LAN"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "Large"
 msgstr "Vialiki"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "Networking"
 msgstr "Sietka"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Next chapter or movie"
 msgstr "Nastupny raździeł albo film"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Normal"
 msgstr "Zvyčajny"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Open _Location..."
 msgstr "Adčyni _adras..."
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Open a file"
 msgstr "Adčyni fajł"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "Open a non-local file"
 msgstr "Adčyni nielakalny fajł"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "Play / P_ause"
 msgstr "Hraj / _Prypyni"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Play or pause the movie"
 msgstr "Hraj albo prypyni film"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "Plugins..."
 msgstr "Pluginy..."
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "Prefere_nces"
 msgstr "_Nałady"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Previous chapter or movie"
 msgstr "Papiaredni raździeł albo film"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Quit the program"
 msgstr "Vyjdzi z prahramy"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "Reset To _Defaults"
 msgstr "Viarni _zmoŭčanyja"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Resize _1:1"
 msgstr "Źmiani pamiery na _1:1"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgid "Resize _2:1"
 msgstr "Źmiani pamiery na _2:1"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Resize to double the original video size"
 msgstr "Pavialič akno ŭdvaja, adnosna pamieraŭ videa"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Resize to half the original video size"
 msgstr "Źmienš akno ŭdvaja, adnosna pamieraŭ videa"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Resize to the original video size"
 msgstr "Viarni pamiery videa"
 
-#: ../data/totem.ui.h:64 ../src/totem-menu.c:1330
+#: ../data/xplayer.ui.h:64 ../src/xplayer-menu.c:1330
 msgid "S_idebar"
 msgstr "_Bakavaja panel"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "S_ubtitles"
 msgstr "S_ubtytry"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "Sat_uration:"
 msgstr "_Nasyčanaść:"
 
-#: ../data/totem.ui.h:68 ../src/totem-menu.c:1326
+#: ../data/xplayer.ui.h:68 ../src/xplayer-menu.c:1326
 msgid "Set the repeat mode"
 msgstr "Užyj režym paŭtoru"
 
-#: ../data/totem.ui.h:69 ../src/totem-menu.c:1327
+#: ../data/xplayer.ui.h:69 ../src/xplayer-menu.c:1327
 msgid "Set the shuffle mode"
 msgstr "Užyj vypadkovy režym"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "Sets 16:9 (widescreen) aspect ratio"
 msgstr "Akreślivaje praporcyi 16:9 (šyroki ekran)"
 
-#: ../data/totem.ui.h:71 ../src/totem-menu.c:1338
+#: ../data/xplayer.ui.h:71 ../src/xplayer-menu.c:1338
 msgid "Sets 2.11:1 (DVB) aspect ratio"
 msgstr "Akreślivaje praporcyi 2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:72 ../src/totem-menu.c:1336
+#: ../data/xplayer.ui.h:72 ../src/xplayer-menu.c:1336
 msgid "Sets 4:3 (TV) aspect ratio"
 msgstr "Akreślivaje praporcyi 4:3 (TV)"
 
-#: ../data/totem.ui.h:73 ../src/totem-menu.c:1334
+#: ../data/xplayer.ui.h:73 ../src/xplayer-menu.c:1334
 msgid "Sets automatic aspect ratio"
 msgstr "Akreślivaje aŭtamatyčnyja praporcyi"
 
-#: ../data/totem.ui.h:74 ../src/totem-menu.c:1335
+#: ../data/xplayer.ui.h:74 ../src/xplayer-menu.c:1335
 msgid "Sets square aspect ratio"
 msgstr "Akreślivaje kvadratnyja praporcyi"
 
-#: ../data/totem.ui.h:75 ../src/totem-menu.c:1329
+#: ../data/xplayer.ui.h:75 ../src/xplayer-menu.c:1329
 msgid "Show _Controls"
 msgstr "Pakažy _kiroŭnyja elementy"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Show _visual effects when an audio file is played"
 msgstr "Pakazvaj _vizualnyja efekty, kali hrajecca aŭdyjafajł"
 
-#: ../data/totem.ui.h:77 ../src/totem-menu.c:1329
+#: ../data/xplayer.ui.h:77 ../src/xplayer-menu.c:1329
 msgid "Show controls"
 msgstr "Pakažy kiroŭnyja elementy"
 
-#: ../data/totem.ui.h:78 ../src/totem-menu.c:1330
+#: ../data/xplayer.ui.h:78 ../src/xplayer-menu.c:1330
 msgid "Show or hide the sidebar"
 msgstr "Pakažy albo schavaj bakavuju panel"
 
-#: ../data/totem.ui.h:79 ../src/totem-menu.c:1327
+#: ../data/xplayer.ui.h:79 ../src/xplayer-menu.c:1327
 msgid "Shuff_le Mode"
 msgstr "_Vypadkovy režym"
 
-#: ../data/totem.ui.h:80 ../src/totem-menu.c:1317 ../src/totem-menu.c:1322
+#: ../data/xplayer.ui.h:80 ../src/xplayer-menu.c:1317 ../src/xplayer-menu.c:1322
 msgid "Skip _Backwards"
 msgstr "Pieraskoč na_zad"
 
-#: ../data/totem.ui.h:81 ../src/totem-menu.c:1316 ../src/totem-menu.c:1321
+#: ../data/xplayer.ui.h:81 ../src/xplayer-menu.c:1316 ../src/xplayer-menu.c:1321
 msgid "Skip _Forward"
 msgstr "Pieraskoč na_pierad"
 
-#: ../data/totem.ui.h:82 ../src/totem-menu.c:1317 ../src/totem-menu.c:1322
+#: ../data/xplayer.ui.h:82 ../src/xplayer-menu.c:1317 ../src/xplayer-menu.c:1322
 msgid "Skip backwards"
 msgstr "Pieraskoč nazad"
 
-#: ../data/totem.ui.h:83 ../src/totem-menu.c:1316 ../src/totem-menu.c:1321
+#: ../data/xplayer.ui.h:83 ../src/xplayer-menu.c:1316 ../src/xplayer-menu.c:1321
 msgid "Skip forward"
 msgstr "Pieraskoč napierad"
 
-#: ../data/totem.ui.h:84 ../src/totem-menu.c:1335
+#: ../data/xplayer.ui.h:84 ../src/xplayer-menu.c:1335
 msgid "Square"
 msgstr "Kvadratny"
 
 # FIXME: Zdajecca tut niešta nia toje
-#: ../data/totem.ui.h:85 ../src/backend/bacon-video-widget-gst-0.10.c:4278
+#: ../data/xplayer.ui.h:85 ../src/backend/bacon-video-widget-gst-0.10.c:4278
 msgid "Stereo"
 msgstr "Sterea"
 
-#: ../data/totem.ui.h:86
+#: ../data/xplayer.ui.h:86
 msgid "Switch An_gles"
 msgstr "Źmiani _kut"
 
-#: ../data/totem.ui.h:87
+#: ../data/xplayer.ui.h:87
 msgid "Switch camera angles"
 msgstr "Źmiani vuhły kamery"
 
-#: ../data/totem.ui.h:88
+#: ../data/xplayer.ui.h:88
 msgid "Switch to fullscreen"
 msgstr "Pierajdzi ŭ poŭnaekranny režym"
 
-#: ../data/totem.ui.h:89
+#: ../data/xplayer.ui.h:89
 msgid "Text Subtitles"
 msgstr "Tekstavyja subtytry"
 
-#: ../data/totem.ui.h:90
+#: ../data/xplayer.ui.h:90
 msgid "Time seek bar"
 msgstr "Panel času"
 
-#: ../data/totem.ui.h:92
-msgid "Totem Preferences"
-msgstr "Nałady Totemu"
+#: ../data/xplayer.ui.h:92
+msgid "Xplayer Preferences"
+msgstr "Nałady Xplayeru"
 
-#: ../data/totem.ui.h:93
+#: ../data/xplayer.ui.h:93
 msgid "Visual Effects"
 msgstr "Vizualnyja efekty"
 
-#: ../data/totem.ui.h:94
+#: ../data/xplayer.ui.h:94
 msgid "Visualization _size:"
 msgstr "_Pamiery vizualizacyi:"
 
-#: ../data/totem.ui.h:95
+#: ../data/xplayer.ui.h:95
 msgid "Volume _Down"
 msgstr "_Cišej"
 
-#: ../data/totem.ui.h:96
+#: ../data/xplayer.ui.h:96
 msgid "Volume _Up"
 msgstr "_Hučniej"
 
-#: ../data/totem.ui.h:97
+#: ../data/xplayer.ui.h:97
 msgid "Zoom In"
 msgstr "Pavialič"
 
-#: ../data/totem.ui.h:98
+#: ../data/xplayer.ui.h:98
 msgid "Zoom Out"
 msgstr "Źmienš"
 
-#: ../data/totem.ui.h:99
+#: ../data/xplayer.ui.h:99
 msgid "Zoom Reset"
 msgstr "Zmoŭčanaje pavieličeńnie"
 
-#: ../data/totem.ui.h:100
+#: ../data/xplayer.ui.h:100
 msgid "Zoom in"
 msgstr "Pavialič"
 
-#: ../data/totem.ui.h:101
+#: ../data/xplayer.ui.h:101
 msgid "Zoom out"
 msgstr "Źmienš"
 
-#: ../data/totem.ui.h:102
+#: ../data/xplayer.ui.h:102
 msgid "Zoom reset"
 msgstr "Zmoŭčanaje pavieličeńnie"
 
-#: ../data/totem.ui.h:103
+#: ../data/xplayer.ui.h:103
 msgid "_About"
 msgstr "_Ab prahramie"
 
-#: ../data/totem.ui.h:104
+#: ../data/xplayer.ui.h:104
 msgid "_Allow the screensaver to activate even when audio-only is playing"
 msgstr "_Dazvol uklučać źbierahalnik ekranu, navat kali hrajecca tolki huk"
 
-#: ../data/totem.ui.h:105
+#: ../data/xplayer.ui.h:105
 msgid "_Angle Menu"
 msgstr "_Menu kuta"
 
-#: ../data/totem.ui.h:106
+#: ../data/xplayer.ui.h:106
 msgid "_Aspect Ratio"
 msgstr "_Praporcyi"
 
-#: ../data/totem.ui.h:107
+#: ../data/xplayer.ui.h:107
 msgid "_Audio output type:"
 msgstr "Typ vyjścia _huku:"
 
-#: ../data/totem.ui.h:108
+#: ../data/xplayer.ui.h:108
 msgid "_Brightness:"
 msgstr "_Jarkaść:"
 
-#: ../data/totem.ui.h:109
+#: ../data/xplayer.ui.h:109
 msgid "_Chapter Menu"
 msgstr "Menu _raździełaŭ"
 
-#: ../data/totem.ui.h:110
+#: ../data/xplayer.ui.h:110
 msgid "_Clear Playlist"
 msgstr "_Ačyść śpis"
 
-#: ../data/totem.ui.h:111
+#: ../data/xplayer.ui.h:111
 msgid "_Contents"
 msgstr "_Źmiest"
 
-#: ../data/totem.ui.h:112
+#: ../data/xplayer.ui.h:112
 msgid "_DVD Menu"
 msgstr "Menu _DVD"
 
-#: ../data/totem.ui.h:113 ../src/totem-menu.c:1328
+#: ../data/xplayer.ui.h:113 ../src/xplayer-menu.c:1328
 msgid "_Deinterlace"
 msgstr "Užyj _deinterlace"
 
-#: ../data/totem.ui.h:114
+#: ../data/xplayer.ui.h:114
 msgid "_Edit"
 msgstr "_Źmiani"
 
-#: ../data/totem.ui.h:115
+#: ../data/xplayer.ui.h:115
 msgid "_Eject"
 msgstr "_Vysuń"
 
-#: ../data/totem.ui.h:116
+#: ../data/xplayer.ui.h:116
 msgid "_Encoding:"
 msgstr "_Kadavańnie:"
 
-#: ../data/totem.ui.h:117
+#: ../data/xplayer.ui.h:117
 msgid "_Font:"
 msgstr "_Šryft:"
 
-#: ../data/totem.ui.h:118
+#: ../data/xplayer.ui.h:118
 msgid "_Fullscreen"
 msgstr "_Poŭny ekran"
 
-#: ../data/totem.ui.h:119
+#: ../data/xplayer.ui.h:119
 msgid "_Go"
 msgstr "_Pierajdzi"
 
-#: ../data/totem.ui.h:120
+#: ../data/xplayer.ui.h:120
 msgid "_Help"
 msgstr "_Dapamoha"
 
-#: ../data/totem.ui.h:121
+#: ../data/xplayer.ui.h:121
 msgid "_Hue:"
 msgstr "_Adcieńnie:"
 
-#: ../data/totem.ui.h:122
+#: ../data/xplayer.ui.h:122
 msgid "_Languages"
 msgstr "_Movy"
 
-#: ../data/totem.ui.h:123
+#: ../data/xplayer.ui.h:123
 msgid "_Movie"
 msgstr "_Film"
 
-#: ../data/totem.ui.h:124
+#: ../data/xplayer.ui.h:124
 msgid "_Next Chapter/Movie"
 msgstr "_Nastupny raździeł/film"
 
-#: ../data/totem.ui.h:125
+#: ../data/xplayer.ui.h:125
 msgid "_Open..."
 msgstr "_Adčyni..."
 
-#: ../data/totem.ui.h:126
+#: ../data/xplayer.ui.h:126
 msgid "_Previous Chapter/Movie"
 msgstr "_Papiaredni raździeł/film"
 
-#: ../data/totem.ui.h:127
+#: ../data/xplayer.ui.h:127
 msgid "_Properties"
 msgstr "_Ułaścivaści"
 
-#: ../data/totem.ui.h:128
+#: ../data/xplayer.ui.h:128
 msgid "_Quit"
 msgstr "_Vyjście"
 
-#: ../data/totem.ui.h:129 ../src/totem-menu.c:1326
+#: ../data/xplayer.ui.h:129 ../src/xplayer-menu.c:1326
 msgid "_Repeat Mode"
 msgstr "Režym _paŭtoru"
 
-#: ../data/totem.ui.h:130
+#: ../data/xplayer.ui.h:130
 msgid "_Resize 1:2"
 msgstr "_Źmiani pamiery na 1:2"
 
-#: ../data/totem.ui.h:132
+#: ../data/xplayer.ui.h:132
 msgid "_Sound"
 msgstr "_Huk"
 
-#: ../data/totem.ui.h:133
+#: ../data/xplayer.ui.h:133
 msgid "_Title Menu"
 msgstr "_Zahałoŭnaje menu"
 
-#: ../data/totem.ui.h:134
+#: ../data/xplayer.ui.h:134
 msgid "_Type of visualization:"
 msgstr "_Typ vizualizacyi:"
 
-#: ../data/totem.ui.h:135
+#: ../data/xplayer.ui.h:135
 msgid "_View"
 msgstr "_Vyhlad"
 
-#: ../data/totem.schemas.in.h:1
+#: ../data/xplayer.schemas.in.h:1
 msgid "Allow the screensaver to activate even when audio-only is playing"
 msgstr "Dazvol uklučać źbierahalnik ekranu, navat kali hrajecca tolki huk"
 
-#: ../data/totem.schemas.in.h:2
+#: ../data/xplayer.schemas.in.h:2
 #, fuzzy
 msgid ""
 "Allow the screensaver to activate even when audio-only is playing. This is "
@@ -757,7 +757,7 @@ msgstr ""
 "Dazvol uklučać źbierahalnik ekranu, navat kali hrajecca tolki huk. Zručna "
 "dla kalonak, jakija siłkujucca ad manitoru."
 
-#: ../data/totem.schemas.in.h:3
+#: ../data/xplayer.schemas.in.h:3
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)"
@@ -765,7 +765,7 @@ msgstr ""
 "Kolkaść buferavanych źviestak dla sietkavych płyniaŭ pierad pačatkam "
 "adlustravańnia płyni (u sekundach)"
 
-#: ../data/totem.schemas.in.h:4
+#: ../data/xplayer.schemas.in.h:4
 msgid ""
 "Approximate network connection speed, used to select quality on media over "
 "the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, \"2\" for "
@@ -775,27 +775,27 @@ msgid ""
 "\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/LAN."
 msgstr ""
 
-#: ../data/totem.schemas.in.h:5
+#: ../data/xplayer.schemas.in.h:5
 msgid "Buffer size"
 msgstr "Pamier buferu"
 
-#: ../data/totem.schemas.in.h:6
+#: ../data/xplayer.schemas.in.h:6
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Zmoŭčanaje pałažeńnie dla akon \"Adčyni...\""
 
-#: ../data/totem.schemas.in.h:7
+#: ../data/xplayer.schemas.in.h:7
 msgid ""
 "Default location for the \"Open...\" dialogs, default is the current "
 "directory"
 msgstr ""
 "Zmoŭčanaje pałažeńnie dla akon \"Adčyni...\", zmoŭčana heta dziejny kataloh"
 
-#: ../data/totem.schemas.in.h:8
+#: ../data/xplayer.schemas.in.h:8
 #, fuzzy
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Zmoŭčanaje pałažeńnie dla voknaŭ \"Zrabi zdymak ekranu...\""
 
-#: ../data/totem.schemas.in.h:9
+#: ../data/xplayer.schemas.in.h:9
 #, fuzzy
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs, default is the "
@@ -804,37 +804,37 @@ msgstr ""
 "Zmoŭčanaje pałažeńnie dla voknaŭ \"Zrabi zdymak ekranu...\", zmoŭčana heta "
 "kataloh \"Malunki\""
 
-#: ../data/totem.schemas.in.h:10
+#: ../data/xplayer.schemas.in.h:10
 msgid "Enable deinterlacing"
 msgstr "Uklučy deinterlacing"
 
-#: ../data/totem.schemas.in.h:11
+#: ../data/xplayer.schemas.in.h:11
 msgid "Encoding charset for subtitle"
 msgstr "Kadavańnie dla subtytraŭ"
 
-#: ../data/totem.schemas.in.h:12
+#: ../data/xplayer.schemas.in.h:12
 msgid "Maximum amount of data to decode ahead of display (in seconds)"
 msgstr ""
 "Maksymalnaja kolkaść źviestak, jakija treba dekadavać napierad dziejnaha "
 "kadra (u sekundach)"
 
-#: ../data/totem.schemas.in.h:13
+#: ../data/xplayer.schemas.in.h:13
 msgid "Name of the visual effects plugins"
 msgstr "Nazva pluginaŭ vizualnych efektaŭ"
 
-#: ../data/totem.schemas.in.h:14
+#: ../data/xplayer.schemas.in.h:14
 msgid "Network buffering threshold"
 msgstr "Paroh sietkavaha buferavańnia"
 
-#: ../data/totem.schemas.in.h:15
+#: ../data/xplayer.schemas.in.h:15
 msgid "Network connection speed"
 msgstr "Chutkaść sietkavaha spałučeńnia"
 
-#: ../data/totem.schemas.in.h:16
+#: ../data/xplayer.schemas.in.h:16
 msgid "Pango font description for subtitle rendering"
 msgstr "Apisańnie šryftu Pango dla adlustravańnia subtytraŭ"
 
-#: ../data/totem.schemas.in.h:17
+#: ../data/xplayer.schemas.in.h:17
 msgid ""
 "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
 "normal, \"2\" for large, \"3\" for extra large."
@@ -842,64 +842,64 @@ msgstr ""
 "Nałady jakaści dla vizualizacyi hučańnia: \"0\" dla nizkaj, \"1\" dla "
 "zvyčajnaj, \"2\" dla vialikaj, \"3\" dla vializarnaj."
 
-#: ../data/totem.schemas.in.h:18
+#: ../data/xplayer.schemas.in.h:18
 msgid "Repeat mode"
 msgstr "Režym paŭtoru"
 
 # Adčynieńnie moža nie najlepšaja forma, ale zahruzka ličycca rusizmam. Niejkija prapanovy?
-#: ../data/totem.schemas.in.h:19
+#: ../data/xplayer.schemas.in.h:19
 msgid "Resize the canvas automatically on file load"
 msgstr "Aŭtamatyčna dapasuj pamier pry adčytańni fajła"
 
-#: ../data/totem.schemas.in.h:20
+#: ../data/xplayer.schemas.in.h:20
 msgid "Show visual effects when no video is displayed"
 msgstr "Pakazvaj vizualnyja efekty, kali niama videa"
 
-#: ../data/totem.schemas.in.h:21
+#: ../data/xplayer.schemas.in.h:21
 msgid "Show visual effects when playing an audio only file."
 msgstr "Pakazvaj vizualnyja efekty, kali hraješ adno hukavy fajł."
 
-#: ../data/totem.schemas.in.h:22
+#: ../data/xplayer.schemas.in.h:22
 msgid "Shuffle mode"
 msgstr "Vypadkovy režym"
 
-#: ../data/totem.schemas.in.h:23
+#: ../data/xplayer.schemas.in.h:23
 msgid "Sound volume"
 msgstr "Hučnaść"
 
-#: ../data/totem.schemas.in.h:24
+#: ../data/xplayer.schemas.in.h:24
 msgid "Sound volume, in percent, between 0 and 100"
 msgstr "Hučnaść, u pracentach, ad 0 da 100"
 
-#: ../data/totem.schemas.in.h:25
+#: ../data/xplayer.schemas.in.h:25
 msgid "Subtitle encoding"
 msgstr "Kadavańnie subtytraŭ"
 
-#: ../data/totem.schemas.in.h:26
+#: ../data/xplayer.schemas.in.h:26
 msgid "Subtitle font"
 msgstr "Šryft dla subtytraŭ"
 
-#: ../data/totem.schemas.in.h:27
+#: ../data/xplayer.schemas.in.h:27
 msgid "The brightness of the video"
 msgstr "Jaskravaść videa"
 
-#: ../data/totem.schemas.in.h:28
+#: ../data/xplayer.schemas.in.h:28
 msgid "The contrast of the video"
 msgstr "Kantrast videa"
 
-#: ../data/totem.schemas.in.h:29
+#: ../data/xplayer.schemas.in.h:29
 msgid "The hue of the video"
 msgstr "Adcieńnie videa"
 
-#: ../data/totem.schemas.in.h:30
+#: ../data/xplayer.schemas.in.h:30
 msgid "The saturation of the video"
 msgstr "Nasyčanaść videa"
 
-#: ../data/totem.schemas.in.h:31
+#: ../data/xplayer.schemas.in.h:31
 msgid "Type of audio output to use"
 msgstr "Typ vyjścia huku"
 
-#: ../data/totem.schemas.in.h:32
+#: ../data/xplayer.schemas.in.h:32
 msgid ""
 "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
 "\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
@@ -912,33 +912,33 @@ msgstr ""
 #. Translators: This is default subtitle encoding
 #. character set. You can change this to be the most common
 #. encoding for fansub subtitles in your language. File a bug
-#. against Totem, and leave UTF-8 as the default if in doubt.
-#: ../data/totem.schemas.in.h:37
+#. against Xplayer, and leave UTF-8 as the default if in doubt.
+#: ../data/xplayer.schemas.in.h:37
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: ../data/totem.schemas.in.h:38
+#: ../data/xplayer.schemas.in.h:38
 msgid "Visualization quality setting"
 msgstr "Jakaść vizualizacyi"
 
-#: ../data/totem.schemas.in.h:39
+#: ../data/xplayer.schemas.in.h:39
 msgid "Whether the main window should stay on top"
 msgstr "Akreślivaje, ci musić hałoŭnaje akno zastavacca ŭhary"
 
-#: ../data/totem.schemas.in.h:40
+#: ../data/xplayer.schemas.in.h:40
 msgid "Whether the main window should stay on top of the other ones"
 msgstr "Akreślivaje, ci musić hałoŭnaje akno zastavacca nad inšymi voknami"
 
-#: ../data/totem.schemas.in.h:41
+#: ../data/xplayer.schemas.in.h:41
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "Ci aŭtamatyčna zahružać tekstavyja fajły z subtytrami, kali zahružajecca film"
 
-#: ../data/totem.schemas.in.h:42
+#: ../data/xplayer.schemas.in.h:42
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "Ci adklučyć pluginy z chatniaha katalohu karystalnika"
 
-#: ../data/totem.schemas.in.h:43
+#: ../data/xplayer.schemas.in.h:43
 msgid "Whether to enable debug for the playback engine"
 msgstr "Akreślivaje, ci treba ŭkučyć adładku dla hrańnia"
 
@@ -946,7 +946,7 @@ msgstr "Akreślivaje, ci treba ŭkučyć adładku dla hrańnia"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Uviadzi _adras fajłu, jaki ty chočaš adčynić:"
 
-#: ../lib/totem-scrsaver.c:115
+#: ../lib/xplayer-scrsaver.c:115
 msgid "Playing a movie"
 msgstr "Hrańnie filmu"
 
@@ -1032,107 +1032,107 @@ msgstr "Opcyi kiravańnia sesijami:"
 msgid "Show session management options"
 msgstr "Pakažy opcyi kiravańnia sesijami"
 
-#: ../src/totem-cell-renderer-video.c:125
+#: ../src/xplayer-cell-renderer-video.c:125
 msgid "Unknown video"
 msgstr "Nieviadomaje videa"
 
-#: ../src/totem-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:94
 msgid "_Play Now"
 msgstr "Zaj_hraj"
 
-#: ../src/totem-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:103
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: ../src/totem-fullscreen.c:494
+#: ../src/xplayer-fullscreen.c:494
 msgid "No File"
 msgstr "Niama fajłu"
 
-#: ../src/totem-interface.c:121 ../src/totem-interface.c:129
+#: ../src/xplayer-interface.c:121 ../src/xplayer-interface.c:129
 #, c-format
 msgid "Could not launch URL \"%s\": %s"
 msgstr "Niemahčyma adčynić URL \"%s\": %s"
 
-#: ../src/totem-interface.c:121
+#: ../src/xplayer-interface.c:121
 msgid "Default browser not configured"
 msgstr "Zmoŭčany hartač nie skanfihuravany"
 
-#: ../src/totem-interface.c:122 ../src/totem-interface.c:130
+#: ../src/xplayer-interface.c:122 ../src/xplayer-interface.c:130
 msgid "Error launching URI"
 msgstr "Pamyłka adčynieńnia adrasu (URI)"
 
-#: ../src/totem-interface.c:188 ../src/totem-interface.c:220
+#: ../src/xplayer-interface.c:188 ../src/xplayer-interface.c:220
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "Niemahčyma adčytać interfejs '%s'. %s"
 
-#: ../src/totem-interface.c:188
+#: ../src/xplayer-interface.c:188
 msgid "The file does not exist."
 msgstr "Fajł nie isnuje."
 
-#: ../src/totem-interface.c:190 ../src/totem-interface.c:192
-#: ../src/totem-interface.c:222 ../src/totem-interface.c:224
-msgid "Make sure that Totem is properly installed."
-msgstr "Upeŭnisia ŭ pravilnaśći instalacyi Totema."
+#: ../src/xplayer-interface.c:190 ../src/xplayer-interface.c:192
+#: ../src/xplayer-interface.c:222 ../src/xplayer-interface.c:224
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Upeŭnisia ŭ pravilnaśći instalacyi Xplayera."
 
-#: ../src/totem-interface.c:335
+#: ../src/xplayer-interface.c:335
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Totem heta svabodnaja prahrama; ty možaš raspaŭsiudžvać jaje i/albo "
+"Xplayer heta svabodnaja prahrama; ty možaš raspaŭsiudžvać jaje i/albo "
 "madyfikavać zhodna z umovami Ahulnaj hramadzkaj licenzii GNU (GNU GPL), "
 "apublikavanaj Fundacyjaj svabodnych prahramaŭ (Free Software Foundation), u "
 "versii 2 albo (pry žadańni) luboj paźniejšaj."
 
-#: ../src/totem-interface.c:339
+#: ../src/xplayer-interface.c:339
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Prahrama Totem raspaŭsiudžvajecca sa spadziavańniami, što jana budzie "
+"Prahrama Xplayer raspaŭsiudžvajecca sa spadziavańniami, što jana budzie "
 "karysnaj, ale BIEŹ NIJAKICH HARANTYJAŬ; navat biez harantavańnia PRYDATNAŚCI "
 "DA KANKRETNAHA VYKARYSTAŃNIA. Padrabiaznaści možna pračytać u Ahulnaj "
 "hramadzkaj licenzii GNU (GNU GPL)."
 
-#: ../src/totem-interface.c:343
+#: ../src/xplayer-interface.c:343
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Ty musiŭ atrymać kopiju Ahulnaj hramadzkaj licenzii GNU (GNU GPL) razam z "
-"Totemam; kali ty nie atrymaŭ jaje, napišy pra heta (pa-anhielsku) pa "
+"Xplayeram; kali ty nie atrymaŭ jaje, napišy pra heta (pa-anhielsku) pa "
 "adrasie: Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, "
 "MA  02111-1307 USA"
 
-#: ../src/totem-interface.c:346
+#: ../src/xplayer-interface.c:346
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
-msgstr "Totem dazvalaje vykarystańnie ŭłaśnickich pluginaŭ GStreamer."
+msgstr "Xplayer dazvalaje vykarystańnie ŭłaśnickich pluginaŭ GStreamer."
 
-#: ../src/totem-menu.c:338
+#: ../src/xplayer-menu.c:338
 msgid "None"
 msgstr "Niama"
 
-#: ../src/totem-menu.c:818
+#: ../src/xplayer-menu.c:818
 #, c-format
 msgid "Play Disc '%s'"
 msgstr "Hraj dysk '%s'"
 
-#: ../src/totem-menu.c:821
+#: ../src/xplayer-menu.c:821
 #, c-format
 msgid "device%d"
 msgstr "pryłada%d"
 
 #. translators: the index of the adapter
 #. * DVB Adapter 1
-#: ../src/totem-menu.c:895
+#: ../src/xplayer-menu.c:895
 #, c-format
 msgid "DVB Adapter %u"
 msgstr "Adapter DVB %u"
@@ -1141,565 +1141,565 @@ msgstr "Adapter DVB %u"
 #. * Watch TV on 'DVB Adapter 1'
 #. * or
 #. * Watch TV on 'Hauppauge Nova-T Stick'
-#: ../src/totem-menu.c:900
+#: ../src/xplayer-menu.c:900
 #, c-format
 msgid "Watch TV on '%s'"
 msgstr "Hladzi TV praz '%s'"
 
 #. This lists the back-end type and version, such as
 #. * Movie Player using GStreamer 0.10.1
-#: ../src/totem-menu.c:1176
+#: ../src/xplayer-menu.c:1176
 #, c-format
 msgid "Movie Player using %s"
 msgstr "Videaplayer, na bazie %s"
 
-#: ../src/totem-menu.c:1180
+#: ../src/xplayer-menu.c:1180
 msgid "Copyright © 2002-2008 Bastien Nocera"
 msgstr "Copyright © 2002-2008 Bastien Nocera"
 
-#: ../src/totem-menu.c:1185 ../browser-plugin/totem-plugin-viewer.c:1191
+#: ../src/xplayer-menu.c:1185 ../browser-plugin/xplayer-plugin-viewer.c:1191
 msgid "translator-credits"
 msgstr "Ihar Hračyška <ihar.hrachyshka@gmail.com>"
 
-#: ../src/totem-menu.c:1189
-msgid "Totem Website"
-msgstr "Sajt Totema"
+#: ../src/xplayer-menu.c:1189
+msgid "Xplayer Website"
+msgstr "Sajt Xplayera"
 
-#: ../src/totem-menu.c:1224
+#: ../src/xplayer-menu.c:1224
 msgid "Configure Plugins"
 msgstr "Kanfihuruj pluginy"
 
-#: ../src/totem-menu.c:1337
+#: ../src/xplayer-menu.c:1337
 msgid "Sets 16:9 (Anamorphic) aspect ratio"
 msgstr "Akreślivaje praporcyi 16:9 (anamarfičnyja)"
 
-#: ../src/totem-object.c:937 ../browser-plugin/totem-plugin-viewer.c:354
+#: ../src/xplayer-object.c:937 ../browser-plugin/xplayer-plugin-viewer.c:354
 msgid "Playing"
 msgstr "Hrańnie"
 
-#: ../src/totem-object.c:939 ../src/totem-options.c:51
+#: ../src/xplayer-object.c:939 ../src/xplayer-options.c:51
 msgid "Pause"
 msgstr "Prypyni"
 
-#: ../src/totem-object.c:944 ../browser-plugin/totem-plugin-viewer.c:350
+#: ../src/xplayer-object.c:944 ../browser-plugin/xplayer-plugin-viewer.c:350
 msgid "Paused"
 msgstr "Prypynieny"
 
-#: ../src/totem-object.c:946 ../src/totem-object.c:956
-#: ../src/totem-options.c:50
+#: ../src/xplayer-object.c:946 ../src/xplayer-object.c:956
+#: ../src/xplayer-options.c:50
 msgid "Play"
 msgstr "Hraj"
 
-#: ../src/totem-object.c:951 ../src/totem-object.c:1585
-#: ../src/totem-statusbar.c:98 ../browser-plugin/totem-plugin-viewer.c:338
+#: ../src/xplayer-object.c:951 ../src/xplayer-object.c:1585
+#: ../src/xplayer-statusbar.c:98 ../browser-plugin/xplayer-plugin-viewer.c:338
 msgid "Stopped"
 msgstr "Spynieny"
 
-#: ../src/totem-object.c:1032 ../src/totem-object.c:1059
-#: ../src/totem-object.c:1706 ../src/totem-object.c:1854
+#: ../src/xplayer-object.c:1032 ../src/xplayer-object.c:1059
+#: ../src/xplayer-object.c:1706 ../src/xplayer-object.c:1854
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem nia zmoh adčynić '%s'."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer nia zmoh adčynić '%s'."
 
-#: ../src/totem-object.c:1142
+#: ../src/xplayer-object.c:1142
 #, c-format
 msgid ""
-"Totem could not play this media (%s) although a plugin is present to handle "
+"Xplayer could not play this media (%s) although a plugin is present to handle "
 "it."
 msgstr ""
-"Totem nia moža hrać taki fajł (%s), choć užo zainstalavany plugin, jaki "
+"Xplayer nia moža hrać taki fajł (%s), choć užo zainstalavany plugin, jaki "
 "dapamahaje jamu ŭ hetym."
 
 # FIXME: Z hetym drive treba niešta rabić... Zašmat pryładaŭ vychodzić.
-#: ../src/totem-object.c:1143
+#: ../src/xplayer-object.c:1143
 msgid ""
 "You might want to check that a disc is present in the drive and that it is "
 "correctly configured."
 msgstr ""
 "Pravier najaŭnaść dysku ŭ pryładzie i pravilnaść naładaŭ hetaj pryłady."
 
-#: ../src/totem-object.c:1150 ../src/plugins/youtube/youtube.py:235
+#: ../src/xplayer-object.c:1150 ../src/plugins/youtube/youtube.py:235
 msgid "More information about media plugins"
 msgstr "Bolš źviestak ab medyjapluginach"
 
-#: ../src/totem-object.c:1151 ../src/plugins/youtube/youtube.py:233
+#: ../src/xplayer-object.c:1151 ../src/plugins/youtube/youtube.py:233
 msgid ""
-"Please install the necessary plugins and restart Totem to be able to play "
+"Please install the necessary plugins and restart Xplayer to be able to play "
 "this media."
 msgstr ""
-"Zainstaluj nieabchodnyja pluginy i restartuj Totem, kab jon zmoh hrać takija "
+"Zainstaluj nieabchodnyja pluginy i restartuj Xplayer, kab jon zmoh hrać takija "
 "fajły."
 
-#: ../src/totem-object.c:1153
+#: ../src/xplayer-object.c:1153
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because it does not have the "
+"Xplayer cannot play this type of media (%s) because it does not have the "
 "appropriate plugins to be able to read from the disc."
 msgstr ""
-"Totem nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
+"Xplayer nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
 "pluginaŭ, kab mahčy pračytać z dysku."
 
-#: ../src/totem-object.c:1155 ../src/plugins/youtube/youtube.py:232
+#: ../src/xplayer-object.c:1155 ../src/plugins/youtube/youtube.py:232
 #, c-format, python-format
 msgid ""
-"Totem cannot play this type of media (%s) because you do not have the "
+"Xplayer cannot play this type of media (%s) because you do not have the "
 "appropriate plugins to handle it."
 msgstr ""
-"Totem nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
+"Xplayer nia moža hrać fajły takoha typu (%s), bo nie staje nieabchodnych "
 "pluginaŭ."
 
-#: ../src/totem-object.c:1159
+#: ../src/xplayer-object.c:1159
 msgid ""
-"Totem cannot play TV, because no TV adapters are present or they are not "
+"Xplayer cannot play TV, because no TV adapters are present or they are not "
 "supported."
 msgstr ""
-"Totem nia moža pakazać TV, bo niama patrebnaj aparatury albo jana nie "
+"Xplayer nia moža pakazać TV, bo niama patrebnaj aparatury albo jana nie "
 "naładžanaja."
 
-#: ../src/totem-object.c:1160
+#: ../src/xplayer-object.c:1160
 msgid "Please insert a supported TV adapter."
 msgstr "Ustaŭ adapter TV, jaki absłuhoŭvajecca systemaj."
 
-#: ../src/totem-object.c:1170
+#: ../src/xplayer-object.c:1170
 msgid "More information about watching TV"
 msgstr "Bolš źviestak ab prahladzie TV"
 
-#: ../src/totem-object.c:1171
-msgid "Totem is missing a channels listing to be able to tune the receiver."
-msgstr "Totem nia maje śpisu kanałaŭ, patrebnaha, kab naładzić receiver."
+#: ../src/xplayer-object.c:1171
+msgid "Xplayer is missing a channels listing to be able to tune the receiver."
+msgstr "Xplayer nia maje śpisu kanałaŭ, patrebnaha, kab naładzić receiver."
 
-#: ../src/totem-object.c:1172
+#: ../src/xplayer-object.c:1172
 msgid ""
 "Please follow the instructions provided in the link to create a channels "
 "listing."
 msgstr "Kab stvaryć śpis kanałaŭ, vykanaj instrukcyju, źmieščanuju pa adrasie."
 
-#: ../src/totem-object.c:1175
+#: ../src/xplayer-object.c:1175
 #, c-format
 msgid ""
-"Totem cannot play this type of media (%s) because the TV device is busy."
+"Xplayer cannot play this type of media (%s) because the TV device is busy."
 msgstr ""
-"Totem nia moža hrać medyi takoha typu (%s), bo pryłada TV čymści zaniataja."
+"Xplayer nia moža hrać medyi takoha typu (%s), bo pryłada TV čymści zaniataja."
 
-#: ../src/totem-object.c:1176
+#: ../src/xplayer-object.c:1176
 msgid "Please try again later."
 msgstr "Kali łaska, paŭtary sprobu paźniej."
 
-#: ../src/totem-object.c:1181
+#: ../src/xplayer-object.c:1181
 #, c-format
-msgid "Totem cannot play this type of media (%s) because it is not supported."
+msgid "Xplayer cannot play this type of media (%s) because it is not supported."
 msgstr ""
-"Totem nia moža hrać medyi takoha typu (%s), bo jany nie padtrymlivajucca."
+"Xplayer nia moža hrać medyi takoha typu (%s), bo jany nie padtrymlivajucca."
 
-#: ../src/totem-object.c:1182
+#: ../src/xplayer-object.c:1182
 msgid "Please insert another disc to play back."
 msgstr "Ustaŭ inšy dysk, kab prajhrać jaho."
 
-#: ../src/totem-object.c:1216
-msgid "Totem was not able to play this disc."
-msgstr "Totem nia moža hrać taki dysk."
+#: ../src/xplayer-object.c:1216
+msgid "Xplayer was not able to play this disc."
+msgstr "Xplayer nia moža hrać taki dysk."
 
-#: ../src/totem-object.c:1217 ../src/totem-object.c:3954
-#: ../browser-plugin/totem-plugin-viewer.c:1824
+#: ../src/xplayer-object.c:1217 ../src/xplayer-object.c:3954
+#: ../browser-plugin/xplayer-plugin-viewer.c:1824
 msgid "No reason."
 msgstr "Biez pryčyny."
 
-#: ../src/totem-object.c:1231
-msgid "Totem does not support playback of Audio CDs"
-msgstr "Totem nie padtrymvaje vykanańnia aŭdyjo CD"
+#: ../src/xplayer-object.c:1231
+msgid "Xplayer does not support playback of Audio CDs"
+msgstr "Xplayer nie padtrymvaje vykanańnia aŭdyjo CD"
 
-#: ../src/totem-object.c:1232
+#: ../src/xplayer-object.c:1232
 msgid "Please consider using a music player or a CD extractor to play this CD"
 msgstr ""
 "Kali łaska, kab pasłuchać hety CD, vykarystaj muzyčny player ci skapijuj CD"
 
-#: ../src/totem-object.c:1712
+#: ../src/xplayer-object.c:1712
 msgid "No error message"
 msgstr "Niama tekstu pamyłki"
 
-#: ../src/totem-object.c:2051
-msgid "Totem could not display the help contents."
-msgstr "Totem nia moža pakazać źmiest dapamohi."
+#: ../src/xplayer-object.c:2051
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer nia moža pakazać źmiest dapamohi."
 
-#: ../src/totem-object.c:2377 ../src/totem-object.c:2379
-#: ../browser-plugin/totem-plugin-viewer.c:1479
+#: ../src/xplayer-object.c:2377 ../src/xplayer-object.c:2379
+#: ../browser-plugin/xplayer-plugin-viewer.c:1479
 msgid "An error occurred"
 msgstr "Adbyłasia pamyłka"
 
-#: ../src/totem-object.c:3250
+#: ../src/xplayer-object.c:3250
 msgid "TV signal lost"
 msgstr "Stračany syhnał TV"
 
-#: ../src/totem-object.c:3251
+#: ../src/xplayer-object.c:3251
 msgid "Please verify your hardware setup."
 msgstr "Spraŭdź nałady svajoj aparatury."
 
-#: ../src/totem-object.c:3809 ../src/totem-object.c:3811
+#: ../src/xplayer-object.c:3809 ../src/xplayer-object.c:3811
 msgid "Previous Chapter/Movie"
 msgstr "Papiaredni raździeł/film"
 
-#: ../src/totem-object.c:3817 ../src/totem-object.c:3819
+#: ../src/xplayer-object.c:3817 ../src/xplayer-object.c:3819
 msgid "Play / Pause"
 msgstr "Hraj / Prypyni"
 
-#: ../src/totem-object.c:3826 ../src/totem-object.c:3828
+#: ../src/xplayer-object.c:3826 ../src/xplayer-object.c:3828
 msgid "Next Chapter/Movie"
 msgstr "Nastupny raździeł/film"
 
-#: ../src/totem-object.c:3954
-msgid "Totem could not startup."
-msgstr "Niemahčyma ŭruchomić Totem."
+#: ../src/xplayer-object.c:3954
+msgid "Xplayer could not startup."
+msgstr "Niemahčyma ŭruchomić Xplayer."
 
-#: ../src/totem-open-location.c:171
+#: ../src/xplayer-open-location.c:171
 msgid "Open Location..."
 msgstr "Adčyni adras..."
 
-#: ../src/totem-options.c:48
+#: ../src/xplayer-options.c:48
 msgid "Enable debug"
 msgstr "Uklučy adładku"
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Play/Pause"
 msgstr "Hraj/Prypyni"
 
-#: ../src/totem-options.c:52
+#: ../src/xplayer-options.c:52
 msgid "Next"
 msgstr "Nastupny"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Previous"
 msgstr "Papiaredni"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Seek Forwards"
 msgstr "Pieraskoč napierad"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Backwards"
 msgstr "Pieraskoč nazad"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Volume Up"
 msgstr "Hučniej"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Down"
 msgstr "Cišej"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Mute sound"
 msgstr "Abiazhuč"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Toggle Fullscreen"
 msgstr "Pieraklučy poŭnaekranny režym"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Show/Hide Controls"
 msgstr "Pakažy/Schavaj elementy kiravańnia"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Quit"
 msgstr "Vyjście"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Enqueue"
 msgstr "Dadaj u čarhu"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Replace"
 msgstr "Zamiani"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Don't connect to an already-running instance"
 msgstr "Nie spałučajsia z užo ŭruchomlenaj instancyjaj"
 
 #. translators: this option prints the current movie's title on the command-line
-#: ../src/totem-options.c:66
+#: ../src/xplayer-options.c:66
 msgid "Print playing movie"
 msgstr "Vyviadzi nazvu hranaha filmu"
 
 # FIXME: Zdajecca tut niešta nia toje
-#: ../src/totem-options.c:67
+#: ../src/xplayer-options.c:67
 msgid "Seek"
 msgstr "Pieraskoč"
 
-#: ../src/totem-options.c:68
+#: ../src/xplayer-options.c:68
 msgid "Playlist index"
 msgstr "Źmiest śpisu hrańnia"
 
-#: ../src/totem-options.c:70
+#: ../src/xplayer-options.c:70
 msgid "Movies to play"
 msgstr "Filmy ŭ čarzie"
 
 #. By extension entry
-#: ../src/totem-playlist.c:150
+#: ../src/xplayer-playlist.c:150
 msgid "MP3 ShoutCast playlist"
 msgstr "Śpis MP3 ShoutCast"
 
-#: ../src/totem-playlist.c:151
+#: ../src/xplayer-playlist.c:151
 msgid "MP3 audio (streamed)"
 msgstr "Huk MP3 (płyń)"
 
-#: ../src/totem-playlist.c:152
+#: ../src/xplayer-playlist.c:152
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "Huk MP3 (płyń, farmat DOS)"
 
-#: ../src/totem-playlist.c:153
+#: ../src/xplayer-playlist.c:153
 msgid "XML Shareable Playlist"
 msgstr "Supolny śpis XML"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:355
+#: ../src/xplayer-playlist.c:355
 #, c-format
 msgid "Title %d"
 msgstr "Zahałovak %d"
 
-#: ../src/totem-playlist.c:430
+#: ../src/xplayer-playlist.c:430
 msgid "Could not save the playlist"
 msgstr "Niemahčyma zapisać śpis"
 
-#: ../src/totem-playlist.c:1000
+#: ../src/xplayer-playlist.c:1000
 msgid "Save Playlist"
 msgstr "Zapišy śpis"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1012 ../src/totem-sidebar.c:121
+#: ../src/xplayer-playlist.c:1012 ../src/xplayer-sidebar.c:121
 msgid "Playlist"
 msgstr "Śpis"
 
-#: ../src/totem-playlist.c:1761
+#: ../src/xplayer-playlist.c:1761
 #, c-format
 msgid "The playlist '%s' could not be parsed, it might be damaged."
 msgstr "Niemahčyma razabrać śpis '%s', jon moža być paškodžanym."
 
-#: ../src/totem-playlist.c:1762
+#: ../src/xplayer-playlist.c:1762
 msgid "Playlist error"
 msgstr "Pamyłka ŭ śpisie"
 
-#: ../src/totem-preferences.c:107
+#: ../src/xplayer-preferences.c:107
 msgid "Enable visual effects?"
 msgstr "Uklučyć vizualnyja efekty?"
 
-#: ../src/totem-preferences.c:109
+#: ../src/xplayer-preferences.c:109
 msgid ""
-"It seems you are running Totem remotely.\n"
+"It seems you are running Xplayer remotely.\n"
 "Are you sure you want to enable the visual effects?"
 msgstr ""
-"Totem pracuje ŭ dystancyjnym režymie.\n"
+"Xplayer pracuje ŭ dystancyjnym režymie.\n"
 "Sapraŭdy ŭklučyć vizualnyja efekty?"
 
-#: ../src/totem-preferences.c:323
+#: ../src/xplayer-preferences.c:323
 msgid "Changing the visuals effect type will require a restart to take effect."
 msgstr "Ty ŭbačyš źmieny typu vizualnych efektaŭ tolki paśla ŭruchamleńnia."
 
-#: ../src/totem-preferences.c:407
+#: ../src/xplayer-preferences.c:407
 msgid ""
-"The change of audio output type will only take effect when Totem is "
+"The change of audio output type will only take effect when Xplayer is "
 "restarted."
 msgstr "Ty ŭbačyš źmieny typu vyjścia huku tolki paśla ŭruchomieńnia."
 
-#: ../src/totem-preferences.c:502
+#: ../src/xplayer-preferences.c:502
 msgid "Preferences"
 msgstr "Nałady"
 
-#: ../src/totem-preferences.c:661
+#: ../src/xplayer-preferences.c:661
 msgid "Select Subtitle Font"
 msgstr "Abiary šryft dla subtytraŭ"
 
 #. FIXME this should be setting an error?
-#: ../src/totem-properties-main.c:114 ../src/totem-properties-view.c:83
-#: ../src/totem-properties-view.c:91
+#: ../src/xplayer-properties-main.c:114 ../src/xplayer-properties-view.c:83
+#: ../src/xplayer-properties-view.c:91
 msgid "Audio/Video"
 msgstr "Huk/Videa"
 
-#: ../src/totem-statusbar.c:93
+#: ../src/xplayer-statusbar.c:93
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:115
+#: ../src/xplayer-statusbar.c:115
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (Płyń)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:122 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:122 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:125 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:125 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Pieraskoč da %s / %s"
 
-#: ../src/totem-statusbar.c:197
+#: ../src/xplayer-statusbar.c:197
 msgid "Buffering"
 msgstr "Buferavańnie"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:208
+#: ../src/xplayer-statusbar.c:208
 #, c-format
 msgid "%d %%"
 msgstr "%d %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:277
+#: ../src/xplayer-statusbar.c:277
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:282
+#: ../src/xplayer-statusbar.c:282
 #, c-format
 msgid "%s, %d %%"
 msgstr "%s, %d %%"
 
-#: ../src/totem-subtitle-encoding.c:157
+#: ../src/xplayer-subtitle-encoding.c:157
 msgid "Current Locale"
 msgstr "Dziejnaje kadavańnie"
 
-#: ../src/totem-subtitle-encoding.c:160 ../src/totem-subtitle-encoding.c:162
-#: ../src/totem-subtitle-encoding.c:164 ../src/totem-subtitle-encoding.c:166
+#: ../src/xplayer-subtitle-encoding.c:160 ../src/xplayer-subtitle-encoding.c:162
+#: ../src/xplayer-subtitle-encoding.c:164 ../src/xplayer-subtitle-encoding.c:166
 msgid "Arabic"
 msgstr "Arabskaja"
 
-#: ../src/totem-subtitle-encoding.c:169
+#: ../src/xplayer-subtitle-encoding.c:169
 msgid "Armenian"
 msgstr "Armianskaja"
 
-#: ../src/totem-subtitle-encoding.c:172 ../src/totem-subtitle-encoding.c:174
-#: ../src/totem-subtitle-encoding.c:176
+#: ../src/xplayer-subtitle-encoding.c:172 ../src/xplayer-subtitle-encoding.c:174
+#: ../src/xplayer-subtitle-encoding.c:176
 msgid "Baltic"
 msgstr "Bałtyjskaja"
 
-#: ../src/totem-subtitle-encoding.c:179
+#: ../src/xplayer-subtitle-encoding.c:179
 msgid "Celtic"
 msgstr "Kielckaja"
 
-#: ../src/totem-subtitle-encoding.c:182 ../src/totem-subtitle-encoding.c:184
-#: ../src/totem-subtitle-encoding.c:186 ../src/totem-subtitle-encoding.c:188
+#: ../src/xplayer-subtitle-encoding.c:182 ../src/xplayer-subtitle-encoding.c:184
+#: ../src/xplayer-subtitle-encoding.c:186 ../src/xplayer-subtitle-encoding.c:188
 msgid "Central European"
 msgstr "Centralna-Eŭrapieskaja"
 
-#: ../src/totem-subtitle-encoding.c:191 ../src/totem-subtitle-encoding.c:193
-#: ../src/totem-subtitle-encoding.c:195 ../src/totem-subtitle-encoding.c:197
+#: ../src/xplayer-subtitle-encoding.c:191 ../src/xplayer-subtitle-encoding.c:193
+#: ../src/xplayer-subtitle-encoding.c:195 ../src/xplayer-subtitle-encoding.c:197
 msgid "Chinese Simplified"
 msgstr "Kitajskaja sproščanaja"
 
-#: ../src/totem-subtitle-encoding.c:200 ../src/totem-subtitle-encoding.c:202
-#: ../src/totem-subtitle-encoding.c:204
+#: ../src/xplayer-subtitle-encoding.c:200 ../src/xplayer-subtitle-encoding.c:202
+#: ../src/xplayer-subtitle-encoding.c:204
 msgid "Chinese Traditional"
 msgstr "Kitajskaja tradycyjnaja"
 
-#: ../src/totem-subtitle-encoding.c:207
+#: ../src/xplayer-subtitle-encoding.c:207
 msgid "Croatian"
 msgstr "Charvackaja"
 
-#: ../src/totem-subtitle-encoding.c:210 ../src/totem-subtitle-encoding.c:212
-#: ../src/totem-subtitle-encoding.c:214 ../src/totem-subtitle-encoding.c:216
-#: ../src/totem-subtitle-encoding.c:218 ../src/totem-subtitle-encoding.c:220
+#: ../src/xplayer-subtitle-encoding.c:210 ../src/xplayer-subtitle-encoding.c:212
+#: ../src/xplayer-subtitle-encoding.c:214 ../src/xplayer-subtitle-encoding.c:216
+#: ../src/xplayer-subtitle-encoding.c:218 ../src/xplayer-subtitle-encoding.c:220
 msgid "Cyrillic"
 msgstr "Kiryličnaja"
 
-#: ../src/totem-subtitle-encoding.c:223
+#: ../src/xplayer-subtitle-encoding.c:223
 msgid "Cyrillic/Russian"
 msgstr "Kiryličnaja/Rasiejskaja"
 
-#: ../src/totem-subtitle-encoding.c:226 ../src/totem-subtitle-encoding.c:228
+#: ../src/xplayer-subtitle-encoding.c:226 ../src/xplayer-subtitle-encoding.c:228
 msgid "Cyrillic/Ukrainian"
 msgstr "Kiryličnaja/Ukrainskaja"
 
-#: ../src/totem-subtitle-encoding.c:231
+#: ../src/xplayer-subtitle-encoding.c:231
 msgid "Georgian"
 msgstr "Hruzinskaja"
 
-#: ../src/totem-subtitle-encoding.c:234 ../src/totem-subtitle-encoding.c:236
-#: ../src/totem-subtitle-encoding.c:238
+#: ../src/xplayer-subtitle-encoding.c:234 ../src/xplayer-subtitle-encoding.c:236
+#: ../src/xplayer-subtitle-encoding.c:238
 msgid "Greek"
 msgstr "Hreckaja"
 
-#: ../src/totem-subtitle-encoding.c:241
+#: ../src/xplayer-subtitle-encoding.c:241
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/totem-subtitle-encoding.c:244
+#: ../src/xplayer-subtitle-encoding.c:244
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/totem-subtitle-encoding.c:247 ../src/totem-subtitle-encoding.c:249
-#: ../src/totem-subtitle-encoding.c:251 ../src/totem-subtitle-encoding.c:253
+#: ../src/xplayer-subtitle-encoding.c:247 ../src/xplayer-subtitle-encoding.c:249
+#: ../src/xplayer-subtitle-encoding.c:251 ../src/xplayer-subtitle-encoding.c:253
 msgid "Hebrew"
 msgstr "Žydoŭskaja"
 
-#: ../src/totem-subtitle-encoding.c:256
+#: ../src/xplayer-subtitle-encoding.c:256
 msgid "Hebrew Visual"
 msgstr "Žydoŭskaja vizualnaja"
 
-#: ../src/totem-subtitle-encoding.c:259
+#: ../src/xplayer-subtitle-encoding.c:259
 msgid "Hindi"
 msgstr "Hindzi"
 
-#: ../src/totem-subtitle-encoding.c:262
+#: ../src/xplayer-subtitle-encoding.c:262
 msgid "Icelandic"
 msgstr "Iślandzkaja"
 
-#: ../src/totem-subtitle-encoding.c:265 ../src/totem-subtitle-encoding.c:267
-#: ../src/totem-subtitle-encoding.c:269
+#: ../src/xplayer-subtitle-encoding.c:265 ../src/xplayer-subtitle-encoding.c:267
+#: ../src/xplayer-subtitle-encoding.c:269
 msgid "Japanese"
 msgstr "Japonskaja"
 
-#: ../src/totem-subtitle-encoding.c:272 ../src/totem-subtitle-encoding.c:274
-#: ../src/totem-subtitle-encoding.c:276 ../src/totem-subtitle-encoding.c:278
+#: ../src/xplayer-subtitle-encoding.c:272 ../src/xplayer-subtitle-encoding.c:274
+#: ../src/xplayer-subtitle-encoding.c:276 ../src/xplayer-subtitle-encoding.c:278
 msgid "Korean"
 msgstr "Karejskaja"
 
-#: ../src/totem-subtitle-encoding.c:281
+#: ../src/xplayer-subtitle-encoding.c:281
 msgid "Nordic"
 msgstr "Nardyčnaja"
 
-#: ../src/totem-subtitle-encoding.c:284
+#: ../src/xplayer-subtitle-encoding.c:284
 msgid "Persian"
 msgstr "Persydzkaja"
 
-#: ../src/totem-subtitle-encoding.c:287 ../src/totem-subtitle-encoding.c:289
+#: ../src/xplayer-subtitle-encoding.c:287 ../src/xplayer-subtitle-encoding.c:289
 msgid "Romanian"
 msgstr "Rumynskaja"
 
-#: ../src/totem-subtitle-encoding.c:292
+#: ../src/xplayer-subtitle-encoding.c:292
 msgid "South European"
 msgstr "Paŭdniova-Eŭrapiejskaja"
 
-#: ../src/totem-subtitle-encoding.c:295
+#: ../src/xplayer-subtitle-encoding.c:295
 msgid "Thai"
 msgstr "Tajskaja"
 
-#: ../src/totem-subtitle-encoding.c:298 ../src/totem-subtitle-encoding.c:300
-#: ../src/totem-subtitle-encoding.c:302 ../src/totem-subtitle-encoding.c:304
+#: ../src/xplayer-subtitle-encoding.c:298 ../src/xplayer-subtitle-encoding.c:300
+#: ../src/xplayer-subtitle-encoding.c:302 ../src/xplayer-subtitle-encoding.c:304
 msgid "Turkish"
 msgstr "Tureckaja"
 
-#: ../src/totem-subtitle-encoding.c:307 ../src/totem-subtitle-encoding.c:309
-#: ../src/totem-subtitle-encoding.c:311 ../src/totem-subtitle-encoding.c:313
-#: ../src/totem-subtitle-encoding.c:315
+#: ../src/xplayer-subtitle-encoding.c:307 ../src/xplayer-subtitle-encoding.c:309
+#: ../src/xplayer-subtitle-encoding.c:311 ../src/xplayer-subtitle-encoding.c:313
+#: ../src/xplayer-subtitle-encoding.c:315
 msgid "Unicode"
 msgstr "Unikod"
 
-#: ../src/totem-subtitle-encoding.c:318 ../src/totem-subtitle-encoding.c:320
-#: ../src/totem-subtitle-encoding.c:322 ../src/totem-subtitle-encoding.c:324
-#: ../src/totem-subtitle-encoding.c:326
+#: ../src/xplayer-subtitle-encoding.c:318 ../src/xplayer-subtitle-encoding.c:320
+#: ../src/xplayer-subtitle-encoding.c:322 ../src/xplayer-subtitle-encoding.c:324
+#: ../src/xplayer-subtitle-encoding.c:326
 msgid "Western"
 msgstr "Zachodniaja"
 
-#: ../src/totem-subtitle-encoding.c:329 ../src/totem-subtitle-encoding.c:331
-#: ../src/totem-subtitle-encoding.c:333
+#: ../src/xplayer-subtitle-encoding.c:329 ../src/xplayer-subtitle-encoding.c:331
+#: ../src/xplayer-subtitle-encoding.c:333
 msgid "Vietnamese"
 msgstr "Vijetnamskaja"
 
-#: ../src/totem-video-thumbnailer.c:648
+#: ../src/xplayer-video-thumbnailer.c:648
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1710,70 +1710,70 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:649
+#: ../src/xplayer-video-thumbnailer.c:649
 msgid "Filename"
 msgstr "Nazva fajłu"
 
-#: ../src/totem-video-thumbnailer.c:651
+#: ../src/xplayer-video-thumbnailer.c:651
 msgid "Resolution"
 msgstr "Pamiery"
 
-#: ../src/totem-video-thumbnailer.c:654
+#: ../src/xplayer-video-thumbnailer.c:654
 msgid "Duration"
 msgstr "Praciahłaść"
 
-#: ../src/totem-uri.c:455
+#: ../src/xplayer-uri.c:455
 msgid "All files"
 msgstr "Usie fajły"
 
-#: ../src/totem-uri.c:460
+#: ../src/xplayer-uri.c:460
 msgid "Supported files"
 msgstr "Padtrymanyja fajły"
 
-#: ../src/totem-uri.c:472
+#: ../src/xplayer-uri.c:472
 msgid "Audio files"
 msgstr "Hukavyja fajły"
 
-#: ../src/totem-uri.c:480
+#: ../src/xplayer-uri.c:480
 msgid "Video files"
 msgstr "Videafajły"
 
-#: ../src/totem-uri.c:490
+#: ../src/xplayer-uri.c:490
 msgid "Subtitle files"
 msgstr "Fajły subtytraŭ"
 
-#: ../src/totem-uri.c:555
+#: ../src/xplayer-uri.c:555
 msgid "Select Text Subtitles"
 msgstr "Vybiery tekstavyja subtytry"
 
-#: ../src/totem-uri.c:609
+#: ../src/xplayer-uri.c:609
 msgid "Select Movies or Playlists"
 msgstr "Abiary filmy albo śpisy"
 
-#: ../src/totem.c:95
+#: ../src/xplayer.c:95
 msgid "Could not open link"
 msgstr "Nie ŭdałosia adčynić spasyłku"
 
-#: ../src/totem.c:136 ../src/totem.c:161
-#: ../browser-plugin/totem-plugin-viewer.c:779
-#: ../browser-plugin/totem-plugin-viewer.c:1833
-msgid "Totem Movie Player"
-msgstr "Videaplayer Totem"
+#: ../src/xplayer.c:136 ../src/xplayer.c:161
+#: ../browser-plugin/xplayer-plugin-viewer.c:779
+#: ../browser-plugin/xplayer-plugin-viewer.c:1833
+msgid "Xplayer Movie Player"
+msgstr "Videaplayer Xplayer"
 
-#: ../src/totem.c:137
+#: ../src/xplayer.c:137
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Niemahčyma inicyjavać biblijateku, biaśpiečnuju dla niciaŭ."
 
-#: ../src/totem.c:137
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Pravier instalacyju systemy. Totem zakančvaje pracu."
+#: ../src/xplayer.c:137
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Pravier instalacyju systemy. Xplayer zakančvaje pracu."
 
 #. Handle command line arguments
-#: ../src/totem.c:145
+#: ../src/xplayer.c:145
 msgid "- Play movies and songs"
 msgstr "– Hraje filmy j pieśni"
 
-#: ../src/totem.c:153
+#: ../src/xplayer.c:153
 #, c-format
 msgid ""
 "%s\n"
@@ -1783,11 +1783,11 @@ msgstr ""
 "Vykanaj zahad \"%s --help\", kab ubačyć poŭny śpis mahčymych opcyjaŭ "
 "zahadnaha radka.\n"
 
-#: ../src/totem.c:169
-msgid "Totem could not initialize the configuration engine."
-msgstr "Totem nia zmoh inicyjavać kiravańnie naładami."
+#: ../src/xplayer.c:169
+msgid "Xplayer could not initialize the configuration engine."
+msgstr "Xplayer nia zmoh inicyjavać kiravańnie naładami."
 
-#: ../src/totem.c:169
+#: ../src/xplayer.c:169
 msgid "Make sure that GNOME is properly installed."
 msgstr "Pravier pravilnaść instalacyi GNOME."
 
@@ -2156,15 +2156,15 @@ msgstr "%s %s"
 msgid "%s"
 msgstr "%s"
 
-#: ../src/plugins/totem-plugin-manager.c:51
+#: ../src/plugins/xplayer-plugin-manager.c:51
 msgid "Plugin"
 msgstr "Plugin"
 
-#: ../src/plugins/totem-plugin-manager.c:52
+#: ../src/plugins/xplayer-plugin-manager.c:52
 msgid "Enabled"
 msgstr "Uklučana"
 
-#: ../src/plugins/totem-plugins-engine.c:593
+#: ../src/plugins/xplayer-plugins-engine.c:593
 #, c-format
 msgid ""
 "Unable to activate plugin %s.\n"
@@ -2173,116 +2173,116 @@ msgstr ""
 "Niemahčyma aktyvizavać plugin %s.\n"
 "%s"
 
-#: ../src/plugins/totem-plugins-engine.c:596
+#: ../src/plugins/xplayer-plugins-engine.c:596
 #, c-format
 msgid "Unable to activate plugin %s"
 msgstr "Niemahčyma aktyvizavać plugin %s"
 
-#: ../src/plugins/totem-plugins-engine.c:598
+#: ../src/plugins/xplayer-plugins-engine.c:598
 msgid "Plugin Error"
 msgstr "Pamyłka plugina"
 
-#: ../src/plugins/bemused/bemused.totem-plugin.in.h:1
+#: ../src/plugins/bemused/bemused.xplayer-plugin.in.h:1
 msgid "Bemused"
 msgstr "Bemused"
 
-#: ../src/plugins/bemused/bemused.totem-plugin.in.h:2
-msgid "Control Totem through a mobile phone with a Bemused client"
-msgstr "Kiruj Totemam praz mabilny telefon z dapamohaj klijenta Bemused"
+#: ../src/plugins/bemused/bemused.xplayer-plugin.in.h:2
+msgid "Control Xplayer through a mobile phone with a Bemused client"
+msgstr "Kiruj Xplayeram praz mabilny telefon z dapamohaj klijenta Bemused"
 
-#: ../src/plugins/bemused/totem-bemused.c:185
+#: ../src/plugins/bemused/xplayer-bemused.c:185
 #, c-format
 msgid "Untitled %d"
 msgstr "Nienazvany %d"
 
-#: ../src/plugins/bemused/totem-bemused.c:607
-msgid "Totem Bemused Server"
-msgstr "Totem Bemused Server"
+#: ../src/plugins/bemused/xplayer-bemused.c:607
+msgid "Xplayer Bemused Server"
+msgstr "Xplayer Bemused Server"
 
 #. FIXME version
-#: ../src/plugins/bemused/totem-bemused.c:609
-msgid "Totem Bemused Server version 1.0"
-msgstr "Totem Bemused Server versii 1.0"
+#: ../src/plugins/bemused/xplayer-bemused.c:609
+msgid "Xplayer Bemused Server version 1.0"
+msgstr "Xplayer Bemused Server versii 1.0"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:77
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:77
 msgid "_Create Video Disc..."
 msgstr "_Stvary videadysk..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:78
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:78
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "Stvary videa DVD ci (S)VCD z adčynienaha filmu"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:80
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:80
 msgid "Copy Vide_o DVD..."
 msgstr "S_kapijuj videa DVD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:81
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:81
 msgid "Copy the currently playing video DVD"
 msgstr "Skapijuj videa DVD, jaki ciapier hraje"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:83
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:83
 msgid "Copy Vide_o (S)VCD..."
 msgstr "S_kapijuj videa (S)VCD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:84
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:84
 msgid "Copy the currently playing (S)VCD"
 msgstr "Skapijuj (S)VCD, jaki ciapier hraje"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:124
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:124
 msgid "The video disc could not be duplicated."
 msgstr "Niemahčyma skapijavać videadysk."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:128
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:279
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:128
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:279
 msgid "The movie could not be recorded."
 msgstr "Nie ŭdałosia zapisać film."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:160
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:170
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:266
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:160
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:170
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:266
 msgid "Unable to write a project."
 msgstr "Nie ŭdałosia zapisać prajekt."
 
-#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.totem-plugin.in.h:1
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.xplayer-plugin.in.h:1
 msgid "Records (S)VCDs or video DVDs"
 msgstr "Zapisvaje dyski (S)VCD ci videa DVD"
 
-#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.totem-plugin.in.h:2
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.xplayer-plugin.in.h:2
 msgid "Video Disc Recorder"
 msgstr "Zapis videadyskaŭ"
 
 #: ../src/plugins/coherence_upnp/coherence_upnp.py:104
-#: ../src/plugins/coherence_upnp/coherence_upnp.totem-plugin.in.h:2
+#: ../src/plugins/coherence_upnp/coherence_upnp.xplayer-plugin.in.h:2
 msgid "Coherence DLNA/UPnP Client"
 msgstr "Klijent Coherence DLNA/UPnP"
 
-#: ../src/plugins/coherence_upnp/coherence_upnp.totem-plugin.in.h:1
-msgid "A DLNA/UPnP client for Totem powered by Coherence"
-msgstr "Klijent DLNA/UPnP dla Totema, na bazie Coherence"
+#: ../src/plugins/coherence_upnp/coherence_upnp.xplayer-plugin.in.h:1
+msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
+msgstr "Klijent DLNA/UPnP dla Xplayera, na bazie Coherence"
 
-#: ../src/plugins/galago/galago.totem-plugin.in.h:1
+#: ../src/plugins/galago/galago.xplayer-plugin.in.h:1
 msgid "Instant Messenger status"
 msgstr "Stan klijenta imhniennych paviedamleńniaŭ"
 
-#: ../src/plugins/galago/galago.totem-plugin.in.h:2
+#: ../src/plugins/galago/galago.xplayer-plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Pieraklučaj stan klijenta imhniennych paviedamleńniaŭ na \"Adyjšoŭ\" pry "
 "prahladzie filmu"
 
-#: ../src/plugins/galago/totem-galago.c:171
+#: ../src/plugins/galago/xplayer-galago.c:171
 msgid "Could not connect to the Galago daemon."
 msgstr "Niemahčyma źviazacca z demanam Galago."
 
-#: ../src/plugins/gromit/gromit.totem-plugin.in.h:1
+#: ../src/plugins/gromit/gromit.xplayer-plugin.in.h:1
 msgid "Gromit Annotations"
 msgstr "Kamentary Gromit"
 
-#: ../src/plugins/gromit/gromit.totem-plugin.in.h:2
+#: ../src/plugins/gromit/gromit.xplayer-plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
 msgstr "Prezentatar, jaki dapamahaje pakidać kamentary na ekranie"
 
-#: ../src/plugins/gromit/totem-gromit.c:272
+#: ../src/plugins/gromit/xplayer-gromit.c:272
 msgid "The gromit binary was not found."
 msgstr "Binarny fajł gromit nia znojdzieny."
 
@@ -2319,7 +2319,7 @@ msgid "Preferred audio _format"
 msgstr "Ulubiony _farmat huku"
 
 #: ../src/plugins/jamendo/jamendo.ui.h:9
-#: ../src/plugins/tracker/totem-tracker-widget.c:365
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:365
 #: ../src/plugins/youtube/youtube.ui.h:2
 msgid "Search Results"
 msgstr "Vyniki pošuku"
@@ -2328,12 +2328,12 @@ msgstr "Vyniki pošuku"
 msgid "_Open Jamendo Album Page in Browser"
 msgstr "_Adčyni staronku albomu na Jamendo ŭ hartačy"
 
-#: ../src/plugins/jamendo/jamendo.totem-plugin.in.h:1
+#: ../src/plugins/jamendo/jamendo.xplayer-plugin.in.h:1
 #: ../src/plugins/jamendo/jamendo.py:129
 msgid "Jamendo"
 msgstr "Jamendo"
 
-#: ../src/plugins/jamendo/jamendo.totem-plugin.in.h:2
+#: ../src/plugins/jamendo/jamendo.xplayer-plugin.in.h:2
 msgid ""
 "Listen to the large collection of Creative Commons licensed music on Jamendo."
 msgstr ""
@@ -2428,31 +2428,31 @@ msgstr "%H:%M:%S"
 msgid "%M:%S"
 msgstr "%M:%S"
 
-#: ../src/plugins/lirc/lirc.totem-plugin.in.h:1
+#: ../src/plugins/lirc/lirc.xplayer-plugin.in.h:1
 msgid "Infrared Remote Control"
 msgstr "Infračyrvonaje addalenaje kiravańnie"
 
-#: ../src/plugins/lirc/lirc.totem-plugin.in.h:2
+#: ../src/plugins/lirc/lirc.xplayer-plugin.in.h:2
 msgid "Support infrared remote control"
 msgstr "Padtrymvaj infračyrvonaje addalenaje kiravańnie"
 
-#: ../src/plugins/lirc/totem-lirc.c:287
+#: ../src/plugins/lirc/xplayer-lirc.c:287
 msgid "Couldn't initialize lirc."
 msgstr "Niemahčyma inicyjavać \"lirc\"."
 
-#: ../src/plugins/lirc/totem-lirc.c:296
+#: ../src/plugins/lirc/xplayer-lirc.c:296
 msgid "Couldn't read lirc configuration."
 msgstr "Niemahčyma adčytać kanfihuracyju \"lirc\"."
 
-#: ../src/plugins/mythtv/totem-mythtv.c:200
+#: ../src/plugins/mythtv/xplayer-mythtv.c:200
 msgid "Recordings"
 msgstr "Zapisy"
 
-#: ../src/plugins/mythtv/totem-mythtv.c:523
+#: ../src/plugins/mythtv/xplayer-mythtv.c:523
 msgid "MythTV Recordings"
 msgstr "Zapisy MythTV"
 
-#: ../src/plugins/mythtv/totem-mythtv.c:524
+#: ../src/plugins/mythtv/xplayer-mythtv.c:524
 msgid "MythTV LiveTV"
 msgstr "MythTV LiveTV"
 
@@ -2472,11 +2472,11 @@ msgstr "_Mova subtytraŭ:"
 msgid "_Play with Subtitle"
 msgstr "_Zajhraj z subtytrami"
 
-#: ../src/plugins/opensubtitles/opensubtitles.totem-plugin.in.h:1
+#: ../src/plugins/opensubtitles/opensubtitles.xplayer-plugin.in.h:1
 msgid "Look for a subtitle for the currently playing movie"
 msgstr "Šukaj subtytry dla hetaha filmu"
 
-#: ../src/plugins/opensubtitles/opensubtitles.totem-plugin.in.h:2
+#: ../src/plugins/opensubtitles/opensubtitles.xplayer-plugin.in.h:2
 msgid "Subtitles downloader"
 msgstr "Ściahvańnie subtytraŭ"
 
@@ -2527,15 +2527,15 @@ msgstr "Pošuk subtytraŭ..."
 msgid "Downloading the subtitles..."
 msgstr "Ściahvańnie subtytraŭ..."
 
-#: ../src/plugins/ontop/ontop.totem-plugin.in.h:1
+#: ../src/plugins/ontop/ontop.xplayer-plugin.in.h:1
 msgid "Always On Top"
 msgstr "Zaŭsiody ŭhary"
 
-#: ../src/plugins/ontop/ontop.totem-plugin.in.h:2
+#: ../src/plugins/ontop/ontop.xplayer-plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
 msgstr "Trymaj hałoŭnaje vakno ŭhary pry hrańni filmu"
 
-#: ../src/plugins/properties/totem-movie-properties.c:159
+#: ../src/plugins/properties/xplayer-movie-properties.c:159
 msgid "Properties"
 msgstr "Ułaścivaści"
 
@@ -2560,15 +2560,15 @@ msgstr "%d kbps"
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/plugins/publish/totem-publish.c:582
+#: ../src/plugins/publish/xplayer-publish.c:582
 msgid "Neighbours"
 msgstr "Susiedzi"
 
-#: ../src/plugins/publish/publish.totem-plugin.in.h:1
+#: ../src/plugins/publish/publish.xplayer-plugin.in.h:1
 msgid "Publish Playlist"
 msgstr "Apublikuj śpis"
 
-#: ../src/plugins/publish/publish.totem-plugin.in.h:2
+#: ../src/plugins/publish/publish.xplayer-plugin.in.h:2
 msgid "Share the current playlist via HTTP"
 msgstr "Zrabi śpis dastupnym praz HTTP"
 
@@ -2604,83 +2604,83 @@ msgstr "Kolkaść zdymkaŭ:"
 msgid "Screenshot width (in pixels):"
 msgstr "Šyrynia zdymku (u pikselach):"
 
-#: ../src/plugins/screenshot/totem-gallery.c:88
+#: ../src/plugins/screenshot/xplayer-gallery.c:88
 msgid "Save Gallery"
 msgstr "Zapišy galereju"
 
-#: ../src/plugins/screenshot/totem-gallery.c:105
+#: ../src/plugins/screenshot/xplayer-gallery.c:105
 #, c-format
 msgid "Screenshot%d.jpg"
 msgstr "Zdymak%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:103
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:103
 msgid "Creating Gallery..."
 msgstr "Stvareńnie galerei..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:110
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:110
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Zapis galerei jak \"%s\""
 
-#: ../src/plugins/screenshot/totem-screenshot.c:69
+#: ../src/plugins/screenshot/xplayer-screenshot.c:69
 msgid "Screenshot.png"
 msgstr "Zdymak.png"
 
-#: ../src/plugins/screenshot/totem-screenshot.c:140
+#: ../src/plugins/screenshot/xplayer-screenshot.c:140
 msgid "There was an error saving the screenshot."
 msgstr "Adbyłasia pamyłka zapisu zdymku ekranu."
 
-#: ../src/plugins/screenshot/totem-screenshot.c:182
+#: ../src/plugins/screenshot/xplayer-screenshot.c:182
 msgid "Save Screenshot"
 msgstr "Zapišy zdymak ekranu"
 
 #. Set the default path and filename
-#: ../src/plugins/screenshot/totem-screenshot.c:197
+#: ../src/plugins/screenshot/xplayer-screenshot.c:197
 #, c-format
 msgid "Screenshot%d.png"
 msgstr "Zdymak%d.png"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:98
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:105
-msgid "Totem could not get a screenshot of the video."
-msgstr "Totem nia zmoh zrabić zdymak ekranu ŭ vypadku hetaha videa."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:98
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:105
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer nia zmoh zrabić zdymak ekranu ŭ vypadku hetaha videa."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:105
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:105
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "Heta nie pavinna było zdarycca; kali łaska, paviedam ab hetaj pamyłcy."
 
 # Źniać ekran heta nieadnaznačny vyraz
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:199
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:199
 msgid "Take _Screenshot..."
 msgstr "Zrabi zdymak _ekranu..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:199
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:199
 msgid "Take a screenshot"
 msgstr "Zdymak _ekranu"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:200
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:200
 msgid "Create Screenshot _Gallery..."
 msgstr "Zrabi halereju zdymkaŭ _ekranu..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:200
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:200
 msgid "Create a gallery of screenshots"
 msgstr "Stvary halereju zdymkaŭ ekranu"
 
-#: ../src/plugins/skipto/totem-skipto.c:171
+#: ../src/plugins/skipto/xplayer-skipto.c:171
 msgid "Skip to"
 msgstr "Pieraskoč da"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:215
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:215
 msgid "_Skip to..."
 msgstr "_Pieraskoč da..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:215
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:215
 msgid "Skip to a specific time"
 msgstr "Pieraskoč da akreślenaha času"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:221
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:221
 msgid "Could not load the \"Skip to\" dialog interface."
 msgstr "Nie ŭdałosia pračytać interfejs dyjalohavaha akna \"Pieraskoč da\"."
 
@@ -2693,17 +2693,17 @@ msgid "seconds"
 msgstr "sekundy"
 
 #. Display an error
-#: ../src/plugins/tracker/totem-tracker-widget.c:167
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:167
 #, c-format
 msgid "Could not get metadata for file %s: %s"
 msgstr "Nie ŭdałosia atrymać metaźviestak dla fajłu %s: %s"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:168
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:168
 msgid "File Error"
 msgstr "Pamyłka fajłu"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:222
-#: ../src/plugins/tracker/totem-tracker-widget.c:274
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:222
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:274
 msgid "No results"
 msgstr "Biez vynikaŭ"
 
@@ -2712,7 +2712,7 @@ msgstr "Biez vynikaŭ"
 #. * Showing 10-20 of 128 matches
 #. * This is similar to what web searches use, eg. Google on the top-right of their search results page show:
 #. * Personalized Results 1 - 10 of about 4,130,000 for foobar
-#: ../src/plugins/tracker/totem-tracker-widget.c:229
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:229
 #, c-format
 msgid "Showing %i - %i of %i match"
 msgid_plural "Showing %i - %i of %i matches"
@@ -2720,32 +2720,32 @@ msgstr[0] "Pakazana %i - %i z %i adpaviednika"
 msgstr[1] "Pakazana %i - %i z %i adpaviednikaŭ"
 msgstr[2] "Pakazana %i - %i z %i adpaviednikaŭ"
 
-#: ../src/plugins/tracker/totem-tracker-widget.c:415
+#: ../src/plugins/tracker/xplayer-tracker-widget.c:415
 msgid "Page"
 msgstr "Staronka"
 
-#: ../src/plugins/tracker/totem-tracker.c:91
-#: ../src/plugins/tracker/tracker.totem-plugin.in.h:1
+#: ../src/plugins/tracker/xplayer-tracker.c:91
+#: ../src/plugins/tracker/tracker.xplayer-plugin.in.h:1
 msgid "Local Search"
 msgstr "Lakalny pošuk"
 
-#: ../src/plugins/thumbnail/thumbnail.totem-plugin.in.h:1
+#: ../src/plugins/thumbnail/thumbnail.xplayer-plugin.in.h:1
 msgid "Set the window icon to the thumbnail of the playing movie"
 msgstr "Pakazvaj zamiest ikony akna minijaturny zdymak hranaha filmu"
 
-#: ../src/plugins/thumbnail/thumbnail.totem-plugin.in.h:2
+#: ../src/plugins/thumbnail/thumbnail.xplayer-plugin.in.h:2
 msgid "Thumbnail"
 msgstr "Minijatura"
 
-#: ../src/plugins/tracker/tracker.totem-plugin.in.h:2
+#: ../src/plugins/tracker/tracker.xplayer-plugin.in.h:2
 msgid "Search for local videos using Tracker"
 msgstr "Šukaj lakalnyja videafajły praz Tracker"
 
-#: ../src/plugins/youtube/youtube.totem-plugin.in.h:1
+#: ../src/plugins/youtube/youtube.xplayer-plugin.in.h:1
 msgid "A plugin to let you browse YouTube videos."
 msgstr "Plugin dziela prahladu videa z YouTube."
 
-#: ../src/plugins/youtube/youtube.totem-plugin.in.h:2
+#: ../src/plugins/youtube/youtube.xplayer-plugin.in.h:2
 msgid "YouTube browser"
 msgstr "Ahladalnik YouTube"
 
@@ -2781,55 +2781,55 @@ msgstr "Atrymańnie vynikaŭ pošuku..."
 msgid "Fetching more videos..."
 msgstr "Atrymańnie dadatkovaha videa..."
 
-#: ../browser-plugin/totem-plugin-viewer.c:465
+#: ../browser-plugin/xplayer-plugin-viewer.c:465
 msgid "No URI to play"
 msgstr "Niama URI, kab hrać"
 
-#: ../browser-plugin/totem-plugin-viewer.c:491
+#: ../browser-plugin/xplayer-plugin-viewer.c:491
 #, c-format
-msgid "Totem could not play '%s'"
-msgstr "Totem nia moža hrać '%s'"
+msgid "Xplayer could not play '%s'"
+msgstr "Xplayer nia moža hrać '%s'"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1129
+#: ../browser-plugin/xplayer-plugin-viewer.c:1129
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Adčyni praz \"%s\""
 
-#: ../browser-plugin/totem-plugin-viewer.c:1180
+#: ../browser-plugin/xplayer-plugin-viewer.c:1180
 #, c-format
 msgid "Browser Plugin using %s"
 msgstr "Plugin hartača na bazie %s"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1185
-msgid "Totem Browser Plugin"
-msgstr "Plugin hartača na bazie Totema"
+#: ../browser-plugin/xplayer-plugin-viewer.c:1185
+msgid "Xplayer Browser Plugin"
+msgstr "Plugin hartača na bazie Xplayera"
 
 #. FIXME!
 #. FIXME construct and show error message
-#: ../browser-plugin/totem-plugin-viewer.c:1824
-msgid "The Totem plugin could not be started."
-msgstr "Niemahčyma było ŭruchomić plugin Totema."
+#: ../browser-plugin/xplayer-plugin-viewer.c:1824
+msgid "The Xplayer plugin could not be started."
+msgstr "Niemahčyma było ŭruchomić plugin Xplayera."
 
-#: ../browser-plugin/totem-plugin-viewer.c:2172
+#: ../browser-plugin/xplayer-plugin-viewer.c:2172
 msgid "No playlist or playlist empty"
 msgstr "Niama śpisu albo śpis pusty"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2275
+#: ../browser-plugin/xplayer-plugin-viewer.c:2275
 msgid "Could not initialise the thread-safe libraries."
 msgstr "Niemahčyma inicyjavać biblijateki, biaśpiečnyja dla niciaŭ."
 
-#: ../browser-plugin/totem-plugin-viewer.c:2275
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "Pravier instalacyju systemy. Plugin Totema zakančvaje pracu."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2275
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Pravier instalacyju systemy. Plugin Xplayera zakančvaje pracu."
 
-#: ../src/plugins/pythonconsole/pythonconsole.totem-plugin.in.h:1
+#: ../src/plugins/pythonconsole/pythonconsole.xplayer-plugin.in.h:1
 msgid "Interactive Python console."
 msgstr "Interakcyjnaja kansol Python."
 
-#: ../src/plugins/pythonconsole/pythonconsole.totem-plugin.in.h:2
+#: ../src/plugins/pythonconsole/pythonconsole.xplayer-plugin.in.h:2
 msgid "Python Console"
 msgstr "Kansol Python"
 
@@ -2842,8 +2842,8 @@ msgid "_Python Console"
 msgstr "_Kansol Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:78
-msgid "Show Totem's Python console"
-msgstr "Pakažy kansol Python dla \"Totema\""
+msgid "Show Xplayer's Python console"
+msgstr "Pakažy kansol Python dla \"Xplayera\""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:83
 msgid "Python Debugger"
@@ -2855,20 +2855,20 @@ msgstr "Uklučy addalenaje adładžvańnie Pythonu praz \"rpdb2\""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:106
 #, python-format
-msgid "You can access the totem object through 'totem_object' :\\n%s"
-msgstr "Ty možaš dastupicca da abjektu totem praz \"totem_object\" :\\n%s"
+msgid "You can access the xplayer object through 'xplayer_object' :\\n%s"
+msgstr "Ty možaš dastupicca da abjektu xplayer praz \"xplayer_object\" :\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:111
-msgid "Totem Python Console"
-msgstr "Kansol Python dla \"Totema\""
+msgid "Xplayer Python Console"
+msgstr "Kansol Python dla \"Xplayera\""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:120
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in GConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
-"Paśla nacisku ŭ knopku OK Totem budzie čakać spałučeńnia ad winpdb ci rpdb2. "
+"Paśla nacisku ŭ knopku OK Xplayer budzie čakać spałučeńnia ad winpdb ci rpdb2. "
 "Kali ty nie padaŭ parol adładžvańnia ŭ systemie GConf, tady budzie ŭžyty "
-"zmoŭčany (\"totem\")."
+"zmoŭčany (\"xplayer\")."
 

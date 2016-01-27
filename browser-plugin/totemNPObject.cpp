@@ -25,8 +25,8 @@
 
 #include <glib.h>
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
 #ifdef DEBUG_PLUGIN
 #define NOTE(x) x
@@ -48,7 +48,7 @@ static const char *variantTypes[] = {
 #define VARIANT_TYPE(type) (variantTypes[MIN (type, NPVariantType_Object + 1)])
 
 void*
-totemNPObject::operator new (size_t aSize) throw ()
+xplayerNPObject::operator new (size_t aSize) throw ()
 {
   void *instance = ::operator new (aSize);
   if (instance) {
@@ -58,41 +58,41 @@ totemNPObject::operator new (size_t aSize) throw ()
   return instance;
 }
 
-totemNPObject::totemNPObject (NPP aNPP)
+xplayerNPObject::xplayerNPObject (NPP aNPP)
   : mNPP (aNPP),
-    mPlugin (reinterpret_cast<totemPlugin*>(aNPP->pdata))
+    mPlugin (reinterpret_cast<xplayerPlugin*>(aNPP->pdata))
 {
-  NOTE (g_print ("totemNPObject ctor [%p]\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject ctor [%p]\n", (void*) this));
 }
 
-totemNPObject::~totemNPObject ()
+xplayerNPObject::~xplayerNPObject ()
 {
-  NOTE (g_print ("totemNPObject dtor [%p]\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject dtor [%p]\n", (void*) this));
 }
 
 bool
-totemNPObject::Throw (const char *aMessage)
+xplayerNPObject::Throw (const char *aMessage)
 {
-  NOTE (g_print ("totemNPObject::Throw [%p] : %s\n", (void*) this, aMessage));
+  NOTE (g_print ("xplayerNPObject::Throw [%p] : %s\n", (void*) this, aMessage));
 
   NPN_SetException (this, aMessage);
   return false;
 }
 
 bool
-totemNPObject::ThrowPropertyNotWritable ()
+xplayerNPObject::ThrowPropertyNotWritable ()
 {
   return Throw ("Property not writable");
 }
 
 bool
-totemNPObject::ThrowSecurityError ()
+xplayerNPObject::ThrowSecurityError ()
 {
   return Throw ("Access denied");
 }
 
 bool
-totemNPObject::CheckArgc (uint32_t argc,
+xplayerNPObject::CheckArgc (uint32_t argc,
                           uint32_t minArgc,
                           uint32_t maxArgc,
                           bool doThrow)
@@ -114,7 +114,7 @@ totemNPObject::CheckArgc (uint32_t argc,
 }
 
 bool
-totemNPObject::CheckArgType (NPVariantType argType,
+xplayerNPObject::CheckArgType (NPVariantType argType,
                              NPVariantType expectedType,
                              uint32_t argNum)
 {
@@ -162,7 +162,7 @@ totemNPObject::CheckArgType (NPVariantType argType,
 }
 
 bool
-totemNPObject::CheckArg (const NPVariant *argv,
+xplayerNPObject::CheckArg (const NPVariant *argv,
                          uint32_t argc,
                          uint32_t argNum,
                          NPVariantType type)
@@ -174,7 +174,7 @@ totemNPObject::CheckArg (const NPVariant *argv,
 }
 
 bool
-totemNPObject::CheckArgv (const NPVariant* argv,
+xplayerNPObject::CheckArgv (const NPVariant* argv,
                           uint32_t argc,
                           uint32_t expectedArgc,
                           ...)
@@ -200,7 +200,7 @@ totemNPObject::CheckArgv (const NPVariant* argv,
 }
 
 bool
-totemNPObject::GetBoolFromArguments (const NPVariant* argv,
+xplayerNPObject::GetBoolFromArguments (const NPVariant* argv,
                                      uint32_t argc,
                                      uint32_t argNum,
                                      bool& _result)
@@ -224,7 +224,7 @@ totemNPObject::GetBoolFromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::GetInt32FromArguments (const NPVariant* argv,
+xplayerNPObject::GetInt32FromArguments (const NPVariant* argv,
                                       uint32_t argc,
                                       uint32_t argNum,
                                       int32_t& _result)
@@ -244,7 +244,7 @@ totemNPObject::GetInt32FromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::GetDoubleFromArguments (const NPVariant* argv,
+xplayerNPObject::GetDoubleFromArguments (const NPVariant* argv,
                                        uint32_t argc,
                                        uint32_t argNum,
                                        double& _result)
@@ -263,7 +263,7 @@ totemNPObject::GetDoubleFromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::GetNPStringFromArguments (const NPVariant* argv,
+xplayerNPObject::GetNPStringFromArguments (const NPVariant* argv,
                                          uint32_t argc,
                                          uint32_t argNum,
                                          NPString& _result)
@@ -284,7 +284,7 @@ totemNPObject::GetNPStringFromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::DupStringFromArguments (const NPVariant* argv,
+xplayerNPObject::DupStringFromArguments (const NPVariant* argv,
                                        uint32_t argc,
                                        uint32_t argNum,
                                        char*& _result)
@@ -301,7 +301,7 @@ totemNPObject::DupStringFromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::GetObjectFromArguments (const NPVariant* argv,
+xplayerNPObject::GetObjectFromArguments (const NPVariant* argv,
                                         uint32_t argc,
                                         uint32_t argNum,
                                         NPObject*& _result)
@@ -321,21 +321,21 @@ totemNPObject::GetObjectFromArguments (const NPVariant* argv,
 }
 
 bool
-totemNPObject::VoidVariant (NPVariant* _result)
+xplayerNPObject::VoidVariant (NPVariant* _result)
 {
   VOID_TO_NPVARIANT (*_result);
   return true;
 }
 
 bool
-totemNPObject::NullVariant (NPVariant* _result)
+xplayerNPObject::NullVariant (NPVariant* _result)
 {
   NULL_TO_NPVARIANT (*_result);
   return true;
 }
 
 bool
-totemNPObject::BoolVariant (NPVariant* _result,
+xplayerNPObject::BoolVariant (NPVariant* _result,
                             bool value)
 {
   BOOLEAN_TO_NPVARIANT (value, *_result);
@@ -343,7 +343,7 @@ totemNPObject::BoolVariant (NPVariant* _result,
 }
 
 bool
-totemNPObject::Int32Variant (NPVariant* _result,
+xplayerNPObject::Int32Variant (NPVariant* _result,
                              int32_t value)
 {
   INT32_TO_NPVARIANT (value, *_result);
@@ -351,7 +351,7 @@ totemNPObject::Int32Variant (NPVariant* _result,
 }
 
 bool
-totemNPObject::DoubleVariant (NPVariant* _result,
+xplayerNPObject::DoubleVariant (NPVariant* _result,
                               double value)
 {
   DOUBLE_TO_NPVARIANT (value, *_result);
@@ -359,7 +359,7 @@ totemNPObject::DoubleVariant (NPVariant* _result,
 }
 
 bool
-totemNPObject::StringVariant (NPVariant* _result,
+xplayerNPObject::StringVariant (NPVariant* _result,
                               const char* value,
                               int32_t len)
 {
@@ -386,7 +386,7 @@ totemNPObject::StringVariant (NPVariant* _result,
 }
 
 bool
-totemNPObject::ObjectVariant (NPVariant* _result,
+xplayerNPObject::ObjectVariant (NPVariant* _result,
                               NPObject* object)
 {
   if (object) {
@@ -402,22 +402,22 @@ totemNPObject::ObjectVariant (NPVariant* _result,
 /* NPObject method default implementations */
 
 void
-totemNPObject::Invalidate ()
+xplayerNPObject::Invalidate ()
 {
-  NOTE (g_print ("totemNPObject %p invalidated\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject %p invalidated\n", (void*) this));
 
   mNPP = NULL;
   mPlugin = NULL;
 }
 
 bool
-totemNPObject::HasMethod (NPIdentifier aName)
+xplayerNPObject::HasMethod (NPIdentifier aName)
 {
   if (!IsValid ())
     return false;
 
   int methodIndex = GetClass()->GetMethodIndex (aName);
-  NOTE (g_print ("totemNPObject::HasMethod [%p] %s => %s\n", (void*) this, NPN_UTF8FromIdentifier (aName), methodIndex >= 0 ? "yes" : "no"));
+  NOTE (g_print ("xplayerNPObject::HasMethod [%p] %s => %s\n", (void*) this, NPN_UTF8FromIdentifier (aName), methodIndex >= 0 ? "yes" : "no"));
   if (methodIndex >= 0)
     return true;
 
@@ -428,7 +428,7 @@ totemNPObject::HasMethod (NPIdentifier aName)
 }
 
 bool
-totemNPObject::Invoke (NPIdentifier aName,
+xplayerNPObject::Invoke (NPIdentifier aName,
                        const NPVariant *argv,
                        uint32_t argc,
                        NPVariant *_result)
@@ -436,7 +436,7 @@ totemNPObject::Invoke (NPIdentifier aName,
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::Invoke [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
+  NOTE (g_print ("xplayerNPObject::Invoke [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
   int methodIndex = GetClass()->GetMethodIndex (aName);
   if (methodIndex >= 0)
     return InvokeByIndex (methodIndex, argv, argc, _result);
@@ -447,7 +447,7 @@ totemNPObject::Invoke (NPIdentifier aName,
       return false;
 
     const char *id = NPVARIANT_TO_STRING (argv[0]).UTF8Characters;
-    g_message ("NOTE: site calls unknown function \"%s\" on totemNPObject %p\n", id ? id : "(null)", (void*) this);
+    g_message ("NOTE: site calls unknown function \"%s\" on xplayerNPObject %p\n", id ? id : "(null)", (void*) this);
 
     /* Silently ignore the invocation */
     VOID_TO_NPVARIANT (*_result);
@@ -458,14 +458,14 @@ totemNPObject::Invoke (NPIdentifier aName,
 }
 
 bool
-totemNPObject::InvokeDefault (const NPVariant *argv,
+xplayerNPObject::InvokeDefault (const NPVariant *argv,
                               uint32_t argc,
                               NPVariant *_result)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::InvokeDefault [%p]\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject::InvokeDefault [%p]\n", (void*) this));
   int defaultMethodIndex = GetClass()->GetDefaultMethodIndex ();
   if (defaultMethodIndex >= 0)
     return InvokeByIndex (defaultMethodIndex, argv, argc, _result);
@@ -474,13 +474,13 @@ totemNPObject::InvokeDefault (const NPVariant *argv,
 }
 
 bool
-totemNPObject::HasProperty (NPIdentifier aName)
+xplayerNPObject::HasProperty (NPIdentifier aName)
 {
   if (!IsValid ())
     return false;
 
   int propertyIndex = GetClass()->GetPropertyIndex (aName);
-  NOTE (g_print ("totemNPObject::HasProperty [%p] %s => %s\n", (void*) this, NPN_UTF8FromIdentifier (aName), propertyIndex >= 0 ? "yes" : "no"));
+  NOTE (g_print ("xplayerNPObject::HasProperty [%p] %s => %s\n", (void*) this, NPN_UTF8FromIdentifier (aName), propertyIndex >= 0 ? "yes" : "no"));
   if (propertyIndex >= 0)
     return true;
 
@@ -488,13 +488,13 @@ totemNPObject::HasProperty (NPIdentifier aName)
 }
 
 bool
-totemNPObject::GetProperty (NPIdentifier aName,
+xplayerNPObject::GetProperty (NPIdentifier aName,
                             NPVariant *_result)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::GetProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
+  NOTE (g_print ("xplayerNPObject::GetProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
   int propertyIndex = GetClass()->GetPropertyIndex (aName);
   if (propertyIndex >= 0)
     return GetPropertyByIndex (propertyIndex, _result);
@@ -503,13 +503,13 @@ totemNPObject::GetProperty (NPIdentifier aName,
 }
 
 bool
-totemNPObject::SetProperty (NPIdentifier aName,
+xplayerNPObject::SetProperty (NPIdentifier aName,
                             const NPVariant *aValue)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::SetProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
+  NOTE (g_print ("xplayerNPObject::SetProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
   int propertyIndex = GetClass()->GetPropertyIndex (aName);
   if (propertyIndex >= 0)
     return SetPropertyByIndex (propertyIndex, aValue);
@@ -518,12 +518,12 @@ totemNPObject::SetProperty (NPIdentifier aName,
 }
 
 bool
-totemNPObject::RemoveProperty (NPIdentifier aName)
+xplayerNPObject::RemoveProperty (NPIdentifier aName)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::RemoveProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
+  NOTE (g_print ("xplayerNPObject::RemoveProperty [%p] %s\n", (void*) this, NPN_UTF8FromIdentifier (aName)));
   int propertyIndex = GetClass()->GetPropertyIndex (aName);
   if (propertyIndex >= 0)
     return RemovePropertyByIndex (propertyIndex);
@@ -532,32 +532,32 @@ totemNPObject::RemoveProperty (NPIdentifier aName)
 }
 
 bool
-totemNPObject::Enumerate (NPIdentifier **_result,
+xplayerNPObject::Enumerate (NPIdentifier **_result,
                           uint32_t *_count)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::Enumerate [%p]\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject::Enumerate [%p]\n", (void*) this));
   return GetClass()->EnumerateProperties (_result, _count);
 }
 
 bool
-totemNPObject::Construct (const NPVariant *argv,
+xplayerNPObject::Construct (const NPVariant *argv,
                           uint32_t argc,
                           NPVariant *_result)
 {
   if (!IsValid ())
     return false;
 
-  NOTE (g_print ("totemNPObject::Construct [%p]\n", (void*) this));
+  NOTE (g_print ("xplayerNPObject::Construct [%p]\n", (void*) this));
   return false; /* FIXMEchpe! */
 }
 
 /* by-index methods */
 
 bool
-totemNPObject::InvokeByIndex (int aIndex,
+xplayerNPObject::InvokeByIndex (int aIndex,
                               const NPVariant *argv,
                               uint32_t argc,
                               NPVariant *_result)
@@ -566,21 +566,21 @@ totemNPObject::InvokeByIndex (int aIndex,
 }
 
 bool
-totemNPObject::GetPropertyByIndex (int aIndex,
+xplayerNPObject::GetPropertyByIndex (int aIndex,
                                    NPVariant *_result)
 {
   return false;
 }
 
 bool
-totemNPObject::SetPropertyByIndex (int aIndex,
+xplayerNPObject::SetPropertyByIndex (int aIndex,
                                    const NPVariant *aValue)
 {
   return false;
 }
 
 bool
-totemNPObject::RemovePropertyByIndex (int aIndex)
+xplayerNPObject::RemovePropertyByIndex (int aIndex)
 {
   return Throw ("Removing properties is not supported.");
 }

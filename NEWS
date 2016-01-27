@@ -10,7 +10,7 @@ Major changes in 3.10.0:
 Major changes in 3.9.92:
 - RTL bug fixes for playback icons
 - Fix year tag not showing in some cases
-- Remove obsolete totem-disc usage
+- Remove obsolete xplayer-disc usage
 - Port zeitgeist plugin to zeitgeist-2.0
 
 Major changes in 3.9.5:
@@ -120,7 +120,7 @@ Plugins:
 * Remove obsolete youtube and bemused plugins
 * Port browser plugin to GDBus
 * Fix getting the cover art in the movie player
-* Fix crasher when Totem is passed arguments
+* Fix crasher when Xplayer is passed arguments
 
 3.2.1:
 * Fix crash when framerate isn't available
@@ -309,7 +309,7 @@ and also:
 * Movie Player:
   - Port from libunique to GApplication
   - Rework cancellation in the YouTube plugin to remove races
-  - Reorganise the core code into an installed library, libtotem.so
+  - Reorganise the core code into an installed library, libxplayer.so
   - Add gobject-introspection support to this library
   - Make it possible to build plugins out of tree by installing a few header files
   - Remove the old Python and Vala bindings in favour of introspection
@@ -349,7 +349,7 @@ and also:
   - Better download buffering handling
   - Fix crasher when PyGTK is badly installed
   - Avoid problems with seeking when pausing the video too early
-  - Fix link to Totem website in error messages
+  - Fix link to Xplayer website in error messages
   - Disable seeking in DVD menus
   - Make Eject menu item work for DVDs
   - Fix playback from FTP sites
@@ -385,7 +385,7 @@ and also:
   - Implement type-ahead search
   - Display embedded cover images in audio streams
   - Add "fullscreen" button in the main video UI
-  - Fix for new TotemPlParser API
+  - Fix for new XplayerPlParser API
   - Fix the time elapsed not showing up in the status bar
     with newer GTK+
   - Fix translation of skip menu items in RTL languages
@@ -439,7 +439,7 @@ and also:
   - Remember the current file position when Pause is clicked
   - Show menu item description in status bar
   - Make Home and End keys seek to the start and the end of streams
-  - Use Totem's icon as the main window logo
+  - Use Xplayer's icon as the main window logo
   - Make screenshot dialogue more like GNOME's
   - Bug fixes:
     - Fix crash when a storage volume is encrypted
@@ -468,7 +468,7 @@ and also:
   - Move subtitles-related menu items to View → Subtitles.
   - Bug fixes:
     - Fix loading subtitles from the cache
-    - Fix loading videos when Totem is already running
+    - Fix loading videos when Xplayer is already running
     - Fix drag'n'dropping a video onto itself reloading the video
     - Only add a file to the recent files when it has been played,
       makes startup with loads of files much quicker
@@ -497,7 +497,7 @@ Major changes:
 
 New features:
 * Add a D-Bus service plugin, to allow getting playback information
-  from a running Totem
+  from a running Xplayer
 * Add support for DVD navigation to the GStreamer backend
 
 Misc bug fixes:
@@ -520,7 +520,7 @@ Misc bug fixes:
 * Make the gallery creation progress window work as expected
 * Fix a possible crasher when getting metadata in the xine-lib backend
 * Many build fixes
-* Make Totem more robust when Python fails to initialise
+* Make Xplayer more robust when Python fails to initialise
 
 2.25.90:
 * Add a UPNP/DLNA plugin
@@ -636,14 +636,14 @@ Misc bug fixes:
   - Remove need to configure the MythTV plugin, use UPNP instead
   - Add a progress bar to the YouTube plugin
   - Add support for high-res YouTube videos
-  - Use ~/.local/share/totem/plugins/ for user-plugins
+  - Use ~/.local/share/xplayer/plugins/ for user-plugins
 
 2.23.3:
 * Update FSF address in the sources
 * Use GIO when a GIO source isn't available (xine-lib, GStreamer)
 * Reset player state when we get an error whilst syncing
-* Add Totem specific application/x-totem-plugin type to the browser plugin
-* Fix building against latest totem-pl-parser
+* Add Xplayer specific application/x-xplayer-plugin type to the browser plugin
+* Fix building against latest xplayer-pl-parser
 * Fix browser plugin not showing on http://www.la1.be site
 
 2.23.2:
@@ -701,8 +701,8 @@ Misc bug fixes:
 
 2.21.94:
 
-Note that configuration files are now in ~/.config/totem/ instead
-of ~/.gnome2/Totem. You will need to move the files by hand.
+Note that configuration files are now in ~/.config/xplayer/ instead
+of ~/.gnome2/Xplayer. You will need to move the files by hand.
 
 * Movie player:
   - Fix crash when pressing a remote button in windowed mode
@@ -710,7 +710,7 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
   - Better support for using "--fullscreen" on startup
   - Default to using the fastest speed for MMS streaming
   - Support auto-loading subtitles when the suffix is upper-case
-  - Add a bug-buddy script so we get more information when totem crashes
+  - Add a bug-buddy script so we get more information when xplayer crashes
 * Browser plugin:
   - Support the audio/x-ms-wma mime-type
   - Better VLC Javascript support
@@ -767,7 +767,7 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
 * Fix building with newer versions of Vala
 * Make the icon bigger when the launcher is dropped on the desktop
 * Ignore backup files when adding them to the playlist
-* Only put Totem on top when playing audio
+* Only put Xplayer on top when playing audio
 * Install the Nautilus extension in the correct directory
 * Browser plugin:
   - Reduce the number of times the button glows in the browser plugin
@@ -781,15 +781,15 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
 
 2.21.4:
 * Small improvements to the playlist sharing plugin
-* Depend on the split totem-pl-parser module
+* Depend on the split xplayer-pl-parser module
 
 2.21.3:
 * Add a sharing plugin using libepc
 * Add a Tracker-based video search plugin
 * Add the ability to select text subtitles for files in the UI
-* Port the mythtv plugin to using the TotemVideoList
+* Port the mythtv plugin to using the XplayerVideoList
 * Show a busy cursor when loading tracks from the YouTube plugin
-* Restore the previously active sidebar page when restarting Totem
+* Restore the previously active sidebar page when restarting Xplayer
 * Add the --no-existing-session argument to allow launching multiple
   instances of the Movie Player
 
@@ -823,7 +823,7 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
 * Podcast parsing fixes, including parsing data from links as supplied
   by the "Connecting to the iTunes Store" page
 * Add support for XM tracker files
-* Fix totem-audio-preview to support both the current nautilus behaviour, and
+* Fix xplayer-audio-preview to support both the current nautilus behaviour, and
   the one used in the gio porting branch
 
 2.21.0, Changes from 2.20.1
@@ -836,7 +836,7 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
   - Disable text subtitles loading by default, as it can slow opening new files down
   - Look for text subtitle files in the subtitles/ sub-directory as well
   - Make it possible to select a DVD menu item with the 5 key of the numeric pad
-  - Add a totem-audio-preview program that plays audio data passed from the standard
+  - Add a xplayer-audio-preview program that plays audio data passed from the standard
     input, as can be used by Nautilus' audio preview
 
 * Bugs
@@ -855,7 +855,7 @@ of ~/.gnome2/Totem. You will need to move the files by hand.
 * Playlist parser:
   - Add RSS and Atom podcasts parsing, including URLs reserved for iTunes
   - Add metadata to the "playlist-started" signal
-  - Add totem_plparser_parse_duration
+  - Add xplayer_plparser_parse_duration
   - Add support for the autoplay metadata in QuickTime metalinks
   - Add support for the abstract, copyright, author and moreinfo
     properties for ASX playlists
@@ -948,14 +948,14 @@ Bug fixes:
 * Features:
   - Add basic DVB support
   - Add a plugin system
-  - Add the "On Top" plugin, to make Totem stay on top when playing a video
+  - Add the "On Top" plugin, to make Xplayer stay on top when playing a video
   - Add the "Galago" plugin, to set your IM status when playing videos
   in fullscreen
   - Move LIRC support, Media Players key support, and Telestrator to plugins
   - Use xdg-user-dirs to add the Movies and Music shortcuts to the file choosers
   - Make "Enter" dismiss the "Open Location" dialogue
   - Move the play/pause button to the leftmost of the UI
-  - Make Totem only send ticks when playing, not when paused or stopped
+  - Make Xplayer only send ticks when playing, not when paused or stopped
   - Use play/pause icons in the playlist to show the current state,
   as in Rhythmbox
   - Allow capture a specific time in a movie using the thumbnailer
@@ -963,7 +963,7 @@ Bug fixes:
 * Don't crash when we can't get a display name for the file we're trying to play
 * Don't crash on exit when LIRC is used
 * Some multi-head fixes
-* Move all the configuration files to ~/.gnome2/Totem
+* Move all the configuration files to ~/.gnome2/Xplayer
 * Remove the webcam application Vanity
 * Curb the resources used by the video thumbnailer and indexer
 * Make the pause remote key actually pause
@@ -981,7 +981,7 @@ Bug fixes:
   button when the volume is 0 on startup
 
 * Browser plugin:
-  - Allow disabling Totem for specific mime-types user-wide, and system-wide
+  - Allow disabling Xplayer for specific mime-types user-wide, and system-wide
   - Make the volume button scroll in the right direction
   - Remove rejection of streams based on mime-type, too many false positives
   - Make the Complex plugin report version "10.0", as is current for the Helix
@@ -1018,7 +1018,7 @@ Bug fixes:
 * Don't change the screen resolution when switching to fullscreen
   and the resolution isn't the highest possible
 * Don't crash when the XRandR extension isn't available
-* Avoid crashes when Totem is compiled with LIRC support, and
+* Avoid crashes when Xplayer is compiled with LIRC support, and
   no remoted are configured
 * Make the ASX playlist parser more robust
 * Browser:
@@ -1030,7 +1030,7 @@ Bug fixes:
 2.17.92
 * Fix building when /bin/sh isn't Bash
 * Add better debugging support to the thumbnailer and indexer
-* Don't crash when launch Totem with no filenames, and Totem
+* Don't crash when launch Xplayer with no filenames, and Xplayer
   is already started
 * Thumbnailer:
   - Fix problems with the first frame being captured sometimes
@@ -1068,7 +1068,7 @@ Bug fixes:
 * Append "#X" number to duplicate languages in the menu entries
 * Add "TrueAudio" as a supported file type
 * Add an uninstalled pkgconfig file for the playlist parser
-* Fix launching Totem remotely (broken by GOption work earlier in 2.17.x)
+* Fix launching Xplayer remotely (broken by GOption work earlier in 2.17.x)
 * Make GTK+-only version compile again
 * Fix disabling the browser plugin using configure
 * Playlist parser:
@@ -1113,7 +1113,7 @@ Bug fixes:
   - Only use accelerated video for the main movie when loading small "QuickTime"
     redirect movies from apple.com
   - Only show errors after having parsed a playlist if the parsing failed, show
-    the totem logo if the playlist was empty
+    the xplayer logo if the playlist was empty
 * Playlist parser:
   - Use less memory when checking whether a file can be parsed as a playlist
   - Support "Google Video Pointer" playlists
@@ -1162,7 +1162,7 @@ Bug fixes:
   to fullscreen
 * Re-add the Properties menu item, to make it more discoverable
 * Fix accessibility with the seek bar
-* Remember the sidebar size when Totem exits maximised
+* Remember the sidebar size when Xplayer exits maximised
 * Fix the playlist not accepting new drops after a drop caused an error
   dialogue to appear
 
@@ -1215,7 +1215,7 @@ Bug fixes:
   - Fix parsing of empty files
   - Fix some old D-Bus usage
   - Remove HAL < 0.5 support
-* Make Totem the only application that fully implements session saving
+* Make Xplayer the only application that fully implements session saving
 * Resize the window properly when showing/hiding the controls
 
 2.17.0
@@ -1282,13 +1282,13 @@ Bug fixes:
   - Split the plugin in 4 different plugins, to allow
     name-based detection to work, and different Javascript interfaces
     to be used (Real Player/Helix, Windows Media Player and Quicktime
-    compatible, and basic Totem)
+    compatible, and basic Xplayer)
   - Handle repeat and autostart parameters
   - Make sure the plugin is available for all Mozilla-based browsers
   - Make scrolling on the volume widget work as it should
 * New icon
 * Use HAL to determine the disc type
-* Save and restore which sidebar was showing, and whether Totem was
+* Save and restore which sidebar was showing, and whether Xplayer was
   maximised
 * Fix the window title not changing when playing files with broken names
 * Fix Ctrl+Q not working in fullscreen
@@ -1340,7 +1340,7 @@ Bug fixes:
  * Add Impulse Tracker and MOD files to the list of supported types
  * Add audio/vnd.rn-realaudio as a supported playlist format
  * Use theme friendly window icons
- * Fix a new installation of Totem not using visualisation (GStreamer)
+ * Fix a new installation of Xplayer not using visualisation (GStreamer)
 
 1.5.1
  * Add XSPF playlists read and write support
@@ -1402,12 +1402,12 @@ Bug fixes:
  * Bigger and better logo
  * Fix a possible crash with the ASF playlist parser
  * Add support for the target property, opening the movie in a stand-alone
- Totem (Mozilla plugin)
+ Xplayer (Mozilla plugin)
  * Add support for background music (Mozilla plugin)
  * Take the aspect ratio of the screen when setting the size of the
  visualisations (xine-lib, GStreamer 0.10)
  * Fix compilation with glib < 2.8
- * Add ability to disable text subtitles when Totem loads them automatically
+ * Add ability to disable text subtitles when Xplayer loads them automatically
  (xine-lib)
  * Better logo mode handling (GStreamer 0.8)
  * Free the video output after showing images (GStreamer 0.8)
@@ -1422,7 +1422,7 @@ Bug fixes:
 
 1.3.90:
  * Use Ctrl+S as "Take Screenshot..." shortcut
- * Fix a possible crash on start with multiple totem processes
+ * Fix a possible crash on start with multiple xplayer processes
  * Support application/smil and application/x-smil mime-types
  * Better parsing of SMIL playlists
  * Better parsing of ASX playlists with multiple REF entries per ENTRY
@@ -1496,10 +1496,10 @@ Bug fixes:
   * Fix duplicate access key in the display preferences
   * Fix wrong accesskeys for the saturation and hue sliders
   * Show the video properties again when a stream has video
-  * Move Totem's remote socket to TMPDIR
+  * Move Xplayer's remote socket to TMPDIR
   * Remove libmusicbrainz dependency
   * Detect DVDs and VCDs properly on a pmount setup
-  * Don't save Totem's thumbnail with an alpha component, for recent
+  * Don't save Xplayer's thumbnail with an alpha component, for recent
   Nautilus changes
   * Remove keyboard shortcuts from the main video popup menu
   * Fix resizing of the sidebar
@@ -1525,7 +1525,7 @@ xine-lib:
   (xine-lib)
 
 1.1.5:
-* Fix Totem not finding the type of a disc when it's not in /etc/fstab
+* Fix Xplayer not finding the type of a disc when it's not in /etc/fstab
 * Some (more) volume button fixes
 * Don't leak memory when getting the supported mime-types of the plugin
 * Fix generation of the playlist-end signal in the playlist parser
@@ -1622,8 +1622,8 @@ xine-lib:
   movie menu
 * Add a preference to select the subtitle font
 * Avoid the progress bar changing the status bar's height
-* Allow Totem to be passed multiple files by Nautilus
-* Translate the language names in Totem's menus
+* Allow Xplayer to be passed multiple files by Nautilus
+* Translate the language names in Xplayer's menus
 * Make the "Skip to..." dialog appear again
 * Don't crash if the playlist contains non-UTF8 data
 * Fix parsing of some ASX playlists
@@ -1638,7 +1638,7 @@ xine-lib:
 * Prevent a click in the recent files really opening the first file twice
 * Add --play and --pause command-line options
 * Fix compilation with glibc 2.2 systems
-* Add a man page for totem-video-thumbnailer, and update the totem one
+* Add a man page for xplayer-video-thumbnailer, and update the xplayer one
 * Fix possible crash in the BaconMessageConnection
 * Require glib 2.6.3 to fix the thumbnailer exiting too soon
 * Fix date shown from some OGG files (GStreamer)
@@ -1677,7 +1677,7 @@ xine-lib:
 * Don't crash when a file fails to open (GStreamer)
 * Automatic subtitles support (GStreamer)
 * Mouse interactivity support (GStreamer)
-* Install Totem's .desktop file properly
+* Install Xplayer's .desktop file properly
 * Fix volume setting on startup
 * Fix the sound device not being released in some cases
 * Fix non-stereo audio playback (xine-lib)
@@ -1733,7 +1733,7 @@ xine-lib:
 
 0.99.20:
 * Add a beta "Telestrator" mode
-* Fix a crash when closing Totem with non-file locations
+* Fix a crash when closing Xplayer with non-file locations
 * Set the current file chooser paths correctly
 * Fix "Play Disc..." when the detected device is a symbolic link
 * Remove warnings when zooming in a window with no video
@@ -1770,7 +1770,7 @@ xine-lib:
 * Work-around a bug in xine-lib where it wouldn't send the right error
   message if trying to play a DVD without libdvdcss installed
 * Make --debug actually work for the instance that's being started
-* Make "totem --quit" just exit if there's no running Totem instance
+* Make "xplayer --quit" just exit if there's no running Xplayer instance
 * Make Ctrl+A select all the files in the playlist window
 * Fix error message when the codec doesn't have a nice name
 * Fix properties windows when the file doesn't have audio or video
@@ -1820,7 +1820,7 @@ xine-lib:
 * Make aspect ratio a submenu, instead of being toggled
 * Screenshot dialog fixes
 * Fix a crasher in the m3u with extinfo parsing
-* Get all the icons from the installed Totem if not otherwise available
+* Get all the icons from the installed Xplayer if not otherwise available
 * Fix a crasher on startup detecting the DVD+ drives
 * Fix the release of the sound device when paused
 * Add German documentation translation by Sebastian Heinlein
@@ -1840,11 +1840,11 @@ xine-lib:
 * Stock icons support
 * Have the command-line options translated
 * Added context menu in the playlist to copy URLs/filenames to the clipboard
-* Added a man page for totem
+* Added a man page for xplayer
 * Install handlers for mms, pnm and rtsp protocols in the xine-lib backend
 * Add a button to reset the colour balance settings
 * Make the fullscreen slider work again
-* Make "totem cd:" work again
+* Make "xplayer cd:" work again
 * Restore the default audio stream if a custom one is not available in the
   file that we're about to play
 * Don't crash when the "none" video output plugin isn't available
@@ -1884,7 +1884,7 @@ xine-lib:
 * Fix Real playlists support with "stop" commands
 * Support the XvMC video driver
 * Support audio/x-ms-asf data type
-* Added ability to launch totem in fullscreen mode
+* Added ability to launch xplayer in fullscreen mode
 * Fix compilation with GTK+ 2.3.x
 
 0.99.7:
@@ -1984,7 +1984,7 @@ enabled (useful for TV output)
   default
 * Try harder to thumbnail short movies
 * Make OGM subtitles and alternate soundtracks work
-* Fix a crash when starting up totem from nautilus with more than one file
+* Fix a crash when starting up xplayer from nautilus with more than one file
 * Autostart playback of optical media if they're listed on the command-line
 * FreeBSD build fixes
 
@@ -1997,11 +1997,11 @@ enabled (useful for TV output)
   as a bookmark system
 * devfs support, FreeBSD support and misc. parsing fixes for the CD
   selection widget
-* moved fullscreen code out of the video widget and into totem (enables
+* moved fullscreen code out of the video widget and into xplayer (enables
   fullscreen to work on the gstreamer backend)
 * Automatic GNOME-based Proxy configuration
 * Make the visual quality option menu actually work
-* Add the /apps/totem/debug entry to enable debug in the playback engine
+* Add the /apps/xplayer/debug entry to enable debug in the playback engine
 * Fixes concerning the colliding error and buffering dialogs
 * Added a --disable-lirc argument to configure
 * Fix handling of Recent Files and URIs
@@ -2054,7 +2054,7 @@ enabled (useful for TV output)
 * Fix a crash when it was a URI being drag and not a local filename
 * Fix build system for the thumbnailer's schemas
 * Much less verbosity on the command line
-* Fix a problem with the "remote" API which would make Totem receive only
+* Fix a problem with the "remote" API which would make Xplayer receive only
   the first file of a list of them
 * Fix a crash when changing the resolution of the screen, in fullscreen mode
 
@@ -2063,7 +2063,7 @@ enabled (useful for TV output)
 
 0.95.0:
 * Xinerama, dual-head and RandR support
-* Added a "remote" mode to control a running Totem
+* Added a "remote" mode to control a running Xplayer
 * Seeking with the seekbar is no longer a mess
 * Fix screenshots when the aspect ratio was 1.0
 * Better error reporting
@@ -2088,7 +2088,7 @@ enabled (useful for TV output)
 * added a statusbar
 * added CDDA support (Digital CD playback)
 * added subtitle support (only on the command-line, use like:
-  "totem file.avi#subtitle:file.sub")
+  "xplayer file.avi#subtitle:file.sub")
 * added a dialog for more precise seeking
 * plenty of bug fixes
 

@@ -126,7 +126,7 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 libsidebar_test_la_DEPENDENCIES = $(plugin_libadd)
 am_libsidebar_test_la_OBJECTS =  \
-	libsidebar_test_la-totem-sidebar-test.lo
+	libsidebar_test_la-xplayer-sidebar-test.lo
 libsidebar_test_la_OBJECTS = $(am_libsidebar_test_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -204,7 +204,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -386,11 +386,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -473,12 +473,12 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/sidebar-test
 plugin_LTLIBRARIES = libsidebar-test.la
 plugin_in_files = sidebar-test.plugin.in
-libsidebar_test_la_SOURCES = totem-sidebar-test.c
+libsidebar_test_la_SOURCES = xplayer-sidebar-test.c
 libsidebar_test_la_LDFLAGS = $(plugin_ldflags)
 libsidebar_test_la_CFLAGS = $(plugin_cflags)
 libsidebar_test_la_LIBADD = $(plugin_libadd)
@@ -538,7 +538,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsidebar_test_la-totem-sidebar-test.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsidebar_test_la-xplayer-sidebar-test.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -561,12 +561,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libsidebar_test_la-totem-sidebar-test.lo: totem-sidebar-test.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsidebar_test_la_CFLAGS) $(CFLAGS) -MT libsidebar_test_la-totem-sidebar-test.lo -MD -MP -MF $(DEPDIR)/libsidebar_test_la-totem-sidebar-test.Tpo -c -o libsidebar_test_la-totem-sidebar-test.lo `test -f 'totem-sidebar-test.c' || echo '$(srcdir)/'`totem-sidebar-test.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsidebar_test_la-totem-sidebar-test.Tpo $(DEPDIR)/libsidebar_test_la-totem-sidebar-test.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-sidebar-test.c' object='libsidebar_test_la-totem-sidebar-test.lo' libtool=yes @AMDEPBACKSLASH@
+libsidebar_test_la-xplayer-sidebar-test.lo: xplayer-sidebar-test.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsidebar_test_la_CFLAGS) $(CFLAGS) -MT libsidebar_test_la-xplayer-sidebar-test.lo -MD -MP -MF $(DEPDIR)/libsidebar_test_la-xplayer-sidebar-test.Tpo -c -o libsidebar_test_la-xplayer-sidebar-test.lo `test -f 'xplayer-sidebar-test.c' || echo '$(srcdir)/'`xplayer-sidebar-test.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsidebar_test_la-xplayer-sidebar-test.Tpo $(DEPDIR)/libsidebar_test_la-xplayer-sidebar-test.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-sidebar-test.c' object='libsidebar_test_la-xplayer-sidebar-test.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsidebar_test_la_CFLAGS) $(CFLAGS) -c -o libsidebar_test_la-totem-sidebar-test.lo `test -f 'totem-sidebar-test.c' || echo '$(srcdir)/'`totem-sidebar-test.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsidebar_test_la_CFLAGS) $(CFLAGS) -c -o libsidebar_test_la-xplayer-sidebar-test.lo `test -f 'xplayer-sidebar-test.c' || echo '$(srcdir)/'`xplayer-sidebar-test.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

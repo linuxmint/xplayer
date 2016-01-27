@@ -15,10 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -36,7 +36,7 @@
 #include <stdio.h>
 
 void
-totem_gdk_window_set_invisible_cursor (GdkWindow *window)
+xplayer_gdk_window_set_invisible_cursor (GdkWindow *window)
 {
 	GdkCursor *cursor;
 
@@ -46,7 +46,7 @@ totem_gdk_window_set_invisible_cursor (GdkWindow *window)
 }
 
 void
-totem_gdk_window_set_waiting_cursor (GdkWindow *window)
+xplayer_gdk_window_set_waiting_cursor (GdkWindow *window)
 {
 	GdkCursor *cursor;
 
@@ -58,7 +58,7 @@ totem_gdk_window_set_waiting_cursor (GdkWindow *window)
 }
 
 static gboolean
-totem_ratio_fits_screen_helper (GtkWidget *video_widget,
+xplayer_ratio_fits_screen_helper (GtkWidget *video_widget,
 				int new_w, int new_h,
 				gfloat ratio)
 {
@@ -101,7 +101,7 @@ get_window_size (GtkWidget *widget,
 }
 
 gboolean
-totem_ratio_fits_screen (GtkWidget *video_widget,
+xplayer_ratio_fits_screen (GtkWidget *video_widget,
 			 int video_width, int video_height,
 			 gfloat ratio)
 {
@@ -127,6 +127,6 @@ totem_ratio_fits_screen (GtkWidget *video_widget,
 		new_h += win_h - gdk_window_get_height (video_win);
 	}
 
-	return totem_ratio_fits_screen_helper (video_widget, new_w, new_h, ratio);
+	return xplayer_ratio_fits_screen_helper (video_widget, new_w, new_h, ratio);
 }
 

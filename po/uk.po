@@ -1,6 +1,6 @@
 # Ukrainian translation of gnomeicu.
 # Copyright (C) Free Software Foundation 2003
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Maxim Dzumanenko <dziumanenko@gmail.com>, 2003-2009
 # Yuriy Syrota <rasta@cvs.gnome.org>
 # Korostil Daniel <ted.korostiled@gmail.com>, 2011, 2012.
@@ -8,7 +8,7 @@
 # Daniel Korostil <ted.korostiled@gmail.com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem\n"
+"Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-21 19:52+0300\n"
 "PO-Revision-Date: 2013-09-21 19:52+0300\n"
@@ -22,74 +22,74 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:352 ../src/totem-object.c:1181
-#: ../src/totem-object.c:1651 ../src/totem-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1651 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Зупинено"
 
-#: ../browser-plugin/totem-plugin-viewer.c:364 ../src/totem-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Призупинено"
 
-#: ../browser-plugin/totem-plugin-viewer.c:368 ../src/totem-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "Відтворення"
 
-#: ../browser-plugin/totem-plugin-viewer.c:386
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Відтворення відео"
 
-#: ../browser-plugin/totem-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "Немає URI для відтворення"
 
-#: ../browser-plugin/totem-plugin-viewer.c:675
-#: ../browser-plugin/totem-plugin-viewer.c:1699
-msgid "Totem Movie Player"
-msgstr "Мультимедійний програвач Totem"
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Мультимедійний програвач Xplayer"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "Відкрити _у програмі «%s»"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1340 ../src/totem-object.c:2451
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2451
 msgid "An error occurred"
 msgstr "Виникла помилка"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "Немає списку відтворення, або список відтворення порожній"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "Додаток перегляду відео"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143 ../src/totem.c:267
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:267
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Неможливо ініціалізувати безпечну бібліотеку потоків виконання."
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "Перевірте встановлення системи. Тотем завершується."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Вийти з повноекранного режиму"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
 msgid "Time:"
 msgstr "Час:"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "Дозволяти збереження екрану при відтворенні аудіо"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
@@ -97,71 +97,71 @@ msgstr ""
 "Дозволяти запуск збереження екрану при відтворенні аудіо. Слід вимкнути, "
 "якщо використовуються динаміки, що живляться від монітора."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr "Показувати ефекти візуалізації, коли відтворюється не відео"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr "Показувати ефекти візуалізації, коли відтворюється звуковий файл."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr "Назва додатка візуальних ефектів"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "Яскравість зображення"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr "Контраст зображення"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr "Яскравість відео"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr "Насиченість відео"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Автоматично змінювати розміри площини показу після відкриття файла"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Repeat mode"
 msgstr "Режим повтору"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
 msgstr "У випадковому порядку"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "Чи ввімкнути черезрядковість для відео"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
 msgstr "Чи увімкнути налагодження механізму відтворення"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
 msgstr "Тип аудіовиходу"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
 msgstr "Якість візуалізації"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
 msgstr "Налаштування якості для візуалізації аудіо."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
 msgstr "Поріг буферизації мережі"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -169,59 +169,59 @@ msgstr ""
 "Кількість даних, що накопичуються у буфері для мережевих потоків, перед "
 "початком показу потоку (у секундах)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Subtitle font"
 msgstr "Шрифт субтитрів"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr "Опис шрифту Pango для відтворення субтитрів."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "Кодування субтитрів"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
 msgstr "Вказане кодування для субтитрів."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Типова адреса для діалогу \"Відрити...\""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr "Типова адреса для «Відкрити…». Типово — теперішній каталог."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Типова адреса для діалогу \"Зберегти кадр...\""
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr "Типова адреса для «Зробити знімок…». Типово — каталог малюнків."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "Чи вимикати модулі у домашньому каталозі користувача"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "Чи вимикати комбінації клавіш"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr "Чи завантажувати субтитри при відтворенні фільмів"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr "Чи завантажувати субтитри автоматично при відтворенні фільмів"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -229,11 +229,11 @@ msgstr ""
 "Чи пам'ятати позицію відтворення аудіо/відеофайлів при паузі або їх "
 "закриванні."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Active plugins list"
 msgstr "Перелік активних додатків"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -256,11 +256,11 @@ msgstr "_Копіювати адресу"
 msgid "Copy the location to the clipboard"
 msgstr "Копіювати адресу в буфер обміну"
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
 msgid "_Select Text Subtitles..."
 msgstr "_Виберіть текстові субтитри…"
 
-#: ../data/playlist.ui.h:6 ../data/totem.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
 msgid "Select a file to use for text subtitles"
 msgstr "Виберіть файл текстових субтитрів"
 
@@ -300,7 +300,7 @@ msgid "Extra Large"
 msgstr "Дуже високий"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5468
-#: ../src/totem-properties-view.c:242
+#: ../src/xplayer-properties-view.c:242
 msgid "Stereo"
 msgstr "Стерео"
 
@@ -325,8 +325,8 @@ msgid "AC3 Passthrough"
 msgstr "Пропускати AC3"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
-msgstr "Параметри Totem"
+msgid "Xplayer Preferences"
+msgstr "Параметри Xplayer"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
@@ -440,7 +440,7 @@ msgid "_Audio output type:"
 msgstr "Тип з_вукового виходу:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:283
+#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr "Звук"
 
@@ -472,7 +472,7 @@ msgstr "Коментар:"
 msgid "Container:"
 msgstr "Контейнер:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:285
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
 msgid "Video"
 msgstr "Відео"
 
@@ -501,329 +501,329 @@ msgid "Channels:"
 msgstr "Канали:"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:80 ../src/totem.c:266
-#: ../src/totem.c:274 ../src/totem-menu.c:789 ../src/totem-object.c:1659
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:266
+#: ../src/xplayer.c:274 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1659
 msgid "Videos"
 msgstr "Відео"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "Програти фільми"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Відео;Фільм;Кіно;Кліп;Серія;Програвач;DVD;ТБ;Disc;"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "_Open"
 msgstr "_Відкрити"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Open _Location"
 msgstr "Відкрити _адресу"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "_Fullscreen"
 msgstr "На весь _екран"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Prefere_nces"
 msgstr "П_араметри"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "Shuff_le"
 msgstr "_Змішати"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Repeat"
 msgstr "Пов_торювати"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "В_ідео"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "_Eject"
 msgstr "Ви_йняти"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "Eject the current disc"
 msgstr "Вийняти поточний диск"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "_Properties"
 msgstr "В_ластивості"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "View the properties of the current stream"
 msgstr "Перегляд властивостей поточного потоку"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "Play / P_ause"
 msgstr "Відтворення / _пауза"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Play or pause the movie"
 msgstr "Відтворення/призупинення фільму"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "_Edit"
 msgstr "З_міни"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Clear Playlist"
 msgstr "О_чистити список відтворення"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "Clear the playlist"
 msgstr "Очистити список відтворення"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "Plugins..."
 msgstr "Додатки…"
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "Configure plugins to extend the application"
 msgstr "Налаштувати додатки для зовнішньої програми"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_View"
 msgstr "П_ерегляд"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "Fit Window to Movie"
 msgstr "Вікно за розміром фільму"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Resize 1∶2"
 msgstr "_Масштаб 1∶2"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "Resize to half the original video size"
 msgstr "Зробити розмір вікна відповідним половині розміру відео"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Resize _1∶1"
 msgstr "Масштаб _1∶1"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Resize to the original video size"
 msgstr "Зробити розмір вікна відповідним розміру відео"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Resize _2∶1"
 msgstr "Масштаб _2∶1"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Resize to double the original video size"
 msgstr "Зробити розмір вікна відповідним подвоєному розміру відео"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_Aspect Ratio"
 msgstr "_Співвідношення сторін"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Switch An_gles"
 msgstr "Перемкнути к_ути"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Switch camera angles"
 msgstr "Перемкнути кути камери"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Go"
 msgstr "Пере_хід"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "_DVD Menu"
 msgstr "Меню _DVD"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Go to the DVD menu"
 msgstr "Меню DVD"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "_Title Menu"
 msgstr "Меню _епізоду"
 
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Go to the title menu"
 msgstr "Перейти до меню заголовку"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "A_udio Menu"
 msgstr "Меню _звуку"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the audio menu"
 msgstr "Перейти до меню звуку"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "_Angle Menu"
 msgstr "_Кутове меню"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the angle menu"
 msgstr "Перейти до кутового меню"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "_Chapter Menu"
 msgstr "Меню _фрагментів"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Go to the chapter menu"
 msgstr "Перейти до меню розділу"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "_Next Chapter/Movie"
 msgstr "Н_аступний фрагмент/фільм"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Next chapter or movie"
 msgstr "Наступний фрагмент або фільм"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "_Previous Chapter/Movie"
 msgstr "П_опередній фрагмент/фільм"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Previous chapter or movie"
 msgstr "Попередній розділ/фільм"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "_Sound"
 msgstr "_Звук"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Volume _Up"
 msgstr "З_більшити гучність"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "Збільшити гучність"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Volume _Down"
 msgstr "З_меншити гучність"
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Decrease volume"
 msgstr "Зменшити гучність"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Help contents"
 msgstr "Зміст довідки"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "_About"
 msgstr "_Про програму"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "About this application"
 msgstr "Про програму"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Show _Controls"
 msgstr "Показувати панель _керування"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Show controls"
 msgstr "Показує панель керування"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "S_idebar"
 msgstr "_Бічна панель"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Show or hide the sidebar"
 msgstr "Показати чи сховати бічну панель"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Автоматично"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Sets automatic aspect ratio"
 msgstr "Встановлює співвідношення сторін автоматично"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Square"
 msgstr "Квадрат"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Sets square aspect ratio"
 msgstr "Встановлює співвідношення сторін 1:1"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "4∶3 (TV)"
 msgstr "4∶3 (ТБ)"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Встановлює відношення сторін 4∶3 (ТБ)"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (широкий екран)"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Встановлює співвідношення сторін 16∶9 (широкоекранне)"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Встановлює відношення сторін 2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "S_ubtitles"
 msgstr "С_убтитри"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "_Languages"
 msgstr "М_ови"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "Zoom In"
 msgstr "Збільшити"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "Zoom in"
 msgstr "Збільшити"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Skip _Forward"
 msgstr "Перейти _вперед"
 
-#: ../data/totem.ui.h:77
+#: ../data/xplayer.ui.h:77
 msgid "Skip forward"
 msgstr "Перейти вперед"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Skip _Backwards"
 msgstr "Перейти _назад"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Skip backwards"
 msgstr "Перейти назад"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Time seek bar"
 msgstr "Повзунок часу"
 
@@ -917,11 +917,11 @@ msgstr ""
 "Неможливо відтворити цей файл через мережу. Спробуйте спочатку звантажити "
 "його на локальний диск."
 
-#: ../src/backend/bacon-video-widget.c:5464 ../src/totem-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5464 ../src/xplayer-properties-view.c:238
 msgid "Surround"
 msgstr "Об'ємний"
 
-#: ../src/backend/bacon-video-widget.c:5466 ../src/totem-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5466 ../src/xplayer-properties-view.c:240
 msgid "Mono"
 msgstr "Моно"
 
@@ -1047,8 +1047,8 @@ msgstr "Показати параметри керування сеансом"
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:56
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -1060,7 +1060,7 @@ msgstr "%d:%02d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:65
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -1174,98 +1174,98 @@ msgstr[0] "%d кадр за секунду"
 msgstr[1] "%d кадри за секунду"
 msgstr[2] "%d кадрів за секунду"
 
-#: ../src/totem-audio-preview.c:137
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "Попереднє відтворення звукових файлів"
 
-#: ../src/totem.c:267
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Перевірте систему. Totem завершується."
+#: ../src/xplayer.c:267
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Перевірте систему. Xplayer завершується."
 
-#: ../src/totem-dnd-menu.c:95
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "_Відтворити"
 
-#: ../src/totem-dnd-menu.c:98
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "_Додати до списку відтворення"
 
-#: ../src/totem-dnd-menu.c:104
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../src/totem-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:573
 msgid "No File"
 msgstr "Немає файла"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "Не вдалось завантажити інтерфейс «%s». %s"
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "Файл не існує."
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
-msgstr "Переконайтесь, що Totem встановлено коректно."
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Переконайтесь, що Xplayer встановлено коректно."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Totem — вільна програма; ви можете розповсюджувати її та/або змінювати на "
+"Xplayer — вільна програма; ви можете розповсюджувати її та/або змінювати на "
 "умовах Загальної громадської ліцензії GNU версії 2 або більш пізньої."
 
-#: ../src/totem-interface.c:361
+#: ../src/xplayer-interface.c:361
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Totem розповсюджується зі сподіванням, що буде корисним, але БЕЗ БУДЬ-ЯКИХ "
+"Xplayer розповсюджується зі сподіванням, що буде корисним, але БЕЗ БУДЬ-ЯКИХ "
 "ГАРАНТІЙ; навіть без неявної гарантії ПРИДАТНОСТІ ДО ПРОДАЖУ чи "
 "ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.  Докладніше дивіться GNU General Public License."
 
-#: ../src/totem-interface.c:365
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Ви мали б отримати копію ліцензії GNU General Public License разом з "
 "програмою; якщо у Вас її все ж немає, напишіть до Free Software Foundation, "
 "Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
-#: ../src/totem-interface.c:368
+#: ../src/xplayer-interface.c:368
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
 "Тотем містить виняток, що дозволяє використовувати закриті додатки GStreamer."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:291
+#: ../src/xplayer-menu.c:291
 msgid "None"
 msgstr "Немає"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:296
+#: ../src/xplayer-menu.c:296
 msgctxt "Language"
 msgid "Auto"
 msgstr "Автоматично"
 
-#: ../src/totem-menu.c:788
+#: ../src/xplayer-menu.c:788
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "Авторські права © 2002-2009 Bastien Nocera"
 
-#: ../src/totem-menu.c:792
+#: ../src/xplayer-menu.c:792
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота <rasta@cvs.gnome.org>\n"
@@ -1273,15 +1273,15 @@ msgstr ""
 "Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Юрій Булка <yurkobb@gmail.com>"
 
-#: ../src/totem-menu.c:796
-msgid "Totem Website"
-msgstr "Сайт Totem"
+#: ../src/xplayer-menu.c:796
+msgid "Xplayer Website"
+msgstr "Сайт Xplayer"
 
-#: ../src/totem-menu.c:827
+#: ../src/xplayer-menu.c:827
 msgid "Configure Plugins"
 msgstr "Налаштувати додатки"
 
-#: ../src/totem-object.c:162
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1291,460 +1291,460 @@ msgstr ""
 "Запустіть '%s --help' для перегляду списку доступних параметрів командного "
 "рядка.\n"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:590
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:590
 #, c-format
-msgid "Totem %s"
-msgstr "Totem %s"
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/totem-object.c:1169 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Пауза"
 
-#: ../src/totem-object.c:1176 ../src/totem-object.c:1186
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Відтворення"
 
 # c-format
-#: ../src/totem-object.c:1268 ../src/totem-object.c:1295
-#: ../src/totem-object.c:1918
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1918
 #, c-format
-msgid "Totem could not play '%s'."
+msgid "Xplayer could not play '%s'."
 msgstr "Не вдалось відтворити «%s»."
 
-#: ../src/totem-object.c:2109
-msgid "Totem could not display the help contents."
+#: ../src/xplayer-object.c:2109
+msgid "Xplayer could not display the help contents."
 msgstr "Неможливо показати вміст довідки."
 
-#: ../src/totem-object.c:3998 ../src/totem-object.c:4000
+#: ../src/xplayer-object.c:3998 ../src/xplayer-object.c:4000
 msgid "Previous Chapter/Movie"
 msgstr "Попередній фрагмент/фільм"
 
-#: ../src/totem-object.c:4007 ../src/totem-object.c:4009
+#: ../src/xplayer-object.c:4007 ../src/xplayer-object.c:4009
 msgid "Play / Pause"
 msgstr "Відтворення / _пауза"
 
-#: ../src/totem-object.c:4017 ../src/totem-object.c:4019
+#: ../src/xplayer-object.c:4017 ../src/xplayer-object.c:4019
 msgid "Next Chapter/Movie"
 msgstr "Наступний фрагмент/фільм"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4030 ../src/totem-object.c:4032
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4030 ../src/xplayer-object.c:4032
 msgid "Fullscreen"
 msgstr "На весь екран"
 
-#: ../src/totem-object.c:4163
-msgid "Totem could not startup."
-msgstr "Не вдалось запустити Totem."
+#: ../src/xplayer-object.c:4163
+msgid "Xplayer could not startup."
+msgstr "Не вдалось запустити Xplayer."
 
-#: ../src/totem-object.c:4163
+#: ../src/xplayer-object.c:4163
 msgid "No reason."
 msgstr "Причина невідома."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "Відкрити адресу..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Увімкнути налагодження"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "Відтворення/пауза"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "Наступний"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "Попередній"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "Перейти вперед"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "Перейти назад"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "Збільшити гучність"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "Зменшити гучність"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "Вимкнути звук"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "Перемикнути повний екран"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "Показати/сховати панель керування"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "Вийти"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Enqueue"
 msgstr "Поставити у чергу"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "Замінити"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "Пошук"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "Індекс списку відтворення"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "Фільми для відтворення"
 
-#: ../src/totem-options.c:79
+#: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
 msgstr "- відтворює відеофільми та звукозаписи"
 
-#: ../src/totem-options.c:142
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "Неможливо поставити в чергу і замінити одночасно"
 
 #. By extension entry
-#: ../src/totem-playlist.c:162
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "Список відтворення MP3 ShoutCast"
 
-#: ../src/totem-playlist.c:163
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 аудіо (потік)"
 
-#: ../src/totem-playlist.c:164
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 аудіо (потік, формат DOS)"
 
-#: ../src/totem-playlist.c:165
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "Список відтворення XML Shareable"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:348
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "Заголовок %d"
 
-#: ../src/totem-playlist.c:447
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "Не вдалось зберегти список відтворення"
 
-#: ../src/totem-playlist.c:1022
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "Збереження списку відтворення"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1034 ../src/totem-playlist.c:1263
-#: ../src/totem-sidebar.c:145
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Список відтворення"
 
-#: ../src/totem-playlist.c:1861
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 "Список відтворення «%s» неможливо проаналізувати. Можливо, його пошкоджено."
 
-#: ../src/totem-playlist.c:1862
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Помилка списку відтворення"
 
-#: ../src/totem-preferences.c:297
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "Параметри"
 
-#: ../src/totem-preferences.c:445
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Вибір шрифту субтитрів"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:281
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
 msgid "Audio/Video"
 msgstr "Звук/Відео"
 
-#: ../src/totem-properties-view.c:141
+#: ../src/xplayer-properties-view.c:141
 msgid "N/A"
 msgstr "Н/Д"
 
-#: ../src/totem-properties-view.c:170
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:170
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "Н/Д"
 
-#: ../src/totem-properties-view.c:173
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:173
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d кбіт/с"
 
-#: ../src/totem-properties-view.c:190
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:190
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:222
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:222
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Гц"
 
-#: ../src/totem-properties-view.c:230
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:230
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "Н/Д"
 
-#: ../src/totem-properties-view.c:251
+#: ../src/xplayer-properties-view.c:251
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "Н/Д"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (встановлення потоку)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Перехід до %s / %s"
 
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "Буферування"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
 msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
 msgstr "%s, %f %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Поточна локаль"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Арабське"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "Вірменське"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Балтійське"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "Кельтське"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Центральноєвропейське"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Спрощене китайське"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Традиційне китайське"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "Хорватське"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Кириличне"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "Кирилиця/Росія"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Кирилиця/Україна"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "Грузинське"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Грецьке"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Гуяраті"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Гурмукхі"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Іврит"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "Єврейське візуальне"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "Гінді"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "Ісландська"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Японська"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Корейська"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "Північне"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "Персидське"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Румунське"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "Південноєвропейське"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "Тайське"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Турецьке"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Унікод"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Західне"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "В'єтнамське"
 
-#: ../src/totem-uri.c:343 ../src/plugins/chapters/totem-chapters.c:984
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "Усі файли"
 
-#: ../src/totem-uri.c:348 ../src/plugins/chapters/totem-chapters.c:981
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "Підтримувані файли"
 
-#: ../src/totem-uri.c:360
+#: ../src/xplayer-uri.c:360
 msgid "Audio files"
 msgstr "Звукові файли"
 
-#: ../src/totem-uri.c:368
+#: ../src/xplayer-uri.c:368
 msgid "Video files"
 msgstr "Відеофайли"
 
-#: ../src/totem-uri.c:378
+#: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
 msgstr "Файли субтитрів"
 
-#: ../src/totem-uri.c:430
+#: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
 msgstr "Вибір текстових субтитрів"
 
-#: ../src/totem-uri.c:495
+#: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
 msgstr "Вибір відеофайлів чи списків відтворення"
 
-#: ../src/totem-uri.c:499
+#: ../src/xplayer-uri.c:499
 msgid "Add Directory"
 msgstr "Додати каталог"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:877
+#: ../src/xplayer-video-thumbnailer.c:877
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1755,15 +1755,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:878
+#: ../src/xplayer-video-thumbnailer.c:878
 msgid "Filename"
 msgstr "Файл"
 
-#: ../src/totem-video-thumbnailer.c:880
+#: ../src/xplayer-video-thumbnailer.c:880
 msgid "Resolution"
 msgstr "Роздільна здатність"
 
-#: ../src/totem-video-thumbnailer.c:883
+#: ../src/xplayer-video-thumbnailer.c:883
 msgid "Duration"
 msgstr "Тривалість"
 
@@ -1791,42 +1791,42 @@ msgstr "Запис відеодисків"
 msgid "Records (S)VCDs or video DVDs"
 msgstr "Записує (S)VCD чи відео DVD"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "_Створити відеодиск..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "Створити відео DVD чи (S)VCD з відритого фільму"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "Копіювати в_ідео DVD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "Копіювати відео DVD, що відтворюється"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "Копіювати в_ідео (S)VCD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "Копіювати (S)VCD, що відтворюється"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:136
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "Не вдалось скопіювати відеодиск."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:138
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:283
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "Не вдалось записати фільм."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:164
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:174
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:270
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "Не вдалось записати проект."
 
@@ -1887,7 +1887,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "Створити новий перелік розділів для фільму"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1125
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "Розділи"
 
@@ -1895,7 +1895,7 @@ msgstr "Розділи"
 msgid "Support chapter markers in movies"
 msgstr "Підтримування заголовків розділу у фільмах"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1904,63 +1904,63 @@ msgstr ""
 "<b>Назва: </b>%s\n"
 "<b>Початок: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:323
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "Помилка читання файла розділів"
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "Розділ з таким же часом вже існує"
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "Спробуйте іншу назву або вилучіть наявний розділ."
 
-#: ../src/plugins/chapters/totem-chapters.c:703
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "Помилка при записі файла з розділами"
 
-#: ../src/plugins/chapters/totem-chapters.c:828
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "Трапилась помилка при збереженні розділів"
 
-#: ../src/plugins/chapters/totem-chapters.c:829
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Будь ласка, перевірте, чи ви маєте право на запис до теки, що містить відео."
 
-#: ../src/plugins/chapters/totem-chapters.c:962
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "Відкрити файл розділу"
 
-#: ../src/plugins/chapters/totem-chapters.c:1079
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "Знімок екрана розділу"
 
-#: ../src/plugins/chapters/totem-chapters.c:1090
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "Назву розділу"
 
-#: ../src/plugins/chapters/totem-chapters.c:1170
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "Зберегти зміни в перелік розділів перед закриттям?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1175
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "Закрити без збереження"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Зберегти"
 
-#: ../src/plugins/chapters/totem-chapters.c:1180
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "Якщо ви не збережете, зміни в переліку розділів буде втрачено."
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr "Додати розділ"
 
@@ -2013,19 +2013,19 @@ msgstr "Додати до списку композицій"
 msgid "Copy Location"
 msgstr "Копіювати адресу"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/totem-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "Перегляд"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/totem-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "Пошук"
 
-#: ../src/plugins/grilo/totem-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "Помилка перегляду"
 
-#: ../src/plugins/grilo/totem-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "Помилка пошуку"
 
@@ -2037,15 +2037,15 @@ msgstr "Анотації у Gromit"
 msgid "Presentation helper to make annotations on screen"
 msgstr "Підтримка анотацій на різних частинах робочого столу"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "Виконуваний файл gromit не знайдено."
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr "Стан у клієнті обміну миттєвими повідомленнями"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Встановлює статус у клієнті обміну миттєвими повідомленнями під час "
@@ -2059,11 +2059,11 @@ msgstr "Інфрачервоне віддалене керування"
 msgid "Support infrared remote control"
 msgstr "Підтримка інфрачервоного віддаленого керування"
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "Неможливо запустити службу lirc."
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "Не вдалось прочитати конфігурацію lirc"
 
@@ -2157,11 +2157,11 @@ msgstr "_Мова субтитрів"
 msgid "_Play with Subtitle"
 msgstr "_Відтворити із субтитрами"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Мова субтитрів"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "Мова, за якою шукатимуть субтитри для фільму."
 
@@ -2173,21 +2173,21 @@ msgstr "Властивості фільму"
 msgid "Adds movie properties to the sidebar"
 msgstr "Додає властивості фільму до бічної панелі"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Властивості"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr "Пароль rpdb2"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
-"Пароль для захисту сервера rpdb2, налагодження Totem через неавторизований "
-"віддалений доступ. Якщо це порожнє, буде використано типовий «totem»."
+"Пароль для захисту сервера rpdb2, налагодження Xplayer через неавторизований "
+"віддалений доступ. Якщо це порожнє, буде використано типовий «xplayer»."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2206,8 +2206,8 @@ msgid "_Python Console"
 msgstr "_Консоль Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
-msgid "Show Totem's Python console"
-msgstr "Показати консоль Python програвача Totem"
+msgid "Show Xplayer's Python console"
+msgstr "Показати консоль Python програвача Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
@@ -2220,22 +2220,22 @@ msgstr "Увімкнути віддалене налагодження Python з
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "Можна отримати доступ до Totem.Object через «totem_object» :\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "Можна отримати доступ до Xplayer.Object через «xplayer_object» :\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
-msgid "Totem Python Console"
-msgstr "Консоль Python програвача Totem"
+msgid "Xplayer Python Console"
+msgstr "Консоль Python програвача Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
-"Після того, як ви натиснете Гаразд, Totem чекатиме на з’єднання від winpdb "
+"Після того, як ви натиснете Гаразд, Xplayer чекатиме на з’єднання від winpdb "
 "або rpdb2. Якщо пароль налагоджувача у GConf не вказано, буде використано "
-"типовий пароль ('totem')."
+"типовий пароль ('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2253,11 +2253,11 @@ msgstr "Додаток обертання"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Дозволяє відеозаписам обертатись, якщо воно у неправильній орієнтації."
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
 msgstr "Обернути _за годинниковою стрілкою"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Обернути _проти годинникової стрілки"
 
@@ -2269,25 +2269,25 @@ msgstr "Зберегти копію"
 msgid "Save a copy of the currently playing movie"
 msgstr "Зберегти копію зараз відтворюваного фільму"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "Зберегти копію…"
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "Зберегти копію відеозапису"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "Зберегти копію"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "В_ідео"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "Потік відео"
 
@@ -2334,7 +2334,7 @@ msgstr "Знімок екрана"
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr "Дозволяє робити знімки і галереї з відеозаписів"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "Зберегти серію знімків екрана"
 
@@ -2342,49 +2342,49 @@ msgstr "Зберегти серію знімків екрана"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "Галерея-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "Створення серії знімків екрана…"
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Збереження серії знімків екрана в «%s»"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:220
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
-msgid "Totem could not get a screenshot of the video."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
 msgstr "Не вдалось отримати кадр цього фільму."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "Цього не повинно було трапитись, надішліть звіт про помилку."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "Зробити з_німок"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "Зробити знімок вікна"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "Створити знімки _галереї…"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr "Створити серію знімків екрана"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "Перестрибнути до"
 
@@ -2398,7 +2398,7 @@ msgstr "_Перестрибнути до:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "секунда"
@@ -2409,16 +2409,16 @@ msgstr[2] "секунд"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "6"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "_Перескочити до…"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "Перестрибнути до вказаного часу"
 
@@ -2536,10 +2536,10 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgstr "Мультимедійний програвач використовує %s"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem не може відтворити цей тип носія (%s), хоча додаток, який повинен "
+#~ "Xplayer не може відтворити цей тип носія (%s), хоча додаток, який повинен "
 #~ "його обробляти, встановлено."
 
 #~ msgid ""
@@ -2553,35 +2553,35 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgstr "Докладніша інформація про мультимедійні модулі"
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
-#~ msgstr "Встановіть потрібні модулі та перезапустіть Totem."
+#~ msgstr "Встановіть потрібні модулі та перезапустіть Xplayer."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem не може відтворити цей тип носія (%s), через відсутність модуля, "
+#~ "Xplayer не може відтворити цей тип носія (%s), через відсутність модуля, "
 #~ "який може читати дані з нього."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem не може відтворити цей тип носія (%s), через відсутність модуля, "
+#~ "Xplayer не може відтворити цей тип носія (%s), через відсутність модуля, "
 #~ "який може його обробляти."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it is not supported."
+#~ "Xplayer cannot play this type of media (%s) because it is not supported."
 #~ msgstr ""
-#~ "Totem не може відтворити цей тип носія (%s), оскільки він не "
+#~ "Xplayer не може відтворити цей тип носія (%s), оскільки він не "
 #~ "підтримується."
 
 #~ msgid "Please insert another disc to play back."
 #~ msgstr "Будь ласка, вставте інший носій."
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem не підтримує відтворення звукових компакт-дисків"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer не підтримує відтворення звукових компакт-дисків"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
@@ -2762,17 +2762,17 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Керувати Totem’ом через мобільний телефон та клієнт Bemused"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Керувати Xplayer’ом через мобільний телефон та клієнт Bemused"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Невідома %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Сервер Bemused Totem"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Сервер Bemused Xplayer"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Сервер Bemused Totem версії 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Сервер Bemused Xplayer версії 1.0"
 
 #~ msgid "A plugin to let you browse YouTube videos."
 #~ msgstr "Модуль, що дозволяє переглядати відео з YouTube."
@@ -2824,10 +2824,10 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgstr "Відеоформат не підтримується"
 
 #~ msgid ""
-#~ "This video is not available in any formats which Totem supports. Would "
+#~ "This video is not available in any formats which Xplayer supports. Would "
 #~ "you like to open it in your web browser instead?"
 #~ msgstr ""
-#~ "Це відео недоступне в жодному форматі, який підтримує Totem. Відкрити "
+#~ "Це відео недоступне в жодному форматі, який підтримує Xplayer. Відкрити "
 #~ "його через веб-переглядач?"
 
 #~ msgid "0 frames per second"
@@ -2859,7 +2859,7 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgid "Coherence DLNA/UPnP Client"
 #~ msgstr "DLNA/UPnP клієнт, оснований на Coherence"
 
-#~ msgid "A DLNA/UPnP client for Totem powered by Coherence"
+#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
 #~ msgstr "DLNA/UPnP клієнт, розроблений командою Coherence"
 
 #~ msgid "By artist"
@@ -2986,8 +2986,8 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Додаток ереглядача, що використовує %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Даток Totem для переглядача"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Даток Xplayer для переглядача"
 
 #~ msgid "Zoom Out"
 #~ msgstr "Зменшити"
@@ -3037,7 +3037,7 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgstr "Увімкнути візуальні ефекти?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
 #~ "Схоже, Тотем виконується на віддаленому терміналі.\n"
@@ -3140,7 +3140,7 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgstr "Щоб задіяти зміну типу відео-ефектів потрібен перезапуск."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "Зміна типу виводу звуку вступить у дію лише на наступному відео фільмі, "
@@ -3149,7 +3149,7 @@ msgstr "Додаток, що надсилає події в Zeitgeist"
 #~ msgid "Could not open link"
 #~ msgstr "Не вдалось відкрити посилання"
 
-#~ msgid "Totem could not initialize the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
 #~ msgstr "Не вдалось ініціалізувати конфігураційний механізм."
 
 #~ msgid "Make sure that GNOME is properly installed."

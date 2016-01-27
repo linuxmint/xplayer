@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema id="org.gnome.totem" path="/org/gnome/Totem/" gettext-domain="@GETTEXT_PACKAGE@">
+	<schema id="org.gnome.xplayer" path="/org/gnome/Xplayer/" gettext-domain="@GETTEXT_PACKAGE@">
 		<key name="lock-screensaver-on-audio" type="b">
 			<default>true</default>
 			<_summary>Allow the screensaver to activate when playing audio</_summary>
@@ -51,11 +51,11 @@
 			<default>false</default>
 			<_summary>Whether to enable debug for the playback engine</_summary>
 		</key>
-		<key name="audio-output-type" enum="org.gnome.totem.BvwAudioOutputType">
+		<key name="audio-output-type" enum="org.gnome.xplayer.BvwAudioOutputType">
 			<default>'stereo'</default>
 			<_summary>Type of audio output to use</_summary>
 		</key>
-		<key name="visualization-quality" enum="org.gnome.totem.BvwVisualizationQuality">
+		<key name="visualization-quality" enum="org.gnome.xplayer.BvwVisualizationQuality">
 			<default>'small'</default>
 			<_summary>Visualization quality setting</_summary>
 			<_description>Quality setting for the audio visualization.</_description>
@@ -75,7 +75,7 @@
 				<!-- Translators: This is default subtitle encoding
 				     character set. You can change this to be the most common
 				     encoding for fansub subtitles in your language. File a bug
-				     against Totem, and leave UTF-8 as the default if in doubt. -->
+				     against Xplayer, and leave UTF-8 as the default if in doubt. -->
 				'UTF-8'</default>
 			<_summary>Subtitle encoding</_summary>
 			<_description>Encoding character set for subtitle.</_description>

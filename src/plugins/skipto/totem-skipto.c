@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add excemption clause.
  * See license_change file for details.
@@ -37,75 +37,75 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 
-#include "totem-dirs.h"
-#include "totem-skipto.h"
-#include "totem-uri.h"
+#include "xplayer-dirs.h"
+#include "xplayer-skipto.h"
+#include "xplayer-uri.h"
 #include "backend/bacon-video-widget.h"
 
-static void totem_skipto_dispose	(GObject *object);
+static void xplayer_skipto_dispose	(GObject *object);
 
 /* Callback functions for GtkBuilder */
-G_MODULE_EXPORT void time_entry_activate_cb (GtkEntry *entry, TotemSkipto *skipto);
-G_MODULE_EXPORT void tstw_adjustment_value_changed_cb (GtkAdjustment *adjustment, TotemSkipto *skipto);
+G_MODULE_EXPORT void time_entry_activate_cb (GtkEntry *entry, XplayerSkipto *skipto);
+G_MODULE_EXPORT void tstw_adjustment_value_changed_cb (GtkAdjustment *adjustment, XplayerSkipto *skipto);
 
-struct TotemSkiptoPrivate {
+struct XplayerSkiptoPrivate {
 	GtkBuilder *xml;
 	GtkWidget *time_entry;
 	GtkLabel *seconds_label;
 	gint64 time;
-	Totem *totem;
+	Xplayer *xplayer;
 };
 
-G_DEFINE_TYPE (TotemSkipto, totem_skipto, GTK_TYPE_DIALOG)
-#define TOTEM_SKIPTO_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_SKIPTO, TotemSkiptoPrivate))
+G_DEFINE_TYPE (XplayerSkipto, xplayer_skipto, GTK_TYPE_DIALOG)
+#define XPLAYER_SKIPTO_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_SKIPTO, XplayerSkiptoPrivate))
 
 static void
-totem_skipto_class_init (TotemSkiptoClass *klass)
+xplayer_skipto_class_init (XplayerSkiptoClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	g_type_class_add_private (klass, sizeof (TotemSkiptoPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerSkiptoPrivate));
 
-	object_class->dispose = totem_skipto_dispose;
+	object_class->dispose = xplayer_skipto_dispose;
 }
 
 static void
-totem_skipto_response_cb (GtkDialog *dialog, gint response_id, gpointer data)
+xplayer_skipto_response_cb (GtkDialog *dialog, gint response_id, gpointer data)
 {
-	TotemSkipto *skipto;
+	XplayerSkipto *skipto;
 
-	skipto = TOTEM_SKIPTO (dialog);
+	skipto = XPLAYER_SKIPTO (dialog);
 	gtk_spin_button_update (GTK_SPIN_BUTTON (skipto->priv->time_entry));
 }
 
 static void
-totem_skipto_init (TotemSkipto *skipto)
+xplayer_skipto_init (XplayerSkipto *skipto)
 {
-	skipto->priv = TOTEM_SKIPTO_GET_PRIVATE (skipto);
+	skipto->priv = XPLAYER_SKIPTO_GET_PRIVATE (skipto);
 
 	gtk_dialog_set_default_response (GTK_DIALOG (skipto), GTK_RESPONSE_OK);
 	g_signal_connect (skipto, "response",
-				G_CALLBACK (totem_skipto_response_cb), NULL);
+				G_CALLBACK (xplayer_skipto_response_cb), NULL);
 }
 
 static void
-totem_skipto_dispose (GObject *object)
+xplayer_skipto_dispose (GObject *object)
 {
-	TotemSkipto *skipto;
+	XplayerSkipto *skipto;
 
-	skipto = TOTEM_SKIPTO (object);
+	skipto = XPLAYER_SKIPTO (object);
 	if (skipto->priv && skipto->priv->xml != NULL) {
 		g_object_unref (skipto->priv->xml);
 		skipto->priv->xml = NULL;
 	}
 
-	G_OBJECT_CLASS (totem_skipto_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xplayer_skipto_parent_class)->dispose (object);
 }
 
 void
-totem_skipto_update_range (TotemSkipto *skipto, gint64 _time)
+xplayer_skipto_update_range (XplayerSkipto *skipto, gint64 _time)
 {
-	g_return_if_fail (TOTEM_IS_SKIPTO (skipto));
+	g_return_if_fail (XPLAYER_IS_SKIPTO (skipto));
 
 	if (_time == skipto->priv->time)
 		return;
@@ -116,11 +116,11 @@ totem_skipto_update_range (TotemSkipto *skipto, gint64 _time)
 }
 
 gint64
-totem_skipto_get_range (TotemSkipto *skipto)
+xplayer_skipto_get_range (XplayerSkipto *skipto)
 {
 	gint64 _time;
 
-	g_return_val_if_fail (TOTEM_IS_SKIPTO (skipto), 0);
+	g_return_val_if_fail (XPLAYER_IS_SKIPTO (skipto), 0);
 
 	_time = gtk_spin_button_get_value (GTK_SPIN_BUTTON (skipto->priv->time_entry)) * 1000;
 
@@ -128,31 +128,31 @@ totem_skipto_get_range (TotemSkipto *skipto)
 }
 
 void
-totem_skipto_set_seekable (TotemSkipto *skipto, gboolean seekable)
+xplayer_skipto_set_seekable (XplayerSkipto *skipto, gboolean seekable)
 {
-	g_return_if_fail (TOTEM_IS_SKIPTO (skipto));
+	g_return_if_fail (XPLAYER_IS_SKIPTO (skipto));
 
 	gtk_dialog_set_response_sensitive (GTK_DIALOG (skipto),
 			GTK_RESPONSE_OK, seekable);
 }
 
 void
-totem_skipto_set_current (TotemSkipto *skipto, gint64 _time)
+xplayer_skipto_set_current (XplayerSkipto *skipto, gint64 _time)
 {
-	g_return_if_fail (TOTEM_IS_SKIPTO (skipto));
+	g_return_if_fail (XPLAYER_IS_SKIPTO (skipto));
 
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON (skipto->priv->time_entry),
 			(gdouble) (_time / 1000));
 }
 
 void
-time_entry_activate_cb (GtkEntry *entry, TotemSkipto *skipto)
+time_entry_activate_cb (GtkEntry *entry, XplayerSkipto *skipto)
 {
 	gtk_dialog_response (GTK_DIALOG (skipto), GTK_RESPONSE_OK);
 }
 
 void
-tstw_adjustment_value_changed_cb (GtkAdjustment *adjustment, TotemSkipto *skipto)
+tstw_adjustment_value_changed_cb (GtkAdjustment *adjustment, XplayerSkipto *skipto)
 {
 	/* Update the "seconds" label so that it always has the correct singular/plural form */
 	/* Translators: label for the seconds selector in the "Skip to" dialogue */
@@ -160,16 +160,16 @@ tstw_adjustment_value_changed_cb (GtkAdjustment *adjustment, TotemSkipto *skipto
 }
 
 GtkWidget *
-totem_skipto_new (TotemObject *totem)
+xplayer_skipto_new (XplayerObject *xplayer)
 {
-	TotemSkipto *skipto;
+	XplayerSkipto *skipto;
 	GtkWidget *container;
 	guint label_length;
 
-	skipto = TOTEM_SKIPTO (g_object_new (TOTEM_TYPE_SKIPTO, NULL));
+	skipto = XPLAYER_SKIPTO (g_object_new (XPLAYER_TYPE_SKIPTO, NULL));
 
-	skipto->priv->totem = totem;
-	skipto->priv->xml = totem_plugin_load_interface ("skipto",
+	skipto->priv->xplayer = xplayer;
+	skipto->priv->xml = xplayer_plugin_load_interface ("skipto",
 							 "skipto.ui", TRUE,
 							 NULL, skipto);
 
@@ -213,7 +213,7 @@ totem_skipto_new (TotemObject *totem)
 			    0);         /* padding */
 
 	gtk_window_set_transient_for (GTK_WINDOW (skipto),
-				      totem_get_main_window (totem));
+				      xplayer_get_main_window (xplayer));
 
 	gtk_widget_show_all (GTK_WIDGET (skipto));
 

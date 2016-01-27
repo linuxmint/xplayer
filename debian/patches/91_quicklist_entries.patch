@@ -1,39 +1,39 @@
 Author: Nekhelesh Ramananthan 
-Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/totem/+bug/938031
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/xplayer/+bug/938031
 
 Origin: vendor
 Forwarded: https://bugzilla.gnome.org/671088
 Reviewed-By: Stéphane Graber <stgraber@ubuntu.com>
 
---- totem-3.0.1.orig/data/totem.desktop.in.in.in
-+++ totem-3.0.1/data/totem.desktop.in.in.in
+--- xplayer-3.0.1.orig/data/xplayer.desktop.in.in.in
++++ xplayer-3.0.1/data/xplayer.desktop.in.in.in
 @@ -14,3 +14,29 @@ X-GNOME-Bugzilla-Version=@VERSION@
- X-GNOME-Bugzilla-OtherBinaries=totem-video-thumbnailer;totem-audio-preview;
- X-GNOME-Bugzilla-ExtraInfoScript=@FULL_LIBEXECDIR@/totem/totem-bugreport.py
+ X-GNOME-Bugzilla-OtherBinaries=xplayer-video-thumbnailer;xplayer-audio-preview;
+ X-GNOME-Bugzilla-ExtraInfoScript=@FULL_LIBEXECDIR@/xplayer/xplayer-bugreport.py
  StartupNotify=true
 +Actions=Play;Next;Previous;Mute;Fullscreen;
 +
 +[Desktop Action Play]
 +_Name=Play/Pause
-+Exec=totem --play-pause
++Exec=xplayer --play-pause
 +OnlyShowIn=Unity;
 +
 +[Desktop Action Next]
 +_Name=Next
-+Exec=totem --next
++Exec=xplayer --next
 +OnlyShowIn=Unity;
 +
 +[Desktop Action Previous]
 +_Name=Previous
-+Exec=totem --previous
++Exec=xplayer --previous
 +OnlyShowIn=Unity;
 +
 +[Desktop Action Mute]
 +_Name=Mute
-+Exec=totem --mute
++Exec=xplayer --mute
 +OnlyShowIn=Unity;
 +
 +[Desktop Action Fullscreen]
 +_Name=Fullscreen
-+Exec=totem --fullscreen
++Exec=xplayer --fullscreen
 +OnlyShowIn=Unity;

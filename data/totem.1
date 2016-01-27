@@ -13,14 +13,14 @@
 .\" You should have received a copy of the GNU General Public License 
 .\" along with this; if not write to the Free Software Foundation, Inc.
 .\" 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
-.TH totem 1 "2008\-08\-25" "GNOME"
+.TH xplayer 1 "2008\-08\-25" "GNOME"
 .SH NAME
-Totem \- GNOME desktop movie player based on GStreamer
+Xplayer \- GNOME desktop movie player based on GStreamer
 .SH SYNOPSIS
-.B totem
+.B xplayer
 .RI [ option... ] " " [ filenames | URI ]
 .SH DESCRIPTION
-.B Totem
+.B Xplayer
 is a movie player for the GNOME desktop.  Through use of the
 .B GStreamer
 backend many popular file and streaming formats are supported including:
@@ -28,11 +28,11 @@ MPEG audio and video (MP3/MPV), Ogg, AVI, ASF, MOV, WMV,
 QuickTime, and more.  Playing of DVD and VCD media is
 also possible.
 Although primarily intended as a movie player,
-.B Totem
+.B Xplayer
 can also play many audio formats.
 .P
 For additional documentation on interactive use of 
-.B Totem
+.B Xplayer
 select the
 .I Help
 menu option.  The menus allow access to some features not
@@ -42,95 +42,95 @@ available through keybindings or command-line options.
 .B \-?, --help
 Output a longer help message then quit.  (Any discrepancies
 between this man page and the output of
-.B totem --help
+.B xplayer --help
 should be reported as a documentation bug.)
 .TP
 .B --version
 Output version information then quit.
 .P
 The following options command an already-running instance of
-.B Totem
+.B Xplayer
 to do something; they are useful for remote-control scripting. If 
-.B Totem
+.B Xplayer
 is not already running, these commands will launch a new instance of
-.B Totem
+.B Xplayer
 but will not do anything further.
 .TP
 .B --play-pause
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to toggle between play and pause.
 .TP
 .B --play
 Tell an already-running instance of
-.B Totem
+.B Xplayer
 to play (has no effect if already playing)
 .TP
 .B --pause
 Tell an already-running instance of
-.B Totem
+.B Xplayer
 to pause (has no effect if already paused)
 .TP
 .B --next
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to skip to the next movie or chapter in the playlist.
 .TP
 .B --previous
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to return to the previous movie or chapter in the playlist.
 .TP
 .B --seek-fwd
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to seek forwards 15 seconds in the current movie.
 .TP
 .B --seek-bwd
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to seek backwards 15 seconds in the current movie.
 .TP
 .B --volume-up
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to raise the volume by 8%.
 .TP
 .B --volume-down
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to lower the volume by 8%.
 .TP
 .B --mute
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to toggle between muted and unmuted audio.
 .TP
 .B --fullscreen
 Tell an already-running instance of 
-.B Totem
+.B Xplayer
 to toggle fullscreen mode.
 .TP
 .B --toggle-controls
 Tell an already-running instance of
-.B Totem
+.B Xplayer
 to toggle showing the controls.
 .TP
 .B --quit
 Tell an already-running instance of
-.B Totem
+.B Xplayer
 to quit.
 .TP
 .BI "--enqueue " filename|URI
-Tell an already-running instance of Totem to add a new stream
+Tell an already-running instance of Xplayer to add a new stream
 to the playlist.
 .TP
 .BI "--replace " filename|URI
-Tell an already-running instance of Totem to play 
+Tell an already-running instance of Xplayer to play 
 from the playlist.
 .SH KEYBINDINGS
 Global keybindings for
-.BR Totem :
+.BR Xplayer :
 .P
 .ta \w'Down-arrow   'u	
 a	cycle between aspect ratios
@@ -192,38 +192,38 @@ m		show the DVD menu
 .br
 c		show the DVD chapter menu
 .SH FILES
-.I /usr/lib/totem/plugins/
+.I /usr/lib/xplayer/plugins/
 .RS
 The global plugins directory, which contains all the system-installed
 plugins.
 .RE
-.I ~/.local/share/totem/plugins/
+.I ~/.local/share/xplayer/plugins/
 .RS
 The user plugins directory, containing plugins available only to that user.
-It is always in the "totem/plugins" subdirectory of your 
+It is always in the "xplayer/plugins" subdirectory of your 
 .B XDG_DATA_HOME
 directory.
 .RE
-.I ~/.config/totem/state.ini
+.I ~/.config/xplayer/state.ini
 .RS
 The configuration file for the main window's appearance, stored in a
 simple INI format.
 .RE
 .SH BUGS
-.B Totem
+.B Xplayer
 cannot play files using some proprietary codecs.
 .SH AUTHOR
-.B Totem
+.B Xplayer
 was written by Bastien Nocera <hadess@hadess.net>.
 This manual page was written by Andre Lehovich for the
 Debian Project.
 .SH DISTRIBUTION
-The latest version of Totem may be downloaded from
-.UR http://projects.gnome.org/totem/
-<http://projects.gnome.org/totem/>
+The latest version of Xplayer may be downloaded from
+.UR http://projects.gnome.org/xplayer/
+<http://projects.gnome.org/xplayer/>
 .UE
 .SH SEE ALSO
-.BR "totem-video-thumbnailer" (1),
+.BR "xplayer-video-thumbnailer" (1),
 .P
 The online documentation available through the program's
 .I Help

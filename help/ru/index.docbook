@@ -4,7 +4,7 @@
 <!ENTITY appversion "2.26">
 <!ENTITY manrevision "3.0">
 <!ENTITY date "February 2009">
-<!ENTITY app "Totem Movie Player">
+<!ENTITY app "Xplayer Movie Player">
 <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file.
        Use the appversion entity to specify the version of the application.
@@ -23,7 +23,7 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title>Руководство по <application>видеопроигрывателю Totem</application></title>
+    <title>Руководство по <application>видеопроигрывателю Xplayer</application></title>
     <copyright lang="en">
       <year>2003</year>
       <holder>Chee Bin HOH</holder>
@@ -37,7 +37,7 @@
     </releaseinfo>
 
     <abstract role="description">
-      <para><application>Видеопроигрыватель Totem</application> — это проигрыватель мультимедиа-файлов для GNOME, использующий GStreamer для воспроизведения, но можно использовать и xine. Он поддерживает большинство кодеков аудио и видео, в том числе и DVD. Среди возможностей Totem: вывод на ТВ, полноэкранный режим, субтитры и многое другое.</para>
+      <para><application>Видеопроигрыватель Xplayer</application> — это проигрыватель мультимедиа-файлов для GNOME, использующий GStreamer для воспроизведения, но можно использовать и xine. Он поддерживает большинство кодеков аудио и видео, в том числе и DVD. Среди возможностей Xplayer: вывод на ТВ, полноэкранный режим, субтитры и многое другое.</para>
     </abstract>
 
     <publisher>
@@ -164,7 +164,7 @@
 <!-- to V3.0, and so on. -->
     <revhistory>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V2.0</revnumber>
 	<date>August 2006</date>
 	<revdescription>
 	  <para role="author" lang="en">Chee Bin HOH
@@ -174,7 +174,7 @@
         </revdescription>
       </revision>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V3.0</revnumber>
 	<date>February 2009</date>
 	<revdescription>
 	  <para role="author" lang="en">Philip Withnall
@@ -185,10 +185,10 @@
       </revision>
     </revhistory>
 
-    <releaseinfo>Данное руководство описывает версию Totem 2.26</releaseinfo>
+    <releaseinfo>Данное руководство описывает версию Xplayer 2.26</releaseinfo>
     <legalnotice>
       <title>Обратная связь</title>
-      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
         this manual, follow the directions in the
         <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
       </para>
@@ -196,10 +196,10 @@
   </articleinfo>
 
   <indexterm zone="index" lang="en">
-    <primary>Totem Movie Player</primary>
+    <primary>Xplayer Movie Player</primary>
   </indexterm>
   <indexterm zone="index" lang="en">
-    <primary>totem</primary>
+    <primary>xplayer</primary>
   </indexterm>
 
 
@@ -207,10 +207,10 @@
 <!-- ============= Introduction ============================== -->
 <!-- Use the Introduction section to give a brief overview of what
      the application is and what it does. -->
-  <sect1 id="totem-introduction">
+  <sect1 id="xplayer-introduction">
     <title>Введение</title>
-    <para><application>Видеопроигрыватель Totem</application> ― это приложение для среды GNOME, которое может проигрывать фильмы и музыку с помощью фреймворка GStreamer или библиотеки xine.</para>
-    <para><application>Видеопроигрыватель Totem</application> предоставляет следующие возможности:</para>
+    <para><application>Видеопроигрыватель Xplayer</application> ― это приложение для среды GNOME, которое может проигрывать фильмы и музыку с помощью фреймворка GStreamer или библиотеки xine.</para>
+    <para><application>Видеопроигрыватель Xplayer</application> предоставляет следующие возможности:</para>
     <itemizedlist>
       <listitem>
 	<para>поддержка большого количества форматов видео и звука;</para>
@@ -235,7 +235,7 @@
       </listitem>
     </itemizedlist>
     <note>
-      <para><application>Видеопроигрыватель Totem</application> также имеет дополнительные возможности, например:</para>
+      <para><application>Видеопроигрыватель Xplayer</application> также имеет дополнительные возможности, например:</para>
       <itemizedlist>
 	<listitem>
 	  <para>создание миниатюр из кадров фильмов в Nautilus — файловом менеджере GNOME;</para>
@@ -260,12 +260,12 @@
      If the information about how to get started is very short, you can
      include it in the Introduction and omit this section. -->
 
-  <sect1 id="totem-getting-started">
+  <sect1 id="xplayer-getting-started">
     <title>Начало работы</title>
 
-    <sect2 id="totem-start">
-      <title>Чтобы запустить <application>видеопроигрыватель Totem</application></title>
-      <para>Вы можете запустить <application>видеопроигрыватель Totem</application> следующими способами:</para>
+    <sect2 id="xplayer-start">
+      <title>Чтобы запустить <application>видеопроигрыватель Xplayer</application></title>
+      <para>Вы можете запустить <application>видеопроигрыватель Xplayer</application> следующими способами:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Меню <guimenu>Приложения</guimenu></term>
@@ -281,32 +281,32 @@
 	<varlistentry>
 	  <term>Командная строка</term>
 	  <listitem>
-	    <para>Чтобы запустить <application>Видеопроигрыватель Totem</application> из командной строки, наберите следующую команду и нажмите <keycap>Enter</keycap>:</para>
+	    <para>Чтобы запустить <application>Видеопроигрыватель Xplayer</application> из командной строки, наберите следующую команду и нажмите <keycap>Enter</keycap>:</para>
 	    <para lang="en">
-            <command>totem</command>
+            <command>xplayer</command>
             </para>
 	    <tip>
-	      <para>Чтобы увидеть перечень доступных параметров командной строки, введите <command>totem --help</command> и нажмите <keycap>Enter</keycap>.</para>
+	      <para>Чтобы увидеть перечень доступных параметров командной строки, введите <command>xplayer --help</command> и нажмите <keycap>Enter</keycap>.</para>
 	    </tip>
 	  </listitem>
 	</varlistentry>
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-when-start">
-      <title>После запуска <application>видеопроигрывателя Totem</application></title>
-      <para>Когда вы запустите <application>видеопроигрыватель Totem</application>, появится следующее окно.</para>
+    <sect2 id="xplayer-when-start">
+      <title>После запуска <application>видеопроигрывателя Xplayer</application></title>
+      <para>Когда вы запустите <application>видеопроигрыватель Xplayer</application>, появится следующее окно.</para>
 
       <!-- ==== Figure ==== -->
-      <figure id="totem-start-fig">
-	<title>Главное окно <application>видеопроигрывателя Totem</application></title>
+      <figure id="xplayer-start-fig">
+	<title>Главное окно <application>видеопроигрывателя Xplayer</application></title>
 	<screenshot>
 	  <mediaobject lang="en">
 	    <imageobject>
-	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	      <imagedata fileref="figures/xplayer_start_window.png" format="PNG"/>
 	    </imageobject>
 	    <textobject>
-	      <phrase>Shows <application>Totem Movie Player</application> main window with
+	      <phrase>Shows <application>Xplayer Movie Player</application> main window with
 		  sidebar opened on playlist. Contains
 		  menubar, display area, sidebar, elapsed time slider, seek control
 		  buttons, volume slider and statusbar.
@@ -319,12 +319,12 @@
 
       <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
       <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
-      <para>Окно <application>видеопроигрывателя Totem</application> состоит из следующих частей:</para>
+      <para>Окно <application>видеопроигрывателя Xplayer</application> состоит из следующих частей:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Строка меню.</term>
   	  <listitem>
-	    <para>Меню содержат все команды, которые используются в <application>видеопроигрывателе Totem</application>.</para>
+	    <para>Меню содержат все команды, которые используются в <application>видеопроигрывателе Xplayer</application>.</para>
  	  </listitem>
    	</varlistentry>
 	<varlistentry>
@@ -371,11 +371,11 @@
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to use the application to perform the tasks for
   which the application is designed. -->
-  <sect1 id="totem-usage">
+  <sect1 id="xplayer-usage">
     <title>Использование</title>
 
     <!-- ================ Usage Subsection ================================ -->
-    <sect2 id="totem-open-file">
+    <sect2 id="xplayer-open-file">
       <title>Чтобы открыть файл</title>
       <para lang="en">To open a video or an audio file, choose
         <menuchoice>
@@ -387,14 +387,14 @@
 		Select the file or files you want to open, then click
 	<guibutton>OK</guibutton>.
       </para>
-      <para>Можно перетаскивать файлы из других приложений, например, из файлового менеджера в окно <application>видеопроигрывателя Totem</application>. Если перетащить файл на область воспроизведения, он заменит текущий список воспроизведения и начнёт воспроизведение. Если перетащить файл в список воспроизведения в боковой панели, то файл будет добавлен к текущему списку воспроизведения. <application>Видеопроигрыватель Totem</application> откроет файл и начнёт воспроизведение фильма или композиции. Название воспроизводимого фильма или композиции выводится в заголовок окна и в список воспроизведения в боковой панели.</para>
-      <para>При попытке открыть файл, формат которого непонятен <application>видеопроигрывателю Totem</application>, появится сообщение об ошибке. Чаще всего это бывает, когда не установлены нужные кодеки. Информация о кодеках есть на <ulink url="http://projects.gnome.org/totem/#codecs" type="http">веб-сайте <application>видеопроигрывателя Totem</application></ulink>.</para>
+      <para>Можно перетаскивать файлы из других приложений, например, из файлового менеджера в окно <application>видеопроигрывателя Xplayer</application>. Если перетащить файл на область воспроизведения, он заменит текущий список воспроизведения и начнёт воспроизведение. Если перетащить файл в список воспроизведения в боковой панели, то файл будет добавлен к текущему списку воспроизведения. <application>Видеопроигрыватель Xplayer</application> откроет файл и начнёт воспроизведение фильма или композиции. Название воспроизводимого фильма или композиции выводится в заголовок окна и в список воспроизведения в боковой панели.</para>
+      <para>При попытке открыть файл, формат которого непонятен <application>видеопроигрывателю Xplayer</application>, появится сообщение об ошибке. Чаще всего это бывает, когда не установлены нужные кодеки. Информация о кодеках есть на <ulink url="http://projects.gnome.org/xplayer/#codecs" type="http">веб-сайте <application>видеопроигрывателя Xplayer</application></ulink>.</para>
       <tip>
-	<para>Вы можете открыть аудио- или видеофайл в <application>видеопроигрывателе Totem</application>, дважды щёлкнув по файлу в файловом менеджере <application>Nautilus</application>.</para>
+	<para>Вы можете открыть аудио- или видеофайл в <application>видеопроигрывателе Xplayer</application>, дважды щёлкнув по файлу в файловом менеджере <application>Nautilus</application>.</para>
       </tip>
     </sect2>
 
-    <sect2 id="totem-usage-open-location">
+    <sect2 id="xplayer-usage-open-location">
       <title>Чтобы открыть файл по адресу</title>
       <para lang="en">To open a file by URI (location), choose
         <menuchoice>
@@ -408,7 +408,7 @@
       <para>Если в буфер обмена был скопирован URI, он будет автоматически вставлен в список.</para>
     </sect2>
 
-    <sect2 id="totem-usage-play">
+    <sect2 id="xplayer-usage-play">
       <title>Воспроизведение фильма (DVD или VCD)</title>
 	      <para lang="en">Insert the disc in the optical device of your computer, then choose
           	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
@@ -422,11 +422,11 @@
       </para>
        </sect2>
 
-    <sect2 id="totem-usage-pause">
+    <sect2 id="xplayer-usage-pause">
       <title>Чтобы приостановить фильм или песню</title>
       <para lang="en">To pause a movie or song that is playing, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_pause_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows pause button.</phrase></textobject>
         </inlinemediaobject> button, or choose
         <menuchoice>
@@ -437,7 +437,7 @@
       </para>
       <para lang="en">To resume playing a movie or song, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_play_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows play button.</phrase></textobject>
         </inlinemediaobject> button again, or choose
         <menuchoice>
@@ -448,7 +448,7 @@
       </para>
     </sect2>
 
-    <sect2 id="totem-usage-view-properties">
+    <sect2 id="xplayer-usage-view-properties">
       <title>Чтобы просмотреть свойства фильма или песни</title>
       <para lang="en">To view the properties of a movie or song, choose
         <menuchoice>
@@ -457,7 +457,7 @@
 	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
     </sect2>
 
-    <sect2 id="totem-usage-seek">
+    <sect2 id="xplayer-usage-seek">
       <title>Перемотка</title>
       <para>Перемотать фильм или песню можно несколькими способами:</para>
       <variablelist>
@@ -510,7 +510,7 @@
                 <guimenuitem>Next Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_next_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek next button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -526,7 +526,7 @@
                 <guimenuitem>Previous Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_previous_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -535,9 +535,9 @@
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-usage-change-zoom">
+    <sect2 id="xplayer-usage-change-zoom">
       <title>Чтобы изменить масштаб</title>
-	  <sect3 id="totem-usage-change-size">
+	  <sect3 id="xplayer-usage-change-size">
 		<title>Чтобы изменить размер видео</title>
       <para>Изменить масштаб области просмотра можно следующими способами:</para>
       <itemizedlist>
@@ -562,7 +562,7 @@
     </listitem>
 	</itemizedlist>
 	</sect3>
-	 <sect3 id="totem-usage-change-ratio">
+	 <sect3 id="xplayer-usage-change-ratio">
 		<title>Чтобы изменить пропорции изображения</title>
 	      <para lang="en">To switch between different aspect ratios, choose
             <menuchoice>
@@ -573,7 +573,7 @@
 	  </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-adjust-volume">
+    <sect2 id="xplayer-usage-adjust-volume">
       <title>Чтобы отрегулировать громкость</title>
       <para lang="en">To increase the volume, choose
         <menuchoice>
@@ -591,40 +591,40 @@
       <para>Кроме того, громкость можно регулировать с помощью соответствующей кнопки. Нажмите кнопку громкости и выберите необходимый уровень с помощью ползунка.</para>
     </sect2>
 
-    <sect2 id="totem-usage-on-top">
+    <sect2 id="xplayer-usage-on-top">
       <title>Закрепление окна поверх остальных окон</title>
-      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+      <para lang="en">To make the <application>Xplayer Movie Player</application> window always on top of other application windows,
         choose
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Plugins</guimenuitem>
-        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Xplayer Movie Player</application> window will now stay on
         top of all other windows while a movie is playing, but not while audio or visualizations are playing.
        </para>
-       <para>Чтобы окно больше не удерживалось поверх всех окон, выключите модуль <guilabel>Всегда поверх всех окон</guilabel>. Смотрите <xref linkend="totem-plugins-always-on-top"/> для дополнительной информации.</para>
+       <para>Чтобы окно больше не удерживалось поверх всех окон, выключите модуль <guilabel>Всегда поверх всех окон</guilabel>. Смотрите <xref linkend="xplayer-plugins-always-on-top"/> для дополнительной информации.</para>
     </sect2>
 
-    <sect2 id="totem-usage-show-control">
+    <sect2 id="xplayer-usage-show-control">
       <title>Чтобы показать или скрыть средства управления</title>
-      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+      <para lang="en">To show or hide the <application>Xplayer Movie Player</application> window controls, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
           <guimenu>View</guimenu>
           <guimenuitem>Show Controls</guimenuitem>
         </menuchoice>, or press the <keycap>H</keycap> key.
-        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        You can also right-click on the <application>Xplayer Movie Player</application> window, then choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
 	  <guimenuitem>Show Controls</guimenuitem>
         </menuchoice> from the popup menu.
       </para>
-      <para>Если выбран параметр <guilabel>Показывать средства управления</guilabel>, то в окне <application>видеопроигрывателя Totem</application> будут показаны строка меню, полоса перемотки, кнопки перехода, ползунок громкости и строка состояния. Если же данный параметр не выбран, то эти средства управления будут скрыты, и будет видна только область просмотра.</para>
+      <para>Если выбран параметр <guilabel>Показывать средства управления</guilabel>, то в окне <application>видеопроигрывателя Xplayer</application> будут показаны строка меню, полоса перемотки, кнопки перехода, ползунок громкости и строка состояния. Если же данный параметр не выбран, то эти средства управления будут скрыты, и будет видна только область просмотра.</para>
     </sect2>
 
-    <sect2 id="totem-usage-playlist">
+    <sect2 id="xplayer-usage-playlist">
       <title>Чтобы управлять списком воспроизведения</title>
 
-      <sect3 id="totem-usage-playlist-show-hide">
+      <sect3 id="xplayer-usage-playlist-show-hide">
 	<title>Чтобы показать или скрыть список воспроизведения</title>
 	<para lang="en">To show or hide the playlist, choose
           <menuchoice>
@@ -634,7 +634,7 @@
 		  the sidebar.</para>
       </sect3>
 
-      <sect3 id="totem-usage-playlist-manage">
+      <sect3 id="xplayer-usage-playlist-manage">
 	<title>Управление списком воспроизведения</title>
 	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
           <variablelist>
@@ -683,27 +683,27 @@
           </variablelist>
         </para>
       </sect3>
-      <sect3 id="totem-usage-playlist-repeat">
+      <sect3 id="xplayer-usage-playlist-repeat">
 	<title>Чтобы включить или выключить режим повтора</title>
 	<para>Чтобы включить или выключить режим повтора, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Режим повтора</guimenuitem></menuchoice>.</para>
       </sect3>
-      <sect3 id="totem-usage-playlist-shuffle">
+      <sect3 id="xplayer-usage-playlist-shuffle">
 	<title>Чтобы включить или выключить случайный порядок</title>
 	<para>Чтобы включить или выключить случайный порядок, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>В случайном порядке</guimenuitem></menuchoice>.</para>
       </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-subtitle">
+    <sect2 id="xplayer-usage-subtitle">
 	  <title>Чтобы выбрать субтитры</title>
 	  <para>Чтобы выбрать язык субтитров, выберите <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu></menuchoice> и выберите язык, в котором хотите видеть субтитры.</para>
 	  <para>Чтобы отключить субтитры, выберите <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu><guimenuitem>Нет</guimenuitem></menuchoice>.</para>
-	  <note><para>По умолчанию <application>видеопроигрыватель Totem</application> будет использовать для субтитров тот язык, который используется на компьютере.</para></note>
-	  <para><application>Видеопроигрыватель Totem</application> автоматически загружает и показывает субтитры для видео, если их файл имеет то же имя, что и проигрываемое видео, а расширение является одним из следующих: <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> или <filename class="extension">ass</filename>.</para>
+	  <note><para>По умолчанию <application>видеопроигрыватель Xplayer</application> будет использовать для субтитров тот язык, который используется на компьютере.</para></note>
+	  <para><application>Видеопроигрыватель Xplayer</application> автоматически загружает и показывает субтитры для видео, если их файл имеет то же имя, что и проигрываемое видео, а расширение является одним из следующих: <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> или <filename class="extension">ass</filename>.</para>
 	  <para>Если имя файла с субтитрами отличается от имени файла, содержащего видео, можно щёлкнуть правой кнопкой мыши по проигрываемому видео в списке воспроизведения и выбрать в появившемся меню <menuchoice><guimenuitem>Выбрать текстовые субтитры</guimenuitem></menuchoice>, чтобы загрузить нужный файл. Также можно указать файл с субтитрами, выбрав <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu><guimenuitem>Выбрать текстовые субтитры</guimenuitem></menuchoice>.</para>
-	  <para>Используя модуль <guilabel>Загрузка субтитров</guilabel>, можно также загружать субтитры при помощи службы OpenSubtitles. Для получения дополнительной информации см. <xref linkend="totem-plugins-opensubtitles"/>.</para>
+	  <para>Используя модуль <guilabel>Загрузка субтитров</guilabel>, можно также загружать субтитры при помощи службы OpenSubtitles. Для получения дополнительной информации см. <xref linkend="xplayer-plugins-opensubtitles"/>.</para>
 	</sect2>
 
-    <sect2 id="totem-usage-take-screenshot">
+    <sect2 id="xplayer-usage-take-screenshot">
       <title>Чтобы сохранить кадр</title>
       <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
         <menuchoice>
@@ -713,10 +713,10 @@
 	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
 	to save the screenshot.
       </para>
-      <tip><para><application>Видеопроигрыватель Totem</application> покажет миниатюру того снимка, который будет сохранён, в левой части диалогового окна <guilabel>Сохранить снимок экрана</guilabel>.</para></tip>
+      <tip><para><application>Видеопроигрыватель Xplayer</application> покажет миниатюру того снимка, который будет сохранён, в левой части диалогового окна <guilabel>Сохранить снимок экрана</guilabel>.</para></tip>
     </sect2>
 
-    <sect2 id="totem-usage-create-screenshot-gallery">
+    <sect2 id="xplayer-usage-create-screenshot-gallery">
       <title>Сохранение серии кадров</title>
       <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
         <menuchoice>
@@ -732,65 +732,65 @@
   </sect1>
 
 <!-- =========== Plugins ======================================= -->
-  <sect1 id="totem-plugins">
+  <sect1 id="xplayer-plugins">
     <title>Расширения</title>
-    <para>Многие возможности <application>видеопроигрывателя Totem</application> представлены в виде модулей, небольших частей приложения, которые загружаются только при необходимости.</para>
-    <sect2 id="totem-plugins-load">
+    <para>Многие возможности <application>видеопроигрывателя Xplayer</application> представлены в виде модулей, небольших частей приложения, которые загружаются только при необходимости.</para>
+    <sect2 id="xplayer-plugins-load">
       <title>Включение модуля</title>
       <para>Чтобы просмотреть список установленных модулей, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Модули</guimenuitem></menuchoice>. Появится диалоговое <application>Настройка модулей</application>. В левой его части расположен список установленных модулей, а справа — описание выбранного модуля. Если у модуля есть настройки, будет активна кнопка <guibutton>Параметры</guibutton> справа.</para>
       <para>Чтобы включить модуль, отметье его флажком слева от его имени в списке модулей, и он сразу будет загружен. Если при загрузке произойдёт ошибка, появится соответствующее сообщение.</para>
-      <para>Чтобы отключить модуль, уберите флажок. Состояние модуля (включён или выключен) сохранится и после закрытия <application>видеопроигрывателя Totem</application>.</para>
+      <para>Чтобы отключить модуль, уберите флажок. Состояние модуля (включён или выключен) сохранится и после закрытия <application>видеопроигрывателя Xplayer</application>.</para>
     </sect2>
-    <sect2 id="totem-plugins-always-on-top">
+    <sect2 id="xplayer-plugins-always-on-top">
       <title>Всегда поверх</title>
       <para>Расширение <guilabel>Всегда поверх</guilabel> удерживает главное окно <application>Видеопроигрывателя</application> поверх других окон во время воспроизведения фильма. Для того, чтобы вернуть окну прежние свойства, отключите модуль расширения.</para>
     </sect2>
-    <sect2 id="totem-plugins-coherence">
+    <sect2 id="xplayer-plugins-coherence">
       <title>Клиент DLNA/UPnP, основанный на Coherence</title>
-      <para>Модуль <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> позволяет <application>видеопроигрывателю Totem</application> воспроизводить мультимедийные данные, получаемые от медиа-служб UPnP (например, Coherence) в локальной сети.</para>
+      <para>Модуль <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> позволяет <application>видеопроигрывателю Xplayer</application> воспроизводить мультимедийные данные, получаемые от медиа-служб UPnP (например, Coherence) в локальной сети.</para>
       <para>При включённом модуле <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или щёлкните по кнопке <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> из выпадающего списка вверху боковой панели для отображения соответствующей панели.</para>
-      <para>В списке боковой панели показан перечень доступных серверов. Щелчок по одному из них покажет список типов мультимедиа, которые он может обслуживать, а щелчок по папке покажет список доступных файлов. Двойной щелчок по файлу добавит его в список воспроизведения <application>видеопроигрывателя Totem</application> и начнёт воспроизведение. Также можно щёлкнуть правой кнопкой по файлу и выбрать <menuchoice><guimenuitem>Воспроизвести</guimenuitem></menuchoice> или <menuchoice><guimenuitem>Поставить в очередь</guimenuitem></menuchoice>, чтобы сразу начать воспроизведение или добавить файл в список воспроизведения соответственно.</para>
+      <para>В списке боковой панели показан перечень доступных серверов. Щелчок по одному из них покажет список типов мультимедиа, которые он может обслуживать, а щелчок по папке покажет список доступных файлов. Двойной щелчок по файлу добавит его в список воспроизведения <application>видеопроигрывателя Xplayer</application> и начнёт воспроизведение. Также можно щёлкнуть правой кнопкой по файлу и выбрать <menuchoice><guimenuitem>Воспроизвести</guimenuitem></menuchoice> или <menuchoice><guimenuitem>Поставить в очередь</guimenuitem></menuchoice>, чтобы сразу начать воспроизведение или добавить файл в список воспроизведения соответственно.</para>
       <para>Если медиа-сервер позволяет, пункт <menuchoice><guimenuitem>Удалить</guimenuitem></menuchoice> в контекстном меню файла позволит удалить файл с медиа-сервера.</para>
     </sect2>
-    <sect2 id="totem-plugins-gromit">
+    <sect2 id="xplayer-plugins-gromit">
       <title>Аннотации Gromit</title>
       <para>Модуль <guilabel>Аннотации средствами Gromit</guilabel> позволяет рисовать поверх фильмов во время их воспроизведения при помощи <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. Чтобы включить этот модуль,  в системе должен быть установлен <application>Gromit</application>. Обратитесь к документации по операционной системе, чтобы получить информацию об установке приложений.</para>
       <para>При включённом модуле нажатие <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> включает и выключает <application>Gromit</application>. Когда <application>Gromit</application> включён, указатель мыши изменяется на перекрестие. Для того, чтобы начать рисование на экране, переместите указатель, удерживая кнопку мыши. Затем снова нажмите <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo>, чтобы выключить <application>Gromit</application>.</para>
-      <para>Для очистки экрана от аннотаций нажмите <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> или закройте <application>видеопроигрыватель Totem</application>.</para>
+      <para>Для очистки экрана от аннотаций нажмите <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> или закройте <application>видеопроигрыватель Xplayer</application>.</para>
     </sect2>
-    <sect2 id="totem-plugins-jamendo">
+    <sect2 id="xplayer-plugins-jamendo">
       <title>Jamendo</title>
       <para>Модуль <guilabel>Jamendo</guilabel> позволяет прослушивать музыку, распространяемую по лицензии Creative Commons, с сайта <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>.</para>
-      <sect3 id="totem-plugins-jamendo-configuration">
+      <sect3 id="xplayer-plugins-jamendo-configuration">
         <title>Настройка модуля</title>
         <para>Вы можете настроить модуль <guilabel>Jamendo</guilabel>. Щёлкните по кнопке <guibutton>Параметры</guibutton> после включения модуля, появится диалоговое окно <application>Конфигурация модуля Jamendo</application>. В появившемся окне можно выбрать формат загружаемой музыки, Ogg или MP3 (Ogg предпочтительнее, так как является свободным форматом), а также указать количество запрашиваемых альбомов при поиске (увеличьте значение, если соединение с Интернет достаточно быстрое).</para>
         <para>Для завершения нажмите кнопку <guibutton>OK</guibutton>.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-setup">
+      <sect3 id="xplayer-plugins-jamendo-setup">
         <title>Боковая панель Jamendo</title>
         <para>Когда модуль <guilabel>Jamendo</guilabel> включён, выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы отобразить боковую панель. Выберите <guilabel>Jamendo</guilabel> из выпадающего списка вверху боковой панели для отображения панели <guilabel>Jamendo</guilabel>.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-search">
+      <sect3 id="xplayer-plugins-jamendo-search">
         <title>Поиск музыки</title>
         <para>Введите запрос в поле поиска вверху панели <guilabel>Jamendo</guilabel>. Можно искать как по исполнителю, так и по тегам. Чтобы начать поиск, нажмите кнопку <guilabel>Поиск</guilabel>.</para>
         <para>Результаты поиска будут показаны в виде списка во вкладке <guilabel>Результаты поиска</guilabel> на боковой панели и могут быть просмотрены при помощи кнопок со стрелками внизу боковой панели. В списке представлены альбомы, содержимое альбома можно просмотреть, щёлкнув по нему. Повторный щелчок по альбому скроет список композиций, входящих в альбом.</para>
         <para>При выбранном исполнителе можно щёлкнуть по кнопке <guibutton>Страница альбома Jamendo</guibutton>, чтобы открыть страницу альбома на веб-сайте Jamendo. Двойной щелчок по альбому или выбор пункта <menuchoice><guimenuitem>Добавить в список воспроизведения</guimenuitem></menuchoice> в контекстном меню альбома заменит список воспроизведения композициями выбранного альбома и начнёт потоковое воспроизведение первой композиции. Двойной щелчок по отдельной композиции заменит список воспроизведения только этой композицией.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-popular">
+      <sect3 id="xplayer-plugins-jamendo-popular">
         <title>Популярные альбомы и последние выпуски</title>
         <para>На вкладке <guilabel>Популярные</guilabel> на панели <guilabel>Jamendo</guilabel> показан список самых популярных альбомов в Jamendo на текущий момент, которые могут быть загружены так же, как и результаты поиска. На вкладке <guilabel>Последние выпуски</guilabel> перечислены последние загруженные на Jamendo альбомы.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-tracker">
+    <sect2 id="xplayer-plugins-tracker">
       <title>Локальный поиск</title>
-      <para>Модуль <guilabel>Локальный поиск</guilabel> позволяет искать видео- и аудио-файлы на компьютере при помощи <application>видеопроигрывателя Totem</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>Локальный поиск</guilabel> из выпадающего списка вверху боковой панели, чтобы открыть панель <guilabel>Локальный поиск</guilabel>.</para>
+      <para>Модуль <guilabel>Локальный поиск</guilabel> позволяет искать видео- и аудио-файлы на компьютере при помощи <application>видеопроигрывателя Xplayer</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>Локальный поиск</guilabel> из выпадающего списка вверху боковой панели, чтобы открыть панель <guilabel>Локальный поиск</guilabel>.</para>
       <para>Чтобы выполнить поиск, введите запрос в поле ввода вверху боковой панели и нажмите <guibutton>Найти</guibutton>. Запрос может включать шаблоны, такие как <literal>*</literal>, который соответствует любой последовательности символов. Например, запрос <userinput>*.mpg</userinput> найдёт все файлы с расширением <filename class="extension">.mpg</filename>.</para>
       <para>Можно перемещаться по результатам поиска при помощи кнопок <guibutton>Назад</guibutton> и <guibutton>Вперёд</guibutton> внизу боковой панели. Можно также сразу перейти на нужную страницу, введя её номер.</para>
     </sect2>
-    <sect2 id="totem-plugins-publish">
+    <sect2 id="xplayer-plugins-publish">
       <title>Публикация списков воспроизведения</title>
       <para>Модуль <guilabel>Опубликовать список воспроизведения</guilabel> позволяет публиковать списки воспроизведения в локальной сети, чтобы позволить другим компьютерам получать доступ к ним и воспроизводить их.</para>
-      <sect3 id="totem-plugins-publish-configuration">
+      <sect3 id="xplayer-plugins-publish-configuration">
         <title>Настройка модуля</title>
         <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
           plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
@@ -798,7 +798,7 @@
           <variablelist>
 	    <varlistentry>
 	      <term lang="en"><literal>%a</literal></term>
-	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Xplayer Movie Player</application>.</para></listitem>
 	    </varlistentry>
 	    <varlistentry>
 	      <term lang="en"><literal>%h</literal></term>
@@ -821,60 +821,60 @@
 	<para>Также можно выбрать флажок <guilabel>Использовать защищённый транспортный протокол (https)</guilabel>, если необходимо шифровать публикуемый список воспроизведения при передаче по сети.</para>
         <para>Для завершения нажмите кнопку <guibutton>Закрыть</guibutton>.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-publishing">
+      <sect3 id="xplayer-plugins-publish-publishing">
         <title>Публикация списков воспроизведения</title>
         <para>При включённом модуле нет необходимости в явной публикации списков воспроизведения — они автоматически будут доступны по сети как веб-сайт Zeroconf.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-neighborhood">
+      <sect3 id="xplayer-plugins-publish-neighborhood">
         <title>Просмотр сетевого окружения</title>
         <para>Для просмотра опубликованных списков воспроизведения выберите <guilabel>Окружение</guilabel> из выпадающего списка вверху боковой панели. Если какой-то список был опубликован в сети, он будет показан в панели. Двойной щелчок по списку загрузит его и начнёт воспроизведение.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-opensubtitles">
+    <sect2 id="xplayer-plugins-opensubtitles">
       <title>Загрузка субтитров</title>
       <para>Модуль <guilabel>Загрузка субтитров</guilabel> позволяет искать и загружать субтитры с сайта <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink>.</para>
       <para>Субтитры могут быть загружены только для локальных фильмов, но не для звуковых файлоы, DVD, потоков DVB, VCD или потоков HTTP. Для поиска субтитров к текущему фильму выберите <menuchoice><guimenu>Вид</guimenu><guimenuitem>Загрузить субтитры для фильма</guimenuitem></menuchoice>, после этого появится диалоговое окно <application>Загрузка субтитров к фильму</application>.</para>
       <para>Выберите нужный язык субтитров в выпадающем списке вверху диалогового окна, затем нажмите кнопку <guibutton>Найти</guibutton>, чтобы найти субтитры для текущего фильма. Критерием поиска субтитров в большей степени является содержимое фильма, чем название файла или теги.</para>
       <para>Результаты поиска показаны в списке в середине диалогового окна. В настоящий момент субтитры могут быть просмотрены только после <emphasis>повторного открытия</emphasis> фильма с субтитрами, поэтому после выбора файла субтитров, который необходимо загрузить, нажмите кнопку <guibutton>Воспроизвести с субтитрами</guibutton>, чтобы загрузить субтитры и перезапустить фильм.</para>
-        <note><para>Загруженные субтитры кэшируются (по умолчанию в <filename>~/.cache/totem/subtitles</filename>), поэтому при повторном просмотре фильма их не придётся загружать снова. При загрузке новых субтитров для фильма, ранее загруженные субтитры для этого фильма удаляются.</para></note>
+        <note><para>Загруженные субтитры кэшируются (по умолчанию в <filename>~/.cache/xplayer/subtitles</filename>), поэтому при повторном просмотре фильма их не придётся загружать снова. При загрузке новых субтитров для фильма, ранее загруженные субтитры для этого фильма удаляются.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-thumbnail">
+    <sect2 id="xplayer-plugins-thumbnail">
       <title>Миниатюра</title>
-      <para>Модуль <guilabel>Миниатюра</guilabel> заменяет значок главного окна <application>видеопроигрывателя Totem</application> миниатюрой текущего фильма и обновляет значок при открытии нового видео.</para>
-      <note><para>Если миниатюры для текущего видео нет (или воспроизводится звуковой файл), значок главного окна изменится на логотип <application>видеопроигрывателя Totem</application>.</para></note>
+      <para>Модуль <guilabel>Миниатюра</guilabel> заменяет значок главного окна <application>видеопроигрывателя Xplayer</application> миниатюрой текущего фильма и обновляет значок при открытии нового видео.</para>
+      <note><para>Если миниатюры для текущего видео нет (или воспроизводится звуковой файл), значок главного окна изменится на логотип <application>видеопроигрывателя Xplayer</application>.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-brasero">
+    <sect2 id="xplayer-plugins-brasero">
       <title>Запись видеодисков</title>
       <para>Модуль <guilabel>Запись видеодисков</guilabel> позволяет записывать текущий список воспроизведения на DVD или VCD при помощи <application>Brasero</application>.</para>
       <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
         A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
         information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
     </sect2>
-    <sect2 id="totem-plugins-youtube">
+    <sect2 id="xplayer-plugins-youtube">
       <title>Обозреватель YouTube</title>
-      <para>Модуль <guilabel>Браузер YouTube</guilabel> позволяет искать видео на <ulink type="http" url="http://www.youtube.com/">YouTube</ulink> и воспроизводить его непосредственно в  <application>видеопроигрывателе Totem</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы открыть боковую панель. Выберите <guilabel>YouTube</guilabel> из выпадающего списка вверху панели, чтобы открыть панель <guilabel>YouTube</guilabel>.</para>
+      <para>Модуль <guilabel>Браузер YouTube</guilabel> позволяет искать видео на <ulink type="http" url="http://www.youtube.com/">YouTube</ulink> и воспроизводить его непосредственно в  <application>видеопроигрывателе Xplayer</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы открыть боковую панель. Выберите <guilabel>YouTube</guilabel> из выпадающего списка вверху панели, чтобы открыть панель <guilabel>YouTube</guilabel>.</para>
       <para>Для поиска видео на YouTube введите запрос в поле вверху боковой панели, затем нажмите кнопку <guibutton>Найти</guibutton>. Результаты поиска будут показаны в списке. При прокрутке списка новые результаты будут подгружаться автоматически.</para>
       <para>Чтобы воспроизвести видео, дважды щёлкните по нему в списке или выберите в его контекстном меню пункт <menuchoice><guimenuitem>Добавить в список воспроизведения</guimenuitem></menuchoice>. Список похожих видеозаписей будет автоматически показан во время воспроизведения видео во вкладке <guilabel>Похожие видео</guilabel> панели <guilabel>YouTube</guilabel>.</para>
       <para>Видео с YouTube можно открыть в веб-браузере, выбрав пункт <menuchoice><guimenuitem>Открыть в веб-браузере</guimenuitem></menuchoice> в его контекстном меню. Это действие приведёт к открытию видео в его изначальном местоположении на веб-сайте YouTube.</para>
     </sect2>
-    <sect2 id="totem-plugins-dbus-service">
+    <sect2 id="xplayer-plugins-dbus-service">
       <title>Служба D-Bus</title>
-      <para>Модуль <guilabel>Служба D-Bus</guilabel> предназначен для широковещательных уведомлений через шину D-Bus о воспроизводимой в настоящий момент <application>видеопроигрывателем Totem</application> композиции. Приложения (например, <application>Gajim</application>) могут получать подобные уведомления и реагировать соответствующим образом. Например, обновлять информацию в системе обмена мгновенными сообщениями о проигрываемом в настоящий момент видео.</para>
+      <para>Модуль <guilabel>Служба D-Bus</guilabel> предназначен для широковещательных уведомлений через шину D-Bus о воспроизводимой в настоящий момент <application>видеопроигрывателем Xplayer</application> композиции. Приложения (например, <application>Gajim</application>) могут получать подобные уведомления и реагировать соответствующим образом. Например, обновлять информацию в системе обмена мгновенными сообщениями о проигрываемом в настоящий момент видео.</para>
     </sect2>
   </sect1>
 
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to customize the
      application. -->
-  <sect1 id="totem-prefs">
+  <sect1 id="xplayer-prefs">
     <title>Параметры</title>
-    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+    <para lang="en">To modify the preferences of <application>Xplayer Movie Player</application>, choose
       <menuchoice>
         <guimenu>Edit</guimenu>
 	<guimenuitem>Preferences</guimenuitem>
       </menuchoice>.</para>
 
-    <sect2 id="totem-prefs-general">
+    <sect2 id="xplayer-prefs-general">
       <title>Общие</title>
       <variablelist>
 	<varlistentry>
@@ -901,7 +901,7 @@
         </varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-display">
+    <sect2 id="xplayer-prefs-display">
       <title>Показ</title>
       <variablelist>
 	<varlistentry>
@@ -909,7 +909,7 @@
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	        <para>Выберите параметр <guilabel>Автоматически изменять размер окна для нового видео</guilabel>, если хотите, чтобы при открытии фильма <application>видеопроигрыватель Totem</application> автоматически подстраивал размер своего окна под размер фильма.</para>
+	        <para>Выберите параметр <guilabel>Автоматически изменять размер окна для нового видео</guilabel>, если хотите, чтобы при открытии фильма <application>видеопроигрыватель Xplayer</application> автоматически подстраивал размер своего окна под размер фильма.</para>
               </listitem>
               <listitem>
                 <para>Выберите параметр хранителя экрана, если вы хотите, чтобы хранитель экрана мог включаться при воспроизведении звуковых файлов. Некоторые мониторы со встроенными динамиками могут прекращать воспроизведение, когда запущен хранитель экрана.</para>
@@ -955,7 +955,7 @@
 	</varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-audio">
+    <sect2 id="xplayer-prefs-audio">
       <title>Аудио</title>
       <variablelist>
 	<varlistentry>
@@ -986,11 +986,11 @@
       section is optional: primary place for this info is "About.." box of
       the program. However, if you do wish to include this info in the
       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
-  <sect1 id="totem-about">
-    <title>О <application>видеопроигрывателе Totem</application></title>
-    <para><application>Видеопроигрыватель Totem</application> написали: Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>), который добавил поддержку GStreamer, и Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Чтобы узнать больше о <application>видеопроигрывателе Totem</application>, посетите <ulink url="http://www.gnome.org/projects/totem/" type="http">его домашнюю веб-страницу</ulink>.</para>
+  <sect1 id="xplayer-about">
+    <title>О <application>видеопроигрывателе Xplayer</application></title>
+    <para><application>Видеопроигрыватель Xplayer</application> написали: Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>), который добавил поддержку GStreamer, и Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Чтобы узнать больше о <application>видеопроигрывателе Xplayer</application>, посетите <ulink url="http://www.gnome.org/projects/xplayer/" type="http">его домашнюю веб-страницу</ulink>.</para>
     <para lang="en">
-      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
       this manual, follow the directions in the
       <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
     </para>

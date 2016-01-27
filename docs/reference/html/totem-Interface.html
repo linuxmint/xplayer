@@ -4,53 +4,53 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Interface</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
-<link rel="home" href="index.html" title="Totem Reference Manual">
+<link rel="home" href="index.html" title="Xplayer Reference Manual">
 <link rel="up" href="core-api.html" title="Core API">
-<link rel="prev" href="TotemObject.html" title="TotemObject">
-<link rel="next" href="totem-TotemPlugin.html" title="TotemPlugin">
+<link rel="prev" href="XplayerObject.html" title="XplayerObject">
+<link rel="next" href="xplayer-XplayerPlugin.html" title="XplayerPlugin">
 <meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
 <tr valign="middle">
-<td><a accesskey="p" href="TotemObject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="XplayerObject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
 <td><a accesskey="u" href="core-api.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
-<th width="100%" align="center">Totem Reference Manual</th>
-<td><a accesskey="n" href="totem-TotemPlugin.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+<th width="100%" align="center">Xplayer Reference Manual</th>
+<td><a accesskey="n" href="xplayer-XplayerPlugin.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
 </tr>
 <tr><td colspan="5" class="shortcuts">
-<a href="#totem-Interface.synopsis" class="shortcut">Top</a>
+<a href="#xplayer-Interface.synopsis" class="shortcut">Top</a>
                    | 
-                  <a href="#totem-Interface.description" class="shortcut">Description</a>
+                  <a href="#xplayer-Interface.description" class="shortcut">Description</a>
 </td></tr>
 </table>
 <div class="refentry">
-<a name="totem-Interface"></a><div class="titlepage"></div>
+<a name="xplayer-Interface"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="totem-Interface.top_of_page"></a>Interface</span></h2>
+<h2><span class="refentrytitle"><a name="xplayer-Interface.top_of_page"></a>Interface</span></h2>
 <p>Interface — interface utility/loading/error functions</p>
 </td>
 <td valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="totem-Interface.stability-level"></a><h2>Stability Level</h2>
+<a name="xplayer-Interface.stability-level"></a><h2>Stability Level</h2>
 Unstable, unless otherwise indicated
 </div>
 <div class="refsynopsisdiv">
-<a name="totem-Interface.synopsis"></a><h2>Synopsis</h2>
+<a name="xplayer-Interface.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">
-#include &lt;totem-interface.h&gt;
+#include &lt;xplayer-interface.h&gt;
 
-<span class="returnvalue">void</span>                <a class="link" href="totem-Interface.html#totem-interface-error" title="totem_interface_error ()">totem_interface_error</a>               (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="xplayer-Interface.html#xplayer-interface-error" title="xplayer_interface_error ()">xplayer_interface_error</a>               (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> *parent</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="totem-Interface.html#totem-interface-error-blocking" title="totem_interface_error_blocking ()">totem_interface_error_blocking</a>      (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="xplayer-Interface.html#xplayer-interface-error-blocking" title="xplayer_interface_error_blocking ()">xplayer_interface_error_blocking</a>      (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> *parent</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="totem-Interface.html#totem-interface-error-with-link" title="totem_interface_error_with_link ()">totem_interface_error_with_link</a>     (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="xplayer-Interface.html#xplayer-interface-error-with-link" title="xplayer_interface_error_with_link ()">xplayer_interface_error_with_link</a>     (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *label</code></em>,
@@ -58,16 +58,16 @@ Unstable, unless otherwise indicated
 </pre>
 </div>
 <div class="refsect1">
-<a name="totem-Interface.description"></a><h2>Description</h2>
+<a name="xplayer-Interface.description"></a><h2>Description</h2>
 <p>
 A collection of interface utility functions, for loading interfaces and displaying errors.
 </p>
 </div>
 <div class="refsect1">
-<a name="totem-Interface.details"></a><h2>Details</h2>
+<a name="xplayer-Interface.details"></a><h2>Details</h2>
 <div class="refsect2">
-<a name="totem-interface-error"></a><h3>totem_interface_error ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_interface_error               (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<a name="xplayer-interface-error"></a><h3>xplayer_interface_error ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_interface_error               (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> *parent</code></em>);</pre>
 <p>
@@ -98,12 +98,12 @@ as its secondary text.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-interface-error-blocking"></a><h3>totem_interface_error_blocking ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_interface_error_blocking      (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<a name="xplayer-interface-error-blocking"></a><h3>xplayer_interface_error_blocking ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_interface_error_blocking      (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> *parent</code></em>);</pre>
 <p>
-Display a modal error dialogue like <a class="link" href="totem-Interface.html#totem-interface-error" title="totem_interface_error ()"><code class="function">totem_interface_error()</code></a> which blocks until the user has
+Display a modal error dialogue like <a class="link" href="xplayer-Interface.html#xplayer-interface-error" title="xplayer_interface_error ()"><code class="function">xplayer_interface_error()</code></a> which blocks until the user has
 dismissed it.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -130,14 +130,14 @@ dismissed it.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-interface-error-with-link"></a><h3>totem_interface_error_with_link ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_interface_error_with_link     (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+<a name="xplayer-interface-error-with-link"></a><h3>xplayer_interface_error_with_link ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_interface_error_with_link     (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *label</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> *parent</code></em>);</pre>
 <p>
-Display a modal error dialogue like <a class="link" href="totem-Interface.html#totem-interface-error" title="totem_interface_error ()"><code class="function">totem_interface_error()</code></a>,
+Display a modal error dialogue like <a class="link" href="xplayer-Interface.html#xplayer-interface-error" title="xplayer_interface_error ()"><code class="function">xplayer_interface_error()</code></a>,
 but add a button which will open <em class="parameter"><code>uri</code></em> in a browser window.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">

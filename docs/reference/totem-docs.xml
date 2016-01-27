@@ -6,23 +6,23 @@
 ]>
 <book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
 	<bookinfo>
-		<title>Totem Reference Manual</title>
+		<title>Xplayer Reference Manual</title>
 		<releaseinfo>
-			for Totem &version;. The latest version of this documentation can be found online at
-			<ulink role="online-location" url="http://library.gnome.org/devel/totem/">http://library.gnome.org/devel/totem/</ulink>.
+			for Xplayer &version;. The latest version of this documentation can be found online at
+			<ulink role="online-location" url="http://library.gnome.org/devel/xplayer/">http://library.gnome.org/devel/xplayer/</ulink>.
 		</releaseinfo>
 	</bookinfo>
 
 	<chapter id="tutorials">
 		<title>Tutorials</title>
-		<xi:include href="xml/totem-plugins.xml"/>
+		<xi:include href="xml/xplayer-plugins.xml"/>
 	</chapter>
 
 	<chapter id="core-api">
 		<title>Core API</title>
-		<xi:include href="xml/totem-object.xml"/>
-		<xi:include href="xml/totem-interface.xml"/>
-		<xi:include href="xml/totem-plugin.xml"/>
+		<xi:include href="xml/xplayer-object.xml"/>
+		<xi:include href="xml/xplayer-interface.xml"/>
+		<xi:include href="xml/xplayer-plugin.xml"/>
 		<xi:include href="xml/bacon-video-widget.xml"/>
 	</chapter>
 

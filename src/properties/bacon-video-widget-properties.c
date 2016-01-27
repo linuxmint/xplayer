@@ -27,7 +27,7 @@
 #include <string.h>
 
 #include "backend/video-utils.h"
-#include "totem-interface.h"
+#include "xplayer-interface.h"
 
 #include "bacon-video-widget-properties.h"
 

@@ -31,18 +31,18 @@
 #include <libpeas/peas-object-module.h>
 #include <libpeas/peas-activatable.h>
 
-#include "totem-plugin.h"
-#include "totem-interface.h"
+#include "xplayer-plugin.h"
+#include "xplayer-interface.h"
 
-#define TOTEM_TYPE_SAVE_FILE_PLUGIN		(totem_save_file_plugin_get_type ())
-#define TOTEM_SAVE_FILE_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_SAVE_FILE_PLUGIN, TotemSaveFilePlugin))
-#define TOTEM_SAVE_FILE_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_SAVE_FILE_PLUGIN, TotemSaveFilePluginClass))
-#define TOTEM_IS_SAVE_FILE_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_SAVE_FILE_PLUGIN))
-#define TOTEM_IS_SAVE_FILE_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_SAVE_FILE_PLUGIN))
-#define TOTEM_SAVE_FILE_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_SAVE_FILE_PLUGIN, TotemSaveFilePluginClass))
+#define XPLAYER_TYPE_SAVE_FILE_PLUGIN		(xplayer_save_file_plugin_get_type ())
+#define XPLAYER_SAVE_FILE_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_SAVE_FILE_PLUGIN, XplayerSaveFilePlugin))
+#define XPLAYER_SAVE_FILE_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_SAVE_FILE_PLUGIN, XplayerSaveFilePluginClass))
+#define XPLAYER_IS_SAVE_FILE_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_SAVE_FILE_PLUGIN))
+#define XPLAYER_IS_SAVE_FILE_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_SAVE_FILE_PLUGIN))
+#define XPLAYER_SAVE_FILE_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_SAVE_FILE_PLUGIN, XplayerSaveFilePluginClass))
 
 typedef struct {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 	GtkWidget   *bvw;
 
 	char        *mrl;
@@ -52,17 +52,17 @@ typedef struct {
 
 	GtkActionGroup *action_group;
 	guint ui_merge_id;
-} TotemSaveFilePluginPrivate;
+} XplayerSaveFilePluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_SAVE_FILE_PLUGIN, TotemSaveFilePlugin, totem_save_file_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_SAVE_FILE_PLUGIN, XplayerSaveFilePlugin, xplayer_save_file_plugin)
 
-static void totem_save_file_plugin_copy (GtkAction *action,
-					 TotemSaveFilePlugin *pi);
+static void xplayer_save_file_plugin_copy (GtkAction *action,
+					 XplayerSaveFilePlugin *pi);
 
-static GtkActionEntry totem_save_file_plugin_actions [] = {
+static GtkActionEntry xplayer_save_file_plugin_actions [] = {
 	{ "SaveFile", "save-as", N_("Save a Copy..."), "<Ctrl>S",
 		N_("Save a copy of the movie"),
-		G_CALLBACK (totem_save_file_plugin_copy) },
+		G_CALLBACK (xplayer_save_file_plugin_copy) },
 };
 
 static void
@@ -116,8 +116,8 @@ copy_uris_with_nautilus (const char *source,
 }
 
 static void
-totem_save_file_plugin_copy (GtkAction *action,
-			     TotemSaveFilePlugin *pi)
+xplayer_save_file_plugin_copy (GtkAction *action,
+			     XplayerSaveFilePlugin *pi)
 {
 	GtkWidget *fs;
 	char *filename;
@@ -127,7 +127,7 @@ totem_save_file_plugin_copy (GtkAction *action,
 
 
 	fs = gtk_file_chooser_dialog_new (_("Save a Copy"),
-					  totem_get_main_window (pi->priv->totem),
+					  xplayer_get_main_window (pi->priv->xplayer),
 					  GTK_FILE_CHOOSER_ACTION_SAVE,
 					  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 					  GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
@@ -191,8 +191,8 @@ totem_save_file_plugin_copy (GtkAction *action,
 }
 
 static void
-totem_save_file_file_closed (TotemObject *totem,
-				 TotemSaveFilePlugin *pi)
+xplayer_save_file_file_closed (XplayerObject *xplayer,
+				 XplayerSaveFilePlugin *pi)
 {
 	GtkAction *action;
 
@@ -206,11 +206,11 @@ totem_save_file_file_closed (TotemObject *totem,
 }
 
 static void
-totem_save_file_file_opened (TotemObject *totem,
+xplayer_save_file_file_opened (XplayerObject *xplayer,
 			     const char *mrl,
-			     TotemSaveFilePlugin *pi)
+			     XplayerSaveFilePlugin *pi)
 {
-	TotemSaveFilePluginPrivate *priv = pi->priv;
+	XplayerSaveFilePluginPrivate *priv = pi->priv;
 	GtkAction *action;
 
 	if (pi->priv->mrl != NULL) {
@@ -228,15 +228,15 @@ totem_save_file_file_opened (TotemObject *totem,
 		action = gtk_action_group_get_action (priv->action_group, "SaveFile");
 		gtk_action_set_sensitive (action, TRUE);
 		pi->priv->mrl = g_strdup (mrl);
-		pi->priv->name = totem_get_short_title (pi->priv->totem);
+		pi->priv->name = xplayer_get_short_title (pi->priv->xplayer);
 		pi->priv->is_tmp = FALSE;
 	}
 }
 
 static void
-totem_save_file_download_filename (GObject    *gobject,
+xplayer_save_file_download_filename (GObject    *gobject,
 				   GParamSpec *pspec,
-				   TotemSaveFilePlugin *pi)
+				   XplayerSaveFilePlugin *pi)
 {
 	GtkAction *action;
 	char *filename;
@@ -252,7 +252,7 @@ totem_save_file_download_filename (GObject    *gobject,
 
 	pi->priv->mrl = g_filename_to_uri (filename, NULL, NULL);
 	g_free (filename);
-	pi->priv->name = totem_get_short_title (pi->priv->totem);
+	pi->priv->name = xplayer_get_short_title (pi->priv->xplayer);
 	pi->priv->is_tmp = TRUE;
 
 	action = gtk_action_group_get_action (pi->priv->action_group, "SaveFile");
@@ -262,8 +262,8 @@ totem_save_file_download_filename (GObject    *gobject,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemSaveFilePlugin *pi = TOTEM_SAVE_FILE_PLUGIN (plugin);
-	TotemSaveFilePluginPrivate *priv = pi->priv;
+	XplayerSaveFilePlugin *pi = XPLAYER_SAVE_FILE_PLUGIN (plugin);
+	XplayerSaveFilePluginPrivate *priv = pi->priv;
 	GtkUIManager *uimanager = NULL;
 	GtkAction *action;
 	char *path;
@@ -275,31 +275,31 @@ impl_activate (PeasActivatable *plugin)
 		return;
 	g_free (path);
 
-	priv->totem = g_object_get_data (G_OBJECT (plugin), "object");
-	priv->bvw = totem_get_video_widget (priv->totem);
+	priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	priv->bvw = xplayer_get_video_widget (priv->xplayer);
 
-	g_signal_connect (priv->totem,
+	g_signal_connect (priv->xplayer,
 			  "file-opened",
-			  G_CALLBACK (totem_save_file_file_opened),
+			  G_CALLBACK (xplayer_save_file_file_opened),
 			  plugin);
-	g_signal_connect (priv->totem,
+	g_signal_connect (priv->xplayer,
 			  "file-closed",
-			  G_CALLBACK (totem_save_file_file_closed),
+			  G_CALLBACK (xplayer_save_file_file_closed),
 			  plugin);
 	g_signal_connect (priv->bvw,
 			  "notify::download-filename",
-			  G_CALLBACK (totem_save_file_download_filename),
+			  G_CALLBACK (xplayer_save_file_download_filename),
 			  plugin);
 
 	/* add UI */
 	priv->action_group = gtk_action_group_new ("SaveFileActions");
 	gtk_action_group_set_translation_domain (priv->action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions (priv->action_group,
-				      totem_save_file_plugin_actions,
-				      G_N_ELEMENTS (totem_save_file_plugin_actions),
+				      xplayer_save_file_plugin_actions,
+				      G_N_ELEMENTS (xplayer_save_file_plugin_actions),
 				      pi);
 
-	uimanager = totem_get_ui_manager (priv->totem);
+	uimanager = xplayer_get_ui_manager (priv->xplayer);
 	gtk_ui_manager_insert_action_group (uimanager, priv->action_group, -1);
 	g_object_unref (priv->action_group);
 
@@ -314,7 +314,7 @@ impl_activate (PeasActivatable *plugin)
 			       TRUE);
 	gtk_ui_manager_add_ui (uimanager,
 			       priv->ui_merge_id,
-			       "/ui/totem-main-popup/save-placeholder",
+			       "/ui/xplayer-main-popup/save-placeholder",
 			       "SaveFile",
 			       "SaveFile",
 			       GTK_UI_MANAGER_MENUITEM,
@@ -323,28 +323,28 @@ impl_activate (PeasActivatable *plugin)
 	action = gtk_action_group_get_action (priv->action_group, "SaveFile");
 	gtk_action_set_sensitive (action, FALSE);
 
-	mrl = totem_get_current_mrl (priv->totem);
-	totem_save_file_file_opened (priv->totem, mrl, pi);
-	totem_save_file_download_filename (NULL, NULL, pi);
+	mrl = xplayer_get_current_mrl (priv->xplayer);
+	xplayer_save_file_file_opened (priv->xplayer, mrl, pi);
+	xplayer_save_file_download_filename (NULL, NULL, pi);
 	g_free (mrl);
 }
 
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemSaveFilePlugin *pi = TOTEM_SAVE_FILE_PLUGIN (plugin);
-	TotemSaveFilePluginPrivate *priv = pi->priv;
+	XplayerSaveFilePlugin *pi = XPLAYER_SAVE_FILE_PLUGIN (plugin);
+	XplayerSaveFilePluginPrivate *priv = pi->priv;
 	GtkUIManager *uimanager = NULL;
 
-	g_signal_handlers_disconnect_by_func (priv->totem, totem_save_file_file_opened, plugin);
-	g_signal_handlers_disconnect_by_func (priv->totem, totem_save_file_file_closed, plugin);
-	g_signal_handlers_disconnect_by_func (priv->bvw, totem_save_file_download_filename, plugin);
+	g_signal_handlers_disconnect_by_func (priv->xplayer, xplayer_save_file_file_opened, plugin);
+	g_signal_handlers_disconnect_by_func (priv->xplayer, xplayer_save_file_file_closed, plugin);
+	g_signal_handlers_disconnect_by_func (priv->bvw, xplayer_save_file_download_filename, plugin);
 
-	uimanager = totem_get_ui_manager (priv->totem);
+	uimanager = xplayer_get_ui_manager (priv->xplayer);
 	gtk_ui_manager_remove_ui (uimanager, priv->ui_merge_id);
 	gtk_ui_manager_remove_action_group (uimanager, priv->action_group);
 
-	priv->totem = NULL;
+	priv->xplayer = NULL;
 	priv->bvw = NULL;
 
 	g_free (priv->mrl);

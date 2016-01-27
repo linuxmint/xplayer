@@ -6,7 +6,7 @@ bvw_test_SOURCES = bvw-test.c
 
 bvw_test_CPPFLAGS = \
 	-DDATADIR=\"$(pkgdatadir)\"	\
-	-DLOGO_PATH=DATADIR\"\"G_DIR_SEPARATOR_S\"totem\"G_DIR_SEPARATOR_S\"totem_logo.png\"	\
+	-DLOGO_PATH=DATADIR\"\"G_DIR_SEPARATOR_S\"xplayer\"G_DIR_SEPARATOR_S\"xplayer_logo.png\"	\
 	-DG_LOG_DOMAIN="\"bvw-test\"" \
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
@@ -46,8 +46,8 @@ libbaconvideowidget_la_SOURCES = \
 	bacon-video-widget.c				\
 	bacon-video-widget-gst-missing-plugins.c	\
 	bacon-video-widget-gst-missing-plugins.h	\
-	totem-aspect-frame.h				\
-	totem-aspect-frame.c				\
+	xplayer-aspect-frame.h				\
+	xplayer-aspect-frame.c				\
 	gsd-osd-window.c				\
 	gsd-osd-window.h				\
 	gsd-osd-window-private.h			\
@@ -66,8 +66,8 @@ libbaconvideowidget_la_CFLAGS =	\
 	$(AM_CFLAGS)
 
 libbaconvideowidget_la_LIBADD =					\
-	$(top_builddir)/src/gst/libtotemgsthelpers.la		\
-	$(top_builddir)/src/gst/libtotemgstpixbufhelpers.la	\
+	$(top_builddir)/src/gst/libxplayergsthelpers.la		\
+	$(top_builddir)/src/gst/libxplayergstpixbufhelpers.la	\
 	$(BACKEND_LIBS)						\
 	-lm
 

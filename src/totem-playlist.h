@@ -1,4 +1,4 @@
-/* totem-playlist.h: Simple playlist dialog
+/* xplayer-playlist.h: Simple playlist dialog
 
    Copyright (C) 2002, 2003, 2004, 2005 Bastien Nocera <hadess@hadess.net>
 
@@ -20,151 +20,151 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_PLAYLIST_H
-#define TOTEM_PLAYLIST_H
+#ifndef XPLAYER_PLAYLIST_H
+#define XPLAYER_PLAYLIST_H
 
 #include <gtk/gtk.h>
-#include <totem-pl-parser.h>
+#include <xplayer-pl-parser.h>
 #include <gio/gio.h>
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_PLAYLIST            (totem_playlist_get_type ())
-#define TOTEM_PLAYLIST(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_PLAYLIST, TotemPlaylist))
-#define TOTEM_PLAYLIST_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_PLAYLIST, TotemPlaylistClass))
-#define TOTEM_IS_PLAYLIST(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_PLAYLIST))
-#define TOTEM_IS_PLAYLIST_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_PLAYLIST))
+#define XPLAYER_TYPE_PLAYLIST            (xplayer_playlist_get_type ())
+#define XPLAYER_PLAYLIST(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_PLAYLIST, XplayerPlaylist))
+#define XPLAYER_PLAYLIST_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_PLAYLIST, XplayerPlaylistClass))
+#define XPLAYER_IS_PLAYLIST(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_PLAYLIST))
+#define XPLAYER_IS_PLAYLIST_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_PLAYLIST))
 
 typedef enum {
-	TOTEM_PLAYLIST_STATUS_NONE,
-	TOTEM_PLAYLIST_STATUS_PLAYING,
-	TOTEM_PLAYLIST_STATUS_PAUSED
-} TotemPlaylistStatus;
+	XPLAYER_PLAYLIST_STATUS_NONE,
+	XPLAYER_PLAYLIST_STATUS_PLAYING,
+	XPLAYER_PLAYLIST_STATUS_PAUSED
+} XplayerPlaylistStatus;
 
 typedef enum {
-	TOTEM_PLAYLIST_DIRECTION_NEXT,
-	TOTEM_PLAYLIST_DIRECTION_PREVIOUS
-} TotemPlaylistDirection;
+	XPLAYER_PLAYLIST_DIRECTION_NEXT,
+	XPLAYER_PLAYLIST_DIRECTION_PREVIOUS
+} XplayerPlaylistDirection;
 
 typedef enum {
-	TOTEM_PLAYLIST_DIALOG_SELECTED,
-	TOTEM_PLAYLIST_DIALOG_PLAYING
-} TotemPlaylistSelectDialog;
+	XPLAYER_PLAYLIST_DIALOG_SELECTED,
+	XPLAYER_PLAYLIST_DIALOG_PLAYING
+} XplayerPlaylistSelectDialog;
 
 
-typedef struct TotemPlaylist	       TotemPlaylist;
-typedef struct TotemPlaylistClass      TotemPlaylistClass;
-typedef struct TotemPlaylistPrivate    TotemPlaylistPrivate;
+typedef struct XplayerPlaylist	       XplayerPlaylist;
+typedef struct XplayerPlaylistClass      XplayerPlaylistClass;
+typedef struct XplayerPlaylistPrivate    XplayerPlaylistPrivate;
 
-typedef void (*TotemPlaylistForeachFunc) (TotemPlaylist *playlist,
+typedef void (*XplayerPlaylistForeachFunc) (XplayerPlaylist *playlist,
 					  const gchar   *filename,
 					  const gchar   *uri,
 					  gpointer       user_data);
 
-struct TotemPlaylist {
+struct XplayerPlaylist {
 	GtkBox parent;
-	TotemPlaylistPrivate *priv;
+	XplayerPlaylistPrivate *priv;
 };
 
-struct TotemPlaylistClass {
+struct XplayerPlaylistClass {
 	GtkBoxClass parent_class;
 
-	void (*changed) (TotemPlaylist *playlist);
-	void (*item_activated) (TotemPlaylist *playlist);
-	void (*active_name_changed) (TotemPlaylist *playlist);
-	void (*current_removed) (TotemPlaylist *playlist);
-	void (*repeat_toggled) (TotemPlaylist *playlist, gboolean repeat);
-	void (*shuffle_toggled) (TotemPlaylist *playlist, gboolean toggled);
-	void (*subtitle_changed) (TotemPlaylist *playlist);
-	void (*item_added) (TotemPlaylist *playlist, const gchar *filename, const gchar *uri);
-	void (*item_removed) (TotemPlaylist *playlist, const gchar *filename, const gchar *uri);
+	void (*changed) (XplayerPlaylist *playlist);
+	void (*item_activated) (XplayerPlaylist *playlist);
+	void (*active_name_changed) (XplayerPlaylist *playlist);
+	void (*current_removed) (XplayerPlaylist *playlist);
+	void (*repeat_toggled) (XplayerPlaylist *playlist, gboolean repeat);
+	void (*shuffle_toggled) (XplayerPlaylist *playlist, gboolean toggled);
+	void (*subtitle_changed) (XplayerPlaylist *playlist);
+	void (*item_added) (XplayerPlaylist *playlist, const gchar *filename, const gchar *uri);
+	void (*item_removed) (XplayerPlaylist *playlist, const gchar *filename, const gchar *uri);
 };
 
-GType    totem_playlist_get_type (void);
-GtkWidget *totem_playlist_new      (void);
+GType    xplayer_playlist_get_type (void);
+GtkWidget *xplayer_playlist_new      (void);
 
 /* The application is responsible for checking that the mrl is correct
  * @display_name is if you have a preferred display string for the mrl,
  * NULL otherwise
  */
-void totem_playlist_add_mrl (TotemPlaylist *playlist,
+void xplayer_playlist_add_mrl (XplayerPlaylist *playlist,
                              const char *mrl,
                              const char *display_name,
                              gboolean cursor,
                              GCancellable *cancellable,
                              GAsyncReadyCallback callback,
                              gpointer user_data);
-gboolean totem_playlist_add_mrl_finish (TotemPlaylist *playlist,
+gboolean xplayer_playlist_add_mrl_finish (XplayerPlaylist *playlist,
                                         GAsyncResult *result);
-gboolean totem_playlist_add_mrl_sync (TotemPlaylist *playlist,
+gboolean xplayer_playlist_add_mrl_sync (XplayerPlaylist *playlist,
                                       const char *mrl,
                                       const char *display_name);
 
-typedef struct TotemPlaylistMrlData TotemPlaylistMrlData;
+typedef struct XplayerPlaylistMrlData XplayerPlaylistMrlData;
 
-TotemPlaylistMrlData *totem_playlist_mrl_data_new (const gchar *mrl,
+XplayerPlaylistMrlData *xplayer_playlist_mrl_data_new (const gchar *mrl,
                                                    const gchar *display_name);
-void totem_playlist_mrl_data_free (TotemPlaylistMrlData *data);
+void xplayer_playlist_mrl_data_free (XplayerPlaylistMrlData *data);
 
-void totem_playlist_add_mrls (TotemPlaylist *self,
+void xplayer_playlist_add_mrls (XplayerPlaylist *self,
                               GList *mrls,
                               gboolean cursor,
                               GCancellable *cancellable,
                               GAsyncReadyCallback callback,
                               gpointer user_data);
-gboolean totem_playlist_add_mrls_finish (TotemPlaylist *self,
+gboolean xplayer_playlist_add_mrls_finish (XplayerPlaylist *self,
                                          GAsyncResult *result,
                                          GError **error);
 
-void totem_playlist_save_current_playlist (TotemPlaylist *playlist,
+void xplayer_playlist_save_current_playlist (XplayerPlaylist *playlist,
 					   const char *output);
-void totem_playlist_save_current_playlist_ext (TotemPlaylist *playlist,
-					   const char *output, TotemPlParserType type);
-void totem_playlist_select_subtitle_dialog (TotemPlaylist *playlist,
-					    TotemPlaylistSelectDialog mode);
+void xplayer_playlist_save_current_playlist_ext (XplayerPlaylist *playlist,
+					   const char *output, XplayerPlParserType type);
+void xplayer_playlist_select_subtitle_dialog (XplayerPlaylist *playlist,
+					    XplayerPlaylistSelectDialog mode);
 
-/* totem_playlist_clear doesn't emit the current_removed signal, even if it does
+/* xplayer_playlist_clear doesn't emit the current_removed signal, even if it does
  * because the caller should know what to do after it's done with clearing */
-gboolean   totem_playlist_clear (TotemPlaylist *playlist);
-void       totem_playlist_clear_with_g_mount (TotemPlaylist *playlist,
+gboolean   xplayer_playlist_clear (XplayerPlaylist *playlist);
+void       xplayer_playlist_clear_with_g_mount (XplayerPlaylist *playlist,
 					      GMount *mount);
-char      *totem_playlist_get_current_mrl (TotemPlaylist *playlist,
+char      *xplayer_playlist_get_current_mrl (XplayerPlaylist *playlist,
 					   char **subtitle);
-char      *totem_playlist_get_current_title (TotemPlaylist *playlist);
-char      *totem_playlist_get_current_content_type (TotemPlaylist *playlist);
-char      *totem_playlist_get_title (TotemPlaylist *playlist,
+char      *xplayer_playlist_get_current_title (XplayerPlaylist *playlist);
+char      *xplayer_playlist_get_current_content_type (XplayerPlaylist *playlist);
+char      *xplayer_playlist_get_title (XplayerPlaylist *playlist,
 				     guint title_index);
 
-gboolean   totem_playlist_set_title (TotemPlaylist *playlist,
+gboolean   xplayer_playlist_set_title (XplayerPlaylist *playlist,
 				     const char *title);
-void       totem_playlist_set_current_subtitle (TotemPlaylist *playlist,
+void       xplayer_playlist_set_current_subtitle (XplayerPlaylist *playlist,
 						const char *subtitle_uri);
 
-#define    totem_playlist_has_direction(playlist, direction) (direction == TOTEM_PLAYLIST_DIRECTION_NEXT ? totem_playlist_has_next_mrl (playlist) : totem_playlist_has_previous_mrl (playlist))
-gboolean   totem_playlist_has_previous_mrl (TotemPlaylist *playlist);
-gboolean   totem_playlist_has_next_mrl (TotemPlaylist *playlist);
+#define    xplayer_playlist_has_direction(playlist, direction) (direction == XPLAYER_PLAYLIST_DIRECTION_NEXT ? xplayer_playlist_has_next_mrl (playlist) : xplayer_playlist_has_previous_mrl (playlist))
+gboolean   xplayer_playlist_has_previous_mrl (XplayerPlaylist *playlist);
+gboolean   xplayer_playlist_has_next_mrl (XplayerPlaylist *playlist);
 
-#define    totem_playlist_set_direction(playlist, direction) (direction == TOTEM_PLAYLIST_DIRECTION_NEXT ? totem_playlist_set_next (playlist) : totem_playlist_set_previous (playlist))
-void       totem_playlist_set_previous (TotemPlaylist *playlist);
-void       totem_playlist_set_next (TotemPlaylist *playlist);
+#define    xplayer_playlist_set_direction(playlist, direction) (direction == XPLAYER_PLAYLIST_DIRECTION_NEXT ? xplayer_playlist_set_next (playlist) : xplayer_playlist_set_previous (playlist))
+void       xplayer_playlist_set_previous (XplayerPlaylist *playlist);
+void       xplayer_playlist_set_next (XplayerPlaylist *playlist);
 
-gboolean   totem_playlist_get_repeat (TotemPlaylist *playlist);
-void       totem_playlist_set_repeat (TotemPlaylist *playlist, gboolean repeat);
+gboolean   xplayer_playlist_get_repeat (XplayerPlaylist *playlist);
+void       xplayer_playlist_set_repeat (XplayerPlaylist *playlist, gboolean repeat);
 
-gboolean   totem_playlist_get_shuffle (TotemPlaylist *playlist);
-void       totem_playlist_set_shuffle (TotemPlaylist *playlist,
+gboolean   xplayer_playlist_get_shuffle (XplayerPlaylist *playlist);
+void       xplayer_playlist_set_shuffle (XplayerPlaylist *playlist,
 				       gboolean shuffle);
 
-gboolean   totem_playlist_set_playing (TotemPlaylist *playlist, TotemPlaylistStatus state);
-TotemPlaylistStatus totem_playlist_get_playing (TotemPlaylist *playlist);
+gboolean   xplayer_playlist_set_playing (XplayerPlaylist *playlist, XplayerPlaylistStatus state);
+XplayerPlaylistStatus xplayer_playlist_get_playing (XplayerPlaylist *playlist);
 
-void       totem_playlist_set_at_start (TotemPlaylist *playlist);
-void       totem_playlist_set_at_end (TotemPlaylist *playlist);
+void       xplayer_playlist_set_at_start (XplayerPlaylist *playlist);
+void       xplayer_playlist_set_at_end (XplayerPlaylist *playlist);
 
-int        totem_playlist_get_current (TotemPlaylist *playlist);
-int        totem_playlist_get_last (TotemPlaylist *playlist);
-void       totem_playlist_set_current (TotemPlaylist *playlist, guint current_index);
+int        xplayer_playlist_get_current (XplayerPlaylist *playlist);
+int        xplayer_playlist_get_last (XplayerPlaylist *playlist);
+void       xplayer_playlist_set_current (XplayerPlaylist *playlist, guint current_index);
 
 G_END_DECLS
 
-#endif /* TOTEM_PLAYLIST_H */
+#endif /* XPLAYER_PLAYLIST_H */

@@ -7,7 +7,7 @@ libbaconvideowidgetproperties_la_SOURCES = \
 
 libbaconvideowidgetproperties_la_CPPFLAGS =	\
 	-I$(top_srcdir)/src/			\
-	-DDATADIR=\""$(datadir)/totem/"\"	\
+	-DDATADIR=\""$(datadir)/xplayer/"\"	\
 	$(AM_CPPFLAGS)
 
 libbaconvideowidgetproperties_la_CFLAGS = \

@@ -15,10 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -34,7 +34,7 @@
 #include <glib/gi18n.h>
 #include <cairo.h>
 #include <gst/gst.h>
-#include <totem-pl-parser.h>
+#include <xplayer-pl-parser.h>
 
 #include <errno.h>
 #include <unistd.h>
@@ -45,11 +45,11 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#include "gst/totem-gst-helpers.h"
-#include "gst/totem-time-helpers.h"
-#include "gst/totem-gst-pixbuf-helpers.h"
+#include "gst/xplayer-gst-helpers.h"
+#include "gst/xplayer-time-helpers.h"
+#include "gst/xplayer-gst-pixbuf-helpers.h"
 #include "video-utils.h"
-#include "totem-resources.h"
+#include "xplayer-resources.h"
 
 #ifdef G_HAVE_ISO_VARARGS
 #define PROGRESS_DEBUG(...) { if (verbose != FALSE) g_message (__VA_ARGS__); }
@@ -90,7 +90,7 @@ static void save_pixbuf (GdkPixbuf *pixbuf, const char *path,
 			 const char *video_path, int size, gboolean is_still);
 
 static void
-entry_parsed_cb (TotemPlParser *parser,
+entry_parsed_cb (XplayerPlParser *parser,
 		 const char    *uri,
 		 GHashTable    *metadata,
 		 char         **new_url)
@@ -102,8 +102,8 @@ static char *
 get_special_url (GFile *file)
 {
 	char *path, *orig_uri, *uri, *mime_type;
-	TotemPlParser *parser;
-	TotemPlParserResult res;
+	XplayerPlParser *parser;
+	XplayerPlParserResult res;
 
 	path = g_file_get_path (file);
 
@@ -118,16 +118,16 @@ get_special_url (GFile *file)
 	uri = NULL;
 	orig_uri = g_file_get_uri (file);
 
-	parser = totem_pl_parser_new ();
+	parser = xplayer_pl_parser_new ();
 	g_signal_connect (parser, "entry-parsed",
 			  G_CALLBACK (entry_parsed_cb), &uri);
 
-	res = totem_pl_parser_parse (parser, orig_uri, FALSE);
+	res = xplayer_pl_parser_parse (parser, orig_uri, FALSE);
 
 	g_free (orig_uri);
 	g_object_unref (parser);
 
-	if (res == TOTEM_PL_PARSER_RESULT_SUCCESS)
+	if (res == XPLAYER_PL_PARSER_RESULT_SUCCESS)
 		return uri;
 
 	g_free (uri);
@@ -178,7 +178,7 @@ error_handler (GstBus *bus,
 	msg_type = GST_MESSAGE_TYPE (message);
 	switch (msg_type) {
 	case GST_MESSAGE_ERROR:
-		totem_gst_message_print (message, play, "totem-video-thumbnailer-error");
+		xplayer_gst_message_print (message, play, "xplayer-video-thumbnailer-error");
 		exit (1);
 	case GST_MESSAGE_EOS:
 		exit (0);
@@ -220,7 +220,7 @@ check_cover_for_stream (ThumbApp   *app,
 	if (!tags)
 		return;
 
-	pixbuf = totem_gst_tag_list_get_cover (tags);
+	pixbuf = xplayer_gst_tag_list_get_cover (tags);
 	if (!pixbuf) {
 		gst_tag_list_unref (tags);
 		return;
@@ -260,7 +260,7 @@ assert_duration (ThumbApp *app)
 {
 	if (app->duration != -1)
 		return;
-	g_print ("totem-video-thumbnailer couldn't get the duration of file '%s'\n", app->input);
+	g_print ("xplayer-video-thumbnailer couldn't get the duration of file '%s'\n", app->input);
 	exit (1);
 }
 
@@ -302,7 +302,7 @@ thumb_app_start (ThumbApp *app)
 			}
 			break;
 		case GST_MESSAGE_ERROR:
-			totem_gst_message_print (message, app->play, "totem-video-thumbnailer-error");
+			xplayer_gst_message_print (message, app->play, "xplayer-video-thumbnailer-error");
 			terminate = TRUE;
 			break;
 
@@ -376,7 +376,7 @@ add_holes_to_pixbuf_small (GdkPixbuf *pixbuf, int width, int height)
 	char *filename;
 	int i;
 
-	filename = g_build_filename (DATADIR, "totem", "filmholes.png", NULL);
+	filename = g_build_filename (DATADIR, "xplayer", "filmholes.png", NULL);
 	holes = gdk_pixbuf_new_from_file (filename, NULL);
 	g_free (filename);
 
@@ -426,7 +426,7 @@ add_holes_to_pixbuf_large (GdkPixbuf *pixbuf, int size)
 	int d_height, d_width;
 	double ratio;
 
-	filename = g_build_filename (DATADIR, "totem",
+	filename = g_build_filename (DATADIR, "xplayer",
 			"filmholes-big-left.png", NULL);
 	left = gdk_pixbuf_new_from_file (filename, NULL);
 	g_free (filename);
@@ -436,7 +436,7 @@ add_holes_to_pixbuf_large (GdkPixbuf *pixbuf, int size)
 		return pixbuf;
 	}
 
-	filename = g_build_filename (DATADIR, "totem",
+	filename = g_build_filename (DATADIR, "xplayer",
 			"filmholes-big-right.png", NULL);
 	right = gdk_pixbuf_new_from_file (filename, NULL);
 	g_free (filename);
@@ -627,10 +627,10 @@ save_pixbuf (GdkPixbuf *pixbuf, const char *path,
 
 	if (ret == FALSE) {
 		if (err != NULL) {
-			g_print ("totem-video-thumbnailer couldn't write the thumbnail '%s' for video '%s': %s\n", path, video_path, err->message);
+			g_print ("xplayer-video-thumbnailer couldn't write the thumbnail '%s' for video '%s': %s\n", path, video_path, err->message);
 			g_error_free (err);
 		} else {
-			g_print ("totem-video-thumbnailer couldn't write the thumbnail '%s' for video '%s'\n", path, video_path);
+			g_print ("xplayer-video-thumbnailer couldn't write the thumbnail '%s' for video '%s'\n", path, video_path);
 		}
 
 		g_object_unref (with_holes);
@@ -647,7 +647,7 @@ capture_frame_at_time (ThumbApp   *app,
 	if (milliseconds != 0)
 		thumb_app_seek (app, milliseconds);
 
-	return totem_gst_playbin_get_frame (app->play);
+	return xplayer_gst_playbin_get_frame (app->play);
 }
 
 static GdkPixbuf *
@@ -677,7 +677,7 @@ capture_interesting_frame (ThumbApp *app)
 
 		/* Pull the frame, if it's interesting we bail early */
 		PROGRESS_DEBUG("About to get frame for iter %d", current);
-		pixbuf = totem_gst_playbin_get_frame (app->play);
+		pixbuf = xplayer_gst_playbin_get_frame (app->play);
 		if (pixbuf != NULL && is_image_interesting (pixbuf) != FALSE) {
 			PROGRESS_DEBUG("Frame for iter %d is interesting", current);
 			break;
@@ -860,7 +860,7 @@ create_gallery (ThumbApp *app)
 	g_object_unref (pixbuf);
 
 	/* Build the header information */
-	duration_text = totem_time_to_string (stream_length);
+	duration_text = xplayer_time_to_string (stream_length);
 	filename = NULL;
 	if (strstr (app->input, "://")) {
 		char *local;
@@ -915,7 +915,7 @@ create_gallery (ThumbApp *app)
 		gchar *timestamp_text;
 		gint layout_width, layout_height;
 
-		timestamp_text = totem_time_to_string (pos);
+		timestamp_text = xplayer_time_to_string (pos);
 
 		pango_layout_set_text (layout, timestamp_text, -1);
 		pango_layout_get_pixel_size (layout, &layout_width, &layout_height);
@@ -1044,12 +1044,12 @@ int main (int argc, char *argv[])
 	PRINT_PROGRESS (6.0);
 
 	if (time_limit != FALSE)
-		totem_resources_monitor_start (input, 0);
+		xplayer_resources_monitor_start (input, 0);
 
 	PROGRESS_DEBUG("About to open video file");
 
 	if (thumb_app_start (&app) == FALSE) {
-		g_print ("totem-video-thumbnailer couldn't open file '%s'\n", input);
+		g_print ("xplayer-video-thumbnailer couldn't open file '%s'\n", input);
 		exit (1);
 	}
 	thumb_app_set_error_handler (&app);
@@ -1058,7 +1058,7 @@ int main (int argc, char *argv[])
 	if (gallery == -1)
 		thumb_app_check_for_cover (&app);
 	if (thumb_app_get_has_video (&app) == FALSE) {
-		PROGRESS_DEBUG ("totem-video-thumbnailer couldn't find a video track in '%s'\n", input);
+		PROGRESS_DEBUG ("xplayer-video-thumbnailer couldn't find a video track in '%s'\n", input);
 		exit (1);
 	}
 	thumb_app_set_duration (&app);
@@ -1084,12 +1084,12 @@ int main (int argc, char *argv[])
 	}
 
 	/* Cleanup */
-	totem_resources_monitor_stop ();
+	xplayer_resources_monitor_stop ();
 	thumb_app_cleanup (&app);
 	PRINT_PROGRESS (92.0);
 
 	if (pixbuf == NULL) {
-		g_print ("totem-video-thumbnailer couldn't get a picture from '%s'\n", input);
+		g_print ("xplayer-video-thumbnailer couldn't get a picture from '%s'\n", input);
 		exit (1);
 	}
 

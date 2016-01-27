@@ -17,17 +17,17 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TOTEM_NPCLASS_H__
-#define __TOTEM_NPCLASS_H__
+#ifndef __XPLAYER_NPCLASS_H__
+#define __XPLAYER_NPCLASS_H__
 
 #include <assert.h>
 
 #include "npapi.h"
 #include "npruntime.h"
 
-class totemNPObject;
+class xplayerNPObject;
 
-class totemNPClass_base : public NPClass {
+class xplayerNPClass_base : public NPClass {
 
   public:
 
@@ -36,14 +36,14 @@ class totemNPClass_base : public NPClass {
     }
 
   protected:
-    friend class totemNPObject;
+    friend class xplayerNPObject;
 
-    totemNPClass_base (const char *aPropertNames[],
+    xplayerNPClass_base (const char *aPropertNames[],
                        uint32_t aPropertyCount,
                        const char *aMethodNames[],
                        uint32_t aMethodCount,
                        const char *aDefaultMethodName);
-    virtual ~totemNPClass_base ();
+    virtual ~xplayerNPClass_base ();
 
     virtual NPObject* InternalCreate (NPP aNPP) = 0;
 
@@ -77,23 +77,23 @@ class totemNPClass_base : public NPClass {
 };
 
 template <class T>
-class totemNPClass : public totemNPClass_base {
+class xplayerNPClass : public xplayerNPClass_base {
 
   public:
 
-    typedef totemNPClass<T> class_type;
+    typedef xplayerNPClass<T> class_type;
 
-    totemNPClass (const char *aPropertNames[],
+    xplayerNPClass (const char *aPropertNames[],
                   uint32_t aPropertyCount,
                   const char *aMethodNames[],
                   uint32_t aMethodCount,
                   const char *aDefaultMethodName) :
-      totemNPClass_base (aPropertNames, aPropertyCount,
+      xplayerNPClass_base (aPropertNames, aPropertyCount,
                          aMethodNames, aMethodCount,
                          aDefaultMethodName) {
     }
 
-    virtual ~totemNPClass () { }
+    virtual ~xplayerNPClass () { }
 
   protected:
 
@@ -104,8 +104,8 @@ class totemNPClass : public totemNPClass_base {
 
 /* Helper macros */
 
-#define TOTEM_DEFINE_NPCLASS(T) \
-class T##NPClass : public totemNPClass<T> {\
+#define XPLAYER_DEFINE_NPCLASS(T) \
+class T##NPClass : public xplayerNPClass<T> {\
 \
   public:\
 \
@@ -119,12 +119,12 @@ class T##NPClass : public totemNPClass<T> {\
     static class_type* sInstance;\
 }
 
-#define TOTEM_IMPLEMENT_NPCLASS(T, propertyNames, propertyNamesCount, methodNames, methodNamesCount, defaultMethodName) \
+#define XPLAYER_IMPLEMENT_NPCLASS(T, propertyNames, propertyNamesCount, methodNames, methodNamesCount, defaultMethodName) \
 \
 T##NPClass::class_type* T##NPClass::sInstance = 0; \
 \
 T##NPClass::T##NPClass () throw ()\
-  : totemNPClass<T> (propertyNames,\
+  : xplayerNPClass<T> (propertyNames,\
                      propertyNamesCount,\
                      methodNames,\
                      methodNamesCount,\
@@ -153,4 +153,4 @@ T##NPClass::Shutdown ()\
   sInstance = 0;\
 }
 
-#endif /* __TOTEM_NPCLASS_H__ */
+#endif /* __XPLAYER_NPCLASS_H__ */

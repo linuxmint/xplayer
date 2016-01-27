@@ -10,13 +10,13 @@ ui_DATA = grilo.ui
 EXTRA_DIST += $(ui_DATA)
 
 confdir = $(plugindir)
-conf_DATA = totem-grilo.conf
+conf_DATA = xplayer-grilo.conf
 EXTRA_DIST += $(conf_DATA)
 
 libgrilo_la_SOURCES =				\
-	totem-grilo.c				\
-	totem-search-entry.c			\
-	totem-search-entry.h
+	xplayer-grilo.c				\
+	xplayer-search-entry.c			\
+	xplayer-search-entry.h
 
 libgrilo_la_LDFLAGS = $(plugin_ldflags)
 libgrilo_la_LIBADD =			\

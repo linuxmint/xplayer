@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * See license_change file for details.
  *
@@ -33,21 +33,21 @@
 #include <gmodule.h>
 #include <string.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 
-#define TOTEM_TYPE_SIDEBAR_TEST_PLUGIN		(totem_sidebar_test_plugin_get_type ())
-#define TOTEM_SIDEBAR_TEST_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_SIDEBAR_TEST_PLUGIN, TotemSidebarTestPlugin))
-#define TOTEM_SIDEBAR_TEST_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_SIDEBAR_TEST_PLUGIN, TotemSidebarTestPluginClass))
-#define TOTEM_IS_SIDEBAR_TEST_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_SIDEBAR_TEST_PLUGIN))
-#define TOTEM_IS_SIDEBAR_TEST_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_SIDEBAR_TEST_PLUGIN))
-#define TOTEM_SIDEBAR_TEST_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_SIDEBAR_TEST_PLUGIN, TotemSidebarTestPluginClass))
+#define XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN		(xplayer_sidebar_test_plugin_get_type ())
+#define XPLAYER_SIDEBAR_TEST_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN, XplayerSidebarTestPlugin))
+#define XPLAYER_SIDEBAR_TEST_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN, XplayerSidebarTestPluginClass))
+#define XPLAYER_IS_SIDEBAR_TEST_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN))
+#define XPLAYER_IS_SIDEBAR_TEST_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN))
+#define XPLAYER_SIDEBAR_TEST_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN, XplayerSidebarTestPluginClass))
 
 typedef struct {
 	gpointer unused;
-} TotemSidebarTestPluginPrivate;
+} XplayerSidebarTestPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_SIDEBAR_TEST_PLUGIN, TotemSidebarTestPlugin, totem_sidebar_test_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_SIDEBAR_TEST_PLUGIN, XplayerSidebarTestPlugin, xplayer_sidebar_test_plugin)
 
 static void
 impl_activate (PeasActivatable *plugin)
@@ -56,7 +56,7 @@ impl_activate (PeasActivatable *plugin)
 
 	label = gtk_label_new ("This is a test sidebar main widget");
 	gtk_widget_show (label);
-	totem_add_sidebar_page (g_object_get_data (G_OBJECT (plugin), "object"),
+	xplayer_add_sidebar_page (g_object_get_data (G_OBJECT (plugin), "object"),
 				"sidebar-test",
 				"Sidebar Test",
 				label);
@@ -66,10 +66,10 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
-	totem_remove_sidebar_page (totem, "sidebar-test");
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	xplayer_remove_sidebar_page (xplayer, "sidebar-test");
 	g_message ("Just removed a test sidebar");
 }
 

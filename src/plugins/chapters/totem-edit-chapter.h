@@ -16,43 +16,43 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
-#ifndef TOTEM_EDIT_CHAPTER_H
-#define TOTEM_EDIT_CHAPTER_H
+#ifndef XPLAYER_EDIT_CHAPTER_H
+#define XPLAYER_EDIT_CHAPTER_H
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_EDIT_CHAPTER			(totem_edit_chapter_get_type ())
-#define TOTEM_EDIT_CHAPTER(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_EDIT_CHAPTER, TotemEditChapter))
-#define TOTEM_EDIT_CHAPTER_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_EDIT_CHAPTER, TotemEditChapterClass))
-#define TOTEM_IS_EDIT_CHAPTER(obj)		(G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_EDIT_CHAPTER))
-#define TOTEM_IS_EDIT_CHAPTER_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_EDIT_CHAPTER))
+#define XPLAYER_TYPE_EDIT_CHAPTER			(xplayer_edit_chapter_get_type ())
+#define XPLAYER_EDIT_CHAPTER(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_EDIT_CHAPTER, XplayerEditChapter))
+#define XPLAYER_EDIT_CHAPTER_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_EDIT_CHAPTER, XplayerEditChapterClass))
+#define XPLAYER_IS_EDIT_CHAPTER(obj)		(G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_EDIT_CHAPTER))
+#define XPLAYER_IS_EDIT_CHAPTER_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_EDIT_CHAPTER))
 
-typedef struct TotemEditChapter			TotemEditChapter;
-typedef struct TotemEditChapterClass		TotemEditChapterClass;
-typedef struct TotemEditChapterPrivate		TotemEditChapterPrivate;
+typedef struct XplayerEditChapter			XplayerEditChapter;
+typedef struct XplayerEditChapterClass		XplayerEditChapterClass;
+typedef struct XplayerEditChapterPrivate		XplayerEditChapterPrivate;
 
-struct TotemEditChapter {
+struct XplayerEditChapter {
 	GtkDialog parent;
-	TotemEditChapterPrivate *priv;
+	XplayerEditChapterPrivate *priv;
 };
 
-struct TotemEditChapterClass {
+struct XplayerEditChapterClass {
 	GtkDialogClass parent_class;
 };
 
-GType totem_edit_chapter_get_type (void);
-GtkWidget * totem_edit_chapter_new (void);
-void totem_edit_chapter_set_title (TotemEditChapter *edit_chapter, const gchar *title);
-gchar * totem_edit_chapter_get_title (TotemEditChapter *edit_chapter);
+GType xplayer_edit_chapter_get_type (void);
+GtkWidget * xplayer_edit_chapter_new (void);
+void xplayer_edit_chapter_set_title (XplayerEditChapter *edit_chapter, const gchar *title);
+gchar * xplayer_edit_chapter_get_title (XplayerEditChapter *edit_chapter);
 
 G_END_DECLS
 
-#endif /* TOTEM_EDIT_CHAPTER_H */
+#endif /* XPLAYER_EDIT_CHAPTER_H */

@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemConeInput.h"
+#include "xplayerPlugin.h"
+#include "xplayerConeInput.h"
 
 static const char *propertyNames[] = {
   "fps",
@@ -39,27 +39,27 @@ static const char *propertyNames[] = {
   "time"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemConeInput,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerConeInput,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          NULL, 0,
                          NULL);
 
-totemConeInput::totemConeInput (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerConeInput::xplayerConeInput (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemConeInput::~totemConeInput ()
+xplayerConeInput::~xplayerConeInput ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemConeInput::GetPropertyByIndex (int aIndex,
+xplayerConeInput::GetPropertyByIndex (int aIndex,
                                     NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemConeInput);
+  XPLAYER_LOG_GETTER (aIndex, xplayerConeInput);
 
   switch (Properties (aIndex)) {
     case eState: {
@@ -73,9 +73,9 @@ totemConeInput::GetPropertyByIndex (int aIndex,
        * STOPPING=5,
        * ERROR=6
        */
-      if (Plugin()->State() == TOTEM_STATE_PLAYING) {
+      if (Plugin()->State() == XPLAYER_STATE_PLAYING) {
         state = 3;
-      } else if (Plugin()->State() == TOTEM_STATE_PAUSED) {
+      } else if (Plugin()->State() == XPLAYER_STATE_PAUSED) {
         state = 4;
       } else {
         state = 0;
@@ -94,7 +94,7 @@ totemConeInput::GetPropertyByIndex (int aIndex,
     case eHasVout:
     case ePosition:
     case eRate:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
       return VoidVariant (_result);
   }
 
@@ -102,10 +102,10 @@ totemConeInput::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemConeInput::SetPropertyByIndex (int aIndex,
+xplayerConeInput::SetPropertyByIndex (int aIndex,
                                     const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemConeInput);
+  XPLAYER_LOG_SETTER (aIndex, xplayerConeInput);
 
   switch (Properties (aIndex)) {
     case eTime:
@@ -119,7 +119,7 @@ totemConeInput::SetPropertyByIndex (int aIndex,
     case ePosition:
     case eRate:
     case eState:
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
       return true;
 
     case eFps:

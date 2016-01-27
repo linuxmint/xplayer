@@ -1,4 +1,4 @@
-/* Totem Vegas plugin scriptable
+/* Xplayer Vegas plugin scriptable
  *
  * Copyright © 2011 Bastien Nocera <hadess@hadess.net>
  *
@@ -21,14 +21,14 @@
 #ifndef __VEGAS_PLUGIN_H__
 #define __VEGAS_PLUGIN_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemVegasPlayer : public totemNPObject
+class xplayerVegasPlayer : public xplayerNPObject
 {
   public:
-    totemVegasPlayer (NPP);
-    virtual ~totemVegasPlayer ();
+    xplayerVegasPlayer (NPP);
+    virtual ~xplayerVegasPlayer ();
 
     enum PluginState {
     };
@@ -43,6 +43,6 @@ class totemVegasPlayer : public totemNPObject
     virtual bool InvokeByIndex (int aIndex, const NPVariant *argv, uint32_t argc, NPVariant *_result);
 };
 
-TOTEM_DEFINE_NPCLASS (totemVegasPlayer);
+XPLAYER_DEFINE_NPCLASS (xplayerVegasPlayer);
 
 #endif /* __VEGAS_PLUGIN_H__ */

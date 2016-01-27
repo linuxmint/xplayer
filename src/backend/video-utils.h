@@ -15,10 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -28,10 +28,10 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-void totem_gdk_window_set_invisible_cursor (GdkWindow *window);
-void totem_gdk_window_set_waiting_cursor (GdkWindow *window);
+void xplayer_gdk_window_set_invisible_cursor (GdkWindow *window);
+void xplayer_gdk_window_set_waiting_cursor (GdkWindow *window);
 
-gboolean totem_ratio_fits_screen (GtkWidget *widget,
+gboolean xplayer_ratio_fits_screen (GtkWidget *widget,
 				  int video_width,
 				  int video_height,
 				  gfloat ratio);

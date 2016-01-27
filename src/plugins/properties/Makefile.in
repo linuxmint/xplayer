@@ -127,7 +127,7 @@ LTLIBRARIES = $(plugin_LTLIBRARIES)
 libmovie_properties_la_DEPENDENCIES = $(plugin_libadd) \
 	$(top_builddir)/src/properties/libbaconvideowidgetproperties.la
 am_libmovie_properties_la_OBJECTS =  \
-	libmovie_properties_la-totem-movie-properties.lo
+	libmovie_properties_la-xplayer-movie-properties.lo
 libmovie_properties_la_OBJECTS = $(am_libmovie_properties_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -205,7 +205,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -387,11 +387,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -474,12 +474,12 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/properties
 plugin_LTLIBRARIES = libmovie-properties.la
 plugin_in_files = movie-properties.plugin.in
-libmovie_properties_la_SOURCES = totem-movie-properties.c
+libmovie_properties_la_SOURCES = xplayer-movie-properties.c
 libmovie_properties_la_LDFLAGS = $(plugin_ldflags)
 libmovie_properties_la_LIBADD = \
 	$(plugin_libadd)	\
@@ -571,7 +571,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmovie_properties_la-totem-movie-properties.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmovie_properties_la-xplayer-movie-properties.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -594,12 +594,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libmovie_properties_la-totem-movie-properties.lo: totem-movie-properties.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmovie_properties_la_CPPFLAGS) $(CPPFLAGS) $(libmovie_properties_la_CFLAGS) $(CFLAGS) -MT libmovie_properties_la-totem-movie-properties.lo -MD -MP -MF $(DEPDIR)/libmovie_properties_la-totem-movie-properties.Tpo -c -o libmovie_properties_la-totem-movie-properties.lo `test -f 'totem-movie-properties.c' || echo '$(srcdir)/'`totem-movie-properties.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libmovie_properties_la-totem-movie-properties.Tpo $(DEPDIR)/libmovie_properties_la-totem-movie-properties.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-movie-properties.c' object='libmovie_properties_la-totem-movie-properties.lo' libtool=yes @AMDEPBACKSLASH@
+libmovie_properties_la-xplayer-movie-properties.lo: xplayer-movie-properties.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmovie_properties_la_CPPFLAGS) $(CPPFLAGS) $(libmovie_properties_la_CFLAGS) $(CFLAGS) -MT libmovie_properties_la-xplayer-movie-properties.lo -MD -MP -MF $(DEPDIR)/libmovie_properties_la-xplayer-movie-properties.Tpo -c -o libmovie_properties_la-xplayer-movie-properties.lo `test -f 'xplayer-movie-properties.c' || echo '$(srcdir)/'`xplayer-movie-properties.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libmovie_properties_la-xplayer-movie-properties.Tpo $(DEPDIR)/libmovie_properties_la-xplayer-movie-properties.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-movie-properties.c' object='libmovie_properties_la-xplayer-movie-properties.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmovie_properties_la_CPPFLAGS) $(CPPFLAGS) $(libmovie_properties_la_CFLAGS) $(CFLAGS) -c -o libmovie_properties_la-totem-movie-properties.lo `test -f 'totem-movie-properties.c' || echo '$(srcdir)/'`totem-movie-properties.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmovie_properties_la_CPPFLAGS) $(CPPFLAGS) $(libmovie_properties_la_CFLAGS) $(CFLAGS) -c -o libmovie_properties_la-xplayer-movie-properties.lo `test -f 'xplayer-movie-properties.c' || echo '$(srcdir)/'`xplayer-movie-properties.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -17,29 +17,29 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TOTEM_NPOBJECT_H__
-#define __TOTEM_NPOBJECT_H__
+#ifndef __XPLAYER_NPOBJECT_H__
+#define __XPLAYER_NPOBJECT_H__
 
 #include <assert.h>
 
 #include "npapi.h"
 #include "npruntime.h"
 
-class totemPlugin;
-class totemNPObject;
-class totemNPClass_base;
-template<class T> class totemNPClass;
+class xplayerPlugin;
+class xplayerNPObject;
+class xplayerNPClass_base;
+template<class T> class xplayerNPClass;
 
-class totemNPObject : public NPObject {
+class xplayerNPObject : public NPObject {
   public:
-    totemNPObject (NPP);
+    xplayerNPObject (NPP);
 
-    virtual ~totemNPObject ();
+    virtual ~xplayerNPObject ();
 
     void* operator new (size_t aSize) throw ();
 
   protected:
-    friend class totemNPClass_base;
+    friend class xplayerNPClass_base;
 
     /* NPObject methods */
     virtual void Invalidate     ();
@@ -62,12 +62,12 @@ class totemNPObject : public NPObject {
   private:
 
     NPP mNPP;
-    totemPlugin *mPlugin;
+    xplayerPlugin *mPlugin;
 
   protected:
 
     bool IsValid () const { return mPlugin != 0; }
-    totemPlugin* Plugin () const { assert (IsValid ()); return mPlugin; }
+    xplayerPlugin* Plugin () const { assert (IsValid ()); return mPlugin; }
 
     bool Throw (const char*);
     bool ThrowPropertyNotWritable ();
@@ -95,14 +95,14 @@ class totemNPObject : public NPObject {
 
   private:
 
-    totemNPClass_base* GetClass() const { return static_cast<totemNPClass_base*>(_class); }
+    xplayerNPClass_base* GetClass() const { return static_cast<xplayerNPClass_base*>(_class); }
 };
 
 /* Helper macros */
-#define TOTEM_LOG_CTOR() g_debug ("%s [%p]", __func__, (void*) this)
-#define TOTEM_LOG_DTOR() g_debug ("%s [%p]", __func__, (void*) this)
+#define XPLAYER_LOG_CTOR() g_debug ("%s [%p]", __func__, (void*) this)
+#define XPLAYER_LOG_DTOR() g_debug ("%s [%p]", __func__, (void*) this)
 
-#define TOTEM_LOG_INVOKE(i, T) \
+#define XPLAYER_LOG_INVOKE(i, T) \
 {\
   static bool logAccess[G_N_ELEMENTS (methodNames)];\
   if (!logAccess[i]) {\
@@ -111,7 +111,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_LOG_GETTER(i, T) \
+#define XPLAYER_LOG_GETTER(i, T) \
 {\
   static bool logAccess[G_N_ELEMENTS (propertyNames)];\
   if (!logAccess[i]) {\
@@ -120,7 +120,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_LOG_SETTER(i, T) \
+#define XPLAYER_LOG_SETTER(i, T) \
 {\
   static bool logAccess[G_N_ELEMENTS (propertyNames)];\
   if (!logAccess[i]) {\
@@ -129,7 +129,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_INVOKE_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_INVOKE_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning[G_N_ELEMENTS (methodNames)];\
   if (!logWarning[i]) {\
@@ -138,7 +138,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_1_INVOKE_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning;\
   if (!logWarning) {\
@@ -147,7 +147,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_GETTER_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_GETTER_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning[G_N_ELEMENTS (propertyNames)];\
   if (!logWarning[i]) {\
@@ -156,7 +156,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_1_GETTER_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_1_GETTER_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning;\
   if (!logWarning) {\
@@ -165,7 +165,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_SETTER_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_SETTER_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning[G_N_ELEMENTS (propertyNames)];\
   if (!logWarning[i]) {\
@@ -174,7 +174,7 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#define TOTEM_WARN_1_SETTER_UNIMPLEMENTED(i, T) \
+#define XPLAYER_WARN_1_SETTER_UNIMPLEMENTED(i, T) \
 {\
   static bool logWarning;\
   if (!logWarning) {\
@@ -183,4 +183,4 @@ class totemNPObject : public NPObject {
   }\
 }
 
-#endif /* __TOTEM_NPOBJECT_H__ */
+#endif /* __XPLAYER_NPOBJECT_H__ */

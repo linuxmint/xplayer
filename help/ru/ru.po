@@ -1,9 +1,9 @@
-# translation of totem help into Russian
+# translation of xplayer help into Russian
 # Timur Salikhov <Tima-S@yandex.ru>
 # Vasiliy Faronov <qvvx@yandex.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem trunk\n"
+"Project-Id-Version: xplayer trunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-14 20:33+0000\n"
 "PO-Revision-Date: 2011-11-16 16:09+0300\n"
@@ -15,305 +15,305 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/totem.xml:258(None)
-msgid "@@image: 'figures/totem_start_window.png'; md5=85daf6f6aaae9262482c8f1b0b6d67b0"
-msgstr "@@image: 'figures/totem_start_window.png'; md5=85daf6f6aaae9262482c8f1b0b6d67b0"
+#: C/xplayer.xml:258(None)
+msgid "@@image: 'figures/xplayer_start_window.png'; md5=85daf6f6aaae9262482c8f1b0b6d67b0"
+msgstr "@@image: 'figures/xplayer_start_window.png'; md5=85daf6f6aaae9262482c8f1b0b6d67b0"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/totem.xml:405(None)
-msgid "@@image: 'figures/totem_pause_button.png'; md5=8af1d98e40e2ebda89cc2cd86550c5f2"
-msgstr "@@image: 'figures/totem_pause_button.png'; md5=8af1d98e40e2ebda89cc2cd86550c5f2"
+#: C/xplayer.xml:405(None)
+msgid "@@image: 'figures/xplayer_pause_button.png'; md5=8af1d98e40e2ebda89cc2cd86550c5f2"
+msgstr "@@image: 'figures/xplayer_pause_button.png'; md5=8af1d98e40e2ebda89cc2cd86550c5f2"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/totem.xml:416(None)
-msgid "@@image: 'figures/totem_play_button.png'; md5=feb4dec4237e6eb7ce571af2dbd0cf79"
-msgstr "@@image: 'figures/totem_play_button.png'; md5=feb4dec4237e6eb7ce571af2dbd0cf79"
+#: C/xplayer.xml:416(None)
+msgid "@@image: 'figures/xplayer_play_button.png'; md5=feb4dec4237e6eb7ce571af2dbd0cf79"
+msgstr "@@image: 'figures/xplayer_play_button.png'; md5=feb4dec4237e6eb7ce571af2dbd0cf79"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/totem.xml:493(None)
-msgid "@@image: 'figures/totem_next_button.png'; md5=c7f9041dc1804edc6777cfe68456e703"
-msgstr "@@image: 'figures/totem_next_button.png'; md5=c7f9041dc1804edc6777cfe68456e703"
+#: C/xplayer.xml:493(None)
+msgid "@@image: 'figures/xplayer_next_button.png'; md5=c7f9041dc1804edc6777cfe68456e703"
+msgstr "@@image: 'figures/xplayer_next_button.png'; md5=c7f9041dc1804edc6777cfe68456e703"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/totem.xml:509(None)
-msgid "@@image: 'figures/totem_previous_button.png'; md5=a966195040a035bf48daab94c9320afc"
-msgstr "@@image: 'figures/totem_previous_button.png'; md5=a966195040a035bf48daab94c9320afc"
+#: C/xplayer.xml:509(None)
+msgid "@@image: 'figures/xplayer_previous_button.png'; md5=a966195040a035bf48daab94c9320afc"
+msgstr "@@image: 'figures/xplayer_previous_button.png'; md5=a966195040a035bf48daab94c9320afc"
 
-#: C/totem.xml:30(title)
-msgid "<application>Totem Movie Player</application> Manual"
-msgstr "Руководство по <application>видеопроигрывателю Totem</application>"
+#: C/xplayer.xml:30(title)
+msgid "<application>Xplayer Movie Player</application> Manual"
+msgstr "Руководство по <application>видеопроигрывателю Xplayer</application>"
 
-#: C/totem.xml:32(year)
+#: C/xplayer.xml:32(year)
 msgid "2003"
 msgstr "2003"
 
-#: C/totem.xml:33(holder)
+#: C/xplayer.xml:33(holder)
 msgid "Chee Bin HOH"
 msgstr "Chee Bin HOH"
 
-#: C/totem.xml:36(year)
+#: C/xplayer.xml:36(year)
 #| msgid "2003"
 msgid "2009"
 msgstr "2009"
 
-#: C/totem.xml:37(holder)
+#: C/xplayer.xml:37(holder)
 msgid "Philip Withnall"
 msgstr "Philip Withnall"
 
-#: C/totem.xml:44(para)
+#: C/xplayer.xml:44(para)
 #| msgid ""
-#| "Totem Movie Player is a media player for GNOME that runs on GStreamer by "
+#| "Xplayer Movie Player is a media player for GNOME that runs on GStreamer by "
 #| "default, but can also be run on xine. It has support for most audio and "
 #| "video codecs including DVDs and Digital CDs among many others. Features "
 #| "include TV-out, fullscreen, subtitles, and more."
-msgid "<application>Totem Movie Player</application> is a media player for GNOME that runs on GStreamer by default, but can also be run on xine. It has support for most audio and video codecs including DVDs among many others. Features include TV-out, fullscreen, subtitles, and more."
-msgstr "<application>Видеопроигрыватель Totem</application> — это проигрыватель мультимедиа-файлов для GNOME, использующий GStreamer для воспроизведения, но можно использовать и xine. Он поддерживает большинство кодеков аудио и видео, в том числе и DVD. Среди возможностей Totem: вывод на ТВ, полноэкранный режим, субтитры и многое другое."
+msgid "<application>Xplayer Movie Player</application> is a media player for GNOME that runs on GStreamer by default, but can also be run on xine. It has support for most audio and video codecs including DVDs among many others. Features include TV-out, fullscreen, subtitles, and more."
+msgstr "<application>Видеопроигрыватель Xplayer</application> — это проигрыватель мультимедиа-файлов для GNOME, использующий GStreamer для воспроизведения, но можно использовать и xine. Он поддерживает большинство кодеков аудио и видео, в том числе и DVD. Среди возможностей Xplayer: вывод на ТВ, полноэкранный режим, субтитры и многое другое."
 
-#: C/totem.xml:51(publishername)
-#: C/totem.xml:64(orgname)
-#: C/totem.xml:117(para)
-#: C/totem.xml:127(para)
+#: C/xplayer.xml:51(publishername)
+#: C/xplayer.xml:64(orgname)
+#: C/xplayer.xml:117(para)
+#: C/xplayer.xml:127(para)
 msgid "GNOME Documentation Project"
 msgstr "Проект документирования GNOME"
 
-#: C/totem.xml:2(para)
+#: C/xplayer.xml:2(para)
 msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
 msgstr "Разрешается копировать, распространять и/или изменять этот документ на условиях лицензии GNU Free Documentation License (GFDL), версии 1.1 или любой более поздней версии, опубликованной Фондом свободного программного обеспечения (Free Software Foundation), без неизменяемых частей и без текстов на обложках. Вы можете найти копию лицензии GFDL по  <ulink type=\"help\" url=\"ghelp:fdl\">этой ссылке</ulink> или в файле COPYING-DOCS, распространяемом с этим документом."
 
-#: C/totem.xml:12(para)
+#: C/xplayer.xml:12(para)
 msgid "This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the license to the manual, as described in section 6 of the license."
 msgstr "Это руководство — часть документации GNOME, которая распространяется на условиях лицензии GNU FDL. Если вы хотите распространять это руководство отдельно от остальной документации, вам следует приложить к руководству копию лицензии, как описано в разделе 6 лицензии."
 
-#: C/totem.xml:19(para)
+#: C/xplayer.xml:19(para)
 msgid "Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters."
 msgstr "Некоторые имена и марки используются компаниями для обозначения их продуктов и услуг и являются торговыми марками. Там, где эти имена присутствуют в документации и где участники проекта документирования GNOME знают об этом, имена выделяются заглавными буквами или начальной заглавной буквой."
 
-#: C/totem.xml:35(para)
+#: C/xplayer.xml:35(para)
 msgid "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr "ДОКУМЕНТ РАСПРОСТРАНЯЕТСЯ «КАК ЕСТЬ», БЕЗ ВСЯКИХ ГАРАНТИЙ, ЯВНЫХ ИЛИ НЕЯВНЫХ, ВКЛЮЧАЯ, БЕЗ ОГРАНИЧЕНИЙ, ГАРАНТИИ ТОГО, ЧТО ДОКУМЕНТ ИЛИ ИЗМЕНЁННАЯ ВЕРСИЯ ДОКУМЕНТА СВОБОДНА ОТ ДЕФЕКТОВ, ПРИГОДНА К ПРОДАЖЕ, ПРИГОДНА К ИСПОЛЬЗОВАНИЮ В ОПРЕДЕЛЁННЫХ ЦЕЛЯХ ИЛИ НЕ НАРУШАЕТ ЗАКОНЫ. ВЕСЬ РИСК, КАСАЮЩИЙСЯ КАЧЕСТВА, ТОЧНОСТИ ИЛИ ПРАВИЛЬНОСТИ ДОКУМЕНТА ИЛИ ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ЛЕЖИТ НА ВАС. ЕСЛИ ДОКУМЕНТ ИЛИ ИЗМЕНЁННАЯ ВЕРСИЯ ДОКУМЕНТА ИМЕЕТ НЕДОСТАТКИ, ВЫ (А НЕ АВТОР ДОКУМЕНТА ИЛИ ЕГО ПОМОЩНИК) БЕРЁТЕ НА СЕБЯ СТОИМОСТЬ ЛЮБОЙ НЕОБХОДИМОЙ ДОРАБОТКИ, КОРРЕКЦИИ ИЛИ ВОССТАНОВЛЕНИЯ. ЭТОТ ОТКАЗ ОТ ГАРАНТИЙ СОСТАВЛЯЕТ ВАЖНУЮ ЧАСТЬ ЛИЦЕНЗИИ. НИКАКОЕ ИСПОЛЬЗОВАНИЕ ДОКУМЕНТА ИЛИ ИЗМЕНЁННОЙ ВЕРСИИ ДОКУМЕНТА НЕ ДОПУСКАЕТСЯ БЕЗ ДАННОГО ПРЕДУПРЕЖДЕНИЯ И"
 
-#: C/totem.xml:55(para)
+#: C/xplayer.xml:55(para)
 msgid "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES."
 msgstr "НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ И НИ ПРИ КАКОМ ЗАКОННОМ СПОСОБЕ, НИ ПО КАКОМУ СОГЛАШЕНИЮ ИЛИ ДРУГОЙ ПРИЧИНЕ, АВТОР, СОЗДАТЕЛЬ, ПОМОЩНИКИ ИЛИ РАСПРОСТРАНИТЕЛИ ДОКУМЕНТА НЕ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ПРЯМОЙ, КОСВЕННЫЙ, СПЕЦИАЛЬНЫЙ, СЛУЧАЙНЫЙ ИЛИ ПРЕДНАМЕРЕННЫЙ УЩЕРБ ЛЮБОГО СВОЙСТВА, ВКЛЮЧАЯ, БЕЗ ОГРАНИЧЕНИЯ, ПОТЕРЮ ЖЕЛАНИЯ, РАБОТОСПОСОБНОСТИ, КОМПЬЮТЕРНЫЕ СБОИ ИЛИ ПОЛОМКИ, ИЛИ ЛЮБОЙ ДРУГОЙ УЩЕРБ ИЛИ ПОТЕРИ, ВОЗНИКАЮЩИЕ ВСЛЕДСТВИЕ ИЛИ СВЯЗАННЫЕ С ИСПОЛЬЗОВАНИЕМ ДОКУМЕНТА ИЛИ ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ДАЖЕ ЕСЛИ СТОРОНА БЫЛА УВЕДОМЛЕНА О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА."
 
-#: C/totem.xml:28(para)
+#: C/xplayer.xml:28(para)
 msgid "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: <placeholder-1/>"
 msgstr "ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПОЛЬЗОВАТЕЛЮ НА УСЛОВИЯХ ЛИЦЕНЗИИ GNU FREE DOCUMENTATION LICENSE С УВЕДОМЛЕНИЕМ О ТОМ, ЧТО: <placeholder-1/>"
 
-#: C/totem.xml:61(firstname)
+#: C/xplayer.xml:61(firstname)
 msgid "Chee Bin"
 msgstr "Chee Bin"
 
-#: C/totem.xml:62(surname)
+#: C/xplayer.xml:62(surname)
 msgid "HOH"
 msgstr "HOH"
 
-#: C/totem.xml:66(email)
+#: C/xplayer.xml:66(email)
 msgid "cbhoh@gnome.org"
 msgstr "cbhoh@gnome.org"
 
-#: C/totem.xml:69(firstname)
+#: C/xplayer.xml:69(firstname)
 msgid "Baptiste"
 msgstr "Baptiste"
 
-#: C/totem.xml:70(surname)
+#: C/xplayer.xml:70(surname)
 msgid "Mille-Mathias"
 msgstr "Mille-Mathias"
 
-#: C/totem.xml:72(orgname)
+#: C/xplayer.xml:72(orgname)
 msgid "GNOME Documentation project"
 msgstr "Проект документирования GNOME"
 
-#: C/totem.xml:74(contrib)
-#: C/totem.xml:80(contrib)
+#: C/xplayer.xml:74(contrib)
+#: C/xplayer.xml:80(contrib)
 msgid "Update documentation"
 msgstr "Дополнение документации"
 
-#: C/totem.xml:75(email)
+#: C/xplayer.xml:75(email)
 msgid "baptiste.millemathias@gmail.org"
 msgstr "baptiste.millemathias@gmail.org"
 
-#: C/totem.xml:78(firstname)
+#: C/xplayer.xml:78(firstname)
 msgid "Philip"
 msgstr "Philip"
 
-#: C/totem.xml:79(surname)
+#: C/xplayer.xml:79(surname)
 msgid "Withnall"
 msgstr "Withnall"
 
-#: C/totem.xml:81(email)
+#: C/xplayer.xml:81(email)
 msgid "philip@tecnocode.co.uk"
 msgstr "philip@tecnocode.co.uk"
 
-#: C/totem.xml:111(revnumber)
-msgid "Totem Movie Player Manual V2.0"
-msgstr "Руководство версии 2.0 по видеопроигрывателю Totem"
+#: C/xplayer.xml:111(revnumber)
+msgid "Xplayer Movie Player Manual V2.0"
+msgstr "Руководство версии 2.0 по видеопроигрывателю Xplayer"
 
-#: C/totem.xml:112(date)
+#: C/xplayer.xml:112(date)
 msgid "August 2006"
 msgstr "август 2006"
 
-#: C/totem.xml:114(para)
+#: C/xplayer.xml:114(para)
 msgid "Chee Bin HOH <email>cbhoh@gnome.org</email>"
 msgstr "Chee Bin HOH <email>cbhoh@gnome.org</email>"
 
-#: C/totem.xml:121(revnumber)
-#| msgid "Totem Movie Player Manual V2.0"
-msgid "Totem Movie Player Manual V3.0"
-msgstr "Руководство версии 3.0 по видеопроигрывателю Totem"
+#: C/xplayer.xml:121(revnumber)
+#| msgid "Xplayer Movie Player Manual V2.0"
+msgid "Xplayer Movie Player Manual V3.0"
+msgstr "Руководство версии 3.0 по видеопроигрывателю Xplayer"
 
-#: C/totem.xml:122(date)
+#: C/xplayer.xml:122(date)
 msgid "February 2009"
 msgstr "Февраль 2009"
 
-#: C/totem.xml:124(para)
+#: C/xplayer.xml:124(para)
 msgid "Philip Withnall <email>philip@tecnocode.co.uk</email>"
 msgstr "Philip Withnall <email>philip@tecnocode.co.uk</email>"
 
-#: C/totem.xml:132(releaseinfo)
-#| msgid "This manual describes version 1.6.0 of Totem Movie Player."
-msgid "This manual describes version 2.26 of Totem Movie Player."
-msgstr "Данное руководство описывает версию Totem 2.26"
+#: C/xplayer.xml:132(releaseinfo)
+#| msgid "This manual describes version 1.6.0 of Xplayer Movie Player."
+msgid "This manual describes version 2.26 of Xplayer Movie Player."
+msgstr "Данное руководство описывает версию Xplayer 2.26"
 
-#: C/totem.xml:135(title)
+#: C/xplayer.xml:135(title)
 msgid "Feedback"
 msgstr "Обратная связь"
 
-#: C/totem.xml:136(para)
-#: C/totem.xml:1100(para)
+#: C/xplayer.xml:136(para)
+#: C/xplayer.xml:1100(para)
 #| msgid ""
-#| "To report a bug or make a suggestion regarding the Totem Movie Player "
+#| "To report a bug or make a suggestion regarding the Xplayer Movie Player "
 #| "application or this manual, follow the directions in the <ulink url="
 #| "\"ghelp:user-guide#feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgid "To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide#feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Чтобы сообщить об ошибке или сделать предложение по видеопроигрывателю Totem или этому руководству, следуйте указаниям в документе <ulink url=\"ghelp:user-guide#feedback\" type=\"help\">Обратная связь с GNOME</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide#feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Чтобы сообщить об ошибке или сделать предложение по видеопроигрывателю Xplayer или этому руководству, следуйте указаниям в документе <ulink url=\"ghelp:user-guide#feedback\" type=\"help\">Обратная связь с GNOME</ulink>."
 
-#: C/totem.xml:144(primary)
-#: C/totem.xml:261(application)
-msgid "Totem Movie Player"
-msgstr "Видеопроигрыватель Totem"
+#: C/xplayer.xml:144(primary)
+#: C/xplayer.xml:261(application)
+msgid "Xplayer Movie Player"
+msgstr "Видеопроигрыватель Xplayer"
 
-#: C/totem.xml:147(primary)
-#: C/totem.xml:236(command)
-msgid "totem"
-msgstr "totem"
+#: C/xplayer.xml:147(primary)
+#: C/xplayer.xml:236(command)
+msgid "xplayer"
+msgstr "xplayer"
 
-#: C/totem.xml:156(title)
+#: C/xplayer.xml:156(title)
 msgid "Introduction"
 msgstr "Введение"
 
-#: C/totem.xml:157(para)
+#: C/xplayer.xml:157(para)
 #| msgid ""
-#| "The <application>Totem Movie Player</application> application is a movie "
+#| "The <application>Xplayer Movie Player</application> application is a movie "
 #| "player for the GNOME desktop based on GStreamer framework and xine "
 #| "library, and enables you to play movies or songs."
-msgid "The <application>Totem Movie Player</application> application is a movie player for the GNOME desktop based on the GStreamer framework and xine library, and enables you to play movies or songs."
-msgstr "<application>Видеопроигрыватель Totem</application> ― это приложение для среды GNOME, которое может проигрывать фильмы и музыку с помощью фреймворка GStreamer или библиотеки xine."
+msgid "The <application>Xplayer Movie Player</application> application is a movie player for the GNOME desktop based on the GStreamer framework and xine library, and enables you to play movies or songs."
+msgstr "<application>Видеопроигрыватель Xplayer</application> ― это приложение для среды GNOME, которое может проигрывать фильмы и музыку с помощью фреймворка GStreamer или библиотеки xine."
 
-#: C/totem.xml:160(para)
-msgid "<application>Totem Movie Player</application> provides the following features:"
-msgstr "<application>Видеопроигрыватель Totem</application> предоставляет следующие возможности:"
+#: C/xplayer.xml:160(para)
+msgid "<application>Xplayer Movie Player</application> provides the following features:"
+msgstr "<application>Видеопроигрыватель Xplayer</application> предоставляет следующие возможности:"
 
-#: C/totem.xml:163(para)
+#: C/xplayer.xml:163(para)
 #| msgid "Support a variety of video and audio files."
 msgid "Support for a variety of video and audio files."
 msgstr "поддержка большого количества форматов видео и звука;"
 
-#: C/totem.xml:166(para)
+#: C/xplayer.xml:166(para)
 #| msgid ""
 #| "Provide a variety of zoom levels and aspect ratios, and a fullscreen view."
 msgid "A variety of zoom levels and aspect ratios, and a fullscreen view."
 msgstr "возможность выбирать из нескольких масштабов и пропорций изображения и смотреть фильмы на весь экран;"
 
-#: C/totem.xml:169(para)
+#: C/xplayer.xml:169(para)
 #| msgid "Seek and Volume controls."
 msgid "Seek and volume controls."
 msgstr "управление уровнем громкости и перемотка;"
 
-#: C/totem.xml:172(para)
+#: C/xplayer.xml:172(para)
 msgid "A playlist."
 msgstr "списки воспроизведения;"
 
-#: C/totem.xml:175(para)
+#: C/xplayer.xml:175(para)
 msgid "Subtitle support."
 msgstr "Поддержка субтитров."
 
-#: C/totem.xml:178(para)
+#: C/xplayer.xml:178(para)
 msgid "Complete keyboard navigation."
 msgstr "управление с клавиатуры."
 
-#: C/totem.xml:181(para)
+#: C/xplayer.xml:181(para)
 msgid "Comprehensive set of plugins, including a subtitle downloader, YouTube browser, and disc burner."
 msgstr "Широкий набор подключаемых модулей, включая модуль поиска субтитров, обозреватель YouTube и программу для записи дисков."
 
-#: C/totem.xml:185(para)
-msgid "<application>Totem Movie Player</application> also comes with additional functionality such as:"
-msgstr "<application>Видеопроигрыватель Totem</application> также имеет дополнительные возможности, например:"
+#: C/xplayer.xml:185(para)
+msgid "<application>Xplayer Movie Player</application> also comes with additional functionality such as:"
+msgstr "<application>Видеопроигрыватель Xplayer</application> также имеет дополнительные возможности, например:"
 
-#: C/totem.xml:189(para)
+#: C/xplayer.xml:189(para)
 msgid "Video thumbnailer for GNOME."
 msgstr "создание миниатюр из кадров фильмов в Nautilus — файловом менеджере GNOME;"
 
-#: C/totem.xml:192(para)
+#: C/xplayer.xml:192(para)
 msgid "Audio preview application for GNOME."
 msgstr "Приложение GNOME для предварительного прослушивания аудио."
 
-#: C/totem.xml:195(para)
+#: C/xplayer.xml:195(para)
 msgid "Nautilus properties tab."
 msgstr "вкладка с метаданными в свойствах медиафайлов в Nautilus."
 
-#: C/totem.xml:212(title)
+#: C/xplayer.xml:212(title)
 msgid "Getting Started"
 msgstr "Начало работы"
 
-#: C/totem.xml:215(title)
-#| msgid "About <application>Totem Movie Player</application>"
-msgid "To Start <application>Totem Movie Player</application>"
-msgstr "Чтобы запустить <application>видеопроигрыватель Totem</application>"
+#: C/xplayer.xml:215(title)
+#| msgid "About <application>Xplayer Movie Player</application>"
+msgid "To Start <application>Xplayer Movie Player</application>"
+msgstr "Чтобы запустить <application>видеопроигрыватель Xplayer</application>"
 
-#: C/totem.xml:216(para)
-msgid "You can start <application>Totem Movie Player</application> in the following ways:"
-msgstr "Вы можете запустить <application>видеопроигрыватель Totem</application> следующими способами:"
+#: C/xplayer.xml:216(para)
+msgid "You can start <application>Xplayer Movie Player</application> in the following ways:"
+msgstr "Вы можете запустить <application>видеопроигрыватель Xplayer</application> следующими способами:"
 
-#: C/totem.xml:220(term)
+#: C/xplayer.xml:220(term)
 msgid "<guimenu>Applications</guimenu> menu"
 msgstr "Меню <guimenu>Приложения</guimenu>"
 
-#: C/totem.xml:222(para)
+#: C/xplayer.xml:222(para)
 msgid "Choose <menuchoice><guisubmenu>Sound &amp; Video</guisubmenu><guimenuitem>Movie Player</guimenuitem></menuchoice>."
 msgstr "Выберите <menuchoice><guisubmenu>Аудио и видео</guisubmenu><guimenuitem>Видеопроигрыватель</guimenuitem></menuchoice>."
 
-#: C/totem.xml:231(term)
+#: C/xplayer.xml:231(term)
 msgid "Command line"
 msgstr "Командная строка"
 
-#: C/totem.xml:233(para)
-msgid "To start <application>Totem Movie Player</application> from a command line, type the following command, then press <keycap>Return</keycap>:"
-msgstr "Чтобы запустить <application>Видеопроигрыватель Totem</application> из командной строки, наберите следующую команду и нажмите <keycap>Enter</keycap>:"
+#: C/xplayer.xml:233(para)
+msgid "To start <application>Xplayer Movie Player</application> from a command line, type the following command, then press <keycap>Return</keycap>:"
+msgstr "Чтобы запустить <application>Видеопроигрыватель Xplayer</application> из командной строки, наберите следующую команду и нажмите <keycap>Enter</keycap>:"
 
-#: C/totem.xml:239(para)
-msgid "To view other command line options that are available, type <command>totem --help</command>, then press <keycap>Return</keycap>."
-msgstr "Чтобы увидеть перечень доступных параметров командной строки, введите <command>totem --help</command> и нажмите <keycap>Enter</keycap>."
+#: C/xplayer.xml:239(para)
+msgid "To view other command line options that are available, type <command>xplayer --help</command>, then press <keycap>Return</keycap>."
+msgstr "Чтобы увидеть перечень доступных параметров командной строки, введите <command>xplayer --help</command> и нажмите <keycap>Enter</keycap>."
 
-#: C/totem.xml:249(title)
-#| msgid "About <application>Totem Movie Player</application>"
-msgid "When You Start <application>Totem Movie Player</application>"
-msgstr "После запуска <application>видеопроигрывателя Totem</application>"
+#: C/xplayer.xml:249(title)
+#| msgid "About <application>Xplayer Movie Player</application>"
+msgid "When You Start <application>Xplayer Movie Player</application>"
+msgstr "После запуска <application>видеопроигрывателя Xplayer</application>"
 
-#: C/totem.xml:250(para)
-msgid "When you start <application>Totem Movie Player</application>, the following window is displayed."
-msgstr "Когда вы запустите <application>видеопроигрыватель Totem</application>, появится следующее окно."
+#: C/xplayer.xml:250(para)
+msgid "When you start <application>Xplayer Movie Player</application>, the following window is displayed."
+msgstr "Когда вы запустите <application>видеопроигрыватель Xplayer</application>, появится следующее окно."
 
-#: C/totem.xml:254(title)
-#| msgid "<application>Totem Movie Player</application> Manual"
-msgid "<application>Totem Movie Player</application> Start Up Window"
-msgstr "Главное окно <application>видеопроигрывателя Totem</application>"
+#: C/xplayer.xml:254(title)
+#| msgid "<application>Xplayer Movie Player</application> Manual"
+msgid "<application>Xplayer Movie Player</application> Start Up Window"
+msgstr "Главное окно <application>видеопроигрывателя Xplayer</application>"
 
-#: C/totem.xml:261(phrase)
+#: C/xplayer.xml:261(phrase)
 #| msgid ""
 #| "Shows <placeholder-1/> main window with sidebar opened on playlist. "
 #| "Contains menubar, display area, sidebar, time elapsed slider, seek "
@@ -322,34 +322,34 @@ msgid "Shows <placeholder-1/> main window with sidebar opened on playlist. Conta
 msgstr "Показывает главное окно <placeholder-1/> с открытым в боковой панели списком воспроизведения. Видны также панель меню, область вывода видео, боковая панель, регулятор времени, кнопки управления прокруткой, регулятор громкости и панель состояния."
 
 #. for example, the items on the menubar and on the toolbar. This section is optional.
-#: C/totem.xml:274(para)
-msgid "The <application>Totem Movie Player</application> window contains the following elements:"
-msgstr "Окно <application>видеопроигрывателя Totem</application> состоит из следующих частей:"
+#: C/xplayer.xml:274(para)
+msgid "The <application>Xplayer Movie Player</application> window contains the following elements:"
+msgstr "Окно <application>видеопроигрывателя Xplayer</application> состоит из следующих частей:"
 
-#: C/totem.xml:278(term)
+#: C/xplayer.xml:278(term)
 msgid "Menubar."
 msgstr "Строка меню."
 
-#: C/totem.xml:280(para)
-msgid "The menus on the menubar contain all of the commands you need to use in <application>Totem Movie Player</application>."
-msgstr "Меню содержат все команды, которые используются в <application>видеопроигрывателе Totem</application>."
+#: C/xplayer.xml:280(para)
+msgid "The menus on the menubar contain all of the commands you need to use in <application>Xplayer Movie Player</application>."
+msgstr "Меню содержат все команды, которые используются в <application>видеопроигрывателе Xplayer</application>."
 
-#: C/totem.xml:285(term)
+#: C/xplayer.xml:285(term)
 msgid "Display area."
 msgstr "Область просмотра."
 
-#: C/totem.xml:287(para)
+#: C/xplayer.xml:287(para)
 #| msgid ""
 #| "The display area displays the movie or a visualisation of the current "
 #| "song."
 msgid "The display area displays the movie or a visualization of the current song."
 msgstr "Область просмотра показывает фильм или визуализацию текущей композиции."
 
-#: C/totem.xml:292(term)
+#: C/xplayer.xml:292(term)
 msgid "Sidebar."
 msgstr "Боковая панель."
 
-#: C/totem.xml:294(para)
+#: C/xplayer.xml:294(para)
 #| msgid ""
 #| "The sidebar displays properties of the file played and acts as playlist. "
 #| "It can also be used by various plugins, such as the MythTV, YouTube and "
@@ -357,12 +357,12 @@ msgstr "Боковая панель."
 msgid "The sidebar displays properties of the file played and acts as playlist. It can also be used by various plugins, such as the MythTV, YouTube and Video Search plugins. They can be selected by clicking on the drop-down list at the top of the sidebar."
 msgstr "В боковой панели показываются свойства воспроизводимого файла, а также список воспроизведения. Кроме того, боковую панель могут использовать разные модули, например MythTV, YouTube и модуль поиска видео. Их можно выбирать в верхней части боковой панели."
 
-#: C/totem.xml:301(term)
+#: C/xplayer.xml:301(term)
 #| msgid "Time elapsed slider."
 msgid "Elapsed time slider."
 msgstr "Полоса перемотки."
 
-#: C/totem.xml:303(para)
+#: C/xplayer.xml:303(para)
 #| msgid ""
 #| "The time elapsed slider displays the elapsed time of movie or song that "
 #| "is playing. It also enables you to skip forward or backward in a movie or "
@@ -370,44 +370,44 @@ msgstr "Полоса перемотки."
 msgid "The elapsed time slider displays the elapsed time of the movie or song that is playing. It also enables you to skip forward or backward in a movie or song by dragging the slider's handle along the bar, or by clicking on a point on the bar."
 msgstr "Полоса перемотки показывает, сколько времени идёт воспроизведение фильма или композиции. С её помощью можно прокрутить фильм или композицию в прямом или обратном направлении, перетаскивая ползунок вправо или влево или щёлкнув в некоторой точке полосы."
 
-#: C/totem.xml:310(term)
+#: C/xplayer.xml:310(term)
 msgid "Seek control buttons."
 msgstr "Кнопки управления."
 
-#: C/totem.xml:312(para)
+#: C/xplayer.xml:312(para)
 #| msgid ""
 #| "The seek control buttons enables you to move to the next or previous "
 #| "track, and to pause or play a movie or song."
 msgid "The seek control buttons enable you to move to the next or previous track, and to pause or play a movie or song."
 msgstr "Кнопки управления позволяют переходить к следующей или предыдущей дорожке, а также приостанавливать или возобновлять воспроизведение фильма или композиции."
 
-#: C/totem.xml:318(term)
+#: C/xplayer.xml:318(term)
 #| msgid "Shows pause button."
 msgid "Volume button."
 msgstr "Регулятор громкости."
 
-#: C/totem.xml:320(para)
+#: C/xplayer.xml:320(para)
 #| msgid "The volume slider enables you to adjust the volume."
 msgid "The volume button enables you to adjust the volume."
 msgstr "С помощью регулятора громкости можно управлять громкостью воспроизведения."
 
-#: C/totem.xml:324(term)
+#: C/xplayer.xml:324(term)
 msgid "Statusbar."
 msgstr "Строка состояния."
 
-#: C/totem.xml:326(para)
+#: C/xplayer.xml:326(para)
 msgid "The statusbar displays status information about the movie or song that is playing."
 msgstr "Строка состояния показывает сведения о фильме или песне, которые в настоящий момент воспроизводятся."
 
-#: C/totem.xml:338(title)
+#: C/xplayer.xml:338(title)
 msgid "Usage"
 msgstr "Использование"
 
-#: C/totem.xml:342(title)
+#: C/xplayer.xml:342(title)
 msgid "To Open a File"
 msgstr "Чтобы открыть файл"
 
-#: C/totem.xml:343(para)
+#: C/xplayer.xml:343(para)
 #| msgid ""
 #| "To open a video or an audio file, choose "
 #| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></"
@@ -418,41 +418,41 @@ msgstr "Чтобы открыть файл"
 msgid "To open a video or an audio file, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut><guimenu>Movie</guimenu><guisubmenu>Open</guisubmenu></menuchoice>. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file or files you want to open, then click <guibutton>OK</guibutton>."
 msgstr "Чтобы открыть файл с видео или звуком, выберите  <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut><guimenu>Фильм</guimenu><guisubmenu>Открыть</guisubmenu></menuchoice>. Появится диалог <guilabel>Выбор фильмов или списков воспроизведения</guilabel>. Выберите один или несколько файлов для открытия и нажмите <guibutton>OK</guibutton>."
 
-#: C/totem.xml:353(para)
+#: C/xplayer.xml:353(para)
 #| msgid ""
 #| "You can drag a file from another application such as a file manager to "
-#| "the <application>Totem Movie Player</application> window. The "
-#| "<application>Totem Movie Player</application> application will open the "
-#| "file and play the movie or song. <application>Totem Movie Player</"
+#| "the <application>Xplayer Movie Player</application> window. The "
+#| "<application>Xplayer Movie Player</application> application will open the "
+#| "file and play the movie or song. <application>Xplayer Movie Player</"
 #| "application> displays the title of the movie or song in the titlebar of "
 #| "the window and in the playlist in the sidebar."
-msgid "You can drag a file from another application such as a file manager to the <application>Totem Movie Player</application> window. If you drag the file to the display area, the file will replace the current playlist and will start playing immediately. If you drag the file to the playlist in the sidebar, the file will be appended to the current playlist. The <application>Totem Movie Player</application> application will open the file and play the movie or song. <application>Totem Movie Player</application> displays the title of the movie or song in the titlebar of the window and in the playlist in the sidebar."
-msgstr "Можно перетаскивать файлы из других приложений, например, из файлового менеджера в окно <application>видеопроигрывателя Totem</application>. Если перетащить файл на область воспроизведения, он заменит текущий список воспроизведения и начнёт воспроизведение. Если перетащить файл в список воспроизведения в боковой панели, то файл будет добавлен к текущему списку воспроизведения. <application>Видеопроигрыватель Totem</application> откроет файл и начнёт воспроизведение фильма или композиции. Название воспроизводимого фильма или композиции выводится в заголовок окна и в список воспроизведения в боковой панели."
+msgid "You can drag a file from another application such as a file manager to the <application>Xplayer Movie Player</application> window. If you drag the file to the display area, the file will replace the current playlist and will start playing immediately. If you drag the file to the playlist in the sidebar, the file will be appended to the current playlist. The <application>Xplayer Movie Player</application> application will open the file and play the movie or song. <application>Xplayer Movie Player</application> displays the title of the movie or song in the titlebar of the window and in the playlist in the sidebar."
+msgstr "Можно перетаскивать файлы из других приложений, например, из файлового менеджера в окно <application>видеопроигрывателя Xplayer</application>. Если перетащить файл на область воспроизведения, он заменит текущий список воспроизведения и начнёт воспроизведение. Если перетащить файл в список воспроизведения в боковой панели, то файл будет добавлен к текущему списку воспроизведения. <application>Видеопроигрыватель Xplayer</application> откроет файл и начнёт воспроизведение фильма или композиции. Название воспроизводимого фильма или композиции выводится в заголовок окна и в список воспроизведения в боковой панели."
 
-#: C/totem.xml:361(para)
+#: C/xplayer.xml:361(para)
 #| msgid ""
-#| "If you try to open a file format that <application>Totem Movie Player</"
+#| "If you try to open a file format that <application>Xplayer Movie Player</"
 #| "application> does not recognize, the application displays an error "
 #| "message. This error is most often encountered if you do not have the "
 #| "correct codecs installed. Information on getting codecs working can be "
-#| "found on the <ulink linkend=\"http://www.gnome.org/projects/totem/#codecs"
-#| "\">Totem Movie Player website</ulink>."
-msgid "If you try to open a file format that <application>Totem Movie Player</application> does not recognize, the application displays an error message. This error is most often encountered if you do not have the correct codecs installed. Information on getting codecs working can be found on the <ulink url=\"http://projects.gnome.org/totem/#codecs\" type=\"http\"><application>Totem Movie Player</application> website</ulink>."
-msgstr "При попытке открыть файл, формат которого непонятен <application>видеопроигрывателю Totem</application>, появится сообщение об ошибке. Чаще всего это бывает, когда не установлены нужные кодеки. Информация о кодеках есть на <ulink url=\"http://projects.gnome.org/totem/#codecs\" type=\"http\">веб-сайте <application>видеопроигрывателя Totem</application></ulink>."
+#| "found on the <ulink linkend=\"http://www.gnome.org/projects/xplayer/#codecs"
+#| "\">Xplayer Movie Player website</ulink>."
+msgid "If you try to open a file format that <application>Xplayer Movie Player</application> does not recognize, the application displays an error message. This error is most often encountered if you do not have the correct codecs installed. Information on getting codecs working can be found on the <ulink url=\"http://projects.gnome.org/xplayer/#codecs\" type=\"http\"><application>Xplayer Movie Player</application> website</ulink>."
+msgstr "При попытке открыть файл, формат которого непонятен <application>видеопроигрывателю Xplayer</application>, появится сообщение об ошибке. Чаще всего это бывает, когда не установлены нужные кодеки. Информация о кодеках есть на <ulink url=\"http://projects.gnome.org/xplayer/#codecs\" type=\"http\">веб-сайте <application>видеопроигрывателя Xplayer</application></ulink>."
 
-#: C/totem.xml:367(para)
+#: C/xplayer.xml:367(para)
 #| msgid ""
 #| "You can double-click on a video or an audio file in the "
 #| "<application>Nautilus</application> file manager to open it on the "
-#| "<application>Totem Movie Player</application> window."
-msgid "You can double-click on a video or an audio file in the <application>Nautilus</application> file manager to open it in the <application>Totem Movie Player</application> window."
-msgstr "Вы можете открыть аудио- или видеофайл в <application>видеопроигрывателе Totem</application>, дважды щёлкнув по файлу в файловом менеджере <application>Nautilus</application>."
+#| "<application>Xplayer Movie Player</application> window."
+msgid "You can double-click on a video or an audio file in the <application>Nautilus</application> file manager to open it in the <application>Xplayer Movie Player</application> window."
+msgstr "Вы можете открыть аудио- или видеофайл в <application>видеопроигрывателе Xplayer</application>, дважды щёлкнув по файлу в файловом менеджере <application>Nautilus</application>."
 
-#: C/totem.xml:374(title)
+#: C/xplayer.xml:374(title)
 msgid "To Open a Location"
 msgstr "Чтобы открыть файл по адресу"
 
-#: C/totem.xml:375(para)
+#: C/xplayer.xml:375(para)
 #| msgid ""
 #| "To open a file by URI location, choose "
 #| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></"
@@ -465,20 +465,20 @@ msgstr "Чтобы открыть файл по адресу"
 msgid "To open a file by URI (location), choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut><guimenu>Movie</guimenu><guimenuitem>Open Location</guimenuitem></menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down combination box to specify the URI you would like to open (it lists URIs which have previously been opened) – or type one in directly – then click on the <guibutton>Open</guibutton> button."
 msgstr "Чтобы открыть файл по его URI (адресу), выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut><guimenu>Фильм</guimenu><guimenuitem>Открыть адрес</guimenuitem></menuchoice>. Появится диалоговое окно <guilabel>Открыть адрес</guilabel>. Выберите URI из списка (в нём показываются URI, открытые раньше) или введите URI вручную, а затем нажмите кнопку <guibutton>Открыть</guibutton>."
 
-#: C/totem.xml:384(para)
+#: C/xplayer.xml:384(para)
 msgid "If you have a URI in the clipboard already, it will automatically be pasted into the combination box."
 msgstr "Если в буфер обмена был скопирован URI, он будет автоматически вставлен в список."
 
-#: C/totem.xml:388(title)
+#: C/xplayer.xml:388(title)
 #| msgid "To Play a Movie (DVD, VCD or CD)"
 msgid "To Play a Movie (DVD or VCD)"
 msgstr "Воспроизведение фильма (DVD или VCD)"
 
-#: C/totem.xml:389(para)
+#: C/xplayer.xml:389(para)
 msgid "Insert the disc in the optical device of your computer, then choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem></menuchoice>."
 msgstr "Вставьте диск в оптический привод вашего компьютера и выберите <menuchoice><guimenu>Фильм</guimenu><guimenuitem>Воспроизвести диск</guimenuitem></menuchoice>."
 
-#: C/totem.xml:392(para)
+#: C/xplayer.xml:392(para)
 #| msgid ""
 #| "To eject a DVD, VCD, or CD, choose "
 #| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></"
@@ -487,15 +487,15 @@ msgstr "Вставьте диск в оптический привод ваше�
 msgid "To eject a DVD or VCD, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut><guimenu>Movie</guimenu><guimenuitem>Eject</guimenuitem></menuchoice>."
 msgstr "Чтобы извлечь DVD или VCD из привода, выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut><guimenu>Фильм</guimenu><guimenuitem>Извлечь</guimenuitem></menuchoice>."
 
-#: C/totem.xml:402(title)
+#: C/xplayer.xml:402(title)
 msgid "To Pause a Movie or Song"
 msgstr "Чтобы приостановить фильм или песню"
 
-#: C/totem.xml:406(phrase)
+#: C/xplayer.xml:406(phrase)
 msgid "Shows pause button."
 msgstr "Кнопка паузы."
 
-#: C/totem.xml:403(para)
+#: C/xplayer.xml:403(para)
 #| msgid ""
 #| "To resume playing a movie or song, click on the <placeholder-1/> button, "
 #| "or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
@@ -504,11 +504,11 @@ msgstr "Кнопка паузы."
 msgid "To pause a movie or song that is playing, click on the <placeholder-1/> button, or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut><guimenu>Movie</guimenu><guimenuitem>Play / Pause</guimenuitem></menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie."
 msgstr "Чтобы приостановить воспроизведение фильма или композиции, нажмите кнопку <placeholder-1/> или выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Пробел</keycap></keycombo></shortcut><guimenu>Фильм</guimenu><guimenuitem>Воспроизведение / Пауза</guimenuitem></menuchoice>. Также можно использовать клавишу <keycap>P</keycap>."
 
-#: C/totem.xml:417(phrase)
+#: C/xplayer.xml:417(phrase)
 msgid "Shows play button."
 msgstr "Кнопка воспроизведения."
 
-#: C/totem.xml:414(para)
+#: C/xplayer.xml:414(para)
 #| msgid ""
 #| "To resume playing a movie or song, click on the <placeholder-1/> button, "
 #| "or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
@@ -517,11 +517,11 @@ msgstr "Кнопка воспроизведения."
 msgid "To resume playing a movie or song, click on the <placeholder-1/> button again, or choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut><guimenu>Movie</guimenu><guimenuitem>Play / Pause</guimenuitem></menuchoice>."
 msgstr "Чтобы возобновить воспроизведение фильма или композиции, нажмите кнопку <placeholder-1/> или выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Пробел</keycap></keycombo></shortcut><guimenu>Фильм</guimenu><guimenuitem>Воспроизведение / Пауза</guimenuitem></menuchoice>."
 
-#: C/totem.xml:428(title)
+#: C/xplayer.xml:428(title)
 msgid "To View Properties of a Movie or Song"
 msgstr "Чтобы просмотреть свойства фильма или песни"
 
-#: C/totem.xml:429(para)
+#: C/xplayer.xml:429(para)
 #| msgid ""
 #| "To view properties of a movie or song, choose <menuchoice><guimenu>View</"
 #| "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> to make the "
@@ -530,19 +530,19 @@ msgstr "Чтобы просмотреть свойства фильма или �
 msgid "To view the properties of a movie or song, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar."
 msgstr "Чтобы просмотреть свойства фильма или композиции, выберите <menuchoice><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice>, чтобы показать боковую панель, а затем в выпадающем списке выберите пункт <guimenu>Свойства</guimenu>."
 
-#: C/totem.xml:437(title)
+#: C/xplayer.xml:437(title)
 msgid "To Seek Through Movies or Songs"
 msgstr "Перемотка"
 
-#: C/totem.xml:438(para)
+#: C/xplayer.xml:438(para)
 msgid "To seek through movies or songs, you can use the following methods:"
 msgstr "Перемотать фильм или песню можно несколькими способами:"
 
-#: C/totem.xml:442(term)
+#: C/xplayer.xml:442(term)
 msgid "To skip forward"
 msgstr "Чтобы перемотать вперёд"
 
-#: C/totem.xml:444(para)
+#: C/xplayer.xml:444(para)
 #| msgid ""
 #| "To skip forward a movie or song, choose "
 #| "<menuchoice><shortcut><keycap>Right</keycap></shortcut><guimenu>Go</"
@@ -550,11 +550,11 @@ msgstr "Чтобы перемотать вперёд"
 msgid "To skip forward through a movie or song, choose <menuchoice><shortcut><keycap>Right</keycap></shortcut><guimenu>Go</guimenu><guimenuitem>Skip Forward</guimenuitem></menuchoice>."
 msgstr "Чтобы перемотать вперёд часть фильма или композиции, выберите <menuchoice><shortcut><keycap>Вправо</keycap></shortcut><guimenu>Переход</guimenu><guimenuitem>Пропустить вперёд</guimenuitem></menuchoice>."
 
-#: C/totem.xml:454(term)
+#: C/xplayer.xml:454(term)
 msgid "To skip backward"
 msgstr "Чтобы перемотать назад"
 
-#: C/totem.xml:456(para)
+#: C/xplayer.xml:456(para)
 #| msgid ""
 #| "To skip backward a movie or song, choose "
 #| "<menuchoice><shortcut><keycap>Left</keycap></shortcut><guimenu>Go</"
@@ -562,11 +562,11 @@ msgstr "Чтобы перемотать назад"
 msgid "To skip backwards through a movie or song, choose <menuchoice><shortcut><keycap>Left</keycap></shortcut><guimenu>Go</guimenu><guimenuitem>Skip Backwards</guimenuitem></menuchoice>."
 msgstr "Чтобы перемотать фильм или композицию назад, выберите <menuchoice><shortcut><keycap>Влево</keycap></shortcut><guimenu>Переход</guimenu><guimenuitem>Пропустить назад</guimenuitem></menuchoice>."
 
-#: C/totem.xml:466(term)
+#: C/xplayer.xml:466(term)
 msgid "To skip to a time"
 msgstr "Чтобы перейти к определённому моменту"
 
-#: C/totem.xml:468(para)
+#: C/xplayer.xml:468(para)
 #| msgid ""
 #| "To skip to a specific elapsed time in the movie or song, choose "
 #| "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></"
@@ -577,31 +577,31 @@ msgstr "Чтобы перейти к определённому моменту"
 msgid "To skip to a specific elapsed time in the movie or song, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Skip to</guimenuitem></menuchoice>. The <application>Skip to</application> dialog is displayed. Use the spin box to specify the elapsed time (in seconds) to skip to, then click <guibutton>OK</guibutton>."
 msgstr "Чтобы перейти к определённому моменту в фильме или композиции, выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut><guimenu>Переход</guimenu><guimenuitem>Перейти к</guimenuitem></menuchoice>. Появится диалоговое окно <guilabel>Перейти к</guilabel>. С помощью числового поля укажите время (в секундах), к которому нужно перейти, а затем нажмите <guibutton>OK</guibutton>."
 
-#: C/totem.xml:477(para)
+#: C/xplayer.xml:477(para)
 msgid "The spin box also allows more natural language to be used. You can enter a time in the formats \"hh:mm:ss\", \"mm:ss\" or \"ss\"; where \"hh\" is the hour, \"mm\" is the minute and \"ss\" is the second to skip to."
 msgstr "Поле ввода позволяет также использовать более естественную форму записи. Момент времени, к которому нужно перейти, можно вводить в формате «чч:мм:сс», «мм:сс» или «сс», где «чч» — часы, «мм» — минуты, а «сс» — секунды."
 
-#: C/totem.xml:484(term)
+#: C/xplayer.xml:484(term)
 msgid "To move to the next movie or song"
 msgstr "Чтобы перейти к следующему фильму или песне"
 
-#: C/totem.xml:494(phrase)
+#: C/xplayer.xml:494(phrase)
 msgid "Shows a seek next button"
 msgstr "Кнопка перехода к следующей композиции"
 
-#: C/totem.xml:486(para)
+#: C/xplayer.xml:486(para)
 msgid "To move to the next movie or song, choose <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Next Chapter/Movie</guimenuitem></menuchoice> or click on the <placeholder-1/> button."
 msgstr "Чтобы перейти к следующему фильму или песне, выберите <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Вправо</keycap></keycombo></shortcut><guimenu>Переход</guimenu><guimenuitem>Следующий фрагмент/фильм</guimenuitem></menuchoice>, либо нажмите кнопку <placeholder-1/>."
 
-#: C/totem.xml:500(term)
+#: C/xplayer.xml:500(term)
 msgid "To move to the previous movie or song"
 msgstr "Чтобы перейти к предыдущему фильму или песне"
 
-#: C/totem.xml:510(phrase)
+#: C/xplayer.xml:510(phrase)
 msgid "Shows a seek previous button"
 msgstr "Кнопка перехода к предыдущей композиции"
 
-#: C/totem.xml:502(para)
+#: C/xplayer.xml:502(para)
 #| msgid ""
 #| "To move to the previous movie or song, choose "
 #| "<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Left</"
@@ -611,23 +611,23 @@ msgstr "Кнопка перехода к предыдущей композици
 msgid "To move to the previous movie or song, choose <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Previous Chapter/Movie</guimenuitem></menuchoice> or click on the <placeholder-1/> button."
 msgstr "Чтобы перейти к предыдущему фильму или композиции, выберите <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Влево</keycap></keycombo></shortcut><guimenu>Переход</guimenu><guimenuitem>Предыдущая часть/фильм</guimenuitem></menuchoice>, либо нажмите кнопку <placeholder-1/>."
 
-#: C/totem.xml:519(title)
+#: C/xplayer.xml:519(title)
 msgid "To Change the Zoom Factor"
 msgstr "Чтобы изменить масштаб"
 
-#: C/totem.xml:521(title)
+#: C/xplayer.xml:521(title)
 msgid "To Change the Video Size"
 msgstr "Чтобы изменить размер видео"
 
-#: C/totem.xml:522(para)
+#: C/xplayer.xml:522(para)
 msgid "To change the zoom factor of the display area, you can use the following methods:"
 msgstr "Изменить масштаб области просмотра можно следующими способами:"
 
-#: C/totem.xml:527(para)
+#: C/xplayer.xml:527(para)
 msgid "To zoom to fullscreen mode, choose <menuchoice><shortcut><keycap>F11</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Fullscreen</guimenuitem></menuchoice>. You can also use the <keycap>F</keycap> key to toggle fullscreen mode. To exit fullscreen mode, click on the <guibutton>Leave Fullscreen</guibutton> button or press <keycap>Esc</keycap>, <keycap>F11</keycap> or <keycap>F</keycap>."
 msgstr "Чтобы перейти в полноэкранный режим, выберите <menuchoice><shortcut><keycap>F11</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Во весь экран</guimenuitem></menuchoice>. Также для переключения полноэкранного режима можно нажимать клавишу <keycap>F</keycap>. Чтобы выйти из полноэкранного режима, нажмите кнопку <guibutton>Выйти из полноэкранного режима</guibutton> или нажмите <keycap>Esc</keycap>, <keycap>F11</keycap> или <keycap>F</keycap>."
 
-#: C/totem.xml:537(para)
+#: C/xplayer.xml:537(para)
 #| msgid ""
 #| "To zoom to half the size (50%) of the original movie or visualisation, "
 #| "choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</"
@@ -637,11 +637,11 @@ msgstr "Чтобы перейти в полноэкранный режим, вы
 msgid "To change the size of the original movie or visualization, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut><guimenu>View</guimenu><guimenuitem>Fit Window to Movie</guimenuitem></menuchoice> and choose a scale ratio."
 msgstr "Чтобы изменить размер видео или визуализации, выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut><guimenu>Вид</guimenu><guimenuitem>Окно по размеру фильма</guimenuitem></menuchoice> и выберите коэффициент масштабирования."
 
-#: C/totem.xml:548(title)
+#: C/xplayer.xml:548(title)
 msgid "To Change the Video Aspect Ratio"
 msgstr "Чтобы изменить пропорции изображения"
 
-#: C/totem.xml:549(para)
+#: C/xplayer.xml:549(para)
 #| msgid ""
 #| "To switch between different aspect ratios, choose "
 #| "<menuchoice><shortcut><keycap>A</keycap></shortcut><guimenu>View</"
@@ -650,11 +650,11 @@ msgstr "Чтобы изменить пропорции изображения"
 msgid "To switch between different aspect ratios, choose <menuchoice><shortcut><keycap>A</keycap></shortcut><guimenu>View</guimenu><guisubmenu>Aspect Ratio</guisubmenu></menuchoice>."
 msgstr "Чтобы переключиться между параметрами пропорций изображения, выберите <menuchoice><shortcut><keycap>A</keycap></shortcut><guimenu>Вид</guimenu><guisubmenu>Пропорции</guisubmenu></menuchoice>."
 
-#: C/totem.xml:559(title)
+#: C/xplayer.xml:559(title)
 msgid "To Adjust the Volume"
 msgstr "Чтобы отрегулировать громкость"
 
-#: C/totem.xml:560(para)
+#: C/xplayer.xml:560(para)
 #| msgid ""
 #| "To increase the volume, choose <menuchoice><shortcut><keycap>Up</keycap></"
 #| "shortcut><guimenu>Sound</guimenu><guimenuitem>Volume Up</guimenuitem></"
@@ -665,63 +665,63 @@ msgstr "Чтобы отрегулировать громкость"
 msgid "To increase the volume, choose <menuchoice><shortcut><keycap>Up</keycap></shortcut><guimenu>Sound</guimenu><guimenuitem>Volume Up</guimenuitem></menuchoice>. To decrease the volume, choose <menuchoice><shortcut><keycap>Down</keycap></shortcut><guimenu>Sound</guimenu><guimenuitem>Volume Down</guimenuitem></menuchoice>."
 msgstr "Чтобы увеличить громкость, выберите <menuchoice><shortcut><keycap>Вверх</keycap></shortcut><guimenu>Звук</guimenu><guimenuitem>Увеличить громкость</guimenuitem></menuchoice>. А чтобы уменьшить громкость — <menuchoice><shortcut><keycap>Вниз</keycap></shortcut><guimenu>Звук</guimenu><guimenuitem>Уменьшить громкость</guimenuitem></menuchoice>."
 
-#: C/totem.xml:573(para)
+#: C/xplayer.xml:573(para)
 #| msgid ""
 #| "To adjust the sound volume, you can also use the volume button. Press the "
 #| "volume button and choose the volume level with the slider."
 msgid "You can also use the volume button: click on the volume button and choose the volume level with the slider."
 msgstr "Кроме того, громкость можно регулировать с помощью соответствующей кнопки. Нажмите кнопку громкости и выберите необходимый уровень с помощью ползунка."
 
-#: C/totem.xml:577(title)
+#: C/xplayer.xml:577(title)
 #| msgid "To Make the Window Always On Top"
 msgid "To Make the Window Always on Top"
 msgstr "Закрепление окна поверх остальных окон"
 
-#: C/totem.xml:578(para)
+#: C/xplayer.xml:578(para)
 #| msgid ""
-#| "To make the <application>Totem Movie Player</application> window always "
+#| "To make the <application>Xplayer Movie Player</application> window always "
 #| "on top of other application windows, choose <menuchoice><guimenu>Edit</"
 #| "guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. Select the "
-#| "<guilabel>Always on Top</guilabel> plugin to enable it. The Totem Movie "
+#| "<guilabel>Always on Top</guilabel> plugin to enable it. The Xplayer Movie "
 #| "Player window will now stay on top of all other windows while a movie is "
 #| "playing, but not while audio or visualisations are playing."
-msgid "To make the <application>Totem Movie Player</application> window always on top of other application windows, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on top of all other windows while a movie is playing, but not while audio or visualizations are playing."
-msgstr "Чтобы окно <application>видеопроигрывателя Totem</application> располагалось всегда поверх остальных окон, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Модули</guimenuitem></menuchoice>. Выберите модуль <guilabel>Всегда поверх всех окон</guilabel>, чтобы включить его. Теперь Totem будет оставаться поверх других окон, когда воспроизводится фильм (но не композиция или визуализация)."
+msgid "To make the <application>Xplayer Movie Player</application> window always on top of other application windows, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Xplayer Movie Player</application> window will now stay on top of all other windows while a movie is playing, but not while audio or visualizations are playing."
+msgstr "Чтобы окно <application>видеопроигрывателя Xplayer</application> располагалось всегда поверх остальных окон, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Модули</guimenuitem></menuchoice>. Выберите модуль <guilabel>Всегда поверх всех окон</guilabel>, чтобы включить его. Теперь Xplayer будет оставаться поверх других окон, когда воспроизводится фильм (но не композиция или визуализация)."
 
-#: C/totem.xml:586(para)
+#: C/xplayer.xml:586(para)
 #| msgid ""
 #| "To stop the window always being on top, disable the <guilabel>Always on "
 #| "Top</guilabel> plugin again."
-msgid "To stop the window from always being on top, disable the <guilabel>Always on Top</guilabel> plugin again. See <xref linkend=\"totem-plugins-always-on-top\"/> for more information."
-msgstr "Чтобы окно больше не удерживалось поверх всех окон, выключите модуль <guilabel>Всегда поверх всех окон</guilabel>. Смотрите <xref linkend=\"totem-plugins-always-on-top\"/> для дополнительной информации."
+msgid "To stop the window from always being on top, disable the <guilabel>Always on Top</guilabel> plugin again. See <xref linkend=\"xplayer-plugins-always-on-top\"/> for more information."
+msgstr "Чтобы окно больше не удерживалось поверх всех окон, выключите модуль <guilabel>Всегда поверх всех окон</guilabel>. Смотрите <xref linkend=\"xplayer-plugins-always-on-top\"/> для дополнительной информации."
 
-#: C/totem.xml:591(title)
+#: C/xplayer.xml:591(title)
 msgid "To Show or Hide Controls"
 msgstr "Чтобы показать или скрыть средства управления"
 
-#: C/totem.xml:592(para)
-msgid "To show or hide the <application>Totem Movie Player</application> window controls, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenu>View</guimenu><guimenuitem>Show Controls</guimenuitem></menuchoice>, or press the <keycap>H</keycap> key. You can also right-click on the <application>Totem Movie Player</application> window, then choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenuitem>Show Controls</guimenuitem></menuchoice> from the popup menu."
-msgstr "Чтобы показать или скрыть средства управления в окне <application>видеопроигрывателя Totem</application>, выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenu>Вид</guimenu><guimenuitem>Показывать средства управления</guimenuitem></menuchoice>, или нажмите клавишу <keycap>H</keycap>. Также вы можете щёлкнуть правой кнопкой мыши на окне <application>видеопроигрывателя Totem</application> и во всплывающем меню выбрать <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenuitem>Показывать средства управления</guimenuitem></menuchoice>."
+#: C/xplayer.xml:592(para)
+msgid "To show or hide the <application>Xplayer Movie Player</application> window controls, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenu>View</guimenu><guimenuitem>Show Controls</guimenuitem></menuchoice>, or press the <keycap>H</keycap> key. You can also right-click on the <application>Xplayer Movie Player</application> window, then choose <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenuitem>Show Controls</guimenuitem></menuchoice> from the popup menu."
+msgstr "Чтобы показать или скрыть средства управления в окне <application>видеопроигрывателя Xplayer</application>, выберите <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenu>Вид</guimenu><guimenuitem>Показывать средства управления</guimenuitem></menuchoice>, или нажмите клавишу <keycap>H</keycap>. Также вы можете щёлкнуть правой кнопкой мыши на окне <application>видеопроигрывателя Xplayer</application> и во всплывающем меню выбрать <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut><guimenuitem>Показывать средства управления</guimenuitem></menuchoice>."
 
-#: C/totem.xml:604(para)
+#: C/xplayer.xml:604(para)
 #| msgid ""
 #| "If the <guilabel>Show Controls</guilabel> option is selected, "
-#| "<application>Totem Movie Player</application> will show the menubar, time "
+#| "<application>Xplayer Movie Player</application> will show the menubar, time "
 #| "elapsed slider, seek control buttons, volume slider and statusbar on the "
 #| "window. If the <guilabel>Show Controls</guilabel> option is unselected, "
 #| "the application will hide these controls and show only the display area."
-msgid "If the <guilabel>Show Controls</guilabel> option is selected, <application>Totem Movie Player</application> will show the menubar, elapsed time slider, seek control buttons, volume slider and statusbar on the window. If the <guilabel>Show Controls</guilabel> option is unselected, the application will hide these controls and show only the display area."
-msgstr "Если выбран параметр <guilabel>Показывать средства управления</guilabel>, то в окне <application>видеопроигрывателя Totem</application> будут показаны строка меню, полоса перемотки, кнопки перехода, ползунок громкости и строка состояния. Если же данный параметр не выбран, то эти средства управления будут скрыты, и будет видна только область просмотра."
+msgid "If the <guilabel>Show Controls</guilabel> option is selected, <application>Xplayer Movie Player</application> will show the menubar, elapsed time slider, seek control buttons, volume slider and statusbar on the window. If the <guilabel>Show Controls</guilabel> option is unselected, the application will hide these controls and show only the display area."
+msgstr "Если выбран параметр <guilabel>Показывать средства управления</guilabel>, то в окне <application>видеопроигрывателя Xplayer</application> будут показаны строка меню, полоса перемотки, кнопки перехода, ползунок громкости и строка состояния. Если же данный параметр не выбран, то эти средства управления будут скрыты, и будет видна только область просмотра."
 
-#: C/totem.xml:613(title)
+#: C/xplayer.xml:613(title)
 msgid "To Manage the Playlist"
 msgstr "Чтобы управлять списком воспроизведения"
 
-#: C/totem.xml:616(title)
+#: C/xplayer.xml:616(title)
 msgid "To Show or Hide the Playlist"
 msgstr "Чтобы показать или скрыть список воспроизведения"
 
-#: C/totem.xml:617(para)
+#: C/xplayer.xml:617(para)
 #| msgid ""
 #| "To show the playlist, choose <menuchoice><guimenu>View</"
 #| "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice>, or click the "
@@ -731,15 +731,15 @@ msgstr "Чтобы показать или скрыть список воспр�
 msgid "To show or hide the playlist, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and choose <guimenu>Playlist</guimenu> on the top of the sidebar."
 msgstr "Чтобы показать список воспроизведения, выберите <menuchoice><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guilabel>Боковая панель</guilabel>, затем выберите <guimenu>Список воспроизведения</guimenu> в выпадающем списке вверху панели."
 
-#: C/totem.xml:626(title)
+#: C/xplayer.xml:626(title)
 msgid "Manage a Playlist"
 msgstr "Управление списком воспроизведения"
 
-#: C/totem.xml:630(term)
+#: C/xplayer.xml:630(term)
 msgid "To add a track or movie"
 msgstr "Чтобы добавить запись или фильм"
 
-#: C/totem.xml:632(para)
+#: C/xplayer.xml:632(para)
 #| msgid ""
 #| "To add a track or movie to the playlist, click on the <guibutton>Add</"
 #| "guibutton> button. The <guilabel>Select Movies or Playlists</guilabel> "
@@ -748,11 +748,11 @@ msgstr "Чтобы добавить запись или фильм"
 msgid "To add a track or movie to the playlist, click on the <guibutton>Add</guibutton> button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you want to add to the playlist, then click <guibutton>Add</guibutton>."
 msgstr "Чтобы добавить композицию или фильм в список воспроизведения, нажмите кнопку <guibutton>Добавить</guibutton>. Появится диалоговое окно <guilabel>Выбор фильмов или списков воспроизведения</guilabel>. Выберите нужный файл и нажмите кнопку <guibutton>Добавить</guibutton>."
 
-#: C/totem.xml:639(term)
+#: C/xplayer.xml:639(term)
 msgid "To remove a track or movie"
 msgstr "Чтобы удалить запись или фильм"
 
-#: C/totem.xml:641(para)
+#: C/xplayer.xml:641(para)
 #| msgid ""
 #| "To remove a track or movie from the playlist, select the items to remove "
 #| "from the <guilabel>filename</guilabel> list box, then click on the "
@@ -760,11 +760,11 @@ msgstr "Чтобы удалить запись или фильм"
 msgid "To remove a track or movie from the playlist, select the item or items to remove from the playlist, then click on the <guibutton>Remove</guibutton> button."
 msgstr "Чтобы удалить композицию или фильм из списка воспроизведения, выделите ненужные пункты в списке, затем нажмите кнопку <guibutton>Удалить</guibutton>."
 
-#: C/totem.xml:647(term)
+#: C/xplayer.xml:647(term)
 msgid "To save the playlist to a file"
 msgstr "Чтобы сохранить список воспроизведения в файл"
 
-#: C/totem.xml:649(para)
+#: C/xplayer.xml:649(para)
 #| msgid ""
 #| "To save the playlist to a file, click on the <guibutton>Save Playlist</"
 #| "guibutton> button. The <guilabel>Save Playlist</guilabel> dialog is "
@@ -773,11 +773,11 @@ msgstr "Чтобы сохранить список воспроизведени�
 msgid "To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton> button. The <application>Save Playlist</application> dialog is displayed; specify the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>."
 msgstr "Чтобы сохранить список воспроизведения в файл, нажмите кнопку <guibutton>Сохранить</guibutton>. Появится диалоговое окно <guilabel>Сохранить список воспроизведения</guilabel>. Укажите в нём имя файла, в котором хотите сохранить список, и нажмите <guibutton>Сохранить</guibutton>."
 
-#: C/totem.xml:656(term)
+#: C/xplayer.xml:656(term)
 msgid "To move a track or movie up the playlist"
 msgstr "Чтобы переместить запись или фильм вверх по списку воспроизведения"
 
-#: C/totem.xml:658(para)
+#: C/xplayer.xml:658(para)
 #| msgid ""
 #| "To move a track or movie up the playlist, select the item from the "
 #| "<guilabel>filename</guilabel> list box, then click on the <guibutton>Move "
@@ -785,11 +785,11 @@ msgstr "Чтобы переместить запись или фильм вве�
 msgid "To move a track or movie up the playlist, select the item from the playlist, then click on the <guibutton>Move Up</guibutton> button."
 msgstr "Чтобы переместить композицию или фильм вверх по списку воспроизведения, выделите элемент в списке воспроизведения и нажмите кнопку <guibutton>Переместить вверх</guibutton>."
 
-#: C/totem.xml:664(term)
+#: C/xplayer.xml:664(term)
 msgid "To move a track or movie down the playlist"
 msgstr "Чтобы переместить запись или фильм вниз по списку воспроизведения"
 
-#: C/totem.xml:666(para)
+#: C/xplayer.xml:666(para)
 #| msgid ""
 #| "To move a track or movie down the playlist, select the item from the "
 #| "<guilabel>filename</guilabel> list box, then click on the <guibutton>Move "
@@ -797,71 +797,71 @@ msgstr "Чтобы переместить запись или фильм вни�
 msgid "To move a track or movie down the playlist, select the item from the playlist, then click on the <guibutton>Move Down</guibutton> button."
 msgstr "Чтобы переместить композицию или фильм вниз по списку воспроизведения, выделите элемент в списке и нажмите кнопку <guibutton>Переместить вниз</guibutton>."
 
-#: C/totem.xml:627(para)
+#: C/xplayer.xml:627(para)
 #| msgid ""
 #| "You can use the <guilabel>Playlist</guilabel> dialog to do the following: "
 #| "<placeholder-1/>"
 msgid "You can use the <application>Playlist</application> dialog to do the following: <placeholder-1/>"
 msgstr "Диалоговое окно <guilabel>Список воспроизведения</guilabel> можно использовать для следующих действий: <placeholder-1/>"
 
-#: C/totem.xml:675(title)
+#: C/xplayer.xml:675(title)
 msgid "To Select or Unselect Repeat Mode"
 msgstr "Чтобы включить или выключить режим повтора"
 
-#: C/totem.xml:676(para)
+#: C/xplayer.xml:676(para)
 msgid "To enable or disable repeat mode, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Repeat Mode</guimenuitem></menuchoice>."
 msgstr "Чтобы включить или выключить режим повтора, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Режим повтора</guimenuitem></menuchoice>."
 
-#: C/totem.xml:681(title)
+#: C/xplayer.xml:681(title)
 msgid "To Select or Unselect Shuffle Mode"
 msgstr "Чтобы включить или выключить случайный порядок"
 
-#: C/totem.xml:682(para)
+#: C/xplayer.xml:682(para)
 msgid "To enable or disable shuffle mode, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Shuffle Mode</guimenuitem></menuchoice>."
 msgstr "Чтобы включить или выключить случайный порядок, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>В случайном порядке</guimenuitem></menuchoice>."
 
-#: C/totem.xml:690(title)
+#: C/xplayer.xml:690(title)
 msgid "To Choose Subtitles"
 msgstr "Чтобы выбрать субтитры"
 
-#: C/totem.xml:691(para)
+#: C/xplayer.xml:691(para)
 msgid "To choose the language of the subtitles, select <menuchoice><guimenu>View</guimenu><guisubmenu>Subtitles</guisubmenu></menuchoice> and choose the subtitle language you want to display."
 msgstr "Чтобы выбрать язык субтитров, выберите <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu></menuchoice> и выберите язык, в котором хотите видеть субтитры."
 
-#: C/totem.xml:695(para)
+#: C/xplayer.xml:695(para)
 msgid "To disable the display of subtitles, select <menuchoice><guimenu>View</guimenu><guisubmenu>Subtitles</guisubmenu><guimenuitem>None</guimenuitem></menuchoice>."
 msgstr "Чтобы отключить субтитры, выберите <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu><guimenuitem>Нет</guimenuitem></menuchoice>."
 
-#: C/totem.xml:697(para)
+#: C/xplayer.xml:697(para)
 #| msgid ""
-#| "By default, Totem Movie Player will choose the same language for the "
+#| "By default, Xplayer Movie Player will choose the same language for the "
 #| "subtitles as the one you normally use on your computer."
-msgid "By default, <application>Totem Movie Player</application> will choose the same language for the subtitles as the one you normally use on your computer."
-msgstr "По умолчанию <application>видеопроигрыватель Totem</application> будет использовать для субтитров тот язык, который используется на компьютере."
+msgid "By default, <application>Xplayer Movie Player</application> will choose the same language for the subtitles as the one you normally use on your computer."
+msgstr "По умолчанию <application>видеопроигрыватель Xplayer</application> будет использовать для субтитров тот язык, который используется на компьютере."
 
-#: C/totem.xml:699(para)
+#: C/xplayer.xml:699(para)
 #| msgid ""
-#| "Totem Movie Player will automatically load and display subtitles if the "
+#| "Xplayer Movie Player will automatically load and display subtitles if the "
 #| "file which contains them has the same name as the video file played and "
 #| "the extension <filename>asc</filename>, <filename>txt</filename>, "
 #| "<filename>sub</filename>, <filename>smi</filename>, or <filename>ssa</"
 #| "filename>."
-msgid "<application>Totem Movie Player</application> will automatically load and display subtitles for a video if it finds a subtitle file with the same name as the video being played, and the extension <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> or <filename class=\"extension\">ass</filename>."
-msgstr "<application>Видеопроигрыватель Totem</application> автоматически загружает и показывает субтитры для видео, если их файл имеет то же имя, что и проигрываемое видео, а расширение является одним из следующих: <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> или <filename class=\"extension\">ass</filename>."
+msgid "<application>Xplayer Movie Player</application> will automatically load and display subtitles for a video if it finds a subtitle file with the same name as the video being played, and the extension <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> or <filename class=\"extension\">ass</filename>."
+msgstr "<application>Видеопроигрыватель Xplayer</application> автоматически загружает и показывает субтитры для видео, если их файл имеет то же имя, что и проигрываемое видео, а расширение является одним из следующих: <filename class=\"extension\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename class=\"extension\">sub</filename>, <filename class=\"extension\">srt</filename>, <filename class=\"extension\">smi</filename>, <filename class=\"extension\">ssa</filename> или <filename class=\"extension\">ass</filename>."
 
-#: C/totem.xml:704(para)
+#: C/xplayer.xml:704(para)
 msgid "If the file containing the subtitles has a different name from the video being played, you can right-click on the video in the playlist and choose <menuchoice><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice> from the popup menu to load the correct subtitle file. You may also choose subtitles by choosing <menuchoice><guimenu>View</guimenu><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice>."
 msgstr "Если имя файла с субтитрами отличается от имени файла, содержащего видео, можно щёлкнуть правой кнопкой мыши по проигрываемому видео в списке воспроизведения и выбрать в появившемся меню <menuchoice><guimenuitem>Выбрать текстовые субтитры</guimenuitem></menuchoice>, чтобы загрузить нужный файл. Также можно указать файл с субтитрами, выбрав <menuchoice><guimenu>Вид</guimenu><guisubmenu>Субтитры</guisubmenu><guimenuitem>Выбрать текстовые субтитры</guimenuitem></menuchoice>."
 
-#: C/totem.xml:708(para)
-msgid "Using the <guilabel>Subtitle Downloader</guilabel> plugin, you can also download subtitles from the OpenSubtitles service. See <xref linkend=\"totem-plugins-opensubtitles\"/> for more information."
-msgstr "Используя модуль <guilabel>Загрузка субтитров</guilabel>, можно также загружать субтитры при помощи службы OpenSubtitles. Для получения дополнительной информации см. <xref linkend=\"totem-plugins-opensubtitles\"/>."
+#: C/xplayer.xml:708(para)
+msgid "Using the <guilabel>Subtitle Downloader</guilabel> plugin, you can also download subtitles from the OpenSubtitles service. See <xref linkend=\"xplayer-plugins-opensubtitles\"/> for more information."
+msgstr "Используя модуль <guilabel>Загрузка субтитров</guilabel>, можно также загружать субтитры при помощи службы OpenSubtitles. Для получения дополнительной информации см. <xref linkend=\"xplayer-plugins-opensubtitles\"/>."
 
-#: C/totem.xml:713(title)
+#: C/xplayer.xml:713(title)
 msgid "To Take a Screenshot"
 msgstr "Чтобы сохранить кадр"
 
-#: C/totem.xml:714(para)
+#: C/xplayer.xml:714(para)
 #| msgid ""
 #| "To take a screenshot of the movie or visualisation that is playing, "
 #| "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Take Screenshot</"
@@ -872,20 +872,20 @@ msgstr "Чтобы сохранить кадр"
 msgid "To take a screenshot of the movie or visualization that is playing, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Take Screenshot</guimenuitem></menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button to save the screenshot."
 msgstr "Чтобы получить снимок кадра воспроизводимого видео или визуализации, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Сохранить кадр</guimenuitem></menuchoice>. Появится диалог <guilabel>Сохранить кадр</guilabel>. Укажите место, в котором хотите сохранить кадр, и имя файла, затем нажмите кнопку <guibutton>Сохранить</guibutton>."
 
-#: C/totem.xml:722(para)
+#: C/xplayer.xml:722(para)
 #| msgid ""
-#| "Totem Movie Player will display a preview of the screenshot which is to "
+#| "Xplayer Movie Player will display a preview of the screenshot which is to "
 #| "be saved on the left-hand side of the <guilabel>Save Screenshot</"
 #| "guilabel> dialog."
-msgid "<application>Totem Movie Player</application> will display a preview of the screenshot which is to be saved on the left-hand side of the <application>Save Screenshot</application> dialog."
-msgstr "<application>Видеопроигрыватель Totem</application> покажет миниатюру того снимка, который будет сохранён, в левой части диалогового окна <guilabel>Сохранить снимок экрана</guilabel>."
+msgid "<application>Xplayer Movie Player</application> will display a preview of the screenshot which is to be saved on the left-hand side of the <application>Save Screenshot</application> dialog."
+msgstr "<application>Видеопроигрыватель Xplayer</application> покажет миниатюру того снимка, который будет сохранён, в левой части диалогового окна <guilabel>Сохранить снимок экрана</guilabel>."
 
-#: C/totem.xml:726(title)
+#: C/xplayer.xml:726(title)
 #| msgid "To Take a Screenshot"
 msgid "To Create a Screenshot Gallery"
 msgstr "Сохранение серии кадров"
 
-#: C/totem.xml:727(para)
+#: C/xplayer.xml:727(para)
 #| msgid ""
 #| "To take a screenshot of the movie or visualisation that is playing, "
 #| "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Take Screenshot</"
@@ -896,27 +896,27 @@ msgstr "Сохранение серии кадров"
 msgid "To create a gallery of screenshots of the movie or visualization that is playing, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Create Screenshot Gallery</guimenuitem></menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button to save the screenshot."
 msgstr "Чтобы получить серию снимков кадров видео или визуализации, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Создать серию кадров</guimenuitem></menuchoice>. Появится диалоговое <guilabel>Сохранить серию кадров</guilabel>. Укажите в нём место, в котором хотите сохранить изображение с серией снимков, затем нажмите кнопку <guibutton>Сохранить</guibutton>."
 
-#: C/totem.xml:735(para)
+#: C/xplayer.xml:735(para)
 msgid "You may specify the width of the individual screenshots in the gallery using the <guilabel>Screenshot width</guilabel> entry. The default width is 128 pixels."
 msgstr "Можно указать ширину отдельных снимков экрана в серии при помощи поля <guilabel>Ширина кадра (в точках растра)</guilabel>. Ширина по умолчанию: 128 пикселов."
 
-#: C/totem.xml:737(para)
+#: C/xplayer.xml:737(para)
 msgid "You may also specify the number of screenshots to be put in the gallery. By default, this is calculated based on the length of the movie; however, this may be overridden by deselecting the <guilabel>Calculate the number of screenshots</guilabel> checkbox and entering the new number in the <guilabel>Number of screenshots</guilabel> spin box."
 msgstr "Также можно указать количество снимков экрана в серии. По умолчанию оно рассчитывается по продолжительности видео, но может быть указано явно после отключения флажка <guilabel>Рассчитать количество кадров</guilabel> и ввода требуемого количества в поле <guilabel>Количество снимков экрана</guilabel>."
 
-#: C/totem.xml:745(title)
+#: C/xplayer.xml:745(title)
 msgid "Plugins"
 msgstr "Расширения"
 
-#: C/totem.xml:746(para)
-msgid "<application>Totem Movie Player</application> has many features which are present in the form of plugins — pieces of the software which are only loaded if necessary."
-msgstr "Многие возможности <application>видеопроигрывателя Totem</application> представлены в виде модулей, небольших частей приложения, которые загружаются только при необходимости."
+#: C/xplayer.xml:746(para)
+msgid "<application>Xplayer Movie Player</application> has many features which are present in the form of plugins — pieces of the software which are only loaded if necessary."
+msgstr "Многие возможности <application>видеопроигрывателя Xplayer</application> представлены в виде модулей, небольших частей приложения, которые загружаются только при необходимости."
 
-#: C/totem.xml:749(title)
+#: C/xplayer.xml:749(title)
 msgid "To Enable a Plugin"
 msgstr "Включение модуля"
 
-#: C/totem.xml:750(para)
+#: C/xplayer.xml:750(para)
 #| msgid ""
 #| "To take a screenshot of the movie or visualisation that is playing, "
 #| "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Take Screenshot</"
@@ -927,35 +927,35 @@ msgstr "Включение модуля"
 msgid "To view the list of installed plugins, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. The <application>Configure Plugins</application> dialog is displayed. On the left is a list of all the plugins you have installed, while on the right is a description of the currently selected plugin. Plugins which have options which can be changed will have a sensitive <guibutton>Configure</guibutton> button on the right."
 msgstr "Чтобы просмотреть список установленных модулей, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Модули</guimenuitem></menuchoice>. Появится диалоговое <application>Настройка модулей</application>. В левой его части расположен список установленных модулей, а справа — описание выбранного модуля. Если у модуля есть настройки, будет активна кнопка <guibutton>Параметры</guibutton> справа."
 
-#: C/totem.xml:754(para)
+#: C/xplayer.xml:754(para)
 msgid "To enable a plugin, simply select the checkbox to the left of its name in the plugin list, and the plugin will be loaded immediately. If there is any error loading the plugin, an error dialog will also be displayed immediately."
 msgstr "Чтобы включить модуль, отметье его флажком слева от его имени в списке модулей, и он сразу будет загружен. Если при загрузке произойдёт ошибка, появится соответствующее сообщение."
 
-#: C/totem.xml:756(para)
-msgid "To disable a plugin again, deselect its checkbox. Plugins will remain enabled or disabled as set even when <application>Totem Movie Player</application> is closed."
-msgstr "Чтобы отключить модуль, уберите флажок. Состояние модуля (включён или выключен) сохранится и после закрытия <application>видеопроигрывателя Totem</application>."
+#: C/xplayer.xml:756(para)
+msgid "To disable a plugin again, deselect its checkbox. Plugins will remain enabled or disabled as set even when <application>Xplayer Movie Player</application> is closed."
+msgstr "Чтобы отключить модуль, уберите флажок. Состояние модуля (включён или выключен) сохранится и после закрытия <application>видеопроигрывателя Xplayer</application>."
 
-#: C/totem.xml:760(title)
+#: C/xplayer.xml:760(title)
 msgid "Always on Top"
 msgstr "Всегда поверх"
 
-#: C/totem.xml:761(para)
-msgid "When enabled, the <guilabel>Always on Top</guilabel> plugin will force the main <application>Totem Movie Player</application> window to be on top of all other windows while a movie is playing, but not while audio or visualizations are playing. To stop the window being on top, disable the plugin again."
+#: C/xplayer.xml:761(para)
+msgid "When enabled, the <guilabel>Always on Top</guilabel> plugin will force the main <application>Xplayer Movie Player</application> window to be on top of all other windows while a movie is playing, but not while audio or visualizations are playing. To stop the window being on top, disable the plugin again."
 msgstr "Расширение <guilabel>Всегда поверх</guilabel> удерживает главное окно <application>Видеопроигрывателя</application> поверх других окон во время воспроизведения фильма. Для того, чтобы вернуть окну прежние свойства, отключите модуль расширения."
 
-#: C/totem.xml:766(title)
+#: C/xplayer.xml:766(title)
 msgid "Coherence DLNA/UPnP Client"
 msgstr "Клиент DLNA/UPnP, основанный на Coherence"
 
-#: C/totem.xml:767(para)
+#: C/xplayer.xml:767(para)
 #| msgid ""
 #| "Select the <guilabel>resize</guilabel> option if you want "
-#| "<application>Totem Movie Player</application> to automatically resize the "
+#| "<application>Xplayer Movie Player</application> to automatically resize the "
 #| "window when a new video is loaded."
-msgid "The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows <application>Totem Movie Player</application> to play multimedia content from UPnP media servers (such as Coherence servers) on the local network."
-msgstr "Модуль <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> позволяет <application>видеопроигрывателю Totem</application> воспроизводить мультимедийные данные, получаемые от медиа-служб UPnP (например, Coherence) в локальной сети."
+msgid "The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows <application>Xplayer Movie Player</application> to play multimedia content from UPnP media servers (such as Coherence servers) on the local network."
+msgstr "Модуль <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> позволяет <application>видеопроигрывателю Xplayer</application> воспроизводить мультимедийные данные, получаемые от медиа-служб UPnP (например, Coherence) в локальной сети."
 
-#: C/totem.xml:769(para)
+#: C/xplayer.xml:769(para)
 #| msgid ""
 #| "To show the playlist, choose <menuchoice><guimenu>View</"
 #| "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice>, or click the "
@@ -965,57 +965,57 @@ msgstr "Модуль <guilabel>DLNA/UPnP клиент, основанный на
 msgid "With the <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Coherence DLNA/UPnP Client</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Coherence DLNA/UPnP Client</guilabel> sidebar."
 msgstr "При включённом модуле <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или щёлкните по кнопке <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>DLNA/UPnP клиент, основанный на Coherence</guilabel> из выпадающего списка вверху боковой панели для отображения соответствующей панели."
 
-#: C/totem.xml:773(para)
-msgid "The tree view in the sidebar will list the available media servers. Clicking on one will expand it to show the types of media it can serve, and clicking on a media folder will expand it to list the media files available. Double-clicking on a media file will add it to <application>Totem Movie Player</application>'s playlist and play it. You may alternatively right-click on a file and choose <menuchoice><guimenuitem>Play</guimenuitem></menuchoice> or <menuchoice><guimenuitem>Enqueue</guimenuitem></menuchoice> to play the file immediately or add it to the playlist, respectively."
-msgstr "В списке боковой панели показан перечень доступных серверов. Щелчок по одному из них покажет список типов мультимедиа, которые он может обслуживать, а щелчок по папке покажет список доступных файлов. Двойной щелчок по файлу добавит его в список воспроизведения <application>видеопроигрывателя Totem</application> и начнёт воспроизведение. Также можно щёлкнуть правой кнопкой по файлу и выбрать <menuchoice><guimenuitem>Воспроизвести</guimenuitem></menuchoice> или <menuchoice><guimenuitem>Поставить в очередь</guimenuitem></menuchoice>, чтобы сразу начать воспроизведение или добавить файл в список воспроизведения соответственно."
+#: C/xplayer.xml:773(para)
+msgid "The tree view in the sidebar will list the available media servers. Clicking on one will expand it to show the types of media it can serve, and clicking on a media folder will expand it to list the media files available. Double-clicking on a media file will add it to <application>Xplayer Movie Player</application>'s playlist and play it. You may alternatively right-click on a file and choose <menuchoice><guimenuitem>Play</guimenuitem></menuchoice> or <menuchoice><guimenuitem>Enqueue</guimenuitem></menuchoice> to play the file immediately or add it to the playlist, respectively."
+msgstr "В списке боковой панели показан перечень доступных серверов. Щелчок по одному из них покажет список типов мультимедиа, которые он может обслуживать, а щелчок по папке покажет список доступных файлов. Двойной щелчок по файлу добавит его в список воспроизведения <application>видеопроигрывателя Xplayer</application> и начнёт воспроизведение. Также можно щёлкнуть правой кнопкой по файлу и выбрать <menuchoice><guimenuitem>Воспроизвести</guimenuitem></menuchoice> или <menuchoice><guimenuitem>Поставить в очередь</guimenuitem></menuchoice>, чтобы сразу начать воспроизведение или добавить файл в список воспроизведения соответственно."
 
-#: C/totem.xml:778(para)
+#: C/xplayer.xml:778(para)
 msgid "If the media server allows it, choosing <menuchoice><guimenuitem>Delete</guimenuitem></menuchoice> from a file's context menu allows you to delete that file from the media server."
 msgstr "Если медиа-сервер позволяет, пункт <menuchoice><guimenuitem>Удалить</guimenuitem></menuchoice> в контекстном меню файла позволит удалить файл с медиа-сервера."
 
-#: C/totem.xml:782(title)
+#: C/xplayer.xml:782(title)
 msgid "Gromit Annotations"
 msgstr "Аннотации Gromit"
 
-#: C/totem.xml:783(para)
+#: C/xplayer.xml:783(para)
 msgid "The <guilabel>Gromit Annotations</guilabel> plugin allows you to draw on top of movies as they are played using <ulink type=\"http\" url=\"http://www.home.unix-ag.org/simon/gromit/\"><application>Gromit</application></ulink>. You must have <application>Gromit</application> installed before you can enable the plugin — consult your operating system documentation for information on how to do this."
 msgstr "Модуль <guilabel>Аннотации средствами Gromit</guilabel> позволяет рисовать поверх фильмов во время их воспроизведения при помощи <ulink type=\"http\" url=\"http://www.home.unix-ag.org/simon/gromit/\"><application>Gromit</application></ulink>. Чтобы включить этот модуль,  в системе должен быть установлен <application>Gromit</application>. Обратитесь к документации по операционной системе, чтобы получить информацию об установке приложений."
 
-#: C/totem.xml:787(para)
+#: C/xplayer.xml:787(para)
 msgid "With the plugin enabled, press <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> to toggle <application>Gromit</application> on or off. When <application>Gromit</application> is enabled, your pointer will change to a crosshair. To draw on the screen, hold down your mouse button and drag your pointer around, before releasing your mouse button. Press <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> again to toggle <application>Gromit</application> off."
 msgstr "При включённом модуле нажатие <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> включает и выключает <application>Gromit</application>. Когда <application>Gromit</application> включён, указатель мыши изменяется на перекрестие. Для того, чтобы начать рисование на экране, переместите указатель, удерживая кнопку мыши. Затем снова нажмите <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo>, чтобы выключить <application>Gromit</application>."
 
-#: C/totem.xml:791(para)
-msgid "To clear the screen of annotations, press <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, or close <application>Totem Movie Player</application>."
-msgstr "Для очистки экрана от аннотаций нажмите <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> или закройте <application>видеопроигрыватель Totem</application>."
+#: C/xplayer.xml:791(para)
+msgid "To clear the screen of annotations, press <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, or close <application>Xplayer Movie Player</application>."
+msgstr "Для очистки экрана от аннотаций нажмите <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo> или закройте <application>видеопроигрыватель Xplayer</application>."
 
-#: C/totem.xml:795(title)
+#: C/xplayer.xml:795(title)
 msgid "Jamendo"
 msgstr "Jamendo"
 
-#: C/totem.xml:796(para)
+#: C/xplayer.xml:796(para)
 msgid "The <guilabel>Jamendo</guilabel> plugin allows you to listen to the collection of Creative Commons-licensed music on the <ulink type=\"http\" url=\"http://www.jamendo.com/en/\">Jamendo</ulink> service."
 msgstr "Модуль <guilabel>Jamendo</guilabel> позволяет прослушивать музыку, распространяемую по лицензии Creative Commons, с сайта <ulink type=\"http\" url=\"http://www.jamendo.com/en/\">Jamendo</ulink>."
 
-#: C/totem.xml:799(title)
-#: C/totem.xml:850(title)
+#: C/xplayer.xml:799(title)
+#: C/xplayer.xml:850(title)
 #| msgid "To Manage the Playlist"
 msgid "To Configure the Plugin"
 msgstr "Настройка модуля"
 
-#: C/totem.xml:800(para)
+#: C/xplayer.xml:800(para)
 msgid "The <guilabel>Jamendo</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the plugin, and the <application>Jamendo Plugin Configuration</application> dialog will be displayed. Here, you can choose whether to download songs in Ogg or MP3 format (Ogg is preferred due to its open-source nature); and the number of albums to retrieve when doing a search (choose more albums if you have a faster Internet connection)."
 msgstr "Вы можете настроить модуль <guilabel>Jamendo</guilabel>. Щёлкните по кнопке <guibutton>Параметры</guibutton> после включения модуля, появится диалоговое окно <application>Конфигурация модуля Jamendo</application>. В появившемся окне можно выбрать формат загружаемой музыки, Ogg или MP3 (Ogg предпочтительнее, так как является свободным форматом), а также указать количество запрашиваемых альбомов при поиске (увеличьте значение, если соединение с Интернет достаточно быстрое)."
 
-#: C/totem.xml:804(para)
+#: C/xplayer.xml:804(para)
 msgid "Once you're done, click <guibutton>OK</guibutton>."
 msgstr "Для завершения нажмите кнопку <guibutton>OK</guibutton>."
 
-#: C/totem.xml:807(title)
+#: C/xplayer.xml:807(title)
 msgid "To Display the Jamendo Sidebar"
 msgstr "Боковая панель Jamendo"
 
-#: C/totem.xml:808(para)
+#: C/xplayer.xml:808(para)
 #| msgid ""
 #| "To show the playlist, choose <menuchoice><guimenu>View</"
 #| "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice>, or click the "
@@ -1025,350 +1025,350 @@ msgstr "Боковая панель Jamendo"
 msgid "With the <guilabel>Jamendo</guilabel> plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Jamendo</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Jamendo</guilabel> sidebar."
 msgstr "Когда модуль <guilabel>Jamendo</guilabel> включён, выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы отобразить боковую панель. Выберите <guilabel>Jamendo</guilabel> из выпадающего списка вверху боковой панели для отображения панели <guilabel>Jamendo</guilabel>."
 
-#: C/totem.xml:814(title)
+#: C/xplayer.xml:814(title)
 msgid "To Search for Music"
 msgstr "Поиск музыки"
 
-#: C/totem.xml:815(para)
+#: C/xplayer.xml:815(para)
 msgid "Enter your search terms in the search entry at the top of the <guilabel>Jamendo</guilabel> sidebar. You can search by either artist or by tags. Click on the search button to start your search."
 msgstr "Введите запрос в поле поиска вверху панели <guilabel>Jamendo</guilabel>. Можно искать как по исполнителю, так и по тегам. Чтобы начать поиск, нажмите кнопку <guilabel>Поиск</guilabel>."
 
-#: C/totem.xml:817(para)
+#: C/xplayer.xml:817(para)
 msgid "Search results will be displayed in the tree view in the <guilabel>Search Results</guilabel> page of the sidebar, and can be browsed through using the arrow buttons at the bottom of the sidebar. Albums are listed, and if you click on an album, its tracks will be listed below it. Click again to hide the album's tracks."
 msgstr "Результаты поиска будут показаны в виде списка во вкладке <guilabel>Результаты поиска</guilabel> на боковой панели и могут быть просмотрены при помощи кнопок со стрелками внизу боковой панели. В списке представлены альбомы, содержимое альбома можно просмотреть, щёлкнув по нему. Повторный щелчок по альбому скроет список композиций, входящих в альбом."
 
-#: C/totem.xml:820(para)
+#: C/xplayer.xml:820(para)
 msgid "With an artist selected, you can click on the <guibutton>Jamendo Album Page</guibutton> button to open that album's page on the Jamendo website. Double-clicking an album, or choosing <menuchoice><guimenuitem>Add to Playlist</guimenuitem></menuchoice> from the album's context menu, will replace your playlist with all the tracks on that album and begin streaming the first track from Jamendo's website. Double-clicking an individual track will replace your playlist with just that track."
 msgstr "При выбранном исполнителе можно щёлкнуть по кнопке <guibutton>Страница альбома Jamendo</guibutton>, чтобы открыть страницу альбома на веб-сайте Jamendo. Двойной щелчок по альбому или выбор пункта <menuchoice><guimenuitem>Добавить в список воспроизведения</guimenuitem></menuchoice> в контекстном меню альбома заменит список воспроизведения композициями выбранного альбома и начнёт потоковое воспроизведение первой композиции. Двойной щелчок по отдельной композиции заменит список воспроизведения только этой композицией."
 
-#: C/totem.xml:826(title)
+#: C/xplayer.xml:826(title)
 msgid "Popular Albums and Latest Releases"
 msgstr "Популярные альбомы и последние выпуски"
 
-#: C/totem.xml:827(para)
+#: C/xplayer.xml:827(para)
 msgid "Viewing the <guilabel>Popular</guilabel> page in the <guilabel>Jamendo</guilabel> sidebar will load a list of the most popular albums on Jamendo at the moment, which can be played as with search results. Viewing the <guilabel>Latest Releases</guilabel> page will likewise load a list of the latest albums released on Jamendo."
 msgstr "На вкладке <guilabel>Популярные</guilabel> на панели <guilabel>Jamendo</guilabel> показан список самых популярных альбомов в Jamendo на текущий момент, которые могут быть загружены так же, как и результаты поиска. На вкладке <guilabel>Последние выпуски</guilabel> перечислены последние загруженные на Jamendo альбомы."
 
-#: C/totem.xml:833(title)
+#: C/xplayer.xml:833(title)
 msgid "Local Search"
 msgstr "Локальный поиск"
 
-#: C/totem.xml:834(para)
-msgid "The <guilabel>Local Search</guilabel> plugin allows you to search for playable movies and audio files on your computer from within <application>Totem Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Local Search</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Local Search</guilabel> sidebar."
-msgstr "Модуль <guilabel>Локальный поиск</guilabel> позволяет искать видео- и аудио-файлы на компьютере при помощи <application>видеопроигрывателя Totem</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>Локальный поиск</guilabel> из выпадающего списка вверху боковой панели, чтобы открыть панель <guilabel>Локальный поиск</guilabel>."
+#: C/xplayer.xml:834(para)
+msgid "The <guilabel>Local Search</guilabel> plugin allows you to search for playable movies and audio files on your computer from within <application>Xplayer Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>Local Search</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>Local Search</guilabel> sidebar."
+msgstr "Модуль <guilabel>Локальный поиск</guilabel> позволяет искать видео- и аудио-файлы на компьютере при помощи <application>видеопроигрывателя Xplayer</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton> для отображения боковой панели. Выберите <guilabel>Локальный поиск</guilabel> из выпадающего списка вверху боковой панели, чтобы открыть панель <guilabel>Локальный поиск</guilabel>."
 
-#: C/totem.xml:839(para)
+#: C/xplayer.xml:839(para)
 msgid "To perform a search, enter your search terms in the search entry at the top of the sidebar and click <guibutton>Find</guibutton>. Your search terms may include wildcards such as <literal>*</literal>, which will match any character. For example, the search <userinput>*.mpg</userinput> will find all movies with the <filename class=\"extension\">.mpg</filename> file extension."
 msgstr "Чтобы выполнить поиск, введите запрос в поле ввода вверху боковой панели и нажмите <guibutton>Найти</guibutton>. Запрос может включать шаблоны, такие как <literal>*</literal>, который соответствует любой последовательности символов. Например, запрос <userinput>*.mpg</userinput> найдёт все файлы с расширением <filename class=\"extension\">.mpg</filename>."
 
-#: C/totem.xml:842(para)
+#: C/xplayer.xml:842(para)
 msgid "Search results may be browsed using the <guibutton>Back</guibutton> and <guibutton>Forward</guibutton> buttons at the bottom of the sidebar, and you may jump to a specific results page by entering its number in the spin box."
 msgstr "Можно перемещаться по результатам поиска при помощи кнопок <guibutton>Назад</guibutton> и <guibutton>Вперёд</guibutton> внизу боковой панели. Можно также сразу перейти на нужную страницу, введя её номер."
 
-#: C/totem.xml:846(title)
+#: C/xplayer.xml:846(title)
 msgid "Publish Playlist"
 msgstr "Публикация списков воспроизведения"
 
-#: C/totem.xml:847(para)
+#: C/xplayer.xml:847(para)
 msgid "The <guilabel>Publish Playlist</guilabel> plugin allows you to publish playlists on your local network to allow other computers to access and play them."
 msgstr "Модуль <guilabel>Опубликовать список воспроизведения</guilabel> позволяет публиковать списки воспроизведения в локальной сети, чтобы позволить другим компьютерам получать доступ к ним и воспроизводить их."
 
-#: C/totem.xml:856(literal)
+#: C/xplayer.xml:856(literal)
 msgid "%a"
 msgstr "%a"
 
-#: C/totem.xml:857(para)
-#| msgid "About <application>Totem Movie Player</application>"
-msgid "Replaced with the program's name: <application>Totem Movie Player</application>."
-msgstr "заменяется названием приложения: <application>Видеопроигрыватель Totem</application>;"
+#: C/xplayer.xml:857(para)
+#| msgid "About <application>Xplayer Movie Player</application>"
+msgid "Replaced with the program's name: <application>Xplayer Movie Player</application>."
+msgstr "заменяется названием приложения: <application>Видеопроигрыватель Xplayer</application>;"
 
-#: C/totem.xml:860(literal)
+#: C/xplayer.xml:860(literal)
 msgid "%h"
 msgstr "%h"
 
-#: C/totem.xml:861(para)
+#: C/xplayer.xml:861(para)
 msgid "Replaced with your computer's host name."
 msgstr "заменяется именем узла;"
 
-#: C/totem.xml:864(literal)
+#: C/xplayer.xml:864(literal)
 msgid "%u"
 msgstr "%u"
 
-#: C/totem.xml:865(para)
+#: C/xplayer.xml:865(para)
 msgid "Replaced with your username."
 msgstr "заменяется именем пользователя;"
 
-#: C/totem.xml:868(literal)
+#: C/xplayer.xml:868(literal)
 msgid "%U"
 msgstr "%U"
 
-#: C/totem.xml:869(para)
+#: C/xplayer.xml:869(para)
 msgid "Replaced with your real name."
 msgstr "заменяется настоящим именем пользователя;"
 
-#: C/totem.xml:872(literal)
+#: C/xplayer.xml:872(literal)
 msgid "%%"
 msgstr "%%"
 
-#: C/totem.xml:873(para)
+#: C/xplayer.xml:873(para)
 msgid "Replaced with a literal percent sign."
 msgstr "заменяется знаком процента."
 
-#: C/totem.xml:851(para)
+#: C/xplayer.xml:851(para)
 msgid "The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following strings will be replaced when playlists are published: <placeholder-1/>"
 msgstr "Вы можете настроить модуль <guilabel>Опубликовать список воспроизведения</guilabel>. Нажмите кнопку <guibutton>Параметры</guibutton> при включении модуля, появится диалоговое окно с параметрами. В нём можно изменить имя, которое отображается при открытии доступа по сети к списку воспроизведения. Следующие строки будут заменены при публикации списка воспроизведения: <placeholder-1/>"
 
-#: C/totem.xml:877(para)
+#: C/xplayer.xml:877(para)
 msgid "You can also select the <guilabel>Use encrypted transport protocol</guilabel> checkbox if you wish to encrypt the shared playlists when they're transmitted over the network."
 msgstr "Также можно выбрать флажок <guilabel>Использовать защищённый транспортный протокол (https)</guilabel>, если необходимо шифровать публикуемый список воспроизведения при передаче по сети."
 
-#: C/totem.xml:879(para)
+#: C/xplayer.xml:879(para)
 msgid "Once you're done, click <guibutton>Close</guibutton>."
 msgstr "Для завершения нажмите кнопку <guibutton>Закрыть</guibutton>."
 
-#: C/totem.xml:882(title)
+#: C/xplayer.xml:882(title)
 #| msgid "To Manage the Playlist"
 msgid "To Publish Playlists"
 msgstr "Публикация списков воспроизведения"
 
-#: C/totem.xml:883(para)
+#: C/xplayer.xml:883(para)
 msgid "With the plugin enabled, you do not need to explicitly publish playlists; they are automatically made available on the network as a Zeroconf website."
 msgstr "При включённом модуле нет необходимости в явной публикации списков воспроизведения — они автоматически будут доступны по сети как веб-сайт Zeroconf."
 
-#: C/totem.xml:887(title)
+#: C/xplayer.xml:887(title)
 msgid "To Browse your Neighborhood"
 msgstr "Просмотр сетевого окружения"
 
-#: C/totem.xml:888(para)
+#: C/xplayer.xml:888(para)
 msgid "To view the shared playlists of others on your network, select <guilabel>Neighborhood</guilabel> from the drop-down list at the top of the sidebar. If any playlists have been published on the network, they will be listed here. Double-click on a playlist to load and play it on your computer."
 msgstr "Для просмотра опубликованных списков воспроизведения выберите <guilabel>Окружение</guilabel> из выпадающего списка вверху боковой панели. Если какой-то список был опубликован в сети, он будет показан в панели. Двойной щелчок по списку загрузит его и начнёт воспроизведение."
 
-#: C/totem.xml:894(title)
+#: C/xplayer.xml:894(title)
 msgid "Subtitle Downloader"
 msgstr "Загрузка субтитров"
 
-#: C/totem.xml:895(para)
+#: C/xplayer.xml:895(para)
 msgid "The <guilabel>Subtitle Downloader</guilabel> plugin allows you to find and download subtitle files from the <ulink type=\"http\" url=\"http://www.opensubtitles.org/en\">OpenSubtitles</ulink> service."
 msgstr "Модуль <guilabel>Загрузка субтитров</guilabel> позволяет искать и загружать субтитры с сайта <ulink type=\"http\" url=\"http://www.opensubtitles.org/en\">OpenSubtitles</ulink>."
 
-#: C/totem.xml:897(para)
+#: C/xplayer.xml:897(para)
 msgid "Subtitles can only be downloaded for local movies; not audio files, DVDs, DVB streams, VCDs or HTTP streams. To search for subtitles for the currently playing movie, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Download Movie Subtitles</guimenuitem></menuchoice>, which will display the <application>Download Movie Subtitles</application> dialog."
 msgstr "Субтитры могут быть загружены только для локальных фильмов, но не для звуковых файлоы, DVD, потоков DVB, VCD или потоков HTTP. Для поиска субтитров к текущему фильму выберите <menuchoice><guimenu>Вид</guimenu><guimenuitem>Загрузить субтитры для фильма</guimenuitem></menuchoice>, после этого появится диалоговое окно <application>Загрузка субтитров к фильму</application>."
 
-#: C/totem.xml:900(para)
+#: C/xplayer.xml:900(para)
 msgid "Select the language in which you wish to have your subtitles from the drop-down list at the top of the dialog, then click on the <guibutton>Find</guibutton> button to search for subtitles for the current movie. Subtitles are found on the basis of the movie's content, rather than its filename or tags."
 msgstr "Выберите нужный язык субтитров в выпадающем списке вверху диалогового окна, затем нажмите кнопку <guibutton>Найти</guibutton>, чтобы найти субтитры для текущего фильма. Критерием поиска субтитров в большей степени является содержимое фильма, чем название файла или теги."
 
-#: C/totem.xml:903(para)
+#: C/xplayer.xml:903(para)
 msgid "Search results are listed in the tree view in the middle of the dialog. Currently, subtitles can only be used with a movie by <emphasis>reloading</emphasis> the movie with the subtitles, so after selecting the subtitle file you wish to download, click on the <guibutton>Play with Subtitle</guibutton> button to download the subtitles and reload the movie."
 msgstr "Результаты поиска показаны в списке в середине диалогового окна. В настоящий момент субтитры могут быть просмотрены только после <emphasis>повторного открытия</emphasis> фильма с субтитрами, поэтому после выбора файла субтитров, который необходимо загрузить, нажмите кнопку <guibutton>Воспроизвести с субтитрами</guibutton>, чтобы загрузить субтитры и перезапустить фильм."
 
-#: C/totem.xml:906(para)
-msgid "Downloaded subtitle files are cached (in <filename>~/.cache/totem/subtitles</filename>, by default) so that they do not need to be downloaded again when playing the movie again. When downloading new subtitles for a movie, any previously downloaded subtitles for that movie are deleted."
-msgstr "Загруженные субтитры кэшируются (по умолчанию в <filename>~/.cache/totem/subtitles</filename>), поэтому при повторном просмотре фильма их не придётся загружать снова. При загрузке новых субтитров для фильма, ранее загруженные субтитры для этого фильма удаляются."
+#: C/xplayer.xml:906(para)
+msgid "Downloaded subtitle files are cached (in <filename>~/.cache/xplayer/subtitles</filename>, by default) so that they do not need to be downloaded again when playing the movie again. When downloading new subtitles for a movie, any previously downloaded subtitles for that movie are deleted."
+msgstr "Загруженные субтитры кэшируются (по умолчанию в <filename>~/.cache/xplayer/subtitles</filename>), поэтому при повторном просмотре фильма их не придётся загружать снова. При загрузке новых субтитров для фильма, ранее загруженные субтитры для этого фильма удаляются."
 
-#: C/totem.xml:910(title)
+#: C/xplayer.xml:910(title)
 msgid "Thumbnail"
 msgstr "Миниатюра"
 
-#: C/totem.xml:911(para)
+#: C/xplayer.xml:911(para)
 #| msgid ""
 #| "Select the <guilabel>resize</guilabel> option if you want "
-#| "<application>Totem Movie Player</application> to automatically resize the "
+#| "<application>Xplayer Movie Player</application> to automatically resize the "
 #| "window when a new video is loaded."
-msgid "The <guilabel>Thumbnail</guilabel> plugin sets <application>Totem Movie Player</application>'s main window icon to a thumbnail of the current movie, and updates the icon when new movies are loaded."
-msgstr "Модуль <guilabel>Миниатюра</guilabel> заменяет значок главного окна <application>видеопроигрывателя Totem</application> миниатюрой текущего фильма и обновляет значок при открытии нового видео."
+msgid "The <guilabel>Thumbnail</guilabel> plugin sets <application>Xplayer Movie Player</application>'s main window icon to a thumbnail of the current movie, and updates the icon when new movies are loaded."
+msgstr "Модуль <guilabel>Миниатюра</guilabel> заменяет значок главного окна <application>видеопроигрывателя Xplayer</application> миниатюрой текущего фильма и обновляет значок при открытии нового видео."
 
-#: C/totem.xml:913(para)
+#: C/xplayer.xml:913(para)
 #| msgid ""
 #| "You can double-click on a video or an audio file in the "
 #| "<application>Nautilus</application> file manager to open it on the "
-#| "<application>Totem Movie Player</application> window."
-msgid "If a thumbnail doesn't exist for the current movie (or if you're playing an audio file), the main window icon will be reset to the <application>Totem Movie Player</application> logo."
-msgstr "Если миниатюры для текущего видео нет (или воспроизводится звуковой файл), значок главного окна изменится на логотип <application>видеопроигрывателя Totem</application>."
+#| "<application>Xplayer Movie Player</application> window."
+msgid "If a thumbnail doesn't exist for the current movie (or if you're playing an audio file), the main window icon will be reset to the <application>Xplayer Movie Player</application> logo."
+msgstr "Если миниатюры для текущего видео нет (или воспроизводится звуковой файл), значок главного окна изменится на логотип <application>видеопроигрывателя Xplayer</application>."
 
-#: C/totem.xml:917(title)
+#: C/xplayer.xml:917(title)
 msgid "Video Disc Recorder"
 msgstr "Запись видеодисков"
 
-#: C/totem.xml:918(para)
+#: C/xplayer.xml:918(para)
 msgid "The <guilabel>Video Disc Recorder</guilabel> plugin allows you to burn the current playlist to a DVD or VCD using <application>Brasero</application>."
 msgstr "Модуль <guilabel>Запись видеодисков</guilabel> позволяет записывать текущий список воспроизведения на DVD или VCD при помощи <application>Brasero</application>."
 
-#: C/totem.xml:919(para)
+#: C/xplayer.xml:919(para)
 msgid "To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>. A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more information, see the <ulink type=\"help\" url=\"ghelp:brasero?brasero-new-project-video\">Brasero documentation</ulink>."
 msgstr "Чтобы записать текущий список воспроизведения, выберите <menuchoice><guimenu>Фильм</guimenu><guimenuitem>Создать видеодиск</guimenuitem></menuchoice>. Появится диалоговое окно <application>Brasero</application> с параметрами преобразования видео в соответствующий формат для дальнейшей записи. Для дополнительной информации смотрите <ulink type=\"help\" url=\"ghelp:brasero?brasero-new-project-video\">документацию к Brasero</ulink>."
 
-#: C/totem.xml:924(title)
+#: C/xplayer.xml:924(title)
 msgid "YouTube Browser"
 msgstr "Обозреватель YouTube"
 
-#: C/totem.xml:925(para)
-msgid "The <guilabel>YouTube Browser</guilabel> plugin allows you to search and browse <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink>, and play YouTube videos directly in <application>Totem Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>YouTube</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>YouTube</guilabel> sidebar."
-msgstr "Модуль <guilabel>Браузер YouTube</guilabel> позволяет искать видео на <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink> и воспроизводить его непосредственно в  <application>видеопроигрывателе Totem</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы открыть боковую панель. Выберите <guilabel>YouTube</guilabel> из выпадающего списка вверху панели, чтобы открыть панель <guilabel>YouTube</guilabel>."
+#: C/xplayer.xml:925(para)
+msgid "The <guilabel>YouTube Browser</guilabel> plugin allows you to search and browse <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink>, and play YouTube videos directly in <application>Xplayer Movie Player</application>. With the plugin enabled, choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the <guibutton>Sidebar</guibutton> button to show the sidebar. Select <guilabel>YouTube</guilabel> from the drop-down list at the top of the sidebar to display the <guilabel>YouTube</guilabel> sidebar."
+msgstr "Модуль <guilabel>Браузер YouTube</guilabel> позволяет искать видео на <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink> и воспроизводить его непосредственно в  <application>видеопроигрывателе Xplayer</application>. При включённом модуле выберите <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Вид</guimenu><guimenuitem>Боковая панель</guimenuitem></menuchoice> или нажмите кнопку <guibutton>Боковая панель</guibutton>, чтобы открыть боковую панель. Выберите <guilabel>YouTube</guilabel> из выпадающего списка вверху панели, чтобы открыть панель <guilabel>YouTube</guilabel>."
 
-#: C/totem.xml:931(para)
+#: C/xplayer.xml:931(para)
 msgid "To search for a YouTube video, enter your search terms in the entry at the top of the sidebar, then click <guibutton>Find</guibutton>. The search results will be listed in the tree view below. More results will be loaded automatically as you scroll down the list."
 msgstr "Для поиска видео на YouTube введите запрос в поле вверху боковой панели, затем нажмите кнопку <guibutton>Найти</guibutton>. Результаты поиска будут показаны в списке. При прокрутке списка новые результаты будут подгружаться автоматически."
 
-#: C/totem.xml:933(para)
+#: C/xplayer.xml:933(para)
 msgid "To play a video, double-click it in the results list, or choose <menuchoice><guimenuitem>Add to Playlist</guimenuitem></menuchoice> from its context menu. When a video is played, a list of related videos will automatically be loaded in the <guilabel>Related Videos</guilabel> page of the <guilabel>YouTube</guilabel> sidebar."
 msgstr "Чтобы воспроизвести видео, дважды щёлкните по нему в списке или выберите в его контекстном меню пункт <menuchoice><guimenuitem>Добавить в список воспроизведения</guimenuitem></menuchoice>. Список похожих видеозаписей будет автоматически показан во время воспроизведения видео во вкладке <guilabel>Похожие видео</guilabel> панели <guilabel>YouTube</guilabel>."
 
-#: C/totem.xml:936(para)
+#: C/xplayer.xml:936(para)
 msgid "YouTube videos can be opened in a web browser by choosing <menuchoice><guimenuitem>Open in Web Browser</guimenuitem></menuchoice> from their context menu. This will open the video in its original location on the YouTube website."
 msgstr "Видео с YouTube можно открыть в веб-браузере, выбрав пункт <menuchoice><guimenuitem>Открыть в веб-браузере</guimenuitem></menuchoice> в его контекстном меню. Это действие приведёт к открытию видео в его изначальном местоположении на веб-сайте YouTube."
 
-#: C/totem.xml:940(title)
+#: C/xplayer.xml:940(title)
 msgid "D-Bus Service"
 msgstr "Служба D-Bus"
 
-#: C/totem.xml:941(para)
-msgid "The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of which track is playing in <application>Totem Movie Player</application> on the D-Bus session bus. Applications such as <application>Gajim</application> can listen for such notifications and respond accordingly by, for example, updating your instant messaging status message to display the video currently being played in <application>Totem Movie Player</application>."
-msgstr "Модуль <guilabel>Служба D-Bus</guilabel> предназначен для широковещательных уведомлений через шину D-Bus о воспроизводимой в настоящий момент <application>видеопроигрывателем Totem</application> композиции. Приложения (например, <application>Gajim</application>) могут получать подобные уведомления и реагировать соответствующим образом. Например, обновлять информацию в системе обмена мгновенными сообщениями о проигрываемом в настоящий момент видео."
+#: C/xplayer.xml:941(para)
+msgid "The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of which track is playing in <application>Xplayer Movie Player</application> on the D-Bus session bus. Applications such as <application>Gajim</application> can listen for such notifications and respond accordingly by, for example, updating your instant messaging status message to display the video currently being played in <application>Xplayer Movie Player</application>."
+msgstr "Модуль <guilabel>Служба D-Bus</guilabel> предназначен для широковещательных уведомлений через шину D-Bus о воспроизводимой в настоящий момент <application>видеопроигрывателем Xplayer</application> композиции. Приложения (например, <application>Gajim</application>) могут получать подобные уведомления и реагировать соответствующим образом. Например, обновлять информацию в системе обмена мгновенными сообщениями о проигрываемом в настоящий момент видео."
 
-#: C/totem.xml:952(title)
+#: C/xplayer.xml:952(title)
 msgid "Preferences"
 msgstr "Параметры"
 
-#: C/totem.xml:953(para)
+#: C/xplayer.xml:953(para)
 #| msgid ""
-#| "To modify the preferences of <application>Totem Movie Player</"
+#| "To modify the preferences of <application>Xplayer Movie Player</"
 #| "application>, choose <menuchoice><guimenu>Edit</"
 #| "guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. The "
 #| "<guilabel>Preferences</guilabel> dialog contains the following tabbed "
 #| "sections:"
-msgid "To modify the preferences of <application>Totem Movie Player</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>."
-msgstr "Чтобы изменить параметры <application>видеопроигрывателя Totem</application>, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Параметры</guimenuitem></menuchoice>."
+msgid "To modify the preferences of <application>Xplayer Movie Player</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>."
+msgstr "Чтобы изменить параметры <application>видеопроигрывателя Xplayer</application>, выберите <menuchoice><guimenu>Правка</guimenu><guimenuitem>Параметры</guimenuitem></menuchoice>."
 
-#: C/totem.xml:960(title)
+#: C/xplayer.xml:960(title)
 msgid "General"
 msgstr "Общие"
 
-#: C/totem.xml:963(term)
+#: C/xplayer.xml:963(term)
 msgid "Networking"
 msgstr "Сеть"
 
-#: C/totem.xml:965(para)
+#: C/xplayer.xml:965(para)
 #| msgid ""
 #| "Select network connection speed from the <guilabel>Connection speed</"
 #| "guilabel> drop-down list box."
 msgid "Select network connection speed from the <guilabel>Connection speed</guilabel> drop-down list."
 msgstr "Выберите скорость соединения с сетью из выпадающего списка <guilabel>Скорость соединения</guilabel>."
 
-#: C/totem.xml:971(term)
+#: C/xplayer.xml:971(term)
 msgid "Text Subtitles"
 msgstr "Текстовые субтитры"
 
-#: C/totem.xml:975(para)
+#: C/xplayer.xml:975(para)
 msgid "<guilabel>Automatically load subtitle files</guilabel>: select this option to automatically load any subtitle files with the same filename as a movie when the movie is loaded."
 msgstr "<guilabel>Автоматически загружать файлы субтитров</guilabel>: выберите этот параметр для автоматической загрузки субтитров с тем же именем файла, что и у фильма, при загрузке фильма."
 
-#: C/totem.xml:979(para)
+#: C/xplayer.xml:979(para)
 msgid "<guilabel>Font</guilabel>: select this option to change the font used to display subtitles."
 msgstr "<guilabel>Шрифт</guilabel>: выберите этот параметр, чтобы изменить шрифт, которым показываются субтитры."
 
-#: C/totem.xml:983(para)
+#: C/xplayer.xml:983(para)
 msgid "<guilabel>Encoding</guilabel>: select this option to change the encoding used to display subtitles."
 msgstr "<guilabel>Кодировка</guilabel>: выберите этот параметр, чтобы изменить кодировку, в которой показываются субтитры."
 
-#: C/totem.xml:992(title)
-#: C/totem.xml:995(term)
+#: C/xplayer.xml:992(title)
+#: C/xplayer.xml:995(term)
 msgid "Display"
 msgstr "Показ"
 
-#: C/totem.xml:999(para)
+#: C/xplayer.xml:999(para)
 #| msgid ""
 #| "Select the <guilabel>resize</guilabel> option if you want "
-#| "<application>Totem Movie Player</application> to automatically resize the "
+#| "<application>Xplayer Movie Player</application> to automatically resize the "
 #| "window when a new video is loaded."
-msgid "Select the resize option if you want <application>Totem Movie Player</application> to automatically resize the window to the size of the video when a new video is loaded."
-msgstr "Выберите параметр <guilabel>Автоматически изменять размер окна для нового видео</guilabel>, если хотите, чтобы при открытии фильма <application>видеопроигрыватель Totem</application> автоматически подстраивал размер своего окна под размер фильма."
+msgid "Select the resize option if you want <application>Xplayer Movie Player</application> to automatically resize the window to the size of the video when a new video is loaded."
+msgstr "Выберите параметр <guilabel>Автоматически изменять размер окна для нового видео</guilabel>, если хотите, чтобы при открытии фильма <application>видеопроигрыватель Xplayer</application> автоматически подстраивал размер своего окна под размер фильма."
 
-#: C/totem.xml:1004(para)
+#: C/xplayer.xml:1004(para)
 msgid "Select the screensaver option if you want to allow the screensaver to activate when playing audio files. Some monitors with integrated speakers may stop playing music when the screensaver is activated."
 msgstr "Выберите параметр хранителя экрана, если вы хотите, чтобы хранитель экрана мог включаться при воспроизведении звуковых файлов. Некоторые мониторы со встроенными динамиками могут прекращать воспроизведение, когда запущен хранитель экрана."
 
-#: C/totem.xml:1011(term)
+#: C/xplayer.xml:1011(term)
 msgid "Visual Effects"
 msgstr "Визуальные эффекты"
 
-#: C/totem.xml:1015(para)
+#: C/xplayer.xml:1015(para)
 msgid "<guilabel>Visual</guilabel>: select this option to show visual effects while an audio file is playing."
 msgstr "<guilabel>Показывать визуальные эффекты</guilabel>: выберите этот параметр, чтобы при воспроизведении звуковых файлов показывались визуальные эффекты."
 
-#: C/totem.xml:1020(para)
+#: C/xplayer.xml:1020(para)
 #| msgid ""
 #| "<guilabel>Type of visualisation</guilabel>: select type of visualisation "
 #| "from the drop-down list box."
 msgid "<guilabel>Type of visualization</guilabel>: select type of visualization from the drop-down list."
 msgstr "<guilabel>Тип визуализации</guilabel>: выберите тип визуализации из выпадающего списка."
 
-#: C/totem.xml:1025(para)
+#: C/xplayer.xml:1025(para)
 #| msgid ""
 #| "<guilabel>Visualisation size</guilabel>: select visualisation size from "
 #| "the drop-down list box."
 msgid "<guilabel>Visualization size</guilabel>: select visualization size from the drop-down list."
 msgstr "<guilabel>Размер визуализации</guilabel>: выберите размер визуализации из выпадающего списка."
 
-#: C/totem.xml:1033(term)
+#: C/xplayer.xml:1033(term)
 msgid "Color balance"
 msgstr "Баланс цвета"
 
-#: C/totem.xml:1037(para)
+#: C/xplayer.xml:1037(para)
 msgid "<guilabel>Brightness</guilabel>: use the slider to specify the level of brightness."
 msgstr "<guilabel>Яркость</guilabel>: используйте ползунок, чтобы выбрать уровень яркости."
 
-#: C/totem.xml:1040(para)
+#: C/xplayer.xml:1040(para)
 msgid "<guilabel>Contrast</guilabel>: use the slider to specify the level of contrast."
 msgstr "<guilabel>Контраст</guilabel>: используйте ползунок, чтобы выбрать уровень контраста."
 
-#: C/totem.xml:1043(para)
+#: C/xplayer.xml:1043(para)
 msgid "<guilabel>Saturation</guilabel>: use the slider to specify the level of saturation."
 msgstr "<guilabel>Насыщенность</guilabel>: используйте ползунок, чтобы выбрать уровень насыщенности."
 
-#: C/totem.xml:1047(para)
+#: C/xplayer.xml:1047(para)
 msgid "<guilabel>Hue</guilabel>: use the slider to specify the level of hue."
 msgstr "<guilabel>Оттенок</guilabel>: используйте ползунок, чтобы выбрать уровень оттенка."
 
-#: C/totem.xml:1051(para)
+#: C/xplayer.xml:1051(para)
 msgid "You may use the <guilabel>Reset to Defaults</guilabel> button to reset the color balance controls to their default positions."
 msgstr "Можно использовать кнопку <guilabel>Восстановить параметры по умолчанию</guilabel> для сброса параметров цветового баланса к исходным значениям."
 
-#: C/totem.xml:1058(title)
+#: C/xplayer.xml:1058(title)
 msgid "Audio"
 msgstr "Аудио"
 
-#: C/totem.xml:1061(term)
+#: C/xplayer.xml:1061(term)
 msgid "Audio Output"
 msgstr "Аудиовыход"
 
-#: C/totem.xml:1063(para)
+#: C/xplayer.xml:1063(para)
 msgid "Select audio output type from the <guilabel>Audio output type</guilabel> drop-down list."
 msgstr "Выберите тип аудиовыхода из выпадающего списка <guilabel>Тип аудиовыхода</guilabel>."
 
-#: C/totem.xml:1091(title)
-msgid "About <application>Totem Movie Player</application>"
-msgstr "О <application>видеопроигрывателе Totem</application>"
+#: C/xplayer.xml:1091(title)
+msgid "About <application>Xplayer Movie Player</application>"
+msgstr "О <application>видеопроигрывателе Xplayer</application>"
 
-#: C/totem.xml:1092(para)
+#: C/xplayer.xml:1092(para)
 #| msgid ""
-#| "<application>Totem Movie Player</application> is written by Bastien "
+#| "<application>Xplayer Movie Player</application> is written by Bastien "
 #| "Nocera (<email>hadess@hadess.net</email>), Julien Moutte "
 #| "(<email>julien@moutte.net</email>) for GStreamer backend, and Guenter "
 #| "Bartsch (<email>guenter@users.sourceforge.net</email>). To find more "
-#| "information about <application>Totem Movie Player</application>, please "
-#| "visit the <ulink url=\"http://www.gnome.org/projects/totem/\" type=\"http"
-#| "\"><application>Totem Movie Player</application> Home Page</ulink>."
-msgid "<application>Totem Movie Player</application> is written by Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) for the GStreamer backend, and Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). To find more information about <application>Totem Movie Player</application>, please visit the <ulink url=\"http://projects.gnome.org/totem/\" type=\"http\"><application>Totem Movie Player</application> website</ulink>."
-msgstr "<application>Видеопроигрыватель Totem</application> написали: Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>), который добавил поддержку GStreamer, и Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Чтобы узнать больше о <application>видеопроигрывателе Totem</application>, посетите <ulink url=\"http://www.gnome.org/projects/totem/\" type=\"http\">его домашнюю веб-страницу</ulink>."
+#| "information about <application>Xplayer Movie Player</application>, please "
+#| "visit the <ulink url=\"http://www.gnome.org/projects/xplayer/\" type=\"http"
+#| "\"><application>Xplayer Movie Player</application> Home Page</ulink>."
+msgid "<application>Xplayer Movie Player</application> is written by Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) for the GStreamer backend, and Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). To find more information about <application>Xplayer Movie Player</application>, please visit the <ulink url=\"http://projects.gnome.org/xplayer/\" type=\"http\"><application>Xplayer Movie Player</application> website</ulink>."
+msgstr "<application>Видеопроигрыватель Xplayer</application> написали: Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>), который добавил поддержку GStreamer, и Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Чтобы узнать больше о <application>видеопроигрывателе Xplayer</application>, посетите <ulink url=\"http://www.gnome.org/projects/xplayer/\" type=\"http\">его домашнюю веб-страницу</ulink>."
 
-#: C/totem.xml:1105(para)
+#: C/xplayer.xml:1105(para)
 msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"ghelp:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
 msgstr "Эта программа распространяется на условиях лицензии GNU General Public License, опубликованной Фондом свободного программного обеспечения; либо версии 2 этой лицензии, либо (по вашему выбору) любой более поздней версии. Копию лицензии можно найти по этой <ulink url=\"ghelp:gpl\" type=\"help\">ссылке</ulink>, или в файле COPYING, который прилагается к исходным текстам программы."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: C/totem.xml:0(None)
+#: C/xplayer.xml:0(None)
 msgid "translator-credits"
 msgstr ""
 "Салихов Тимур <Tima-S@yandex.ru>\n"

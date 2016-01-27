@@ -1,73 +1,73 @@
 noinst_LTLIBRARIES =			\
-	libtotemgsthelpers.la		\
-	libtotemgstpixbufhelpers.la	\
-	libtotemtimehelpers.la		\
-	libtotemrtlhelpers.la
+	libxplayergsthelpers.la		\
+	libxplayergstpixbufhelpers.la	\
+	libxplayertimehelpers.la		\
+	libxplayerrtlhelpers.la
 
-libtotemgsthelpers_la_SOURCES =	\
-	totem-gst-helpers.c	\
-	totem-gst-helpers.h
+libxplayergsthelpers_la_SOURCES =	\
+	xplayer-gst-helpers.c	\
+	xplayer-gst-helpers.h
 
-libtotemgsthelpers_la_CPPFLAGS =	\
+libxplayergsthelpers_la_CPPFLAGS =	\
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemgsthelpers_la_CFLAGS =	\
+libxplayergsthelpers_la_CFLAGS =	\
 	$(HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemgsthelpers_la_LIBADD = $(HELPER_LIBS)
-libtotemgsthelpers_la_LDFLAGS= -no-undefined
+libxplayergsthelpers_la_LIBADD = $(HELPER_LIBS)
+libxplayergsthelpers_la_LDFLAGS= -no-undefined
 
-libtotemgstpixbufhelpers_la_SOURCES =	\
-	totem-gst-pixbuf-helpers.c	\
-	totem-gst-pixbuf-helpers.h
+libxplayergstpixbufhelpers_la_SOURCES =	\
+	xplayer-gst-pixbuf-helpers.c	\
+	xplayer-gst-pixbuf-helpers.h
 
-libtotemgstpixbufhelpers_la_CPPFLAGS =	\
+libxplayergstpixbufhelpers_la_CPPFLAGS =	\
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemgstpixbufhelpers_la_CFLAGS =	\
+libxplayergstpixbufhelpers_la_CFLAGS =	\
 	$(PIXBUF_HELPER_CFLAGS)		\
 	$(AM_CFLAGS)
 
-libtotemgstpixbufhelpers_la_LIBADD = $(PIXBUF_HELPER_LIBS)
-libtotemgstpixbufhelpers_la_LDFLAGS= -no-undefined
+libxplayergstpixbufhelpers_la_LIBADD = $(PIXBUF_HELPER_LIBS)
+libxplayergstpixbufhelpers_la_LDFLAGS= -no-undefined
 
-libtotemtimehelpers_la_SOURCES =	\
-	totem-time-helpers.c		\
-	totem-time-helpers.h
+libxplayertimehelpers_la_SOURCES =	\
+	xplayer-time-helpers.c		\
+	xplayer-time-helpers.h
 
-libtotemtimehelpers_la_CPPFLAGS =	\
+libxplayertimehelpers_la_CPPFLAGS =	\
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemtimehelpers_la_CFLAGS =	\
+libxplayertimehelpers_la_CFLAGS =	\
 	$(TIME_HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemtimehelpers_la_LIBADD = $(TIME_HELPER_LIBS)
-libtotemtimehelpers_la_LDFLAGS= -no-undefined
+libxplayertimehelpers_la_LIBADD = $(TIME_HELPER_LIBS)
+libxplayertimehelpers_la_LDFLAGS= -no-undefined
 
-libtotemrtlhelpers_la_SOURCES =	\
-	totem-rtl-helpers.c		\
-	totem-rtl-helpers.h
+libxplayerrtlhelpers_la_SOURCES =	\
+	xplayer-rtl-helpers.c		\
+	xplayer-rtl-helpers.h
 
-libtotemrtlhelpers_la_CPPFLAGS =	\
+libxplayerrtlhelpers_la_CPPFLAGS =	\
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemrtlhelpers_la_CFLAGS =	\
+libxplayerrtlhelpers_la_CFLAGS =	\
 	$(RTL_HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemrtlhelpers_la_LIBADD = $(RTL_HELPER_LIBS)
-libtotemrtlhelpers_la_LDFLAGS= -no-undefined
+libxplayerrtlhelpers_la_LIBADD = $(RTL_HELPER_LIBS)
+libxplayerrtlhelpers_la_LDFLAGS= -no-undefined
 
-EXTRA_DIST = totem-time-helpers.h
+EXTRA_DIST = xplayer-time-helpers.h
 
 -include $(top_srcdir)/git.mk

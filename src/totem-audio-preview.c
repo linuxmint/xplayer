@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -37,9 +37,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#include "totem-gst-helpers.h"
-#include "totem-resources.h"
-#include "totem-mime-types.h"
+#include "xplayer-gst-helpers.h"
+#include "xplayer-resources.h"
+#include "xplayer-mime-types.h"
 
 static gboolean show_mimetype = FALSE;
 static gboolean g_fatal_warnings = FALSE;
@@ -83,7 +83,7 @@ error_handler (GstBus *bus,
 	msg_type = GST_MESSAGE_TYPE (message);
 	switch (msg_type) {
 	case GST_MESSAGE_ERROR:
-		totem_gst_message_print (message, play, "totem-audio-preview-error");
+		xplayer_gst_message_print (message, play, "xplayer-audio-preview-error");
 		exit (1);
 	case GST_MESSAGE_EOS:
 		exit (0);
@@ -135,7 +135,7 @@ int main (int argc, char **argv)
 	textdomain (GETTEXT_PACKAGE);
 
 	g_set_application_name (_("Audio Preview"));
-	g_setenv("PULSE_PROP_application.icon_name", "totem", TRUE);
+	g_setenv("PULSE_PROP_application.icon_name", "xplayer", TRUE);
 	g_setenv("PULSE_PROP_media.role", "music", TRUE);
 
 	context = g_option_context_new ("Plays audio passed on the standard input or the filename passed on the command-line");
@@ -175,7 +175,7 @@ int main (int argc, char **argv)
 	setup_play (play);
 	setup_filename (play);
 	setup_errors (play);
-	totem_resources_monitor_start (NULL, -1);
+	xplayer_resources_monitor_start (NULL, -1);
 	gst_element_set_state (play, GST_STATE_PLAYING);
 
 	loop = g_main_loop_new (NULL, TRUE);

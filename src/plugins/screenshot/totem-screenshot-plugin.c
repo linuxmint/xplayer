@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -33,22 +33,22 @@
 #include <gdk/gdkkeysyms.h>
 #include <libpeas/peas-activatable.h>
 
-#include "totem-plugin.h"
-#include "totem-screenshot-plugin.h"
+#include "xplayer-plugin.h"
+#include "xplayer-screenshot-plugin.h"
 #include "screenshot-filename-builder.h"
-#include "totem-gallery.h"
-#include "totem-uri.h"
+#include "xplayer-gallery.h"
+#include "xplayer-uri.h"
 #include "backend/bacon-video-widget.h"
 
-#define TOTEM_TYPE_SCREENSHOT_PLUGIN		(totem_screenshot_plugin_get_type ())
-#define TOTEM_SCREENSHOT_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_SCREENSHOT_PLUGIN, TotemScreenshotPlugin))
-#define TOTEM_SCREENSHOT_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_SCREENSHOT_PLUGIN, TotemScreenshotPluginClass))
-#define TOTEM_IS_SCREENSHOT_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_SCREENSHOT_PLUGIN))
-#define TOTEM_IS_SCREENSHOT_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_SCREENSHOT_PLUGIN))
-#define TOTEM_SCREENSHOT_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_SCREENSHOT_PLUGIN, TotemScreenshotPluginClass))
+#define XPLAYER_TYPE_SCREENSHOT_PLUGIN		(xplayer_screenshot_plugin_get_type ())
+#define XPLAYER_SCREENSHOT_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_SCREENSHOT_PLUGIN, XplayerScreenshotPlugin))
+#define XPLAYER_SCREENSHOT_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_SCREENSHOT_PLUGIN, XplayerScreenshotPluginClass))
+#define XPLAYER_IS_SCREENSHOT_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_SCREENSHOT_PLUGIN))
+#define XPLAYER_IS_SCREENSHOT_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_SCREENSHOT_PLUGIN))
+#define XPLAYER_SCREENSHOT_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_SCREENSHOT_PLUGIN, XplayerScreenshotPluginClass))
 
 typedef struct {
-	Totem *totem;
+	Xplayer *xplayer;
 	BaconVideoWidget *bvw;
 
 	gulong got_metadata_signal;
@@ -60,14 +60,14 @@ typedef struct {
 
 	guint ui_merge_id;
 	GtkActionGroup *action_group;
-} TotemScreenshotPluginPrivate;
+} XplayerScreenshotPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_SCREENSHOT_PLUGIN,
-		      TotemScreenshotPlugin,
-		      totem_screenshot_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_SCREENSHOT_PLUGIN,
+		      XplayerScreenshotPlugin,
+		      xplayer_screenshot_plugin)
 
 typedef struct {
-	TotemScreenshotPlugin *plugin;
+	XplayerScreenshotPlugin *plugin;
 	GdkPixbuf *pixbuf;
 } ScreenshotSaveJob;
 
@@ -120,7 +120,7 @@ save_file_create_ready_cb (GObject *source,
 					 G_OUTPUT_STREAM (stream),
 					 "png", NULL,
 					 save_pixbuf_ready_cb, job,
-					 "tEXt::Software", "totem",
+					 "tEXt::Software", "xplayer",
 					 NULL);
 
 	g_object_unref (stream);
@@ -202,9 +202,9 @@ flash_area (GtkWidget *widget)
 }
 
 static void
-take_screenshot_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
+take_screenshot_action_cb (GtkAction *action, XplayerScreenshotPlugin *self)
 {
-	TotemScreenshotPluginPrivate *priv = self->priv;
+	XplayerScreenshotPluginPrivate *priv = self->priv;
 	GdkPixbuf *pixbuf;
 	GError *err = NULL;
 	ScreenshotSaveJob *job;
@@ -217,7 +217,7 @@ take_screenshot_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
 		if (err == NULL)
 			return;
 
-		totem_action_error (priv->totem, _("Totem could not get a screenshot of the video."), err->message);
+		xplayer_action_error (priv->xplayer, _("Xplayer could not get a screenshot of the video."), err->message);
 		g_error_free (err);
 		return;
 	}
@@ -226,11 +226,11 @@ take_screenshot_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
 
 	pixbuf = bacon_video_widget_get_current_frame (priv->bvw);
 	if (pixbuf == NULL) {
-		totem_action_error (priv->totem, _("Totem could not get a screenshot of the video."), _("This is not supposed to happen; please file a bug report."));
+		xplayer_action_error (priv->xplayer, _("Xplayer could not get a screenshot of the video."), _("This is not supposed to happen; please file a bug report."));
 		return;
 	}
 
-	video_name = totem_get_short_title (self->priv->totem);
+	video_name = xplayer_get_short_title (self->priv->xplayer);
 
 	job = g_slice_new (ScreenshotSaveJob);
 	job->plugin = self;
@@ -244,22 +244,22 @@ take_screenshot_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
 static void
 take_gallery_response_cb (GtkDialog *dialog,
 			  int response_id,
-			  TotemScreenshotPlugin *self)
+			  XplayerScreenshotPlugin *self)
 {
 	if (response_id != GTK_RESPONSE_OK)
 		gtk_widget_destroy (GTK_WIDGET (dialog));
 }
 
 static void
-take_gallery_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
+take_gallery_action_cb (GtkAction *action, XplayerScreenshotPlugin *self)
 {
-	Totem *totem = self->priv->totem;
+	Xplayer *xplayer = self->priv->xplayer;
 	GtkDialog *dialog;
 
 	if (bacon_video_widget_get_logo_mode (self->priv->bvw) != FALSE)
 		return;
 
-	dialog = GTK_DIALOG (totem_gallery_new (totem));
+	dialog = GTK_DIALOG (xplayer_gallery_new (xplayer));
 
 	g_signal_connect (dialog, "response",
 			  G_CALLBACK (take_gallery_response_cb), self);
@@ -267,7 +267,7 @@ take_gallery_action_cb (GtkAction *action, TotemScreenshotPlugin *self)
 }
 
 static gboolean
-window_key_press_event_cb (GtkWidget *window, GdkEventKey *event, TotemScreenshotPlugin *self)
+window_key_press_event_cb (GtkWidget *window, GdkEventKey *event, XplayerScreenshotPlugin *self)
 {
 	switch (event->keyval) {
 	case GDK_KEY_Save:
@@ -289,9 +289,9 @@ window_key_press_event_cb (GtkWidget *window, GdkEventKey *event, TotemScreensho
 }
 
 static void
-update_state (TotemScreenshotPlugin *self)
+update_state (XplayerScreenshotPlugin *self)
 {
-	TotemScreenshotPluginPrivate *priv = self->priv;
+	XplayerScreenshotPluginPrivate *priv = self->priv;
 	gboolean sensitive;
 	GtkAction *action;
 
@@ -306,19 +306,19 @@ update_state (TotemScreenshotPlugin *self)
 }
 
 static void
-got_metadata_cb (BaconVideoWidget *bvw, TotemScreenshotPlugin *self)
+got_metadata_cb (BaconVideoWidget *bvw, XplayerScreenshotPlugin *self)
 {
 	update_state (self);
 }
 
 static void
-notify_logo_mode_cb (GObject *object, GParamSpec *pspec, TotemScreenshotPlugin *self)
+notify_logo_mode_cb (GObject *object, GParamSpec *pspec, XplayerScreenshotPlugin *self)
 {
 	update_state (self);
 }
 
 static void
-disable_save_to_disk_changed_cb (GSettings *settings, const gchar *key, TotemScreenshotPlugin *self)
+disable_save_to_disk_changed_cb (GSettings *settings, const gchar *key, XplayerScreenshotPlugin *self)
 {
 	self->priv->save_to_disk = !g_settings_get_boolean (settings, "disable-save-to-disk");
 }
@@ -328,15 +328,15 @@ impl_activate (PeasActivatable *plugin)
 {
 	GtkWindow *window;
 	GtkUIManager *manager;
-	TotemScreenshotPlugin *self = TOTEM_SCREENSHOT_PLUGIN (plugin);
-	TotemScreenshotPluginPrivate *priv = self->priv;
+	XplayerScreenshotPlugin *self = XPLAYER_SCREENSHOT_PLUGIN (plugin);
+	XplayerScreenshotPluginPrivate *priv = self->priv;
 	const GtkActionEntry menu_entries[] = {
 		{ "take-screenshot", "camera-photo", N_("Take _Screenshot"), "<Ctrl><Alt>S", N_("Take a screenshot"), G_CALLBACK (take_screenshot_action_cb) },
 		{ "take-gallery", NULL, N_("Create Screenshot _Gallery..."), NULL, N_("Create a gallery of screenshots"), G_CALLBACK (take_gallery_action_cb) }
 	};
 
-	priv->totem = g_object_get_data (G_OBJECT (plugin), "object");
-	priv->bvw = BACON_VIDEO_WIDGET (totem_get_video_widget (priv->totem));
+	priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	priv->bvw = BACON_VIDEO_WIDGET (xplayer_get_video_widget (priv->xplayer));
 	priv->got_metadata_signal = g_signal_connect (G_OBJECT (priv->bvw),
 						      "got-metadata",
 						      G_CALLBACK (got_metadata_cb),
@@ -347,7 +347,7 @@ impl_activate (PeasActivatable *plugin)
 							  self);
 
 	/* Key press handler */
-	window = totem_get_main_window (priv->totem);
+	window = xplayer_get_main_window (priv->xplayer);
 	priv->key_press_event_signal = g_signal_connect (G_OBJECT (window),
 							 "key-press-event", 
 							 G_CALLBACK (window_key_press_event_cb),
@@ -360,7 +360,7 @@ impl_activate (PeasActivatable *plugin)
 	gtk_action_group_add_actions (priv->action_group, menu_entries,
 				      G_N_ELEMENTS (menu_entries), self);
 
-	manager = totem_get_ui_manager (priv->totem);
+	manager = xplayer_get_ui_manager (priv->xplayer);
 
 	gtk_ui_manager_insert_action_group (manager, priv->action_group, -1);
 	g_object_unref (priv->action_group);
@@ -388,7 +388,7 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemScreenshotPluginPrivate *priv = TOTEM_SCREENSHOT_PLUGIN (plugin)->priv;
+	XplayerScreenshotPluginPrivate *priv = XPLAYER_SCREENSHOT_PLUGIN (plugin)->priv;
 	GtkWindow *window;
 	GtkUIManager *manager;
 
@@ -396,7 +396,7 @@ impl_deactivate (PeasActivatable *plugin)
 	g_signal_handler_disconnect (G_OBJECT (priv->bvw), priv->got_metadata_signal);
 	g_signal_handler_disconnect (G_OBJECT (priv->bvw), priv->notify_logo_mode_signal);
 
-	window = totem_get_main_window (priv->totem);
+	window = xplayer_get_main_window (priv->xplayer);
 	g_signal_handler_disconnect (G_OBJECT (window), priv->key_press_event_signal);
 	g_object_unref (window);
 
@@ -404,7 +404,7 @@ impl_deactivate (PeasActivatable *plugin)
 	g_object_unref (priv->settings);
 
 	/* Remove the menu */
-	manager = totem_get_ui_manager (priv->totem);
+	manager = xplayer_get_ui_manager (priv->xplayer);
 	gtk_ui_manager_remove_ui (manager, priv->ui_merge_id);
 	gtk_ui_manager_remove_action_group (manager, priv->action_group);
 
@@ -435,21 +435,21 @@ make_filename_for_dir (const char *directory, const char *format, const char *mo
 }
 
 gchar *
-totem_screenshot_plugin_setup_file_chooser (const char *filename_format, const char *movie_title)
+xplayer_screenshot_plugin_setup_file_chooser (const char *filename_format, const char *movie_title)
 {
 	GSettings *settings;
 	char *path, *filename, *full, *uri;
 	GFile *file;
 
 	/* Set the default path */
-	settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	path = g_settings_get_string (settings, "screenshot-save-uri");
 	g_object_unref (settings);
 
 	/* Default to the Pictures directory */
 	if (*path == '\0') {
 		g_free (path);
-		path = totem_pictures_dir ();
+		path = xplayer_pictures_dir ();
 		/* No pictures dir, then it's the home dir */
 		if (path == NULL)
 			path = g_strdup (g_get_home_dir ());
@@ -471,7 +471,7 @@ totem_screenshot_plugin_setup_file_chooser (const char *filename_format, const c
 }
 
 void
-totem_screenshot_plugin_update_file_chooser (const char *uri)
+xplayer_screenshot_plugin_update_file_chooser (const char *uri)
 {
 	GSettings *settings;
 	char *dir;
@@ -484,7 +484,7 @@ totem_screenshot_plugin_update_file_chooser (const char *uri)
 	dir = g_file_get_path (parent);
 	g_object_unref (parent);
 
-	settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	g_settings_set_string (settings, "screenshot-save-uri", dir);
 	g_object_unref (settings);
 	g_free (dir);

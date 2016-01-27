@@ -1,4 +1,4 @@
-using Totem;
+using Xplayer;
 
 struct MediaInfo {
   int64 timestamp;
@@ -25,44 +25,44 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   public GLib.Object object { owned get; construct; }
 
   public void activate () {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
 
     zg_log = new Zeitgeist.Log ();
     zg_registry = new Zeitgeist.DataSourceRegistry ();
 
     current_media = MediaInfo ();
 
-    signals += Signal.connect_swapped (totem, "file-has-played",
+    signals += Signal.connect_swapped (xplayer, "file-has-played",
                                        (Callback) file_has_played, this);
-    signals += Signal.connect_swapped (totem, "file-closed",
+    signals += Signal.connect_swapped (xplayer, "file-closed",
                                        (Callback)file_closed, this);
-    signals += Signal.connect_swapped (totem, "metadata-updated",
+    signals += Signal.connect_swapped (xplayer, "metadata-updated",
                                        (Callback) metadata_changed, this);
-    signals += Signal.connect_swapped (totem, "notify::playing",
+    signals += Signal.connect_swapped (xplayer, "notify::playing",
                                        (Callback) playing_changed, this);
 
     GenericArray<Zeitgeist.Event> templates =
       new GenericArray<Zeitgeist.Event> ();
     var event = new Zeitgeist.Event.full ("", Zeitgeist.ZG.USER_ACTIVITY,
-                                          "application://totem.desktop", null);
+                                          "application://xplayer.desktop", null);
     templates.add (event);
     var ds = new Zeitgeist.DataSource.full (
-      "org.gnome.Totem,dataprovider",
-      "Totem dataprovider",
-      "Logs access/leave events for media files played with Totem",
+      "org.gnome.Xplayer,dataprovider",
+      "Xplayer dataprovider",
+      "Logs access/leave events for media files played with Xplayer",
       templates
     );
     zg_registry.register_data_source.begin (ds, null);
   }
 
   public void deactivate () {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
 
     /* we don't always get file-closed, so lets simulate it */
-    file_closed (totem);
+    file_closed (xplayer);
 
     foreach (ulong id in signals) {
-      SignalHandler.disconnect (totem, id);
+      SignalHandler.disconnect (xplayer, id);
     }
     signals = null;
 
@@ -85,9 +85,9 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
     timeout_id = Timeout.add (interval, timeout_cb);
   }
 
-  private void file_has_played (string mrl, Totem.Object totem) {
+  private void file_has_played (string mrl, Xplayer.Object xplayer) {
     if (current_media.mrl != null)
-      file_closed (totem);
+      file_closed (xplayer);
 
     current_media = MediaInfo ();
     current_media.mrl = mrl;
@@ -103,7 +103,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
     }
   }
 
-  private void file_closed (Totem.Object totem) {
+  private void file_closed (Xplayer.Object xplayer) {
     if (current_media.sent_access && current_media.mrl != null) {
       /* send close event */
       TimeVal cur_time = TimeVal ();
@@ -121,7 +121,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   }
 
   private void metadata_changed (string? artist, string? title, string? album,
-                                 uint track_num, Totem.Object totem) {
+                                 uint track_num, Xplayer.Object xplayer) {
     /* we can get some notification after sending event to ZG, so ignore it */
     if (media_info_timeout != 0) {
       current_media.artist = artist;
@@ -131,7 +131,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   }
 
   private bool timeout_cb () {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
 
     if (media_info_timeout != 0) {
       /* we don't have any info besides the url, so use the short_title */
@@ -139,7 +139,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
       Source.remove (media_info_timeout);
       media_info_timeout = 0;
 
-      current_media.title = Totem.get_short_title (totem);
+      current_media.title = Xplayer.get_short_title (xplayer);
       timeout_id = 0;
       wait_for_media_info ();
     }
@@ -149,7 +149,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   }
 
   private async void query_media_mimetype (string current_mrl) {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
     string mrl = current_mrl;
     var f = File.new_for_uri (mrl);
 
@@ -157,7 +157,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
       var fi = yield f.query_info_async (FileAttribute.STANDARD_CONTENT_TYPE,
                                          0, Priority.DEFAULT_IDLE, null);
 
-      if (current_media.mrl != mrl || !totem.is_playing ()) return;
+      if (current_media.mrl != mrl || !xplayer.is_playing ()) return;
       current_media.mimetype = fi.get_content_type ();
 
       /* send event */
@@ -169,11 +169,11 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   }
 
   private bool wait_for_media_info () {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
 
-    if (current_media.title != null && totem.is_playing ()) {
+    if (current_media.title != null && xplayer.is_playing ()) {
       Value val;
-      var video = totem.get_video_widget () as Bacon.VideoWidget;
+      var video = xplayer.get_video_widget () as Bacon.VideoWidget;
       video.get_metadata (Bacon.MetadataType.HAS_VIDEO, out val);
       current_media.interpretation = val.get_boolean () ?
         Zeitgeist.NFO.VIDEO : Zeitgeist.NFO.AUDIO;
@@ -191,18 +191,18 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
   }
 
   private void playing_changed () {
-    Totem.Object totem = (Totem.Object) this.object;
+    Xplayer.Object xplayer = (Xplayer.Object) this.object;
 
     if (media_info_timeout == 0 && current_media.sent_access == false) {
       wait_for_media_info ();
     }
 
     /* end of playlist */
-    if (!totem.is_playing () && current_media.sent_access) {
+    if (!xplayer.is_playing () && current_media.sent_access) {
       /* sends leave event even if the user just pauses the playback
          for a little while, but we don't want too many access events
          for the same uri */
-      file_closed (totem);
+      file_closed (xplayer);
     }
   }
 
@@ -223,7 +223,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
         new GenericArray<Zeitgeist.Event> ();
       var event = new Zeitgeist.Event.full (event_interpretation,
                                             Zeitgeist.ZG.USER_ACTIVITY,
-                                            "application://totem.desktop",
+                                            "application://xplayer.desktop",
                                             null);
       event.add_subject (subject);
       events.add (event);

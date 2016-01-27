@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemCone.h"
+#include "xplayerPlugin.h"
+#include "xplayerCone.h"
 
 static const char *propertyNames[] = {
   "audio",
@@ -44,29 +44,29 @@ static const char *methodNames[] = {
   "versionInfo"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemCone,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerCone,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemCone::totemCone (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerCone::xplayerCone (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemCone::~totemCone ()
+xplayerCone::~xplayerCone ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemCone::InvokeByIndex (int aIndex,
+xplayerCone::InvokeByIndex (int aIndex,
                           const NPVariant *argv,
                           uint32_t argc,
                           NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemCone);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerCone);
 
   switch (Methods (aIndex)) {
     case eversionInfo:
@@ -77,31 +77,31 @@ totemCone::InvokeByIndex (int aIndex,
 }
 
 bool
-totemCone::GetPropertyByIndex (int aIndex,
+xplayerCone::GetPropertyByIndex (int aIndex,
                                NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemCone);
+  XPLAYER_LOG_GETTER (aIndex, xplayerCone);
 
   switch (Properties (aIndex)) {
     case eAudio:
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eConeAudio));
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eConeAudio));
 
     case eInput:
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eConeInput));
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eConeInput));
 
     case ePlaylist:
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eConePlaylist));
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eConePlaylist));
 
     case eVideo:
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eConeVideo));
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eConeVideo));
 
     case eVersionInfo:
-      return StringVariant (_result, TOTEM_CONE_VERSION);
+      return StringVariant (_result, XPLAYER_CONE_VERSION);
 
     case eIterator:
     case eLog:
     case eMessages:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
       return NullVariant (_result);
   }
 
@@ -109,10 +109,10 @@ totemCone::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemCone::SetPropertyByIndex (int aIndex,
+xplayerCone::SetPropertyByIndex (int aIndex,
                                const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemCone);
+  XPLAYER_LOG_SETTER (aIndex, xplayerCone);
 
   return ThrowPropertyNotWritable ();
 }

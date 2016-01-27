@@ -10,13 +10,13 @@ ui_DATA = chapters-list.ui chapters-edit.ui
 EXTRA_DIST += $(ui_DATA)
 
 libchapters_la_SOURCES = \
-	totem-chapters.c	\
-	totem-cmml-parser.c	\
-	totem-cmml-parser.h	\
-	totem-chapters-utils.c	\
-	totem-chapters-utils.h	\
-	totem-edit-chapter.c	\
-	totem-edit-chapter.h
+	xplayer-chapters.c	\
+	xplayer-cmml-parser.c	\
+	xplayer-cmml-parser.h	\
+	xplayer-chapters-utils.c	\
+	xplayer-chapters-utils.h	\
+	xplayer-edit-chapter.c	\
+	xplayer-edit-chapter.h
 libchapters_la_LDFLAGS = $(plugin_ldflags)
 libchapters_la_LIBADD = \
 	$(plugin_libadd)	\

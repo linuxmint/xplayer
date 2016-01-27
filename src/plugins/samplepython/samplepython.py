@@ -1,6 +1,6 @@
 # From code by James Livingston
 
-from gi.repository import GObject, Peas, Totem # pylint: disable-msg=E0611,W0611
+from gi.repository import GObject, Peas, Xplayer # pylint: disable-msg=E0611,W0611
 
 class SamplePython (GObject.Object, Peas.Activatable):
     __gtype_name__ = 'SamplePython'

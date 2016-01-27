@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_CONE_VIDEO_H__
-#define __TOTEM_CONE_VIDEO_H__
+#ifndef __XPLAYER_CONE_VIDEO_H__
+#define __XPLAYER_CONE_VIDEO_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemConeVideo : public totemNPObject
+class xplayerConeVideo : public xplayerNPObject
 {
   public:
-    totemConeVideo (NPP);
-    virtual ~totemConeVideo ();
+    xplayerConeVideo (NPP);
+    virtual ~xplayerConeVideo ();
 
   private:
 
@@ -56,6 +56,6 @@ class totemConeVideo : public totemNPObject
     double mSaveVolume;
 };
 
-TOTEM_DEFINE_NPCLASS (totemConeVideo);
+XPLAYER_DEFINE_NPCLASS (xplayerConeVideo);
 
-#endif /* __TOTEM_CONE_VIDEO_H__ */
+#endif /* __XPLAYER_CONE_VIDEO_H__ */

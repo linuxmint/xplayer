@@ -16,28 +16,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
 /*
- * SECTION:totem-chapters-utils
+ * SECTION:xplayer-chapters-utils
  * @short_description: misc helper functions
  * @stability: Unstable
- * @include: totem-chapters-utils.h
+ * @include: xplayer-chapters-utils.h
  *
  * These functions are used for misc operations within chapters plugin.
  */
 
 #include <glib.h>
 
-#include "totem-chapters-utils.h"
+#include "xplayer-chapters-utils.h"
 #include <string.h>
 
 /**
- * totem_remove_file_extension:
+ * xplayer_remove_file_extension:
  * @filename: filename to remove extension from
  *
  * Removes extension from the @filename.
@@ -45,7 +45,7 @@
  * Returns: filename without extension on success, %NULL otherwise; free with g_free ().
  **/
 gchar *
-totem_remove_file_extension (const gchar *filename)
+xplayer_remove_file_extension (const gchar *filename)
 {
 	gchar	*p, *s;
 
@@ -64,7 +64,7 @@ totem_remove_file_extension (const gchar *filename)
 }
 
 /**
- * totem_change_file_extension:
+ * xplayer_change_file_extension:
  * @filename: filename to change extension in
  * @ext: new extension for @filename
  *
@@ -73,7 +73,7 @@ totem_remove_file_extension (const gchar *filename)
  * Returns: filename with new extension on success, %NULL otherwise; free with g_free ().
  **/
 gchar *
-totem_change_file_extension (const gchar	*filename,
+xplayer_change_file_extension (const gchar	*filename,
 			     const gchar	*ext)
 {
 	gchar	*no_ext, *new_file;
@@ -83,7 +83,7 @@ totem_change_file_extension (const gchar	*filename,
 	g_return_val_if_fail (ext != NULL, NULL);
 	g_return_val_if_fail (strlen (ext) > 0, NULL);
 
-	no_ext = totem_remove_file_extension (filename);
+	no_ext = xplayer_remove_file_extension (filename);
 
 	if (no_ext == NULL)
 		return NULL;

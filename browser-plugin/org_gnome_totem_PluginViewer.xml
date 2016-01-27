@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<node name="/org/gnome/totem/PluginViewer">
-  <interface name="org.gnome.totem.PluginViewer">
+<node name="/org/gnome/xplayer/PluginViewer">
+  <interface name="org.gnome.xplayer.PluginViewer">
     <method name="DoCommand">
       <arg type="s" name="Command" direction="in" />
     </method>
@@ -23,7 +23,7 @@
     </method>
     <method name="CloseStream" />
     <method name="OpenURI">
-      <annotation name="org.freedesktop.DBus.GLib.CSymbol" value="totem_embedded_open_uri" />
+      <annotation name="org.freedesktop.DBus.GLib.CSymbol" value="xplayer_embedded_open_uri" />
       <arg type="s" name="URI" direction="in" />
       <arg type="s" name="BaseURI" direction="in" />
     </method>

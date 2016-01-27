@@ -9,7 +9,7 @@ AUTOMAKE_OPTIONS = 1.6
 # of using the various options.
 
 # The name of the module, e.g. 'glib'.
-DOC_MODULE=totem
+DOC_MODULE=xplayer
 
 # The top-level SGML file. You can change this if you want to.
 DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.xml
@@ -29,7 +29,7 @@ SCAN_OPTIONS=
 
 # Extra options to supply to gtkdoc-mkdb.
 # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml
-MKDB_OPTIONS=--sgml-mode --output-format=xml --name-space=totem
+MKDB_OPTIONS=--sgml-mode --output-format=xml --name-space=xplayer
 
 # Extra options to supply to gtkdoc-mktmpl
 # e.g. MKTMPL_OPTIONS=--only-section-tmpl
@@ -50,7 +50,7 @@ CFILE_GLOB=$(top_srcdir)/src/*.c
 # Header files to ignore when scanning.
 # e.g. IGNORE_HFILES=gtkdebug.h gtkintl.h
 IGNORE_HFILES = \
-	totem-private.h			\
+	xplayer-private.h			\
 	ev-sidebar.h			\
 	eggdesktopfile.h		\
 	eggfileformatchooser.h		\
@@ -59,52 +59,52 @@ IGNORE_HFILES = \
 	eggsmclient-private.h		\
 	gnome-screenshot-widget.h	\
 	gsd-media-keys-window.h		\
-	totem-profile.h			\
-	totem-sample-vala-plugin.h	\
-	totem-chapters-utils.h		\
-	totem-cmml-parser.h		\
-	totem-edit-chapter.h		\
+	xplayer-profile.h			\
+	xplayer-sample-vala-plugin.h	\
+	xplayer-chapters-utils.h		\
+	xplayer-cmml-parser.h		\
+	xplayer-edit-chapter.h		\
 	bacon-video-widget-common.h			\
 	bacon-video-widget-gst-missing-plugins.h	\
 	bacon-resize.h					\
-	totem-playlist.h				\
-	totem-fullscreen.h				\
-	totem-module.h					\
-	totem-time-label.h				\
-	totem-plugin-manager.h				\
-	totem-properties-view.h				\
-	totem-open-location.h				\
-	totem-statusbar.h				\
-	totem-sidebar.h					\
-	totem-session.h					\
-	totem-resources.h				\
-	totem-plugins-engine.h				\
-	totem-options.h					\
-	totem-preferences.h				\
-	totem-dvb-setup.h				\
+	xplayer-playlist.h				\
+	xplayer-fullscreen.h				\
+	xplayer-module.h					\
+	xplayer-time-label.h				\
+	xplayer-plugin-manager.h				\
+	xplayer-properties-view.h				\
+	xplayer-open-location.h				\
+	xplayer-statusbar.h				\
+	xplayer-sidebar.h					\
+	xplayer-session.h					\
+	xplayer-resources.h				\
+	xplayer-plugins-engine.h				\
+	xplayer-options.h					\
+	xplayer-preferences.h				\
+	xplayer-dvb-setup.h				\
 	gstscreenshot.h					\
-	totem-uri.h					\
-	totem-python-plugin.h				\
-	totem-subtitle-encoding.h			\
-	totem-menu.h					\
+	xplayer-uri.h					\
+	xplayer-python-plugin.h				\
+	xplayer-subtitle-encoding.h			\
+	xplayer-menu.h					\
 	video-utils.h					\
 	debug.h						\
-	totem-dnd-menu.h				\
-	totem-aspect-frame.h				\
-	totem-gst-helpers.h				\
+	xplayer-dnd-menu.h				\
+	xplayer-aspect-frame.h				\
+	xplayer-gst-helpers.h				\
 	bacon-video-widget-properties.h	\
-	totem-gallery.h			\
-	totem-gallery-progress.h	\
-	totem-screenshot.h		\
-	totem-screenshot-plugin.h	\
-	totem-skipto.h			\
-	totem-skipto-plugin.h		\
-	totem-time-entry.h		\
-	totem-tracker-widget.h		\
+	xplayer-gallery.h			\
+	xplayer-gallery-progress.h	\
+	xplayer-screenshot.h		\
+	xplayer-screenshot-plugin.h	\
+	xplayer-skipto.h			\
+	xplayer-skipto-plugin.h		\
+	xplayer-time-entry.h		\
+	xplayer-tracker-widget.h		\
 	gsd-media-keys-window.h		\
 	gsd-osd-window.h		\
 	bacon-video-osd-actor.h		\
-	totem-search-entry.h		\
+	xplayer-search-entry.h		\
 	gd-tagged-entry.h		\
 	gd-fullscreen-filter.h		\
 	gsd-osd-window-private.h	\
@@ -116,7 +116,7 @@ HTML_IMAGES=
 
 # Extra SGML files that are included by $(DOC_MAIN_SGML_FILE).
 # e.g. content_files=running.sgml building.sgml changes-2.0.sgml
-content_files = version.xml totem-plugins.xml
+content_files = version.xml xplayer-plugins.xml
 
 # SGML files where gtk-doc abbrevations (#GtkWidget) are expanded
 # These files must be listed here *and* in content_files
@@ -135,7 +135,7 @@ GTKDOC_CFLAGS = \
 	-I$(top_srcdir)/src/plugins	\
 	$(PLAYER_CFLAGS)
 GTKDOC_LIBS = \
-	$(top_builddir)/src/libtotem.la	\
+	$(top_builddir)/src/libxplayer.la	\
 	$(PLAYER_LIBS)
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.

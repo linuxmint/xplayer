@@ -16,14 +16,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
 /*
- * SECTION:totem-cmml-parser
+ * SECTION:xplayer-cmml-parser
  * @short_description: parser for CMML files
  * @stability: Unstable
  *
@@ -41,63 +41,63 @@
 #include <libxml/xmlwriter.h>
 #include <string.h>
 #include <math.h>
-#include "totem-cmml-parser.h"
+#include "xplayer-cmml-parser.h"
 
 #define MSECS_IN_HOUR (1000 * 60 * 60)
 #define MSECS_IN_MINUTE (1000 * 60)
 #define MSECS_IN_SECOND (1000)
 
-#define TOTEM_CMML_PREAMBLE 	"<!DOCTYPE cmml SYSTEM \"cmml.dtd\">\n"
+#define XPLAYER_CMML_PREAMBLE 	"<!DOCTYPE cmml SYSTEM \"cmml.dtd\">\n"
 
-typedef void (*TotemCmmlCallback) (TotemCmmlClip *, gpointer user_data);
+typedef void (*XplayerCmmlCallback) (XplayerCmmlClip *, gpointer user_data);
 
 typedef enum {
-	TOTEM_CMML_NONE = 0,
-	TOTEM_CMML_CMML,
-	TOTEM_CMML_HEAD,
-	TOTEM_CMML_CLIP
-} TotemCmmlStatus;
+	XPLAYER_CMML_NONE = 0,
+	XPLAYER_CMML_CMML,
+	XPLAYER_CMML_HEAD,
+	XPLAYER_CMML_CLIP
+} XplayerCmmlStatus;
 
 typedef struct {
 	xmlTextReaderPtr	reader;
-	TotemCmmlStatus		status;
-	TotemCmmlClip		*clip;
-	TotemCmmlCallback	callback;
+	XplayerCmmlStatus		status;
+	XplayerCmmlClip		*clip;
+	XplayerCmmlCallback	callback;
 	gpointer		user_data;
-} TotemCmmlContext;
+} XplayerCmmlContext;
 
-static TotemCmmlContext * totem_cmml_context_new (void);
-static void totem_cmml_context_free (TotemCmmlContext *context);
-static void totem_cmml_context_set_callback (TotemCmmlContext *context, TotemCmmlCallback cb, gpointer user_data);
-static int totem_cmml_compare_clips (gconstpointer pointer_a, gconstpointer pointer_b);
-static TotemCmmlClip * totem_cmml_clip_new_from_attrs (const xmlChar **attrs);
-static void totem_cmml_clip_insert_img_attr (TotemCmmlClip *clip, const xmlChar **attrs);
-static gdouble totem_cmml_parse_smpte (const gchar *str, gdouble framerate);
-static gdouble totem_cmml_parse_npt (const gchar *str);
-static gdouble totem_cmml_parse_time_str (const gchar *str);
-static void totem_cmml_parse_start (TotemCmmlContext *context, const xmlChar *tag, const xmlChar **attrs);
-static void totem_cmml_parse_end (TotemCmmlContext *context, const xmlChar *tag);
-static void totem_cmml_parse_xml_node (TotemCmmlContext	*context);
-static void totem_cmml_read_clip_cb (TotemCmmlClip *clip, gpointer user_data);
+static XplayerCmmlContext * xplayer_cmml_context_new (void);
+static void xplayer_cmml_context_free (XplayerCmmlContext *context);
+static void xplayer_cmml_context_set_callback (XplayerCmmlContext *context, XplayerCmmlCallback cb, gpointer user_data);
+static int xplayer_cmml_compare_clips (gconstpointer pointer_a, gconstpointer pointer_b);
+static XplayerCmmlClip * xplayer_cmml_clip_new_from_attrs (const xmlChar **attrs);
+static void xplayer_cmml_clip_insert_img_attr (XplayerCmmlClip *clip, const xmlChar **attrs);
+static gdouble xplayer_cmml_parse_smpte (const gchar *str, gdouble framerate);
+static gdouble xplayer_cmml_parse_npt (const gchar *str);
+static gdouble xplayer_cmml_parse_time_str (const gchar *str);
+static void xplayer_cmml_parse_start (XplayerCmmlContext *context, const xmlChar *tag, const xmlChar **attrs);
+static void xplayer_cmml_parse_end (XplayerCmmlContext *context, const xmlChar *tag);
+static void xplayer_cmml_parse_xml_node (XplayerCmmlContext	*context);
+static void xplayer_cmml_read_clip_cb (XplayerCmmlClip *clip, gpointer user_data);
 
-static TotemCmmlContext *
-totem_cmml_context_new (void)
+static XplayerCmmlContext *
+xplayer_cmml_context_new (void)
 {
-	TotemCmmlContext *ctx = g_new0 (TotemCmmlContext, 1);
+	XplayerCmmlContext *ctx = g_new0 (XplayerCmmlContext, 1);
 
-	ctx->status = TOTEM_CMML_NONE;
+	ctx->status = XPLAYER_CMML_NONE;
 	return ctx;
 }
 
 static void
-totem_cmml_context_free (TotemCmmlContext *context)
+xplayer_cmml_context_free (XplayerCmmlContext *context)
 {
 	g_free (context);
 }
 
 static void
-totem_cmml_context_set_callback (TotemCmmlContext	*context,
-				 TotemCmmlCallback	cb,
+xplayer_cmml_context_set_callback (XplayerCmmlContext	*context,
+				 XplayerCmmlCallback	cb,
 				 gpointer		user_data)
 {
 	g_return_if_fail (context != NULL);
@@ -106,8 +106,8 @@ totem_cmml_context_set_callback (TotemCmmlContext	*context,
 	context->user_data = user_data;
 }
 
-static TotemCmmlClip *
-totem_cmml_clip_new_from_attrs (const xmlChar **attrs)
+static XplayerCmmlClip *
+xplayer_cmml_clip_new_from_attrs (const xmlChar **attrs)
 {
 	gint		i = 0;
 	gint64		start = -1;
@@ -119,15 +119,15 @@ totem_cmml_clip_new_from_attrs (const xmlChar **attrs)
 		if (g_strcmp0 ((const gchar *) attrs[i], "title") == 0)
 			title = g_strdup ((const gchar *) attrs[i + 1]);
 		else if (g_strcmp0 ((const gchar *) attrs[i], "start") == 0)
-			start = (gint64) (totem_cmml_parse_time_str ((const gchar *) attrs[i + 1]) * 1000);
+			start = (gint64) (xplayer_cmml_parse_time_str ((const gchar *) attrs[i + 1]) * 1000);
 		i += 2;
 	}
 
-	return totem_cmml_clip_new (title, NULL, start, NULL);
+	return xplayer_cmml_clip_new (title, NULL, start, NULL);
 }
 
 static void
-totem_cmml_clip_insert_img_attr (TotemCmmlClip	*clip,
+xplayer_cmml_clip_insert_img_attr (XplayerCmmlClip	*clip,
 				 const xmlChar	**attrs)
 {
 	gint		i = 0;
@@ -174,7 +174,7 @@ totem_cmml_clip_insert_img_attr (TotemCmmlClip	*clip,
 
 /* the idea of parsing time was taken from libcmml (and some of code, too) */
 static gdouble
-totem_cmml_parse_smpte (const gchar	*str,
+xplayer_cmml_parse_smpte (const gchar	*str,
 			gdouble		framerate)
 {
 	gint		h = 0, m = 0, s = 0;
@@ -251,7 +251,7 @@ totem_cmml_parse_smpte (const gchar	*str,
 }
 
 static gdouble
-totem_cmml_parse_npt (const gchar *str)
+xplayer_cmml_parse_npt (const gchar *str)
 {
 	gint		h, m;
 	gfloat		s;
@@ -317,9 +317,9 @@ totem_cmml_parse_npt (const gchar *str)
 
 	/* We break slightly with the specifications here and allow seconds-only values greater than 60 seconds.
 	 * (i.e. we allow "90" to be successfully parsed as 1.5 minutes and returned as 90 seconds, rather than
-	 * returning an error because it's > 60). This is because Totem previously (incorrectly) wrote out timestamps
+	 * returning an error because it's > 60). This is because Xplayer previously (incorrectly) wrote out timestamps
 	 * in this (seconds only, potentially > 60) format; so for compatibility with CMML files written by older
-	 * versions of Totem, we have to allow such formats.
+	 * versions of Xplayer, we have to allow such formats.
 	 * However, if either h or m is non-zero, we error out as before. */
 	if (G_UNLIKELY ((h != 0 || m != 0) && (s >= 60.0 || s < 0.0)))
 		return -1;
@@ -329,45 +329,45 @@ totem_cmml_parse_npt (const gchar *str)
 
 
 static gdouble
-totem_cmml_parse_time_str (const gchar *str)
+xplayer_cmml_parse_time_str (const gchar *str)
 {
 	if (G_UNLIKELY (str == NULL))
 		return -1.0;
 
 	/* we need to choose parsing function to use */
 	if (g_str_has_prefix (str, "npt:"))
-		return totem_cmml_parse_npt (str + 4);
+		return xplayer_cmml_parse_npt (str + 4);
 
 	if (g_str_has_prefix (str, "smpte-24:"))
-		return totem_cmml_parse_smpte (str + 9, 24.0);
+		return xplayer_cmml_parse_smpte (str + 9, 24.0);
 
 	if (g_str_has_prefix (str, "smpte-24-drop:"))
-		return totem_cmml_parse_smpte (str + 14, 23.976);
+		return xplayer_cmml_parse_smpte (str + 14, 23.976);
 
 	if (g_str_has_prefix (str, "smpte-25:"))
-		return totem_cmml_parse_smpte (str + 9, 25.0);
+		return xplayer_cmml_parse_smpte (str + 9, 25.0);
 
 	if (g_str_has_prefix (str, "smpte-30:"))
-		return totem_cmml_parse_smpte (str + 9, 30.0);
+		return xplayer_cmml_parse_smpte (str + 9, 30.0);
 
 	if (g_str_has_prefix (str, "smpte-30-drop:"))
-		return totem_cmml_parse_smpte (str + 14, 29.97);
+		return xplayer_cmml_parse_smpte (str + 14, 29.97);
 
 	if (g_str_has_prefix (str, "smpte-50:"))
-		return totem_cmml_parse_smpte (str + 9, 50.0);
+		return xplayer_cmml_parse_smpte (str + 9, 50.0);
 
 	if (g_str_has_prefix (str, "smpte-60:"))
-		return totem_cmml_parse_smpte (str + 9, 60);
+		return xplayer_cmml_parse_smpte (str + 9, 60);
 
 	if (g_str_has_prefix (str, "smpte-60-drop:"))
-		return totem_cmml_parse_smpte (str + 14, 59.94);
+		return xplayer_cmml_parse_smpte (str + 14, 59.94);
 
 	/* default is npt */
-	return totem_cmml_parse_npt (str);
+	return xplayer_cmml_parse_npt (str);
 }
 
 static void
-totem_cmml_parse_start (TotemCmmlContext	*context,
+xplayer_cmml_parse_start (XplayerCmmlContext	*context,
 			const xmlChar		*tag,
 			const xmlChar		**attrs)
 {
@@ -375,80 +375,80 @@ totem_cmml_parse_start (TotemCmmlContext	*context,
 	g_return_if_fail (tag != NULL);
 
 	if (g_strcmp0 ((const gchar *) tag, "cmml") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_NONE))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_NONE))
 			return;
 
 		/* empty document */
 		if (G_UNLIKELY (xmlTextReaderIsEmptyElement (context->reader)))
 			return;
 
-		context->status = TOTEM_CMML_CMML;
+		context->status = XPLAYER_CMML_CMML;
 	} else if (g_strcmp0 ((const gchar *) tag, "head") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_CMML))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_CMML))
 			return;
 
 		/* empty head, let it ok */
 		if (G_UNLIKELY (xmlTextReaderIsEmptyElement (context->reader)))
-			context->status = TOTEM_CMML_CMML;
+			context->status = XPLAYER_CMML_CMML;
 
-		context->status = TOTEM_CMML_HEAD;
+		context->status = XPLAYER_CMML_HEAD;
 	} else if (g_strcmp0 ((const gchar *) tag, "clip") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_CMML))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_CMML))
 			return;
 
-		context->clip = totem_cmml_clip_new_from_attrs (attrs);
+		context->clip = xplayer_cmml_clip_new_from_attrs (attrs);
 
 		/* empty clip element, we need to set status to CMML */
 		if (G_UNLIKELY (xmlTextReaderIsEmptyElement (context->reader))) {
 			if (G_LIKELY(context->callback != NULL))
 				(context->callback) (context->clip, context->user_data);
 
-			context->status = TOTEM_CMML_CMML;
-			totem_cmml_clip_free (context->clip);
+			context->status = XPLAYER_CMML_CMML;
+			xplayer_cmml_clip_free (context->clip);
 			context->clip = NULL;
 		} else
-			context->status = TOTEM_CMML_CLIP;
+			context->status = XPLAYER_CMML_CLIP;
 	} else if (g_strcmp0 ((const gchar *) tag, "img") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_CLIP))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_CLIP))
 			return;
 
-		totem_cmml_clip_insert_img_attr (context->clip, attrs);
+		xplayer_cmml_clip_insert_img_attr (context->clip, attrs);
 	}
 }
 
 static void
-totem_cmml_parse_end (TotemCmmlContext	*context,
+xplayer_cmml_parse_end (XplayerCmmlContext	*context,
 		      const xmlChar	*tag)
 {
 	g_return_if_fail (context != NULL);
 	g_return_if_fail (tag != NULL);
 
 	if (g_strcmp0 ((const gchar *) tag, "cmml") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_CMML))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_CMML))
 			return;
 
-		context->status = TOTEM_CMML_NONE;
+		context->status = XPLAYER_CMML_NONE;
 	} else if (g_strcmp0 ((const gchar *) tag, "head") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_HEAD))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_HEAD))
 			return;
 
-		context->status = TOTEM_CMML_CMML;
+		context->status = XPLAYER_CMML_CMML;
 	} else if (g_strcmp0 ((const gchar *) tag, "clip") == 0) {
-		if (G_UNLIKELY (context->status != TOTEM_CMML_CLIP))
+		if (G_UNLIKELY (context->status != XPLAYER_CMML_CLIP))
 			return;
 
-		context->status = TOTEM_CMML_CMML;
+		context->status = XPLAYER_CMML_CMML;
 		if (G_LIKELY (context->callback != NULL))
 			(context->callback) (context->clip, context->user_data);
 
-		totem_cmml_clip_free (context->clip);
+		xplayer_cmml_clip_free (context->clip);
 		context->clip = NULL;
 		return;
 	}
 }
 
 static void
-totem_cmml_parse_xml_node (TotemCmmlContext *context)
+xplayer_cmml_parse_xml_node (XplayerCmmlContext *context)
 {
 	xmlChar		*tag;
 	xmlChar		**attrs = NULL;
@@ -474,38 +474,38 @@ totem_cmml_parse_xml_node (TotemCmmlContext *context)
 			xmlTextReaderMoveToElement (context->reader);
 		}
 
-		totem_cmml_parse_start (context, tag, (const xmlChar **) attrs);
+		xplayer_cmml_parse_start (context, tag, (const xmlChar **) attrs);
 		/* free resources */
 		for (j = i - 1; j >= 0; j -= 1)
 			xmlFree (attrs[j]);
 		g_free (attrs);
 	} else if (xmlTextReaderNodeType (context->reader) == XML_READER_TYPE_END_ELEMENT)
-		totem_cmml_parse_end (context, tag);
+		xplayer_cmml_parse_end (context, tag);
 	xmlFree (tag);
 }
 
 static void
-totem_cmml_read_clip_cb (TotemCmmlClip	*clip,
+xplayer_cmml_read_clip_cb (XplayerCmmlClip	*clip,
 			 gpointer	user_data)
 {
-	TotemCmmlClip	*new_clip;
+	XplayerCmmlClip	*new_clip;
 
 	g_return_if_fail (clip != NULL);
 	g_return_if_fail (user_data != NULL);
 
-	new_clip = totem_cmml_clip_copy (clip);
+	new_clip = xplayer_cmml_clip_copy (clip);
 
 	if (G_LIKELY (new_clip != NULL && new_clip->time_start >= 0)) {
 		* ( (GList **) user_data) = g_list_append ( * ( (GList **) user_data), new_clip);
 	/* clip with -1 start time is bad one, remove it */
 	} else if (new_clip != NULL) {
 		g_warning ("Ignoring clip '%s' due to having an invalid start time: %" G_GINT64_FORMAT, new_clip->title, new_clip->time_start);
-		totem_cmml_clip_free (new_clip);
+		xplayer_cmml_clip_free (new_clip);
 	}
 }
 
 /**
- * totem_cmml_convert_msecs_to_str:
+ * xplayer_cmml_convert_msecs_to_str:
  * @time_msecs: time to convert in msecs
  *
  * Converts %time_msecs to string "hh:mm:ss".
@@ -513,7 +513,7 @@ totem_cmml_read_clip_cb (TotemCmmlClip	*clip,
  * Returns: string in "hh:mm:ss" format.
  **/
 gchar *
-totem_cmml_convert_msecs_to_str (gint64 time_msecs)
+xplayer_cmml_convert_msecs_to_str (gint64 time_msecs)
 {
 	gint32		hours, minutes, seconds;
 
@@ -528,21 +528,21 @@ totem_cmml_convert_msecs_to_str (gint64 time_msecs)
 }
 
 static int
-totem_cmml_compare_clips (gconstpointer pointer_a,
+xplayer_cmml_compare_clips (gconstpointer pointer_a,
 			  gconstpointer pointer_b)
 {
-	TotemCmmlClip	*clip_a, *clip_b;
+	XplayerCmmlClip	*clip_a, *clip_b;
 
 	g_return_val_if_fail (pointer_a != NULL && pointer_b != NULL, -1);
 
-	clip_a = (TotemCmmlClip *) pointer_a;
-	clip_b = (TotemCmmlClip *) pointer_b;
+	clip_a = (XplayerCmmlClip *) pointer_a;
+	clip_b = (XplayerCmmlClip *) pointer_b;
 
 	return clip_a->time_start - clip_b->time_start;
 }
 
 /**
- * totem_cmml_clip_new:
+ * xplayer_cmml_clip_new:
  * @title: clip title, %NULL allowed
  * @desc: clip description, %NULL allowed
  * @start: clip start time in msecs
@@ -550,17 +550,17 @@ totem_cmml_compare_clips (gconstpointer pointer_a,
  *
  * Creates new clip structure with appropriate parameters.
  *
- * Returns: newly allocated #TotemCmmlClip structure.
+ * Returns: newly allocated #XplayerCmmlClip structure.
  **/
-TotemCmmlClip *
-totem_cmml_clip_new (const gchar	*title,
+XplayerCmmlClip *
+xplayer_cmml_clip_new (const gchar	*title,
 		     const gchar	*desc,
 		     gint64		start,
 		     GdkPixbuf		*pixbuf)
 {
-	TotemCmmlClip		*clip;
+	XplayerCmmlClip		*clip;
 
-	clip = g_new0 (TotemCmmlClip, 1);
+	clip = g_new0 (XplayerCmmlClip, 1);
 
 	clip->title = g_strdup (title);
 	clip->desc = g_strdup (desc);
@@ -572,13 +572,13 @@ totem_cmml_clip_new (const gchar	*title,
 }
 
 /**
- * totem_cmml_clip_free:
- * @clip: #TotemCmmlClip to free
+ * xplayer_cmml_clip_free:
+ * @clip: #XplayerCmmlClip to free
  *
  * Frees unused clip structure.
  **/
 void
-totem_cmml_clip_free (TotemCmmlClip *clip)
+xplayer_cmml_clip_free (XplayerCmmlClip *clip)
 {
 	if (clip == NULL)
 		return;
@@ -591,29 +591,29 @@ totem_cmml_clip_free (TotemCmmlClip *clip)
 }
 
 /**
- * totem_cmml_clip_copy:
- * @clip: #TotemCmmlClip structure to copy
+ * xplayer_cmml_clip_copy:
+ * @clip: #XplayerCmmlClip structure to copy
  *
- * Copies #TotemCmmlClip structure.
+ * Copies #XplayerCmmlClip structure.
  *
- * Returns: newly allocated #TotemCmmlClip if @clip != %NULL, %NULL otherwise.
+ * Returns: newly allocated #XplayerCmmlClip if @clip != %NULL, %NULL otherwise.
  **/
-TotemCmmlClip *
-totem_cmml_clip_copy (TotemCmmlClip *clip)
+XplayerCmmlClip *
+xplayer_cmml_clip_copy (XplayerCmmlClip *clip)
 {
 	g_return_val_if_fail (clip != NULL, NULL);
 
-	return totem_cmml_clip_new (clip->title, clip->desc, clip->time_start, clip->pixbuf);
+	return xplayer_cmml_clip_new (clip->title, clip->desc, clip->time_start, clip->pixbuf);
 }
 
 static void
-totem_cmml_read_file_cb (GObject	*source_object,
+xplayer_cmml_read_file_cb (GObject	*source_object,
 			 GAsyncResult	*result,
 			 gpointer	 user_data)
 {
 	GError			*error = NULL;
 	xmlTextReaderPtr	reader;
-	TotemCmmlContext	*context;
+	XplayerCmmlContext	*context;
 	gint			ret;
 	gchar			*contents;
 	gsize			length;
@@ -643,23 +643,23 @@ totem_cmml_read_file_cb (GObject	*source_object,
 		return;
 	}
 
-	context = totem_cmml_context_new ();
+	context = xplayer_cmml_context_new ();
 	context->reader = reader;
-	totem_cmml_context_set_callback (context, totem_cmml_read_clip_cb, &list);
+	xplayer_cmml_context_set_callback (context, xplayer_cmml_read_clip_cb, &list);
 
 	ret = xmlTextReaderRead (reader);
 	while (ret == 1) {
-		totem_cmml_parse_xml_node (context);
+		xplayer_cmml_parse_xml_node (context);
 		ret = xmlTextReaderRead (reader);
 	}
 
 	g_free (contents);
 	xmlFreeTextReader (reader);
-	totem_cmml_clip_free (context->clip);
-	totem_cmml_context_free (context);
+	xplayer_cmml_clip_free (context->clip);
+	xplayer_cmml_context_free (context);
 
 	/* sort clips by time growth */
-	list = g_list_sort (list, (GCompareFunc) totem_cmml_compare_clips);
+	list = g_list_sort (list, (GCompareFunc) xplayer_cmml_compare_clips);
 
 	g_simple_async_result_set_op_res_gpointer (simple, list, NULL);
 	g_simple_async_result_complete_in_idle (simple);
@@ -667,7 +667,7 @@ totem_cmml_read_file_cb (GObject	*source_object,
 }
 
 /**
- * totem_cmml_read_file:
+ * xplayer_cmml_read_file:
  * @file: a #GFile representing the file to read
  * @cancellable: optional #GCancellable object, %NULL to ignore
  * @callback: a #GAsyncReadyCallback to call when the request is satisfied.
@@ -676,7 +676,7 @@ totem_cmml_read_file_cb (GObject	*source_object,
  * Reads and parses a CMML file asynchronously.
  **/
 void
-totem_cmml_read_file (GFile               *file,
+xplayer_cmml_read_file (GFile               *file,
 		      GCancellable        *cancellable,
 		      GAsyncReadyCallback  callback,
 		      gpointer             user_data)
@@ -686,13 +686,13 @@ totem_cmml_read_file (GFile               *file,
 	simple = g_simple_async_result_new (G_OBJECT (file),
 					    callback,
 					    user_data,
-					    totem_cmml_read_file);
+					    xplayer_cmml_read_file);
 
-	g_file_load_contents_async (file, cancellable, totem_cmml_read_file_cb, simple);
+	g_file_load_contents_async (file, cancellable, xplayer_cmml_read_file_cb, simple);
 }
 
 /**
- * totem_ccml_read_file_finish:
+ * xplayer_ccml_read_file_finish:
  * @file: a #GFile representing the file to read
  * @res: a #GAsyncResult
  * @error: a #GError, or %NULL
@@ -700,7 +700,7 @@ totem_cmml_read_file (GFile               *file,
  * Returns a list of parsed chapters or %NULL on error
  **/
 GList *
-totem_cmml_read_file_finish (GFile        *file,
+xplayer_cmml_read_file_finish (GFile        *file,
 			     GAsyncResult *res,
 			     GError      **error)
 {
@@ -708,7 +708,7 @@ totem_cmml_read_file_finish (GFile        *file,
 
 	g_return_val_if_fail (G_IS_FILE (file), NULL);
 
-	g_warn_if_fail (g_simple_async_result_get_source_tag (simple) == totem_cmml_read_file);
+	g_warn_if_fail (g_simple_async_result_get_source_tag (simple) == xplayer_cmml_read_file);
 
 	if (g_simple_async_result_propagate_error (simple, error))
 		return NULL;
@@ -717,14 +717,14 @@ totem_cmml_read_file_finish (GFile        *file,
 }
 
 static void
-totem_cmml_write_file_result (GObject		*source_object,
+xplayer_cmml_write_file_result (GObject		*source_object,
 			      GAsyncResult	*result,
 			      gpointer		user_data)
 {
 	GError			*error = NULL;
-	TotemCmmlAsyncData	*data;
+	XplayerCmmlAsyncData	*data;
 
-	data = (TotemCmmlAsyncData *) user_data;
+	data = (XplayerCmmlAsyncData *) user_data;
 
 	g_file_replace_contents_finish (G_FILE (source_object), result, NULL, &error);
 	g_object_unref (source_object);
@@ -744,15 +744,15 @@ totem_cmml_write_file_result (GObject		*source_object,
 }
 
 /**
- * totem_cmml_write_file_async:
- * @data: #TotemCmmlAsyncData structure with info needed
+ * xplayer_cmml_write_file_async:
+ * @data: #XplayerCmmlAsyncData structure with info needed
  *
  * Writes CMML file with clips given.
  *
  * Returns: 0 if no errors occurred while starting async writing, -1 otherwise.
  **/
 gint
-totem_cmml_write_file_async (TotemCmmlAsyncData *data)
+xplayer_cmml_write_file_async (XplayerCmmlAsyncData *data)
 {
 	GFile			*gio_file;
 	gint			res, len;
@@ -785,7 +785,7 @@ totem_cmml_write_file_async (TotemCmmlAsyncData *data)
 	}
 
 	/* CMML preamble */
-	res = xmlTextWriterWriteRaw (writer, (const xmlChar *) TOTEM_CMML_PREAMBLE);
+	res = xmlTextWriterWriteRaw (writer, (const xmlChar *) XPLAYER_CMML_PREAMBLE);
 	if (G_UNLIKELY (res < 0)) {
 		xmlBufferFree (buf);
 		xmlFreeTextWriter (writer);
@@ -831,13 +831,13 @@ totem_cmml_write_file_async (TotemCmmlAsyncData *data)
 		GdkPixdata 	*pixdata;
 		guint		st_len;
 		guint8		*stream;
-		TotemCmmlClip	*clip;
+		XplayerCmmlClip	*clip;
 		gchar		start_buf[G_ASCII_DTOSTR_BUF_SIZE];
 		gchar		*start_string;
 		gint		hours, minutes;
 		gdouble		seconds;
 
-		clip = (TotemCmmlClip *) cur_clip->data;
+		clip = (XplayerCmmlClip *) cur_clip->data;
 		time_start = ((gdouble) clip->time_start) / 1000;
 
 		/* start <clip> tag */
@@ -868,11 +868,11 @@ totem_cmml_write_file_async (TotemCmmlAsyncData *data)
 		if (G_UNLIKELY (res < 0))
 			break;
 
-		if (G_LIKELY (((TotemCmmlClip *) cur_clip->data)->pixbuf != NULL)) {
+		if (G_LIKELY (((XplayerCmmlClip *) cur_clip->data)->pixbuf != NULL)) {
 			pixdata = g_new0 (GdkPixdata, 1);
 
 			/* encode and serialize pixbuf data */
-			gdk_pixdata_from_pixbuf (pixdata, ((TotemCmmlClip *) cur_clip->data)->pixbuf, TRUE);
+			gdk_pixdata_from_pixbuf (pixdata, ((XplayerCmmlClip *) cur_clip->data)->pixbuf, TRUE);
 			stream = gdk_pixdata_serialize (pixdata, &st_len);
 			base64_enc = g_base64_encode (stream, st_len);
 
@@ -942,7 +942,7 @@ totem_cmml_write_file_async (TotemCmmlAsyncData *data)
 	gio_file = g_file_new_for_uri (data->file);
 	g_file_replace_contents_async (gio_file, data->buf, len, NULL, FALSE,
 				       G_FILE_CREATE_NONE, data->cancellable,
-				       (GAsyncReadyCallback) totem_cmml_write_file_result, data);
+				       (GAsyncReadyCallback) xplayer_cmml_write_file_result, data);
 
 	return 0;
 }

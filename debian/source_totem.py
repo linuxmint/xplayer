@@ -2,7 +2,7 @@ import os, apport.packaging, apport.hookutils
 
 def add_info(report, ui):
 
-    response = ui.choice("How would you describe the issue?", ["The totem interface is not working correctly", "No sound is being played", "Some audio files or videos are not being played correctly"], False)
+    response = ui.choice("How would you describe the issue?", ["The xplayer interface is not working correctly", "No sound is being played", "Some audio files or videos are not being played correctly"], False)
 
     if response == None: # user cancelled
         raise StopIteration

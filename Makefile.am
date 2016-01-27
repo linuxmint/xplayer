@@ -15,13 +15,13 @@ EXTRA_DIST =			\
 	intltool-merge.in	\
 	intltool-update.in	\
 	AUTHORS NEWS		\
-	totem.spec.in		\
-	totem.spec		\
+	xplayer.spec.in		\
+	xplayer.spec		\
 	ChangeLog.pre-gitlog	\
 	MAINTAINERS		\
-	totem.doap
+	xplayer.doap
 
-CLEANFILES = totem.spec
+CLEANFILES = xplayer.spec
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \

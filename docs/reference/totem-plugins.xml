@@ -1,23 +1,23 @@
-<refentry id="totem-plugins">
+<refentry id="xplayer-plugins">
 	<refmeta>
-		<refentrytitle role="top_of_page" id="totem-plugins.top_of_page">Writing Totem Plugins</refentrytitle>
+		<refentrytitle role="top_of_page" id="xplayer-plugins.top_of_page">Writing Xplayer Plugins</refentrytitle>
 		<manvolnum>3</manvolnum>
-		<refmiscinfo>Totem</refmiscinfo>
+		<refmiscinfo>Xplayer</refmiscinfo>
 	</refmeta>
 	<refnamediv>
-		<refname>Writing Totem Plugins</refname>
-		<refpurpose>brief tutorial on writing Totem plugins</refpurpose>
+		<refname>Writing Xplayer Plugins</refname>
+		<refpurpose>brief tutorial on writing Xplayer plugins</refpurpose>
 	</refnamediv>
 
 	<refsect1>
 		<title>Introduction</title>
-		<para>Totem is extensible by means of small, dynamically-loadable plugins, which add functionality wanted by some but not others.</para>
+		<para>Xplayer is extensible by means of small, dynamically-loadable plugins, which add functionality wanted by some but not others.</para>
 
 		<refsect2>
 			<title>Locations</title>
-			<para>Totem plugins can either be installed in the system path
-				(e.g. <filename class="directory">/usr/lib/totem/plugins/</filename>), or in a user's home directory
-				(e.g. <filename class="directory">~/.local/share/totem/plugins/</filename>). In either case, each plugin resides in a
+			<para>Xplayer plugins can either be installed in the system path
+				(e.g. <filename class="directory">/usr/lib/xplayer/plugins/</filename>), or in a user's home directory
+				(e.g. <filename class="directory">~/.local/share/xplayer/plugins/</filename>). In either case, each plugin resides in a
 				subdirectory named after the plugin itself.</para>
 			<para>In addition, each plugin needs a <filename class="extension">.plugin</filename> index file, residing inside the plugin
 				directory. This gives the code name of the plugin, as well as some metadata about the plugin such as its human-readable
@@ -25,7 +25,7 @@
 			<example>
 				<title>Example Plugin Directory</title>
 				<para>A system-installed plugin called <literal>subtitle-downloader</literal> would reside in
-					<filename class="directory">/usr/lib/totem/plugins/subtitle-downloader</filename>, and would (at a
+					<filename class="directory">/usr/lib/xplayer/plugins/subtitle-downloader</filename>, and would (at a
 					minimum) have the following files:
 					<itemizedlist>
 						<listitem><filename>subtitle-downloader.plugin</filename></listitem>
@@ -33,7 +33,7 @@
 					</itemizedlist>
 				</para>
 				<para>If installed in a user's home directory, it would reside in
-					<filename class="extension">~/.local/share/totem/plugins/subtitle-downloader</filename> and have the same
+					<filename class="extension">~/.local/share/xplayer/plugins/subtitle-downloader</filename> and have the same
 					files.</para>
 			</example>
 		</refsect2>
@@ -52,8 +52,8 @@
 	Website=<replaceable>http://plugin/website/</replaceable></programlisting>
 				Most of the values in the template are fairly self-explanatory. One thing to note is that the plugin name should be
 				in lowercase, and contain no spaces. The plugin interface age should start at <literal>1</literal>, and only be
-				incremented when the binary interface of the plugin (as used by Totem) changes. If the plugin does not have its own
-				website, Totem's website (<literal>http://projects.gnome.org/totem/</literal>) can be used.</para>
+				incremented when the binary interface of the plugin (as used by Xplayer) changes. If the plugin does not have its own
+				website, Xplayer's website (<literal>http://projects.gnome.org/xplayer/</literal>) can be used.</para>
 			<para>The library file containing the plugin's code should be named
 				<filename>lib<replaceable>plugin-name</replaceable>.so</filename> (for C, or other compiled language, plugins) or
 				<filename><replaceable>pluginname</replaceable>.py</filename> (for Python plugins).</para>
@@ -68,50 +68,50 @@
 				<example>
 					<title>Example Plugin Code</title>
 					<programlisting>
-#define TOTEM_TYPE_FOOBAR_PLUGIN		(totem_foobar_plugin_get_type ())
-#define TOTEM_FOOBAR_PLUGIN(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_FOOBAR_PLUGIN, TotemFoobarPlugin))
-#define TOTEM_FOOBAR_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_FOOBAR_PLUGIN, TotemFoobarPluginClass))
-#define TOTEM_IS_FOOBAR_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_FOOBAR_PLUGIN))
-#define TOTEM_IS_FOOBAR_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_FOOBAR_PLUGIN))
-#define TOTEM_FOOBAR_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_FOOBAR_PLUGIN, TotemFoobarPluginClass))
+#define XPLAYER_TYPE_FOOBAR_PLUGIN		(xplayer_foobar_plugin_get_type ())
+#define XPLAYER_FOOBAR_PLUGIN(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_FOOBAR_PLUGIN, XplayerFoobarPlugin))
+#define XPLAYER_FOOBAR_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_FOOBAR_PLUGIN, XplayerFoobarPluginClass))
+#define XPLAYER_IS_FOOBAR_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_FOOBAR_PLUGIN))
+#define XPLAYER_IS_FOOBAR_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_FOOBAR_PLUGIN))
+#define XPLAYER_FOOBAR_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_FOOBAR_PLUGIN, XplayerFoobarPluginClass))
 
 typedef struct {
 	/* Plugin private member variables */
-} TotemFoobarPluginPrivate;
+} XplayerFoobarPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER (TOTEM_TYPE_FOOBAR_PLUGIN, TotemFoobarPlugin, totem_foobar_plugin);
+XPLAYER_PLUGIN_REGISTER (XPLAYER_TYPE_FOOBAR_PLUGIN, XplayerFoobarPlugin, xplayer_foobar_plugin);
 
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemFoobarPlugin *self = TOTEM_FOOBAR_PLUGIN (plugin);
-	TotemFoobarPluginPrivate *priv = self->priv;
-	TotemObject *totem = g_object_get_data (G_OBJECT (plugin), "object");
+	XplayerFoobarPlugin *self = XPLAYER_FOOBAR_PLUGIN (plugin);
+	XplayerFoobarPluginPrivate *priv = self->priv;
+	XplayerObject *xplayer = g_object_get_data (G_OBJECT (plugin), "object");
 
 	/* Initialise resources, connect to events, create menu items and UI, etc., here.
 	 * Note that impl_activate() and impl_deactivate() can be called multiple times in one
-	 * Totem instance, though impl_activate() will always be followed by impl_deactivate() before
+	 * Xplayer instance, though impl_activate() will always be followed by impl_deactivate() before
 	 * it is called again. Similarly, impl_deactivate() cannot be called twice in succession. */
 }
 
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemFoobarPlugin *self = TOTEM_FOOBAR_PLUGIN (plugin);
+	XplayerFoobarPlugin *self = XPLAYER_FOOBAR_PLUGIN (plugin);
 
 	/* Destroy resources created in impl_activate() here. e.g. Disconnect from signals
 	 * and remove menu entries and UI. */
 }</programlisting>
 				</example></para>
-			<para>Once resources have been created, and the plugin has been connected to Totem's UI in the <function>impl_activate</function>
-				function, the plugin is free to go about its tasks as appropriate. If the user deactivates the plugin, or Totem decides
+			<para>Once resources have been created, and the plugin has been connected to Xplayer's UI in the <function>impl_activate</function>
+				function, the plugin is free to go about its tasks as appropriate. If the user deactivates the plugin, or Xplayer decides
 				to deactivate it, the <function>impl_deactivate</function> will be called. The plugin should free any resources
-				grabbed or allocated in the <function>impl_activate</function> function, and remove itself from the Totem
+				grabbed or allocated in the <function>impl_activate</function> function, and remove itself from the Xplayer
 				interface.</para>
-			<para>Note that plugins can be activated and deactivated (e.g. from Totem's plugin manager) many times during one Totem session,
+			<para>Note that plugins can be activated and deactivated (e.g. from Xplayer's plugin manager) many times during one Xplayer session,
 				so the <function>impl_activate</function> and <function>impl_deactivate</function> functions must be able to cope with
 				this.</para>
-			<para>Any of the API documented in the rest of the Totem API reference can be used by plugins. Python plugins are written in
+			<para>Any of the API documented in the rest of the Xplayer API reference can be used by plugins. Python plugins are written in
 				the same way as C plugins, and are similarly implemented as classes derived from
 				<type><link linkend="PeasExtensionBase">PeasExtensionBase</link></type> and implementing
 				<type><link linkend="PeasActivatable">PeasActivatable</link></type>.</para>

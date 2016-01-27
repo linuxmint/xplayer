@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
 
-<object class="GtkUIManager" id="totem-playlist-ui-manager">
+<object class="GtkUIManager" id="xplayer-playlist-ui-manager">
    <child>
       <object class="GtkActionGroup" id="playlist-action-group">
          <child>
@@ -31,7 +31,7 @@
       </object>
    </child>
    <ui>
-      <popup name="totem-playlist-popup">
+      <popup name="xplayer-playlist-popup">
          <menuitem name="remove" action="remove"/>
          <menuitem name="copy-location" action="copy-location"/>
          <menuitem name="select-subtitle" action="select-subtitle"/>
@@ -106,7 +106,7 @@
             <property name="use_action_appearance">False</property>
             <property name="use_underline">True</property>
 	    <property name="icon_name">list-add-symbolic</property>
-	    <signal name="clicked" handler="totem_playlist_add_files"/>
+	    <signal name="clicked" handler="xplayer_playlist_add_files"/>
 	    <property name="tooltip-text" translatable="yes">Add...</property>
           </object>
           <packing>
@@ -137,7 +137,7 @@
             <property name="use_underline">True</property>
 	    <property name="icon_name">document-save-symbolic</property>
 	    <property name="tooltip-text" translatable="yes">Save Playlist...</property>
-	    <signal name="clicked" handler="totem_playlist_save_files"/>
+	    <signal name="clicked" handler="xplayer_playlist_save_files"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -152,7 +152,7 @@
             <property name="use_underline">True</property>
 	    <property name="icon_name">go-up-symbolic</property>
 	    <property name="tooltip-text" translatable="yes">Move Up</property>
-	    <signal name="clicked" handler="totem_playlist_up_files"/>
+	    <signal name="clicked" handler="xplayer_playlist_up_files"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -167,7 +167,7 @@
             <property name="use_underline">True</property>
 	    <property name="icon_name">go-down-symbolic</property>
 	    <property name="tooltip-text" translatable="yes">Move Down</property>
-	    <signal name="clicked" handler="totem_playlist_down_files"/>
+	    <signal name="clicked" handler="xplayer_playlist_down_files"/>
           </object>
           <packing>
             <property name="expand">False</property>

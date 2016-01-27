@@ -1,8 +1,8 @@
-=== modified file 'data/totem.ui'
-Index: totem-3.10.1/data/totem.ui
+=== modified file 'data/xplayer.ui'
+Index: xplayer-3.10.1/data/xplayer.ui
 ===================================================================
---- totem-3.10.1.orig/data/totem.ui	2014-03-31 13:51:48.385068485 +0200
-+++ totem-3.10.1/data/totem.ui	2014-03-31 13:51:48.373068485 +0200
+--- xplayer-3.10.1.orig/data/xplayer.ui	2014-03-31 13:51:48.385068485 +0200
++++ xplayer-3.10.1/data/xplayer.ui	2014-03-31 13:51:48.373068485 +0200
 @@ -4,51 +4,6 @@
  <interface>
  <requires lib="gtk+" version="3.0"/>
@@ -52,7 +52,7 @@ Index: totem-3.10.1/data/totem.ui
 -	</section>
 -</menu>
 -
- <object class="GtkUIManager" id="totem-ui-manager">
+ <object class="GtkUIManager" id="xplayer-ui-manager">
     <child>
        <object class="GtkActionGroup" id="main-action-group">
 @@ -58,6 +13,23 @@
@@ -191,48 +191,48 @@ Index: totem-3.10.1/data/totem.ui
    <signal name="value-changed" handler="seek_slider_changed_cb"/>
  </object>
  
--<object class="GtkApplicationWindow" id="totem_main_window">
-+<object class="GtkWindow" id="totem_main_window">
+-<object class="GtkApplicationWindow" id="xplayer_main_window">
++<object class="GtkWindow" id="xplayer_main_window">
    <property name="title" translatable="yes">Videos</property>
    <property name="type">GTK_WINDOW_TOPLEVEL</property>
    <property name="window_position">GTK_WIN_POS_NONE</property>
-Index: totem-3.10.1/src/totem-menu.c
+Index: xplayer-3.10.1/src/xplayer-menu.c
 ===================================================================
---- totem-3.10.1.orig/src/totem-menu.c	2014-03-31 13:51:48.385068485 +0200
-+++ totem-3.10.1/src/totem-menu.c	2014-03-31 13:51:48.377068485 +0200
+--- xplayer-3.10.1.orig/src/xplayer-menu.c	2014-03-31 13:51:48.385068485 +0200
++++ xplayer-3.10.1/src/xplayer-menu.c	2014-03-31 13:51:48.377068485 +0200
 @@ -43,10 +43,14 @@
- #define TOTEM_MAX_RECENT_ITEM_LEN 40
+ #define XPLAYER_MAX_RECENT_ITEM_LEN 40
  
  /* Callback functions for GtkBuilder */
-+G_MODULE_EXPORT void open_action_callback (GtkAction *action, Totem *totem);
-+G_MODULE_EXPORT void open_location_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void eject_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void properties_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void play_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void quit_action_callback (GtkAction *action, Totem *totem);
-+G_MODULE_EXPORT void preferences_action_callback (GtkAction *action, Totem *totem);
-+G_MODULE_EXPORT void fullscreen_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void zoom_1_2_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void zoom_1_1_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void zoom_2_1_action_callback (GtkAction *action, Totem *totem);
++G_MODULE_EXPORT void open_action_callback (GtkAction *action, Xplayer *xplayer);
++G_MODULE_EXPORT void open_location_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void eject_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void properties_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void play_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void quit_action_callback (GtkAction *action, Xplayer *xplayer);
++G_MODULE_EXPORT void preferences_action_callback (GtkAction *action, Xplayer *xplayer);
++G_MODULE_EXPORT void fullscreen_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void zoom_1_2_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void zoom_1_1_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void zoom_2_1_action_callback (GtkAction *action, Xplayer *xplayer);
 @@ -66,118 +70,14 @@
- G_MODULE_EXPORT void contents_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void about_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void plugins_action_callback (GtkAction *action, Totem *totem);
-+G_MODULE_EXPORT void repeat_mode_action_callback (GtkToggleAction *action, Totem *totem);
-+G_MODULE_EXPORT void shuffle_mode_action_callback (GtkToggleAction *action, Totem *totem);
- G_MODULE_EXPORT void show_controls_action_callback (GtkToggleAction *action, Totem *totem);
- G_MODULE_EXPORT void show_sidebar_action_callback (GtkToggleAction *action, Totem *totem);
- G_MODULE_EXPORT void aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Totem *totem);
- G_MODULE_EXPORT void select_subtitle_action_callback (GtkAction *action, Totem *totem);
- G_MODULE_EXPORT void clear_playlist_action_callback (GtkAction *action, Totem *totem);
+ G_MODULE_EXPORT void contents_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void about_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void plugins_action_callback (GtkAction *action, Xplayer *xplayer);
++G_MODULE_EXPORT void repeat_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer);
++G_MODULE_EXPORT void shuffle_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void show_controls_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void show_sidebar_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Xplayer *xplayer);
+ G_MODULE_EXPORT void select_subtitle_action_callback (GtkAction *action, Xplayer *xplayer);
+ G_MODULE_EXPORT void clear_playlist_action_callback (GtkAction *action, Xplayer *xplayer);
  
 -static void
 -open_action_cb (GSimpleAction *action,
 -		GVariant      *parameter,
 -		gpointer       user_data)
 -{
--	totem_action_open (TOTEM_OBJECT (user_data));
+-	xplayer_action_open (XPLAYER_OBJECT (user_data));
 -}
 -
 -static void
@@ -240,7 +240,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -			 GVariant      *parameter,
 -			 gpointer       user_data)
 -{
--	totem_action_open_location (TOTEM_OBJECT (user_data));
+-	xplayer_action_open_location (XPLAYER_OBJECT (user_data));
 -}
 -
 -static void
@@ -248,7 +248,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -		       GVariant      *parameter,
 -		       gpointer       user_data)
 -{
--	gtk_widget_show (TOTEM_OBJECT (user_data)->prefs);
+-	gtk_widget_show (XPLAYER_OBJECT (user_data)->prefs);
 -}
 -
 -static void
@@ -259,7 +259,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -	gboolean param;
 -
 -	param = g_variant_get_boolean (value);
--	totem_action_fullscreen (TOTEM_OBJECT (user_data), param);
+-	xplayer_action_fullscreen (XPLAYER_OBJECT (user_data), param);
 -
 -	g_simple_action_set_state (action, value);
 -}
@@ -272,7 +272,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -	gboolean param;
 -
 -	param = g_variant_get_boolean (value);
--	totem_playlist_set_shuffle (TOTEM_OBJECT (user_data)->playlist, param);
+-	xplayer_playlist_set_shuffle (XPLAYER_OBJECT (user_data)->playlist, param);
 -
 -	g_simple_action_set_state (action, value);
 -}
@@ -285,7 +285,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -	gboolean param;
 -
 -	param = g_variant_get_boolean (value);
--	totem_playlist_set_repeat (TOTEM_OBJECT (user_data)->playlist, param);
+-	xplayer_playlist_set_repeat (XPLAYER_OBJECT (user_data)->playlist, param);
 -
 -	g_simple_action_set_state (action, value);
 -}
@@ -307,7 +307,7 @@ Index: totem-3.10.1/src/totem-menu.c
 -		GVariant      *parameter,
 -		gpointer       user_data)
 -{
--	totem_action_exit (TOTEM_OBJECT (user_data));
+-	xplayer_action_exit (XPLAYER_OBJECT (user_data));
 -}
 -
 -static GActionEntry app_entries[] = {
@@ -321,16 +321,16 @@ Index: totem-3.10.1/src/totem-menu.c
 -};
 -
 -void
--totem_app_menu_setup (Totem *totem)
+-xplayer_app_menu_setup (Xplayer *xplayer)
 -{
 -	GMenuModel *appmenu;
 -
--	g_action_map_add_action_entries (G_ACTION_MAP (totem), app_entries, G_N_ELEMENTS (app_entries), totem);
+-	g_action_map_add_action_entries (G_ACTION_MAP (xplayer), app_entries, G_N_ELEMENTS (app_entries), xplayer);
 -
--	appmenu = (GMenuModel *)gtk_builder_get_object (totem->xml, "appmenu");
--	gtk_application_set_app_menu (GTK_APPLICATION (totem), appmenu);
+-	appmenu = (GMenuModel *)gtk_builder_get_object (xplayer->xml, "appmenu");
+-	gtk_application_set_app_menu (GTK_APPLICATION (xplayer), appmenu);
 -
--	gtk_window_set_application (GTK_WINDOW (totem->win), GTK_APPLICATION (totem));
+-	gtk_window_set_application (GTK_WINDOW (xplayer->win), GTK_APPLICATION (xplayer));
 -}
 -
  /* Helper function to escape underscores in labels
@@ -340,131 +340,131 @@ Index: totem-3.10.1/src/totem-menu.c
  }
  
  void
-+open_action_callback (GtkAction *action, Totem *totem)
++open_action_callback (GtkAction *action, Xplayer *xplayer)
 +{
-+	totem_action_open (totem);
++	xplayer_action_open (xplayer);
 +}
 +
 +void
-+open_location_action_callback (GtkAction *action, Totem *totem)
++open_location_action_callback (GtkAction *action, Xplayer *xplayer)
 +{
-+	totem_action_open_location (totem);
++	xplayer_action_open_location (xplayer);
 +}
 +
 +void
- eject_action_callback (GtkAction *action, Totem *totem)
+ eject_action_callback (GtkAction *action, Xplayer *xplayer)
  {
- 	totem_action_eject (totem);
+ 	xplayer_action_eject (xplayer);
 @@ -658,6 +570,18 @@
  }
  
  void
-+preferences_action_callback (GtkAction *action, Totem *totem)
++preferences_action_callback (GtkAction *action, Xplayer *xplayer)
 +{
-+	gtk_widget_show (totem->prefs);
++	gtk_widget_show (xplayer->prefs);
 +}
 +
 +void
-+fullscreen_action_callback (GtkAction *action, Totem *totem)
++fullscreen_action_callback (GtkAction *action, Xplayer *xplayer)
 +{
-+	totem_action_fullscreen_toggle (totem);
++	xplayer_action_fullscreen_toggle (xplayer);
 +}
 +
 +void
- zoom_1_2_action_callback (GtkAction *action, Totem *totem)
+ zoom_1_2_action_callback (GtkAction *action, Xplayer *xplayer)
  {
- 	totem_action_set_scale_ratio (totem, 0.5);
+ 	xplayer_action_set_scale_ratio (xplayer, 0.5);
 @@ -853,6 +777,20 @@
  }
  
  void
-+repeat_mode_action_callback (GtkToggleAction *action, Totem *totem)
++repeat_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 +{
-+	totem_playlist_set_repeat (totem->playlist,
++	xplayer_playlist_set_repeat (xplayer->playlist,
 +			gtk_toggle_action_get_active (action));
 +}
 +
 +void
-+shuffle_mode_action_callback (GtkToggleAction *action, Totem *totem)
++shuffle_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 +{
-+	totem_playlist_set_shuffle (totem->playlist,
++	xplayer_playlist_set_shuffle (xplayer->playlist,
 +			gtk_toggle_action_get_active (action));
 +}
 +
 +void
- show_controls_action_callback (GtkToggleAction *action, Totem *totem)
+ show_controls_action_callback (GtkToggleAction *action, Xplayer *xplayer)
  {
  	gboolean show;
-Index: totem-3.10.1/src/totem-menu.h
+Index: xplayer-3.10.1/src/xplayer-menu.h
 ===================================================================
---- totem-3.10.1.orig/src/totem-menu.h	2014-03-31 13:51:48.385068485 +0200
-+++ totem-3.10.1/src/totem-menu.h	2014-03-31 13:51:48.377068485 +0200
+--- xplayer-3.10.1.orig/src/xplayer-menu.h	2014-03-31 13:51:48.385068485 +0200
++++ xplayer-3.10.1/src/xplayer-menu.h	2014-03-31 13:51:48.377068485 +0200
 @@ -27,8 +27,6 @@
  
  G_BEGIN_DECLS
  
--void totem_app_menu_setup (Totem *totem);
+-void xplayer_app_menu_setup (Xplayer *xplayer);
 -
- void totem_ui_manager_setup (Totem *totem);
+ void xplayer_ui_manager_setup (Xplayer *xplayer);
  
- void totem_sublang_update (Totem *totem);
-Index: totem-3.10.1/src/totem-object.c
+ void xplayer_sublang_update (Xplayer *xplayer);
+Index: xplayer-3.10.1/src/xplayer-object.c
 ===================================================================
---- totem-3.10.1.orig/src/totem-object.c	2014-03-31 13:51:48.385068485 +0200
-+++ totem-3.10.1/src/totem-object.c	2014-03-31 13:51:48.377068485 +0200
+--- xplayer-3.10.1.orig/src/xplayer-object.c	2014-03-31 13:51:48.385068485 +0200
++++ xplayer-3.10.1/src/xplayer-object.c	2014-03-31 13:51:48.377068485 +0200
 @@ -1433,8 +1433,6 @@
  window_state_event_cb (GtkWidget *window, GdkEventWindowState *event,
- 		       TotemObject *totem)
+ 		       XplayerObject *xplayer)
  {
 -	GAction *action;
 -
  	if (event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) {
- 		totem->maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
- 		totem_action_set_sensitivity ("zoom-1-2", !totem->maximised);
+ 		xplayer->maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
+ 		xplayer_action_set_sensitivity ("zoom-1-2", !xplayer->maximised);
 @@ -1453,6 +1451,7 @@
  
- 		totem->controls_visibility = TOTEM_CONTROLS_FULLSCREEN;
- 		show_controls (totem, FALSE);
-+		totem_action_set_sensitivity ("fullscreen", FALSE);
+ 		xplayer->controls_visibility = XPLAYER_CONTROLS_FULLSCREEN;
+ 		show_controls (xplayer, FALSE);
++		xplayer_action_set_sensitivity ("fullscreen", FALSE);
  	} else {
  		GtkAction *action;
  
 @@ -1467,12 +1466,9 @@
- 			totem->controls_visibility = TOTEM_CONTROLS_HIDDEN;
+ 			xplayer->controls_visibility = XPLAYER_CONTROLS_HIDDEN;
  
- 		show_controls (totem, TRUE);
-+		totem_action_set_sensitivity ("fullscreen", TRUE);
+ 		show_controls (xplayer, TRUE);
++		xplayer_action_set_sensitivity ("fullscreen", TRUE);
  	}
  
--	action = g_action_map_lookup_action (G_ACTION_MAP (totem), "fullscreen");
+-	action = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "fullscreen");
 -	g_simple_action_set_state (G_SIMPLE_ACTION (action),
--				   g_variant_new_boolean (totem->controls_visibility == TOTEM_CONTROLS_FULLSCREEN));
+-				   g_variant_new_boolean (xplayer->controls_visibility == XPLAYER_CONTROLS_FULLSCREEN));
 -
- 	g_object_notify (G_OBJECT (totem), "fullscreen");
+ 	g_object_notify (G_OBJECT (xplayer), "fullscreen");
  
  	return FALSE;
 @@ -1513,10 +1509,7 @@
  void
- fs_exit1_activate_cb (GtkButton *button, TotemObject *totem)
+ fs_exit1_activate_cb (GtkButton *button, XplayerObject *xplayer)
  {
 -	GAction *action;
 -
--	action = g_action_map_lookup_action (G_ACTION_MAP (totem), "fullscreen");
+-	action = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "fullscreen");
 -	g_action_change_state (action, g_variant_new_boolean (FALSE));
-+	totem_action_fullscreen (totem, FALSE);
++	xplayer_action_fullscreen (xplayer, FALSE);
  }
  
  void
 @@ -1726,6 +1719,9 @@
  		/* Subtitle selection */
- 		totem_action_set_sensitivity ("select-subtitle", FALSE);
+ 		xplayer_action_set_sensitivity ("select-subtitle", FALSE);
  
 +		/* Fullscreen */
-+		totem_action_set_sensitivity ("fullscreen", FALSE);
++		xplayer_action_set_sensitivity ("fullscreen", FALSE);
 +
  		/* Set the logo */
- 		bacon_video_widget_set_logo_mode (totem->bvw, TRUE);
- 		update_mrl_label (totem, NULL);
+ 		bacon_video_widget_set_logo_mode (xplayer->bvw, TRUE);
+ 		update_mrl_label (xplayer, NULL);
 @@ -1739,6 +1735,7 @@
  		gdouble volume;
  		char *user_agent;
@@ -475,54 +475,54 @@ Index: totem-3.10.1/src/totem-object.c
  			{ (gchar*) "text/uri-list", 0, 0 }
 @@ -1781,6 +1778,10 @@
  		/* Subtitle selection */
- 		totem_action_set_sensitivity ("select-subtitle", !totem_is_special_mrl (mrl));
+ 		xplayer_action_set_sensitivity ("select-subtitle", !xplayer_is_special_mrl (mrl));
  
 +		/* Fullscreen */
-+		window_state = gdk_window_get_state (gtk_widget_get_window (totem->win));
-+		totem_action_set_sensitivity ("fullscreen", !(window_state & GDK_WINDOW_STATE_FULLSCREEN));
++		window_state = gdk_window_get_state (gtk_widget_get_window (xplayer->win));
++		xplayer_action_set_sensitivity ("fullscreen", !(window_state & GDK_WINDOW_STATE_FULLSCREEN));
 +
  		/* Set the playlist */
- 		play_pause_set_label (totem, STATE_PAUSED);
+ 		play_pause_set_label (xplayer, STATE_PAUSED);
  
 @@ -3246,21 +3247,33 @@
  static void
- playlist_repeat_toggle_cb (TotemPlaylist *playlist, gboolean repeat, TotemObject *totem)
+ playlist_repeat_toggle_cb (XplayerPlaylist *playlist, gboolean repeat, XplayerObject *xplayer)
  {
 -	GAction *action;
 +	GtkAction *action;
 +
-+	action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
++	action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 +
 +	g_signal_handlers_block_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-+			NULL, NULL, totem);
++			NULL, NULL, xplayer);
  
--	action = g_action_map_lookup_action (G_ACTION_MAP (totem), "repeat");
+-	action = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "repeat");
 -	g_simple_action_set_state (G_SIMPLE_ACTION (action),
 -				   g_variant_new_boolean (repeat));
 +	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), repeat);
 +
 +	g_signal_handlers_unblock_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-+			NULL, NULL, totem);
++			NULL, NULL, xplayer);
  }
  
  static void
- playlist_shuffle_toggle_cb (TotemPlaylist *playlist, gboolean shuffle, TotemObject *totem)
+ playlist_shuffle_toggle_cb (XplayerPlaylist *playlist, gboolean shuffle, XplayerObject *xplayer)
  {
 -	GAction *action;
 +	GtkAction *action;
 +
-+	action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
++	action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 +
 +	g_signal_handlers_block_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-+			NULL, NULL, totem);
++			NULL, NULL, xplayer);
  
--	action = g_action_map_lookup_action (G_ACTION_MAP (totem), "shuffle");
+-	action = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "shuffle");
 -	g_simple_action_set_state (G_SIMPLE_ACTION (action),
 -				   g_variant_new_boolean (shuffle));
 +	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), shuffle);
 +
 +	g_signal_handlers_unblock_matched (G_OBJECT (action), G_SIGNAL_MATCH_DATA, 0, 0,
-+			NULL, NULL, totem);
++			NULL, NULL, xplayer);
  }
  
  /**
@@ -533,33 +533,33 @@ Index: totem-3.10.1/src/totem-object.c
 -	GAction *gaction;
  
  	/* Menu items */
--	gaction = g_action_map_lookup_action (G_ACTION_MAP (totem), "repeat");
+-	gaction = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "repeat");
 -	g_simple_action_set_state (G_SIMPLE_ACTION (gaction),
--				   g_variant_new_boolean (totem_playlist_get_repeat (totem->playlist)));
--	gaction = g_action_map_lookup_action (G_ACTION_MAP (totem), "shuffle");
+-				   g_variant_new_boolean (xplayer_playlist_get_repeat (xplayer->playlist)));
+-	gaction = g_action_map_lookup_action (G_ACTION_MAP (xplayer), "shuffle");
 -	g_simple_action_set_state (G_SIMPLE_ACTION (gaction),
--				   g_variant_new_boolean (totem_playlist_get_shuffle (totem->playlist)));
-+	action = gtk_action_group_get_action (totem->main_action_group, "repeat-mode");
+-				   g_variant_new_boolean (xplayer_playlist_get_shuffle (xplayer->playlist)));
++	action = gtk_action_group_get_action (xplayer->main_action_group, "repeat-mode");
 +	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-+		totem_playlist_get_repeat (totem->playlist));
-+	action = gtk_action_group_get_action (totem->main_action_group, "shuffle-mode");
++		xplayer_playlist_get_repeat (xplayer->playlist));
++	action = gtk_action_group_get_action (xplayer->main_action_group, "shuffle-mode");
 +	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-+		totem_playlist_get_shuffle (totem->playlist));
++		xplayer_playlist_get_shuffle (xplayer->playlist));
  
  	/* Controls */
- 	box = GTK_BOX (gtk_builder_get_object (totem->xml, "tmw_buttons_hbox"));
+ 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_buttons_hbox"));
 @@ -4024,14 +4036,13 @@
  	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
  
  	/* Fullscreen button */
-+	action = gtk_action_group_get_action (totem->main_action_group,
++	action = gtk_action_group_get_action (xplayer->main_action_group,
 +			"fullscreen");
 +	item = gtk_action_create_tool_item (action);
- 	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Totem's main window. */
+ 	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window. */
 -	item = GTK_WIDGET (gtk_toggle_tool_button_new ());
 -	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (item), "view-fullscreen-symbolic");
  	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), _("Fullscreen"));
- 	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window. */
+ 	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window. */
  	atk_object_set_name (gtk_widget_get_accessible (item), _("Fullscreen"));
 -	gtk_actionable_set_action_name (GTK_ACTIONABLE (item), "app.fullscreen");
 -	gtk_widget_show (item);
@@ -568,31 +568,31 @@ Index: totem-3.10.1/src/totem-object.c
  	/* Sidebar button (Drag'n'Drop) */
 @@ -4106,6 +4117,7 @@
  	 * and skip-* are back in the main action group. */
- 	/*totem_action_set_sensitivity ("skip-forward", FALSE);
- 	totem_action_set_sensitivity ("skip-backwards", FALSE);*/
-+	totem_action_set_sensitivity ("fullscreen", FALSE);
+ 	/*xplayer_action_set_sensitivity ("skip-forward", FALSE);
+ 	xplayer_action_set_sensitivity ("skip-backwards", FALSE);*/
++	xplayer_action_set_sensitivity ("fullscreen", FALSE);
  
- 	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (totem->xml, "skip-action-group"));
+ 	action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xplayer->xml, "skip-action-group"));
  
-Index: totem-3.10.1/src/totem.c
+Index: xplayer-3.10.1/src/xplayer.c
 ===================================================================
---- totem-3.10.1.orig/src/totem.c	2014-03-31 13:51:48.385068485 +0200
-+++ totem-3.10.1/src/totem.c	2014-03-31 13:51:56.969068771 +0200
+--- xplayer-3.10.1.orig/src/xplayer.c	2014-03-31 13:51:48.385068485 +0200
++++ xplayer-3.10.1/src/xplayer.c	2014-03-31 13:51:56.969068771 +0200
 @@ -109,9 +109,6 @@
- 	set_rtl_icon_name (totem, "skip-backwards", "media-seek-backward");
+ 	set_rtl_icon_name (xplayer, "skip-backwards", "media-seek-backward");
  
- 	totem->win = GTK_WIDGET (gtk_builder_get_object (totem->xml, "totem_main_window"));
--	g_object_bind_property (G_OBJECT (totem), "fullscreen",
--				G_OBJECT (totem->win), "show-menubar",
+ 	xplayer->win = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "xplayer_main_window"));
+-	g_object_bind_property (G_OBJECT (xplayer), "fullscreen",
+-				G_OBJECT (xplayer->win), "show-menubar",
 -				G_BINDING_INVERT_BOOLEAN);
  
  	/* Menubar */
- 	totem_ui_manager_setup (totem);
+ 	xplayer_ui_manager_setup (xplayer);
 @@ -134,7 +131,6 @@
- 	totem_session_setup (totem, argv);
- 	totem_setup_file_monitoring (totem);
- 	totem_setup_file_filters ();
--	totem_app_menu_setup (totem);
- 	totem_callback_connect (totem);
+ 	xplayer_session_setup (xplayer, argv);
+ 	xplayer_setup_file_monitoring (xplayer);
+ 	xplayer_setup_file_filters ();
+-	xplayer_app_menu_setup (xplayer);
+ 	xplayer_callback_connect (xplayer);
  
- 	sidebar_pageid = totem_setup_window (totem);
+ 	sidebar_pageid = xplayer_setup_window (xplayer);

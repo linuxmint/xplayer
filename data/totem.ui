@@ -4,7 +4,7 @@
 <interface>
 <requires lib="gtk+" version="3.0"/>
 
-<object class="GtkUIManager" id="totem-ui-manager">
+<object class="GtkUIManager" id="xplayer-ui-manager">
    <child>
       <object class="GtkActionGroup" id="main-action-group">
          <child>
@@ -472,7 +472,7 @@
             <menuitem name="about" action="about"/>
          </menu>
       </menubar>
-      <popup name="totem-main-popup">
+      <popup name="xplayer-main-popup">
          <menuitem name="play" action="play"/>
          <menuitem name="next-chapter" action="next-chapter"/>
          <menuitem name="previous-chapter" action="previous-chapter"/>
@@ -504,7 +504,7 @@
   <signal name="value-changed" handler="seek_slider_changed_cb"/>
 </object>
 
-<object class="GtkWindow" id="totem_main_window">
+<object class="GtkWindow" id="xplayer_main_window">
   <property name="title" translatable="yes">Videos</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
@@ -524,7 +524,7 @@
   <signal name="key-release-event" handler="window_key_press_event_cb"/>
 
   <child>
-    <object class="GtkVBox" id="totem_main_vbox">
+    <object class="GtkVBox" id="xplayer_main_vbox">
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">0</property>
@@ -538,7 +538,7 @@
           <property name="orientation">vertical</property>
 
 	  <child>
-	    <object class="GtkMenuBar" id="tmw-menubar" constructor="totem-ui-manager"/>
+	    <object class="GtkMenuBar" id="tmw-menubar" constructor="xplayer-ui-manager"/>
 	    <packing>
 	       <property name="pack-type">start</property>
 	       <property name="expand">False</property>
@@ -727,7 +727,7 @@
       </child>
 
       <child>
-	<object class="TotemStatusbar" id="tmw_statusbar">
+	<object class="XplayerStatusbar" id="tmw_statusbar">
 	  <property name="visible">True</property>
 	</object>
 	<packing>

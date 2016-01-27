@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add excemption clause.
  * See license_change file for details.
@@ -36,36 +36,36 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#include "totem.h"
-#include "totem-open-location.h"
-#include "totem-interface.h"
+#include "xplayer.h"
+#include "xplayer-open-location.h"
+#include "xplayer-interface.h"
 
-struct TotemOpenLocationPrivate
+struct XplayerOpenLocationPrivate
 {
 	GtkWidget *uri_container;
 	GtkEntry *uri_entry;
 };
 
-#define TOTEM_OPEN_LOCATION_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_OPEN_LOCATION, TotemOpenLocationPrivate))
+#define XPLAYER_OPEN_LOCATION_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_OPEN_LOCATION, XplayerOpenLocationPrivate))
 
-G_DEFINE_TYPE (TotemOpenLocation, totem_open_location, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (XplayerOpenLocation, xplayer_open_location, GTK_TYPE_DIALOG)
 
 /* GtkBuilder callbacks */
 G_MODULE_EXPORT void uri_entry_changed_cb (GtkEditable *entry, GtkDialog *dialog);
 
 static void
-totem_open_location_class_init (TotemOpenLocationClass *klass)
+xplayer_open_location_class_init (XplayerOpenLocationClass *klass)
 {
-	g_type_class_add_private (klass, sizeof (TotemOpenLocationPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerOpenLocationPrivate));
 }
 
 static void
-totem_open_location_init (TotemOpenLocation *self)
+xplayer_open_location_init (XplayerOpenLocation *self)
 {
 	GtkBuilder *builder;
 
-	self->priv = TOTEM_OPEN_LOCATION_GET_PRIVATE (self);
-	builder = totem_interface_load ("uri.ui", FALSE, NULL, self);
+	self->priv = XPLAYER_OPEN_LOCATION_GET_PRIVATE (self);
+	builder = xplayer_interface_load ("uri.ui", FALSE, NULL, self);
 
 	if (builder == NULL)
 		return;
@@ -82,7 +82,7 @@ totem_open_location_init (TotemOpenLocation *self)
 }
 
 static gboolean
-totem_open_location_match (GtkEntryCompletion *completion, const gchar *key, GtkTreeIter *iter, gpointer user_data)
+xplayer_open_location_match (GtkEntryCompletion *completion, const gchar *key, GtkTreeIter *iter, gpointer user_data)
 {
 	/* Substring-match key against URI */
 	char *uri, *match;
@@ -100,7 +100,7 @@ totem_open_location_match (GtkEntryCompletion *completion, const gchar *key, Gtk
 }
 
 static gint
-totem_compare_recent_stream_items (GtkRecentInfo *a, GtkRecentInfo *b)
+xplayer_compare_recent_stream_items (GtkRecentInfo *a, GtkRecentInfo *b)
 {
 	time_t time_a, time_b;
 
@@ -111,11 +111,11 @@ totem_compare_recent_stream_items (GtkRecentInfo *a, GtkRecentInfo *b)
 }
 
 char *
-totem_open_location_get_uri (TotemOpenLocation *open_location)
+xplayer_open_location_get_uri (XplayerOpenLocation *open_location)
 {
 	char *uri;
 
-	g_return_val_if_fail (TOTEM_IS_OPEN_LOCATION (open_location), NULL);
+	g_return_val_if_fail (XPLAYER_IS_OPEN_LOCATION (open_location), NULL);
 
 	uri = g_strdup (gtk_entry_get_text (open_location->priv->uri_entry));
 
@@ -134,12 +134,12 @@ totem_open_location_get_uri (TotemOpenLocation *open_location)
 }
 
 static char *
-totem_open_location_set_from_clipboard (TotemOpenLocation *open_location)
+xplayer_open_location_set_from_clipboard (XplayerOpenLocation *open_location)
 {
 	GtkClipboard *clipboard;
 	gchar *clipboard_content;
 
-	g_return_val_if_fail (TOTEM_IS_OPEN_LOCATION (open_location), NULL);
+	g_return_val_if_fail (XPLAYER_IS_OPEN_LOCATION (open_location), NULL);
 
 	/* Initialize the clipboard and get its content */
 	clipboard = gtk_clipboard_get_for_display (gtk_widget_get_display (GTK_WIDGET (open_location)), GDK_SELECTION_CLIPBOARD);
@@ -164,15 +164,15 @@ uri_entry_changed_cb (GtkEditable *entry, GtkDialog *dialog)
 }
 
 GtkWidget *
-totem_open_location_new (void)
+xplayer_open_location_new (void)
 {
-	TotemOpenLocation *open_location;
+	XplayerOpenLocation *open_location;
 	char *clipboard_location;
 	GtkEntryCompletion *completion;
 	GtkTreeModel *model;
 	GList *recent_items, *streams_recent_items = NULL;
 
-	open_location = TOTEM_OPEN_LOCATION (g_object_new (TOTEM_TYPE_OPEN_LOCATION, NULL));
+	open_location = XPLAYER_OPEN_LOCATION (g_object_new (XPLAYER_TYPE_OPEN_LOCATION, NULL));
 
 	if (open_location->priv->uri_container == NULL) {
 		g_object_unref (open_location);
@@ -189,12 +189,12 @@ totem_open_location_new (void)
 	gtk_dialog_set_default_response (GTK_DIALOG (open_location), GTK_RESPONSE_OK);
 
 	/* Get item from clipboard to fill GtkEntry */
-	clipboard_location = totem_open_location_set_from_clipboard (open_location);
+	clipboard_location = xplayer_open_location_set_from_clipboard (open_location);
 	if (clipboard_location != NULL && strcmp (clipboard_location, "") != 0)
 		gtk_entry_set_text (open_location->priv->uri_entry, clipboard_location);
 	g_free (clipboard_location);
 
-	/* Add items in Totem's GtkRecentManager to the URI GtkEntry's GtkEntryCompletion */
+	/* Add items in Xplayer's GtkRecentManager to the URI GtkEntry's GtkEntryCompletion */
 	completion = gtk_entry_completion_new();
 	model = GTK_TREE_MODEL (gtk_list_store_new (1, G_TYPE_STRING));
 	gtk_entry_set_completion (open_location->priv->uri_entry, completion);
@@ -206,18 +206,18 @@ totem_open_location_new (void)
 		GList *p;
 		GtkTreeIter iter;
 
-		/* Filter out non-Totem items */
+		/* Filter out non-Xplayer items */
 		for (p = recent_items; p != NULL; p = p->next)
 		{
 			GtkRecentInfo *info = (GtkRecentInfo *) p->data;
-			if (!gtk_recent_info_has_group (info, "TotemStreams")) {
+			if (!gtk_recent_info_has_group (info, "XplayerStreams")) {
 				gtk_recent_info_unref (info);
 				continue;
 			}
 			streams_recent_items = g_list_prepend (streams_recent_items, info);
 		}
 
-		streams_recent_items = g_list_sort (streams_recent_items, (GCompareFunc) totem_compare_recent_stream_items);
+		streams_recent_items = g_list_sort (streams_recent_items, (GCompareFunc) xplayer_compare_recent_stream_items);
 
 		/* Populate the list store for the combobox */
 		for (p = streams_recent_items; p != NULL; p = p->next)
@@ -235,7 +235,7 @@ totem_open_location_new (void)
 
 	gtk_entry_completion_set_model (completion, model);
 	gtk_entry_completion_set_text_column (completion, 0);
-	gtk_entry_completion_set_match_func (completion, (GtkEntryCompletionMatchFunc) totem_open_location_match, model, NULL);
+	gtk_entry_completion_set_match_func (completion, (GtkEntryCompletionMatchFunc) xplayer_open_location_match, model, NULL);
 
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (open_location))),
 				open_location->priv->uri_container,

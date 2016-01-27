@@ -126,7 +126,7 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 libapple_trailers_la_DEPENDENCIES = $(plugin_libadd)
 am_libapple_trailers_la_OBJECTS =  \
-	libapple_trailers_la-totem-apple-trailers.lo
+	libapple_trailers_la-xplayer-apple-trailers.lo
 libapple_trailers_la_OBJECTS = $(am_libapple_trailers_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -204,7 +204,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -386,11 +386,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -473,12 +473,12 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/apple-trailers
 plugin_LTLIBRARIES = libapple-trailers.la
 plugin_in_files = apple-trailers.plugin.in
-libapple_trailers_la_SOURCES = totem-apple-trailers.c
+libapple_trailers_la_SOURCES = xplayer-apple-trailers.c
 libapple_trailers_la_LDFLAGS = $(plugin_ldflags)
 libapple_trailers_la_LIBADD = $(plugin_libadd)
 libapple_trailers_la_CFLAGS = $(plugin_cflags)
@@ -562,7 +562,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libapple_trailers_la-totem-apple-trailers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libapple_trailers_la-xplayer-apple-trailers.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -585,12 +585,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libapple_trailers_la-totem-apple-trailers.lo: totem-apple-trailers.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libapple_trailers_la_CFLAGS) $(CFLAGS) -MT libapple_trailers_la-totem-apple-trailers.lo -MD -MP -MF $(DEPDIR)/libapple_trailers_la-totem-apple-trailers.Tpo -c -o libapple_trailers_la-totem-apple-trailers.lo `test -f 'totem-apple-trailers.c' || echo '$(srcdir)/'`totem-apple-trailers.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libapple_trailers_la-totem-apple-trailers.Tpo $(DEPDIR)/libapple_trailers_la-totem-apple-trailers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-apple-trailers.c' object='libapple_trailers_la-totem-apple-trailers.lo' libtool=yes @AMDEPBACKSLASH@
+libapple_trailers_la-xplayer-apple-trailers.lo: xplayer-apple-trailers.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libapple_trailers_la_CFLAGS) $(CFLAGS) -MT libapple_trailers_la-xplayer-apple-trailers.lo -MD -MP -MF $(DEPDIR)/libapple_trailers_la-xplayer-apple-trailers.Tpo -c -o libapple_trailers_la-xplayer-apple-trailers.lo `test -f 'xplayer-apple-trailers.c' || echo '$(srcdir)/'`xplayer-apple-trailers.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libapple_trailers_la-xplayer-apple-trailers.Tpo $(DEPDIR)/libapple_trailers_la-xplayer-apple-trailers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-apple-trailers.c' object='libapple_trailers_la-xplayer-apple-trailers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libapple_trailers_la_CFLAGS) $(CFLAGS) -c -o libapple_trailers_la-totem-apple-trailers.lo `test -f 'totem-apple-trailers.c' || echo '$(srcdir)/'`totem-apple-trailers.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libapple_trailers_la_CFLAGS) $(CFLAGS) -c -o libapple_trailers_la-xplayer-apple-trailers.lo `test -f 'xplayer-apple-trailers.c' || echo '$(srcdir)/'`xplayer-apple-trailers.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

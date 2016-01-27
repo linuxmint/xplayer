@@ -15,60 +15,60 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
  *
  */
 
-#ifndef __TOTEM_PRIVATE_H__
-#define __TOTEM_PRIVATE_H__
+#ifndef __XPLAYER_PRIVATE_H__
+#define __XPLAYER_PRIVATE_H__
 
 #include <gtk/gtk.h>
 #include <gio/gio.h>
 
-#include "totem-playlist.h"
+#include "xplayer-playlist.h"
 #include "backend/bacon-video-widget.h"
-#include "totem-open-location.h"
-#include "totem-fullscreen.h"
-#include "totem-plugins-engine.h"
+#include "xplayer-open-location.h"
+#include "xplayer-fullscreen.h"
+#include "xplayer-plugins-engine.h"
 
-#define totem_signal_block_by_data(obj, data) (g_signal_handlers_block_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
-#define totem_signal_unblock_by_data(obj, data) (g_signal_handlers_unblock_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
+#define xplayer_signal_block_by_data(obj, data) (g_signal_handlers_block_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
+#define xplayer_signal_unblock_by_data(obj, data) (g_signal_handlers_unblock_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
 
-#define totem_set_sensitivity(xml, name, state)					\
+#define xplayer_set_sensitivity(xml, name, state)					\
 	{									\
 		GtkWidget *widget;						\
 		widget = GTK_WIDGET (gtk_builder_get_object (xml, name));	\
 		gtk_widget_set_sensitive (widget, state);			\
 	}
-#define totem_main_set_sensitivity(name, state) totem_set_sensitivity (totem->xml, name, state)
+#define xplayer_main_set_sensitivity(name, state) xplayer_set_sensitivity (xplayer->xml, name, state)
 
-#define totem_action_set_sensitivity(name, state)					\
+#define xplayer_action_set_sensitivity(name, state)					\
 	{										\
 		GtkAction *__action;							\
-		__action = gtk_action_group_get_action (totem->main_action_group, name);\
+		__action = gtk_action_group_get_action (xplayer->main_action_group, name);\
 		gtk_action_set_sensitive (__action, state);				\
 	}
 
 typedef enum {
-	TOTEM_CONTROLS_UNDEFINED,
-	TOTEM_CONTROLS_VISIBLE,
-	TOTEM_CONTROLS_HIDDEN,
-	TOTEM_CONTROLS_FULLSCREEN
+	XPLAYER_CONTROLS_UNDEFINED,
+	XPLAYER_CONTROLS_VISIBLE,
+	XPLAYER_CONTROLS_HIDDEN,
+	XPLAYER_CONTROLS_FULLSCREEN
 } ControlsVisibility;
 
 typedef enum {
 	STATE_PLAYING,
 	STATE_PAUSED,
 	STATE_STOPPED
-} TotemStates;
+} XplayerStates;
 
-struct _TotemObject {
+struct _XplayerObject {
 	GtkApplication parent;
 
 	/* Control window */
@@ -94,7 +94,7 @@ struct _TotemObject {
 
 	/* Plugins */
 	GtkWidget *plugins;
-	TotemPluginsEngine *engine;
+	XplayerPluginsEngine *engine;
 
 	/* Sidebar */
 	GtkWidget *sidebar;
@@ -120,7 +120,7 @@ struct _TotemObject {
 	GList *language_list;
 
 	/* Fullscreen */
-	TotemFullscreen *fs;
+	XplayerFullscreen *fs;
 
 	/* controls management */
 	ControlsVisibility controls_visibility;
@@ -150,16 +150,16 @@ struct _TotemObject {
 	/* other */
 	char *mrl;
 	gint64 seek_to;
-	TotemPlaylist *playlist;
+	XplayerPlaylist *playlist;
 	GSettings *settings;
-	TotemStates state;
-	TotemOpenLocation *open_location;
+	XplayerStates state;
+	XplayerOpenLocation *open_location;
 	gboolean remember_position;
 	gboolean disable_kbd_shortcuts;
 	gboolean has_played_emitted;
 };
 
-GtkWidget *totem_volume_create (void);
+GtkWidget *xplayer_volume_create (void);
 
 #define SEEK_FORWARD_OFFSET 60
 #define SEEK_BACKWARD_OFFSET -15
@@ -173,20 +173,20 @@ GtkWidget *totem_volume_create (void);
 #define ZOOM_IN_OFFSET 0.01
 #define ZOOM_OUT_OFFSET -0.01
 
-void	totem_action_open			(Totem *totem);
-void	totem_action_open_location		(Totem *totem);
-void	totem_action_eject			(Totem *totem);
-void	totem_action_set_zoom			(Totem *totem, gboolean zoom);
-void	totem_action_show_help			(Totem *totem);
-void	totem_action_show_properties		(Totem *totem);
-gboolean totem_action_open_files		(Totem *totem, char **list);
-G_GNUC_NORETURN void totem_action_error_and_exit (const char *title, const char *reason, Totem *totem);
+void	xplayer_action_open			(Xplayer *xplayer);
+void	xplayer_action_open_location		(Xplayer *xplayer);
+void	xplayer_action_eject			(Xplayer *xplayer);
+void	xplayer_action_set_zoom			(Xplayer *xplayer, gboolean zoom);
+void	xplayer_action_show_help			(Xplayer *xplayer);
+void	xplayer_action_show_properties		(Xplayer *xplayer);
+gboolean xplayer_action_open_files		(Xplayer *xplayer, char **list);
+G_GNUC_NORETURN void xplayer_action_error_and_exit (const char *title, const char *reason, Xplayer *xplayer);
 
-void	show_controls				(Totem *totem, gboolean was_fullscreen);
+void	show_controls				(Xplayer *xplayer, gboolean was_fullscreen);
 
-char	*totem_setup_window			(Totem *totem);
-void	totem_callback_connect			(Totem *totem);
-void	playlist_widget_setup			(Totem *totem);
-void	video_widget_create			(Totem *totem);
+char	*xplayer_setup_window			(Xplayer *xplayer);
+void	xplayer_callback_connect			(Xplayer *xplayer);
+void	playlist_widget_setup			(Xplayer *xplayer);
+void	video_widget_create			(Xplayer *xplayer);
 
-#endif /* __TOTEM_PRIVATE_H__ */
+#endif /* __XPLAYER_PRIVATE_H__ */

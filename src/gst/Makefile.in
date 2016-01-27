@@ -95,43 +95,43 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libtotemgsthelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_libtotemgsthelpers_la_OBJECTS =  \
-	libtotemgsthelpers_la-totem-gst-helpers.lo
-libtotemgsthelpers_la_OBJECTS = $(am_libtotemgsthelpers_la_OBJECTS)
+libxplayergsthelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_libxplayergsthelpers_la_OBJECTS =  \
+	libxplayergsthelpers_la-xplayer-gst-helpers.lo
+libxplayergsthelpers_la_OBJECTS = $(am_libxplayergsthelpers_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotemgsthelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayergsthelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotemgsthelpers_la_CFLAGS) $(CFLAGS) \
-	$(libtotemgsthelpers_la_LDFLAGS) $(LDFLAGS) -o $@
-libtotemgstpixbufhelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_libtotemgstpixbufhelpers_la_OBJECTS =  \
-	libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo
-libtotemgstpixbufhelpers_la_OBJECTS =  \
-	$(am_libtotemgstpixbufhelpers_la_OBJECTS)
-libtotemgstpixbufhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+	$(libxplayergsthelpers_la_CFLAGS) $(CFLAGS) \
+	$(libxplayergsthelpers_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayergstpixbufhelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_libxplayergstpixbufhelpers_la_OBJECTS =  \
+	libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo
+libxplayergstpixbufhelpers_la_OBJECTS =  \
+	$(am_libxplayergstpixbufhelpers_la_OBJECTS)
+libxplayergstpixbufhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotemgstpixbufhelpers_la_CFLAGS) $(CFLAGS) \
-	$(libtotemgstpixbufhelpers_la_LDFLAGS) $(LDFLAGS) -o $@
-libtotemrtlhelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_libtotemrtlhelpers_la_OBJECTS =  \
-	libtotemrtlhelpers_la-totem-rtl-helpers.lo
-libtotemrtlhelpers_la_OBJECTS = $(am_libtotemrtlhelpers_la_OBJECTS)
-libtotemrtlhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+	$(libxplayergstpixbufhelpers_la_CFLAGS) $(CFLAGS) \
+	$(libxplayergstpixbufhelpers_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayerrtlhelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_libxplayerrtlhelpers_la_OBJECTS =  \
+	libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo
+libxplayerrtlhelpers_la_OBJECTS = $(am_libxplayerrtlhelpers_la_OBJECTS)
+libxplayerrtlhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotemrtlhelpers_la_CFLAGS) $(CFLAGS) \
-	$(libtotemrtlhelpers_la_LDFLAGS) $(LDFLAGS) -o $@
-libtotemtimehelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_libtotemtimehelpers_la_OBJECTS =  \
-	libtotemtimehelpers_la-totem-time-helpers.lo
-libtotemtimehelpers_la_OBJECTS = $(am_libtotemtimehelpers_la_OBJECTS)
-libtotemtimehelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+	$(libxplayerrtlhelpers_la_CFLAGS) $(CFLAGS) \
+	$(libxplayerrtlhelpers_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayertimehelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_libxplayertimehelpers_la_OBJECTS =  \
+	libxplayertimehelpers_la-xplayer-time-helpers.lo
+libxplayertimehelpers_la_OBJECTS = $(am_libxplayertimehelpers_la_OBJECTS)
+libxplayertimehelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotemtimehelpers_la_CFLAGS) $(CFLAGS) \
-	$(libtotemtimehelpers_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(libxplayertimehelpers_la_CFLAGS) $(CFLAGS) \
+	$(libxplayertimehelpers_la_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -166,14 +166,14 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libtotemgsthelpers_la_SOURCES) \
-	$(libtotemgstpixbufhelpers_la_SOURCES) \
-	$(libtotemrtlhelpers_la_SOURCES) \
-	$(libtotemtimehelpers_la_SOURCES)
-DIST_SOURCES = $(libtotemgsthelpers_la_SOURCES) \
-	$(libtotemgstpixbufhelpers_la_SOURCES) \
-	$(libtotemrtlhelpers_la_SOURCES) \
-	$(libtotemtimehelpers_la_SOURCES)
+SOURCES = $(libxplayergsthelpers_la_SOURCES) \
+	$(libxplayergstpixbufhelpers_la_SOURCES) \
+	$(libxplayerrtlhelpers_la_SOURCES) \
+	$(libxplayertimehelpers_la_SOURCES)
+DIST_SOURCES = $(libxplayergsthelpers_la_SOURCES) \
+	$(libxplayergstpixbufhelpers_la_SOURCES) \
+	$(libxplayerrtlhelpers_la_SOURCES) \
+	$(libxplayertimehelpers_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -380,11 +380,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -453,72 +453,72 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 noinst_LTLIBRARIES = \
-	libtotemgsthelpers.la		\
-	libtotemgstpixbufhelpers.la	\
-	libtotemtimehelpers.la		\
-	libtotemrtlhelpers.la
+	libxplayergsthelpers.la		\
+	libxplayergstpixbufhelpers.la	\
+	libxplayertimehelpers.la		\
+	libxplayerrtlhelpers.la
 
-libtotemgsthelpers_la_SOURCES = \
-	totem-gst-helpers.c	\
-	totem-gst-helpers.h
+libxplayergsthelpers_la_SOURCES = \
+	xplayer-gst-helpers.c	\
+	xplayer-gst-helpers.h
 
-libtotemgsthelpers_la_CPPFLAGS = \
+libxplayergsthelpers_la_CPPFLAGS = \
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemgsthelpers_la_CFLAGS = \
+libxplayergsthelpers_la_CFLAGS = \
 	$(HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemgsthelpers_la_LIBADD = $(HELPER_LIBS)
-libtotemgsthelpers_la_LDFLAGS = -no-undefined
-libtotemgstpixbufhelpers_la_SOURCES = \
-	totem-gst-pixbuf-helpers.c	\
-	totem-gst-pixbuf-helpers.h
+libxplayergsthelpers_la_LIBADD = $(HELPER_LIBS)
+libxplayergsthelpers_la_LDFLAGS = -no-undefined
+libxplayergstpixbufhelpers_la_SOURCES = \
+	xplayer-gst-pixbuf-helpers.c	\
+	xplayer-gst-pixbuf-helpers.h
 
-libtotemgstpixbufhelpers_la_CPPFLAGS = \
+libxplayergstpixbufhelpers_la_CPPFLAGS = \
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemgstpixbufhelpers_la_CFLAGS = \
+libxplayergstpixbufhelpers_la_CFLAGS = \
 	$(PIXBUF_HELPER_CFLAGS)		\
 	$(AM_CFLAGS)
 
-libtotemgstpixbufhelpers_la_LIBADD = $(PIXBUF_HELPER_LIBS)
-libtotemgstpixbufhelpers_la_LDFLAGS = -no-undefined
-libtotemtimehelpers_la_SOURCES = \
-	totem-time-helpers.c		\
-	totem-time-helpers.h
+libxplayergstpixbufhelpers_la_LIBADD = $(PIXBUF_HELPER_LIBS)
+libxplayergstpixbufhelpers_la_LDFLAGS = -no-undefined
+libxplayertimehelpers_la_SOURCES = \
+	xplayer-time-helpers.c		\
+	xplayer-time-helpers.h
 
-libtotemtimehelpers_la_CPPFLAGS = \
+libxplayertimehelpers_la_CPPFLAGS = \
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemtimehelpers_la_CFLAGS = \
+libxplayertimehelpers_la_CFLAGS = \
 	$(TIME_HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemtimehelpers_la_LIBADD = $(TIME_HELPER_LIBS)
-libtotemtimehelpers_la_LDFLAGS = -no-undefined
-libtotemrtlhelpers_la_SOURCES = \
-	totem-rtl-helpers.c		\
-	totem-rtl-helpers.h
+libxplayertimehelpers_la_LIBADD = $(TIME_HELPER_LIBS)
+libxplayertimehelpers_la_LDFLAGS = -no-undefined
+libxplayerrtlhelpers_la_SOURCES = \
+	xplayer-rtl-helpers.c		\
+	xplayer-rtl-helpers.h
 
-libtotemrtlhelpers_la_CPPFLAGS = \
+libxplayerrtlhelpers_la_CPPFLAGS = \
 	-D_REENTRANT			\
 	$(DISABLE_DEPRECATED)		\
 	$(AM_CPPFLAGS)
 
-libtotemrtlhelpers_la_CFLAGS = \
+libxplayerrtlhelpers_la_CFLAGS = \
 	$(RTL_HELPER_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libtotemrtlhelpers_la_LIBADD = $(RTL_HELPER_LIBS)
-libtotemrtlhelpers_la_LDFLAGS = -no-undefined
-EXTRA_DIST = totem-time-helpers.h
+libxplayerrtlhelpers_la_LIBADD = $(RTL_HELPER_LIBS)
+libxplayerrtlhelpers_la_LDFLAGS = -no-undefined
+EXTRA_DIST = xplayer-time-helpers.h
 all: all-am
 
 .SUFFIXES:
@@ -565,17 +565,17 @@ clean-noinstLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotemgsthelpers.la: $(libtotemgsthelpers_la_OBJECTS) $(libtotemgsthelpers_la_DEPENDENCIES) $(EXTRA_libtotemgsthelpers_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotemgsthelpers_la_LINK)  $(libtotemgsthelpers_la_OBJECTS) $(libtotemgsthelpers_la_LIBADD) $(LIBS)
+libxplayergsthelpers.la: $(libxplayergsthelpers_la_OBJECTS) $(libxplayergsthelpers_la_DEPENDENCIES) $(EXTRA_libxplayergsthelpers_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayergsthelpers_la_LINK)  $(libxplayergsthelpers_la_OBJECTS) $(libxplayergsthelpers_la_LIBADD) $(LIBS)
 
-libtotemgstpixbufhelpers.la: $(libtotemgstpixbufhelpers_la_OBJECTS) $(libtotemgstpixbufhelpers_la_DEPENDENCIES) $(EXTRA_libtotemgstpixbufhelpers_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotemgstpixbufhelpers_la_LINK)  $(libtotemgstpixbufhelpers_la_OBJECTS) $(libtotemgstpixbufhelpers_la_LIBADD) $(LIBS)
+libxplayergstpixbufhelpers.la: $(libxplayergstpixbufhelpers_la_OBJECTS) $(libxplayergstpixbufhelpers_la_DEPENDENCIES) $(EXTRA_libxplayergstpixbufhelpers_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayergstpixbufhelpers_la_LINK)  $(libxplayergstpixbufhelpers_la_OBJECTS) $(libxplayergstpixbufhelpers_la_LIBADD) $(LIBS)
 
-libtotemrtlhelpers.la: $(libtotemrtlhelpers_la_OBJECTS) $(libtotemrtlhelpers_la_DEPENDENCIES) $(EXTRA_libtotemrtlhelpers_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotemrtlhelpers_la_LINK)  $(libtotemrtlhelpers_la_OBJECTS) $(libtotemrtlhelpers_la_LIBADD) $(LIBS)
+libxplayerrtlhelpers.la: $(libxplayerrtlhelpers_la_OBJECTS) $(libxplayerrtlhelpers_la_DEPENDENCIES) $(EXTRA_libxplayerrtlhelpers_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayerrtlhelpers_la_LINK)  $(libxplayerrtlhelpers_la_OBJECTS) $(libxplayerrtlhelpers_la_LIBADD) $(LIBS)
 
-libtotemtimehelpers.la: $(libtotemtimehelpers_la_OBJECTS) $(libtotemtimehelpers_la_DEPENDENCIES) $(EXTRA_libtotemtimehelpers_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotemtimehelpers_la_LINK)  $(libtotemtimehelpers_la_OBJECTS) $(libtotemtimehelpers_la_LIBADD) $(LIBS)
+libxplayertimehelpers.la: $(libxplayertimehelpers_la_OBJECTS) $(libxplayertimehelpers_la_DEPENDENCIES) $(EXTRA_libxplayertimehelpers_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayertimehelpers_la_LINK)  $(libxplayertimehelpers_la_OBJECTS) $(libxplayertimehelpers_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -583,10 +583,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotemgsthelpers_la-totem-gst-helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotemrtlhelpers_la-totem-rtl-helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotemtimehelpers_la-totem-time-helpers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayergsthelpers_la-xplayer-gst-helpers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayerrtlhelpers_la-xplayer-rtl-helpers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayertimehelpers_la-xplayer-time-helpers.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -609,33 +609,33 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libtotemgsthelpers_la-totem-gst-helpers.lo: totem-gst-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemgsthelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemgsthelpers_la_CFLAGS) $(CFLAGS) -MT libtotemgsthelpers_la-totem-gst-helpers.lo -MD -MP -MF $(DEPDIR)/libtotemgsthelpers_la-totem-gst-helpers.Tpo -c -o libtotemgsthelpers_la-totem-gst-helpers.lo `test -f 'totem-gst-helpers.c' || echo '$(srcdir)/'`totem-gst-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotemgsthelpers_la-totem-gst-helpers.Tpo $(DEPDIR)/libtotemgsthelpers_la-totem-gst-helpers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-gst-helpers.c' object='libtotemgsthelpers_la-totem-gst-helpers.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayergsthelpers_la-xplayer-gst-helpers.lo: xplayer-gst-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayergsthelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayergsthelpers_la_CFLAGS) $(CFLAGS) -MT libxplayergsthelpers_la-xplayer-gst-helpers.lo -MD -MP -MF $(DEPDIR)/libxplayergsthelpers_la-xplayer-gst-helpers.Tpo -c -o libxplayergsthelpers_la-xplayer-gst-helpers.lo `test -f 'xplayer-gst-helpers.c' || echo '$(srcdir)/'`xplayer-gst-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayergsthelpers_la-xplayer-gst-helpers.Tpo $(DEPDIR)/libxplayergsthelpers_la-xplayer-gst-helpers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-gst-helpers.c' object='libxplayergsthelpers_la-xplayer-gst-helpers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemgsthelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemgsthelpers_la_CFLAGS) $(CFLAGS) -c -o libtotemgsthelpers_la-totem-gst-helpers.lo `test -f 'totem-gst-helpers.c' || echo '$(srcdir)/'`totem-gst-helpers.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayergsthelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayergsthelpers_la_CFLAGS) $(CFLAGS) -c -o libxplayergsthelpers_la-xplayer-gst-helpers.lo `test -f 'xplayer-gst-helpers.c' || echo '$(srcdir)/'`xplayer-gst-helpers.c
 
-libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo: totem-gst-pixbuf-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemgstpixbufhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemgstpixbufhelpers_la_CFLAGS) $(CFLAGS) -MT libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo -MD -MP -MF $(DEPDIR)/libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.Tpo -c -o libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo `test -f 'totem-gst-pixbuf-helpers.c' || echo '$(srcdir)/'`totem-gst-pixbuf-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.Tpo $(DEPDIR)/libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-gst-pixbuf-helpers.c' object='libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo: xplayer-gst-pixbuf-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayergstpixbufhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayergstpixbufhelpers_la_CFLAGS) $(CFLAGS) -MT libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo -MD -MP -MF $(DEPDIR)/libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.Tpo -c -o libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo `test -f 'xplayer-gst-pixbuf-helpers.c' || echo '$(srcdir)/'`xplayer-gst-pixbuf-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.Tpo $(DEPDIR)/libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-gst-pixbuf-helpers.c' object='libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemgstpixbufhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemgstpixbufhelpers_la_CFLAGS) $(CFLAGS) -c -o libtotemgstpixbufhelpers_la-totem-gst-pixbuf-helpers.lo `test -f 'totem-gst-pixbuf-helpers.c' || echo '$(srcdir)/'`totem-gst-pixbuf-helpers.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayergstpixbufhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayergstpixbufhelpers_la_CFLAGS) $(CFLAGS) -c -o libxplayergstpixbufhelpers_la-xplayer-gst-pixbuf-helpers.lo `test -f 'xplayer-gst-pixbuf-helpers.c' || echo '$(srcdir)/'`xplayer-gst-pixbuf-helpers.c
 
-libtotemrtlhelpers_la-totem-rtl-helpers.lo: totem-rtl-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemrtlhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemrtlhelpers_la_CFLAGS) $(CFLAGS) -MT libtotemrtlhelpers_la-totem-rtl-helpers.lo -MD -MP -MF $(DEPDIR)/libtotemrtlhelpers_la-totem-rtl-helpers.Tpo -c -o libtotemrtlhelpers_la-totem-rtl-helpers.lo `test -f 'totem-rtl-helpers.c' || echo '$(srcdir)/'`totem-rtl-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotemrtlhelpers_la-totem-rtl-helpers.Tpo $(DEPDIR)/libtotemrtlhelpers_la-totem-rtl-helpers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-rtl-helpers.c' object='libtotemrtlhelpers_la-totem-rtl-helpers.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo: xplayer-rtl-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayerrtlhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayerrtlhelpers_la_CFLAGS) $(CFLAGS) -MT libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo -MD -MP -MF $(DEPDIR)/libxplayerrtlhelpers_la-xplayer-rtl-helpers.Tpo -c -o libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo `test -f 'xplayer-rtl-helpers.c' || echo '$(srcdir)/'`xplayer-rtl-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayerrtlhelpers_la-xplayer-rtl-helpers.Tpo $(DEPDIR)/libxplayerrtlhelpers_la-xplayer-rtl-helpers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-rtl-helpers.c' object='libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemrtlhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemrtlhelpers_la_CFLAGS) $(CFLAGS) -c -o libtotemrtlhelpers_la-totem-rtl-helpers.lo `test -f 'totem-rtl-helpers.c' || echo '$(srcdir)/'`totem-rtl-helpers.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayerrtlhelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayerrtlhelpers_la_CFLAGS) $(CFLAGS) -c -o libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo `test -f 'xplayer-rtl-helpers.c' || echo '$(srcdir)/'`xplayer-rtl-helpers.c
 
-libtotemtimehelpers_la-totem-time-helpers.lo: totem-time-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemtimehelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemtimehelpers_la_CFLAGS) $(CFLAGS) -MT libtotemtimehelpers_la-totem-time-helpers.lo -MD -MP -MF $(DEPDIR)/libtotemtimehelpers_la-totem-time-helpers.Tpo -c -o libtotemtimehelpers_la-totem-time-helpers.lo `test -f 'totem-time-helpers.c' || echo '$(srcdir)/'`totem-time-helpers.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotemtimehelpers_la-totem-time-helpers.Tpo $(DEPDIR)/libtotemtimehelpers_la-totem-time-helpers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-time-helpers.c' object='libtotemtimehelpers_la-totem-time-helpers.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayertimehelpers_la-xplayer-time-helpers.lo: xplayer-time-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayertimehelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayertimehelpers_la_CFLAGS) $(CFLAGS) -MT libxplayertimehelpers_la-xplayer-time-helpers.lo -MD -MP -MF $(DEPDIR)/libxplayertimehelpers_la-xplayer-time-helpers.Tpo -c -o libxplayertimehelpers_la-xplayer-time-helpers.lo `test -f 'xplayer-time-helpers.c' || echo '$(srcdir)/'`xplayer-time-helpers.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayertimehelpers_la-xplayer-time-helpers.Tpo $(DEPDIR)/libxplayertimehelpers_la-xplayer-time-helpers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-time-helpers.c' object='libxplayertimehelpers_la-xplayer-time-helpers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotemtimehelpers_la_CPPFLAGS) $(CPPFLAGS) $(libtotemtimehelpers_la_CFLAGS) $(CFLAGS) -c -o libtotemtimehelpers_la-totem-time-helpers.lo `test -f 'totem-time-helpers.c' || echo '$(srcdir)/'`totem-time-helpers.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayertimehelpers_la_CPPFLAGS) $(CPPFLAGS) $(libxplayertimehelpers_la_CFLAGS) $(CFLAGS) -c -o libxplayertimehelpers_la-xplayer-time-helpers.lo `test -f 'xplayer-time-helpers.c' || echo '$(srcdir)/'`xplayer-time-helpers.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

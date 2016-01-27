@@ -16,10 +16,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
 #include "config.h"
@@ -36,22 +36,22 @@
 #include <math.h>
 
 #include "backend/bacon-video-widget.h"
-#include "totem-plugin.h"
-#include "totem-dirs.h"
-#include "totem-interface.h"
-#include "totem.h"
-#include "totem-cmml-parser.h"
-#include "totem-chapters-utils.h"
-#include "totem-edit-chapter.h"
+#include "xplayer-plugin.h"
+#include "xplayer-dirs.h"
+#include "xplayer-interface.h"
+#include "xplayer.h"
+#include "xplayer-cmml-parser.h"
+#include "xplayer-chapters-utils.h"
+#include "xplayer-edit-chapter.h"
 
-#define TOTEM_TYPE_CHAPTERS_PLUGIN		(totem_chapters_plugin_get_type ())
-#define TOTEM_CHAPTERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_CHAPTERS_PLUGIN, TotemChaptersPlugin))
-#define TOTEM_CHAPTERS_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_CHAPTERS_PLUGIN, TotemChaptersPluginClass))
-#define TOTEM_IS_CHAPTERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_CHAPTERS_PLUGIN))
-#define TOTEM_IS_CHAPTERS_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_CHAPTERS_PLUGIN))
-#define TOTEM_CHAPTERS_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_CHAPTERS_PLUGIN, TotemChaptersPluginClass))
+#define XPLAYER_TYPE_CHAPTERS_PLUGIN		(xplayer_chapters_plugin_get_type ())
+#define XPLAYER_CHAPTERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_CHAPTERS_PLUGIN, XplayerChaptersPlugin))
+#define XPLAYER_CHAPTERS_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_CHAPTERS_PLUGIN, XplayerChaptersPluginClass))
+#define XPLAYER_IS_CHAPTERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_CHAPTERS_PLUGIN))
+#define XPLAYER_IS_CHAPTERS_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_CHAPTERS_PLUGIN))
+#define XPLAYER_CHAPTERS_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_CHAPTERS_PLUGIN, XplayerChaptersPluginClass))
 
-#define TOTEM_CHAPTERS_PLUGIN_GET_PRIVATE(obj)	(G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_CHAPTERS_PLUGIN, TotemChaptersPluginPrivate))
+#define XPLAYER_CHAPTERS_PLUGIN_GET_PRIVATE(obj)	(G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_CHAPTERS_PLUGIN, XplayerChaptersPluginPrivate))
 
 #define CHAPTER_TOOLTIP(title, start) g_strdup_printf	( _("<b>Title: </b>%s\n<b>Start time: </b>%s"),	\
 							 ( title ), ( start ) )
@@ -63,8 +63,8 @@
 #define ICON_SCALE_RATIO 2
 
 typedef struct {
-	TotemObject	*totem;
-	TotemEditChapter *edit_chapter;
+	XplayerObject	*xplayer;
+	XplayerEditChapter *edit_chapter;
 	GtkWidget	*tree;
 	GtkWidget	*add_button,
 			*remove_button,
@@ -84,9 +84,9 @@ typedef struct {
 	GCancellable	*cancellable[2];
 	GSettings	*settings;
 	guint		autoload_handle_id;
-} TotemChaptersPluginPrivate;
+} XplayerChaptersPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER (TOTEM_TYPE_CHAPTERS_PLUGIN, TotemChaptersPlugin, totem_chapters_plugin)
+XPLAYER_PLUGIN_REGISTER (XPLAYER_TYPE_CHAPTERS_PLUGIN, XplayerChaptersPlugin, xplayer_chapters_plugin)
 
 enum {
 	CHAPTERS_PIXBUF_COLUMN = 0,
@@ -97,38 +97,38 @@ enum {
 	CHAPTERS_N_COLUMNS
 };
 
-static void totem_file_opened_async_cb (TotemObject *totem, const gchar *uri, TotemChaptersPlugin *plugin);
-static void totem_file_opened_result_cb (GObject *source_object, GAsyncResult *res, gpointer user_data);
-static void totem_file_closed_cb (TotemObject *totem, TotemChaptersPlugin *plugin);
+static void xplayer_file_opened_async_cb (XplayerObject *xplayer, const gchar *uri, XplayerChaptersPlugin *plugin);
+static void xplayer_file_opened_result_cb (GObject *source_object, GAsyncResult *res, gpointer user_data);
+static void xplayer_file_closed_cb (XplayerObject *xplayer, XplayerChaptersPlugin *plugin);
 static void add_chapter_to_the_list (gpointer data, gpointer user_data);
-static void add_chapter_to_the_list_new (TotemChaptersPlugin *plugin, const gchar *title, gint64 time);
-static gboolean check_available_time (TotemChaptersPlugin *plugin, gint64 time);
+static void add_chapter_to_the_list_new (XplayerChaptersPlugin *plugin, const gchar *title, gint64 time);
+static gboolean check_available_time (XplayerChaptersPlugin *plugin, gint64 time);
 static GdkPixbuf * get_chapter_pixbuf (GdkPixbuf *src);
-static void chapter_edit_dialog_response_cb (GtkDialog *dialog, gint response, TotemChaptersPlugin *plugin);
+static void chapter_edit_dialog_response_cb (GtkDialog *dialog, gint response, XplayerChaptersPlugin *plugin);
 static void prepare_chapter_edit (GtkCellRenderer *renderer, GtkCellEditable *editable, gchar *path, gpointer user_data);
 static void finish_chapter_edit (GtkCellRendererText *renderer, gchar *path, gchar *new_text, gpointer user_data);
-static void chapter_selection_changed_cb (GtkTreeSelection *tree_selection, TotemChaptersPlugin *plugin);
-static void show_chapter_edit_dialog (TotemChaptersPlugin *plugin);
+static void chapter_selection_changed_cb (GtkTreeSelection *tree_selection, XplayerChaptersPlugin *plugin);
+static void show_chapter_edit_dialog (XplayerChaptersPlugin *plugin);
 static void save_chapters_result_cb (gpointer data, gpointer user_data);
-static GList * get_chapters_list (TotemChaptersPlugin *plugin);
-static gboolean show_popup_menu (TotemChaptersPlugin *plugin, GdkEventButton *event);
-static void autoload_changed_cb (GSettings *settigs, const gchar *key, TotemChaptersPlugin *plugin);
-static void load_chapters_from_file (const gchar *uri, gboolean from_dialog, TotemChaptersPlugin *plugin);
-static void set_no_data_visible (gboolean visible, gboolean show_buttons, TotemChaptersPlugin *plugin);
+static GList * get_chapters_list (XplayerChaptersPlugin *plugin);
+static gboolean show_popup_menu (XplayerChaptersPlugin *plugin, GdkEventButton *event);
+static void autoload_changed_cb (GSettings *settigs, const gchar *key, XplayerChaptersPlugin *plugin);
+static void load_chapters_from_file (const gchar *uri, gboolean from_dialog, XplayerChaptersPlugin *plugin);
+static void set_no_data_visible (gboolean visible, gboolean show_buttons, XplayerChaptersPlugin *plugin);
 
 /* GtkBuilder callbacks */
-void add_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
-void remove_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
-void save_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
-void goto_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
-void tree_view_row_activated_cb (GtkTreeView *tree_view, GtkTreePath *path, GtkTreeViewColumn *column, TotemChaptersPlugin *plugin);
-gboolean tree_view_button_press_cb (GtkTreeView *tree_view, GdkEventButton *event, TotemChaptersPlugin *plugin);
-gboolean tree_view_key_press_cb (GtkTreeView *tree_view, GdkEventKey *event, TotemChaptersPlugin *plugin);
-gboolean tree_view_popup_menu_cb (GtkTreeView *tree_view, TotemChaptersPlugin *plugin);
-void popup_remove_action_cb (GtkAction *action, TotemChaptersPlugin *plugin);
-void popup_goto_action_cb (GtkAction *action, TotemChaptersPlugin *plugin);
-void load_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
-void continue_button_clicked_cb (GtkButton *button, TotemChaptersPlugin *plugin);
+void add_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
+void remove_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
+void save_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
+void goto_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
+void tree_view_row_activated_cb (GtkTreeView *tree_view, GtkTreePath *path, GtkTreeViewColumn *column, XplayerChaptersPlugin *plugin);
+gboolean tree_view_button_press_cb (GtkTreeView *tree_view, GdkEventButton *event, XplayerChaptersPlugin *plugin);
+gboolean tree_view_key_press_cb (GtkTreeView *tree_view, GdkEventKey *event, XplayerChaptersPlugin *plugin);
+gboolean tree_view_popup_menu_cb (GtkTreeView *tree_view, XplayerChaptersPlugin *plugin);
+void popup_remove_action_cb (GtkAction *action, XplayerChaptersPlugin *plugin);
+void popup_goto_action_cb (GtkAction *action, XplayerChaptersPlugin *plugin);
+void load_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
+void continue_button_clicked_cb (GtkButton *button, XplayerChaptersPlugin *plugin);
 
 static GdkPixbuf *
 get_chapter_pixbuf (GdkPixbuf *src)
@@ -168,22 +168,22 @@ static void
 add_chapter_to_the_list (gpointer	data,
 			 gpointer	user_data)
 {
-	TotemChaptersPlugin	*plugin;
+	XplayerChaptersPlugin	*plugin;
 	GdkPixbuf		*pixbuf;
 	GtkTreeIter		iter;
 	GtkTreeStore		*store;
-	TotemCmmlClip		*clip;
+	XplayerCmmlClip		*clip;
 	gchar			*text, *start, *tip;
 
 	g_return_if_fail (data != NULL);
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (user_data));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (user_data));
 
-	plugin = TOTEM_CHAPTERS_PLUGIN (user_data);
+	plugin = XPLAYER_CHAPTERS_PLUGIN (user_data);
 	store = GTK_TREE_STORE (gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree)));
-	clip = ((TotemCmmlClip *) data);
+	clip = ((XplayerCmmlClip *) data);
 
 	/* prepare tooltip data */
-	start = totem_cmml_convert_msecs_to_str (clip->time_start);
+	start = xplayer_cmml_convert_msecs_to_str (clip->time_start);
 	tip = CHAPTER_TOOLTIP (clip->title, start);
 
 	/* append clip to the sidebar list */
@@ -210,7 +210,7 @@ add_chapter_to_the_list (gpointer	data,
 }
 
 static void
-add_chapter_to_the_list_new (TotemChaptersPlugin	*plugin,
+add_chapter_to_the_list_new (XplayerChaptersPlugin	*plugin,
 			     const gchar		*title,
 			     gint64			_time)
 {
@@ -222,7 +222,7 @@ add_chapter_to_the_list_new (TotemChaptersPlugin	*plugin,
 	gint64		cur_time, prev_time = 0;
 	gint		iter_count = 0;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 	g_return_if_fail (title != NULL);
 	g_return_if_fail (_time >= 0);
 
@@ -245,7 +245,7 @@ add_chapter_to_the_list_new (TotemChaptersPlugin	*plugin,
 	}
 
 	/* prepare tooltip data */
-	start = totem_cmml_convert_msecs_to_str (_time);
+	start = xplayer_cmml_convert_msecs_to_str (_time);
 	tip = CHAPTER_TOOLTIP (title, start);
 
 	/* insert clip into the sidebar list at proper position */
@@ -272,7 +272,7 @@ add_chapter_to_the_list_new (TotemChaptersPlugin	*plugin,
 }
 
 static gboolean
-check_available_time (TotemChaptersPlugin	*plugin,
+check_available_time (XplayerChaptersPlugin	*plugin,
 		      gint64			_time)
 {
 	GtkTreeModel	*store;
@@ -280,7 +280,7 @@ check_available_time (TotemChaptersPlugin	*plugin,
 	gboolean	valid;
 	gint64		cur_time;
 
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), FALSE);
 
 	store = gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree));
 
@@ -303,24 +303,24 @@ check_available_time (TotemChaptersPlugin	*plugin,
 }
 
 static void
-totem_file_opened_result_cb (GObject      *source_object,
+xplayer_file_opened_result_cb (GObject      *source_object,
 			     GAsyncResult *res,
 			     gpointer      user_data)
 {
-	TotemChaptersPlugin *plugin = TOTEM_CHAPTERS_PLUGIN (user_data);
+	XplayerChaptersPlugin *plugin = XPLAYER_CHAPTERS_PLUGIN (user_data);
 	GError *error = NULL;
 	GList *list;
 	gboolean from_dialog;
 	gboolean is_exists;
 
 	is_exists = TRUE;
-	list = totem_cmml_read_file_finish (G_FILE (source_object), res, &error);
+	list = xplayer_cmml_read_file_finish (G_FILE (source_object), res, &error);
 
 	if (list == NULL) {
 		/* Ignore errors if file is not present */
 		if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_NOT_FOUND) &&
 		    !g_error_matches (error, G_IO_ERROR, G_IO_ERROR_NOT_SUPPORTED)) {
-			totem_action_error (plugin->priv->totem, _("Error while reading file with chapters"),
+			xplayer_action_error (plugin->priv->xplayer, _("Error while reading file with chapters"),
 					    error->message);
 			g_error_free (error);
 
@@ -339,7 +339,7 @@ totem_file_opened_result_cb (GObject      *source_object,
 	}
 
 	g_list_foreach (list, (GFunc) add_chapter_to_the_list, plugin);
-	g_list_foreach (list, (GFunc) totem_cmml_clip_free, NULL);
+	g_list_foreach (list, (GFunc) xplayer_cmml_clip_free, NULL);
 	g_list_free (list);
 
 	/* do not show tree if read operation failed */
@@ -347,20 +347,20 @@ totem_file_opened_result_cb (GObject      *source_object,
 }
 
 static void
-totem_file_opened_async_cb (TotemObject			*totem,
+xplayer_file_opened_async_cb (XplayerObject			*xplayer,
 			    const gchar			*uri,
-			    TotemChaptersPlugin		*plugin)
+			    XplayerChaptersPlugin		*plugin)
 {
 	gchar	*cmml_file;
 
-	g_return_if_fail (TOTEM_IS_OBJECT (totem));
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_OBJECT (xplayer));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 	g_return_if_fail (uri != NULL);
 
 	if (g_str_has_prefix (uri, "http") != FALSE)
 		return;
 
-	cmml_file = totem_change_file_extension (uri, "cmml");
+	cmml_file = xplayer_change_file_extension (uri, "cmml");
 	/* if file has no extension - append it */
 	if (cmml_file == NULL)
 		cmml_file = g_strconcat (uri, ".cmml", NULL);
@@ -374,12 +374,12 @@ totem_file_opened_async_cb (TotemObject			*totem,
 }
 
 static void
-totem_file_closed_cb (TotemObject		*totem,
-		      TotemChaptersPlugin	*plugin)
+xplayer_file_closed_cb (XplayerObject		*xplayer,
+		      XplayerChaptersPlugin	*plugin)
 {
 	GtkTreeStore	*store;
 
-	g_return_if_fail (TOTEM_IS_OBJECT (totem) && TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_OBJECT (xplayer) && XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	store = GTK_TREE_STORE (gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree)));
 
@@ -403,12 +403,12 @@ totem_file_closed_cb (TotemObject		*totem,
 static void
 chapter_edit_dialog_response_cb (GtkDialog		*dialog,
 				 gint			response,
-				 TotemChaptersPlugin	*plugin)
+				 XplayerChaptersPlugin	*plugin)
 {
 	gchar		*title;
 
-	g_return_if_fail (TOTEM_IS_EDIT_CHAPTER (dialog));
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_EDIT_CHAPTER (dialog));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	if (response != GTK_RESPONSE_OK) {
 		gtk_widget_destroy (GTK_WIDGET (plugin->priv->edit_chapter));
@@ -417,13 +417,13 @@ chapter_edit_dialog_response_cb (GtkDialog		*dialog,
 			g_object_unref (G_OBJECT (plugin->priv->last_frame));
 
 		if (plugin->priv->was_played)
-			totem_action_play (plugin->priv->totem);
+			xplayer_action_play (plugin->priv->xplayer);
 		return;
 	}
 
 	gtk_widget_hide (GTK_WIDGET (dialog));
 
-	title = totem_edit_chapter_get_title (TOTEM_EDIT_CHAPTER (dialog));
+	title = xplayer_edit_chapter_get_title (XPLAYER_EDIT_CHAPTER (dialog));
 	add_chapter_to_the_list_new (plugin, title, plugin->priv->last_time);
 
 	gtk_widget_set_sensitive (plugin->priv->save_button, TRUE);
@@ -435,7 +435,7 @@ chapter_edit_dialog_response_cb (GtkDialog		*dialog,
 	gtk_widget_destroy (GTK_WIDGET (plugin->priv->edit_chapter));
 
 	if (plugin->priv->was_played)
-		totem_action_play (plugin->priv->totem);
+		xplayer_action_play (plugin->priv->xplayer);
 }
 
 static void
@@ -444,17 +444,17 @@ prepare_chapter_edit (GtkCellRenderer	*renderer,
 		      gchar		*path,
 		      gpointer		user_data)
 {
-	TotemChaptersPlugin	*plugin;
+	XplayerChaptersPlugin	*plugin;
 	GtkTreeModel		*store;
 	GtkTreeIter		iter;
 	gchar			*title;
 	GtkEntry		*entry;
 
 	g_return_if_fail (GTK_IS_ENTRY (editable));
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (user_data));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (user_data));
 	g_return_if_fail (path != NULL);
 
-	plugin = TOTEM_CHAPTERS_PLUGIN (user_data);
+	plugin = XPLAYER_CHAPTERS_PLUGIN (user_data);
 	entry = GTK_ENTRY (editable);
 	store = gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree));
 
@@ -474,17 +474,17 @@ finish_chapter_edit (GtkCellRendererText	*renderer,
 		     gchar			*new_text,
 		     gpointer			user_data)
 {
-	TotemChaptersPlugin	*plugin;
+	XplayerChaptersPlugin	*plugin;
 	GtkTreeModel		*store;
 	GtkTreeIter		iter;
 	gchar			*time_str, *tip, *new_title, *old_title;
 	gint64			_time;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (user_data));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (user_data));
 	g_return_if_fail (new_text != NULL);
 	g_return_if_fail (path != NULL);
 
-	plugin = TOTEM_CHAPTERS_PLUGIN (user_data);
+	plugin = XPLAYER_CHAPTERS_PLUGIN (user_data);
 	store = gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree));
 
 	if (G_UNLIKELY (!gtk_tree_model_get_iter_from_string (store, &iter, path)))
@@ -500,7 +500,7 @@ finish_chapter_edit (GtkCellRendererText	*renderer,
 		return;
 	}
 
-	time_str = totem_cmml_convert_msecs_to_str (_time);
+	time_str = xplayer_cmml_convert_msecs_to_str (_time);
 	new_title = CHAPTER_TITLE (new_text, time_str);
 	tip = CHAPTER_TOOLTIP (new_text, time_str);
 
@@ -519,44 +519,44 @@ finish_chapter_edit (GtkCellRendererText	*renderer,
 }
 
 static void
-show_chapter_edit_dialog (TotemChaptersPlugin	*plugin)
+show_chapter_edit_dialog (XplayerChaptersPlugin	*plugin)
 {
 	GtkWindow		*main_window;
 	BaconVideoWidget	*bvw;
 	gint64			_time;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	if (G_UNLIKELY (plugin->priv->edit_chapter != NULL)) {
 		gtk_window_present (GTK_WINDOW (plugin->priv->edit_chapter));
 		return;
 	}
 
-	main_window = totem_get_main_window (plugin->priv->totem);
-	plugin->priv->was_played = totem_is_playing (plugin->priv->totem);
-	totem_action_pause (plugin->priv->totem);
+	main_window = xplayer_get_main_window (plugin->priv->xplayer);
+	plugin->priv->was_played = xplayer_is_playing (plugin->priv->xplayer);
+	xplayer_action_pause (plugin->priv->xplayer);
 
 	/* adding a new one, check if it's time available */
-	g_object_get (G_OBJECT (plugin->priv->totem), "current-time", &_time, NULL);
+	g_object_get (G_OBJECT (plugin->priv->xplayer), "current-time", &_time, NULL);
 	if (G_UNLIKELY (!check_available_time (plugin, _time))) {
-		totem_interface_error_blocking (_("Chapter with the same time already exists"),
+		xplayer_interface_error_blocking (_("Chapter with the same time already exists"),
 						_("Try another name or remove an existing chapter."),
 						main_window);
 		g_object_unref (main_window);
 		if (plugin->priv->was_played)
-			totem_action_play (plugin->priv->totem);
+			xplayer_action_play (plugin->priv->xplayer);
 		return;
 	}
 	plugin->priv->last_time = _time;
 
 	/* capture frame */
-	bvw = BACON_VIDEO_WIDGET (totem_get_video_widget (plugin->priv->totem));
+	bvw = BACON_VIDEO_WIDGET (xplayer_get_video_widget (plugin->priv->xplayer));
 	plugin->priv->last_frame = bacon_video_widget_get_current_frame (bvw);
 	g_object_add_weak_pointer (G_OBJECT (plugin->priv->last_frame), (gpointer *) &plugin->priv->last_frame);
 	g_object_unref (bvw);
 
 	/* create chapter-edit dialog */
-	plugin->priv->edit_chapter = TOTEM_EDIT_CHAPTER (totem_edit_chapter_new ());
+	plugin->priv->edit_chapter = XPLAYER_EDIT_CHAPTER (xplayer_edit_chapter_new ());
 	g_object_add_weak_pointer (G_OBJECT (plugin->priv->edit_chapter), (gpointer *) &(plugin->priv->edit_chapter));
 
 	g_signal_connect (G_OBJECT (plugin->priv->edit_chapter), "delete-event",
@@ -573,13 +573,13 @@ show_chapter_edit_dialog (TotemChaptersPlugin	*plugin)
 
 static void
 chapter_selection_changed_cb (GtkTreeSelection		*tree_selection,
-			      TotemChaptersPlugin	*plugin)
+			      XplayerChaptersPlugin	*plugin)
 {
 	gint		count;
 	gboolean	allow_remove, allow_goto;
 
 	g_return_if_fail (GTK_IS_TREE_SELECTION (tree_selection));
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	count = gtk_tree_selection_count_selected_rows (tree_selection);
 	allow_remove = (count > 0);
@@ -592,11 +592,11 @@ chapter_selection_changed_cb (GtkTreeSelection		*tree_selection,
 static void
 autoload_changed_cb (GSettings			*settings,
 		     const gchar		*key,
-		     TotemChaptersPlugin	*plugin)
+		     XplayerChaptersPlugin	*plugin)
 {
 	g_return_if_fail (G_IS_SETTINGS (settings));
 	g_return_if_fail (key != NULL);
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	plugin->priv->autoload = g_settings_get_boolean (settings, key);
 }
@@ -604,11 +604,11 @@ autoload_changed_cb (GSettings			*settings,
 static void
 load_chapters_from_file (const gchar		*uri,
 			 gboolean		from_dialog,
-			 TotemChaptersPlugin	*plugin)
+			 XplayerChaptersPlugin	*plugin)
 {
 	GFile *file;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	if (plugin->priv->cancellable[0] != NULL) {
 		g_cancellable_cancel (plugin->priv->cancellable[0]);
@@ -622,15 +622,15 @@ load_chapters_from_file (const gchar		*uri,
 	g_object_add_weak_pointer (G_OBJECT (plugin->priv->cancellable[0]),
 				   (gpointer *) &(plugin->priv->cancellable[0]));
 
-	totem_cmml_read_file (file, plugin->priv->cancellable[0], totem_file_opened_result_cb, plugin);
+	xplayer_cmml_read_file (file, plugin->priv->cancellable[0], xplayer_file_opened_result_cb, plugin);
 }
 
 static void
 set_no_data_visible (gboolean			visible,
 		     gboolean			show_buttons,
-		     TotemChaptersPlugin	*plugin)
+		     XplayerChaptersPlugin	*plugin)
 {
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	if (visible) {
 		gtk_widget_hide (plugin->priv->list_box);
@@ -649,23 +649,23 @@ set_no_data_visible (gboolean			visible,
 
 void
 add_button_clicked_cb (GtkButton		*button,
-		       TotemChaptersPlugin	*plugin)
+		       XplayerChaptersPlugin	*plugin)
 {
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	show_chapter_edit_dialog (plugin);
 }
 
 void
 remove_button_clicked_cb (GtkButton		*button,
-			  TotemChaptersPlugin	*plugin)
+			  XplayerChaptersPlugin	*plugin)
 {
 	GtkTreeSelection	*selection;
 	GtkTreeIter		iter;
 	GtkTreeModel		*store;
 	GList			*list;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	store = gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree));
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (plugin->priv->tree));
@@ -691,32 +691,32 @@ static void
 save_chapters_result_cb (gpointer	data,
 			 gpointer	user_data)
 {
-	TotemCmmlAsyncData	*adata;
-	TotemChaptersPlugin	*plugin;
+	XplayerCmmlAsyncData	*adata;
+	XplayerChaptersPlugin	*plugin;
 
 	g_return_if_fail (data != NULL);
 
-	adata = (TotemCmmlAsyncData *) data;
-	plugin = TOTEM_CHAPTERS_PLUGIN (adata->user_data);
+	adata = (XplayerCmmlAsyncData *) data;
+	plugin = XPLAYER_CHAPTERS_PLUGIN (adata->user_data);
 
 	if (G_UNLIKELY (!adata->successful && !g_cancellable_is_cancelled (adata->cancellable))) {
-		totem_action_error (plugin->priv->totem, _("Error while writing file with chapters"),
+		xplayer_action_error (plugin->priv->xplayer, _("Error while writing file with chapters"),
 				    adata->error);
 		gtk_widget_set_sensitive (plugin->priv->save_button, TRUE);
 	}
 
 	g_object_unref (adata->cancellable);
-	g_list_foreach (adata->list, (GFunc) totem_cmml_clip_free, NULL);
+	g_list_foreach (adata->list, (GFunc) xplayer_cmml_clip_free, NULL);
 	g_list_free (adata->list);
 	g_free (adata->error);
 	g_free (adata);
 }
 
 static GList *
-get_chapters_list (TotemChaptersPlugin	*plugin)
+get_chapters_list (XplayerChaptersPlugin	*plugin)
 {
 	GList		*list = NULL;
-	TotemCmmlClip	*clip;
+	XplayerCmmlClip	*clip;
 	GtkTreeModel	*store;
 	GtkTreeIter	iter;
 	gchar		*title;
@@ -724,7 +724,7 @@ get_chapters_list (TotemChaptersPlugin	*plugin)
 	GdkPixbuf	*pixbuf;
 	gboolean	valid;
 
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), NULL);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), NULL);
 
 	store = gtk_tree_view_get_model (GTK_TREE_VIEW (plugin->priv->tree));
 
@@ -735,7 +735,7 @@ get_chapters_list (TotemChaptersPlugin	*plugin)
 				    CHAPTERS_TIME_PRIV_COLUMN, &_time,
 				    CHAPTERS_PIXBUF_COLUMN, &pixbuf,
 				    -1);
-		clip = totem_cmml_clip_new (title, NULL, _time, pixbuf);
+		clip = xplayer_cmml_clip_new (title, NULL, _time, pixbuf);
 		list = g_list_prepend (list, clip);
 
 		g_free (title);
@@ -749,7 +749,7 @@ get_chapters_list (TotemChaptersPlugin	*plugin)
 }
 
 static gboolean
-show_popup_menu (TotemChaptersPlugin	*plugin,
+show_popup_menu (XplayerChaptersPlugin	*plugin,
 		 GdkEventButton		*event)
 {
 	guint			button = 0;
@@ -760,7 +760,7 @@ show_popup_menu (TotemChaptersPlugin	*plugin,
 	GtkAction		*remove_act, *goto_act;
 	GtkTreeSelection	*selection;
 
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), FALSE);
 
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (plugin->priv->tree));
 
@@ -790,7 +790,7 @@ show_popup_menu (TotemChaptersPlugin	*plugin,
 	gtk_action_set_sensitive (remove_act, count > 0);
 	gtk_action_set_sensitive (goto_act, count == 1);
 
-	menu = gtk_ui_manager_get_widget (plugin->priv->ui_manager, "/totem-chapters-popup");
+	menu = gtk_ui_manager_get_widget (plugin->priv->ui_manager, "/xplayer-chapters-popup");
 
 	gtk_menu_shell_select_first (GTK_MENU_SHELL (menu), FALSE);
 
@@ -802,18 +802,18 @@ show_popup_menu (TotemChaptersPlugin	*plugin,
 
 void
 save_button_clicked_cb (GtkButton		*button,
-			TotemChaptersPlugin	*plugin)
+			XplayerChaptersPlugin	*plugin)
 {
-	TotemCmmlAsyncData	*data;
+	XplayerCmmlAsyncData	*data;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	if (plugin->priv->cancellable[1] != NULL) {
 		g_cancellable_cancel (plugin->priv->cancellable[1]);
 		g_object_unref (plugin->priv->cancellable[1]);
 	}
 
-	data = g_new0 (TotemCmmlAsyncData, 1);
+	data = g_new0 (XplayerCmmlAsyncData, 1);
 	data->file = plugin->priv->cmml_mrl;
 	data->list = get_chapters_list (plugin);
 	data->final = save_chapters_result_cb;
@@ -824,8 +824,8 @@ save_button_clicked_cb (GtkButton		*button,
 	g_object_add_weak_pointer (G_OBJECT (plugin->priv->cancellable[1]),
 				   (gpointer *) &(plugin->priv->cancellable[1]));
 
-	if (G_UNLIKELY (totem_cmml_write_file_async (data) < 0)) {
-		totem_action_error (plugin->priv->totem, _("Error occurred while saving chapters"),
+	if (G_UNLIKELY (xplayer_cmml_write_file_async (data) < 0)) {
+		xplayer_action_error (plugin->priv->xplayer, _("Error occurred while saving chapters"),
 		                    _("Please check you have permission to write to the folder containing the movie."));
 		g_free (data);
 	} else
@@ -836,19 +836,19 @@ void
 tree_view_row_activated_cb (GtkTreeView			*tree_view,
 			    GtkTreePath			*path,
 			    GtkTreeViewColumn		*column,
-			    TotemChaptersPlugin		*plugin)
+			    XplayerChaptersPlugin		*plugin)
 {
 	GtkTreeModel	*store;
 	GtkTreeIter	iter;
 	gboolean	seekable;
 	gint64		_time;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 	g_return_if_fail (GTK_IS_TREE_VIEW (tree_view));
 	g_return_if_fail (path != NULL);
 
 	store = gtk_tree_view_get_model (tree_view);
-	seekable = totem_is_seekable (plugin->priv->totem);
+	seekable = xplayer_is_seekable (plugin->priv->xplayer);
 	if (!seekable) {
 		g_warning ("chapters: unable to seek stream!");
 		return;
@@ -857,15 +857,15 @@ tree_view_row_activated_cb (GtkTreeView			*tree_view,
 	gtk_tree_model_get_iter (store, &iter, path);
 	gtk_tree_model_get (store, &iter, CHAPTERS_TIME_PRIV_COLUMN, &_time, -1);
 
-	totem_action_seek_time (plugin->priv->totem, _time, TRUE);
+	xplayer_action_seek_time (plugin->priv->xplayer, _time, TRUE);
 }
 
 gboolean
 tree_view_button_press_cb (GtkTreeView			*tree_view,
 			   GdkEventButton		*event,
-			   TotemChaptersPlugin		*plugin)
+			   XplayerChaptersPlugin		*plugin)
 {
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), FALSE);
 	g_return_val_if_fail (event != NULL, FALSE);
 
 	if (event->type == GDK_BUTTON_PRESS && event->button == 3)
@@ -877,11 +877,11 @@ tree_view_button_press_cb (GtkTreeView			*tree_view,
 gboolean
 tree_view_key_press_cb (GtkTreeView		*tree_view,
 			GdkEventKey		*event,
-			TotemChaptersPlugin	*plugin)
+			XplayerChaptersPlugin	*plugin)
 {
 	GtkTreeSelection	*selection;
 
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), FALSE);
 	g_return_val_if_fail (event != NULL, FALSE);
 
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (plugin->priv->tree));
@@ -917,34 +917,34 @@ tree_view_key_press_cb (GtkTreeView		*tree_view,
 
 gboolean
 tree_view_popup_menu_cb (GtkTreeView		*tree_view,
-			 TotemChaptersPlugin	*plugin)
+			 XplayerChaptersPlugin	*plugin)
 {
-	g_return_val_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin), FALSE);
+	g_return_val_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin), FALSE);
 
 	return show_popup_menu (plugin, NULL);
 }
 
 void
 popup_remove_action_cb (GtkAction		*action,
-			TotemChaptersPlugin	*plugin)
+			XplayerChaptersPlugin	*plugin)
 {
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	remove_button_clicked_cb (GTK_BUTTON (plugin->priv->remove_button), plugin);
 }
 
 void
 popup_goto_action_cb (GtkAction			*action,
-		      TotemChaptersPlugin	*plugin)
+		      XplayerChaptersPlugin	*plugin)
 {
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	goto_button_clicked_cb (GTK_BUTTON (plugin->priv->goto_button), plugin);
 }
 
 void
 load_button_clicked_cb (GtkButton		*button,
-			TotemChaptersPlugin	*plugin)
+			XplayerChaptersPlugin	*plugin)
 {
 	GtkWindow	*main_window;
 	GtkWidget	*dialog;
@@ -952,13 +952,13 @@ load_button_clicked_cb (GtkButton		*button,
 	GtkFileFilter	*filter_supported, *filter_all;
 	gchar		*filename, *mrl, *dir;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
-	plugin->priv->was_played = totem_is_playing (plugin->priv->totem);
-	totem_action_pause (plugin->priv->totem);
+	plugin->priv->was_played = xplayer_is_playing (plugin->priv->xplayer);
+	xplayer_action_pause (plugin->priv->xplayer);
 
-	mrl = totem_get_current_mrl (plugin->priv->totem);
-	main_window = totem_get_main_window (plugin->priv->totem);
+	mrl = xplayer_get_current_mrl (plugin->priv->xplayer);
+	main_window = xplayer_get_main_window (plugin->priv->xplayer);
 	dialog = gtk_file_chooser_dialog_new (_("Open Chapter File"), main_window, GTK_FILE_CHOOSER_ACTION_OPEN,
 					      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 					      GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
@@ -997,7 +997,7 @@ load_button_clicked_cb (GtkButton		*button,
 	}
 
 	if (plugin->priv->was_played)
-		totem_action_play (plugin->priv->totem);
+		xplayer_action_play (plugin->priv->xplayer);
 
 	gtk_widget_destroy (dialog);
 	g_object_unref (main_window);
@@ -1009,23 +1009,23 @@ load_button_clicked_cb (GtkButton		*button,
 
 void
 continue_button_clicked_cb (GtkButton		*button,
-			    TotemChaptersPlugin	*plugin)
+			    XplayerChaptersPlugin	*plugin)
 {
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	set_no_data_visible (FALSE, FALSE, plugin);
 }
 
 void
 goto_button_clicked_cb (GtkButton		*button,
-			TotemChaptersPlugin	*plugin)
+			XplayerChaptersPlugin	*plugin)
 {
 	GtkTreeView		*tree;
 	GtkTreeModel		*store;
 	GtkTreeSelection	*selection;
 	GList			*list;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
 	tree = GTK_TREE_VIEW (plugin->priv->tree);
 	store = gtk_tree_view_get_model (tree);
@@ -1042,37 +1042,37 @@ goto_button_clicked_cb (GtkButton		*button,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemObject		*totem;
+	XplayerObject		*xplayer;
 	GtkWindow		*main_window;
 	GtkBuilder		*builder;
 	GtkWidget		*main_box;
 	GtkTreeSelection	*selection;
-	TotemChaptersPlugin	*cplugin;
+	XplayerChaptersPlugin	*cplugin;
 	GtkCellRenderer		*renderer;
 	GtkTreeViewColumn	*column;
 	gchar			*mrl;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
-	cplugin = TOTEM_CHAPTERS_PLUGIN (plugin);
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
-	main_window = totem_get_main_window (totem);
+	cplugin = XPLAYER_CHAPTERS_PLUGIN (plugin);
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	main_window = xplayer_get_main_window (xplayer);
 
-	builder = totem_plugin_load_interface ("chapters", "chapters-list.ui", TRUE,
+	builder = xplayer_plugin_load_interface ("chapters", "chapters-list.ui", TRUE,
 					       main_window, cplugin);
 	g_object_unref (main_window);
 
 	if (builder == NULL)
 		return;
 
-	cplugin->priv->settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	cplugin->priv->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	cplugin->priv->autoload = g_settings_get_boolean (cplugin->priv->settings, "autoload-chapters");
 	g_signal_connect (cplugin->priv->settings, "changed::autoload-chapters", (GCallback) autoload_changed_cb, cplugin);
 
 	cplugin->priv->tree = GTK_WIDGET (gtk_builder_get_object (builder, "chapters_tree_view"));
 	cplugin->priv->action_group = GTK_ACTION_GROUP (gtk_builder_get_object (builder, "chapters-action-group"));
 	g_object_ref (cplugin->priv->action_group);
-	cplugin->priv->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (builder, "totem-chapters-ui-manager"));
+	cplugin->priv->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (builder, "xplayer-chapters-ui-manager"));
 	g_object_ref (cplugin->priv->ui_manager);
 
 	renderer = gtk_cell_renderer_pixbuf_new ();
@@ -1091,7 +1091,7 @@ impl_activate (PeasActivatable *plugin)
 							   "markup", CHAPTERS_TITLE_COLUMN, NULL);
 	gtk_tree_view_append_column (GTK_TREE_VIEW (cplugin->priv->tree), column);
 
-	cplugin->priv->totem = g_object_ref (totem);
+	cplugin->priv->xplayer = g_object_ref (xplayer);
 	/* for read operation */
 	cplugin->priv->cancellable[0] = NULL;
 	/* for write operation */
@@ -1122,27 +1122,27 @@ impl_activate (PeasActivatable *plugin)
 
 	set_no_data_visible (TRUE, FALSE, cplugin);
 
-	totem_add_sidebar_page (totem, "chapters", _("Chapters"), main_box);
+	xplayer_add_sidebar_page (xplayer, "chapters", _("Chapters"), main_box);
 
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (cplugin->priv->tree));
 	gtk_tree_selection_set_mode (selection, GTK_SELECTION_MULTIPLE);
 
-	g_signal_connect (G_OBJECT (totem),
+	g_signal_connect (G_OBJECT (xplayer),
 			  "file-opened",
-			  G_CALLBACK (totem_file_opened_async_cb),
+			  G_CALLBACK (xplayer_file_opened_async_cb),
 			  plugin);
-	g_signal_connect (G_OBJECT (totem),
+	g_signal_connect (G_OBJECT (xplayer),
 			  "file-closed",
-			  G_CALLBACK (totem_file_closed_cb),
+			  G_CALLBACK (xplayer_file_closed_cb),
 			  plugin);
 	g_signal_connect (G_OBJECT (selection),
 			  "changed",
 			  G_CALLBACK (chapter_selection_changed_cb),
 			  plugin);
 
-	mrl = totem_get_current_mrl (cplugin->priv->totem);
+	mrl = xplayer_get_current_mrl (cplugin->priv->xplayer);
 	if (mrl != NULL)
-		totem_file_opened_async_cb (cplugin->priv->totem, mrl, cplugin);
+		xplayer_file_opened_async_cb (cplugin->priv->xplayer, mrl, cplugin);
 
 	g_object_unref (builder);
 	g_free (mrl);
@@ -1151,29 +1151,29 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemObject		*totem;
-	TotemChaptersPlugin	*cplugin;
+	XplayerObject		*xplayer;
+	XplayerChaptersPlugin	*cplugin;
 
-	g_return_if_fail (TOTEM_IS_CHAPTERS_PLUGIN (plugin));
+	g_return_if_fail (XPLAYER_IS_CHAPTERS_PLUGIN (plugin));
 
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
-	cplugin = TOTEM_CHAPTERS_PLUGIN (plugin);
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	cplugin = XPLAYER_CHAPTERS_PLUGIN (plugin);
 
 	/* If there are unsaved changes to the chapter data, ask the user if they'd like to save them. */
 	if (gtk_widget_get_sensitive (cplugin->priv->save_button) == TRUE) {
 		GtkWidget *dialog;
 		GtkWindow *main_window;
 
-		main_window = totem_object_get_main_window (totem);
+		main_window = xplayer_object_get_main_window (xplayer);
 		dialog = gtk_message_dialog_new (main_window, GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
 		                                 GTK_MESSAGE_QUESTION, GTK_BUTTONS_NONE,
 		                                 _("Save changes to chapter list before closing?"));
 		g_object_unref (main_window);
 
 		gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-		                        /* Translators: close Totem without saving changes to the chapter list of the current movie. */
+		                        /* Translators: close Xplayer without saving changes to the chapter list of the current movie. */
 		                        _("Close without Saving"), GTK_RESPONSE_CLOSE,
-		                        /* Translators: save changes to the chapter list of the current movie before closing Totem. */
+		                        /* Translators: save changes to the chapter list of the current movie before closing Xplayer. */
 		                        _("Save"), GTK_RESPONSE_OK,
 		                        NULL);
 		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
@@ -1192,11 +1192,11 @@ impl_deactivate (PeasActivatable *plugin)
 
 	/* FIXME: do not cancel async operation if any */
 
-	g_signal_handlers_disconnect_by_func (G_OBJECT (totem),
-					      totem_file_opened_async_cb,
+	g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer),
+					      xplayer_file_opened_async_cb,
 					      plugin);
-	g_signal_handlers_disconnect_by_func (G_OBJECT (totem),
-					      totem_file_closed_cb,
+	g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer),
+					      xplayer_file_closed_cb,
 					      plugin);
 	if (cplugin->priv->settings != NULL)
 		g_object_unref (cplugin->priv->settings);
@@ -1220,8 +1220,8 @@ impl_deactivate (PeasActivatable *plugin)
 		g_cancellable_cancel (cplugin->priv->cancellable[1]);
 
 
-	g_object_unref (cplugin->priv->totem);
+	g_object_unref (cplugin->priv->xplayer);
 	g_free (cplugin->priv->cmml_mrl);
 
-	totem_remove_sidebar_page (totem, "chapters");
+	xplayer_remove_sidebar_page (xplayer, "chapters");
 }

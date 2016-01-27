@@ -1,4 +1,4 @@
-/* Totem Vegas Plugin
+/* Xplayer Vegas Plugin
  *
  * Copyright © 2011 Bastien Nocera <hadess@hadess.net>
  *
@@ -20,35 +20,35 @@
 
 #include <config.h>
 
-#include "totemPlugin.h"
-#include "totemVegasPlugin.h"
+#include "xplayerPlugin.h"
+#include "xplayerVegasPlugin.h"
 
 static const char *methodNames[] = {
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemVegasPlayer,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerVegasPlayer,
                          NULL, 0,
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemVegasPlayer::totemVegasPlayer (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerVegasPlayer::xplayerVegasPlayer (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemVegasPlayer::~totemVegasPlayer ()
+xplayerVegasPlayer::~xplayerVegasPlayer ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemVegasPlayer::InvokeByIndex (int aIndex,
+xplayerVegasPlayer::InvokeByIndex (int aIndex,
                                        const NPVariant *argv,
                                        uint32_t argc,
                                        NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemVegasPlayer);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerVegasPlayer);
 
   return false;
 }

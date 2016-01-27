@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Writing Totem Plugins</title>
+<title>Writing Xplayer Plugins</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
-<link rel="home" href="index.html" title="Totem Reference Manual">
+<link rel="home" href="index.html" title="Xplayer Reference Manual">
 <link rel="up" href="tutorials.html" title="Tutorials">
 <link rel="prev" href="tutorials.html" title="Tutorials">
 <link rel="next" href="core-api.html" title="Core API">
@@ -16,26 +16,26 @@
 <td><a accesskey="p" href="tutorials.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
 <td><a accesskey="u" href="tutorials.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
-<th width="100%" align="center">Totem Reference Manual</th>
+<th width="100%" align="center">Xplayer Reference Manual</th>
 <td><a accesskey="n" href="core-api.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="totem-plugins"></a><div class="titlepage"></div>
+<a name="xplayer-plugins"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="totem-plugins.top_of_page"></a>Writing Totem Plugins</span></h2>
-<p>Writing Totem Plugins — brief tutorial on writing Totem plugins</p>
+<h2><span class="refentrytitle"><a name="xplayer-plugins.top_of_page"></a>Writing Xplayer Plugins</span></h2>
+<p>Writing Xplayer Plugins — brief tutorial on writing Xplayer plugins</p>
 </td>
 <td valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="id-1.2.2.3"></a><h2>Introduction</h2>
-<p>Totem is extensible by means of small, dynamically-loadable plugins, which add functionality wanted by some but not others.</p>
+<p>Xplayer is extensible by means of small, dynamically-loadable plugins, which add functionality wanted by some but not others.</p>
 <div class="refsect2">
 <a name="id-1.2.2.3.3"></a><h3>Locations</h3>
-<p>Totem plugins can either be installed in the system path
-				(e.g. <code class="filename">/usr/lib/totem/plugins/</code>), or in a user's home directory
-				(e.g. <code class="filename">~/.local/share/totem/plugins/</code>). In either case, each plugin resides in a
+<p>Xplayer plugins can either be installed in the system path
+				(e.g. <code class="filename">/usr/lib/xplayer/plugins/</code>), or in a user's home directory
+				(e.g. <code class="filename">~/.local/share/xplayer/plugins/</code>). In either case, each plugin resides in a
 				subdirectory named after the plugin itself.</p>
 <p>In addition, each plugin needs a <code class="filename">.plugin</code> index file, residing inside the plugin
 				directory. This gives the code name of the plugin, as well as some metadata about the plugin such as its human-readable
@@ -44,7 +44,7 @@
 <a name="id-1.2.2.3.3.4"></a><p class="title"><b>Example 1. Example Plugin Directory</b></p>
 <div class="example-contents">
 <p>A system-installed plugin called <code class="literal">subtitle-downloader</code> would reside in
-					<code class="filename">/usr/lib/totem/plugins/subtitle-downloader</code>, and would (at a
+					<code class="filename">/usr/lib/xplayer/plugins/subtitle-downloader</code>, and would (at a
 					minimum) have the following files:
 					</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -54,7 +54,7 @@
 <p>
 				</p>
 <p>If installed in a user's home directory, it would reside in
-					<code class="filename">~/.local/share/totem/plugins/subtitle-downloader</code> and have the same
+					<code class="filename">~/.local/share/xplayer/plugins/subtitle-downloader</code> and have the same
 					files.</p>
 </div>
 </div>
@@ -77,8 +77,8 @@
 <p>
 				Most of the values in the template are fairly self-explanatory. One thing to note is that the plugin name should be
 				in lowercase, and contain no spaces. The plugin interface age should start at <code class="literal">1</code>, and only be
-				incremented when the binary interface of the plugin (as used by Totem) changes. If the plugin does not have its own
-				website, Totem's website (<code class="literal">http://projects.gnome.org/totem/</code>) can be used.</p>
+				incremented when the binary interface of the plugin (as used by Xplayer) changes. If the plugin does not have its own
+				website, Xplayer's website (<code class="literal">http://projects.gnome.org/xplayer/</code>) can be used.</p>
 <p>The library file containing the plugin's code should be named
 				<code class="filename">lib<em class="replaceable"><code>plugin-name</code></em>.so</code> (for C, or other compiled language, plugins) or
 				<code class="filename"><em class="replaceable"><code>pluginname</code></em>.py</code> (for Python plugins).</p>
@@ -131,36 +131,36 @@
 32
 33
 34</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="normal">        </span><span class="symbol">(</span><span class="function">totem_foobar_plugin_get_type</span><span class="normal"> </span><span class="symbol">())</span>
-<span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_FOOBAR_PLUGIN</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">          </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-INSTANCE-CAST:CAPS">G_TYPE_CHECK_INSTANCE_CAST</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> TotemFoobarPlugin</span><span class="symbol">))</span>
-<span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_FOOBAR_PLUGIN_CLASS</span><span class="symbol">(</span><span class="normal">k</span><span class="symbol">)</span><span class="normal">        </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-CLASS-CAST:CAPS">G_TYPE_CHECK_CLASS_CAST</a></span><span class="symbol">((</span><span class="normal">k</span><span class="symbol">),</span><span class="normal"> TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> TotemFoobarPluginClass</span><span class="symbol">))</span>
-<span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_IS_FOOBAR_PLUGIN</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">       </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-INSTANCE-TYPE:CAPS">G_TYPE_CHECK_INSTANCE_TYPE</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">))</span>
-<span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_IS_FOOBAR_PLUGIN_CLASS</span><span class="symbol">(</span><span class="normal">k</span><span class="symbol">)</span><span class="normal">     </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-CLASS-TYPE:CAPS">G_TYPE_CHECK_CLASS_TYPE</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">k</span><span class="symbol">),</span><span class="normal"> TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">))</span>
-<span class="preproc">#define</span><span class="normal"> </span><span class="function">TOTEM_FOOBAR_PLUGIN_GET_CLASS</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">    </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INSTANCE-GET-CLASS:CAPS">G_TYPE_INSTANCE_GET_CLASS</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> TotemFoobarPluginClass</span><span class="symbol">))</span>
+        <td class="listing_code"><pre class="programlisting"><span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="normal">        </span><span class="symbol">(</span><span class="function">xplayer_foobar_plugin_get_type</span><span class="normal"> </span><span class="symbol">())</span>
+<span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_FOOBAR_PLUGIN</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">          </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-INSTANCE-CAST:CAPS">G_TYPE_CHECK_INSTANCE_CAST</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> XplayerFoobarPlugin</span><span class="symbol">))</span>
+<span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_FOOBAR_PLUGIN_CLASS</span><span class="symbol">(</span><span class="normal">k</span><span class="symbol">)</span><span class="normal">        </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-CLASS-CAST:CAPS">G_TYPE_CHECK_CLASS_CAST</a></span><span class="symbol">((</span><span class="normal">k</span><span class="symbol">),</span><span class="normal"> XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> XplayerFoobarPluginClass</span><span class="symbol">))</span>
+<span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_IS_FOOBAR_PLUGIN</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">       </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-INSTANCE-TYPE:CAPS">G_TYPE_CHECK_INSTANCE_TYPE</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">))</span>
+<span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_IS_FOOBAR_PLUGIN_CLASS</span><span class="symbol">(</span><span class="normal">k</span><span class="symbol">)</span><span class="normal">     </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-CHECK-CLASS-TYPE:CAPS">G_TYPE_CHECK_CLASS_TYPE</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">k</span><span class="symbol">),</span><span class="normal"> XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">))</span>
+<span class="preproc">#define</span><span class="normal"> </span><span class="function">XPLAYER_FOOBAR_PLUGIN_GET_CLASS</span><span class="symbol">(</span><span class="normal">o</span><span class="symbol">)</span><span class="normal">    </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INSTANCE-GET-CLASS:CAPS">G_TYPE_INSTANCE_GET_CLASS</a></span><span class="normal"> </span><span class="symbol">((</span><span class="normal">o</span><span class="symbol">),</span><span class="normal"> XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> XplayerFoobarPluginClass</span><span class="symbol">))</span>
 
 <span class="keyword">typedef</span><span class="normal"> </span><span class="keyword">struct</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">    </span><span class="comment">/* Plugin private member variables */</span>
-<span class="cbracket">}</span><span class="normal"> TotemFoobarPluginPrivate</span><span class="symbol">;</span>
+<span class="cbracket">}</span><span class="normal"> XplayerFoobarPluginPrivate</span><span class="symbol">;</span>
 
-<span class="function"><a href="totem-TotemPlugin.html#TOTEM-PLUGIN-REGISTER:CAPS">TOTEM_PLUGIN_REGISTER</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">TOTEM_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> TotemFoobarPlugin</span><span class="symbol">,</span><span class="normal"> totem_foobar_plugin</span><span class="symbol">);</span>
+<span class="function"><a href="xplayer-XplayerPlugin.html#XPLAYER-PLUGIN-REGISTER:CAPS">XPLAYER_PLUGIN_REGISTER</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">XPLAYER_TYPE_FOOBAR_PLUGIN</span><span class="symbol">,</span><span class="normal"> XplayerFoobarPlugin</span><span class="symbol">,</span><span class="normal"> xplayer_foobar_plugin</span><span class="symbol">);</span>
 
 <span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
 <span class="function">impl_activate</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">PeasActivatable</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">plugin</span><span class="symbol">)</span>
 <span class="cbracket">{</span>
-<span class="normal">    </span><span class="usertype">TotemFoobarPlugin</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">self </span><span class="symbol">=</span><span class="normal"> </span><span class="function">TOTEM_FOOBAR_PLUGIN</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="usertype">TotemFoobarPluginPrivate</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">priv </span><span class="symbol">=</span><span class="normal"> self</span><span class="symbol">-&gt;</span><span class="normal">priv</span><span class="symbol">;</span>
-<span class="normal">    </span><span class="usertype">TotemObject</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">totem </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-get-data">g_object_get_data</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"object"</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="usertype">XplayerFoobarPlugin</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">self </span><span class="symbol">=</span><span class="normal"> </span><span class="function">XPLAYER_FOOBAR_PLUGIN</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="usertype">XplayerFoobarPluginPrivate</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">priv </span><span class="symbol">=</span><span class="normal"> self</span><span class="symbol">-&gt;</span><span class="normal">priv</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="usertype">XplayerObject</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">xplayer </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-get-data">g_object_get_data</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#G-OBJECT:CAPS">G_OBJECT</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"object"</span><span class="symbol">);</span>
 
 <span class="normal">    </span><span class="comment">/* Initialise resources, connect to events, create menu items and UI, etc., here.</span>
 <span class="comment">     * Note that impl_activate() and impl_deactivate() can be called multiple times in one</span>
-<span class="comment">     * Totem instance, though impl_activate() will always be followed by impl_deactivate() before</span>
+<span class="comment">     * Xplayer instance, though impl_activate() will always be followed by impl_deactivate() before</span>
 <span class="comment">     * it is called again. Similarly, impl_deactivate() cannot be called twice in succession. */</span>
 <span class="cbracket">}</span>
 
 <span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
 <span class="function">impl_deactivate</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">PeasActivatable</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">plugin</span><span class="symbol">)</span>
 <span class="cbracket">{</span>
-<span class="normal">    </span><span class="usertype">TotemFoobarPlugin</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">self </span><span class="symbol">=</span><span class="normal"> </span><span class="function">TOTEM_FOOBAR_PLUGIN</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="usertype">XplayerFoobarPlugin</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">self </span><span class="symbol">=</span><span class="normal"> </span><span class="function">XPLAYER_FOOBAR_PLUGIN</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">plugin</span><span class="symbol">);</span>
 
 <span class="normal">    </span><span class="comment">/* Destroy resources created in impl_activate() here. e.g. Disconnect from signals</span>
 <span class="comment">     * and remove menu entries and UI. */</span>
@@ -172,15 +172,15 @@
 
 </div>
 <p><br class="example-break"></p>
-<p>Once resources have been created, and the plugin has been connected to Totem's UI in the <code class="function">impl_activate</code>
-				function, the plugin is free to go about its tasks as appropriate. If the user deactivates the plugin, or Totem decides
+<p>Once resources have been created, and the plugin has been connected to Xplayer's UI in the <code class="function">impl_activate</code>
+				function, the plugin is free to go about its tasks as appropriate. If the user deactivates the plugin, or Xplayer decides
 				to deactivate it, the <code class="function">impl_deactivate</code> will be called. The plugin should free any resources
-				grabbed or allocated in the <code class="function">impl_activate</code> function, and remove itself from the Totem
+				grabbed or allocated in the <code class="function">impl_activate</code> function, and remove itself from the Xplayer
 				interface.</p>
-<p>Note that plugins can be activated and deactivated (e.g. from Totem's plugin manager) many times during one Totem session,
+<p>Note that plugins can be activated and deactivated (e.g. from Xplayer's plugin manager) many times during one Xplayer session,
 				so the <code class="function">impl_activate</code> and <code class="function">impl_deactivate</code> functions must be able to cope with
 				this.</p>
-<p>Any of the API documented in the rest of the Totem API reference can be used by plugins. Python plugins are written in
+<p>Any of the API documented in the rest of the Xplayer API reference can be used by plugins. Python plugins are written in
 				the same way as C plugins, and are similarly implemented as classes derived from
 				<span class="type"><a href="/usr/share/gtk-doc/html/libpeas/PeasExtensionBase.html">PeasExtensionBase</a></span> and implementing
 				<span class="type"><a href="/usr/share/gtk-doc/html/libpeas/PeasActivatable.html">PeasActivatable</a></span>.</p>

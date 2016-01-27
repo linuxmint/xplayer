@@ -81,8 +81,8 @@ build_triplet = @build@
 host_triplet = @host@
 DIST_COMMON = $(top_srcdir)/src/plugins/Makefile.plugins \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	totem-zeitgeist-dp-plugin.c $(top_srcdir)/build-aux/depcomp \
-	$(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp
+	xplayer-zeitgeist-dp-plugin.c $(top_srcdir)/build-aux/depcomp \
+	$(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp
 subdir = src/plugins/zeitgeist-dp
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libgd/libgd.m4 \
@@ -126,20 +126,20 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libtotem_zeitgeist_dp_plugin_la_DEPENDENCIES = $(plugin_libadd) \
+libxplayer_zeitgeist_dp_plugin_la_DEPENDENCIES = $(plugin_libadd) \
 	$(am__DEPENDENCIES_1)
-am_libtotem_zeitgeist_dp_plugin_la_OBJECTS =  \
-	libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo
-libtotem_zeitgeist_dp_plugin_la_OBJECTS =  \
-	$(am_libtotem_zeitgeist_dp_plugin_la_OBJECTS)
+am_libxplayer_zeitgeist_dp_plugin_la_OBJECTS =  \
+	libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo
+libxplayer_zeitgeist_dp_plugin_la_OBJECTS =  \
+	$(am_libxplayer_zeitgeist_dp_plugin_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotem_zeitgeist_dp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_zeitgeist_dp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) \
-	$(libtotem_zeitgeist_dp_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(libxplayer_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) \
+	$(libxplayer_zeitgeist_dp_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -182,8 +182,8 @@ AM_V_VALAC = $(am__v_VALAC_@AM_V@)
 am__v_VALAC_ = $(am__v_VALAC_@AM_DEFAULT_V@)
 am__v_VALAC_0 = @echo "  VALAC   " $@;
 am__v_VALAC_1 = 
-SOURCES = $(libtotem_zeitgeist_dp_plugin_la_SOURCES)
-DIST_SOURCES = $(libtotem_zeitgeist_dp_plugin_la_SOURCES)
+SOURCES = $(libxplayer_zeitgeist_dp_plugin_la_SOURCES)
+DIST_SOURCES = $(libxplayer_zeitgeist_dp_plugin_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -216,7 +216,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -398,11 +398,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -485,34 +485,34 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/zeitgeist-dp
-plugin_LTLIBRARIES = libtotem-zeitgeist-dp-plugin.la
+plugin_LTLIBRARIES = libxplayer-zeitgeist-dp-plugin.la
 plugin_in_files = zeitgeist-dp.plugin.in
 
 # here we are explicitly specifying gtk+-3.0 to use the vapi because vala still
 # cannot parse the gir
 AM_VALAFLAGS = \
 	--girdir=$(top_builddir)/src	\
-	--pkg Totem-1.0 --pkg Peas-1.0 --pkg gtk+-3.0 \
+	--pkg Xplayer-1.0 --pkg Peas-1.0 --pkg gtk+-3.0 \
 	--pkg zeitgeist-2.0 \
 	bacon-video.vapi
 
-libtotem_zeitgeist_dp_plugin_la_SOURCES = totem-zeitgeist-dp-plugin.vala
-libtotem_zeitgeist_dp_plugin_la_LDFLAGS = $(plugin_ldflags)
-libtotem_zeitgeist_dp_plugin_la_LIBADD = \
+libxplayer_zeitgeist_dp_plugin_la_SOURCES = xplayer-zeitgeist-dp-plugin.vala
+libxplayer_zeitgeist_dp_plugin_la_LDFLAGS = $(plugin_ldflags)
+libxplayer_zeitgeist_dp_plugin_la_LIBADD = \
 	$(plugin_libadd)		\
 	$(LIBZEITGEIST_LIBS)
 
-libtotem_zeitgeist_dp_plugin_la_CFLAGS = \
+libxplayer_zeitgeist_dp_plugin_la_CFLAGS = \
 	$(plugin_cflags) \
 	$(LIBZEITGEIST_CFLAGS) \
 	-I $(top_srcdir)/src/backend
 
 GITIGNOREFILES = \
-	$(libtotem_zeitgeist_dp_plugin_la_SOURCES:.vala=.c) \
-	libtotem_zeitgeist_dp_plugin_la_vala.stamp \
+	$(libxplayer_zeitgeist_dp_plugin_la_SOURCES:.vala=.c) \
+	libxplayer_zeitgeist_dp_plugin_la_vala.stamp \
 	$(NULL)
 
 all: all-am
@@ -586,8 +586,8 @@ clean-pluginLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem-zeitgeist-dp-plugin.la: $(libtotem_zeitgeist_dp_plugin_la_OBJECTS) $(libtotem_zeitgeist_dp_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_zeitgeist_dp_plugin_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_zeitgeist_dp_plugin_la_LINK) -rpath $(plugindir) $(libtotem_zeitgeist_dp_plugin_la_OBJECTS) $(libtotem_zeitgeist_dp_plugin_la_LIBADD) $(LIBS)
+libxplayer-zeitgeist-dp-plugin.la: $(libxplayer_zeitgeist_dp_plugin_la_OBJECTS) $(libxplayer_zeitgeist_dp_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_zeitgeist_dp_plugin_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_zeitgeist_dp_plugin_la_LINK) -rpath $(plugindir) $(libxplayer_zeitgeist_dp_plugin_la_OBJECTS) $(libxplayer_zeitgeist_dp_plugin_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -595,7 +595,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -618,20 +618,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo: totem-zeitgeist-dp-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libtotem_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) -MT libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo -MD -MP -MF $(DEPDIR)/libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.Tpo -c -o libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo `test -f 'totem-zeitgeist-dp-plugin.c' || echo '$(srcdir)/'`totem-zeitgeist-dp-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.Tpo $(DEPDIR)/libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-zeitgeist-dp-plugin.c' object='libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo: xplayer-zeitgeist-dp-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxplayer_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) -MT libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.Tpo -c -o libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo `test -f 'xplayer-zeitgeist-dp-plugin.c' || echo '$(srcdir)/'`xplayer-zeitgeist-dp-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.Tpo $(DEPDIR)/libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-zeitgeist-dp-plugin.c' object='libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libtotem_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) -c -o libtotem_zeitgeist_dp_plugin_la-totem-zeitgeist-dp-plugin.lo `test -f 'totem-zeitgeist-dp-plugin.c' || echo '$(srcdir)/'`totem-zeitgeist-dp-plugin.c
-$(srcdir)/totem-zeitgeist-dp-plugin.c: $(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp
-	@if test -f $@; then :; else rm -f $(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp; fi
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxplayer_zeitgeist_dp_plugin_la_CFLAGS) $(CFLAGS) -c -o libxplayer_zeitgeist_dp_plugin_la-xplayer-zeitgeist-dp-plugin.lo `test -f 'xplayer-zeitgeist-dp-plugin.c' || echo '$(srcdir)/'`xplayer-zeitgeist-dp-plugin.c
+$(srcdir)/xplayer-zeitgeist-dp-plugin.c: $(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp; fi
 	@if test -f $@; then :; else \
-	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp; \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp; \
 	fi
-$(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp: totem-zeitgeist-dp-plugin.vala
+$(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp: xplayer-zeitgeist-dp-plugin.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C totem-zeitgeist-dp-plugin.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C xplayer-zeitgeist-dp-plugin.vala
 	$(AM_V_at)mv -f $@-t $@
 
 mostlyclean-libtool:
@@ -782,9 +782,9 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-	-rm -f $(srcdir)/libtotem_zeitgeist_dp_plugin_la_vala.stamp
-	-rm -f $(srcdir)/totem-zeitgeist-dp-plugin.c
-	-rm -f totem-zeitgeist-dp-plugin.c
+	-rm -f $(srcdir)/libxplayer_zeitgeist_dp_plugin_la_vala.stamp
+	-rm -f $(srcdir)/xplayer-zeitgeist-dp-plugin.c
+	-rm -f xplayer-zeitgeist-dp-plugin.c
 clean: clean-am
 
 clean-am: clean-generic clean-libtool clean-pluginLTLIBRARIES \

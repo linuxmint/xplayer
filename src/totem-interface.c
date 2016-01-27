@@ -1,4 +1,4 @@
-/* totem-interface.c
+/* xplayer-interface.c
  *
  *  Copyright (C) 2005 Bastien Nocera
  *
@@ -19,10 +19,10 @@
  *
  *  Author: Bastien Nocera <hadess@hadess.net>
  * 
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -30,10 +30,10 @@
  */
 
 /**
- * SECTION:totem-interface
+ * SECTION:xplayer-interface
  * @short_description: interface utility/loading/error functions
  * @stability: Unstable
- * @include: totem-interface.h
+ * @include: xplayer-interface.h
  *
  * A collection of interface utility functions, for loading interfaces and displaying errors.
  **/
@@ -45,16 +45,16 @@
 #include <gtk/gtk.h>
 #include <gtk/gtkx.h>
 
-#include "totem-interface.h"
+#include "xplayer-interface.h"
 
 static GtkWidget *
-totem_interface_error_dialog (const char *title, const char *reason,
+xplayer_interface_error_dialog (const char *title, const char *reason,
 		GtkWindow *parent)
 {
 	GtkWidget *error_dialog;
 
 	if (reason == NULL)
-		g_warning ("totem_action_error called with reason == NULL");
+		g_warning ("xplayer_action_error called with reason == NULL");
 
 	error_dialog =
 		gtk_message_dialog_new (NULL,
@@ -65,7 +65,7 @@ totem_interface_error_dialog (const char *title, const char *reason,
 	gtk_message_dialog_format_secondary_text
 		(GTK_MESSAGE_DIALOG (error_dialog), "%s", reason);
 
-	totem_interface_set_transient_for (GTK_WINDOW (error_dialog),
+	xplayer_interface_set_transient_for (GTK_WINDOW (error_dialog),
 				GTK_WINDOW (parent));
 	gtk_window_set_title (GTK_WINDOW (error_dialog), ""); /* as per HIG */
 	gtk_container_set_border_width (GTK_CONTAINER (error_dialog), 5);
@@ -77,7 +77,7 @@ totem_interface_error_dialog (const char *title, const char *reason,
 }
 
 /**
- * totem_interface_error:
+ * xplayer_interface_error:
  * @title: the error title
  * @reason: the error reason (secondary text)
  * @parent: the error dialogue's parent #GtkWindow
@@ -86,12 +86,12 @@ totem_interface_error_dialog (const char *title, const char *reason,
  * as its secondary text.
  **/
 void
-totem_interface_error (const char *title, const char *reason,
+xplayer_interface_error (const char *title, const char *reason,
 		GtkWindow *parent)
 {
 	GtkWidget *error_dialog;
 
-	error_dialog = totem_interface_error_dialog (title, reason, parent);
+	error_dialog = xplayer_interface_error_dialog (title, reason, parent);
 
 	g_signal_connect (G_OBJECT (error_dialog), "response", G_CALLBACK
 			(gtk_widget_destroy), error_dialog);
@@ -100,39 +100,39 @@ totem_interface_error (const char *title, const char *reason,
 }
 
 /**
- * totem_interface_error_blocking:
+ * xplayer_interface_error_blocking:
  * @title: the error title
  * @reason: the error reason (secondary text)
  * @parent: the error dialogue's parent #GtkWindow
  *
- * Display a modal error dialogue like totem_interface_error() which blocks until the user has
+ * Display a modal error dialogue like xplayer_interface_error() which blocks until the user has
  * dismissed it.
  **/
 void
-totem_interface_error_blocking (const char *title, const char *reason,
+xplayer_interface_error_blocking (const char *title, const char *reason,
 		GtkWindow *parent)
 {
 	GtkWidget *error_dialog;
 
-	error_dialog = totem_interface_error_dialog (title, reason, parent);
+	error_dialog = xplayer_interface_error_dialog (title, reason, parent);
 
 	gtk_dialog_run (GTK_DIALOG (error_dialog));
 	gtk_widget_destroy (error_dialog);
 }
 
 /**
- * totem_interface_error_with_link:
+ * xplayer_interface_error_with_link:
  * @title: the error title
  * @reason: the error reason (secondary text)
  * @uri: the URI to open
  * @label: a label for the URI's button, or %NULL to use @uri as the label
  * @parent: the error dialogue's parent #GtkWindow
  *
- * Display a modal error dialogue like totem_interface_error(),
+ * Display a modal error dialogue like xplayer_interface_error(),
  * but add a button which will open @uri in a browser window.
  **/
 void
-totem_interface_error_with_link (const char *title, const char *reason,
+xplayer_interface_error_with_link (const char *title, const char *reason,
 				 const char *uri, const char *label, GtkWindow *parent)
 {
 	GtkWidget *error_dialog, *link_button, *hbox;
@@ -140,7 +140,7 @@ totem_interface_error_with_link (const char *title, const char *reason,
 	if (label == NULL)
 		label = uri;
 
-	error_dialog = totem_interface_error_dialog (title, reason, parent);
+	error_dialog = xplayer_interface_error_dialog (title, reason, parent);
 	link_button = gtk_link_button_new_with_label (uri, label);
 
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
@@ -158,7 +158,7 @@ totem_interface_error_with_link (const char *title, const char *reason,
 }
 
 /**
- * totem_interface_load:
+ * xplayer_interface_load:
  * @name: the #GtkBuilder UI file to load
  * @fatal: %TRUE if errors loading the file should be fatal, %FALSE otherwise
  * @parent: (allow-none): the parent window to use when displaying error dialogues, or %NULL
@@ -169,26 +169,26 @@ totem_interface_error_with_link (const char *title, const char *reason,
  * Return value: (transfer full): the loaded #GtkBuilder object, or %NULL
  */
 GtkBuilder *
-totem_interface_load (const char *name, gboolean fatal, GtkWindow *parent, gpointer user_data)
+xplayer_interface_load (const char *name, gboolean fatal, GtkWindow *parent, gpointer user_data)
 {
 	GtkBuilder *builder = NULL;
 	char *filename;
 
-	filename = totem_interface_get_full_path (name);
+	filename = xplayer_interface_get_full_path (name);
 	if (filename == NULL) {
 		char *msg;
 
 		msg = g_strdup_printf (_("Couldn't load the '%s' interface. %s"), name, _("The file does not exist."));
 		if (fatal == FALSE)
-			totem_interface_error (msg, _("Make sure that Totem is properly installed."), parent);
+			xplayer_interface_error (msg, _("Make sure that Xplayer is properly installed."), parent);
 		else
-			totem_interface_error_blocking (msg, _("Make sure that Totem is properly installed."), parent);
+			xplayer_interface_error_blocking (msg, _("Make sure that Xplayer is properly installed."), parent);
 
 		g_free (msg);
 		return NULL;
 	}
 
-	builder = totem_interface_load_with_full_path (filename, fatal, parent,
+	builder = xplayer_interface_load_with_full_path (filename, fatal, parent,
 						       user_data);
 	g_free (filename);
 
@@ -196,7 +196,7 @@ totem_interface_load (const char *name, gboolean fatal, GtkWindow *parent, gpoin
 }
 
 /**
- * totem_interface_load_with_full_path:
+ * xplayer_interface_load_with_full_path:
  * @filename: the #GtkBuilder UI file path to load
  * @fatal: %TRUE if errors loading the file should be fatal, %FALSE otherwise
  * @parent: (allow-none): the parent window to use when displaying error dialogues, or %NULL
@@ -207,7 +207,7 @@ totem_interface_load (const char *name, gboolean fatal, GtkWindow *parent, gpoin
  * Return value: (transfer full): the loaded #GtkBuilder object, or %NULL
  */
 GtkBuilder *
-totem_interface_load_with_full_path (const char *filename, gboolean fatal, 
+xplayer_interface_load_with_full_path (const char *filename, gboolean fatal, 
 				     GtkWindow *parent, gpointer user_data)
 {
 	GtkBuilder *builder = NULL;
@@ -223,9 +223,9 @@ totem_interface_load_with_full_path (const char *filename, gboolean fatal,
 
 		msg = g_strdup_printf (_("Couldn't load the '%s' interface. %s"), filename, error->message);
 		if (fatal == FALSE)
-			totem_interface_error (msg, _("Make sure that Totem is properly installed."), parent);
+			xplayer_interface_error (msg, _("Make sure that Xplayer is properly installed."), parent);
 		else
-			totem_interface_error_blocking (msg, _("Make sure that Totem is properly installed."), parent);
+			xplayer_interface_error_blocking (msg, _("Make sure that Xplayer is properly installed."), parent);
 
 		g_free (msg);
 		g_error_free (error);
@@ -239,20 +239,20 @@ totem_interface_load_with_full_path (const char *filename, gboolean fatal,
 }
 
 /**
- * totem_interface_load_pixbuf:
+ * xplayer_interface_load_pixbuf:
  * @name: the image file name
  *
- * Load the image called @name in the directory given by totem_interface_get_full_path() into a #GdkPixbuf.
+ * Load the image called @name in the directory given by xplayer_interface_get_full_path() into a #GdkPixbuf.
  *
  * Return value: (transfer full): the loaded pixbuf, or %NULL
  */
 GdkPixbuf*
-totem_interface_load_pixbuf (const char *name)
+xplayer_interface_load_pixbuf (const char *name)
 {
 	GdkPixbuf *pix;
 	char *filename;
 
-	filename = totem_interface_get_full_path (name);
+	filename = xplayer_interface_get_full_path (name);
 	if (filename == NULL)
 		return NULL;
 	pix = gdk_pixbuf_new_from_file (filename, NULL);
@@ -261,11 +261,11 @@ totem_interface_load_pixbuf (const char *name)
 }
 
 char *
-totem_interface_get_full_path (const char *name)
+xplayer_interface_get_full_path (const char *name)
 {
 	char *filename;
 
-#ifdef TOTEM_RUN_IN_SOURCE_TREE
+#ifdef XPLAYER_RUN_IN_SOURCE_TREE
 	/* Try the GtkBuilder file in the source tree first */
 	filename = g_build_filename ("..", "data", name, NULL);
 	if (g_file_test (filename, G_FILE_TEST_EXISTS) == FALSE)
@@ -273,7 +273,7 @@ totem_interface_get_full_path (const char *name)
 		g_free (filename);
 		/* Try the local file */
 		filename = g_build_filename (DATADIR,
-				"totem", name, NULL);
+				"xplayer", name, NULL);
 
 		if (g_file_test (filename, G_FILE_TEST_EXISTS) == FALSE)
 		{
@@ -283,7 +283,7 @@ totem_interface_get_full_path (const char *name)
 	}
 #else
 	filename = g_build_filename (DATADIR,
-	                                "totem", name, NULL);
+	                                "xplayer", name, NULL);
 #endif
 
 	return filename;
@@ -291,7 +291,7 @@ totem_interface_get_full_path (const char *name)
 
 #ifdef GDK_WINDOWING_X11
 static GdkWindow *
-totem_gtk_plug_get_toplevel (GtkPlug *plug)
+xplayer_gtk_plug_get_toplevel (GtkPlug *plug)
 {
 	Window root, parent, *children;
 	guint nchildren;
@@ -324,7 +324,7 @@ totem_gtk_plug_get_toplevel (GtkPlug *plug)
 #endif /* GDK_WINDOWING_X11 */
 
 void
-totem_interface_set_transient_for (GtkWindow *window, GtkWindow *parent)
+xplayer_interface_set_transient_for (GtkWindow *window, GtkWindow *parent)
 {
 #ifdef GDK_WINDOWING_X11
 	GdkDisplay *display;
@@ -336,7 +336,7 @@ totem_interface_set_transient_for (GtkWindow *window, GtkWindow *parent)
 		GdkWindow *toplevel;
 
 		gtk_widget_realize (GTK_WIDGET (window));
-		toplevel = totem_gtk_plug_get_toplevel (GTK_PLUG (parent));
+		toplevel = xplayer_gtk_plug_get_toplevel (GTK_PLUG (parent));
 		if (toplevel != NULL) {
 			gdk_window_set_transient_for
 				(gtk_widget_get_window (GTK_WIDGET (window)), toplevel);
@@ -351,21 +351,21 @@ totem_interface_set_transient_for (GtkWindow *window, GtkWindow *parent)
 }
 
 char *
-totem_interface_get_license (void)
+xplayer_interface_get_license (void)
 {
 	const char *license[] = {
-		N_("Totem is free software; you can redistribute it and/or modify "
+		N_("Xplayer is free software; you can redistribute it and/or modify "
 		   "it under the terms of the GNU General Public License as published by "
 		   "the Free Software Foundation; either version 2 of the License, or "
 		   "(at your option) any later version."),
-		N_("Totem is distributed in the hope that it will be useful, "
+		N_("Xplayer is distributed in the hope that it will be useful, "
 		   "but WITHOUT ANY WARRANTY; without even the implied warranty of "
 		   "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
 		   "GNU General Public License for more details."),
 		N_("You should have received a copy of the GNU General Public License "
-		   "along with Totem; if not, write to the Free Software Foundation, Inc., "
+		   "along with Xplayer; if not, write to the Free Software Foundation, Inc., "
 		   "59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"),
-		N_("Totem contains an exception to allow the use of proprietary "
+		N_("Xplayer contains an exception to allow the use of proprietary "
 		   "GStreamer plugins.")
 	};
 	return g_strjoin ("\n\n",

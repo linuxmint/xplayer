@@ -1,4 +1,4 @@
-/* Totem MullY Plugin
+/* Xplayer MullY Plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_MULLY_PLUGIN_H__
-#define __TOTEM_MULLY_PLUGIN_H__
+#ifndef __XPLAYER_MULLY_PLUGIN_H__
+#define __XPLAYER_MULLY_PLUGIN_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemMullYPlayer : public totemNPObject
+class xplayerMullYPlayer : public xplayerNPObject
 {
   public:
-    totemMullYPlayer (NPP);
-    virtual ~totemMullYPlayer ();
+    xplayerMullYPlayer (NPP);
+    virtual ~xplayerMullYPlayer ();
 
   private:
 
@@ -99,6 +99,6 @@ class totemMullYPlayer : public totemNPObject
     virtual bool InvokeByIndex (int aIndex, const NPVariant *argv, uint32_t argc, NPVariant *_result);
 };
 
-TOTEM_DEFINE_NPCLASS (totemMullYPlayer);
+XPLAYER_DEFINE_NPCLASS (xplayerMullYPlayer);
 
-#endif /* __TOTEM_MULLY_PLUGIN_H__ */
+#endif /* __XPLAYER_MULLY_PLUGIN_H__ */

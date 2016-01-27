@@ -1,4 +1,4 @@
-/* Totem NarrowSpace Plugin
+/* Xplayer NarrowSpace Plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -22,8 +22,8 @@
 
 #include <config.h>
 
-#include "totemPlugin.h"
-#include "totemNarrowSpacePlugin.h"
+#include "xplayerPlugin.h"
+#include "xplayerNarrowSpacePlugin.h"
 
 static const char *methodNames[] = {
   "GetAutoPlay",
@@ -115,45 +115,45 @@ static const char *methodNames[] = {
   "Stop"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemNarrowSpacePlayer,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerNarrowSpacePlayer,
                          NULL, 0,
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemNarrowSpacePlayer::totemNarrowSpacePlayer (NPP aNPP)
-  : totemNPObject (aNPP),
+xplayerNarrowSpacePlayer::xplayerNarrowSpacePlayer (NPP aNPP)
+  : xplayerNPObject (aNPP),
     mPluginState (eState_Waiting)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemNarrowSpacePlayer::~totemNarrowSpacePlayer ()
+xplayerNarrowSpacePlayer::~xplayerNarrowSpacePlayer ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
+xplayerNarrowSpacePlayer::InvokeByIndex (int aIndex,
                                        const NPVariant *argv,
                                        uint32_t argc,
                                        NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemNarrowSpacePlayer);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerNarrowSpacePlayer);
 
   switch (Methods (aIndex)) {
     case ePlay:
       /* void Play (); */
-      Plugin()->Command (TOTEM_COMMAND_PLAY);
+      Plugin()->Command (XPLAYER_COMMAND_PLAY);
       return VoidVariant (_result);
 
     case eStop:
       /* void Stop (); */
-      Plugin()->Command (TOTEM_COMMAND_PAUSE);
+      Plugin()->Command (XPLAYER_COMMAND_PAUSE);
       return VoidVariant (_result);
 
     case eRewind:
       /* void Rewind (); */
-      Plugin()->Command (TOTEM_COMMAND_STOP);
+      Plugin()->Command (XPLAYER_COMMAND_STOP);
       return VoidVariant (_result);
 
     case eGetMaxBytesLoaded:
@@ -301,7 +301,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
 
     case eGetStartTime:
       /* unsigned long GetStartTime (); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return Int32Variant (_result, 0); /* FIXME */
 
     case eGetTime:
@@ -310,7 +310,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
 
     case eGetEndTime:
       /* unsigned long GetEndTime (); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return Int32Variant (_result, 0);
 
     case eGetTimeScale:
@@ -333,17 +333,17 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
 
     case eGetLanguage:
       /* ACString GetLanguage (); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return StringVariant (_result, "English");
 
     case eGetComponentVersion:
       /* ACString GetComponentVersion (in ACString type, in ACString subType, in ACString manufacturer); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return StringVariant (_result, "1.0");
 
     case eGetIsQuickTimeRegistered:
       /* boolean GetIsQuickTimeRegistered (); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
     case eGetIsVRMovie:
       /* boolean GetIsVRMovie (); */
       return BoolVariant (_result, false);
@@ -412,19 +412,19 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
 
     case eGetTrackCount:
       /* unsigned long GetTrackCount (); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return Int32Variant (_result, 1);
 
     case eGetTrackEnabled:
       /* boolean GetTrackEnabled (in unsigned long index); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return BoolVariant (_result, true);
 
     case eGetPluginVersion:
       /* ACString GetPluginVersion (); */
     case eGetQuickTimeVersion:
       /* ACString GetQuickTimeVersion (); */
-      return StringVariant (_result, TOTEM_NARROWSPACE_VERSION);
+      return StringVariant (_result, XPLAYER_NARROWSPACE_VERSION);
 
     case eGetQuickTimeConnectionSpeed:
       /* unsigned long GetQuickTimeConnectionSpeed (); */
@@ -452,7 +452,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       /* unsigned long GetNodeCount (); */
     case eGetNodeID:
       /* unsigned long GetNodeID (); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return Int32Variant (_result, 0);
 
     case eGetFieldOfView:
@@ -461,7 +461,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       /* float GetPanAngle (); */
     case eGetTiltAngle:
       /* float GetTiltAngle (); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return DoubleVariant (_result, 0.0);
 
     case eGetTrackName:
@@ -486,7 +486,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       /* AUTF8String GetURL (); */
     case eGetUserData:
       /* AUTF8String GetUserData (in ACString type); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return StringVariant (_result, "");
 
     case eGoPreviousNode:
@@ -519,7 +519,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       /* void SetTarget (in AUTF8String target); */
     case eSetTiltAngle:
       /* void SetTiltAngle (in float angle); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return VoidVariant (_result);
     case eSetTime:
       /* void SetTime (in unsigned long time); */
@@ -531,7 +531,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       return true;
     case eSetTrackEnabled:
       /* void SetTrackEnabled (in unsigned long index, in boolean enabled); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return VoidVariant (_result);
     case eSetURL: {
       /* void SetURL (in AUTF8String url); */
@@ -546,7 +546,7 @@ totemNarrowSpacePlayer::InvokeByIndex (int aIndex,
       /* void Step (in long count); */
     case eShowDefaultView:
       /* void ShowDefaultView (); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemNarrowSpacePlayer);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerNarrowSpacePlayer);
       return VoidVariant (_result);
   }
 

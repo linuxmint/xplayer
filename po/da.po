@@ -1,6 +1,6 @@
-# Danish translation of Totem.
+# Danish translation of Xplayer.
 # Copyright (C) 2002-2011 Free Software Foundation, Inc.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Ole Laursen <olau@hardworking.dk>, 2002, 03.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
 # Lasse Bang Mikkelsen <lbm@fatalerror.dk>, 2006.
@@ -14,7 +14,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem\n"
+"Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-10 17:32+0200\n"
 "PO-Revision-Date: 2013-05-10 12:43+0200\n"
@@ -26,76 +26,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:351 ../src/totem-object.c:1180
-#: ../src/totem-object.c:1650 ../src/totem-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
+#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Stoppet"
 
-#: ../browser-plugin/totem-plugin-viewer.c:363 ../src/totem-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
 msgid "Paused"
 msgstr "På pause"
 
-#: ../browser-plugin/totem-plugin-viewer.c:367 ../src/totem-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
 msgid "Playing"
 msgstr "Afspiller"
 
 # Enten "afspilning af (en) film" eller "afspiller en film". Lad os håbe sidstnævnte er korrekt...
-#: ../browser-plugin/totem-plugin-viewer.c:385
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Afspiller en film"
 
-#: ../browser-plugin/totem-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "Ingen URI at afspille"
 
-#: ../browser-plugin/totem-plugin-viewer.c:675
-#: ../browser-plugin/totem-plugin-viewer.c:1699
-msgid "Totem Movie Player"
-msgstr "Totem - filmafspiller"
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Xplayer - filmafspiller"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Åbn med \"%s\""
 
-#: ../browser-plugin/totem-plugin-viewer.c:1340 ../src/totem-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2475
 msgid "An error occurred"
 msgstr "Der opstod en fejl"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "Ingen eller tom afspilningsliste"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "Udvidelsesmodul til filmgennemsyn"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143 ../src/totem.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Kunne ikke klargøre de trådsikre biblioteker."
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"Kontrollér din systeminstallation. Totem-udvidelsesmodulet vil nu afslutte."
+"Kontrollér din systeminstallation. Xplayer-udvidelsesmodulet vil nu afslutte."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Forlad fuldskærm"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
 msgid "Time:"
 msgstr "Tid:"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "Tillad aktivering af pauseskærmen når der afspilles lyd"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
@@ -103,71 +103,71 @@ msgstr ""
 "Tillad aktivering af pauseskærm når der afspilles lyd. Slå fra, hvis du har "
 "højttalere, der får strøm fra skærmen."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr "Vis visuelle effekter når der ikke afspilles en video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr "Vis visuelle effekter når en fil med kun lyd afspilles."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr "Navn på udvidelsesmodul til visuelle effekter"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "Lysstyrken for videoen"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr "Kontrasten for videoen"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr "Videoens farvetone"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr "Videoens mætning"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Ændr størrelsen af lærredet automatisk ved filåbninger"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Repeat mode"
 msgstr "Gentagelsestilstand"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
 msgstr "Blandingstilstand"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "Om deinterlacing for interlacede film skal deaktiveres"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
 msgstr "Om fejlanalysering skal slåes til for afspilningsmotoren"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
 msgstr "Type lyd-uddata der skal benyttes"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
 msgstr "Kvalitetsindstilling for visualisering"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
 msgstr "Kvalitetsindstilling til lydvisualisering."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
 msgstr "Tærskel for netværksbuffer"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -175,27 +175,27 @@ msgstr ""
 "Mængden af data som skal mellemlagres for netværksstrømme inden strømmen "
 "vises (i sekunder)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Subtitle font"
 msgstr "Skrifttype for undertekster"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr "Pango-skrifttypebeskrivelse for optegning af undertekster."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "Kodning af undertekster"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
 msgstr "Tegnkodning til undertekster."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Forvalgt placering for \"Åbn...\"-vinduerne"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -203,11 +203,11 @@ msgstr ""
 "Standardplacering for \"Åbn...\"-vinduerne. Standardværdien er den nuværende "
 "mappe."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Forvalgt placering for \"Gem skærmbillede\"-vinduerne"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -215,23 +215,23 @@ msgstr ""
 "Standardplacering for \"Gem skærmbillede\"-vinduerne. Standardværdien er "
 "mappen Billeder."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "Om udvidelsesmoduler i brugerens hjemmemappe skal deaktiveres"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "Om tastaturgenveje skal deaktiveres"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr "Om undertekster skal hentes automatisk når en film indlæses"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr "Om eksterne kapitelfiler skal hentes automatisk når en film indlæses"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -239,11 +239,11 @@ msgstr ""
 "Hvorvidt positionen i de afspillede lyd-/videofiler skal huskes, når de "
 "sættes på pause eller lukkes"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Active plugins list"
 msgstr "Liste over aktive udvidelsesmoduler"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -267,11 +267,11 @@ msgstr "_Kopiér placering"
 msgid "Copy the location to the clipboard"
 msgstr "Kopiér placeringen til udklipsholderen"
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
 msgid "_Select Text Subtitles..."
 msgstr "_Vælg undertekster..."
 
-#: ../data/playlist.ui.h:6 ../data/totem.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
 msgid "Select a file to use for text subtitles"
 msgstr "Vælg en fil at læse undertekster fra"
 
@@ -311,7 +311,7 @@ msgid "Extra Large"
 msgstr "Ekstra stor"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/totem-properties-view.c:232
+#: ../src/xplayer-properties-view.c:232
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -337,8 +337,8 @@ msgid "AC3 Passthrough"
 msgstr "AC3-gennemløb"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
-msgstr "Indstillinger for Totem"
+msgid "Xplayer Preferences"
+msgstr "Indstillinger for Xplayer"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
@@ -455,7 +455,7 @@ msgid "_Audio output type:"
 msgstr "_Lyduddata-type:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:273
+#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "Lyd"
 
@@ -487,7 +487,7 @@ msgstr "Kommentar:"
 msgid "Container:"
 msgstr "Beholder:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:275
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
 msgid "Video"
 msgstr "Video"
 
@@ -516,330 +516,330 @@ msgid "Channels:"
 msgstr "Kanaler:"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:80 ../src/totem.c:248
-#: ../src/totem.c:256 ../src/totem-menu.c:789 ../src/totem-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
+#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
 msgid "Videos"
 msgstr "Videoer"
 
 # Enten "afspilning af (en) film" eller "afspiller en film". Lad os håbe sidstnævnte er korrekt...
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "Afspil film"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Film;Klip;Serie;Afspiller;Dvd;Tv;Disk;"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "_Open"
 msgstr "_Åbn"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Open _Location"
 msgstr "Åbn _sted"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "_Fullscreen"
 msgstr "_Fuldskærm"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Prefere_nces"
-msgstr "_Indstillinger for Totem"
+msgstr "_Indstillinger for Xplayer"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "Shuff_le"
 msgstr "_Tilfældig"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Repeat"
 msgstr "_Gentag"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Film"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "_Eject"
 msgstr "_Skub ud"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "Eject the current disc"
 msgstr "Skub den aktuelle skive ud"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "_Properties"
 msgstr "_Egenskaber"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "View the properties of the current stream"
 msgstr "Vis egenskaberne for den aktuelle strøm"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "Play / P_ause"
 msgstr "Afspil / p_ause"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Play or pause the movie"
 msgstr "Afspil eller sæt filmen på pause"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "_Edit"
 msgstr "_Redigér"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Clear Playlist"
 msgstr "_Ryd afspilningsliste"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "Clear the playlist"
 msgstr "Ryd afspilningslisten"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "Plugins..."
 msgstr "Udvidelsesmoduler..."
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "Configure plugins to extend the application"
 msgstr "Konfigurér udvidelsesmoduler til dette program"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_View"
 msgstr "_Vis"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "Fit Window to Movie"
 msgstr "Tilpas vinduet til filmen"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Resize 1∶2"
 msgstr "_Ændr størrelse til 1∶2"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "Resize to half the original video size"
 msgstr "Anvend videoens halve originalstørrelse"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Resize _1∶1"
 msgstr "Ændr størrelsen _1∶1"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Resize to the original video size"
 msgstr "Anvend videoens originalstørrelse"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Resize _2∶1"
 msgstr "Ændr størrelsen _2∶1"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Resize to double the original video size"
 msgstr "Anvend videoens dobbelte originalstørrelse"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_Aspect Ratio"
 msgstr "_Højde-/breddeforhold"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Switch An_gles"
 msgstr "Skift vi_nkler"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Switch camera angles"
 msgstr "Skift kameravinkel"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Go"
 msgstr "_Start"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "_DVD Menu"
 msgstr "_Dvd-menu"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Go to the DVD menu"
 msgstr "Gå til dvd-menuen"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "_Title Menu"
 msgstr "_Titelmenu"
 
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Go to the title menu"
 msgstr "Gå til titelmenuen"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "A_udio Menu"
 msgstr "_Lydmenu"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the audio menu"
 msgstr "Gå til lydmenuen"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "_Angle Menu"
 msgstr "_Vinkelmenu"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the angle menu"
 msgstr "Gå til vinkelmenuen"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "_Chapter Menu"
 msgstr "_Kapitelmenu"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Go to the chapter menu"
 msgstr "Gå til kapitelmenuen"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "_Next Chapter/Movie"
 msgstr "_Næste kapitel/film"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Next chapter or movie"
 msgstr "Næste kapitel eller film"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "_Previous Chapter/Movie"
 msgstr "_Forrige kapitel/film"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Previous chapter or movie"
 msgstr "Forrige kapitel eller film"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "_Sound"
 msgstr "_Lyd"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Volume _Up"
 msgstr "Lydstyrke _op"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "Forøg lydstyrken"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Volume _Down"
 msgstr "Lydstyrke _ned"
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Decrease volume"
 msgstr "Mindsk lydstyrken"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "_Contents"
 msgstr "_Indhold"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Help contents"
 msgstr "Indhold af hjælp"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "_About"
 msgstr "_Om"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "About this application"
 msgstr "Om dette program"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Show _Controls"
 msgstr "Vis _kontroller"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Show controls"
 msgstr "Vis kontroller"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "S_idebar"
 msgstr "_Sidepanel"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Show or hide the sidebar"
 msgstr "Vis eller skjul sidepanelet"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Sets automatic aspect ratio"
 msgstr "Sætter højde-/breddeforholdet automatisk"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Square"
 msgstr "Kvadratisk"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Sets square aspect ratio"
 msgstr "Sætter kvadratisk højde-/breddeforhold"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "4∶3 (TV)"
 msgstr "4∶3 (tv)"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Sætter højde-/breddeforholdet til 4∶3 (TV)"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (bredskærm)"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Sætter højde-/breddeforholdet til 16∶9 (bredskærm)"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Sætter højde-/breddeforholdet til 2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "S_ubtitles"
 msgstr "_Undertekster"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "_Languages"
 msgstr "_Sprog"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "Zoom In"
 msgstr "Zoom ind"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "Zoom in"
 msgstr "Zoom ind"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Skip _Forward"
 msgstr "Spring f_remad"
 
-#: ../data/totem.ui.h:77
+#: ../data/xplayer.ui.h:77
 msgid "Skip forward"
 msgstr "Spring fremad"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Skip _Backwards"
 msgstr "Spring t_ilbage"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Skip backwards"
 msgstr "Spring tilbage"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Time seek bar"
 msgstr "Søgebjælke"
 
@@ -928,11 +928,11 @@ msgid ""
 msgstr ""
 "Denne fil kan ikke afspilles over netværket. Prøv at hente den lokalt først."
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/totem-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
 msgid "Surround"
 msgstr "Surround"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/totem-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
 msgid "Mono"
 msgstr "Mono"
 
@@ -1059,8 +1059,8 @@ msgstr "Vis indstillinger for sessionshåndtering"
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:56
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -1072,7 +1072,7 @@ msgstr "%d:%02d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:65
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -1182,102 +1182,102 @@ msgid_plural "%d frames per second"
 msgstr[0] "%d billede pr. sekund"
 msgstr[1] "%d billeder pr. sekund"
 
-#: ../src/totem-audio-preview.c:137
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "Forhåndsafspilning af lyd"
 
-#: ../src/totem.c:249
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Kontrollér din systeminstallation. Totem vil nu afslutte."
+#: ../src/xplayer.c:249
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Kontrollér din systeminstallation. Xplayer vil nu afslutte."
 
-#: ../src/totem-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:94
 msgid "_Play Now"
 msgstr "_Afspil nu"
 
-#: ../src/totem-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:97
 msgid "_Add to Playlist"
 msgstr "_Føj til afspilningsliste"
 
-#: ../src/totem-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:103
 msgid "Cancel"
 msgstr "Annullér"
 
-#: ../src/totem-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:573
 msgid "No File"
 msgstr "Ingen fil"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "Kunne ikke indlæse grænsefladen \"%s\". %s"
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "Filen findes ikke."
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
-msgstr "Sikr dig at Totem er korrekt installeret."
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Sikr dig at Xplayer er korrekt installeret."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Totem er fri software; det kan distribueres og/eller modificeres som "
+"Xplayer er fri software; det kan distribueres og/eller modificeres som "
 "betinget af GNU General Public License, udarbejdet af Free Software "
 "Foundation; enten version 2 af licensen eller, efter eget valg, enhver nyere "
 "version."
 
-#: ../src/totem-interface.c:361
+#: ../src/xplayer-interface.c:361
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Totem distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
+"Xplayer distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
 "GARANTI; selv uden de underforståede garantier SALGBARHED eller EGNETHED TIL "
 "ET BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
 "detaljer."
 
-#: ../src/totem-interface.c:365
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Du bør have modtaget en kopi af GNU General Public License sammen med Totem; "
+"Du bør have modtaget en kopi af GNU General Public License sammen med Xplayer; "
 "er dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 59 "
 "Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
-#: ../src/totem-interface.c:368
+#: ../src/xplayer-interface.c:368
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Totem indeholder en undtagelse for at tillade brug af proprietære GStreamer-"
+"Xplayer indeholder en undtagelse for at tillade brug af proprietære GStreamer-"
 "udvidelsesmoduler."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:291
+#: ../src/xplayer-menu.c:291
 msgid "None"
 msgstr "Ingen"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:296
+#: ../src/xplayer-menu.c:296
 msgctxt "Language"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/totem-menu.c:788
+#: ../src/xplayer-menu.c:788
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "Copyright © 2002-2009 Bastien Nocera"
 
-#: ../src/totem-menu.c:792
+#: ../src/xplayer-menu.c:792
 msgid "translator-credits"
 msgstr ""
 "Ole Laursen\n"
@@ -1288,15 +1288,15 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/totem-menu.c:796
-msgid "Totem Website"
-msgstr "Totems hjemmeside"
+#: ../src/xplayer-menu.c:796
+msgid "Xplayer Website"
+msgstr "Xplayers hjemmeside"
 
-#: ../src/totem-menu.c:827
+#: ../src/xplayer-menu.c:827
 msgid "Configure Plugins"
 msgstr "Konfigurér udvidelsesmoduler"
 
-#: ../src/totem-object.c:161
+#: ../src/xplayer-object.c:161
 #, c-format
 msgid ""
 "%s\n"
@@ -1305,464 +1305,464 @@ msgstr ""
 "%s\n"
 "Kør \"%s --help\" for at se en fuldstændig liste af kommandolinjetilvalg.\n"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:589
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:589
 #, c-format
-msgid "Totem %s"
-msgstr "Totem %s"
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/totem-object.c:1168 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pause"
 
-#: ../src/totem-object.c:1175 ../src/totem-object.c:1185
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Afspil"
 
-#: ../src/totem-object.c:1267 ../src/totem-object.c:1294
-#: ../src/totem-object.c:1787 ../src/totem-object.c:1942
+#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
+#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem kunne ikke afspille \"%s\"."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer kunne ikke afspille \"%s\"."
 
-#: ../src/totem-object.c:1793
+#: ../src/xplayer-object.c:1793
 msgid "No error message"
 msgstr "Ingen fejlmeddelelse"
 
-#: ../src/totem-object.c:2133
-msgid "Totem could not display the help contents."
-msgstr "Totem kunne ikke vise indholdet af hjælp."
+#: ../src/xplayer-object.c:2133
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer kunne ikke vise indholdet af hjælp."
 
-#: ../src/totem-object.c:4022 ../src/totem-object.c:4024
+#: ../src/xplayer-object.c:4022 ../src/xplayer-object.c:4024
 msgid "Previous Chapter/Movie"
 msgstr "Forrige kapitel/film"
 
-#: ../src/totem-object.c:4031 ../src/totem-object.c:4033
+#: ../src/xplayer-object.c:4031 ../src/xplayer-object.c:4033
 msgid "Play / Pause"
 msgstr "Afspil / pause"
 
-#: ../src/totem-object.c:4041 ../src/totem-object.c:4043
+#: ../src/xplayer-object.c:4041 ../src/xplayer-object.c:4043
 msgid "Next Chapter/Movie"
 msgstr "Næste kapitel/film"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4054 ../src/totem-object.c:4056
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4054 ../src/xplayer-object.c:4056
 msgid "Fullscreen"
 msgstr "Fuldskærm"
 
-#: ../src/totem-object.c:4187
-msgid "Totem could not startup."
-msgstr "Totem kunne ikke starte."
+#: ../src/xplayer-object.c:4187
+msgid "Xplayer could not startup."
+msgstr "Xplayer kunne ikke starte."
 
-#: ../src/totem-object.c:4187
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "Ingen begrundelse."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "Åbn placering..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Aktiver fejlsøgning"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "Afspil/pause"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "Næste"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "Forrige"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "Søg fremad"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "Søg tilbage"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "Lydstyrke op"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "Lydstyrke ned"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "Slå lyden fra"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "Fuldskærm"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "Vis/skjul kontroller"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "Afslut"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Enqueue"
 msgstr "Sæt i kø"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "Erstat"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "Søg"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "Indeks i afspilningsliste"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "Film til afspilning"
 
-#: ../src/totem-options.c:79
+#: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
 msgstr "- Afspil film og sange"
 
-#: ../src/totem-options.c:142
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "Kan ikke sætte i kø og erstatte på samme tid"
 
 #. By extension entry
-#: ../src/totem-playlist.c:161
+#: ../src/xplayer-playlist.c:161
 msgid "MP3 ShoutCast playlist"
 msgstr "Afspilningsliste for MP3-ShoutCast"
 
-#: ../src/totem-playlist.c:162
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 audio (streamed)"
 msgstr "MP3-audio (strøm)"
 
-#: ../src/totem-playlist.c:163
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3-audio (strøm, DOS-format)"
 
-#: ../src/totem-playlist.c:164
+#: ../src/xplayer-playlist.c:164
 msgid "XML Shareable Playlist"
 msgstr "Delelig XML-afspilningsliste"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:347
+#: ../src/xplayer-playlist.c:347
 #, c-format
 msgid "Title %d"
 msgstr "Titel %d"
 
-#: ../src/totem-playlist.c:446
+#: ../src/xplayer-playlist.c:446
 msgid "Could not save the playlist"
 msgstr "Kunne ikke gemme afspilningslisten"
 
-#: ../src/totem-playlist.c:1021
+#: ../src/xplayer-playlist.c:1021
 msgid "Save Playlist"
 msgstr "Gem afspilningsliste"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1033 ../src/totem-playlist.c:1262
-#: ../src/totem-sidebar.c:145
+#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Afspilningsliste"
 
-#: ../src/totem-playlist.c:1860
+#: ../src/xplayer-playlist.c:1860
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 "Afspilningslisten \"%s\" kunne ikke fortolkes. Den kan være beskadiget."
 
-#: ../src/totem-playlist.c:1861
+#: ../src/xplayer-playlist.c:1861
 msgid "Playlist error"
 msgstr "Afspilningslistefejl"
 
-#: ../src/totem-preferences.c:297
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "Indstillinger"
 
-#: ../src/totem-preferences.c:445
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Vælg skrifttype for undertekster"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:271
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
 msgid "Audio/Video"
 msgstr "Lyd/video"
 
-#: ../src/totem-properties-view.c:131
+#: ../src/xplayer-properties-view.c:131
 msgid "N/A"
 msgstr "Ikke tilgængelig"
 
-#: ../src/totem-properties-view.c:160
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:160
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "Ikke tilgængelig"
 
-#: ../src/totem-properties-view.c:163
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:163
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kbps"
 
-#: ../src/totem-properties-view.c:180
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:180
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:212
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:212
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/totem-properties-view.c:220
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:220
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "-"
 
-#: ../src/totem-properties-view.c:241
+#: ../src/xplayer-properties-view.c:241
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "Ikke tilgængelig"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (strømmer)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Søg til %s / %s"
 
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "Mellemlagring"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
 msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
 msgstr "%s, %f %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Nuværende regionaldata"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabisk"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "Armensk"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltisk"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "Keltisk"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Centraleuropæisk"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Forenklet kinesisk"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Traditionelt kinesisk"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "Kroatisk"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Kyrillisk"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "Kyrillisk/russisk"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Kyrillisk/ukrainsk"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "Georgisk"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Græsk"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebraisk"
 
 # Jeg ved intet om Hebraisk, ejheller hvad "visual" betyder i denne sammenhæng, men forhåbentlig er det meningsfuldt
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "Hebraisk visuelt"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "Islandsk"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japansk"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Koreansk"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "Nordisk"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "Persisk"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Rumænsk"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "Sydeuropæisk"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "Thailandsk"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Tyrkisk"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Vestlig"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamesisk"
 
-#: ../src/totem-uri.c:343 ../src/plugins/chapters/totem-chapters.c:984
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "Alle filer"
 
-#: ../src/totem-uri.c:348 ../src/plugins/chapters/totem-chapters.c:981
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "Understøttede filer"
 
-#: ../src/totem-uri.c:360
+#: ../src/xplayer-uri.c:360
 msgid "Audio files"
 msgstr "Lydfiler"
 
-#: ../src/totem-uri.c:368
+#: ../src/xplayer-uri.c:368
 msgid "Video files"
 msgstr "Videofiler"
 
-#: ../src/totem-uri.c:378
+#: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
 msgstr "Undertekstfiler"
 
-#: ../src/totem-uri.c:430
+#: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
 msgstr "Vælg undertekster"
 
-#: ../src/totem-uri.c:495
+#: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
 msgstr "Vælg film eller afspilningslister"
 
-#: ../src/totem-uri.c:499
+#: ../src/xplayer-uri.c:499
 msgid "Add Directory"
 msgstr "Tilføj mappe"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:848
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1773,15 +1773,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:849
 msgid "Filename"
 msgstr "Filnavn"
 
-#: ../src/totem-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:851
 msgid "Resolution"
 msgstr "Opløsning"
 
-#: ../src/totem-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:854
 msgid "Duration"
 msgstr "Varighed"
 
@@ -1809,42 +1809,42 @@ msgstr "Video-diskoptager"
 msgid "Records (S)VCDs or video DVDs"
 msgstr "Optager (S)VCD'er eller video-dvd'er"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "_Opret videodisk..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "Opret en video-dvd eller en (S)VCD fra den nu åbne film"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "Kopiér vide_o-dvd..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "Kopiér dvd'en, der afspilles nu"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "Kopiér (S)VCD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "Kopiér (S)VCD'en, der afspilles nu"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:136
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "Videodisken kunne ikke duplikeres."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:138
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:283
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "Filmen kunne ikke optages."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:164
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:174
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:270
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "Kan ikke skrive et projekt."
 
@@ -1905,7 +1905,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "Opret en ny kapitelliste for filmen"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1125
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "Kapitler"
 
@@ -1913,7 +1913,7 @@ msgstr "Kapitler"
 msgid "Support chapter markers in movies"
 msgstr "Understøttelse for kapitelmarkører i film"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1922,64 +1922,64 @@ msgstr ""
 "<b>Titel: </b>%s\n"
 "<b>Starttidspunkt: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:323
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "Fejl ved læsning af kapitelfil"
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "Kapitel med samme tidspunkt findes allerede"
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "Prøv et andet navn eller fjern et eksisterende kapitel."
 
-#: ../src/plugins/chapters/totem-chapters.c:703
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "Fejl ved skrivning af kapitelfil"
 
-#: ../src/plugins/chapters/totem-chapters.c:828
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "Der opstod en fejl ved gemning af kapitler"
 
-#: ../src/plugins/chapters/totem-chapters.c:829
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Kontrollér venligst at du har rettigheder til at skrive til mappen, der "
 "indeholder filmen."
 
-#: ../src/plugins/chapters/totem-chapters.c:962
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "Åbn kapitelfil"
 
-#: ../src/plugins/chapters/totem-chapters.c:1079
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "Skærmbillede for kapitel"
 
-#: ../src/plugins/chapters/totem-chapters.c:1090
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "Kapitelnavn"
 
-#: ../src/plugins/chapters/totem-chapters.c:1170
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "Gem ændringer til kapitelliste før der lukkes?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1175
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "Luk uden at gemme"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Gem"
 
-#: ../src/plugins/chapters/totem-chapters.c:1180
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "Hvis du ikke gemmer, vil ændringer til kapitellisten gå tabt."
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr "Tilføj kapitel"
 
@@ -2034,19 +2034,19 @@ msgstr "Føj til afspilningsliste"
 msgid "Copy Location"
 msgstr "Kopiér placering"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/totem-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "Gennemse"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/totem-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "Søg"
 
-#: ../src/plugins/grilo/totem-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "Fejl ved gennemsyn"
 
-#: ../src/plugins/grilo/totem-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "Fejl ved søgning"
 
@@ -2058,15 +2058,15 @@ msgstr "Gromit-noter"
 msgid "Presentation helper to make annotations on screen"
 msgstr "Præsentationshjælper til at lave noter på skærmen"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "Den binære gromit-fil blev ikke fundet."
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr "Status for samtaleklienter"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Lad din online-status for samtaleklienter skifte til fraværende når en film "
@@ -2080,11 +2080,11 @@ msgstr "Infrarød fjernbetjening"
 msgid "Support infrared remote control"
 msgstr "Understøt infrarød fjernbetjening"
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "Kunne ikke klargøre lirc."
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "Kunne ikke læse lirc-konfiguration."
 
@@ -2178,11 +2178,11 @@ msgstr "Undertekst_sprog:"
 msgid "_Play with Subtitle"
 msgstr "_Afspil med undertekster"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Undertekstsprog"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "Sproget der bruges til at søge efter filmundertekster i."
 
@@ -2194,21 +2194,21 @@ msgstr "Filmegenskaber"
 msgid "Adds movie properties to the sidebar"
 msgstr "Tilføjer filmegenskaber til sidepanelet"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Egenskaber"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr "rpdb2-adgangskode"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
-"En adgangskode til at beskytte rpdb2-serveren til fejlsøgning af Totem fra "
-"uautoriseret fjerntilgang, Hvis denne er tom, bruges standardværdien \"totem"
+"En adgangskode til at beskytte rpdb2-serveren til fejlsøgning af Xplayer fra "
+"uautoriseret fjerntilgang, Hvis denne er tom, bruges standardværdien \"xplayer"
 "\"."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
@@ -2228,8 +2228,8 @@ msgid "_Python Console"
 msgstr "_Python-konsol"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
-msgid "Show Totem's Python console"
-msgstr "Vis Totems Python-konsol"
+msgid "Show Xplayer's Python console"
+msgstr "Vis Xplayers Python-konsol"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
@@ -2242,22 +2242,22 @@ msgstr "Aktivér fjern Python-fejlsøgning med rpdb2"
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "Du kan tilgå Totem.Objekt'et med \"totem_object\" : \\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "Du kan tilgå Xplayer.Objekt'et med \"xplayer_object\" : \\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
-msgid "Totem Python Console"
-msgstr "Python-konsol til Totem"
+msgid "Xplayer Python Console"
+msgstr "Python-konsol til Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
-"Efter du har trykket O.k., ventes indtil du forbinder til Totem med winpdb "
+"Efter du har trykket O.k., ventes indtil du forbinder til Xplayer med winpdb "
 "eller rpdb2. Hvis du ikke har indstillet et fejlsøgerkodeord i DConf, vil "
-"standardkodeordet blive benyttet (\"totem\")."
+"standardkodeordet blive benyttet (\"xplayer\")."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2275,12 +2275,12 @@ msgstr "Udvidelsesmodul til rotering"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Tillader at videoer roteres, hvis de ikke vender rigtigt"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
 msgstr "_Rotér med uret"
 
 # Er det rigtigt noteret?
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotér _mod uret"
 
@@ -2292,25 +2292,25 @@ msgstr "Gem en kopi"
 msgid "Save a copy of the currently playing movie"
 msgstr "Gem en kopi af den film, der afspilles nu"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "Gem en kopi..."
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "Gem en kopi af filmen"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "Gem en kopi"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "Film"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "Filmstrøm"
 
@@ -2357,7 +2357,7 @@ msgstr "Skærmbillede"
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr "Tillader at der tages skærmbilleder og gallerier af videoer"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "Gem galleri"
 
@@ -2365,49 +2365,49 @@ msgstr "Gem galleri"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "Galleri-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "Opretter galleri..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Gemmer galleri som \"%s\""
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:220
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
-msgid "Totem could not get a screenshot of the video."
-msgstr "Totem kunne ikke skaffe et skærmbillede af videoen."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer kunne ikke skaffe et skærmbillede af videoen."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "Dette burde ikke ske. Rapportér venligst fejlen."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "Gem _skærmbillede"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "Gem et skærmbillede"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "Opret _galleri af skærmbilleder..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr "Opret et galleri af skærmbilleder"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "Spring til"
 
@@ -2421,7 +2421,7 @@ msgstr "_Spring til:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "sekund"
@@ -2431,16 +2431,16 @@ msgstr[1] "sekunder"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "8"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "_Spring til..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "Spring til angivet tidspunkt"
 
@@ -2559,10 +2559,10 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgstr "Filmafspiller med %s"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
-#~ "Totem kunne ikke afspille dette medie (%s), selvom et modul er "
+#~ "Xplayer kunne ikke afspille dette medie (%s), selvom et modul er "
 #~ "tilgængeligt til at håndtere det."
 
 #~ msgid ""
@@ -2575,40 +2575,40 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgstr "Mere information om mediemoduler"
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr ""
-#~ "Installér de nødvendige moduler og genstart Totem hvis du vil afspille "
+#~ "Installér de nødvendige moduler og genstart Xplayer hvis du vil afspille "
 #~ "denne type."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s), da du ikke har de "
+#~ "Xplayer kan ikke afspille denne medietype (%s), da du ikke har de "
 #~ "nødvendige udvidelsesmoduler til at læse dem fra disken."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s), da du ikke har de "
+#~ "Xplayer kan ikke afspille denne medietype (%s), da du ikke har de "
 #~ "nødvendige udvidelsesmoduler til at håndtere den."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it is not supported."
+#~ "Xplayer cannot play this type of media (%s) because it is not supported."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s), fordi den ikke understøttes."
+#~ "Xplayer kan ikke afspille denne medietype (%s), fordi den ikke understøttes."
 
 # ???
 #~ msgid "Please insert another disc to play back."
 #~ msgstr "Indsæt venligst en ny disk for at afspille."
 
-#~ msgid "Totem was not able to play this disc."
-#~ msgstr "Totem kunne ikke afspille disken."
+#~ msgid "Xplayer was not able to play this disc."
+#~ msgstr "Xplayer kunne ikke afspille disken."
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem understøtter ikke afspilning af lyd-cd'er"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer understøtter ikke afspilning af lyd-cd'er"
 
 #~ msgid ""
 #~ "Please consider using a music player or a CD extractor to play this CD"
@@ -2781,17 +2781,17 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Betjen Totem gennem en mobiltelefon med en Bemused-klient"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Betjen Xplayer gennem en mobiltelefon med en Bemused-klient"
 
 #~ msgid "Untitled %d"
 #~ msgstr "Unavngiven %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totem Bemused Server"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayer Bemused Server"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totem Bemused Server version 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayer Bemused Server version 1.0"
 
 #~ msgid "A plugin to let you browse YouTube videos."
 #~ msgstr "Et udvidelsesmodul, der lader dig gennemse YouTube-videoer."
@@ -2843,10 +2843,10 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgstr "Videoformat understøttes ikke"
 
 #~ msgid ""
-#~ "This video is not available in any formats which Totem supports. Would "
+#~ "This video is not available in any formats which Xplayer supports. Would "
 #~ "you like to open it in your web browser instead?"
 #~ msgstr ""
-#~ "Denne video er ikke tilgængelig i et format som Totem understøtter. Vil "
+#~ "Denne video er ikke tilgængelig i et format som Xplayer understøtter. Vil "
 #~ "du åbne den i din webbrowser i stedet?"
 
 #~ msgid "0 frames per second"
@@ -2912,8 +2912,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Coherence DLNA/UPnP Client"
 #~ msgstr "Coherence DLNA/UPnP-klient"
 
-#~ msgid "A DLNA/UPnP client for Totem powered by Coherence"
-#~ msgstr "En DLNA/UPnP-klient til Totem drevet af Coherence"
+#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
+#~ msgstr "En DLNA/UPnP-klient til Xplayer drevet af Coherence"
 
 #~ msgid "By artist"
 #~ msgstr "Efter kunstner"
@@ -3052,8 +3052,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "Browser-udvidelsesmodul med %s"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem browser-udvidelsesmodul"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer browser-udvidelsesmodul"
 
 #~ msgid ""
 #~ "Approximate network connection speed, used to select quality on media "
@@ -3102,10 +3102,10 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgstr "Aktivér visuelle effekter?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "Det ser ud til at du kører Totem via et netværk.\n"
+#~ "Det ser ud til at du kører Xplayer via et netværk.\n"
 #~ "Er du sikker på du vil aktivere de visuelle effekter?"
 
 #~ msgid ""
@@ -3114,17 +3114,17 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ "Skift af typen af visuel effekt kræver en genstart for at træde i kraft."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
-#~ "Ændringen af lyduddatatype træder først i kraft når Totem bliver "
+#~ "Ændringen af lyduddatatype træder først i kraft når Xplayer bliver "
 #~ "genstartet."
 
 #~ msgid "Could not open link"
 #~ msgstr "Kunne ikke åbne link"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem kunne ikke klargøre konfigurationsmotoren."
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer kunne ikke klargøre konfigurationsmotoren."
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "Kontrollér at Gnome er korrekt installeret."
@@ -3251,10 +3251,10 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgstr "Sæt højde-/breddeforholdet til 16:9"
 
 #~ msgid ""
-#~ "Totem cannot play TV, because no TV adapters are present or they are not "
+#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
 #~ "supported."
 #~ msgstr ""
-#~ "Totem kan ikke afspille TV, da ingen TV-adaptere er tilsluttet eller "
+#~ "Xplayer kan ikke afspille TV, da ingen TV-adaptere er tilsluttet eller "
 #~ "fordi de ikke understøttes."
 
 #~ msgid "Please insert a supported TV adapter."
@@ -3263,8 +3263,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "More information about watching TV"
 #~ msgstr "Mere information om at se TV"
 
-#~ msgid "Totem is missing a channels listing to be able to tune the receiver."
-#~ msgstr "Totem mangler en kanaloversigt for at kunne tune modtageren."
+#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
+#~ msgstr "Xplayer mangler en kanaloversigt for at kunne tune modtageren."
 
 #~ msgid ""
 #~ "Please follow the instructions provided in the link to create a channels "
@@ -3274,9 +3274,9 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ "kanaloversigt."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because the TV device is busy."
+#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
 #~ msgstr ""
-#~ "Totem kan ikke afspille denne medietype (%s), fordi TV-enheden er optaget."
+#~ "Xplayer kan ikke afspille denne medietype (%s), fordi TV-enheden er optaget."
 
 #~ msgid "Please try again later."
 #~ msgstr "Prøv venligst igen senere."
@@ -3293,11 +3293,11 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Screenshot%d.jpg"
 #~ msgstr "Skærmbillede%d.jpg"
 
-#~ msgid "Totem could not play '%s'"
-#~ msgstr "Totem kunne ikke afspille \"%s\""
+#~ msgid "Xplayer could not play '%s'"
+#~ msgstr "Xplayer kunne ikke afspille \"%s\""
 
-#~ msgid "The Totem plugin could not be started."
-#~ msgstr "Totem-udvidelsesmodulet kunne ikke startes."
+#~ msgid "The Xplayer plugin could not be started."
+#~ msgstr "Xplayer-udvidelsesmodulet kunne ikke startes."
 
 #~ msgid "Could not initialise the thread-safe libraries."
 #~ msgstr "Kunne ikke klargøre de trådsikre biblioteker."
@@ -3413,10 +3413,10 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 
 #~ msgid ""
 #~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Totem is restarted."
+#~ "when Xplayer is restarted."
 #~ msgstr ""
 #~ "Ændringen af denne indstilling træder først i kraft for den næste film "
-#~ "eller når Totem bliver genstartet."
+#~ "eller når Xplayer bliver genstartet."
 
 #~ msgid "long time format|%d:%02d:%02d"
 #~ msgstr "%d:%02d:%02d"
@@ -3427,8 +3427,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Search YouTube"
 #~ msgstr "Søg på YouTube"
 
-#~ msgid "Totem could not parse the command-line options"
-#~ msgstr "Totem kunne ikke fortolke kommandolinje-parametrene"
+#~ msgid "Xplayer could not parse the command-line options"
+#~ msgstr "Xplayer kunne ikke fortolke kommandolinje-parametrene"
 
 #~ msgid "IP address of the local MythTV server"
 #~ msgstr "IP-adresse af den lokale MythTV-server"
@@ -3487,8 +3487,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Couldn't open file '%s': %s"
 #~ msgstr "Kunne ikke åbne filen \"%s\": %s"
 
-#~ msgid "Totem could not eject the optical media."
-#~ msgstr "Totem kunne ikke skubbe det optiske medium ud."
+#~ msgid "Xplayer could not eject the optical media."
+#~ msgstr "Xplayer kunne ikke skubbe det optiske medium ud."
 
 #~ msgid "Skipto"
 #~ msgstr "Spring til"
@@ -3633,8 +3633,8 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ msgid "Style of bevel around the statusbar text"
 #~ msgstr "Afrundingstypen omkring statuslinjeteksten"
 
-#~ msgid "Totem could not seek in '%s'."
-#~ msgstr "Totem kunne ikke søge i \"%s\"."
+#~ msgid "Xplayer could not seek in '%s'."
+#~ msgstr "Xplayer kunne ikke søge i \"%s\"."
 
 #~ msgid "Webcam utility using %s"
 #~ msgstr "Netkamera-værktøj via %s"
@@ -3735,17 +3735,17 @@ msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
 #~ "Aktivering/deaktivering af denne type tv-ud kræver en genstart for at "
 #~ "træde i kraft."
 
-#~ msgid "Totem couldn't show the movie properties window."
-#~ msgstr "Totem kunne ikke vise filmegenskabsvinduet."
+#~ msgid "Xplayer couldn't show the movie properties window."
+#~ msgstr "Xplayer kunne ikke vise filmegenskabsvinduet."
 
-#~ msgid "Make sure that Totem is correctly installed."
-#~ msgstr "Kontrollér at Totem er korrekt installeret."
+#~ msgid "Make sure that Xplayer is correctly installed."
+#~ msgstr "Kontrollér at Xplayer er korrekt installeret."
 
 #~ msgid "video popup menu"
 #~ msgstr "video pop op-menu"
 
-#~ msgid "Totem Video Window"
-#~ msgstr "Totem-videovindue"
+#~ msgid "Xplayer Video Window"
+#~ msgstr "Xplayer-videovindue"
 
 #~ msgid "Failed to open media file; unknown error"
 #~ msgstr "Det mislykkedes at åbne medie-filen; ukendt fejl"

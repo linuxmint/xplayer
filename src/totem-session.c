@@ -1,4 +1,4 @@
-/* totem-session.c
+/* xplayer-session.c
 
    Copyright (C) 2004 Bastien Nocera
 
@@ -22,10 +22,10 @@
 
 #include "config.h"
 
-#include "totem.h"
-#include "totem-private.h"
-#include "totem-session.h"
-#include "totem-uri.h"
+#include "xplayer.h"
+#include "xplayer-private.h"
+#include "xplayer-session.h"
+#include "xplayer-uri.h"
 
 #ifdef WITH_SMCLIENT
 
@@ -38,7 +38,7 @@
 #endif
 
 static char *
-totem_session_create_key (void)
+xplayer_session_create_key (void)
 {
 	char *filename, *path;
 
@@ -46,29 +46,29 @@ totem_session_create_key (void)
 			(int) getpid (),
 			(int) time (NULL),
 			g_random_int ());
-	path = g_build_filename (totem_dot_dir (), filename, NULL);
+	path = g_build_filename (xplayer_dot_dir (), filename, NULL);
 	g_free (filename);
 
 	return path;
 }
 
 static void
-totem_save_state_cb (EggSMClient *client,
+xplayer_save_state_cb (EggSMClient *client,
 	             GKeyFile *key_file,
-	             Totem *totem)
+	             Xplayer *xplayer)
 {
 	const char *argv[] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 	int i = 0;
 	char *path_id, *current, *seek, *uri;
 	int current_index;
 
-	current_index = totem_playlist_get_current (totem->playlist);
+	current_index = xplayer_playlist_get_current (xplayer->playlist);
 
 	if (current_index == -1)
 		return;
 
-	path_id = totem_session_create_key ();
-	totem_playlist_save_current_playlist (totem->playlist, path_id);
+	path_id = xplayer_session_create_key ();
+	xplayer_playlist_save_current_playlist (xplayer->playlist, path_id);
 
 	/* How to discard the save */
 	argv[i++] = "rm";
@@ -80,8 +80,8 @@ totem_save_state_cb (EggSMClient *client,
 	i = 0;
 	current = g_strdup_printf ("%d", current_index);
 	seek = g_strdup_printf ("%"G_GINT64_FORMAT,
-			bacon_video_widget_get_current_time (totem->bvw));
-	argv[i++] = totem->argv0;
+			bacon_video_widget_get_current_time (xplayer->bvw));
+	argv[i++] = xplayer->argv0;
 	argv[i++] = "--playlist-idx";
 	argv[i++] = current;
 	argv[i++] = "--seek";
@@ -102,14 +102,14 @@ totem_save_state_cb (EggSMClient *client,
 }
 
 G_GNUC_NORETURN static void
-totem_quit_cb (EggSMClient *client,
-	       Totem *totem)
+xplayer_quit_cb (EggSMClient *client,
+	       Xplayer *xplayer)
 {
-	totem_action_exit (totem);
+	xplayer_action_exit (xplayer);
 }
 
 void
-totem_session_add_options (GOptionContext *context)
+xplayer_session_add_options (GOptionContext *context)
 {
 #ifdef GDK_WINDOWING_X11
 	egg_set_desktop_file_without_defaults (DATADIR "/applications/" PACKAGE ".desktop");
@@ -119,24 +119,24 @@ totem_session_add_options (GOptionContext *context)
 }
 
 void
-totem_session_setup (Totem *totem, char **argv)
+xplayer_session_setup (Xplayer *xplayer, char **argv)
 {
 	EggSMClient *sm_client;
 
-	totem->argv0 = argv[0];
+	xplayer->argv0 = argv[0];
 
 	sm_client = egg_sm_client_get ();
 	g_signal_connect (sm_client, "save-state",
-	                  G_CALLBACK (totem_save_state_cb), totem);
+	                  G_CALLBACK (xplayer_save_state_cb), xplayer);
 	g_signal_connect (sm_client, "quit",
-	                  G_CALLBACK (totem_quit_cb), totem);
+	                  G_CALLBACK (xplayer_quit_cb), xplayer);
 
 	if (egg_sm_client_is_resumed (sm_client))
-		totem->session_restored = TRUE;
+		xplayer->session_restored = TRUE;
 }
 
 void
-totem_session_restore (Totem *totem, char **filenames)
+xplayer_session_restore (Xplayer *xplayer, char **filenames)
 {
 	char *mrl, *uri, *subtitle;
 
@@ -145,24 +145,24 @@ totem_session_restore (Totem *totem, char **filenames)
 	uri = filenames[0];
 	subtitle = NULL;
 
-	totem_signal_block_by_data (totem->playlist, totem);
+	xplayer_signal_block_by_data (xplayer->playlist, xplayer);
 
-	/* Possibly the only place in Totem where it makes sense to add an MRL to the playlist synchronously, since we haven't yet entered
+	/* Possibly the only place in Xplayer where it makes sense to add an MRL to the playlist synchronously, since we haven't yet entered
 	 * the GTK+ main loop, and thus can't freeze the application. */
-	if (totem_playlist_add_mrl_sync (totem->playlist, uri, NULL) == FALSE) {
-		totem_signal_unblock_by_data (totem->playlist, totem);
-		totem_action_set_mrl (totem, NULL, NULL);
+	if (xplayer_playlist_add_mrl_sync (xplayer->playlist, uri, NULL) == FALSE) {
+		xplayer_signal_unblock_by_data (xplayer->playlist, xplayer);
+		xplayer_action_set_mrl (xplayer, NULL, NULL);
 		g_free (uri);
 		return;
 	}
 
-	totem_signal_unblock_by_data (totem->playlist, totem);
+	xplayer_signal_unblock_by_data (xplayer->playlist, xplayer);
 
-	if (totem->index != 0)
-		totem_playlist_set_current (totem->playlist, totem->index);
-	mrl = totem_playlist_get_current_mrl (totem->playlist, &subtitle);
+	if (xplayer->index != 0)
+		xplayer_playlist_set_current (xplayer->playlist, xplayer->index);
+	mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
 
-	totem_action_set_mrl_with_warning (totem, mrl, subtitle, FALSE);
+	xplayer_action_set_mrl_with_warning (xplayer, mrl, subtitle, FALSE);
 
 	/* We do the seeking after being told that the stream is seekable,
 	 * not straight away */
@@ -174,17 +174,17 @@ totem_session_restore (Totem *totem, char **filenames)
 #else
 
 void
-totem_session_add_options (GOptionContext *context)
+xplayer_session_add_options (GOptionContext *context)
 {
 }
 
 void
-totem_session_setup (Totem *totem, char **argv)
+xplayer_session_setup (Xplayer *xplayer, char **argv)
 {
 }
 
 void
-totem_session_restore (Totem *totem, char **argv)
+xplayer_session_restore (Xplayer *xplayer, char **argv)
 {
 }
 

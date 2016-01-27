@@ -4,7 +4,7 @@
 <!ENTITY appversion "2.26">
 <!ENTITY manrevision "3.0">
 <!ENTITY date "February 2009">
-<!ENTITY app "Totem Movie Player">
+<!ENTITY app "Xplayer Movie Player">
 <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file.
        Use the appversion entity to specify the version of the application.
@@ -23,7 +23,7 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title>Manual til <application>Totem</application></title>
+    <title>Manual til <application>Xplayer</application></title>
     <copyright lang="en">
       <year>2003</year>
       <holder>Chee Bin HOH</holder>
@@ -37,7 +37,7 @@
     </releaseinfo>
 
     <abstract role="description">
-      <para><application>Totem</application> er en medieafspiller til GNOME, der kører over GStreamer som standard, men som også kan køres over xine. Den understøtter de fleste lyd- og videocodec inklusive DVD'er og mange andre. Der understøttes TV-udgang, fuldskærm, undertekster med mere.</para>
+      <para><application>Xplayer</application> er en medieafspiller til GNOME, der kører over GStreamer som standard, men som også kan køres over xine. Den understøtter de fleste lyd- og videocodec inklusive DVD'er og mange andre. Der understøttes TV-udgang, fuldskærm, undertekster med mere.</para>
     </abstract>
 
     <publisher>
@@ -164,7 +164,7 @@
 <!-- to V3.0, and so on. -->
     <revhistory>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V2.0</revnumber>
 	<date>August 2006</date>
 	<revdescription>
 	  <para role="author" lang="en">Chee Bin HOH
@@ -174,7 +174,7 @@
         </revdescription>
       </revision>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V3.0</revnumber>
 	<date>February 2009</date>
 	<revdescription>
 	  <para role="author" lang="en">Philip Withnall
@@ -185,10 +185,10 @@
       </revision>
     </revhistory>
 
-    <releaseinfo>Denne manual beskriver version 2.26 af Totem.</releaseinfo>
+    <releaseinfo>Denne manual beskriver version 2.26 af Xplayer.</releaseinfo>
     <legalnotice>
       <title>Tilbagemelding</title>
-      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
         this manual, follow the directions in the
         <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
       </para>
@@ -196,10 +196,10 @@
   </articleinfo>
 
   <indexterm zone="index" lang="en">
-    <primary>Totem Movie Player</primary>
+    <primary>Xplayer Movie Player</primary>
   </indexterm>
   <indexterm zone="index" lang="en">
-    <primary>totem</primary>
+    <primary>xplayer</primary>
   </indexterm>
 
 
@@ -207,10 +207,10 @@
 <!-- ============= Introduction ============================== -->
 <!-- Use the Introduction section to give a brief overview of what
      the application is and what it does. -->
-  <sect1 id="totem-introduction">
+  <sect1 id="xplayer-introduction">
     <title>Introduktion</title>
-    <para>Programmet <application>Totem</application> er en filmafspiller til GNOME-skrivebordet baseret på GStreamer samt xine-biblioteket, som lader dig afspille film og musik.</para>
-    <para><application>Totem</application> indeholder følgende funktionalitet:</para>
+    <para>Programmet <application>Xplayer</application> er en filmafspiller til GNOME-skrivebordet baseret på GStreamer samt xine-biblioteket, som lader dig afspille film og musik.</para>
+    <para><application>Xplayer</application> indeholder følgende funktionalitet:</para>
     <itemizedlist>
       <listitem>
 	<para>Understøttelse af diverse video- og lydfiltyper.</para>
@@ -235,7 +235,7 @@
       </listitem>
     </itemizedlist>
     <note>
-      <para><application>Totem</application> inkluderer yderligere funktioner såsom:</para>
+      <para><application>Xplayer</application> inkluderer yderligere funktioner såsom:</para>
       <itemizedlist>
 	<listitem>
 	  <para>Videominiaturefunktion til GNOME.</para>
@@ -260,12 +260,12 @@
      If the information about how to get started is very short, you can
      include it in the Introduction and omit this section. -->
 
-  <sect1 id="totem-getting-started">
+  <sect1 id="xplayer-getting-started">
     <title>Kom godt i gang</title>
 
-    <sect2 id="totem-start">
-      <title>Start filmafspilleren <application>Totem</application></title>
-      <para>Du kan starte <application>Totem</application> på følgende måder:</para>
+    <sect2 id="xplayer-start">
+      <title>Start filmafspilleren <application>Xplayer</application></title>
+      <para>Du kan starte <application>Xplayer</application> på følgende måder:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Menuen <guimenu>Programmer</guimenu></term>
@@ -281,32 +281,32 @@
 	<varlistentry>
 	  <term>Kommandolinje</term>
 	  <listitem>
-	    <para>For at starte <application>Totem</application> fra kommandolinjen, skriver du følgende kommando efterfulgt af <keycap>Retur</keycap>:</para>
+	    <para>For at starte <application>Xplayer</application> fra kommandolinjen, skriver du følgende kommando efterfulgt af <keycap>Retur</keycap>:</para>
 	    <para lang="en">
-            <command>totem</command>
+            <command>xplayer</command>
             </para>
 	    <tip>
-	      <para>Skriv <command>totem --help</command> efterfulgt af <keycap>Retur</keycap> for at se andre kommandolinjetilvalg.</para>
+	      <para>Skriv <command>xplayer --help</command> efterfulgt af <keycap>Retur</keycap> for at se andre kommandolinjetilvalg.</para>
 	    </tip>
 	  </listitem>
 	</varlistentry>
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-when-start">
-      <title>Opstart af <application>Totem</application></title>
-      <para>Når du starter <application>Totem</application>, vises følgende vindue.</para>
+    <sect2 id="xplayer-when-start">
+      <title>Opstart af <application>Xplayer</application></title>
+      <para>Når du starter <application>Xplayer</application>, vises følgende vindue.</para>
 
       <!-- ==== Figure ==== -->
-      <figure id="totem-start-fig">
-	<title><application>Totem</application>s opstartsvindue</title>
+      <figure id="xplayer-start-fig">
+	<title><application>Xplayer</application>s opstartsvindue</title>
 	<screenshot>
 	  <mediaobject lang="en">
 	    <imageobject>
-	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	      <imagedata fileref="figures/xplayer_start_window.png" format="PNG"/>
 	    </imageobject>
 	    <textobject>
-	      <phrase>Shows <application>Totem Movie Player</application> main window with
+	      <phrase>Shows <application>Xplayer Movie Player</application> main window with
 		  sidebar opened on playlist. Contains
 		  menubar, display area, sidebar, elapsed time slider, seek control
 		  buttons, volume slider and statusbar.
@@ -319,12 +319,12 @@
 
       <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
       <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
-      <para><application>Totem</application>-vinduet indeholder følgende elementer:</para>
+      <para><application>Xplayer</application>-vinduet indeholder følgende elementer:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Menubjælke.</term>
   	  <listitem>
-	    <para>Menuerne i menubjælken indeholder alle de kommandoer, du har brug for i <application>Totem</application>.</para>
+	    <para>Menuerne i menubjælken indeholder alle de kommandoer, du har brug for i <application>Xplayer</application>.</para>
  	  </listitem>
    	</varlistentry>
 	<varlistentry>
@@ -371,11 +371,11 @@
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to use the application to perform the tasks for
   which the application is designed. -->
-  <sect1 id="totem-usage">
+  <sect1 id="xplayer-usage">
     <title>Brug</title>
 
     <!-- ================ Usage Subsection ================================ -->
-    <sect2 id="totem-open-file">
+    <sect2 id="xplayer-open-file">
       <title>Åbn en fil</title>
       <para lang="en">To open a video or an audio file, choose
         <menuchoice>
@@ -387,14 +387,14 @@
 		Select the file or files you want to open, then click
 	<guibutton>OK</guibutton>.
       </para>
-      <para>Du kan trække en fil fra et andet program, såsom et filhåndteringsprogram, ind i <application>Totem</application>-vinduet. Hvis du trækker filen til fremvisningsområdet, vil filen erstatte den aktuelle afspilningsliste, og blive afspillet med det samme. Hvis du trækker filen til afspilningslisten i sidepanelet, vil filen blive føjet til denne. Programmet <application>Totem</application> vil åbne filen og afspille filmen eller sangen. <application>Totem</application> viser titlen på filmen eller sangen i vinduets titelbjælke, samt på afspilningslisten i sidepanelet.</para>
-      <para>Prøver du at åbne et filformat, som <application>Totem</application> ikke genkender, vil programmet vise en fejlmeddelelse. Denne fejl ses som oftest, hvis du ikke har de nødvendige codec installeret. Du kan finde informationer på <ulink url="http://projects.gnome.org/totem/#codecs" type="http"><application>Totem</application>s websted</ulink> om hvordan codec installeres.</para>
+      <para>Du kan trække en fil fra et andet program, såsom et filhåndteringsprogram, ind i <application>Xplayer</application>-vinduet. Hvis du trækker filen til fremvisningsområdet, vil filen erstatte den aktuelle afspilningsliste, og blive afspillet med det samme. Hvis du trækker filen til afspilningslisten i sidepanelet, vil filen blive føjet til denne. Programmet <application>Xplayer</application> vil åbne filen og afspille filmen eller sangen. <application>Xplayer</application> viser titlen på filmen eller sangen i vinduets titelbjælke, samt på afspilningslisten i sidepanelet.</para>
+      <para>Prøver du at åbne et filformat, som <application>Xplayer</application> ikke genkender, vil programmet vise en fejlmeddelelse. Denne fejl ses som oftest, hvis du ikke har de nødvendige codec installeret. Du kan finde informationer på <ulink url="http://projects.gnome.org/xplayer/#codecs" type="http"><application>Xplayer</application>s websted</ulink> om hvordan codec installeres.</para>
       <tip>
-	<para>I filhåndteringsprogrammet <application>Nautilus</application>, kan du dobbeltklikke på en video- eller lydfil for at åbne den i <application>Totem</application>-vinduet.</para>
+	<para>I filhåndteringsprogrammet <application>Nautilus</application>, kan du dobbeltklikke på en video- eller lydfil for at åbne den i <application>Xplayer</application>-vinduet.</para>
       </tip>
     </sect2>
 
-    <sect2 id="totem-usage-open-location">
+    <sect2 id="xplayer-usage-open-location">
       <title>Åbn et sted</title>
       <para lang="en">To open a file by URI (location), choose
         <menuchoice>
@@ -408,7 +408,7 @@
       <para>Hvis du allerede har en URI i udklipsholderen, vil den automatisk indsættes i kombinationsboksen.</para>
     </sect2>
 
-    <sect2 id="totem-usage-play">
+    <sect2 id="xplayer-usage-play">
       <title>Afspil en film (DVD eller VCD)</title>
 	      <para lang="en">Insert the disc in the optical device of your computer, then choose
           	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
@@ -422,11 +422,11 @@
       </para>
        </sect2>
 
-    <sect2 id="totem-usage-pause">
+    <sect2 id="xplayer-usage-pause">
       <title>Sæt en film eller sang på pause</title>
       <para lang="en">To pause a movie or song that is playing, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_pause_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows pause button.</phrase></textobject>
         </inlinemediaobject> button, or choose
         <menuchoice>
@@ -437,7 +437,7 @@
       </para>
       <para lang="en">To resume playing a movie or song, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_play_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows play button.</phrase></textobject>
         </inlinemediaobject> button again, or choose
         <menuchoice>
@@ -448,7 +448,7 @@
       </para>
     </sect2>
 
-    <sect2 id="totem-usage-view-properties">
+    <sect2 id="xplayer-usage-view-properties">
       <title>Sådan ser du egenskaberne for en film eller sang</title>
       <para lang="en">To view the properties of a movie or song, choose
         <menuchoice>
@@ -457,7 +457,7 @@
 	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
     </sect2>
 
-    <sect2 id="totem-usage-seek">
+    <sect2 id="xplayer-usage-seek">
       <title>Spol gennem film eller sange</title>
       <para>Du kan springe mellem film eller sange på følgende måder:</para>
       <variablelist>
@@ -510,7 +510,7 @@
                 <guimenuitem>Next Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_next_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek next button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -526,7 +526,7 @@
                 <guimenuitem>Previous Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_previous_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -535,9 +535,9 @@
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-usage-change-zoom">
+    <sect2 id="xplayer-usage-change-zoom">
       <title>Indstil zoomfaktoren</title>
-	  <sect3 id="totem-usage-change-size">
+	  <sect3 id="xplayer-usage-change-size">
 		<title>Indstil videostørrelsen</title>
       <para>Du kan ændre zoomfaktoren for fremvisningsområdet på følgende måder:</para>
       <itemizedlist>
@@ -562,7 +562,7 @@
     </listitem>
 	</itemizedlist>
 	</sect3>
-	 <sect3 id="totem-usage-change-ratio">
+	 <sect3 id="xplayer-usage-change-ratio">
 		<title>Indstil skærmforhold</title>
 	      <para lang="en">To switch between different aspect ratios, choose
             <menuchoice>
@@ -573,7 +573,7 @@
 	  </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-adjust-volume">
+    <sect2 id="xplayer-usage-adjust-volume">
       <title>Justér lydstyrken</title>
       <para lang="en">To increase the volume, choose
         <menuchoice>
@@ -591,40 +591,40 @@
       <para>Du kan også bruge volumenknappen: klik på volumenknappen og vælg lydstyrken med skydebrikken.</para>
     </sect2>
 
-    <sect2 id="totem-usage-on-top">
+    <sect2 id="xplayer-usage-on-top">
       <title>Få vinduet til altid at være øverst</title>
-      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+      <para lang="en">To make the <application>Xplayer Movie Player</application> window always on top of other application windows,
         choose
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Plugins</guimenuitem>
-        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Xplayer Movie Player</application> window will now stay on
         top of all other windows while a movie is playing, but not while audio or visualizations are playing.
        </para>
-       <para>Du kan få vinduet til ikke længere altid at være øverst, ved igen at deaktivere <guilabel>Altid øverst</guilabel>-modulet. Se <xref linkend="totem-plugins-always-on-top"/> for yderligere information.</para>
+       <para>Du kan få vinduet til ikke længere altid at være øverst, ved igen at deaktivere <guilabel>Altid øverst</guilabel>-modulet. Se <xref linkend="xplayer-plugins-always-on-top"/> for yderligere information.</para>
     </sect2>
 
-    <sect2 id="totem-usage-show-control">
+    <sect2 id="xplayer-usage-show-control">
       <title>Vis eller skjul kontroller</title>
-      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+      <para lang="en">To show or hide the <application>Xplayer Movie Player</application> window controls, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
           <guimenu>View</guimenu>
           <guimenuitem>Show Controls</guimenuitem>
         </menuchoice>, or press the <keycap>H</keycap> key.
-        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        You can also right-click on the <application>Xplayer Movie Player</application> window, then choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
 	  <guimenuitem>Show Controls</guimenuitem>
         </menuchoice> from the popup menu.
       </para>
-      <para>Hvis du sætter flueben ved <guilabel>Vis kontroller</guilabel>, vil <application>Totem</application> vise menubjælken, tidsskydeknappen, søgekontrollerne, skydeknappen for lydstyrke samt statusbjælke i vinduet. Hvis <guilabel>Vis kontroller</guilabel> fluebenet fjernes, vil programmet skjulle disse kontroller og kun vise fremvisningsområdet.</para>
+      <para>Hvis du sætter flueben ved <guilabel>Vis kontroller</guilabel>, vil <application>Xplayer</application> vise menubjælken, tidsskydeknappen, søgekontrollerne, skydeknappen for lydstyrke samt statusbjælke i vinduet. Hvis <guilabel>Vis kontroller</guilabel> fluebenet fjernes, vil programmet skjulle disse kontroller og kun vise fremvisningsområdet.</para>
     </sect2>
 
-    <sect2 id="totem-usage-playlist">
+    <sect2 id="xplayer-usage-playlist">
       <title>Håndtér afspilningslisten</title>
 
-      <sect3 id="totem-usage-playlist-show-hide">
+      <sect3 id="xplayer-usage-playlist-show-hide">
 	<title>Vis eller skjul afspilningslisten</title>
 	<para lang="en">To show or hide the playlist, choose
           <menuchoice>
@@ -634,7 +634,7 @@
 		  the sidebar.</para>
       </sect3>
 
-      <sect3 id="totem-usage-playlist-manage">
+      <sect3 id="xplayer-usage-playlist-manage">
 	<title>Håndtér en afspilningsliste</title>
 	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
           <variablelist>
@@ -683,27 +683,27 @@
           </variablelist>
         </para>
       </sect3>
-      <sect3 id="totem-usage-playlist-repeat">
+      <sect3 id="xplayer-usage-playlist-repeat">
 	<title>Slå gentagelse til eller fra</title>
 	<para>Brug <menuchoice><guimenu>Redigér</guimenu><guimenuitem>Gentagelsestilstand</guimenuitem></menuchoice> til slå gentagelse til eller fra.</para>
       </sect3>
-      <sect3 id="totem-usage-playlist-shuffle">
+      <sect3 id="xplayer-usage-playlist-shuffle">
 	<title>Slå tilfældig rækkefølge til eller fra</title>
 	<para>Vælg <menuchoice><guimenu>Redigér</guimenu><guimenuitem>Blandingstilstand</guimenuitem></menuchoice> for at slå tilfældig rækkefølge til eller fra.</para>
       </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-subtitle">
+    <sect2 id="xplayer-usage-subtitle">
 	  <title>Vælg undertekster</title>
 	  <para>Undertekstsprog vælges via <menuchoice><guimenu>Vis</guimenu><guisubmenu>Vælg undertekster</guisubmenu></menuchoice>; derfra kan du vælge, hvilket sprog du vil have undertekster på.</para>
 	  <para>Vælg <menuchoice><guimenu>Vis</guimenu><guisubmenu>Undertekster</guisubmenu><guimenuitem>Ingen</guimenuitem></menuchoice> for at deaktivere visning af undertekster.</para>
-	  <note><para>Som standard vil <application>Totem</application> vælge det samme sprog for underteksterne, som det du normalt bruger på din computer.</para></note>
-	  <para><application>Totem</application> vil automatisk indlæse og vise undertekster for en video, hvis det finder en undertekstfil med samme navn som videoen, der afspilles.  Undertekstfilen kan have enhver af følgende fil-endelser: <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> eller <filename class="extension">ass</filename>.</para>
+	  <note><para>Som standard vil <application>Xplayer</application> vælge det samme sprog for underteksterne, som det du normalt bruger på din computer.</para></note>
+	  <para><application>Xplayer</application> vil automatisk indlæse og vise undertekster for en video, hvis det finder en undertekstfil med samme navn som videoen, der afspilles.  Undertekstfilen kan have enhver af følgende fil-endelser: <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> eller <filename class="extension">ass</filename>.</para>
 	  <para>Hvis navnet på filen, der indeholder underteksterne, ikke stemmer overens med videoens filnavn, kan du højreklikke på videoen i afspilningslisten og klikke <menuchoice><guimenuitem>Vælg undertekster</guimenuitem></menuchoice> fra pop op-menuen for at indlæse den ønskede undertekstfil. Du kan også vælge undertekster via <menuchoice><guimenu>Vis</guimenu><guimenuitem>Vælg undertekster</guimenuitem></menuchoice>.</para>
-	  <para>Ved hjælp af udvidelsesmodulet <guilabel>Underteksthenter</guilabel> kan du også hente undertekster via tjenesten OpenSubtitles. Se <xref linkend="totem-plugins-opensubtitles"/> for yderligere information.</para>
+	  <para>Ved hjælp af udvidelsesmodulet <guilabel>Underteksthenter</guilabel> kan du også hente undertekster via tjenesten OpenSubtitles. Se <xref linkend="xplayer-plugins-opensubtitles"/> for yderligere information.</para>
 	</sect2>
 
-    <sect2 id="totem-usage-take-screenshot">
+    <sect2 id="xplayer-usage-take-screenshot">
       <title>Tag et skærmbillede</title>
       <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
         <menuchoice>
@@ -713,10 +713,10 @@
 	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
 	to save the screenshot.
       </para>
-      <tip><para><application>Totem</application> viser en miniature af skærmbilledet, der skal gemmes, i venstre side af <application>Gem skærmbillede</application>-vinduet.</para></tip>
+      <tip><para><application>Xplayer</application> viser en miniature af skærmbilledet, der skal gemmes, i venstre side af <application>Gem skærmbillede</application>-vinduet.</para></tip>
     </sect2>
 
-    <sect2 id="totem-usage-create-screenshot-gallery">
+    <sect2 id="xplayer-usage-create-screenshot-gallery">
       <title>Opret et galleri af skærmbilleder</title>
       <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
         <menuchoice>
@@ -732,65 +732,65 @@
   </sect1>
 
 <!-- =========== Plugins ======================================= -->
-  <sect1 id="totem-plugins">
+  <sect1 id="xplayer-plugins">
     <title>Udvidelsesmoduler</title>
-    <para><application>Totem</application> har mange funktioner som kan tilgås i form af udvidelsesmoduler - softwareenheder, som kun indlæses hvis dette er nødvendigt.</para>
-    <sect2 id="totem-plugins-load">
+    <para><application>Xplayer</application> har mange funktioner som kan tilgås i form af udvidelsesmoduler - softwareenheder, som kun indlæses hvis dette er nødvendigt.</para>
+    <sect2 id="xplayer-plugins-load">
       <title>Aktivér et udvidelsesmodul</title>
       <para>Du kan se en liste af installerede udvidelsesmoduler ved at vælge <menuchoice><guimenu>Redigér</guimenu><guimenuitem>Udvidelsesmoduler</guimenuitem></menuchoice>. Dermed vises vinduet <application>Konfigurér udvidelsesmoduler</application>. På venstre side findes en liste af alle de moduler, du har installeret, mens der til højre er en beskrivelse af det pt. markerede modul. Moduler som har indstillinger, som kan ændres, vil have en aktivérbar <guibutton>Konfigurér</guibutton>-knap til højre.</para>
       <para>Et udvidelsesmodul aktiveres på simpel vis ved at sætte flueben i afkrydsningsfeltet til venstre for dets navn i listen af moduler, og modulet vil så indlæses omgående. Hvis der er nogen fejl under indlæsning, vil en fejlmeddelelse også blive vist med det samme.</para>
-      <para>Du kan deaktivere et udvidelsesmodul igen ved at fjerne fluebenet fra modulets afkrydsningsboks. Udvidelsesmoduler vil forblive aktiveret eller deaktiveret som her indstillet, selv efter <application>Totem</application> har været lukket.</para>
+      <para>Du kan deaktivere et udvidelsesmodul igen ved at fjerne fluebenet fra modulets afkrydsningsboks. Udvidelsesmoduler vil forblive aktiveret eller deaktiveret som her indstillet, selv efter <application>Xplayer</application> har været lukket.</para>
     </sect2>
-    <sect2 id="totem-plugins-always-on-top">
+    <sect2 id="xplayer-plugins-always-on-top">
       <title>Altid øverst</title>
-      <para>Udvidelsesmodulet <guilabel>Altid øverst</guilabel> vil tvinge <application>Totem</application>s hovedvindue til at være placeret over alle andre vinduer mens en film bliver afspillet, men ikke når blot lyd eller visualiseringer afspilles. Deaktivér modulet for at lade andre vinduer være øverst.</para>
+      <para>Udvidelsesmodulet <guilabel>Altid øverst</guilabel> vil tvinge <application>Xplayer</application>s hovedvindue til at være placeret over alle andre vinduer mens en film bliver afspillet, men ikke når blot lyd eller visualiseringer afspilles. Deaktivér modulet for at lade andre vinduer være øverst.</para>
     </sect2>
-    <sect2 id="totem-plugins-coherence">
+    <sect2 id="xplayer-plugins-coherence">
       <title>Klient til Coherence DLNA/UPnP</title>
-      <para>Udvidelsesmodulet <guilabel>Coherence DLNA/UPnP-klient</guilabel> lader <application>Totem</application> afspille multimedie-indhold fra UPnP-medieservere såsom Coherence-servere på lokalnetværket.</para>
+      <para>Udvidelsesmodulet <guilabel>Coherence DLNA/UPnP-klient</guilabel> lader <application>Xplayer</application> afspille multimedie-indhold fra UPnP-medieservere såsom Coherence-servere på lokalnetværket.</para>
       <para>Med udvidelsesmodulet <guilabel>Coherence DLNA/UPnP-klient</guilabel> kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klikke på knappen <guibutton>Sidepanel</guibutton> for at få vist sidepanelet. Vælg <guilabel>Coherence DLNA/UPnP-klient</guilabel> fra rullegardinslisten øverst i sidepanelet for at vise sidepanelet for <guilabel>Coherence DLNA/UPnP-klient</guilabel>.</para>
-      <para>Trævisningen i sidepanelet vil vise en liste af tilgængelige medieservere. Klik på en af dem, for at udfolde den, således at dens tilgængelige mediefiler vises. Dobbeltklik på en mediefil for at føje den til <application>Totem</application>s afspilningsliste og afspille den. Du kan alternativt højreklikke på en fil og vælge <menuchoice><guimenuitem>Afspil</guimenuitem></menuchoice> eller <menuchoice><guimenuitem>Sæt i kø</guimenuitem></menuchoice> for henholdsvis at afspille den omgående eller blot føje den til afspilningslisten.</para>
+      <para>Trævisningen i sidepanelet vil vise en liste af tilgængelige medieservere. Klik på en af dem, for at udfolde den, således at dens tilgængelige mediefiler vises. Dobbeltklik på en mediefil for at føje den til <application>Xplayer</application>s afspilningsliste og afspille den. Du kan alternativt højreklikke på en fil og vælge <menuchoice><guimenuitem>Afspil</guimenuitem></menuchoice> eller <menuchoice><guimenuitem>Sæt i kø</guimenuitem></menuchoice> for henholdsvis at afspille den omgående eller blot føje den til afspilningslisten.</para>
       <para>Hvis medieserveren tillader det, kan du slette en fil fra serveren ved at vælge <menuchoice><guimenuitem>Slet</guimenuitem></menuchoice> fra filens kontekstmenu.</para>
     </sect2>
-    <sect2 id="totem-plugins-gromit">
+    <sect2 id="xplayer-plugins-gromit">
       <title>Gromit-annotationer</title>
       <para>Udvidelsesmodulet <guilabel>Gromit-annotationer</guilabel> lader dig tegne på film mens de afspilles, ved hjælp af <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. Du skal have <application>Gromit</application> installeret for at kunne aktivere dette modul - se dokumentationen for dit operativsystem for information om hvordan dette gøres.</para>
       <para>Når dette udvidelsesmodul er aktiveret, kan du trykke <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> for at slå <application>Gromit</application> til eller fra. Når <application>Gromit</application> er aktiveret, vil din musemarkør ændres til et sigtekorn. Du kan så tegne på skærmen ved at holde museknappen nede, trække markøren omkring, og så slippe den museknappen. Tryk <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> igen for at slå <application>Gromit</application> fra.</para>
-      <para>Du kan rydde skærmen for annotationer ved at trykke <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, eller lukke <application>Totem</application>.</para>
+      <para>Du kan rydde skærmen for annotationer ved at trykke <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, eller lukke <application>Xplayer</application>.</para>
     </sect2>
-    <sect2 id="totem-plugins-jamendo">
+    <sect2 id="xplayer-plugins-jamendo">
       <title>Jamendo</title>
       <para>Udvidelsesmodulet <guilabel>Jamendo</guilabel> lader dig lytte til en samling af musik, udgivet under Creative Commons-licensen, via <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>-tjenesten.</para>
-      <sect3 id="totem-plugins-jamendo-configuration">
+      <sect3 id="xplayer-plugins-jamendo-configuration">
         <title>Konfigurér udvidelsesmodulet</title>
         <para>Modulet <guilabel>Jamendo</guilabel> kan konfigureres. Klik på <guibutton>Konfigurér</guibutton>-knappen når modulet aktiveres, og vinduet <application>Konfiguration af Jamendo-udvidelsesmodul</application> vil blive vist. Her kan du vælge om du vil hente sange i Ogg- eller MP3-format (Ogg-formatet er at foretrække på grund af dets fri natur), samt antallet af album, der skal hentes når der foretages en søgning (vælg flere album hvis du har en hurtigere internetforbindelse).</para>
         <para>Klik på <guibutton>O.k.</guibutton>-knappen når du er færdig.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-setup">
+      <sect3 id="xplayer-plugins-jamendo-setup">
         <title>Vis Jamendo-sidepanelet</title>
         <para>Når <guilabel>Jamendo</guilabel>-udvidelsesmodulet er aktiveret, kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klikke på <guibutton>Sidepanel</guibutton>-knappen for at få vist sidepanelet. Vælg <guilabel>Jamendo</guilabel> fra rullegardinslisten øverst i sidepanelet for at få vist <guilabel>Jamendo</guilabel>-sidepanelet.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-search">
+      <sect3 id="xplayer-plugins-jamendo-search">
         <title>Søg efter musik</title>
         <para>Indtast dine søgestrenge i indtastningsfeltet øverst i <guilabel>Jamendo</guilabel>-sidepanelet. Du kan søge enten på kunstner eller mærker. Klik på søgeknappen for at starte søgningen.</para>
         <para>Søgeresultaterne anføres som en trævisning i sidepanelets <guilabel>Søgeresultater</guilabel>-faneblad, og kan gennemses ved brug af piletasterne for bunden af sidepanelet. Her vises en liste af album, som du kan klikke på for at få vist de tilhørende spor nedenunder. Klik igen for at skjule albummets spor.</para>
         <para>Hvis du har valgt en kunstner, kan du klikke på knappen <guibutton>Jamendo-albumside</guibutton> for at åbne siden for dette album på Jamendo-webstedet. Dobbeltklik på et album, eller vælg <menuchoice><guimenuitem>Føj til afspilningsliste</guimenuitem></menuchoice> fra albummets kontekstmenu, for at erstatte den afspilningsliste med alle sporene fra dette album, og påbegynde streaming af det første spor fra Jamendos websted. Du kan også dobbeltklikke på et enkelt spor, for at erstatte din afspilningliste med blot dette spor.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-popular">
+      <sect3 id="xplayer-plugins-jamendo-popular">
         <title>Populære album og nyeste udgivelser</title>
         <para>Fanebladet <guilabel>Populære</guilabel> i <guilabel>Jamendo</guilabel>-sidepanelet vil hente en liste af de mest populære album på Jamendo i øjeblikket, og disse kan afspilles på samme vis som andre søgeresultater. Fanebladet <guilabel>Sidste udgivelser</guilabel> vil tilsvarende hente en liste af de senest udgivne album på Jamendo.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-tracker">
+    <sect2 id="xplayer-plugins-tracker">
       <title>Lokal søgning</title>
-      <para>Udvidelsesmodulet <guilabel>Lokal søgning</guilabel> lader dig søge efter film- og lydfiler på din computer direkte fra <application>Totem</application>. Når modulet er aktiveret, kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klik på knappen <guibutton>Sidepanel</guibutton> for at få vist sidepanelet. Vælg <guilabel>Lokal søgning</guilabel> fra rullegardinslisten øverst i sidepanelet for at få vist sidepanelet for <guilabel>Lokal søgning</guilabel>.</para>
+      <para>Udvidelsesmodulet <guilabel>Lokal søgning</guilabel> lader dig søge efter film- og lydfiler på din computer direkte fra <application>Xplayer</application>. Når modulet er aktiveret, kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klik på knappen <guibutton>Sidepanel</guibutton> for at få vist sidepanelet. Vælg <guilabel>Lokal søgning</guilabel> fra rullegardinslisten øverst i sidepanelet for at få vist sidepanelet for <guilabel>Lokal søgning</guilabel>.</para>
       <para>Angiv dine søgetermer i indtastningsfeltet øverst i sidepanelet og klik <guibutton>Find</guibutton> for at foretage en søgning. Dine søgetermer kan inkludere specialtegn såsom <literal>*</literal>, hvilket vil matche enhver tegnfølge. For eksempel vil søgningen <userinput>*.mpg</userinput> finde alle film med filendelsen <filename class="extension">.mpg</filename>.</para>
       <para>Søgeresultater kan gennemses ved brug af knapperne <guibutton>Forrige</guibutton> og <guibutton>Næste</guibutton> ved bunden af sidepanelet, og du kan hoppe til en specifik resultatside ved at angive dens nummer i rulleboksen.</para>
     </sect2>
-    <sect2 id="totem-plugins-publish">
+    <sect2 id="xplayer-plugins-publish">
       <title>Udgiv afspilningsliste</title>
       <para>Udvidelsesmodulet <guilabel>Offentliggør afspilningsliste</guilabel> lader dig offentliggøre afspilningslister på dit lokalnetværk, så andre computere kan tilgå og afspille dem.</para>
-      <sect3 id="totem-plugins-publish-configuration">
+      <sect3 id="xplayer-plugins-publish-configuration">
         <title>Konfigurér udvidelsesmodulet</title>
         <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
           plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
@@ -798,7 +798,7 @@
           <variablelist>
 	    <varlistentry>
 	      <term lang="en"><literal>%a</literal></term>
-	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Xplayer Movie Player</application>.</para></listitem>
 	    </varlistentry>
 	    <varlistentry>
 	      <term lang="en"><literal>%h</literal></term>
@@ -821,16 +821,16 @@
 	<para>Du kan også sætte flueben ved <guilabel>Brug krypteret transportprotokol</guilabel>, hvis du ønsker at kryptere de delte afspilningslister, når de sendes over netværket.</para>
         <para>Klik på <guibutton>Luk</guibutton>-knappen når du er færdig.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-publishing">
+      <sect3 id="xplayer-plugins-publish-publishing">
         <title>Udgiv afspilningslister</title>
         <para>Når modulet er aktiveret, behøver du ikke eksplicit dele afspilningslister; de gøres automatisk tilgængelige på netværket som et Zeroconf-websted.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-neighborhood">
+      <sect3 id="xplayer-plugins-publish-neighborhood">
         <title>Gennemse nabolaget</title>
         <para>Vælg <guilabel>Naboer</guilabel> fra rullegardinslisten øverst i sidepanelet, for at få vist andres delte afspilningslister på netværket. Hvis nogen afspilningslister er blevet delt på netværket, vil de blive vist her. Dobbeltklik på en afspilningsliste for at hente den og afspille den på din computer.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-opensubtitles">
+    <sect2 id="xplayer-plugins-opensubtitles">
       <title>Underteksthenter</title>
       <para>Udvidelsesmodulet <guilabel>Underteksthenter</guilabel> lader dig finde og hente undertekstfiler fra tjenesten <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink>.</para>
       <para>Undertekster kan kun hentes til lokale film; ikke lydfiler, dvd'er, dvb-strømme, vcd'er eller http-strømme.
@@ -838,45 +838,45 @@
 Vælg <menuchoice><guimenu>Vis</guimenu><guimenuitem>Hent filmundertekster</guimenuitem></menuchoice> for at søge efter undertekster til den film, der i øjeblikket afspilles. Dette vil vise vinduet <application>Hent undertekster til film</application>.</para>
       <para>Vælg det sprog, du ønsker undertekster i, fra rullegardinslisten øverst i vinduet, og klik så på <guibutton>Find</guibutton> for at søge efter undertekster for den aktuelle film. Undertekster findes baseret på filmens indhold, frem for dens filnavn eller mærker.</para>
       <para>Søgeresultaterne anføres i trævisningen i midten af vinduet. I øjeblikket kan undertekster kun bruges ved at <emphasis>genindlæse</emphasis> den relevante film med underteksterne, så efter at have valgt undertekstfilen, så klik på knappen <guibutton>Afspil med undertekster</guibutton> for at hente filen samt genindlæse filmen.</para>
-        <note><para>Hentede undertekstfiler gemmes (som standard i <filename>~/.cache/totem/subtitles</filename>), så de ikke behøver blive hentet igen næste gang filmen afspilles. Når nye undertekster for en film hentes, vil eventuelle tidligere hentede undertekster for den pågældende film blive slettet.</para></note>
+        <note><para>Hentede undertekstfiler gemmes (som standard i <filename>~/.cache/xplayer/subtitles</filename>), så de ikke behøver blive hentet igen næste gang filmen afspilles. Når nye undertekster for en film hentes, vil eventuelle tidligere hentede undertekster for den pågældende film blive slettet.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-thumbnail">
+    <sect2 id="xplayer-plugins-thumbnail">
       <title>Miniature</title>
-      <para>Udvidelsesmodulet <guilabel>Miniature</guilabel> sætter <application>Totem</application>s hovedvindues ikon til en miniature af den aktuelle film, og opdaterer ikonet når nye film indlæses.</para>
-      <note><para>Hvis en miniature ikke findes for den aktuelle film (eller hvis du afspiller en lydfil), vil hovedvinduets ikon nulstilles til <application>Totem</application>s logo.</para></note>
+      <para>Udvidelsesmodulet <guilabel>Miniature</guilabel> sætter <application>Xplayer</application>s hovedvindues ikon til en miniature af den aktuelle film, og opdaterer ikonet når nye film indlæses.</para>
+      <note><para>Hvis en miniature ikke findes for den aktuelle film (eller hvis du afspiller en lydfil), vil hovedvinduets ikon nulstilles til <application>Xplayer</application>s logo.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-brasero">
+    <sect2 id="xplayer-plugins-brasero">
       <title>Video-diskoptager</title>
       <para>Udvidelsesmodulet <guilabel>Video-diskoptager</guilabel> lader dig brænde den aktuelle afspilningsliste til en dvd eller vcd ved hjælp af <application>Brasero</application>.</para>
       <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
         A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
         information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
     </sect2>
-    <sect2 id="totem-plugins-youtube">
+    <sect2 id="xplayer-plugins-youtube">
       <title>YouTube-læser</title>
-      <para>Udvidelsesmodulet <guilabel>YouTube-læser</guilabel> lader dig søge i og gennemse <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, og afspille YouTube-videoer direkte i <application>Totem</application>. Når modulet er aktiveret, kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klikke på knappen <guibutton>Sidepanel</guibutton>, for at få vist sidepanelet. Vælg så <guilabel>YouTube</guilabel> fra rullegardinslisten øverst i sidepanelet for at få vist <guilabel>YouTube</guilabel>-sidepanelet.</para>
+      <para>Udvidelsesmodulet <guilabel>YouTube-læser</guilabel> lader dig søge i og gennemse <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, og afspille YouTube-videoer direkte i <application>Xplayer</application>. Når modulet er aktiveret, kan du vælge <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Vis</guimenu><guimenuitem>Sidepanel</guimenuitem></menuchoice> eller klikke på knappen <guibutton>Sidepanel</guibutton>, for at få vist sidepanelet. Vælg så <guilabel>YouTube</guilabel> fra rullegardinslisten øverst i sidepanelet for at få vist <guilabel>YouTube</guilabel>-sidepanelet.</para>
       <para>Angiv dine søgetermer i indtastningsfeltet øverst i sidepanelet og klik <guibutton>Find</guibutton> for søge efter en YouTube-video. Dine søgeresultater vil blive anført i trævisningen nedenfor. Flere resultater vil blive indlæst automatisk, efterhånden som du ruller gennem listen.</para>
       <para>Dobbeltklik på en video i resultatlisten, eller vælg <menuchoice><guimenuitem>Føj til afspilningsliste</guimenuitem></menuchoice> fra dens kontekstmenu, for at afspille videoen. Når en video afspilles, vil en liste af relaterede videoer automatisk blive oprettet i fanebladet <guilabel>Relaterede videoer</guilabel> i <guilabel>YouTube</guilabel>-sidepanelet.</para>
       <para>YouTube-videoer kan åbnes i en webbrowser ved at vælge <menuchoice><guimenuitem>Åbn i webbrowser</guimenuitem></menuchoice> fra deres kontekstmenu. Dette vil åbne videoen i dens originale placering på YouTube-webstedet.</para>
     </sect2>
-    <sect2 id="totem-plugins-dbus-service">
+    <sect2 id="xplayer-plugins-dbus-service">
       <title>D-Bus-tjeneste</title>
-      <para>Udvidelsesmodulet <guilabel>D-Bus-tjeneste</guilabel> rundsender beskeder om, hvilket spor, der afspilles i <application>Totem</application> via D-Bus-sessionsbussen. Programmer såsom <application>Gajim</application> kan lytte efter sådanne beskeder og reagere, f.eks. ved at opdatere din statusmeddelelse i dit IM-program, så der står, hvilken video, der nu afspilles i <application>Totem</application>.</para>
+      <para>Udvidelsesmodulet <guilabel>D-Bus-tjeneste</guilabel> rundsender beskeder om, hvilket spor, der afspilles i <application>Xplayer</application> via D-Bus-sessionsbussen. Programmer såsom <application>Gajim</application> kan lytte efter sådanne beskeder og reagere, f.eks. ved at opdatere din statusmeddelelse i dit IM-program, så der står, hvilken video, der nu afspilles i <application>Xplayer</application>.</para>
     </sect2>
   </sect1>
 
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to customize the
      application. -->
-  <sect1 id="totem-prefs">
+  <sect1 id="xplayer-prefs">
     <title>Indstillinger</title>
-    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+    <para lang="en">To modify the preferences of <application>Xplayer Movie Player</application>, choose
       <menuchoice>
         <guimenu>Edit</guimenu>
 	<guimenuitem>Preferences</guimenuitem>
       </menuchoice>.</para>
 
-    <sect2 id="totem-prefs-general">
+    <sect2 id="xplayer-prefs-general">
       <title>Generelt</title>
       <variablelist>
 	<varlistentry>
@@ -903,7 +903,7 @@ Vælg <menuchoice><guimenu>Vis</guimenu><guimenuitem>Hent filmundertekster</guim
         </varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-display">
+    <sect2 id="xplayer-prefs-display">
       <title>Fremvisning</title>
       <variablelist>
 	<varlistentry>
@@ -911,7 +911,7 @@ Vælg <menuchoice><guimenu>Vis</guimenu><guimenuitem>Hent filmundertekster</guim
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	        <para>Sæt flueben ved indstillingen for automatisk ændring af størrelse, hvis du vil have <application>Totem</application> til automatisk at ændre vinduesstørrelsen når en ny video indlæses, så det passer med videoen.</para>
+	        <para>Sæt flueben ved indstillingen for automatisk ændring af størrelse, hvis du vil have <application>Xplayer</application> til automatisk at ændre vinduesstørrelsen når en ny video indlæses, så det passer med videoen.</para>
               </listitem>
               <listitem>
                 <para>Sæt flueben ved indstillingen for pauseskærm, hvis du vil tillade at pauseskærmen aktiveres når du afspiller lydfiler. Visse skærme med integrerede højttalere vil muligvis stoppe afspilningen når pauseskærmen aktiveres.</para>
@@ -957,7 +957,7 @@ Vælg <menuchoice><guimenu>Vis</guimenu><guimenuitem>Hent filmundertekster</guim
 	</varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-audio">
+    <sect2 id="xplayer-prefs-audio">
       <title>Lyd</title>
       <variablelist>
 	<varlistentry>
@@ -988,11 +988,11 @@ Vælg <menuchoice><guimenu>Vis</guimenu><guimenuitem>Hent filmundertekster</guim
       section is optional: primary place for this info is "About.." box of
       the program. However, if you do wish to include this info in the
       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
-  <sect1 id="totem-about">
-    <title>Om <application>Totem</application></title>
-    <para><application>Totem</application> er skrevet af Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) for GStreamer-motoren, samt Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Besøg <ulink url="http://projects.gnome.org/totem/" type="http"><application>Totem</application>Totems websted</ulink> for yderligere information om <application>Totem</application>.</para>
+  <sect1 id="xplayer-about">
+    <title>Om <application>Xplayer</application></title>
+    <para><application>Xplayer</application> er skrevet af Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) for GStreamer-motoren, samt Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Besøg <ulink url="http://projects.gnome.org/xplayer/" type="http"><application>Xplayer</application>Xplayers websted</ulink> for yderligere information om <application>Xplayer</application>.</para>
     <para lang="en">
-      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
       this manual, follow the directions in the
       <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
     </para>

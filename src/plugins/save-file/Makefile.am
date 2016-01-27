@@ -5,7 +5,7 @@ plugin_LTLIBRARIES = libsave-file.la
 
 plugin_in_files = save-file.plugin.in
 
-libsave_file_la_SOURCES = totem-save-file.c
+libsave_file_la_SOURCES = xplayer-save-file.c
 libsave_file_la_LDFLAGS = $(plugin_ldflags)
 libsave_file_la_LIBADD = \
 	$(plugin_libadd)	\

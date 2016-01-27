@@ -3,7 +3,7 @@
   SYSTEM 'http://glade.gnome.org/glade-2.0.dtd'>
 <interface>
 
-<object class="GtkWindow" id="totem_exit_fullscreen_window">
+<object class="GtkWindow" id="xplayer_exit_fullscreen_window">
   <property name="title" translatable="yes"></property>
   <property name="type">GTK_WINDOW_POPUP</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
@@ -17,8 +17,8 @@
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
-  <signal name="enter-notify-event" handler="totem_fullscreen_control_enter_notify"/>
-  <signal name="leave-notify-event" handler="totem_fullscreen_control_leave_notify"/>
+  <signal name="enter-notify-event" handler="xplayer_fullscreen_control_enter_notify"/>
+  <signal name="leave-notify-event" handler="xplayer_fullscreen_control_leave_notify"/>
 
   <child>
     <object class="GtkButton" id="tefw_fs_exit_button">
@@ -94,7 +94,7 @@
   </child>
 </object>
 
-<object class="GtkWindow" id="totem_controls_window">
+<object class="GtkWindow" id="xplayer_controls_window">
   <property name="title" translatable="yes"></property>
   <property name="type">GTK_WINDOW_POPUP</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
@@ -108,8 +108,8 @@
   <property name="gravity">GDK_GRAVITY_SOUTH_WEST</property>
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
-  <signal name="enter-notify-event" handler="totem_fullscreen_control_enter_notify"/>
-  <signal name="leave-notify-event" handler="totem_fullscreen_control_leave_notify"/>
+  <signal name="enter-notify-event" handler="xplayer_fullscreen_control_enter_notify"/>
+  <signal name="leave-notify-event" handler="xplayer_fullscreen_control_leave_notify"/>
 
   <child>
     <object class="GtkHBox" id="tcw_hbox">
@@ -179,8 +179,8 @@
 	      <property name="digits">1</property>
 	      <property name="inverted">False</property>
 	      <property name="adjustment">tcw_seek_adjustment</property>
-	      <signal name="button-press-event" handler="totem_fullscreen_seek_slider_pressed_cb"/>
-	      <signal name="button-release-event" handler="totem_fullscreen_seek_slider_released_cb"/>
+	      <signal name="button-press-event" handler="xplayer_fullscreen_seek_slider_pressed_cb"/>
+	      <signal name="button-release-event" handler="xplayer_fullscreen_seek_slider_released_cb"/>
 	    </object>
 	    <packing>
 	      <property name="padding">0</property>
@@ -203,7 +203,7 @@
 	  <property name="spacing">3</property>
 
 	  <child>
-	    <object class="TotemTimeLabel" id="tcw_time_display_label">
+	    <object class="XplayerTimeLabel" id="tcw_time_display_label">
 	      <property name="visible">True</property>
 	    </object>
 	    <packing>

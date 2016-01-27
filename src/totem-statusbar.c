@@ -1,6 +1,6 @@
 /* GTK - The GIMP Toolkit
  * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
- * TotemStatusbar Copyright (C) 1998 Shawn T. Amundson
+ * XplayerStatusbar Copyright (C) 1998 Shawn T. Amundson
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -31,18 +31,18 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#include "totem-statusbar.h"
-#include "totem-time-helpers.h"
+#include "xplayer-statusbar.h"
+#include "xplayer-time-helpers.h"
 
 #define SPACING 4
 #define NORMAL_CONTEXT "text"
 #define BUFFERING_CONTEXT "buffering"
 #define HELP_CONTEXT "help"
 
-static void totem_statusbar_finalize         (GObject             *object);
-static void totem_statusbar_sync_description (TotemStatusbar      *statusbar);
+static void xplayer_statusbar_finalize         (GObject             *object);
+static void xplayer_statusbar_sync_description (XplayerStatusbar      *statusbar);
 
-struct _TotemStatusbarPrivate {
+struct _XplayerStatusbarPrivate {
   GtkWidget *progress;
   GtkWidget *time_label;
 
@@ -56,22 +56,22 @@ struct _TotemStatusbarPrivate {
   guint timeout_ticks : 2;
 };
 
-G_DEFINE_TYPE(TotemStatusbar, totem_statusbar, GTK_TYPE_STATUSBAR)
+G_DEFINE_TYPE(XplayerStatusbar, xplayer_statusbar, GTK_TYPE_STATUSBAR)
 
 static void
-totem_statusbar_class_init (TotemStatusbarClass *klass)
+xplayer_statusbar_class_init (XplayerStatusbarClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-  g_type_class_add_private (klass, sizeof (TotemStatusbarPrivate));
+  g_type_class_add_private (klass, sizeof (XplayerStatusbarPrivate));
 
-  gobject_class->finalize = totem_statusbar_finalize;
+  gobject_class->finalize = xplayer_statusbar_finalize;
 }
 
 static void
-totem_statusbar_init (TotemStatusbar *statusbar)
+xplayer_statusbar_init (XplayerStatusbar *statusbar)
 {
-  TotemStatusbarPrivate *priv = G_TYPE_INSTANCE_GET_PRIVATE (statusbar, TOTEM_TYPE_STATUSBAR, TotemStatusbarPrivate);
+  XplayerStatusbarPrivate *priv = G_TYPE_INSTANCE_GET_PRIVATE (statusbar, XPLAYER_TYPE_STATUSBAR, XplayerStatusbarPrivate);
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
   GtkWidget *packer, *hbox, *vbox, *label;
   GList *children_list;
@@ -112,27 +112,27 @@ totem_statusbar_init (TotemStatusbar *statusbar)
   gtk_box_pack_start (GTK_BOX (hbox), priv->time_label, FALSE, FALSE, 0);
   gtk_widget_show (priv->time_label);
 
-  totem_statusbar_set_text (statusbar, _("Stopped"));
+  xplayer_statusbar_set_text (statusbar, _("Stopped"));
 }
 
 GtkWidget* 
-totem_statusbar_new (void)
+xplayer_statusbar_new (void)
 {
-  return g_object_new (TOTEM_TYPE_STATUSBAR, NULL);
+  return g_object_new (XPLAYER_TYPE_STATUSBAR, NULL);
 }
 
 static void
-totem_statusbar_update_time (TotemStatusbar *statusbar)
+xplayer_statusbar_update_time (XplayerStatusbar *statusbar)
 {
-  TotemStatusbarPrivate *priv = statusbar->priv;
+  XplayerStatusbarPrivate *priv = statusbar->priv;
   char *time_string, *length, *label;
 
-  time_string = totem_time_to_string (priv->time * 1000);
+  time_string = xplayer_time_to_string (priv->time * 1000);
 
   if (priv->length < 0) {
     label = g_strdup_printf (_("%s (Streaming)"), time_string);
   } else {
-    length = totem_time_to_string
+    length = xplayer_time_to_string
 	    (priv->length == -1 ? 0 : priv->length * 1000);
 
     if (priv->seeking == FALSE)
@@ -149,11 +149,11 @@ totem_statusbar_update_time (TotemStatusbar *statusbar)
   gtk_label_set_text (GTK_LABEL (priv->time_label), label);
   g_free (label);
 
-  totem_statusbar_sync_description (statusbar);
+  xplayer_statusbar_sync_description (statusbar);
 }
 
 void
-totem_statusbar_set_text (TotemStatusbar *statusbar, const char *label)
+xplayer_statusbar_set_text (XplayerStatusbar *statusbar, const char *label)
 {
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
   guint id;
@@ -162,24 +162,24 @@ totem_statusbar_set_text (TotemStatusbar *statusbar, const char *label)
   gtk_statusbar_pop (gstatusbar, id);
   gtk_statusbar_push (gstatusbar, id, label);
 
-  totem_statusbar_sync_description (statusbar);
+  xplayer_statusbar_sync_description (statusbar);
 }
 
 void
-totem_statusbar_set_time (TotemStatusbar *statusbar, gint _time)
+xplayer_statusbar_set_time (XplayerStatusbar *statusbar, gint _time)
 {
-  g_return_if_fail (TOTEM_IS_STATUSBAR (statusbar));
+  g_return_if_fail (XPLAYER_IS_STATUSBAR (statusbar));
 
   if (statusbar->priv->time == _time)
     return;
 
   statusbar->priv->time = _time;
-  totem_statusbar_update_time (statusbar);
+  xplayer_statusbar_update_time (statusbar);
 }
 
 /* Set a help message to be displayed in the status bar. */
 void
-totem_statusbar_push_help (TotemStatusbar *statusbar, const char *message)
+xplayer_statusbar_push_help (XplayerStatusbar *statusbar, const char *message)
 {
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
   guint id;
@@ -190,7 +190,7 @@ totem_statusbar_push_help (TotemStatusbar *statusbar, const char *message)
 
 /* Remove the last help message of the status bar. */
 void
-totem_statusbar_pop_help (TotemStatusbar *statusbar)
+xplayer_statusbar_pop_help (XplayerStatusbar *statusbar)
 {
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
   guint id;
@@ -200,9 +200,9 @@ totem_statusbar_pop_help (TotemStatusbar *statusbar)
 }
 
 static gboolean
-totem_statusbar_timeout_pop (TotemStatusbar *statusbar)
+xplayer_statusbar_timeout_pop (XplayerStatusbar *statusbar)
 {
-  TotemStatusbarPrivate *priv = statusbar->priv;
+  XplayerStatusbarPrivate *priv = statusbar->priv;
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
 
   if (--priv->timeout_ticks > 0)
@@ -215,7 +215,7 @@ totem_statusbar_timeout_pop (TotemStatusbar *statusbar)
 
   gtk_widget_hide (priv->progress);
 
-  totem_statusbar_sync_description (statusbar);
+  xplayer_statusbar_sync_description (statusbar);
 
   priv->percentage = 101;
 
@@ -225,9 +225,9 @@ totem_statusbar_timeout_pop (TotemStatusbar *statusbar)
 }
 
 void
-totem_statusbar_push (TotemStatusbar *statusbar, gdouble percentage)
+xplayer_statusbar_push (XplayerStatusbar *statusbar, gdouble percentage)
 {
-  TotemStatusbarPrivate *priv = statusbar->priv;
+  XplayerStatusbarPrivate *priv = statusbar->priv;
   GtkStatusbar *gstatusbar = GTK_STATUSBAR (statusbar);
   char *label;
   gboolean need_update = FALSE;
@@ -261,54 +261,54 @@ totem_statusbar_push (TotemStatusbar *statusbar, gdouble percentage)
 
   if (priv->timeout == 0)
   {
-    priv->timeout = g_timeout_add_seconds (1, (GSourceFunc) totem_statusbar_timeout_pop, statusbar);
+    priv->timeout = g_timeout_add_seconds (1, (GSourceFunc) xplayer_statusbar_timeout_pop, statusbar);
   }
 
   if (need_update)
-    totem_statusbar_sync_description (statusbar);
+    xplayer_statusbar_sync_description (statusbar);
 }
 
 void
-totem_statusbar_pop (TotemStatusbar *statusbar)
+xplayer_statusbar_pop (XplayerStatusbar *statusbar)
 {
   if (statusbar->priv->pushed != FALSE)
   {
     g_source_remove (statusbar->priv->timeout);
-    totem_statusbar_timeout_pop (statusbar);
+    xplayer_statusbar_timeout_pop (statusbar);
   }
 }
 
 void
-totem_statusbar_set_time_and_length (TotemStatusbar *statusbar,
+xplayer_statusbar_set_time_and_length (XplayerStatusbar *statusbar,
 				     gint _time, gint length)
 {
-  g_return_if_fail (TOTEM_IS_STATUSBAR (statusbar));
+  g_return_if_fail (XPLAYER_IS_STATUSBAR (statusbar));
 
   if (_time != statusbar->priv->time ||
       length != statusbar->priv->length) {
     statusbar->priv->time = _time;
     statusbar->priv->length = length;
 
-    totem_statusbar_update_time (statusbar);
+    xplayer_statusbar_update_time (statusbar);
   }
 }
 
 void
-totem_statusbar_set_seeking (TotemStatusbar *statusbar,
+xplayer_statusbar_set_seeking (XplayerStatusbar *statusbar,
 			     gboolean seeking)
 {
-  g_return_if_fail (TOTEM_IS_STATUSBAR (statusbar));
+  g_return_if_fail (XPLAYER_IS_STATUSBAR (statusbar));
 
   if (statusbar->priv->seeking == seeking)
     return;
 
   statusbar->priv->seeking = seeking;
 
-  totem_statusbar_update_time (statusbar);
+  xplayer_statusbar_update_time (statusbar);
 }
 
 static void
-totem_statusbar_sync_description (TotemStatusbar *statusbar)
+xplayer_statusbar_sync_description (XplayerStatusbar *statusbar)
 {
   GtkWidget *message_area, *label;
   AtkObject *obj;
@@ -337,14 +337,14 @@ totem_statusbar_sync_description (TotemStatusbar *statusbar)
 }
 
 static void
-totem_statusbar_finalize (GObject *object)
+xplayer_statusbar_finalize (GObject *object)
 {
-  TotemStatusbarPrivate *priv = TOTEM_STATUSBAR (object)->priv;
+  XplayerStatusbarPrivate *priv = XPLAYER_STATUSBAR (object)->priv;
 
   if (priv->timeout != 0)
     g_source_remove (priv->timeout);
 
-  G_OBJECT_CLASS (totem_statusbar_parent_class)->finalize (object);
+  G_OBJECT_CLASS (xplayer_statusbar_parent_class)->finalize (object);
 }
 
 /*

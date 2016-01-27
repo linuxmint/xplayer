@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemConePlaylist.h"
+#include "xplayerPlugin.h"
+#include "xplayerConePlaylist.h"
 
 static const char *propertyNames[] = {
   "isPlaying",
@@ -45,29 +45,29 @@ static const char *methodNames[] = {
   "togglePause"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemConePlaylist,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerConePlaylist,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemConePlaylist::totemConePlaylist (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerConePlaylist::xplayerConePlaylist (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemConePlaylist::~totemConePlaylist ()
+xplayerConePlaylist::~xplayerConePlaylist ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemConePlaylist::InvokeByIndex (int aIndex,
+xplayerConePlaylist::InvokeByIndex (int aIndex,
                                   const NPVariant *argv,
                                   uint32_t argc,
                                   NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemConePlaylist);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerConePlaylist);
 
   switch (Methods (aIndex)) {
     case eAdd: {
@@ -113,18 +113,18 @@ totemConePlaylist::InvokeByIndex (int aIndex,
     }
 
     case ePlay:
-      Plugin()->Command (TOTEM_COMMAND_PLAY);
+      Plugin()->Command (XPLAYER_COMMAND_PLAY);
       return VoidVariant (_result);
 
     case eStop:
-      Plugin()->Command (TOTEM_COMMAND_STOP);
+      Plugin()->Command (XPLAYER_COMMAND_STOP);
       return VoidVariant (_result);
 
     case eTogglePause:
-      if (Plugin()->State() == TOTEM_STATE_PLAYING) {
-	Plugin()->Command (TOTEM_COMMAND_PAUSE);
-      } else if (Plugin()->State() == TOTEM_STATE_PAUSED) {
-	Plugin()->Command (TOTEM_COMMAND_PLAY);
+      if (Plugin()->State() == XPLAYER_STATE_PLAYING) {
+	Plugin()->Command (XPLAYER_COMMAND_PAUSE);
+      } else if (Plugin()->State() == XPLAYER_STATE_PAUSED) {
+	Plugin()->Command (XPLAYER_COMMAND_PLAY);
       }
       return VoidVariant (_result);
 
@@ -132,7 +132,7 @@ totemConePlaylist::InvokeByIndex (int aIndex,
     case ePlayItem:
     case ePrev:
     case eRemoveItem:
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemConePlaylist);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerConePlaylist);
       return VoidVariant (_result);
   }
 
@@ -140,27 +140,27 @@ totemConePlaylist::InvokeByIndex (int aIndex,
 }
 
 bool
-totemConePlaylist::GetPropertyByIndex (int aIndex,
+xplayerConePlaylist::GetPropertyByIndex (int aIndex,
                                        NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemConePlaylist);
+  XPLAYER_LOG_GETTER (aIndex, xplayerConePlaylist);
 
   switch (Properties (aIndex)) {
     case eItems:
-      return ObjectVariant (_result, Plugin()->GetNPObject (totemPlugin::eConePlaylistItems));
+      return ObjectVariant (_result, Plugin()->GetNPObject (xplayerPlugin::eConePlaylistItems));
 
     case eIsPlaying:
-      return BoolVariant (_result, Plugin()->State() == TOTEM_STATE_PLAYING);
+      return BoolVariant (_result, Plugin()->State() == XPLAYER_STATE_PLAYING);
   }
 
   return false;
 }
 
 bool
-totemConePlaylist::SetPropertyByIndex (int aIndex,
+xplayerConePlaylist::SetPropertyByIndex (int aIndex,
                                        const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemConePlaylist);
+  XPLAYER_LOG_SETTER (aIndex, xplayerConePlaylist);
 
   return ThrowPropertyNotWritable ();
 }

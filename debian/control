@@ -2,7 +2,7 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
-Source: totem
+Source: xplayer
 Section: video
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -42,7 +42,7 @@ Build-Depends: debhelper (>= 8),
                libpeas-dev (>= 1.1.0),
                librsvg2-dev (>= 2.16.0-2),
                libsoup2.4-dev,
-               libtotem-plparser-dev (>= 2.32.4-2),
+               libxplayer-plparser-dev (>= 2.32.4-2),
                libx11-dev,
                libxml2-dev (>= 2.6.0),
                libxrandr-dev (>= 2:1.1.1),
@@ -56,27 +56,27 @@ Build-Depends: debhelper (>= 8),
                x11proto-core-dev,
                yelp-tools
 Standards-Version: 3.9.4
-Homepage: http://www.gnome.org/projects/totem/
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/totem/ubuntu
+Homepage: http://www.gnome.org/projects/xplayer/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/xplayer/ubuntu
 
-Package: libtotem0
+Package: libxplayer0
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Replaces: totem (<< 3.0.1-1)
-Description: Main library for the Totem media player
- This package contains the main library used by the Totem media player. It is
+Replaces: xplayer (<< 3.0.1-1)
+Description: Main library for the Xplayer media player
+ This package contains the main library used by the Xplayer media player. It is
  used both by the media player itself and by the plugins.
  .
- This library is only useful within Totem. You should not have to
+ This library is only useful within Xplayer. You should not have to
  manually install this package.
 
-Package: totem
+Package: xplayer
 Architecture: any
 Depends: ${misc:Depends},
          ${python:Depends},
          ${shlibs:Depends},
-         totem-common (= ${source:Version}),
+         xplayer-common (= ${source:Version}),
          gstreamer1.0-clutter,
          gstreamer1.0-plugins-base,
          gstreamer1.0-plugins-good,
@@ -84,15 +84,15 @@ Depends: ${misc:Depends},
          gnome-icon-theme (>= 2.15.90),
          gnome-icon-theme-symbolic,
          gsettings-desktop-schemas,
-Recommends: totem-plugins,
+Recommends: xplayer-plugins,
             gstreamer1.0-pulseaudio,
 Suggests: gnome-codec-install,
           gstreamer1.0-libav,
           gstreamer1.0-plugins-bad,
           gstreamer1.0-plugins-ugly,
-          totem-mozilla
+          xplayer-mozilla
 Description: Simple media player for the GNOME desktop based on GStreamer
- Totem is a simple yet featureful media player for GNOME which can read
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats. It features :
  .
     * Shoutcast, m3u, asx, SMIL and ra playlists support
@@ -114,128 +114,128 @@ Description: Simple media player for the GNOME desktop based on GStreamer
     * DVD, VCD and OGG/OGM subtitles with automatic language selection
     * Extensible with plugins
 
-Package: totem-mozilla
+Package: xplayer-mozilla
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         totem (= ${binary:Version}),
+         xplayer (= ${binary:Version}),
          dbus-x11 (>= 0.61)
 #Recommends: epiphany-browser | www-browser
 XB-Npp-Applications: ec8030f7-c20a-464f-9b0e-13a3a9e97384, 92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a
-XB-Npp-Name:  Totem Mozilla plugin
+XB-Npp-Name:  Xplayer Mozilla plugin
 XB-Npp-MimeType: video/quicktime, video/mp4, image/x-macpaint, image/x-quicktime, application/x-mplayer2, video/x-ms-asf-plugin, video/x-msvideo, video/x-ms-asf, video/x-ms-wmv, video/x-wmv, video/x-ms-wvx, video/x-ms-wm, application/ogg, video/mpeg, audio/wav, audio/x-wav, audio/mpeg
-XB-Npp-Description: Watch Movies in your Browser (http://projects.gnome.org/totem/)
-XB-Npp-Filename: libtotem-
-Description: Totem Mozilla plugin
- This package contains the Totem Mozilla plugin, which will
+XB-Npp-Description: Watch Movies in your Browser (http://projects.gnome.org/xplayer/)
+XB-Npp-Filename: libxplayer-
+Description: Xplayer Mozilla plugin
+ This package contains the Xplayer Mozilla plugin, which will
  enhance your Gecko-based browser to be able to display movie
  clips.
  .
  This plugin should work for Firefox as well as XULRunner based browsers.
 
-Package: totem-common
+Package: xplayer-common
 Architecture: all
 Depends: ${misc:Depends}
-Description: Data files for the Totem media player
- Totem is a simple yet featureful media player for GNOME which can read
+Description: Data files for the Xplayer media player
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats.
  .
  This package contains common data files and translations.
 
-Package: totem-dbg
+Package: xplayer-dbg
 Architecture: any
 Section: debug
 Priority: extra
 Depends: ${misc:Depends},
-         totem (= ${binary:Version})
-Description: Debugging symbols for the Totem media player
- Totem is a simple yet featureful media player for GNOME which can read
+         xplayer (= ${binary:Version})
+Description: Debugging symbols for the Xplayer media player
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats.
  .
  This package contains detached debugging symbols.
 
-Package: totem-plugins
+Package: xplayer-plugins
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${python:Depends},
-         totem (= ${binary:Version}),
+         xplayer (= ${binary:Version}),
          gir1.2-gdkpixbuf-2.0,
          gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
          gir1.2-pango-1.0,
          gir1.2-peas-1.0,
-         gir1.2-totem-1.0 (= ${binary:Version}),
+         gir1.2-xplayer-1.0 (= ${binary:Version}),
          python-gi (>= 2.90.3),
          python-xdg
 Suggests: gromit
-Description: Plugins for the Totem media player
- Totem is a simple yet featureful media player for GNOME which can read
+Description: Plugins for the Xplayer media player
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats.
  .
- This package contains a set of recommended plugins for Totem, which
+ This package contains a set of recommended plugins for Xplayer, which
  allow to:
  .
     * Annotate the screen with the Gromit tool
-    * Control Totem with an Infrared remote control
-    * Control Totem with the keyboard's media player keys
-    * Keep the Totem window on top of the screen
+    * Control Xplayer with an Infrared remote control
+    * Control Xplayer with the keyboard's media player keys
+    * Keep the Xplayer window on top of the screen
     * Display movie properties
     * Deactivate the screensaver when a movie is playing
     * Skip to a defined time in the movie
     * Set the away status in the instant messenger when a movie is
       playing
-    * Control totem with a mobile phone using the Bluetooth protocol
+    * Control xplayer with a mobile phone using the Bluetooth protocol
     * Share the current playlist via HTTP
     * Search, browse for and play videos from YouTube
  .
  Additional plugins can be written in C, Python or Vala.
 
-Package: totem-plugins-extra
+Package: xplayer-plugins-extra
 Architecture: any
-Depends: totem (= ${binary:Version}),
+Depends: xplayer (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
 Recommends: gromit
-Description: Extra plugins for the Totem media player
- Totem is a simple yet featureful media player for GNOME which can read
+Description: Extra plugins for the Xplayer media player
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats.
  .
- This package contains a set of extra plugins for Totem, which allow to:
+ This package contains a set of extra plugins for Xplayer, which allow to:
  .
     * Discover and browse media using the Grilo DLNA plugin
     * Annotate the screen with the Gromit tool
  .
  Additional plugins can be written in C, Python or Vala.
 
-Package: gir1.2-totem-1.0
+Package: gir1.2-xplayer-1.0
 Section: introspection
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${gir:Depends}
-Description: GObject introspection data for Totem media player
- Totem is a simple yet featureful media player for GNOME which can read
+Description: GObject introspection data for Xplayer media player
+ Xplayer is a simple yet featureful media player for GNOME which can read
  a large number of file formats.
  .
- This package contains introspection data for the Totem media player.
+ This package contains introspection data for the Xplayer media player.
  .
  It can be used by packages using the GIRepository format to generate
  dynamic bindings.
 
-Package: libtotem-dev
+Package: libxplayer-dev
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         libtotem0 (= ${binary:Version}),
-         gir1.2-totem-1.0 (= ${binary:Version}),
+         libxplayer0 (= ${binary:Version}),
+         gir1.2-xplayer-1.0 (= ${binary:Version}),
          libglib2.0-dev,
          libgtk-3-dev,
-         libtotem-plparser-dev
-Breaks: totem (<< 3.0.1-2)
-Replaces: totem (<< 3.0.1-2)
-Description: Main library for the Totem media player - development files
- This package contains development files for the Totem media player library.
+         libxplayer-plparser-dev
+Breaks: xplayer (<< 3.0.1-2)
+Replaces: xplayer (<< 3.0.1-2)
+Description: Main library for the Xplayer media player - development files
+ This package contains development files for the Xplayer media player library.
  .
- You may need it to develop plugins for Totem.
+ You may need it to develop plugins for Xplayer.

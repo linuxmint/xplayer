@@ -80,8 +80,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = totem$(EXEEXT) totem-video-thumbnailer$(EXEEXT) \
-	totem-audio-preview$(EXEEXT)
+bin_PROGRAMS = xplayer$(EXEEXT) xplayer-video-thumbnailer$(EXEEXT) \
+	xplayer-audio-preview$(EXEEXT)
 @WITH_SMCLIENT_TRUE@am__append_1 = \
 @WITH_SMCLIENT_TRUE@	eggsmclient.c \
 @WITH_SMCLIENT_TRUE@	eggsmclient.h \
@@ -99,7 +99,7 @@ bin_PROGRAMS = totem$(EXEEXT) totem-video-thumbnailer$(EXEEXT) \
 @WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_WIN32_TRUE@am__append_6 = eggsmclient-win32.c
 @WITH_SMCLIENT_QUARTZ_TRUE@@WITH_SMCLIENT_TRUE@am__append_7 = eggsmclient-osx.c
 @HAVE_NAUTILUS_TRUE@noinst_PROGRAMS = test-properties-page$(EXEEXT)
-@HAVE_INTROSPECTION_TRUE@am__append_8 = Totem-1.0.gir
+@HAVE_INTROSPECTION_TRUE@am__append_8 = Xplayer-1.0.gir
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/build-aux/depcomp
@@ -148,121 +148,121 @@ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(nautilusdir)" \
 LTLIBRARIES = $(lib_LTLIBRARIES) $(nautilus_LTLIBRARIES) \
 	$(noinst_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_DEPENDENCIES = properties/libbaconvideowidgetproperties.la \
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_DEPENDENCIES = properties/libbaconvideowidgetproperties.la \
 @HAVE_NAUTILUS_TRUE@	$(am__DEPENDENCIES_1)
-am__libtotem_properties_page_la_SOURCES_DIST =  \
-	totem-properties-main.c totem-properties-view.c \
-	totem-properties-view.h
-@HAVE_NAUTILUS_TRUE@am_libtotem_properties_page_la_OBJECTS = libtotem_properties_page_la-totem-properties-main.lo \
-@HAVE_NAUTILUS_TRUE@	libtotem_properties_page_la-totem-properties-view.lo
-libtotem_properties_page_la_OBJECTS =  \
-	$(am_libtotem_properties_page_la_OBJECTS)
+am__libxplayer_properties_page_la_SOURCES_DIST =  \
+	xplayer-properties-main.c xplayer-properties-view.c \
+	xplayer-properties-view.h
+@HAVE_NAUTILUS_TRUE@am_libxplayer_properties_page_la_OBJECTS = libxplayer_properties_page_la-xplayer-properties-main.lo \
+@HAVE_NAUTILUS_TRUE@	libxplayer_properties_page_la-xplayer-properties-view.lo
+libxplayer_properties_page_la_OBJECTS =  \
+	$(am_libxplayer_properties_page_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotem_properties_page_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_properties_page_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_properties_page_la_CFLAGS) $(CFLAGS) \
-	$(libtotem_properties_page_la_LDFLAGS) $(LDFLAGS) -o $@
-@HAVE_NAUTILUS_TRUE@am_libtotem_properties_page_la_rpath = -rpath \
+	$(libxplayer_properties_page_la_CFLAGS) $(CFLAGS) \
+	$(libxplayer_properties_page_la_LDFLAGS) $(LDFLAGS) -o $@
+@HAVE_NAUTILUS_TRUE@am_libxplayer_properties_page_la_rpath = -rpath \
 @HAVE_NAUTILUS_TRUE@	$(nautilusdir)
 @WITH_SMCLIENT_TRUE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
-libtotem_la_DEPENDENCIES = libtotem_player.la \
+libxplayer_la_DEPENDENCIES = libxplayer_player.la \
 	backend/libbaconvideowidget.la $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_2)
-am__libtotem_la_SOURCES_DIST = totem.h totem-interface.h \
-	plugins/totem-plugin.h plugins/totem-dirs.h totem-object.c \
-	totem-private.h totem-preferences.c totem-preferences.h \
-	totem-dnd-menu.c totem-dnd-menu.h totem-options.c \
-	totem-options.h totem-playlist.c totem-playlist.h \
+am__libxplayer_la_SOURCES_DIST = xplayer.h xplayer-interface.h \
+	plugins/xplayer-plugin.h plugins/xplayer-dirs.h xplayer-object.c \
+	xplayer-private.h xplayer-preferences.c xplayer-preferences.h \
+	xplayer-dnd-menu.c xplayer-dnd-menu.h xplayer-options.c \
+	xplayer-options.h xplayer-playlist.c xplayer-playlist.h \
 	eggfileformatchooser.c eggfileformatchooser.h egg-macros.h \
-	totem-session.c totem-session.h totem-sidebar.c \
-	totem-sidebar.h totem-open-location.c totem-open-location.h \
-	totem-menu.c totem-menu.h totem-uri.c totem-uri.h \
-	totem-subtitle-encoding.c totem-subtitle-encoding.h \
-	totem-profile.h plugins/totem-plugins-engine.c \
-	plugins/totem-plugins-engine.h plugins/totem-dirs.c \
+	xplayer-session.c xplayer-session.h xplayer-sidebar.c \
+	xplayer-sidebar.h xplayer-open-location.c xplayer-open-location.h \
+	xplayer-menu.c xplayer-menu.h xplayer-uri.c xplayer-uri.h \
+	xplayer-subtitle-encoding.c xplayer-subtitle-encoding.h \
+	xplayer-profile.h plugins/xplayer-plugins-engine.c \
+	plugins/xplayer-plugins-engine.h plugins/xplayer-dirs.c \
 	eggsmclient.c eggsmclient.h eggsmclient-private.h \
 	eggdesktopfile.c eggdesktopfile.h eggsmclient-xsmp.c \
 	eggsmclient-win32.c eggsmclient-osx.c
 am__objects_1 =
-@WITH_SMCLIENT_TRUE@am__objects_2 = libtotem_la-eggsmclient.lo
-@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_XSMP_TRUE@am__objects_3 = libtotem_la-eggdesktopfile.lo \
-@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_XSMP_TRUE@	libtotem_la-eggsmclient-xsmp.lo
-@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_WIN32_TRUE@am__objects_4 = libtotem_la-eggsmclient-win32.lo
-@WITH_SMCLIENT_QUARTZ_TRUE@@WITH_SMCLIENT_TRUE@am__objects_5 = libtotem_la-eggsmclient-osx.lo
-am_libtotem_la_OBJECTS = $(am__objects_1) libtotem_la-totem-object.lo \
-	libtotem_la-totem-preferences.lo libtotem_la-totem-dnd-menu.lo \
-	libtotem_la-totem-options.lo libtotem_la-totem-playlist.lo \
-	libtotem_la-eggfileformatchooser.lo \
-	libtotem_la-totem-session.lo libtotem_la-totem-sidebar.lo \
-	libtotem_la-totem-open-location.lo libtotem_la-totem-menu.lo \
-	libtotem_la-totem-uri.lo \
-	libtotem_la-totem-subtitle-encoding.lo \
-	libtotem_la-totem-plugins-engine.lo libtotem_la-totem-dirs.lo \
+@WITH_SMCLIENT_TRUE@am__objects_2 = libxplayer_la-eggsmclient.lo
+@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_XSMP_TRUE@am__objects_3 = libxplayer_la-eggdesktopfile.lo \
+@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_XSMP_TRUE@	libxplayer_la-eggsmclient-xsmp.lo
+@WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_WIN32_TRUE@am__objects_4 = libxplayer_la-eggsmclient-win32.lo
+@WITH_SMCLIENT_QUARTZ_TRUE@@WITH_SMCLIENT_TRUE@am__objects_5 = libxplayer_la-eggsmclient-osx.lo
+am_libxplayer_la_OBJECTS = $(am__objects_1) libxplayer_la-xplayer-object.lo \
+	libxplayer_la-xplayer-preferences.lo libxplayer_la-xplayer-dnd-menu.lo \
+	libxplayer_la-xplayer-options.lo libxplayer_la-xplayer-playlist.lo \
+	libxplayer_la-eggfileformatchooser.lo \
+	libxplayer_la-xplayer-session.lo libxplayer_la-xplayer-sidebar.lo \
+	libxplayer_la-xplayer-open-location.lo libxplayer_la-xplayer-menu.lo \
+	libxplayer_la-xplayer-uri.lo \
+	libxplayer_la-xplayer-subtitle-encoding.lo \
+	libxplayer_la-xplayer-plugins-engine.lo libxplayer_la-xplayer-dirs.lo \
 	$(am__objects_2) $(am__objects_3) $(am__objects_4) \
 	$(am__objects_5)
-libtotem_la_OBJECTS = $(am_libtotem_la_OBJECTS)
-libtotem_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libtotem_la_CFLAGS) \
-	$(CFLAGS) $(libtotem_la_LDFLAGS) $(LDFLAGS) -o $@
-libtotem_player_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	gst/libtotemtimehelpers.la gst/libtotemrtlhelpers.la
-am_libtotem_player_la_OBJECTS = $(am__objects_1) \
-	libtotem_player_la-totem-statusbar.lo \
-	libtotem_player_la-totem-interface.lo \
-	libtotem_player_la-totem-fullscreen.lo \
-	libtotem_player_la-gd-fullscreen-filter.lo \
-	libtotem_player_la-totem-time-label.lo
-libtotem_player_la_OBJECTS = $(am_libtotem_player_la_OBJECTS)
-libtotem_player_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_la_OBJECTS = $(am_libxplayer_la_OBJECTS)
+libxplayer_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libxplayer_la_CFLAGS) \
+	$(CFLAGS) $(libxplayer_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayer_player_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	gst/libxplayertimehelpers.la gst/libxplayerrtlhelpers.la
+am_libxplayer_player_la_OBJECTS = $(am__objects_1) \
+	libxplayer_player_la-xplayer-statusbar.lo \
+	libxplayer_player_la-xplayer-interface.lo \
+	libxplayer_player_la-xplayer-fullscreen.lo \
+	libxplayer_player_la-gd-fullscreen-filter.lo \
+	libxplayer_player_la-xplayer-time-label.lo
+libxplayer_player_la_OBJECTS = $(am_libxplayer_player_la_OBJECTS)
+libxplayer_player_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_player_la_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+	$(libxplayer_player_la_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am__test_properties_page_SOURCES_DIST = totem-properties-main.c \
-	totem-properties-view.c totem-properties-view.h \
+am__test_properties_page_SOURCES_DIST = xplayer-properties-main.c \
+	xplayer-properties-view.c xplayer-properties-view.h \
 	test-properties-page.c
-@HAVE_NAUTILUS_TRUE@am_test_properties_page_OBJECTS = test_properties_page-totem-properties-main.$(OBJEXT) \
-@HAVE_NAUTILUS_TRUE@	test_properties_page-totem-properties-view.$(OBJEXT) \
+@HAVE_NAUTILUS_TRUE@am_test_properties_page_OBJECTS = test_properties_page-xplayer-properties-main.$(OBJEXT) \
+@HAVE_NAUTILUS_TRUE@	test_properties_page-xplayer-properties-view.$(OBJEXT) \
 @HAVE_NAUTILUS_TRUE@	test_properties_page-test-properties-page.$(OBJEXT)
 test_properties_page_OBJECTS = $(am_test_properties_page_OBJECTS)
 @HAVE_NAUTILUS_TRUE@test_properties_page_DEPENDENCIES =  \
 @HAVE_NAUTILUS_TRUE@	backend/libbaconvideowidget.la \
 @HAVE_NAUTILUS_TRUE@	properties/libbaconvideowidgetproperties.la \
-@HAVE_NAUTILUS_TRUE@	libtotem_player.la $(am__DEPENDENCIES_1)
+@HAVE_NAUTILUS_TRUE@	libxplayer_player.la $(am__DEPENDENCIES_1)
 test_properties_page_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(test_properties_page_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am_totem_OBJECTS = totem-totem.$(OBJEXT)
-totem_OBJECTS = $(am_totem_OBJECTS)
-totem_DEPENDENCIES = libtotem.la $(am__DEPENDENCIES_1)
-totem_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(totem_CFLAGS) $(CFLAGS) \
+am_xplayer_OBJECTS = xplayer-xplayer.$(OBJEXT)
+xplayer_OBJECTS = $(am_xplayer_OBJECTS)
+xplayer_DEPENDENCIES = libxplayer.la $(am__DEPENDENCIES_1)
+xplayer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(xplayer_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
-am_totem_audio_preview_OBJECTS =  \
-	totem_audio_preview-totem-audio-preview.$(OBJEXT) \
-	totem_audio_preview-totem-resources.$(OBJEXT)
-totem_audio_preview_OBJECTS = $(am_totem_audio_preview_OBJECTS)
-totem_audio_preview_DEPENDENCIES = gst/libtotemgsthelpers.la \
+am_xplayer_audio_preview_OBJECTS =  \
+	xplayer_audio_preview-xplayer-audio-preview.$(OBJEXT) \
+	xplayer_audio_preview-xplayer-resources.$(OBJEXT)
+xplayer_audio_preview_OBJECTS = $(am_xplayer_audio_preview_OBJECTS)
+xplayer_audio_preview_DEPENDENCIES = gst/libxplayergsthelpers.la \
 	$(am__DEPENDENCIES_1)
-totem_audio_preview_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+xplayer_audio_preview_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(totem_audio_preview_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+	$(xplayer_audio_preview_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am_totem_video_thumbnailer_OBJECTS =  \
-	totem_video_thumbnailer-totem-video-thumbnailer.$(OBJEXT) \
-	totem_video_thumbnailer-totem-resources.$(OBJEXT)
-totem_video_thumbnailer_OBJECTS =  \
-	$(am_totem_video_thumbnailer_OBJECTS)
-totem_video_thumbnailer_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	gst/libtotemgstpixbufhelpers.la gst/libtotemgsthelpers.la \
-	gst/libtotemtimehelpers.la
-totem_video_thumbnailer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+am_xplayer_video_thumbnailer_OBJECTS =  \
+	xplayer_video_thumbnailer-xplayer-video-thumbnailer.$(OBJEXT) \
+	xplayer_video_thumbnailer-xplayer-resources.$(OBJEXT)
+xplayer_video_thumbnailer_OBJECTS =  \
+	$(am_xplayer_video_thumbnailer_OBJECTS)
+xplayer_video_thumbnailer_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	gst/libxplayergstpixbufhelpers.la gst/libxplayergsthelpers.la \
+	gst/libxplayertimehelpers.la
+xplayer_video_thumbnailer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(totem_video_thumbnailer_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+	$(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -298,16 +298,16 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libtotem_properties_page_la_SOURCES) \
-	$(libtotem_la_SOURCES) $(libtotem_player_la_SOURCES) \
-	$(test_properties_page_SOURCES) $(totem_SOURCES) \
-	$(totem_audio_preview_SOURCES) \
-	$(totem_video_thumbnailer_SOURCES)
-DIST_SOURCES = $(am__libtotem_properties_page_la_SOURCES_DIST) \
-	$(am__libtotem_la_SOURCES_DIST) $(libtotem_player_la_SOURCES) \
-	$(am__test_properties_page_SOURCES_DIST) $(totem_SOURCES) \
-	$(totem_audio_preview_SOURCES) \
-	$(totem_video_thumbnailer_SOURCES)
+SOURCES = $(libxplayer_properties_page_la_SOURCES) \
+	$(libxplayer_la_SOURCES) $(libxplayer_player_la_SOURCES) \
+	$(test_properties_page_SOURCES) $(xplayer_SOURCES) \
+	$(xplayer_audio_preview_SOURCES) \
+	$(xplayer_video_thumbnailer_SOURCES)
+DIST_SOURCES = $(am__libxplayer_properties_page_la_SOURCES_DIST) \
+	$(am__libxplayer_la_SOURCES_DIST) $(libxplayer_player_la_SOURCES) \
+	$(am__test_properties_page_SOURCES_DIST) $(xplayer_SOURCES) \
+	$(xplayer_audio_preview_SOURCES) \
+	$(xplayer_video_thumbnailer_SOURCES)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -387,7 +387,7 @@ AM_CPPFLAGS = \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DDATADIR=\""$(datadir)"\"			\
 	-DLIBEXECDIR=\""$(libexecdir)"\"		\
-	-DTOTEM_PLUGIN_DIR=\""$(libdir)/totem/plugins"\"\
+	-DXPLAYER_PLUGIN_DIR=\""$(libdir)/xplayer/plugins"\"\
 	-DBINDIR=\""$(bindir)"\"			\
 	-DGTKBUILDERDIR=\"""\"				\
 	$(DISABLE_DEPRECATED)				\
@@ -571,11 +571,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -644,141 +644,141 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = gst backend properties . plugins
-lib_LTLIBRARIES = libtotem.la
-noinst_LTLIBRARIES = libtotem_player.la
+lib_LTLIBRARIES = libxplayer.la
+noinst_LTLIBRARIES = libxplayer_player.la
 
 # Header files installed for use by plugins (and consequently introspected using gobject-introspection; see the bottom of the Makefile)
 INST_H_FILES = \
-	totem.h				\
-	totem-interface.h		\
-	plugins/totem-plugin.h		\
-	plugins/totem-dirs.h
+	xplayer.h				\
+	xplayer-interface.h		\
+	plugins/xplayer-plugin.h		\
+	plugins/xplayer-dirs.h
 
-headerdir = $(includedir)/totem/$(TOTEM_API_VERSION)
+headerdir = $(includedir)/xplayer/$(XPLAYER_API_VERSION)
 header_DATA = $(INST_H_FILES)
 
-# Totem UI ltlibrary (used by browser plugins)
-libtotem_player_la_SOURCES = \
+# Xplayer UI ltlibrary (used by browser plugins)
+libxplayer_player_la_SOURCES = \
 	$(INST_H_FILES)		\
-	totem-statusbar.c	\
-	totem-statusbar.h	\
-	totem-interface.c	\
-	totem-fullscreen.c	\
-	totem-fullscreen.h	\
+	xplayer-statusbar.c	\
+	xplayer-statusbar.h	\
+	xplayer-interface.c	\
+	xplayer-fullscreen.c	\
+	xplayer-fullscreen.h	\
 	gd-fullscreen-filter.c	\
 	gd-fullscreen-filter.h	\
-	totem-time-label.c	\
-	totem-time-label.h
+	xplayer-time-label.c	\
+	xplayer-time-label.h
 
-libtotem_player_la_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+libxplayer_player_la_CPPFLAGS = \
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(AM_CPPFLAGS)
 
-libtotem_player_la_LIBADD = \
+libxplayer_player_la_LIBADD = \
 	$(PLAYER_LIBS)			\
-	gst/libtotemtimehelpers.la	\
-	gst/libtotemrtlhelpers.la
+	gst/libxplayertimehelpers.la	\
+	gst/libxplayerrtlhelpers.la
 
-libtotem_player_la_CFLAGS = \
+libxplayer_player_la_CFLAGS = \
 	$(LIBPLAYER_CFLAGS)	\
 	-I$(srcdir)/gst/	\
 	$(AM_CFLAGS)
 
 
-# Totem main library (used for main player; separate to allow gtk-doc to be used)
-libtotem_la_SOURCES = $(TOTEM_MARSHAL_FILES) $(INST_H_FILES) \
-	totem-object.c totem-private.h totem-preferences.c \
-	totem-preferences.h totem-dnd-menu.c totem-dnd-menu.h \
-	totem-options.c totem-options.h totem-playlist.c \
-	totem-playlist.h eggfileformatchooser.c eggfileformatchooser.h \
-	egg-macros.h totem-session.c totem-session.h totem-sidebar.c \
-	totem-sidebar.h totem-open-location.c totem-open-location.h \
-	totem-menu.c totem-menu.h totem-uri.c totem-uri.h \
-	totem-subtitle-encoding.c totem-subtitle-encoding.h \
-	totem-profile.h plugins/totem-plugins-engine.c \
-	plugins/totem-plugins-engine.h plugins/totem-dirs.c \
+# Xplayer main library (used for main player; separate to allow gtk-doc to be used)
+libxplayer_la_SOURCES = $(XPLAYER_MARSHAL_FILES) $(INST_H_FILES) \
+	xplayer-object.c xplayer-private.h xplayer-preferences.c \
+	xplayer-preferences.h xplayer-dnd-menu.c xplayer-dnd-menu.h \
+	xplayer-options.c xplayer-options.h xplayer-playlist.c \
+	xplayer-playlist.h eggfileformatchooser.c eggfileformatchooser.h \
+	egg-macros.h xplayer-session.c xplayer-session.h xplayer-sidebar.c \
+	xplayer-sidebar.h xplayer-open-location.c xplayer-open-location.h \
+	xplayer-menu.c xplayer-menu.h xplayer-uri.c xplayer-uri.h \
+	xplayer-subtitle-encoding.c xplayer-subtitle-encoding.h \
+	xplayer-profile.h plugins/xplayer-plugins-engine.c \
+	plugins/xplayer-plugins-engine.h plugins/xplayer-dirs.c \
 	$(am__append_1) $(am__append_4) $(am__append_6) \
 	$(am__append_7)
-libtotem_la_CPPFLAGS = -I$(top_builddir)/data \
-	-DG_LOG_DOMAIN=\""Totem"\" $(AM_CPPFLAGS) $(am__append_5)
-libtotem_la_CFLAGS = $(PLAYER_CFLAGS) $(AM_CFLAGS) -I$(srcdir)/gst/ \
+libxplayer_la_CPPFLAGS = -I$(top_builddir)/data \
+	-DG_LOG_DOMAIN=\""Xplayer"\" $(AM_CPPFLAGS) $(am__append_5)
+libxplayer_la_CFLAGS = $(PLAYER_CFLAGS) $(AM_CFLAGS) -I$(srcdir)/gst/ \
 	$(am__append_2)
-libtotem_la_LDFLAGS = \
+libxplayer_la_LDFLAGS = \
 	-export-dynamic	\
 	-no-undefined \
 	$(AM_LDFLAGS)
 
-libtotem_la_LIBADD = libtotem_player.la backend/libbaconvideowidget.la \
+libxplayer_la_LIBADD = libxplayer_player.la backend/libbaconvideowidget.la \
 	$(PLAYER_LIBS) $(am__append_3)
 
-# Totem
-totem_SOURCES = totem.c
-totem_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+# Xplayer
+xplayer_SOURCES = xplayer.c
+xplayer_CPPFLAGS = \
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(AM_CPPFLAGS)
 
-totem_CFLAGS = \
+xplayer_CFLAGS = \
 	$(PLAYER_CFLAGS)	\
 	-I$(srcdir)/gst/	\
 	$(AM_CFLAGS)
 
-totem_LDADD = \
-	libtotem.la	\
+xplayer_LDADD = \
+	libxplayer.la	\
 	$(PLAYER_LIBS)
 
 
-# Totem video thumbnailer
-totem_video_thumbnailer_SOURCES = \
-	totem-video-thumbnailer.c	\
-	totem-resources.c		\
-	totem-resources.h
+# Xplayer video thumbnailer
+xplayer_video_thumbnailer_SOURCES = \
+	xplayer-video-thumbnailer.c	\
+	xplayer-resources.c		\
+	xplayer-resources.h
 
-totem_video_thumbnailer_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""TotemVideoThumbnailer"\"	\
+xplayer_video_thumbnailer_CPPFLAGS = \
+	-DG_LOG_DOMAIN=\""XplayerVideoThumbnailer"\"	\
 	$(AM_CPPFLAGS)
 
-totem_video_thumbnailer_CFLAGS = \
+xplayer_video_thumbnailer_CFLAGS = \
 	$(THUMBNAILER_CFLAGS)		\
 	$(AM_CFLAGS)
 
-totem_video_thumbnailer_LDADD = \
+xplayer_video_thumbnailer_LDADD = \
 	$(THUMBNAILER_LIBS)		\
-	gst/libtotemgstpixbufhelpers.la	\
-	gst/libtotemgsthelpers.la	\
-	gst/libtotemtimehelpers.la	\
+	gst/libxplayergstpixbufhelpers.la	\
+	gst/libxplayergsthelpers.la	\
+	gst/libxplayertimehelpers.la	\
 	-lm
 
 
 # Nautilus Property Page
 @HAVE_NAUTILUS_TRUE@nautilusdir = $(NAUTILUSDIR)
-@HAVE_NAUTILUS_TRUE@nautilus_LTLIBRARIES = libtotem-properties-page.la
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_SOURCES = \
-@HAVE_NAUTILUS_TRUE@	totem-properties-main.c		\
-@HAVE_NAUTILUS_TRUE@	totem-properties-view.c		\
-@HAVE_NAUTILUS_TRUE@	totem-properties-view.h
+@HAVE_NAUTILUS_TRUE@nautilus_LTLIBRARIES = libxplayer-properties-page.la
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_SOURCES = \
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-main.c		\
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-view.c		\
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-view.h
 
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_CPPFLAGS = \
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_CPPFLAGS = \
 @HAVE_NAUTILUS_TRUE@	-I$(top_srcdir)/src/properties		\
 @HAVE_NAUTILUS_TRUE@	-I$(top_builddir)/data			\
-@HAVE_NAUTILUS_TRUE@	-DG_LOG_DOMAIN=\""TotemPropertiesPage"\"\
+@HAVE_NAUTILUS_TRUE@	-DG_LOG_DOMAIN=\""XplayerPropertiesPage"\"\
 @HAVE_NAUTILUS_TRUE@	$(AM_CPPFLAGS)
 
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_CFLAGS = \
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_CFLAGS = \
 @HAVE_NAUTILUS_TRUE@	$(NAUTILUS_CFLAGS)		\
 @HAVE_NAUTILUS_TRUE@	$(AM_CFLAGS)
 
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_LDFLAGS = \
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_LDFLAGS = \
 @HAVE_NAUTILUS_TRUE@	-export_dynamic -avoid-version -module -no-undefined	\
 @HAVE_NAUTILUS_TRUE@	$(AM_LDFLAGS)
 
-@HAVE_NAUTILUS_TRUE@libtotem_properties_page_la_LIBADD = \
+@HAVE_NAUTILUS_TRUE@libxplayer_properties_page_la_LIBADD = \
 @HAVE_NAUTILUS_TRUE@	properties/libbaconvideowidgetproperties.la		\
 @HAVE_NAUTILUS_TRUE@	$(NAUTILUS_LIBS)
 
 @HAVE_NAUTILUS_TRUE@test_properties_page_SOURCES = \
-@HAVE_NAUTILUS_TRUE@	totem-properties-main.c		\
-@HAVE_NAUTILUS_TRUE@	totem-properties-view.c		\
-@HAVE_NAUTILUS_TRUE@	totem-properties-view.h		\
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-main.c		\
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-view.c		\
+@HAVE_NAUTILUS_TRUE@	xplayer-properties-view.h		\
 @HAVE_NAUTILUS_TRUE@	test-properties-page.c
 
 @HAVE_NAUTILUS_TRUE@test_properties_page_CPPFLAGS = \
@@ -793,43 +793,43 @@ totem_video_thumbnailer_LDADD = \
 @HAVE_NAUTILUS_TRUE@test_properties_page_LDADD = \
 @HAVE_NAUTILUS_TRUE@	backend/libbaconvideowidget.la				\
 @HAVE_NAUTILUS_TRUE@	properties/libbaconvideowidgetproperties.la		\
-@HAVE_NAUTILUS_TRUE@	libtotem_player.la					\
+@HAVE_NAUTILUS_TRUE@	libxplayer_player.la					\
 @HAVE_NAUTILUS_TRUE@	$(NAUTILUS_LIBS)
 
 
-# Totem Audio Preview for Nautilus
-totem_audio_preview_SOURCES = \
-	totem-audio-preview.c		\
-	totem-resources.c		\
-	totem-resources.h
+# Xplayer Audio Preview for Nautilus
+xplayer_audio_preview_SOURCES = \
+	xplayer-audio-preview.c		\
+	xplayer-resources.c		\
+	xplayer-resources.h
 
-totem_audio_preview_CPPFLAGS = \
+xplayer_audio_preview_CPPFLAGS = \
 	-I$(top_builddir)/data			\
 	-I$(top_srcdir)/src/gst			\
-	-DG_LOG_DOMAIN=\""TotemAudioPreview"\"	\
+	-DG_LOG_DOMAIN=\""XplayerAudioPreview"\"	\
 	$(AM_CPPFLAGS)
 
-totem_audio_preview_CFLAGS = \
+xplayer_audio_preview_CFLAGS = \
 	$(PREVIEW_CFLAGS)	\
 	$(AM_CFLAGS)
 
-totem_audio_preview_LDADD = \
-	gst/libtotemgsthelpers.la		\
+xplayer_audio_preview_LDADD = \
+	gst/libxplayergsthelpers.la		\
 	$(PREVIEW_LIBS)
 
 INTROSPECTION_GIRS = $(am__append_8)
 INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --warn-all
 INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
-@HAVE_INTROSPECTION_TRUE@introspection_sources = $(INST_H_FILES) $(filter %.c,$(libtotem_player_la_SOURCES) $(libtotem_la_SOURCES))
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_INCLUDES = GLib-2.0 GObject-2.0 Gtk-3.0 TotemPlParser-1.0
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_SCANNERFLAGS = --c-include=totem.h --pkg-export=totem
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_CFLAGS = \
+@HAVE_INTROSPECTION_TRUE@introspection_sources = $(INST_H_FILES) $(filter %.c,$(libxplayer_player_la_SOURCES) $(libxplayer_la_SOURCES))
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_INCLUDES = GLib-2.0 GObject-2.0 Gtk-3.0 XplayerPlParser-1.0
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_SCANNERFLAGS = --c-include=xplayer.h --pkg-export=xplayer
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_CFLAGS = \
 @HAVE_INTROSPECTION_TRUE@	$(PLAYER_CFLAGS)	\
-@HAVE_INTROSPECTION_TRUE@	$(libtotem_la_CPPFLAGS)
+@HAVE_INTROSPECTION_TRUE@	$(libxplayer_la_CPPFLAGS)
 
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_LIBS = libtotem.la
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_FILES = $(introspection_sources)
-@HAVE_INTROSPECTION_TRUE@Totem_1_0_gir_EXPORT_PACKAGES = totem
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_LIBS = libxplayer.la
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_FILES = $(introspection_sources)
+@HAVE_INTROSPECTION_TRUE@Xplayer_1_0_gir_EXPORT_PACKAGES = xplayer
 @HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
 @HAVE_INTROSPECTION_TRUE@gir_DATA = $(INTROSPECTION_GIRS)
 @HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0
@@ -951,14 +951,14 @@ clean-noinstLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem-properties-page.la: $(libtotem_properties_page_la_OBJECTS) $(libtotem_properties_page_la_DEPENDENCIES) $(EXTRA_libtotem_properties_page_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_properties_page_la_LINK) $(am_libtotem_properties_page_la_rpath) $(libtotem_properties_page_la_OBJECTS) $(libtotem_properties_page_la_LIBADD) $(LIBS)
+libxplayer-properties-page.la: $(libxplayer_properties_page_la_OBJECTS) $(libxplayer_properties_page_la_DEPENDENCIES) $(EXTRA_libxplayer_properties_page_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_properties_page_la_LINK) $(am_libxplayer_properties_page_la_rpath) $(libxplayer_properties_page_la_OBJECTS) $(libxplayer_properties_page_la_LIBADD) $(LIBS)
 
-libtotem.la: $(libtotem_la_OBJECTS) $(libtotem_la_DEPENDENCIES) $(EXTRA_libtotem_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_la_LINK) -rpath $(libdir) $(libtotem_la_OBJECTS) $(libtotem_la_LIBADD) $(LIBS)
+libxplayer.la: $(libxplayer_la_OBJECTS) $(libxplayer_la_DEPENDENCIES) $(EXTRA_libxplayer_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_la_LINK) -rpath $(libdir) $(libxplayer_la_OBJECTS) $(libxplayer_la_LIBADD) $(LIBS)
 
-libtotem_player.la: $(libtotem_player_la_OBJECTS) $(libtotem_player_la_DEPENDENCIES) $(EXTRA_libtotem_player_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_player_la_LINK)  $(libtotem_player_la_OBJECTS) $(libtotem_player_la_LIBADD) $(LIBS)
+libxplayer_player.la: $(libxplayer_player_la_OBJECTS) $(libxplayer_player_la_DEPENDENCIES) $(EXTRA_libxplayer_player_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_player_la_LINK)  $(libxplayer_player_la_OBJECTS) $(libxplayer_player_la_LIBADD) $(LIBS)
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	@list='$(bin_PROGRAMS)'; test -n "$(bindir)" || list=; \
@@ -1022,17 +1022,17 @@ test-properties-page$(EXEEXT): $(test_properties_page_OBJECTS) $(test_properties
 	@rm -f test-properties-page$(EXEEXT)
 	$(AM_V_CCLD)$(test_properties_page_LINK) $(test_properties_page_OBJECTS) $(test_properties_page_LDADD) $(LIBS)
 
-totem$(EXEEXT): $(totem_OBJECTS) $(totem_DEPENDENCIES) $(EXTRA_totem_DEPENDENCIES) 
-	@rm -f totem$(EXEEXT)
-	$(AM_V_CCLD)$(totem_LINK) $(totem_OBJECTS) $(totem_LDADD) $(LIBS)
+xplayer$(EXEEXT): $(xplayer_OBJECTS) $(xplayer_DEPENDENCIES) $(EXTRA_xplayer_DEPENDENCIES) 
+	@rm -f xplayer$(EXEEXT)
+	$(AM_V_CCLD)$(xplayer_LINK) $(xplayer_OBJECTS) $(xplayer_LDADD) $(LIBS)
 
-totem-audio-preview$(EXEEXT): $(totem_audio_preview_OBJECTS) $(totem_audio_preview_DEPENDENCIES) $(EXTRA_totem_audio_preview_DEPENDENCIES) 
-	@rm -f totem-audio-preview$(EXEEXT)
-	$(AM_V_CCLD)$(totem_audio_preview_LINK) $(totem_audio_preview_OBJECTS) $(totem_audio_preview_LDADD) $(LIBS)
+xplayer-audio-preview$(EXEEXT): $(xplayer_audio_preview_OBJECTS) $(xplayer_audio_preview_DEPENDENCIES) $(EXTRA_xplayer_audio_preview_DEPENDENCIES) 
+	@rm -f xplayer-audio-preview$(EXEEXT)
+	$(AM_V_CCLD)$(xplayer_audio_preview_LINK) $(xplayer_audio_preview_OBJECTS) $(xplayer_audio_preview_LDADD) $(LIBS)
 
-totem-video-thumbnailer$(EXEEXT): $(totem_video_thumbnailer_OBJECTS) $(totem_video_thumbnailer_DEPENDENCIES) $(EXTRA_totem_video_thumbnailer_DEPENDENCIES) 
-	@rm -f totem-video-thumbnailer$(EXEEXT)
-	$(AM_V_CCLD)$(totem_video_thumbnailer_LINK) $(totem_video_thumbnailer_OBJECTS) $(totem_video_thumbnailer_LDADD) $(LIBS)
+xplayer-video-thumbnailer$(EXEEXT): $(xplayer_video_thumbnailer_OBJECTS) $(xplayer_video_thumbnailer_DEPENDENCIES) $(EXTRA_xplayer_video_thumbnailer_DEPENDENCIES) 
+	@rm -f xplayer-video-thumbnailer$(EXEEXT)
+	$(AM_V_CCLD)$(xplayer_video_thumbnailer_LINK) $(xplayer_video_thumbnailer_OBJECTS) $(xplayer_video_thumbnailer_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -1040,40 +1040,40 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggdesktopfile.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggfileformatchooser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggsmclient-osx.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggsmclient-win32.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggsmclient-xsmp.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-eggsmclient.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-dirs.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-dnd-menu.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-menu.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-object.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-open-location.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-options.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-playlist.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-plugins-engine.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-preferences.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-session.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-sidebar.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-subtitle-encoding.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_la-totem-uri.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_player_la-gd-fullscreen-filter.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_player_la-totem-fullscreen.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_player_la-totem-interface.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_player_la-totem-statusbar.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_player_la-totem-time-label.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_properties_page_la-totem-properties-main.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_properties_page_la-totem-properties-view.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggdesktopfile.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggfileformatchooser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggsmclient-osx.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggsmclient-win32.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggsmclient-xsmp.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-eggsmclient.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-dirs.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-dnd-menu.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-menu.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-object.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-open-location.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-options.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-playlist.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-plugins-engine.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-preferences.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-session.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-sidebar.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-subtitle-encoding.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_la-xplayer-uri.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_player_la-gd-fullscreen-filter.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_player_la-xplayer-fullscreen.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_player_la-xplayer-interface.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_player_la-xplayer-statusbar.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_player_la-xplayer-time-label.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-main.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-view.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_properties_page-test-properties-page.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_properties_page-totem-properties-main.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_properties_page-totem-properties-view.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem-totem.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_audio_preview-totem-audio-preview.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_audio_preview-totem-resources.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_video_thumbnailer-totem-resources.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_properties_page-xplayer-properties-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_properties_page-xplayer-properties-view.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer-xplayer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_audio_preview-xplayer-resources.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -1096,215 +1096,215 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libtotem_properties_page_la-totem-properties-main.lo: totem-properties-main.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_properties_page_la_CFLAGS) $(CFLAGS) -MT libtotem_properties_page_la-totem-properties-main.lo -MD -MP -MF $(DEPDIR)/libtotem_properties_page_la-totem-properties-main.Tpo -c -o libtotem_properties_page_la-totem-properties-main.lo `test -f 'totem-properties-main.c' || echo '$(srcdir)/'`totem-properties-main.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_properties_page_la-totem-properties-main.Tpo $(DEPDIR)/libtotem_properties_page_la-totem-properties-main.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-main.c' object='libtotem_properties_page_la-totem-properties-main.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_properties_page_la-xplayer-properties-main.lo: xplayer-properties-main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_properties_page_la_CFLAGS) $(CFLAGS) -MT libxplayer_properties_page_la-xplayer-properties-main.lo -MD -MP -MF $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-main.Tpo -c -o libxplayer_properties_page_la-xplayer-properties-main.lo `test -f 'xplayer-properties-main.c' || echo '$(srcdir)/'`xplayer-properties-main.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-main.Tpo $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-main.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-main.c' object='libxplayer_properties_page_la-xplayer-properties-main.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_properties_page_la_CFLAGS) $(CFLAGS) -c -o libtotem_properties_page_la-totem-properties-main.lo `test -f 'totem-properties-main.c' || echo '$(srcdir)/'`totem-properties-main.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_properties_page_la_CFLAGS) $(CFLAGS) -c -o libxplayer_properties_page_la-xplayer-properties-main.lo `test -f 'xplayer-properties-main.c' || echo '$(srcdir)/'`xplayer-properties-main.c
 
-libtotem_properties_page_la-totem-properties-view.lo: totem-properties-view.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_properties_page_la_CFLAGS) $(CFLAGS) -MT libtotem_properties_page_la-totem-properties-view.lo -MD -MP -MF $(DEPDIR)/libtotem_properties_page_la-totem-properties-view.Tpo -c -o libtotem_properties_page_la-totem-properties-view.lo `test -f 'totem-properties-view.c' || echo '$(srcdir)/'`totem-properties-view.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_properties_page_la-totem-properties-view.Tpo $(DEPDIR)/libtotem_properties_page_la-totem-properties-view.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-view.c' object='libtotem_properties_page_la-totem-properties-view.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_properties_page_la-xplayer-properties-view.lo: xplayer-properties-view.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_properties_page_la_CFLAGS) $(CFLAGS) -MT libxplayer_properties_page_la-xplayer-properties-view.lo -MD -MP -MF $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-view.Tpo -c -o libxplayer_properties_page_la-xplayer-properties-view.lo `test -f 'xplayer-properties-view.c' || echo '$(srcdir)/'`xplayer-properties-view.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-view.Tpo $(DEPDIR)/libxplayer_properties_page_la-xplayer-properties-view.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-view.c' object='libxplayer_properties_page_la-xplayer-properties-view.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_properties_page_la_CFLAGS) $(CFLAGS) -c -o libtotem_properties_page_la-totem-properties-view.lo `test -f 'totem-properties-view.c' || echo '$(srcdir)/'`totem-properties-view.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_properties_page_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_properties_page_la_CFLAGS) $(CFLAGS) -c -o libxplayer_properties_page_la-xplayer-properties-view.lo `test -f 'xplayer-properties-view.c' || echo '$(srcdir)/'`xplayer-properties-view.c
 
-libtotem_la-totem-object.lo: totem-object.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-object.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-object.Tpo -c -o libtotem_la-totem-object.lo `test -f 'totem-object.c' || echo '$(srcdir)/'`totem-object.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-object.Tpo $(DEPDIR)/libtotem_la-totem-object.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-object.c' object='libtotem_la-totem-object.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-object.lo: xplayer-object.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-object.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-object.Tpo -c -o libxplayer_la-xplayer-object.lo `test -f 'xplayer-object.c' || echo '$(srcdir)/'`xplayer-object.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-object.Tpo $(DEPDIR)/libxplayer_la-xplayer-object.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-object.c' object='libxplayer_la-xplayer-object.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-object.lo `test -f 'totem-object.c' || echo '$(srcdir)/'`totem-object.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-object.lo `test -f 'xplayer-object.c' || echo '$(srcdir)/'`xplayer-object.c
 
-libtotem_la-totem-preferences.lo: totem-preferences.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-preferences.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-preferences.Tpo -c -o libtotem_la-totem-preferences.lo `test -f 'totem-preferences.c' || echo '$(srcdir)/'`totem-preferences.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-preferences.Tpo $(DEPDIR)/libtotem_la-totem-preferences.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-preferences.c' object='libtotem_la-totem-preferences.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-preferences.lo: xplayer-preferences.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-preferences.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-preferences.Tpo -c -o libxplayer_la-xplayer-preferences.lo `test -f 'xplayer-preferences.c' || echo '$(srcdir)/'`xplayer-preferences.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-preferences.Tpo $(DEPDIR)/libxplayer_la-xplayer-preferences.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-preferences.c' object='libxplayer_la-xplayer-preferences.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-preferences.lo `test -f 'totem-preferences.c' || echo '$(srcdir)/'`totem-preferences.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-preferences.lo `test -f 'xplayer-preferences.c' || echo '$(srcdir)/'`xplayer-preferences.c
 
-libtotem_la-totem-dnd-menu.lo: totem-dnd-menu.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-dnd-menu.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-dnd-menu.Tpo -c -o libtotem_la-totem-dnd-menu.lo `test -f 'totem-dnd-menu.c' || echo '$(srcdir)/'`totem-dnd-menu.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-dnd-menu.Tpo $(DEPDIR)/libtotem_la-totem-dnd-menu.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-dnd-menu.c' object='libtotem_la-totem-dnd-menu.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-dnd-menu.lo: xplayer-dnd-menu.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-dnd-menu.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-dnd-menu.Tpo -c -o libxplayer_la-xplayer-dnd-menu.lo `test -f 'xplayer-dnd-menu.c' || echo '$(srcdir)/'`xplayer-dnd-menu.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-dnd-menu.Tpo $(DEPDIR)/libxplayer_la-xplayer-dnd-menu.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-dnd-menu.c' object='libxplayer_la-xplayer-dnd-menu.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-dnd-menu.lo `test -f 'totem-dnd-menu.c' || echo '$(srcdir)/'`totem-dnd-menu.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-dnd-menu.lo `test -f 'xplayer-dnd-menu.c' || echo '$(srcdir)/'`xplayer-dnd-menu.c
 
-libtotem_la-totem-options.lo: totem-options.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-options.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-options.Tpo -c -o libtotem_la-totem-options.lo `test -f 'totem-options.c' || echo '$(srcdir)/'`totem-options.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-options.Tpo $(DEPDIR)/libtotem_la-totem-options.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-options.c' object='libtotem_la-totem-options.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-options.lo: xplayer-options.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-options.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-options.Tpo -c -o libxplayer_la-xplayer-options.lo `test -f 'xplayer-options.c' || echo '$(srcdir)/'`xplayer-options.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-options.Tpo $(DEPDIR)/libxplayer_la-xplayer-options.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-options.c' object='libxplayer_la-xplayer-options.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-options.lo `test -f 'totem-options.c' || echo '$(srcdir)/'`totem-options.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-options.lo `test -f 'xplayer-options.c' || echo '$(srcdir)/'`xplayer-options.c
 
-libtotem_la-totem-playlist.lo: totem-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-playlist.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-playlist.Tpo -c -o libtotem_la-totem-playlist.lo `test -f 'totem-playlist.c' || echo '$(srcdir)/'`totem-playlist.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-playlist.Tpo $(DEPDIR)/libtotem_la-totem-playlist.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-playlist.c' object='libtotem_la-totem-playlist.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-playlist.lo: xplayer-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-playlist.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-playlist.Tpo -c -o libxplayer_la-xplayer-playlist.lo `test -f 'xplayer-playlist.c' || echo '$(srcdir)/'`xplayer-playlist.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-playlist.Tpo $(DEPDIR)/libxplayer_la-xplayer-playlist.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-playlist.c' object='libxplayer_la-xplayer-playlist.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-playlist.lo `test -f 'totem-playlist.c' || echo '$(srcdir)/'`totem-playlist.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-playlist.lo `test -f 'xplayer-playlist.c' || echo '$(srcdir)/'`xplayer-playlist.c
 
-libtotem_la-eggfileformatchooser.lo: eggfileformatchooser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggfileformatchooser.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggfileformatchooser.Tpo -c -o libtotem_la-eggfileformatchooser.lo `test -f 'eggfileformatchooser.c' || echo '$(srcdir)/'`eggfileformatchooser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggfileformatchooser.Tpo $(DEPDIR)/libtotem_la-eggfileformatchooser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggfileformatchooser.c' object='libtotem_la-eggfileformatchooser.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggfileformatchooser.lo: eggfileformatchooser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggfileformatchooser.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggfileformatchooser.Tpo -c -o libxplayer_la-eggfileformatchooser.lo `test -f 'eggfileformatchooser.c' || echo '$(srcdir)/'`eggfileformatchooser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggfileformatchooser.Tpo $(DEPDIR)/libxplayer_la-eggfileformatchooser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggfileformatchooser.c' object='libxplayer_la-eggfileformatchooser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggfileformatchooser.lo `test -f 'eggfileformatchooser.c' || echo '$(srcdir)/'`eggfileformatchooser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggfileformatchooser.lo `test -f 'eggfileformatchooser.c' || echo '$(srcdir)/'`eggfileformatchooser.c
 
-libtotem_la-totem-session.lo: totem-session.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-session.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-session.Tpo -c -o libtotem_la-totem-session.lo `test -f 'totem-session.c' || echo '$(srcdir)/'`totem-session.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-session.Tpo $(DEPDIR)/libtotem_la-totem-session.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-session.c' object='libtotem_la-totem-session.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-session.lo: xplayer-session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-session.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-session.Tpo -c -o libxplayer_la-xplayer-session.lo `test -f 'xplayer-session.c' || echo '$(srcdir)/'`xplayer-session.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-session.Tpo $(DEPDIR)/libxplayer_la-xplayer-session.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-session.c' object='libxplayer_la-xplayer-session.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-session.lo `test -f 'totem-session.c' || echo '$(srcdir)/'`totem-session.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-session.lo `test -f 'xplayer-session.c' || echo '$(srcdir)/'`xplayer-session.c
 
-libtotem_la-totem-sidebar.lo: totem-sidebar.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-sidebar.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-sidebar.Tpo -c -o libtotem_la-totem-sidebar.lo `test -f 'totem-sidebar.c' || echo '$(srcdir)/'`totem-sidebar.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-sidebar.Tpo $(DEPDIR)/libtotem_la-totem-sidebar.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-sidebar.c' object='libtotem_la-totem-sidebar.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-sidebar.lo: xplayer-sidebar.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-sidebar.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-sidebar.Tpo -c -o libxplayer_la-xplayer-sidebar.lo `test -f 'xplayer-sidebar.c' || echo '$(srcdir)/'`xplayer-sidebar.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-sidebar.Tpo $(DEPDIR)/libxplayer_la-xplayer-sidebar.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-sidebar.c' object='libxplayer_la-xplayer-sidebar.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-sidebar.lo `test -f 'totem-sidebar.c' || echo '$(srcdir)/'`totem-sidebar.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-sidebar.lo `test -f 'xplayer-sidebar.c' || echo '$(srcdir)/'`xplayer-sidebar.c
 
-libtotem_la-totem-open-location.lo: totem-open-location.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-open-location.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-open-location.Tpo -c -o libtotem_la-totem-open-location.lo `test -f 'totem-open-location.c' || echo '$(srcdir)/'`totem-open-location.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-open-location.Tpo $(DEPDIR)/libtotem_la-totem-open-location.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-open-location.c' object='libtotem_la-totem-open-location.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-open-location.lo: xplayer-open-location.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-open-location.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-open-location.Tpo -c -o libxplayer_la-xplayer-open-location.lo `test -f 'xplayer-open-location.c' || echo '$(srcdir)/'`xplayer-open-location.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-open-location.Tpo $(DEPDIR)/libxplayer_la-xplayer-open-location.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-open-location.c' object='libxplayer_la-xplayer-open-location.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-open-location.lo `test -f 'totem-open-location.c' || echo '$(srcdir)/'`totem-open-location.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-open-location.lo `test -f 'xplayer-open-location.c' || echo '$(srcdir)/'`xplayer-open-location.c
 
-libtotem_la-totem-menu.lo: totem-menu.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-menu.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-menu.Tpo -c -o libtotem_la-totem-menu.lo `test -f 'totem-menu.c' || echo '$(srcdir)/'`totem-menu.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-menu.Tpo $(DEPDIR)/libtotem_la-totem-menu.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-menu.c' object='libtotem_la-totem-menu.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-menu.lo: xplayer-menu.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-menu.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-menu.Tpo -c -o libxplayer_la-xplayer-menu.lo `test -f 'xplayer-menu.c' || echo '$(srcdir)/'`xplayer-menu.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-menu.Tpo $(DEPDIR)/libxplayer_la-xplayer-menu.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-menu.c' object='libxplayer_la-xplayer-menu.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-menu.lo `test -f 'totem-menu.c' || echo '$(srcdir)/'`totem-menu.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-menu.lo `test -f 'xplayer-menu.c' || echo '$(srcdir)/'`xplayer-menu.c
 
-libtotem_la-totem-uri.lo: totem-uri.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-uri.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-uri.Tpo -c -o libtotem_la-totem-uri.lo `test -f 'totem-uri.c' || echo '$(srcdir)/'`totem-uri.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-uri.Tpo $(DEPDIR)/libtotem_la-totem-uri.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-uri.c' object='libtotem_la-totem-uri.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-uri.lo: xplayer-uri.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-uri.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-uri.Tpo -c -o libxplayer_la-xplayer-uri.lo `test -f 'xplayer-uri.c' || echo '$(srcdir)/'`xplayer-uri.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-uri.Tpo $(DEPDIR)/libxplayer_la-xplayer-uri.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-uri.c' object='libxplayer_la-xplayer-uri.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-uri.lo `test -f 'totem-uri.c' || echo '$(srcdir)/'`totem-uri.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-uri.lo `test -f 'xplayer-uri.c' || echo '$(srcdir)/'`xplayer-uri.c
 
-libtotem_la-totem-subtitle-encoding.lo: totem-subtitle-encoding.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-subtitle-encoding.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-subtitle-encoding.Tpo -c -o libtotem_la-totem-subtitle-encoding.lo `test -f 'totem-subtitle-encoding.c' || echo '$(srcdir)/'`totem-subtitle-encoding.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-subtitle-encoding.Tpo $(DEPDIR)/libtotem_la-totem-subtitle-encoding.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-subtitle-encoding.c' object='libtotem_la-totem-subtitle-encoding.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-subtitle-encoding.lo: xplayer-subtitle-encoding.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-subtitle-encoding.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-subtitle-encoding.Tpo -c -o libxplayer_la-xplayer-subtitle-encoding.lo `test -f 'xplayer-subtitle-encoding.c' || echo '$(srcdir)/'`xplayer-subtitle-encoding.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-subtitle-encoding.Tpo $(DEPDIR)/libxplayer_la-xplayer-subtitle-encoding.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-subtitle-encoding.c' object='libxplayer_la-xplayer-subtitle-encoding.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-subtitle-encoding.lo `test -f 'totem-subtitle-encoding.c' || echo '$(srcdir)/'`totem-subtitle-encoding.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-subtitle-encoding.lo `test -f 'xplayer-subtitle-encoding.c' || echo '$(srcdir)/'`xplayer-subtitle-encoding.c
 
-libtotem_la-totem-plugins-engine.lo: plugins/totem-plugins-engine.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-plugins-engine.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-plugins-engine.Tpo -c -o libtotem_la-totem-plugins-engine.lo `test -f 'plugins/totem-plugins-engine.c' || echo '$(srcdir)/'`plugins/totem-plugins-engine.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-plugins-engine.Tpo $(DEPDIR)/libtotem_la-totem-plugins-engine.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='plugins/totem-plugins-engine.c' object='libtotem_la-totem-plugins-engine.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-plugins-engine.lo: plugins/xplayer-plugins-engine.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-plugins-engine.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-plugins-engine.Tpo -c -o libxplayer_la-xplayer-plugins-engine.lo `test -f 'plugins/xplayer-plugins-engine.c' || echo '$(srcdir)/'`plugins/xplayer-plugins-engine.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-plugins-engine.Tpo $(DEPDIR)/libxplayer_la-xplayer-plugins-engine.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='plugins/xplayer-plugins-engine.c' object='libxplayer_la-xplayer-plugins-engine.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-plugins-engine.lo `test -f 'plugins/totem-plugins-engine.c' || echo '$(srcdir)/'`plugins/totem-plugins-engine.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-plugins-engine.lo `test -f 'plugins/xplayer-plugins-engine.c' || echo '$(srcdir)/'`plugins/xplayer-plugins-engine.c
 
-libtotem_la-totem-dirs.lo: plugins/totem-dirs.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-totem-dirs.lo -MD -MP -MF $(DEPDIR)/libtotem_la-totem-dirs.Tpo -c -o libtotem_la-totem-dirs.lo `test -f 'plugins/totem-dirs.c' || echo '$(srcdir)/'`plugins/totem-dirs.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-totem-dirs.Tpo $(DEPDIR)/libtotem_la-totem-dirs.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='plugins/totem-dirs.c' object='libtotem_la-totem-dirs.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-xplayer-dirs.lo: plugins/xplayer-dirs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-xplayer-dirs.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-xplayer-dirs.Tpo -c -o libxplayer_la-xplayer-dirs.lo `test -f 'plugins/xplayer-dirs.c' || echo '$(srcdir)/'`plugins/xplayer-dirs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-xplayer-dirs.Tpo $(DEPDIR)/libxplayer_la-xplayer-dirs.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='plugins/xplayer-dirs.c' object='libxplayer_la-xplayer-dirs.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-totem-dirs.lo `test -f 'plugins/totem-dirs.c' || echo '$(srcdir)/'`plugins/totem-dirs.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-xplayer-dirs.lo `test -f 'plugins/xplayer-dirs.c' || echo '$(srcdir)/'`plugins/xplayer-dirs.c
 
-libtotem_la-eggsmclient.lo: eggsmclient.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggsmclient.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggsmclient.Tpo -c -o libtotem_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggsmclient.Tpo $(DEPDIR)/libtotem_la-eggsmclient.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient.c' object='libtotem_la-eggsmclient.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggsmclient.lo: eggsmclient.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggsmclient.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggsmclient.Tpo -c -o libxplayer_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggsmclient.Tpo $(DEPDIR)/libxplayer_la-eggsmclient.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient.c' object='libxplayer_la-eggsmclient.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
 
-libtotem_la-eggdesktopfile.lo: eggdesktopfile.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggdesktopfile.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggdesktopfile.Tpo -c -o libtotem_la-eggdesktopfile.lo `test -f 'eggdesktopfile.c' || echo '$(srcdir)/'`eggdesktopfile.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggdesktopfile.Tpo $(DEPDIR)/libtotem_la-eggdesktopfile.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggdesktopfile.c' object='libtotem_la-eggdesktopfile.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggdesktopfile.lo: eggdesktopfile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggdesktopfile.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggdesktopfile.Tpo -c -o libxplayer_la-eggdesktopfile.lo `test -f 'eggdesktopfile.c' || echo '$(srcdir)/'`eggdesktopfile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggdesktopfile.Tpo $(DEPDIR)/libxplayer_la-eggdesktopfile.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggdesktopfile.c' object='libxplayer_la-eggdesktopfile.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggdesktopfile.lo `test -f 'eggdesktopfile.c' || echo '$(srcdir)/'`eggdesktopfile.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggdesktopfile.lo `test -f 'eggdesktopfile.c' || echo '$(srcdir)/'`eggdesktopfile.c
 
-libtotem_la-eggsmclient-xsmp.lo: eggsmclient-xsmp.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggsmclient-xsmp.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggsmclient-xsmp.Tpo -c -o libtotem_la-eggsmclient-xsmp.lo `test -f 'eggsmclient-xsmp.c' || echo '$(srcdir)/'`eggsmclient-xsmp.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggsmclient-xsmp.Tpo $(DEPDIR)/libtotem_la-eggsmclient-xsmp.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-xsmp.c' object='libtotem_la-eggsmclient-xsmp.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggsmclient-xsmp.lo: eggsmclient-xsmp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggsmclient-xsmp.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggsmclient-xsmp.Tpo -c -o libxplayer_la-eggsmclient-xsmp.lo `test -f 'eggsmclient-xsmp.c' || echo '$(srcdir)/'`eggsmclient-xsmp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggsmclient-xsmp.Tpo $(DEPDIR)/libxplayer_la-eggsmclient-xsmp.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-xsmp.c' object='libxplayer_la-eggsmclient-xsmp.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggsmclient-xsmp.lo `test -f 'eggsmclient-xsmp.c' || echo '$(srcdir)/'`eggsmclient-xsmp.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggsmclient-xsmp.lo `test -f 'eggsmclient-xsmp.c' || echo '$(srcdir)/'`eggsmclient-xsmp.c
 
-libtotem_la-eggsmclient-win32.lo: eggsmclient-win32.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggsmclient-win32.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggsmclient-win32.Tpo -c -o libtotem_la-eggsmclient-win32.lo `test -f 'eggsmclient-win32.c' || echo '$(srcdir)/'`eggsmclient-win32.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggsmclient-win32.Tpo $(DEPDIR)/libtotem_la-eggsmclient-win32.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-win32.c' object='libtotem_la-eggsmclient-win32.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggsmclient-win32.lo: eggsmclient-win32.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggsmclient-win32.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggsmclient-win32.Tpo -c -o libxplayer_la-eggsmclient-win32.lo `test -f 'eggsmclient-win32.c' || echo '$(srcdir)/'`eggsmclient-win32.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggsmclient-win32.Tpo $(DEPDIR)/libxplayer_la-eggsmclient-win32.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-win32.c' object='libxplayer_la-eggsmclient-win32.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggsmclient-win32.lo `test -f 'eggsmclient-win32.c' || echo '$(srcdir)/'`eggsmclient-win32.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggsmclient-win32.lo `test -f 'eggsmclient-win32.c' || echo '$(srcdir)/'`eggsmclient-win32.c
 
-libtotem_la-eggsmclient-osx.lo: eggsmclient-osx.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -MT libtotem_la-eggsmclient-osx.lo -MD -MP -MF $(DEPDIR)/libtotem_la-eggsmclient-osx.Tpo -c -o libtotem_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_la-eggsmclient-osx.Tpo $(DEPDIR)/libtotem_la-eggsmclient-osx.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-osx.c' object='libtotem_la-eggsmclient-osx.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_la-eggsmclient-osx.lo: eggsmclient-osx.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -MT libxplayer_la-eggsmclient-osx.lo -MD -MP -MF $(DEPDIR)/libxplayer_la-eggsmclient-osx.Tpo -c -o libxplayer_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_la-eggsmclient-osx.Tpo $(DEPDIR)/libxplayer_la-eggsmclient-osx.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='eggsmclient-osx.c' object='libxplayer_la-eggsmclient-osx.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_la_CFLAGS) $(CFLAGS) -c -o libtotem_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_la_CFLAGS) $(CFLAGS) -c -o libxplayer_la-eggsmclient-osx.lo `test -f 'eggsmclient-osx.c' || echo '$(srcdir)/'`eggsmclient-osx.c
 
-libtotem_player_la-totem-statusbar.lo: totem-statusbar.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -MT libtotem_player_la-totem-statusbar.lo -MD -MP -MF $(DEPDIR)/libtotem_player_la-totem-statusbar.Tpo -c -o libtotem_player_la-totem-statusbar.lo `test -f 'totem-statusbar.c' || echo '$(srcdir)/'`totem-statusbar.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_player_la-totem-statusbar.Tpo $(DEPDIR)/libtotem_player_la-totem-statusbar.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-statusbar.c' object='libtotem_player_la-totem-statusbar.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_player_la-xplayer-statusbar.lo: xplayer-statusbar.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -MT libxplayer_player_la-xplayer-statusbar.lo -MD -MP -MF $(DEPDIR)/libxplayer_player_la-xplayer-statusbar.Tpo -c -o libxplayer_player_la-xplayer-statusbar.lo `test -f 'xplayer-statusbar.c' || echo '$(srcdir)/'`xplayer-statusbar.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_player_la-xplayer-statusbar.Tpo $(DEPDIR)/libxplayer_player_la-xplayer-statusbar.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-statusbar.c' object='libxplayer_player_la-xplayer-statusbar.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -c -o libtotem_player_la-totem-statusbar.lo `test -f 'totem-statusbar.c' || echo '$(srcdir)/'`totem-statusbar.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -c -o libxplayer_player_la-xplayer-statusbar.lo `test -f 'xplayer-statusbar.c' || echo '$(srcdir)/'`xplayer-statusbar.c
 
-libtotem_player_la-totem-interface.lo: totem-interface.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -MT libtotem_player_la-totem-interface.lo -MD -MP -MF $(DEPDIR)/libtotem_player_la-totem-interface.Tpo -c -o libtotem_player_la-totem-interface.lo `test -f 'totem-interface.c' || echo '$(srcdir)/'`totem-interface.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_player_la-totem-interface.Tpo $(DEPDIR)/libtotem_player_la-totem-interface.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-interface.c' object='libtotem_player_la-totem-interface.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_player_la-xplayer-interface.lo: xplayer-interface.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -MT libxplayer_player_la-xplayer-interface.lo -MD -MP -MF $(DEPDIR)/libxplayer_player_la-xplayer-interface.Tpo -c -o libxplayer_player_la-xplayer-interface.lo `test -f 'xplayer-interface.c' || echo '$(srcdir)/'`xplayer-interface.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_player_la-xplayer-interface.Tpo $(DEPDIR)/libxplayer_player_la-xplayer-interface.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-interface.c' object='libxplayer_player_la-xplayer-interface.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -c -o libtotem_player_la-totem-interface.lo `test -f 'totem-interface.c' || echo '$(srcdir)/'`totem-interface.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -c -o libxplayer_player_la-xplayer-interface.lo `test -f 'xplayer-interface.c' || echo '$(srcdir)/'`xplayer-interface.c
 
-libtotem_player_la-totem-fullscreen.lo: totem-fullscreen.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -MT libtotem_player_la-totem-fullscreen.lo -MD -MP -MF $(DEPDIR)/libtotem_player_la-totem-fullscreen.Tpo -c -o libtotem_player_la-totem-fullscreen.lo `test -f 'totem-fullscreen.c' || echo '$(srcdir)/'`totem-fullscreen.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_player_la-totem-fullscreen.Tpo $(DEPDIR)/libtotem_player_la-totem-fullscreen.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-fullscreen.c' object='libtotem_player_la-totem-fullscreen.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_player_la-xplayer-fullscreen.lo: xplayer-fullscreen.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -MT libxplayer_player_la-xplayer-fullscreen.lo -MD -MP -MF $(DEPDIR)/libxplayer_player_la-xplayer-fullscreen.Tpo -c -o libxplayer_player_la-xplayer-fullscreen.lo `test -f 'xplayer-fullscreen.c' || echo '$(srcdir)/'`xplayer-fullscreen.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_player_la-xplayer-fullscreen.Tpo $(DEPDIR)/libxplayer_player_la-xplayer-fullscreen.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-fullscreen.c' object='libxplayer_player_la-xplayer-fullscreen.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -c -o libtotem_player_la-totem-fullscreen.lo `test -f 'totem-fullscreen.c' || echo '$(srcdir)/'`totem-fullscreen.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -c -o libxplayer_player_la-xplayer-fullscreen.lo `test -f 'xplayer-fullscreen.c' || echo '$(srcdir)/'`xplayer-fullscreen.c
 
-libtotem_player_la-gd-fullscreen-filter.lo: gd-fullscreen-filter.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -MT libtotem_player_la-gd-fullscreen-filter.lo -MD -MP -MF $(DEPDIR)/libtotem_player_la-gd-fullscreen-filter.Tpo -c -o libtotem_player_la-gd-fullscreen-filter.lo `test -f 'gd-fullscreen-filter.c' || echo '$(srcdir)/'`gd-fullscreen-filter.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_player_la-gd-fullscreen-filter.Tpo $(DEPDIR)/libtotem_player_la-gd-fullscreen-filter.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='gd-fullscreen-filter.c' object='libtotem_player_la-gd-fullscreen-filter.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_player_la-gd-fullscreen-filter.lo: gd-fullscreen-filter.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -MT libxplayer_player_la-gd-fullscreen-filter.lo -MD -MP -MF $(DEPDIR)/libxplayer_player_la-gd-fullscreen-filter.Tpo -c -o libxplayer_player_la-gd-fullscreen-filter.lo `test -f 'gd-fullscreen-filter.c' || echo '$(srcdir)/'`gd-fullscreen-filter.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_player_la-gd-fullscreen-filter.Tpo $(DEPDIR)/libxplayer_player_la-gd-fullscreen-filter.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='gd-fullscreen-filter.c' object='libxplayer_player_la-gd-fullscreen-filter.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -c -o libtotem_player_la-gd-fullscreen-filter.lo `test -f 'gd-fullscreen-filter.c' || echo '$(srcdir)/'`gd-fullscreen-filter.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -c -o libxplayer_player_la-gd-fullscreen-filter.lo `test -f 'gd-fullscreen-filter.c' || echo '$(srcdir)/'`gd-fullscreen-filter.c
 
-libtotem_player_la-totem-time-label.lo: totem-time-label.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -MT libtotem_player_la-totem-time-label.lo -MD -MP -MF $(DEPDIR)/libtotem_player_la-totem-time-label.Tpo -c -o libtotem_player_la-totem-time-label.lo `test -f 'totem-time-label.c' || echo '$(srcdir)/'`totem-time-label.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_player_la-totem-time-label.Tpo $(DEPDIR)/libtotem_player_la-totem-time-label.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-time-label.c' object='libtotem_player_la-totem-time-label.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_player_la-xplayer-time-label.lo: xplayer-time-label.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -MT libxplayer_player_la-xplayer-time-label.lo -MD -MP -MF $(DEPDIR)/libxplayer_player_la-xplayer-time-label.Tpo -c -o libxplayer_player_la-xplayer-time-label.lo `test -f 'xplayer-time-label.c' || echo '$(srcdir)/'`xplayer-time-label.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_player_la-xplayer-time-label.Tpo $(DEPDIR)/libxplayer_player_la-xplayer-time-label.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-time-label.c' object='libxplayer_player_la-xplayer-time-label.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_player_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_player_la_CFLAGS) $(CFLAGS) -c -o libtotem_player_la-totem-time-label.lo `test -f 'totem-time-label.c' || echo '$(srcdir)/'`totem-time-label.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_player_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_player_la_CFLAGS) $(CFLAGS) -c -o libxplayer_player_la-xplayer-time-label.lo `test -f 'xplayer-time-label.c' || echo '$(srcdir)/'`xplayer-time-label.c
 
-test_properties_page-totem-properties-main.o: totem-properties-main.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-totem-properties-main.o -MD -MP -MF $(DEPDIR)/test_properties_page-totem-properties-main.Tpo -c -o test_properties_page-totem-properties-main.o `test -f 'totem-properties-main.c' || echo '$(srcdir)/'`totem-properties-main.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-totem-properties-main.Tpo $(DEPDIR)/test_properties_page-totem-properties-main.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-main.c' object='test_properties_page-totem-properties-main.o' libtool=no @AMDEPBACKSLASH@
+test_properties_page-xplayer-properties-main.o: xplayer-properties-main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-xplayer-properties-main.o -MD -MP -MF $(DEPDIR)/test_properties_page-xplayer-properties-main.Tpo -c -o test_properties_page-xplayer-properties-main.o `test -f 'xplayer-properties-main.c' || echo '$(srcdir)/'`xplayer-properties-main.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-xplayer-properties-main.Tpo $(DEPDIR)/test_properties_page-xplayer-properties-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-main.c' object='test_properties_page-xplayer-properties-main.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-totem-properties-main.o `test -f 'totem-properties-main.c' || echo '$(srcdir)/'`totem-properties-main.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-xplayer-properties-main.o `test -f 'xplayer-properties-main.c' || echo '$(srcdir)/'`xplayer-properties-main.c
 
-test_properties_page-totem-properties-main.obj: totem-properties-main.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-totem-properties-main.obj -MD -MP -MF $(DEPDIR)/test_properties_page-totem-properties-main.Tpo -c -o test_properties_page-totem-properties-main.obj `if test -f 'totem-properties-main.c'; then $(CYGPATH_W) 'totem-properties-main.c'; else $(CYGPATH_W) '$(srcdir)/totem-properties-main.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-totem-properties-main.Tpo $(DEPDIR)/test_properties_page-totem-properties-main.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-main.c' object='test_properties_page-totem-properties-main.obj' libtool=no @AMDEPBACKSLASH@
+test_properties_page-xplayer-properties-main.obj: xplayer-properties-main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-xplayer-properties-main.obj -MD -MP -MF $(DEPDIR)/test_properties_page-xplayer-properties-main.Tpo -c -o test_properties_page-xplayer-properties-main.obj `if test -f 'xplayer-properties-main.c'; then $(CYGPATH_W) 'xplayer-properties-main.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-properties-main.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-xplayer-properties-main.Tpo $(DEPDIR)/test_properties_page-xplayer-properties-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-main.c' object='test_properties_page-xplayer-properties-main.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-totem-properties-main.obj `if test -f 'totem-properties-main.c'; then $(CYGPATH_W) 'totem-properties-main.c'; else $(CYGPATH_W) '$(srcdir)/totem-properties-main.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-xplayer-properties-main.obj `if test -f 'xplayer-properties-main.c'; then $(CYGPATH_W) 'xplayer-properties-main.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-properties-main.c'; fi`
 
-test_properties_page-totem-properties-view.o: totem-properties-view.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-totem-properties-view.o -MD -MP -MF $(DEPDIR)/test_properties_page-totem-properties-view.Tpo -c -o test_properties_page-totem-properties-view.o `test -f 'totem-properties-view.c' || echo '$(srcdir)/'`totem-properties-view.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-totem-properties-view.Tpo $(DEPDIR)/test_properties_page-totem-properties-view.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-view.c' object='test_properties_page-totem-properties-view.o' libtool=no @AMDEPBACKSLASH@
+test_properties_page-xplayer-properties-view.o: xplayer-properties-view.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-xplayer-properties-view.o -MD -MP -MF $(DEPDIR)/test_properties_page-xplayer-properties-view.Tpo -c -o test_properties_page-xplayer-properties-view.o `test -f 'xplayer-properties-view.c' || echo '$(srcdir)/'`xplayer-properties-view.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-xplayer-properties-view.Tpo $(DEPDIR)/test_properties_page-xplayer-properties-view.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-view.c' object='test_properties_page-xplayer-properties-view.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-totem-properties-view.o `test -f 'totem-properties-view.c' || echo '$(srcdir)/'`totem-properties-view.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-xplayer-properties-view.o `test -f 'xplayer-properties-view.c' || echo '$(srcdir)/'`xplayer-properties-view.c
 
-test_properties_page-totem-properties-view.obj: totem-properties-view.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-totem-properties-view.obj -MD -MP -MF $(DEPDIR)/test_properties_page-totem-properties-view.Tpo -c -o test_properties_page-totem-properties-view.obj `if test -f 'totem-properties-view.c'; then $(CYGPATH_W) 'totem-properties-view.c'; else $(CYGPATH_W) '$(srcdir)/totem-properties-view.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-totem-properties-view.Tpo $(DEPDIR)/test_properties_page-totem-properties-view.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-properties-view.c' object='test_properties_page-totem-properties-view.obj' libtool=no @AMDEPBACKSLASH@
+test_properties_page-xplayer-properties-view.obj: xplayer-properties-view.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-xplayer-properties-view.obj -MD -MP -MF $(DEPDIR)/test_properties_page-xplayer-properties-view.Tpo -c -o test_properties_page-xplayer-properties-view.obj `if test -f 'xplayer-properties-view.c'; then $(CYGPATH_W) 'xplayer-properties-view.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-properties-view.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_properties_page-xplayer-properties-view.Tpo $(DEPDIR)/test_properties_page-xplayer-properties-view.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-properties-view.c' object='test_properties_page-xplayer-properties-view.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-totem-properties-view.obj `if test -f 'totem-properties-view.c'; then $(CYGPATH_W) 'totem-properties-view.c'; else $(CYGPATH_W) '$(srcdir)/totem-properties-view.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-xplayer-properties-view.obj `if test -f 'xplayer-properties-view.c'; then $(CYGPATH_W) 'xplayer-properties-view.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-properties-view.c'; fi`
 
 test_properties_page-test-properties-page.o: test-properties-page.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -MT test_properties_page-test-properties-page.o -MD -MP -MF $(DEPDIR)/test_properties_page-test-properties-page.Tpo -c -o test_properties_page-test-properties-page.o `test -f 'test-properties-page.c' || echo '$(srcdir)/'`test-properties-page.c
@@ -1320,75 +1320,75 @@ test_properties_page-test-properties-page.obj: test-properties-page.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_properties_page_CPPFLAGS) $(CPPFLAGS) $(test_properties_page_CFLAGS) $(CFLAGS) -c -o test_properties_page-test-properties-page.obj `if test -f 'test-properties-page.c'; then $(CYGPATH_W) 'test-properties-page.c'; else $(CYGPATH_W) '$(srcdir)/test-properties-page.c'; fi`
 
-totem-totem.o: totem.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_CPPFLAGS) $(CPPFLAGS) $(totem_CFLAGS) $(CFLAGS) -MT totem-totem.o -MD -MP -MF $(DEPDIR)/totem-totem.Tpo -c -o totem-totem.o `test -f 'totem.c' || echo '$(srcdir)/'`totem.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem-totem.Tpo $(DEPDIR)/totem-totem.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem.c' object='totem-totem.o' libtool=no @AMDEPBACKSLASH@
+xplayer-xplayer.o: xplayer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_CPPFLAGS) $(CPPFLAGS) $(xplayer_CFLAGS) $(CFLAGS) -MT xplayer-xplayer.o -MD -MP -MF $(DEPDIR)/xplayer-xplayer.Tpo -c -o xplayer-xplayer.o `test -f 'xplayer.c' || echo '$(srcdir)/'`xplayer.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer-xplayer.Tpo $(DEPDIR)/xplayer-xplayer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer.c' object='xplayer-xplayer.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_CPPFLAGS) $(CPPFLAGS) $(totem_CFLAGS) $(CFLAGS) -c -o totem-totem.o `test -f 'totem.c' || echo '$(srcdir)/'`totem.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_CPPFLAGS) $(CPPFLAGS) $(xplayer_CFLAGS) $(CFLAGS) -c -o xplayer-xplayer.o `test -f 'xplayer.c' || echo '$(srcdir)/'`xplayer.c
 
-totem-totem.obj: totem.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_CPPFLAGS) $(CPPFLAGS) $(totem_CFLAGS) $(CFLAGS) -MT totem-totem.obj -MD -MP -MF $(DEPDIR)/totem-totem.Tpo -c -o totem-totem.obj `if test -f 'totem.c'; then $(CYGPATH_W) 'totem.c'; else $(CYGPATH_W) '$(srcdir)/totem.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem-totem.Tpo $(DEPDIR)/totem-totem.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem.c' object='totem-totem.obj' libtool=no @AMDEPBACKSLASH@
+xplayer-xplayer.obj: xplayer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_CPPFLAGS) $(CPPFLAGS) $(xplayer_CFLAGS) $(CFLAGS) -MT xplayer-xplayer.obj -MD -MP -MF $(DEPDIR)/xplayer-xplayer.Tpo -c -o xplayer-xplayer.obj `if test -f 'xplayer.c'; then $(CYGPATH_W) 'xplayer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer-xplayer.Tpo $(DEPDIR)/xplayer-xplayer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer.c' object='xplayer-xplayer.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_CPPFLAGS) $(CPPFLAGS) $(totem_CFLAGS) $(CFLAGS) -c -o totem-totem.obj `if test -f 'totem.c'; then $(CYGPATH_W) 'totem.c'; else $(CYGPATH_W) '$(srcdir)/totem.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_CPPFLAGS) $(CPPFLAGS) $(xplayer_CFLAGS) $(CFLAGS) -c -o xplayer-xplayer.obj `if test -f 'xplayer.c'; then $(CYGPATH_W) 'xplayer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer.c'; fi`
 
-totem_audio_preview-totem-audio-preview.o: totem-audio-preview.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -MT totem_audio_preview-totem-audio-preview.o -MD -MP -MF $(DEPDIR)/totem_audio_preview-totem-audio-preview.Tpo -c -o totem_audio_preview-totem-audio-preview.o `test -f 'totem-audio-preview.c' || echo '$(srcdir)/'`totem-audio-preview.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_audio_preview-totem-audio-preview.Tpo $(DEPDIR)/totem_audio_preview-totem-audio-preview.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-audio-preview.c' object='totem_audio_preview-totem-audio-preview.o' libtool=no @AMDEPBACKSLASH@
+xplayer_audio_preview-xplayer-audio-preview.o: xplayer-audio-preview.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -MT xplayer_audio_preview-xplayer-audio-preview.o -MD -MP -MF $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Tpo -c -o xplayer_audio_preview-xplayer-audio-preview.o `test -f 'xplayer-audio-preview.c' || echo '$(srcdir)/'`xplayer-audio-preview.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Tpo $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-audio-preview.c' object='xplayer_audio_preview-xplayer-audio-preview.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -c -o totem_audio_preview-totem-audio-preview.o `test -f 'totem-audio-preview.c' || echo '$(srcdir)/'`totem-audio-preview.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -c -o xplayer_audio_preview-xplayer-audio-preview.o `test -f 'xplayer-audio-preview.c' || echo '$(srcdir)/'`xplayer-audio-preview.c
 
-totem_audio_preview-totem-audio-preview.obj: totem-audio-preview.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -MT totem_audio_preview-totem-audio-preview.obj -MD -MP -MF $(DEPDIR)/totem_audio_preview-totem-audio-preview.Tpo -c -o totem_audio_preview-totem-audio-preview.obj `if test -f 'totem-audio-preview.c'; then $(CYGPATH_W) 'totem-audio-preview.c'; else $(CYGPATH_W) '$(srcdir)/totem-audio-preview.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_audio_preview-totem-audio-preview.Tpo $(DEPDIR)/totem_audio_preview-totem-audio-preview.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-audio-preview.c' object='totem_audio_preview-totem-audio-preview.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_audio_preview-xplayer-audio-preview.obj: xplayer-audio-preview.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -MT xplayer_audio_preview-xplayer-audio-preview.obj -MD -MP -MF $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Tpo -c -o xplayer_audio_preview-xplayer-audio-preview.obj `if test -f 'xplayer-audio-preview.c'; then $(CYGPATH_W) 'xplayer-audio-preview.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-audio-preview.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Tpo $(DEPDIR)/xplayer_audio_preview-xplayer-audio-preview.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-audio-preview.c' object='xplayer_audio_preview-xplayer-audio-preview.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -c -o totem_audio_preview-totem-audio-preview.obj `if test -f 'totem-audio-preview.c'; then $(CYGPATH_W) 'totem-audio-preview.c'; else $(CYGPATH_W) '$(srcdir)/totem-audio-preview.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -c -o xplayer_audio_preview-xplayer-audio-preview.obj `if test -f 'xplayer-audio-preview.c'; then $(CYGPATH_W) 'xplayer-audio-preview.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-audio-preview.c'; fi`
 
-totem_audio_preview-totem-resources.o: totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -MT totem_audio_preview-totem-resources.o -MD -MP -MF $(DEPDIR)/totem_audio_preview-totem-resources.Tpo -c -o totem_audio_preview-totem-resources.o `test -f 'totem-resources.c' || echo '$(srcdir)/'`totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_audio_preview-totem-resources.Tpo $(DEPDIR)/totem_audio_preview-totem-resources.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-resources.c' object='totem_audio_preview-totem-resources.o' libtool=no @AMDEPBACKSLASH@
+xplayer_audio_preview-xplayer-resources.o: xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -MT xplayer_audio_preview-xplayer-resources.o -MD -MP -MF $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Tpo -c -o xplayer_audio_preview-xplayer-resources.o `test -f 'xplayer-resources.c' || echo '$(srcdir)/'`xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Tpo $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-resources.c' object='xplayer_audio_preview-xplayer-resources.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -c -o totem_audio_preview-totem-resources.o `test -f 'totem-resources.c' || echo '$(srcdir)/'`totem-resources.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -c -o xplayer_audio_preview-xplayer-resources.o `test -f 'xplayer-resources.c' || echo '$(srcdir)/'`xplayer-resources.c
 
-totem_audio_preview-totem-resources.obj: totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -MT totem_audio_preview-totem-resources.obj -MD -MP -MF $(DEPDIR)/totem_audio_preview-totem-resources.Tpo -c -o totem_audio_preview-totem-resources.obj `if test -f 'totem-resources.c'; then $(CYGPATH_W) 'totem-resources.c'; else $(CYGPATH_W) '$(srcdir)/totem-resources.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_audio_preview-totem-resources.Tpo $(DEPDIR)/totem_audio_preview-totem-resources.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-resources.c' object='totem_audio_preview-totem-resources.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_audio_preview-xplayer-resources.obj: xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -MT xplayer_audio_preview-xplayer-resources.obj -MD -MP -MF $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Tpo -c -o xplayer_audio_preview-xplayer-resources.obj `if test -f 'xplayer-resources.c'; then $(CYGPATH_W) 'xplayer-resources.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-resources.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Tpo $(DEPDIR)/xplayer_audio_preview-xplayer-resources.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-resources.c' object='xplayer_audio_preview-xplayer-resources.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_audio_preview_CPPFLAGS) $(CPPFLAGS) $(totem_audio_preview_CFLAGS) $(CFLAGS) -c -o totem_audio_preview-totem-resources.obj `if test -f 'totem-resources.c'; then $(CYGPATH_W) 'totem-resources.c'; else $(CYGPATH_W) '$(srcdir)/totem-resources.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_audio_preview_CPPFLAGS) $(CPPFLAGS) $(xplayer_audio_preview_CFLAGS) $(CFLAGS) -c -o xplayer_audio_preview-xplayer-resources.obj `if test -f 'xplayer-resources.c'; then $(CYGPATH_W) 'xplayer-resources.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-resources.c'; fi`
 
-totem_video_thumbnailer-totem-video-thumbnailer.o: totem-video-thumbnailer.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -MT totem_video_thumbnailer-totem-video-thumbnailer.o -MD -MP -MF $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Tpo -c -o totem_video_thumbnailer-totem-video-thumbnailer.o `test -f 'totem-video-thumbnailer.c' || echo '$(srcdir)/'`totem-video-thumbnailer.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Tpo $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-video-thumbnailer.c' object='totem_video_thumbnailer-totem-video-thumbnailer.o' libtool=no @AMDEPBACKSLASH@
+xplayer_video_thumbnailer-xplayer-video-thumbnailer.o: xplayer-video-thumbnailer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -MT xplayer_video_thumbnailer-xplayer-video-thumbnailer.o -MD -MP -MF $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Tpo -c -o xplayer_video_thumbnailer-xplayer-video-thumbnailer.o `test -f 'xplayer-video-thumbnailer.c' || echo '$(srcdir)/'`xplayer-video-thumbnailer.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Tpo $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-video-thumbnailer.c' object='xplayer_video_thumbnailer-xplayer-video-thumbnailer.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o totem_video_thumbnailer-totem-video-thumbnailer.o `test -f 'totem-video-thumbnailer.c' || echo '$(srcdir)/'`totem-video-thumbnailer.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o xplayer_video_thumbnailer-xplayer-video-thumbnailer.o `test -f 'xplayer-video-thumbnailer.c' || echo '$(srcdir)/'`xplayer-video-thumbnailer.c
 
-totem_video_thumbnailer-totem-video-thumbnailer.obj: totem-video-thumbnailer.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -MT totem_video_thumbnailer-totem-video-thumbnailer.obj -MD -MP -MF $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Tpo -c -o totem_video_thumbnailer-totem-video-thumbnailer.obj `if test -f 'totem-video-thumbnailer.c'; then $(CYGPATH_W) 'totem-video-thumbnailer.c'; else $(CYGPATH_W) '$(srcdir)/totem-video-thumbnailer.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Tpo $(DEPDIR)/totem_video_thumbnailer-totem-video-thumbnailer.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-video-thumbnailer.c' object='totem_video_thumbnailer-totem-video-thumbnailer.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_video_thumbnailer-xplayer-video-thumbnailer.obj: xplayer-video-thumbnailer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -MT xplayer_video_thumbnailer-xplayer-video-thumbnailer.obj -MD -MP -MF $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Tpo -c -o xplayer_video_thumbnailer-xplayer-video-thumbnailer.obj `if test -f 'xplayer-video-thumbnailer.c'; then $(CYGPATH_W) 'xplayer-video-thumbnailer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-video-thumbnailer.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Tpo $(DEPDIR)/xplayer_video_thumbnailer-xplayer-video-thumbnailer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-video-thumbnailer.c' object='xplayer_video_thumbnailer-xplayer-video-thumbnailer.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o totem_video_thumbnailer-totem-video-thumbnailer.obj `if test -f 'totem-video-thumbnailer.c'; then $(CYGPATH_W) 'totem-video-thumbnailer.c'; else $(CYGPATH_W) '$(srcdir)/totem-video-thumbnailer.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o xplayer_video_thumbnailer-xplayer-video-thumbnailer.obj `if test -f 'xplayer-video-thumbnailer.c'; then $(CYGPATH_W) 'xplayer-video-thumbnailer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-video-thumbnailer.c'; fi`
 
-totem_video_thumbnailer-totem-resources.o: totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -MT totem_video_thumbnailer-totem-resources.o -MD -MP -MF $(DEPDIR)/totem_video_thumbnailer-totem-resources.Tpo -c -o totem_video_thumbnailer-totem-resources.o `test -f 'totem-resources.c' || echo '$(srcdir)/'`totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_video_thumbnailer-totem-resources.Tpo $(DEPDIR)/totem_video_thumbnailer-totem-resources.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-resources.c' object='totem_video_thumbnailer-totem-resources.o' libtool=no @AMDEPBACKSLASH@
+xplayer_video_thumbnailer-xplayer-resources.o: xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -MT xplayer_video_thumbnailer-xplayer-resources.o -MD -MP -MF $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Tpo -c -o xplayer_video_thumbnailer-xplayer-resources.o `test -f 'xplayer-resources.c' || echo '$(srcdir)/'`xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Tpo $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-resources.c' object='xplayer_video_thumbnailer-xplayer-resources.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o totem_video_thumbnailer-totem-resources.o `test -f 'totem-resources.c' || echo '$(srcdir)/'`totem-resources.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o xplayer_video_thumbnailer-xplayer-resources.o `test -f 'xplayer-resources.c' || echo '$(srcdir)/'`xplayer-resources.c
 
-totem_video_thumbnailer-totem-resources.obj: totem-resources.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -MT totem_video_thumbnailer-totem-resources.obj -MD -MP -MF $(DEPDIR)/totem_video_thumbnailer-totem-resources.Tpo -c -o totem_video_thumbnailer-totem-resources.obj `if test -f 'totem-resources.c'; then $(CYGPATH_W) 'totem-resources.c'; else $(CYGPATH_W) '$(srcdir)/totem-resources.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_video_thumbnailer-totem-resources.Tpo $(DEPDIR)/totem_video_thumbnailer-totem-resources.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-resources.c' object='totem_video_thumbnailer-totem-resources.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_video_thumbnailer-xplayer-resources.obj: xplayer-resources.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -MT xplayer_video_thumbnailer-xplayer-resources.obj -MD -MP -MF $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Tpo -c -o xplayer_video_thumbnailer-xplayer-resources.obj `if test -f 'xplayer-resources.c'; then $(CYGPATH_W) 'xplayer-resources.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-resources.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Tpo $(DEPDIR)/xplayer_video_thumbnailer-xplayer-resources.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-resources.c' object='xplayer_video_thumbnailer-xplayer-resources.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(totem_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o totem_video_thumbnailer-totem-resources.obj `if test -f 'totem-resources.c'; then $(CYGPATH_W) 'totem-resources.c'; else $(CYGPATH_W) '$(srcdir)/totem-resources.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_video_thumbnailer_CPPFLAGS) $(CPPFLAGS) $(xplayer_video_thumbnailer_CFLAGS) $(CFLAGS) -c -o xplayer_video_thumbnailer-xplayer-resources.obj `if test -f 'xplayer-resources.c'; then $(CYGPATH_W) 'xplayer-resources.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-resources.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -1756,8 +1756,8 @@ uninstall-am: uninstall-binPROGRAMS uninstall-girDATA \
 # Introspection
 -include $(INTROSPECTION_MAKEFILE)
 
-# NOTE: This should change with $(TOTEM_API_VERSION)
-@HAVE_INTROSPECTION_TRUE@Totem-1.0.gir: libtotem.la
+# NOTE: This should change with $(XPLAYER_API_VERSION)
+@HAVE_INTROSPECTION_TRUE@Xplayer-1.0.gir: libxplayer.la
 
 -include $(top_srcdir)/git.mk
 

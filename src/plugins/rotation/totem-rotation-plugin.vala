@@ -17,12 +17,12 @@
  */
 
 using GLib;
-using Totem;
+using Xplayer;
 using Peas;
 using Clutter;
 using GtkClutter;
 
-public const string GIO_ROTATION_FILE_ATTRIBUTE = "metadata::totem::rotation";
+public const string GIO_ROTATION_FILE_ATTRIBUTE = "metadata::xplayer::rotation";
 
 class RotationPlugin: GLib.Object, Peas.Activatable
 {
@@ -34,7 +34,7 @@ class RotationPlugin: GLib.Object, Peas.Activatable
 
     public void activate ()
     {
-        Totem.Object t = (Totem.Object) this.object;
+        Xplayer.Object t = (Xplayer.Object) this.object;
         string mrl = t.get_current_mrl ();
 
         this.bvw = t.get_video_widget () as Bacon.VideoWidget;
@@ -71,7 +71,7 @@ class RotationPlugin: GLib.Object, Peas.Activatable
 
     public void deactivate ()
     {
-        Totem.Object t = (Totem.Object) this.object;
+        Xplayer.Object t = (Xplayer.Object) this.object;
 
         // disconnect callbacks
         t.file_closed.disconnect (this.cb_file_closed);
@@ -120,7 +120,7 @@ class RotationPlugin: GLib.Object, Peas.Activatable
 
     private async void store_state ()
     {
-        Totem.Object t = (Totem.Object) this.object;
+        Xplayer.Object t = (Xplayer.Object) this.object;
         string mrl = t.get_current_mrl ();
 
         if (mrl == null) {

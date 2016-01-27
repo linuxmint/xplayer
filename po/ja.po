@@ -1,5 +1,5 @@
-# totem ja.po.
-# This file is distributed under the same license as the totem package.
+# xplayer ja.po.
+# This file is distributed under the same license as the xplayer package.
 # Copyright (C) 2002-2012 Free Software Foundation, Inc.
 # James Hashida <khashida@redhat.com>, 2002.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
@@ -12,8 +12,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: totem master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: xplayer master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-09-18 12:57+0000\n"
 "PO-Revision-Date: 2013-04-14 22:25+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
@@ -24,202 +24,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:352 ../src/totem-object.c:1181
-#: ../src/totem-object.c:1651 ../src/totem-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1651 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "停止中"
 
-#: ../browser-plugin/totem-plugin-viewer.c:364 ../src/totem-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "一時停止中"
 
-#: ../browser-plugin/totem-plugin-viewer.c:368 ../src/totem-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "再生中"
 
-#: ../browser-plugin/totem-plugin-viewer.c:386
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "動画を再生する"
 
-#: ../browser-plugin/totem-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "再生する URI を指定してください"
 
-#: ../browser-plugin/totem-plugin-viewer.c:675
-#: ../browser-plugin/totem-plugin-viewer.c:1699
-msgid "Totem Movie Player"
-msgstr "Totem 動画プレイヤー"
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Xplayer 動画プレイヤー"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "\"%s\" で開く(_O)"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1340 ../src/totem-object.c:2451
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2451
 msgid "An error occurred"
 msgstr "エラーが発生しました"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "プレイリストが存在しないか空です"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "動画ブラウザー プラグイン"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143 ../src/totem.c:267
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:267
 msgid "Could not initialize the thread-safe libraries."
 msgstr "スレッドセーフなライブラリを初期化できませんでした。"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143
-msgid "Verify your system installation. The Totem plugin will now exit."
-msgstr "システムのインストールを確認してください。Totem のプラグインを終了します。"
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "システムのインストールを確認してください。Xplayer のプラグインを終了します。"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "フルスクリーンの解除"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
 msgid "Time:"
 msgstr "時間:"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "音声を再生している時もスクリーンセーバーを有効にする"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid "Allow the screensaver to activate when playing audio. Disable if you have monitor-powered speakers."
 msgstr "音声を再生している場合でもスクリーンセーバーを有効にします。モニターで動作するスピーカーを使用している際には無効にします。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr "視覚効果を表示するかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr "楽曲ファイルの演奏時にのみ視覚効果を表示します。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr "視覚効果プラグインの名前"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "映像の明るさ"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr "映像のコントラスト"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr "映像の色相"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr "映像の彩度"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "キャンバスの大きさを自動的に変更するかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Repeat mode"
 msgstr "リピート・モードにするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
 msgstr "シャッフル・モードにするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "インターレースの動画のインターレース解除を無効にするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
 msgstr "再生エンジンのデバッグを有効にするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
 msgstr "音声出力の種類"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
 msgstr "視覚効果の大きさ"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
 msgstr "音楽の視覚効果の品質設定です。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
 msgstr "ネットワーク・バッファリングのしきい値"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid "Amount of data to buffer for network streams before starting to display the stream (in seconds)."
 msgstr "ストリームの表示を開始する前にネットワークストリーム用にバッファーするデータ量です (秒単位)。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Subtitle font"
 msgstr "字幕のフォント"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr "字幕を描画する際に使用するPango形式記述のフォントです。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "字幕のエンコーディング"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
 msgstr "字幕をエンコーディングする際の文字集合です。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "\"開く...\" ダイアログで表示するデフォルトのフォルダー"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid "Default location for the \"Open...\" dialogs. Default is the current directory."
 msgstr "\"開く...\" ダイアログで表示するデフォルトの場所です。デフォルトは現在のフォルダーです。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "\"スクリーンショットの取得\" ダイアログで表示するデフォルトのフォルダー"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid "Default location for the \"Take Screenshot\" dialogs. Default is the Pictures directory."
 msgstr "\"スクリーンショットの取得\" ダイアログで表示するデフォルトの場所です。デフォルトは画像フォルダーです。"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "ユーザーのホーム・フォルダーにあるプラグインを無効にするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "キーボードショートカットを無効にするかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr "ビデオを読み込んだら字幕のファイルを自動的に読み込むかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr "ビデオを読み込んだらチャプター・ファイルを自動的に読み込むかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid "Whether to remember the position of played audio/video files when pausing or closing them"
 msgstr "音声やビデオの再生を一時停止したり、閉じた時の位置を覚えておくかどうか"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Active plugins list"
 msgstr "有効なプラグイン一覧"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid "A list of the names of the plugins which are currently active (loaded and running)."
 msgstr "現在有効(読み込み済みで実行中)であるプラグインの名前の一覧です。"
 
@@ -239,11 +239,11 @@ msgstr "場所のコピー(_C)"
 msgid "Copy the location to the clipboard"
 msgstr "場所をクリップボードへコピーします"
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
 msgid "_Select Text Subtitles..."
 msgstr "字幕の選択(_S)..."
 
-#: ../data/playlist.ui.h:6 ../data/totem.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
 msgid "Select a file to use for text subtitles"
 msgstr "字幕で使用するファイルを選択してください"
 
@@ -283,7 +283,7 @@ msgid "Extra Large"
 msgstr "巨大"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5468
-#: ../src/totem-properties-view.c:242
+#: ../src/xplayer-properties-view.c:242
 msgid "Stereo"
 msgstr "ステレオ"
 
@@ -308,8 +308,8 @@ msgid "AC3 Passthrough"
 msgstr "AC3 パススルー"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
-msgstr "Totem の設定"
+msgid "Xplayer Preferences"
+msgstr "Xplayer の設定"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
@@ -423,7 +423,7 @@ msgid "_Audio output type:"
 msgstr "音声出力の種類(_A):"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:283
+#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr "音声"
 
@@ -455,7 +455,7 @@ msgstr "コメント:"
 msgid "Container:"
 msgstr "コンテナー:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:285
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
 msgid "Video"
 msgstr "ビデオ"
 
@@ -484,329 +484,329 @@ msgid "Channels:"
 msgstr "チャンネル数:"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:80 ../src/totem.c:266
-#: ../src/totem.c:274 ../src/totem-menu.c:789 ../src/totem-object.c:1659
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:266
+#: ../src/xplayer.c:274 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1659
 msgid "Videos"
 msgstr "ビデオ"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "動画を再生します"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;ビデオ;映像;動画;フィルム;クリップ;シリーズ;プレイヤー;テレビ;ディスク;"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "_Open"
 msgstr "開く(_O)"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Open _Location"
 msgstr "場所を開く(_L)"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "_Fullscreen"
 msgstr "フルスクリーン(_F)"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Prefere_nces"
 msgstr "設定(_N)"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "Shuff_le"
 msgstr "シャッフル(_L)"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Repeat"
 msgstr "リピート(_R)"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "動画(_M)"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "_Eject"
 msgstr "取り出し(_E)"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "Eject the current disc"
 msgstr "ディスクを取り出す"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "_Properties"
 msgstr "プロパティ(_P)"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "View the properties of the current stream"
 msgstr "このストリームのプロパティを表示"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "Play / P_ause"
 msgstr "再生/一時停止(_A)"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Play or pause the movie"
 msgstr "動画を再生したり停止します"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Clear Playlist"
 msgstr "プレイリストのクリア(_C)"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "Clear the playlist"
 msgstr "プレイリストをクリアします"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "Plugins..."
 msgstr "プラグイン..."
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "Configure plugins to extend the application"
 msgstr "アプリケーションを拡張するプラグインの設定"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "Fit Window to Movie"
 msgstr "ウィンドウを合わせる"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Resize 1∶2"
 msgstr "1∶2 サイズ(_R)"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "Resize to half the original video size"
 msgstr "ビデオのサイズを半分にします"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Resize _1∶1"
 msgstr "1∶1 サイズ(_1)"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Resize to the original video size"
 msgstr "ビデオのサイズをオリジナルのサイズにします"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Resize _2∶1"
 msgstr "2∶1 サイズ(_2)"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Resize to double the original video size"
 msgstr "ビデオのサイズを2倍にします"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_Aspect Ratio"
 msgstr "アスペクト比(_A)"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Switch An_gles"
 msgstr "角度の切り替え(_G)"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Switch camera angles"
 msgstr "カメラの角度を切り替えます"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Go"
 msgstr "移動(_G)"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "_DVD Menu"
 msgstr "DVD メニュー(_D)"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Go to the DVD menu"
 msgstr "DVD メニューへ移動します"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "_Title Menu"
 msgstr "タイトル・メニュー(_T)"
 
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Go to the title menu"
 msgstr "タイトル・メニューへ移動します"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "A_udio Menu"
 msgstr "音声メニュー(_U)"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the audio menu"
 msgstr "音声メニューへ移動します"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "_Angle Menu"
 msgstr "アングル・メニュー(_A)"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the angle menu"
 msgstr "カメラのアングル・メニューへ移動します"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "_Chapter Menu"
 msgstr "チャプター・メニュー(_C)"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Go to the chapter menu"
 msgstr "チャプター・メニューへ移動します"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "_Next Chapter/Movie"
 msgstr "次のチャプター/動画(_N)"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Next chapter or movie"
 msgstr "次のチャプターまたは動画に進みます"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "_Previous Chapter/Movie"
 msgstr "前のチャプター/動画(_P)"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Previous chapter or movie"
 msgstr "前のチャプターまたは動画に戻ります"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "_Sound"
 msgstr "サウンド(_S)"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Volume _Up"
 msgstr "音量を上げる(_U)"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "音量を上げます"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Volume _Down"
 msgstr "音量を下げる(_D)"
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Decrease volume"
 msgstr "音量を下げます"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "_Contents"
 msgstr "目次(_C)"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Help contents"
 msgstr "ヘルプの目次です"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "_About"
 msgstr "このアプリケーションについて(_A)"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "About this application"
 msgstr "このアプリケーションの情報を表示します"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Show _Controls"
 msgstr "コントロールの表示(_C)"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Show controls"
 msgstr "コントロールを表示します"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "S_idebar"
 msgstr "サイドバー(_I)"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Show or hide the sidebar"
 msgstr "サイドバーの表示/非表示を切り替えます"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "自動"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Sets automatic aspect ratio"
 msgstr "アスペクト比を自動調節します"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Square"
 msgstr "正方形"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Sets square aspect ratio"
 msgstr "アスペクト比を正方形にします"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "アスペクト比を 4∶3 (TV) にします"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (ワイドスクリーン)"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "アスペクト比を 16∶9 (ワイドスクリーン) にします"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "アスペクト比を 2.11∶1 (DVB) にします"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "S_ubtitles"
 msgstr "字幕(_U)"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "_Languages"
 msgstr "言語(_L)"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "Zoom In"
 msgstr "拡大する"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "Zoom in"
 msgstr "拡大します"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Skip _Forward"
 msgstr "前方へスキップ(_F)"
 
-#: ../data/totem.ui.h:77
+#: ../data/xplayer.ui.h:77
 msgid "Skip forward"
 msgstr "前方へスキップ"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Skip _Backwards"
 msgstr "後方へスキップ(_B)"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Skip backwards"
 msgstr "後方へスキップ"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Time seek bar"
 msgstr "再生時間バー"
 
@@ -883,11 +883,11 @@ msgstr "音声か動画ストリームのコーデックがないため処理で
 msgid "This file cannot be played over the network. Try downloading it locally first."
 msgstr "このファイルはネットワーク越しに再生できません。まずローカルにダウンロードしてみてください。"
 
-#: ../src/backend/bacon-video-widget.c:5464 ../src/totem-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5464 ../src/xplayer-properties-view.c:238
 msgid "Surround"
 msgstr "サラウンド"
 
-#: ../src/backend/bacon-video-widget.c:5466 ../src/totem-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5466 ../src/xplayer-properties-view.c:240
 msgid "Mono"
 msgstr "モノラル"
 
@@ -1003,8 +1003,8 @@ msgstr "セッション管理のオプションを表示する"
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:56
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -1016,7 +1016,7 @@ msgstr "%d:%02d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:65
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -1122,76 +1122,76 @@ msgid "%d frame per second"
 msgid_plural "%d frames per second"
 msgstr[0] "%d フレーム/秒"
 
-#: ../src/totem-audio-preview.c:137
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "音声プレビュー"
 
-#: ../src/totem.c:267
-msgid "Verify your system installation. Totem will now exit."
-msgstr "システムのインストールを確認してください。Totem を終了します。"
+#: ../src/xplayer.c:267
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "システムのインストールを確認してください。Xplayer を終了します。"
 
-#: ../src/totem-dnd-menu.c:95
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "今すぐ再生する(_P)"
 
-#: ../src/totem-dnd-menu.c:98
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "プレイリストに追加する(_A)"
 
-#: ../src/totem-dnd-menu.c:104
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../src/totem-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:573
 msgid "No File"
 msgstr "ファイルなし"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "インターフェース ('%s') を読み込めませんでした: %s"
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "ファイルがありません"
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
-msgstr "Totem が正しくインストールされているか確認してください。"
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Xplayer が正しくインストールされているか確認してください。"
 
-#: ../src/totem-interface.c:357
-msgid "Totem is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
-msgstr "Totem はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆利用許諾契約書の第二版、あるいはそれ以降の版が定める条項の下で本プログラムを再頒布または変更することができます。"
+#: ../src/xplayer-interface.c:357
+msgid "Xplayer is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+msgstr "Xplayer はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆利用許諾契約書の第二版、あるいはそれ以降の版が定める条項の下で本プログラムを再頒布または変更することができます。"
 
-#: ../src/totem-interface.c:361
-msgid "Totem is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
-msgstr "Totem は有用とは思いますが、頒布にあたっては市場性または特定の目的に対する適合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細には GNU 一般公衆利用許諾契約書をご覧ください。"
+#: ../src/xplayer-interface.c:361
+msgid "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+msgstr "Xplayer は有用とは思いますが、頒布にあたっては市場性または特定の目的に対する適合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細には GNU 一般公衆利用許諾契約書をご覧ください。"
 
-#: ../src/totem-interface.c:365
-msgid "You should have received a copy of the GNU General Public License along with Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+#: ../src/xplayer-interface.c:365
+msgid "You should have received a copy of the GNU General Public License along with Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr "あなたは本プログラムと一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。そうでない場合は、Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA まで連絡してください。"
 
-#: ../src/totem-interface.c:368
-msgid "Totem contains an exception to allow the use of proprietary GStreamer plugins."
-msgstr "例外として、Totem にはプロプラエタリとして利用可能な Gstreamer プラグインが含まれています。"
+#: ../src/xplayer-interface.c:368
+msgid "Xplayer contains an exception to allow the use of proprietary GStreamer plugins."
+msgstr "例外として、Xplayer にはプロプラエタリとして利用可能な Gstreamer プラグインが含まれています。"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:291
+#: ../src/xplayer-menu.c:291
 msgid "None"
 msgstr "なし"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:296
+#: ../src/xplayer-menu.c:296
 msgctxt "Language"
 msgid "Auto"
 msgstr "自動"
 
-#: ../src/totem-menu.c:788
+#: ../src/xplayer-menu.c:788
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "Copyright © 2002-2009 Bastien Nocera"
 
-#: ../src/totem-menu.c:792
+#: ../src/xplayer-menu.c:792
 msgid "translator-credits"
 msgstr ""
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
@@ -1204,15 +1204,15 @@ msgstr ""
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 http://www.gnome.gr.jp/"
 
-#: ../src/totem-menu.c:796
-msgid "Totem Website"
-msgstr "Totem のウェブサイト"
+#: ../src/xplayer-menu.c:796
+msgid "Xplayer Website"
+msgstr "Xplayer のウェブサイト"
 
-#: ../src/totem-menu.c:827
+#: ../src/xplayer-menu.c:827
 msgid "Configure Plugins"
 msgstr "プラグインの設定"
 
-#: ../src/totem-object.c:162
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1221,458 +1221,458 @@ msgstr ""
 "%s\n"
 "コマンドライン・オプションの一覧を表示する場合は '%s --help' を実行してください\n"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:590
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:590
 #, c-format
-msgid "Totem %s"
-msgstr "Totem %s"
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/totem-object.c:1169 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "一時停止する"
 
-#: ../src/totem-object.c:1176 ../src/totem-object.c:1186
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "再生する"
 
-#: ../src/totem-object.c:1268 ../src/totem-object.c:1295
-#: ../src/totem-object.c:1918
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1918
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem は '%s' を再生できませんでした。"
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer は '%s' を再生できませんでした。"
 
-#: ../src/totem-object.c:2109
-msgid "Totem could not display the help contents."
-msgstr "Totem はヘルプの目次を表示できませんでした。"
+#: ../src/xplayer-object.c:2109
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer はヘルプの目次を表示できませんでした。"
 
-#: ../src/totem-object.c:3998 ../src/totem-object.c:4000
+#: ../src/xplayer-object.c:3998 ../src/xplayer-object.c:4000
 msgid "Previous Chapter/Movie"
 msgstr "前のチャプター/動画に移動します"
 
-#: ../src/totem-object.c:4007 ../src/totem-object.c:4009
+#: ../src/xplayer-object.c:4007 ../src/xplayer-object.c:4009
 msgid "Play / Pause"
 msgstr "再生/一時停止します"
 
-#: ../src/totem-object.c:4017 ../src/totem-object.c:4019
+#: ../src/xplayer-object.c:4017 ../src/xplayer-object.c:4019
 msgid "Next Chapter/Movie"
 msgstr "次のチャプター/動画に移動します"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4030 ../src/totem-object.c:4032
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4030 ../src/xplayer-object.c:4032
 msgid "Fullscreen"
 msgstr "フルスクリーン"
 
-#: ../src/totem-object.c:4163
-msgid "Totem could not startup."
-msgstr "Totem を起動できませんでした。"
+#: ../src/xplayer-object.c:4163
+msgid "Xplayer could not startup."
+msgstr "Xplayer を起動できませんでした。"
 
-#: ../src/totem-object.c:4163
+#: ../src/xplayer-object.c:4163
 msgid "No reason."
 msgstr "原因は不明です。"
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "場所を開く..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "デバッグ・モードにする"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "動画を再生または一時停止する"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "次へ進む"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "前へ戻る"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "再生しながら次へ進む"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "再生しながら後ろへ戻る"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "音量を上げる"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "音量を下げる"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "ミュートにする"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "フルスクリーンに切り替え"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "コントロールの表示を切り替える"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "終了する"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Enqueue"
 msgstr "キューに追加する"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "置き換える"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "シークする"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "プレイリストのインデックス"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "再生する動画"
 
-#: ../src/totem-options.c:79
+#: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
 msgstr "- 動画や楽曲を再生/演奏します"
 
-#: ../src/totem-options.c:142
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "キューへの追加と置き換えは同時にできません"
 
 #. By extension entry
-#: ../src/totem-playlist.c:162
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast 形式の演奏一覧"
 
-#: ../src/totem-playlist.c:163
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 オーディオ (ストリーム)"
 
-#: ../src/totem-playlist.c:164
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 オーディオ (ストリーム、DOS 形式)"
 
-#: ../src/totem-playlist.c:165
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "XML Shareable 形式のプレイリスト"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:348
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "タイトル %d"
 
-#: ../src/totem-playlist.c:447
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "プレイリストを保存できませんでした"
 
-#: ../src/totem-playlist.c:1022
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "プレイリストの保存"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1034 ../src/totem-playlist.c:1263
-#: ../src/totem-sidebar.c:145
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "プレイリスト"
 
-#: ../src/totem-playlist.c:1861
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "プレイリスト '%s' を解析できませんでした。おそらく壊れています。"
 
-#: ../src/totem-playlist.c:1862
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "プレイリストのエラー"
 
-#: ../src/totem-preferences.c:297
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "設定"
 
-#: ../src/totem-preferences.c:445
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "字幕で使用するフォントの選択"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:281
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
 msgid "Audio/Video"
 msgstr "音声/ビデオ"
 
-#: ../src/totem-properties-view.c:141
+#: ../src/xplayer-properties-view.c:141
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/totem-properties-view.c:170
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:170
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/totem-properties-view.c:173
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:173
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kbps"
 
-#: ../src/totem-properties-view.c:190
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:190
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:222
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:222
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/totem-properties-view.c:230
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:230
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/totem-properties-view.c:251
+#: ../src/xplayer-properties-view.c:251
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (ストリーミング)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "%s / %s へスキップ"
 
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "バッファリング中"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
 msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
 msgstr "%s, %f %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "現在のロケール"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "アラビア語"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "アルメニア語"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "バルト語"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "ケルト語"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "中欧"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "中国語/簡体字"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "中国語/繁体字"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "クロアチア語"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "キリル語"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "キリル語/ロシア"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "キリル語/ウクライナ"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "グルジア語"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "ギリシア語"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "グジャラート語"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "グルムキー文字"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "ヘブライ語"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "ヘブライ語/表示"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "ヒンズー語"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "アイスランド語"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "日本語"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "韓国語"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "北欧"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "ペルシア語"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "ルーマニア語"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "南欧"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "タイ語"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "トルコ語"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "西欧"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "ベトナム語"
 
-#: ../src/totem-uri.c:343 ../src/plugins/chapters/totem-chapters.c:984
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "すべてのファイル"
 
-#: ../src/totem-uri.c:348 ../src/plugins/chapters/totem-chapters.c:981
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "サポートしているファイル"
 
-#: ../src/totem-uri.c:360
+#: ../src/xplayer-uri.c:360
 msgid "Audio files"
 msgstr "楽曲ファイル"
 
-#: ../src/totem-uri.c:368
+#: ../src/xplayer-uri.c:368
 msgid "Video files"
 msgstr "動画ファイル"
 
-#: ../src/totem-uri.c:378
+#: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
 msgstr "字幕のファイル"
 
-#: ../src/totem-uri.c:430
+#: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
 msgstr "字幕の選択"
 
-#: ../src/totem-uri.c:495
+#: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
 msgstr "動画またはプレイリストの選択"
 
-#: ../src/totem-uri.c:499
+#: ../src/xplayer-uri.c:499
 msgid "Add Directory"
 msgstr "ディレクトリの追加"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:877
+#: ../src/xplayer-video-thumbnailer.c:877
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1683,15 +1683,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:878
+#: ../src/xplayer-video-thumbnailer.c:878
 msgid "Filename"
 msgstr "ファイル名"
 
-#: ../src/totem-video-thumbnailer.c:880
+#: ../src/xplayer-video-thumbnailer.c:880
 msgid "Resolution"
 msgstr "解像度"
 
-#: ../src/totem-video-thumbnailer.c:883
+#: ../src/xplayer-video-thumbnailer.c:883
 msgid "Duration"
 msgstr "再生時間"
 
@@ -1719,42 +1719,42 @@ msgstr "ビデオディスクレコーダー"
 msgid "Records (S)VCDs or video DVDs"
 msgstr "(S)VCD または DVD-Video を作成します"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "ビデオディスクの作成(_C)..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "現在開いている動画からDVD-Video または (S)VCD を作成します"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "DVD-Videoの複製(_O)..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "現在再生中の DVD-Video の複製を作成します"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "(S)VCD の複製..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "現在再生中の (S)VCD の複製を作成します"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:136
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "ビデオディスクの複製を作成できませんでした"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:138
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:283
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "動画を保存できませんでした"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:164
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:174
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:270
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "プロジェクトを書き込めません"
 
@@ -1815,7 +1815,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "新規にこの動画のチャプターリストを作成"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1125
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "チャプター"
 
@@ -1823,7 +1823,7 @@ msgstr "チャプター"
 msgid "Support chapter markers in movies"
 msgstr "動画のチャプター作成をサポートします"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1832,61 +1832,61 @@ msgstr ""
 "<b>タイトル: </b>%s\n"
 "<b>開始時間: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:323
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "チャプターのファイルを読み込もうとしてエラー"
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "同じ時間のチャプターがすでに存在します"
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "他の名前にするか既存のチャプターを削除してみてください。"
 
-#: ../src/plugins/chapters/totem-chapters.c:703
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "チャプターのファイルを書き込もうとしてエラー"
 
-#: ../src/plugins/chapters/totem-chapters.c:828
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "チャプターを保存する際にエラーが発生しました"
 
-#: ../src/plugins/chapters/totem-chapters.c:829
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid "Please check you have permission to write to the folder containing the movie."
 msgstr "動画があるフォルダーの書き込み権限を確認してください。"
 
-#: ../src/plugins/chapters/totem-chapters.c:962
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "チャプターファイルを開く"
 
-#: ../src/plugins/chapters/totem-chapters.c:1079
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "チャプタースクリーンショット"
 
-#: ../src/plugins/chapters/totem-chapters.c:1090
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "チャプタータイトル"
 
-#: ../src/plugins/chapters/totem-chapters.c:1170
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "閉じる前にチャプターリストに変更を保存しますか?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1175
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "保存しないで閉じる"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "保存"
 
-#: ../src/plugins/chapters/totem-chapters.c:1180
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "保存しない場合、チャプターリストへの変更は失われます。"
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr "チャプターを追加"
 
@@ -1935,19 +1935,19 @@ msgstr "プレイリストに追加"
 msgid "Copy Location"
 msgstr "場所のコピー"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/totem-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "表示"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/totem-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "検索"
 
-#: ../src/plugins/grilo/totem-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "表示エラー"
 
-#: ../src/plugins/grilo/totem-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "検索エラー"
 
@@ -1959,15 +1959,15 @@ msgstr "Gromit 式のアノテーション"
 msgid "Presentation helper to make annotations on screen"
 msgstr "スクリーンで注釈を表示するプレゼンテーション・ヘルパーです"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "Gromit のバイナリが見つかりませんでした。"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr "インスタントメッセンジャーのステータス"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr "動画を再生している時にインスタントメッセンジャーを離席状態にセットします"
 
@@ -1979,11 +1979,11 @@ msgstr "赤外線リモート制御"
 msgid "Support infrared remote control"
 msgstr "赤外線のリモコンをサポートします"
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "lirc を初期化できませんでした。"
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "lirc の設定を読み込めませんでした。"
 
@@ -2077,11 +2077,11 @@ msgstr "字幕の言語(_L):"
 msgid "_Play with Subtitle"
 msgstr "字幕付きで再生する(_P)"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "字幕の言語"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "動画にある字幕を検索するための言語です。"
 
@@ -2093,17 +2093,17 @@ msgstr "動画のプロパティ"
 msgid "Adds movie properties to the sidebar"
 msgstr "サイドバーに動画のプロパティを追加します"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr "rpdb2パスワード"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
-msgid "A password to protect the rpdb2 server for debugging Totem from unauthorized remote access. If this is empty, a default of 'totem' will be used."
-msgstr "権限のないリモートアクセスからTotemをデバッグ用rpdb2サーバーを保護するためのパスワード。空の場合は、デフォルトで'totem'を使います。"
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "A password to protect the rpdb2 server for debugging Xplayer from unauthorized remote access. If this is empty, a default of 'xplayer' will be used."
+msgstr "権限のないリモートアクセスからXplayerをデバッグ用rpdb2サーバーを保護するためのパスワード。空の場合は、デフォルトで'xplayer'を使います。"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2122,8 +2122,8 @@ msgid "_Python Console"
 msgstr "Python 端末(_P)"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
-msgid "Show Totem's Python console"
-msgstr "Totem 用の Python 端末を開きます"
+msgid "Show Xplayer's Python console"
+msgstr "Xplayer 用の Python 端末を開きます"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
@@ -2136,16 +2136,16 @@ msgstr "rpdb2 を使ったリモートの Python デバッグを利用できる�
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "'totem_object' を使ってTotem.Objectにアクセスできます:\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "'xplayer_object' を使ってXplayer.Objectにアクセスできます:\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
-msgid "Totem Python Console"
-msgstr "Totem の Python 端末"
+msgid "Xplayer Python Console"
+msgstr "Xplayer の Python 端末"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
-msgid "After you press OK, Totem will wait until you connect to it with winpdb or rpdb2. If you have not set a debugger password in DConf, it will use the default password ('totem')."
-msgstr "OK をクリックした後、winpdb または rpdb2 に接続するまで Totem は待機状態に入ります。DConf の設定でデバッガーのパスワードを指定していない場合、デフォルトのパスワード ('totem') を使用してください。"
+msgid "After you press OK, Xplayer will wait until you connect to it with winpdb or rpdb2. If you have not set a debugger password in DConf, it will use the default password ('xplayer')."
+msgstr "OK をクリックした後、winpdb または rpdb2 に接続するまで Xplayer は待機状態に入ります。DConf の設定でデバッガーのパスワードを指定していない場合、デフォルトのパスワード ('xplayer') を使用してください。"
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2163,11 +2163,11 @@ msgstr "回転プラグイン"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "動画の向きが誤っている場合に回転することができます"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
 msgstr "時計回りに回転(_R)"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "反時計回りに回転(_L)"
 
@@ -2179,25 +2179,25 @@ msgstr "コピーを保存"
 msgid "Save a copy of the currently playing movie"
 msgstr "現在再生中の動画を複製します"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "コピーを保存..."
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "動画のコピーを保存"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "コピーを保存"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "動画"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "動画ストリーム"
 
@@ -2244,7 +2244,7 @@ msgstr "スクリーンショット"
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr "ビデオのスクリーンショットやギャラリーを撮ることができます"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "ギャラリーの保存"
 
@@ -2252,49 +2252,49 @@ msgstr "ギャラリーの保存"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "ギャラリー-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "ギャラリーの作成中..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "ギャラリー (\"%s\") の保存中"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:220
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
-msgid "Totem could not get a screenshot of the video."
-msgstr "Totem はこのビデオのスクリーンショットを撮れませんでした。"
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer はこのビデオのスクリーンショットを撮れませんでした。"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "これは発生してはいけない現象です; バグとして報告してください。"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "スクリーンショットを撮る(_S)"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "再生中のスクリーンショットを撮ります"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "ギャラリーの作成(_G)..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr "いろいろなスクリーンショットを集めたギャラリーを作成します"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "スキップ"
 
@@ -2308,7 +2308,7 @@ msgstr "スキップ先(_S):"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "秒"
@@ -2317,16 +2317,16 @@ msgstr[0] "秒"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "7"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "指定先へスキップ(_S)..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "指定した時間までスキップします"
 
@@ -2363,7 +2363,7 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgstr "リモート・サイトにあるファイルを開きます"
 
 #~ msgid "Quit the program"
-#~ msgstr "Totem を終了します"
+#~ msgstr "Xplayer を終了します"
 
 #~ msgid "Configure the application"
 #~ msgstr "アプリケーションの設定"
@@ -2437,8 +2437,8 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Movie Player using %s"
 #~ msgstr "%s を使った動画プレイヤーです。"
 
-#~ msgid "Totem could not play this media (%s) although a plugin is present to handle it."
-#~ msgstr "このメディア (%s) を操作するプラグインはありますが、Totem はそのメディアを再生できませんでした。"
+#~ msgid "Xplayer could not play this media (%s) although a plugin is present to handle it."
+#~ msgstr "このメディア (%s) を操作するプラグインはありますが、Xplayer はそのメディアを再生できませんでした。"
 
 #~ msgid "You might want to check that a disc is present in the drive and that it is correctly configured."
 #~ msgstr "ドライブの中にディスクがあるか確認して、そのドライブが正しく設定されていることを確認してください。"
@@ -2446,23 +2446,23 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "More information about media plugins"
 #~ msgstr "メディア・プラグインの詳細情報"
 
-#~ msgid "Please install the necessary plugins and restart Totem to be able to play this media."
-#~ msgstr "必要なプラグインをインストールして Totem を再起動すると、このメディアを再生できます。"
+#~ msgid "Please install the necessary plugins and restart Xplayer to be able to play this media."
+#~ msgstr "必要なプラグインをインストールして Xplayer を再起動すると、このメディアを再生できます。"
 
-#~ msgid "Totem cannot play this type of media (%s) because it does not have the appropriate plugins to be able to read from the disc."
+#~ msgid "Xplayer cannot play this type of media (%s) because it does not have the appropriate plugins to be able to read from the disc."
 #~ msgstr "この種類のメディア (%s) を読み取るプラグインがないため、そのメディアを再生できません。"
 
-#~ msgid "Totem cannot play this type of media (%s) because you do not have the appropriate plugins to handle it."
+#~ msgid "Xplayer cannot play this type of media (%s) because you do not have the appropriate plugins to handle it."
 #~ msgstr "この種類のメディア (%s) を操作する適切なプラグインがないため、そのメディアを再生できません。"
 
-#~ msgid "Totem cannot play this type of media (%s) because it is not supported."
+#~ msgid "Xplayer cannot play this type of media (%s) because it is not supported."
 #~ msgstr "この種類のメディア (%s) はサポートしていないため、そのメディアを再生できません。"
 
 #~ msgid "Please insert another disc to play back."
 #~ msgstr "他のディスクを挿入してください。"
 
-#~ msgid "Totem does not support playback of Audio CDs"
-#~ msgstr "Totem では音楽 CD の再生をサポートしていません"
+#~ msgid "Xplayer does not support playback of Audio CDs"
+#~ msgstr "Xplayer では音楽 CD の再生をサポートしていません"
 
 #~ msgid "Please consider using a music player or a CD extractor to play this CD"
 #~ msgstr "この CD を再生できる楽曲プレイヤーまたは CD 取り込みツールを利用してみてください。"
@@ -2575,17 +2575,17 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Bemused"
 #~ msgstr "Bemused"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
-#~ msgstr "Bemused クライアントと携帯電話を使って Totem を制御します"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
+#~ msgstr "Bemused クライアントと携帯電話を使って Xplayer を制御します"
 
 #~ msgid "Untitled %d"
 #~ msgstr "タイトルなし %d"
 
-#~ msgid "Totem Bemused Server"
-#~ msgstr "Totem Bemused サーバー"
+#~ msgid "Xplayer Bemused Server"
+#~ msgstr "Xplayer Bemused サーバー"
 
-#~ msgid "Totem Bemused Server version 1.0"
-#~ msgstr "Totem Bemused サーバーのバージョン 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
+#~ msgstr "Xplayer Bemused サーバーのバージョン 1.0"
 
 #~ msgid "A plugin to let you browse YouTube videos."
 #~ msgstr "YouTube の動画を参照できるプラグインです"
@@ -2680,8 +2680,8 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Coherence DLNA/UPnP Client"
 #~ msgstr "コヒーレンス DLNA/UPnP クライアント"
 
-#~ msgid "A DLNA/UPnP client for Totem powered by Coherence"
-#~ msgstr "コヒーレンスが提供する Totem 用の DLNA/UPnP クライアントです"
+#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
+#~ msgstr "コヒーレンスが提供する Xplayer 用の DLNA/UPnP クライアントです"
 
 #~ msgid "By artist"
 #~ msgstr "演奏者順"
@@ -2793,17 +2793,17 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "%s を使ったブラウザー用プラグイン"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem のブラウザー用プラグインです"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer のブラウザー用プラグインです"
 
 #~ msgid "Enable visual effects?"
 #~ msgstr "視覚効果を有効にしますか?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
-#~ "リモートから Totem を実行しているようです。\n"
+#~ "リモートから Xplayer を実行しているようです。\n"
 #~ "視覚効果を有効にしますか?"
 
 #~ msgid "Chapters support"
@@ -2881,14 +2881,14 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Changing the visuals effect type will require a restart to take effect."
 #~ msgstr "視覚効果の種類を適用するには再起動が必要です。"
 
-#~ msgid "The change of audio output type will only take effect when Totem is restarted."
-#~ msgstr "ここで変更した音声出力の種類は Totem を再起動したときに反映されます。"
+#~ msgid "The change of audio output type will only take effect when Xplayer is restarted."
+#~ msgstr "ここで変更した音声出力の種類は Xplayer を再起動したときに反映されます。"
 
 #~ msgid "Could not open link"
 #~ msgstr "リンクを開けませんでした"
 
-#~ msgid "Totem could not initialize the configuration engine."
-#~ msgstr "Totem は設定エンジンを初期化できませんでした。"
+#~ msgid "Xplayer could not initialize the configuration engine."
+#~ msgstr "Xplayer は設定エンジンを初期化できませんでした。"
 
 #~ msgid "Make sure that GNOME is properly installed."
 #~ msgstr "GNOME が正しくインストールされているか確認してください。"
@@ -2951,7 +2951,7 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Watch TV on '%s'"
 #~ msgstr "'%s' 上の TV を観る"
 
-#~ msgid "Totem cannot play TV, because no TV adapters are present or they are not supported."
+#~ msgid "Xplayer cannot play TV, because no TV adapters are present or they are not supported."
 #~ msgstr "TV アダプターが無いか、あるいはサポートしていないアダプターのため TV を再生できません。"
 
 #~ msgid "Please insert a supported TV adapter."
@@ -2960,13 +2960,13 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "More information about watching TV"
 #~ msgstr "TV の視聴に関する詳細情報"
 
-#~ msgid "Totem is missing a channels listing to be able to tune the receiver."
+#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
 #~ msgstr "受信チャンネルを合わすことが可能な番組表がありません。"
 
 #~ msgid "Please follow the instructions provided in the link to create a channels listing."
 #~ msgstr "番組表を作成するリンクで提供されている手順に従ってください。"
 
-#~ msgid "Totem cannot play this type of media (%s) because the TV device is busy."
+#~ msgid "Xplayer cannot play this type of media (%s) because the TV device is busy."
 #~ msgstr "TV のデバイスが使用中のため、この種類のメディア (%s) を再生できません。"
 
 #~ msgid "Please try again later."
@@ -2978,5 +2978,5 @@ msgstr "Zeitgeist にイベントを送信するプラグインです"
 #~ msgid "Please verify your hardware setup."
 #~ msgstr "ハードウェアの設定を確認してみてください"
 
-#~ msgid "Totem could not play '%s'"
+#~ msgid "Xplayer could not play '%s'"
 #~ msgstr "'%s' を再生できませんでした"

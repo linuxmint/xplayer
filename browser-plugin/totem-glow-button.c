@@ -29,13 +29,13 @@
 
 #include <math.h>
 #include <gtk/gtk.h>
-#include "totem-glow-button.h"
+#include "xplayer-glow-button.h"
 
 #define FADE_OPACITY_DEFAULT 0.6
 #define ENTER_SPEEDUP_RATIO 0.4
 #define FADE_MAX_LOOPS 4
 
-struct _TotemGlowButton {
+struct _XplayerGlowButton {
 	GtkButton parent;
 
 	gdouble glow_start_time;
@@ -51,14 +51,14 @@ struct _TotemGlowButton {
 	guint anim_finished :1;
 };
 
-static void totem_glow_button_set_timeout (TotemGlowButton *button, gboolean set_timeout);
+static void xplayer_glow_button_set_timeout (XplayerGlowButton *button, gboolean set_timeout);
 
 static GtkButtonClass *parent_class;
 
-G_DEFINE_TYPE (TotemGlowButton, totem_glow_button, GTK_TYPE_BUTTON);
+G_DEFINE_TYPE (XplayerGlowButton, xplayer_glow_button, GTK_TYPE_BUTTON);
 
 static gboolean
-totem_glow_button_glow (TotemGlowButton *button)
+xplayer_glow_button_glow (XplayerGlowButton *button)
 {
 	GtkWidget *buttonw;
 	GTimeVal tv;
@@ -111,30 +111,30 @@ totem_glow_button_glow (TotemGlowButton *button)
 	gtk_widget_queue_draw (GTK_WIDGET (button));
 
 	if (button->anim_finished != FALSE)
-		totem_glow_button_set_timeout (button, FALSE);
+		xplayer_glow_button_set_timeout (button, FALSE);
 
 	return button->anim_enabled;
 }
 
 static void
-totem_glow_button_clear_glow_start_timeout_id (TotemGlowButton *button)
+xplayer_glow_button_clear_glow_start_timeout_id (XplayerGlowButton *button)
 {
 	button->button_glow = 0;
 }
 
 static gboolean
-totem_glow_button_draw (GtkWidget *widget,
+xplayer_glow_button_draw (GtkWidget *widget,
 			cairo_t   *cr,
 			gpointer   user_data)
 {
-	TotemGlowButton *button;
+	XplayerGlowButton *button;
 	GtkStyleContext *context;
 	GtkAllocation allocation, child_allocation;
 	gint width, height;
 	GtkWidget *child;
 	GdkRGBA acolor;
 
-	button = TOTEM_GLOW_BUTTON (widget);
+	button = XPLAYER_GLOW_BUTTON (widget);
 
 	if (button->glow_factor == 0.0)
 		return FALSE;
@@ -176,25 +176,25 @@ totem_glow_button_draw (GtkWidget *widget,
 }
 
 static void
-totem_glow_button_map (GtkWidget *buttonw)
+xplayer_glow_button_map (GtkWidget *buttonw)
 {
-	TotemGlowButton *button;
+	XplayerGlowButton *button;
 
 	(* GTK_WIDGET_CLASS (parent_class)->map) (buttonw);
 
-	button = TOTEM_GLOW_BUTTON (buttonw);
+	button = XPLAYER_GLOW_BUTTON (buttonw);
 
 	if (button->glow != FALSE && button->button_glow == 0) {
-		totem_glow_button_set_glow (button, TRUE);
+		xplayer_glow_button_set_glow (button, TRUE);
 	}
 }
 
 static void
-totem_glow_button_unmap (GtkWidget *buttonw)
+xplayer_glow_button_unmap (GtkWidget *buttonw)
 {
-	TotemGlowButton *button;
+	XplayerGlowButton *button;
 
-	button = TOTEM_GLOW_BUTTON (buttonw);
+	button = XPLAYER_GLOW_BUTTON (buttonw);
 
 	if (button->button_glow > 0) {
 		g_source_remove (button->button_glow);
@@ -205,26 +205,26 @@ totem_glow_button_unmap (GtkWidget *buttonw)
 }
 
 static void
-totem_glow_button_enter (GtkButton *buttonw)
+xplayer_glow_button_enter (GtkButton *buttonw)
 {
-	TotemGlowButton *button;
+	XplayerGlowButton *button;
 
-	button = TOTEM_GLOW_BUTTON (buttonw);
+	button = XPLAYER_GLOW_BUTTON (buttonw);
 
 	(* GTK_BUTTON_CLASS (parent_class)->enter) (buttonw);
 
 	button->pointer_entered = TRUE;
 	button->anim_finished = FALSE;
 	button->glow_start_time = G_MINDOUBLE;
-	totem_glow_button_set_timeout (button, FALSE);
+	xplayer_glow_button_set_timeout (button, FALSE);
 }
 
 static void
-totem_glow_button_leave (GtkButton *buttonw)
+xplayer_glow_button_leave (GtkButton *buttonw)
 {
-	TotemGlowButton *button;
+	XplayerGlowButton *button;
 
-	button = TOTEM_GLOW_BUTTON (buttonw);
+	button = XPLAYER_GLOW_BUTTON (buttonw);
 
 	(* GTK_BUTTON_CLASS (parent_class)->leave) (buttonw);
 
@@ -232,21 +232,21 @@ totem_glow_button_leave (GtkButton *buttonw)
 	button->glow_start_time = G_MINDOUBLE;
 	button->anim_finished = FALSE;
 	if (button->glow != FALSE)
-		totem_glow_button_set_timeout (button, TRUE);
+		xplayer_glow_button_set_timeout (button, TRUE);
 }
 
 static void
-totem_glow_button_finalize (GObject *object)
+xplayer_glow_button_finalize (GObject *object)
 {
-	TotemGlowButton *button = TOTEM_GLOW_BUTTON (object);
+	XplayerGlowButton *button = XPLAYER_GLOW_BUTTON (object);
 
-	totem_glow_button_set_glow (button, FALSE);
+	xplayer_glow_button_set_glow (button, FALSE);
 
 	G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
 static void
-totem_glow_button_class_init (TotemGlowButtonClass *klass)
+xplayer_glow_button_class_init (XplayerGlowButtonClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
@@ -254,38 +254,38 @@ totem_glow_button_class_init (TotemGlowButtonClass *klass)
 
 	parent_class = g_type_class_peek_parent (klass);
 
-	object_class->finalize = totem_glow_button_finalize;
+	object_class->finalize = xplayer_glow_button_finalize;
 	/* Note that we don't use a draw here because we
 	 * want to modify what the button will draw by itself */
-	widget_class->map = totem_glow_button_map;
-	widget_class->unmap = totem_glow_button_unmap;
-	button_class->enter = totem_glow_button_enter;
-	button_class->leave = totem_glow_button_leave;
+	widget_class->map = xplayer_glow_button_map;
+	widget_class->unmap = xplayer_glow_button_unmap;
+	button_class->enter = xplayer_glow_button_enter;
+	button_class->leave = xplayer_glow_button_leave;
 }
 
 static void
-totem_glow_button_init (TotemGlowButton *button)
+xplayer_glow_button_init (XplayerGlowButton *button)
 {
 	button->glow_start_time = 0.0;
 	button->button_glow = 0;
 	button->glow_factor = 0.0;
 
 	g_signal_connect_object (button, "draw",
-				 G_CALLBACK (totem_glow_button_draw),
+				 G_CALLBACK (xplayer_glow_button_draw),
 				 G_OBJECT (button),
 				 G_CONNECT_AFTER);
 }
 
 GtkWidget *
-totem_glow_button_new (void)
+xplayer_glow_button_new (void)
 {
-	return g_object_new (TOTEM_TYPE_GLOW_BUTTON, NULL);
+	return g_object_new (XPLAYER_TYPE_GLOW_BUTTON, NULL);
 }
 
 /* We can only add a timeout once, we assert that, though
  * calling it multiple times to disable the animation is fine */
 static void
-totem_glow_button_set_timeout (TotemGlowButton *button, gboolean set_timeout)
+xplayer_glow_button_set_timeout (XplayerGlowButton *button, gboolean set_timeout)
 {
 	if (set_timeout != FALSE) {
 		if (button->button_glow > 0)
@@ -300,8 +300,8 @@ totem_glow_button_set_timeout (TotemGlowButton *button, gboolean set_timeout)
 		button->button_glow =
 			g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE,
 					    100,
-					    (GSourceFunc) totem_glow_button_glow, button,
-					    (GDestroyNotify) totem_glow_button_clear_glow_start_timeout_id);
+					    (GSourceFunc) xplayer_glow_button_glow, button,
+					    (GDestroyNotify) xplayer_glow_button_clear_glow_start_timeout_id);
 	} else {
 		if (button->button_glow > 0) {
 			g_source_remove (button->button_glow);
@@ -313,12 +313,12 @@ totem_glow_button_set_timeout (TotemGlowButton *button, gboolean set_timeout)
 }
 
 void
-totem_glow_button_set_glow (TotemGlowButton *button, gboolean glow)
+xplayer_glow_button_set_glow (XplayerGlowButton *button, gboolean glow)
 {
 	GtkSettings *settings;
 	gboolean anim_enabled;
 
-	g_return_if_fail (TOTEM_IS_GLOW_BUTTON (button));
+	g_return_if_fail (XPLAYER_IS_GLOW_BUTTON (button));
 
 	if (gtk_widget_get_mapped (GTK_WIDGET (button)) == FALSE
 	    && glow != FALSE) {
@@ -340,11 +340,11 @@ totem_glow_button_set_glow (TotemGlowButton *button, gboolean glow)
 
 	button->glow = glow;
 
-	totem_glow_button_set_timeout (button, glow);
+	xplayer_glow_button_set_timeout (button, glow);
 }
 
 gboolean
-totem_glow_button_get_glow (TotemGlowButton *button)
+xplayer_glow_button_get_glow (XplayerGlowButton *button)
 {
 	return button->glow != FALSE;
 }

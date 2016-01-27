@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add excemption clause.
  * See license_change file for details.
@@ -35,32 +35,32 @@
 #include <gdk/gdkkeysyms.h>
 #include <libpeas/peas-activatable.h>
 
-#include "totem-plugin.h"
-#include "totem-skipto.h"
+#include "xplayer-plugin.h"
+#include "xplayer-skipto.h"
 
-#define TOTEM_TYPE_SKIPTO_PLUGIN		(totem_skipto_plugin_get_type ())
-#define TOTEM_SKIPTO_PLUGIN(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_SKIPTO_PLUGIN, TotemSkiptoPlugin))
-#define TOTEM_SKIPTO_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_SKIPTO_PLUGIN, TotemSkiptoPluginClass))
-#define TOTEM_IS_SKIPTO_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_SKIPTO_PLUGIN))
-#define TOTEM_IS_SKIPTO_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_SKIPTO_PLUGIN))
-#define TOTEM_SKIPTO_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_SKIPTO_PLUGIN, TotemSkiptoPluginClass))
+#define XPLAYER_TYPE_SKIPTO_PLUGIN		(xplayer_skipto_plugin_get_type ())
+#define XPLAYER_SKIPTO_PLUGIN(o)			(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_SKIPTO_PLUGIN, XplayerSkiptoPlugin))
+#define XPLAYER_SKIPTO_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_SKIPTO_PLUGIN, XplayerSkiptoPluginClass))
+#define XPLAYER_IS_SKIPTO_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_SKIPTO_PLUGIN))
+#define XPLAYER_IS_SKIPTO_PLUGIN_CLASS(k)		(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_SKIPTO_PLUGIN))
+#define XPLAYER_SKIPTO_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_SKIPTO_PLUGIN, XplayerSkiptoPluginClass))
 
 typedef struct {
-	TotemObject	*totem;
-	TotemSkipto	*st;
+	XplayerObject	*xplayer;
+	XplayerSkipto	*st;
 	guint		handler_id_stream_length;
 	guint		handler_id_seekable;
 	guint		handler_id_key_press;
 	guint		ui_merge_id;
 	GtkActionGroup	*action_group;
-} TotemSkiptoPluginPrivate;
+} XplayerSkiptoPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_SKIPTO_PLUGIN, TotemSkiptoPlugin, totem_skipto_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_SKIPTO_PLUGIN, XplayerSkiptoPlugin, xplayer_skipto_plugin)
 
 static void
-destroy_dialog (TotemSkiptoPlugin *plugin)
+destroy_dialog (XplayerSkiptoPlugin *plugin)
 {
-	TotemSkiptoPluginPrivate *priv = plugin->priv;
+	XplayerSkiptoPluginPrivate *priv = plugin->priv;
 
 	if (priv->st != NULL) {
 		g_object_remove_weak_pointer (G_OBJECT (priv->st),
@@ -71,22 +71,22 @@ destroy_dialog (TotemSkiptoPlugin *plugin)
 }
 
 static void
-totem_skipto_update_from_state (TotemObject *totem,
-				TotemSkiptoPlugin *plugin)
+xplayer_skipto_update_from_state (XplayerObject *xplayer,
+				XplayerSkiptoPlugin *plugin)
 {
 	gint64 _time;
 	gboolean seekable;
 	GtkAction *action;
-	TotemSkiptoPluginPrivate *priv = plugin->priv;
+	XplayerSkiptoPluginPrivate *priv = plugin->priv;
 
-	g_object_get (G_OBJECT (totem),
+	g_object_get (G_OBJECT (xplayer),
 				"stream-length", &_time,
 				"seekable", &seekable,
 				NULL);
 
 	if (priv->st != NULL) {
-		totem_skipto_update_range (priv->st, _time);
-		totem_skipto_set_seekable (priv->st, seekable);
+		xplayer_skipto_update_range (priv->st, _time);
+		xplayer_skipto_set_seekable (priv->st, seekable);
 	}
 
 	/* Update the action's sensitivity */
@@ -95,15 +95,15 @@ totem_skipto_update_from_state (TotemObject *totem,
 }
 
 static void
-property_notify_cb (TotemObject *totem,
+property_notify_cb (XplayerObject *xplayer,
 		    GParamSpec *spec,
-		    TotemSkiptoPlugin *plugin)
+		    XplayerSkiptoPlugin *plugin)
 {
-	totem_skipto_update_from_state (totem, plugin);
+	xplayer_skipto_update_from_state (xplayer, plugin);
 }
 
 static void
-skip_to_response_callback (GtkDialog *dialog, gint response, TotemSkiptoPlugin *plugin)
+skip_to_response_callback (GtkDialog *dialog, gint response, XplayerSkiptoPlugin *plugin)
 {
 	if (response != GTK_RESPONSE_OK) {
 		destroy_dialog (plugin);
@@ -112,47 +112,47 @@ skip_to_response_callback (GtkDialog *dialog, gint response, TotemSkiptoPlugin *
 
 	gtk_widget_hide (GTK_WIDGET (dialog));
 
-	totem_action_seek_time (plugin->priv->totem,
-				totem_skipto_get_range (plugin->priv->st),
+	xplayer_action_seek_time (plugin->priv->xplayer,
+				xplayer_skipto_get_range (plugin->priv->st),
 				TRUE);
 	destroy_dialog (plugin);
 }
 
 static void
-run_skip_to_dialog (TotemSkiptoPlugin *plugin)
+run_skip_to_dialog (XplayerSkiptoPlugin *plugin)
 {
-	TotemSkiptoPluginPrivate *priv = plugin->priv;
+	XplayerSkiptoPluginPrivate *priv = plugin->priv;
 
-	if (totem_is_seekable (priv->totem) == FALSE)
+	if (xplayer_is_seekable (priv->xplayer) == FALSE)
 		return;
 
 	if (priv->st != NULL) {
 		gtk_window_present (GTK_WINDOW (priv->st));
-		totem_skipto_set_current (priv->st, totem_get_current_time
-					  (priv->totem));
+		xplayer_skipto_set_current (priv->st, xplayer_get_current_time
+					  (priv->xplayer));
 		return;
 	}
 
-	priv->st = TOTEM_SKIPTO (totem_skipto_new (priv->totem));
+	priv->st = XPLAYER_SKIPTO (xplayer_skipto_new (priv->xplayer));
 	g_signal_connect (G_OBJECT (priv->st), "delete-event",
 			  G_CALLBACK (gtk_widget_destroy), NULL);
 	g_signal_connect (G_OBJECT (priv->st), "response",
 			  G_CALLBACK (skip_to_response_callback), plugin);
 	g_object_add_weak_pointer (G_OBJECT (priv->st),
 				   (gpointer *)&(priv->st));
-	totem_skipto_update_from_state (priv->totem, plugin);
-	totem_skipto_set_current (priv->st,
-				  totem_get_current_time (priv->totem));
+	xplayer_skipto_update_from_state (priv->xplayer, plugin);
+	xplayer_skipto_set_current (priv->st,
+				  xplayer_get_current_time (priv->xplayer));
 }
 
 static void
-skip_to_action_callback (GtkAction *action, TotemSkiptoPlugin *plugin)
+skip_to_action_callback (GtkAction *action, XplayerSkiptoPlugin *plugin)
 {
 	run_skip_to_dialog (plugin);
 }
 
 static gboolean
-on_window_key_press_event (GtkWidget *window, GdkEventKey *event, TotemSkiptoPlugin *plugin)
+on_window_key_press_event (GtkWidget *window, GdkEventKey *event, XplayerSkiptoPlugin *plugin)
 {
 
 	if (event->state == 0 || !(event->state & GDK_CONTROL_MASK))
@@ -175,25 +175,25 @@ impl_activate (PeasActivatable *plugin)
 {
 	GtkWindow *window;
 	GtkUIManager *manager;
-	TotemSkiptoPlugin *pi = TOTEM_SKIPTO_PLUGIN (plugin);
-	TotemSkiptoPluginPrivate *priv = pi->priv;
+	XplayerSkiptoPlugin *pi = XPLAYER_SKIPTO_PLUGIN (plugin);
+	XplayerSkiptoPluginPrivate *priv = pi->priv;
 
 	const GtkActionEntry menu_entries[] = {
 		{ "skip-to", GTK_STOCK_JUMP_TO, N_("_Skip To..."), "<Control>K", N_("Skip to a specific time"), G_CALLBACK (skip_to_action_callback) }
 	};
 
-	priv->totem = g_object_get_data (G_OBJECT (plugin), "object");
-	priv->handler_id_stream_length = g_signal_connect (G_OBJECT (priv->totem),
+	priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	priv->handler_id_stream_length = g_signal_connect (G_OBJECT (priv->xplayer),
 				"notify::stream-length",
 				G_CALLBACK (property_notify_cb),
 				pi);
-	priv->handler_id_seekable = g_signal_connect (G_OBJECT (priv->totem),
+	priv->handler_id_seekable = g_signal_connect (G_OBJECT (priv->xplayer),
 				"notify::seekable",
 				G_CALLBACK (property_notify_cb),
 				pi);
 
 	/* Key press handler */
-	window = totem_get_main_window (priv->totem);
+	window = xplayer_get_main_window (priv->xplayer);
 	priv->handler_id_key_press = g_signal_connect (G_OBJECT(window),
 				"key-press-event",
 				G_CALLBACK (on_window_key_press_event),
@@ -206,7 +206,7 @@ impl_activate (PeasActivatable *plugin)
 	gtk_action_group_add_actions (priv->action_group, menu_entries,
 				G_N_ELEMENTS (menu_entries), pi);
 
-	manager = totem_get_ui_manager (priv->totem);
+	manager = xplayer_get_ui_manager (priv->xplayer);
 
 	gtk_ui_manager_insert_action_group (manager, priv->action_group, -1);
 	g_object_unref (priv->action_group);
@@ -216,7 +216,7 @@ impl_activate (PeasActivatable *plugin)
 			       "/ui/tmw-menubar/go/skip-forward", "skip-to",
 			       "skip-to", GTK_UI_MANAGER_AUTO, TRUE);
 
-	totem_skipto_update_from_state (priv->totem, pi);
+	xplayer_skipto_update_from_state (priv->xplayer, pi);
 }
 
 static void
@@ -224,18 +224,18 @@ impl_deactivate (PeasActivatable *plugin)
 {
 	GtkWindow *window;
 	GtkUIManager *manager;
-	TotemObject *totem;
-	TotemSkiptoPluginPrivate *priv = TOTEM_SKIPTO_PLUGIN (plugin)->priv;
+	XplayerObject *xplayer;
+	XplayerSkiptoPluginPrivate *priv = XPLAYER_SKIPTO_PLUGIN (plugin)->priv;
 
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
 
-	g_signal_handler_disconnect (G_OBJECT (totem),
+	g_signal_handler_disconnect (G_OBJECT (xplayer),
 				     priv->handler_id_stream_length);
-	g_signal_handler_disconnect (G_OBJECT (totem),
+	g_signal_handler_disconnect (G_OBJECT (xplayer),
 				     priv->handler_id_seekable);
 
 	if (priv->handler_id_key_press != 0) {
-		window = totem_get_main_window (totem);
+		window = xplayer_get_main_window (xplayer);
 		g_signal_handler_disconnect (G_OBJECT(window),
 					     priv->handler_id_key_press);
 		priv->handler_id_key_press = 0;
@@ -243,10 +243,10 @@ impl_deactivate (PeasActivatable *plugin)
 	}
 
 	/* Remove the menu */
-	manager = totem_get_ui_manager (totem);
+	manager = xplayer_get_ui_manager (xplayer);
 	gtk_ui_manager_remove_ui (manager, priv->ui_merge_id);
 	gtk_ui_manager_remove_action_group (manager, priv->action_group);
 
-	destroy_dialog (TOTEM_SKIPTO_PLUGIN (plugin));
+	destroy_dialog (XPLAYER_SKIPTO_PLUGIN (plugin));
 }
 

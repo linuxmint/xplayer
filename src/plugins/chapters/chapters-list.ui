@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <interface>
-  <object class="GtkUIManager" id="totem-chapters-ui-manager">
+  <object class="GtkUIManager" id="xplayer-chapters-ui-manager">
      <child>
         <object class="GtkActionGroup" id="chapters-action-group">
            <child>
@@ -22,7 +22,7 @@
         </object>
      </child>
      <ui>
-        <popup name="totem-chapters-popup">
+        <popup name="xplayer-chapters-popup">
            <menuitem name="remove" action="remove"/>
            <menuitem name="goto" action="goto"/>
         </popup>

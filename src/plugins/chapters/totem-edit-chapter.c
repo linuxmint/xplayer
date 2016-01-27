@@ -16,56 +16,56 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
 /*
- * SECTION:totem-edit-chapter
+ * SECTION:xplayer-edit-chapter
  * @short_description: dialog to add new chapters in chapters plugin
  * @stability: Unstable
- * @include: totem-edit-chapter.h
+ * @include: xplayer-edit-chapter.h
  *
- * #TotemEditChapter dialog is used for entering names of new chapters in the chapters plugin
+ * #XplayerEditChapter dialog is used for entering names of new chapters in the chapters plugin
  */
 
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
-#include "totem.h"
-#include "totem-interface.h"
-#include "totem-dirs.h"
-#include "totem-edit-chapter.h"
+#include "xplayer.h"
+#include "xplayer-interface.h"
+#include "xplayer-dirs.h"
+#include "xplayer-edit-chapter.h"
 #include <string.h>
 
-struct TotemEditChapterPrivate {
+struct XplayerEditChapterPrivate {
 	GtkEntry	*title_entry;
 	GtkWidget	*container;
 };
 
 
-#define TOTEM_EDIT_CHAPTER_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TOTEM_TYPE_EDIT_CHAPTER, TotemEditChapterPrivate))
+#define XPLAYER_EDIT_CHAPTER_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), XPLAYER_TYPE_EDIT_CHAPTER, XplayerEditChapterPrivate))
 
-G_DEFINE_TYPE (TotemEditChapter, totem_edit_chapter, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (XplayerEditChapter, xplayer_edit_chapter, GTK_TYPE_DIALOG)
 
 /* GtkBuilder callbacks */
 void title_entry_changed_cb (GtkEditable *entry, gpointer user_data);
 
 static void
-totem_edit_chapter_class_init (TotemEditChapterClass *klass)
+xplayer_edit_chapter_class_init (XplayerEditChapterClass *klass)
 {
-	g_type_class_add_private (klass, sizeof (TotemEditChapterPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerEditChapterPrivate));
 }
 
 static void
-totem_edit_chapter_init (TotemEditChapter *self)
+xplayer_edit_chapter_init (XplayerEditChapter *self)
 {
 	GtkBuilder	*builder;
 
-	self->priv = TOTEM_EDIT_CHAPTER_GET_PRIVATE (self);
-	builder = totem_plugin_load_interface ("chapters", "chapters-edit.ui", FALSE, NULL, self);
+	self->priv = XPLAYER_EDIT_CHAPTER_GET_PRIVATE (self);
+	builder = xplayer_plugin_load_interface ("chapters", "chapters-edit.ui", FALSE, NULL, self);
 
 	if (builder == NULL) {
 		self->priv->container = NULL;
@@ -80,12 +80,12 @@ totem_edit_chapter_init (TotemEditChapter *self)
 }
 
 GtkWidget*
-totem_edit_chapter_new (void)
+xplayer_edit_chapter_new (void)
 {
-	TotemEditChapter	*edit_chapter;
+	XplayerEditChapter	*edit_chapter;
 	GtkWidget		*dialog_area;
 
-	edit_chapter = TOTEM_EDIT_CHAPTER (g_object_new (TOTEM_TYPE_EDIT_CHAPTER, NULL));
+	edit_chapter = XPLAYER_EDIT_CHAPTER (g_object_new (XPLAYER_TYPE_EDIT_CHAPTER, NULL));
 
 	if (G_UNLIKELY (edit_chapter->priv->container == NULL)) {
 		g_object_unref (edit_chapter);
@@ -113,18 +113,18 @@ totem_edit_chapter_new (void)
 }
 
 void
-totem_edit_chapter_set_title (TotemEditChapter	*edit_chapter,
+xplayer_edit_chapter_set_title (XplayerEditChapter	*edit_chapter,
 			      const gchar	*title)
 {
-	g_return_if_fail (TOTEM_IS_EDIT_CHAPTER (edit_chapter));
+	g_return_if_fail (XPLAYER_IS_EDIT_CHAPTER (edit_chapter));
 
 	gtk_entry_set_text (edit_chapter->priv->title_entry, title);
 }
 
 gchar *
-totem_edit_chapter_get_title (TotemEditChapter *edit_chapter)
+xplayer_edit_chapter_get_title (XplayerEditChapter *edit_chapter)
 {
-	g_return_val_if_fail (TOTEM_IS_EDIT_CHAPTER (edit_chapter), NULL);
+	g_return_val_if_fail (XPLAYER_IS_EDIT_CHAPTER (edit_chapter), NULL);
 
 	return g_strdup (gtk_entry_get_text (edit_chapter->priv->title_entry));
 }

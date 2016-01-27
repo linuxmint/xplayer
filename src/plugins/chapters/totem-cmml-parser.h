@@ -16,20 +16,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
-#ifndef TOTEM_CMML_PARSER_H_
-#define TOTEM_CMML_PARSER_H_
+#ifndef XPLAYER_CMML_PARSER_H_
+#define XPLAYER_CMML_PARSER_H_
 
 #include <glib.h>
 #include <libxml/xmlreader.h>
 
 /**
- * TotemCmmlClip:
+ * XplayerCmmlClip:
  * @title: clip title
  * @desc: clip description
  * @time_start: start time of clip in msecs
@@ -42,10 +42,10 @@ typedef struct {
 	gchar		*desc;
 	gint64		time_start;
 	GdkPixbuf	*pixbuf;
-} TotemCmmlClip;
+} XplayerCmmlClip;
 
 /**
- * TotemCmmlAsyncData:
+ * XplayerCmmlAsyncData:
  * @file: file to read
  * @list: list to store chapters to read in/write
  * @final: function to call at final, %NULL is allowed
@@ -70,20 +70,20 @@ typedef struct {
 	gboolean	is_exists;
 	gboolean	from_dialog;
 	GCancellable	*cancellable;
-} TotemCmmlAsyncData;
+} XplayerCmmlAsyncData;
 
-gchar *	totem_cmml_convert_msecs_to_str (gint64 time_msecs);
-TotemCmmlClip * totem_cmml_clip_new (const gchar *title, const gchar *desc, gint64 start, GdkPixbuf *pixbuf);
-void totem_cmml_clip_free (TotemCmmlClip *clip);
-TotemCmmlClip * totem_cmml_clip_copy (TotemCmmlClip *clip);
+gchar *	xplayer_cmml_convert_msecs_to_str (gint64 time_msecs);
+XplayerCmmlClip * xplayer_cmml_clip_new (const gchar *title, const gchar *desc, gint64 start, GdkPixbuf *pixbuf);
+void xplayer_cmml_clip_free (XplayerCmmlClip *clip);
+XplayerCmmlClip * xplayer_cmml_clip_copy (XplayerCmmlClip *clip);
 
-void totem_cmml_read_file (GFile               *file,
+void xplayer_cmml_read_file (GFile               *file,
 			   GCancellable        *cancellable,
 			   GAsyncReadyCallback  callback,
 			   gpointer             user_data);
-GList *totem_cmml_read_file_finish (GFile        *file,
+GList *xplayer_cmml_read_file_finish (GFile        *file,
 				    GAsyncResult *res,
 				    GError      **error);
-gint totem_cmml_write_file_async (TotemCmmlAsyncData *data);
+gint xplayer_cmml_write_file_async (XplayerCmmlAsyncData *data);
 
-#endif /* TOTEM_CMML_PARSER_H_ */
+#endif /* XPLAYER_CMML_PARSER_H_ */

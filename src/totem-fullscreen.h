@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  */
 
@@ -29,23 +29,23 @@
 
 #include "backend/bacon-video-widget.h"
 
-#define TOTEM_TYPE_FULLSCREEN            (totem_fullscreen_get_type ())
-#define TOTEM_FULLSCREEN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
-                                          TOTEM_TYPE_FULLSCREEN, \
-                                          TotemFullscreen))
-#define TOTEM_FULLSCREEN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), \
-                                          TOTEM_TYPE_FULLSCREEN, \
-                                          TotemFullscreenClass))
-#define TOTEM_IS_FULLSCREEN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
-                                          TOTEM_TYPE_FULLSCREEN))
-#define TOTEM_IS_FULLSCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), \
-                                          TOTEM_TYPE_FULLSCREEN))
+#define XPLAYER_TYPE_FULLSCREEN            (xplayer_fullscreen_get_type ())
+#define XPLAYER_FULLSCREEN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
+                                          XPLAYER_TYPE_FULLSCREEN, \
+                                          XplayerFullscreen))
+#define XPLAYER_FULLSCREEN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), \
+                                          XPLAYER_TYPE_FULLSCREEN, \
+                                          XplayerFullscreenClass))
+#define XPLAYER_IS_FULLSCREEN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
+                                          XPLAYER_TYPE_FULLSCREEN))
+#define XPLAYER_IS_FULLSCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), \
+                                          XPLAYER_TYPE_FULLSCREEN))
 
-typedef struct TotemFullscreen TotemFullscreen;
-typedef struct TotemFullscreenClass TotemFullscreenClass;
-typedef struct _TotemFullscreenPrivate TotemFullscreenPrivate;
+typedef struct XplayerFullscreen XplayerFullscreen;
+typedef struct XplayerFullscreenClass XplayerFullscreenClass;
+typedef struct _XplayerFullscreenPrivate XplayerFullscreenPrivate;
 
-struct TotemFullscreen {
+struct XplayerFullscreen {
 	GObject                parent;
 
 	/* Public Widgets from popups */
@@ -56,30 +56,30 @@ struct TotemFullscreen {
 	GtkWidget              *exit_button;
 
 	/* Private */
-	TotemFullscreenPrivate *priv;
+	XplayerFullscreenPrivate *priv;
 };
 
-struct TotemFullscreenClass {
+struct XplayerFullscreenClass {
 	GObjectClass parent_class;
 };
 
-GType    totem_fullscreen_get_type           (void);
-TotemFullscreen * totem_fullscreen_new       (GtkWindow *toplevel_window);
-void     totem_fullscreen_set_video_widget   (TotemFullscreen *fs,
+GType    xplayer_fullscreen_get_type           (void);
+XplayerFullscreen * xplayer_fullscreen_new       (GtkWindow *toplevel_window);
+void     xplayer_fullscreen_set_video_widget   (XplayerFullscreen *fs,
 					      BaconVideoWidget *bvw);
-void     totem_fullscreen_set_parent_window  (TotemFullscreen *fs,
+void     xplayer_fullscreen_set_parent_window  (XplayerFullscreen *fs,
 					      GtkWindow *parent_window);
-void     totem_fullscreen_show_popups        (TotemFullscreen *fs,
+void     xplayer_fullscreen_show_popups        (XplayerFullscreen *fs,
 					      gboolean show_cursor);
-void totem_fullscreen_show_popups_or_osd (TotemFullscreen *fs,
+void xplayer_fullscreen_show_popups_or_osd (XplayerFullscreen *fs,
 					  const char *icon_name,
 					  gboolean show_cursor);
-gboolean totem_fullscreen_is_fullscreen      (TotemFullscreen *fs);
-void     totem_fullscreen_set_fullscreen     (TotemFullscreen *fs,
+gboolean xplayer_fullscreen_is_fullscreen      (XplayerFullscreen *fs);
+void     xplayer_fullscreen_set_fullscreen     (XplayerFullscreen *fs,
 					      gboolean fullscreen);
-void     totem_fullscreen_set_title          (TotemFullscreen *fs,
+void     xplayer_fullscreen_set_title          (XplayerFullscreen *fs,
 					      const char *title);
-void     totem_fullscreen_set_seekable       (TotemFullscreen *fs,
+void     xplayer_fullscreen_set_seekable       (XplayerFullscreen *fs,
 					      gboolean seekable);
-void     totem_fullscreen_set_can_set_volume (TotemFullscreen *fs,
+void     xplayer_fullscreen_set_can_set_volume (XplayerFullscreen *fs,
 					      gboolean can_set_volume);

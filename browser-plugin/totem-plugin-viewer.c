@@ -1,4 +1,4 @@
-/* Totem Plugin Viewer
+/* Xplayer Plugin Viewer
  *
  * Copyright © 2004-2006 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -39,29 +39,29 @@
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <totem-pl-parser.h>
+#include <xplayer-pl-parser.h>
 
 #include <dbus/dbus-glib.h>
 
 #include "bacon-video-widget.h"
-#include "totem-interface.h"
-#include "totem-statusbar.h"
-#include "totem-time-label.h"
-#include "totem-fullscreen.h"
-#include "totem-glow-button.h"
-#include "totem-rtl-helpers.h"
+#include "xplayer-interface.h"
+#include "xplayer-statusbar.h"
+#include "xplayer-time-label.h"
+#include "xplayer-fullscreen.h"
+#include "xplayer-glow-button.h"
+#include "xplayer-rtl-helpers.h"
 #include "video-utils.h"
 
-#include "totem-plugin-viewer-constants.h"
-#include "totem-plugin-viewer-options.h"
+#include "xplayer-plugin-viewer-constants.h"
+#include "xplayer-plugin-viewer-options.h"
 
-GtkWidget *totem_statusbar_create (void);
-GtkWidget *totem_volume_create (void);
-GtkWidget *totem_pp_create (void);
+GtkWidget *xplayer_statusbar_create (void);
+GtkWidget *xplayer_volume_create (void);
+GtkWidget *xplayer_pp_create (void);
 
-/* Private function in totem-pl-parser, not for use
+/* Private function in xplayer-pl-parser, not for use
  * by anyone but us */
-char * totem_pl_parser_resolve_uri (GFile *base_gfile, const char *relative_uri);
+char * xplayer_pl_parser_resolve_uri (GFile *base_gfile, const char *relative_uri);
 
 #define VOLUME_DOWN_OFFSET (-0.08)
 #define VOLUME_UP_OFFSET (0.08)
@@ -73,20 +73,20 @@ char * totem_pl_parser_resolve_uri (GFile *base_gfile, const char *relative_uri)
 #endif
 
 typedef enum {
-	TOTEM_PLUGIN_TYPE_GMP,
-	TOTEM_PLUGIN_TYPE_NARROWSPACE,
-	TOTEM_PLUGIN_TYPE_MULLY,
-	TOTEM_PLUGIN_TYPE_CONE,
-	TOTEM_PLUGIN_TYPE_VEGAS,
-	TOTEM_PLUGIN_TYPE_LAST
-} TotemPluginType;
+	XPLAYER_PLUGIN_TYPE_GMP,
+	XPLAYER_PLUGIN_TYPE_NARROWSPACE,
+	XPLAYER_PLUGIN_TYPE_MULLY,
+	XPLAYER_PLUGIN_TYPE_CONE,
+	XPLAYER_PLUGIN_TYPE_VEGAS,
+	XPLAYER_PLUGIN_TYPE_LAST
+} XplayerPluginType;
 
-#define TOTEM_TYPE_EMBEDDED (totem_embedded_get_type ())
-#define TOTEM_EMBEDDED(o)          (G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_EMBEDDED, TotemEmbedded))
-#define TOTEM_EMBEDDED_CLASS(k)    (G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_EMBEDDED, TotemEmbeddedClass))
-#define TOTEM_IS_EMBEDDED(o)       (G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_EMBEDDED))
-#define TOTEM_IS_EMBEDDED_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_EMBEDDED))
-#define TOTEM_EMBEDDED_GET_CLASS(o)(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_EMBEDDED, TotemEmbeddedClass))
+#define XPLAYER_TYPE_EMBEDDED (xplayer_embedded_get_type ())
+#define XPLAYER_EMBEDDED(o)          (G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_EMBEDDED, XplayerEmbedded))
+#define XPLAYER_EMBEDDED_CLASS(k)    (G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_EMBEDDED, XplayerEmbeddedClass))
+#define XPLAYER_IS_EMBEDDED(o)       (G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_EMBEDDED))
+#define XPLAYER_IS_EMBEDDED_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_EMBEDDED))
+#define XPLAYER_EMBEDDED_GET_CLASS(o)(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_EMBEDDED, XplayerEmbeddedClass))
 
 typedef struct {
 	char *uri;
@@ -94,13 +94,13 @@ typedef struct {
 	char *title;
 	int duration;
 	int starttime;
-} TotemPlItem;
+} XplayerPlItem;
 
 typedef struct {
 	GtkApplicationClass parent;
-} TotemEmbeddedClass;
+} XplayerEmbeddedClass;
 
-typedef struct _TotemEmbedded {
+typedef struct _XplayerEmbedded {
 	GtkApplication parent;
 
 	DBusGConnection *conn;
@@ -108,7 +108,7 @@ typedef struct _TotemEmbedded {
 	GtkBuilder *menuxml, *xml;
 	GtkWidget *pp_button;
 	GtkWidget *pp_fs_button;
-	TotemStatusbar *statusbar;
+	XplayerStatusbar *statusbar;
 	int width, height;
         char *user_agent;
 	const char *mimetype;
@@ -121,11 +121,11 @@ typedef struct _TotemEmbedded {
 	char *stream_uri;
 	gint64 size; /* the size of the streamed file for fd://0 */
 	BaconVideoWidget *bvw;
-	TotemStates state;
+	XplayerStates state;
 	GdkCursor *cursor;
 	guint inhibit_id;
 
-	/* Playlist, a GList of TotemPlItem */
+	/* Playlist, a GList of XplayerPlItem */
 	GList *playlist, *current;
 	guint parser_id;
 	int num_items;
@@ -143,13 +143,13 @@ typedef struct _TotemEmbedded {
 	GtkWidget *volume;
 
 	/* Fullscreen */
-	TotemFullscreen *fs;
+	XplayerFullscreen *fs;
 	GtkWidget * fs_window;
 
 	/* Error */
 	GError *error;
 
-	guint type : 3; /* TotemPluginType */
+	guint type : 3; /* XplayerPluginType */
 
 	guint is_browser_stream : 1;
 	guint is_playlist : 1;
@@ -160,40 +160,40 @@ typedef struct _TotemEmbedded {
 	guint seeking : 1;
 	guint autostart : 1;
 	guint audioonly : 1;
-} TotemEmbedded;
+} XplayerEmbedded;
 
-GType totem_embedded_get_type (void);
+GType xplayer_embedded_get_type (void);
 
-#define TOTEM_EMBEDDED_ERROR_QUARK (g_quark_from_static_string ("TotemEmbeddedErrorQuark"))
+#define XPLAYER_EMBEDDED_ERROR_QUARK (g_quark_from_static_string ("XplayerEmbeddedErrorQuark"))
 
 enum
 {
-	TOTEM_EMBEDDED_UNKNOWN_PLUGIN_TYPE,
-	TOTEM_EMBEDDED_SETWINDOW_UNSUPPORTED_CONTROLS,
-	TOTEM_EMBEDDED_SETWINDOW_HAVE_WINDOW,
-	TOTEM_EMBEDDED_SETWINDOW_INVALID_XID,
-	TOTEM_EMBEDDED_NO_URI,
-	TOTEM_EMBEDDED_OPEN_FAILED,
-	TOTEM_EMBEDDED_UNKNOWN_COMMAND
+	XPLAYER_EMBEDDED_UNKNOWN_PLUGIN_TYPE,
+	XPLAYER_EMBEDDED_SETWINDOW_UNSUPPORTED_CONTROLS,
+	XPLAYER_EMBEDDED_SETWINDOW_HAVE_WINDOW,
+	XPLAYER_EMBEDDED_SETWINDOW_INVALID_XID,
+	XPLAYER_EMBEDDED_NO_URI,
+	XPLAYER_EMBEDDED_OPEN_FAILED,
+	XPLAYER_EMBEDDED_UNKNOWN_COMMAND
 };
 
-G_DEFINE_TYPE (TotemEmbedded, totem_embedded, GTK_TYPE_APPLICATION);
-static void totem_embedded_init (TotemEmbedded *emb) { }
+G_DEFINE_TYPE (XplayerEmbedded, xplayer_embedded, GTK_TYPE_APPLICATION);
+static void xplayer_embedded_init (XplayerEmbedded *emb) { }
 
-static gboolean totem_embedded_do_command (TotemEmbedded *emb, const char *command, GError **err);
-static gboolean totem_embedded_push_parser (gpointer data);
-static gboolean totem_embedded_play (TotemEmbedded *embedded, GError **error);
-static void totem_embedded_set_logo_by_name (TotemEmbedded *embedded, const char *name);
+static gboolean xplayer_embedded_do_command (XplayerEmbedded *emb, const char *command, GError **err);
+static gboolean xplayer_embedded_push_parser (gpointer data);
+static gboolean xplayer_embedded_play (XplayerEmbedded *embedded, GError **error);
+static void xplayer_embedded_set_logo_by_name (XplayerEmbedded *embedded, const char *name);
 
-static void totem_embedded_update_menu (TotemEmbedded *emb);
-static void on_open1_activate (GtkButton *button, TotemEmbedded *emb);
-static void totem_embedded_toggle_fullscreen (TotemEmbedded *emb);
+static void xplayer_embedded_update_menu (XplayerEmbedded *emb);
+static void on_open1_activate (GtkButton *button, XplayerEmbedded *emb);
+static void xplayer_embedded_toggle_fullscreen (XplayerEmbedded *emb);
 
-void on_preferences1_activate (GtkButton *button, TotemEmbedded *emb);
-void on_copy_location1_activate (GtkButton *button, TotemEmbedded *emb);
-void on_fullscreen1_activate (GtkMenuItem *menuitem, TotemEmbedded *emb);
+void on_preferences1_activate (GtkButton *button, XplayerEmbedded *emb);
+void on_copy_location1_activate (GtkButton *button, XplayerEmbedded *emb);
+void on_fullscreen1_activate (GtkMenuItem *menuitem, XplayerEmbedded *emb);
 
-static void update_fill (TotemEmbedded *emb, gdouble level);
+static void update_fill (XplayerEmbedded *emb, gdouble level);
 
 enum {
 	BUTTON_PRESS,
@@ -207,9 +207,9 @@ enum {
 static int signals[LAST_SIGNAL] = { 0 };
 
 static void
-totem_embedded_finalize (GObject *object)
+xplayer_embedded_finalize (GObject *object)
 {
-	TotemEmbedded *embedded = TOTEM_EMBEDDED (object);
+	XplayerEmbedded *embedded = XPLAYER_EMBEDDED (object);
 
 	if (embedded->window)
 		gtk_widget_destroy (embedded->window);
@@ -223,15 +223,15 @@ totem_embedded_finalize (GObject *object)
 
 	/* FIXME etc */
 
-	G_OBJECT_CLASS (totem_embedded_parent_class)->finalize (object);
+	G_OBJECT_CLASS (xplayer_embedded_parent_class)->finalize (object);
 }
 
-static void totem_embedded_class_init (TotemEmbeddedClass *klass)
+static void xplayer_embedded_class_init (XplayerEmbeddedClass *klass)
 {
 	GType param_types[3];
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->finalize = totem_embedded_finalize;
+	object_class->finalize = xplayer_embedded_finalize;
 
 	param_types[0] = param_types[1] = G_TYPE_UINT;
 	param_types[2] = G_TYPE_STRING;
@@ -280,14 +280,14 @@ static void totem_embedded_class_init (TotemEmbeddedClass *klass)
 }
 
 static void
-totem_embedded_exit (TotemEmbedded *emb)
+xplayer_embedded_exit (XplayerEmbedded *emb)
 {
 	//FIXME what happens when embedded, and we can't go on?
 	exit (1);
 }
 
 static void
-totem_embedded_error_and_exit (char *title, char *reason, TotemEmbedded *emb)
+xplayer_embedded_error_and_exit (char *title, char *reason, XplayerEmbedded *emb)
 {
 	/* Avoid any more contacts, so drop off the bus */
 	if (emb->conn != NULL) {
@@ -296,45 +296,45 @@ totem_embedded_error_and_exit (char *title, char *reason, TotemEmbedded *emb)
 	}
 
 	/* FIXME send a signal to the plugin with the error message instead! */
-	totem_interface_error_blocking (title, reason,
+	xplayer_interface_error_blocking (title, reason,
 			GTK_WINDOW (emb->window));
-	totem_embedded_exit (emb);
+	xplayer_embedded_exit (emb);
 }
 
 static void
-totem_embedded_volume_changed (TotemEmbedded *emb, double volume)
+xplayer_embedded_volume_changed (XplayerEmbedded *emb, double volume)
 {
 	GValue value = { 0, };
 
 	g_value_init (&value, G_TYPE_DOUBLE);
 	g_value_set_double (&value, volume);
 	g_signal_emit (emb, signals[PROPERTY_CHANGE], 0,
-		       TOTEM_PROPERTY_VOLUME,
+		       XPLAYER_PROPERTY_VOLUME,
 		       &value);
 }
 
 static void
-totem_embedded_set_error (TotemEmbedded *emb,
+xplayer_embedded_set_error (XplayerEmbedded *emb,
 			  int code,
 			  char *secondary)
 {
-	emb->error = g_error_new_literal (TOTEM_EMBEDDED_ERROR_QUARK,
+	emb->error = g_error_new_literal (XPLAYER_EMBEDDED_ERROR_QUARK,
 	                                  code,
 	                                  secondary);
-	g_message ("totem_embedded_set_error: '%s'", secondary);
+	g_message ("xplayer_embedded_set_error: '%s'", secondary);
 }
 
 static gboolean
-totem_embedded_set_error_logo (TotemEmbedded *embedded,
+xplayer_embedded_set_error_logo (XplayerEmbedded *embedded,
 			       GError *error)
 {
-	g_message ("totem_embedded_set_error_logo called by browser plugin");
-	totem_embedded_set_logo_by_name (embedded, "image-missing");
+	g_message ("xplayer_embedded_set_error_logo called by browser plugin");
+	xplayer_embedded_set_logo_by_name (embedded, "image-missing");
 	return TRUE;
 }
 
 static void
-totem_embedded_set_state (TotemEmbedded *emb, TotemStates state)
+xplayer_embedded_set_state (XplayerEmbedded *emb, XplayerStates state)
 {
 	GtkWidget *image;
 	const gchar *id;
@@ -342,43 +342,43 @@ totem_embedded_set_state (TotemEmbedded *emb, TotemStates state)
 	if (state == emb->state)
 		return;
 
-	g_message ("Viewer state: %s", totem_states[state]);
+	g_message ("Viewer state: %s", xplayer_states[state]);
 
 	image = gtk_button_get_image (GTK_BUTTON (emb->pp_button));
 
 	switch (state) {
-	case TOTEM_STATE_STOPPED:
-		id = totem_get_rtl_icon_name ("media-playback-start");
-		totem_statusbar_set_text (emb->statusbar, _("Stopped"));
-		totem_statusbar_set_time_and_length (emb->statusbar, 0, 0);
-		totem_time_label_set_time
-			(TOTEM_TIME_LABEL (emb->fs->time_label), 0, 0);
+	case XPLAYER_STATE_STOPPED:
+		id = xplayer_get_rtl_icon_name ("media-playback-start");
+		xplayer_statusbar_set_text (emb->statusbar, _("Stopped"));
+		xplayer_statusbar_set_time_and_length (emb->statusbar, 0, 0);
+		xplayer_time_label_set_time
+			(XPLAYER_TIME_LABEL (emb->fs->time_label), 0, 0);
 		if (emb->href_uri != NULL && emb->hidden == FALSE) {
 			gdk_window_set_cursor
 				(gtk_widget_get_window (GTK_WIDGET (emb->bvw)),
 				 emb->cursor);
 		}
 		break;
-	case TOTEM_STATE_PAUSED:
-		id = totem_get_rtl_icon_name ("media-playback-start");
-		totem_statusbar_set_text (emb->statusbar, _("Paused"));
+	case XPLAYER_STATE_PAUSED:
+		id = xplayer_get_rtl_icon_name ("media-playback-start");
+		xplayer_statusbar_set_text (emb->statusbar, _("Paused"));
 		break;
-	case TOTEM_STATE_PLAYING:
+	case XPLAYER_STATE_PLAYING:
 		id = "media-playback-pause-symbolic";
-		totem_statusbar_set_text (emb->statusbar, _("Playing"));
+		xplayer_statusbar_set_text (emb->statusbar, _("Playing"));
 		if (emb->href_uri == NULL && emb->hidden == FALSE) {
 			gdk_window_set_cursor
 				(gtk_widget_get_window (GTK_WIDGET (emb->bvw)),
 				 NULL);
 		}
 		break;
-	case TOTEM_STATE_INVALID:
+	case XPLAYER_STATE_INVALID:
 	default:
 		g_assert_not_reached ();
 		break;
 	}
 
-	if (state == TOTEM_STATE_PLAYING) {
+	if (state == XPLAYER_STATE_PLAYING) {
 		if (emb->inhibit_id == 0) {
 			emb->inhibit_id = gtk_application_inhibit (GTK_APPLICATION (emb),
 								   NULL,
@@ -398,10 +398,10 @@ totem_embedded_set_state (TotemEmbedded *emb, TotemStates state)
 }
 
 static void
-totem_embedded_set_logo_by_name (TotemEmbedded *embedded,
+xplayer_embedded_set_logo_by_name (XplayerEmbedded *embedded,
 				 const char *name)
 {
-	totem_embedded_set_state (embedded, TOTEM_STATE_STOPPED);
+	xplayer_embedded_set_state (embedded, XPLAYER_STATE_STOPPED);
 
 	if (embedded->audioonly != FALSE || embedded->hidden != FALSE)
 		return;
@@ -411,14 +411,14 @@ totem_embedded_set_logo_by_name (TotemEmbedded *embedded,
 }
 
 static void
-totem_embedded_set_pp_state (TotemEmbedded *emb, gboolean state)
+xplayer_embedded_set_pp_state (XplayerEmbedded *emb, gboolean state)
 {
 	gtk_widget_set_sensitive (emb->pp_button, state);
 	gtk_widget_set_sensitive (emb->pp_fs_button, state);
 }
 
 static gboolean
-totem_embedded_open_internal (TotemEmbedded *emb,
+xplayer_embedded_open_internal (XplayerEmbedded *emb,
 			      gboolean start_play,
 			      GError **error)
 {
@@ -437,15 +437,15 @@ totem_embedded_open_internal (TotemEmbedded *emb,
 
 	if (!uri) {
 		g_set_error_literal (error,
-                                     TOTEM_EMBEDDED_ERROR_QUARK,
-                                     TOTEM_EMBEDDED_NO_URI,
+                                     XPLAYER_EMBEDDED_ERROR_QUARK,
+                                     XPLAYER_EMBEDDED_NO_URI,
                                      _("No URI to play"));
-		//FIXME totem_embedded_set_error (emb, error); |error| may be null?
+		//FIXME xplayer_embedded_set_error (emb, error); |error| may be null?
 
 		return FALSE;
 	}
 
-	g_message ("totem_embedded_open_internal '%s' subtitle '%s' is-browser-stream %d start-play %d",
+	g_message ("xplayer_embedded_open_internal '%s' subtitle '%s' is-browser-stream %d start-play %d",
 		   uri, emb->current_subtitle_uri, emb->is_browser_stream, start_play);
 
 	bacon_video_widget_set_logo_mode (emb->bvw, FALSE);
@@ -456,37 +456,37 @@ totem_embedded_open_internal (TotemEmbedded *emb,
 
 	/* FIXME we shouldn't even do that here */
 	if (start_play)
-		totem_embedded_play (emb, NULL);
+		xplayer_embedded_play (emb, NULL);
 	else
-		totem_glow_button_set_glow (TOTEM_GLOW_BUTTON (emb->pp_button), TRUE);
+		xplayer_glow_button_set_glow (XPLAYER_GLOW_BUTTON (emb->pp_button), TRUE);
 
-	totem_embedded_update_menu (emb);
+	xplayer_embedded_update_menu (emb);
 	if (emb->href_uri != NULL)
-		totem_fullscreen_set_title (emb->fs, emb->href_uri);
+		xplayer_fullscreen_set_title (emb->fs, emb->href_uri);
 	else
-		totem_fullscreen_set_title (emb->fs, emb->current_uri);
+		xplayer_fullscreen_set_title (emb->fs, emb->current_uri);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_play (TotemEmbedded *emb,
+xplayer_embedded_play (XplayerEmbedded *emb,
 		     GError **error)
 {
 	GError *err = NULL;
 
 	if (emb->current_uri == NULL) {
-		totem_glow_button_set_glow (TOTEM_GLOW_BUTTON (emb->pp_button), FALSE);
+		xplayer_glow_button_set_glow (XPLAYER_GLOW_BUTTON (emb->pp_button), FALSE);
 		g_signal_emit (emb, signals[BUTTON_PRESS], 0,
 			       gtk_get_current_event_time (), 0);
 		return TRUE;
 	}
 
-	totem_glow_button_set_glow (TOTEM_GLOW_BUTTON (emb->pp_button), FALSE);
+	xplayer_glow_button_set_glow (XPLAYER_GLOW_BUTTON (emb->pp_button), FALSE);
 
 	if (bacon_video_widget_play (emb->bvw, &err) != FALSE) {
-		totem_embedded_set_state (emb, TOTEM_STATE_PLAYING);
-		totem_embedded_set_pp_state (emb, TRUE);
+		xplayer_embedded_set_state (emb, XPLAYER_STATE_PLAYING);
+		xplayer_embedded_set_pp_state (emb, TRUE);
 	} else {
 		g_warning ("Error in bacon_video_widget_play: %s", err->message);
 		g_error_free (err);
@@ -496,63 +496,63 @@ totem_embedded_play (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_pause (TotemEmbedded *emb,
+xplayer_embedded_pause (XplayerEmbedded *emb,
 		      GError **error)
 {
-	totem_embedded_set_state (emb, TOTEM_STATE_PAUSED);
+	xplayer_embedded_set_state (emb, XPLAYER_STATE_PAUSED);
 	bacon_video_widget_pause (emb->bvw);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_stop (TotemEmbedded *emb,
+xplayer_embedded_stop (XplayerEmbedded *emb,
 		     GError **error)
 {
-	totem_embedded_set_state (emb, TOTEM_STATE_STOPPED);
+	xplayer_embedded_set_state (emb, XPLAYER_STATE_STOPPED);
 	bacon_video_widget_stop (emb->bvw);
 
 	g_signal_emit (emb, signals[SIGNAL_TICK], 0,
 		       (guint32) 0,
 		       (guint32) 0,
-		       totem_states[emb->state]);
+		       xplayer_states[emb->state]);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_do_command (TotemEmbedded *embedded,
+xplayer_embedded_do_command (XplayerEmbedded *embedded,
 			   const char *command,
 			   GError **error)
 {
 	g_return_val_if_fail (command != NULL, FALSE);
 
-	g_message ("totem_embedded_do_command: %s", command);
+	g_message ("xplayer_embedded_do_command: %s", command);
 
-	if (strcmp (command, TOTEM_COMMAND_PLAY) == 0) {
-		return totem_embedded_play (embedded, error);
+	if (strcmp (command, XPLAYER_COMMAND_PLAY) == 0) {
+		return xplayer_embedded_play (embedded, error);
 	}
-	if (strcmp (command, TOTEM_COMMAND_PAUSE) == 0) {
-		return totem_embedded_pause (embedded, error);
+	if (strcmp (command, XPLAYER_COMMAND_PAUSE) == 0) {
+		return xplayer_embedded_pause (embedded, error);
 	}
-	if (strcmp (command, TOTEM_COMMAND_STOP) == 0) {
-		return totem_embedded_stop (embedded, error);
+	if (strcmp (command, XPLAYER_COMMAND_STOP) == 0) {
+		return xplayer_embedded_stop (embedded, error);
 	}
 		
 	g_set_error (error,
-                     TOTEM_EMBEDDED_ERROR_QUARK,
-                     TOTEM_EMBEDDED_UNKNOWN_COMMAND,
+                     XPLAYER_EMBEDDED_ERROR_QUARK,
+                     XPLAYER_EMBEDDED_UNKNOWN_COMMAND,
                      "Unknown command '%s'", command);
 	return FALSE;
 }
 
 static gboolean
-totem_embedded_set_href (TotemEmbedded *embedded,
+xplayer_embedded_set_href (XplayerEmbedded *embedded,
 			 const char *href_uri,
 			 const char *target,
 			 GError *error)
 {
-	g_message ("totem_embedded_set_href %s (target: %s)",
+	g_message ("xplayer_embedded_set_href %s (target: %s)",
 		   href_uri, target);
 
 	g_free (embedded->href_uri);
@@ -577,18 +577,18 @@ totem_embedded_set_href (TotemEmbedded *embedded,
 }
 
 static gboolean
-totem_embedded_set_volume (TotemEmbedded *embedded,
+xplayer_embedded_set_volume (XplayerEmbedded *embedded,
 			   gdouble volume,
 			   GError *error)
 {
-	g_message ("totem_embedded_set_volume: %f", volume);
+	g_message ("xplayer_embedded_set_volume: %f", volume);
 	bacon_video_widget_set_volume (embedded->bvw, volume);
-	totem_embedded_volume_changed (embedded, volume);
+	xplayer_embedded_volume_changed (embedded, volume);
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_launch_player (TotemEmbedded *embedded,
+xplayer_embedded_launch_player (XplayerEmbedded *embedded,
 			      guint32 user_time)
 {
 	GList *uris = NULL;
@@ -598,7 +598,7 @@ totem_embedded_launch_player (TotemEmbedded *embedded,
 
 	g_return_val_if_fail (embedded->app != NULL, FALSE);
 
-	if (embedded->type == TOTEM_PLUGIN_TYPE_NARROWSPACE
+	if (embedded->type == XPLAYER_PLUGIN_TYPE_NARROWSPACE
 		   && embedded->href_uri != NULL) {
 		uris = g_list_prepend (uris, embedded->href_uri);
 	} else {
@@ -620,7 +620,7 @@ totem_embedded_launch_player (TotemEmbedded *embedded,
 }
 
 static void
-totem_embedded_set_uri (TotemEmbedded *emb,
+xplayer_embedded_set_uri (XplayerEmbedded *emb,
 		        const char *uri,
 		        const char *base_uri,
 		        const char *subtitle,
@@ -638,9 +638,9 @@ totem_embedded_set_uri (TotemEmbedded *emb,
 	emb->base_uri = g_strdup (base_uri);
 	if (base_uri)
 		base_gfile = g_file_new_for_uri (base_uri);
-	emb->current_uri = totem_pl_parser_resolve_uri (base_gfile, uri);
+	emb->current_uri = xplayer_pl_parser_resolve_uri (base_gfile, uri);
 	if (subtitle != NULL)
-		emb->current_subtitle_uri = totem_pl_parser_resolve_uri (base_gfile, subtitle);
+		emb->current_subtitle_uri = xplayer_pl_parser_resolve_uri (base_gfile, subtitle);
 	else
 		emb->current_subtitle_uri = NULL;
 	if (base_gfile)
@@ -649,7 +649,7 @@ totem_embedded_set_uri (TotemEmbedded *emb,
 	emb->href_uri = NULL;
 
 	if (uri != NULL)
-		g_print ("totem_embedded_set_uri uri %s base %s => resolved %s (subtitle %s => resolved %s)\n",
+		g_print ("xplayer_embedded_set_uri uri %s base %s => resolved %s (subtitle %s => resolved %s)\n",
 			 uri, base_uri, emb->current_uri, subtitle, emb->current_subtitle_uri);
 	else
 		g_print ("Emptying current_uri\n");
@@ -669,63 +669,63 @@ totem_embedded_set_uri (TotemEmbedded *emb,
 }
 
 static void
-totem_embedded_update_title (TotemEmbedded *emb, const char *title)
+xplayer_embedded_update_title (XplayerEmbedded *emb, const char *title)
 {
 	if (title == NULL)
-		gtk_window_set_title (GTK_WINDOW (emb->fs_window), _("Totem Movie Player"));
+		gtk_window_set_title (GTK_WINDOW (emb->fs_window), _("Xplayer Movie Player"));
 	else
 		gtk_window_set_title (GTK_WINDOW (emb->fs_window), title);
-	totem_fullscreen_set_title (emb->fs, title);
+	xplayer_fullscreen_set_title (emb->fs, title);
 }
 
 static void
-totem_pl_item_free (gpointer data, gpointer user_data)
+xplayer_pl_item_free (gpointer data, gpointer user_data)
 {
-	TotemPlItem *item = (TotemPlItem *) data;
+	XplayerPlItem *item = (XplayerPlItem *) data;
 
 	if (!item)
 		return;
 	g_free (item->uri);
 	g_free (item->title);
 	g_free (item->subtitle);
-	g_slice_free (TotemPlItem, item);
+	g_slice_free (XplayerPlItem, item);
 }
 
 static gboolean
-totem_embedded_clear_playlist (TotemEmbedded *emb, GError *error)
+xplayer_embedded_clear_playlist (XplayerEmbedded *emb, GError *error)
 {
-	g_message ("totem_embedded_clear_playlist");
+	g_message ("xplayer_embedded_clear_playlist");
 
-	g_list_foreach (emb->playlist, (GFunc) totem_pl_item_free, NULL);
+	g_list_foreach (emb->playlist, (GFunc) xplayer_pl_item_free, NULL);
 	g_list_free (emb->playlist);
 
 	emb->playlist = NULL;
 	emb->current = NULL;
 	emb->num_items = 0;
 
-	totem_embedded_set_uri (emb, NULL, NULL, NULL, FALSE);
+	xplayer_embedded_set_uri (emb, NULL, NULL, NULL, FALSE);
 
 	bacon_video_widget_close (emb->bvw);
 	update_fill (emb, -1.0);
-	totem_embedded_update_title (emb, NULL);
+	xplayer_embedded_update_title (emb, NULL);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_add_item (TotemEmbedded *embedded,
+xplayer_embedded_add_item (XplayerEmbedded *embedded,
 			 const char *base_uri,
 			 const char *uri,
 			 const char *title,
 			 const char *subtitle,
 			 GError *error)
 {
-	TotemPlItem *item;
+	XplayerPlItem *item;
 
-	g_message ("totem_embedded_add_item: %s (base: %s title: %s subtitle: %s)",
+	g_message ("xplayer_embedded_add_item: %s (base: %s title: %s subtitle: %s)",
 		   uri, base_uri, title, subtitle);
 
-	item = g_slice_new0 (TotemPlItem);
+	item = g_slice_new0 (XplayerPlItem);
 	item->uri = g_strdup (uri);
 	item->title = g_strdup (title);
 	item->subtitle = g_strdup (subtitle);
@@ -737,19 +737,19 @@ totem_embedded_add_item (TotemEmbedded *embedded,
 
 	if (embedded->current_uri == NULL) {
 		embedded->current = embedded->playlist;
-		totem_embedded_set_uri (embedded,
+		xplayer_embedded_set_uri (embedded,
 					(const char *) uri,
 					base_uri,
 					subtitle,
 					FALSE);
-		totem_embedded_open_internal (embedded, FALSE, NULL /* FIXME */);
+		xplayer_embedded_open_internal (embedded, FALSE, NULL /* FIXME */);
 	}
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_set_fullscreen (TotemEmbedded *emb,
+xplayer_embedded_set_fullscreen (XplayerEmbedded *emb,
 			       gboolean fullscreen_enabled,
 			       GError **error)
 {
@@ -759,17 +759,17 @@ totem_embedded_set_fullscreen (TotemEmbedded *emb,
 	fs_action = GTK_ACTION (gtk_builder_get_object
 				(emb->menuxml, "fullscreen1"));
 
-	if (totem_fullscreen_is_fullscreen (emb->fs) == fullscreen_enabled)
+	if (xplayer_fullscreen_is_fullscreen (emb->fs) == fullscreen_enabled)
 		return TRUE;
 
-	g_message ("totem_embedded_set_fullscreen: %d", fullscreen_enabled);
+	g_message ("xplayer_embedded_set_fullscreen: %d", fullscreen_enabled);
 
 	if (fullscreen_enabled == FALSE) {
 		GtkWidget * container;
 		container = GTK_WIDGET (gtk_builder_get_object (emb->xml,
 								"video_box"));
 
-		totem_fullscreen_set_fullscreen (emb->fs, FALSE);
+		xplayer_fullscreen_set_fullscreen (emb->fs, FALSE);
 		gtk_widget_reparent (GTK_WIDGET (emb->bvw), container);
 		gtk_widget_hide (emb->fs_window);
 
@@ -785,12 +785,12 @@ totem_embedded_set_fullscreen (TotemEmbedded *emb,
 		gdk_screen_get_monitor_geometry (gtk_widget_get_screen (GTK_WIDGET (emb->bvw)),
 						 monitor, &rect);
 		gtk_window_move (GTK_WINDOW (emb->fs_window), rect.x, rect.y);
-		totem_interface_set_transient_for (GTK_WINDOW (emb->fs_window), GTK_WINDOW (emb->window));
+		xplayer_interface_set_transient_for (GTK_WINDOW (emb->fs_window), GTK_WINDOW (emb->window));
 
 		gtk_widget_reparent (GTK_WIDGET (emb->bvw), emb->fs_window);
 		bacon_video_widget_set_fullscreen (emb->bvw, TRUE);
 		gtk_window_fullscreen (GTK_WINDOW (emb->fs_window));
-		totem_fullscreen_set_fullscreen (emb->fs, TRUE);
+		xplayer_fullscreen_set_fullscreen (emb->fs, TRUE);
 		gtk_widget_show_all (emb->fs_window);
 
 		gtk_action_set_sensitive (fs_action, FALSE);
@@ -799,18 +799,18 @@ totem_embedded_set_fullscreen (TotemEmbedded *emb,
 	g_value_init (&value, G_TYPE_BOOLEAN);
 	g_value_set_boolean (&value, fullscreen_enabled);
 	g_signal_emit (emb, signals[PROPERTY_CHANGE], 0,
-		       TOTEM_PROPERTY_ISFULLSCREEN,
+		       XPLAYER_PROPERTY_ISFULLSCREEN,
 		       &value);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_set_time (TotemEmbedded *emb,
+xplayer_embedded_set_time (XplayerEmbedded *emb,
 			 guint64 _time,
 			 GError **error)
 {
-	g_message ("totem_embedded_set_time: %"G_GUINT64_FORMAT, _time);
+	g_message ("xplayer_embedded_set_time: %"G_GUINT64_FORMAT, _time);
 
 	bacon_video_widget_seek_time (emb->bvw, _time, FALSE, NULL);
 
@@ -818,34 +818,34 @@ totem_embedded_set_time (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_open_uri (TotemEmbedded *emb,
+xplayer_embedded_open_uri (XplayerEmbedded *emb,
 			 const char *uri,
 			 const char *base_uri,
 			 GError **error)
 {
-	g_message ("totem_embedded_open_uri: uri %s base_uri: %s", uri, base_uri);
+	g_message ("xplayer_embedded_open_uri: uri %s base_uri: %s", uri, base_uri);
 
-	totem_embedded_clear_playlist (emb, NULL);
+	xplayer_embedded_clear_playlist (emb, NULL);
 
-	totem_embedded_set_uri (emb, uri, base_uri, NULL, FALSE);
+	xplayer_embedded_set_uri (emb, uri, base_uri, NULL, FALSE);
 	/* We can only have one item in the "playlist" when
 	 * we open a particular URI like this */
 	emb->num_items = 1;
 
-	return totem_embedded_open_internal (emb, TRUE, error);
+	return xplayer_embedded_open_internal (emb, TRUE, error);
 }
 
 static gboolean
-totem_embedded_setup_stream (TotemEmbedded *emb,
+xplayer_embedded_setup_stream (XplayerEmbedded *emb,
 			     const char *uri,
 			     const char *base_uri,
 			     GError **error)
 {
-	g_message ("totem_embedded_setup_stream called: uri %s, base_uri: %s", uri, base_uri);
+	g_message ("xplayer_embedded_setup_stream called: uri %s, base_uri: %s", uri, base_uri);
 
-	totem_embedded_clear_playlist (emb, NULL);
+	xplayer_embedded_clear_playlist (emb, NULL);
 
-	totem_embedded_set_uri (emb, uri, base_uri, NULL, TRUE);
+	xplayer_embedded_set_uri (emb, uri, base_uri, NULL, TRUE);
 	/* We can only have one item in the "playlist" when
 	 * we open a browser stream */
 	emb->num_items = 1;
@@ -856,22 +856,22 @@ totem_embedded_setup_stream (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_open_stream (TotemEmbedded *emb,
+xplayer_embedded_open_stream (XplayerEmbedded *emb,
 			    gint64 size,
 			    GError **error)
 {
-	g_message ("totem_embedded_open_stream called: with size %"G_GINT64_FORMAT, size);
+	g_message ("xplayer_embedded_open_stream called: with size %"G_GINT64_FORMAT, size);
 
 	emb->size = size;
 
-	return totem_embedded_open_internal (emb, TRUE, error);
+	return xplayer_embedded_open_internal (emb, TRUE, error);
 }
 
 static gboolean
-totem_embedded_close_stream (TotemEmbedded *emb,
+xplayer_embedded_close_stream (XplayerEmbedded *emb,
 			     GError *error)
 {
-	g_message ("totem_embedded_close_stream");
+	g_message ("xplayer_embedded_close_stream");
 
 	if (!emb->is_browser_stream)
 		return TRUE;
@@ -884,10 +884,10 @@ totem_embedded_close_stream (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_open_playlist_item (TotemEmbedded *emb,
+xplayer_embedded_open_playlist_item (XplayerEmbedded *emb,
 				   GList *item)
 {
-	TotemPlItem *plitem;
+	XplayerPlItem *plitem;
 	gboolean eop;
 
 	if (!emb->playlist)
@@ -903,9 +903,9 @@ totem_embedded_open_playlist_item (TotemEmbedded *emb,
 	emb->current = item;
 	g_assert (item != NULL);
 
-	plitem = (TotemPlItem *) item->data;
+	plitem = (XplayerPlItem *) item->data;
 
-	totem_embedded_set_uri (emb,
+	xplayer_embedded_set_uri (emb,
 				(const char *) plitem->uri,
 			        emb->base_uri /* FIXME? */,
 			        plitem->subtitle,
@@ -915,8 +915,8 @@ totem_embedded_open_playlist_item (TotemEmbedded *emb,
 	update_fill (emb, -1.0);
 
 	//FIXME set the title from the URI if possible
-	totem_embedded_update_title (emb, plitem->title);
-	if (totem_embedded_open_internal (emb, FALSE, NULL /* FIXME */)) {
+	xplayer_embedded_update_title (emb, plitem->title);
+	if (xplayer_embedded_open_internal (emb, FALSE, NULL /* FIXME */)) {
 		if (plitem->starttime > 0) {
 			gboolean retval;
 
@@ -930,7 +930,7 @@ totem_embedded_open_playlist_item (TotemEmbedded *emb,
 		}
 
 		if ((eop != FALSE && emb->repeat != FALSE) || (eop == FALSE)) {
-			    totem_embedded_play (emb, NULL);
+			    xplayer_embedded_play (emb, NULL);
 		}
 	}
 
@@ -938,7 +938,7 @@ totem_embedded_open_playlist_item (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_set_local_file (TotemEmbedded *emb,
+xplayer_embedded_set_local_file (XplayerEmbedded *emb,
 			       const char *path,
 			       const char *uri,
 			       const char *base_uri,
@@ -949,27 +949,27 @@ totem_embedded_set_local_file (TotemEmbedded *emb,
 	g_message ("Setting the current path to %s (uri: %s base: %s)",
 		   path, uri, base_uri);
 
-	totem_embedded_clear_playlist (emb, NULL);
+	xplayer_embedded_clear_playlist (emb, NULL);
 
 	file_uri = g_filename_to_uri (path, NULL, error);
 	if (!file_uri)
 		return FALSE;
 
 	/* FIXME what about |uri| param?!! */
-	totem_embedded_set_uri (emb, file_uri, base_uri, emb->current_subtitle_uri, FALSE);
+	xplayer_embedded_set_uri (emb, file_uri, base_uri, emb->current_subtitle_uri, FALSE);
 	g_free (file_uri);
 
-	return totem_embedded_open_internal (emb, TRUE, error);
+	return xplayer_embedded_open_internal (emb, TRUE, error);
 }
 
 static gboolean
-totem_embedded_set_local_cache (TotemEmbedded *emb,
+xplayer_embedded_set_local_cache (XplayerEmbedded *emb,
 				const char *path,
 				GError **error)
 {
 	int fd;
 
-	g_message ("totem_embedded_set_local_cache: %s", path);
+	g_message ("xplayer_embedded_set_local_cache: %s", path);
 
 	/* FIXME Should also handle playlists */
 	if (!emb->is_browser_stream)
@@ -991,7 +991,7 @@ totem_embedded_set_local_cache (TotemEmbedded *emb,
 }
 
 static gboolean
-totem_embedded_set_playlist (TotemEmbedded *emb,
+xplayer_embedded_set_playlist (XplayerEmbedded *emb,
 			     const char *path,
 			     const char *uri,
 			     const char *base_uri,
@@ -1000,7 +1000,7 @@ totem_embedded_set_playlist (TotemEmbedded *emb,
 	g_message ("Setting the current playlist to %s (uri: %s base: %s)",
 		   path, uri, base_uri);
 
-	totem_embedded_clear_playlist (emb, NULL);
+	xplayer_embedded_clear_playlist (emb, NULL);
 
 	if (path != NULL && *path != '\0') {
 		char *file_uri;
@@ -1012,7 +1012,7 @@ totem_embedded_set_playlist (TotemEmbedded *emb,
 		/* FIXME, we should remove that when we can
 		 * parse from memory or
 		 * https://bugzilla.gnome.org/show_bug.cgi?id=598702 is fixed */
-		fd = g_file_open_tmp ("totem-browser-plugin-playlist-XXXXXX",
+		fd = g_file_open_tmp ("xplayer-browser-plugin-playlist-XXXXXX",
 				      &tmp_file,
 				      &err);
 		if (fd < 0) {
@@ -1042,22 +1042,22 @@ totem_embedded_set_playlist (TotemEmbedded *emb,
 		close (fd);
 
 		emb->remove_copy = TRUE;
-		totem_embedded_set_uri (emb, file_uri, base_uri, NULL, FALSE);
+		xplayer_embedded_set_uri (emb, file_uri, base_uri, NULL, FALSE);
 		g_free (file_uri);
 	} else {
-		totem_embedded_set_uri (emb, uri, base_uri, NULL, FALSE);
+		xplayer_embedded_set_uri (emb, uri, base_uri, NULL, FALSE);
 	}
 
 	/* Schedule parsing on idle */
 	if (emb->parser_id == 0)
-		emb->parser_id = g_idle_add (totem_embedded_push_parser,
+		emb->parser_id = g_idle_add (xplayer_embedded_push_parser,
 					     emb);
 
 	return TRUE;
 }
 
 static GAppInfo *
-totem_embedded_get_app_for_uri (const char *uri)
+xplayer_embedded_get_app_for_uri (const char *uri)
 {
 	char *type;
 	GAppInfo *info;
@@ -1070,7 +1070,7 @@ totem_embedded_get_app_for_uri (const char *uri)
 }
 
 static void
-totem_embedded_update_menu (TotemEmbedded *emb)
+xplayer_embedded_update_menu (XplayerEmbedded *emb)
 {
 	GtkWidget *item, *image;
 	GtkMenuShell *menu;
@@ -1096,7 +1096,7 @@ totem_embedded_update_menu (TotemEmbedded *emb)
 			uri = emb->stream_uri;
 		else
 			uri = emb->current_uri;
-		emb->app = totem_embedded_get_app_for_uri (uri);
+		emb->app = xplayer_embedded_get_app_for_uri (uri);
 	}
 
 	if (emb->app == NULL) {
@@ -1131,23 +1131,23 @@ totem_embedded_update_menu (TotemEmbedded *emb)
 }
 
 static void
-on_open1_activate (GtkButton *button, TotemEmbedded *emb)
+on_open1_activate (GtkButton *button, XplayerEmbedded *emb)
 {
 	GTimeVal val;
 	g_get_current_time (&val);
-	totem_embedded_launch_player (emb, val.tv_sec);
-	totem_embedded_stop (emb, NULL);
+	xplayer_embedded_launch_player (emb, val.tv_sec);
+	xplayer_embedded_stop (emb, NULL);
 }
 
 void
-on_fullscreen1_activate (GtkMenuItem *menuitem, TotemEmbedded *emb)
+on_fullscreen1_activate (GtkMenuItem *menuitem, XplayerEmbedded *emb)
 {
-	if (totem_fullscreen_is_fullscreen (emb->fs) == FALSE)
-		totem_embedded_toggle_fullscreen (emb);
+	if (xplayer_fullscreen_is_fullscreen (emb->fs) == FALSE)
+		xplayer_embedded_toggle_fullscreen (emb);
 }
 
 void
-on_copy_location1_activate (GtkButton *button, TotemEmbedded *emb)
+on_copy_location1_activate (GtkButton *button, XplayerEmbedded *emb)
 {
 	GdkDisplay *display;
 	GtkClipboard *clip;
@@ -1174,23 +1174,23 @@ on_copy_location1_activate (GtkButton *button, TotemEmbedded *emb)
 }
 
 void
-on_preferences1_activate (GtkButton *button, TotemEmbedded *emb)
+on_preferences1_activate (GtkButton *button, XplayerEmbedded *emb)
 {
 	/* TODO: */
 }
 
 static void
-on_play_pause (GtkWidget *widget, TotemEmbedded *emb)
+on_play_pause (GtkWidget *widget, XplayerEmbedded *emb)
 {
-	if (emb->state == TOTEM_STATE_PLAYING) {
-		totem_embedded_pause (emb, NULL);
+	if (emb->state == XPLAYER_STATE_PLAYING) {
+		xplayer_embedded_pause (emb, NULL);
 	} else {
 		if (emb->current_uri == NULL) {
-			totem_glow_button_set_glow (TOTEM_GLOW_BUTTON (emb->pp_button), FALSE);
+			xplayer_glow_button_set_glow (XPLAYER_GLOW_BUTTON (emb->pp_button), FALSE);
 			g_signal_emit (emb, signals[BUTTON_PRESS], 0,
 				       gtk_get_current_event_time (), 0);
 		} else {
-			totem_embedded_play (emb, NULL);
+			xplayer_embedded_play (emb, NULL);
 		}
 	}
 }
@@ -1217,7 +1217,7 @@ resolve_redirect (const char *old_mrl, const char *mrl)
 }
 
 static void
-on_got_redirect (GtkWidget *bvw, const char *mrl, TotemEmbedded *emb)
+on_got_redirect (GtkWidget *bvw, const char *mrl, XplayerEmbedded *emb)
 {
 	char *new_uri = NULL;
 
@@ -1245,19 +1245,19 @@ on_got_redirect (GtkWidget *bvw, const char *mrl, TotemEmbedded *emb)
 	g_message ("Redirecting to '%s'", new_uri ? new_uri : mrl);
 
 	/* FIXME: clear playlist? or replace current entry? or add a new entry? */
-	/* FIXME: use totem_embedded_open_uri? */
+	/* FIXME: use xplayer_embedded_open_uri? */
 
-	totem_embedded_set_uri (emb, new_uri ? new_uri : mrl , emb->base_uri /* FIXME? */, emb->current_subtitle_uri, FALSE);
+	xplayer_embedded_set_uri (emb, new_uri ? new_uri : mrl , emb->base_uri /* FIXME? */, emb->current_subtitle_uri, FALSE);
 
-	totem_embedded_set_state (emb, TOTEM_STATE_STOPPED);
+	xplayer_embedded_set_state (emb, XPLAYER_STATE_STOPPED);
 
-	totem_embedded_open_internal (emb, TRUE, NULL /* FIXME? */);
+	xplayer_embedded_open_internal (emb, TRUE, NULL /* FIXME? */);
 
 	g_free (new_uri);
 }
 
 static char *
-totem_embedded_get_nice_name_for_stream (BaconVideoWidget *bvw)
+xplayer_embedded_get_nice_name_for_stream (BaconVideoWidget *bvw)
 {
 	char *title, *artist, *retval;
 	int tracknum;
@@ -1295,37 +1295,37 @@ totem_embedded_get_nice_name_for_stream (BaconVideoWidget *bvw)
 }
 
 static void
-on_got_metadata (BaconVideoWidget *bvw, TotemEmbedded *emb)
+on_got_metadata (BaconVideoWidget *bvw, XplayerEmbedded *emb)
 {
 	char *title;
 
-	title = totem_embedded_get_nice_name_for_stream (bvw);
+	title = xplayer_embedded_get_nice_name_for_stream (bvw);
 	if (title == NULL)
 		return;
 
-	totem_embedded_update_title (emb, title);
+	xplayer_embedded_update_title (emb, title);
 }
 
 static void
-totem_embedded_toggle_fullscreen (TotemEmbedded *emb)
+xplayer_embedded_toggle_fullscreen (XplayerEmbedded *emb)
 {
-	if (totem_fullscreen_is_fullscreen (emb->fs) != FALSE)
-		totem_embedded_set_fullscreen (emb, FALSE, NULL);
+	if (xplayer_fullscreen_is_fullscreen (emb->fs) != FALSE)
+		xplayer_embedded_set_fullscreen (emb, FALSE, NULL);
 	else
-		totem_embedded_set_fullscreen (emb, TRUE, NULL);
+		xplayer_embedded_set_fullscreen (emb, TRUE, NULL);
 }
 
 static void
-totem_embedded_on_fullscreen_exit (GtkWidget *widget, TotemEmbedded *emb)
+xplayer_embedded_on_fullscreen_exit (GtkWidget *widget, XplayerEmbedded *emb)
 {
-	if (totem_fullscreen_is_fullscreen (emb->fs) != FALSE)
-		totem_embedded_toggle_fullscreen (emb);
+	if (xplayer_fullscreen_is_fullscreen (emb->fs) != FALSE)
+		xplayer_embedded_toggle_fullscreen (emb);
 }
 
 static gboolean
 on_video_button_press_event (BaconVideoWidget *bvw,
 			     GdkEventButton *event,
-			     TotemEmbedded *emb)
+			     XplayerEmbedded *emb)
 {
 	guint state = event->state & gtk_accelerator_get_default_mod_mask ();
 	GtkMenu *menu;
@@ -1335,9 +1335,9 @@ on_video_button_press_event (BaconVideoWidget *bvw,
 
 	menu = GTK_MENU (gtk_builder_get_object (emb->menuxml, "menu"));
 
-	if (event->type == GDK_BUTTON_PRESS && event->button == 1 && state == 0 && emb->state == TOTEM_STATE_STOPPED) {
+	if (event->type == GDK_BUTTON_PRESS && event->button == 1 && state == 0 && emb->state == XPLAYER_STATE_STOPPED) {
 		if (emb->error != NULL) {
-			totem_interface_error (_("An error occurred"), emb->error->message, (GtkWindow *) (emb->window));
+			xplayer_interface_error (_("An error occurred"), emb->error->message, (GtkWindow *) (emb->window));
 			g_error_free (emb->error);
 			emb->error = NULL;
 		} else if (!gtk_widget_get_visible (GTK_WIDGET (menu))) {
@@ -1357,18 +1357,18 @@ on_video_button_press_event (BaconVideoWidget *bvw,
 		gtk_menu_popup (menu, NULL, NULL, NULL, NULL,
 				event->button, event->time);
 	} else if (event->type == GDK_2BUTTON_PRESS && event->button == 1 && state == 0) {
-		totem_embedded_toggle_fullscreen (emb);
+		xplayer_embedded_toggle_fullscreen (emb);
 	}
 
 	return FALSE;
 }
 
 static void
-on_eos_event (BaconVideoWidget *bvw, TotemEmbedded *emb)
+on_eos_event (BaconVideoWidget *bvw, XplayerEmbedded *emb)
 {
 	gboolean start_play;
 
-	totem_embedded_set_state (emb, TOTEM_STATE_STOPPED);
+	xplayer_embedded_set_state (emb, XPLAYER_STATE_STOPPED);
 	gtk_adjustment_set_value (emb->seekadj, 0);
 
 	/* FIXME: the plugin needs to handle EOS itself, e.g. for QTNext */
@@ -1383,10 +1383,10 @@ on_eos_event (BaconVideoWidget *bvw, TotemEmbedded *emb)
 			emb->is_browser_stream = FALSE;
 			bacon_video_widget_close (emb->bvw);
 			update_fill (emb, -1.0);
-			totem_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
+			xplayer_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
 		} else {
 			/* FIXME: should find a way to enable playback of the stream again without re-requesting it */
-			totem_embedded_set_pp_state (emb, FALSE);
+			xplayer_embedded_set_pp_state (emb, FALSE);
 		}
 	/* FIXME? else if (emb->playing_nth_item == emb->playlist_num_items) ? */
 	} else if (emb->num_items == 1) {
@@ -1395,24 +1395,24 @@ on_eos_event (BaconVideoWidget *bvw, TotemEmbedded *emb)
 				bacon_video_widget_pause (emb->bvw);
 				bacon_video_widget_seek (emb->bvw, 0.0, NULL);
 				if (start_play != FALSE)
-					totem_embedded_play (emb, NULL);
+					xplayer_embedded_play (emb, NULL);
 			} else {
 				bacon_video_widget_close (emb->bvw);
 				update_fill (emb, -1.0);
-				totem_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
+				xplayer_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
 			}
 		} else {
 			bacon_video_widget_close (emb->bvw);
 			update_fill (emb, -1.0);
-			totem_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
+			xplayer_embedded_open_internal (emb, start_play, NULL /* FIXME? */);
 		}
 	} else if (emb->current) {
-		totem_embedded_open_playlist_item (emb, emb->current->next);
+		xplayer_embedded_open_playlist_item (emb, emb->current->next);
 	}
 }
 
 static gboolean
-skip_unplayable_stream (TotemEmbedded *emb)
+skip_unplayable_stream (XplayerEmbedded *emb)
 {
 	on_eos_event (BACON_VIDEO_WIDGET (emb->bvw), emb);
 	return FALSE;
@@ -1422,14 +1422,14 @@ static void
 on_error_event (BaconVideoWidget *bvw,
 		char *message,
                 gboolean playback_stopped,
-		TotemEmbedded *emb)
+		XplayerEmbedded *emb)
 {
 	if (playback_stopped) {
 		/* FIXME: necessary? */
 		if (emb->is_browser_stream)
 			g_signal_emit (emb, signals[STOP_STREAM], 0);
 	
-		totem_embedded_set_state (emb, TOTEM_STATE_STOPPED);
+		xplayer_embedded_set_state (emb, XPLAYER_STATE_STOPPED);
 
 		/* If we have a playlist, and that the current item
 		 * is < 60 seconds long, just go through it
@@ -1440,7 +1440,7 @@ on_error_event (BaconVideoWidget *bvw,
 		 * FIXME we should mark streams as not playable though
 		 * so we don't loop through unplayable streams... */
 		if (emb->num_items > 1 && emb->current) {
-			TotemPlItem *item = emb->current->data;
+			XplayerPlItem *item = emb->current->data;
 
 			if ((item->duration > 0 && item->duration < 60)
 			    || (!emb->repeat && emb->current->next)) {
@@ -1450,15 +1450,15 @@ on_error_event (BaconVideoWidget *bvw,
 		}
 	}
 
-	totem_embedded_set_error (emb, BVW_ERROR_GENERIC, message);
-	totem_embedded_set_error_logo (emb, NULL);
+	xplayer_embedded_set_error (emb, BVW_ERROR_GENERIC, message);
+	xplayer_embedded_set_error_logo (emb, NULL);
 }
 
 static void
-cb_vol (GtkWidget *val, gdouble value, TotemEmbedded *emb)
+cb_vol (GtkWidget *val, gdouble value, XplayerEmbedded *emb)
 {
 	bacon_video_widget_set_volume (emb->bvw, value);
-	totem_embedded_volume_changed (emb, value);
+	xplayer_embedded_volume_changed (emb, value);
 }
 
 static void
@@ -1467,42 +1467,42 @@ on_tick (GtkWidget *bvw,
 		gint64 stream_length,
 		double current_position,
 		gboolean seekable,
-		TotemEmbedded *emb)
+		XplayerEmbedded *emb)
 {
-	if (emb->state != TOTEM_STATE_STOPPED) {
+	if (emb->state != XPLAYER_STATE_STOPPED) {
 		gtk_widget_set_sensitive (emb->seek, seekable);
 		gtk_widget_set_sensitive (emb->fs->seek, seekable);
 		if (emb->seeking == FALSE)
 			gtk_adjustment_set_value (emb->seekadj,
 					current_position * 65535);
 		if (stream_length == 0) {
-			totem_statusbar_set_time_and_length (emb->statusbar,
+			xplayer_statusbar_set_time_and_length (emb->statusbar,
 					(int) (current_time / 1000), -1);
 		} else {
-			totem_statusbar_set_time_and_length (emb->statusbar,
+			xplayer_statusbar_set_time_and_length (emb->statusbar,
 					(int) (current_time / 1000),
 					(int) (stream_length / 1000));
 		}
 
-		totem_time_label_set_time
-			(TOTEM_TIME_LABEL (emb->fs->time_label),
+		xplayer_time_label_set_time
+			(XPLAYER_TIME_LABEL (emb->fs->time_label),
 			 current_time, stream_length);
 	}
 
 	g_signal_emit (emb, signals[SIGNAL_TICK], 0,
 		       (guint32) current_time,
 		       (guint32) stream_length,
-		       totem_states[emb->state]);
+		       xplayer_states[emb->state]);
 }
 
 static void
-on_buffering (BaconVideoWidget *bvw, gdouble percentage, TotemEmbedded *emb)
+on_buffering (BaconVideoWidget *bvw, gdouble percentage, XplayerEmbedded *emb)
 {
 //	g_message ("Buffering: %d %%", percentage);
 }
 
 static void
-update_fill (TotemEmbedded *emb, gdouble level)
+update_fill (XplayerEmbedded *emb, gdouble level)
 {
 	if (level < 0.0) {
 		gtk_range_set_show_fill_level (GTK_RANGE (emb->seek), FALSE);
@@ -1517,7 +1517,7 @@ update_fill (TotemEmbedded *emb, gdouble level)
 }
 
 static void
-on_download_buffering (BaconVideoWidget *bvw, gdouble level, TotemEmbedded *emb)
+on_download_buffering (BaconVideoWidget *bvw, gdouble level, XplayerEmbedded *emb)
 {
 	update_fill (emb, level);
 }
@@ -1525,7 +1525,7 @@ on_download_buffering (BaconVideoWidget *bvw, gdouble level, TotemEmbedded *emb)
 static void
 property_notify_cb_volume (BaconVideoWidget *bvw,
 			   GParamSpec *spec,
-			   TotemEmbedded *emb)
+			   XplayerEmbedded *emb)
 {
 	double volume;
 	
@@ -1533,26 +1533,26 @@ property_notify_cb_volume (BaconVideoWidget *bvw,
 	
 	g_signal_handlers_block_by_func (emb->volume, cb_vol, emb);
 	gtk_scale_button_set_value (GTK_SCALE_BUTTON (emb->volume), volume);
-	totem_embedded_volume_changed (emb, volume);
+	xplayer_embedded_volume_changed (emb, volume);
 	g_signal_handlers_unblock_by_func (emb->volume, cb_vol, emb);
 }
 
 static gboolean
-on_seek_start (GtkWidget *widget, GdkEventButton *event, TotemEmbedded *emb)
+on_seek_start (GtkWidget *widget, GdkEventButton *event, XplayerEmbedded *emb)
 {
 	emb->seeking = TRUE;
-	totem_time_label_set_seeking (TOTEM_TIME_LABEL (emb->fs->time_label),
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (emb->fs->time_label),
 				      TRUE);
 
 	return FALSE;
 }
 
 static gboolean
-cb_on_seek (GtkWidget *widget, GdkEventButton *event, TotemEmbedded *emb)
+cb_on_seek (GtkWidget *widget, GdkEventButton *event, XplayerEmbedded *emb)
 {
 	bacon_video_widget_seek (emb->bvw,
 		gtk_range_get_value (GTK_RANGE (widget)) / 65535, NULL);
-	totem_time_label_set_seeking (TOTEM_TIME_LABEL (emb->fs->time_label),
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (emb->fs->time_label),
 				      FALSE);
 	emb->seeking = FALSE;
 
@@ -1571,7 +1571,7 @@ controls_size_allocate_cb (GtkWidget *controls,
 #endif
 
 static void
-totem_embedded_action_volume_relative (TotemEmbedded *emb, double off_pct)
+xplayer_embedded_action_volume_relative (XplayerEmbedded *emb, double off_pct)
 {
 	double vol;
 	
@@ -1580,30 +1580,30 @@ totem_embedded_action_volume_relative (TotemEmbedded *emb, double off_pct)
 	
 	vol = bacon_video_widget_get_volume (emb->bvw);
 	bacon_video_widget_set_volume (emb->bvw, vol + off_pct);
-	totem_embedded_volume_changed (emb, vol + off_pct);
+	xplayer_embedded_volume_changed (emb, vol + off_pct);
 }
 
 static gboolean
-totem_embedded_handle_key_press (TotemEmbedded *emb, GdkEventKey *event)
+xplayer_embedded_handle_key_press (XplayerEmbedded *emb, GdkEventKey *event)
 {
 	switch (event->keyval) {
 	case GDK_KEY_Escape:
-		if (totem_fullscreen_is_fullscreen (emb->fs) != FALSE)
-			totem_embedded_toggle_fullscreen (emb);
+		if (xplayer_fullscreen_is_fullscreen (emb->fs) != FALSE)
+			xplayer_embedded_toggle_fullscreen (emb);
 		return TRUE;
 	case GDK_KEY_F11:
 	case GDK_KEY_f:
 	case GDK_KEY_F:
-		totem_embedded_toggle_fullscreen (emb);
+		xplayer_embedded_toggle_fullscreen (emb);
 		return TRUE;
 	case GDK_KEY_space:
 		on_play_pause (NULL, emb);
 		return TRUE;
 	case GDK_KEY_Up:
-		totem_embedded_action_volume_relative (emb, VOLUME_UP_OFFSET);
+		xplayer_embedded_action_volume_relative (emb, VOLUME_UP_OFFSET);
 		return TRUE;
 	case GDK_KEY_Down:
-		totem_embedded_action_volume_relative (emb, VOLUME_DOWN_OFFSET);
+		xplayer_embedded_action_volume_relative (emb, VOLUME_DOWN_OFFSET);
 		return TRUE;
 	case GDK_KEY_Left:
 	case GDK_KEY_Right:
@@ -1614,8 +1614,8 @@ totem_embedded_handle_key_press (TotemEmbedded *emb, GdkEventKey *event)
 }
 
 static gboolean
-totem_embedded_key_press_event (GtkWidget *widget, GdkEventKey *event,
-				TotemEmbedded *emb)
+xplayer_embedded_key_press_event (GtkWidget *widget, GdkEventKey *event,
+				XplayerEmbedded *emb)
 {
 	if (event->type != GDK_KEY_PRESS)
 		return FALSE;
@@ -1625,7 +1625,7 @@ totem_embedded_key_press_event (GtkWidget *widget, GdkEventKey *event,
 		switch (event->keyval) {
 		case GDK_KEY_Left:
 		case GDK_KEY_Right:
-			return totem_embedded_handle_key_press (emb, event);
+			return xplayer_embedded_handle_key_press (emb, event);
 		default:
 			break;
 		}
@@ -1638,11 +1638,11 @@ totem_embedded_key_press_event (GtkWidget *widget, GdkEventKey *event,
 	    event->state & GDK_MOD5_MASK)
 		return FALSE;
 
-	return totem_embedded_handle_key_press (emb, event);
+	return xplayer_embedded_handle_key_press (emb, event);
 }
 
 static gboolean
-totem_embedded_construct (TotemEmbedded *emb,
+xplayer_embedded_construct (XplayerEmbedded *emb,
 			  Window xid,
 			  int width,
 			  int height)
@@ -1651,7 +1651,7 @@ totem_embedded_construct (TotemEmbedded *emb,
 	GtkWidget *popup_button;
 	GError *err = NULL;
 
-	emb->xml = totem_interface_load ("mozilla-viewer.ui", TRUE,
+	emb->xml = xplayer_interface_load ("mozilla-viewer.ui", TRUE,
 					 GTK_WINDOW (emb->window), emb);
 	g_assert (emb->xml);
 
@@ -1696,16 +1696,16 @@ totem_embedded_construct (TotemEmbedded *emb,
 	/* Fullscreen setup */
 	emb->fs_window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 	gtk_widget_realize (emb->fs_window);
-	gtk_window_set_title (GTK_WINDOW (emb->fs_window), _("Totem Movie Player"));
-	gtk_window_set_default_icon_name ("totem");
+	gtk_window_set_title (GTK_WINDOW (emb->fs_window), _("Xplayer Movie Player"));
+	gtk_window_set_default_icon_name ("xplayer");
 
-	emb->fs = totem_fullscreen_new (GTK_WINDOW (emb->fs_window));
-	totem_fullscreen_set_video_widget (emb->fs, emb->bvw);
+	emb->fs = xplayer_fullscreen_new (GTK_WINDOW (emb->fs_window));
+	xplayer_fullscreen_set_video_widget (emb->fs, emb->bvw);
 	g_signal_connect (G_OBJECT (emb->fs->exit_button), "clicked",
-			  G_CALLBACK (totem_embedded_on_fullscreen_exit), emb);
+			  G_CALLBACK (xplayer_embedded_on_fullscreen_exit), emb);
 
 	emb->pp_fs_button = GTK_WIDGET (gtk_tool_button_new_from_stock
-					(totem_get_rtl_icon_name ("media-playback-start")));
+					(xplayer_get_rtl_icon_name ("media-playback-start")));
 	g_signal_connect (G_OBJECT (emb->pp_fs_button), "clicked",
 			  G_CALLBACK (on_play_pause), emb);
 	gtk_container_add (GTK_CONTAINER (emb->fs->buttons_box), emb->pp_fs_button);
@@ -1714,15 +1714,15 @@ totem_embedded_construct (TotemEmbedded *emb,
 	gtk_widget_add_events (emb->fs_window, GDK_KEY_PRESS_MASK |
 			       GDK_KEY_RELEASE_MASK);
 	g_signal_connect (G_OBJECT(emb->fs_window), "key_press_event",
-			G_CALLBACK (totem_embedded_key_press_event), emb);
+			G_CALLBACK (xplayer_embedded_key_press_event), emb);
 	g_signal_connect (G_OBJECT(emb->fs_window), "key_release_event",
-			G_CALLBACK (totem_embedded_key_press_event), emb);
+			G_CALLBACK (xplayer_embedded_key_press_event), emb);
 	gtk_widget_add_events (GTK_WIDGET (emb->bvw), GDK_KEY_PRESS_MASK |
 			       GDK_KEY_RELEASE_MASK);
 	g_signal_connect (G_OBJECT(emb->bvw), "key_press_event",
-			G_CALLBACK (totem_embedded_key_press_event), emb);
+			G_CALLBACK (xplayer_embedded_key_press_event), emb);
 	g_signal_connect (G_OBJECT(emb->bvw), "key_release_event",
-			G_CALLBACK (totem_embedded_key_press_event), emb);
+			G_CALLBACK (xplayer_embedded_key_press_event), emb);
 
 	g_signal_connect (G_OBJECT(emb->bvw), "got-redirect",
 			G_CALLBACK (on_got_redirect), emb);
@@ -1769,13 +1769,13 @@ totem_embedded_construct (TotemEmbedded *emb,
 			  G_CALLBACK (cb_on_seek), emb);
 
 	emb->pp_button = GTK_WIDGET (gtk_builder_get_object (emb->xml, "pp_button"));
-	image = gtk_image_new_from_icon_name (totem_get_rtl_icon_name ("media-playback-start"), GTK_ICON_SIZE_MENU);
+	image = gtk_image_new_from_icon_name (xplayer_get_rtl_icon_name ("media-playback-start"), GTK_ICON_SIZE_MENU);
 	gtk_button_set_image (GTK_BUTTON (emb->pp_button), image);
 	g_signal_connect (G_OBJECT (emb->pp_button), "clicked",
 			  G_CALLBACK (on_play_pause), emb);
 
 	/* popup */
-	emb->menuxml = totem_interface_load ("mozilla-viewer.ui", TRUE,
+	emb->menuxml = xplayer_interface_load ("mozilla-viewer.ui", TRUE,
 					     GTK_WINDOW (emb->window), emb);
 	g_assert (emb->menuxml);
 
@@ -1792,7 +1792,7 @@ totem_embedded_construct (TotemEmbedded *emb,
 	g_signal_connect (G_OBJECT (emb->volume), "value-changed",
 			  G_CALLBACK (cb_vol), emb);
 
-	emb->statusbar = TOTEM_STATUSBAR (gtk_builder_get_object (emb->xml, "statusbar"));
+	emb->statusbar = XPLAYER_STATUSBAR (gtk_builder_get_object (emb->xml, "statusbar"));
 
 	if (!emb->hidden)
 		gtk_widget_set_size_request (emb->window, width, height);
@@ -1817,7 +1817,7 @@ totem_embedded_construct (TotemEmbedded *emb,
 		gchar *css_path;
 		GError *error = NULL;
 
-		css_path = totem_interface_get_full_path ("mozilla-viewer.css");
+		css_path = xplayer_interface_get_full_path ("mozilla-viewer.css");
 		provider = gtk_css_provider_new ();
 		gtk_css_provider_load_from_path (provider, css_path, &error);
 		g_free (css_path);
@@ -1854,7 +1854,7 @@ totem_embedded_construct (TotemEmbedded *emb,
 			(gtk_widget_get_display (emb->window),
 			 GDK_HAND2);
 	}
-	totem_embedded_set_state (emb, TOTEM_STATE_STOPPED);
+	xplayer_embedded_set_state (emb, XPLAYER_STATE_STOPPED);
 
 	if (!emb->hidden) {
 		gtk_widget_show (emb->window);
@@ -1862,20 +1862,20 @@ totem_embedded_construct (TotemEmbedded *emb,
 
 	/* Set the logo and the button glow */
 	if (!emb->hidden && emb->autostart == FALSE) {
-		totem_glow_button_set_glow (TOTEM_GLOW_BUTTON (emb->pp_button), TRUE);
+		xplayer_glow_button_set_glow (XPLAYER_GLOW_BUTTON (emb->pp_button), TRUE);
 		if (gtk_widget_get_direction (GTK_WIDGET (emb->bvw)) == GTK_TEXT_DIR_LTR)
-			totem_embedded_set_logo_by_name (emb, "gtk-media-play-ltr");
+			xplayer_embedded_set_logo_by_name (emb, "gtk-media-play-ltr");
 		else
-			totem_embedded_set_logo_by_name (emb, "gtk-media-play-rtl");
+			xplayer_embedded_set_logo_by_name (emb, "gtk-media-play-rtl");
 	} else {
-		totem_embedded_set_logo_by_name (emb, "totem");
+		xplayer_embedded_set_logo_by_name (emb, "xplayer");
 	}
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_set_window (TotemEmbedded *embedded,
+xplayer_embedded_set_window (XplayerEmbedded *embedded,
 			   const char *controls,
 			   guint window,
 			   int width,
@@ -1887,8 +1887,8 @@ totem_embedded_set_window (TotemEmbedded *embedded,
 	if (strcmp (controls, "All") != 0 &&
 	    strcmp (controls, "ImageWindow") != 0) {
 		g_set_error (error,
-			     TOTEM_EMBEDDED_ERROR_QUARK,
-			     TOTEM_EMBEDDED_SETWINDOW_UNSUPPORTED_CONTROLS,
+			     XPLAYER_EMBEDDED_ERROR_QUARK,
+			     XPLAYER_EMBEDDED_SETWINDOW_UNSUPPORTED_CONTROLS,
 			     "Unsupported controls '%s'", controls);
 		return FALSE;
 	}
@@ -1897,16 +1897,16 @@ totem_embedded_set_window (TotemEmbedded *embedded,
 		g_warning ("Viewer: Already have a window!");
 
 		g_set_error_literal (error,
-                                     TOTEM_EMBEDDED_ERROR_QUARK,
-                                     TOTEM_EMBEDDED_SETWINDOW_HAVE_WINDOW,
+                                     XPLAYER_EMBEDDED_ERROR_QUARK,
+                                     XPLAYER_EMBEDDED_SETWINDOW_HAVE_WINDOW,
                                      "Already have a window");
 		return FALSE;
 	}
 
 	if (window == 0) {
 		g_set_error_literal (error,
-                                     TOTEM_EMBEDDED_ERROR_QUARK,
-                                     TOTEM_EMBEDDED_SETWINDOW_INVALID_XID,
+                                     XPLAYER_EMBEDDED_ERROR_QUARK,
+                                     XPLAYER_EMBEDDED_SETWINDOW_INVALID_XID,
                                      "Invalid XID");
 		return FALSE;
 	}
@@ -1914,14 +1914,14 @@ totem_embedded_set_window (TotemEmbedded *embedded,
 	embedded->width = width;
 	embedded->height = height;
 
-	totem_embedded_construct (embedded, (Window) window,
+	xplayer_embedded_construct (embedded, (Window) window,
 				  width, height);
 
 	return TRUE;
 }
 
 static gboolean
-totem_embedded_unset_window (TotemEmbedded *embedded,
+xplayer_embedded_unset_window (XplayerEmbedded *embedded,
 			    guint window,
 			    GError **error)
 {
@@ -1940,13 +1940,13 @@ entry_metadata_foreach (const char *key,
 }
 
 static void
-entry_parsed (TotemPlParser *parser,
+entry_parsed (XplayerPlParser *parser,
 	     const char *uri,
 	     GHashTable *metadata,
 	     gpointer data)
 {
-	TotemEmbedded *emb = (TotemEmbedded *) data;
-	TotemPlItem *item;
+	XplayerEmbedded *emb = (XplayerEmbedded *) data;
+	XplayerPlItem *item;
 	int duration;
 
 	if (g_str_has_prefix (uri, "file://") != FALSE
@@ -1959,39 +1959,39 @@ entry_parsed (TotemPlParser *parser,
 	g_hash_table_foreach (metadata, (GHFunc) entry_metadata_foreach, NULL);
 
 	/* Skip short advert streams */
-	duration = totem_pl_parser_parse_duration (g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_DURATION), FALSE);
+	duration = xplayer_pl_parser_parse_duration (g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_DURATION), FALSE);
 	if (duration == 0)
 		return;
 
-	item = g_slice_new0 (TotemPlItem);
+	item = g_slice_new0 (XplayerPlItem);
 	item->uri = g_strdup (uri);
-	item->title = g_strdup (g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_TITLE));
+	item->title = g_strdup (g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_TITLE));
 	item->duration = duration;
-	item->starttime = totem_pl_parser_parse_duration (g_hash_table_lookup (metadata, TOTEM_PL_PARSER_FIELD_STARTTIME), FALSE);
+	item->starttime = xplayer_pl_parser_parse_duration (g_hash_table_lookup (metadata, XPLAYER_PL_PARSER_FIELD_STARTTIME), FALSE);
 
 	emb->playlist = g_list_prepend (emb->playlist, item);
 }
 
 static gboolean
-totem_embedded_push_parser (gpointer data)
+xplayer_embedded_push_parser (gpointer data)
 {
-	TotemEmbedded *emb = (TotemEmbedded *) data;
-	TotemPlParser *parser;
-	TotemPlParserResult res;
+	XplayerEmbedded *emb = (XplayerEmbedded *) data;
+	XplayerPlParser *parser;
+	XplayerPlParserResult res;
 
 	emb->parser_id = 0;
 
-	parser = totem_pl_parser_new ();
+	parser = xplayer_pl_parser_new ();
 	g_object_set (parser, "force", TRUE,
 		      "disable-unsafe", TRUE,
 		      NULL);
 	g_signal_connect (parser, "entry-parsed", G_CALLBACK (entry_parsed), emb);
-	res = totem_pl_parser_parse_with_base (parser, emb->current_uri,
+	res = xplayer_pl_parser_parse_with_base (parser, emb->current_uri,
 					       emb->base_uri, FALSE);
 	g_object_unref (parser);
 
 	/* Delete the temporary file created in
-	 * totem_embedded_set_playlist */
+	 * xplayer_embedded_set_playlist */
 	if (emb->remove_copy) {
 		GFile *file;
 
@@ -2005,19 +2005,19 @@ totem_embedded_push_parser (gpointer data)
 
 	/* FIXME: show a proper error message */
 	switch (res) {
-	case TOTEM_PL_PARSER_RESULT_SUCCESS:
+	case XPLAYER_PL_PARSER_RESULT_SUCCESS:
 		/* Success! */
 		break;
-	case TOTEM_PL_PARSER_RESULT_UNHANDLED:
+	case XPLAYER_PL_PARSER_RESULT_UNHANDLED:
 		g_print ("url '%s' unhandled\n", emb->current_uri);
 		break;
-	case TOTEM_PL_PARSER_RESULT_ERROR:
+	case XPLAYER_PL_PARSER_RESULT_ERROR:
 		g_print ("error handling url '%s'\n", emb->current_uri);
 		break;
-	case TOTEM_PL_PARSER_RESULT_IGNORED:
+	case XPLAYER_PL_PARSER_RESULT_IGNORED:
 		g_print ("ignored url '%s'\n", emb->current_uri);
 		break;
-	case TOTEM_PL_PARSER_RESULT_CANCELLED:
+	case XPLAYER_PL_PARSER_RESULT_CANCELLED:
 		g_print ("cancelled url '%s'\n", emb->current_uri);
 		break;
 	default:
@@ -2026,15 +2026,15 @@ totem_embedded_push_parser (gpointer data)
 	}
 
 	/* Check if we have anything in the playlist now */
-	if (emb->playlist == NULL && res != TOTEM_PL_PARSER_RESULT_SUCCESS) {
+	if (emb->playlist == NULL && res != XPLAYER_PL_PARSER_RESULT_SUCCESS) {
 		g_message ("Couldn't parse playlist '%s'", emb->current_uri);
-		totem_embedded_set_error (emb, BVW_ERROR_EMPTY_FILE,
+		xplayer_embedded_set_error (emb, BVW_ERROR_EMPTY_FILE,
 					  _("No playlist or playlist empty"));
-		totem_embedded_set_error_logo (emb, NULL);
+		xplayer_embedded_set_error_logo (emb, NULL);
 		return FALSE;
 	} else if (emb->playlist == NULL) {
 		g_message ("Playlist empty");
-		totem_embedded_set_logo_by_name (emb, "totem");
+		xplayer_embedded_set_logo_by_name (emb, "xplayer");
 		return FALSE;
 	}
 
@@ -2042,7 +2042,7 @@ totem_embedded_push_parser (gpointer data)
 	emb->num_items = g_list_length (emb->playlist);
 
 	/* Launch the first item */
-	totem_embedded_open_playlist_item (emb, emb->playlist);
+	xplayer_embedded_open_playlist_item (emb, emb->playlist);
 
 	/* don't run again */
 	return FALSE;
@@ -2060,7 +2060,7 @@ static gboolean arg_repeat = FALSE;
 static gboolean arg_no_autostart = FALSE;
 static gboolean arg_audioonly = FALSE;
 static gboolean arg_g_fatal_warnings = FALSE;
-static TotemPluginType arg_plugin_type = TOTEM_PLUGIN_TYPE_LAST;
+static XplayerPluginType arg_plugin_type = XPLAYER_PLUGIN_TYPE_LAST;
 
 static gboolean
 parse_plugin_type (const gchar *option_name,
@@ -2068,16 +2068,16 @@ parse_plugin_type (const gchar *option_name,
 	           gpointer data,
 	           GError **error)
 {
-	const char types[TOTEM_PLUGIN_TYPE_LAST][12] = {
+	const char types[XPLAYER_PLUGIN_TYPE_LAST][12] = {
 		"gmp",
 		"narrowspace",
 		"mully",
 		"cone",
 		"vegas"
 	};
-	TotemPluginType type;
+	XplayerPluginType type;
 
-	for (type = 0; type < TOTEM_PLUGIN_TYPE_LAST; ++type) {
+	for (type = 0; type < XPLAYER_PLUGIN_TYPE_LAST; ++type) {
 		if (strcmp (value, types[type]) == 0) {
 			arg_plugin_type = type;
 			return TRUE;
@@ -2090,29 +2090,29 @@ parse_plugin_type (const gchar *option_name,
 
 static GOptionEntry option_entries [] =
 {
-	{ TOTEM_OPTION_PLUGIN_TYPE, 0, 0, G_OPTION_ARG_CALLBACK, parse_plugin_type, NULL, NULL },
-	{ TOTEM_OPTION_USER_AGENT, 0, 0, G_OPTION_ARG_STRING, &arg_user_agent, NULL, NULL },
-	{ TOTEM_OPTION_MIMETYPE, 0, 0, G_OPTION_ARG_STRING, &arg_mime_type, NULL, NULL },
-	{ TOTEM_OPTION_CONTROLS_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_no_controls, NULL, NULL },
-	{ TOTEM_OPTION_STATUSBAR, 0, 0, G_OPTION_ARG_NONE, &arg_statusbar, NULL, NULL },
-	{ TOTEM_OPTION_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_hidden, NULL, NULL },
-	{ TOTEM_OPTION_PLAYLIST, 0, 0, G_OPTION_ARG_NONE, &arg_is_playlist, NULL, NULL },
-	{ TOTEM_OPTION_REPEAT, 0, 0, G_OPTION_ARG_NONE, &arg_repeat, NULL, NULL },
-	{ TOTEM_OPTION_NOAUTOSTART, 0, 0, G_OPTION_ARG_NONE, &arg_no_autostart, NULL, NULL },
-	{ TOTEM_OPTION_AUDIOONLY, 0, 0, G_OPTION_ARG_NONE, &arg_audioonly, NULL, NULL },
-        { TOTEM_OPTION_REFERRER, 0, 0, G_OPTION_ARG_STRING, &arg_referrer, NULL, NULL },
+	{ XPLAYER_OPTION_PLUGIN_TYPE, 0, 0, G_OPTION_ARG_CALLBACK, parse_plugin_type, NULL, NULL },
+	{ XPLAYER_OPTION_USER_AGENT, 0, 0, G_OPTION_ARG_STRING, &arg_user_agent, NULL, NULL },
+	{ XPLAYER_OPTION_MIMETYPE, 0, 0, G_OPTION_ARG_STRING, &arg_mime_type, NULL, NULL },
+	{ XPLAYER_OPTION_CONTROLS_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_no_controls, NULL, NULL },
+	{ XPLAYER_OPTION_STATUSBAR, 0, 0, G_OPTION_ARG_NONE, &arg_statusbar, NULL, NULL },
+	{ XPLAYER_OPTION_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_hidden, NULL, NULL },
+	{ XPLAYER_OPTION_PLAYLIST, 0, 0, G_OPTION_ARG_NONE, &arg_is_playlist, NULL, NULL },
+	{ XPLAYER_OPTION_REPEAT, 0, 0, G_OPTION_ARG_NONE, &arg_repeat, NULL, NULL },
+	{ XPLAYER_OPTION_NOAUTOSTART, 0, 0, G_OPTION_ARG_NONE, &arg_no_autostart, NULL, NULL },
+	{ XPLAYER_OPTION_AUDIOONLY, 0, 0, G_OPTION_ARG_NONE, &arg_audioonly, NULL, NULL },
+        { XPLAYER_OPTION_REFERRER, 0, 0, G_OPTION_ARG_STRING, &arg_referrer, NULL, NULL },
 	{ "g-fatal-warnings", 0, 0, G_OPTION_ARG_NONE, &arg_g_fatal_warnings, "Make all warnings fatal", NULL },
 	{ G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_FILENAME_ARRAY /* STRING? */, &arg_remaining, NULL },
 	{ NULL }
 };
 
-#include "totem-plugin-viewer-interface.h"
+#include "xplayer-plugin-viewer-interface.h"
 
 int main (int argc, char **argv)
 {
 	GOptionContext *context;
 	GOptionGroup *baconoptiongroup;
-	TotemEmbedded *emb;
+	XplayerEmbedded *emb;
 	DBusGProxy *proxy;
 	DBusGConnection *conn;
 	guint res;
@@ -2125,7 +2125,7 @@ int main (int argc, char **argv)
 	textdomain (GETTEXT_PACKAGE);
 
 	g_set_application_name (_("Movie browser plugin"));
-	gtk_window_set_default_icon_name ("totem");
+	gtk_window_set_default_icon_name ("xplayer");
 
 #ifdef GNOME_ENABLE_DEBUG
 	{
@@ -2140,7 +2140,7 @@ int main (int argc, char **argv)
 	if (XInitThreads () == 0)
 	{
 		gtk_init (&argc, &argv);
-		totem_embedded_error_and_exit (_("Could not initialize the thread-safe libraries."), _("Verify your system installation. The Totem plugin will now exit."), NULL);
+		xplayer_embedded_error_and_exit (_("Could not initialize the thread-safe libraries."), _("Verify your system installation. The Xplayer plugin will now exit."), NULL);
 	}
 
 	dbus_g_thread_init ();
@@ -2149,7 +2149,7 @@ int main (int argc, char **argv)
 	{
 		const char *env;
 
-		env = g_getenv ("TOTEM_EMBEDDED_GDB");
+		env = g_getenv ("XPLAYER_EMBEDDED_GDB");
 		if (env && g_ascii_strtoull (env, NULL, 10) == 1) {
 			const char *gdbargv[5];
 			char *gdb;
@@ -2201,9 +2201,9 @@ int main (int argc, char **argv)
 		exit (1);
 	}
 
-	g_type_ensure (TOTEM_TYPE_GLOW_BUTTON);
-	g_type_ensure (TOTEM_TYPE_STATUSBAR);
-	g_type_ensure (TOTEM_TYPE_TIME_LABEL);
+	g_type_ensure (XPLAYER_TYPE_GLOW_BUTTON);
+	g_type_ensure (XPLAYER_TYPE_STATUSBAR);
+	g_type_ensure (XPLAYER_TYPE_TIME_LABEL);
 
 	if (arg_audioonly != FALSE)
 		g_setenv("PULSE_PROP_media.role", "video", TRUE);
@@ -2219,15 +2219,15 @@ int main (int argc, char **argv)
 	}
 
         // FIXME check that ALL necessary params were given!
-	if (arg_plugin_type == TOTEM_PLUGIN_TYPE_LAST) {
+	if (arg_plugin_type == XPLAYER_PLUGIN_TYPE_LAST) {
 		g_warning ("Plugin type is required\n");
 		exit (1);
 	}
 
-	dbus_g_object_type_install_info (TOTEM_TYPE_EMBEDDED,
-					 &dbus_glib_totem_embedded_object_info);
+	dbus_g_object_type_install_info (XPLAYER_TYPE_EMBEDDED,
+					 &dbus_glib_xplayer_embedded_object_info);
 	g_snprintf (svcname, sizeof (svcname),
-		    TOTEM_PLUGIN_VIEWER_NAME_TEMPLATE, getpid());
+		    XPLAYER_PLUGIN_VIEWER_NAME_TEMPLATE, getpid());
 
 	if (!(conn = dbus_g_bus_get (DBUS_BUS_SESSION, &e))) {
 		g_warning ("Failed to get DBUS connection: %s", e->message);
@@ -2257,7 +2257,7 @@ int main (int argc, char **argv)
 	gtk_settings = gtk_settings_get_default ();
 	g_object_set (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme", TRUE, NULL);
 
-	emb = g_object_new (TOTEM_TYPE_EMBEDDED,
+	emb = g_object_new (XPLAYER_TYPE_EMBEDDED,
 			    "application-id", svcname,
 			    "flags", G_APPLICATION_NON_UNIQUE,
 			    NULL);
@@ -2268,7 +2268,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	emb->state = TOTEM_STATE_INVALID;
+	emb->state = XPLAYER_STATE_INVALID;
 	emb->width = -1;
 	emb->height = -1;
 	emb->controller_hidden = arg_no_controls;
@@ -2286,7 +2286,7 @@ int main (int argc, char **argv)
 
 	/* FIXME: register this BEFORE requesting the service name? */
 	dbus_g_connection_register_g_object (conn,
-					     TOTEM_PLUGIN_VIEWER_DBUS_PATH,
+					     XPLAYER_PLUGIN_VIEWER_DBUS_PATH,
 					     G_OBJECT (emb));
 	emb->conn = conn;
 
@@ -2294,7 +2294,7 @@ int main (int argc, char **argv)
 	 * else wait to be plugged in.
 	 */
 	if (emb->hidden) {
-		totem_embedded_construct (emb, 0, -1, -1);
+		xplayer_embedded_construct (emb, 0, -1, -1);
 	}
 
 	gtk_main ();

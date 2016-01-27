@@ -24,14 +24,14 @@
 
 #include <math.h>
 
-#include "totem-aspect-frame.h"
+#include "xplayer-aspect-frame.h"
 
-G_DEFINE_TYPE (TotemAspectFrame, totem_aspect_frame, CLUTTER_TYPE_ACTOR)
+G_DEFINE_TYPE (XplayerAspectFrame, xplayer_aspect_frame, CLUTTER_TYPE_ACTOR)
 
 #define ASPECT_FRAME_PRIVATE(o)                         \
   (G_TYPE_INSTANCE_GET_PRIVATE ((o),                    \
-                                TOTEM_TYPE_ASPECT_FRAME,   \
-                                TotemAspectFramePrivate))
+                                XPLAYER_TYPE_ASPECT_FRAME,   \
+                                XplayerAspectFramePrivate))
 
 enum
 {
@@ -40,7 +40,7 @@ enum
   PROP_EXPAND,
 };
 
-struct _TotemAspectFramePrivate
+struct _XplayerAspectFramePrivate
 {
   guint expand : 1;
   gdouble rotation;
@@ -48,17 +48,17 @@ struct _TotemAspectFramePrivate
 
 
 static void
-totem_aspect_frame_get_property (GObject    *object,
+xplayer_aspect_frame_get_property (GObject    *object,
                                  guint       property_id,
                                  GValue     *value,
                                  GParamSpec *pspec)
 {
-  TotemAspectFrame *frame = TOTEM_ASPECT_FRAME (object);
+  XplayerAspectFrame *frame = XPLAYER_ASPECT_FRAME (object);
 
   switch (property_id)
     {
     case PROP_EXPAND:
-      g_value_set_boolean (value, totem_aspect_frame_get_expand (frame));
+      g_value_set_boolean (value, xplayer_aspect_frame_get_expand (frame));
       break;
 
     default:
@@ -67,7 +67,7 @@ totem_aspect_frame_get_property (GObject    *object,
 }
 
 static void
-totem_aspect_frame_set_property (GObject      *object,
+xplayer_aspect_frame_set_property (GObject      *object,
                                  guint         property_id,
                                  const GValue *value,
                                  GParamSpec   *pspec)
@@ -75,7 +75,7 @@ totem_aspect_frame_set_property (GObject      *object,
   switch (property_id)
     {
     case PROP_EXPAND:
-      totem_aspect_frame_set_expand (TOTEM_ASPECT_FRAME (object),
+      xplayer_aspect_frame_set_expand (XPLAYER_ASPECT_FRAME (object),
                                    g_value_get_boolean (value));
       break;
 
@@ -85,19 +85,19 @@ totem_aspect_frame_set_property (GObject      *object,
 }
 
 static void
-totem_aspect_frame_dispose (GObject *object)
+xplayer_aspect_frame_dispose (GObject *object)
 {
-  G_OBJECT_CLASS (totem_aspect_frame_parent_class)->dispose (object);
+  G_OBJECT_CLASS (xplayer_aspect_frame_parent_class)->dispose (object);
 }
 
 static void
-totem_aspect_frame_finalize (GObject *object)
+xplayer_aspect_frame_finalize (GObject *object)
 {
-  G_OBJECT_CLASS (totem_aspect_frame_parent_class)->finalize (object);
+  G_OBJECT_CLASS (xplayer_aspect_frame_parent_class)->finalize (object);
 }
 
 static void
-totem_aspect_frame_get_preferred_width (ClutterActor *actor,
+xplayer_aspect_frame_get_preferred_width (ClutterActor *actor,
                                         gfloat        for_height,
                                         gfloat       *min_width_p,
                                         gfloat       *nat_width_p)
@@ -112,12 +112,12 @@ totem_aspect_frame_get_preferred_width (ClutterActor *actor,
   if (override)
     g_object_get (G_OBJECT (actor), "natural-height", &for_height, NULL);
 
-  CLUTTER_ACTOR_CLASS (totem_aspect_frame_parent_class)->
+  CLUTTER_ACTOR_CLASS (xplayer_aspect_frame_parent_class)->
     get_preferred_width (actor, for_height, min_width_p, nat_width_p);
 }
 
 static void
-totem_aspect_frame_get_preferred_height (ClutterActor *actor,
+xplayer_aspect_frame_get_preferred_height (ClutterActor *actor,
                                          gfloat        for_width,
                                          gfloat       *min_height_p,
                                          gfloat       *nat_height_p)
@@ -132,12 +132,12 @@ totem_aspect_frame_get_preferred_height (ClutterActor *actor,
   if (override)
     g_object_get (G_OBJECT (actor), "natural-width", &for_width, NULL);
 
-  CLUTTER_ACTOR_CLASS (totem_aspect_frame_parent_class)->
+  CLUTTER_ACTOR_CLASS (xplayer_aspect_frame_parent_class)->
     get_preferred_height (actor, for_width, min_height_p, nat_height_p);
 }
 
 static void
-totem_aspect_frame_get_size (TotemAspectFrame *frame,
+xplayer_aspect_frame_get_size (XplayerAspectFrame *frame,
                              gdouble           rotation,
                              gfloat           *width,
                              gfloat           *height)
@@ -180,11 +180,11 @@ _get_allocation (ClutterActor *actor,
 }
 
 static void
-totem_aspect_frame_set_rotation_internal (TotemAspectFrame *frame,
+xplayer_aspect_frame_set_rotation_internal (XplayerAspectFrame *frame,
 					  gdouble           rotation,
 					  gboolean          animate)
 {
-  TotemAspectFramePrivate *priv = frame->priv;
+  XplayerAspectFramePrivate *priv = frame->priv;
   ClutterActor *actor;
   gfloat frame_width, frame_height;
   gfloat child_width, child_height;
@@ -196,7 +196,7 @@ totem_aspect_frame_set_rotation_internal (TotemAspectFrame *frame,
   if (!actor)
     return;
 
-  totem_aspect_frame_get_size (frame, rotation,
+  xplayer_aspect_frame_get_size (frame, rotation,
                                &frame_width, &frame_height);
   _get_allocation (actor, &child_width, &child_height);
 
@@ -235,7 +235,7 @@ totem_aspect_frame_set_rotation_internal (TotemAspectFrame *frame,
 }
 
 static void
-totem_aspect_frame_allocate (ClutterActor           *actor,
+xplayer_aspect_frame_allocate (ClutterActor           *actor,
                              const ClutterActorBox  *box,
                              ClutterAllocationFlags  flags)
 {
@@ -243,9 +243,9 @@ totem_aspect_frame_allocate (ClutterActor           *actor,
   ClutterActorBox child_box;
   gfloat aspect, child_aspect, width, height, box_width, box_height;
 
-  TotemAspectFramePrivate *priv = TOTEM_ASPECT_FRAME (actor)->priv;
+  XplayerAspectFramePrivate *priv = XPLAYER_ASPECT_FRAME (actor)->priv;
 
-  CLUTTER_ACTOR_CLASS (totem_aspect_frame_parent_class)->
+  CLUTTER_ACTOR_CLASS (xplayer_aspect_frame_parent_class)->
     allocate (actor, box, flags);
 
   child = clutter_actor_get_child_at_index (actor, 0);
@@ -281,15 +281,15 @@ totem_aspect_frame_allocate (ClutterActor           *actor,
 
   clutter_actor_allocate (child, &child_box, flags);
 
-  totem_aspect_frame_set_rotation_internal (TOTEM_ASPECT_FRAME (actor),
+  xplayer_aspect_frame_set_rotation_internal (XPLAYER_ASPECT_FRAME (actor),
                                             priv->rotation, FALSE);
 }
 
 static void
-totem_aspect_frame_paint (ClutterActor *actor)
+xplayer_aspect_frame_paint (ClutterActor *actor)
 {
   ClutterActor *child;
-  TotemAspectFramePrivate *priv = TOTEM_ASPECT_FRAME (actor)->priv;
+  XplayerAspectFramePrivate *priv = XPLAYER_ASPECT_FRAME (actor)->priv;
 
   child = clutter_actor_get_child_at_index (actor, 0);
 
@@ -311,16 +311,16 @@ totem_aspect_frame_paint (ClutterActor *actor)
 }
 
 static void
-totem_aspect_frame_pick (ClutterActor       *actor,
+xplayer_aspect_frame_pick (ClutterActor       *actor,
                          const ClutterColor *color)
 {
   ClutterActorBox box;
   ClutterActor *child;
-  TotemAspectFramePrivate *priv = TOTEM_ASPECT_FRAME (actor)->priv;
+  XplayerAspectFramePrivate *priv = XPLAYER_ASPECT_FRAME (actor)->priv;
 
   clutter_actor_get_allocation_box (actor, &box);
 
-  CLUTTER_ACTOR_CLASS (totem_aspect_frame_parent_class)->pick (actor, color);
+  CLUTTER_ACTOR_CLASS (xplayer_aspect_frame_parent_class)->pick (actor, color);
 
   child = clutter_actor_get_child_at_index (actor, 0);
 
@@ -338,25 +338,25 @@ totem_aspect_frame_pick (ClutterActor       *actor,
 }
 
 static void
-totem_aspect_frame_class_init (TotemAspectFrameClass *klass)
+xplayer_aspect_frame_class_init (XplayerAspectFrameClass *klass)
 {
   GParamSpec *pspec;
 
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
   ClutterActorClass *actor_class = CLUTTER_ACTOR_CLASS (klass);
 
-  g_type_class_add_private (klass, sizeof (TotemAspectFramePrivate));
+  g_type_class_add_private (klass, sizeof (XplayerAspectFramePrivate));
 
-  object_class->get_property = totem_aspect_frame_get_property;
-  object_class->set_property = totem_aspect_frame_set_property;
-  object_class->dispose = totem_aspect_frame_dispose;
-  object_class->finalize = totem_aspect_frame_finalize;
+  object_class->get_property = xplayer_aspect_frame_get_property;
+  object_class->set_property = xplayer_aspect_frame_set_property;
+  object_class->dispose = xplayer_aspect_frame_dispose;
+  object_class->finalize = xplayer_aspect_frame_finalize;
 
-  actor_class->get_preferred_width = totem_aspect_frame_get_preferred_width;
-  actor_class->get_preferred_height = totem_aspect_frame_get_preferred_height;
-  actor_class->allocate = totem_aspect_frame_allocate;
-  actor_class->paint = totem_aspect_frame_paint;
-  actor_class->pick = totem_aspect_frame_pick;
+  actor_class->get_preferred_width = xplayer_aspect_frame_get_preferred_width;
+  actor_class->get_preferred_height = xplayer_aspect_frame_get_preferred_height;
+  actor_class->allocate = xplayer_aspect_frame_allocate;
+  actor_class->paint = xplayer_aspect_frame_paint;
+  actor_class->pick = xplayer_aspect_frame_pick;
 
   pspec = g_param_spec_boolean ("expand",
                                 "Expand",
@@ -368,24 +368,24 @@ totem_aspect_frame_class_init (TotemAspectFrameClass *klass)
 }
 
 static void
-totem_aspect_frame_init (TotemAspectFrame *self)
+xplayer_aspect_frame_init (XplayerAspectFrame *self)
 {
   self->priv = ASPECT_FRAME_PRIVATE (self);
   clutter_actor_set_pivot_point (CLUTTER_ACTOR (self), 0.5f, 0.5f);
 }
 
 ClutterActor *
-totem_aspect_frame_new (void)
+xplayer_aspect_frame_new (void)
 {
-  return g_object_new (TOTEM_TYPE_ASPECT_FRAME, NULL);
+  return g_object_new (XPLAYER_TYPE_ASPECT_FRAME, NULL);
 }
 
 void
-totem_aspect_frame_set_expand (TotemAspectFrame *frame, gboolean expand)
+xplayer_aspect_frame_set_expand (XplayerAspectFrame *frame, gboolean expand)
 {
-  TotemAspectFramePrivate *priv;
+  XplayerAspectFramePrivate *priv;
 
-  g_return_if_fail (TOTEM_IS_ASPECT_FRAME (frame));
+  g_return_if_fail (XPLAYER_IS_ASPECT_FRAME (frame));
 
   priv = frame->priv;
   if (priv->expand != expand)
@@ -393,31 +393,31 @@ totem_aspect_frame_set_expand (TotemAspectFrame *frame, gboolean expand)
       priv->expand = expand;
       g_object_notify (G_OBJECT (frame), "expand");
 
-      totem_aspect_frame_set_rotation_internal (frame, priv->rotation, TRUE);
+      xplayer_aspect_frame_set_rotation_internal (frame, priv->rotation, TRUE);
     }
 }
 
 gboolean
-totem_aspect_frame_get_expand (TotemAspectFrame *frame)
+xplayer_aspect_frame_get_expand (XplayerAspectFrame *frame)
 {
-  g_return_val_if_fail (TOTEM_IS_ASPECT_FRAME (frame), FALSE);
+  g_return_val_if_fail (XPLAYER_IS_ASPECT_FRAME (frame), FALSE);
   return frame->priv->expand;
 }
 
 void
-totem_aspect_frame_set_child   (TotemAspectFrame *frame,
+xplayer_aspect_frame_set_child   (XplayerAspectFrame *frame,
 				ClutterActor     *child)
 {
-  g_return_if_fail (TOTEM_IS_ASPECT_FRAME (frame));
+  g_return_if_fail (XPLAYER_IS_ASPECT_FRAME (frame));
 
   clutter_actor_add_child (CLUTTER_ACTOR (frame), child);
 }
 
 void
-totem_aspect_frame_set_rotation (TotemAspectFrame *frame,
+xplayer_aspect_frame_set_rotation (XplayerAspectFrame *frame,
 				 gdouble           rotation)
 {
-  g_return_if_fail (TOTEM_IS_ASPECT_FRAME (frame));
+  g_return_if_fail (XPLAYER_IS_ASPECT_FRAME (frame));
   g_return_if_fail (fmod (rotation, 90.0) == 0.0);
 
   rotation = fmod (rotation, 360.0);
@@ -427,22 +427,22 @@ totem_aspect_frame_set_rotation (TotemAspectFrame *frame,
   if (rotation == 0.0 && frame->priv->rotation == 270.0)
     rotation = 360.0;
   else if (rotation == 90.0 && frame->priv->rotation == 360.0)
-    totem_aspect_frame_set_rotation_internal (frame, 0.0, FALSE);
+    xplayer_aspect_frame_set_rotation_internal (frame, 0.0, FALSE);
   else if (rotation == 270.0 && fmod (frame->priv->rotation, 360.0) == 0.0)
-    totem_aspect_frame_set_rotation_internal (frame, 360.0, FALSE);
+    xplayer_aspect_frame_set_rotation_internal (frame, 360.0, FALSE);
 
   g_debug ("Setting rotation to '%lf'", rotation);
 
   frame->priv->rotation = rotation;
-  totem_aspect_frame_set_rotation_internal (frame, rotation, TRUE);
+  xplayer_aspect_frame_set_rotation_internal (frame, rotation, TRUE);
 }
 
 gdouble
-totem_aspect_frame_get_rotation (TotemAspectFrame *frame)
+xplayer_aspect_frame_get_rotation (XplayerAspectFrame *frame)
 {
   gdouble rotation;
 
-  g_return_val_if_fail (TOTEM_IS_ASPECT_FRAME (frame), 0.0);
+  g_return_val_if_fail (XPLAYER_IS_ASPECT_FRAME (frame), 0.0);
 
   rotation = fmod (frame->priv->rotation, 360.0);
   g_debug ("Got rotation %lf", rotation);

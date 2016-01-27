@@ -127,10 +127,10 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)" \
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 libscreenshot_la_DEPENDENCIES = $(plugin_libadd)
 am_libscreenshot_la_OBJECTS =  \
-	libscreenshot_la-totem-screenshot-plugin.lo \
+	libscreenshot_la-xplayer-screenshot-plugin.lo \
 	libscreenshot_la-screenshot-filename-builder.lo \
-	libscreenshot_la-totem-gallery.lo \
-	libscreenshot_la-totem-gallery-progress.lo
+	libscreenshot_la-xplayer-gallery.lo \
+	libscreenshot_la-xplayer-gallery-progress.lo
 libscreenshot_la_OBJECTS = $(am_libscreenshot_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -208,7 +208,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -390,11 +390,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -477,7 +477,7 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/screenshot
 plugin_LTLIBRARIES = libscreenshot.la
@@ -485,14 +485,14 @@ plugin_in_files = screenshot.plugin.in
 uidir = $(plugindir)
 ui_DATA = gallery.ui
 libscreenshot_la_SOURCES = \
-	totem-screenshot-plugin.c	\
-	totem-screenshot-plugin.h	\
+	xplayer-screenshot-plugin.c	\
+	xplayer-screenshot-plugin.h	\
 	screenshot-filename-builder.c	\
 	screenshot-filename-builder.h	\
-	totem-gallery.c			\
-	totem-gallery.h			\
-	totem-gallery-progress.c	\
-	totem-gallery-progress.h
+	xplayer-gallery.c			\
+	xplayer-gallery.h			\
+	xplayer-gallery-progress.c	\
+	xplayer-gallery-progress.h
 
 libscreenshot_la_LDFLAGS = $(plugin_ldflags)
 libscreenshot_la_CFLAGS = $(plugin_cflags)
@@ -578,9 +578,9 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-screenshot-filename-builder.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-totem-gallery-progress.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-totem-gallery.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-totem-screenshot-plugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-xplayer-gallery-progress.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-xplayer-gallery.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libscreenshot_la-xplayer-screenshot-plugin.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -603,12 +603,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libscreenshot_la-totem-screenshot-plugin.lo: totem-screenshot-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-totem-screenshot-plugin.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-totem-screenshot-plugin.Tpo -c -o libscreenshot_la-totem-screenshot-plugin.lo `test -f 'totem-screenshot-plugin.c' || echo '$(srcdir)/'`totem-screenshot-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-totem-screenshot-plugin.Tpo $(DEPDIR)/libscreenshot_la-totem-screenshot-plugin.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-screenshot-plugin.c' object='libscreenshot_la-totem-screenshot-plugin.lo' libtool=yes @AMDEPBACKSLASH@
+libscreenshot_la-xplayer-screenshot-plugin.lo: xplayer-screenshot-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-xplayer-screenshot-plugin.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-xplayer-screenshot-plugin.Tpo -c -o libscreenshot_la-xplayer-screenshot-plugin.lo `test -f 'xplayer-screenshot-plugin.c' || echo '$(srcdir)/'`xplayer-screenshot-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-xplayer-screenshot-plugin.Tpo $(DEPDIR)/libscreenshot_la-xplayer-screenshot-plugin.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-screenshot-plugin.c' object='libscreenshot_la-xplayer-screenshot-plugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-totem-screenshot-plugin.lo `test -f 'totem-screenshot-plugin.c' || echo '$(srcdir)/'`totem-screenshot-plugin.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-xplayer-screenshot-plugin.lo `test -f 'xplayer-screenshot-plugin.c' || echo '$(srcdir)/'`xplayer-screenshot-plugin.c
 
 libscreenshot_la-screenshot-filename-builder.lo: screenshot-filename-builder.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-screenshot-filename-builder.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-screenshot-filename-builder.Tpo -c -o libscreenshot_la-screenshot-filename-builder.lo `test -f 'screenshot-filename-builder.c' || echo '$(srcdir)/'`screenshot-filename-builder.c
@@ -617,19 +617,19 @@ libscreenshot_la-screenshot-filename-builder.lo: screenshot-filename-builder.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-screenshot-filename-builder.lo `test -f 'screenshot-filename-builder.c' || echo '$(srcdir)/'`screenshot-filename-builder.c
 
-libscreenshot_la-totem-gallery.lo: totem-gallery.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-totem-gallery.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-totem-gallery.Tpo -c -o libscreenshot_la-totem-gallery.lo `test -f 'totem-gallery.c' || echo '$(srcdir)/'`totem-gallery.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-totem-gallery.Tpo $(DEPDIR)/libscreenshot_la-totem-gallery.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-gallery.c' object='libscreenshot_la-totem-gallery.lo' libtool=yes @AMDEPBACKSLASH@
+libscreenshot_la-xplayer-gallery.lo: xplayer-gallery.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-xplayer-gallery.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-xplayer-gallery.Tpo -c -o libscreenshot_la-xplayer-gallery.lo `test -f 'xplayer-gallery.c' || echo '$(srcdir)/'`xplayer-gallery.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-xplayer-gallery.Tpo $(DEPDIR)/libscreenshot_la-xplayer-gallery.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-gallery.c' object='libscreenshot_la-xplayer-gallery.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-totem-gallery.lo `test -f 'totem-gallery.c' || echo '$(srcdir)/'`totem-gallery.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-xplayer-gallery.lo `test -f 'xplayer-gallery.c' || echo '$(srcdir)/'`xplayer-gallery.c
 
-libscreenshot_la-totem-gallery-progress.lo: totem-gallery-progress.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-totem-gallery-progress.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-totem-gallery-progress.Tpo -c -o libscreenshot_la-totem-gallery-progress.lo `test -f 'totem-gallery-progress.c' || echo '$(srcdir)/'`totem-gallery-progress.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-totem-gallery-progress.Tpo $(DEPDIR)/libscreenshot_la-totem-gallery-progress.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-gallery-progress.c' object='libscreenshot_la-totem-gallery-progress.lo' libtool=yes @AMDEPBACKSLASH@
+libscreenshot_la-xplayer-gallery-progress.lo: xplayer-gallery-progress.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -MT libscreenshot_la-xplayer-gallery-progress.lo -MD -MP -MF $(DEPDIR)/libscreenshot_la-xplayer-gallery-progress.Tpo -c -o libscreenshot_la-xplayer-gallery-progress.lo `test -f 'xplayer-gallery-progress.c' || echo '$(srcdir)/'`xplayer-gallery-progress.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libscreenshot_la-xplayer-gallery-progress.Tpo $(DEPDIR)/libscreenshot_la-xplayer-gallery-progress.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-gallery-progress.c' object='libscreenshot_la-xplayer-gallery-progress.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-totem-gallery-progress.lo `test -f 'totem-gallery-progress.c' || echo '$(srcdir)/'`totem-gallery-progress.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libscreenshot_la_CFLAGS) $(CFLAGS) -c -o libscreenshot_la-xplayer-gallery-progress.lo `test -f 'xplayer-gallery-progress.c' || echo '$(srcdir)/'`xplayer-gallery-progress.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

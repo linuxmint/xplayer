@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * See license_change file for details.
  *
@@ -37,25 +37,25 @@
 #include <libpeas/peas-activatable.h>
 #include <bacon-video-widget-properties.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 #include "bacon-video-widget.h"
 
-#define TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN		(totem_movie_properties_plugin_get_type ())
-#define TOTEM_MOVIE_PROPERTIES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN, TotemMoviePropertiesPlugin))
-#define TOTEM_MOVIE_PROPERTIES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN, TotemMoviePropertiesPluginClass))
-#define TOTEM_IS_MOVIE_PROPERTIES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN))
-#define TOTEM_IS_MOVIE_PROPERTIES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN))
-#define TOTEM_MOVIE_PROPERTIES_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN, TotemMoviePropertiesPluginClass))
+#define XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN		(xplayer_movie_properties_plugin_get_type ())
+#define XPLAYER_MOVIE_PROPERTIES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN, XplayerMoviePropertiesPlugin))
+#define XPLAYER_MOVIE_PROPERTIES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN, XplayerMoviePropertiesPluginClass))
+#define XPLAYER_IS_MOVIE_PROPERTIES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN))
+#define XPLAYER_IS_MOVIE_PROPERTIES_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN))
+#define XPLAYER_MOVIE_PROPERTIES_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN, XplayerMoviePropertiesPluginClass))
 
 typedef struct {
 	GtkWidget    *props;
 	guint         handler_id_stream_length;
-} TotemMoviePropertiesPluginPrivate;
+} XplayerMoviePropertiesPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_MOVIE_PROPERTIES_PLUGIN,
-		      TotemMoviePropertiesPlugin,
-		      totem_movie_properties_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_MOVIE_PROPERTIES_PLUGIN,
+		      XplayerMoviePropertiesPlugin,
+		      xplayer_movie_properties_plugin)
 
 /* used in update_properties_from_bvw() */
 #define UPDATE_FROM_STRING(type, name) \
@@ -175,13 +175,13 @@ update_properties_from_bvw (BaconVideoWidgetProperties *props,
 
 
 static void
-stream_length_notify_cb (TotemObject *totem,
+stream_length_notify_cb (XplayerObject *xplayer,
 			 GParamSpec *arg1,
-			 TotemMoviePropertiesPlugin *plugin)
+			 XplayerMoviePropertiesPlugin *plugin)
 {
 	gint64 stream_length;
 
-	g_object_get (G_OBJECT (totem),
+	g_object_get (G_OBJECT (xplayer),
 		      "stream-length", &stream_length,
 		      NULL);
 
@@ -191,13 +191,13 @@ stream_length_notify_cb (TotemObject *totem,
 }
 
 static void
-totem_movie_properties_plugin_file_opened (TotemObject *totem,
+xplayer_movie_properties_plugin_file_opened (XplayerObject *xplayer,
 					   const char *mrl,
-					   TotemMoviePropertiesPlugin *plugin)
+					   XplayerMoviePropertiesPlugin *plugin)
 {
 	GtkWidget *bvw;
 
-	bvw = totem_get_video_widget (totem);
+	bvw = xplayer_get_video_widget (xplayer);
 	update_properties_from_bvw
 		(BACON_VIDEO_WIDGET_PROPERTIES (plugin->priv->props), bvw);
 	g_object_unref (bvw);
@@ -205,8 +205,8 @@ totem_movie_properties_plugin_file_opened (TotemObject *totem,
 }
 
 static void
-totem_movie_properties_plugin_file_closed (TotemObject *totem,
-					   TotemMoviePropertiesPlugin *plugin)
+xplayer_movie_properties_plugin_file_closed (XplayerObject *xplayer,
+					   XplayerMoviePropertiesPlugin *plugin)
 {
         /* Reset the properties and wait for the signal*/
         bacon_video_widget_properties_reset
@@ -215,16 +215,16 @@ totem_movie_properties_plugin_file_closed (TotemObject *totem,
 }
 
 static void
-totem_movie_properties_plugin_metadata_updated (TotemObject *totem,
+xplayer_movie_properties_plugin_metadata_updated (XplayerObject *xplayer,
 						const char *artist, 
 						const char *title, 
 						const char *album,
 						guint track_num,
-						TotemMoviePropertiesPlugin *plugin)
+						XplayerMoviePropertiesPlugin *plugin)
 {
 	GtkWidget *bvw;
 
-	bvw = totem_get_video_widget (totem);
+	bvw = xplayer_get_video_widget (xplayer);
 	update_properties_from_bvw
 		(BACON_VIDEO_WIDGET_PROPERTIES (plugin->priv->props), bvw);
 	g_object_unref (bvw);
@@ -233,33 +233,33 @@ totem_movie_properties_plugin_metadata_updated (TotemObject *totem,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemMoviePropertiesPlugin *pi;
-	TotemObject *totem;
+	XplayerMoviePropertiesPlugin *pi;
+	XplayerObject *xplayer;
 
-	pi = TOTEM_MOVIE_PROPERTIES_PLUGIN (plugin);
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
+	pi = XPLAYER_MOVIE_PROPERTIES_PLUGIN (plugin);
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
 
 	pi->priv->props = bacon_video_widget_properties_new ();
 	gtk_widget_show (pi->priv->props);
-	totem_add_sidebar_page (totem,
+	xplayer_add_sidebar_page (xplayer,
 				"properties",
 				_("Properties"),
 				pi->priv->props);
 	gtk_widget_set_sensitive (pi->priv->props, FALSE);
 
-	g_signal_connect (G_OBJECT (totem),
+	g_signal_connect (G_OBJECT (xplayer),
 			  "file-opened",
-			  G_CALLBACK (totem_movie_properties_plugin_file_opened),
+			  G_CALLBACK (xplayer_movie_properties_plugin_file_opened),
 			  plugin);
-	g_signal_connect (G_OBJECT (totem),
+	g_signal_connect (G_OBJECT (xplayer),
 			  "file-closed",
-			  G_CALLBACK (totem_movie_properties_plugin_file_closed),
+			  G_CALLBACK (xplayer_movie_properties_plugin_file_closed),
 			  plugin);
-	g_signal_connect (G_OBJECT (totem),
+	g_signal_connect (G_OBJECT (xplayer),
 			  "metadata-updated",
-			  G_CALLBACK (totem_movie_properties_plugin_metadata_updated),
+			  G_CALLBACK (xplayer_movie_properties_plugin_metadata_updated),
 			  plugin);
-	pi->priv->handler_id_stream_length = g_signal_connect (G_OBJECT (totem),
+	pi->priv->handler_id_stream_length = g_signal_connect (G_OBJECT (xplayer),
 							 "notify::stream-length",
 							 G_CALLBACK (stream_length_notify_cb),
 							 plugin);
@@ -268,23 +268,23 @@ impl_activate (PeasActivatable *plugin)
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemMoviePropertiesPlugin *pi;
-	TotemObject *totem;
+	XplayerMoviePropertiesPlugin *pi;
+	XplayerObject *xplayer;
 
-	pi = TOTEM_MOVIE_PROPERTIES_PLUGIN (plugin);
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
+	pi = XPLAYER_MOVIE_PROPERTIES_PLUGIN (plugin);
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
 
-	g_signal_handler_disconnect (G_OBJECT (totem), pi->priv->handler_id_stream_length);
-	g_signal_handlers_disconnect_by_func (G_OBJECT (totem),
-					      totem_movie_properties_plugin_metadata_updated,
+	g_signal_handler_disconnect (G_OBJECT (xplayer), pi->priv->handler_id_stream_length);
+	g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer),
+					      xplayer_movie_properties_plugin_metadata_updated,
 					      plugin);
-	g_signal_handlers_disconnect_by_func (G_OBJECT (totem),
-					      totem_movie_properties_plugin_file_opened,
+	g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer),
+					      xplayer_movie_properties_plugin_file_opened,
 					      plugin);
-	g_signal_handlers_disconnect_by_func (G_OBJECT (totem),
-					      totem_movie_properties_plugin_file_closed,
+	g_signal_handlers_disconnect_by_func (G_OBJECT (xplayer),
+					      xplayer_movie_properties_plugin_file_closed,
 					      plugin);
 	pi->priv->handler_id_stream_length = 0;
-	totem_remove_sidebar_page (totem, "properties");
+	xplayer_remove_sidebar_page (xplayer, "properties");
 }
 

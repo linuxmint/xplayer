@@ -5,7 +5,7 @@ plugin_LTLIBRARIES = libscreensaver.la
 
 plugin_in_files = screensaver.plugin.in
 
-libscreensaver_la_SOURCES = totem-screensaver.c
+libscreensaver_la_SOURCES = xplayer-screensaver.c
 libscreensaver_la_LDFLAGS = $(plugin_ldflags)
 libscreensaver_la_LIBADD = $(plugin_libadd)
 libscreensaver_la_CPPFLAGS = $(AM_CPPFLAGS)

@@ -1,4 +1,4 @@
-/* totem-menu.h
+/* xplayer-menu.h
 
    Copyright (C) 2004-2005 Bastien Nocera <hadess@hadess.net>
 
@@ -20,20 +20,20 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_MENU_H
-#define TOTEM_MENU_H
+#ifndef XPLAYER_MENU_H
+#define XPLAYER_MENU_H
 
-#include "totem.h"
+#include "xplayer.h"
 
 G_BEGIN_DECLS
 
-void totem_ui_manager_setup (Totem *totem);
+void xplayer_ui_manager_setup (Xplayer *xplayer);
 
-void totem_sublang_update (Totem *totem);
-void totem_sublang_exit (Totem *totem);
+void xplayer_sublang_update (Xplayer *xplayer);
+void xplayer_sublang_exit (Xplayer *xplayer);
 
-void totem_setup_recent (Totem *totem);
+void xplayer_setup_recent (Xplayer *xplayer);
 
 G_END_DECLS
 
-#endif /* TOTEM_MENU_H */
+#endif /* XPLAYER_MENU_H */

@@ -4,7 +4,7 @@
 <!ENTITY appversion "2.26">
 <!ENTITY manrevision "3.0">
 <!ENTITY date "February 2009">
-<!ENTITY app "Totem Movie Player">
+<!ENTITY app "Xplayer Movie Player">
 <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file.
        Use the appversion entity to specify the version of the application.
@@ -23,7 +23,7 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title><application>Totem 电影播放机</application>手册</title>
+    <title><application>Xplayer 电影播放机</application>手册</title>
     <copyright lang="en">
       <year>2003</year>
       <holder>Chee Bin HOH</holder>
@@ -37,7 +37,7 @@
     </releaseinfo>
 
     <abstract role="description">
-      <para><application>Totem 电影播放机</application>是 GNOME 的媒体播放器，默认运行在 GStreamer 上，但也能运行在 xine 上。它支持多种音频视频解码，其中也包括 DVD。其功能包括 TV-out，全屏播放，字幕等等。</para>
+      <para><application>Xplayer 电影播放机</application>是 GNOME 的媒体播放器，默认运行在 GStreamer 上，但也能运行在 xine 上。它支持多种音频视频解码，其中也包括 DVD。其功能包括 TV-out，全屏播放，字幕等等。</para>
     </abstract>
 
     <publisher>
@@ -164,7 +164,7 @@
 <!-- to V3.0, and so on. -->
     <revhistory>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V2.0</revnumber>
 	<date>August 2006</date>
 	<revdescription>
 	  <para role="author" lang="en">Chee Bin HOH
@@ -174,7 +174,7 @@
         </revdescription>
       </revision>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V3.0</revnumber>
 	<date>February 2009</date>
 	<revdescription>
 	  <para role="author" lang="en">Philip Withnall
@@ -185,10 +185,10 @@
       </revision>
     </revhistory>
 
-    <releaseinfo>本手册描述的是 2.26 版的 Totem 电影播放机。</releaseinfo>
+    <releaseinfo>本手册描述的是 2.26 版的 Xplayer 电影播放机。</releaseinfo>
     <legalnotice>
       <title>反馈</title>
-      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
         this manual, follow the directions in the
         <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
       </para>
@@ -196,10 +196,10 @@
   </articleinfo>
 
   <indexterm zone="index" lang="en">
-    <primary>Totem Movie Player</primary>
+    <primary>Xplayer Movie Player</primary>
   </indexterm>
   <indexterm zone="index" lang="en">
-    <primary>totem</primary>
+    <primary>xplayer</primary>
   </indexterm>
 
 
@@ -207,10 +207,10 @@
 <!-- ============= Introduction ============================== -->
 <!-- Use the Introduction section to give a brief overview of what
      the application is and what it does. -->
-  <sect1 id="totem-introduction">
+  <sect1 id="xplayer-introduction">
     <title>介绍</title>
-    <para><application>Totem 电影播放机 </application>是 GNOME 桌面的媒体播放器，基于 Gstreamer 多媒体框架和 Xine 库，您可用它播放电影或者音乐。</para>
-    <para><application>Totem 电影播放机</application>提供如下功能：</para>
+    <para><application>Xplayer 电影播放机 </application>是 GNOME 桌面的媒体播放器，基于 Gstreamer 多媒体框架和 Xine 库，您可用它播放电影或者音乐。</para>
+    <para><application>Xplayer 电影播放机</application>提供如下功能：</para>
     <itemizedlist>
       <listitem>
 	<para>支持多种视频音频文件。</para>
@@ -235,7 +235,7 @@
       </listitem>
     </itemizedlist>
     <note>
-      <para><application>Totem 电影播放机</application>还有一些附加功能，如：</para>
+      <para><application>Xplayer 电影播放机</application>还有一些附加功能，如：</para>
       <itemizedlist>
 	<listitem>
 	  <para>GNOME 视频缩略图生成器。</para>
@@ -260,12 +260,12 @@
      If the information about how to get started is very short, you can
      include it in the Introduction and omit this section. -->
 
-  <sect1 id="totem-getting-started">
+  <sect1 id="xplayer-getting-started">
     <title>入门</title>
 
-    <sect2 id="totem-start">
-      <title>要启动<application>Totem 电影播放机 </application></title>
-      <para>您可以通过如下几种方式启动 <application>Totem 电影播放机 </application>：</para>
+    <sect2 id="xplayer-start">
+      <title>要启动<application>Xplayer 电影播放机 </application></title>
+      <para>您可以通过如下几种方式启动 <application>Xplayer 电影播放机 </application>：</para>
       <variablelist>
 	<varlistentry>
 	  <term><guimenu>应用程序</guimenu> 菜单</term>
@@ -281,32 +281,32 @@
 	<varlistentry>
 	  <term>命令行</term>
 	  <listitem>
-	    <para>要从命令行启动 <application>Totem 电影播放机</application>，请输入下面的命令，然后按<keycap>回车</keycap>：</para>
+	    <para>要从命令行启动 <application>Xplayer 电影播放机</application>，请输入下面的命令，然后按<keycap>回车</keycap>：</para>
 	    <para lang="en">
-            <command>totem</command>
+            <command>xplayer</command>
             </para>
 	    <tip>
-	      <para>要查看其它可用的命令行选项，请输入 <command>totem --help</command>，然后按<keycap>回车</keycap>。</para>
+	      <para>要查看其它可用的命令行选项，请输入 <command>xplayer --help</command>，然后按<keycap>回车</keycap>。</para>
 	    </tip>
 	  </listitem>
 	</varlistentry>
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-when-start">
-      <title>当您启动 <application>Totem 电影播放机</application>时</title>
-      <para>当您启动 <application>Totem 电影播放机</application>，显示下面的窗口。</para>
+    <sect2 id="xplayer-when-start">
+      <title>当您启动 <application>Xplayer 电影播放机</application>时</title>
+      <para>当您启动 <application>Xplayer 电影播放机</application>，显示下面的窗口。</para>
 
       <!-- ==== Figure ==== -->
-      <figure id="totem-start-fig">
-	<title><application>Totem 电影播放机</application>启动界面</title>
+      <figure id="xplayer-start-fig">
+	<title><application>Xplayer 电影播放机</application>启动界面</title>
 	<screenshot>
 	  <mediaobject lang="en">
 	    <imageobject>
-	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	      <imagedata fileref="figures/xplayer_start_window.png" format="PNG"/>
 	    </imageobject>
 	    <textobject>
-	      <phrase>Shows <application>Totem Movie Player</application> main window with
+	      <phrase>Shows <application>Xplayer Movie Player</application> main window with
 		  sidebar opened on playlist. Contains
 		  menubar, display area, sidebar, elapsed time slider, seek control
 		  buttons, volume slider and statusbar.
@@ -319,12 +319,12 @@
 
       <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
       <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
-      <para><application>Totem 电影播放机</application>界面包含下面几个元素：</para>
+      <para><application>Xplayer 电影播放机</application>界面包含下面几个元素：</para>
       <variablelist>
 	<varlistentry>
 	  <term>菜单栏。</term>
   	  <listitem>
-	    <para><application>Totem 电影播放机</application>菜单栏里的菜单包括您需要的全部功能。</para>
+	    <para><application>Xplayer 电影播放机</application>菜单栏里的菜单包括您需要的全部功能。</para>
  	  </listitem>
    	</varlistentry>
 	<varlistentry>
@@ -371,11 +371,11 @@
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to use the application to perform the tasks for
   which the application is designed. -->
-  <sect1 id="totem-usage">
+  <sect1 id="xplayer-usage">
     <title>用法</title>
 
     <!-- ================ Usage Subsection ================================ -->
-    <sect2 id="totem-open-file">
+    <sect2 id="xplayer-open-file">
       <title>打开文件</title>
       <para lang="en">To open a video or an audio file, choose
         <menuchoice>
@@ -387,14 +387,14 @@
 		Select the file or files you want to open, then click
 	<guibutton>OK</guibutton>.
       </para>
-      <para>您可以从另外一个应用程序中，如文件管理器，将一个文件拖拽到<application> Totem 电影播放机</application>窗口中。若把文件拖到显示区，那么该文件会取代现有的播放列表并立即开始播放。若拖拽文件到侧边栏中的播放列表处，那么该文件会添加到现有播放列表。 <application>Totem 电影播放机</application>将会打开文件并播放电影或音乐。 <application>Totem 电影播放机</application>会在窗口的标题栏及侧边栏上的播放列表中显示电影或音乐的标题。</para>
-      <para>如果您试图打开一个 <application>Totem 电影播放机</application>无法识别格式的文件，那么将会显示一个错误信息。大多数情况下，该错误会是因为未安装合适的解码器造成的。关于获取解码器的信息，可在如下网站获得<ulink url="http://projects.gnome.org/totem/#codecs" type="http"><application>Totem 电影播放机</application> 网站</ulink>。</para>
+      <para>您可以从另外一个应用程序中，如文件管理器，将一个文件拖拽到<application> Xplayer 电影播放机</application>窗口中。若把文件拖到显示区，那么该文件会取代现有的播放列表并立即开始播放。若拖拽文件到侧边栏中的播放列表处，那么该文件会添加到现有播放列表。 <application>Xplayer 电影播放机</application>将会打开文件并播放电影或音乐。 <application>Xplayer 电影播放机</application>会在窗口的标题栏及侧边栏上的播放列表中显示电影或音乐的标题。</para>
+      <para>如果您试图打开一个 <application>Xplayer 电影播放机</application>无法识别格式的文件，那么将会显示一个错误信息。大多数情况下，该错误会是因为未安装合适的解码器造成的。关于获取解码器的信息，可在如下网站获得<ulink url="http://projects.gnome.org/xplayer/#codecs" type="http"><application>Xplayer 电影播放机</application> 网站</ulink>。</para>
       <tip>
-	<para>您可以在<application> Nautilus </application>中双击影音文件，以便在<application>Totem 电影播放机</application>窗口中打开。</para>
+	<para>您可以在<application> Nautilus </application>中双击影音文件，以便在<application>Xplayer 电影播放机</application>窗口中打开。</para>
       </tip>
     </sect2>
 
-    <sect2 id="totem-usage-open-location">
+    <sect2 id="xplayer-usage-open-location">
       <title>打开位置</title>
       <para lang="en">To open a file by URI (location), choose
         <menuchoice>
@@ -408,7 +408,7 @@
       <para>如果粘贴板中已有一个URL，它会被自动粘贴到组合框中。</para>
     </sect2>
 
-    <sect2 id="totem-usage-play">
+    <sect2 id="xplayer-usage-play">
       <title>播放电影( DVD 或 VCD 光盘)</title>
 	      <para lang="en">Insert the disc in the optical device of your computer, then choose
           	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
@@ -422,11 +422,11 @@
       </para>
        </sect2>
 
-    <sect2 id="totem-usage-pause">
+    <sect2 id="xplayer-usage-pause">
       <title>暂停电影或音乐</title>
       <para lang="en">To pause a movie or song that is playing, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_pause_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows pause button.</phrase></textobject>
         </inlinemediaobject> button, or choose
         <menuchoice>
@@ -437,7 +437,7 @@
       </para>
       <para lang="en">To resume playing a movie or song, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_play_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows play button.</phrase></textobject>
         </inlinemediaobject> button again, or choose
         <menuchoice>
@@ -448,7 +448,7 @@
       </para>
     </sect2>
 
-    <sect2 id="totem-usage-view-properties">
+    <sect2 id="xplayer-usage-view-properties">
       <title>查看影音文件属性</title>
       <para lang="en">To view the properties of a movie or song, choose
         <menuchoice>
@@ -457,7 +457,7 @@
 	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
     </sect2>
 
-    <sect2 id="totem-usage-seek">
+    <sect2 id="xplayer-usage-seek">
       <title>定位影音文件</title>
       <para>要定位影音文件，可以使用如下方法：</para>
       <variablelist>
@@ -510,7 +510,7 @@
                 <guimenuitem>Next Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_next_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek next button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -526,7 +526,7 @@
                 <guimenuitem>Previous Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_previous_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -535,9 +535,9 @@
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-usage-change-zoom">
+    <sect2 id="xplayer-usage-change-zoom">
       <title>更改缩放系数</title>
-	  <sect3 id="totem-usage-change-size">
+	  <sect3 id="xplayer-usage-change-size">
 		<title>更改视频尺寸</title>
       <para>要更改显示区域的缩放系数，使用下面的方法：</para>
       <itemizedlist>
@@ -562,7 +562,7 @@
     </listitem>
 	</itemizedlist>
 	</sect3>
-	 <sect3 id="totem-usage-change-ratio">
+	 <sect3 id="xplayer-usage-change-ratio">
 		<title>更改视频纵横比</title>
 	      <para lang="en">To switch between different aspect ratios, choose
             <menuchoice>
@@ -573,7 +573,7 @@
 	  </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-adjust-volume">
+    <sect2 id="xplayer-usage-adjust-volume">
       <title>调节声音</title>
       <para lang="en">To increase the volume, choose
         <menuchoice>
@@ -591,40 +591,40 @@
       <para>您也可以使用音量控制按钮：点击音量按钮并用滑块来选择音量大小。</para>
     </sect2>
 
-    <sect2 id="totem-usage-on-top">
+    <sect2 id="xplayer-usage-on-top">
       <title>让窗口总是在最前端</title>
-      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+      <para lang="en">To make the <application>Xplayer Movie Player</application> window always on top of other application windows,
         choose
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Plugins</guimenuitem>
-        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Xplayer Movie Player</application> window will now stay on
         top of all other windows while a movie is playing, but not while audio or visualizations are playing.
        </para>
-       <para>要取消窗口总是位于前端的设置，请禁用插件<guilabel>总是位于顶端</guilabel>。参见 <xref linkend="totem-plugins-always-on-top"/> 以获取更多信息。</para>
+       <para>要取消窗口总是位于前端的设置，请禁用插件<guilabel>总是位于顶端</guilabel>。参见 <xref linkend="xplayer-plugins-always-on-top"/> 以获取更多信息。</para>
     </sect2>
 
-    <sect2 id="totem-usage-show-control">
+    <sect2 id="xplayer-usage-show-control">
       <title>显示或隐藏控制面板</title>
-      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+      <para lang="en">To show or hide the <application>Xplayer Movie Player</application> window controls, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
           <guimenu>View</guimenu>
           <guimenuitem>Show Controls</guimenuitem>
         </menuchoice>, or press the <keycap>H</keycap> key.
-        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        You can also right-click on the <application>Xplayer Movie Player</application> window, then choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
 	  <guimenuitem>Show Controls</guimenuitem>
         </menuchoice> from the popup menu.
       </para>
-      <para>如果<guilabel>显示控制面板</guilabel>选项被选中， <application>Totem 电影播放机</application> 窗口会显示菜单栏，时间滑块，播放控制按钮，音量滑块和状态栏。如果<guilabel>显示控制面板</guilabel>选项未选中，程序会隐藏它们只留下显示区域。</para>
+      <para>如果<guilabel>显示控制面板</guilabel>选项被选中， <application>Xplayer 电影播放机</application> 窗口会显示菜单栏，时间滑块，播放控制按钮，音量滑块和状态栏。如果<guilabel>显示控制面板</guilabel>选项未选中，程序会隐藏它们只留下显示区域。</para>
     </sect2>
 
-    <sect2 id="totem-usage-playlist">
+    <sect2 id="xplayer-usage-playlist">
       <title>管理播放列表</title>
 
-      <sect3 id="totem-usage-playlist-show-hide">
+      <sect3 id="xplayer-usage-playlist-show-hide">
 	<title>显示或隐藏播放列表</title>
 	<para lang="en">To show or hide the playlist, choose
           <menuchoice>
@@ -634,7 +634,7 @@
 		  the sidebar.</para>
       </sect3>
 
-      <sect3 id="totem-usage-playlist-manage">
+      <sect3 id="xplayer-usage-playlist-manage">
 	<title>管理播放列表</title>
 	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
           <variablelist>
@@ -683,27 +683,27 @@
           </variablelist>
         </para>
       </sect3>
-      <sect3 id="totem-usage-playlist-repeat">
+      <sect3 id="xplayer-usage-playlist-repeat">
 	<title>选择或取消重复播放模式</title>
 	<para>要启用或停用重复播放模式，选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>重复模式</guimenuitem></menuchoice>。</para>
       </sect3>
-      <sect3 id="totem-usage-playlist-shuffle">
+      <sect3 id="xplayer-usage-playlist-shuffle">
 	<title>选择或取消随机播放模式</title>
 	<para>要启用或停用随机播放模式，请选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>随机模式</guimenuitem></menuchoice>。</para>
       </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-subtitle">
+    <sect2 id="xplayer-usage-subtitle">
 	  <title>选择字幕</title>
 	  <para>要选择字幕语言，选择<menuchoice><guimenu>查看</guimenu><guisubmenu>字幕</guisubmenu></menuchoice>，并选择需要的字幕语言。</para>
 	  <para>要停止显示字幕，选择<menuchoice><guimenu>查看</guimenu><guisubmenu>字幕</guisubmenu><guimenuitem>无</guimenuitem></menuchoice>。</para>
-	  <note><para>默认情况下，<application>Totem 电影播放机</application>将会把字幕语言设定为与计算机当前所用语言一致。</para></note>
-	  <para>如果找到一个字幕文件，与当前播放视频的名称相同，并具有如下扩展名，<filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> 或 <filename class="extension">ass</filename><application>，Totem 电影播放机</application> 会自动载入并显示视频字幕。</para>
+	  <note><para>默认情况下，<application>Xplayer 电影播放机</application>将会把字幕语言设定为与计算机当前所用语言一致。</para></note>
+	  <para>如果找到一个字幕文件，与当前播放视频的名称相同，并具有如下扩展名，<filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> 或 <filename class="extension">ass</filename><application>，Xplayer 电影播放机</application> 会自动载入并显示视频字幕。</para>
 	  <para>如果文件包含的字幕文件与正在播放的视频不同名，您可以右击播放列表里的视频项目并从快捷菜单中选择<menuchoice><guimenuitem>选择文本字幕</guimenuitem></menuchoice> 读取正确的字幕文件。您也可以通过<menuchoice><guimenu>查看</guimenu><guimenuitem>选择文本字幕</guimenuitem></menuchoice>菜单找出要使用的字幕。</para>
-	  <para>使用<guilabel>字幕下载器</guilabel>插件，也可从 OpenSubtitle 服务下载字幕。参看<xref linkend="totem-plugins-opensubtitles"/> 获得更多信息。</para>
+	  <para>使用<guilabel>字幕下载器</guilabel>插件，也可从 OpenSubtitle 服务下载字幕。参看<xref linkend="xplayer-plugins-opensubtitles"/> 获得更多信息。</para>
 	</sect2>
 
-    <sect2 id="totem-usage-take-screenshot">
+    <sect2 id="xplayer-usage-take-screenshot">
       <title>截图</title>
       <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
         <menuchoice>
@@ -713,10 +713,10 @@
 	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
 	to save the screenshot.
       </para>
-      <tip><para><application>Totem 电影播放机</application>会在<application>保存截图</application>左侧显示将要保存的截图预览。</para></tip>
+      <tip><para><application>Xplayer 电影播放机</application>会在<application>保存截图</application>左侧显示将要保存的截图预览。</para></tip>
     </sect2>
 
-    <sect2 id="totem-usage-create-screenshot-gallery">
+    <sect2 id="xplayer-usage-create-screenshot-gallery">
       <title>创建截图画册</title>
       <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
         <menuchoice>
@@ -732,65 +732,65 @@
   </sect1>
 
 <!-- =========== Plugins ======================================= -->
-  <sect1 id="totem-plugins">
+  <sect1 id="xplayer-plugins">
     <title>插件</title>
-    <para><application>Totem 电影播放机</application>有许多以插件形式实现的功能——仅当需要时才加载的软件模块。</para>
-    <sect2 id="totem-plugins-load">
+    <para><application>Xplayer 电影播放机</application>有许多以插件形式实现的功能——仅当需要时才加载的软件模块。</para>
+    <sect2 id="xplayer-plugins-load">
       <title>启用插件</title>
       <para>要查看已安装插件的列表，选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>插件</guimenuitem></menuchoice>。此时会弹出<application>配置插件</application>对话框。左侧是所有已安装插件的列表，右侧是当前选中插件的描述。对于有配置选项的插件，在右侧会有一个激活的<guibutton>配置</guibutton>按钮。</para>
       <para>要启用一个插件, 仅需选中插件列表中名称左侧的复选框，插件会被立即载入。如果载入插件发生错误，将会随即显示一个错误对话框。</para>
-      <para>要停用一个插件，取消选择插件旁的复选框。即使<application>Totem 电影播放机</application>关闭，插件仍会保持启用或者停用的状态。</para>
+      <para>要停用一个插件，取消选择插件旁的复选框。即使<application>Xplayer 电影播放机</application>关闭，插件仍会保持启用或者停用的状态。</para>
     </sect2>
-    <sect2 id="totem-plugins-always-on-top">
+    <sect2 id="xplayer-plugins-always-on-top">
       <title>总是位于前面</title>
-      <para>当启用，<guilabel>总是位于前面</guilabel>插件将会强制 <application>Totem 电影播放机</application>在播放电影时窗口始终位于所有其它窗口的前面，但这不不包含音频或可视化效果播放时的情况。停用窗口一直在前功能，只需停用插件即可。</para>
+      <para>当启用，<guilabel>总是位于前面</guilabel>插件将会强制 <application>Xplayer 电影播放机</application>在播放电影时窗口始终位于所有其它窗口的前面，但这不不包含音频或可视化效果播放时的情况。停用窗口一直在前功能，只需停用插件即可。</para>
     </sect2>
-    <sect2 id="totem-plugins-coherence">
+    <sect2 id="xplayer-plugins-coherence">
       <title>Coherence DLNA/UPnp 客户端</title>
-      <para><guilabel>Coherence DLNA/UPnP 客户端</guilabel>插件允许 <application>Totem 电影播放机</application> 在本地网络上播放 UPnP 媒体服务器(如 Coherence 服务器)目录上的多媒体资源。</para>
+      <para><guilabel>Coherence DLNA/UPnP 客户端</guilabel>插件允许 <application>Xplayer 电影播放机</application> 在本地网络上播放 UPnP 媒体服务器(如 Coherence 服务器)目录上的多媒体资源。</para>
       <para><guilabel>Coherence DLNA/UPnP 客户端</guilabel>插件启用后，选择 <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice> 或者点击<guibutton>侧边栏</guibutton>按钮显示侧边栏。从侧边栏顶部的下拉列表里选择 <guilabel>Coherence DLNA/UPnP 客户端</guilabel>即可显示 <guilabel>Coherence DLNA/UPnP 客户端</guilabel>侧边栏。</para>
-      <para>树形列表将显示所有可用的媒体服务器。点击服务器将展开显示该服务器提供服务的媒体类型，单击媒体文件夹会展开可用多媒体文件列表，双击媒体文件将会加入该文件到<application> Totem 电影播放机</application>的播放列表中并播放它。您可能有选择地右击一个文件并且选择<menuchoice><guimenuitem>播放</guimenuitem></menuchoice>或者<menuchoice><guimenuitem>队列</guimenuitem></menuchoice>菜单，立即播放文件或者分别把它加入到播放列表。</para>
+      <para>树形列表将显示所有可用的媒体服务器。点击服务器将展开显示该服务器提供服务的媒体类型，单击媒体文件夹会展开可用多媒体文件列表，双击媒体文件将会加入该文件到<application> Xplayer 电影播放机</application>的播放列表中并播放它。您可能有选择地右击一个文件并且选择<menuchoice><guimenuitem>播放</guimenuitem></menuchoice>或者<menuchoice><guimenuitem>队列</guimenuitem></menuchoice>菜单，立即播放文件或者分别把它加入到播放列表。</para>
       <para>如果媒体服务器允许，那么从文件的右键快捷菜单中选择<menuchoice><guimenuitem>删除</guimenuitem></menuchoice>允许您删除媒体服务器上的文件。</para>
     </sect2>
-    <sect2 id="totem-plugins-gromit">
+    <sect2 id="xplayer-plugins-gromit">
       <title>屏幕涂鸦</title>
       <para><guilabel>屏幕涂鸦</guilabel>插件允许您在播放电影时使用<ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink> 程序在电影图像上面绘图。当然您必须启用插件之前安装 <application>Gromit</application> 程序 — 请查阅您的操作系统文档中有关如何安装 Gromit 的信息。</para>
       <para>随着插件启用，按快捷键 <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> 开关 <application>Gromit</application> 程序。当 <application>Gromit</application> 程序启用时，您的指针会变成十字。在屏幕上绘图，就要在您松开鼠标左键之前，一直按住您的鼠标并且拖拽您的指针。再次按 <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> 关闭<application>Gromit</application> 。</para>
-      <para>要清理屏幕上的涂鸦，只需按下快捷键 <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>，或者关闭 <application>Totem 电影播放机</application>。</para>
+      <para>要清理屏幕上的涂鸦，只需按下快捷键 <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>，或者关闭 <application>Xplayer 电影播放机</application>。</para>
     </sect2>
-    <sect2 id="totem-plugins-jamendo">
+    <sect2 id="xplayer-plugins-jamendo">
       <title>Jamendo</title>
       <para><guilabel>Jamendo</guilabel> 插件允许您收听在 <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink> 服务上以创作共享协议下发布的音乐。</para>
-      <sect3 id="totem-plugins-jamendo-configuration">
+      <sect3 id="xplayer-plugins-jamendo-configuration">
         <title>配置插件</title>
         <para><guilabel>Jamendo</guilabel> 插件可以被配置。当插件启用时，点击<guibutton>配置</guibutton>按钮，这时将会显示<application> Jamendo 插件配置</application>对话框。在这里，您可以选择是否下载 OGG 或者 MP3 格式的歌曲(推荐开源格式 OGG )；搜索时检索到的专辑数(如有较快的网络连接，可选择更多的专辑)。 </para>
         <para>一旦完成，点击<guibutton>确定</guibutton>。</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-setup">
+      <sect3 id="xplayer-plugins-jamendo-setup">
         <title>显示 Jamendo 侧边栏</title>
         <para>启用<guilabel>Jamendo</guilabel> 插件后，选择 <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice> 或者单击<guibutton>侧边栏</guibutton>按钮显示侧边栏。从顶部下拉列表选择 <guilabel>Jamendo</guilabel> 即可显示 <guilabel>Jamendo</guilabel> 侧边栏。</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-search">
+      <sect3 id="xplayer-plugins-jamendo-search">
         <title>音乐搜索</title>
         <para>在 <guilabel>Jamendo</guilabel> 侧边栏顶部的搜索框中输入您的搜索条件。您可以通过艺术家或者标签来搜索。单击搜索按钮即可开始搜索。</para>
         <para>搜索结果将以树状视图显示在侧边栏的<guilabel>搜索结果</guilabel>页中，并且可以用侧边栏底部的箭头状按钮浏览详细信息，如果您点击一个专辑,该专辑将会展开它的曲目。再点击该专辑，曲目会被收起</para>
         <para>选中艺术家，您可以点击 <guibutton>Jamendo 专辑页</guibutton>按钮打开 Jamendo 网站上的专辑页面。从专辑的目录菜单中点击专辑或者选择<menuchoice><guimenuitem>添加到播放列表</guimenuitem></menuchoice>,将用这个专辑里的所有曲目取代您播放列表并且通过 Jamendo 的网站从第一首曲目开始在线收听该专辑。单独双击一首曲目将会用这首曲目取代播放列表。</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-popular">
+      <sect3 id="xplayer-plugins-jamendo-popular">
         <title>流行专辑和最新发布</title>
         <para>查看<guilabel>Jamendo</guilabel>侧边栏下的<guilabel>流行</guilabel>页面将从 Jamendo 取回一份流行专辑列表，可以做为搜索结果播放。查看<guilabel>最新发布</guilabel>页类似地会从 Jamendo取回一份最新专辑列表。</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-tracker">
+    <sect2 id="xplayer-plugins-tracker">
       <title>本地搜索</title>
-      <para><guilabel>本地搜索</guilabel> 插件允许您在 <application>Totem 电影播放机</application>中搜索计算机可播放的影音文件。启用这个插件，选择 <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice>或者单击<guibutton>侧边栏</guibutton>按钮显示侧边栏。点击侧边栏顶部的下拉菜单选择<guilabel>本地搜索</guilabel>显示<guilabel>本地搜索</guilabel>侧边栏。</para>
+      <para><guilabel>本地搜索</guilabel> 插件允许您在 <application>Xplayer 电影播放机</application>中搜索计算机可播放的影音文件。启用这个插件，选择 <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice>或者单击<guibutton>侧边栏</guibutton>按钮显示侧边栏。点击侧边栏顶部的下拉菜单选择<guilabel>本地搜索</guilabel>显示<guilabel>本地搜索</guilabel>侧边栏。</para>
       <para>在侧边栏顶部的搜索框中输入您的搜索条件并点击<guibutton>查找</guibutton>。您的搜索条件可能包含 <literal>*</literal> 之类的通配符，* 号匹配任意字符。例如搜索 <userinput>*.mpg</userinput> 将查找所以扩展名为 <filename class="extension">.mpg</filename> 的影音文件。</para>
       <para>可以利用侧边栏底部的<guibutton>后退</guibutton>和<guibutton>前进</guibutton>按钮浏览搜索结果。并且您可以通过微调框跳输入数字页码跳转到指定页。</para>
     </sect2>
-    <sect2 id="totem-plugins-publish">
+    <sect2 id="xplayer-plugins-publish">
       <title>发布播放列表</title>
       <para><guilabel>发布播放列表</guilabel>插件允计在您的本地网络上发表播放列表，允许其它计算机接入并播放它们。</para>
-      <sect3 id="totem-plugins-publish-configuration">
+      <sect3 id="xplayer-plugins-publish-configuration">
         <title>配置插件</title>
         <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
           plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
@@ -798,7 +798,7 @@
           <variablelist>
 	    <varlistentry>
 	      <term lang="en"><literal>%a</literal></term>
-	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Xplayer Movie Player</application>.</para></listitem>
 	    </varlistentry>
 	    <varlistentry>
 	      <term lang="en"><literal>%h</literal></term>
@@ -821,60 +821,60 @@
 	<para>当您网络中传播播放列表时，如果您希望加密您共享列表，可以勾选<guilabel>使用加密传输协议</guilabel>复选框。</para>
         <para>一旦您决定了，单击<guibutton>关闭</guibutton>。</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-publishing">
+      <sect3 id="xplayer-plugins-publish-publishing">
         <title>发布播放列表</title>
         <para>插件启用后，您无需明确地发布播放列表;他们会像一个 Zeroconf 站点一样自动地在网络上可用。</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-neighborhood">
+      <sect3 id="xplayer-plugins-publish-neighborhood">
         <title>浏览网上邻居</title>
         <para>查看网络中其它人的播放列表，从侧边栏顶部的下拉列表中选择<guilabel>Neighborhood</guilabel>。如果播放列表已在网络中发布，侧边栏中会列出。双击一播放列表即载入并在您的计算机上播放。</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-opensubtitles">
+    <sect2 id="xplayer-plugins-opensubtitles">
       <title>字幕下载器</title>
       <para><guilabel>字幕下载器</guilabel>插件允许您从 <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink> 服务中查找并下载字幕文件。</para>
       <para>字幕下载只能用于本地电影文件;不能用于音频文件、DVD、DVB 流媒体、VCD 或 HTTP 流媒体。要为正在播放的电影搜索字幕，选择<menuchoice><guimenu>查看</guimenu><guimenuitem>下载电影字幕</guimenuitem></menuchoice>后，便会显示<application>下载电影字幕</application>对话框。</para>
       <para>在对话框顶部下拉列表中选择您所期望的字幕语言，然后点击<guibutton>查找</guibutton>按钮搜索当前电影字幕。字幕的查找是根椐电影的内容，而不是根椐字的文件名或者标签。</para>
       <para>在对话框的中间，搜索结果以树状视图列出。现在，字幕只能通过<emphasis>重新载入</emphasis>电影才能使用。因此在您选定您希望下载的字幕后，点击<guibutton>带字幕播放</guibutton>按钮后下载字幕并且重新载入电影。</para>
-        <note><para>下载的字幕文件会被缓存(默认放在 <filename>~/.cache/totem/subtitles</filename>) ，所以再次播放这个电影时字幕不需重新下载。当下载了电影的新字幕时，先前下载的字幕会被删除。</para></note>
+        <note><para>下载的字幕文件会被缓存(默认放在 <filename>~/.cache/xplayer/subtitles</filename>) ，所以再次播放这个电影时字幕不需重新下载。当下载了电影的新字幕时，先前下载的字幕会被删除。</para></note>
     </sect2>
-    <sect2 id="totem-plugins-thumbnail">
+    <sect2 id="xplayer-plugins-thumbnail">
       <title>缩略图</title>
-      <para><guilabel>缩略图</guilabel>插件，设置<application> Totem 电影播放机</application>的主窗口图标为当前播放电影的缩略图，并前当新电影被载入时更新图标。</para>
-      <note><para>如果现有电影的缩略图不存在(或者您正在播放音频文件)，那么主窗口图标会重置为<application>Totem 电影播放机</application>标志。</para></note>
+      <para><guilabel>缩略图</guilabel>插件，设置<application> Xplayer 电影播放机</application>的主窗口图标为当前播放电影的缩略图，并前当新电影被载入时更新图标。</para>
+      <note><para>如果现有电影的缩略图不存在(或者您正在播放音频文件)，那么主窗口图标会重置为<application>Xplayer 电影播放机</application>标志。</para></note>
     </sect2>
-    <sect2 id="totem-plugins-brasero">
+    <sect2 id="xplayer-plugins-brasero">
       <title>视频光盘录制</title>
       <para><guilabel>视频光盘录制器</guilabel>插件使您能够将现有播放列表的内容运用<application>Brasero</application>刻录到 DVD 或 VCD 光盘。</para>
       <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
         A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
         information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
     </sect2>
-    <sect2 id="totem-plugins-youtube">
+    <sect2 id="xplayer-plugins-youtube">
       <title>YouTube 浏览器</title>
-      <para><guilabel>YouTube 浏览器</guilabel>插件允许您浏览并搜索<ulink type="http" url="http://www.youtube.com/">YouTube</ulink>，并在<application>Totem 电影播放机</application>中直接播放。插件启用后，选择<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice>或者点击<guibutton>侧边栏</guibutton>按钮显示侧边栏。从侧边栏顶部下拉列表中选择<guilabel>YouTube</guilabel>标签以显示<guilabel>YouTube</guilabel>侧边栏。</para>
+      <para><guilabel>YouTube 浏览器</guilabel>插件允许您浏览并搜索<ulink type="http" url="http://www.youtube.com/">YouTube</ulink>，并在<application>Xplayer 电影播放机</application>中直接播放。插件启用后，选择<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice>或者点击<guibutton>侧边栏</guibutton>按钮显示侧边栏。从侧边栏顶部下拉列表中选择<guilabel>YouTube</guilabel>标签以显示<guilabel>YouTube</guilabel>侧边栏。</para>
       <para>要搜索 YouTube视频，在侧边栏的顶部搜索框中输入要搜索的条件，然后点击<guibutton>查找</guibutton>按钮。搜索结果会以树状视图在下面列出。更多结果会自动地在您向下滚动列表时载入。</para>
       <para>要播放视频，双击搜索结果列表，或者从它的目录菜单中选择<menuchoice><guimenuitem>添加到播放列表</guimenuitem></menuchoice>。当视频被播放，会在<guilabel>YouTube</guilabel>侧边栏的<guilabel>Related Videos</guilabel>页自动载入相关视频列表中。</para>
       <para>YouTube 视频能通过它的目录菜单选择<menuchoice><guimenuitem>在浏览器中打开</guimenuitem></menuchoice>菜单打开。这样会在 YouTube  网站原始位置打开视频。</para>
     </sect2>
-    <sect2 id="totem-plugins-dbus-service">
+    <sect2 id="xplayer-plugins-dbus-service">
       <title>D-Bus 服务</title>
-      <para><guilabel>D-Bus 服务</guilabel>插件使<application>Totem 电影播放机</application>实现在 D-Bus 会话总线上广播正在播放曲目的消息通知。应用程序，如 <application>Gajim</application>，能够监听到通知并做出相应的应答，例如，更新您的即时通信状态显示<application>Totem 电影播放机</application>中正在播放的视频。</para>
+      <para><guilabel>D-Bus 服务</guilabel>插件使<application>Xplayer 电影播放机</application>实现在 D-Bus 会话总线上广播正在播放曲目的消息通知。应用程序，如 <application>Gajim</application>，能够监听到通知并做出相应的应答，例如，更新您的即时通信状态显示<application>Xplayer 电影播放机</application>中正在播放的视频。</para>
     </sect2>
   </sect1>
 
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to customize the
      application. -->
-  <sect1 id="totem-prefs">
+  <sect1 id="xplayer-prefs">
     <title>首选项</title>
-    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+    <para lang="en">To modify the preferences of <application>Xplayer Movie Player</application>, choose
       <menuchoice>
         <guimenu>Edit</guimenu>
 	<guimenuitem>Preferences</guimenuitem>
       </menuchoice>.</para>
 
-    <sect2 id="totem-prefs-general">
+    <sect2 id="xplayer-prefs-general">
       <title>常规</title>
       <variablelist>
 	<varlistentry>
@@ -901,7 +901,7 @@
         </varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-display">
+    <sect2 id="xplayer-prefs-display">
       <title>显示</title>
       <variablelist>
 	<varlistentry>
@@ -909,7 +909,7 @@
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	        <para>当新视频载入时，如果您想<application>Totem 播放器</application>依照该视频尺寸自动调整窗口大小，那么请选择调整大小选项。</para>
+	        <para>当新视频载入时，如果您想<application>Xplayer 播放器</application>依照该视频尺寸自动调整窗口大小，那么请选择调整大小选项。</para>
               </listitem>
               <listitem>
                 <para>当音频文件播放时，如果您想使屏保开始起作用，那么请选择屏保选项。在屏保开始起作用时，一些集成扬声器的显示器可能会停止正在播放的音乐。</para>
@@ -955,7 +955,7 @@
 	</varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-audio">
+    <sect2 id="xplayer-prefs-audio">
       <title>音频</title>
       <variablelist>
 	<varlistentry>
@@ -986,11 +986,11 @@
       section is optional: primary place for this info is "About.." box of
       the program. However, if you do wish to include this info in the
       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
-  <sect1 id="totem-about">
-    <title>关于 <application>Totem 电影播放机</application></title>
-    <para><application>Totem 电影播放机</application>由 Bastien Nocera (<email>hadess@hadess.net</email>)编写，Julien Moutte (<email>julien@moutte.net</email>) 和 Guenter Bartsch (<email>guenter@users.sourceforge.net</email>)编写 GStreamer 后端。 查询更多关于 <application>Totem 电影播放机</application>信息，请访问 <ulink url="http://projects.gnome.org/totem/" type="http"><application>Totem 电影播放机</application> 网站</ulink>。</para>
+  <sect1 id="xplayer-about">
+    <title>关于 <application>Xplayer 电影播放机</application></title>
+    <para><application>Xplayer 电影播放机</application>由 Bastien Nocera (<email>hadess@hadess.net</email>)编写，Julien Moutte (<email>julien@moutte.net</email>) 和 Guenter Bartsch (<email>guenter@users.sourceforge.net</email>)编写 GStreamer 后端。 查询更多关于 <application>Xplayer 电影播放机</application>信息，请访问 <ulink url="http://projects.gnome.org/xplayer/" type="http"><application>Xplayer 电影播放机</application> 网站</ulink>。</para>
     <para lang="en">
-      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
       this manual, follow the directions in the
       <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
     </para>

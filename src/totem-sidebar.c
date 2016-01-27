@@ -1,4 +1,4 @@
-/* totem-sidebar.c
+/* xplayer-sidebar.c
 
    Copyright (C) 2004-2005 Bastien Nocera
 
@@ -24,12 +24,12 @@
 
 #include <glib/gi18n.h>
 
-#include "totem.h"
-#include "totem-sidebar.h"
-#include "totem-private.h"
+#include "xplayer.h"
+#include "xplayer-sidebar.h"
+#include "xplayer-private.h"
 
 static void
-cb_resize (Totem * totem)
+cb_resize (Xplayer * xplayer)
 {
 	GValue gvalue_size = { 0, };
 	gint handle_size;
@@ -37,53 +37,53 @@ cb_resize (Totem * totem)
 	GtkAllocation allocation;
 	int w, h;
 
-	gtk_widget_get_allocation (totem->win, &allocation);
+	gtk_widget_get_allocation (xplayer->win, &allocation);
 	w = allocation.width;
 	h = allocation.height;
 
 	g_value_init (&gvalue_size, G_TYPE_INT);
-	pane = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_main_pane"));
+	pane = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_main_pane"));
 	gtk_widget_style_get_property (pane, "handle-size", &gvalue_size);
 	handle_size = g_value_get_int (&gvalue_size);
 	g_value_unset (&gvalue_size);
 
-	gtk_widget_get_allocation (totem->sidebar, &allocation);
-	if (totem->sidebar_shown) {
+	gtk_widget_get_allocation (xplayer->sidebar, &allocation);
+	if (xplayer->sidebar_shown) {
 		w += allocation.width + handle_size;
 	} else {
 		w -= allocation.width + handle_size;
 	}
 
 	if (w > 0 && h > 0)
-		gtk_window_resize (GTK_WINDOW (totem->win), w, h);
+		gtk_window_resize (GTK_WINDOW (xplayer->win), w, h);
 }
 
 void
-totem_sidebar_toggle (Totem *totem, gboolean state)
+xplayer_sidebar_toggle (Xplayer *xplayer, gboolean state)
 {
 	GtkAction *action;
 
-	if (gtk_widget_get_visible (GTK_WIDGET (totem->sidebar)) == state)
+	if (gtk_widget_get_visible (GTK_WIDGET (xplayer->sidebar)) == state)
 		return;
 
 	if (state != FALSE)
-		gtk_widget_show (GTK_WIDGET (totem->sidebar));
+		gtk_widget_show (GTK_WIDGET (xplayer->sidebar));
 	else
-		gtk_widget_hide (GTK_WIDGET (totem->sidebar));
+		gtk_widget_hide (GTK_WIDGET (xplayer->sidebar));
 
-	action = gtk_action_group_get_action (totem->main_action_group, "sidebar");
-	totem_signal_block_by_data (G_OBJECT (action), totem);
+	action = gtk_action_group_get_action (xplayer->main_action_group, "sidebar");
+	xplayer_signal_block_by_data (G_OBJECT (action), xplayer);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), state);
-	totem_signal_unblock_by_data (G_OBJECT (action), totem);
+	xplayer_signal_unblock_by_data (G_OBJECT (action), xplayer);
 
-	totem->sidebar_shown = state;
-	cb_resize(totem);
+	xplayer->sidebar_shown = state;
+	cb_resize(xplayer);
 }
 
 gboolean
-totem_sidebar_is_visible (Totem *totem)
+xplayer_sidebar_is_visible (Xplayer *xplayer)
 {
-	return totem->sidebar_shown;
+	return xplayer->sidebar_shown;
 }
 
 static gboolean
@@ -105,19 +105,19 @@ has_popup (void)
 }
 
 gboolean
-totem_sidebar_is_focused (Totem *totem, gboolean *handles_kbd)
+xplayer_sidebar_is_focused (Xplayer *xplayer, gboolean *handles_kbd)
 {
 	GtkWidget *focused, *sidebar_button;
 
 	if (handles_kbd != NULL)
 		*handles_kbd = has_popup ();
 
-	focused = gtk_window_get_focus (GTK_WINDOW (totem->win));
+	focused = gtk_window_get_focus (GTK_WINDOW (xplayer->win));
 	if (focused == NULL)
 		return FALSE;
-	if (gtk_widget_is_ancestor (focused, GTK_WIDGET (totem->sidebar)) != FALSE)
+	if (gtk_widget_is_ancestor (focused, GTK_WIDGET (xplayer->sidebar)) != FALSE)
 		return TRUE;
-	sidebar_button = GTK_WIDGET (gtk_builder_get_object (totem->xml, "tmw_sidebar_button_hbox"));
+	sidebar_button = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_sidebar_button_hbox"));
 	if (gtk_widget_is_ancestor (focused, sidebar_button) != FALSE)
 		return TRUE;
 
@@ -125,48 +125,48 @@ totem_sidebar_is_focused (Totem *totem, gboolean *handles_kbd)
 }
 
 void
-totem_sidebar_setup (Totem *totem, gboolean visible)
+xplayer_sidebar_setup (Xplayer *xplayer, gboolean visible)
 {
 	GtkPaned *item;
 	GtkAction *action;
 	GtkUIManager *uimanager;
 	GtkActionGroup *action_group;
 
-	item = GTK_PANED (gtk_builder_get_object (totem->xml, "tmw_main_pane"));
-	totem->sidebar = gtk_notebook_new ();
-	gtk_notebook_set_show_border (GTK_NOTEBOOK (totem->sidebar), FALSE);
-	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (totem->sidebar), FALSE);
+	item = GTK_PANED (gtk_builder_get_object (xplayer->xml, "tmw_main_pane"));
+	xplayer->sidebar = gtk_notebook_new ();
+	gtk_notebook_set_show_border (GTK_NOTEBOOK (xplayer->sidebar), FALSE);
+	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (xplayer->sidebar), FALSE);
 
 	action_group = gtk_action_group_new ("SidebarActions");
-	uimanager = totem_get_ui_manager (totem);
+	uimanager = xplayer_get_ui_manager (xplayer);
 	gtk_ui_manager_insert_action_group (uimanager, action_group, -1);
-	g_object_set_data (G_OBJECT (totem->sidebar), "sidebar-action-group", action_group);
+	g_object_set_data (G_OBJECT (xplayer->sidebar), "sidebar-action-group", action_group);
 
-	totem_sidebar_add_page (totem, "playlist", _("Playlist"), NULL, GTK_WIDGET (totem->playlist));
-	gtk_paned_pack2 (item, totem->sidebar, FALSE, FALSE);
+	xplayer_sidebar_add_page (xplayer, "playlist", _("Playlist"), NULL, GTK_WIDGET (xplayer->playlist));
+	gtk_paned_pack2 (item, xplayer->sidebar, FALSE, FALSE);
 
-	totem->sidebar_shown = visible;
-	action = gtk_action_group_get_action (totem->main_action_group, "sidebar");
+	xplayer->sidebar_shown = visible;
+	action = gtk_action_group_get_action (xplayer->main_action_group, "sidebar");
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
 
-	gtk_widget_show_all (totem->sidebar);
-	gtk_widget_realize (totem->sidebar);
+	gtk_widget_show_all (xplayer->sidebar);
+	gtk_widget_realize (xplayer->sidebar);
 
 	if (!visible)
-		gtk_widget_hide (totem->sidebar);
+		gtk_widget_hide (xplayer->sidebar);
 }
 
 static void
 action_activated (GtkAction *action,
-		  Totem     *totem)
+		  Xplayer     *xplayer)
 {
-	totem_sidebar_set_current_page (totem,
+	xplayer_sidebar_set_current_page (xplayer,
 					gtk_action_get_name (action),
 					TRUE);
 }
 
 void
-totem_sidebar_add_page (Totem *totem,
+xplayer_sidebar_add_page (Xplayer *xplayer,
 			const char *page_id,
 			const char *label,
 			const char *accelerator,
@@ -183,7 +183,7 @@ totem_sidebar_add_page (Totem *totem,
 	g_object_set_data_full (G_OBJECT (main_widget), "sidebar-name",
 				g_strdup (page_id), g_free);
 
-	gtk_notebook_append_page (GTK_NOTEBOOK (totem->sidebar),
+	gtk_notebook_append_page (GTK_NOTEBOOK (xplayer->sidebar),
 				  main_widget,
 				  NULL);
 
@@ -196,12 +196,12 @@ totem_sidebar_add_page (Totem *totem,
 				 NULL,
 				 NULL);
 	g_signal_connect (G_OBJECT (action), "activate",
-			  G_CALLBACK (action_activated), totem);
+			  G_CALLBACK (action_activated), xplayer);
 
-	uimanager = totem_get_ui_manager (totem);
+	uimanager = xplayer_get_ui_manager (xplayer);
 	merge_id = gtk_ui_manager_new_merge_id (uimanager);
 
-	action_group = g_object_get_data (G_OBJECT (totem->sidebar), "sidebar-action-group");
+	action_group = g_object_get_data (G_OBJECT (xplayer->sidebar), "sidebar-action-group");
 	gtk_action_group_add_action_with_accel (action_group, action, accelerator);
 	gtk_ui_manager_add_ui (uimanager,
 			       merge_id,
@@ -215,7 +215,7 @@ totem_sidebar_add_page (Totem *totem,
 }
 
 static int
-get_page_num_for_name (Totem *totem,
+get_page_num_for_name (Xplayer *xplayer,
 		       const char *page_id)
 {
 	int num_pages, i;
@@ -223,12 +223,12 @@ get_page_num_for_name (Totem *totem,
 	if (page_id == NULL)
 		return -1;
 
-	num_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (totem->sidebar));
+	num_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (xplayer->sidebar));
 	for (i = 0; i < num_pages; i++) {
 		GtkWidget *widget;
 		const char *name;
 
-		widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (totem->sidebar), i);
+		widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (xplayer->sidebar), i);
 
 		name = g_object_get_data (G_OBJECT (widget), "sidebar-name");
 		if (g_strcmp0 (name, page_id) == 0)
@@ -239,7 +239,7 @@ get_page_num_for_name (Totem *totem,
 }
 
 void
-totem_sidebar_remove_page (Totem *totem,
+xplayer_sidebar_remove_page (Xplayer *xplayer,
 			   const char *page_id)
 {
 	GtkUIManager *uimanager;
@@ -250,46 +250,46 @@ totem_sidebar_remove_page (Totem *totem,
 	guint merge_id;
 	gpointer data;
 
-	page_num = get_page_num_for_name (totem, page_id);
+	page_num = get_page_num_for_name (xplayer, page_id);
 
 	if (page_num == -1) {
 		g_warning ("Tried to remove sidebar page '%s' but it does not exist", page_id);
 		return;
 	}
 
-	main_widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (totem->sidebar), page_num);
+	main_widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (xplayer->sidebar), page_num);
 	data = g_object_get_data (G_OBJECT (main_widget), "sidebar-menu-merge-id");
 	merge_id = GPOINTER_TO_UINT (data);
 
-	gtk_notebook_remove_page (GTK_NOTEBOOK (totem->sidebar), page_num);
+	gtk_notebook_remove_page (GTK_NOTEBOOK (xplayer->sidebar), page_num);
 
 	if (data == NULL)
 		return;
 
-	action_group = g_object_get_data (G_OBJECT (totem->sidebar), "sidebar-action-group");
-	uimanager = totem_get_ui_manager (totem);
+	action_group = g_object_get_data (G_OBJECT (xplayer->sidebar), "sidebar-action-group");
+	uimanager = xplayer_get_ui_manager (xplayer);
 	gtk_ui_manager_remove_ui (uimanager, merge_id);
 	action = gtk_action_group_get_action (action_group, page_id);
 	gtk_action_group_remove_action (action_group, action);
 }
 
 char *
-totem_sidebar_get_current_page (Totem *totem)
+xplayer_sidebar_get_current_page (Xplayer *xplayer)
 {
 	int current_page;
 	GtkWidget *widget;
 
-	if (totem->sidebar == NULL)
+	if (xplayer->sidebar == NULL)
 		return NULL;
 
-	current_page = gtk_notebook_get_current_page (GTK_NOTEBOOK (totem->sidebar));
-	widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (totem->sidebar), current_page);
+	current_page = gtk_notebook_get_current_page (GTK_NOTEBOOK (xplayer->sidebar));
+	widget = gtk_notebook_get_nth_page (GTK_NOTEBOOK (xplayer->sidebar), current_page);
 
 	return g_strdup (g_object_get_data (G_OBJECT (widget), "sidebar-name"));
 }
 
 void
-totem_sidebar_set_current_page (Totem *totem,
+xplayer_sidebar_set_current_page (Xplayer *xplayer,
 				const char *page_id,
 				gboolean force_visible)
 {
@@ -298,16 +298,16 @@ totem_sidebar_set_current_page (Totem *totem,
 	if (page_id == NULL)
 		return;
 
-	page_num = get_page_num_for_name (totem, page_id);
+	page_num = get_page_num_for_name (xplayer, page_id);
 
 	if (page_num == -1) {
 		g_warning ("Tried to set sidebar page '%s' but it does not exist", page_id);
 		return;
 	}
 
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (totem->sidebar), page_num);
+	gtk_notebook_set_current_page (GTK_NOTEBOOK (xplayer->sidebar), page_num);
 
 	if (force_visible != FALSE)
-		totem_sidebar_toggle (totem, TRUE);
+		xplayer_sidebar_toggle (xplayer, TRUE);
 }
 

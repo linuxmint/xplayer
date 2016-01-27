@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_CONE_AUDIO_H__
-#define __TOTEM_CONE_AUDIO_H__
+#ifndef __XPLAYER_CONE_AUDIO_H__
+#define __XPLAYER_CONE_AUDIO_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemConeAudio : public totemNPObject
+class xplayerConeAudio : public xplayerNPObject
 {
   public:
-    totemConeAudio (NPP);
-    virtual ~totemConeAudio ();
+    xplayerConeAudio (NPP);
+    virtual ~xplayerConeAudio ();
 
   private:
 
@@ -53,6 +53,6 @@ class totemConeAudio : public totemNPObject
     double mSavedVolume;
 };
 
-TOTEM_DEFINE_NPCLASS (totemConeAudio);
+XPLAYER_DEFINE_NPCLASS (xplayerConeAudio);
 
-#endif /* __TOTEM_CONE_AUDIO_H__ */
+#endif /* __XPLAYER_CONE_AUDIO_H__ */

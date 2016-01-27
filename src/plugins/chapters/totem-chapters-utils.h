@@ -16,18 +16,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  */
 
-#ifndef TOTEM_CHAPTERS_UTILS_H_
-#define TOTEM_CHAPTERS_UTILS_H_
+#ifndef XPLAYER_CHAPTERS_UTILS_H_
+#define XPLAYER_CHAPTERS_UTILS_H_
 
 #include <glib.h>
 
-gchar * totem_remove_file_extension (const gchar *filename);
-gchar * totem_change_file_extension (const gchar *filename, const gchar *ext);
+gchar * xplayer_remove_file_extension (const gchar *filename);
+gchar * xplayer_change_file_extension (const gchar *filename, const gchar *ext);
 
-#endif /* TOTEM_CHAPTERS_UTILS_H_ */
+#endif /* XPLAYER_CHAPTERS_UTILS_H_ */

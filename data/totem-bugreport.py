@@ -9,7 +9,7 @@ if os.system ('gst-typefind-0.10 --version') == 0:
 	last_visited = 0
 	recent_manager = Gtk.RecentManager.get_default ()
 	for recent in recent_manager.get_items ():
-		if recent.has_group ("Totem"):
+		if recent.has_group ("Xplayer"):
 			if recent.get_visited () > last_visited:
 				last_visited = recent.get_visited ()
 				last = recent.get_uri_display ()

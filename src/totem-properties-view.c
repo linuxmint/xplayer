@@ -16,10 +16,10 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -35,10 +35,10 @@
 #include <gst/tag/tag.h>
 #include <gst/pbutils/pbutils.h>
 
-#include "totem-properties-view.h"
+#include "xplayer-properties-view.h"
 #include "bacon-video-widget-properties.h"
 
-struct TotemPropertiesViewPriv {
+struct XplayerPropertiesViewPriv {
 	GtkWidget *label;
 	GtkWidget *vbox;
 	BaconVideoWidgetProperties *props;
@@ -46,25 +46,25 @@ struct TotemPropertiesViewPriv {
 };
 
 static GObjectClass *parent_class = NULL;
-static void totem_properties_view_finalize (GObject *object);
+static void xplayer_properties_view_finalize (GObject *object);
 
-G_DEFINE_TYPE (TotemPropertiesView, totem_properties_view, GTK_TYPE_GRID)
+G_DEFINE_TYPE (XplayerPropertiesView, xplayer_properties_view, GTK_TYPE_GRID)
 
 void
-totem_properties_view_register_type (GTypeModule *module)
+xplayer_properties_view_register_type (GTypeModule *module)
 {
-	totem_properties_view_get_type ();
+	xplayer_properties_view_get_type ();
 }
 
 static void
-totem_properties_view_class_init (TotemPropertiesViewClass *class)
+xplayer_properties_view_class_init (XplayerPropertiesViewClass *class)
 {
 	parent_class = g_type_class_peek_parent (class);
-	G_OBJECT_CLASS (class)->finalize = totem_properties_view_finalize;
+	G_OBJECT_CLASS (class)->finalize = xplayer_properties_view_finalize;
 }
 
 static void
-update_general (TotemPropertiesView *props,
+update_general (XplayerPropertiesView *props,
 		const GstTagList    *list)
 {
 	struct {
@@ -125,7 +125,7 @@ update_general (TotemPropertiesView *props,
 }
 
 static void
-set_codec (TotemPropertiesView     *props,
+set_codec (XplayerPropertiesView     *props,
 	   GstDiscovererStreamInfo *info,
 	   const char              *widget)
 {
@@ -158,7 +158,7 @@ set_codec (TotemPropertiesView     *props,
 }
 
 static void
-set_bitrate (TotemPropertiesView    *props,
+set_bitrate (XplayerPropertiesView    *props,
 	     guint                   bitrate,
 	     const char             *widget)
 {
@@ -178,7 +178,7 @@ set_bitrate (TotemPropertiesView    *props,
 }
 
 static void
-update_video (TotemPropertiesView    *props,
+update_video (XplayerPropertiesView    *props,
 	      GstDiscovererVideoInfo *info)
 {
 	guint width, height;
@@ -207,7 +207,7 @@ update_video (TotemPropertiesView    *props,
 }
 
 static void
-update_audio (TotemPropertiesView    *props,
+update_audio (XplayerPropertiesView    *props,
 	      GstDiscovererAudioInfo *info)
 {
 	guint samplerate, channels;
@@ -256,7 +256,7 @@ static void
 discovered_cb (GstDiscoverer       *discoverer,
 	       GstDiscovererInfo   *info,
 	       GError              *error,
-	       TotemPropertiesView *props)
+	       XplayerPropertiesView *props)
 {
 	GList *video_streams, *audio_streams;
 	const GstTagList *taglist;
@@ -315,11 +315,11 @@ discovered_cb (GstDiscoverer       *discoverer,
 }
 
 static void
-totem_properties_view_init (TotemPropertiesView *props)
+xplayer_properties_view_init (XplayerPropertiesView *props)
 {
 	GError *err = NULL;
 
-	props->priv = g_new0 (TotemPropertiesViewPriv, 1);
+	props->priv = g_new0 (XplayerPropertiesViewPriv, 1);
 
 	props->priv->vbox = bacon_video_widget_properties_new ();
 	gtk_grid_attach (GTK_GRID (props), props->priv->vbox, 0, 0, 1, 1);
@@ -338,11 +338,11 @@ totem_properties_view_init (TotemPropertiesView *props)
 }
 
 static void
-totem_properties_view_finalize (GObject *object)
+xplayer_properties_view_finalize (GObject *object)
 {
-	TotemPropertiesView *props;
+	XplayerPropertiesView *props;
 
-	props = TOTEM_PROPERTIES_VIEW (object);
+	props = XPLAYER_PROPERTIES_VIEW (object);
 
 	if (props->priv != NULL)
 	{
@@ -362,23 +362,23 @@ totem_properties_view_finalize (GObject *object)
 }
 
 GtkWidget *
-totem_properties_view_new (const char *location, GtkWidget *label)
+xplayer_properties_view_new (const char *location, GtkWidget *label)
 {
-	TotemPropertiesView *self;
+	XplayerPropertiesView *self;
 
-	self = g_object_new (TOTEM_TYPE_PROPERTIES_VIEW, NULL);
+	self = g_object_new (XPLAYER_TYPE_PROPERTIES_VIEW, NULL);
 	g_object_ref (label);
 	self->priv->label = label;
-	totem_properties_view_set_location (self, location);
+	xplayer_properties_view_set_location (self, location);
 
 	return GTK_WIDGET (self);
 }
 
 void
-totem_properties_view_set_location (TotemPropertiesView *props,
+xplayer_properties_view_set_location (XplayerPropertiesView *props,
 				    const char          *location)
 {
-	g_assert (TOTEM_IS_PROPERTIES_VIEW (props));
+	g_assert (XPLAYER_IS_PROPERTIES_VIEW (props));
 
 	if (props->priv->disco)
 		gst_discoverer_stop (props->priv->disco);

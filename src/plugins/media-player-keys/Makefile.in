@@ -128,7 +128,7 @@ am__DEPENDENCIES_1 =
 libmedia_player_keys_la_DEPENDENCIES = $(plugin_libadd) \
 	$(am__DEPENDENCIES_1)
 am_libmedia_player_keys_la_OBJECTS =  \
-	libmedia_player_keys_la-totem-media-player-keys.lo
+	libmedia_player_keys_la-xplayer-media-player-keys.lo
 libmedia_player_keys_la_OBJECTS =  \
 	$(am_libmedia_player_keys_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
@@ -207,7 +207,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -389,11 +389,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -476,13 +476,13 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/media-player-keys
 plugin_LTLIBRARIES = libmedia_player_keys.la
 plugin_in_files = media-player-keys.plugin.in
 libmedia_player_keys_la_SOURCES = \
-	totem-media-player-keys.c
+	xplayer-media-player-keys.c
 
 libmedia_player_keys_la_LDFLAGS = $(plugin_ldflags)
 libmedia_player_keys_la_LIBADD = \
@@ -573,7 +573,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmedia_player_keys_la-totem-media-player-keys.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmedia_player_keys_la-xplayer-media-player-keys.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -596,12 +596,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libmedia_player_keys_la-totem-media-player-keys.lo: totem-media-player-keys.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libmedia_player_keys_la_CFLAGS) $(CFLAGS) -MT libmedia_player_keys_la-totem-media-player-keys.lo -MD -MP -MF $(DEPDIR)/libmedia_player_keys_la-totem-media-player-keys.Tpo -c -o libmedia_player_keys_la-totem-media-player-keys.lo `test -f 'totem-media-player-keys.c' || echo '$(srcdir)/'`totem-media-player-keys.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libmedia_player_keys_la-totem-media-player-keys.Tpo $(DEPDIR)/libmedia_player_keys_la-totem-media-player-keys.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-media-player-keys.c' object='libmedia_player_keys_la-totem-media-player-keys.lo' libtool=yes @AMDEPBACKSLASH@
+libmedia_player_keys_la-xplayer-media-player-keys.lo: xplayer-media-player-keys.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libmedia_player_keys_la_CFLAGS) $(CFLAGS) -MT libmedia_player_keys_la-xplayer-media-player-keys.lo -MD -MP -MF $(DEPDIR)/libmedia_player_keys_la-xplayer-media-player-keys.Tpo -c -o libmedia_player_keys_la-xplayer-media-player-keys.lo `test -f 'xplayer-media-player-keys.c' || echo '$(srcdir)/'`xplayer-media-player-keys.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libmedia_player_keys_la-xplayer-media-player-keys.Tpo $(DEPDIR)/libmedia_player_keys_la-xplayer-media-player-keys.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-media-player-keys.c' object='libmedia_player_keys_la-xplayer-media-player-keys.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libmedia_player_keys_la_CFLAGS) $(CFLAGS) -c -o libmedia_player_keys_la-totem-media-player-keys.lo `test -f 'totem-media-player-keys.c' || echo '$(srcdir)/'`totem-media-player-keys.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libmedia_player_keys_la_CFLAGS) $(CFLAGS) -c -o libmedia_player_keys_la-xplayer-media-player-keys.lo `test -f 'xplayer-media-player-keys.c' || echo '$(srcdir)/'`xplayer-media-player-keys.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

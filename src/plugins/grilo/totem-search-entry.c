@@ -19,10 +19,10 @@
  *
  */
 
-#include "totem-search-entry.h"
+#include "xplayer-search-entry.h"
 #include "libgd/gd-tagged-entry.h"
 
-G_DEFINE_TYPE (TotemSearchEntry, totem_search_entry, GTK_TYPE_BOX)
+G_DEFINE_TYPE (XplayerSearchEntry, xplayer_search_entry, GTK_TYPE_BOX)
 
 /* To be used as the ID in the GdTaggedEntry */
 #define SOURCE_ID "source-id"
@@ -39,7 +39,7 @@ enum {
 
 static guint signals[LAST_SIGNAL] = { 0, };
 
-struct _TotemSearchEntryPrivate {
+struct _XplayerSearchEntryPrivate {
 	GtkWidget *entry;
 	GtkWidget *button;
 	GtkWidget *menu;
@@ -47,18 +47,18 @@ struct _TotemSearchEntryPrivate {
 };
 
 static void
-totem_search_entry_finalize (GObject *obj)
+xplayer_search_entry_finalize (GObject *obj)
 {
-	TotemSearchEntry *self = TOTEM_SEARCH_ENTRY (obj);
+	XplayerSearchEntry *self = XPLAYER_SEARCH_ENTRY (obj);
 
 	/* FIXME */
 
-	G_OBJECT_CLASS (totem_search_entry_parent_class)->finalize (obj);
+	G_OBJECT_CLASS (xplayer_search_entry_parent_class)->finalize (obj);
 }
 
 static void
 entry_activate_cb (GtkEntry *entry,
-		   TotemSearchEntry *self)
+		   XplayerSearchEntry *self)
 {
 	const char *text;
 
@@ -69,12 +69,12 @@ entry_activate_cb (GtkEntry *entry,
 }
 
 static void
-totem_search_entry_init (TotemSearchEntry *self)
+xplayer_search_entry_init (XplayerSearchEntry *self)
 {
 	GtkWidget *entry;
 	GtkWidget *button;
 
-	self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, TOTEM_TYPE_SEARCH_ENTRY, TotemSearchEntryPrivate);
+	self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, XPLAYER_TYPE_SEARCH_ENTRY, XplayerSearchEntryPrivate);
 
 	/* Entry */
 	entry = GTK_WIDGET (gd_tagged_entry_new ());
@@ -101,14 +101,14 @@ totem_search_entry_init (TotemSearchEntry *self)
 }
 
 static void
-totem_search_entry_set_property (GObject *object,
+xplayer_search_entry_set_property (GObject *object,
 				 guint property_id,
                                  const GValue *value,
                                  GParamSpec * pspec)
 {
 	switch (property_id) {
 	case PROP_SELECTED_ID:
-		totem_search_entry_set_selected_id (TOTEM_SEARCH_ENTRY (object),
+		xplayer_search_entry_set_selected_id (XPLAYER_SEARCH_ENTRY (object),
 						    g_value_get_string (value));
 		break;
 	default:
@@ -117,7 +117,7 @@ totem_search_entry_set_property (GObject *object,
 }
 
 static void
-totem_search_entry_get_property (GObject    *object,
+xplayer_search_entry_get_property (GObject    *object,
 				 guint       property_id,
                                  GValue     *value,
                                  GParamSpec *pspec)
@@ -125,7 +125,7 @@ totem_search_entry_get_property (GObject    *object,
 	switch (property_id) {
 	case PROP_SELECTED_ID:
 		g_value_set_string (value,
-				    totem_search_entry_get_selected_id (TOTEM_SEARCH_ENTRY (object)));
+				    xplayer_search_entry_get_selected_id (XPLAYER_SEARCH_ENTRY (object)));
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -133,17 +133,17 @@ totem_search_entry_get_property (GObject    *object,
 }
 
 static void
-totem_search_entry_class_init (TotemSearchEntryClass *klass)
+xplayer_search_entry_class_init (XplayerSearchEntryClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-	gobject_class->finalize = totem_search_entry_finalize;
-	gobject_class->set_property = totem_search_entry_set_property;
-	gobject_class->get_property = totem_search_entry_get_property;
+	gobject_class->finalize = xplayer_search_entry_finalize;
+	gobject_class->set_property = xplayer_search_entry_set_property;
+	gobject_class->get_property = xplayer_search_entry_get_property;
 
 	signals[SIGNAL_ACTIVATE] =
 		g_signal_new ("activate",
-			      TOTEM_TYPE_SEARCH_ENTRY,
+			      XPLAYER_TYPE_SEARCH_ENTRY,
 			      G_SIGNAL_RUN_FIRST | G_SIGNAL_DETAILED,
 			      0, NULL, NULL, NULL,
 			      G_TYPE_NONE,
@@ -155,18 +155,18 @@ totem_search_entry_class_init (TotemSearchEntryClass *klass)
 							      G_PARAM_READWRITE |
 							      G_PARAM_STATIC_STRINGS));
 
-	g_type_class_add_private (klass, sizeof (TotemSearchEntryPrivate));
+	g_type_class_add_private (klass, sizeof (XplayerSearchEntryPrivate));
 }
 
-TotemSearchEntry *
-totem_search_entry_new (void)
+XplayerSearchEntry *
+xplayer_search_entry_new (void)
 {
-	return g_object_new (TOTEM_TYPE_SEARCH_ENTRY, NULL);
+	return g_object_new (XPLAYER_TYPE_SEARCH_ENTRY, NULL);
 }
 
 static void
 item_toggled (GtkCheckMenuItem *item,
-	      TotemSearchEntry *self)
+	      XplayerSearchEntry *self)
 {
 	const char *label;
 
@@ -179,7 +179,7 @@ item_toggled (GtkCheckMenuItem *item,
 }
 
 static void
-insert_item_sorted (TotemSearchEntry *self,
+insert_item_sorted (XplayerSearchEntry *self,
 		    int               priority,
 		    GtkWidget        *item)
 {
@@ -189,14 +189,14 @@ insert_item_sorted (TotemSearchEntry *self,
 }
 
 void
-totem_search_entry_add_source (TotemSearchEntry *self,
+xplayer_search_entry_add_source (XplayerSearchEntry *self,
 			       const gchar      *id,
 			       const gchar      *label,
 			       int               priority)
 {
 	GtkWidget *item;
 
-	g_return_if_fail (TOTEM_IS_SEARCH_ENTRY (self));
+	g_return_if_fail (XPLAYER_IS_SEARCH_ENTRY (self));
 
 	if (self->priv->menu == NULL) {
 		self->priv->menu = gtk_menu_new ();
@@ -220,12 +220,12 @@ totem_search_entry_add_source (TotemSearchEntry *self,
 }
 
 void
-totem_search_entry_remove_source (TotemSearchEntry *self,
+xplayer_search_entry_remove_source (XplayerSearchEntry *self,
 				  const gchar *id)
 {
 	guint num_items;
 
-	g_return_if_fail (TOTEM_IS_SEARCH_ENTRY (self));
+	g_return_if_fail (XPLAYER_IS_SEARCH_ENTRY (self));
 
 	/* FIXME
 	 * - implement
@@ -242,19 +242,19 @@ totem_search_entry_remove_source (TotemSearchEntry *self,
 }
 
 const char *
-totem_search_entry_get_text (TotemSearchEntry *self)
+xplayer_search_entry_get_text (XplayerSearchEntry *self)
 {
-	g_return_val_if_fail (TOTEM_IS_SEARCH_ENTRY (self), NULL);
+	g_return_val_if_fail (XPLAYER_IS_SEARCH_ENTRY (self), NULL);
 
 	return gtk_entry_get_text (GTK_ENTRY (self->priv->entry));
 }
 
 const char *
-totem_search_entry_get_selected_id (TotemSearchEntry *self)
+xplayer_search_entry_get_selected_id (XplayerSearchEntry *self)
 {
 	GSList *l;
 
-	g_return_val_if_fail (TOTEM_IS_SEARCH_ENTRY (self), NULL);
+	g_return_val_if_fail (XPLAYER_IS_SEARCH_ENTRY (self), NULL);
 
 	for (l = self->priv->group ; l != NULL; l = l->next) {
 		GtkCheckMenuItem *item = l->data;
@@ -267,12 +267,12 @@ totem_search_entry_get_selected_id (TotemSearchEntry *self)
 }
 
 void
-totem_search_entry_set_selected_id (TotemSearchEntry *self,
+xplayer_search_entry_set_selected_id (XplayerSearchEntry *self,
 				    const char       *id)
 {
 	GSList *l;
 
-	g_return_if_fail (TOTEM_IS_SEARCH_ENTRY (self));
+	g_return_if_fail (XPLAYER_IS_SEARCH_ENTRY (self));
 	g_return_if_fail (id != NULL);
 
 	for (l = self->priv->group ; l != NULL; l = l->next) {
@@ -286,6 +286,6 @@ totem_search_entry_set_selected_id (TotemSearchEntry *self,
 		}
 	}
 
-	g_warning ("Could not find ID '%s' in TotemSearchEntry %p",
+	g_warning ("Could not find ID '%s' in XplayerSearchEntry %p",
 		   id, self);
 }

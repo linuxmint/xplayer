@@ -124,18 +124,18 @@ am__uninstall_files_from_dir = { \
   }
 am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
-libtotem_im_status_la_DEPENDENCIES = $(plugin_libadd)
-am_libtotem_im_status_la_OBJECTS =  \
-	libtotem_im_status_la-totem-im-status.lo
-libtotem_im_status_la_OBJECTS = $(am_libtotem_im_status_la_OBJECTS)
+libxplayer_im_status_la_DEPENDENCIES = $(plugin_libadd)
+am_libxplayer_im_status_la_OBJECTS =  \
+	libxplayer_im_status_la-xplayer-im-status.lo
+libxplayer_im_status_la_OBJECTS = $(am_libxplayer_im_status_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotem_im_status_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libxplayer_im_status_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libtotem_im_status_la_CFLAGS) $(CFLAGS) \
-	$(libtotem_im_status_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(libxplayer_im_status_la_CFLAGS) $(CFLAGS) \
+	$(libxplayer_im_status_la_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -170,8 +170,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libtotem_im_status_la_SOURCES)
-DIST_SOURCES = $(libtotem_im_status_la_SOURCES)
+SOURCES = $(libxplayer_im_status_la_SOURCES)
+DIST_SOURCES = $(libxplayer_im_status_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -204,7 +204,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -386,11 +386,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -473,17 +473,17 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/im-status
-plugin_LTLIBRARIES = libtotem-im-status.la
-plugin_in_files = totem-im-status.plugin.in
-libtotem_im_status_la_SOURCES = totem-im-status.c
-libtotem_im_status_la_LDFLAGS = $(plugin_ldflags)
-libtotem_im_status_la_LIBADD = \
+plugin_LTLIBRARIES = libxplayer-im-status.la
+plugin_in_files = xplayer-im-status.plugin.in
+libxplayer_im_status_la_SOURCES = xplayer-im-status.c
+libxplayer_im_status_la_LDFLAGS = $(plugin_ldflags)
+libxplayer_im_status_la_LIBADD = \
 	$(plugin_libadd)
 
-libtotem_im_status_la_CFLAGS = \
+libxplayer_im_status_la_CFLAGS = \
 	$(plugin_cflags)
 
 all: all-am
@@ -557,8 +557,8 @@ clean-pluginLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem-im-status.la: $(libtotem_im_status_la_OBJECTS) $(libtotem_im_status_la_DEPENDENCIES) $(EXTRA_libtotem_im_status_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libtotem_im_status_la_LINK) -rpath $(plugindir) $(libtotem_im_status_la_OBJECTS) $(libtotem_im_status_la_LIBADD) $(LIBS)
+libxplayer-im-status.la: $(libxplayer_im_status_la_OBJECTS) $(libxplayer_im_status_la_DEPENDENCIES) $(EXTRA_libxplayer_im_status_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libxplayer_im_status_la_LINK) -rpath $(plugindir) $(libxplayer_im_status_la_OBJECTS) $(libxplayer_im_status_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -566,7 +566,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_im_status_la-totem-im-status.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_im_status_la-xplayer-im-status.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -589,12 +589,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libtotem_im_status_la-totem-im-status.lo: totem-im-status.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libtotem_im_status_la_CFLAGS) $(CFLAGS) -MT libtotem_im_status_la-totem-im-status.lo -MD -MP -MF $(DEPDIR)/libtotem_im_status_la-totem-im-status.Tpo -c -o libtotem_im_status_la-totem-im-status.lo `test -f 'totem-im-status.c' || echo '$(srcdir)/'`totem-im-status.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_im_status_la-totem-im-status.Tpo $(DEPDIR)/libtotem_im_status_la-totem-im-status.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-im-status.c' object='libtotem_im_status_la-totem-im-status.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_im_status_la-xplayer-im-status.lo: xplayer-im-status.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxplayer_im_status_la_CFLAGS) $(CFLAGS) -MT libxplayer_im_status_la-xplayer-im-status.lo -MD -MP -MF $(DEPDIR)/libxplayer_im_status_la-xplayer-im-status.Tpo -c -o libxplayer_im_status_la-xplayer-im-status.lo `test -f 'xplayer-im-status.c' || echo '$(srcdir)/'`xplayer-im-status.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_im_status_la-xplayer-im-status.Tpo $(DEPDIR)/libxplayer_im_status_la-xplayer-im-status.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-im-status.c' object='libxplayer_im_status_la-xplayer-im-status.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libtotem_im_status_la_CFLAGS) $(CFLAGS) -c -o libtotem_im_status_la-totem-im-status.lo `test -f 'totem-im-status.c' || echo '$(srcdir)/'`totem-im-status.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxplayer_im_status_la_CFLAGS) $(CFLAGS) -c -o libxplayer_im_status_la-xplayer-im-status.lo `test -f 'xplayer-im-status.c' || echo '$(srcdir)/'`xplayer-im-status.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

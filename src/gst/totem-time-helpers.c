@@ -15,10 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -28,13 +28,13 @@
 #include <glib/gi18n.h>
 #include <libintl.h>
 
-#include "totem-time-helpers.h"
+#include "xplayer-time-helpers.h"
 
 
 /* FIXME: Remove
  * See https://bugzilla.gnome.org/show_bug.cgi?id=679850 */
 char *
-totem_time_to_string (gint64 msecs)
+xplayer_time_to_string (gint64 msecs)
 {
 	int sec, min, hour, _time;
 

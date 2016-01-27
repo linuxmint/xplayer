@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef __TOTEM_SEARCH_ENTRY_H__
-#define __TOTEM_SEARCH_ENTRY_H__
+#ifndef __XPLAYER_SEARCH_ENTRY_H__
+#define __XPLAYER_SEARCH_ENTRY_H__
 
 #include <glib-object.h>
 
@@ -28,47 +28,47 @@
 
 G_BEGIN_DECLS
 
-#define TOTEM_TYPE_SEARCH_ENTRY totem_search_entry_get_type()
-#define TOTEM_SEARCH_ENTRY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TOTEM_TYPE_SEARCH_ENTRY, TotemSearchEntry))
-#define TOTEM_SEARCH_ENTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), TOTEM_TYPE_SEARCH_ENTRY, TotemSearchEntryClass))
-#define TOTEM_IS_SEARCH_ENTRY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TOTEM_TYPE_SEARCH_ENTRY))
-#define TOTEM_IS_SEARCH_ENTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TOTEM_TYPE_SEARCH_ENTRY))
-#define TOTEM_SEARCH_ENTRY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TOTEM_TYPE_SEARCH_ENTRY, TotemSearchEntryClass))
+#define XPLAYER_TYPE_SEARCH_ENTRY xplayer_search_entry_get_type()
+#define XPLAYER_SEARCH_ENTRY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), XPLAYER_TYPE_SEARCH_ENTRY, XplayerSearchEntry))
+#define XPLAYER_SEARCH_ENTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), XPLAYER_TYPE_SEARCH_ENTRY, XplayerSearchEntryClass))
+#define XPLAYER_IS_SEARCH_ENTRY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), XPLAYER_TYPE_SEARCH_ENTRY))
+#define XPLAYER_IS_SEARCH_ENTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XPLAYER_TYPE_SEARCH_ENTRY))
+#define XPLAYER_SEARCH_ENTRY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), XPLAYER_TYPE_SEARCH_ENTRY, XplayerSearchEntryClass))
 
-typedef struct _TotemSearchEntry TotemSearchEntry;
-typedef struct _TotemSearchEntryClass TotemSearchEntryClass;
-typedef struct _TotemSearchEntryPrivate TotemSearchEntryPrivate;
+typedef struct _XplayerSearchEntry XplayerSearchEntry;
+typedef struct _XplayerSearchEntryClass XplayerSearchEntryClass;
+typedef struct _XplayerSearchEntryPrivate XplayerSearchEntryPrivate;
 
-struct _TotemSearchEntry
+struct _XplayerSearchEntry
 {
 	GtkBox parent;
 
-	TotemSearchEntryPrivate *priv;
+	XplayerSearchEntryPrivate *priv;
 };
 
-struct _TotemSearchEntryClass
+struct _XplayerSearchEntryClass
 {
 	GtkBoxClass parent_class;
 };
 
-GType totem_search_entry_get_type (void) G_GNUC_CONST;
+GType xplayer_search_entry_get_type (void) G_GNUC_CONST;
 
-TotemSearchEntry *totem_search_entry_new (void);
+XplayerSearchEntry *xplayer_search_entry_new (void);
 
-void totem_search_entry_add_source (TotemSearchEntry *entry,
+void xplayer_search_entry_add_source (XplayerSearchEntry *entry,
                                   const gchar *id,
                                   const gchar *label,
                                   int priority);
 
-void totem_search_entry_remove_source (TotemSearchEntry *self,
+void xplayer_search_entry_remove_source (XplayerSearchEntry *self,
                                        const gchar *id);
 
-const char *totem_search_entry_get_text (TotemSearchEntry *self);
+const char *xplayer_search_entry_get_text (XplayerSearchEntry *self);
 
-const char *totem_search_entry_get_selected_id (TotemSearchEntry *self);
-void        totem_search_entry_set_selected_id (TotemSearchEntry *self,
+const char *xplayer_search_entry_get_selected_id (XplayerSearchEntry *self);
+void        xplayer_search_entry_set_selected_id (XplayerSearchEntry *self,
 						const char       *id);
 
 G_END_DECLS
 
-#endif /* __TOTEM_SEARCH_ENTRY_H__ */
+#endif /* __XPLAYER_SEARCH_ENTRY_H__ */

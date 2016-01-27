@@ -1,6 +1,6 @@
-# translation of totem.master.ml.po to
-# This file is distributed under the same license as the totem package.
-# Copyright (C) 2003-2008 totem'S COPYRIGHT HOLDER.
+# translation of xplayer.master.ml.po to
+# This file is distributed under the same license as the xplayer package.
+# Copyright (C) 2003-2008 xplayer'S COPYRIGHT HOLDER.
 # FSF-India <locale@gnu.org.in>, 2003.
 # Ani Peter <apeter@redhat.com>, 2006, 2013.
 # Hari Vishnu <harivishnu@gmail.com>, 2008.
@@ -11,9 +11,9 @@
 # Anish A <aneesh.nl@gmail.com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem.master.ml\n"
+"Project-Id-Version: xplayer.master.ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=totem&keywords=I18N+L10N&component=general\n"
+"product=xplayer&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-03-06 17:19+0000\n"
 "PO-Revision-Date: 2013-03-25 16:23+0530\n"
 "Last-Translator: Ani Peter <peter.ani@gmail.com>\n"
@@ -26,76 +26,76 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "X-Project-Style: gnome\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:351 ../src/totem-object.c:1178
-#: ../src/totem-object.c:1648 ../src/totem-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1178
+#: ../src/xplayer-object.c:1648 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "നിര്‍ത്തിയിരിക്കുന്നു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:363 ../src/totem-object.c:1171
+#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1171
 msgid "Paused"
 msgstr "താല്‍ക്കാലികമായി നിര്‍ത്തിയിരിക്കുന്നു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:367 ../src/totem-object.c:1164
+#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1164
 msgid "Playing"
 msgstr "പ്രവര്‍ത്തിക്കുന്നു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:385
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "ഒരു ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുന്നു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "പ്ലേ ചെയ്യാന്‍ യു.ആര്‍.എല്‍ ഇല്ല"
 
-#: ../browser-plugin/totem-plugin-viewer.c:675
-#: ../browser-plugin/totem-plugin-viewer.c:1699
-msgid "Totem Movie Player"
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
 msgstr "ടോട്ടം മൂവി പ്ലേയര്‍"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "(_O)തുറക്കുക \"%s\" ഉപയോഗിച്ച്"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1340 ../src/totem-object.c:2473
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2473
 msgid "An error occurred"
 msgstr "ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "പ്ലേലിസ്റ്റില്ല അല്ലെങ്കില്‍ പ്ലേലിസ്റ്റ് ഖാലിയാണു"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "ചലചിത്രം ബ്രൌസര്‍ സംയോജകം"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143 ../src/totem.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
 msgid "Could not initialize the thread-safe libraries."
 msgstr "ത്രെഡ്-സെയിഫ് ലൈബ്രറികള്‍ ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Totem സംയോജകം ഇപ്പോള്‍ "
+"നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer സംയോജകം ഇപ്പോള്‍ "
 "നില്‍ക്കുന്നതാണ്."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "സ്ക്രീന്‍ മുഴുവനും എടുക്കേണ്ട"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
 msgid "Time:"
 msgstr "സമയം:"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "ശബ്ദം വരുമ്പോള്‍ സ്ക്രീന്‍സേവര്‍ പ്രവര്‍ത്തിയ്ക്കാന്‍ അനുവദിക്കുക"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
@@ -104,74 +104,74 @@ msgstr ""
 "വഴി ഊര്‍ജം കിട്ടുന്ന "
 "സ്പീക്കറുകള്‍ക്കുണ്ടെങ്കില്‍, ഇതു് പ്രവര്‍ത്തന രഹിതമാക്കുക."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr "വീഡിയോ പ്രദര്‍ശിപ്പിക്കാത്തപ്പോള്‍ വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ കാണിയ്ക്കുക"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr ""
 "ഓഡിയോ ഫയല്‍ പ്രദര്‍ശിപ്പിക്കുമ്പോള്‍ മാത്രം വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ കാണിയ്ക്കുക"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr "വിഷ്വല്‍ ഇഫക്റ്റ്സ് സംയോജകങ്ങളുടെ പേരു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ പ്രകാശം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ തെളിച്ചം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ വര്‍ണ്ണം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ സാച്ചുറേഷന്‍"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "ഫയല്‍ ലോഡ് ചെയ്യുമ്പോള്‍ കാന്വാസ് തനിയെ വലിപ്പം മാറ്റുക"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Repeat mode"
 msgstr "ആവര്‍ത്തന മോഡ്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
 msgstr "ഷഫിള്‍ മോഡ്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 "ഇന്റര്‍ലെയിസ്ഡ് ചലചിത്രങ്ങള്‍ക്കുള്ള ഡീഇന്റര്‍ലെയിസിങ് പ്രവര്‍ത്തന "
 "രഹിതമാക്കണമോ എന്നു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
 msgstr "പ്ലേബാക്ക് എഞ്ചിന് ഡീബഗ് സജ്ജമാക്കണമോ"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
 msgstr "ഉപയോഗിക്കുന്നതിനുളള ഏതു് തരം ഓഡിയോ ഔട്ട്പുട്ട്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
 msgstr "വിഷ്യലൈസേഷന്റെ ഗുണ സജ്ജീകരണം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
 msgstr "ശബ്ദ വിഷ്വലൈസേഷന്റെ ഗുണനിലവാര സജ്ജീകരണം."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
 msgstr "ശൃംഖല ബഫറിങ് ത്രെഷോള്‍ഡ്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -180,27 +180,27 @@ msgstr ""
 "ചെയ്യേണ്ട ഡാറ്റയുടെ അളവ് "
 "(സെക്കന്റുകളില്‍)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Subtitle font"
 msgstr "അടിക്കുറിപ്പിന്റെ അക്ഷരസഞ്ചയം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr "അടിക്കുറിപ്പു് ചിത്രീകരിയ്ക്കാനുളള പാംഗോ അക്ഷരസഞ്ചയത്തിന്റെ വിവരണം."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "അടിക്കുറിപ്പു് എന്‍കോഡിങ്ങ്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
 msgstr "അടിക്കുറിപ്പിനു് വേണ്ട എന്‍കോഡിങ്ങ്."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "\"തുറക്കുക...\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -209,11 +209,11 @@ msgstr ""
 "നിലവിലുള്ള "
 "ഡയറക്ടറിയാണു്."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "\"തിരച്ചിത്രം എടുക്കുക\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -222,26 +222,26 @@ msgstr ""
 "സഹജമായിട്ടുള്ളതു് ചിത്രങ്ങളുടെ "
 "ഡയറക്ടറിയാണു്."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
 "ഉപയോക്താവിന്റെ 'വീട്' തട്ടത്തില്‍ സംയോജകങ്ങള്‍ അപ്രാവര്‍ത്തികമാക്കണോ എന്നു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "കീബോര്‍ഡ് കുറുക്കുവഴികള്‍ പ്രവര്‍ത്തന രഹിതമാക്കണമോ എന്നു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr "ചലച്ചിത്രം ലോഡ് ചെയ്യുമ്പോള്‍ അടിക്കുറിപ്പു് തനിയെ ലോഡ് ചെയ്യണോ എന്ന്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "ചലച്ചിത്രം ലഭ്യമാക്കുമ്പോള്‍ പുറത്തു് നിന്നുള്ള ഭാഗത്തിനുള്ള ഫയലുകള്‍ സ്വയമേ "
 "ലഭ്യമാക്കണമോ എന്നു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -250,11 +250,11 @@ msgstr ""
 "പ്രവര്‍ത്തനത്തിലുള്ള ഓഡിയോ/വീഡിയോ "
 "ഫയലുകളുടെ സ്ഥാനം സൂക്ഷിക്കണമോ എന്നു്"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Active plugins list"
 msgstr "സജീവമായ സംയോജക പട്ടിക"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -277,11 +277,11 @@ msgstr "വിലാസം _പകര്‍ത്തുക..."
 msgid "Copy the location to the clipboard"
 msgstr "സ്ഥാനം ഓര്‍മ്മച്ചെപ്പിലേയ്ക്കു് പകര്‍ത്തുക"
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
 msgid "_Select Text Subtitles..."
 msgstr "_അടിക്കുറിപ്പു് പദാവലി തെരഞ്ഞെടുക്കുക..."
 
-#: ../data/playlist.ui.h:6 ../data/totem.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
 msgid "Select a file to use for text subtitles"
 msgstr "അടിക്കുറിപ്പുകള്‍ക്കായി ഉപയോഗിയ്ക്കേണ്ട ഫയല്‍ തെരഞ്ഞെടുക്കുക"
 
@@ -321,7 +321,7 @@ msgid "Extra Large"
 msgstr "വളരെ വലുതു്"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5461
-#: ../src/totem-properties-view.c:232
+#: ../src/xplayer-properties-view.c:232
 msgid "Stereo"
 msgstr "സ്റ്റീരിയോ"
 
@@ -346,7 +346,7 @@ msgid "AC3 Passthrough"
 msgstr "എ.സി.3 പാസ്ത്രൂ (അകത്തൂടെ കടക്കല്‍)"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
+msgid "Xplayer Preferences"
 msgstr "ടോട്ടത്തിനുള്ള മുന്‍ഗണനകള്‍"
 
 #: ../data/preferences.ui.h:14
@@ -469,7 +469,7 @@ msgid "_Audio output type:"
 msgstr "_ഓഡിയോ ഔട്ട്പുട്ട് രീതി:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:273
+#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "ശബ്ദം"
 
@@ -501,7 +501,7 @@ msgstr "അഭിപ്രായം:"
 msgid "Container:"
 msgstr "കണ്ടെയിനര്‍:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:275
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
 msgid "Video"
 msgstr "വീഡിയോ"
 
@@ -530,330 +530,330 @@ msgid "Channels:"
 msgstr "ചാനലുകള്‍:"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:80 ../src/totem.c:248
-#: ../src/totem.c:256 ../src/totem-menu.c:789 ../src/totem-object.c:1656
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
+#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1656
 msgid "Videos"
 msgstr "വീഡിയോകള്‍"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "_Open"
 msgstr "_തുറക്കുക"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Open _Location"
 msgstr "_വിലാസം തുറക്കുക"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "_Fullscreen"
 msgstr "_മുഴുവന്‍ തിരശ്ശീല"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Prefere_nces"
 msgstr "മുന്‍ഗണ_നകള്‍"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "Shuff_le"
 msgstr "_കശക്കുക"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Repeat"
 msgstr "_ആവര്‍ത്തിക്കുക"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "_പുറത്തു് കടക്കുക"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_ചലച്ചിത്രം"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "_Eject"
 msgstr "_പുറത്തെടുക്കുക"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "Eject the current disc"
 msgstr "നിലവിലുള്ള ഡിസ്ക് പുറത്തെടുക്കുക"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "_Properties"
 msgstr "_ഗുണഗണങ്ങള്‍"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "View the properties of the current stream"
 msgstr "നിലവിലുള്ള സ്ട്രീമില്‍ നിന്നും ഗുണഗണങ്ങള്‍ കാണുക"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "Play / P_ause"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക / _താല്‍കാലത്തേക്ക് നിര്‍ത്തുക"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Play or pause the movie"
 msgstr ""
 "ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുക അല്ലെങ്കില്‍ താല്‍കാലത്തേക്ക് നിര്‍ത്തുക"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "_Edit"
 msgstr "_മാറ്റം വരുത്തുക"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Clear Playlist"
 msgstr "_പ്ലേലിസ്റ്റ് മായ്ക്കുക"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "Clear the playlist"
 msgstr "പ്ലേലിസ്റ്റ് മായ്ക്കുക"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "Plugins..."
 msgstr "സംയോജകം..."
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "Configure plugins to extend the application"
 msgstr "പ്രയോഗം വികസിപ്പിക്കുന്നതിനായി പ്ലഗിനുകള്‍ ക്രമീകരിക്കുക"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_View"
 msgstr "_കാഴ്ച"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "Fit Window to Movie"
 msgstr "സിനിമയുടെ വലിപ്പത്തിലേയ്ക്കു് ജാലകം ക്രമീകരിയ്ക്കുക"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Resize 1∶2"
 msgstr "1:2 _വലിപ്പത്തിലേയ്ക്കാക്കുക"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "Resize to half the original video size"
 msgstr "ചലച്ചിത്രത്തിന്റെ പകുതി വലിപ്പത്തിലാക്കുക"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Resize _1∶1"
 msgstr "വലിപ്പം _1:1 ആയി ക്രമീകരിയ്ക്കുക"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Resize to the original video size"
 msgstr "ചലച്ചിത്രത്തിന്റെ സ്വാഭാവിക വലിപ്പത്തിലാക്കുക"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Resize _2∶1"
 msgstr "വലിപ്പം _2:1 ആയി ക്രമീകരിയ്ക്കുക"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Resize to double the original video size"
 msgstr "ചലച്ചിത്രത്തിന്റെ ഇരട്ടി വലിപ്പത്തിലാക്കുക"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_Aspect Ratio"
 msgstr "_ആസ്പെക്റ്റ് റേഷ്യോ"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Switch An_gles"
 msgstr "_ആങ്കിളുകള്‍ സ്വിച്ച് ചെയ്യുക"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Switch camera angles"
 msgstr "ക്യാമറ ആങ്കിളുകള്‍ സ്വിച്ച് ചെയ്യുക"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Go"
 msgstr "_പോകുക"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "_DVD Menu"
 msgstr "_ഡി.വി.ഡി മെനു"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Go to the DVD menu"
 msgstr "ഡി.വി.ഡി മെനുവിലേയ്ക്കു് പോവുക"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "_Title Menu"
 msgstr "_തലക്കെട്ടു് മെനു"
 
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Go to the title menu"
 msgstr "തലക്കെട്ടുകളുടെ മെനുവിലേയ്ക്കു് പോവുക"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "A_udio Menu"
 msgstr "_ഓഡിയോ മെനു"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the audio menu"
 msgstr "ഓഡിയോ മെനുവിലേയ്ക്കു് പോവുക"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "_Angle Menu"
 msgstr "_ആങ്കിള്‍ മെനു"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the angle menu"
 msgstr "ആങ്കിള്‍ മെനുവിലേയ്ക്കു് പോവുക"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "_Chapter Menu"
 msgstr "_ഭാഗങ്ങളുടെ മെനു"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Go to the chapter menu"
 msgstr "ഭാഗങ്ങളുടെ മെനുവിലേയ്ക്കു് പോവുക"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "_Next Chapter/Movie"
 msgstr "_അടുത്ത ഭാഗം/സിനിമാ"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Next chapter or movie"
 msgstr "അടുത്ത ഭാഗം അല്ലെങ്കില്‍ സിനിമ"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "_Previous Chapter/Movie"
 msgstr "തൊട്ടു് _മുമ്പുള്ള ഭാഗം/സിനിമ"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Previous chapter or movie"
 msgstr "മുമ്പുളള ഭാഗം"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "_Sound"
 msgstr "_ശബ്ദം"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Volume _Up"
 msgstr "ശബ്ദം _വര്‍ദ്ധിപ്പിക്കുക"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "ശബ്ദം വര്‍ദ്ധിപ്പിക്കുക"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Volume _Down"
 msgstr "ശബ്ദം _കുറയ്ക്കുക"
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Decrease volume"
 msgstr "ശബ്ദം കുറയ്ക്കുക"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "_Help"
 msgstr "_സഹായം"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "_Contents"
 msgstr "_ഉളളടക്കം"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Help contents"
 msgstr "സഹായത്തിന്റെ ഉളളടക്കം"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "About this application"
 msgstr "ഈ പ്രയോഗത്തെക്കുറിച്ചു്"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Show _Controls"
 msgstr "_നിയന്ത്രണങ്ങള്‍ കാണിയ്ക്കുക"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Show controls"
 msgstr "നിയന്ത്രണങ്ങള്‍ കാണിയ്ക്കുക"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "S_idebar"
 msgstr "വശത്തുള്ള _പട്ട"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Show or hide the sidebar"
 msgstr "സൈഡ് ബാര്‍ കാണിയ്ക്കുകയോ അദൃശ്യമാക്കുകയോ ചെയ്യുക"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "സ്വതേ"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Sets automatic aspect ratio"
 msgstr "ഓട്ടോമാറ്റിക്ക് ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Square"
 msgstr "ചതുരം"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Sets square aspect ratio"
 msgstr "സ്ക്വയര്‍ ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "4∶3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "4:3 (TV) ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "16∶9 (Widescreen)"
 msgstr "16:9 (വൈഡ്‌സ്ക്രീന്‍)"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "16:9 (വൈഡ്-സ്ക്രീന്‍) ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "2.11∶1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "2.11:1 (DVB) ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "S_ubtitles"
 msgstr "അ_ടിക്കുറിപ്പുകള്‍"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "_Languages"
 msgstr "_ഭാഷകള്‍"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "Zoom In"
 msgstr "വലുതാക്കുക"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "Zoom in"
 msgstr "വലുതാക്കുക"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Skip _Forward"
 msgstr "_മുന്നോട്ട് ഒരു പടി പോവുക"
 
-#: ../data/totem.ui.h:77
+#: ../data/xplayer.ui.h:77
 msgid "Skip forward"
 msgstr "മുന്നോട്ട് ഒരു പടി പോവുക"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Skip _Backwards"
 msgstr "_പുറകോട്ട് ഒരു പടി പോവുക"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Skip backwards"
 msgstr "പുറകോട്ട് ഒരു പടി പോവുക"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Time seek bar"
 msgstr "പ്രത്യേക സമയത്തേയ്ക്കു് കൊണ്ടുപോകാനുള്ള ബാറ്"
 
@@ -945,11 +945,11 @@ msgstr ""
 "ഡിസ്ക്കിലേക്ക് ഡൌണ്‍ ലോഡ് "
 "ചെയ്യുന്നതിന് ശ്രമിക്കുക."
 
-#: ../src/backend/bacon-video-widget.c:5457 ../src/totem-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5457 ../src/xplayer-properties-view.c:228
 msgid "Surround"
 msgstr "സറൌണ്ട് (എല്ലാ ദിശയില്‍ നിന്നും ശബ്ദം)"
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/totem-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:230
 msgid "Mono"
 msgstr "മോണോ"
 
@@ -1078,8 +1078,8 @@ msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഐച്ഛി�
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:56
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -1091,7 +1091,7 @@ msgstr "%d:%02d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:65
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -1201,49 +1201,49 @@ msgid_plural "%d frames per second"
 msgstr[0] "ഒരു സെക്കന്‍ഡില്‍ %d ഫ്രെയിമുകള്‍"
 msgstr[1] "ഒരു സെക്കന്‍ഡില്‍ %d ഫ്രെയിമുകള്‍"
 
-#: ../src/totem-audio-preview.c:137
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "ഓഡിയോ തിരനോട്ടം"
 
-#: ../src/totem.c:249
-msgid "Verify your system installation. Totem will now exit."
+#: ../src/xplayer.c:249
+msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
-"നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Totem ഇപ്പോള്‍ പുറത്ത് "
+"നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer ഇപ്പോള്‍ പുറത്ത് "
 "കടക്കുന്നതാണ്."
 
-#: ../src/totem-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:94
 msgid "_Play Now"
 msgstr "ഇപ്പോള്‍ _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/totem-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:97
 msgid "_Add to Playlist"
 msgstr "_പ്ലേലിസ്റ്റിലേയ്ക്കു് ചേര്‍ക്കുക"
 
-#: ../src/totem-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:103
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: ../src/totem-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:573
 msgid "No File"
 msgstr "ഫയല്‍ ഇല്ല"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "'%s' വിനിമയതലം ചേര്‍ക്കുവാന്‍ സാധ്യമായില്ല. %s"
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "ഫയല്‍ നിലവിലില്ല."
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
 msgstr "ടോട്ടം ശരിയായി ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിക്കുന്നു എന്നുറപ്പുവരുത്തുക."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
@@ -1256,9 +1256,9 @@ msgstr ""
 "ശേഷമുള്ളഏതെങ്കിലും ലക്കമോ "
 "ഉപയോഗിക്കാം."
 
-#: ../src/totem-interface.c:361
+#: ../src/xplayer-interface.c:361
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
@@ -1270,10 +1270,10 @@ msgstr ""
 "ഉള്‍‌ക്കൊള്ളുന്ന വാറണ്ടി പോലും ഇല്ല. കൂടുതല്‍ വിവരങ്ങള്‍ക്കു്ഗ്നു ജനറല്‍ "
 "പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
-#: ../src/totem-interface.c:365
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "നിങ്ങള്‍ക്കു് ടോട്ടത്തിനൊപ്പം ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സിന്റെ ഒരു പകര്‍പ്പു് "
@@ -1282,9 +1282,9 @@ msgstr ""
 "Franklin "
 "Street, Fifth Floor, Boston, MA02110-1301, USA."
 
-#: ../src/totem-interface.c:368
+#: ../src/xplayer-interface.c:368
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
 "ടോട്ടമില്‍ പ്രൊപ്രൈറ്ററി ജി-സ്ട്രീമര്‍ സംയോജകങ്ങളുടെ ഉപയോഗം "
@@ -1292,21 +1292,21 @@ msgstr ""
 "ഒഴിവാക്കലുണ്ട്."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:291
+#: ../src/xplayer-menu.c:291
 msgid "None"
 msgstr "ഒന്നുമില്ല"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:296
+#: ../src/xplayer-menu.c:296
 msgctxt "Language"
 msgid "Auto"
 msgstr "സ്വതേ"
 
-#: ../src/totem-menu.c:788
+#: ../src/xplayer-menu.c:788
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "പകര്‍പ്പവകാശം © 2002-2009 ബാസ്‌റ്റ്യന്‍ നോസെറാ"
 
-#: ../src/totem-menu.c:792
+#: ../src/xplayer-menu.c:792
 msgid "translator-credits"
 msgstr ""
 "എഫ്എസ്എഫ്-ഇന്ത്യ <locale@gnu.org.in>\n"
@@ -1314,15 +1314,15 @@ msgstr ""
 "ഹരി വിഷ്ണു <harivishnu@gmail.com>\n"
 "അനീഷ് എ(Anish)<aneesh.nl@gmail.com>"
 
-#: ../src/totem-menu.c:796
-msgid "Totem Website"
+#: ../src/xplayer-menu.c:796
+msgid "Xplayer Website"
 msgstr "ടോട്ടം വെബ്സൈറ്റ്"
 
-#: ../src/totem-menu.c:827
+#: ../src/xplayer-menu.c:827
 msgid "Configure Plugins"
 msgstr "സംയോജകങ്ങള്‍ ക്രമീകരിയ്ക്കുക"
 
-#: ../src/totem-object.c:161
+#: ../src/xplayer-object.c:161
 #, c-format
 msgid ""
 "%s\n"
@@ -1331,462 +1331,462 @@ msgstr ""
 "%s\n"
 " '%s --help' രണ്‍ ചെയ്യുക ലഭ്യമായ ആജ്ഞ-വരി ഐച്ഛികങ്ങളുടെ പട്ടിക കാണാന്‍..\n"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:589
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:589
 #, c-format
-msgid "Totem %s"
+msgid "Xplayer %s"
 msgstr "ടോട്ടം %s"
 
-#: ../src/totem-object.c:1166 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1166 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "താല്‍കാലികമായി നിര്‍ത്തുക"
 
-#: ../src/totem-object.c:1173 ../src/totem-object.c:1183
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1173 ../src/xplayer-object.c:1183
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/totem-object.c:1265 ../src/totem-object.c:1292
-#: ../src/totem-object.c:1785 ../src/totem-object.c:1940
+#: ../src/xplayer-object.c:1265 ../src/xplayer-object.c:1292
+#: ../src/xplayer-object.c:1785 ../src/xplayer-object.c:1940
 #, c-format
-msgid "Totem could not play '%s'."
+msgid "Xplayer could not play '%s'."
 msgstr "ടോട്ടത്തിനു് '%s' പ്രവര്‍ത്തിപ്പിക്കുവാന്‍‍ സാധ്യമായില്ല."
 
-#: ../src/totem-object.c:1791
+#: ../src/xplayer-object.c:1791
 msgid "No error message"
 msgstr "പിശക് സന്ദേശങ്ങള്‍ ഒന്നും ഇല്ല"
 
-#: ../src/totem-object.c:2131
-msgid "Totem could not display the help contents."
+#: ../src/xplayer-object.c:2131
+msgid "Xplayer could not display the help contents."
 msgstr "ടോട്ടത്തിനു് സഹായത്തിന്റെ ഉളളടക്കം പ്രദര്‍ശിപ്പിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/totem-object.c:4019 ../src/totem-object.c:4021
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "തൊട്ട് മുമ്പുള്ള ഭാഗം/സിനിമ"
 
-#: ../src/totem-object.c:4028 ../src/totem-object.c:4030
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക / താല്‍കാലത്തേക്ക് നിര്‍ത്തുക"
 
-#: ../src/totem-object.c:4038 ../src/totem-object.c:4040
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "അടുത്ത ഭാഗം/സിനിമ"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4051 ../src/totem-object.c:4053
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4051 ../src/xplayer-object.c:4053
 msgid "Fullscreen"
 msgstr "മുഴുവന്‍ തിരശ്ശീല"
 
-#: ../src/totem-object.c:4184
-msgid "Totem could not startup."
+#: ../src/xplayer-object.c:4184
+msgid "Xplayer could not startup."
 msgstr "ടോട്ടത്തിനു് ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല."
 
-#: ../src/totem-object.c:4184
+#: ../src/xplayer-object.c:4184
 msgid "No reason."
 msgstr "കാരണം ഇല്ല."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "വിലാസം തുറക്കുക..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "ഡീബഗ് പ്രവര്‍ത്തന സജ്ജമാക്കുക"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക/താല്‍കാലികമായി നിര്‍ത്തുക"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "അടുത്തത്"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "പിന്നോട്ട്"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "മുമ്പോട്ട് തിരയുക"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "പുറകോട്ട് തിരയുക"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "ശബ്ദം വര്‍ദ്ധിപ്പിക്കുക"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "ശബ്ദം കുറയ്ക്കുക"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "ശബ്ദമില്ലാതാക്കുക"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "മുഴുവന്‍ തിരശ്ശീലയും"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "നിയന്ത്രണങ്ങള്‍ കാണിയ്ക്കുക/അദൃശ്യമാക്കുക"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "പുറത്ത് കടക്കുക"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Enqueue"
 msgstr "Enqueue"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "മാറ്റി എഴുതുക"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "സമയത്തേക്ക് അനക്കുക"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "പ്ലേലിസ്റ്റ് സൂചിക"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "ഓടിക്കേണ്ട ചലച്ചിത്രങ്ങള്‍"
 
-#: ../src/totem-options.c:79
+#: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
 msgstr "- സിനിമയും പാട്ടുകളും പ്രവര്‍ത്തിപ്പിക്കുന്നു"
 
-#: ../src/totem-options.c:142
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "വരിയിലേക്ക് ചേര്‍ക്കുവാനും മാറ്റിസ്ഥാപിക്കുവാനും ഒരേസമയം പറ്റില്ല"
 
 #. By extension entry
-#: ../src/totem-playlist.c:161
+#: ../src/xplayer-playlist.c:161
 msgid "MP3 ShoutCast playlist"
 msgstr "എംപിത്രി ഷൌട്ട്കാസ്റ്റ് പ്ലേലിസ്റ്റ്"
 
-#: ../src/totem-playlist.c:162
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 audio (streamed)"
 msgstr "എംപിത്രി ഓ‍ഡിയോ (സ്ട്രീമ്ഡ്)"
 
-#: ../src/totem-playlist.c:163
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "എംപിത്രി ഓ‍ഡിയോ (സ്ട്രീമ്ഡ്, ഡോസ് ശൈലി)"
 
-#: ../src/totem-playlist.c:164
+#: ../src/xplayer-playlist.c:164
 msgid "XML Shareable Playlist"
 msgstr "XML പങ്കിടുന്ന പ്ലേലിസ്റ്റ്"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:347
+#: ../src/xplayer-playlist.c:347
 #, c-format
 msgid "Title %d"
 msgstr "തലക്കെട്ടു് %d"
 
-#: ../src/totem-playlist.c:446
+#: ../src/xplayer-playlist.c:446
 msgid "Could not save the playlist"
 msgstr "പ്ലേലിസ്റ്റ് സംരക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/totem-playlist.c:1021
+#: ../src/xplayer-playlist.c:1021
 msgid "Save Playlist"
 msgstr "പ്ലേലിസ്റ്റ് സൂക്ഷിക്കുക"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1033 ../src/totem-playlist.c:1262
-#: ../src/totem-sidebar.c:145
+#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "പ്ലേലിസ്റ്റ്"
 
-#: ../src/totem-playlist.c:1861
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "പ്ലേലിസ്റ്റ് '%s' തുറക്കാന്‍ കഴിഞ്ഞില്ല. ഇതിനു കേടു വന്നിരിക്കാം"
 
-#: ../src/totem-playlist.c:1862
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "പ്ലേലിസ്റ്റ് പിശക്"
 
-#: ../src/totem-preferences.c:297
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "മുന്‍ഗണനകള്‍"
 
-#: ../src/totem-preferences.c:445
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "അടിക്കുറിപ്പിനുള്ള അക്ഷരസഞ്ചയം തെരഞ്ഞെടുക്കുക"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:271
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
 msgid "Audio/Video"
 msgstr "ഓഡിയോ/വീഡിയോ"
 
-#: ../src/totem-properties-view.c:131
+#: ../src/xplayer-properties-view.c:131
 msgid "N/A"
 msgstr "ബാധകമല്ല"
 
-#: ../src/totem-properties-view.c:160
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:160
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "അസാധു"
 
-#: ../src/totem-properties-view.c:163
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:163
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kbps"
 
-#: ../src/totem-properties-view.c:180
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:180
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:212
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:212
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/totem-properties-view.c:220
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:220
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "ലഭ്യമല്ല"
 
-#: ../src/totem-properties-view.c:241
+#: ../src/xplayer-properties-view.c:241
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "ലഭ്യമല്ല"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (സ്ട്രീം ചെയ്തുകൊണ്ടിരിയ്ക്കുന്നു)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "%s / %s തെരയുക"
 
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "ബഫറിങ്"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
 msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
 msgstr "%s, %f %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "നിലവിലുളള ലോക്കെല്‍"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "അറബിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "അര്‍മേനിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "ബാള്‍ട്ടിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "സെല്‍ട്ടിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "മദ്ധ്യ യൂറോപ്പിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "ലളിതമാക്കിയ ചൈനീസ്"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "പരമ്പരാഗത ചൈനീസ്"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "ക്രൊയേഷ്യന്‍"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "സിറില്ലിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "സിറില്ലിക്ക്/റഷ്യന്‍"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "സിറില്ലിക്ക്/യുക്രേനിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "ജോര്‍ജിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "ഗ്രീക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "ഗുജറാത്തി"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "ഗുരുമുക്കി"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "ഹീബ്രൂ"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "ഹീബ്രൂ വിഷ്വല്‍"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "ഹിന്ദി"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "ഐസ്ലാന്‍ഡിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "ജാപ്പനീസ്"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "കൊറിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "നോര്‍ഡിക്ക്"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "പേര്‍ഷ്യന്‍"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "റൊമാനിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "സൌത്ത് യൂറോപ്പിയന്‍"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "തായി"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "ടര്‍ക്കിഷ്"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "യൂണികോഡ്"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "പാശ്ചാത്ത്യം"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "വിയറ്റ്നാമീസ്"
 
-#: ../src/totem-uri.c:343 ../src/plugins/chapters/totem-chapters.c:984
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "എല്ലാ ഫയലുകളും"
 
-#: ../src/totem-uri.c:348 ../src/plugins/chapters/totem-chapters.c:981
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "പിന്തുണയുളള ഫയലുകള്‍"
 
-#: ../src/totem-uri.c:360
+#: ../src/xplayer-uri.c:360
 msgid "Audio files"
 msgstr "ശബ്ദ ഫയലുകള്‍"
 
-#: ../src/totem-uri.c:368
+#: ../src/xplayer-uri.c:368
 msgid "Video files"
 msgstr "ചലചിത്ര ഫയലുകള്‍"
 
-#: ../src/totem-uri.c:378
+#: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
 msgstr "അടിക്കുറിപ്പു് ഫയലുകള്‍"
 
-#: ../src/totem-uri.c:430
+#: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
 msgstr "അടിക്കുറിപ്പു് തെരഞ്ഞെടുക്കുക"
 
-#: ../src/totem-uri.c:495
+#: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
 msgstr "ചലച്ചിത്രങ്ങള്‍ അല്ലെങ്കില്‍ പ്ലേലിസ്റ്റുകള്‍ തെരഞ്ഞെടുക്കുക"
 
-#: ../src/totem-uri.c:499
+#: ../src/xplayer-uri.c:499
 msgid "Add Directory"
 msgstr "അറ ചേര്‍ക്കുക"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:848
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1797,15 +1797,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:849
 msgid "Filename"
 msgstr "ഫയല്‍നാമം"
 
-#: ../src/totem-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:851
 msgid "Resolution"
 msgstr "റിസല്യൂഷന്‍"
 
-#: ../src/totem-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:854
 msgid "Duration"
 msgstr "സമയ പരിധി"
 
@@ -1833,44 +1833,44 @@ msgstr "വീഡിയോ ഡിസ്ക് റിക്കോര്‍ഡര�
 msgid "Records (S)VCDs or video DVDs"
 msgstr "വിസിഡി അല്ലെങ്കില്‍ ഡിവിഡികള്‍ റിക്കോര്‍ഡ് ചെയ്യുക"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "വീഡിയോ ഡിസ്ക് _ഉണ്ടാക്കുക..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr ""
 "നിലവില്‍ ഓടുന്ന ചലചിത്രത്തില്‍ നിന്നും ഒരു വീഡിയോ ഡിവിഡി അല്ലെങ്കില്‍ (S) VCD "
 "ഉണ്ടാക്കുക"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "വീഡി_യോ ഡിവിഡി പകര്‍ത്തുക..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "നിലവില്‍ പ്രവര്‍ത്തിക്കുന്ന വീഡിയോ ഡിവിഡി പകര്‍ത്തുക"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "(S)VCD പകര്‍ത്തുക..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "നിലവില്‍ പ്രവര്‍ത്തിക്കുന്ന വീഡിയോ (S)VCD പകര്‍ത്തുക"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:136
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "വീഡിയോ ഡിസ്കിന്റെ ഡൂപ്ലിക്കേറ്റുണ്ടാക്കുവാന്‍ സാധ്യമല്ല."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:138
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:283
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "ചലച്ചിത്രം റിക്കോര്‍ഡ് ചെയ്യുവാന്‍ സാധ്യമായില്ല."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:164
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:174
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:270
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "ഒരു സംരംഭം സിഡിയിലേക്കു് സൂക്ഷിക്കുവാന്‍ സാധ്യമല്ല."
 
@@ -1931,7 +1931,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "ചലചിത്രച്ചിനു് പുതിയൊരു ഭാഗം തയ്യാറാക്കുക"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1125
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "ഭാഗങ്ങള്‍"
 
@@ -1939,7 +1939,7 @@ msgstr "ഭാഗങ്ങള്‍"
 msgid "Support chapter markers in movies"
 msgstr "ചലചിത്രത്തില്‍ ഭാഗങ്ങള്‍ അടയാളപ്പെടുത്തുന്നതു് പിന്തുണയ്ക്കുന്നു"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1948,67 +1948,67 @@ msgstr ""
 "<b>തലക്കെട്ട്: </b>%s\n"
 "<b>തുടക്ക സമയം: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:323
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "ഭാഗങ്ങളുള്ള ഫയല്‍ ലഭ്യമാക്കുമ്പോള്‍ പിശക്"
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "ഇതേ സമയമുള്ള മറ്റൊരു ഭാഗമുണ്ടു്."
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "മറ്റൊരു നാമം ശ്രമിയ്ക്കുക അല്ലെങ്കില്‍ നിലവിലുള്ള ഭാഗം നീക്കം ചെയ്യുക."
 
-#: ../src/plugins/chapters/totem-chapters.c:703
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "ഭാഗങ്ങളുടെ ഫയലിലേക്കു് സൂക്ഷിയ്ക്കുമ്പോള്‍ പിശക്"
 
-#: ../src/plugins/chapters/totem-chapters.c:828
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "ഭാഗങ്ങള്‍ സൂക്ഷിയ്ക്കുമ്പോള്‍ പിശക് ഉണ്ടായിരിയ്ക്കുന്നു"
 
-#: ../src/plugins/chapters/totem-chapters.c:829
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "ചലചിത്രം അടങ്ങുന്ന ഫോള്‍ഡറിലേക്കു് സൂക്ഷിയ്ക്കുവാനുള്ള അനുമതി "
 "നിങ്ങള്‍ക്കുണ്ടോ എന്നു് പരിശോധിയ്ക്കുക."
 
-#: ../src/plugins/chapters/totem-chapters.c:962
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "ഭാഗങ്ങളുടെ ഫയല്‍ തുറക്കുക"
 
-#: ../src/plugins/chapters/totem-chapters.c:1079
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "ഭാഗത്തിന്റെ സ്ക്രീന്‍ഷോട്ട്"
 
-#: ../src/plugins/chapters/totem-chapters.c:1090
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "ഭാഗത്തിന്റെ തലക്കെട്ട്"
 
-#: ../src/plugins/chapters/totem-chapters.c:1170
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr ""
 "അടയ്ക്കുന്നതിനു് മുമ്പു് ഓരോ ഭാഗങ്ങളില്‍ വരുത്തിയ മാറ്റങ്ങള്‍ സൂക്ഷിയ്ക്കണമോ?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1175
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "സൂക്ഷിക്കാതെ അടക്കുക"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "സൂക്ഷിക്കുക"
 
-#: ../src/plugins/chapters/totem-chapters.c:1180
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
 "നിങ്ങള്‍ ഓരോ ഭാഗങ്ങളില്‍ വരുത്തിയ മാറ്റങ്ങള്‍ സൂക്ഷിച്ചില്ലെങ്കില്‍, അവ "
 "നഷ്ടമാകുന്നു."
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr "ഭാഗങ്ങള്‍ ചേര്‍ക്കുക"
 
@@ -2062,19 +2062,19 @@ msgstr "പ്ലേലിസ്റ്റിലേയ്ക്കു് ചേ�
 msgid "Copy Location"
 msgstr "വിലാസം പകര്‍ത്തുക"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/totem-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "അന്വേഷണം"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/totem-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "തെരയുക"
 
-#: ../src/plugins/grilo/totem-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "തെരച്ചില്‍ പിശക്"
 
-#: ../src/plugins/grilo/totem-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "തെരച്ചലില്‍ പിശക്"
 
@@ -2086,15 +2086,15 @@ msgstr "ഗ്രോമിറ്റ് അന്നോട്ടേഷന്‍�
 msgid "Presentation helper to make annotations on screen"
 msgstr "സ്ലീനേല്‍ കുറിപ്പികള്‍ ഉണ്ടാക്കാന്‍ പ്രെസെന്റേഷന്‍ സഹായി"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "ഗ്രോമിറ്റ് ബൈനറി കണ്ടു പിടിക്കാനായില്ല"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr "ഇന്‍സ്റ്റന്റ് മെസ്സഞ്ചര്‍ സ്റ്റാറ്റസ്"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "ചലച്ചിത്രം ഓടുമ്പോള്‍ നിങ്ങളുടെ ഇന്‍സ്റ്റന്റ് മെസ്സഞ്ചര്‍ സ്റ്റാറ്റസ് 'ദൂരെ' "
@@ -2108,11 +2108,11 @@ msgstr "ഇന്‍ഫ്രാറെഡ് റിമോട്ട് കണ്�
 msgid "Support infrared remote control"
 msgstr "ഇന്‍ഫ്രാ-റെഡ് ദൂര-നിയന്ത്രണം താങ്ങുന്നു"
 
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "എല്‍.ഐ.അര്‍.സി ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "lirc ക്രമീകരണം വായിക്കാന്‍ കഴിഞ്ഞില്ല"
 
@@ -2206,11 +2206,11 @@ msgstr "അടിക്കുറിപ്പു് _ഭാഷകള്‍:"
 msgid "_Play with Subtitle"
 msgstr "അടിക്കുറിപ്പുകളുമായ _പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "ആലേഖന _ഭാഷകള്‍:"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "ആലേഖനങ്ങള്‍ക്കുള്ള ചലചിത്രങ്ങള്‍ തെരയുവാനുള്ള ഭാഷ."
 
@@ -2223,22 +2223,22 @@ msgstr "ചലചിത്രത്തിന്റെ ഗുണഗണങ്ങ�
 msgid "Adds movie properties to the sidebar"
 msgstr "വശത്തുള്ള ബാറിലേക്കു് ചലചിത്രത്തിന്റെ വിശേഷതകള്‍ ചേര്‍ക്കുന്നു"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങള്‍"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr "rpdb2 രഹസ്യവാക്ക്"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
 "ആധികാരികതയില്ലാത്ത വിദൂര പ്രവേശനത്തില്‍ നിന്നും ടോട്ടം ഡീബഗ്ഗ് "
 "ചെയ്യുന്നതിനായി "
-"rpdb2 സര്‍വറിനുള്ള രഹസ്യവാക്ക്. ഇതു് കാലിയെങ്കില്‍, 'totem' എന്നതിന്റെ "
+"rpdb2 സര്‍വറിനുള്ള രഹസ്യവാക്ക്. ഇതു് കാലിയെങ്കില്‍, 'xplayer' എന്നതിന്റെ "
 "സ്വതവേയുള്ളതു് ഉപയോഗിയ്ക്കുന്നു."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
@@ -2258,7 +2258,7 @@ msgid "_Python Console"
 msgstr "(_P)പൈത്തണ്‍ കണ്‍സോള്‍ "
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
-msgid "Show Totem's Python console"
+msgid "Show Xplayer's Python console"
 msgstr "ടോട്ടെം പൈത്തണ്‍ കണ്‍സോള്‍ കാണിയ്ക്കുക"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
@@ -2274,24 +2274,24 @@ msgstr ""
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "'totem_object'-ലൂടെ നിങ്ങള്‍ക്കു് Totem.Object ലഭ്യമാക്കാം- :\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "'xplayer_object'-ലൂടെ നിങ്ങള്‍ക്കു് Xplayer.Object ലഭ്യമാക്കാം- :\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
-msgid "Totem Python Console"
+msgid "Xplayer Python Console"
 msgstr "ടോട്ടം പൈത്തണ്‍ കണ്‍സോള്‍"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
 "നിങ്ങള്‍ ഒ.കെ അമര്‍ത്തി കഴിഞ്ഞാല്‍ ടോട്ടം കാത്തിരിക്കുന്നു നിങ്ങള്‍ "
 "അതിലേയ്ക്കു് വിന്‍.പി.ഡി.ബി "
 "അല്ലെങ്കില്‍ അര്‍.പി.ഡി.ബി.2 ഉപയോഗിച്ച് ബന്ധപെട്ടില്ലെങ്കില്‍. നിങ്ങള്‍ "
 "ജികോണ്‍ഫില്‍ ഒരു ഡീബഗര്‍ "
-"പാസ്വര്‍ഡ് ഇട്ടിറ്റില്ലെങ്കില്‍, അതു സഹജമായ പാസ്വര്‍ഡ് ഉപയോഗിക്കും  ('totem')."
+"പാസ്വര്‍ഡ് ഇട്ടിറ്റില്ലെങ്കില്‍, അതു സഹജമായ പാസ്വര്‍ഡ് ഉപയോഗിക്കും  ('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2311,11 +2311,11 @@ msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr ""
 "തെറ്റായ സംവേദനത്തിലാണെങ്കില്‍ വീഡിയോകള്‍ തിരിയ്ക്കുവാന്‍ അനുവദിയ്ക്കുന്നു"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
 msgstr "ഘടികാരദിശയില്‍ _തിരിയ്ക്കുക"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "_ഘടികാരദിശയ്ക്കെതിരെ തിരിയ്ക്കുക"
 
@@ -2328,25 +2328,25 @@ msgstr "ഒരു പകര്‍പ്പ് സൂക്ഷിയ്ക്ക�
 msgid "Save a copy of the currently playing movie"
 msgstr "നിലവില്‍ പ്രവര്‍ത്തിക്കുന്ന ചലചിത്രത്തിന്റെ പകര്‍പ്പു് സൂക്ഷിയ്ക്കുക"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "ഒരു പകര്‍പ്പ് സൂക്ഷിയ്ക്കുക..."
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "ചലചിത്രത്തിന്റെ ഒരു പകര്‍പ്പു് സൂക്ഷിയ്ക്കുക"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "ഒരു പകര്‍പ്പ് സംരക്ഷിക്കുക"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "ചലച്ചിത്രം"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "ചലചിത്ര സംഭരണി"
 
@@ -2395,7 +2395,7 @@ msgid "Allows screenshots and galleries to be taken of videos"
 msgstr ""
 "വീഡിയോകളുടെ സ്ക്രീന്‍ഷോട്ടുകളും ഗ്യാലറികളും എടുക്കുവാന്‍ അനുവദിയ്ക്കുന്നു"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "ഗാലറി സൂക്ഷിക്കുക"
 
@@ -2403,49 +2403,49 @@ msgstr "ഗാലറി സൂക്ഷിക്കുക"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "ഗാലറി-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "ഗാലറി ഉണ്ടാക്കുന്നു..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "ഗാലറി \"%s\" ആയി സൂക്ഷിക്കുന്നു"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:220
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
-msgid "Totem could not get a screenshot of the video."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
 msgstr "ടോട്ടത്തിനു് വീഡിയോയുടെ സ്ക്രീന്‍ ഷോട്ട് ലഭ്യമായില്ല."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "ഇത് പാടില്ലാത്തതാണ്; ഒരു റിപ്പോര്‍ട്ട് തയ്യാറാക്കുക."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "_തിരച്ചിത്രം എടുക്കുക"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "ഒരു സ്ക്രീന്‍ ഷോട്ട് എടുക്കുക"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "സ്ക്രീന്‍ഷോട്ട് _ഗാലറി ഉണ്ടാക്കുക..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr "സ്ക്രീന്‍ ഷോട്ടുകളുടെ ഗാലറിയുണ്ടാക്കുക"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "അടുത്തതിലേക്കു്"
 
@@ -2459,7 +2459,7 @@ msgstr "_അടുത്തതിലേക്കു്:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "സെക്കന്റ്"
@@ -2469,16 +2469,16 @@ msgstr[1] "സെക്കന്റുകള്‍"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "7"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "_അടുത്തതിലേക്കു്..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്ക്കു് മാറുക"
 
@@ -2570,7 +2570,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "%s ഉപയോഗിക്കുന്ന മൂവി പ്ലേയര്‍"
 
 #~ msgid ""
-#~ "Totem could not play this media (%s) although a plugin is present to "
+#~ "Xplayer could not play this media (%s) although a plugin is present to "
 #~ "handle it."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ഈ മധ്യമം പ്ലേ ചെയ്യാന്‍ കഴിഞ്ഞില്ല (%s), ഇത് കയ്കാര്യം ചെയ്യാന്‍ സംയോജകം "
@@ -2585,33 +2585,33 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "മാധ്യമ സം യോജകങ്ങളെ കുറിച്ച് കൂടുതല്‍ വിവരങ്ങള്‍"
 
 #~ msgid ""
-#~ "Please install the necessary plugins and restart Totem to be able to play "
+#~ "Please install the necessary plugins and restart Xplayer to be able to play "
 #~ "this media."
 #~ msgstr "ആവശ്യമുളള സംയോജകങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്ത് ടോട്ടം വീണ്ടും ആരംഭിക്കുക"
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it does not have the "
+#~ "Xplayer cannot play this type of media (%s) because it does not have the "
 #~ "appropriate plugins to be able to read from the disc."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ഇത്തരം മാധ്യമം പ്ലേ ചെയ്യാന്‍ കഴിയില്ല (%s), കാരണം അതിനു ഡിസ്കില്‍ നിന്നു "
 #~ "വായിക്കാനുള്ള ശരിയായ സംയോജകങ്ങളില്ല"
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because you do not have the "
+#~ "Xplayer cannot play this type of media (%s) because you do not have the "
 #~ "appropriate plugins to handle it."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ഇത്തരം മാധ്യമം പ്ലേ ചെയ്യാന്‍ കഴിയില്ല (%s), കാരണം അതിനു കയ്കാര്യം ചെയ്യാനുള്ള "
 #~ "ശരിയായ സംയോജകങ്ങളില്ല"
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because it is not supported."
+#~ "Xplayer cannot play this type of media (%s) because it is not supported."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ഇത്തരം മാധ്യമം പ്ലേ ചെയ്യാന്‍ കഴിയില്ല (%s), കാരണം അത് പിന്തുണയ്ക്കുന്നില്ല"
 
 #~ msgid "Please insert another disc to play back."
 #~ msgstr "ദയവായി പ്ലേ-ബാക്ക് ചെയ്യാന്‍ വേറെ ഒരു ഡിസ്ക് ഇടുക"
 
-#~ msgid "Totem does not support playback of Audio CDs"
+#~ msgid "Xplayer does not support playback of Audio CDs"
 #~ msgstr "ടോട്ടം ശബ്ദ സി.ഡികളൂടെ പ്ലേ.ബാക്ക് പിന്തുണയ്ക്കുന്നില്ല"
 
 #~ msgid ""
@@ -2765,7 +2765,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ "ആരംഭിക്കേണ്ടതാണ്."
 
 #~ msgid ""
-#~ "The change of audio output type will only take effect when Totem is "
+#~ "The change of audio output type will only take effect when Xplayer is "
 #~ "restarted."
 #~ msgstr ""
 #~ "ടോട്ടം വീണ്ടും ആരംഭിച്ചാല്‍ മാത്രമേ ഓഡിയോ ഔട്ട്പുട്ട് രീതിയില്‍ വരുത്തിയ മാറ്റങ്ങള്‍ "
@@ -2908,7 +2908,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "16:9 (അനമോര്‍ഫിക്ക്) ആസ്പക്റ്റ് റേഷ്യോ സജ്ജമാക്കുക"
 
 #~ msgid ""
-#~ "Totem cannot play TV, because no TV adapters are present or they are not "
+#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
 #~ "supported."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ടി.വി പ്ലേ ചെയ്യാന്‍ കഴിയില്ല, കാരണം ടി.വി അഡാപ്റ്ററുകളൊന്നും ഇല്ല അല്ലെങ്കില്‍ "
@@ -2920,7 +2920,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgid "More information about watching TV"
 #~ msgstr "ടി.വി കാണുന്നതിനെ പറ്റി കൂറ്റുതല്‍ വിവരങ്ങള്‍"
 
-#~ msgid "Totem is missing a channels listing to be able to tune the receiver."
+#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
 #~ msgstr "ടോട്ടം ഒരു ചാനല്‍ പട്ടിക കാണുന്നില്ല, ഇത് റിസീവര്‍ ട്യൂണ്‍ ചെയ്യാന്‍ ആവശ്യമുള്ളതാണു്."
 
 #~ msgid ""
@@ -2929,7 +2929,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "കണ്ണിയില്‍ തന്നിരിക്കുന്ന ഉപദേശങ്ങള്‍ ഉപയോഗിക്കുക ഒരു ചാനല്‍സ് പട്ടിക ഉണ്ടാക്കാന്‍."
 
 #~ msgid ""
-#~ "Totem cannot play this type of media (%s) because the TV device is busy."
+#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
 #~ msgstr ""
 #~ "ടോട്ടമിനു ഇത്തരം മാധ്യമം പ്ലേ ചെയ്യാന്‍ കഴിയില്ല (%s), കാരണം ടി.വ്വി ഉപകരണം "
 #~ "തിരക്കിലാണു."
@@ -2947,7 +2947,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ സജ്ജമാക്കണമോ?"
 
 #~ msgid ""
-#~ "It seems you are running Totem remotely.\n"
+#~ "It seems you are running Xplayer remotely.\n"
 #~ "Are you sure you want to enable the visual effects?"
 #~ msgstr ""
 #~ "നിങ്ങള്‍ മാറ്റൊരു കംപ്യൂട്ടറില്‍ നിന്നുമാണ് ടോട്ടം പ്രവര്‍ത്തിപ്പിക്കുന്നത്.\n"
@@ -2958,7 +2958,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "പ്ലേലിസ്റ്റ് സംരക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
 #, fuzzy
-#~ msgid "Totem could not initialize the configuration engine."
+#~ msgid "Xplayer could not initialize the configuration engine."
 #~ msgstr "ടോട്ടത്തിനു് സഹായത്തിന്റെ ഉളളടക്കം പ്രദര്‍ശിപ്പിക്കുവാന്‍ സാധ്യമായില്ല"
 
 #, fuzzy
@@ -3016,16 +3016,16 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgid "Bemused"
 #~ msgstr "ബിമ്യൂസ്ഡ്"
 
-#~ msgid "Control Totem through a mobile phone with a Bemused client"
+#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
 #~ msgstr "മൊബൈല്‍ ഫോണ്‍ ഉപയോഗിച്ച് ഒരു ബെമ്യൂസ്ഡ് ക്ലയന്റ് വഴി ടോട്ടം നിയന്ത്രിക്കുക "
 
 #~ msgid "Untitled %d"
 #~ msgstr "പേരില്ലാത്തത് %d"
 
-#~ msgid "Totem Bemused Server"
+#~ msgid "Xplayer Bemused Server"
 #~ msgstr "ടോട്ടം ബിമ്യൂസ്ഡ് സെര്‍വര്‍"
 
-#~ msgid "Totem Bemused Server version 1.0"
+#~ msgid "Xplayer Bemused Server version 1.0"
 #~ msgstr "ടോട്ടം ബിമ്യൂസ്ഡ് സെര്‍വര്‍ വേര്‍ഷന്‍ 1.0"
 
 #~ msgid "Delete"
@@ -3034,7 +3034,7 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgid "Coherence DLNA/UPnP Client"
 #~ msgstr "കോഹറന്‍സ് DLNA/UPnP ക്ലൈന്റ്"
 
-#~ msgid "A DLNA/UPnP client for Totem powered by Coherence"
+#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
 #~ msgstr "കൊഹറന്‍സ് നിയന്ത്രിതമായ ടോട്ടമിനുള്ള ഒരു DLNA/UPnP ക്ലൈന്റ്"
 
 #~ msgid "Could not connect to the Galago daemon."
@@ -3211,17 +3211,17 @@ msgstr "ഒരു വ്യക്തമായ സമയത്തിലേയ്�
 #~ msgstr "കൂടുതല്‍ വീഡിയോകള്‍… കൊണ്ടു വരുന്നു.."
 
 #, fuzzy
-#~ msgid "Totem could not play '%s'"
+#~ msgid "Xplayer could not play '%s'"
 #~ msgstr "ടോട്ടത്തിനു് '%s' പ്രവര്‍ത്തിപ്പിക്കുവാന്‍‍ സാധ്യമായില്ല."
 
 #~ msgid "Browser Plugin using %s"
 #~ msgstr "%s ഉപയോഗിക്കുന്ന ബ്രൗസര്‍ സമ്യോജകം"
 
-#~ msgid "Totem Browser Plugin"
-#~ msgstr "Totem ബ്രൗസര്‍  സമ്യോജകം"
+#~ msgid "Xplayer Browser Plugin"
+#~ msgstr "Xplayer ബ്രൗസര്‍  സമ്യോജകം"
 
 #, fuzzy
-#~ msgid "The Totem plugin could not be started."
+#~ msgid "The Xplayer plugin could not be started."
 #~ msgstr "ടോട്ടത്തിനു് ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല."
 
 #, fuzzy

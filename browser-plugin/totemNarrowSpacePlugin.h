@@ -1,4 +1,4 @@
-/* Totem NarrowSpace plugin scriptable
+/* Xplayer NarrowSpace plugin scriptable
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -23,14 +23,14 @@
 #ifndef __NARROWSPACE_PLUGIN_H__
 #define __NARROWSPACE_PLUGIN_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemNarrowSpacePlayer : public totemNPObject
+class xplayerNarrowSpacePlayer : public xplayerNPObject
 {
   public:
-    totemNarrowSpacePlayer (NPP);
-    virtual ~totemNarrowSpacePlayer ();
+    xplayerNarrowSpacePlayer (NPP);
+    virtual ~xplayerNarrowSpacePlayer ();
 
     enum PluginState {
       eState_Complete,
@@ -137,6 +137,6 @@ class totemNarrowSpacePlayer : public totemNPObject
     virtual bool InvokeByIndex (int aIndex, const NPVariant *argv, uint32_t argc, NPVariant *_result);
 };
 
-TOTEM_DEFINE_NPCLASS (totemNarrowSpacePlayer);
+XPLAYER_DEFINE_NPCLASS (xplayerNarrowSpacePlayer);
 
 #endif /* __NARROWSPACE_PLUGIN_H__ */

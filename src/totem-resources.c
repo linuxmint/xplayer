@@ -15,10 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -39,7 +39,7 @@
 #include <sys/resource.h>
 #endif
 
-#include "totem-resources.h"
+#include "xplayer-resources.h"
 
 #define MAX_HELPER_MEMORY (256 * 1024 * 1024)	/* 256 MB */
 #define MAX_HELPER_SECONDS (15)			/* 15 seconds */
@@ -108,7 +108,7 @@ time_monitor (gpointer data)
 }
 
 void
-totem_resources_monitor_start (const char *input, gint wall_clock_time)
+xplayer_resources_monitor_start (const char *input, gint wall_clock_time)
 {
 	set_resource_limits (input);
 
@@ -123,7 +123,7 @@ totem_resources_monitor_start (const char *input, gint wall_clock_time)
 }
 
 void
-totem_resources_monitor_stop (void)
+xplayer_resources_monitor_stop (void)
 {
 	finished = TRUE;
 }

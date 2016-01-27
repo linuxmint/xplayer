@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -28,8 +28,8 @@
 
 #include "npupp.h"
 
-#include "totemPlugin.h"
-#include "totemGMPNetwork.h"
+#include "xplayerPlugin.h"
+#include "xplayerGMPNetwork.h"
 
 static const char *propertyNames[] = {
   "bandWidth",
@@ -63,29 +63,29 @@ static const char *methodNames[] = {
   "setProxySettings"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPNetwork,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPNetwork,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPNetwork::totemGMPNetwork (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerGMPNetwork::xplayerGMPNetwork (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPNetwork::~totemGMPNetwork ()
+xplayerGMPNetwork::~xplayerGMPNetwork ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemGMPNetwork::InvokeByIndex (int aIndex,
+xplayerGMPNetwork::InvokeByIndex (int aIndex,
                                 const NPVariant *argv,
                                 uint32_t argc,
                                 NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPNetwork);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPNetwork);
 
   switch (Methods (aIndex)) {
     case eGetProxyBypassForLocal:
@@ -105,10 +105,10 @@ totemGMPNetwork::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPNetwork::GetPropertyByIndex (int aIndex,
+xplayerGMPNetwork::GetPropertyByIndex (int aIndex,
                                      NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemGMPNetwork);
+  XPLAYER_LOG_GETTER (aIndex, xplayerGMPNetwork);
 
   switch (Properties (aIndex)) {
     case eBandWidth:
@@ -130,7 +130,7 @@ totemGMPNetwork::GetPropertyByIndex (int aIndex,
     case eReceptionQuality:
     case eRecoveredPackets:
     case eSourceProtocol:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, totemGMPNetwork);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPNetwork);
       return Int32Variant (_result, 0);
   }
 
@@ -138,15 +138,15 @@ totemGMPNetwork::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPNetwork::SetPropertyByIndex (int aIndex,
+xplayerGMPNetwork::SetPropertyByIndex (int aIndex,
                                      const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPNetwork);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPNetwork);
 
   switch (Properties (aIndex)) {
     case eBufferingTime:
     case eMaxBandwidth:
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, totemGMPNetwork);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, xplayerGMPNetwork);
       return true;
 
     case eBandWidth:

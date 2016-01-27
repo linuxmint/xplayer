@@ -7,23 +7,23 @@
 
 	* pt_BR/pt_BR.po: Updated Brazilian Portuguese translaion by
 	Fabrício Godoy.
-	* pt_BR/figures/totem_start_window.png: Added localized figure by
+	* pt_BR/figures/xplayer_start_window.png: Added localized figure by
 	Fabrício Godoy.
 
 2009-04-03  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Upgraded manual to use DocBook 4.5, and fixed a few
+	* C/xplayer.xml: Upgraded manual to use DocBook 4.5, and fixed a few
 	validation problems such that `make check` now passes.
 	* de/de.po:
 	* pl/pl.po: Fixed a few markup validation problems.
 
 2009-04-01  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Added documentation for the new D-Bus Service plugin.
+	* C/xplayer.xml: Added documentation for the new D-Bus Service plugin.
 
 2009-03-31  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml:
+	* C/xplayer.xml:
 	* Makefile.am: Allow the list of documenters to be automatically-
 	generated. (Closes: #573295)
 
@@ -33,7 +33,7 @@
 
 2009-03-17  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Fixed a typo.
+	* C/xplayer.xml: Fixed a typo.
 	* en_GB/en_GB.po: Updated British English translation.
 
 2009-03-15  Andre Klapper  <a9016009@gmx.de>
@@ -47,11 +47,11 @@
 
 2009-03-09  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Added details of documentation reviews.
+	* C/xplayer.xml: Added details of documentation reviews.
 
 2009-03-09  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Marking documentation as final!
+	* C/xplayer.xml: Marking documentation as final!
 
 2009-03-09  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
 
@@ -63,7 +63,7 @@
 
 2009-03-08  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: A few more small fixes to the documentation to aid
+	* C/xplayer.xml: A few more small fixes to the documentation to aid
 	readability and consistency.
 
 2009-03-08  Mario Blättermann  <mariobl@svn.gnome.org>
@@ -80,12 +80,12 @@
 
 2009-03-08  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Made a few more bits of terminology consistent and
+	* C/xplayer.xml: Made a few more bits of terminology consistent and
 	fixed the rest of the problems on Shaun's list.
 
 2009-03-08  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Fixed some problems found by Shaun McCance's editorial
+	* C/xplayer.xml: Fixed some problems found by Shaun McCance's editorial
 	review of the documentation. (Closes: #574524)
 
 2009-03-07  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
@@ -106,7 +106,7 @@
 
 2009-03-03  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Added documentation for the plugins and tidied up a
+	* C/xplayer.xml: Added documentation for the plugins and tidied up a
 	few other things.
 
 2009-03-03  Mario Blättermann  <mariobl@svn.gnome.org>
@@ -123,7 +123,7 @@
 
 2009-03-01  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Fixed a few typos.
+	* C/xplayer.xml: Fixed a few typos.
 	* en_GB/en_GB.po: Updated British English translation.
 
 2009-03-01  Simos Xenitellis  <simos@gnome.org>
@@ -159,18 +159,18 @@
 2009-02-17  Inaki Larranaga Murgoitio  <dooteo@euskalgnu.org>
 
 	* eu/figures/: Added image in Basque language. Images are:
-		totem_pause_button.png
-		totem_start_window.png
-		totem_volume_mute_button.png
-		totem_previous_button.png
-		totem_play_button.png
-		totem_volume_maximum_button.png
-		totem_next_button.png
-		totem_show_playlist_button.png
+		xplayer_pause_button.png
+		xplayer_start_window.png
+		xplayer_volume_mute_button.png
+		xplayer_previous_button.png
+		xplayer_play_button.png
+		xplayer_volume_maximum_button.png
+		xplayer_next_button.png
+		xplayer_show_playlist_button.png
 
 2009-02-16  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Updated the documentation to match changes in Totem
+	* C/xplayer.xml: Updated the documentation to match changes in Xplayer
 	since the stone age. Added a bit of documentation for new features.
 	(Helps: #496647)
 
@@ -205,7 +205,7 @@
 
 2008-12-06  Takeshi AIHANA <takeshi.aihana@gmail.com>
 
-	* ja/figures/totem_start_window.png:
+	* ja/figures/xplayer_start_window.png:
 	  Updated to the localized screenshot.
 
 2008-12-05  Takeshi AIHANA <takeshi.aihana@gmail.com>
@@ -222,7 +222,7 @@
 
 2008-10-26  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* C/totem.xml: Mention about loading a custom subtitles file if one
+	* C/xplayer.xml: Mention about loading a custom subtitles file if one
 	isn't found automatically. (Closes: #554929)
 
 2008-08-09  Luca Ferretti  <elle.uca@libero.it>
@@ -282,7 +282,7 @@
 
 2008-03-02  Philip Withnall  <pwithnall@svn.gnome.org>
 
-	* C/totem.xml:
+	* C/xplayer.xml:
 	* es/es.po:
 	* fr/fr.po:
 	* oc/oc.po:
@@ -323,12 +323,12 @@
 
 2007-12-20  Philip Withnall  <pwithnall@svn.gnome.org>
 
-	* C/totem.xml: Merged fixes from Tom Dryer as part of his GHOP entry.
+	* C/xplayer.xml: Merged fixes from Tom Dryer as part of his GHOP entry.
 	(Closes: #503702)
 
 2007-12-20  Philip Withnall  <pwithnall@svn.gnome.org>
 
-	* C/totem.xml: Fixed many spelling, grammar and other errors, as
+	* C/xplayer.xml: Fixed many spelling, grammar and other errors, as
 	well as updating some of the documentation to use new shortcuts, etc.
 	(Closes: #500783)
 
@@ -342,13 +342,13 @@
 
 2007-11-25  Philip Withnall  <pwithnall@svn.gnome.org>
 
-	* C/totem.xml:
+	* C/xplayer.xml:
 	* en_GB/en_GB.po: Modified patch from Eero
 	Salokannel <epatic@pp.inet.fi> to fix documentation
 	for "Take Screenshot..." dialog. (Closes: #486466)
 	Wording changes to paragraphs about bug reporting.
 	(Closes: #497183)
-	Corrections to the documented menu path for Totem.
+	Corrections to the documented menu path for Xplayer.
 	(Closes: #497182)
 	Fixed a typo and a whitespace issue. (Helps: #496647)
 
@@ -358,8 +358,8 @@
 
 2007-10-31  Bastien Nocera  <hadess@hadess.net>
 
-	* C/totem.xml:
-	* bg/totem.xml:
+	* C/xplayer.xml:
+	* bg/xplayer.xml:
 	* ca/ca.po:
 	* de/de.po:
 	* en_GB/en_GB.po:
@@ -390,8 +390,8 @@
 
 2007-08-09  Bastien Nocera  <hadess@hadess.net>
 
-	* C/totem.xml:
-	* bg/totem.xml:
+	* C/xplayer.xml:
+	* bg/xplayer.xml:
 	* ca/ca.po:
 	* de/de.po:
 	* en_GB/en_GB.po:
@@ -401,7 +401,7 @@
 	* pt_BR/pt_BR.po:
 	* ru/ru.po:
 	* sv/sv.po:
-	* uk/uk.po: Fix the URL to Totem's webpage (Closes: #463602)
+	* uk/uk.po: Fix the URL to Xplayer's webpage (Closes: #463602)
 
 2007-06-02  Jordi Mas <jmas@softcatala.org>
 
@@ -425,8 +425,8 @@
 	* uk/.cvsignore:
 	* uk/Makefile.am:
 	* uk/legal.xml:
-	* uk/totem-uk.omf:
-	* uk/totem.xml:
+	* uk/xplayer-uk.omf:
+	* uk/xplayer.xml:
 	Removed.
 
 2007-02-11  Raphael Higino  <raphaelh@svn.gnome.org>
@@ -441,8 +441,8 @@
 	* ru/.cvsignore:
 	* ru/Makefile.am:
 	* ru/legal.xml:
-	* ru/totem-ru.omf:
-	* ru/totem.xml:
+	* ru/xplayer-ru.omf:
+	* ru/xplayer.xml:
 	
 	Converted to gnome-doc-utils.
 
@@ -467,17 +467,17 @@
 2006-11-03  Christophe Bliard  <christophe.bliard@trux.info>
 
 	* fr/fr.po: Updated French translation.
-	* fr/figures/totem_start_window.png: Updated image
+	* fr/figures/xplayer_start_window.png: Updated image
 
 2006-10-30  Francisco Javier F. Serrador  <serrador@openshine.com>
 
 	* es/es.po: Updated Spanish translation.
-	* es/figures/totem_start_window.png: Updated image
-	* es/totem.xml: Removed.
+	* es/figures/xplayer_start_window.png: Updated image
+	* es/xplayer.xml: Removed.
 
 2006-10-30  Francisco Javier F. Serrador  <serrador@openshine.com>
 
-	* C/totem.xml: s/langage/language/g 
+	* C/xplayer.xml: s/langage/language/g 
 
 2006-10-23  Daniel Nylander <po@danielnylander.se>
 
@@ -490,11 +490,11 @@
 2006-10-15  Christophe Bliard  <christophe.bliard@trux.info>
 
 	* fr/fr.po: Moved French translation to gnome-doc-utils.
-	* fr/legal.xml fr/Makefile.am fr/totem-fr.omf fr/totem.xml: Removed
+	* fr/legal.xml fr/Makefile.am fr/xplayer-fr.omf fr/xplayer.xml: Removed
 	non-gnome-doc-utils 
-	* fr/figures/totem_show_playlist_button.png
-	fr/figures/totem_volume_maximum_button.png
-	fr/figures/totem_volume_mute_button.png: Removed no more used figures
+	* fr/figures/xplayer_show_playlist_button.png
+	fr/figures/xplayer_volume_maximum_button.png
+	fr/figures/xplayer_volume_mute_button.png: Removed no more used figures
 	* Makefile.am: Added fr to DOC_LINGUAS.
 
 2006-10-11  Daniel Nylander <po@danielnylander.se>
@@ -504,9 +504,9 @@
 
 2006-10-01  Joachim Noreiko  <jnoreiko@yahoo.com>
 
-  * C/totem.xml:
-  * C/figures/totem_start_window.png:
-    bring manual up to date for totem 1.6.0
+  * C/xplayer.xml:
+  * C/figures/xplayer_start_window.png:
+    bring manual up to date for xplayer 1.6.0
     patch from Baptiste Mille-Mathias for #351851
 
 2006-09-29  Jan Arne Petersen  <jpetersen@jpetersen.org>

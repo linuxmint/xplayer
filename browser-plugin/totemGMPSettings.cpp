@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2006, 2007 Christian Persch
  *
@@ -24,8 +24,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemGMPSettings.h"
+#include "xplayerPlugin.h"
+#include "xplayerGMPSettings.h"
 
 static const char *propertyNames[] = {
   "autostart",
@@ -49,30 +49,30 @@ static const char *methodNames[] = {
   "setMode"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPSettings,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPSettings,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPSettings::totemGMPSettings (NPP aNPP)
-  : totemNPObject (aNPP),
+xplayerGMPSettings::xplayerGMPSettings (NPP aNPP)
+  : xplayerNPObject (aNPP),
     mMute (false)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPSettings::~totemGMPSettings ()
+xplayerGMPSettings::~xplayerGMPSettings ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemGMPSettings::InvokeByIndex (int aIndex,
+xplayerGMPSettings::InvokeByIndex (int aIndex,
                                  const NPVariant *argv,
                                  uint32_t argc,
                                  NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPSettings);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPSettings);
 
   switch (Methods (aIndex)) {
     case eIsAvailable:
@@ -83,7 +83,7 @@ totemGMPSettings::InvokeByIndex (int aIndex,
       /* void setMode (in ACString modeName, in boolean state); */
     case eRequestMediaAccessRights:
       /* boolean requestMediaAccessRights (in ACString access); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return BoolVariant (_result, false);
   }
 
@@ -91,10 +91,10 @@ totemGMPSettings::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPSettings::GetPropertyByIndex (int aIndex,
+xplayerGMPSettings::GetPropertyByIndex (int aIndex,
                                       NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemGMPSettings);
+  XPLAYER_LOG_GETTER (aIndex, xplayerGMPSettings);
 
   switch (Properties (aIndex)) {
     case eMute:
@@ -111,47 +111,47 @@ totemGMPSettings::GetPropertyByIndex (int aIndex,
 
     case eBalance:
       /* attribute long balance; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return Int32Variant (_result, 0);
 
     case eBaseURL:
       /* attribute AUTF8String baseURL; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return StringVariant (_result, "");
 
     case eDefaultAudioLanguage:
       /* readonly attribute long defaultAudioLanguage; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return Int32Variant (_result, 0); /* FIXME */
 
     case eDefaultFrame:
       /* attribute AUTF8String defaultFrame; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return StringVariant (_result, "");
 
     case eEnableErrorDialogs:
       /* attribute boolean enableErrorDialogs; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return BoolVariant (_result, true);
 
     case eInvokeURLs:
       /* attribute boolean invokeURLs; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return BoolVariant (_result, true);
 
     case eMediaAccessRights:
       /* readonly attribute ACString mediaAccessRights; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return StringVariant (_result, "");
 
     case ePlayCount:
       /* attribute long playCount; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return Int32Variant (_result, 1);
 
     case eRate:
       /* attribute double rate; */
-      TOTEM_WARN_1_GETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_1_GETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return DoubleVariant (_result, 1.0);
   }
 
@@ -159,10 +159,10 @@ totemGMPSettings::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPSettings::SetPropertyByIndex (int aIndex,
+xplayerGMPSettings::SetPropertyByIndex (int aIndex,
                                       const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPSettings);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPSettings);
 
   switch (Properties (aIndex)) {
     case eMute: {
@@ -209,7 +209,7 @@ totemGMPSettings::SetPropertyByIndex (int aIndex,
       /* attribute long playCount; */
     case eRate:
       /* attribute double rate; */
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, totemGMPSettings);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, xplayerGMPSettings);
       return true;
 
     case eDefaultAudioLanguage:

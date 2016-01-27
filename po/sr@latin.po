@@ -1,6 +1,6 @@
-# Serbian translation of totem
+# Serbian translation of xplayer
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003 - 2013.
-# This file is distributed under the same license as the totem package.
+# This file is distributed under the same license as the xplayer package.
 # Maintainer: Miloš Popović <gpopac@gmail.com>
 # Prevous maintainer: Veljko M. Stanojević <veljko@vms.homelinux.net>
 # Reviewed on 2005-07-11 by Danilo Šegan <danilo@gnome.org>
@@ -9,8 +9,8 @@
 # Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: totem\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=totem&"
+"Project-Id-Version: xplayer\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&"
 "keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-05-09 18:07+0000\n"
 "PO-Revision-Date: 2013-05-13 10:33+0200\n"
@@ -24,77 +24,77 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../browser-plugin/totem-plugin-viewer.c:351 ../src/totem-object.c:1180
-#: ../src/totem-object.c:1650 ../src/totem-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
+#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Zaustavljeno"
 
-#: ../browser-plugin/totem-plugin-viewer.c:363 ../src/totem-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
 msgid "Paused"
 msgstr "Pauzirano"
 
-#: ../browser-plugin/totem-plugin-viewer.c:367 ../src/totem-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
 msgid "Playing"
 msgstr "Puštam"
 
-#: ../browser-plugin/totem-plugin-viewer.c:385
-#: ../src/plugins/screensaver/totem-screensaver.c:97
+#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Puštam film"
 
-#: ../browser-plugin/totem-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "Nema adrese za puštanje"
 
-#: ../browser-plugin/totem-plugin-viewer.c:675
-#: ../browser-plugin/totem-plugin-viewer.c:1699
-msgid "Totem Movie Player"
-msgstr "Totem — puštanje filmova"
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Xplayer — puštanje filmova"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/totem-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Otvori pomoću „%s“"
 
-#: ../browser-plugin/totem-plugin-viewer.c:1340 ../src/totem-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2475
 msgid "An error occurred"
 msgstr "Došlo je do greške"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "Nema spiska za puštanje ili je prazan"
 
-#: ../browser-plugin/totem-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "Priključak za pregledanje filmova"
 
 # andrija: nepotpun prevod, a težak :)
 # danilo: niti i bezbedno, poslužiće ;)
-#: ../browser-plugin/totem-plugin-viewer.c:2143 ../src/totem.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Nisam uspeo da učitam biblioteke za bezbedan rad sa nitima."
 
-#: ../browser-plugin/totem-plugin-viewer.c:2143
-msgid "Verify your system installation. The Totem plugin will now exit."
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"Proverite instalaciju vašeg sistema. Totemov priključak će se sada zatvoriti."
+"Proverite instalaciju vašeg sistema. Xplayerov priključak će se sada zatvoriti."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Napusti ceo ekran"
 
-#: ../data/fullscreen.ui.h:2 ../data/totem.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
 msgid "Time:"
 msgstr "Vreme:"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:1
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr "Dopušta pokretanje čuvara ekrana pri puštanju muzike"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:2
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
@@ -102,71 +102,71 @@ msgstr ""
 "Dopušta pokretanje čuvara ekrana kada je puštena samo muzika. Isključite ako "
 "imate zvučnike koji se napajaju sa monitora."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:3
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
 msgstr "Prikazuje vizuelne efekte kada se ne prikazuje video"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:4
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr "Prikazuje vizuelne efekte kada je puštena samo zvučna datoteka."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:5
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
 msgstr "Naziv priključka za vizuelne efekte"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:6
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "Osvetljenje video snimka"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:7
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
 msgstr "Kontrast video snimka"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:8
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:8
 msgid "The hue of the video"
 msgstr "Nijanse video snimka"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:9
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
 msgstr "Zasićenje video snimka"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:10
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Sam menja veličinu platna pri učitavanju datoteke"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:11
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:11
 msgid "Repeat mode"
 msgstr "Režim ponavljanja"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:12
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
 msgstr "Nasumični režim"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:13
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "Da li da isključi rasplitanje videa sa isprepletenim kadrovima"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:14
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
 msgstr "Da li da uključi uklanjanje grešaka prilikom puštanja"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:15
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
 msgstr "Vrsta zvučnog izlaza koji se koristi"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:16
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
 msgstr "Podešavanje kvaliteta vizuelizacije"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:17
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
 msgstr "Podešavanje kvaliteta za vizuelizaciju zvuka."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:18
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
 msgstr "Prag za mrežno čitanje unapred"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:19
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:19
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -174,39 +174,39 @@ msgstr ""
 "Količina podataka koja će biti unapred učitana za mrežne tokove pre početka "
 "prikazivanja toka (u sekundama)."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:20
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:20
 msgid "Subtitle font"
 msgstr "Slovni lik za titl"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:21
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr "Opis Pango slovnog lika za iscrtavanje teksta prevoda."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:22
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
 msgstr "Kodiranje za titl"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:23
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
 msgstr "Skup znakova kodiranja za titl."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:24
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Podrazumevana putanja za prozorče „Otvori...“"
 
 # bug: folder or directory?
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:25
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr "Podrazumevana putanja za prozorče „Otvori...“, inače tekuća fascikla."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:26
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Podrazumevana putanja za prozorče „Napravi snimak ekrana“"
 
 # bug: folder or directory?
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:27
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -214,23 +214,23 @@ msgstr ""
 "Podrazumevana putanja za prozorče „Napravi snimak ekrana“, u suprotnom "
 "podrazumevana fascikla sa slikama."
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:28
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "Da li da isključi priključke u korisnikovom ličnom direktorijumu"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:29
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "Da li da onemogućim prečice sa tastature"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:30
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr "Da li sam da učita tekstualne datoteke sa titlom pri učitavanju filma"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:31
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr "Da li sam da učita spoljne datoteke sa poglavljima pri učitavanju filma"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:32
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -238,11 +238,11 @@ msgstr ""
 "Da li da pamti položaj puštene audio/video datoteke prilikom njenog pauziranja "
 "ili zatvaranja"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:33
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:33
 msgid "Active plugins list"
 msgstr "Spisak aktivnih priključaka"
 
-#: ../data/org.gnome.totem.gschema.xml.in.in.h:34
+#: ../data/org.gnome.xplayer.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
@@ -265,11 +265,11 @@ msgstr "_Umnoži putanju"
 msgid "Copy the location to the clipboard"
 msgstr "Umnožite putanju među isečke"
 
-#: ../data/playlist.ui.h:5 ../data/totem.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
 msgid "_Select Text Subtitles..."
 msgstr "_Izaberi tekstualni titl..."
 
-#: ../data/playlist.ui.h:6 ../data/totem.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
 msgid "Select a file to use for text subtitles"
 msgstr "Izaberite tekstualnu datoteku sa titlovima"
 
@@ -309,7 +309,7 @@ msgid "Extra Large"
 msgstr "Veoma veliko"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/totem-properties-view.c:232
+#: ../src/xplayer-properties-view.c:232
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -334,8 +334,8 @@ msgid "AC3 Passthrough"
 msgstr "AC3 propuštanje"
 
 #: ../data/preferences.ui.h:13
-msgid "Totem Preferences"
-msgstr "Postavke Totema"
+msgid "Xplayer Preferences"
+msgstr "Postavke Xplayera"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
@@ -449,7 +449,7 @@ msgid "_Audio output type:"
 msgstr "Vrsta _zvučnog izlaza:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/totem-properties-view.c:273
+#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "Zvuk"
 
@@ -481,7 +481,7 @@ msgstr "Napomena:"
 msgid "Container:"
 msgstr "Sadržalac:"
 
-#: ../data/properties.ui.h:9 ../src/totem-properties-view.c:275
+#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
 msgid "Video"
 msgstr "Video"
 
@@ -510,329 +510,329 @@ msgid "Channels:"
 msgstr "Kanala:"
 
 #. Title
-#: ../data/totem.desktop.in.in.in.h:1 ../data/totem.ui.h:80 ../src/totem.c:248
-#: ../src/totem.c:256 ../src/totem-menu.c:789 ../src/totem-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
+#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
 msgid "Videos"
 msgstr "Video snimci"
 
-#: ../data/totem.desktop.in.in.in.h:2
+#: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
 msgstr "Puštajte filmove"
 
-#: ../data/totem.desktop.in.in.in.h:3
+#: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Snimak;Film;Epizoda;Serije;Puštač;DVD;TV;Disk;"
 
-#: ../data/totem.ui.h:1
+#: ../data/xplayer.ui.h:1
 msgid "_Open"
 msgstr "_Otvori"
 
-#: ../data/totem.ui.h:2
+#: ../data/xplayer.ui.h:2
 msgid "Open _Location"
 msgstr "Otvori _putanju"
 
-#: ../data/totem.ui.h:3
+#: ../data/xplayer.ui.h:3
 msgid "_Fullscreen"
 msgstr "Preko _celog ekrana"
 
-#: ../data/totem.ui.h:4
+#: ../data/xplayer.ui.h:4
 msgid "Prefere_nces"
 msgstr "Pos_tavke"
 
-#: ../data/totem.ui.h:5
+#: ../data/xplayer.ui.h:5
 msgid "Shuff_le"
 msgstr "_Nasumično"
 
-#: ../data/totem.ui.h:6
+#: ../data/xplayer.ui.h:6
 msgid "_Repeat"
 msgstr "_Ponovi"
 
-#: ../data/totem.ui.h:7
+#: ../data/xplayer.ui.h:7
 msgid "_Quit"
 msgstr "_Izađi"
 
-#: ../data/totem.ui.h:8
+#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Film"
 
-#: ../data/totem.ui.h:9
+#: ../data/xplayer.ui.h:9
 msgid "_Eject"
 msgstr "_Izbaci"
 
-#: ../data/totem.ui.h:10
+#: ../data/xplayer.ui.h:10
 msgid "Eject the current disc"
 msgstr "Izbacite trenutni disk"
 
-#: ../data/totem.ui.h:11
+#: ../data/xplayer.ui.h:11
 msgid "_Properties"
 msgstr "_Svojstva"
 
-#: ../data/totem.ui.h:12
+#: ../data/xplayer.ui.h:12
 msgid "View the properties of the current stream"
 msgstr "Pogledajte osobine trenutnog toka"
 
-#: ../data/totem.ui.h:13
+#: ../data/xplayer.ui.h:13
 msgid "Play / P_ause"
 msgstr "P_usti / pauziraj"
 
-#: ../data/totem.ui.h:14
+#: ../data/xplayer.ui.h:14
 msgid "Play or pause the movie"
 msgstr "Pustite ili pauzirajte film"
 
-#: ../data/totem.ui.h:15
+#: ../data/xplayer.ui.h:15
 msgid "_Edit"
 msgstr "_Uređivanje"
 
-#: ../data/totem.ui.h:16
+#: ../data/xplayer.ui.h:16
 msgid "_Clear Playlist"
 msgstr "_Očisti spisak"
 
-#: ../data/totem.ui.h:17
+#: ../data/xplayer.ui.h:17
 msgid "Clear the playlist"
 msgstr "Očistite listu za puštanje"
 
-#: ../data/totem.ui.h:18
+#: ../data/xplayer.ui.h:18
 msgid "Plugins..."
 msgstr "Priključci..."
 
-#: ../data/totem.ui.h:19
+#: ../data/xplayer.ui.h:19
 msgid "Configure plugins to extend the application"
 msgstr "Podesite priključke da proširite mogućnosti programa"
 
-#: ../data/totem.ui.h:20
+#: ../data/xplayer.ui.h:20
 msgid "_View"
 msgstr "_Pregled"
 
-#: ../data/totem.ui.h:21
+#: ../data/xplayer.ui.h:21
 msgid "Fit Window to Movie"
 msgstr "Prilagodi prozor filmu"
 
-#: ../data/totem.ui.h:22
+#: ../data/xplayer.ui.h:22
 msgid "_Resize 1∶2"
 msgstr "_Veličina 1:2"
 
-#: ../data/totem.ui.h:23
+#: ../data/xplayer.ui.h:23
 msgid "Resize to half the original video size"
 msgstr "Promenite veličinu na polovinu veličine prvobitnog videa"
 
-#: ../data/totem.ui.h:24
+#: ../data/xplayer.ui.h:24
 msgid "Resize _1∶1"
 msgstr "Veličina _1:1"
 
-#: ../data/totem.ui.h:25
+#: ../data/xplayer.ui.h:25
 msgid "Resize to the original video size"
 msgstr "Promenite veličinu na prvobitnu veličinu videa"
 
-#: ../data/totem.ui.h:26
+#: ../data/xplayer.ui.h:26
 msgid "Resize _2∶1"
 msgstr "Veličina _2:1"
 
-#: ../data/totem.ui.h:27
+#: ../data/xplayer.ui.h:27
 msgid "Resize to double the original video size"
 msgstr "Udvostručite veličinu prvobitnog videa"
 
-#: ../data/totem.ui.h:28
+#: ../data/xplayer.ui.h:28
 msgid "_Aspect Ratio"
 msgstr "_Odnos širine i visine"
 
-#: ../data/totem.ui.h:29
+#: ../data/xplayer.ui.h:29
 msgid "Switch An_gles"
 msgstr "Promeni _ugao gledanja"
 
-#: ../data/totem.ui.h:30
+#: ../data/xplayer.ui.h:30
 msgid "Switch camera angles"
 msgstr "Promenite uglove kamere"
 
-#: ../data/totem.ui.h:31
+#: ../data/xplayer.ui.h:31
 msgid "_Go"
 msgstr "_Idi"
 
-#: ../data/totem.ui.h:32
+#: ../data/xplayer.ui.h:32
 msgid "_DVD Menu"
 msgstr "_DVD izbornik"
 
-#: ../data/totem.ui.h:33
+#: ../data/xplayer.ui.h:33
 msgid "Go to the DVD menu"
 msgstr "Idite na DVD izbornik"
 
-#: ../data/totem.ui.h:34
+#: ../data/xplayer.ui.h:34
 msgid "_Title Menu"
 msgstr "Izbornik _naslova"
 
-#: ../data/totem.ui.h:35
+#: ../data/xplayer.ui.h:35
 msgid "Go to the title menu"
 msgstr "Idite na izbornik naslova"
 
-#: ../data/totem.ui.h:36
+#: ../data/xplayer.ui.h:36
 msgid "A_udio Menu"
 msgstr "Izbornik _zvuka"
 
-#: ../data/totem.ui.h:37
+#: ../data/xplayer.ui.h:37
 msgid "Go to the audio menu"
 msgstr "Idite na izbornik zvuka"
 
-#: ../data/totem.ui.h:38
+#: ../data/xplayer.ui.h:38
 msgid "_Angle Menu"
 msgstr "Izbornik _uglova"
 
-#: ../data/totem.ui.h:39
+#: ../data/xplayer.ui.h:39
 msgid "Go to the angle menu"
 msgstr "Idite na izbornik uglova"
 
-#: ../data/totem.ui.h:40
+#: ../data/xplayer.ui.h:40
 msgid "_Chapter Menu"
 msgstr "Izbornik _poglavlja"
 
-#: ../data/totem.ui.h:41
+#: ../data/xplayer.ui.h:41
 msgid "Go to the chapter menu"
 msgstr "Idite na izbornik poglavlja"
 
-#: ../data/totem.ui.h:42
+#: ../data/xplayer.ui.h:42
 msgid "_Next Chapter/Movie"
 msgstr "_Sledeće poglavlje/film"
 
-#: ../data/totem.ui.h:43
+#: ../data/xplayer.ui.h:43
 msgid "Next chapter or movie"
 msgstr "Sledeće poglavlje ili film"
 
-#: ../data/totem.ui.h:44
+#: ../data/xplayer.ui.h:44
 msgid "_Previous Chapter/Movie"
 msgstr "_Prethodno poglavlje/film"
 
-#: ../data/totem.ui.h:45
+#: ../data/xplayer.ui.h:45
 msgid "Previous chapter or movie"
 msgstr "Prethodno poglavlje ili film"
 
-#: ../data/totem.ui.h:46
+#: ../data/xplayer.ui.h:46
 msgid "_Sound"
 msgstr "_Zvuk"
 
-#: ../data/totem.ui.h:47
+#: ../data/xplayer.ui.h:47
 msgid "Volume _Up"
 msgstr "_Pojačaj"
 
-#: ../data/totem.ui.h:48
+#: ../data/xplayer.ui.h:48
 msgid "Increase volume"
 msgstr "Pojačajte zvuk"
 
-#: ../data/totem.ui.h:49
+#: ../data/xplayer.ui.h:49
 msgid "Volume _Down"
 msgstr "_Utišaj"
 
-#: ../data/totem.ui.h:50
+#: ../data/xplayer.ui.h:50
 msgid "Decrease volume"
 msgstr "Utišaj zvuk"
 
-#: ../data/totem.ui.h:51
+#: ../data/xplayer.ui.h:51
 msgid "_Help"
 msgstr "Po_moć"
 
-#: ../data/totem.ui.h:52
+#: ../data/xplayer.ui.h:52
 msgid "_Contents"
 msgstr "_Sadržaj"
 
-#: ../data/totem.ui.h:53
+#: ../data/xplayer.ui.h:53
 msgid "Help contents"
 msgstr "Sadržaj pomoći"
 
-#: ../data/totem.ui.h:54
+#: ../data/xplayer.ui.h:54
 msgid "_About"
 msgstr "_O programu"
 
-#: ../data/totem.ui.h:55
+#: ../data/xplayer.ui.h:55
 msgid "About this application"
 msgstr "O ovom programu"
 
-#: ../data/totem.ui.h:56
+#: ../data/xplayer.ui.h:56
 msgid "Show _Controls"
 msgstr "Prikaži _kontrole"
 
-#: ../data/totem.ui.h:57
+#: ../data/xplayer.ui.h:57
 msgid "Show controls"
 msgstr "Prikažite kontrole"
 
-#: ../data/totem.ui.h:58
+#: ../data/xplayer.ui.h:58
 msgid "S_idebar"
 msgstr "_Bočna površ"
 
-#: ../data/totem.ui.h:59
+#: ../data/xplayer.ui.h:59
 msgid "Show or hide the sidebar"
 msgstr "Prikažite ili sakrijte bočnu površ"
 
-#: ../data/totem.ui.h:60
+#: ../data/xplayer.ui.h:60
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Sam prilagodi"
 
-#: ../data/totem.ui.h:61
+#: ../data/xplayer.ui.h:61
 msgid "Sets automatic aspect ratio"
 msgstr "Sam će da postavi odnos visine i širine"
 
-#: ../data/totem.ui.h:62
+#: ../data/xplayer.ui.h:62
 msgid "Square"
 msgstr "Kvadrat"
 
-#: ../data/totem.ui.h:63
+#: ../data/xplayer.ui.h:63
 msgid "Sets square aspect ratio"
 msgstr "Postavite kvadratni odnos visine i širine"
 
-#: ../data/totem.ui.h:64
+#: ../data/xplayer.ui.h:64
 msgid "4∶3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/totem.ui.h:65
+#: ../data/xplayer.ui.h:65
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Postavite odnos visine i širine na 4:3 (TV)"
 
-#: ../data/totem.ui.h:66
+#: ../data/xplayer.ui.h:66
 msgid "16∶9 (Widescreen)"
 msgstr "16:9 (široki ekran)"
 
-#: ../data/totem.ui.h:67
+#: ../data/xplayer.ui.h:67
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Postavite odnos visine i širine na 16:9 (široki ekran)"
 
-#: ../data/totem.ui.h:68
+#: ../data/xplayer.ui.h:68
 msgid "2.11∶1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:69
+#: ../data/xplayer.ui.h:69
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Postavite odnos visine i širine na 2.11:1 (DVB)"
 
-#: ../data/totem.ui.h:70
+#: ../data/xplayer.ui.h:70
 msgid "S_ubtitles"
 msgstr "_Prevodi"
 
-#: ../data/totem.ui.h:73
+#: ../data/xplayer.ui.h:73
 msgid "_Languages"
 msgstr "_Jezici"
 
-#: ../data/totem.ui.h:74
+#: ../data/xplayer.ui.h:74
 msgid "Zoom In"
 msgstr "Uvećaj"
 
-#: ../data/totem.ui.h:75
+#: ../data/xplayer.ui.h:75
 msgid "Zoom in"
 msgstr "Uvećajte prikaz"
 
-#: ../data/totem.ui.h:76
+#: ../data/xplayer.ui.h:76
 msgid "Skip _Forward"
 msgstr "Premotaj una_pred"
 
-#: ../data/totem.ui.h:77
+#: ../data/xplayer.ui.h:77
 msgid "Skip forward"
 msgstr "Premotajte unapred"
 
-#: ../data/totem.ui.h:78
+#: ../data/xplayer.ui.h:78
 msgid "Skip _Backwards"
 msgstr "Premotaj una_zad"
 
-#: ../data/totem.ui.h:79
+#: ../data/xplayer.ui.h:79
 msgid "Skip backwards"
 msgstr "Premotajte unazad"
 
-#: ../data/totem.ui.h:82
+#: ../data/xplayer.ui.h:82
 msgid "Time seek bar"
 msgstr "Traka protoka vremena"
 
@@ -927,11 +927,11 @@ msgstr ""
 "Ne mogu da pustim ovu datoteku preko mreže. Pokušajte da je prvo prenesete "
 "na disk."
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/totem-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
 msgid "Surround"
 msgstr "Okruženje"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/totem-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
 msgid "Mono"
 msgstr "Mono"
 
@@ -1057,8 +1057,8 @@ msgstr "Prikazuje mogućnosti upravljanja sesijom"
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:56
-#: ../src/plugins/skipto/totem-time-entry.c:57
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
@@ -1070,7 +1070,7 @@ msgstr "%d:%02d:%02d"
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
 #.
-#: ../src/gst/totem-time-helpers.c:65
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
@@ -1189,101 +1189,101 @@ msgstr[1] "%d kadra u sekundi"
 msgstr[2] "%d kadrova u sekundi"
 msgstr[3] "Jedan kadar u sekundi"
 
-#: ../src/totem-audio-preview.c:137
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "Zvučni pregled"
 
-#: ../src/totem.c:249
-msgid "Verify your system installation. Totem will now exit."
-msgstr "Proverite instalaciju sistema. Totem će se sada ugasiti."
+#: ../src/xplayer.c:249
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Proverite instalaciju sistema. Xplayer će se sada ugasiti."
 
-#: ../src/totem-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:94
 msgid "_Play Now"
 msgstr "_Pusti sada"
 
-#: ../src/totem-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:97
 msgid "_Add to Playlist"
 msgstr "_Dodaj na spisak za puštanje"
 
-#: ../src/totem-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:103
 msgid "Cancel"
 msgstr "Otkaži"
 
-#: ../src/totem-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:573
 msgid "No File"
 msgstr "Nema datoteke"
 
-#: ../src/totem-interface.c:181 ../src/totem-interface.c:224
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
 msgstr "Ne mogu da učitam „%s“ sučelje. %s"
 
-#: ../src/totem-interface.c:181
+#: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
 msgstr "Datoteka ne postoji."
 
-#: ../src/totem-interface.c:183 ../src/totem-interface.c:185
-#: ../src/totem-interface.c:226 ../src/totem-interface.c:228
-msgid "Make sure that Totem is properly installed."
-msgstr "Proverite da li je Totem pravilno instaliran."
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Proverite da li je Xplayer pravilno instaliran."
 
-#: ../src/totem-interface.c:357
+#: ../src/xplayer-interface.c:357
 msgid ""
-"Totem is free software; you can redistribute it and/or modify it under the "
+"Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Totem je slobodan softver; možete ga prosleđivati i/ili menjati pod uslovima "
+"Xplayer je slobodan softver; možete ga prosleđivati i/ili menjati pod uslovima "
 "GNU Opšte javne licence koju je objavila Zadužbina slobodnog softvera; "
 "verzije 2 licence ili (po vašem izboru) bilo koje novije verzije."
 
-#: ../src/totem-interface.c:361
+#: ../src/xplayer-interface.c:361
 msgid ""
-"Totem is distributed in the hope that it will be useful, but WITHOUT ANY "
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Totem se raspodeljuje u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; "
+"Xplayer se raspodeljuje u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; "
 "čak i bez primenjene garancije TRŽIŠNE VREDNOSTI ili PRILAGOĐENOSTI ODREĐENOJ "
 "NAMENI. Pogledajte GNU Opštu javnu licencu za više detalja."
 
 # bug: old address for FSF
-#: ../src/totem-interface.c:365
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Totem; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
 "Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Treba da ste primili primerak GNU Opšte javne licence uz Totem; ako niste, "
+"Treba da ste primili primerak GNU Opšte javne licence uz Xplayer; ako niste, "
 "pišite Zadužbini slobodnog softvera na adresu: „Free Software Foundation, "
 "Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA“"
 
-#: ../src/totem-interface.c:368
+#: ../src/xplayer-interface.c:368
 msgid ""
-"Totem contains an exception to allow the use of proprietary GStreamer "
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Totem sadrži izuzetak da bi dozvolio upotrebu vlasničkih priključaka za "
+"Xplayer sadrži izuzetak da bi dozvolio upotrebu vlasničkih priključaka za "
 "GStrimer."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:291
+#: ../src/xplayer-menu.c:291
 msgid "None"
 msgstr "Ništa"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/totem-menu.c:296
+#: ../src/xplayer-menu.c:296
 msgctxt "Language"
 msgid "Auto"
 msgstr "Sam odredi"
 
-#: ../src/totem-menu.c:788
+#: ../src/xplayer-menu.c:788
 msgid "Copyright © 2002-2009 Bastien Nocera"
 msgstr "Autorska prava © 2002–2009 Bastijen Nosera"
 
-#: ../src/totem-menu.c:792
+#: ../src/xplayer-menu.c:792
 msgid "translator-credits"
 msgstr ""
 "Veljko Stanojević <veljko@vms.homelinux.net>\n"
@@ -1296,15 +1296,15 @@ msgstr ""
 "\n"
 "http://prevod.org — prevod na srpski jezik"
 
-#: ../src/totem-menu.c:796
-msgid "Totem Website"
-msgstr "Veb sajt Totema"
+#: ../src/xplayer-menu.c:796
+msgid "Xplayer Website"
+msgstr "Veb sajt Xplayera"
 
-#: ../src/totem-menu.c:827
+#: ../src/xplayer-menu.c:827
 msgid "Configure Plugins"
 msgstr "Podesite priključke"
 
-#: ../src/totem-object.c:161
+#: ../src/xplayer-object.c:161
 #, c-format
 msgid ""
 "%s\n"
@@ -1314,463 +1314,463 @@ msgstr ""
 "Pokrenite „%s --help“ da ​​vidite potpun spisak dostupnih opcija linije "
 "naredbi.\n"
 
-#. Translators: %s is the totem version number
-#: ../src/totem-object.c:589
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:589
 #, c-format
-msgid "Totem %s"
-msgstr "Totem %s"
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/totem-object.c:1168 ../src/totem-options.c:52
+#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pauziraj"
 
-#: ../src/totem-object.c:1175 ../src/totem-object.c:1185
-#: ../src/totem-options.c:51
+#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Pusti"
 
-#: ../src/totem-object.c:1267 ../src/totem-object.c:1294
-#: ../src/totem-object.c:1787 ../src/totem-object.c:1942
+#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
+#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
 #, c-format
-msgid "Totem could not play '%s'."
-msgstr "Totem ne može da pusti „%s“."
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer ne može da pusti „%s“."
 
-#: ../src/totem-object.c:1793
+#: ../src/xplayer-object.c:1793
 msgid "No error message"
 msgstr "Nema poruka o greškama"
 
-#: ../src/totem-object.c:2133
-msgid "Totem could not display the help contents."
-msgstr "Totem ne može da prikaže sadržaj pomoći."
+#: ../src/xplayer-object.c:2133
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer ne može da prikaže sadržaj pomoći."
 
-#: ../src/totem-object.c:4022 ../src/totem-object.c:4024
+#: ../src/xplayer-object.c:4022 ../src/xplayer-object.c:4024
 msgid "Previous Chapter/Movie"
 msgstr "Prethodno poglavlje/film"
 
-#: ../src/totem-object.c:4031 ../src/totem-object.c:4033
+#: ../src/xplayer-object.c:4031 ../src/xplayer-object.c:4033
 msgid "Play / Pause"
 msgstr "Pusti / Pauziraj"
 
-#: ../src/totem-object.c:4041 ../src/totem-object.c:4043
+#: ../src/xplayer-object.c:4041 ../src/xplayer-object.c:4043
 msgid "Next Chapter/Movie"
 msgstr "Sledeće poglavlje/film"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Totem's main window.
-#: ../src/totem-object.c:4054 ../src/totem-object.c:4056
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../src/xplayer-object.c:4054 ../src/xplayer-object.c:4056
 msgid "Fullscreen"
 msgstr "Preko celog ekrana"
 
-#: ../src/totem-object.c:4187
-msgid "Totem could not startup."
-msgstr "Totem ne može da se pokrene."
+#: ../src/xplayer-object.c:4187
+msgid "Xplayer could not startup."
+msgstr "Xplayer ne može da se pokrene."
 
-#: ../src/totem-object.c:4187
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "Bez razloga."
 
-#: ../src/totem-open-location.c:182
+#: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
 msgstr "Otvori putanju..."
 
-#: ../src/totem-options.c:49
+#: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Uključuje uklanjanje grešaka"
 
-#: ../src/totem-options.c:50
+#: ../src/xplayer-options.c:50
 msgid "Play/Pause"
 msgstr "Pušta/pauzira"
 
-#: ../src/totem-options.c:53
+#: ../src/xplayer-options.c:53
 msgid "Next"
 msgstr "Sledeće"
 
-#: ../src/totem-options.c:54
+#: ../src/xplayer-options.c:54
 msgid "Previous"
 msgstr "Prethodno"
 
-#: ../src/totem-options.c:55
+#: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
 msgstr "Premotava unapred"
 
-#: ../src/totem-options.c:56
+#: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
 msgstr "Premotava unazad"
 
-#: ../src/totem-options.c:57
+#: ../src/xplayer-options.c:57
 msgid "Volume Up"
 msgstr "Pojačava jačinu zvuka"
 
-#: ../src/totem-options.c:58
+#: ../src/xplayer-options.c:58
 msgid "Volume Down"
 msgstr "Utišava jačinu zvuka"
 
-#: ../src/totem-options.c:59
+#: ../src/xplayer-options.c:59
 msgid "Mute sound"
 msgstr "Potpuno utišava jačinu zvuka"
 
-#: ../src/totem-options.c:60
+#: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
 msgstr "Okida režim preko celog ekrana"
 
-#: ../src/totem-options.c:61
+#: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
 msgstr "Prikazuje/skriva dugmad za upravljanje"
 
-#: ../src/totem-options.c:62
+#: ../src/xplayer-options.c:62
 msgid "Quit"
 msgstr "Zatvara program"
 
-#: ../src/totem-options.c:63
+#: ../src/xplayer-options.c:63
 msgid "Enqueue"
 msgstr "Zakazuje puštanje"
 
-#: ../src/totem-options.c:64
+#: ../src/xplayer-options.c:64
 msgid "Replace"
 msgstr "Vrši zamenu"
 
-#: ../src/totem-options.c:65
+#: ../src/xplayer-options.c:65
 msgid "Seek"
 msgstr "Premotava"
 
-#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading
-#: ../src/totem-options.c:67
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
 msgid "Playlist index"
 msgstr "Indeks spiska numera"
 
-#: ../src/totem-options.c:69
+#: ../src/xplayer-options.c:69
 msgid "Movies to play"
 msgstr "Filmovi za puštanje"
 
-#: ../src/totem-options.c:79
+#: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
 msgstr "— puštajte filmove i pesme"
 
-#: ../src/totem-options.c:142
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "Ne mogu da zakažem i da zamenim u isto vreme"
 
 #. By extension entry
-#: ../src/totem-playlist.c:161
+#: ../src/xplayer-playlist.c:161
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 Šautkast lista"
 
-#: ../src/totem-playlist.c:162
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 audio (streamed)"
 msgstr "MP3 zvuk (kroz tok)"
 
-#: ../src/totem-playlist.c:163
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 zvuk (kroz tok, DOS format)"
 
-#: ../src/totem-playlist.c:164
+#: ../src/xplayer-playlist.c:164
 msgid "XML Shareable Playlist"
 msgstr "IksML deljiva lista"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/totem-playlist.c:347
+#: ../src/xplayer-playlist.c:347
 #, c-format
 msgid "Title %d"
 msgstr "Naslov %d"
 
-#: ../src/totem-playlist.c:446
+#: ../src/xplayer-playlist.c:446
 msgid "Could not save the playlist"
 msgstr "Ne mogu da sačuvam listu"
 
-#: ../src/totem-playlist.c:1021
+#: ../src/xplayer-playlist.c:1021
 msgid "Save Playlist"
 msgstr "Sačuvaj spisak numera"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/totem-playlist.c:1033 ../src/totem-playlist.c:1262
-#: ../src/totem-sidebar.c:145
+#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Spisak numera"
 
-#: ../src/totem-playlist.c:1860
+#: ../src/xplayer-playlist.c:1860
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "Ne mogu da učitam listu „%s“. Možda je oštećena."
 
-#: ../src/totem-playlist.c:1861
+#: ../src/xplayer-playlist.c:1861
 msgid "Playlist error"
 msgstr "Greška sa listom"
 
-#: ../src/totem-preferences.c:297
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "Postavke"
 
-#: ../src/totem-preferences.c:445
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Izaberite slovni lik za prevode"
 
-#: ../src/totem-properties-main.c:116 ../src/totem-properties-view.c:271
+#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
 msgid "Audio/Video"
 msgstr "Zvuk/video"
 
-#: ../src/totem-properties-view.c:131
+#: ../src/xplayer-properties-view.c:131
 msgid "N/A"
 msgstr "nedostupno"
 
-#: ../src/totem-properties-view.c:160
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:160
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
 msgstr "nedostupno"
 
-#: ../src/totem-properties-view.c:163
-#: ../src/plugins/properties/totem-movie-properties.c:152
-#: ../src/plugins/properties/totem-movie-properties.c:163
+#: ../src/xplayer-properties-view.c:163
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kb/s"
 
-#: ../src/totem-properties-view.c:180
-#: ../src/plugins/properties/totem-movie-properties.c:149
+#: ../src/xplayer-properties-view.c:180
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/totem-properties-view.c:212
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:212
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../src/totem-properties-view.c:220
-#: ../src/plugins/properties/totem-movie-properties.c:166
+#: ../src/xplayer-properties-view.c:220
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr "nedostupno"
 
-#: ../src/totem-properties-view.c:241
+#: ../src/xplayer-properties-view.c:241
 msgctxt "Number of audio channels"
 msgid "N/A"
 msgstr "nedostupno"
 
-#: ../src/totem-statusbar.c:110
+#: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
 
-#: ../src/totem-statusbar.c:133
+#: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
 msgstr "%s (protočni)"
 
 #. Elapsed / Total Length
-#: ../src/totem-statusbar.c:140 ../src/totem-time-label.c:64
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
 #, c-format
 msgid "%s / %s"
 msgstr "%s / %s"
 
 #. Seeking to Time / Total Length
-#: ../src/totem-statusbar.c:143 ../src/totem-time-label.c:67
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
 msgstr "Premotaj na %s / %s"
 
 # andrija: Baferovanje?
-#: ../src/totem-statusbar.c:239
+#: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
 msgstr "Smeštam u međumemoriju"
 
 #. eg: 75 %
-#: ../src/totem-statusbar.c:250
+#: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
 msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
-#: ../src/totem-statusbar.c:325
+#: ../src/xplayer-statusbar.c:325
 #, c-format
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. eg: Buffering, 75 %
-#: ../src/totem-statusbar.c:330
+#: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
 msgstr "%s, %f %%"
 
-#: ../src/totem-subtitle-encoding.c:156
+#: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Tekući lokalitet"
 
-#: ../src/totem-subtitle-encoding.c:159 ../src/totem-subtitle-encoding.c:161
-#: ../src/totem-subtitle-encoding.c:163 ../src/totem-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "arapski"
 
-#: ../src/totem-subtitle-encoding.c:168
+#: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
 msgstr "jermenski"
 
-#: ../src/totem-subtitle-encoding.c:171 ../src/totem-subtitle-encoding.c:173
-#: ../src/totem-subtitle-encoding.c:175
+#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "baltički"
 
-#: ../src/totem-subtitle-encoding.c:178
+#: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
 msgstr "keltski"
 
-#: ../src/totem-subtitle-encoding.c:181 ../src/totem-subtitle-encoding.c:183
-#: ../src/totem-subtitle-encoding.c:185 ../src/totem-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "centralnoevropski"
 
-#: ../src/totem-subtitle-encoding.c:190 ../src/totem-subtitle-encoding.c:192
-#: ../src/totem-subtitle-encoding.c:194 ../src/totem-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "kineski pojednostavljeni"
 
-#: ../src/totem-subtitle-encoding.c:199 ../src/totem-subtitle-encoding.c:201
-#: ../src/totem-subtitle-encoding.c:203
+#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "kineski tradicionalni"
 
-#: ../src/totem-subtitle-encoding.c:206
+#: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
 msgstr "hrvatski"
 
-#: ../src/totem-subtitle-encoding.c:209 ../src/totem-subtitle-encoding.c:211
-#: ../src/totem-subtitle-encoding.c:213 ../src/totem-subtitle-encoding.c:215
-#: ../src/totem-subtitle-encoding.c:217 ../src/totem-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "ćirilični"
 
-#: ../src/totem-subtitle-encoding.c:222
+#: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
 msgstr "ćirilični/ruski"
 
-#: ../src/totem-subtitle-encoding.c:225 ../src/totem-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "ćirilični/ukrajinski"
 
-#: ../src/totem-subtitle-encoding.c:230
+#: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
 msgstr "gruzijski"
 
-#: ../src/totem-subtitle-encoding.c:233 ../src/totem-subtitle-encoding.c:235
-#: ../src/totem-subtitle-encoding.c:237
+#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "grčki"
 
-#: ../src/totem-subtitle-encoding.c:240
+#: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "gujarati"
 
-#: ../src/totem-subtitle-encoding.c:243
+#: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "gurmuki"
 
-#: ../src/totem-subtitle-encoding.c:246 ../src/totem-subtitle-encoding.c:248
-#: ../src/totem-subtitle-encoding.c:250 ../src/totem-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "jevrejski"
 
-#: ../src/totem-subtitle-encoding.c:255
+#: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
 msgstr "jevrejski vizuelni"
 
-#: ../src/totem-subtitle-encoding.c:258
+#: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "hindu"
 
-#: ../src/totem-subtitle-encoding.c:261
+#: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
 msgstr "islandski"
 
-#: ../src/totem-subtitle-encoding.c:264 ../src/totem-subtitle-encoding.c:266
-#: ../src/totem-subtitle-encoding.c:268
+#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "japanski"
 
-#: ../src/totem-subtitle-encoding.c:271 ../src/totem-subtitle-encoding.c:273
-#: ../src/totem-subtitle-encoding.c:275 ../src/totem-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "korejski"
 
-#: ../src/totem-subtitle-encoding.c:280
+#: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
 msgstr "nordijski"
 
-#: ../src/totem-subtitle-encoding.c:283
+#: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
 msgstr "persijski"
 
-#: ../src/totem-subtitle-encoding.c:286 ../src/totem-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "rumunski"
 
-#: ../src/totem-subtitle-encoding.c:291
+#: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
 msgstr "južnoevropski"
 
-#: ../src/totem-subtitle-encoding.c:294
+#: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "tajlandski"
 
-#: ../src/totem-subtitle-encoding.c:297 ../src/totem-subtitle-encoding.c:299
-#: ../src/totem-subtitle-encoding.c:301 ../src/totem-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "turski"
 
-#: ../src/totem-subtitle-encoding.c:306 ../src/totem-subtitle-encoding.c:308
-#: ../src/totem-subtitle-encoding.c:310 ../src/totem-subtitle-encoding.c:312
-#: ../src/totem-subtitle-encoding.c:314
+#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "unikod"
 
-#: ../src/totem-subtitle-encoding.c:317 ../src/totem-subtitle-encoding.c:319
-#: ../src/totem-subtitle-encoding.c:321 ../src/totem-subtitle-encoding.c:323
-#: ../src/totem-subtitle-encoding.c:325
+#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "zapadni"
 
-#: ../src/totem-subtitle-encoding.c:328 ../src/totem-subtitle-encoding.c:330
-#: ../src/totem-subtitle-encoding.c:332
+#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "vijetnamski"
 
-#: ../src/totem-uri.c:343 ../src/plugins/chapters/totem-chapters.c:984
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "Sve datoteke"
 
-#: ../src/totem-uri.c:348 ../src/plugins/chapters/totem-chapters.c:981
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "Podržane datoteke"
 
-#: ../src/totem-uri.c:360
+#: ../src/xplayer-uri.c:360
 msgid "Audio files"
 msgstr "Zvučne datoteke"
 
-#: ../src/totem-uri.c:368
+#: ../src/xplayer-uri.c:368
 msgid "Video files"
 msgstr "Video datoteke"
 
-#: ../src/totem-uri.c:378
+#: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
 msgstr "Datoteke prevoda"
 
-#: ../src/totem-uri.c:430
+#: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
 msgstr "Izaberite tekstualni titl"
 
-#: ../src/totem-uri.c:495
+#: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
 msgstr "Izaberite filmove ili spiskove"
 
-#: ../src/totem-uri.c:499
+#: ../src/xplayer-uri.c:499
 msgid "Add Directory"
 msgstr "Dodajte direktorijum"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/totem-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:848
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1781,15 +1781,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/totem-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:849
 msgid "Filename"
 msgstr "Naziv datoteke"
 
-#: ../src/totem-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:851
 msgid "Resolution"
 msgstr "Rezolucija"
 
-#: ../src/totem-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:854
 msgid "Duration"
 msgstr "Trajanje"
 
@@ -1817,42 +1817,42 @@ msgstr "Smimanje video diskova"
 msgid "Records (S)VCDs or video DVDs"
 msgstr "Snimajte (S)VCD ili video DVD diskove"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:65
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
 msgstr "_Napravi video disk..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:66
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
 msgstr "Napravite video DVD ili (S)VCD od trenutno puštenog filma"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:68
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
 msgstr "_Umnoži Video DVD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:69
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
 msgstr "Umnožite trenutno pušteni video DVD"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:71
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
 msgstr "Umnoži (S)VCD..."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:72
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
 msgstr "Umnožite trenutno pušteni (S)VCD"
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:136
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "Ne mogu da umnožim video disk."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:138
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:283
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "Ne mogu da snimim film."
 
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:164
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:174
-#: ../src/plugins/brasero-disc-recorder/totem-disc-recorder.c:270
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "Ne mogu da upišem projekat."
 
@@ -1913,7 +1913,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "Napravite novi spisak poglavlja za film"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/totem-chapters.c:1125
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "Poglavlja"
 
@@ -1921,7 +1921,7 @@ msgstr "Poglavlja"
 msgid "Support chapter markers in movies"
 msgstr "Podrška markera poglavlja u filmovima"
 
-#: ../src/plugins/chapters/totem-chapters.c:56
+#: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
 "<b>Title: </b>%s\n"
@@ -1930,64 +1930,64 @@ msgstr ""
 "<b>Naslov: </b>%s\n"
 "<b>Početak: </b>%s"
 
-#: ../src/plugins/chapters/totem-chapters.c:323
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "Greška prilikom čitanja datoteke sa poglavljima"
 
-#: ../src/plugins/chapters/totem-chapters.c:542
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "Poglavlja sa ovim nazivom već postoje"
 
-#: ../src/plugins/chapters/totem-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "Pokušajte drugi naziv ili uklonite postojeće poglavlje."
 
-#: ../src/plugins/chapters/totem-chapters.c:703
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "Greška prilikom upisa datoteke sa poglavljima"
 
-#: ../src/plugins/chapters/totem-chapters.c:828
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "Greška prilikom čuvanja poglavlja"
 
-#: ../src/plugins/chapters/totem-chapters.c:829
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Molim proverite da li imate dozvolu za pisanje u direktorijum u kome se "
 "nalazi film."
 
-#: ../src/plugins/chapters/totem-chapters.c:962
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "Otvori datoteku poglavlja"
 
-#: ../src/plugins/chapters/totem-chapters.c:1079
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "Snimak ekrana poglavlja"
 
-#: ../src/plugins/chapters/totem-chapters.c:1090
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "Naslov poglavlja"
 
-#: ../src/plugins/chapters/totem-chapters.c:1170
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "Da sačuvam izmene u spisak sa poglavljima pre zatvaranja?"
 
-#. Translators: close Totem without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/totem-chapters.c:1175
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "Zatvori bez čuvanja"
 
-#. Translators: save changes to the chapter list of the current movie before closing Totem.
-#: ../src/plugins/chapters/totem-chapters.c:1177
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Sačuvaj"
 
-#: ../src/plugins/chapters/totem-chapters.c:1180
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "Ako ne sačuvate, izmene u spisku sa poglavljima će biti izgubljene."
 
-#: ../src/plugins/chapters/totem-edit-chapter.c:95
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
 msgstr "Dodajte poglavlje"
 
@@ -2040,19 +2040,19 @@ msgstr "Dodajte na spisak za puštanje"
 msgid "Copy Location"
 msgstr "Umnoži putanju"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/totem-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "Razgledaj"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/totem-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "Traži"
 
-#: ../src/plugins/grilo/totem-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "Greška u razgledanju"
 
-#: ../src/plugins/grilo/totem-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "Greška pretrage"
 
@@ -2064,15 +2064,15 @@ msgstr "Gromitove zabeleške"
 msgid "Presentation helper to make annotations on screen"
 msgstr "Pri prezentacijama pomaže praveći zabeleške na ekranu"
 
-#: ../src/plugins/gromit/totem-gromit.c:231
+#: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
 msgstr "Gromitova izvršna datoteka nije nađena."
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:1
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
 msgstr "Stanje programa za trenutne poruke"
 
-#: ../src/plugins/im-status/totem-im-status.plugin.in.h:2
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Namestite vaše stanje u programu za trenutne poruke na „odsutan“ kada je "
@@ -2088,11 +2088,11 @@ msgstr "Podržani infracrveni upravljači"
 
 # andrija: nepotpun prevod, a težak :)
 # danilo: niti i bezbedno, poslužiće ;)
-#: ../src/plugins/lirc/totem-lirc.c:242
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
 msgstr "Nisam uspeo da pokrenem lirc."
 
-#: ../src/plugins/lirc/totem-lirc.c:254
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
 msgstr "Ne mogu da učitam postavke lirca."
 
@@ -2186,11 +2186,11 @@ msgstr "Jezik tit_la:"
 msgid "_Play with Subtitle"
 msgstr "_Pusti sa titlom"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:1
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Jezik prevoda"
 
-#: ../src/plugins/opensubtitles/org.gnome.totem.plugins.opensubtitles.gschema.xml.in.in.h:2
+#: ../src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
 msgstr "Jezik za pretraživanje za prevode filmova."
 
@@ -2202,21 +2202,21 @@ msgstr "Svojstva filma"
 msgid "Adds movie properties to the sidebar"
 msgstr "Dodajte svojstva filma u bočnu površ"
 
-#: ../src/plugins/properties/totem-movie-properties.c:246
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Svojstva"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
 msgstr "rpdb2 lozinka"
 
-#: ../src/plugins/pythonconsole/org.gnome.totem.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Totem from unauthorized "
-"remote access. If this is empty, a default of 'totem' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
+"remote access. If this is empty, a default of 'xplayer' will be used."
 msgstr ""
-"Lozinka za zaštitu rpdb2 servera za otklanjanje grešaka Totema od neovlašćenog "
-"udaljenog pristupa. Ako je ovo prazno, podrazumevano „totem“ će se koristiti."
+"Lozinka za zaštitu rpdb2 servera za otklanjanje grešaka Xplayera od neovlašćenog "
+"udaljenog pristupa. Ako je ovo prazno, podrazumevano „xplayer“ će se koristiti."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2235,8 +2235,8 @@ msgid "_Python Console"
 msgstr "_Pitonova konzola"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
-msgid "Show Totem's Python console"
-msgstr "Prikažite Pitonovu konzolu za Totem"
+msgid "Show Xplayer's Python console"
+msgstr "Prikažite Pitonovu konzolu za Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
@@ -2249,22 +2249,22 @@ msgstr "Uključite udaljeno uklanjanje grešaka Pitona pomoću rpdb2"
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the Totem.Object through 'totem_object' :\\n%s"
-msgstr "Možete pristupiti totemovom objektu kroz „totem_object“ :\\n%s"
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "Možete pristupiti xplayerovom objektu kroz „xplayer_object“ :\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
-msgid "Totem Python Console"
-msgstr "Pitonova konzola za Totem"
+msgid "Xplayer Python Console"
+msgstr "Pitonova konzola za Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
-"After you press OK, Totem will wait until you connect to it with winpdb or "
+"After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
-"default password ('totem')."
+"default password ('xplayer')."
 msgstr ""
-"Nakon što pritisnete U redu, Totem će sačekati da se povežete na njega preko "
+"Nakon što pritisnete U redu, Xplayer će sačekati da se povežete na njega preko "
 "„winpdb“ ili „rpdb2“. Ukoliko niste izabrali lozinku radi uklanjanja grešaka u "
-"Dkonfu, koristite podrazumevanu lozinku (totem)."
+"Dkonfu, koristite podrazumevanu lozinku (xplayer)."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2282,11 +2282,11 @@ msgstr "Priključak zaokretanja"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Omogućava okretanje video snimaka ako su pogrešno okrenuti"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
 msgstr "Okreni u _smeru kazaljke na satu"
 
-#: ../src/plugins/rotation/totem-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Okreni suprotno od smera _kazaljke na satu"
 
@@ -2298,25 +2298,25 @@ msgstr "Sačuvajte primerak"
 msgid "Save a copy of the currently playing movie"
 msgstr "Sačuvajte jedan primerak trenutno puštenog filma"
 
-#: ../src/plugins/save-file/totem-save-file.c:63
+#: ../src/plugins/save-file/xplayer-save-file.c:63
 msgid "Save a Copy..."
 msgstr "Sačuvaj primerak..."
 
-#: ../src/plugins/save-file/totem-save-file.c:64
+#: ../src/plugins/save-file/xplayer-save-file.c:64
 msgid "Save a copy of the movie"
 msgstr "Sačuvajte primerak filma"
 
-#: ../src/plugins/save-file/totem-save-file.c:129
+#: ../src/plugins/save-file/xplayer-save-file.c:129
 msgid "Save a Copy"
 msgstr "Sačuvajte primerak"
 
 #. translators: Movie is the default saved movie filename,
 #. * without the suffix
-#: ../src/plugins/save-file/totem-save-file.c:161
+#: ../src/plugins/save-file/xplayer-save-file.c:161
 msgid "Movie"
 msgstr "Film"
 
-#: ../src/plugins/save-file/totem-save-file.c:183
+#: ../src/plugins/save-file/xplayer-save-file.c:183
 msgid "Movie stream"
 msgstr "Tok filma"
 
@@ -2363,7 +2363,7 @@ msgstr "Snimak ekrana"
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr "Omogućava pravljenje snimaka ekrana i zbirki iz videa"
 
-#: ../src/plugins/screenshot/totem-gallery.c:91
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
 msgstr "Sačuvaj zbirku"
 
@@ -2371,49 +2371,49 @@ msgstr "Sačuvaj zbirku"
 #. * argument is a number which is used to prevent overwriting files.
 #. * Just translate "Gallery", and not the ".jpg". Example:
 #. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/totem-gallery.c:115
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
 msgstr "Zbirka-%s-%d.jpg"
 
 #. Set up the window
-#: ../src/plugins/screenshot/totem-gallery-progress.c:101
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
 msgstr "Pravim zbirku..."
 
 #. Set the progress label
-#: ../src/plugins/screenshot/totem-gallery-progress.c:107
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
 msgstr "Čuvam zbirku kao „%s“"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:220
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
-msgid "Totem could not get a screenshot of the video."
-msgstr "Totem nije uspeo da napravi snimak ekrana filma."
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer nije uspeo da napravi snimak ekrana filma."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:229
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
 msgstr "Ovo nije trebalo da se desi; molim prijavite grešku."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "_Snimi ekran"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "Napravite snimak ekrana"
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "Napravi _zbirku snimaka ekrana..."
 
-#: ../src/plugins/screenshot/totem-screenshot-plugin.c:335
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr "Napravite zbirku snimaka ekrana"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
-#: ../src/plugins/skipto/totem-skipto.c:196
+#: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
 msgstr "Premotaj na"
 
@@ -2427,7 +2427,7 @@ msgstr "_Premotaj na:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/totem-skipto.c:159
+#: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "sekunda"
@@ -2439,16 +2439,16 @@ msgstr[3] "sekunda"
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
 #. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
 #. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/totem-skipto.c:189
+#: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
 msgstr "7"
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
 msgstr "_Premotaj na..."
 
-#: ../src/plugins/skipto/totem-skipto-plugin.c:182
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
 msgstr "Premotajte na određeno vreme"
 

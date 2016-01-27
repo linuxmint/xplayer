@@ -5,15 +5,15 @@ Notes on the plugin's internals
 Envars of interest
 ===================
 
-export TOTEM_EMBEDDED_DEBUG_SYNC=1
-- Pass --sync to the totem-plugin-viewer
+export XPLAYER_EMBEDDED_DEBUG_SYNC=1
+- Pass --sync to the xplayer-plugin-viewer
 
-export TOTEM_EMBEDDED_DEBUG_FATAL=1
-- Pass --g-fatal-warnings to the totem-plugin-viewer
+export XPLAYER_EMBEDDED_DEBUG_FATAL=1
+- Pass --g-fatal-warnings to the xplayer-plugin-viewer
 
-export TOTEM_EMBEDDED_GDB=1
+export XPLAYER_EMBEDDED_GDB=1
 - Launch a gdb session inside an xterm to capture crashes and errors
-  from the totem-plugin-viewer
+  from the xplayer-plugin-viewer
 
 export MOZ_PLUGIN_PATH=`pwd`
 - Mozilla/Gecko/Firefox envar to lookup the browser plugins in the current
@@ -23,9 +23,9 @@ Disabling specific mime-types
 =============================
 
 This can be achieved using 2 files. They are:
-/etc/totem/browser-plugins.ini ($(sysconfdir)/totem/browser-plugins.ini)
+/etc/xplayer/browser-plugins.ini ($(sysconfdir)/xplayer/browser-plugins.ini)
 and
-~/.config/totem/browser-plugins.ini
+~/.config/xplayer/browser-plugins.ini
 
 The format is:
 [Plugins]

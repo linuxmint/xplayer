@@ -15,10 +15,10 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -30,7 +30,7 @@
 #define GST_USE_UNSTABLE_API 1
 #include <gst/gst.h>
 #include <glib/gi18n-lib.h>
-#include "totem-properties-view.h"
+#include "xplayer-properties-view.h"
 
 static GtkWidget *window, *props, *label;
 
@@ -42,7 +42,7 @@ create_props (const char *url)
 	g_signal_connect (G_OBJECT (window), "destroy",
 			  G_CALLBACK (gtk_main_quit), NULL);
 	gtk_window_set_default_size (GTK_WINDOW (window), 450, 550);
-	props = totem_properties_view_new (url, label);
+	props = xplayer_properties_view_new (url, label);
 	gtk_container_add (GTK_CONTAINER (window), props);
 
 	gtk_widget_show_all (window);

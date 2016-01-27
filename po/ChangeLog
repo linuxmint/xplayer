@@ -328,7 +328,7 @@
 
 2009-02-07  Philip Withnall  <philip@tecnocode.co.uk>
 
-	* POTFILES.in: Add totem-object.c due to the reorganisation in
+	* POTFILES.in: Add xplayer-object.c due to the reorganisation in
 	revision #5948.
 
 2009-01-30  Gil Forcada  <gforcada@gnome.org>
@@ -1754,7 +1754,7 @@
 
 2007-10-22  Philip Withnall  <pwithnall@svn.gnome.org>
 
-	* POTFILES.in: Add the TotemCellRendererVideo files
+	* POTFILES.in: Add the XplayerCellRendererVideo files
 	to the list and fix a previous entry in the ChangeLog.
 
 2007-10-22  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
@@ -2441,12 +2441,12 @@
 
 2007-04-24  Funda Wang  <fundawang@gmail.com>
 
-	* POTFILES.in: totem.desktop now different from previous name.
+	* POTFILES.in: xplayer.desktop now different from previous name.
 	* POTFILES.skip: removed oboslete file.
 
 2007-04-23  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: Update filenames for the totem plugins
+	* POTFILES.in: Update filenames for the xplayer plugins
 	entry, mark them as INI files
 
 2007-04-23  Kjartan Maraas  <kmaraas@gnome.org>
@@ -3313,7 +3313,7 @@
 2006-07-03  Bastien Nocera  <hadess@hadess.net>
 
 	* POTFILES.in:
-	* POTFILES.skip: do translate src/totem-mozilla-viewer.c
+	* POTFILES.skip: do translate src/xplayer-mozilla-viewer.c
 
 2006-07-03  Runa Bhattacharjee <runabh@gmail.com>
 
@@ -4523,7 +4523,7 @@
 
 2005-08-05  Marcel Telka  <marcel@telka.sk>
 
-	* POTFILES.in: Removed src/totem-volume.c.
+	* POTFILES.in: Removed src/xplayer-volume.c.
 
 2005-08-04  Raphael Higino  <raphaelh@cvs.gnome.org>
 
@@ -4611,7 +4611,7 @@
 
 2005-07-24  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: add totem-volume.c to be translated
+	* POTFILES.in: add xplayer-volume.c to be translated
 
 2005-07-24  Clytie Siddall <clytie@riverland.net.au>
 
@@ -4664,7 +4664,7 @@
 
 2005-07-06  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: add src/totem-sidebar.c to the list of files
+	* POTFILES.in: add src/xplayer-sidebar.c to the list of files
 	to translate
 
 2005-07-06  Priit Laes  <plaes@cvs.gnome.org>
@@ -4881,7 +4881,7 @@
 
 2005-04-30  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: added src/totem-properties-view.c
+	* POTFILES.in: added src/xplayer-properties-view.c
 
 2005-04-25  Pablo Saratxaga  <pablo@mandriva.com>
 
@@ -5019,7 +5019,7 @@
 
 2005-03-22  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: renamed totem-sublang.c to totem-menu.c
+	* POTFILES.in: renamed xplayer-sublang.c to xplayer-menu.c
 
 2005-03-16  Adam Weinberger  <adamw@gnome.org>
 
@@ -5035,7 +5035,7 @@
 
 	* POTFILES.in:
 	* POTFILES.skip: move the mozilla plugin to the untranslated parts
-	of Totem
+	of Xplayer
 
 2005-03-13  David Lodge <dave@cirt.net>
 
@@ -5847,7 +5847,7 @@
 2004-08-04  Francisco Javier F. Serrador  <serrador@cvs.gnome.org>
 
 	* es.po: Updated Spanish translation.
-	* POTFILES.in: Changed data/totem.desktop.in entry to data/totem.desktop.in.in
+	* POTFILES.in: Changed data/xplayer.desktop.in entry to data/xplayer.desktop.in.in
 
 2004-08-03  Ilkka Tuohela  <hile@iki.fi>
 
@@ -5859,7 +5859,7 @@
 
 2004-07-26  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.skip: add data/totem.desktop.in.in to the skipped files
+	* POTFILES.skip: add data/xplayer.desktop.in.in to the skipped files
 
 2004-07-12  Gustavo Maciel Dias Vieira  <gustavo@sagui.org>
 
@@ -6581,7 +6581,7 @@
 
 2003-10-13  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: added totem-pl-parser.c to the POTFILES.in
+	* POTFILES.in: added xplayer-pl-parser.c to the POTFILES.in
 
 2003-10-09  Abel Cheung  <maddog@linux.org.hk>
 
@@ -6965,7 +6965,7 @@
 
 2003-07-24  Abel Cheung  <maddog@linux.org.hk>
 
-	* POTFILES.in: Added src/totem-playlist.c.
+	* POTFILES.in: Added src/xplayer-playlist.c.
 	* POTFILES.*: Removed non-existant files.
 	* ChangeLog: Convert to UTF-8.
 
@@ -7109,7 +7109,7 @@
 2003-06-10  Bastien Nocera  <hadess@hadess.net>
 
 	* POTFILES.in:
-	* POTFILES.skip: don't translate the totem-video-thumbnail schemas file
+	* POTFILES.skip: don't translate the xplayer-video-thumbnail schemas file
 	(Thanks to Jordi for seeing that)
 
 2003-06-10  Christian Neumair  <chris@gnome-de.org>
@@ -7862,7 +7862,7 @@
 
 2002-01-18  Christian Neumair  <chris@gnome-de.org>
 
-	* POTFILES.in: Added src/totem-statusbar.c.
+	* POTFILES.in: Added src/xplayer-statusbar.c.
 	* de.po: Updated German translation.
 
 2003-01-17  Christian Neumair  <chris@gnome-de.org>
@@ -8026,7 +8026,7 @@
 
 2002-12-07  Bastien Nocera  <hadess@hadess.net>
 
-	* POTFILES.in: added the totem cd selection widget
+	* POTFILES.in: added the xplayer cd selection widget
 
 2002-12-07  Christian Neumair  <chris@gnome-de.org>
 

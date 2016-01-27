@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_CONE_INPUT_H__
-#define __TOTEM_CONE_INPUT_H__
+#ifndef __XPLAYER_CONE_INPUT_H__
+#define __XPLAYER_CONE_INPUT_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemConeInput : public totemNPObject
+class xplayerConeInput : public xplayerNPObject
 {
   public:
-    totemConeInput (NPP);
-    virtual ~totemConeInput ();
+    xplayerConeInput (NPP);
+    virtual ~xplayerConeInput ();
 
   private:
 
@@ -48,6 +48,6 @@ class totemConeInput : public totemNPObject
     virtual bool SetPropertyByIndex (int aIndex, const NPVariant *aValue);
 };
 
-TOTEM_DEFINE_NPCLASS (totemConeInput);
+XPLAYER_DEFINE_NPCLASS (xplayerConeInput);
 
-#endif /* __TOTEM_CONE_INPUT_H__ */
+#endif /* __XPLAYER_CONE_INPUT_H__ */

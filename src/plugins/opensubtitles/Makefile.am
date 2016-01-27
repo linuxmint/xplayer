@@ -12,7 +12,7 @@ EXTRA_DIST += $(ui_DATA)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-gsettings_SCHEMAS = org.gnome.totem.plugins.opensubtitles.gschema.xml
+gsettings_SCHEMAS = org.gnome.xplayer.plugins.opensubtitles.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
 convertdir = $(datadir)/GConf/gsettings

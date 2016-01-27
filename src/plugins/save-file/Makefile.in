@@ -126,7 +126,7 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 libsave_file_la_DEPENDENCIES = $(plugin_libadd) $(am__DEPENDENCIES_1)
-am_libsave_file_la_OBJECTS = libsave_file_la-totem-save-file.lo
+am_libsave_file_la_OBJECTS = libsave_file_la-xplayer-save-file.lo
 libsave_file_la_OBJECTS = $(am_libsave_file_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -204,7 +204,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -386,11 +386,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -473,12 +473,12 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/save-file
 plugin_LTLIBRARIES = libsave-file.la
 plugin_in_files = save-file.plugin.in
-libsave_file_la_SOURCES = totem-save-file.c
+libsave_file_la_SOURCES = xplayer-save-file.c
 libsave_file_la_LDFLAGS = $(plugin_ldflags)
 libsave_file_la_LIBADD = \
 	$(plugin_libadd)	\
@@ -568,7 +568,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsave_file_la-totem-save-file.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libsave_file_la-xplayer-save-file.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -591,12 +591,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libsave_file_la-totem-save-file.lo: totem-save-file.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsave_file_la_CFLAGS) $(CFLAGS) -MT libsave_file_la-totem-save-file.lo -MD -MP -MF $(DEPDIR)/libsave_file_la-totem-save-file.Tpo -c -o libsave_file_la-totem-save-file.lo `test -f 'totem-save-file.c' || echo '$(srcdir)/'`totem-save-file.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsave_file_la-totem-save-file.Tpo $(DEPDIR)/libsave_file_la-totem-save-file.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-save-file.c' object='libsave_file_la-totem-save-file.lo' libtool=yes @AMDEPBACKSLASH@
+libsave_file_la-xplayer-save-file.lo: xplayer-save-file.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsave_file_la_CFLAGS) $(CFLAGS) -MT libsave_file_la-xplayer-save-file.lo -MD -MP -MF $(DEPDIR)/libsave_file_la-xplayer-save-file.Tpo -c -o libsave_file_la-xplayer-save-file.lo `test -f 'xplayer-save-file.c' || echo '$(srcdir)/'`xplayer-save-file.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libsave_file_la-xplayer-save-file.Tpo $(DEPDIR)/libsave_file_la-xplayer-save-file.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-save-file.c' object='libsave_file_la-xplayer-save-file.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsave_file_la_CFLAGS) $(CFLAGS) -c -o libsave_file_la-totem-save-file.lo `test -f 'totem-save-file.c' || echo '$(srcdir)/'`totem-save-file.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsave_file_la_CFLAGS) $(CFLAGS) -c -o libsave_file_la-xplayer-save-file.lo `test -f 'xplayer-save-file.c' || echo '$(srcdir)/'`xplayer-save-file.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

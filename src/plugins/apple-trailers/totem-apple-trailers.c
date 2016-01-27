@@ -16,10 +16,10 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -31,21 +31,21 @@
 
 #include <glib-object.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 
-#define TOTEM_TYPE_APPLE_TRAILERS_PLUGIN	(totem_apple_trailers_plugin_get_type ())
-#define TOTEM_APPLE_TRAILERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_APPLE_TRAILERS_PLUGIN, TotemAppleTrailersPlugin))
+#define XPLAYER_TYPE_APPLE_TRAILERS_PLUGIN	(xplayer_apple_trailers_plugin_get_type ())
+#define XPLAYER_APPLE_TRAILERS_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_APPLE_TRAILERS_PLUGIN, XplayerAppleTrailersPlugin))
 
 typedef struct {
 	guint signal_id;
-	TotemObject *totem;
-} TotemAppleTrailersPluginPrivate;
+	XplayerObject *xplayer;
+} XplayerAppleTrailersPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_APPLE_TRAILERS_PLUGIN, TotemAppleTrailersPlugin, totem_apple_trailers_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_APPLE_TRAILERS_PLUGIN, XplayerAppleTrailersPlugin, xplayer_apple_trailers_plugin)
 
 static char *
-get_user_agent_cb (TotemObject *totem,
+get_user_agent_cb (XplayerObject *xplayer,
 		   const char  *mrl)
 {
 	if (g_str_has_prefix (mrl, "http://movies.apple.com") ||
@@ -57,25 +57,25 @@ get_user_agent_cb (TotemObject *totem,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemAppleTrailersPlugin *pi = TOTEM_APPLE_TRAILERS_PLUGIN (plugin);
+	XplayerAppleTrailersPlugin *pi = XPLAYER_APPLE_TRAILERS_PLUGIN (plugin);
 
-	pi->priv->totem = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
-	pi->priv->signal_id = g_signal_connect (G_OBJECT (pi->priv->totem), "get-user-agent",
+	pi->priv->xplayer = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
+	pi->priv->signal_id = g_signal_connect (G_OBJECT (pi->priv->xplayer), "get-user-agent",
 						G_CALLBACK (get_user_agent_cb), NULL);
 }
 
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemAppleTrailersPlugin *pi = TOTEM_APPLE_TRAILERS_PLUGIN (plugin);
+	XplayerAppleTrailersPlugin *pi = XPLAYER_APPLE_TRAILERS_PLUGIN (plugin);
 
 	if (pi->priv->signal_id) {
-		g_signal_handler_disconnect (pi->priv->totem, pi->priv->signal_id);
+		g_signal_handler_disconnect (pi->priv->xplayer, pi->priv->signal_id);
 		pi->priv->signal_id = 0;
 	}
 
-	if (pi->priv->totem) {
-		g_object_unref (pi->priv->totem);
-		pi->priv->totem = NULL;
+	if (pi->priv->xplayer) {
+		g_object_unref (pi->priv->xplayer);
+		pi->priv->xplayer = NULL;
 	}
 }

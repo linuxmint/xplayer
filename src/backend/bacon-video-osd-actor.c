@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
  *
- * On-screen-display (OSD) for Totem's video widget
+ * On-screen-display (OSD) for Xplayer's video widget
  *
  * Copyright (C) 2012 Red Hat, Inc.
  *

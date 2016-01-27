@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemConePlaylistItems.h"
+#include "xplayerPlugin.h"
+#include "xplayerConePlaylistItems.h"
 
 static const char *propertyNames[] = {
   "count"
@@ -37,29 +37,29 @@ static const char *methodNames[] = {
   "clear"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemConePlaylistItems,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerConePlaylistItems,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemConePlaylistItems::totemConePlaylistItems (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerConePlaylistItems::xplayerConePlaylistItems (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemConePlaylistItems::~totemConePlaylistItems ()
+xplayerConePlaylistItems::~xplayerConePlaylistItems ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemConePlaylistItems::InvokeByIndex (int aIndex,
+xplayerConePlaylistItems::InvokeByIndex (int aIndex,
                                        const NPVariant *argv,
                                        uint32_t argc,
                                        NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemConePlaylistItems);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerConePlaylistItems);
 
   switch (Methods (aIndex)) {
     case eClear:
@@ -71,14 +71,14 @@ totemConePlaylistItems::InvokeByIndex (int aIndex,
 }
 
 bool
-totemConePlaylistItems::GetPropertyByIndex (int aIndex,
+xplayerConePlaylistItems::GetPropertyByIndex (int aIndex,
                                             NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemConePlaylistItems);
+  XPLAYER_LOG_GETTER (aIndex, xplayerConePlaylistItems);
 
   switch (Properties (aIndex)) {
     case eCount:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, totemConePlaylistItems);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, xplayerConePlaylistItems);
       return Int32Variant (_result, 1);
   }
 
@@ -86,10 +86,10 @@ totemConePlaylistItems::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemConePlaylistItems::SetPropertyByIndex (int aIndex,
+xplayerConePlaylistItems::SetPropertyByIndex (int aIndex,
                                             const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemConePlaylistItems);
+  XPLAYER_LOG_SETTER (aIndex, xplayerConePlaylistItems);
 
   return ThrowPropertyNotWritable ();
 }

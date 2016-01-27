@@ -17,25 +17,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
  *
  */
 
-#ifndef __TOTEM_PROFILE_H__
-#define __TOTEM_PROFILE_H__ 1
+#ifndef __XPLAYER_PROFILE_H__
+#define __XPLAYER_PROFILE_H__ 1
 
 #ifdef GNOME_ENABLE_DEBUG
 
 #include <sys/time.h>
 #include <glib.h>
 
-#define TOTEM_PROFILE(function)     \
+#define XPLAYER_PROFILE(function)     \
     do{                             \
       struct timeval current_time;  \
       double dtime;                 \
@@ -50,8 +50,8 @@
 
 #else /* GNOME_ENABLE_DEBUG */
 
-#define TOTEM_PROFILE(function) function
+#define XPLAYER_PROFILE(function) function
 
 #endif /* GNOME_ENABLE_DEBUG */
 
-#endif /* __TOTEM_PROFILE_H__ */
+#endif /* __XPLAYER_PROFILE_H__ */

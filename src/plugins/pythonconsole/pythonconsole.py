@@ -25,10 +25,10 @@
 # Bits from gedit Python Console Plugin
 #     Copyrignt (C), 2005 Raphaël Slinckx
 #
-# The Totem project hereby grant permission for non-gpl compatible GStreamer
-# plugins to be used and distributed together with GStreamer and Totem. This
+# The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+# plugins to be used and distributed together with GStreamer and Xplayer. This
 # permission are above and beyond the permissions granted by the GPL license
-# Totem is covered by.
+# Xplayer is covered by.
 #
 # Monday 7th February 2005: Christian Schaller: Add exception clause.
 # See license_change file for details.
@@ -37,7 +37,7 @@ from console import PythonConsole
 
 __all__ = ('PythonConsole', 'OutFile')
 
-from gi.repository import GObject, Peas, Gtk, Totem # pylint: disable-msg=E0611
+from gi.repository import GObject, Peas, Gtk, Xplayer # pylint: disable-msg=E0611
 from gi.repository import Gio # pylint: disable-msg=E0611
 
 try:
@@ -47,7 +47,7 @@ except ImportError:
     HAVE_RPDB2 = False
 
 import gettext
-gettext.textdomain ("totem")
+gettext.textdomain ("xplayer")
 
 D_ = gettext.dgettext
 _ = gettext.gettext
@@ -73,14 +73,14 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
     def __init__ (self):
         GObject.Object.__init__ (self)
 
-        self.totem = None
+        self.xplayer = None
         self.window = None
 
     def do_activate (self):
-        self.totem = self.object
+        self.xplayer = self.object
 
         data = dict ()
-        manager = self.totem.get_ui_manager ()
+        manager = self.xplayer.get_ui_manager ()
 
         data['action_group'] = Gtk.ActionGroup (name = 'Python')
 
@@ -91,7 +91,7 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
 
         action = Gtk.Action (name = 'PythonConsole',
                              label = _(u'_Python Console'),
-                             tooltip = _(u"Show Totem's Python console"),
+                             tooltip = _(u"Show Xplayer's Python console"),
                              stock_id = 'gnome-mime-text-x-python')
         action.connect ('activate', self._show_console)
         data['action_group'].add_action (action)
@@ -111,22 +111,22 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
         data['ui_id'] = manager.add_ui_from_string (UI_STR)
         manager.ensure_update ()
 
-        self.totem.PythonConsolePluginInfo = data
+        self.xplayer.PythonConsolePluginInfo = data
 
     def _show_console (self, _action):
         if not self.window:
             console = PythonConsole (namespace = {
                 '__builtins__' : __builtins__,
-                'Totem' : Totem,
-                'totem_object' : self.totem
+                'Xplayer' : Xplayer,
+                'xplayer_object' : self.xplayer
             }, destroy_cb = self._destroy_console)
 
             console.set_size_request (600, 400) # pylint: disable-msg=E1101
-            console.eval ('print "%s" %% totem_object' % _(u"You can access "\
-                "the Totem.Object through \'totem_object\' :\\n%s"), False)
+            console.eval ('print "%s" %% xplayer_object' % _(u"You can access "\
+                "the Xplayer.Object through \'xplayer_object\' :\\n%s"), False)
 
             self.window = Gtk.Window ()
-            self.window.set_title (_(u'Totem Python Console'))
+            self.window.set_title (_(u'Xplayer Python Console'))
             self.window.add (console)
             self.window.connect ('destroy', self._destroy_console)
             self.window.show_all ()
@@ -136,16 +136,16 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
 
     @classmethod
     def _enable_debugging (cls, _action):
-        msg = _(u"After you press OK, Totem will wait until you connect to it "\
+        msg = _(u"After you press OK, Xplayer will wait until you connect to it "\
                  "with winpdb or rpdb2. If you have not set a debugger "\
                  "password in DConf, it will use the default password "\
-                 "('totem').")
+                 "('xplayer').")
         dialog = Gtk.MessageDialog (None, 0, Gtk.MessageType.INFO,
                                     Gtk.ButtonsType.OK_CANCEL, msg)
         if dialog.run () == Gtk.ResponseType.OK:
-            schema = 'org.gnome.totem.plugins.pythonconsole'
+            schema = 'org.gnome.xplayer.plugins.pythonconsole'
             settings = Gio.Settings.new (schema)
-            password = settings.get_string ('rpdb2-password') or "totem"
+            password = settings.get_string ('rpdb2-password') or "xplayer"
             def start_debugger (password):
                 rpdb2.start_embedded_debugger (password)
                 return False
@@ -158,14 +158,14 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
         self.window = None
 
     def do_deactivate (self):
-        data = self.totem.PythonConsolePluginInfo
+        data = self.xplayer.PythonConsolePluginInfo
 
-        manager = self.totem.get_ui_manager ()
+        manager = self.xplayer.get_ui_manager ()
         manager.remove_ui (data['ui_id'])
         manager.remove_action_group (data['action_group'])
         manager.ensure_update ()
 
-        self.totem.PythonConsolePluginInfo = None
+        self.xplayer.PythonConsolePluginInfo = None
 
         if self.window is not None:
             self.window.destroy ()

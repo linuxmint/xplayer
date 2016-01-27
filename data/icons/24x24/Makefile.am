@@ -1,8 +1,8 @@
 icondir = $(datadir)/icons/hicolor/24x24/apps
-icon_DATA = totem.png
+icon_DATA = xplayer.png
 
 tvicondir = $(datadir)/icons/hicolor/24x24/devices/
-tvicon_DATA = totem-tv.png
+tvicon_DATA = xplayer-tv.png
 
 EXTRA_DIST = $(icon_DATA) $(tvicon_DATA)
 

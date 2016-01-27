@@ -2,7 +2,7 @@
                          _|_ __|_ _ ._ _  
                           |_(_)|_(/_| | | 
 
-Totem is movie player for the GNOME desktop based on GStreamer.
+Xplayer is movie player for the GNOME desktop based on GStreamer.
 It features a playlist, a full-screen mode, seek and volume controls,
 as well as complete keyboard navigation.
 
@@ -105,17 +105,17 @@ BUGS
 ====
 
 Bugs should be filed in GNOME's Bugzilla:
-http://bugzilla.gnome.org/enter_bug.cgi?product=totem
+http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer
 
 To get a better debug output, run:
-# totem --debug
+# xplayer --debug
 
 Or for the stand-alone applications:
-# gsettings set org.gnome.totem debug true
+# gsettings set org.gnome.xplayer debug true
 then run your application and capture its output
 
 Contact
 =======
 
 Bastien Nocera <hadess@hadess.net>
-http://www.gnome.org/projects/totem/
+http://www.gnome.org/projects/xplayer/

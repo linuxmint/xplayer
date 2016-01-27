@@ -1,4 +1,4 @@
-/* Totem Mozilla plugin
+/* Xplayer Mozilla plugin
  *
  * Copyright © 2004-2006 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -35,8 +35,8 @@
 
 #include <glib.h>
 
-#include "totem-pl-parser-mini.h"
-#include "totem-plugin-viewer-options.h"
+#include "xplayer-pl-parser-mini.h"
+#include "xplayer-plugin-viewer-options.h"
 
 #include "npapi.h"
 #include "npruntime.h"
@@ -56,26 +56,26 @@
 #define DD(x...)
 #endif
 
-#include "totemPlugin.h"
+#include "xplayerPlugin.h"
 
-#if defined(TOTEM_GMP_PLUGIN)
-#include "totemGMPControls.h"
-#include "totemGMPNetwork.h"
-#include "totemGMPPlayer.h"
-#include "totemGMPSettings.h"
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
-#include "totemNarrowSpacePlugin.h"
-#elif defined(TOTEM_MULLY_PLUGIN)
-#include "totemMullYPlugin.h"
-#elif defined(TOTEM_CONE_PLUGIN)
-#include "totemCone.h"
-#include "totemConeAudio.h"
-#include "totemConeInput.h"
-#include "totemConePlaylist.h"
-#include "totemConePlaylistItems.h"
-#include "totemConeVideo.h"
-#elif defined(TOTEM_VEGAS_PLUGIN)
-#include "totemVegasPlugin.h"
+#if defined(XPLAYER_GMP_PLUGIN)
+#include "xplayerGMPControls.h"
+#include "xplayerGMPNetwork.h"
+#include "xplayerGMPPlayer.h"
+#include "xplayerGMPSettings.h"
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
+#include "xplayerNarrowSpacePlugin.h"
+#elif defined(XPLAYER_MULLY_PLUGIN)
+#include "xplayerMullYPlugin.h"
+#elif defined(XPLAYER_CONE_PLUGIN)
+#include "xplayerCone.h"
+#include "xplayerConeAudio.h"
+#include "xplayerConeInput.h"
+#include "xplayerConePlaylist.h"
+#include "xplayerConePlaylistItems.h"
+#include "xplayerConeVideo.h"
+#elif defined(XPLAYER_VEGAS_PLUGIN)
+#include "xplayerVegasPlugin.h"
 #else
 #error Unknown plugin type
 #endif
@@ -85,8 +85,8 @@
 /* How much data bytes to request */
 #define PLUGIN_STREAM_CHUNK_SIZE (8 * 1024)
 
-static const totemPluginMimeEntry kMimeTypes[] = {
-#if defined(TOTEM_GMP_PLUGIN)
+static const xplayerPluginMimeEntry kMimeTypes[] = {
+#if defined(XPLAYER_GMP_PLUGIN)
   { "application/x-mplayer2", "avi, wma, wmv", "video/x-msvideo" },
   { "video/x-ms-asf-plugin", "asf, wmv", "video/x-ms-asf" },
   { "video/x-msvideo", "asf, wmv", NULL },
@@ -100,18 +100,18 @@ static const totemPluginMimeEntry kMimeTypes[] = {
   { "application/x-ms-wmp", "wmp", "video/x-ms-wmv" },
   { "application/asx", "asx", "audio/x-ms-asx" },
   { "audio/x-ms-wma", "wma", NULL }
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
   { "video/quicktime", "mov", NULL },
   { "video/mp4", "mp4", NULL },
   { "image/x-macpaint", "pntg", NULL },
   { "image/x-quicktime", "pict, pict1, pict2", "image/x-pict" },
   { "video/x-m4v", "m4v", NULL },
   { "application/vnd.apple.mpegurl", "m3u8", NULL },
-#elif defined(TOTEM_VEGAS_PLUGIN)
+#elif defined(XPLAYER_VEGAS_PLUGIN)
   { "application/x-shockwave-flash", "swf", "Shockwave Flash" },
-#elif defined(TOTEM_MULLY_PLUGIN)
+#elif defined(XPLAYER_MULLY_PLUGIN)
   { "video/divx", "divx", "video/x-msvideo" },
-#elif defined(TOTEM_CONE_PLUGIN)
+#elif defined(XPLAYER_CONE_PLUGIN)
   { "application/x-vlc-plugin", "", "VLC Multimedia Plugin" },
   { "application/vlc", "", "VLC Multimedia Plugin" },
   { "video/x-google-vlc-plugin", "", "VLC Multimedia Plugin" },
@@ -133,7 +133,7 @@ static const totemPluginMimeEntry kMimeTypes[] = {
   { "application/x-nsv-vp3-mp3", "nsv", "video/x-nsv" },
   { "video/flv", "flv", "application/x-flash-video" },
   { "video/webm", "webm", NULL },
-  { "application/x-totem-plugin", "", "Videos multimedia plugin" },
+  { "application/x-xplayer-plugin", "", "Videos multimedia plugin" },
   { "audio/midi", "mid, midi", NULL },
 #else
 #error Unknown plugin type
@@ -141,35 +141,35 @@ static const totemPluginMimeEntry kMimeTypes[] = {
 };
 
 static const char kPluginDescription[] =
-#if defined(TOTEM_GMP_PLUGIN)
+#if defined(XPLAYER_GMP_PLUGIN)
   "Windows Media Player Plug-in 10 (compatible; Videos)";
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
-  "QuickTime Plug-in " TOTEM_NARROWSPACE_VERSION;
-#elif defined(TOTEM_VEGAS_PLUGIN)
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
+  "QuickTime Plug-in " XPLAYER_NARROWSPACE_VERSION;
+#elif defined(XPLAYER_VEGAS_PLUGIN)
   "Shockwave Flash";
-#elif defined(TOTEM_MULLY_PLUGIN)
+#elif defined(XPLAYER_MULLY_PLUGIN)
   "DivX\xC2\xAE Web Player";
-#elif defined(TOTEM_CONE_PLUGIN)
+#elif defined(XPLAYER_CONE_PLUGIN)
   "VLC Multimedia Plugin (compatible Videos " VERSION ")";
 #else
 #error Unknown plugin type
 #endif
 
 static const char kPluginLongDescription[] =
-#if defined(TOTEM_MULLY_PLUGIN)
-  "DivX Web Player version " TOTEM_MULLY_VERSION;
-#elif defined(TOTEM_VEGAS_PLUGIN)
+#if defined(XPLAYER_MULLY_PLUGIN)
+  "DivX Web Player version " XPLAYER_MULLY_VERSION;
+#elif defined(XPLAYER_VEGAS_PLUGIN)
   "Shockwave Flash 11.1 r102";
 #else
   "The <a href=\"http://www.gnome.org/\">Videos</a> " PACKAGE_VERSION " plugin handles video and audio streams.";
 #endif
 
 static const char kPluginUserAgent[] =
-#if defined(TOTEM_NARROWSPACE_PLUGIN)
-  "Quicktime/"TOTEM_NARROWSPACE_VERSION;
-#elif defined(TOTEM_GMP_PLUGIN)
+#if defined(XPLAYER_NARROWSPACE_PLUGIN)
+  "Quicktime/"XPLAYER_NARROWSPACE_VERSION;
+#elif defined(XPLAYER_GMP_PLUGIN)
   "Windows-Media-Player/10.00.00.4019";
-#elif defined(TOTEM_VEGAS_PLUGIN)
+#elif defined(XPLAYER_VEGAS_PLUGIN)
   "Videos/"VERSION;
 #else
   "";
@@ -184,7 +184,7 @@ static void NameVanishedCallback (GDBusConnection *connection,
 				  gpointer         aData);
 
 static void
-totem_dbus_proxy_call_no_reply (GDBusProxy *proxy,
+xplayer_dbus_proxy_call_no_reply (GDBusProxy *proxy,
 				const gchar *method_name,
 				GVariant *parameters)
 {
@@ -200,7 +200,7 @@ totem_dbus_proxy_call_no_reply (GDBusProxy *proxy,
 }
 
 void*
-totemPlugin::operator new (size_t aSize) throw ()
+xplayerPlugin::operator new (size_t aSize) throw ()
 {
 	void *object = ::operator new (aSize);
 	if (object) {
@@ -210,7 +210,7 @@ totemPlugin::operator new (size_t aSize) throw ()
 	return object;
 }
 
-totemPlugin::totemPlugin (NPP aNPP)
+xplayerPlugin::xplayerPlugin (NPP aNPP)
 :	mNPP (aNPP),
         mMimeType (NULL),
         mDocumentURI (NULL),
@@ -225,12 +225,12 @@ totemPlugin::totemPlugin (NPP aNPP)
 	mHeight (-1),
 	mAutoPlay (true),
 	mNeedViewer (true),
-	mState (TOTEM_STATE_STOPPED)
+	mState (XPLAYER_STATE_STOPPED)
 {
-        TOTEM_LOG_CTOR ();
+        XPLAYER_LOG_CTOR ();
 }
 
-totemPlugin::~totemPlugin ()
+xplayerPlugin::~xplayerPlugin ()
 {
         /* FIXMEchpe invalidate the scriptable object, or is that done automatically? */
 
@@ -241,11 +241,11 @@ totemPlugin::~totemPlugin ()
                 mTimerID = 0;
 	}
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	g_free (mURLURI);
 #endif
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         g_free (mHref);
         g_free (mTarget);
         g_free (mHrefURI);
@@ -268,11 +268,11 @@ totemPlugin::~totemPlugin ()
         g_free (mRectangle);
         g_free (mMovieName);
 
-        TOTEM_LOG_DTOR ();
+        XPLAYER_LOG_DTOR ();
 }
 
 /* static */ void
-totemPlugin::QueueCommand (TotemQueueCommand *cmd)
+xplayerPlugin::QueueCommand (XplayerQueueCommand *cmd)
 {
 	assert (mQueue);
 
@@ -282,13 +282,13 @@ totemPlugin::QueueCommand (TotemQueueCommand *cmd)
 /* public functions */
 
 void
-totemPlugin::Command (const char *aCommand)
+xplayerPlugin::Command (const char *aCommand)
 {
 	if (!mViewerReady) {
 		D("Queuing command '%s'", aCommand);
-		TotemQueueCommand *cmd;
-		cmd = g_new0 (TotemQueueCommand, 1);
-		cmd->type = TOTEM_QUEUE_TYPE_SET_STRING;
+		XplayerQueueCommand *cmd;
+		cmd = g_new0 (XplayerQueueCommand, 1);
+		cmd->type = XPLAYER_QUEUE_TYPE_SET_STRING;
 		cmd->string = g_strdup (aCommand);
 		QueueCommand (cmd);
 		return;
@@ -297,13 +297,13 @@ totemPlugin::Command (const char *aCommand)
 	D ("Command '%s'", aCommand);
 
 	assert (mViewerProxy);
-	totem_dbus_proxy_call_no_reply (mViewerProxy,
+	xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"DoCommand",
 					g_variant_new ("(s)", aCommand));
 }
 
 void
-totemPlugin::SetTime (guint64 aTime)
+xplayerPlugin::SetTime (guint64 aTime)
 {
 	D ("SetTime '%lu'", aTime);
 
@@ -314,13 +314,13 @@ totemPlugin::SetTime (guint64 aTime)
 	mTime = aTime;
 
 	assert (mViewerProxy);
-	totem_dbus_proxy_call_no_reply (mViewerProxy,
+	xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"SetTime",
 					g_variant_new ("(t)", GetTime()));
 }
 
 void
-totemPlugin::SetVolume (double aVolume)
+xplayerPlugin::SetVolume (double aVolume)
 {
 	D ("SetVolume '%f'", aVolume);
 
@@ -331,13 +331,13 @@ totemPlugin::SetVolume (double aVolume)
 		return;
 
 	assert (mViewerProxy);
-	totem_dbus_proxy_call_no_reply (mViewerProxy,
+	xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"SetVolume",
 					g_variant_new ("(d)", gdouble (Volume())));
 }
 
 void
-totemPlugin::SetFullscreen (bool enabled)
+xplayerPlugin::SetFullscreen (bool enabled)
 {
 	D ("SetFullscreen '%d'", enabled);
 
@@ -348,19 +348,19 @@ totemPlugin::SetFullscreen (bool enabled)
 		return;
 
 	assert (mViewerProxy);
-	totem_dbus_proxy_call_no_reply (mViewerProxy,
+	xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"SetFullscreen",
 					g_variant_new ("(b)", gboolean (IsFullscreen())));
 }
 
 void
-totemPlugin::ClearPlaylist ()
+xplayerPlugin::ClearPlaylist ()
 {
 	if (!mViewerReady) {
 		Dm ("Queuing ClearPlaylist");
-		TotemQueueCommand *cmd;
-		cmd = g_new0 (TotemQueueCommand, 1);
-		cmd->type = TOTEM_QUEUE_TYPE_CLEAR_PLAYLIST;
+		XplayerQueueCommand *cmd;
+		cmd = g_new0 (XplayerQueueCommand, 1);
+		cmd->type = XPLAYER_QUEUE_TYPE_CLEAR_PLAYLIST;
 		QueueCommand (cmd);
 		return;
 	}
@@ -368,13 +368,13 @@ totemPlugin::ClearPlaylist ()
 	Dm ("ClearPlaylist");
 
 	assert (mViewerProxy);
-	totem_dbus_proxy_call_no_reply (mViewerProxy,
+	xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"ClearPlaylist",
 					NULL);
 }
 
 int32_t
-totemPlugin::AddItem (const NPString& aURI,
+xplayerPlugin::AddItem (const NPString& aURI,
 		      const NPString& aTitle,
 		      const char *aSubtitle)
 {
@@ -394,9 +394,9 @@ totemPlugin::AddItem (const NPString& aURI,
 	if (!mViewerReady) {
 		D ("Queuing AddItem '%s' (title: '%s' sub: '%s')",
 		   uri, title ? title : "", aSubtitle ? aSubtitle : "");
-		TotemQueueCommand *cmd;
-		cmd = g_new0 (TotemQueueCommand, 1);
-		cmd->type = TOTEM_QUEUE_TYPE_ADD_ITEM;
+		XplayerQueueCommand *cmd;
+		cmd = g_new0 (XplayerQueueCommand, 1);
+		cmd->type = XPLAYER_QUEUE_TYPE_ADD_ITEM;
 		cmd->add_item.uri = uri;
 		cmd->add_item.title = title;
 		cmd->add_item.subtitle = g_strdup (aSubtitle);
@@ -409,7 +409,7 @@ totemPlugin::AddItem (const NPString& aURI,
 
 	assert (mViewerProxy);
 
-        totem_dbus_proxy_call_no_reply (mViewerProxy,
+        xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 					"AddItem",
 					g_variant_new ("(ssss)",
 						       mBaseURI,
@@ -423,70 +423,70 @@ totemPlugin::AddItem (const NPString& aURI,
 }
 
 void
-totemPlugin::SetMute (bool enabled)
+xplayerPlugin::SetMute (bool enabled)
 {
   mMute = enabled;
   /* FIXMEchpe do stuff in the viewer! */
 }
 
 void
-totemPlugin::SetLooping (bool enabled)
+xplayerPlugin::SetLooping (bool enabled)
 {
   mIsLooping = enabled;
   /* FIXMEchpe do stuff in the viewer! */
 }
 
 void
-totemPlugin::SetAutoPlay (bool enabled)
+xplayerPlugin::SetAutoPlay (bool enabled)
 {
   mAutoPlay = enabled;
 }
 
 void
-totemPlugin::SetControllerVisible (bool enabled)
+xplayerPlugin::SetControllerVisible (bool enabled)
 {
   mControllerHidden = !enabled; // FIXMEchpe
 }
 
 void
-totemPlugin::SetBackgroundColor (const NPString& color)
+xplayerPlugin::SetBackgroundColor (const NPString& color)
 {
   g_free (mBackgroundColor);
   mBackgroundColor = g_strndup (color.UTF8Characters, color.UTF8Length);
 }
 
 void
-totemPlugin::SetMatrix (const NPString& matrix)
+xplayerPlugin::SetMatrix (const NPString& matrix)
 {
   g_free (mMatrix);
   mMatrix = g_strndup (matrix.UTF8Characters, matrix.UTF8Length);
 }
 
 void
-totemPlugin::SetRectangle (const NPString& rectangle)
+xplayerPlugin::SetRectangle (const NPString& rectangle)
 {
   g_free (mRectangle);
   mRectangle = g_strndup (rectangle.UTF8Characters, rectangle.UTF8Length);
 }
 
 void
-totemPlugin::SetMovieName (const NPString& name)
+xplayerPlugin::SetMovieName (const NPString& name)
 {
   g_free (mMovieName);
   mMovieName = g_strndup (name.UTF8Characters, name.UTF8Length);
 }
 
 void
-totemPlugin::SetRate (double rate)
+xplayerPlugin::SetRate (double rate)
 {
   // FIXMEchpe
 }
 
 double
-totemPlugin::Rate () const
+xplayerPlugin::Rate () const
 {
   double rate;
-  if (mState == TOTEM_STATE_PLAYING) {
+  if (mState == XPLAYER_STATE_PLAYING) {
     rate = 1.0;
   } else {
     rate = 0.0;
@@ -497,7 +497,7 @@ totemPlugin::Rate () const
 /* Viewer interaction */
 
 NPError
-totemPlugin::ViewerFork ()
+xplayerPlugin::ViewerFork ()
 {
 	const char *userAgent = kPluginUserAgent;
 
@@ -513,38 +513,38 @@ totemPlugin::ViewerFork ()
 
 	/* And start the viewer */
 	g_ptr_array_add (arr,
-			 g_build_filename (LIBEXECDIR, "totem-plugin-viewer", NULL));
+			 g_build_filename (LIBEXECDIR, "xplayer-plugin-viewer", NULL));
 
 	/* So we can debug X errors in the viewer */
-	const char *sync = g_getenv ("TOTEM_EMBEDDED_DEBUG_SYNC");
+	const char *sync = g_getenv ("XPLAYER_EMBEDDED_DEBUG_SYNC");
 	if (sync && sync[0] == '1') {
 		g_ptr_array_add (arr, g_strdup ("--sync"));
 	}
 
 #ifdef GNOME_ENABLE_DEBUG
-	const char *fatal = g_getenv ("TOTEM_EMBEDDED_DEBUG_FATAL");
+	const char *fatal = g_getenv ("XPLAYER_EMBEDDED_DEBUG_FATAL");
 	if (fatal && fatal[0] == '1') {
 		g_ptr_array_add (arr, g_strdup ("--g-fatal-warnings"));
 	}
 #endif
 
-	g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_PLUGIN_TYPE));
-#if defined(TOTEM_GMP_PLUGIN)
+	g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_PLUGIN_TYPE));
+#if defined(XPLAYER_GMP_PLUGIN)
 	g_ptr_array_add (arr, g_strdup ("gmp"));
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
 	g_ptr_array_add (arr, g_strdup ("narrowspace"));
-#elif defined(TOTEM_MULLY_PLUGIN)
+#elif defined(XPLAYER_MULLY_PLUGIN)
 	g_ptr_array_add (arr, g_strdup ("mully"));
-#elif defined(TOTEM_CONE_PLUGIN)
+#elif defined(XPLAYER_CONE_PLUGIN)
 	g_ptr_array_add (arr, g_strdup ("cone"));
-#elif defined(TOTEM_VEGAS_PLUGIN)
+#elif defined(XPLAYER_VEGAS_PLUGIN)
 	g_ptr_array_add (arr, g_strdup ("vegas"));
 #else
 #error Unknown plugin type
 #endif
 
 	if (userAgent) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_USER_AGENT));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_USER_AGENT));
 		g_ptr_array_add (arr, g_strdup (userAgent));
 	}
 
@@ -553,38 +553,38 @@ totemPlugin::ViewerFork ()
          * to check what exactly the various legacy plugins pass here.
          */
         if (mDocumentURI) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_REFERRER));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_REFERRER));
 		g_ptr_array_add (arr, g_strdup (mDocumentURI));
         }
 
 	/* FIXME: remove this */
 	if (mMimeType) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_MIMETYPE));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_MIMETYPE));
 		g_ptr_array_add (arr, g_strdup (mMimeType));
 	}
 
 	if (mControllerHidden) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_CONTROLS_HIDDEN));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_CONTROLS_HIDDEN));
 	}
 
 	if (mShowStatusbar) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_STATUSBAR));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_STATUSBAR));
 	}
 
 	if (mHidden) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_HIDDEN));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_HIDDEN));
 	}
 
 	if (mRepeat) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_REPEAT));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_REPEAT));
 	}
 
 	if (mAudioOnly) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_AUDIOONLY));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_AUDIOONLY));
 	}
 
 	if (!mAutoPlay) {
-		g_ptr_array_add (arr, g_strdup (DASHES TOTEM_OPTION_NOAUTOSTART));
+		g_ptr_array_add (arr, g_strdup (DASHES XPLAYER_OPTION_NOAUTOSTART));
 	}
 
 	g_ptr_array_add (arr, NULL);
@@ -642,7 +642,7 @@ totemPlugin::ViewerFork ()
 		return NPERR_GENERIC_ERROR;
 	}
 
-	mViewerServiceName = g_strdup_printf (TOTEM_PLUGIN_VIEWER_NAME_TEMPLATE, mViewerPID);
+	mViewerServiceName = g_strdup_printf (XPLAYER_PLUGIN_VIEWER_NAME_TEMPLATE, mViewerPID);
 	D ("Viewer DBus interface name is '%s'", mViewerServiceName);
 
 	mBusWatchId = g_bus_watch_name (G_BUS_TYPE_SESSION, mViewerServiceName,
@@ -659,7 +659,7 @@ totemPlugin::ViewerFork ()
 }
 
 void
-totemPlugin::ViewerSetup ()
+xplayerPlugin::ViewerSetup ()
 {
 	/* already set up */
 	if (mViewerSetUp)
@@ -679,8 +679,8 @@ totemPlugin::ViewerSetup ()
 						      G_DBUS_PROXY_FLAGS_NONE,
 						      NULL,
 						      mViewerServiceName,
-						      TOTEM_PLUGIN_VIEWER_DBUS_PATH,
-						      TOTEM_PLUGIN_VIEWER_INTERFACE_NAME,
+						      XPLAYER_PLUGIN_VIEWER_DBUS_PATH,
+						      XPLAYER_PLUGIN_VIEWER_INTERFACE_NAME,
 						      NULL, NULL);
 
 	mSignalId = g_signal_connect (G_OBJECT (mViewerProxy), "g-signal",
@@ -694,7 +694,7 @@ totemPlugin::ViewerSetup ()
 }
 
 void
-totemPlugin::ViewerCleanup ()
+xplayerPlugin::ViewerCleanup ()
 {
 	mViewerReady = false;
 
@@ -735,7 +735,7 @@ totemPlugin::ViewerCleanup ()
 }
 
 void
-totemPlugin::ViewerSetWindow ()
+xplayerPlugin::ViewerSetWindow ()
 {
 	if (mWindowSet || mWindow == 0)
 		return;
@@ -769,7 +769,7 @@ totemPlugin::ViewerSetWindow ()
 }
 
 void
-totemPlugin::ViewerReady ()
+xplayerPlugin::ViewerReady ()
 {
 	Dm ("ViewerReady");
 
@@ -779,33 +779,33 @@ totemPlugin::ViewerReady ()
 
 	/* Unqueue any queued commands, before any
 	 * new ones come in */
-	TotemQueueCommand *cmd;
+	XplayerQueueCommand *cmd;
 
-	while ((cmd = (TotemQueueCommand *) g_queue_pop_head (mQueue)) != NULL) {
+	while ((cmd = (XplayerQueueCommand *) g_queue_pop_head (mQueue)) != NULL) {
 		D("Popping command %d", cmd->type);
 		switch (cmd->type) {
-		case TOTEM_QUEUE_TYPE_CLEAR_PLAYLIST:
+		case XPLAYER_QUEUE_TYPE_CLEAR_PLAYLIST:
 			ClearPlaylist();
 			break;
-		case TOTEM_QUEUE_TYPE_SET_PLAYLIST:
+		case XPLAYER_QUEUE_TYPE_SET_PLAYLIST:
 			assert (mViewerProxy);
 
 			D ("SetPlaylist '%s'", cmd->add_item.uri);
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"SetPlaylist",
 							g_variant_new ("(sss)",
 								       "",
 								       cmd->add_item.uri,
 								       ""));
 			break;
-		case TOTEM_QUEUE_TYPE_ADD_ITEM:
+		case XPLAYER_QUEUE_TYPE_ADD_ITEM:
 			assert (mViewerProxy);
 
 			D ("AddItem '%s' (base: '%s' title: '%s' sub: '%s')",
 			   cmd->add_item.uri, mBaseURI,
 			   cmd->add_item.title ? cmd->add_item.title : "",
 			   cmd->add_item.subtitle ? cmd->add_item.subtitle : "");
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"AddItem",
 							g_variant_new ("(ssss)",
 								       mBaseURI,
@@ -816,12 +816,12 @@ totemPlugin::ViewerReady ()
 			g_free (cmd->add_item.title);
 			g_free (cmd->add_item.subtitle);
 			break;
-		case TOTEM_QUEUE_TYPE_SET_STRING:
+		case XPLAYER_QUEUE_TYPE_SET_STRING:
 			assert (cmd->string);
 
-			if (g_str_equal (cmd->string, TOTEM_COMMAND_PLAY) ||
-			    g_str_equal (cmd->string, TOTEM_COMMAND_PAUSE) ||
-			    g_str_equal (cmd->string, TOTEM_COMMAND_STOP)) {
+			if (g_str_equal (cmd->string, XPLAYER_COMMAND_PLAY) ||
+			    g_str_equal (cmd->string, XPLAYER_COMMAND_PAUSE) ||
+			    g_str_equal (cmd->string, XPLAYER_COMMAND_STOP)) {
 				Command(cmd->string);
 			} else {
 				D("Unhandled queued string '%s'", cmd->string);
@@ -843,31 +843,31 @@ totemPlugin::ViewerReady ()
 		mWaitingForButtonPress = true;
 	}
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	/* Tell the viewer it has an href */
 	if (mHref) {
 		Dm("SetHref in ViewerReady");
-		totem_dbus_proxy_call_no_reply (mViewerProxy,
+		xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 						"SetHref",
 						g_variant_new ("(ss)", mHref, mTarget ? mTarget : ""));
 	}
 	if (mHref && mAutoHref)
 		ViewerButtonPressed (0, 0);
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 }
 
 void
-totemPlugin::ViewerButtonPressed (guint aTimestamp, guint aButton)
+xplayerPlugin::ViewerButtonPressed (guint aTimestamp, guint aButton)
 {
 	Dm ("ButtonPress");
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	/* FIXME set href="" afterwards, so we don't try to launch again when the user clicks again? */
 	if (mHref) {
 		if (mTarget &&
                     g_ascii_strcasecmp (mTarget, "quicktimeplayer") == 0) {
 			D ("Opening movie '%s' in external player", mHref);
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"LaunchPlayer",
 							g_variant_new ("(su)", mHref, time));
 			return;
@@ -877,7 +877,7 @@ totemPlugin::ViewerButtonPressed (guint aTimestamp, guint aButton)
                      g_ascii_strcasecmp (mTarget, "_current") == 0 ||
                      g_ascii_strcasecmp (mTarget, "_self") == 0)) {
                         D ("Opening movie '%s'", mHref);
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"SetHref",
 							g_variant_new ("(ss)", "", ""));
 			/* FIXME this isn't right, we should just create a mHrefURI and instruct to load that one */
@@ -920,7 +920,7 @@ totemPlugin::ViewerButtonPressed (guint aTimestamp, guint aButton)
 }
 
 /* static */ void
-totemPlugin::BusNameAppearedCallback (GDBusConnection *connection,
+xplayerPlugin::BusNameAppearedCallback (GDBusConnection *connection,
 				      const gchar     *name,
 				      const gchar     *aNameOwner)
 {
@@ -947,13 +947,13 @@ NameAppearedCallback (GDBusConnection *connection,
 		      const gchar     *aNameOwner,
 		      gpointer         aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 
 	plugin->BusNameAppearedCallback (connection, name, aNameOwner);
 }
 
 /* static */ void
-totemPlugin::BusNameVanishedCallback (GDBusConnection *connection,
+xplayerPlugin::BusNameVanishedCallback (GDBusConnection *connection,
 				      const gchar     *aName)
 {
 	if (mViewerBusAddress == NULL)
@@ -974,7 +974,7 @@ NameVanishedCallback (GDBusConnection *connection,
 		      const gchar     *aName,
 		      gpointer         aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 
 	plugin->BusNameVanishedCallback (connection, aName);
 }
@@ -982,7 +982,7 @@ NameVanishedCallback (GDBusConnection *connection,
 /* Stream handling */
 
 void
-totemPlugin::ClearRequest ()
+xplayerPlugin::ClearRequest ()
 {
   g_free (mRequestURI);
   mRequestURI = NULL;
@@ -992,7 +992,7 @@ totemPlugin::ClearRequest ()
 }
 
 void
-totemPlugin::RequestStream (bool aForceViewer)
+xplayerPlugin::RequestStream (bool aForceViewer)
 {
 	D ("Stream requested (force viewer: %d)", aForceViewer);
 
@@ -1012,14 +1012,14 @@ totemPlugin::RequestStream (bool aForceViewer)
 	const char *baseURI = NULL;
 	const char *requestURI = NULL;
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	/* Prefer filename over src */
 	if (mURLURI) {
 		requestURI = mURLURI;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	/* Prefer qtsrc over src */
 	if (mQtsrcURI) {
 		requestURI = mQtsrcURI;
@@ -1034,11 +1034,11 @@ totemPlugin::RequestStream (bool aForceViewer)
 
        /* We should be following QTSRCDONTUSEBROWSER instead */
 	aForceViewer = true;
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
-#if defined (TOTEM_MULLY_PLUGIN) || defined (TOTEM_CONE_PLUGIN)
+#if defined (XPLAYER_MULLY_PLUGIN) || defined (XPLAYER_CONE_PLUGIN)
 	aForceViewer = true;
-#endif /* TOTEM_MULLY_PLUGIN || TOTEM_CONE_PLUGIN */
+#endif /* XPLAYER_MULLY_PLUGIN || XPLAYER_CONE_PLUGIN */
 
 	/* Fallback */
 	if (!requestURI)
@@ -1090,24 +1090,24 @@ totemPlugin::RequestStream (bool aForceViewer)
 
 	/* FIXME: start playing in the callbacks ! */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Playable;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Playable;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_Waiting;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_Waiting;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 }
 
 void
-totemPlugin::UnsetStream ()
+xplayerPlugin::UnsetStream ()
 {
 	if (!mStream)
 		return;
@@ -1117,28 +1117,28 @@ totemPlugin::UnsetStream ()
                            NPRES_DONE);
         mStream = NULL;
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Waiting;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Waiting;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_MediaEnded;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_MediaEnded;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 }
 
 /* Callbacks */
 
 /* static */ gboolean
-totemPlugin::ViewerForkTimeoutCallback (void *aData)
+xplayerPlugin::ViewerForkTimeoutCallback (void *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 
         plugin->mTimerID = 0;
 
@@ -1154,7 +1154,7 @@ totemPlugin::ViewerForkTimeoutCallback (void *aData)
 }
 
 /* static */ void
-totemPlugin::ButtonPressCallback (guint aTimestamp,
+xplayerPlugin::ButtonPressCallback (guint aTimestamp,
 				  guint aButton)
 {
 	g_debug ("ButtonPress signal received");
@@ -1163,7 +1163,7 @@ totemPlugin::ButtonPressCallback (guint aTimestamp,
 }
 
 /* static */ void
-totemPlugin::StopStreamCallback (void)
+xplayerPlugin::StopStreamCallback (void)
 {
 	g_debug ("StopStream signal received");
 
@@ -1171,7 +1171,7 @@ totemPlugin::StopStreamCallback (void)
 }
 
 /* static */ void
-totemPlugin::TickCallback (guint aTime,
+xplayerPlugin::TickCallback (guint aTime,
 			   guint aDuration,
 			   char *aState)
 {
@@ -1179,9 +1179,9 @@ totemPlugin::TickCallback (guint aTime,
 
 	DD ("Tick signal received, aState %s, aTime %d, aDuration %d", aState, aTime, aDuration);
 
-	for (i = 0; i < TOTEM_STATE_INVALID; i++) {
-		if (strcmp (aState, totem_states[i]) == 0) {
-			this->mState = (TotemStates) i;
+	for (i = 0; i < XPLAYER_STATE_INVALID; i++) {
+		if (strcmp (aState, xplayer_states[i]) == 0) {
+			this->mState = (XplayerStates) i;
 			break;
 		}
 	}
@@ -1189,53 +1189,53 @@ totemPlugin::TickCallback (guint aTime,
 	this->mTime = aTime;
 	this->mDuration = aDuration;
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
         if (!this->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = this->mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
                 switch (this->mState) {
-		case TOTEM_STATE_PLAYING:
-			scriptable->mPluginState = totemGMPPlayer::eState_Playing;
+		case XPLAYER_STATE_PLAYING:
+			scriptable->mPluginState = xplayerGMPPlayer::eState_Playing;
 			break;
-		case TOTEM_STATE_PAUSED:
-			scriptable->mPluginState = totemGMPPlayer::eState_Paused;
+		case XPLAYER_STATE_PAUSED:
+			scriptable->mPluginState = xplayerGMPPlayer::eState_Paused;
 			break;
-		case TOTEM_STATE_STOPPED:
-			scriptable->mPluginState = totemGMPPlayer::eState_Stopped;
+		case XPLAYER_STATE_STOPPED:
+			scriptable->mPluginState = xplayerGMPPlayer::eState_Stopped;
 			break;
 		default:
-			scriptable->mPluginState = totemGMPPlayer::eState_Undefined;
+			scriptable->mPluginState = xplayerGMPPlayer::eState_Undefined;
 		}
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!this->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = this->mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
                 switch (this->mState) {
-		case TOTEM_STATE_PLAYING:
-		case TOTEM_STATE_PAUSED:
-			scriptable->mPluginState = totemNarrowSpacePlayer::eState_Playable;
+		case XPLAYER_STATE_PLAYING:
+		case XPLAYER_STATE_PAUSED:
+			scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Playable;
 			break;
-		case TOTEM_STATE_STOPPED:
-			if (scriptable->mPluginState == totemNarrowSpacePlayer::eState_Playable) {
-				scriptable->mPluginState = totemNarrowSpacePlayer::eState_Complete;
+		case XPLAYER_STATE_STOPPED:
+			if (scriptable->mPluginState == xplayerNarrowSpacePlayer::eState_Playable) {
+				scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Complete;
 				/* The QuickTime plugin expects the duration to be the
 				 * length of the file on EOS */
 				this->mTime = this->mDuration;
 			} else
-				scriptable->mPluginState = totemNarrowSpacePlayer::eState_Waiting;
+				scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Waiting;
 			break;
 		default:
-			scriptable->mPluginState = totemNarrowSpacePlayer::eState_Waiting;
+			scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Waiting;
 		}
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 }
 
 /* static */ void
-totemPlugin::PropertyChangeCallback (const char *aType,
+xplayerPlugin::PropertyChangeCallback (const char *aType,
 				     GVariant   *aVariant)
 {
 	//NS_ASSERTION (aType != NULL, "aType is NULL probably garbage");
@@ -1244,21 +1244,21 @@ totemPlugin::PropertyChangeCallback (const char *aType,
 
 	DD ("PropertyChange signal received, aType %s", aType);
 
-	if (strcmp (aType, TOTEM_PROPERTY_VOLUME) == 0) {
+	if (strcmp (aType, XPLAYER_PROPERTY_VOLUME) == 0) {
 		this->mVolume = g_variant_get_double (aVariant);
-	} else if (strcmp (aType, TOTEM_PROPERTY_ISFULLSCREEN) == 0) {
+	} else if (strcmp (aType, XPLAYER_PROPERTY_ISFULLSCREEN) == 0) {
 		this->mIsFullscreen = g_variant_get_boolean (aVariant);
 	}
 }
 
 /* static */ void
-totemPlugin::ProxySignalCallback (GDBusProxy *aProxy,
+xplayerPlugin::ProxySignalCallback (GDBusProxy *aProxy,
 				  gchar      *sender_name,
 				  gchar      *signal_name,
 				  GVariant   *parameters,
 				  void       *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 
 	if (g_str_equal (signal_name, "ButtonPress")) {
 		guint aTimestamp, aButton;
@@ -1288,11 +1288,11 @@ totemPlugin::ProxySignalCallback (GDBusProxy *aProxy,
 }
 
 /* static */ void
-totemPlugin::ViewerSetWindowCallback (GObject      *aObject,
+xplayerPlugin::ViewerSetWindowCallback (GObject      *aObject,
 				      GAsyncResult *aRes,
 				      void         *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 	GError *error = NULL;
 	GVariant *result;
 
@@ -1316,11 +1316,11 @@ totemPlugin::ViewerSetWindowCallback (GObject      *aObject,
 }
 
 /* static */ void
-totemPlugin::ViewerOpenStreamCallback (GObject *aObject,
+xplayerPlugin::ViewerOpenStreamCallback (GObject *aObject,
 				       GAsyncResult *aRes,
 				       void *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 	GError *error = NULL;
 	GVariant *result;
 
@@ -1342,16 +1342,16 @@ totemPlugin::ViewerOpenStreamCallback (GObject *aObject,
 	/* FIXME this isn't the best way... */
 	if (plugin->mHidden &&
 	    plugin->mAutoPlay) {
-		plugin->Command (TOTEM_COMMAND_PLAY);
+		plugin->Command (XPLAYER_COMMAND_PLAY);
 	}
 }
 
 /* static */ void
-totemPlugin::ViewerSetupStreamCallback (GObject *aObject,
+xplayerPlugin::ViewerSetupStreamCallback (GObject *aObject,
 					GAsyncResult *aRes,
 					void *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 	GError *error = NULL;
 	GVariant *result;
 
@@ -1390,28 +1390,28 @@ totemPlugin::ViewerSetupStreamCallback (GObject *aObject,
 		return;
 	}
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!plugin->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = plugin->mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Playable;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Playable;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!plugin->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = plugin->mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_Waiting;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_Waiting;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 }
 
 /* static */ void
-totemPlugin::ViewerOpenURICallback (GObject      *aObject,
+xplayerPlugin::ViewerOpenURICallback (GObject      *aObject,
 				    GAsyncResult *aRes,
 				    void         *aData)
 {
-	totemPlugin *plugin = reinterpret_cast<totemPlugin*>(aData);
+	xplayerPlugin *plugin = reinterpret_cast<xplayerPlugin*>(aData);
 	GError *error = NULL;
 	GVariant *result;
 
@@ -1430,24 +1430,24 @@ totemPlugin::ViewerOpenURICallback (GObject      *aObject,
 
 	g_variant_unref (result);
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!plugin->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = plugin->mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Playable;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Playable;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!plugin->mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = plugin->mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_Ready;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_Ready;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
 	/* FIXME this isn't the best way... */
 	if (plugin->mAutoPlay) {
-		plugin->Command (TOTEM_COMMAND_PLAY);
+		plugin->Command (XPLAYER_COMMAND_PLAY);
 	}
 }
 
@@ -1455,19 +1455,19 @@ totemPlugin::ViewerOpenURICallback (GObject      *aObject,
 
 
 /* static */ char *
-totemPlugin::PluginDescription ()
+xplayerPlugin::PluginDescription ()
 {
   return (char*) kPluginDescription;
 }
 
 /* static */ char *
-totemPlugin::PluginLongDescription ()
+xplayerPlugin::PluginLongDescription ()
 {
   return (char*) kPluginLongDescription;
 }
 
 /* static */ void
-totemPlugin::PluginMimeTypes (const totemPluginMimeEntry **_entries,
+xplayerPlugin::PluginMimeTypes (const xplayerPluginMimeEntry **_entries,
 					uint32_t *_count)
 {
   *_entries = kMimeTypes;
@@ -1475,7 +1475,7 @@ totemPlugin::PluginMimeTypes (const totemPluginMimeEntry **_entries,
 }
 
 void
-totemPlugin::SetRealMimeType (const char *mimetype)
+xplayerPlugin::SetRealMimeType (const char *mimetype)
 {
 	for (uint32_t i = 0; i < G_N_ELEMENTS (kMimeTypes); ++i) {
 		if (strcmp (kMimeTypes[i].mimetype, mimetype) == 0) {
@@ -1493,7 +1493,7 @@ totemPlugin::SetRealMimeType (const char *mimetype)
 }
 
 bool
-totemPlugin::IsSchemeSupported (const char *aURI, const char *aBaseURI)
+xplayerPlugin::IsSchemeSupported (const char *aURI, const char *aBaseURI)
 {
   if (!aURI)
     return false;
@@ -1519,7 +1519,7 @@ totemPlugin::IsSchemeSupported (const char *aURI, const char *aBaseURI)
 }
 
 bool
-totemPlugin::ParseBoolean (const char *key,
+xplayerPlugin::ParseBoolean (const char *key,
 			   const char *value,
 			   bool default_val)
 {
@@ -1543,7 +1543,7 @@ totemPlugin::ParseBoolean (const char *key,
 }
 
 bool
-totemPlugin::GetBooleanValue (GHashTable *args,
+xplayerPlugin::GetBooleanValue (GHashTable *args,
 			      const char *key,
 			      bool default_val)
 {
@@ -1557,7 +1557,7 @@ totemPlugin::GetBooleanValue (GHashTable *args,
 }
 
 uint32_t
-totemPlugin::GetEnumIndex (GHashTable *args,
+xplayerPlugin::GetEnumIndex (GHashTable *args,
 			   const char *key,
 			   const char *values[],
 			   uint32_t n_values,
@@ -1578,7 +1578,7 @@ totemPlugin::GetEnumIndex (GHashTable *args,
 /* Public functions for use by the scriptable plugin */
 
 bool
-totemPlugin::SetSrc (const char* aURL)
+xplayerPlugin::SetSrc (const char* aURL)
 {
         g_free (mSrcURI);
 
@@ -1602,7 +1602,7 @@ totemPlugin::SetSrc (const char* aURL)
 }
 
 bool
-totemPlugin::SetSrc (const NPString& aURL)
+xplayerPlugin::SetSrc (const NPString& aURL)
 {
         g_free (mSrcURI);
 
@@ -1625,10 +1625,10 @@ totemPlugin::SetSrc (const NPString& aURL)
         return true;
 }
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 
 void
-totemPlugin::SetURL (const char* aURL)
+xplayerPlugin::SetURL (const char* aURL)
 {
         g_free (mURLURI);
 
@@ -1645,7 +1645,7 @@ totemPlugin::SetURL (const char* aURL)
 }
 
 void
-totemPlugin::SetBaseURL (const char *aBaseURL)
+xplayerPlugin::SetBaseURL (const char *aBaseURL)
 {
         g_free (mBaseURI);
 
@@ -1661,12 +1661,12 @@ totemPlugin::SetBaseURL (const char *aBaseURL)
         /* FIXMEchpe: resolve the URI here? */
 }
 
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 
 void
-totemPlugin::SetURL (const NPString& aURL)
+xplayerPlugin::SetURL (const NPString& aURL)
 {
         g_free (mSrcURI);
 
@@ -1690,7 +1690,7 @@ totemPlugin::SetURL (const NPString& aURL)
 }
 
 bool
-totemPlugin::SetQtsrc (const char* aURL)
+xplayerPlugin::SetQtsrc (const char* aURL)
 {
 	/* FIXME can qtsrc have URL extensions? */
 
@@ -1711,7 +1711,7 @@ totemPlugin::SetQtsrc (const char* aURL)
 }
 
 bool
-totemPlugin::SetHref (const char* aURL)
+xplayerPlugin::SetHref (const char* aURL)
 {
 	char *url = NULL, *target = NULL;
 	bool hasExtensions = ParseURLExtensions (aURL, &url, &target);
@@ -1765,7 +1765,7 @@ totemPlugin::SetHref (const char* aURL)
 }
 
 bool
-totemPlugin::ParseURLExtensions (const char* str,
+xplayerPlugin::ParseURLExtensions (const char* str,
 				 char **_url,
 				 char **_target)
 {
@@ -1808,12 +1808,12 @@ totemPlugin::ParseURLExtensions (const char* str,
 	return true;
 }
 
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
 /* Plugin glue functions */
 
 NPError
-totemPlugin::Init (NPMIMEType mimetype,
+xplayerPlugin::Init (NPMIMEType mimetype,
 		   uint16_t mode,
 		   int16_t argc,
 		   char *argn[],
@@ -1839,10 +1839,10 @@ totemPlugin::Init (NPMIMEType mimetype,
 		return NPERR_GENERIC_ERROR;
 	}
 
-        /* FIXMEchpe: should use totemNPObjectWrapper + getter_Retains(),
+        /* FIXMEchpe: should use xplayerNPObjectWrapper + getter_Retains(),
          * but that causes a crash somehow, deep inside libxul...
          */
-        totemNPVariantWrapper ownerDocument;
+        xplayerNPVariantWrapper ownerDocument;
         if (!NPN_GetProperty (mNPP,
                               mPluginElement,
                               NPN_GetStringIdentifier ("ownerDocument"),
@@ -1852,7 +1852,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 		return NPERR_GENERIC_ERROR;
 	}
 
-        totemNPVariantWrapper docURI;
+        xplayerNPVariantWrapper docURI;
         if (!NPN_GetProperty (mNPP,
                               ownerDocument.GetObject(),
                               NPN_GetStringIdentifier ("documentURI"),
@@ -1873,7 +1873,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 	 */
 
         /* This is a property on nsIDOM3Node */
-        totemNPVariantWrapper baseURI;
+        xplayerNPVariantWrapper baseURI;
         if (!NPN_GetProperty (mNPP,
                               mPluginElement,
                               NPN_GetStringIdentifier ("baseURI"),
@@ -1923,7 +1923,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 		height = strtol (value, NULL, 0);
 	}
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	value = (const char *) g_hash_table_lookup (args, "vidwidth");
 	if (value != NULL) {
 		width = strtol (value, NULL, 0);
@@ -1932,7 +1932,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 	if (value != NULL) {
 		height = strtol (value, NULL, 0);
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
 	/* Are we hidden? */
 	/* Treat hidden without a value as TRUE */
@@ -1971,7 +1971,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 
         SetSrc (src);
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	/* http://windowssdk.msdn.microsoft.com/en-us/library/aa392440(VS.80).aspx */
 	const char *filename = (const char *) g_hash_table_lookup (args, "filename");
 	if (!filename)
@@ -1986,9 +1986,9 @@ totemPlugin::Init (NPMIMEType mimetype,
         if (base)
 		SetBaseURL (base);
 
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	const char *href = (const char *) g_hash_table_lookup (args, "href");
 	if (href) {
 		SetHref (href);
@@ -2009,24 +2009,24 @@ totemPlugin::Init (NPMIMEType mimetype,
 	if (qtsrc) {
 		SetQtsrc (qtsrc);
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
 /* FIXME */
-#ifdef TOTEM_MULLY_PLUGIN
+#ifdef XPLAYER_MULLY_PLUGIN
 	value = (const char *) g_hash_table_lookup (args, "video");
 	if (value) {
                 SetSrc (value);
 	}
-#endif /* TOTEM_MULLY_PLUGIN */
+#endif /* XPLAYER_MULLY_PLUGIN */
 
-#ifdef TOTEM_CONE_PLUGIN
+#ifdef XPLAYER_CONE_PLUGIN
 	value = (const char *) g_hash_table_lookup (args, "target");
 	if (value) {
                 SetSrc (value);
 	}
-#endif /* TOTEM_CONE_PLUGIN */
+#endif /* XPLAYER_CONE_PLUGIN */
 
-#ifdef TOTEM_VEGAS_PLUGIN
+#ifdef XPLAYER_VEGAS_PLUGIN
 	char *oldSrc;
 	const char *useURI;
 	oldSrc = g_strdup (mSrcURI);
@@ -2035,7 +2035,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 	SetSrc ("");
 
 	/* Is it too small to be a video? */
-	if (width != -1 && width < TOTEM_VEGAS_SMALL_SWF_SIZE) {
+	if (width != -1 && width < XPLAYER_VEGAS_SMALL_SWF_SIZE) {
 		g_free (oldSrc);
 		oldSrc = NULL;
 	}
@@ -2043,16 +2043,16 @@ totemPlugin::Init (NPMIMEType mimetype,
 	useURI = NULL;
 	/* Don't do anything if there's no source */
 	if (oldSrc) {
-		if (totem_pl_parser_can_parse_from_uri (oldSrc, TRUE))
+		if (xplayer_pl_parser_can_parse_from_uri (oldSrc, TRUE))
 			useURI = oldSrc;
-		else if (totem_pl_parser_can_parse_from_uri (mDocumentURI, TRUE))
+		else if (xplayer_pl_parser_can_parse_from_uri (mDocumentURI, TRUE))
 			useURI = mDocumentURI;
 
 		value = (const char *) g_hash_table_lookup (args, "flashvars");
 		if (useURI != NULL && value != NULL) {
-			TotemQueueCommand *cmd;
-			cmd = g_new0 (TotemQueueCommand, 1);
-			cmd->type = TOTEM_QUEUE_TYPE_SET_PLAYLIST;
+			XplayerQueueCommand *cmd;
+			cmd = g_new0 (XplayerQueueCommand, 1);
+			cmd->type = XPLAYER_QUEUE_TYPE_SET_PLAYLIST;
 			cmd->string = g_strdup (useURI);
 			QueueCommand (cmd);
 		}
@@ -2062,12 +2062,12 @@ totemPlugin::Init (NPMIMEType mimetype,
 	mAutoPlay = FALSE;
 #endif
 
-#if 0 //def TOTEM_MULLY_PLUGIN
+#if 0 //def XPLAYER_MULLY_PLUGIN
 	/* Click to play behaviour of the DivX plugin */
 	char *previewimage = (const char *) g_hash_table_lookup (args, "previewimage");
 	if (value != NULL)
 		mHref = g_strdup (mSrc);
-#endif /* TOTEM_MULLY_PLUGIN */
+#endif /* XPLAYER_MULLY_PLUGIN */
 
         /* FIXMEchpe: check if this doesn't work anymore because the URLs aren't fully resolved! */
 	/* If we're set to start automatically, we'll use the src stream */
@@ -2078,22 +2078,22 @@ totemPlugin::Init (NPMIMEType mimetype,
 	}
 
 	/* Caching behaviour */
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	if (strcmp (mimetype, "video/quicktime") != 0) {
 		mCache = true;
 	}
 
 	mCache = GetBooleanValue (args, "cache", mCache);
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
-#if defined (TOTEM_NARROWSPACE_PLUGIN)
+#if defined (XPLAYER_NARROWSPACE_PLUGIN)
 	mControllerHidden = !GetBooleanValue (args, "controller", true);
 
 	mAutoPlay = GetBooleanValue (args, "autoplay", true);
 
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
-#ifdef TOTEM_CONE_PLUGIN
+#ifdef XPLAYER_CONE_PLUGIN
 	/* VLC plugin defaults to have its controller hidden.
 	 * But we don't want to hide it if VLC wasn't explicitely requested.
 	 * VLC plugin checks for toolbar argument in vlcplugin.cpp: VlcPlugin::init()
@@ -2111,7 +2111,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 		mControllerHidden = true;
 #endif
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	/* uimode is either invisible, none, mini, or full
 	 * http://windowssdk.msdn.microsoft.com/en-us/library/aa392439(VS.80).aspx */
 	value = (char *) g_hash_table_lookup (args, "uimode");
@@ -2134,7 +2134,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 					      GetBooleanValue (args, "showcontrols", true));
 
 	mShowStatusbar = GetBooleanValue (args, "showstatusbar", mShowStatusbar);
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
 	/* Whether to NOT autostart */
 	//FIXME Doesn't handle playcount, or loop with numbers
@@ -2145,25 +2145,25 @@ totemPlugin::Init (NPMIMEType mimetype,
 
 	/* Minimum heights of the different plugins, note that the
 	 * controllers need to be showing, otherwise it's useless */
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
 	if (height == 40 && !mControllerHidden) {
 		mAudioOnly = true;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
-#if defined(TOTEM_NARROWSPACE_PLUGIN)
+#endif /* XPLAYER_GMP_PLUGIN */
+#if defined(XPLAYER_NARROWSPACE_PLUGIN)
 	if (height > 0 && height <= 16 && !mControllerHidden) {
 		mAudioOnly = true;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	/* We need to autostart if we're using an HREF
 	 * otherwise the start image isn't shown */
 	if (mHref) {
 		mExpectingStream = true;
 		mAutoPlay = true;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
 	/* Dump some disagnostics */
 	D ("mSrcURI: %s", mSrcURI ? mSrcURI : "");
@@ -2174,10 +2174,10 @@ totemPlugin::Init (NPMIMEType mimetype,
 	D ("mHidden: %d", mHidden);
 	D ("mAudioOnly: %d", mAudioOnly);
 	D ("mAutoPlay: %d, mRepeat: %d", mAutoPlay, mRepeat);
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
 	D ("mHref: %s", mHref ? mHref : "");
 	D ("mTarget: %s", mTarget ? mTarget : "");
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
 
 	g_hash_table_destroy (args);
 
@@ -2185,7 +2185,7 @@ totemPlugin::Init (NPMIMEType mimetype,
 }
 
 NPError
-totemPlugin::SetWindow (NPWindow *window)
+xplayerPlugin::SetWindow (NPWindow *window)
 {
 	if (mHidden && window->window != 0) {
 		Dm ("SetWindow: hidden, can't set window");
@@ -2215,7 +2215,7 @@ totemPlugin::SetWindow (NPWindow *window)
 }
 
 NPError
-totemPlugin::NewStream (NPMIMEType type,
+xplayerPlugin::NewStream (NPMIMEType type,
 			NPStream* stream,
 			NPBool seekable,
 			uint16* stype)
@@ -2283,20 +2283,20 @@ totemPlugin::NewStream (NPMIMEType type,
 		mStreamType = NP_ASFILE;
 	}
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Loading;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Loading;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_Buffering;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_Buffering;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 
 	mStream = stream;
 
@@ -2324,7 +2324,7 @@ totemPlugin::NewStream (NPMIMEType type,
 }
 
 NPError
-totemPlugin::DestroyStream (NPStream* stream,
+xplayerPlugin::DestroyStream (NPStream* stream,
 			    NPError reason)
 {
 	if (!mStream || mStream != stream)
@@ -2348,7 +2348,7 @@ totemPlugin::DestroyStream (NPStream* stream,
 }
 
 int32_t
-totemPlugin::WriteReady (NPStream *stream)
+xplayerPlugin::WriteReady (NPStream *stream)
 {
 	/* FIXME this could probably be an assertion instead */
 	if (!mStream || mStream != stream)
@@ -2373,7 +2373,7 @@ totemPlugin::WriteReady (NPStream *stream)
 }
 
 int32_t
-totemPlugin::Write (NPStream *stream,
+xplayerPlugin::Write (NPStream *stream,
 		    int32_t offset,
 		    int32_t len,
 		    void *buffer)
@@ -2400,18 +2400,18 @@ totemPlugin::Write (NPStream *stream,
 
 		mCheckedForPlaylist = true;
 
-		if (totem_pl_parser_can_parse_from_data ((const char *) buffer, len, TRUE /* FIXME */)) {
+		if (xplayer_pl_parser_can_parse_from_data ((const char *) buffer, len, TRUE /* FIXME */)) {
 			Dm ("Is playlist; need to wait for the file to be downloaded completely");
 			mIsPlaylist = true;
 
 			/* Close the viewer */
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"CloseStream",
 							NULL);
 
 			return len;
 		} else {
-			D ("Is not playlist: totem_pl_parser_can_parse_from_data failed (len %d)", len);
+			D ("Is not playlist: xplayer_pl_parser_can_parse_from_data failed (len %d)", len);
 		}
 	}
 
@@ -2442,7 +2442,7 @@ totemPlugin::Write (NPStream *stream,
 }
 
 void
-totemPlugin::StreamAsFile (NPStream *stream,
+xplayerPlugin::StreamAsFile (NPStream *stream,
 			   const char* fname)
 {
 	if (!mStream || mStream != stream)
@@ -2451,7 +2451,7 @@ totemPlugin::StreamAsFile (NPStream *stream,
 	D ("StreamAsFile filename '%s'", fname);
 
 	if (!mCheckedForPlaylist) {
-		mIsPlaylist = totem_pl_parser_can_parse_from_filename
+		mIsPlaylist = xplayer_pl_parser_can_parse_from_filename
 				(fname, TRUE) != FALSE;
 	}
 
@@ -2519,24 +2519,24 @@ totemPlugin::StreamAsFile (NPStream *stream,
 		g_error_free (error);
 		return;
 	}
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemNarrowSpacePlayer *scriptable = static_cast<totemNarrowSpacePlayer*>(object);
-		scriptable->mPluginState = totemNarrowSpacePlayer::eState_Complete;
+                xplayerNarrowSpacePlayer *scriptable = static_cast<xplayerNarrowSpacePlayer*>(object);
+		scriptable->mPluginState = xplayerNarrowSpacePlayer::eState_Complete;
 	}
-#endif /* TOTEM_NARROWSPACE_PLUGIN */
-#ifdef TOTEM_GMP_PLUGIN
+#endif /* XPLAYER_NARROWSPACE_PLUGIN */
+#ifdef XPLAYER_GMP_PLUGIN
         if (!mNPObjects[ePluginScriptable].IsNull ()) {
                 NPObject *object = mNPObjects[ePluginScriptable];
-                totemGMPPlayer *scriptable = static_cast<totemGMPPlayer*>(object);
-		scriptable->mPluginState = totemGMPPlayer::eState_Ready;
+                xplayerGMPPlayer *scriptable = static_cast<xplayerGMPPlayer*>(object);
+		scriptable->mPluginState = xplayerGMPPlayer::eState_Ready;
 	}
-#endif /* TOTEM_GMP_PLUGIN */
+#endif /* XPLAYER_GMP_PLUGIN */
 }
 
 void
-totemPlugin::URLNotify (const char *url,
+xplayerPlugin::URLNotify (const char *url,
 		        NPReason reason,
 		        void *notifyData)
 {
@@ -2553,7 +2553,7 @@ totemPlugin::URLNotify (const char *url,
 	 */
 	if (mExpectingStream) {
 		if (reason == NPRES_NETWORK_ERR) {
-			totem_dbus_proxy_call_no_reply (mViewerProxy,
+			xplayer_dbus_proxy_call_no_reply (mViewerProxy,
 							"SetErrorLogo",
 							NULL);
 		} else if (reason != NPRES_DONE) {
@@ -2566,55 +2566,55 @@ totemPlugin::URLNotify (const char *url,
 }
 
 NPObject*
-totemPlugin::GetNPObject (ObjectEnum which)
+xplayerPlugin::GetNPObject (ObjectEnum which)
 {
   if (!mNPObjects[which].IsNull ())
     return mNPObjects[which];
 
-  totemNPClass_base *npclass = 0;
+  xplayerNPClass_base *npclass = 0;
 
-#if defined(TOTEM_GMP_PLUGIN)
+#if defined(XPLAYER_GMP_PLUGIN)
   switch (which) {
     case ePluginScriptable:
-      npclass = totemGMPPlayerNPClass::Instance();
+      npclass = xplayerGMPPlayerNPClass::Instance();
       break;
     case eGMPControls:
-      npclass = totemGMPControlsNPClass::Instance();
+      npclass = xplayerGMPControlsNPClass::Instance();
       break;
     case eGMPNetwork:
-      npclass = totemGMPNetworkNPClass::Instance();
+      npclass = xplayerGMPNetworkNPClass::Instance();
       break;
     case eGMPSettings:
-      npclass = totemGMPSettingsNPClass::Instance();
+      npclass = xplayerGMPSettingsNPClass::Instance();
       break;
     case eLastNPObject:
       g_assert_not_reached ();
   }
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
-  npclass = totemNarrowSpacePlayerNPClass::Instance();
-#elif defined(TOTEM_MULLY_PLUGIN)
-  npclass = totemMullYPlayerNPClass::Instance();
-#elif defined(TOTEM_VEGAS_PLUGIN)
-  npclass = totemVegasPlayerNPClass::Instance();
-#elif defined(TOTEM_CONE_PLUGIN)
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
+  npclass = xplayerNarrowSpacePlayerNPClass::Instance();
+#elif defined(XPLAYER_MULLY_PLUGIN)
+  npclass = xplayerMullYPlayerNPClass::Instance();
+#elif defined(XPLAYER_VEGAS_PLUGIN)
+  npclass = xplayerVegasPlayerNPClass::Instance();
+#elif defined(XPLAYER_CONE_PLUGIN)
   switch (which) {
     case ePluginScriptable:
-      npclass = totemConeNPClass::Instance();
+      npclass = xplayerConeNPClass::Instance();
       break;
     case eConeAudio:
-      npclass = totemConeAudioNPClass::Instance();
+      npclass = xplayerConeAudioNPClass::Instance();
       break;
     case eConeInput:
-      npclass = totemConeInputNPClass::Instance();
+      npclass = xplayerConeInputNPClass::Instance();
       break;
     case eConePlaylist:
-      npclass = totemConePlaylistNPClass::Instance();
+      npclass = xplayerConePlaylistNPClass::Instance();
       break;
     case eConePlaylistItems:
-      npclass = totemConePlaylistItemsNPClass::Instance();
+      npclass = xplayerConePlaylistItemsNPClass::Instance();
       break;
     case eConeVideo:
-      npclass = totemConeVideoNPClass::Instance();
+      npclass = xplayerConeVideoNPClass::Instance();
       break;
     case eLastNPObject:
       g_assert_not_reached ();
@@ -2636,7 +2636,7 @@ totemPlugin::GetNPObject (ObjectEnum which)
 }
 
 NPError
-totemPlugin::GetScriptableNPObject (void *_retval)
+xplayerPlugin::GetScriptableNPObject (void *_retval)
 {
   D ("GetScriptableNPObject [%p]", (void *) this);
 
@@ -2651,32 +2651,32 @@ totemPlugin::GetScriptableNPObject (void *_retval)
 }
 
 /* static */ NPError
-totemPlugin::Initialise ()
+xplayerPlugin::Initialise ()
 {
 	return NPERR_NO_ERROR;
 }
 
 /* static */ NPError
-totemPlugin::Shutdown ()
+xplayerPlugin::Shutdown ()
 {
-#if defined(TOTEM_GMP_PLUGIN)
-        totemGMPPlayerNPClass::Shutdown ();
-        totemGMPControlsNPClass::Shutdown ();
-        totemGMPNetworkNPClass::Shutdown ();
-        totemGMPSettingsNPClass::Shutdown ();
-#elif defined(TOTEM_NARROWSPACE_PLUGIN)
-        totemNarrowSpacePlayerNPClass::Shutdown ();
-#elif defined(TOTEM_MULLY_PLUGIN)
-        totemMullYPlayerNPClass::Shutdown ();
-#elif defined(TOTEM_CONE_PLUGIN)
-        totemConeNPClass::Shutdown ();
-        totemConeAudioNPClass::Shutdown ();
-        totemConeInputNPClass::Shutdown ();
-        totemConePlaylistNPClass::Shutdown ();
-        totemConePlaylistItemsNPClass::Shutdown ();
-        totemConeVideoNPClass::Shutdown ();
-#elif defined(TOTEM_VEGAS_PLUGIN)
-        totemVegasPlayerNPClass::Shutdown ();
+#if defined(XPLAYER_GMP_PLUGIN)
+        xplayerGMPPlayerNPClass::Shutdown ();
+        xplayerGMPControlsNPClass::Shutdown ();
+        xplayerGMPNetworkNPClass::Shutdown ();
+        xplayerGMPSettingsNPClass::Shutdown ();
+#elif defined(XPLAYER_NARROWSPACE_PLUGIN)
+        xplayerNarrowSpacePlayerNPClass::Shutdown ();
+#elif defined(XPLAYER_MULLY_PLUGIN)
+        xplayerMullYPlayerNPClass::Shutdown ();
+#elif defined(XPLAYER_CONE_PLUGIN)
+        xplayerConeNPClass::Shutdown ();
+        xplayerConeAudioNPClass::Shutdown ();
+        xplayerConeInputNPClass::Shutdown ();
+        xplayerConePlaylistNPClass::Shutdown ();
+        xplayerConePlaylistItemsNPClass::Shutdown ();
+        xplayerConeVideoNPClass::Shutdown ();
+#elif defined(XPLAYER_VEGAS_PLUGIN)
+        xplayerVegasPlayerNPClass::Shutdown ();
 #else
 #error Unknown plugin type
 #endif

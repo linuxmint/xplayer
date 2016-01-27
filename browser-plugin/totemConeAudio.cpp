@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemConeAudio.h"
+#include "xplayerPlugin.h"
+#include "xplayerConeAudio.h"
 
 static const char *propertyNames[] = {
   "channel"
@@ -40,31 +40,31 @@ static const char *methodNames[] = {
   "toggleMute"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemConeAudio,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerConeAudio,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemConeAudio::totemConeAudio (NPP aNPP)
-  : totemNPObject (aNPP),
+xplayerConeAudio::xplayerConeAudio (NPP aNPP)
+  : xplayerNPObject (aNPP),
     mMute (false),
     mSavedVolume (0.5)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemConeAudio::~totemConeAudio ()
+xplayerConeAudio::~xplayerConeAudio ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemConeAudio::InvokeByIndex (int aIndex,
+xplayerConeAudio::InvokeByIndex (int aIndex,
                                const NPVariant *argv,
                                uint32_t argc,
                                NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemConeAudio);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerConeAudio);
 
   switch (Methods (aIndex)) {
     case eToggleMute: {
@@ -79,10 +79,10 @@ totemConeAudio::InvokeByIndex (int aIndex,
 }
 
 bool
-totemConeAudio::GetPropertyByIndex (int aIndex,
+xplayerConeAudio::GetPropertyByIndex (int aIndex,
                                     NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemConeAudio);
+  XPLAYER_LOG_GETTER (aIndex, xplayerConeAudio);
 
   switch (Properties (aIndex)) {
     case eMute:
@@ -93,7 +93,7 @@ totemConeAudio::GetPropertyByIndex (int aIndex,
 
     case eChannel:
     case eTrack:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
       return VoidVariant (_result);
   }
 
@@ -101,10 +101,10 @@ totemConeAudio::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemConeAudio::SetPropertyByIndex (int aIndex,
+xplayerConeAudio::SetPropertyByIndex (int aIndex,
                                     const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemConeAudio);
+  XPLAYER_LOG_SETTER (aIndex, xplayerConeAudio);
 
   switch (Properties (aIndex)) {
     case eVolume: {
@@ -131,7 +131,7 @@ totemConeAudio::SetPropertyByIndex (int aIndex,
 
     case eChannel:
     case eTrack:
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
       return true;
   }
 

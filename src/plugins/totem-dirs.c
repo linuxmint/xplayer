@@ -26,15 +26,15 @@
  */
 
 /**
- * SECTION:totem-plugin
+ * SECTION:xplayer-plugin
  * @short_description: base plugin class and loading/unloading functions
  * @stability: Unstable
- * @include: totem-dirs.h
+ * @include: xplayer-dirs.h
  *
- * libpeas is used as a general-purpose architecture for adding plugins to Totem, with
+ * libpeas is used as a general-purpose architecture for adding plugins to Xplayer, with
  * derived support for different programming languages.
  *
- * The functions in totem-dirs.h are used to allow plugins to find and load files installed alongside the plugins, such as UI files.
+ * The functions in xplayer-dirs.h are used to allow plugins to find and load files installed alongside the plugins, such as UI files.
  **/
 
 #ifdef HAVE_CONFIG_H
@@ -43,24 +43,24 @@
 
 #include <glib.h>
 
-#include "totem-dirs.h"
-#include "totem-plugins-engine.h"
-#include "totem-uri.h"
-#include "totem-interface.h"
+#include "xplayer-dirs.h"
+#include "xplayer-plugins-engine.h"
+#include "xplayer-uri.h"
+#include "xplayer-interface.h"
 
 #define UNINSTALLED_PLUGINS_LOCATION "plugins"
 
 /**
- * totem_get_plugin_paths:
+ * xplayer_get_plugin_paths:
  *
- * Return a %NULL-terminated array of paths to directories which can contain Totem plugins. This respects the GSettings disable_user_plugins setting.
+ * Return a %NULL-terminated array of paths to directories which can contain Xplayer plugins. This respects the GSettings disable_user_plugins setting.
  *
  * Return value: (transfer full): a %NULL-terminated array of paths to plugin directories
  *
  * Since: 2.90.0
  **/
 char **
-totem_get_plugin_paths (void)
+xplayer_get_plugin_paths (void)
 {
 	GPtrArray *paths;
 	char  *path;
@@ -70,7 +70,7 @@ totem_get_plugin_paths (void)
 	paths = g_ptr_array_new ();
 	uninstalled = FALSE;
 
-#ifdef TOTEM_RUN_IN_SOURCE_TREE
+#ifdef XPLAYER_RUN_IN_SOURCE_TREE
 	path = g_build_filename (UNINSTALLED_PLUGINS_LOCATION, NULL);
 	if (g_file_test (path, G_FILE_TEST_IS_DIR) != FALSE) {
 		uninstalled = TRUE;
@@ -78,16 +78,16 @@ totem_get_plugin_paths (void)
 	}
 #endif
 
-	settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	if (g_settings_get_boolean (settings, "disable-user-plugins") == FALSE) {
-		path = g_build_filename (totem_data_dot_dir (), "plugins", NULL);
+		path = g_build_filename (xplayer_data_dot_dir (), "plugins", NULL);
 		g_ptr_array_add (paths, path);
 	}
 
 	g_object_unref (settings);
 
 	if (uninstalled == FALSE) {
-		path = g_strdup (TOTEM_PLUGIN_DIR);
+		path = g_strdup (XPLAYER_PLUGIN_DIR);
 		g_ptr_array_add (paths, path);
 	}
 
@@ -98,13 +98,13 @@ totem_get_plugin_paths (void)
 }
 
 /**
- * totem_plugin_find_file:
+ * xplayer_plugin_find_file:
  * @plugin_name: the plugin name
  * @file: the file to find
  *
  * Finds the specified @file by looking in the plugin paths
- * listed by totem_get_plugin_paths() and then in the system
- * Totem data directory.
+ * listed by xplayer_get_plugin_paths() and then in the system
+ * Xplayer data directory.
  *
  * This should be used by plugins to find plugin-specific
  * resource files.
@@ -112,16 +112,16 @@ totem_get_plugin_paths (void)
  * Return value: a newly-allocated absolute path for the file, or %NULL
  **/
 char *
-totem_plugin_find_file (const char *plugin_name,
+xplayer_plugin_find_file (const char *plugin_name,
 			const char *file)
 {
-	TotemPluginsEngine *engine;
+	XplayerPluginsEngine *engine;
 	PeasPluginInfo *info;
 	const char *dir;
 	char *tmp;
 	char *ret = NULL;
 
-	engine = totem_plugins_engine_get_default (NULL);
+	engine = xplayer_plugins_engine_get_default (NULL);
 	info = peas_engine_get_plugin_info (PEAS_ENGINE (engine), plugin_name);
 
 	dir = peas_plugin_info_get_module_dir (info);
@@ -142,7 +142,7 @@ totem_plugin_find_file (const char *plugin_name,
 
 	/* global data files */
 	if (ret == NULL)
-		ret = totem_interface_get_full_path (file);
+		ret = xplayer_interface_get_full_path (file);
 
 	g_object_unref (engine);
 
@@ -161,7 +161,7 @@ totem_plugin_find_file (const char *plugin_name,
 }
 
 /**
- * totem_plugin_load_interface:
+ * xplayer_plugin_load_interface:
  * @plugin_name: the plugin name
  * @name: interface filename
  * @fatal: %TRUE if it's a fatal error if the interface can't be loaded
@@ -176,7 +176,7 @@ totem_plugin_find_file (const char *plugin_name,
  * Return value: (transfer full): the #GtkBuilder instance for the interface
  **/
 GtkBuilder *
-totem_plugin_load_interface (const char *plugin_name,
+xplayer_plugin_load_interface (const char *plugin_name,
 			     const char *name,
 			     gboolean fatal,
 			     GtkWindow *parent,
@@ -185,8 +185,8 @@ totem_plugin_load_interface (const char *plugin_name,
 	GtkBuilder *builder = NULL;
 	char *filename;
 
-	filename = totem_plugin_find_file (plugin_name, name);
-	builder = totem_interface_load_with_full_path (filename,
+	filename = xplayer_plugin_find_file (plugin_name, name);
+	builder = xplayer_interface_load_with_full_path (filename,
 						       fatal,
 						       parent,
 						       user_data);

@@ -16,10 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * See license_change file for details.
  *
@@ -35,30 +35,30 @@
 #include <libpeas/peas-activatable.h>
 #include <string.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 #include "backend/bacon-video-widget.h"
 
-#define TOTEM_TYPE_SCREENSAVER_PLUGIN		(totem_screensaver_plugin_get_type ())
-#define TOTEM_SCREENSAVER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_SCREENSAVER_PLUGIN, TotemScreensaverPlugin))
-#define TOTEM_SCREENSAVER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), TOTEM_TYPE_SCREENSAVER_PLUGIN, TotemScreensaverPluginClass))
-#define TOTEM_IS_SCREENSAVER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), TOTEM_TYPE_SCREENSAVER_PLUGIN))
-#define TOTEM_IS_SCREENSAVER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), TOTEM_TYPE_SCREENSAVER_PLUGIN))
-#define TOTEM_SCREENSAVER_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), TOTEM_TYPE_SCREENSAVER_PLUGIN, TotemScreensaverPluginClass))
+#define XPLAYER_TYPE_SCREENSAVER_PLUGIN		(xplayer_screensaver_plugin_get_type ())
+#define XPLAYER_SCREENSAVER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_SCREENSAVER_PLUGIN, XplayerScreensaverPlugin))
+#define XPLAYER_SCREENSAVER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), XPLAYER_TYPE_SCREENSAVER_PLUGIN, XplayerScreensaverPluginClass))
+#define XPLAYER_IS_SCREENSAVER_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_TYPE ((o), XPLAYER_TYPE_SCREENSAVER_PLUGIN))
+#define XPLAYER_IS_SCREENSAVER_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), XPLAYER_TYPE_SCREENSAVER_PLUGIN))
+#define XPLAYER_SCREENSAVER_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), XPLAYER_TYPE_SCREENSAVER_PLUGIN, XplayerScreensaverPluginClass))
 
 typedef struct {
-	TotemObject *totem;
+	XplayerObject *xplayer;
 	BaconVideoWidget *bvw;
 	GSettings *settings;
 
 	guint          handler_id_playing;
 	guint          handler_id_metadata;
 	guint          inhibit_cookie;
-} TotemScreensaverPluginPrivate;
+} XplayerScreensaverPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_SCREENSAVER_PLUGIN,
-		      TotemScreensaverPlugin,
-		      totem_screensaver_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_SCREENSAVER_PLUGIN,
+		      XplayerScreensaverPlugin,
+		      xplayer_screensaver_plugin)
 
 static gboolean
 has_video (BaconVideoWidget *bvw)
@@ -74,24 +74,24 @@ has_video (BaconVideoWidget *bvw)
 }
 
 static void
-totem_screensaver_update_from_state (TotemObject *totem,
-				     TotemScreensaverPlugin *pi)
+xplayer_screensaver_update_from_state (XplayerObject *xplayer,
+				     XplayerScreensaverPlugin *pi)
 {
 	gboolean lock_screensaver_on_audio, has_video_frames;
 	BaconVideoWidget *bvw;
 
-	bvw = BACON_VIDEO_WIDGET (totem_get_video_widget ((Totem *)(totem)));
+	bvw = BACON_VIDEO_WIDGET (xplayer_get_video_widget ((Xplayer *)(xplayer)));
 
 	lock_screensaver_on_audio = g_settings_get_boolean (pi->priv->settings, "lock-screensaver-on-audio");
 	has_video_frames = has_video (bvw);
 
-	if ((totem_is_playing (totem) != FALSE && has_video_frames) ||
-	    (totem_is_playing (totem) != FALSE && !lock_screensaver_on_audio)) {
+	if ((xplayer_is_playing (xplayer) != FALSE && has_video_frames) ||
+	    (xplayer_is_playing (xplayer) != FALSE && !lock_screensaver_on_audio)) {
 		if (pi->priv->inhibit_cookie == 0) {
 			GtkWindow *window;
 
-			window = totem_get_main_window (totem);
-			pi->priv->inhibit_cookie = gtk_application_inhibit (GTK_APPLICATION (totem),
+			window = xplayer_get_main_window (xplayer);
+			pi->priv->inhibit_cookie = gtk_application_inhibit (GTK_APPLICATION (xplayer),
 										window,
 										GTK_APPLICATION_INHIBIT_IDLE,
 										_("Playing a movie"));
@@ -99,45 +99,45 @@ totem_screensaver_update_from_state (TotemObject *totem,
 		}
 	} else {
 		if (pi->priv->inhibit_cookie != 0) {
-			gtk_application_uninhibit (GTK_APPLICATION (pi->priv->totem), pi->priv->inhibit_cookie);
+			gtk_application_uninhibit (GTK_APPLICATION (pi->priv->xplayer), pi->priv->inhibit_cookie);
 			pi->priv->inhibit_cookie = 0;
 		}
 	}
 }
 
 static void
-property_notify_cb (TotemObject *totem,
+property_notify_cb (XplayerObject *xplayer,
 		    GParamSpec *spec,
-		    TotemScreensaverPlugin *pi)
+		    XplayerScreensaverPlugin *pi)
 {
-	totem_screensaver_update_from_state (totem, pi);
+	xplayer_screensaver_update_from_state (xplayer, pi);
 }
 
 static void
-got_metadata_cb (BaconVideoWidget *bvw, TotemScreensaverPlugin *pi)
+got_metadata_cb (BaconVideoWidget *bvw, XplayerScreensaverPlugin *pi)
 {
-	totem_screensaver_update_from_state (pi->priv->totem, pi);
+	xplayer_screensaver_update_from_state (pi->priv->xplayer, pi);
 }
 
 static void
-lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, TotemScreensaverPlugin *pi)
+lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, XplayerScreensaverPlugin *pi)
 {
-	totem_screensaver_update_from_state (pi->priv->totem, pi);
+	xplayer_screensaver_update_from_state (pi->priv->xplayer, pi);
 }
 
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemScreensaverPlugin *pi = TOTEM_SCREENSAVER_PLUGIN (plugin);
-	TotemObject *totem;
+	XplayerScreensaverPlugin *pi = XPLAYER_SCREENSAVER_PLUGIN (plugin);
+	XplayerObject *xplayer;
 
-	totem = g_object_get_data (G_OBJECT (plugin), "object");
-	pi->priv->bvw = BACON_VIDEO_WIDGET (totem_get_video_widget (totem));
+	xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+	pi->priv->bvw = BACON_VIDEO_WIDGET (xplayer_get_video_widget (xplayer));
 
-	pi->priv->settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	pi->priv->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	g_signal_connect (pi->priv->settings, "changed::lock-screensaver-on-audio", (GCallback) lock_screensaver_on_audio_changed_cb, plugin);
 
-	pi->priv->handler_id_playing = g_signal_connect (G_OBJECT (totem),
+	pi->priv->handler_id_playing = g_signal_connect (G_OBJECT (xplayer),
 						   "notify::playing",
 						   G_CALLBACK (property_notify_cb),
 						   pi);
@@ -146,23 +146,23 @@ impl_activate (PeasActivatable *plugin)
 						    G_CALLBACK (got_metadata_cb),
 						    pi);
 
-	pi->priv->totem = g_object_ref (totem);
+	pi->priv->xplayer = g_object_ref (xplayer);
 
 	/* Force setting the current status */
-	totem_screensaver_update_from_state (totem, pi);
+	xplayer_screensaver_update_from_state (xplayer, pi);
 }
 
 static void
 impl_deactivate	(PeasActivatable *plugin)
 {
-	TotemScreensaverPlugin *pi = TOTEM_SCREENSAVER_PLUGIN (plugin);
+	XplayerScreensaverPlugin *pi = XPLAYER_SCREENSAVER_PLUGIN (plugin);
 
 	g_object_unref (pi->priv->settings);
 
 	if (pi->priv->handler_id_playing != 0) {
-		TotemObject *totem;
-		totem = g_object_get_data (G_OBJECT (plugin), "object");
-		g_signal_handler_disconnect (G_OBJECT (totem), pi->priv->handler_id_playing);
+		XplayerObject *xplayer;
+		xplayer = g_object_get_data (G_OBJECT (plugin), "object");
+		g_signal_handler_disconnect (G_OBJECT (xplayer), pi->priv->handler_id_playing);
 		pi->priv->handler_id_playing = 0;
 	}
 	if (pi->priv->handler_id_metadata != 0) {
@@ -171,11 +171,11 @@ impl_deactivate	(PeasActivatable *plugin)
 	}
 
 	if (pi->priv->inhibit_cookie != 0) {
-		gtk_application_uninhibit (GTK_APPLICATION (pi->priv->totem), pi->priv->inhibit_cookie);
+		gtk_application_uninhibit (GTK_APPLICATION (pi->priv->xplayer), pi->priv->inhibit_cookie);
 		pi->priv->inhibit_cookie = 0;
 	}
 
-	g_object_unref (pi->priv->totem);
+	g_object_unref (pi->priv->xplayer);
 	g_object_unref (pi->priv->bvw);
 }
 

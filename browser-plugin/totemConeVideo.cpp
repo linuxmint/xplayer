@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,8 +26,8 @@
 
 #include <glib.h>
 
-#include "totemPlugin.h"
-#include "totemConeVideo.h"
+#include "xplayerPlugin.h"
+#include "xplayerConeVideo.h"
 
 static const char *propertyNames[] = {
   "aspectRatio",
@@ -43,29 +43,29 @@ static const char *methodNames[] = {
   "toggleTeletext"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemConeVideo,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerConeVideo,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemConeVideo::totemConeVideo (NPP aNPP)
-  : totemNPObject (aNPP)
+xplayerConeVideo::xplayerConeVideo (NPP aNPP)
+  : xplayerNPObject (aNPP)
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemConeVideo::~totemConeVideo ()
+xplayerConeVideo::~xplayerConeVideo ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 }
 
 bool
-totemConeVideo::InvokeByIndex (int aIndex,
+xplayerConeVideo::InvokeByIndex (int aIndex,
                                const NPVariant *argv,
                                uint32_t argc,
                                NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemConeVideo);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerConeVideo);
 
   switch (Methods (aIndex)) {
     case eToggleFullscreen: {
@@ -76,7 +76,7 @@ totemConeVideo::InvokeByIndex (int aIndex,
     }
 
     case eToggleTeletext:
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemConeVideo);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerConeVideo);
       return VoidVariant (_result);
   }
 
@@ -84,10 +84,10 @@ totemConeVideo::InvokeByIndex (int aIndex,
 }
 
 bool
-totemConeVideo::GetPropertyByIndex (int aIndex,
+xplayerConeVideo::GetPropertyByIndex (int aIndex,
                                     NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemConeVideo);
+  XPLAYER_LOG_GETTER (aIndex, xplayerConeVideo);
 
   switch (Properties (aIndex)) {
     case eFullscreen:
@@ -98,7 +98,7 @@ totemConeVideo::GetPropertyByIndex (int aIndex,
     case eSubtitle:
     case eTeletext:
     case eWidth:
-      TOTEM_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_GETTER_UNIMPLEMENTED (aIndex, _result);
       return VoidVariant (_result);
   }
 
@@ -106,10 +106,10 @@ totemConeVideo::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemConeVideo::SetPropertyByIndex (int aIndex,
+xplayerConeVideo::SetPropertyByIndex (int aIndex,
                                     const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemConeVideo);
+  XPLAYER_LOG_SETTER (aIndex, xplayerConeVideo);
 
   switch (Properties (aIndex)) {
     case eFullscreen: {
@@ -124,7 +124,7 @@ totemConeVideo::SetPropertyByIndex (int aIndex,
     case eAspectRatio:
     case eSubtitle:
     case eTeletext:
-      TOTEM_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
+      XPLAYER_WARN_SETTER_UNIMPLEMENTED (aIndex, _result);
       return true;
 
     case eHeight:

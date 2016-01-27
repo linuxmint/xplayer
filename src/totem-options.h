@@ -1,4 +1,4 @@
-/* totem-options.h
+/* xplayer-options.h
 
    Copyright (C) 2004,2007 Bastien Nocera <hadess@hadess.net>
 
@@ -20,12 +20,12 @@
    Author: Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef TOTEM_OPTIONS_H
-#define TOTEM_OPTIONS_H
+#ifndef XPLAYER_OPTIONS_H
+#define XPLAYER_OPTIONS_H
 
 #include <gtk/gtk.h>
 
-#include "totem.h"
+#include "xplayer.h"
 
 G_BEGIN_DECLS
 
@@ -50,20 +50,20 @@ typedef struct {
 	gdouble playlistidx;
 	gint64 seek;
 	gchar **filenames;
-} TotemCmdLineOptions;
+} XplayerCmdLineOptions;
 
 extern const GOptionEntry all_options[];
-extern TotemCmdLineOptions optionstate;
+extern XplayerCmdLineOptions optionstate;
 
-void totem_options_register_remote_commands (Totem *totem);
-GOptionContext *totem_options_get_context (void);
-void totem_options_process_early (Totem *totem,
-				  const TotemCmdLineOptions* options);
-void totem_options_process_late (Totem *totem, 
-				 const TotemCmdLineOptions* options);
-void totem_options_process_for_server (Totem *totem,
-				       const TotemCmdLineOptions* options);
+void xplayer_options_register_remote_commands (Xplayer *xplayer);
+GOptionContext *xplayer_options_get_context (void);
+void xplayer_options_process_early (Xplayer *xplayer,
+				  const XplayerCmdLineOptions* options);
+void xplayer_options_process_late (Xplayer *xplayer, 
+				 const XplayerCmdLineOptions* options);
+void xplayer_options_process_for_server (Xplayer *xplayer,
+				       const XplayerCmdLineOptions* options);
 
 G_END_DECLS
 
-#endif /* TOTEM_OPTIONS_H */
+#endif /* XPLAYER_OPTIONS_H */

@@ -17,10 +17,10 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -29,7 +29,7 @@
 
 #include "config.h"
 #include <glib/gi18n.h>
-#include "totem-subtitle-encoding.h"
+#include "xplayer-subtitle-encoding.h"
 #include <string.h>
 
 typedef enum
@@ -474,7 +474,7 @@ subtitle_encoding_combo_render (GtkComboBox * combo)
 }
 
 const char *
-totem_subtitle_encoding_get_selected (GtkComboBox * combo)
+xplayer_subtitle_encoding_get_selected (GtkComboBox * combo)
 {
   GtkTreeModel *model;
   GtkTreeIter iter;
@@ -490,7 +490,7 @@ totem_subtitle_encoding_get_selected (GtkComboBox * combo)
 }
 
 void
-totem_subtitle_encoding_set (GtkComboBox * combo, const char *encoding)
+xplayer_subtitle_encoding_set (GtkComboBox * combo, const char *encoding)
 {
   GtkTreeModel *model;
   GtkTreeIter iter, iter2;
@@ -518,7 +518,7 @@ totem_subtitle_encoding_set (GtkComboBox * combo, const char *encoding)
 }
 
 void
-totem_subtitle_encoding_init (GtkComboBox *combo)
+xplayer_subtitle_encoding_init (GtkComboBox *combo)
 {
   GtkTreeModel *model;
   subtitle_encoding_init ();

@@ -1,4 +1,4 @@
-/* Totem GMP plugin
+/* Xplayer GMP plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -26,7 +26,7 @@
 
 #include <glib.h>
 
-#include "totemGMPPlaylist.h"
+#include "xplayerGMPPlaylist.h"
 
 static const char *propertyNames[] = {
   "attributeCount",
@@ -47,32 +47,32 @@ static const char *methodNames[] = {
   "setItemInfo"
 };
 
-TOTEM_IMPLEMENT_NPCLASS (totemGMPPlaylist,
+XPLAYER_IMPLEMENT_NPCLASS (xplayerGMPPlaylist,
                          propertyNames, G_N_ELEMENTS (propertyNames),
                          methodNames, G_N_ELEMENTS (methodNames),
                          NULL);
 
-totemGMPPlaylist::totemGMPPlaylist (NPP aNPP)
-  : totemNPObject (aNPP),
+xplayerGMPPlaylist::xplayerGMPPlaylist (NPP aNPP)
+  : xplayerNPObject (aNPP),
     mName (NPN_StrDup ("Playlist"))
 {
-  TOTEM_LOG_CTOR ();
+  XPLAYER_LOG_CTOR ();
 }
 
-totemGMPPlaylist::~totemGMPPlaylist ()
+xplayerGMPPlaylist::~xplayerGMPPlaylist ()
 {
-  TOTEM_LOG_DTOR ();
+  XPLAYER_LOG_DTOR ();
 
   g_free (mName);
 }
 
 bool
-totemGMPPlaylist::InvokeByIndex (int aIndex,
+xplayerGMPPlaylist::InvokeByIndex (int aIndex,
                                  const NPVariant *argv,
                                  uint32_t argc,
                                  NPVariant *_result)
 {
-  TOTEM_LOG_INVOKE (aIndex, totemGMPPlaylist);
+  XPLAYER_LOG_INVOKE (aIndex, xplayerGMPPlaylist);
 
   switch (Methods (aIndex)) {
     case eAttributeName:
@@ -80,12 +80,12 @@ totemGMPPlaylist::InvokeByIndex (int aIndex,
     case eGetAttributeName:
       /* AUTF8String getAttributeName (in long index); */
     case eGetItemInfo:
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemGMPPlaylist);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPPlaylist);
       /* AUTF8String getItemInfo (in AUTF8String name); */
       return StringVariant (_result, "");
 
     case eIsIdentical: {
-      /* boolean isIdentical (in totemIGMPPlaylist playlist); */
+      /* boolean isIdentical (in xplayerIGMPPlaylist playlist); */
       NPObject *other;
       if (!GetObjectFromArguments (argv, argc, 0, other))
         return false;
@@ -94,21 +94,21 @@ totemGMPPlaylist::InvokeByIndex (int aIndex,
     }
 
     case eItem:
-      /* totemIGMPMedia item (in long index); */
-      TOTEM_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, totemGMPPlaylist);
+      /* xplayerIGMPMedia item (in long index); */
+      XPLAYER_WARN_1_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPPlaylist);
       return NullVariant (_result);
 
     case eAppendItem:
-      /* void appendItem (in totemIGMPMedia item); */
+      /* void appendItem (in xplayerIGMPMedia item); */
     case eInsertItem:
-      /* void insertItem (in long index, in totemIGMPMedia item); */
+      /* void insertItem (in long index, in xplayerIGMPMedia item); */
     case eMoveItem:
       /* void moveItem (in long oldIndex, in long newIndex); */
     case eRemoveItem:
-      /* void removeItem (in totemIGMPMedia item); */
+      /* void removeItem (in xplayerIGMPMedia item); */
     case eSetItemInfo:
       /* void setItemInfo (in AUTF8String name, in AUTF8String value); */
-      TOTEM_WARN_INVOKE_UNIMPLEMENTED (aIndex, totemGMPPlaylist);
+      XPLAYER_WARN_INVOKE_UNIMPLEMENTED (aIndex, xplayerGMPPlaylist);
       return VoidVariant (_result);
   }
 
@@ -116,10 +116,10 @@ totemGMPPlaylist::InvokeByIndex (int aIndex,
 }
 
 bool
-totemGMPPlaylist::GetPropertyByIndex (int aIndex,
+xplayerGMPPlaylist::GetPropertyByIndex (int aIndex,
                                       NPVariant *_result)
 {
-  TOTEM_LOG_GETTER (aIndex, totemGMPPlaylist);
+  XPLAYER_LOG_GETTER (aIndex, xplayerGMPPlaylist);
 
   switch (Properties (aIndex)) {
     case eAttributeCount:
@@ -137,10 +137,10 @@ totemGMPPlaylist::GetPropertyByIndex (int aIndex,
 }
 
 bool
-totemGMPPlaylist::SetPropertyByIndex (int aIndex,
+xplayerGMPPlaylist::SetPropertyByIndex (int aIndex,
                                       const NPVariant *aValue)
 {
-  TOTEM_LOG_SETTER (aIndex, totemGMPPlaylist);
+  XPLAYER_LOG_SETTER (aIndex, xplayerGMPPlaylist);
 
   switch (Properties (aIndex)) {
     case eName:

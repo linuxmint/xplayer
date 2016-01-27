@@ -1,4 +1,4 @@
-/* Totem browser plugin
+/* Xplayer browser plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,45 +20,45 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_PLUGIN_H__
-#define __TOTEM_PLUGIN_H__
+#ifndef __XPLAYER_PLUGIN_H__
+#define __XPLAYER_PLUGIN_H__
 
 #include <stdint.h>
 #include <gio/gio.h>
 
 #include "npapi.h"
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
-#include "totemNPObjectWrapper.h"
-#include "totemNPVariantWrapper.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
+#include "xplayerNPObjectWrapper.h"
+#include "xplayerNPVariantWrapper.h"
 
-#include "totem-plugin-viewer-constants.h"
+#include "xplayer-plugin-viewer-constants.h"
 
-#define TOTEM_NARROWSPACE_VERSION   "7.6.6"
-#define TOTEM_MULLY_VERSION         "1.4.0.233"
-#define TOTEM_CONE_VERSION          "0.8.6"
-#define TOTEM_GMP_VERSION_BUILD     "11.0.0.1024"
+#define XPLAYER_NARROWSPACE_VERSION   "7.6.6"
+#define XPLAYER_MULLY_VERSION         "1.4.0.233"
+#define XPLAYER_CONE_VERSION          "0.8.6"
+#define XPLAYER_GMP_VERSION_BUILD     "11.0.0.1024"
 
-#define TOTEM_VEGAS_SMALL_SWF_SIZE 50
+#define XPLAYER_VEGAS_SMALL_SWF_SIZE 50
 
 typedef struct {
   const char *mimetype;
   const char *extensions;
   const char *mime_alias;
-} totemPluginMimeEntry;
+} xplayerPluginMimeEntry;
 
 typedef enum {
-	TOTEM_QUEUE_TYPE_SET_VOLUME,
-	TOTEM_QUEUE_TYPE_CLEAR_PLAYLIST,
-	TOTEM_QUEUE_TYPE_ADD_ITEM,
-	TOTEM_QUEUE_TYPE_SET_BOOLEAN,
-	TOTEM_QUEUE_TYPE_SET_STRING,
-	TOTEM_QUEUE_TYPE_SET_PLAYLIST
-} TotemQueueCommandType;
+	XPLAYER_QUEUE_TYPE_SET_VOLUME,
+	XPLAYER_QUEUE_TYPE_CLEAR_PLAYLIST,
+	XPLAYER_QUEUE_TYPE_ADD_ITEM,
+	XPLAYER_QUEUE_TYPE_SET_BOOLEAN,
+	XPLAYER_QUEUE_TYPE_SET_STRING,
+	XPLAYER_QUEUE_TYPE_SET_PLAYLIST
+} XplayerQueueCommandType;
 
 typedef struct {
-	TotemQueueCommandType type;
+	XplayerQueueCommandType type;
 	union {
 		float volume;
 		struct {
@@ -69,21 +69,21 @@ typedef struct {
 		gboolean boolean;
 		char *string;
 	};
-} TotemQueueCommand;
+} XplayerQueueCommand;
 
-class totemBasicPlayer;
-class totemConePlayer;
-class totemGMPControls;
-class totemGMPError;
-class totemGMPPlayer;
-class totemGMPSettings;
-class totemMullYPlayer;
-class totemNarrowSpacePlayer;
+class xplayerBasicPlayer;
+class xplayerConePlayer;
+class xplayerGMPControls;
+class xplayerGMPError;
+class xplayerGMPPlayer;
+class xplayerGMPSettings;
+class xplayerMullYPlayer;
+class xplayerNarrowSpacePlayer;
 
-class totemPlugin {
+class xplayerPlugin {
   public:
-    totemPlugin (NPP aNPP);
-    ~totemPlugin ();
+    xplayerPlugin (NPP aNPP);
+    ~xplayerPlugin ();
 
     void* operator new (size_t aSize) throw ();
 
@@ -124,7 +124,7 @@ class totemPlugin {
 
     static char *PluginDescription ();
     static char *PluginLongDescription();
-    static void PluginMimeTypes (const totemPluginMimeEntry **, uint32_t *);
+    static void PluginMimeTypes (const xplayerPluginMimeEntry **, uint32_t *);
 
     /* static */ void BusNameAppearedCallback (GDBusConnection *connection,
 					       const gchar     *name,
@@ -196,7 +196,7 @@ class totemPlugin {
 
     NPP mNPP;
 
-    totemNPObjectWrapper mPluginElement;
+    xplayerNPObjectWrapper mPluginElement;
 
     guint mTimerID;
 
@@ -270,14 +270,14 @@ class totemPlugin {
 
     double mVolume;
 
-    TotemStates mState;
+    XplayerStates mState;
 
     uint32_t mDuration;
     uint32_t mTime;
 
     GQueue *mQueue;
 
-#ifdef TOTEM_GMP_PLUGIN
+#ifdef XPLAYER_GMP_PLUGIN
   public:
     void SetURL (const char* aURL);
     void SetBaseURL (const char* aBaseURL);
@@ -287,7 +287,7 @@ class totemPlugin {
     char* mURLURI;
 #endif
 
-#ifdef TOTEM_NARROWSPACE_PLUGIN
+#ifdef XPLAYER_NARROWSPACE_PLUGIN
   public:
     bool SetQtsrc (const char* aURL);
     bool SetHref (const char* aURL);
@@ -302,7 +302,7 @@ class totemPlugin {
 			     char* *_url,
 			     char* *_target);
 
-    void LaunchTotem (const char* aURL,
+    void LaunchXplayer (const char* aURL,
 		      uint32_t aTimestamp);
 
     char* mQtsrcURI;
@@ -316,11 +316,11 @@ class totemPlugin {
 
     enum ObjectEnum {
       ePluginScriptable,
-#if defined(TOTEM_GMP_PLUGIN)
+#if defined(XPLAYER_GMP_PLUGIN)
       eGMPControls,
       eGMPNetwork,
       eGMPSettings,
-#elif defined(TOTEM_CONE_PLUGIN)
+#elif defined(XPLAYER_CONE_PLUGIN)
       eConeAudio,
       eConeInput,
       eConePlaylist,
@@ -332,7 +332,7 @@ class totemPlugin {
 
   private:
 
-    totemNPObjectWrapper mNPObjects[eLastNPObject];
+    xplayerNPObjectWrapper mNPObjects[eLastNPObject];
 
   public:
 
@@ -397,7 +397,7 @@ class totemPlugin {
     void SetRate (double rate);
     double Rate () const;
 
-    void QueueCommand (TotemQueueCommand *cmd);
+    void QueueCommand (XplayerQueueCommand *cmd);
 
     double Duration () const { return double (mDuration); }
 
@@ -408,9 +408,9 @@ class totemPlugin {
     uint64_t GetTime () const { return mTime; }
     void SetTime (uint64_t aTime);
 
-    TotemStates State () const { return mState; }
+    XplayerStates State () const { return mState; }
 
     uint32_t Bandwidth () const { return 300000; /* bit/s */ /* FIXMEchpe! */ }
 };
 
-#endif /* __TOTEM_PLUGIN_H__ */
+#endif /* __XPLAYER_PLUGIN_H__ */

@@ -3,13 +3,13 @@
 %define gstreamer_plugins_good_version	0.10.0
 
 Summary: Movie player for GNOME 2
-Name: totem
+Name: xplayer
 Version: 3.10.1
 Release: 1
 License: GPL
 Group: Applications/Multimedia
-URL: http://www.gnome.org/projects/totem/
-Source0: http://ftp.gnome.org/pub/GNOME/sources/totem/0.99/totem-%{version}.tar.bz2
+URL: http://www.gnome.org/projects/xplayer/
+Source0: http://ftp.gnome.org/pub/GNOME/sources/xplayer/0.99/xplayer-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires(post): GConf2
 Requires: gnome-desktop >= 2.6.0
@@ -28,17 +28,17 @@ BuildRequires: iso-codes-devel
 Obsoletes: nautilus-media
 
 %description
-Totem is simple movie player for the Gnome desktop. It features a
+Xplayer is simple movie player for the Gnome desktop. It features a
 simple playlist, a full-screen mode, seek and volume controls, as well as
 a pretty complete keyboard navigation.
 
 %package mozplugin
-Summary: Mozilla plugin for Totem
+Summary: Mozilla plugin for Xplayer
 Group: Applications/Internet
 
 %description mozplugin
-Totem is simple movie player for the Gnome desktop. The mozilla plugin
-for totem allows totem to be embeded into a web browser. 
+Xplayer is simple movie player for the Gnome desktop. The mozilla plugin
+for xplayer allows xplayer to be embeded into a web browser. 
 
 %prep
 %setup -q
@@ -58,7 +58,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 rm -f $RPM_BUILD_ROOT%{_libdir}/*.{a,la}
 rm -f $RPM_BUILD_ROOT%{_libdir}/nautilus/extensions-1.0/*.{a,la}
 rm -f $RPM_BUILD_ROOT%{_libdir}/mozilla/plugins/*.{a,la}
-rm -f $RPM_BUILD_ROOT%{_libdir}/totem/plugins/*/*.{a,la}
+rm -f $RPM_BUILD_ROOT%{_libdir}/xplayer/plugins/*/*.{a,la}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 update-desktop-database %{_datadir}/applications
 export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
 
-SCHEMAS="totem.schemas totem-handlers.schemas totem-video-thumbnail.schemas" 
+SCHEMAS="xplayer.schemas xplayer-handlers.schemas xplayer-video-thumbnail.schemas" 
 
 for S in $SCHEMAS; do
   gconftool-2 --makefile-install-rule \
@@ -83,7 +83,7 @@ done
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 %config %{_sysconfdir}/gconf/schemas/*.schemas
 %{_bindir}/%{name}
-%{_bindir}/totem-video-indexer
+%{_bindir}/xplayer-video-indexer
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/gnome/help/%{name}/
 %{_datadir}/omf/%{name}/
@@ -93,44 +93,44 @@ done
 %{_bindir}/%{name}-video-thumbnailer
 %{_bindir}/%{name}-audio-preview
 %{_mandir}/man1/%{name}.1*
-%{_mandir}/man1/totem-video-thumbnailer.1.gz
+%{_mandir}/man1/xplayer-video-thumbnailer.1.gz
 %{_datadir}/locale
-%{_libdir}/totem/plugins/gromit/gromit.totem-plugin
-%{_libdir}/totem/plugins/gromit/libgromit.so
-%{_libdir}/totem/plugins/ontop/libontop.so
-%{_libdir}/totem/plugins/ontop/ontop.totem-plugin
-%{_libdir}/totem/plugins/screensaver/libscreensaver.so
-%{_libdir}/totem/plugins/screensaver/screensaver.totem-plugin
-%{_libdir}/totem/plugins/skipto/libskipto.so
-%{_libdir}/totem/plugins/skipto/skipto.totem-plugin
-%{_libdir}/totem/plugins/skipto/skipto.ui
-%{_libdir}/totem/plugins/media-player-keys/libmedia_player_keys.so
-%{_libdir}/totem/plugins/media-player-keys/media-player-keys.totem-plugin
-%{_libdir}/totem/plugins/properties/libmovie-properties.so
-%{_libdir}/totem/plugins/properties/movie-properties.totem-plugin
-%{_libdir}/totem/plugins/totem/*.py
-%{_libdir}/totem/plugins/totem/*.pyc
-%{_libdir}/totem/plugins/totem/*.pyo
-%{_libdir}/totem/plugins/youtube/*.py
-%{_libdir}/totem/plugins/youtube/*.pyc
-%{_libdir}/totem/plugins/youtube/*.pyo
-%{_libdir}/totem/plugins/youtube/youtube.totem-plugin
-%{_libdir}/totem/plugins/youtube/youtube.ui
-%{_libdir}/totem/plugins/pythonconsole/*.py
-%{_libdir}/totem/plugins/pythonconsole/*.pyc
-%{_libdir}/totem/plugins/pythonconsole/*.pyo
-%{_libdir}/totem/plugins/pythonconsole/pythonconsole.totem-plugin
-%{_libdir}/totem/plugins/jamendo/*.py
-%{_libdir}/totem/plugins/jamendo/*.pyc
-%{_libdir}/totem/plugins/jamendo/*.pyo
-%{_libdir}/totem/plugins/jamendo/jamendo.totem-plugin
-%{_libdir}/totem/plugins/jamendo/jamendo.glade
-%{_libexecdir}/totem/totem-bugreport.*
+%{_libdir}/xplayer/plugins/gromit/gromit.xplayer-plugin
+%{_libdir}/xplayer/plugins/gromit/libgromit.so
+%{_libdir}/xplayer/plugins/ontop/libontop.so
+%{_libdir}/xplayer/plugins/ontop/ontop.xplayer-plugin
+%{_libdir}/xplayer/plugins/screensaver/libscreensaver.so
+%{_libdir}/xplayer/plugins/screensaver/screensaver.xplayer-plugin
+%{_libdir}/xplayer/plugins/skipto/libskipto.so
+%{_libdir}/xplayer/plugins/skipto/skipto.xplayer-plugin
+%{_libdir}/xplayer/plugins/skipto/skipto.ui
+%{_libdir}/xplayer/plugins/media-player-keys/libmedia_player_keys.so
+%{_libdir}/xplayer/plugins/media-player-keys/media-player-keys.xplayer-plugin
+%{_libdir}/xplayer/plugins/properties/libmovie-properties.so
+%{_libdir}/xplayer/plugins/properties/movie-properties.xplayer-plugin
+%{_libdir}/xplayer/plugins/xplayer/*.py
+%{_libdir}/xplayer/plugins/xplayer/*.pyc
+%{_libdir}/xplayer/plugins/xplayer/*.pyo
+%{_libdir}/xplayer/plugins/youtube/*.py
+%{_libdir}/xplayer/plugins/youtube/*.pyc
+%{_libdir}/xplayer/plugins/youtube/*.pyo
+%{_libdir}/xplayer/plugins/youtube/youtube.xplayer-plugin
+%{_libdir}/xplayer/plugins/youtube/youtube.ui
+%{_libdir}/xplayer/plugins/pythonconsole/*.py
+%{_libdir}/xplayer/plugins/pythonconsole/*.pyc
+%{_libdir}/xplayer/plugins/pythonconsole/*.pyo
+%{_libdir}/xplayer/plugins/pythonconsole/pythonconsole.xplayer-plugin
+%{_libdir}/xplayer/plugins/jamendo/*.py
+%{_libdir}/xplayer/plugins/jamendo/*.pyc
+%{_libdir}/xplayer/plugins/jamendo/*.pyo
+%{_libdir}/xplayer/plugins/jamendo/jamendo.xplayer-plugin
+%{_libdir}/xplayer/plugins/jamendo/jamendo.glade
+%{_libexecdir}/xplayer/xplayer-bugreport.*
 
 %files mozplugin
 %defattr(-, root, root)
-%{_libdir}/mozilla/libtotem*
-%{_libexecdir}/totem-plugin-viewer
+%{_libdir}/mozilla/libxplayer*
+%{_libexecdir}/xplayer-plugin-viewer
 
 %changelog
 * Tue Nov 25 2008 David JEAN LOUIS <izimobil@gmail.com>
@@ -212,7 +212,7 @@ done
 - Update to 0.101
  
 * Mon Jan 03 2005 Colin Walters <walters@redhat.com> - 0.100-2
-- Grab patch totem-0.100-desktopfile.patch from CVS to fix
+- Grab patch xplayer-0.100-desktopfile.patch from CVS to fix
   missing menu entry (144088)
 - Remove workaround for desktop file being misinstalled, fixed
   by above patch

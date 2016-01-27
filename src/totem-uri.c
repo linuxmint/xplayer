@@ -1,4 +1,4 @@
-/* totem-uri.c
+/* xplayer-uri.c
 
    Copyright (C) 2004 Bastien Nocera
 
@@ -30,9 +30,9 @@
 #include <unistd.h>
 #include <gio/gio.h>
 
-#include "totem-mime-types.h"
-#include "totem-uri.h"
-#include "totem-private.h"
+#include "xplayer-mime-types.h"
+#include "xplayer-uri.h"
+#include "xplayer-private.h"
 
 /* 5 minute threshold. We don't want to save the position within a 3
  * minute song for example. */
@@ -41,7 +41,7 @@
  * for example, we don't save if the user exits when they reach the credits of a film */
 #define SAVE_POSITION_END_THRESHOLD 0.05
 /* The GIO file attribute used to store the position in a stream */
-#define SAVE_POSITION_FILE_ATTRIBUTE "metadata::totem::position"
+#define SAVE_POSITION_FILE_ATTRIBUTE "metadata::xplayer::position"
 
 static GtkFileFilter *filter_all = NULL;
 static GtkFileFilter *filter_subs = NULL;
@@ -50,7 +50,7 @@ static GtkFileFilter *filter_audio = NULL;
 static GtkFileFilter *filter_video = NULL;
 
 gboolean
-totem_playing_dvd (const char *uri)
+xplayer_playing_dvd (const char *uri)
 {
 	if (uri == NULL)
 		return FALSE;
@@ -59,7 +59,7 @@ totem_playing_dvd (const char *uri)
 }
 
 static void
-totem_ensure_dir (const char *path)
+xplayer_ensure_dir (const char *path)
 {
 	if (g_file_test (path, G_FILE_TEST_IS_DIR) != FALSE)
 		return;
@@ -68,45 +68,45 @@ totem_ensure_dir (const char *path)
 }
 
 const char *
-totem_dot_dir (void)
+xplayer_dot_dir (void)
 {
-	static char *totem_dir = NULL;
+	static char *xplayer_dir = NULL;
 
-	if (totem_dir != NULL) {
-		totem_ensure_dir (totem_dir);
-		return totem_dir;
+	if (xplayer_dir != NULL) {
+		xplayer_ensure_dir (xplayer_dir);
+		return xplayer_dir;
 	}
 
-	totem_dir = g_build_filename (g_get_user_config_dir (),
-				      "totem",
+	xplayer_dir = g_build_filename (g_get_user_config_dir (),
+				      "xplayer",
 				      NULL);
 
-	totem_ensure_dir (totem_dir);
+	xplayer_ensure_dir (xplayer_dir);
 
-	return (const char *)totem_dir;
+	return (const char *)xplayer_dir;
 }
 
 const char *
-totem_data_dot_dir (void)
+xplayer_data_dot_dir (void)
 {
-	static char *totem_dir = NULL;
+	static char *xplayer_dir = NULL;
 
-	if (totem_dir != NULL) {
-		totem_ensure_dir (totem_dir);
-		return totem_dir;
+	if (xplayer_dir != NULL) {
+		xplayer_ensure_dir (xplayer_dir);
+		return xplayer_dir;
 	}
 
-	totem_dir = g_build_filename (g_get_user_data_dir (),
-				      "totem",
+	xplayer_dir = g_build_filename (g_get_user_data_dir (),
+				      "xplayer",
 				      NULL);
 
-	totem_ensure_dir (totem_dir);
+	xplayer_ensure_dir (xplayer_dir);
 
-	return (const char *)totem_dir;
+	return (const char *)xplayer_dir;
 }
 
 char *
-totem_pictures_dir (void)
+xplayer_pictures_dir (void)
 {
 	const char *dir;
 
@@ -117,7 +117,7 @@ totem_pictures_dir (void)
 }
 
 static GMount *
-totem_get_mount_for_uri (const char *path)
+xplayer_get_mount_for_uri (const char *path)
 {
 	GMount *mount;
 	GFile *file;
@@ -139,7 +139,7 @@ totem_get_mount_for_uri (const char *path)
 }
 
 static GMount *
-totem_get_mount_for_dvd (const char *uri)
+xplayer_get_mount_for_dvd (const char *uri)
 {
 	GMount *mount;
 	char *path;
@@ -171,7 +171,7 @@ totem_get_mount_for_dvd (const char *uri)
 		g_list_foreach (volumes, (GFunc) g_object_unref, NULL);
 		g_list_free (volumes);
 	} else {
-		mount = totem_get_mount_for_uri (path);
+		mount = xplayer_get_mount_for_uri (path);
 		g_free (path);
 	}
 	/* We have a path to the file itself */
@@ -179,13 +179,13 @@ totem_get_mount_for_dvd (const char *uri)
 }
 
 static char *
-totem_get_mountpoint_for_vcd (const char *uri)
+xplayer_get_mountpoint_for_vcd (const char *uri)
 {
 	return NULL;
 }
 
 GMount *
-totem_get_mount_for_media (const char *uri)
+xplayer_get_mount_for_media (const char *uri)
 {
 	GMount *ret;
 	char *mount_path;
@@ -196,23 +196,23 @@ totem_get_mount_for_media (const char *uri)
 	mount_path = NULL;
 
 	if (g_str_has_prefix (uri, "dvd://") != FALSE)
-		return totem_get_mount_for_dvd (uri);
+		return xplayer_get_mount_for_dvd (uri);
 	else if (g_str_has_prefix (uri, "vcd:") != FALSE)
-		mount_path = totem_get_mountpoint_for_vcd (uri);
+		mount_path = xplayer_get_mountpoint_for_vcd (uri);
 	else if (g_str_has_prefix (uri, "file:") != FALSE)
 		mount_path = g_filename_from_uri (uri, NULL, NULL);
 
 	if (mount_path == NULL)
 		return NULL;
 
-	ret = totem_get_mount_for_uri (mount_path);
+	ret = xplayer_get_mount_for_uri (mount_path);
 	g_free (mount_path);
 
 	return ret;
 }
 
 gboolean
-totem_is_special_mrl (const char *uri)
+xplayer_is_special_mrl (const char *uri)
 {
 	GMount *mount;
 
@@ -221,7 +221,7 @@ totem_is_special_mrl (const char *uri)
 	if (g_str_has_prefix (uri, "dvb:") != FALSE)
 		return TRUE;
 
-	mount = totem_get_mount_for_media (uri);
+	mount = xplayer_get_mount_for_media (uri);
 	if (mount != NULL)
 		g_object_unref (mount);
 
@@ -229,7 +229,7 @@ totem_is_special_mrl (const char *uri)
 }
 
 gboolean
-totem_is_block_device (const char *uri)
+xplayer_is_block_device (const char *uri)
 {
 	struct stat buf;
 	char *local;
@@ -252,7 +252,7 @@ totem_is_block_device (const char *uri)
 }
 
 char *
-totem_create_full_path (const char *path)
+xplayer_create_full_path (const char *path)
 {
 	GFile *file;
 	char *retval;
@@ -261,7 +261,7 @@ totem_create_full_path (const char *path)
 
 	if (strstr (path, "://") != NULL)
 		return NULL;
-	if (totem_is_special_mrl (path) != FALSE)
+	if (xplayer_is_special_mrl (path) != FALSE)
 		return NULL;
 
 	file = g_file_new_for_commandline_arg (path);
@@ -272,30 +272,30 @@ totem_create_full_path (const char *path)
 }
 
 static void
-totem_action_on_unmount (GVolumeMonitor *volume_monitor,
+xplayer_action_on_unmount (GVolumeMonitor *volume_monitor,
 			 GMount *mount,
-			 Totem *totem)
+			 Xplayer *xplayer)
 {
-	totem_playlist_clear_with_g_mount (totem->playlist, mount);
+	xplayer_playlist_clear_with_g_mount (xplayer->playlist, mount);
 }
 
 void
-totem_setup_file_monitoring (Totem *totem)
+xplayer_setup_file_monitoring (Xplayer *xplayer)
 {
-	totem->monitor = g_volume_monitor_get ();
+	xplayer->monitor = g_volume_monitor_get ();
 
-	g_signal_connect (G_OBJECT (totem->monitor),
+	g_signal_connect (G_OBJECT (xplayer->monitor),
 			  "mount-pre-unmount",
-			  G_CALLBACK (totem_action_on_unmount),
-			  totem);
-	g_signal_connect (G_OBJECT (totem->monitor),
+			  G_CALLBACK (xplayer_action_on_unmount),
+			  xplayer);
+	g_signal_connect (G_OBJECT (xplayer->monitor),
 			  "mount-removed",
-			  G_CALLBACK (totem_action_on_unmount),
-			  totem);
+			  G_CALLBACK (xplayer_action_on_unmount),
+			  xplayer);
 }
 
 /* List from xine-lib's demux_sputext.c.
- * Keep in sync with the list in totem_setup_file_filters() in this file.
+ * Keep in sync with the list in xplayer_setup_file_filters() in this file.
  * Don't add .txt extensions, as there are too many false positives. */
 static const char subtitle_ext[][4] = {
 	"sub",
@@ -307,7 +307,7 @@ static const char subtitle_ext[][4] = {
 };
 
 gboolean
-totem_uri_is_subtitle (const char *uri)
+xplayer_uri_is_subtitle (const char *uri)
 {
 	guint len, i;
 
@@ -322,7 +322,7 @@ totem_uri_is_subtitle (const char *uri)
 }
 
 char *
-totem_uri_escape_for_display (const char *uri)
+xplayer_uri_escape_for_display (const char *uri)
 {
 	GFile *file;
 	char *disp;
@@ -335,7 +335,7 @@ totem_uri_escape_for_display (const char *uri)
 }
 
 void
-totem_setup_file_filters (void)
+xplayer_setup_file_filters (void)
 {
 	guint i;
 
@@ -387,7 +387,7 @@ totem_setup_file_filters (void)
 }
 
 void
-totem_destroy_file_filters (void)
+xplayer_destroy_file_filters (void)
 {
 	if (filter_all != NULL) {
 		g_object_unref (filter_all);
@@ -405,7 +405,7 @@ static const GUserDirectory dir_types[] = {
 };
 
 static void
-totem_add_default_dirs (GtkFileChooser *dialog)
+xplayer_add_default_dirs (GtkFileChooser *dialog)
 {
 	guint i;
 	for (i = 0; i < G_N_ELEMENTS (dir_types); i++) {
@@ -419,7 +419,7 @@ totem_add_default_dirs (GtkFileChooser *dialog)
 }
 
 char *
-totem_add_subtitle (GtkWindow *parent, const char *uri)
+xplayer_add_subtitle (GtkWindow *parent, const char *uri)
 {
 	GtkWidget *fs;
 	GSettings *settings;
@@ -439,12 +439,12 @@ totem_add_subtitle (GtkWindow *parent, const char *uri)
 	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (fs), filter_subs);
 	gtk_file_chooser_set_filter (GTK_FILE_CHOOSER (fs), filter_subs);
 
-	settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	folder_set = FALSE;
 
 	/* Add the subtitles cache dir as a shortcut */
 	new_path = g_build_filename (g_get_user_cache_dir (),
-				     "totem",
+				     "xplayer",
 				     "subtitles",
 				     NULL);
 	gtk_file_chooser_add_shortcut_folder_uri (GTK_FILE_CHOOSER (fs), new_path, NULL);
@@ -468,7 +468,7 @@ totem_add_subtitle (GtkWindow *parent, const char *uri)
 		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fs),
 						     g_get_home_dir ());
 	}
-	totem_add_default_dirs (GTK_FILE_CHOOSER (fs));
+	xplayer_add_default_dirs (GTK_FILE_CHOOSER (fs));
 
 	if (gtk_dialog_run (GTK_DIALOG (fs)) == GTK_RESPONSE_ACCEPT) {
 		subtitle = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (fs));
@@ -483,7 +483,7 @@ totem_add_subtitle (GtkWindow *parent, const char *uri)
 #define OPEN_DIRECTORY_RESPONSE 1
 
 GSList *
-totem_add_files (GtkWindow *parent, const char *path)
+xplayer_add_files (GtkWindow *parent, const char *path)
 {
 	GtkWidget *fs;
 	int response;
@@ -508,7 +508,7 @@ totem_add_files (GtkWindow *parent, const char *path)
 	gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (fs), TRUE);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (fs), FALSE);
 
-	settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 	set_folder = TRUE;
 	if (path != NULL) {
 		set_folder = gtk_file_chooser_set_current_folder_uri
@@ -527,7 +527,7 @@ totem_add_files (GtkWindow *parent, const char *path)
 		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fs),
 						     g_get_home_dir ());
 	}
-	totem_add_default_dirs (GTK_FILE_CHOOSER (fs));
+	xplayer_add_default_dirs (GTK_FILE_CHOOSER (fs));
 
 	response = gtk_dialog_run (GTK_DIALOG (fs));
 
@@ -557,22 +557,22 @@ totem_add_files (GtkWindow *parent, const char *path)
 }
 
 void
-totem_save_position (Totem *totem)
+xplayer_save_position (Xplayer *xplayer)
 {
 	gint64 stream_length, position;
 	char *pos_str;
 	GFile *file;
 	GError *error = NULL;
 
-	if (totem->remember_position == FALSE)
+	if (xplayer->remember_position == FALSE)
 		return;
-	if (totem->mrl == NULL)
+	if (xplayer->mrl == NULL)
 		return;
 
-	stream_length = bacon_video_widget_get_stream_length (totem->bvw);
-	position = bacon_video_widget_get_current_time (totem->bvw);
+	stream_length = bacon_video_widget_get_stream_length (xplayer->bvw);
+	position = bacon_video_widget_get_current_time (xplayer->bvw);
 
-	file = g_file_new_for_uri (totem->mrl);
+	file = g_file_new_for_uri (xplayer->mrl);
 
 	/* Don't save if it's:
 	 *  - a live stream
@@ -614,13 +614,13 @@ totem_save_position (Totem *totem)
 }
 
 void
-totem_try_restore_position (Totem *totem, const char *mrl)
+xplayer_try_restore_position (Xplayer *xplayer, const char *mrl)
 {
 	GFile *file;
 	GFileInfo *file_info;
 	const char *seek_str;
 
-	if (totem->remember_position == FALSE)
+	if (xplayer->remember_position == FALSE)
 		return;
 
 	if (mrl == NULL)
@@ -640,7 +640,7 @@ totem_try_restore_position (Totem *totem, const char *mrl)
 	g_debug ("seek time: %s", seek_str);
 
 	if (seek_str != NULL)
-		totem->seek_to = g_ascii_strtoull (seek_str, NULL, 0);
+		xplayer->seek_to = g_ascii_strtoull (seek_str, NULL, 0);
 
 	g_object_unref (file_info);
 }

@@ -20,17 +20,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission is above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
  *
  */
 
-#include "totem-gst-pixbuf-helpers.h"
+#include "xplayer-gst-pixbuf-helpers.h"
 
 #include <gst/tag/tag.h>
 #include <gst/video/video-format.h>
@@ -42,7 +42,7 @@ destroy_pixbuf (guchar *pix, gpointer data)
 }
 
 GdkPixbuf *
-totem_gst_playbin_get_frame (GstElement *play)
+xplayer_gst_playbin_get_frame (GstElement *play)
 {
   GstStructure *s;
   GstSample *sample = NULL;
@@ -116,7 +116,7 @@ done:
 }
 
 static GdkPixbuf *
-totem_gst_buffer_to_pixbuf (GstBuffer *buffer)
+xplayer_gst_buffer_to_pixbuf (GstBuffer *buffer)
 {
   GdkPixbufLoader *loader;
   GdkPixbuf *pixbuf = NULL;
@@ -148,7 +148,7 @@ totem_gst_buffer_to_pixbuf (GstBuffer *buffer)
 }
 
 static GstSample *
-totem_gst_tag_list_get_cover_real (GstTagList *tag_list)
+xplayer_gst_tag_list_get_cover_real (GstTagList *tag_list)
 {
   GstSample *cover_sample = NULL;
   guint i;
@@ -184,13 +184,13 @@ totem_gst_tag_list_get_cover_real (GstTagList *tag_list)
 }
 
 GdkPixbuf *
-totem_gst_tag_list_get_cover (GstTagList *tag_list)
+xplayer_gst_tag_list_get_cover (GstTagList *tag_list)
 {
   GstSample *cover_sample;
 
   g_return_val_if_fail (tag_list != NULL, FALSE);
 
-  cover_sample = totem_gst_tag_list_get_cover_real (tag_list);
+  cover_sample = xplayer_gst_tag_list_get_cover_real (tag_list);
   /* Fallback to preview */
     if (!cover_sample) {
       gst_tag_list_get_sample_index (tag_list, GST_TAG_PREVIEW_IMAGE, 0,
@@ -202,7 +202,7 @@ totem_gst_tag_list_get_cover (GstTagList *tag_list)
     GdkPixbuf *pixbuf;
 
     buffer = gst_sample_get_buffer (cover_sample);
-    pixbuf = totem_gst_buffer_to_pixbuf (buffer);
+    pixbuf = xplayer_gst_buffer_to_pixbuf (buffer);
     gst_sample_unref (cover_sample);
     return pixbuf;
   }

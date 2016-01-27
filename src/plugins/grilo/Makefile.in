@@ -128,8 +128,8 @@ LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 libgrilo_la_DEPENDENCIES = $(plugin_libadd) $(am__DEPENDENCIES_1) \
 	$(top_builddir)/libgd/libgd.la
-am_libgrilo_la_OBJECTS = libgrilo_la-totem-grilo.lo \
-	libgrilo_la-totem-search-entry.lo
+am_libgrilo_la_OBJECTS = libgrilo_la-xplayer-grilo.lo \
+	libgrilo_la-xplayer-search-entry.lo
 libgrilo_la_OBJECTS = $(am_libgrilo_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -206,7 +206,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -388,11 +388,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -475,7 +475,7 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/grilo
 plugin_LTLIBRARIES = libgrilo.la
@@ -483,11 +483,11 @@ plugin_in_files = grilo.plugin.in
 uidir = $(plugindir)
 ui_DATA = grilo.ui
 confdir = $(plugindir)
-conf_DATA = totem-grilo.conf
+conf_DATA = xplayer-grilo.conf
 libgrilo_la_SOURCES = \
-	totem-grilo.c				\
-	totem-search-entry.c			\
-	totem-search-entry.h
+	xplayer-grilo.c				\
+	xplayer-search-entry.c			\
+	xplayer-search-entry.h
 
 libgrilo_la_LDFLAGS = $(plugin_ldflags)
 libgrilo_la_LIBADD = \
@@ -581,8 +581,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgrilo_la-totem-grilo.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgrilo_la-totem-search-entry.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgrilo_la-xplayer-grilo.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgrilo_la-xplayer-search-entry.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -605,19 +605,19 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libgrilo_la-totem-grilo.lo: totem-grilo.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -MT libgrilo_la-totem-grilo.lo -MD -MP -MF $(DEPDIR)/libgrilo_la-totem-grilo.Tpo -c -o libgrilo_la-totem-grilo.lo `test -f 'totem-grilo.c' || echo '$(srcdir)/'`totem-grilo.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgrilo_la-totem-grilo.Tpo $(DEPDIR)/libgrilo_la-totem-grilo.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-grilo.c' object='libgrilo_la-totem-grilo.lo' libtool=yes @AMDEPBACKSLASH@
+libgrilo_la-xplayer-grilo.lo: xplayer-grilo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -MT libgrilo_la-xplayer-grilo.lo -MD -MP -MF $(DEPDIR)/libgrilo_la-xplayer-grilo.Tpo -c -o libgrilo_la-xplayer-grilo.lo `test -f 'xplayer-grilo.c' || echo '$(srcdir)/'`xplayer-grilo.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgrilo_la-xplayer-grilo.Tpo $(DEPDIR)/libgrilo_la-xplayer-grilo.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-grilo.c' object='libgrilo_la-xplayer-grilo.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -c -o libgrilo_la-totem-grilo.lo `test -f 'totem-grilo.c' || echo '$(srcdir)/'`totem-grilo.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -c -o libgrilo_la-xplayer-grilo.lo `test -f 'xplayer-grilo.c' || echo '$(srcdir)/'`xplayer-grilo.c
 
-libgrilo_la-totem-search-entry.lo: totem-search-entry.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -MT libgrilo_la-totem-search-entry.lo -MD -MP -MF $(DEPDIR)/libgrilo_la-totem-search-entry.Tpo -c -o libgrilo_la-totem-search-entry.lo `test -f 'totem-search-entry.c' || echo '$(srcdir)/'`totem-search-entry.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgrilo_la-totem-search-entry.Tpo $(DEPDIR)/libgrilo_la-totem-search-entry.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-search-entry.c' object='libgrilo_la-totem-search-entry.lo' libtool=yes @AMDEPBACKSLASH@
+libgrilo_la-xplayer-search-entry.lo: xplayer-search-entry.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -MT libgrilo_la-xplayer-search-entry.lo -MD -MP -MF $(DEPDIR)/libgrilo_la-xplayer-search-entry.Tpo -c -o libgrilo_la-xplayer-search-entry.lo `test -f 'xplayer-search-entry.c' || echo '$(srcdir)/'`xplayer-search-entry.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgrilo_la-xplayer-search-entry.Tpo $(DEPDIR)/libgrilo_la-xplayer-search-entry.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-search-entry.c' object='libgrilo_la-xplayer-search-entry.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -c -o libgrilo_la-totem-search-entry.lo `test -f 'totem-search-entry.c' || echo '$(srcdir)/'`totem-search-entry.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgrilo_la_CFLAGS) $(CFLAGS) -c -o libgrilo_la-xplayer-search-entry.lo `test -f 'xplayer-search-entry.c' || echo '$(srcdir)/'`xplayer-search-entry.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

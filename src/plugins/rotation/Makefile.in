@@ -81,7 +81,7 @@ build_triplet = @build@
 host_triplet = @host@
 DIST_COMMON = $(top_srcdir)/src/plugins/Makefile.plugins \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	totem-rotation-plugin.c $(top_srcdir)/build-aux/depcomp \
+	xplayer-rotation-plugin.c $(top_srcdir)/build-aux/depcomp \
 	$(srcdir)/librotation_la_vala.stamp
 subdir = src/plugins/rotation
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -126,7 +126,7 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 librotation_la_DEPENDENCIES = $(plugin_libadd)
-am_librotation_la_OBJECTS = librotation_la-totem-rotation-plugin.lo
+am_librotation_la_OBJECTS = librotation_la-xplayer-rotation-plugin.lo
 librotation_la_OBJECTS = $(am_librotation_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -212,7 +212,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -394,11 +394,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -481,7 +481,7 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/rotation
 plugin_LTLIBRARIES = librotation.la
@@ -491,9 +491,9 @@ plugin_in_files = rotation.plugin.in
 # because vala still cannot parse the gir
 AM_VALAFLAGS = \
 	--girdir=$(top_builddir)/src	\
-	--pkg Totem-1.0 --pkg libpeas-1.0 --pkg cogl-pango-1.0 --pkg GtkClutter-1.0 --pkg Clutter-1.0 --pkg gtk+-3.0 bacon-video.vapi
+	--pkg Xplayer-1.0 --pkg libpeas-1.0 --pkg cogl-pango-1.0 --pkg GtkClutter-1.0 --pkg Clutter-1.0 --pkg gtk+-3.0 bacon-video.vapi
 
-librotation_la_SOURCES = totem-rotation-plugin.vala
+librotation_la_SOURCES = xplayer-rotation-plugin.vala
 librotation_la_LDFLAGS = $(plugin_ldflags)
 librotation_la_CFLAGS = $(plugin_cflags) -include $(CONFIG_HEADER) -I $(top_srcdir)/src/backend
 librotation_la_LIBADD = $(plugin_libadd)
@@ -582,7 +582,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/librotation_la-totem-rotation-plugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/librotation_la-xplayer-rotation-plugin.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -605,20 +605,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-librotation_la-totem-rotation-plugin.lo: totem-rotation-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librotation_la_CFLAGS) $(CFLAGS) -MT librotation_la-totem-rotation-plugin.lo -MD -MP -MF $(DEPDIR)/librotation_la-totem-rotation-plugin.Tpo -c -o librotation_la-totem-rotation-plugin.lo `test -f 'totem-rotation-plugin.c' || echo '$(srcdir)/'`totem-rotation-plugin.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/librotation_la-totem-rotation-plugin.Tpo $(DEPDIR)/librotation_la-totem-rotation-plugin.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-rotation-plugin.c' object='librotation_la-totem-rotation-plugin.lo' libtool=yes @AMDEPBACKSLASH@
+librotation_la-xplayer-rotation-plugin.lo: xplayer-rotation-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librotation_la_CFLAGS) $(CFLAGS) -MT librotation_la-xplayer-rotation-plugin.lo -MD -MP -MF $(DEPDIR)/librotation_la-xplayer-rotation-plugin.Tpo -c -o librotation_la-xplayer-rotation-plugin.lo `test -f 'xplayer-rotation-plugin.c' || echo '$(srcdir)/'`xplayer-rotation-plugin.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/librotation_la-xplayer-rotation-plugin.Tpo $(DEPDIR)/librotation_la-xplayer-rotation-plugin.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-rotation-plugin.c' object='librotation_la-xplayer-rotation-plugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librotation_la_CFLAGS) $(CFLAGS) -c -o librotation_la-totem-rotation-plugin.lo `test -f 'totem-rotation-plugin.c' || echo '$(srcdir)/'`totem-rotation-plugin.c
-$(srcdir)/totem-rotation-plugin.c: $(srcdir)/librotation_la_vala.stamp
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(librotation_la_CFLAGS) $(CFLAGS) -c -o librotation_la-xplayer-rotation-plugin.lo `test -f 'xplayer-rotation-plugin.c' || echo '$(srcdir)/'`xplayer-rotation-plugin.c
+$(srcdir)/xplayer-rotation-plugin.c: $(srcdir)/librotation_la_vala.stamp
 	@if test -f $@; then :; else rm -f $(srcdir)/librotation_la_vala.stamp; fi
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/librotation_la_vala.stamp; \
 	fi
-$(srcdir)/librotation_la_vala.stamp: totem-rotation-plugin.vala
+$(srcdir)/librotation_la_vala.stamp: xplayer-rotation-plugin.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C totem-rotation-plugin.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C xplayer-rotation-plugin.vala
 	$(AM_V_at)mv -f $@-t $@
 
 mostlyclean-libtool:
@@ -770,8 +770,8 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-rm -f $(srcdir)/librotation_la_vala.stamp
-	-rm -f $(srcdir)/totem-rotation-plugin.c
-	-rm -f totem-rotation-plugin.c
+	-rm -f $(srcdir)/xplayer-rotation-plugin.c
+	-rm -f xplayer-rotation-plugin.c
 clean: clean-am
 
 clean-am: clean-generic clean-libtool clean-pluginLTLIBRARIES \

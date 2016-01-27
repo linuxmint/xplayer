@@ -80,22 +80,22 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 noinst_PROGRAMS = test-glow-button$(EXEEXT)
-libexec_PROGRAMS = totem-plugin-viewer$(EXEEXT)
+libexec_PROGRAMS = xplayer-plugin-viewer$(EXEEXT)
 
-# Totem GMP Plugin
-@ENABLE_GMP_PLUGIN_TRUE@am__append_1 = libtotem-gmp-plugin.la
+# Xplayer GMP Plugin
+@ENABLE_GMP_PLUGIN_TRUE@am__append_1 = libxplayer-gmp-plugin.la
 
-# Totem NarrowSpace Plugin
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@am__append_2 = libtotem-narrowspace-plugin.la
+# Xplayer NarrowSpace Plugin
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@am__append_2 = libxplayer-narrowspace-plugin.la
 
-# Totem Vegas Plugin
-@ENABLE_VEGAS_PLUGIN_TRUE@am__append_3 = libtotem-vegas-plugin.la
+# Xplayer Vegas Plugin
+@ENABLE_VEGAS_PLUGIN_TRUE@am__append_3 = libxplayer-vegas-plugin.la
 
-# Totem MULLY Plugin
-@ENABLE_MULLY_PLUGIN_TRUE@am__append_4 = libtotem-mully-plugin.la
+# Xplayer MULLY Plugin
+@ENABLE_MULLY_PLUGIN_TRUE@am__append_4 = libxplayer-mully-plugin.la
 
-# Totem Cone Plugin
-@ENABLE_CONE_PLUGIN_TRUE@am__append_5 = libtotem-cone-plugin.la
+# Xplayer Cone Plugin
+@ENABLE_CONE_PLUGIN_TRUE@am__append_5 = libxplayer-cone-plugin.la
 subdir = browser-plugin
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/build-aux/depcomp TODO
@@ -142,148 +142,148 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(libexecdir)"
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_DEPENDENCIES =  \
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_DEPENDENCIES =  \
 @ENABLE_CONE_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libtotem_cone_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
-	totemNPNGlue.cpp totemNPClass.cpp totemNPClass.h \
-	totemNPObject.cpp totemNPObject.h totemNPObjectWrapper.h \
-	totemNPVariantWrapper.h totemPluginGlue.cpp totemPlugin.cpp \
-	totemPlugin.h totem-plugin-viewer-constants.h \
-	totemConeAudio.cpp totemConeAudio.h totemCone.cpp totemCone.h \
-	totemConeInput.cpp totemConeInput.h totemConePlaylist.cpp \
-	totemConePlaylist.h totemConePlaylistItems.cpp \
-	totemConePlaylistItems.h totemConeVideo.cpp totemConeVideo.h
-am__objects_1 = libtotem_cone_plugin_la-totemNPNGlue.lo \
-	libtotem_cone_plugin_la-totemNPClass.lo \
-	libtotem_cone_plugin_la-totemNPObject.lo \
-	libtotem_cone_plugin_la-totemPluginGlue.lo \
-	libtotem_cone_plugin_la-totemPlugin.lo
-@ENABLE_CONE_PLUGIN_TRUE@am_libtotem_cone_plugin_la_OBJECTS =  \
+am__libxplayer_cone_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
+	xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
+	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
+	xplayerConeAudio.cpp xplayerConeAudio.h xplayerCone.cpp xplayerCone.h \
+	xplayerConeInput.cpp xplayerConeInput.h xplayerConePlaylist.cpp \
+	xplayerConePlaylist.h xplayerConePlaylistItems.cpp \
+	xplayerConePlaylistItems.h xplayerConeVideo.cpp xplayerConeVideo.h
+am__objects_1 = libxplayer_cone_plugin_la-xplayerNPNGlue.lo \
+	libxplayer_cone_plugin_la-xplayerNPClass.lo \
+	libxplayer_cone_plugin_la-xplayerNPObject.lo \
+	libxplayer_cone_plugin_la-xplayerPluginGlue.lo \
+	libxplayer_cone_plugin_la-xplayerPlugin.lo
+@ENABLE_CONE_PLUGIN_TRUE@am_libxplayer_cone_plugin_la_OBJECTS =  \
 @ENABLE_CONE_PLUGIN_TRUE@	$(am__objects_1) \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemConeAudio.lo \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemCone.lo \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemConeInput.lo \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemConePlaylist.lo \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemConePlaylistItems.lo \
-@ENABLE_CONE_PLUGIN_TRUE@	libtotem_cone_plugin_la-totemConeVideo.lo
-libtotem_cone_plugin_la_OBJECTS =  \
-	$(am_libtotem_cone_plugin_la_OBJECTS)
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerConeAudio.lo \
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerCone.lo \
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerConeInput.lo \
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerConePlaylist.lo \
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo \
+@ENABLE_CONE_PLUGIN_TRUE@	libxplayer_cone_plugin_la-xplayerConeVideo.lo
+libxplayer_cone_plugin_la_OBJECTS =  \
+	$(am_libxplayer_cone_plugin_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libtotem_cone_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+libxplayer_cone_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libtotem_cone_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_CONE_PLUGIN_TRUE@am_libtotem_cone_plugin_la_rpath = -rpath \
+	$(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libxplayer_cone_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_CONE_PLUGIN_TRUE@am_libxplayer_cone_plugin_la_rpath = -rpath \
 @ENABLE_CONE_PLUGIN_TRUE@	$(plugindir)
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_DEPENDENCIES =  \
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_DEPENDENCIES =  \
 @ENABLE_GMP_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libtotem_gmp_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
-	totemNPNGlue.cpp totemNPClass.cpp totemNPClass.h \
-	totemNPObject.cpp totemNPObject.h totemNPObjectWrapper.h \
-	totemNPVariantWrapper.h totemPluginGlue.cpp totemPlugin.cpp \
-	totemPlugin.h totem-plugin-viewer-constants.h \
-	totemGMPControls.cpp totemGMPControls.h totemGMPError.cpp \
-	totemGMPError.h totemGMPNetwork.cpp totemGMPNetwork.h \
-	totemGMPPlayer.cpp totemGMPPlayer.h totemGMPPlaylist.cpp \
-	totemGMPPlaylist.h totemGMPSettings.cpp totemGMPSettings.h
-am__objects_2 = libtotem_gmp_plugin_la-totemNPNGlue.lo \
-	libtotem_gmp_plugin_la-totemNPClass.lo \
-	libtotem_gmp_plugin_la-totemNPObject.lo \
-	libtotem_gmp_plugin_la-totemPluginGlue.lo \
-	libtotem_gmp_plugin_la-totemPlugin.lo
-@ENABLE_GMP_PLUGIN_TRUE@am_libtotem_gmp_plugin_la_OBJECTS =  \
+am__libxplayer_gmp_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
+	xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
+	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
+	xplayerGMPControls.cpp xplayerGMPControls.h xplayerGMPError.cpp \
+	xplayerGMPError.h xplayerGMPNetwork.cpp xplayerGMPNetwork.h \
+	xplayerGMPPlayer.cpp xplayerGMPPlayer.h xplayerGMPPlaylist.cpp \
+	xplayerGMPPlaylist.h xplayerGMPSettings.cpp xplayerGMPSettings.h
+am__objects_2 = libxplayer_gmp_plugin_la-xplayerNPNGlue.lo \
+	libxplayer_gmp_plugin_la-xplayerNPClass.lo \
+	libxplayer_gmp_plugin_la-xplayerNPObject.lo \
+	libxplayer_gmp_plugin_la-xplayerPluginGlue.lo \
+	libxplayer_gmp_plugin_la-xplayerPlugin.lo
+@ENABLE_GMP_PLUGIN_TRUE@am_libxplayer_gmp_plugin_la_OBJECTS =  \
 @ENABLE_GMP_PLUGIN_TRUE@	$(am__objects_2) \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPControls.lo \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPError.lo \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPNetwork.lo \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPPlayer.lo \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPPlaylist.lo \
-@ENABLE_GMP_PLUGIN_TRUE@	libtotem_gmp_plugin_la-totemGMPSettings.lo
-libtotem_gmp_plugin_la_OBJECTS = $(am_libtotem_gmp_plugin_la_OBJECTS)
-libtotem_gmp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPControls.lo \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPError.lo \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo \
+@ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPSettings.lo
+libxplayer_gmp_plugin_la_OBJECTS = $(am_libxplayer_gmp_plugin_la_OBJECTS)
+libxplayer_gmp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libtotem_gmp_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_GMP_PLUGIN_TRUE@am_libtotem_gmp_plugin_la_rpath = -rpath \
+	$(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libxplayer_gmp_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_GMP_PLUGIN_TRUE@am_libxplayer_gmp_plugin_la_rpath = -rpath \
 @ENABLE_GMP_PLUGIN_TRUE@	$(plugindir)
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_DEPENDENCIES =  \
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_DEPENDENCIES =  \
 @ENABLE_MULLY_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libtotem_mully_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
-	npupp.h totemNPNGlue.cpp totemNPClass.cpp totemNPClass.h \
-	totemNPObject.cpp totemNPObject.h totemNPObjectWrapper.h \
-	totemNPVariantWrapper.h totemPluginGlue.cpp totemPlugin.cpp \
-	totemPlugin.h totem-plugin-viewer-constants.h \
-	totemMullYPlugin.cpp totemMullYPlugin.h
-am__objects_3 = libtotem_mully_plugin_la-totemNPNGlue.lo \
-	libtotem_mully_plugin_la-totemNPClass.lo \
-	libtotem_mully_plugin_la-totemNPObject.lo \
-	libtotem_mully_plugin_la-totemPluginGlue.lo \
-	libtotem_mully_plugin_la-totemPlugin.lo
-@ENABLE_MULLY_PLUGIN_TRUE@am_libtotem_mully_plugin_la_OBJECTS =  \
+am__libxplayer_mully_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
+	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
+	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
+	xplayerMullYPlugin.cpp xplayerMullYPlugin.h
+am__objects_3 = libxplayer_mully_plugin_la-xplayerNPNGlue.lo \
+	libxplayer_mully_plugin_la-xplayerNPClass.lo \
+	libxplayer_mully_plugin_la-xplayerNPObject.lo \
+	libxplayer_mully_plugin_la-xplayerPluginGlue.lo \
+	libxplayer_mully_plugin_la-xplayerPlugin.lo
+@ENABLE_MULLY_PLUGIN_TRUE@am_libxplayer_mully_plugin_la_OBJECTS =  \
 @ENABLE_MULLY_PLUGIN_TRUE@	$(am__objects_3) \
-@ENABLE_MULLY_PLUGIN_TRUE@	libtotem_mully_plugin_la-totemMullYPlugin.lo
-libtotem_mully_plugin_la_OBJECTS =  \
-	$(am_libtotem_mully_plugin_la_OBJECTS)
-libtotem_mully_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+@ENABLE_MULLY_PLUGIN_TRUE@	libxplayer_mully_plugin_la-xplayerMullYPlugin.lo
+libxplayer_mully_plugin_la_OBJECTS =  \
+	$(am_libxplayer_mully_plugin_la_OBJECTS)
+libxplayer_mully_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libtotem_mully_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_MULLY_PLUGIN_TRUE@am_libtotem_mully_plugin_la_rpath = -rpath \
+	$(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libxplayer_mully_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_MULLY_PLUGIN_TRUE@am_libxplayer_mully_plugin_la_rpath = -rpath \
 @ENABLE_MULLY_PLUGIN_TRUE@	$(plugindir)
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_DEPENDENCIES =  \
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_DEPENDENCIES =  \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libtotem_narrowspace_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
-	npupp.h totemNPNGlue.cpp totemNPClass.cpp totemNPClass.h \
-	totemNPObject.cpp totemNPObject.h totemNPObjectWrapper.h \
-	totemNPVariantWrapper.h totemPluginGlue.cpp totemPlugin.cpp \
-	totemPlugin.h totem-plugin-viewer-constants.h \
-	totemNarrowSpacePlugin.cpp totemNarrowSpacePlugin.h
-am__objects_4 = libtotem_narrowspace_plugin_la-totemNPNGlue.lo \
-	libtotem_narrowspace_plugin_la-totemNPClass.lo \
-	libtotem_narrowspace_plugin_la-totemNPObject.lo \
-	libtotem_narrowspace_plugin_la-totemPluginGlue.lo \
-	libtotem_narrowspace_plugin_la-totemPlugin.lo
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@am_libtotem_narrowspace_plugin_la_OBJECTS =  \
+am__libxplayer_narrowspace_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
+	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
+	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
+	xplayerNarrowSpacePlugin.cpp xplayerNarrowSpacePlugin.h
+am__objects_4 = libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo \
+	libxplayer_narrowspace_plugin_la-xplayerNPClass.lo \
+	libxplayer_narrowspace_plugin_la-xplayerNPObject.lo \
+	libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo \
+	libxplayer_narrowspace_plugin_la-xplayerPlugin.lo
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@am_libxplayer_narrowspace_plugin_la_OBJECTS =  \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	$(am__objects_4) \
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@	libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo
-libtotem_narrowspace_plugin_la_OBJECTS =  \
-	$(am_libtotem_narrowspace_plugin_la_OBJECTS)
-libtotem_narrowspace_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@	libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo
+libxplayer_narrowspace_plugin_la_OBJECTS =  \
+	$(am_libxplayer_narrowspace_plugin_la_OBJECTS)
+libxplayer_narrowspace_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libtotem_narrowspace_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@am_libtotem_narrowspace_plugin_la_rpath =  \
+	$(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libxplayer_narrowspace_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@am_libxplayer_narrowspace_plugin_la_rpath =  \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	-rpath $(plugindir)
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_DEPENDENCIES =  \
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_DEPENDENCIES =  \
 @ENABLE_VEGAS_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libtotem_vegas_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
-	npupp.h totemNPNGlue.cpp totemNPClass.cpp totemNPClass.h \
-	totemNPObject.cpp totemNPObject.h totemNPObjectWrapper.h \
-	totemNPVariantWrapper.h totemPluginGlue.cpp totemPlugin.cpp \
-	totemPlugin.h totem-plugin-viewer-constants.h \
-	totemVegasPlugin.cpp totemVegasPlugin.h
-am__objects_5 = libtotem_vegas_plugin_la-totemNPNGlue.lo \
-	libtotem_vegas_plugin_la-totemNPClass.lo \
-	libtotem_vegas_plugin_la-totemNPObject.lo \
-	libtotem_vegas_plugin_la-totemPluginGlue.lo \
-	libtotem_vegas_plugin_la-totemPlugin.lo
-@ENABLE_VEGAS_PLUGIN_TRUE@am_libtotem_vegas_plugin_la_OBJECTS =  \
+am__libxplayer_vegas_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
+	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
+	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
+	xplayerVegasPlugin.cpp xplayerVegasPlugin.h
+am__objects_5 = libxplayer_vegas_plugin_la-xplayerNPNGlue.lo \
+	libxplayer_vegas_plugin_la-xplayerNPClass.lo \
+	libxplayer_vegas_plugin_la-xplayerNPObject.lo \
+	libxplayer_vegas_plugin_la-xplayerPluginGlue.lo \
+	libxplayer_vegas_plugin_la-xplayerPlugin.lo
+@ENABLE_VEGAS_PLUGIN_TRUE@am_libxplayer_vegas_plugin_la_OBJECTS =  \
 @ENABLE_VEGAS_PLUGIN_TRUE@	$(am__objects_5) \
-@ENABLE_VEGAS_PLUGIN_TRUE@	libtotem_vegas_plugin_la-totemVegasPlugin.lo
-libtotem_vegas_plugin_la_OBJECTS =  \
-	$(am_libtotem_vegas_plugin_la_OBJECTS)
-libtotem_vegas_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+@ENABLE_VEGAS_PLUGIN_TRUE@	libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo
+libxplayer_vegas_plugin_la_OBJECTS =  \
+	$(am_libxplayer_vegas_plugin_la_OBJECTS)
+libxplayer_vegas_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libtotem_vegas_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_VEGAS_PLUGIN_TRUE@am_libtotem_vegas_plugin_la_rpath = -rpath \
+	$(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libxplayer_vegas_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_VEGAS_PLUGIN_TRUE@am_libxplayer_vegas_plugin_la_rpath = -rpath \
 @ENABLE_VEGAS_PLUGIN_TRUE@	$(plugindir)
 PROGRAMS = $(libexec_PROGRAMS) $(noinst_PROGRAMS)
 am_test_glow_button_OBJECTS =  \
-	test_glow_button-totem-glow-button.$(OBJEXT) \
+	test_glow_button-xplayer-glow-button.$(OBJEXT) \
 	test_glow_button-test-glow-button.$(OBJEXT)
 test_glow_button_OBJECTS = $(am_test_glow_button_OBJECTS)
 test_glow_button_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -291,17 +291,17 @@ test_glow_button_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(test_glow_button_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
-am_totem_plugin_viewer_OBJECTS =  \
-	totem_plugin_viewer-totem-glow-button.$(OBJEXT) \
-	totem_plugin_viewer-totem-plugin-viewer.$(OBJEXT)
-totem_plugin_viewer_OBJECTS = $(am_totem_plugin_viewer_OBJECTS)
-totem_plugin_viewer_DEPENDENCIES =  \
+am_xplayer_plugin_viewer_OBJECTS =  \
+	xplayer_plugin_viewer-xplayer-glow-button.$(OBJEXT) \
+	xplayer_plugin_viewer-xplayer-plugin-viewer.$(OBJEXT)
+xplayer_plugin_viewer_OBJECTS = $(am_xplayer_plugin_viewer_OBJECTS)
+xplayer_plugin_viewer_DEPENDENCIES =  \
 	$(top_builddir)/src/backend/libbaconvideowidget.la \
-	$(top_builddir)/src/libtotem_player.la $(am__DEPENDENCIES_1)
-totem_plugin_viewer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+	$(top_builddir)/src/libxplayer_player.la $(am__DEPENDENCIES_1)
+xplayer_plugin_viewer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(totem_plugin_viewer_CFLAGS) $(CFLAGS) \
-	$(totem_plugin_viewer_LDFLAGS) $(LDFLAGS) -o $@
+	$(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) \
+	$(xplayer_plugin_viewer_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -354,18 +354,18 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(libtotem_cone_plugin_la_SOURCES) \
-	$(libtotem_gmp_plugin_la_SOURCES) \
-	$(libtotem_mully_plugin_la_SOURCES) \
-	$(libtotem_narrowspace_plugin_la_SOURCES) \
-	$(libtotem_vegas_plugin_la_SOURCES) \
-	$(test_glow_button_SOURCES) $(totem_plugin_viewer_SOURCES)
-DIST_SOURCES = $(am__libtotem_cone_plugin_la_SOURCES_DIST) \
-	$(am__libtotem_gmp_plugin_la_SOURCES_DIST) \
-	$(am__libtotem_mully_plugin_la_SOURCES_DIST) \
-	$(am__libtotem_narrowspace_plugin_la_SOURCES_DIST) \
-	$(am__libtotem_vegas_plugin_la_SOURCES_DIST) \
-	$(test_glow_button_SOURCES) $(totem_plugin_viewer_SOURCES)
+SOURCES = $(libxplayer_cone_plugin_la_SOURCES) \
+	$(libxplayer_gmp_plugin_la_SOURCES) \
+	$(libxplayer_mully_plugin_la_SOURCES) \
+	$(libxplayer_narrowspace_plugin_la_SOURCES) \
+	$(libxplayer_vegas_plugin_la_SOURCES) \
+	$(test_glow_button_SOURCES) $(xplayer_plugin_viewer_SOURCES)
+DIST_SOURCES = $(am__libxplayer_cone_plugin_la_SOURCES_DIST) \
+	$(am__libxplayer_gmp_plugin_la_SOURCES_DIST) \
+	$(am__libxplayer_mully_plugin_la_SOURCES_DIST) \
+	$(am__libxplayer_narrowspace_plugin_la_SOURCES_DIST) \
+	$(am__libxplayer_vegas_plugin_la_SOURCES_DIST) \
+	$(test_glow_button_SOURCES) $(xplayer_plugin_viewer_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -580,11 +580,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -656,22 +656,22 @@ plugindir = $(BROWSER_PLUGIN_DIR)
 plugin_LTLIBRARIES = $(am__append_1) $(am__append_2) $(am__append_3) \
 	$(am__append_4) $(am__append_5)
 EXTRA_DIST = plugin.symbols TODO README.browser-plugin \
-	org_gnome_totem_PluginViewer.xml
+	org_gnome_xplayer_PluginViewer.xml
 plugin_sources = \
 	npapi.h				\
 	npruntime.h			\
 	npupp.h				\
-	totemNPNGlue.cpp		\
-	totemNPClass.cpp		\
-	totemNPClass.h			\
-	totemNPObject.cpp		\
-	totemNPObject.h			\
-	totemNPObjectWrapper.h		\
-	totemNPVariantWrapper.h		\
-	totemPluginGlue.cpp		\
-	totemPlugin.cpp			\
-	totemPlugin.h			\
-	totem-plugin-viewer-constants.h
+	xplayerNPNGlue.cpp		\
+	xplayerNPClass.cpp		\
+	xplayerNPClass.h			\
+	xplayerNPObject.cpp		\
+	xplayerNPObject.h			\
+	xplayerNPObjectWrapper.h		\
+	xplayerNPVariantWrapper.h		\
+	xplayerPluginGlue.cpp		\
+	xplayerPlugin.cpp			\
+	xplayerPlugin.h			\
+	xplayer-plugin-viewer-constants.h
 
 plugin_cxxflags = \
 	$(BROWSER_PLUGIN_CFLAGS)	\
@@ -688,8 +688,8 @@ plugin_ldflags = \
 	$(AM_LDFLAGS)
 
 test_glow_button_SOURCES = \
-	totem-glow-button.c	\
-	totem-glow-button.h	\
+	xplayer-glow-button.c	\
+	xplayer-glow-button.h	\
 	test-glow-button.c
 
 test_glow_button_LDADD = \
@@ -701,128 +701,128 @@ test_glow_button_CFLAGS = \
 	$(WARN_CFLAGS)		\
 	$(AM_CFLAGS)
 
-totem_plugin_viewer_SOURCES = \
-	totem-glow-button.c		\
-	totem-glow-button.h		\
-	totem-plugin-viewer-interface.h	\
-	totem-plugin-viewer.c		\
-	totem-plugin-viewer-constants.h	\
-	totem-plugin-viewer-options.h	\
+xplayer_plugin_viewer_SOURCES = \
+	xplayer-glow-button.c		\
+	xplayer-glow-button.h		\
+	xplayer-plugin-viewer-interface.h	\
+	xplayer-plugin-viewer.c		\
+	xplayer-plugin-viewer-constants.h	\
+	xplayer-plugin-viewer-options.h	\
 	$(MARSHAL_FILES)
 
-totem_plugin_viewer_CPPFLAGS = \
+xplayer_plugin_viewer_CPPFLAGS = \
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DG_LOG_DOMAIN=\""TotemEmbedded\""		\
+	-DG_LOG_DOMAIN=\""XplayerEmbedded\""		\
 	-I$(top_srcdir)/src/gst				\
 	$(AM_CPPFLAGS)
 
-totem_plugin_viewer_CFLAGS = \
+xplayer_plugin_viewer_CFLAGS = \
 	$(PLUGIN_VIEWER_CFLAGS)	\
 	$(WARN_CFLAGS)		\
 	$(AM_CFLAGS)
 
-totem_plugin_viewer_LDADD = \
+xplayer_plugin_viewer_LDADD = \
 	$(top_builddir)/src/backend/libbaconvideowidget.la		\
-	$(top_builddir)/src/libtotem_player.la				\
+	$(top_builddir)/src/libxplayer_player.la				\
 	$(PLUGIN_VIEWER_LIBS)
 
-totem_plugin_viewer_LDFLAGS = -export-dynamic
-CLEANFILES = totem-plugin-viewer-interface.h
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_SOURCES = \
+xplayer_plugin_viewer_LDFLAGS = -export-dynamic
+CLEANFILES = xplayer-plugin-viewer-interface.h
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_SOURCES = \
 @ENABLE_GMP_PLUGIN_TRUE@	$(plugin_sources)		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPControls.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPControls.h		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPError.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPError.h			\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPNetwork.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPNetwork.h		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPPlayer.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPPlayer.h		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPPlaylist.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPPlaylist.h		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPSettings.cpp		\
-@ENABLE_GMP_PLUGIN_TRUE@	totemGMPSettings.h
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPControls.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPControls.h		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPError.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPError.h			\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPNetwork.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPNetwork.h		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPPlayer.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPPlayer.h		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPPlaylist.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPPlaylist.h		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPSettings.cpp		\
+@ENABLE_GMP_PLUGIN_TRUE@	xplayerGMPSettings.h
 
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_CPPFLAGS = \
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_CPPFLAGS = \
 @ENABLE_GMP_PLUGIN_TRUE@	-DXP_UNIX					\
 @ENABLE_GMP_PLUGIN_TRUE@	-DMOZ_X11					\
-@ENABLE_GMP_PLUGIN_TRUE@	-DTOTEM_GMP_PLUGIN				\
-@ENABLE_GMP_PLUGIN_TRUE@	-DTOTEM_PL_PARSER_MINI				\
+@ENABLE_GMP_PLUGIN_TRUE@	-DXPLAYER_GMP_PLUGIN				\
+@ENABLE_GMP_PLUGIN_TRUE@	-DXPLAYER_PL_PARSER_MINI				\
 @ENABLE_GMP_PLUGIN_TRUE@	$(AM_CPPFLAGS)
 
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_CXXFLAGS = $(plugin_cxxflags)
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_LIBADD = $(plugin_libadd)
-@ENABLE_GMP_PLUGIN_TRUE@libtotem_gmp_plugin_la_LDFLAGS = $(plugin_ldflags)
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_SOURCES = \
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_CXXFLAGS = $(plugin_cxxflags)
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_LIBADD = $(plugin_libadd)
+@ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_LDFLAGS = $(plugin_ldflags)
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_SOURCES = \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	$(plugin_sources)		\
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@	totemNarrowSpacePlugin.cpp	\
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@	totemNarrowSpacePlugin.h
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@	xplayerNarrowSpacePlugin.cpp	\
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@	xplayerNarrowSpacePlugin.h
 
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_CPPFLAGS = \
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_CPPFLAGS = \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DXP_UNIX					\
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DMOZ_X11					\
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DTOTEM_NARROWSPACE_PLUGIN			\
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DTOTEM_PL_PARSER_MINI				\
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DXPLAYER_NARROWSPACE_PLUGIN			\
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@	-DXPLAYER_PL_PARSER_MINI				\
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	$(AM_CPPFLAGS)
 
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_CXXFLAGS = $(plugin_cxxflags)
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_LIBADD = $(plugin_libadd)
-@ENABLE_NARROWSPACE_PLUGIN_TRUE@libtotem_narrowspace_plugin_la_LDFLAGS = $(plugin_ldflags)
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_SOURCES = \
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_CXXFLAGS = $(plugin_cxxflags)
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_LIBADD = $(plugin_libadd)
+@ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_LDFLAGS = $(plugin_ldflags)
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_SOURCES = \
 @ENABLE_VEGAS_PLUGIN_TRUE@	$(plugin_sources)		\
-@ENABLE_VEGAS_PLUGIN_TRUE@	totemVegasPlugin.cpp	\
-@ENABLE_VEGAS_PLUGIN_TRUE@	totemVegasPlugin.h
+@ENABLE_VEGAS_PLUGIN_TRUE@	xplayerVegasPlugin.cpp	\
+@ENABLE_VEGAS_PLUGIN_TRUE@	xplayerVegasPlugin.h
 
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_CPPFLAGS = \
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_CPPFLAGS = \
 @ENABLE_VEGAS_PLUGIN_TRUE@	-DXP_UNIX					\
 @ENABLE_VEGAS_PLUGIN_TRUE@	-DMOZ_X11					\
-@ENABLE_VEGAS_PLUGIN_TRUE@	-DTOTEM_VEGAS_PLUGIN			\
-@ENABLE_VEGAS_PLUGIN_TRUE@	-DTOTEM_PL_PARSER_MINI				\
+@ENABLE_VEGAS_PLUGIN_TRUE@	-DXPLAYER_VEGAS_PLUGIN			\
+@ENABLE_VEGAS_PLUGIN_TRUE@	-DXPLAYER_PL_PARSER_MINI				\
 @ENABLE_VEGAS_PLUGIN_TRUE@	$(AM_CPPFLAGS)
 
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_CXXFLAGS = $(plugin_cxxflags)
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_LIBADD = $(plugin_libadd)
-@ENABLE_VEGAS_PLUGIN_TRUE@libtotem_vegas_plugin_la_LDFLAGS = $(plugin_ldflags)
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_SOURCES = \
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_CXXFLAGS = $(plugin_cxxflags)
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_LIBADD = $(plugin_libadd)
+@ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_LDFLAGS = $(plugin_ldflags)
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_SOURCES = \
 @ENABLE_MULLY_PLUGIN_TRUE@	$(plugin_sources)		\
-@ENABLE_MULLY_PLUGIN_TRUE@	totemMullYPlugin.cpp		\
-@ENABLE_MULLY_PLUGIN_TRUE@	totemMullYPlugin.h
+@ENABLE_MULLY_PLUGIN_TRUE@	xplayerMullYPlugin.cpp		\
+@ENABLE_MULLY_PLUGIN_TRUE@	xplayerMullYPlugin.h
 
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_CPPFLAGS = \
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_CPPFLAGS = \
 @ENABLE_MULLY_PLUGIN_TRUE@	-DXP_UNIX					\
 @ENABLE_MULLY_PLUGIN_TRUE@	-DMOZ_X11					\
-@ENABLE_MULLY_PLUGIN_TRUE@	-DTOTEM_MULLY_PLUGIN				\
-@ENABLE_MULLY_PLUGIN_TRUE@	-DTOTEM_PL_PARSER_MINI				\
+@ENABLE_MULLY_PLUGIN_TRUE@	-DXPLAYER_MULLY_PLUGIN				\
+@ENABLE_MULLY_PLUGIN_TRUE@	-DXPLAYER_PL_PARSER_MINI				\
 @ENABLE_MULLY_PLUGIN_TRUE@	$(AM_CPPFLAGS)
 
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_CXXFLAGS = $(plugin_cxxflags)
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_LIBADD = $(plugin_libadd)
-@ENABLE_MULLY_PLUGIN_TRUE@libtotem_mully_plugin_la_LDFLAGS = $(plugin_ldflags)
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_SOURCES = \
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_CXXFLAGS = $(plugin_cxxflags)
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_LIBADD = $(plugin_libadd)
+@ENABLE_MULLY_PLUGIN_TRUE@libxplayer_mully_plugin_la_LDFLAGS = $(plugin_ldflags)
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_SOURCES = \
 @ENABLE_CONE_PLUGIN_TRUE@	$(plugin_sources)		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeAudio.cpp		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeAudio.h		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemCone.cpp			\
-@ENABLE_CONE_PLUGIN_TRUE@	totemCone.h			\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeInput.cpp		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeInput.h		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConePlaylist.cpp		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConePlaylist.h		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConePlaylistItems.cpp	\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConePlaylistItems.h	\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeVideo.cpp		\
-@ENABLE_CONE_PLUGIN_TRUE@	totemConeVideo.h
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeAudio.cpp		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeAudio.h		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerCone.cpp			\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerCone.h			\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeInput.cpp		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeInput.h		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConePlaylist.cpp		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConePlaylist.h		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConePlaylistItems.cpp	\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConePlaylistItems.h	\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeVideo.cpp		\
+@ENABLE_CONE_PLUGIN_TRUE@	xplayerConeVideo.h
 
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_CPPFLAGS = \
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_CPPFLAGS = \
 @ENABLE_CONE_PLUGIN_TRUE@	-DXP_UNIX					\
 @ENABLE_CONE_PLUGIN_TRUE@	-DMOZ_X11					\
-@ENABLE_CONE_PLUGIN_TRUE@	-DTOTEM_CONE_PLUGIN				\
-@ENABLE_CONE_PLUGIN_TRUE@	-DTOTEM_PL_PARSER_MINI				\
+@ENABLE_CONE_PLUGIN_TRUE@	-DXPLAYER_CONE_PLUGIN				\
+@ENABLE_CONE_PLUGIN_TRUE@	-DXPLAYER_PL_PARSER_MINI				\
 @ENABLE_CONE_PLUGIN_TRUE@	$(AM_CPPFLAGS)
 
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_CXXFLAGS = $(plugin_cxxflags)
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_LIBADD = $(plugin_libadd)
-@ENABLE_CONE_PLUGIN_TRUE@libtotem_cone_plugin_la_LDFLAGS = $(plugin_ldflags)
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_CXXFLAGS = $(plugin_cxxflags)
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_LIBADD = $(plugin_libadd)
+@ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_LDFLAGS = $(plugin_ldflags)
 all: all-am
 
 .SUFFIXES:
@@ -893,20 +893,20 @@ clean-pluginLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libtotem-cone-plugin.la: $(libtotem_cone_plugin_la_OBJECTS) $(libtotem_cone_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_cone_plugin_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libtotem_cone_plugin_la_LINK) $(am_libtotem_cone_plugin_la_rpath) $(libtotem_cone_plugin_la_OBJECTS) $(libtotem_cone_plugin_la_LIBADD) $(LIBS)
+libxplayer-cone-plugin.la: $(libxplayer_cone_plugin_la_OBJECTS) $(libxplayer_cone_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_cone_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libxplayer_cone_plugin_la_LINK) $(am_libxplayer_cone_plugin_la_rpath) $(libxplayer_cone_plugin_la_OBJECTS) $(libxplayer_cone_plugin_la_LIBADD) $(LIBS)
 
-libtotem-gmp-plugin.la: $(libtotem_gmp_plugin_la_OBJECTS) $(libtotem_gmp_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_gmp_plugin_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libtotem_gmp_plugin_la_LINK) $(am_libtotem_gmp_plugin_la_rpath) $(libtotem_gmp_plugin_la_OBJECTS) $(libtotem_gmp_plugin_la_LIBADD) $(LIBS)
+libxplayer-gmp-plugin.la: $(libxplayer_gmp_plugin_la_OBJECTS) $(libxplayer_gmp_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_gmp_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libxplayer_gmp_plugin_la_LINK) $(am_libxplayer_gmp_plugin_la_rpath) $(libxplayer_gmp_plugin_la_OBJECTS) $(libxplayer_gmp_plugin_la_LIBADD) $(LIBS)
 
-libtotem-mully-plugin.la: $(libtotem_mully_plugin_la_OBJECTS) $(libtotem_mully_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_mully_plugin_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libtotem_mully_plugin_la_LINK) $(am_libtotem_mully_plugin_la_rpath) $(libtotem_mully_plugin_la_OBJECTS) $(libtotem_mully_plugin_la_LIBADD) $(LIBS)
+libxplayer-mully-plugin.la: $(libxplayer_mully_plugin_la_OBJECTS) $(libxplayer_mully_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_mully_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libxplayer_mully_plugin_la_LINK) $(am_libxplayer_mully_plugin_la_rpath) $(libxplayer_mully_plugin_la_OBJECTS) $(libxplayer_mully_plugin_la_LIBADD) $(LIBS)
 
-libtotem-narrowspace-plugin.la: $(libtotem_narrowspace_plugin_la_OBJECTS) $(libtotem_narrowspace_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_narrowspace_plugin_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libtotem_narrowspace_plugin_la_LINK) $(am_libtotem_narrowspace_plugin_la_rpath) $(libtotem_narrowspace_plugin_la_OBJECTS) $(libtotem_narrowspace_plugin_la_LIBADD) $(LIBS)
+libxplayer-narrowspace-plugin.la: $(libxplayer_narrowspace_plugin_la_OBJECTS) $(libxplayer_narrowspace_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_narrowspace_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libxplayer_narrowspace_plugin_la_LINK) $(am_libxplayer_narrowspace_plugin_la_rpath) $(libxplayer_narrowspace_plugin_la_OBJECTS) $(libxplayer_narrowspace_plugin_la_LIBADD) $(LIBS)
 
-libtotem-vegas-plugin.la: $(libtotem_vegas_plugin_la_OBJECTS) $(libtotem_vegas_plugin_la_DEPENDENCIES) $(EXTRA_libtotem_vegas_plugin_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libtotem_vegas_plugin_la_LINK) $(am_libtotem_vegas_plugin_la_rpath) $(libtotem_vegas_plugin_la_OBJECTS) $(libtotem_vegas_plugin_la_LIBADD) $(LIBS)
+libxplayer-vegas-plugin.la: $(libxplayer_vegas_plugin_la_OBJECTS) $(libxplayer_vegas_plugin_la_DEPENDENCIES) $(EXTRA_libxplayer_vegas_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libxplayer_vegas_plugin_la_LINK) $(am_libxplayer_vegas_plugin_la_rpath) $(libxplayer_vegas_plugin_la_OBJECTS) $(libxplayer_vegas_plugin_la_LIBADD) $(LIBS)
 install-libexecPROGRAMS: $(libexec_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	@list='$(libexec_PROGRAMS)'; test -n "$(libexecdir)" || list=; \
@@ -970,9 +970,9 @@ test-glow-button$(EXEEXT): $(test_glow_button_OBJECTS) $(test_glow_button_DEPEND
 	@rm -f test-glow-button$(EXEEXT)
 	$(AM_V_CCLD)$(test_glow_button_LINK) $(test_glow_button_OBJECTS) $(test_glow_button_LDADD) $(LIBS)
 
-totem-plugin-viewer$(EXEEXT): $(totem_plugin_viewer_OBJECTS) $(totem_plugin_viewer_DEPENDENCIES) $(EXTRA_totem_plugin_viewer_DEPENDENCIES) 
-	@rm -f totem-plugin-viewer$(EXEEXT)
-	$(AM_V_CCLD)$(totem_plugin_viewer_LINK) $(totem_plugin_viewer_OBJECTS) $(totem_plugin_viewer_LDADD) $(LIBS)
+xplayer-plugin-viewer$(EXEEXT): $(xplayer_plugin_viewer_OBJECTS) $(xplayer_plugin_viewer_DEPENDENCIES) $(EXTRA_xplayer_plugin_viewer_DEPENDENCIES) 
+	@rm -f xplayer-plugin-viewer$(EXEEXT)
+	$(AM_V_CCLD)$(xplayer_plugin_viewer_LINK) $(xplayer_plugin_viewer_OBJECTS) $(xplayer_plugin_viewer_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -980,50 +980,50 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemCone.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemConeAudio.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemConeInput.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylist.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylistItems.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemConeVideo.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemNPClass.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemNPNGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemNPObject.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_cone_plugin_la-totemPluginGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPControls.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPError.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPNetwork.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlayer.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlaylist.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemGMPSettings.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemNPClass.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemNPNGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemNPObject.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_gmp_plugin_la-totemPluginGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemMullYPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemNPClass.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemNPNGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemNPObject.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_mully_plugin_la-totemPluginGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPClass.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPNGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPObject.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_narrowspace_plugin_la-totemPluginGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemNPClass.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemNPNGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemNPObject.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemPlugin.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemPluginGlue.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libtotem_vegas_plugin_la-totemVegasPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerCone.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeAudio.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeInput.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylist.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylistItems.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeVideo.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPClass.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPNGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPObject.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_cone_plugin_la-xplayerPluginGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPControls.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPError.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPNetwork.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlayer.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlaylist.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPSettings.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPClass.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPNGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPObject.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPluginGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerMullYPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPClass.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPNGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPObject.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_mully_plugin_la-xplayerPluginGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPClass.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPNGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPObject.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPluginGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPClass.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPNGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPObject.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPlugin.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPluginGlue.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxplayer_vegas_plugin_la-xplayerVegasPlugin.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_glow_button-test-glow-button.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_glow_button-totem-glow-button.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_plugin_viewer-totem-glow-button.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_glow_button-xplayer-glow-button.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -1046,19 +1046,19 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-test_glow_button-totem-glow-button.o: totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -MT test_glow_button-totem-glow-button.o -MD -MP -MF $(DEPDIR)/test_glow_button-totem-glow-button.Tpo -c -o test_glow_button-totem-glow-button.o `test -f 'totem-glow-button.c' || echo '$(srcdir)/'`totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_glow_button-totem-glow-button.Tpo $(DEPDIR)/test_glow_button-totem-glow-button.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-glow-button.c' object='test_glow_button-totem-glow-button.o' libtool=no @AMDEPBACKSLASH@
+test_glow_button-xplayer-glow-button.o: xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -MT test_glow_button-xplayer-glow-button.o -MD -MP -MF $(DEPDIR)/test_glow_button-xplayer-glow-button.Tpo -c -o test_glow_button-xplayer-glow-button.o `test -f 'xplayer-glow-button.c' || echo '$(srcdir)/'`xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_glow_button-xplayer-glow-button.Tpo $(DEPDIR)/test_glow_button-xplayer-glow-button.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-glow-button.c' object='test_glow_button-xplayer-glow-button.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -c -o test_glow_button-totem-glow-button.o `test -f 'totem-glow-button.c' || echo '$(srcdir)/'`totem-glow-button.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -c -o test_glow_button-xplayer-glow-button.o `test -f 'xplayer-glow-button.c' || echo '$(srcdir)/'`xplayer-glow-button.c
 
-test_glow_button-totem-glow-button.obj: totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -MT test_glow_button-totem-glow-button.obj -MD -MP -MF $(DEPDIR)/test_glow_button-totem-glow-button.Tpo -c -o test_glow_button-totem-glow-button.obj `if test -f 'totem-glow-button.c'; then $(CYGPATH_W) 'totem-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/totem-glow-button.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_glow_button-totem-glow-button.Tpo $(DEPDIR)/test_glow_button-totem-glow-button.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-glow-button.c' object='test_glow_button-totem-glow-button.obj' libtool=no @AMDEPBACKSLASH@
+test_glow_button-xplayer-glow-button.obj: xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -MT test_glow_button-xplayer-glow-button.obj -MD -MP -MF $(DEPDIR)/test_glow_button-xplayer-glow-button.Tpo -c -o test_glow_button-xplayer-glow-button.obj `if test -f 'xplayer-glow-button.c'; then $(CYGPATH_W) 'xplayer-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-glow-button.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_glow_button-xplayer-glow-button.Tpo $(DEPDIR)/test_glow_button-xplayer-glow-button.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-glow-button.c' object='test_glow_button-xplayer-glow-button.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -c -o test_glow_button-totem-glow-button.obj `if test -f 'totem-glow-button.c'; then $(CYGPATH_W) 'totem-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/totem-glow-button.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -c -o test_glow_button-xplayer-glow-button.obj `if test -f 'xplayer-glow-button.c'; then $(CYGPATH_W) 'xplayer-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-glow-button.c'; fi`
 
 test_glow_button-test-glow-button.o: test-glow-button.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -MT test_glow_button-test-glow-button.o -MD -MP -MF $(DEPDIR)/test_glow_button-test-glow-button.Tpo -c -o test_glow_button-test-glow-button.o `test -f 'test-glow-button.c' || echo '$(srcdir)/'`test-glow-button.c
@@ -1074,33 +1074,33 @@ test_glow_button-test-glow-button.obj: test-glow-button.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(test_glow_button_CFLAGS) $(CFLAGS) -c -o test_glow_button-test-glow-button.obj `if test -f 'test-glow-button.c'; then $(CYGPATH_W) 'test-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/test-glow-button.c'; fi`
 
-totem_plugin_viewer-totem-glow-button.o: totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -MT totem_plugin_viewer-totem-glow-button.o -MD -MP -MF $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Tpo -c -o totem_plugin_viewer-totem-glow-button.o `test -f 'totem-glow-button.c' || echo '$(srcdir)/'`totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Tpo $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-glow-button.c' object='totem_plugin_viewer-totem-glow-button.o' libtool=no @AMDEPBACKSLASH@
+xplayer_plugin_viewer-xplayer-glow-button.o: xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -MT xplayer_plugin_viewer-xplayer-glow-button.o -MD -MP -MF $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Tpo -c -o xplayer_plugin_viewer-xplayer-glow-button.o `test -f 'xplayer-glow-button.c' || echo '$(srcdir)/'`xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Tpo $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-glow-button.c' object='xplayer_plugin_viewer-xplayer-glow-button.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -c -o totem_plugin_viewer-totem-glow-button.o `test -f 'totem-glow-button.c' || echo '$(srcdir)/'`totem-glow-button.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -c -o xplayer_plugin_viewer-xplayer-glow-button.o `test -f 'xplayer-glow-button.c' || echo '$(srcdir)/'`xplayer-glow-button.c
 
-totem_plugin_viewer-totem-glow-button.obj: totem-glow-button.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -MT totem_plugin_viewer-totem-glow-button.obj -MD -MP -MF $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Tpo -c -o totem_plugin_viewer-totem-glow-button.obj `if test -f 'totem-glow-button.c'; then $(CYGPATH_W) 'totem-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/totem-glow-button.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Tpo $(DEPDIR)/totem_plugin_viewer-totem-glow-button.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-glow-button.c' object='totem_plugin_viewer-totem-glow-button.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_plugin_viewer-xplayer-glow-button.obj: xplayer-glow-button.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -MT xplayer_plugin_viewer-xplayer-glow-button.obj -MD -MP -MF $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Tpo -c -o xplayer_plugin_viewer-xplayer-glow-button.obj `if test -f 'xplayer-glow-button.c'; then $(CYGPATH_W) 'xplayer-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-glow-button.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Tpo $(DEPDIR)/xplayer_plugin_viewer-xplayer-glow-button.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-glow-button.c' object='xplayer_plugin_viewer-xplayer-glow-button.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -c -o totem_plugin_viewer-totem-glow-button.obj `if test -f 'totem-glow-button.c'; then $(CYGPATH_W) 'totem-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/totem-glow-button.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -c -o xplayer_plugin_viewer-xplayer-glow-button.obj `if test -f 'xplayer-glow-button.c'; then $(CYGPATH_W) 'xplayer-glow-button.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-glow-button.c'; fi`
 
-totem_plugin_viewer-totem-plugin-viewer.o: totem-plugin-viewer.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -MT totem_plugin_viewer-totem-plugin-viewer.o -MD -MP -MF $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Tpo -c -o totem_plugin_viewer-totem-plugin-viewer.o `test -f 'totem-plugin-viewer.c' || echo '$(srcdir)/'`totem-plugin-viewer.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Tpo $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-plugin-viewer.c' object='totem_plugin_viewer-totem-plugin-viewer.o' libtool=no @AMDEPBACKSLASH@
+xplayer_plugin_viewer-xplayer-plugin-viewer.o: xplayer-plugin-viewer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -MT xplayer_plugin_viewer-xplayer-plugin-viewer.o -MD -MP -MF $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Tpo -c -o xplayer_plugin_viewer-xplayer-plugin-viewer.o `test -f 'xplayer-plugin-viewer.c' || echo '$(srcdir)/'`xplayer-plugin-viewer.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Tpo $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-plugin-viewer.c' object='xplayer_plugin_viewer-xplayer-plugin-viewer.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -c -o totem_plugin_viewer-totem-plugin-viewer.o `test -f 'totem-plugin-viewer.c' || echo '$(srcdir)/'`totem-plugin-viewer.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -c -o xplayer_plugin_viewer-xplayer-plugin-viewer.o `test -f 'xplayer-plugin-viewer.c' || echo '$(srcdir)/'`xplayer-plugin-viewer.c
 
-totem_plugin_viewer-totem-plugin-viewer.obj: totem-plugin-viewer.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -MT totem_plugin_viewer-totem-plugin-viewer.obj -MD -MP -MF $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Tpo -c -o totem_plugin_viewer-totem-plugin-viewer.obj `if test -f 'totem-plugin-viewer.c'; then $(CYGPATH_W) 'totem-plugin-viewer.c'; else $(CYGPATH_W) '$(srcdir)/totem-plugin-viewer.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Tpo $(DEPDIR)/totem_plugin_viewer-totem-plugin-viewer.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-plugin-viewer.c' object='totem_plugin_viewer-totem-plugin-viewer.obj' libtool=no @AMDEPBACKSLASH@
+xplayer_plugin_viewer-xplayer-plugin-viewer.obj: xplayer-plugin-viewer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -MT xplayer_plugin_viewer-xplayer-plugin-viewer.obj -MD -MP -MF $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Tpo -c -o xplayer_plugin_viewer-xplayer-plugin-viewer.obj `if test -f 'xplayer-plugin-viewer.c'; then $(CYGPATH_W) 'xplayer-plugin-viewer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-plugin-viewer.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Tpo $(DEPDIR)/xplayer_plugin_viewer-xplayer-plugin-viewer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-plugin-viewer.c' object='xplayer_plugin_viewer-xplayer-plugin-viewer.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(totem_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(totem_plugin_viewer_CFLAGS) $(CFLAGS) -c -o totem_plugin_viewer-totem-plugin-viewer.obj `if test -f 'totem-plugin-viewer.c'; then $(CYGPATH_W) 'totem-plugin-viewer.c'; else $(CYGPATH_W) '$(srcdir)/totem-plugin-viewer.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xplayer_plugin_viewer_CPPFLAGS) $(CPPFLAGS) $(xplayer_plugin_viewer_CFLAGS) $(CFLAGS) -c -o xplayer_plugin_viewer-xplayer-plugin-viewer.obj `if test -f 'xplayer-plugin-viewer.c'; then $(CYGPATH_W) 'xplayer-plugin-viewer.c'; else $(CYGPATH_W) '$(srcdir)/xplayer-plugin-viewer.c'; fi`
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -1123,285 +1123,285 @@ totem_plugin_viewer-totem-plugin-viewer.obj: totem-plugin-viewer.c
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
 
-libtotem_cone_plugin_la-totemNPNGlue.lo: totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemNPNGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemNPNGlue.Tpo -c -o libtotem_cone_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemNPNGlue.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemNPNGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPNGlue.cpp' object='libtotem_cone_plugin_la-totemNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerNPNGlue.lo: xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerNPNGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPNGlue.Tpo -c -o libxplayer_cone_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPNGlue.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPNGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPNGlue.cpp' object='libxplayer_cone_plugin_la-xplayerNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
 
-libtotem_cone_plugin_la-totemNPClass.lo: totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemNPClass.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemNPClass.Tpo -c -o libtotem_cone_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemNPClass.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemNPClass.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPClass.cpp' object='libtotem_cone_plugin_la-totemNPClass.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerNPClass.lo: xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerNPClass.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPClass.Tpo -c -o libxplayer_cone_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPClass.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPClass.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPClass.cpp' object='libxplayer_cone_plugin_la-xplayerNPClass.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
 
-libtotem_cone_plugin_la-totemNPObject.lo: totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemNPObject.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemNPObject.Tpo -c -o libtotem_cone_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemNPObject.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemNPObject.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPObject.cpp' object='libtotem_cone_plugin_la-totemNPObject.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerNPObject.lo: xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerNPObject.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPObject.Tpo -c -o libxplayer_cone_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPObject.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerNPObject.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPObject.cpp' object='libxplayer_cone_plugin_la-xplayerNPObject.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
 
-libtotem_cone_plugin_la-totemPluginGlue.lo: totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemPluginGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemPluginGlue.Tpo -c -o libtotem_cone_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemPluginGlue.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemPluginGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPluginGlue.cpp' object='libtotem_cone_plugin_la-totemPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerPluginGlue.lo: xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerPluginGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPluginGlue.Tpo -c -o libxplayer_cone_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPluginGlue.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPluginGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPluginGlue.cpp' object='libxplayer_cone_plugin_la-xplayerPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
 
-libtotem_cone_plugin_la-totemPlugin.lo: totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemPlugin.Tpo -c -o libtotem_cone_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemPlugin.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPlugin.cpp' object='libtotem_cone_plugin_la-totemPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerPlugin.lo: xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPlugin.Tpo -c -o libxplayer_cone_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPlugin.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPlugin.cpp' object='libxplayer_cone_plugin_la-xplayerPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
 
-libtotem_cone_plugin_la-totemConeAudio.lo: totemConeAudio.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemConeAudio.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemConeAudio.Tpo -c -o libtotem_cone_plugin_la-totemConeAudio.lo `test -f 'totemConeAudio.cpp' || echo '$(srcdir)/'`totemConeAudio.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemConeAudio.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemConeAudio.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemConeAudio.cpp' object='libtotem_cone_plugin_la-totemConeAudio.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerConeAudio.lo: xplayerConeAudio.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerConeAudio.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeAudio.Tpo -c -o libxplayer_cone_plugin_la-xplayerConeAudio.lo `test -f 'xplayerConeAudio.cpp' || echo '$(srcdir)/'`xplayerConeAudio.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeAudio.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeAudio.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerConeAudio.cpp' object='libxplayer_cone_plugin_la-xplayerConeAudio.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemConeAudio.lo `test -f 'totemConeAudio.cpp' || echo '$(srcdir)/'`totemConeAudio.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerConeAudio.lo `test -f 'xplayerConeAudio.cpp' || echo '$(srcdir)/'`xplayerConeAudio.cpp
 
-libtotem_cone_plugin_la-totemCone.lo: totemCone.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemCone.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemCone.Tpo -c -o libtotem_cone_plugin_la-totemCone.lo `test -f 'totemCone.cpp' || echo '$(srcdir)/'`totemCone.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemCone.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemCone.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemCone.cpp' object='libtotem_cone_plugin_la-totemCone.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerCone.lo: xplayerCone.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerCone.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerCone.Tpo -c -o libxplayer_cone_plugin_la-xplayerCone.lo `test -f 'xplayerCone.cpp' || echo '$(srcdir)/'`xplayerCone.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerCone.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerCone.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerCone.cpp' object='libxplayer_cone_plugin_la-xplayerCone.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemCone.lo `test -f 'totemCone.cpp' || echo '$(srcdir)/'`totemCone.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerCone.lo `test -f 'xplayerCone.cpp' || echo '$(srcdir)/'`xplayerCone.cpp
 
-libtotem_cone_plugin_la-totemConeInput.lo: totemConeInput.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemConeInput.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemConeInput.Tpo -c -o libtotem_cone_plugin_la-totemConeInput.lo `test -f 'totemConeInput.cpp' || echo '$(srcdir)/'`totemConeInput.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemConeInput.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemConeInput.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemConeInput.cpp' object='libtotem_cone_plugin_la-totemConeInput.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerConeInput.lo: xplayerConeInput.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerConeInput.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeInput.Tpo -c -o libxplayer_cone_plugin_la-xplayerConeInput.lo `test -f 'xplayerConeInput.cpp' || echo '$(srcdir)/'`xplayerConeInput.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeInput.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeInput.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerConeInput.cpp' object='libxplayer_cone_plugin_la-xplayerConeInput.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemConeInput.lo `test -f 'totemConeInput.cpp' || echo '$(srcdir)/'`totemConeInput.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerConeInput.lo `test -f 'xplayerConeInput.cpp' || echo '$(srcdir)/'`xplayerConeInput.cpp
 
-libtotem_cone_plugin_la-totemConePlaylist.lo: totemConePlaylist.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemConePlaylist.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylist.Tpo -c -o libtotem_cone_plugin_la-totemConePlaylist.lo `test -f 'totemConePlaylist.cpp' || echo '$(srcdir)/'`totemConePlaylist.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylist.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylist.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemConePlaylist.cpp' object='libtotem_cone_plugin_la-totemConePlaylist.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerConePlaylist.lo: xplayerConePlaylist.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerConePlaylist.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylist.Tpo -c -o libxplayer_cone_plugin_la-xplayerConePlaylist.lo `test -f 'xplayerConePlaylist.cpp' || echo '$(srcdir)/'`xplayerConePlaylist.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylist.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylist.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerConePlaylist.cpp' object='libxplayer_cone_plugin_la-xplayerConePlaylist.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemConePlaylist.lo `test -f 'totemConePlaylist.cpp' || echo '$(srcdir)/'`totemConePlaylist.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerConePlaylist.lo `test -f 'xplayerConePlaylist.cpp' || echo '$(srcdir)/'`xplayerConePlaylist.cpp
 
-libtotem_cone_plugin_la-totemConePlaylistItems.lo: totemConePlaylistItems.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemConePlaylistItems.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylistItems.Tpo -c -o libtotem_cone_plugin_la-totemConePlaylistItems.lo `test -f 'totemConePlaylistItems.cpp' || echo '$(srcdir)/'`totemConePlaylistItems.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylistItems.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemConePlaylistItems.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemConePlaylistItems.cpp' object='libtotem_cone_plugin_la-totemConePlaylistItems.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo: xplayerConePlaylistItems.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylistItems.Tpo -c -o libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo `test -f 'xplayerConePlaylistItems.cpp' || echo '$(srcdir)/'`xplayerConePlaylistItems.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylistItems.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConePlaylistItems.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerConePlaylistItems.cpp' object='libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemConePlaylistItems.lo `test -f 'totemConePlaylistItems.cpp' || echo '$(srcdir)/'`totemConePlaylistItems.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerConePlaylistItems.lo `test -f 'xplayerConePlaylistItems.cpp' || echo '$(srcdir)/'`xplayerConePlaylistItems.cpp
 
-libtotem_cone_plugin_la-totemConeVideo.lo: totemConeVideo.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_cone_plugin_la-totemConeVideo.lo -MD -MP -MF $(DEPDIR)/libtotem_cone_plugin_la-totemConeVideo.Tpo -c -o libtotem_cone_plugin_la-totemConeVideo.lo `test -f 'totemConeVideo.cpp' || echo '$(srcdir)/'`totemConeVideo.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_cone_plugin_la-totemConeVideo.Tpo $(DEPDIR)/libtotem_cone_plugin_la-totemConeVideo.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemConeVideo.cpp' object='libtotem_cone_plugin_la-totemConeVideo.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_cone_plugin_la-xplayerConeVideo.lo: xplayerConeVideo.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_cone_plugin_la-xplayerConeVideo.lo -MD -MP -MF $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeVideo.Tpo -c -o libxplayer_cone_plugin_la-xplayerConeVideo.lo `test -f 'xplayerConeVideo.cpp' || echo '$(srcdir)/'`xplayerConeVideo.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeVideo.Tpo $(DEPDIR)/libxplayer_cone_plugin_la-xplayerConeVideo.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerConeVideo.cpp' object='libxplayer_cone_plugin_la-xplayerConeVideo.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_cone_plugin_la-totemConeVideo.lo `test -f 'totemConeVideo.cpp' || echo '$(srcdir)/'`totemConeVideo.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_cone_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_cone_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_cone_plugin_la-xplayerConeVideo.lo `test -f 'xplayerConeVideo.cpp' || echo '$(srcdir)/'`xplayerConeVideo.cpp
 
-libtotem_gmp_plugin_la-totemNPNGlue.lo: totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemNPNGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemNPNGlue.Tpo -c -o libtotem_gmp_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemNPNGlue.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemNPNGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPNGlue.cpp' object='libtotem_gmp_plugin_la-totemNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerNPNGlue.lo: xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerNPNGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPNGlue.Tpo -c -o libxplayer_gmp_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPNGlue.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPNGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPNGlue.cpp' object='libxplayer_gmp_plugin_la-xplayerNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
 
-libtotem_gmp_plugin_la-totemNPClass.lo: totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemNPClass.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemNPClass.Tpo -c -o libtotem_gmp_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemNPClass.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemNPClass.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPClass.cpp' object='libtotem_gmp_plugin_la-totemNPClass.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerNPClass.lo: xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerNPClass.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPClass.Tpo -c -o libxplayer_gmp_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPClass.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPClass.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPClass.cpp' object='libxplayer_gmp_plugin_la-xplayerNPClass.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
 
-libtotem_gmp_plugin_la-totemNPObject.lo: totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemNPObject.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemNPObject.Tpo -c -o libtotem_gmp_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemNPObject.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemNPObject.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPObject.cpp' object='libtotem_gmp_plugin_la-totemNPObject.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerNPObject.lo: xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerNPObject.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPObject.Tpo -c -o libxplayer_gmp_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPObject.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerNPObject.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPObject.cpp' object='libxplayer_gmp_plugin_la-xplayerNPObject.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
 
-libtotem_gmp_plugin_la-totemPluginGlue.lo: totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemPluginGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemPluginGlue.Tpo -c -o libtotem_gmp_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemPluginGlue.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemPluginGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPluginGlue.cpp' object='libtotem_gmp_plugin_la-totemPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerPluginGlue.lo: xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerPluginGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPluginGlue.Tpo -c -o libxplayer_gmp_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPluginGlue.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPluginGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPluginGlue.cpp' object='libxplayer_gmp_plugin_la-xplayerPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
 
-libtotem_gmp_plugin_la-totemPlugin.lo: totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemPlugin.Tpo -c -o libtotem_gmp_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemPlugin.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPlugin.cpp' object='libtotem_gmp_plugin_la-totemPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerPlugin.lo: xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPlugin.Tpo -c -o libxplayer_gmp_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPlugin.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPlugin.cpp' object='libxplayer_gmp_plugin_la-xplayerPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
 
-libtotem_gmp_plugin_la-totemGMPControls.lo: totemGMPControls.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPControls.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPControls.Tpo -c -o libtotem_gmp_plugin_la-totemGMPControls.lo `test -f 'totemGMPControls.cpp' || echo '$(srcdir)/'`totemGMPControls.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPControls.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPControls.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPControls.cpp' object='libtotem_gmp_plugin_la-totemGMPControls.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPControls.lo: xplayerGMPControls.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPControls.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPControls.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPControls.lo `test -f 'xplayerGMPControls.cpp' || echo '$(srcdir)/'`xplayerGMPControls.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPControls.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPControls.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPControls.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPControls.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPControls.lo `test -f 'totemGMPControls.cpp' || echo '$(srcdir)/'`totemGMPControls.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPControls.lo `test -f 'xplayerGMPControls.cpp' || echo '$(srcdir)/'`xplayerGMPControls.cpp
 
-libtotem_gmp_plugin_la-totemGMPError.lo: totemGMPError.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPError.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPError.Tpo -c -o libtotem_gmp_plugin_la-totemGMPError.lo `test -f 'totemGMPError.cpp' || echo '$(srcdir)/'`totemGMPError.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPError.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPError.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPError.cpp' object='libtotem_gmp_plugin_la-totemGMPError.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPError.lo: xplayerGMPError.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPError.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPError.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPError.lo `test -f 'xplayerGMPError.cpp' || echo '$(srcdir)/'`xplayerGMPError.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPError.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPError.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPError.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPError.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPError.lo `test -f 'totemGMPError.cpp' || echo '$(srcdir)/'`totemGMPError.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPError.lo `test -f 'xplayerGMPError.cpp' || echo '$(srcdir)/'`xplayerGMPError.cpp
 
-libtotem_gmp_plugin_la-totemGMPNetwork.lo: totemGMPNetwork.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPNetwork.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPNetwork.Tpo -c -o libtotem_gmp_plugin_la-totemGMPNetwork.lo `test -f 'totemGMPNetwork.cpp' || echo '$(srcdir)/'`totemGMPNetwork.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPNetwork.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPNetwork.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPNetwork.cpp' object='libtotem_gmp_plugin_la-totemGMPNetwork.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo: xplayerGMPNetwork.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPNetwork.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo `test -f 'xplayerGMPNetwork.cpp' || echo '$(srcdir)/'`xplayerGMPNetwork.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPNetwork.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPNetwork.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPNetwork.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPNetwork.lo `test -f 'totemGMPNetwork.cpp' || echo '$(srcdir)/'`totemGMPNetwork.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPNetwork.lo `test -f 'xplayerGMPNetwork.cpp' || echo '$(srcdir)/'`xplayerGMPNetwork.cpp
 
-libtotem_gmp_plugin_la-totemGMPPlayer.lo: totemGMPPlayer.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPPlayer.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlayer.Tpo -c -o libtotem_gmp_plugin_la-totemGMPPlayer.lo `test -f 'totemGMPPlayer.cpp' || echo '$(srcdir)/'`totemGMPPlayer.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlayer.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlayer.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPPlayer.cpp' object='libtotem_gmp_plugin_la-totemGMPPlayer.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo: xplayerGMPPlayer.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlayer.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo `test -f 'xplayerGMPPlayer.cpp' || echo '$(srcdir)/'`xplayerGMPPlayer.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlayer.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlayer.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPPlayer.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPPlayer.lo `test -f 'totemGMPPlayer.cpp' || echo '$(srcdir)/'`totemGMPPlayer.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo `test -f 'xplayerGMPPlayer.cpp' || echo '$(srcdir)/'`xplayerGMPPlayer.cpp
 
-libtotem_gmp_plugin_la-totemGMPPlaylist.lo: totemGMPPlaylist.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPPlaylist.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlaylist.Tpo -c -o libtotem_gmp_plugin_la-totemGMPPlaylist.lo `test -f 'totemGMPPlaylist.cpp' || echo '$(srcdir)/'`totemGMPPlaylist.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlaylist.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPPlaylist.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPPlaylist.cpp' object='libtotem_gmp_plugin_la-totemGMPPlaylist.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo: xplayerGMPPlaylist.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlaylist.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo `test -f 'xplayerGMPPlaylist.cpp' || echo '$(srcdir)/'`xplayerGMPPlaylist.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlaylist.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPPlaylist.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPPlaylist.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPPlaylist.lo `test -f 'totemGMPPlaylist.cpp' || echo '$(srcdir)/'`totemGMPPlaylist.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo `test -f 'xplayerGMPPlaylist.cpp' || echo '$(srcdir)/'`xplayerGMPPlaylist.cpp
 
-libtotem_gmp_plugin_la-totemGMPSettings.lo: totemGMPSettings.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_gmp_plugin_la-totemGMPSettings.lo -MD -MP -MF $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPSettings.Tpo -c -o libtotem_gmp_plugin_la-totemGMPSettings.lo `test -f 'totemGMPSettings.cpp' || echo '$(srcdir)/'`totemGMPSettings.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPSettings.Tpo $(DEPDIR)/libtotem_gmp_plugin_la-totemGMPSettings.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemGMPSettings.cpp' object='libtotem_gmp_plugin_la-totemGMPSettings.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_gmp_plugin_la-xplayerGMPSettings.lo: xplayerGMPSettings.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_gmp_plugin_la-xplayerGMPSettings.lo -MD -MP -MF $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPSettings.Tpo -c -o libxplayer_gmp_plugin_la-xplayerGMPSettings.lo `test -f 'xplayerGMPSettings.cpp' || echo '$(srcdir)/'`xplayerGMPSettings.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPSettings.Tpo $(DEPDIR)/libxplayer_gmp_plugin_la-xplayerGMPSettings.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerGMPSettings.cpp' object='libxplayer_gmp_plugin_la-xplayerGMPSettings.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_gmp_plugin_la-totemGMPSettings.lo `test -f 'totemGMPSettings.cpp' || echo '$(srcdir)/'`totemGMPSettings.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_gmp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_gmp_plugin_la-xplayerGMPSettings.lo `test -f 'xplayerGMPSettings.cpp' || echo '$(srcdir)/'`xplayerGMPSettings.cpp
 
-libtotem_mully_plugin_la-totemNPNGlue.lo: totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemNPNGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemNPNGlue.Tpo -c -o libtotem_mully_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemNPNGlue.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemNPNGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPNGlue.cpp' object='libtotem_mully_plugin_la-totemNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerNPNGlue.lo: xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerNPNGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPNGlue.Tpo -c -o libxplayer_mully_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPNGlue.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPNGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPNGlue.cpp' object='libxplayer_mully_plugin_la-xplayerNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
 
-libtotem_mully_plugin_la-totemNPClass.lo: totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemNPClass.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemNPClass.Tpo -c -o libtotem_mully_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemNPClass.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemNPClass.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPClass.cpp' object='libtotem_mully_plugin_la-totemNPClass.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerNPClass.lo: xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerNPClass.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPClass.Tpo -c -o libxplayer_mully_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPClass.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPClass.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPClass.cpp' object='libxplayer_mully_plugin_la-xplayerNPClass.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
 
-libtotem_mully_plugin_la-totemNPObject.lo: totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemNPObject.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemNPObject.Tpo -c -o libtotem_mully_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemNPObject.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemNPObject.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPObject.cpp' object='libtotem_mully_plugin_la-totemNPObject.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerNPObject.lo: xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerNPObject.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPObject.Tpo -c -o libxplayer_mully_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPObject.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerNPObject.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPObject.cpp' object='libxplayer_mully_plugin_la-xplayerNPObject.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
 
-libtotem_mully_plugin_la-totemPluginGlue.lo: totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemPluginGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemPluginGlue.Tpo -c -o libtotem_mully_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemPluginGlue.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemPluginGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPluginGlue.cpp' object='libtotem_mully_plugin_la-totemPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerPluginGlue.lo: xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerPluginGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPluginGlue.Tpo -c -o libxplayer_mully_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPluginGlue.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPluginGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPluginGlue.cpp' object='libxplayer_mully_plugin_la-xplayerPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
 
-libtotem_mully_plugin_la-totemPlugin.lo: totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemPlugin.Tpo -c -o libtotem_mully_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemPlugin.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPlugin.cpp' object='libtotem_mully_plugin_la-totemPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerPlugin.lo: xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPlugin.Tpo -c -o libxplayer_mully_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPlugin.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPlugin.cpp' object='libxplayer_mully_plugin_la-xplayerPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
 
-libtotem_mully_plugin_la-totemMullYPlugin.lo: totemMullYPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_mully_plugin_la-totemMullYPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_mully_plugin_la-totemMullYPlugin.Tpo -c -o libtotem_mully_plugin_la-totemMullYPlugin.lo `test -f 'totemMullYPlugin.cpp' || echo '$(srcdir)/'`totemMullYPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_mully_plugin_la-totemMullYPlugin.Tpo $(DEPDIR)/libtotem_mully_plugin_la-totemMullYPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemMullYPlugin.cpp' object='libtotem_mully_plugin_la-totemMullYPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_mully_plugin_la-xplayerMullYPlugin.lo: xplayerMullYPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_mully_plugin_la-xplayerMullYPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_mully_plugin_la-xplayerMullYPlugin.Tpo -c -o libxplayer_mully_plugin_la-xplayerMullYPlugin.lo `test -f 'xplayerMullYPlugin.cpp' || echo '$(srcdir)/'`xplayerMullYPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_mully_plugin_la-xplayerMullYPlugin.Tpo $(DEPDIR)/libxplayer_mully_plugin_la-xplayerMullYPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerMullYPlugin.cpp' object='libxplayer_mully_plugin_la-xplayerMullYPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_mully_plugin_la-totemMullYPlugin.lo `test -f 'totemMullYPlugin.cpp' || echo '$(srcdir)/'`totemMullYPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_mully_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_mully_plugin_la-xplayerMullYPlugin.lo `test -f 'xplayerMullYPlugin.cpp' || echo '$(srcdir)/'`xplayerMullYPlugin.cpp
 
-libtotem_narrowspace_plugin_la-totemNPNGlue.lo: totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemNPNGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPNGlue.Tpo -c -o libtotem_narrowspace_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPNGlue.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPNGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPNGlue.cpp' object='libtotem_narrowspace_plugin_la-totemNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo: xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPNGlue.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPNGlue.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPNGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPNGlue.cpp' object='libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
 
-libtotem_narrowspace_plugin_la-totemNPClass.lo: totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemNPClass.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPClass.Tpo -c -o libtotem_narrowspace_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPClass.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPClass.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPClass.cpp' object='libtotem_narrowspace_plugin_la-totemNPClass.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerNPClass.lo: xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerNPClass.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPClass.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPClass.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPClass.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPClass.cpp' object='libxplayer_narrowspace_plugin_la-xplayerNPClass.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
 
-libtotem_narrowspace_plugin_la-totemNPObject.lo: totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemNPObject.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPObject.Tpo -c -o libtotem_narrowspace_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPObject.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNPObject.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPObject.cpp' object='libtotem_narrowspace_plugin_la-totemNPObject.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerNPObject.lo: xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerNPObject.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPObject.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPObject.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNPObject.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPObject.cpp' object='libxplayer_narrowspace_plugin_la-xplayerNPObject.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
 
-libtotem_narrowspace_plugin_la-totemPluginGlue.lo: totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemPluginGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPluginGlue.Tpo -c -o libtotem_narrowspace_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPluginGlue.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPluginGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPluginGlue.cpp' object='libtotem_narrowspace_plugin_la-totemPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo: xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPluginGlue.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPluginGlue.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPluginGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPluginGlue.cpp' object='libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
 
-libtotem_narrowspace_plugin_la-totemPlugin.lo: totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPlugin.Tpo -c -o libtotem_narrowspace_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPlugin.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPlugin.cpp' object='libtotem_narrowspace_plugin_la-totemPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerPlugin.lo: xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPlugin.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPlugin.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPlugin.cpp' object='libxplayer_narrowspace_plugin_la-xplayerPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
 
-libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo: totemNarrowSpacePlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.Tpo -c -o libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo `test -f 'totemNarrowSpacePlugin.cpp' || echo '$(srcdir)/'`totemNarrowSpacePlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.Tpo $(DEPDIR)/libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNarrowSpacePlugin.cpp' object='libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo: xplayerNarrowSpacePlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.Tpo -c -o libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo `test -f 'xplayerNarrowSpacePlugin.cpp' || echo '$(srcdir)/'`xplayerNarrowSpacePlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.Tpo $(DEPDIR)/libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNarrowSpacePlugin.cpp' object='libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_narrowspace_plugin_la-totemNarrowSpacePlugin.lo `test -f 'totemNarrowSpacePlugin.cpp' || echo '$(srcdir)/'`totemNarrowSpacePlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_narrowspace_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo `test -f 'xplayerNarrowSpacePlugin.cpp' || echo '$(srcdir)/'`xplayerNarrowSpacePlugin.cpp
 
-libtotem_vegas_plugin_la-totemNPNGlue.lo: totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemNPNGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemNPNGlue.Tpo -c -o libtotem_vegas_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemNPNGlue.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemNPNGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPNGlue.cpp' object='libtotem_vegas_plugin_la-totemNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerNPNGlue.lo: xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerNPNGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPNGlue.Tpo -c -o libxplayer_vegas_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPNGlue.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPNGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPNGlue.cpp' object='libxplayer_vegas_plugin_la-xplayerNPNGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemNPNGlue.lo `test -f 'totemNPNGlue.cpp' || echo '$(srcdir)/'`totemNPNGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerNPNGlue.lo `test -f 'xplayerNPNGlue.cpp' || echo '$(srcdir)/'`xplayerNPNGlue.cpp
 
-libtotem_vegas_plugin_la-totemNPClass.lo: totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemNPClass.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemNPClass.Tpo -c -o libtotem_vegas_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemNPClass.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemNPClass.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPClass.cpp' object='libtotem_vegas_plugin_la-totemNPClass.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerNPClass.lo: xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerNPClass.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPClass.Tpo -c -o libxplayer_vegas_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPClass.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPClass.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPClass.cpp' object='libxplayer_vegas_plugin_la-xplayerNPClass.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemNPClass.lo `test -f 'totemNPClass.cpp' || echo '$(srcdir)/'`totemNPClass.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerNPClass.lo `test -f 'xplayerNPClass.cpp' || echo '$(srcdir)/'`xplayerNPClass.cpp
 
-libtotem_vegas_plugin_la-totemNPObject.lo: totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemNPObject.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemNPObject.Tpo -c -o libtotem_vegas_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemNPObject.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemNPObject.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemNPObject.cpp' object='libtotem_vegas_plugin_la-totemNPObject.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerNPObject.lo: xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerNPObject.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPObject.Tpo -c -o libxplayer_vegas_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPObject.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerNPObject.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerNPObject.cpp' object='libxplayer_vegas_plugin_la-xplayerNPObject.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemNPObject.lo `test -f 'totemNPObject.cpp' || echo '$(srcdir)/'`totemNPObject.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerNPObject.lo `test -f 'xplayerNPObject.cpp' || echo '$(srcdir)/'`xplayerNPObject.cpp
 
-libtotem_vegas_plugin_la-totemPluginGlue.lo: totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemPluginGlue.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemPluginGlue.Tpo -c -o libtotem_vegas_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemPluginGlue.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemPluginGlue.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPluginGlue.cpp' object='libtotem_vegas_plugin_la-totemPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerPluginGlue.lo: xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerPluginGlue.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPluginGlue.Tpo -c -o libxplayer_vegas_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPluginGlue.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPluginGlue.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPluginGlue.cpp' object='libxplayer_vegas_plugin_la-xplayerPluginGlue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemPluginGlue.lo `test -f 'totemPluginGlue.cpp' || echo '$(srcdir)/'`totemPluginGlue.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerPluginGlue.lo `test -f 'xplayerPluginGlue.cpp' || echo '$(srcdir)/'`xplayerPluginGlue.cpp
 
-libtotem_vegas_plugin_la-totemPlugin.lo: totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemPlugin.Tpo -c -o libtotem_vegas_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemPlugin.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemPlugin.cpp' object='libtotem_vegas_plugin_la-totemPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerPlugin.lo: xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPlugin.Tpo -c -o libxplayer_vegas_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPlugin.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerPlugin.cpp' object='libxplayer_vegas_plugin_la-xplayerPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemPlugin.lo `test -f 'totemPlugin.cpp' || echo '$(srcdir)/'`totemPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerPlugin.lo `test -f 'xplayerPlugin.cpp' || echo '$(srcdir)/'`xplayerPlugin.cpp
 
-libtotem_vegas_plugin_la-totemVegasPlugin.lo: totemVegasPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libtotem_vegas_plugin_la-totemVegasPlugin.lo -MD -MP -MF $(DEPDIR)/libtotem_vegas_plugin_la-totemVegasPlugin.Tpo -c -o libtotem_vegas_plugin_la-totemVegasPlugin.lo `test -f 'totemVegasPlugin.cpp' || echo '$(srcdir)/'`totemVegasPlugin.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libtotem_vegas_plugin_la-totemVegasPlugin.Tpo $(DEPDIR)/libtotem_vegas_plugin_la-totemVegasPlugin.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='totemVegasPlugin.cpp' object='libtotem_vegas_plugin_la-totemVegasPlugin.lo' libtool=yes @AMDEPBACKSLASH@
+libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo: xplayerVegasPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo -MD -MP -MF $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerVegasPlugin.Tpo -c -o libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo `test -f 'xplayerVegasPlugin.cpp' || echo '$(srcdir)/'`xplayerVegasPlugin.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerVegasPlugin.Tpo $(DEPDIR)/libxplayer_vegas_plugin_la-xplayerVegasPlugin.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='xplayerVegasPlugin.cpp' object='libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libtotem_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libtotem_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libtotem_vegas_plugin_la-totemVegasPlugin.lo `test -f 'totemVegasPlugin.cpp' || echo '$(srcdir)/'`totemVegasPlugin.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libxplayer_vegas_plugin_la_CPPFLAGS) $(CPPFLAGS) $(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) -c -o libxplayer_vegas_plugin_la-xplayerVegasPlugin.lo `test -f 'xplayerVegasPlugin.cpp' || echo '$(srcdir)/'`xplayerVegasPlugin.cpp
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -1620,10 +1620,10 @@ uninstall-am: uninstall-libexecPROGRAMS uninstall-pluginLTLIBRARIES
 
 
 # Are we a bit thick, Mister?
-totem-plugin-viewer.c: totem-plugin-viewer-interface.h $(MARSHAL_FILES)
+xplayer-plugin-viewer.c: xplayer-plugin-viewer-interface.h $(MARSHAL_FILES)
 
-totem-plugin-viewer-interface.h: org_gnome_totem_PluginViewer.xml
-	$(DBUS_BIND) --prefix=totem_embedded --mode=glib-server $< > $@
+xplayer-plugin-viewer-interface.h: org_gnome_xplayer_PluginViewer.xml
+	$(DBUS_BIND) --prefix=xplayer_embedded --mode=glib-server $< > $@
 
 -include $(top_srcdir)/git.mk
 

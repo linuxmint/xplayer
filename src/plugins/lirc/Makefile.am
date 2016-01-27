@@ -6,10 +6,10 @@ plugin_LTLIBRARIES = liblirc.la
 plugin_in_files = lirc.plugin.in
 
 configdir = $(PLUGINDIR)/lirc
-config_DATA = totem_lirc_default
+config_DATA = xplayer_lirc_default
 EXTRA_DIST += $(config_DATA)
 
-liblirc_la_SOURCES = totem-lirc.c
+liblirc_la_SOURCES = xplayer-lirc.c
 liblirc_la_LDFLAGS = $(plugin_ldflags)
 liblirc_la_LIBADD = \
 	$(plugin_libadd)	\

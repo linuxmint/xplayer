@@ -1,4 +1,4 @@
-/* totem-options.c
+/* xplayer-options.c
 
    Copyright (C) 2004 Bastien Nocera
 
@@ -27,12 +27,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "totem-options.h"
-#include "totem-uri.h"
+#include "xplayer-options.h"
+#include "xplayer-uri.h"
 #include "bacon-video-widget.h"
-#include "totem-private.h"
+#include "xplayer-private.h"
 
-TotemCmdLineOptions optionstate;	/* Decoded command line options */
+XplayerCmdLineOptions optionstate;	/* Decoded command line options */
 
 G_GNUC_NORETURN static gboolean
 option_version_cb (const gchar *option_name,
@@ -63,7 +63,7 @@ const GOptionEntry all_options[] = {
 	{"enqueue", '\0', 0, G_OPTION_ARG_NONE, &optionstate.enqueue, N_("Enqueue"), NULL},
 	{"replace", '\0', 0, G_OPTION_ARG_NONE, &optionstate.replace, N_("Replace"), NULL},
 	{"seek", '\0', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_INT64, &optionstate.seek, N_("Seek"), NULL},
-	/* Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Totem's finished loading */
+	/* Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading */
 	{"playlist-idx", '\0', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_DOUBLE, &optionstate.playlistidx, N_("Playlist index"), NULL},
 	{ "version", 0, G_OPTION_FLAG_NO_ARG | G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_CALLBACK, option_version_cb, NULL, NULL },
 	{G_OPTION_REMAINING, '\0', 0, G_OPTION_ARG_FILENAME_ARRAY, &optionstate.filenames, N_("Movies to play"), NULL},
@@ -71,7 +71,7 @@ const GOptionEntry all_options[] = {
 };
 
 GOptionContext *
-totem_options_get_context (void)
+xplayer_options_get_context (void)
 {
 	GOptionContext *context;
 	GOptionGroup *baconoptiongroup;
@@ -90,26 +90,26 @@ totem_options_get_context (void)
 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
 	/* FIXME:
 	 * This seems to hang on startup */
-	/* totem_session_add_options (context); */
+	/* xplayer_session_add_options (context); */
 
 	return context;
 }
 
 void
-totem_options_process_late (Totem *totem, const TotemCmdLineOptions *options)
+xplayer_options_process_late (Xplayer *xplayer, const XplayerCmdLineOptions *options)
 {
 	if (options->togglecontrols)
-		totem_action_toggle_controls (totem);
+		xplayer_action_toggle_controls (xplayer);
 
 	/* Handle --playlist-idx */
-	totem->index = options->playlistidx;
+	xplayer->index = options->playlistidx;
 
 	/* Handle --seek */
-	totem->seek_to_start = options->seek;
+	xplayer->seek_to_start = options->seek;
 }
 
 void
-totem_options_process_early (Totem *totem, const TotemCmdLineOptions* options)
+xplayer_options_process_early (Xplayer *xplayer, const XplayerCmdLineOptions* options)
 {
 	if (options->quit) {
 		/* If --quit is one of the commands, just quit */
@@ -117,23 +117,23 @@ totem_options_process_early (Totem *totem, const TotemCmdLineOptions* options)
 		exit (0);
 	}
 
-	g_settings_set_boolean (totem->settings, "debug", options->debug);
+	g_settings_set_boolean (xplayer->settings, "debug", options->debug);
 }
 
 void
-totem_options_process_for_server (Totem                     *totem,
-				  const TotemCmdLineOptions *options)
+xplayer_options_process_for_server (Xplayer                     *xplayer,
+				  const XplayerCmdLineOptions *options)
 {
-	TotemRemoteCommand action;
+	XplayerRemoteCommand action;
 	GList *commands, *l;
 	int i;
 
 	commands = NULL;
-	action = TOTEM_REMOTE_COMMAND_REPLACE;
+	action = XPLAYER_REMOTE_COMMAND_REPLACE;
 
 	/* Are we quitting ? */
 	if (options->quit) {
-		totem_action_remote (totem, TOTEM_REMOTE_COMMAND_QUIT, NULL);
+		xplayer_action_remote (xplayer, XPLAYER_REMOTE_COMMAND_QUIT, NULL);
 		return;
 	}
 
@@ -141,9 +141,9 @@ totem_options_process_for_server (Totem                     *totem,
 	if (options->replace && options->enqueue) {
 		g_warning (_("Can't enqueue and replace at the same time"));
 	} else if (options->replace) {
-		action = TOTEM_REMOTE_COMMAND_REPLACE;
+		action = XPLAYER_REMOTE_COMMAND_REPLACE;
 	} else if (options->enqueue) {
-		action = TOTEM_REMOTE_COMMAND_ENQUEUE;
+		action = XPLAYER_REMOTE_COMMAND_ENQUEUE;
 	}
 
 	/* Send the files to enqueue */
@@ -152,88 +152,88 @@ totem_options_process_for_server (Totem                     *totem,
 		char *full_path;
 
 		filename = options->filenames[i];
-		full_path = totem_create_full_path (filename);
+		full_path = xplayer_create_full_path (filename);
 
-		totem_action_remote (totem, action, full_path ? full_path : filename);
+		xplayer_action_remote (xplayer, action, full_path ? full_path : filename);
 
 		g_free (full_path);
 
 		/* Even if the default action is replace, we only want to replace with the
 		   first file.  After that, we enqueue. */
 		if (i == 0) {
-			action = TOTEM_REMOTE_COMMAND_ENQUEUE;
+			action = XPLAYER_REMOTE_COMMAND_ENQUEUE;
 		}
 	}
 
 	if (options->playpause) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_PLAYPAUSE));
+					  (XPLAYER_REMOTE_COMMAND_PLAYPAUSE));
 	}
 
 	if (options->play) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_PLAY));
+					  (XPLAYER_REMOTE_COMMAND_PLAY));
 	}
 
 	if (options->pause) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_PAUSE));
+					  (XPLAYER_REMOTE_COMMAND_PAUSE));
 	}
 
 	if (options->next) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_NEXT));
+					  (XPLAYER_REMOTE_COMMAND_NEXT));
 	}
 
 	if (options->previous) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_PREVIOUS));
+					  (XPLAYER_REMOTE_COMMAND_PREVIOUS));
 	}
 
 	if (options->seekfwd) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_SEEK_FORWARD));
+					  (XPLAYER_REMOTE_COMMAND_SEEK_FORWARD));
 	}
 
 	if (options->seekbwd) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_SEEK_BACKWARD));
+					  (XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD));
 	}
 
 	if (options->volumeup) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_VOLUME_UP));
+					  (XPLAYER_REMOTE_COMMAND_VOLUME_UP));
 	}
 
 	if (options->volumedown) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_VOLUME_DOWN));
+					  (XPLAYER_REMOTE_COMMAND_VOLUME_DOWN));
 	}
 
 	if (options->mute) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_MUTE));
+					  (XPLAYER_REMOTE_COMMAND_MUTE));
 	}
 
 	if (options->fullscreen) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_FULLSCREEN));
+					  (XPLAYER_REMOTE_COMMAND_FULLSCREEN));
 	}
 
 	if (options->togglecontrols) {
 		commands = g_list_append (commands, GINT_TO_POINTER
-					  (TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS));
+					  (XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS));
 	}
 
 	/* No commands, no files, show ourselves */
 	if (commands == NULL && options->filenames == NULL) {
-		totem_action_remote (totem, TOTEM_REMOTE_COMMAND_SHOW, NULL);
+		xplayer_action_remote (xplayer, XPLAYER_REMOTE_COMMAND_SHOW, NULL);
 		return;
 	}
 
 	/* Send commands */
 	for (l = commands; l != NULL; l = l->next) {
-		totem_action_remote (totem, GPOINTER_TO_INT (l->data), NULL);
+		xplayer_action_remote (xplayer, GPOINTER_TO_INT (l->data), NULL);
 	}
 
 	g_list_free (commands);

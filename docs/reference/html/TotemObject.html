@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>TotemObject</title>
+<title>XplayerObject</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
-<link rel="home" href="index.html" title="Totem Reference Manual">
+<link rel="home" href="index.html" title="Xplayer Reference Manual">
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="core-api.html" title="Core API">
-<link rel="next" href="totem-Interface.html" title="Interface">
+<link rel="next" href="xplayer-Interface.html" title="Interface">
 <meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -17,237 +17,237 @@
 <td><a accesskey="p" href="core-api.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
 <td><a accesskey="u" href="core-api.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
-<th width="100%" align="center">Totem Reference Manual</th>
-<td><a accesskey="n" href="totem-Interface.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+<th width="100%" align="center">Xplayer Reference Manual</th>
+<td><a accesskey="n" href="xplayer-Interface.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
 </tr>
 <tr><td colspan="5" class="shortcuts">
-<a href="#TotemObject.synopsis" class="shortcut">Top</a>
+<a href="#XplayerObject.synopsis" class="shortcut">Top</a>
                    | 
-                  <a href="#TotemObject.description" class="shortcut">Description</a>
+                  <a href="#XplayerObject.description" class="shortcut">Description</a>
                    | 
-                  <a href="#TotemObject.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                  <a href="#XplayerObject.object-hierarchy" class="shortcut">Object Hierarchy</a>
                    | 
-                  <a href="#TotemObject.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                  <a href="#XplayerObject.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
                    | 
-                  <a href="#TotemObject.properties" class="shortcut">Properties</a>
+                  <a href="#XplayerObject.properties" class="shortcut">Properties</a>
                    | 
-                  <a href="#TotemObject.signals" class="shortcut">Signals</a>
+                  <a href="#XplayerObject.signals" class="shortcut">Signals</a>
 </td></tr>
 </table>
 <div class="refentry">
-<a name="TotemObject"></a><div class="titlepage"></div>
+<a name="XplayerObject"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="TotemObject.top_of_page"></a>TotemObject</span></h2>
-<p>TotemObject — main Totem object</p>
+<h2><span class="refentrytitle"><a name="XplayerObject.top_of_page"></a>XplayerObject</span></h2>
+<p>XplayerObject — main Xplayer object</p>
 </td>
 <td valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="TotemObject.stability-level"></a><h2>Stability Level</h2>
+<a name="XplayerObject.stability-level"></a><h2>Stability Level</h2>
 Unstable, unless otherwise indicated
 </div>
 <div class="refsynopsisdiv">
-<a name="TotemObject.synopsis"></a><h2>Synopsis</h2>
+<a name="XplayerObject.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">
-#include &lt;totem.h&gt;
+#include &lt;xplayer.h&gt;
 
-typedef             <a class="link" href="TotemObject.html#Totem" title="Totem">Totem</a>;
-                    <a class="link" href="TotemObject.html#TotemObject-struct" title="TotemObject">TotemObject</a>;
-enum                <a class="link" href="TotemObject.html#TotemRemoteCommand" title="enum TotemRemoteCommand">TotemRemoteCommand</a>;
-enum                <a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting">TotemRemoteSetting</a>;
-#define             <a class="link" href="TotemObject.html#TOTEM-GSETTINGS-SCHEMA:CAPS" title="TOTEM_GSETTINGS_SCHEMA">TOTEM_GSETTINGS_SCHEMA</a>
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-plugins-init" title="totem_object_plugins_init ()">totem_object_plugins_init</a>           (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-plugins-shutdown" title="totem_object_plugins_shutdown ()">totem_object_plugins_shutdown</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-file-opened" title="totem_file_opened ()">totem_file_opened</a>                   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+typedef             <a class="link" href="XplayerObject.html#Xplayer" title="Xplayer">Xplayer</a>;
+                    <a class="link" href="XplayerObject.html#XplayerObject-struct" title="XplayerObject">XplayerObject</a>;
+enum                <a class="link" href="XplayerObject.html#XplayerRemoteCommand" title="enum XplayerRemoteCommand">XplayerRemoteCommand</a>;
+enum                <a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting">XplayerRemoteSetting</a>;
+#define             <a class="link" href="XplayerObject.html#XPLAYER-GSETTINGS-SCHEMA:CAPS" title="XPLAYER_GSETTINGS_SCHEMA">XPLAYER_GSETTINGS_SCHEMA</a>
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-plugins-init" title="xplayer_object_plugins_init ()">xplayer_object_plugins_init</a>           (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-plugins-shutdown" title="xplayer_object_plugins_shutdown ()">xplayer_object_plugins_shutdown</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-file-opened" title="xplayer_file_opened ()">xplayer_file_opened</a>                   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *mrl</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-file-closed" title="totem_file_closed ()">totem_file_closed</a>                   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-metadata-updated" title="totem_metadata_updated ()">totem_metadata_updated</a>              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-file-closed" title="xplayer_file_closed ()">xplayer_file_closed</a>                   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-metadata-updated" title="xplayer_metadata_updated ()">xplayer_metadata_updated</a>              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *artist</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *album</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> track_num</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-error" title="totem_object_action_error ()">totem_object_action_error</a>           (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-error" title="xplayer_object_action_error ()">xplayer_object_action_error</a>           (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-exit" title="totem_object_action_exit ()">totem_object_action_exit</a>            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-add-to-playlist-and-play" title="totem_object_add_to_playlist_and_play ()">totem_object_add_to_playlist_and_play</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-exit" title="xplayer_object_action_exit ()">xplayer_object_action_exit</a>            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-add-to-playlist-and-play" title="xplayer_object_add_to_playlist_and_play ()">xplayer_object_add_to_playlist_and_play</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *display_name</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-play" title="totem_object_action_play ()">totem_object_action_play</a>            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-play-pause" title="totem_object_action_play_pause ()">totem_object_action_play_pause</a>      (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-pause" title="totem_action_pause ()">totem_action_pause</a>                  (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-stop" title="totem_object_action_stop ()">totem_object_action_stop</a>            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-fullscreen" title="totem_action_fullscreen ()">totem_action_fullscreen</a>             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-play" title="xplayer_object_action_play ()">xplayer_object_action_play</a>            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-play-pause" title="xplayer_object_action_play_pause ()">xplayer_object_action_play_pause</a>      (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-pause" title="xplayer_action_pause ()">xplayer_action_pause</a>                  (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-stop" title="xplayer_object_action_stop ()">xplayer_object_action_stop</a>            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-fullscreen" title="xplayer_action_fullscreen ()">xplayer_action_fullscreen</a>             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> state</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-fullscreen-toggle" title="totem_object_action_fullscreen_toggle ()">totem_object_action_fullscreen_toggle</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-next" title="totem_object_action_next ()">totem_object_action_next</a>            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-previous" title="totem_object_action_previous ()">totem_object_action_previous</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-next-angle" title="totem_action_next_angle ()">totem_action_next_angle</a>             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemObject.html#totem-object-action-remote-get-setting" title="totem_object_action_remote_get_setting ()">totem_object_action_remote_get_setting</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a> setting</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-remote-set-setting" title="totem_object_action_remote_set_setting ()">totem_object_action_remote_set_setting</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a> setting</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-fullscreen-toggle" title="xplayer_object_action_fullscreen_toggle ()">xplayer_object_action_fullscreen_toggle</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-next" title="xplayer_object_action_next ()">xplayer_object_action_next</a>            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-previous" title="xplayer_object_action_previous ()">xplayer_object_action_previous</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-next-angle" title="xplayer_action_next_angle ()">xplayer_action_next_angle</a>             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerObject.html#xplayer-object-action-remote-get-setting" title="xplayer_object_action_remote_get_setting ()">xplayer_object_action_remote_get_setting</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a> setting</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-remote-set-setting" title="xplayer_object_action_remote_set_setting ()">xplayer_object_action_remote_set_setting</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a> setting</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-seek-time" title="totem_object_action_seek_time ()">totem_object_action_seek_time</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-seek-time" title="xplayer_object_action_seek_time ()">xplayer_object_action_seek_time</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> msec</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> accurate</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-seek-relative" title="totem_action_seek_relative ()">totem_action_seek_relative</a>          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-seek-relative" title="xplayer_action_seek_relative ()">xplayer_action_seek_relative</a>          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> offset</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> accurate</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-volume" title="totem_object_action_volume ()">totem_object_action_volume</a>          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-volume" title="xplayer_object_action_volume ()">xplayer_object_action_volume</a>          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">double</span> volume</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-volume-relative" title="totem_action_volume_relative ()">totem_action_volume_relative</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-volume-relative" title="xplayer_action_volume_relative ()">xplayer_action_volume_relative</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">double</span> off_pct</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-volume-toggle-mute" title="totem_action_volume_toggle_mute ()">totem_action_volume_toggle_mute</a>     (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-toggle-aspect-ratio" title="totem_action_toggle_aspect_ratio ()">totem_action_toggle_aspect_ratio</a>    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">int</span>                 <a class="link" href="TotemObject.html#totem-action-get-aspect-ratio" title="totem_action_get_aspect_ratio ()">totem_action_get_aspect_ratio</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-set-aspect-ratio" title="totem_action_set_aspect_ratio ()">totem_action_set_aspect_ratio</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-volume-toggle-mute" title="xplayer_action_volume_toggle_mute ()">xplayer_action_volume_toggle_mute</a>     (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-toggle-aspect-ratio" title="xplayer_action_toggle_aspect_ratio ()">xplayer_action_toggle_aspect_ratio</a>    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="XplayerObject.html#xplayer-action-get-aspect-ratio" title="xplayer_action_get_aspect_ratio ()">xplayer_action_get_aspect_ratio</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-set-aspect-ratio" title="xplayer_action_set_aspect_ratio ()">xplayer_action_set_aspect_ratio</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> ratio</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-toggle-controls" title="totem_action_toggle_controls ()">totem_action_toggle_controls</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-set-scale-ratio" title="totem_action_set_scale_ratio ()">totem_action_set_scale_ratio</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-toggle-controls" title="xplayer_action_toggle_controls ()">xplayer_action_toggle_controls</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-set-scale-ratio" title="xplayer_action_set_scale_ratio ()">xplayer_action_set_scale_ratio</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> ratio</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-action-set-playlist-index" title="totem_action_set_playlist_index ()">totem_action_set_playlist_index</a>     (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-action-set-playlist-index" title="xplayer_action_set_playlist_index ()">xplayer_action_set_playlist_index</a>     (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-action-remote" title="totem_object_action_remote ()">totem_object_action_remote</a>          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteCommand" title="enum TotemRemoteCommand"><span class="type">TotemRemoteCommand</span></a> cmd</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-action-remote" title="xplayer_object_action_remote ()">xplayer_object_action_remote</a>          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteCommand" title="enum XplayerRemoteCommand"><span class="type">XplayerRemoteCommand</span></a> cmd</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *url</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemObject.html#totem-is-fullscreen" title="totem_is_fullscreen ()">totem_is_fullscreen</a>                 (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemObject.html#totem-object-is-playing" title="totem_object_is_playing ()">totem_object_is_playing</a>             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemObject.html#totem-object-is-paused" title="totem_object_is_paused ()">totem_object_is_paused</a>              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="TotemObject.html#totem-object-is-seekable" title="totem_object_is_seekable ()">totem_object_is_seekable</a>            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="returnvalue">GtkWindow</span></a> *         <a class="link" href="TotemObject.html#totem-object-get-main-window" title="totem_object_get_main_window ()">totem_object_get_main_window</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://developer.gnome.org/gtk2/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      <a class="link" href="TotemObject.html#totem-object-get-ui-manager" title="totem_object_get_ui_manager ()">totem_object_get_ui_manager</a>         (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">char</span> *              <a class="link" href="TotemObject.html#totem-object-get-current-mrl" title="totem_object_get_current_mrl ()">totem_object_get_current_mrl</a>        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         <a class="link" href="TotemObject.html#totem-object-get-video-widget" title="totem_object_get_video_widget ()">totem_object_get_video_widget</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              <a class="link" href="TotemObject.html#totem-get-current-time" title="totem_get_current_time ()">totem_get_current_time</a>              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-set-current-subtitle" title="totem_object_set_current_subtitle ()">totem_object_set_current_subtitle</a>   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerObject.html#xplayer-is-fullscreen" title="xplayer_is_fullscreen ()">xplayer_is_fullscreen</a>                 (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerObject.html#xplayer-object-is-playing" title="xplayer_object_is_playing ()">xplayer_object_is_playing</a>             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerObject.html#xplayer-object-is-paused" title="xplayer_object_is_paused ()">xplayer_object_is_paused</a>              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="XplayerObject.html#xplayer-object-is-seekable" title="xplayer_object_is_seekable ()">xplayer_object_is_seekable</a>            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="returnvalue">GtkWindow</span></a> *         <a class="link" href="XplayerObject.html#xplayer-object-get-main-window" title="xplayer_object_get_main_window ()">xplayer_object_get_main_window</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://developer.gnome.org/gtk2/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      <a class="link" href="XplayerObject.html#xplayer-object-get-ui-manager" title="xplayer_object_get_ui_manager ()">xplayer_object_get_ui_manager</a>         (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="XplayerObject.html#xplayer-object-get-current-mrl" title="xplayer_object_get_current_mrl ()">xplayer_object_get_current_mrl</a>        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         <a class="link" href="XplayerObject.html#xplayer-object-get-video-widget" title="xplayer_object_get_video_widget ()">xplayer_object_get_video_widget</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              <a class="link" href="XplayerObject.html#xplayer-get-current-time" title="xplayer_get_current_time ()">xplayer_get_current_time</a>              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-set-current-subtitle" title="xplayer_object_set_current_subtitle ()">xplayer_object_set_current_subtitle</a>   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *subtitle_uri</code></em>);
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="TotemObject.html#totem-object-get-playlist-length" title="totem_object_get_playlist_length ()">totem_object_get_playlist_length</a>    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">int</span>                 <a class="link" href="TotemObject.html#totem-object-get-playlist-pos" title="totem_object_get_playlist_pos ()">totem_object_get_playlist_pos</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">char</span> *              <a class="link" href="TotemObject.html#totem-object-get-title-at-playlist-pos" title="totem_object_get_title_at_playlist_pos ()">totem_object_get_title_at_playlist_pos</a>
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="XplayerObject.html#xplayer-object-get-playlist-length" title="xplayer_object_get_playlist_length ()">xplayer_object_get_playlist_length</a>    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="XplayerObject.html#xplayer-object-get-playlist-pos" title="xplayer_object_get_playlist_pos ()">xplayer_object_get_playlist_pos</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="XplayerObject.html#xplayer-object-get-title-at-playlist-pos" title="xplayer_object_get_title_at_playlist_pos ()">xplayer_object_get_title_at_playlist_pos</a>
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> playlist_index</code></em>);
-<span class="returnvalue">char</span> *              <a class="link" href="TotemObject.html#totem-get-short-title" title="totem_get_short_title ()">totem_get_short_title</a>               (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">double</span>              <a class="link" href="TotemObject.html#totem-object-get-volume" title="totem_object_get_volume ()">totem_object_get_volume</a>             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);
-<span class="returnvalue">char</span> *              <a class="link" href="TotemObject.html#totem-object-get-version" title="totem_object_get_version ()">totem_object_get_version</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-add-sidebar-page" title="totem_object_add_sidebar_page ()">totem_object_add_sidebar_page</a>       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">char</span> *              <a class="link" href="XplayerObject.html#xplayer-get-short-title" title="xplayer_get_short_title ()">xplayer_get_short_title</a>               (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">double</span>              <a class="link" href="XplayerObject.html#xplayer-object-get-volume" title="xplayer_object_get_volume ()">xplayer_object_get_volume</a>             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="XplayerObject.html#xplayer-object-get-version" title="xplayer_object_get_version ()">xplayer_object_get_version</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-add-sidebar-page" title="xplayer_object_add_sidebar_page ()">xplayer_object_add_sidebar_page</a>       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *page_id</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="type">GtkWidget</span></a> *main_widget</code></em>);
-<span class="returnvalue">void</span>                <a class="link" href="TotemObject.html#totem-object-remove-sidebar-page" title="totem_object_remove_sidebar_page ()">totem_object_remove_sidebar_page</a>    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<span class="returnvalue">void</span>                <a class="link" href="XplayerObject.html#xplayer-object-remove-sidebar-page" title="xplayer_object_remove_sidebar_page ()">xplayer_object_remove_sidebar_page</a>    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *page_id</code></em>);
-const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * <a class="link" href="TotemObject.html#totem-object-get-supported-content-types" title="totem_object_get_supported_content_types ()">totem_object_get_supported_content_types</a>
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * <a class="link" href="XplayerObject.html#xplayer-object-get-supported-content-types" title="xplayer_object_get_supported_content_types ()">xplayer_object_get_supported_content_types</a>
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);
-const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * <a class="link" href="TotemObject.html#totem-object-get-supported-uri-schemes" title="totem_object_get_supported_uri_schemes ()">totem_object_get_supported_uri_schemes</a>
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * <a class="link" href="XplayerObject.html#xplayer-object-get-supported-uri-schemes" title="xplayer_object_get_supported_uri_schemes ()">xplayer_object_get_supported_uri_schemes</a>
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="XplayerObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="synopsis">
   <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
    +----<a href="http://library.gnome.org/devel/gio/unstable/GApplication.html">GApplication</a>
          +----<a href="http://developer.gnome.org/gtk2/GtkApplication.html">GtkApplication</a>
-               +----TotemObject
+               +----XplayerObject
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<a name="XplayerObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
-TotemObject implements
+XplayerObject implements
  <a href="http://library.gnome.org/devel/gio/unstable/GActionGroup.html">GActionGroup</a> and  <a href="http://library.gnome.org/devel/gio/unstable/GActionMap.html">GActionMap</a>.</p>
 </div>
 <div class="refsect1">
-<a name="TotemObject.properties"></a><h2>Properties</h2>
+<a name="XplayerObject.properties"></a><h2>Properties</h2>
 <pre class="synopsis">
-  "<a class="link" href="TotemObject.html#TotemObject--current-content-type" title='The "current-content-type" property'>current-content-type</a>"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
-  "<a class="link" href="TotemObject.html#TotemObject--current-display-name" title='The "current-display-name" property'>current-display-name</a>"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
-  "<a class="link" href="TotemObject.html#TotemObject--current-mrl" title='The "current-mrl" property'>current-mrl</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
-  "<a class="link" href="TotemObject.html#TotemObject--current-time" title='The "current-time" property'>current-time</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read
-  "<a class="link" href="TotemObject.html#TotemObject--fullscreen" title='The "fullscreen" property'>fullscreen</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
-  "<a class="link" href="TotemObject.html#TotemObject--playing" title='The "playing" property'>playing</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
-  "<a class="link" href="TotemObject.html#TotemObject--remember-position" title='The "remember-position" property'>remember-position</a>"        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
-  "<a class="link" href="TotemObject.html#TotemObject--seekable" title='The "seekable" property'>seekable</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
-  "<a class="link" href="TotemObject.html#TotemObject--stream-length" title='The "stream-length" property'>stream-length</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--current-content-type" title='The "current-content-type" property'>current-content-type</a>"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--current-display-name" title='The "current-display-name" property'>current-display-name</a>"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--current-mrl" title='The "current-mrl" property'>current-mrl</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--current-time" title='The "current-time" property'>current-time</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--fullscreen" title='The "fullscreen" property'>fullscreen</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--playing" title='The "playing" property'>playing</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--remember-position" title='The "remember-position" property'>remember-position</a>"        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="XplayerObject.html#XplayerObject--seekable" title='The "seekable" property'>seekable</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="XplayerObject.html#XplayerObject--stream-length" title='The "stream-length" property'>stream-length</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemObject.signals"></a><h2>Signals</h2>
+<a name="XplayerObject.signals"></a><h2>Signals</h2>
 <pre class="synopsis">
-  "<a class="link" href="TotemObject.html#TotemObject-file-closed" title='The "file-closed" signal'>file-closed</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
-  "<a class="link" href="TotemObject.html#TotemObject-file-has-played" title='The "file-has-played" signal'>file-has-played</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
-  "<a class="link" href="TotemObject.html#TotemObject-file-opened" title='The "file-opened" signal'>file-opened</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
-  "<a class="link" href="TotemObject.html#TotemObject-get-text-subtitle" title='The "get-text-subtitle" signal'>get-text-subtitle</a>"                              : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
-  "<a class="link" href="TotemObject.html#TotemObject-get-user-agent" title='The "get-user-agent" signal'>get-user-agent</a>"                                 : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
-  "<a class="link" href="TotemObject.html#TotemObject-metadata-updated" title='The "metadata-updated" signal'>metadata-updated</a>"                               : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-file-closed" title='The "file-closed" signal'>file-closed</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-file-has-played" title='The "file-has-played" signal'>file-has-played</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-file-opened" title='The "file-opened" signal'>file-opened</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-get-text-subtitle" title='The "get-text-subtitle" signal'>get-text-subtitle</a>"                              : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-get-user-agent" title='The "get-user-agent" signal'>get-user-agent</a>"                                 : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="XplayerObject.html#XplayerObject-metadata-updated" title='The "metadata-updated" signal'>metadata-updated</a>"                               : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
 </pre>
 </div>
 <div class="refsect1">
-<a name="TotemObject.description"></a><h2>Description</h2>
+<a name="XplayerObject.description"></a><h2>Description</h2>
 <p>
-<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> is the core object of Totem; a singleton which controls all Totem's main functions.
+<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> is the core object of Xplayer; a singleton which controls all Xplayer's main functions.
 </p>
 </div>
 <div class="refsect1">
-<a name="TotemObject.details"></a><h2>Details</h2>
+<a name="XplayerObject.details"></a><h2>Details</h2>
 <div class="refsect2">
-<a name="Totem"></a><h3>Totem</h3>
-<pre class="programlisting">typedef struct _TotemObject Totem;
+<a name="Xplayer"></a><h3>Xplayer</h3>
+<pre class="programlisting">typedef struct _XplayerObject Xplayer;
 </pre>
 <p>
-The <a class="link" href="TotemObject.html#Totem" title="Totem"><span class="type">Totem</span></a> object is a handy synonym for <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>, and the two can be used interchangably.
+The <a class="link" href="XplayerObject.html#Xplayer" title="Xplayer"><span class="type">Xplayer</span></a> object is a handy synonym for <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>, and the two can be used interchangably.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-struct"></a><h3>TotemObject</h3>
-<pre class="programlisting">typedef struct _TotemObject TotemObject;</pre>
+<a name="XplayerObject-struct"></a><h3>XplayerObject</h3>
+<pre class="programlisting">typedef struct _XplayerObject XplayerObject;</pre>
 <p>
-All the fields in the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> structure are private and should never be accessed directly.
+All the fields in the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> structure are private and should never be accessed directly.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemRemoteCommand"></a><h3>enum TotemRemoteCommand</h3>
+<a name="XplayerRemoteCommand"></a><h3>enum XplayerRemoteCommand</h3>
 <pre class="programlisting">typedef enum {
-	TOTEM_REMOTE_COMMAND_UNKNOWN = 0,
-	TOTEM_REMOTE_COMMAND_PLAY,
-	TOTEM_REMOTE_COMMAND_PAUSE,
-	TOTEM_REMOTE_COMMAND_STOP,
-	TOTEM_REMOTE_COMMAND_PLAYPAUSE,
-	TOTEM_REMOTE_COMMAND_NEXT,
-	TOTEM_REMOTE_COMMAND_PREVIOUS,
-	TOTEM_REMOTE_COMMAND_SEEK_FORWARD,
-	TOTEM_REMOTE_COMMAND_SEEK_BACKWARD,
-	TOTEM_REMOTE_COMMAND_VOLUME_UP,
-	TOTEM_REMOTE_COMMAND_VOLUME_DOWN,
-	TOTEM_REMOTE_COMMAND_FULLSCREEN,
-	TOTEM_REMOTE_COMMAND_QUIT,
-	TOTEM_REMOTE_COMMAND_ENQUEUE,
-	TOTEM_REMOTE_COMMAND_REPLACE,
-	TOTEM_REMOTE_COMMAND_SHOW,
-	TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS,
-	TOTEM_REMOTE_COMMAND_UP,
-	TOTEM_REMOTE_COMMAND_DOWN,
-	TOTEM_REMOTE_COMMAND_LEFT,
-	TOTEM_REMOTE_COMMAND_RIGHT,
-	TOTEM_REMOTE_COMMAND_SELECT,
-	TOTEM_REMOTE_COMMAND_DVD_MENU,
-	TOTEM_REMOTE_COMMAND_ZOOM_UP,
-	TOTEM_REMOTE_COMMAND_ZOOM_DOWN,
-	TOTEM_REMOTE_COMMAND_EJECT,
-	TOTEM_REMOTE_COMMAND_PLAY_DVD,
-	TOTEM_REMOTE_COMMAND_MUTE,
-	TOTEM_REMOTE_COMMAND_TOGGLE_ASPECT
-} TotemRemoteCommand;
+	XPLAYER_REMOTE_COMMAND_UNKNOWN = 0,
+	XPLAYER_REMOTE_COMMAND_PLAY,
+	XPLAYER_REMOTE_COMMAND_PAUSE,
+	XPLAYER_REMOTE_COMMAND_STOP,
+	XPLAYER_REMOTE_COMMAND_PLAYPAUSE,
+	XPLAYER_REMOTE_COMMAND_NEXT,
+	XPLAYER_REMOTE_COMMAND_PREVIOUS,
+	XPLAYER_REMOTE_COMMAND_SEEK_FORWARD,
+	XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD,
+	XPLAYER_REMOTE_COMMAND_VOLUME_UP,
+	XPLAYER_REMOTE_COMMAND_VOLUME_DOWN,
+	XPLAYER_REMOTE_COMMAND_FULLSCREEN,
+	XPLAYER_REMOTE_COMMAND_QUIT,
+	XPLAYER_REMOTE_COMMAND_ENQUEUE,
+	XPLAYER_REMOTE_COMMAND_REPLACE,
+	XPLAYER_REMOTE_COMMAND_SHOW,
+	XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS,
+	XPLAYER_REMOTE_COMMAND_UP,
+	XPLAYER_REMOTE_COMMAND_DOWN,
+	XPLAYER_REMOTE_COMMAND_LEFT,
+	XPLAYER_REMOTE_COMMAND_RIGHT,
+	XPLAYER_REMOTE_COMMAND_SELECT,
+	XPLAYER_REMOTE_COMMAND_DVD_MENU,
+	XPLAYER_REMOTE_COMMAND_ZOOM_UP,
+	XPLAYER_REMOTE_COMMAND_ZOOM_DOWN,
+	XPLAYER_REMOTE_COMMAND_EJECT,
+	XPLAYER_REMOTE_COMMAND_PLAY_DVD,
+	XPLAYER_REMOTE_COMMAND_MUTE,
+	XPLAYER_REMOTE_COMMAND_TOGGLE_ASPECT
+} XplayerRemoteCommand;
 </pre>
 <p>
-Represents a command which can be sent to a running Totem instance remotely.
+Represents a command which can be sent to a running Xplayer instance remotely.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -256,147 +256,147 @@ Represents a command which can be sent to a running Totem instance remotely.
 </colgroup>
 <tbody>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-UNKNOWN:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_UNKNOWN</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-UNKNOWN:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_UNKNOWN</code></span></p></td>
 <td>unknown command
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-PLAY:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_PLAY</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-PLAY:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_PLAY</code></span></p></td>
 <td>play the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-PAUSE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_PAUSE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-PAUSE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_PAUSE</code></span></p></td>
 <td>pause the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-STOP:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_STOP</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-STOP:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_STOP</code></span></p></td>
 <td>stop playing the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-PLAYPAUSE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_PLAYPAUSE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-PLAYPAUSE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_PLAYPAUSE</code></span></p></td>
 <td>toggle play/pause on the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-NEXT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_NEXT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-NEXT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_NEXT</code></span></p></td>
 <td>play the next playlist item
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-PREVIOUS:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_PREVIOUS</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-PREVIOUS:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_PREVIOUS</code></span></p></td>
 <td>play the previous playlist item
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-SEEK-FORWARD:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_SEEK_FORWARD</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-SEEK-FORWARD:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_SEEK_FORWARD</code></span></p></td>
 <td>seek forwards in the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-SEEK-BACKWARD:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_SEEK_BACKWARD</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-SEEK-BACKWARD:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD</code></span></p></td>
 <td>seek backwards in the current stream
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-VOLUME-UP:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_VOLUME_UP</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-VOLUME-UP:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_VOLUME_UP</code></span></p></td>
 <td>increase the volume
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-VOLUME-DOWN:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_VOLUME_DOWN</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-VOLUME-DOWN:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_VOLUME_DOWN</code></span></p></td>
 <td>decrease the volume
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-FULLSCREEN:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_FULLSCREEN</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-FULLSCREEN:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_FULLSCREEN</code></span></p></td>
 <td>toggle fullscreen mode
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-QUIT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_QUIT</code></span></p></td>
-<td>quit the instance of Totem
+<td><p><a name="XPLAYER-REMOTE-COMMAND-QUIT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_QUIT</code></span></p></td>
+<td>quit the instance of Xplayer
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-ENQUEUE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_ENQUEUE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-ENQUEUE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_ENQUEUE</code></span></p></td>
 <td>enqueue a new playlist item
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-REPLACE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_REPLACE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-REPLACE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_REPLACE</code></span></p></td>
 <td>replace an item in the playlist
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-SHOW:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_SHOW</code></span></p></td>
-<td>show the Totem instance
+<td><p><a name="XPLAYER-REMOTE-COMMAND-SHOW:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_SHOW</code></span></p></td>
+<td>show the Xplayer instance
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-TOGGLE-CONTROLS:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-TOGGLE-CONTROLS:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS</code></span></p></td>
 <td>toggle the control visibility
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-UP:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_UP</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-UP:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_UP</code></span></p></td>
 <td>go up (DVD controls)
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-DOWN:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_DOWN</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-DOWN:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_DOWN</code></span></p></td>
 <td>go down (DVD controls)
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-LEFT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_LEFT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-LEFT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_LEFT</code></span></p></td>
 <td>go left (DVD controls)
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-RIGHT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_RIGHT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-RIGHT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_RIGHT</code></span></p></td>
 <td>go right (DVD controls)
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-SELECT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_SELECT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-SELECT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_SELECT</code></span></p></td>
 <td>select the current item (DVD controls)
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-DVD-MENU:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_DVD_MENU</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-DVD-MENU:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_DVD_MENU</code></span></p></td>
 <td>go to the DVD menu
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-ZOOM-UP:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_ZOOM_UP</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-ZOOM-UP:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_ZOOM_UP</code></span></p></td>
 <td>increase the zoom level
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-ZOOM-DOWN:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_ZOOM_DOWN</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-ZOOM-DOWN:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_ZOOM_DOWN</code></span></p></td>
 <td>decrease the zoom level
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-EJECT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_EJECT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-EJECT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_EJECT</code></span></p></td>
 <td>eject the current disc
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-PLAY-DVD:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_PLAY_DVD</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-PLAY-DVD:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_PLAY_DVD</code></span></p></td>
 <td>play a DVD in a drive
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-MUTE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_MUTE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-MUTE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_MUTE</code></span></p></td>
 <td>toggle mute
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-COMMAND-TOGGLE-ASPECT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_COMMAND_TOGGLE_ASPECT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-COMMAND-TOGGLE-ASPECT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_COMMAND_TOGGLE_ASPECT</code></span></p></td>
 <td>toggle the aspect ratio
 </td>
 </tr>
@@ -405,14 +405,14 @@ Represents a command which can be sent to a running Totem instance remotely.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemRemoteSetting"></a><h3>enum TotemRemoteSetting</h3>
+<a name="XplayerRemoteSetting"></a><h3>enum XplayerRemoteSetting</h3>
 <pre class="programlisting">typedef enum {
-	TOTEM_REMOTE_SETTING_SHUFFLE,
-	TOTEM_REMOTE_SETTING_REPEAT
-} TotemRemoteSetting;
+	XPLAYER_REMOTE_SETTING_SHUFFLE,
+	XPLAYER_REMOTE_SETTING_REPEAT
+} XplayerRemoteSetting;
 </pre>
 <p>
-Represents a boolean setting or preference on a remote Totem instance.
+Represents a boolean setting or preference on a remote Xplayer instance.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -421,12 +421,12 @@ Represents a boolean setting or preference on a remote Totem instance.
 </colgroup>
 <tbody>
 <tr>
-<td><p><a name="TOTEM-REMOTE-SETTING-SHUFFLE:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_SETTING_SHUFFLE</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-SETTING-SHUFFLE:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_SETTING_SHUFFLE</code></span></p></td>
 <td>whether shuffle is enabled
 </td>
 </tr>
 <tr>
-<td><p><a name="TOTEM-REMOTE-SETTING-REPEAT:CAPS"></a><span class="term"><code class="literal">TOTEM_REMOTE_SETTING_REPEAT</code></span></p></td>
+<td><p><a name="XPLAYER-REMOTE-SETTING-REPEAT:CAPS"></a><span class="term"><code class="literal">XPLAYER_REMOTE_SETTING_REPEAT</code></span></p></td>
 <td>whether repeat is enabled
 </td>
 </tr>
@@ -435,17 +435,17 @@ Represents a boolean setting or preference on a remote Totem instance.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TOTEM-GSETTINGS-SCHEMA:CAPS"></a><h3>TOTEM_GSETTINGS_SCHEMA</h3>
-<pre class="programlisting">#define TOTEM_GSETTINGS_SCHEMA "org.gnome.totem"
+<a name="XPLAYER-GSETTINGS-SCHEMA:CAPS"></a><h3>XPLAYER_GSETTINGS_SCHEMA</h3>
+<pre class="programlisting">#define XPLAYER_GSETTINGS_SCHEMA "org.gnome.xplayer"
 </pre>
 <p>
-The GSettings schema under which all Totem settings are stored.
+The GSettings schema under which all Xplayer settings are stored.
 </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-plugins-init"></a><h3>totem_object_plugins_init ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_plugins_init           (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-plugins-init"></a><h3>xplayer_object_plugins_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_plugins_init           (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Initialises the plugin engine and activates all the
 enabled plugins.
@@ -456,16 +456,16 @@ enabled plugins.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-plugins-shutdown"></a><h3>totem_object_plugins_shutdown ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_plugins_shutdown       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-plugins-shutdown"></a><h3>xplayer_object_plugins_shutdown ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_plugins_shutdown       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Shuts down the plugin engine and deactivates all the
 plugins.
@@ -476,19 +476,19 @@ plugins.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-file-opened"></a><h3>totem_file_opened ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_file_opened                   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-file-opened"></a><h3>xplayer_file_opened ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_file_opened                   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *mrl</code></em>);</pre>
 <p>
-Emits the <a class="link" href="TotemObject.html#TotemObject-file-opened" title='The "file-opened" signal'><span class="type">"file-opened"</span></a> signal on <em class="parameter"><code>totem</code></em>, with the
+Emits the <a class="link" href="XplayerObject.html#XplayerObject-file-opened" title='The "file-opened" signal'><span class="type">"file-opened"</span></a> signal on <em class="parameter"><code>xplayer</code></em>, with the
 specified <em class="parameter"><code>mrl</code></em>.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -498,8 +498,8 @@ specified <em class="parameter"><code>mrl</code></em>.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -511,10 +511,10 @@ specified <em class="parameter"><code>mrl</code></em>.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-file-closed"></a><h3>totem_file_closed ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_file_closed                   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-file-closed"></a><h3>xplayer_file_closed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_file_closed                   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Emits the <a class="link" href="TotemObject.html#TotemObject-file-closed" title='The "file-closed" signal'><span class="type">"file-closed"</span></a> signal on <em class="parameter"><code>totem</code></em>.
+Emits the <a class="link" href="XplayerObject.html#XplayerObject-file-closed" title='The "file-closed" signal'><span class="type">"file-closed"</span></a> signal on <em class="parameter"><code>xplayer</code></em>.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -522,22 +522,22 @@ Emits the <a class="link" href="TotemObject.html#TotemObject-file-closed" title=
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-metadata-updated"></a><h3>totem_metadata_updated ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_metadata_updated              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-metadata-updated"></a><h3>xplayer_metadata_updated ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_metadata_updated              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *artist</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *album</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> track_num</code></em>);</pre>
 <p>
-Emits the <a class="link" href="TotemObject.html#TotemObject-metadata-updated" title='The "metadata-updated" signal'><span class="type">"metadata-updated"</span></a> signal on <em class="parameter"><code>totem</code></em>,
+Emits the <a class="link" href="XplayerObject.html#XplayerObject-metadata-updated" title='The "metadata-updated" signal'><span class="type">"metadata-updated"</span></a> signal on <em class="parameter"><code>xplayer</code></em>,
 with the specified stream data.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -547,8 +547,8 @@ with the specified stream data.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -575,8 +575,8 @@ with the specified stream data.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-error"></a><h3>totem_object_action_error ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_error           (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-action-error"></a><h3>xplayer_object_action_error ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_error           (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *reason</code></em>);</pre>
 <p>
@@ -590,8 +590,8 @@ given <em class="parameter"><code>title</code></em> and <em class="parameter"><c
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -607,10 +607,10 @@ given <em class="parameter"><code>title</code></em> and <em class="parameter"><c
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-exit"></a><h3>totem_object_action_exit ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_exit            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-exit"></a><h3>xplayer_object_action_exit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_exit            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Closes Totem.
+Closes Xplayer.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -618,17 +618,17 @@ Closes Totem.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-add-to-playlist-and-play"></a><h3>totem_object_add_to_playlist_and_play ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_add_to_playlist_and_play
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-add-to-playlist-and-play"></a><h3>xplayer_object_add_to_playlist_and_play ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_add_to_playlist_and_play
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *display_name</code></em>);</pre>
 <p>
@@ -641,8 +641,8 @@ Add <em class="parameter"><code>uri</code></em> to the playlist and play it imme
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -658,10 +658,10 @@ Add <em class="parameter"><code>uri</code></em> to the playlist and play it imme
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-play"></a><h3>totem_object_action_play ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_play            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-play"></a><h3>xplayer_object_action_play ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_play            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Plays the current stream. If Totem is already playing, it continues
+Plays the current stream. If Xplayer is already playing, it continues
 to play. If the stream cannot be played, and error dialog is displayed.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -670,16 +670,16 @@ to play. If the stream cannot be played, and error dialog is displayed.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-play-pause"></a><h3>totem_object_action_play_pause ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_play_pause      (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-play-pause"></a><h3>xplayer_object_action_play_pause ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_play_pause      (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Gets the current MRL from the playlist and attempts to play it.
 If the stream is already playing, playback is paused.
@@ -690,18 +690,18 @@ If the stream is already playing, playback is paused.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-pause"></a><h3>totem_action_pause ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_pause                  (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-pause"></a><h3>xplayer_action_pause ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_pause                  (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Pauses the current stream. If Totem is already paused, it continues
+Pauses the current stream. If Xplayer is already paused, it continues
 to be paused.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -710,16 +710,16 @@ to be paused.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-stop"></a><h3>totem_object_action_stop ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_stop            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-stop"></a><h3>xplayer_object_action_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_stop            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Stops the current stream.
 </p>
@@ -729,19 +729,19 @@ Stops the current stream.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-fullscreen"></a><h3>totem_action_fullscreen ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_fullscreen             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-fullscreen"></a><h3>xplayer_action_fullscreen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_fullscreen             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> state</code></em>);</pre>
 <p>
-Sets Totem's fullscreen state according to <em class="parameter"><code>state</code></em>.
+Sets Xplayer's fullscreen state according to <em class="parameter"><code>state</code></em>.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -750,25 +750,25 @@ Sets Totem's fullscreen state according to <em class="parameter"><code>state</co
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
 <td>
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Totem should be fullscreened</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Xplayer should be fullscreened</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-fullscreen-toggle"></a><h3>totem_object_action_fullscreen_toggle ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_fullscreen_toggle
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-fullscreen-toggle"></a><h3>xplayer_object_action_fullscreen_toggle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_fullscreen_toggle
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Toggles Totem's fullscreen state; if Totem is fullscreened, calling
+Toggles Xplayer's fullscreen state; if Xplayer is fullscreened, calling
 this makes it unfullscreened and vice-versa.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -777,16 +777,16 @@ this makes it unfullscreened and vice-versa.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-next"></a><h3>totem_object_action_next ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_next            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-next"></a><h3>xplayer_object_action_next ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_next            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 If a DVD is being played, goes to the next chapter. If a normal stream
 is being played, plays the next entry in the playlist.
@@ -797,16 +797,16 @@ is being played, plays the next entry in the playlist.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-previous"></a><h3>totem_object_action_previous ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_previous        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-action-previous"></a><h3>xplayer_object_action_previous ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_previous        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 If a DVD is being played, goes to the previous chapter. If a normal stream
 is being played, goes to the start of the stream if possible. If seeking is
@@ -818,16 +818,16 @@ not possible, plays the previous entry in the playlist.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-next-angle"></a><h3>totem_action_next_angle ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_next_angle             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-next-angle"></a><h3>xplayer_action_next_angle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_next_angle             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Switches to the next angle, if watching a DVD. If not watching a DVD, this is a
 no-op.
@@ -838,20 +838,20 @@ no-op.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-remote-get-setting"></a><h3>totem_object_action_remote_get_setting ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_object_action_remote_get_setting
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a> setting</code></em>);</pre>
+<a name="xplayer-object-action-remote-get-setting"></a><h3>xplayer_object_action_remote_get_setting ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_object_action_remote_get_setting
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a> setting</code></em>);</pre>
 <p>
-Returns the value of <em class="parameter"><code>setting</code></em> for this instance of Totem.
+Returns the value of <em class="parameter"><code>setting</code></em> for this instance of Xplayer.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -860,13 +860,13 @@ Returns the value of <em class="parameter"><code>setting</code></em> for this in
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>setting</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a>
+<td>a <a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a>
 </td>
 </tr>
 <tr>
@@ -879,13 +879,13 @@ Returns the value of <em class="parameter"><code>setting</code></em> for this in
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-remote-set-setting"></a><h3>totem_object_action_remote_set_setting ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_remote_set_setting
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a> setting</code></em>,
+<a name="xplayer-object-action-remote-set-setting"></a><h3>xplayer_object_action_remote_set_setting ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_remote_set_setting
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a> setting</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
 <p>
-Sets <em class="parameter"><code>setting</code></em> to <em class="parameter"><code>value</code></em> on this instance of Totem.
+Sets <em class="parameter"><code>setting</code></em> to <em class="parameter"><code>value</code></em> on this instance of Xplayer.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -894,13 +894,13 @@ Sets <em class="parameter"><code>setting</code></em> to <em class="parameter"><c
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>setting</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html#TotemRemoteSetting" title="enum TotemRemoteSetting"><span class="type">TotemRemoteSetting</span></a>
+<td>a <a class="link" href="XplayerObject.html#XplayerRemoteSetting" title="enum XplayerRemoteSetting"><span class="type">XplayerRemoteSetting</span></a>
 </td>
 </tr>
 <tr>
@@ -912,8 +912,8 @@ Sets <em class="parameter"><code>setting</code></em> to <em class="parameter"><c
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-seek-time"></a><h3>totem_object_action_seek_time ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_seek_time       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-action-seek-time"></a><h3>xplayer_object_action_seek_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_seek_time       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> msec</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> accurate</code></em>);</pre>
 <p>
@@ -927,8 +927,8 @@ error dialog if that's not possible.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -944,8 +944,8 @@ error dialog if that's not possible.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-seek-relative"></a><h3>totem_action_seek_relative ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_seek_relative          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-seek-relative"></a><h3>xplayer_action_seek_relative ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_seek_relative          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> offset</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> accurate</code></em>);</pre>
 <p>
@@ -959,8 +959,8 @@ or displays an error dialog if that's not possible.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -976,8 +976,8 @@ or displays an error dialog if that's not possible.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-volume"></a><h3>totem_object_action_volume ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_volume          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-action-volume"></a><h3>xplayer_object_action_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_volume          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">double</span> volume</code></em>);</pre>
 <p>
 Sets the volume, with <code class="code">1.0</code> being the maximum, and <code class="code">0.0</code> being the minimum level.
@@ -989,8 +989,8 @@ Sets the volume, with <code class="code">1.0</code> being the maximum, and <code
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1002,8 +1002,8 @@ Sets the volume, with <code class="code">1.0</code> being the maximum, and <code
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-volume-relative"></a><h3>totem_action_volume_relative ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_volume_relative        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-volume-relative"></a><h3>xplayer_action_volume_relative ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_volume_relative        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">double</span> off_pct</code></em>);</pre>
 <p>
 Sets the volume relative to its current level, with <code class="code">1.0</code> being the
@@ -1016,8 +1016,8 @@ maximum, and <code class="code">0.0</code> being the minimum level.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1029,8 +1029,8 @@ maximum, and <code class="code">0.0</code> being the minimum level.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-volume-toggle-mute"></a><h3>totem_action_volume_toggle_mute ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_volume_toggle_mute     (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-volume-toggle-mute"></a><h3>xplayer_action_volume_toggle_mute ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_volume_toggle_mute     (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Toggles the mute status.
 </p>
@@ -1040,16 +1040,16 @@ Toggles the mute status.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-toggle-aspect-ratio"></a><h3>totem_action_toggle_aspect_ratio ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_toggle_aspect_ratio    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-toggle-aspect-ratio"></a><h3>xplayer_action_toggle_aspect_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_toggle_aspect_ratio    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Toggles the aspect ratio selected in the menu to the
 next one in the list.
@@ -1060,16 +1060,16 @@ next one in the list.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-get-aspect-ratio"></a><h3>totem_action_get_aspect_ratio ()</h3>
-<pre class="programlisting"><span class="returnvalue">int</span>                 totem_action_get_aspect_ratio       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-get-aspect-ratio"></a><h3>xplayer_action_get_aspect_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 xplayer_action_get_aspect_ratio       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Gets the current aspect ratio as defined in <a class="link" href="BaconVideoWidget.html#BvwAspectRatio" title="enum BvwAspectRatio"><span class="type">BvwAspectRatio</span></a>.
 </p>
@@ -1080,8 +1080,8 @@ Gets the current aspect ratio as defined in <a class="link" href="BaconVideoWidg
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1093,8 +1093,8 @@ Gets the current aspect ratio as defined in <a class="link" href="BaconVideoWidg
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-set-aspect-ratio"></a><h3>totem_action_set_aspect_ratio ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_set_aspect_ratio       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-set-aspect-ratio"></a><h3>xplayer_action_set_aspect_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_set_aspect_ratio       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><span class="type">int</span> ratio</code></em>);</pre>
 <p>
 Sets the aspect ratio selected in the menu to <em class="parameter"><code>ratio</code></em>,
@@ -1107,8 +1107,8 @@ as defined in <a class="link" href="BaconVideoWidget.html#BvwAspectRatio" title=
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1120,10 +1120,10 @@ as defined in <a class="link" href="BaconVideoWidget.html#BvwAspectRatio" title=
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-toggle-controls"></a><h3>totem_action_toggle_controls ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_toggle_controls        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-action-toggle-controls"></a><h3>xplayer_action_toggle_controls ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_toggle_controls        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-If Totem's not fullscreened, this toggles the state of the "Show Controls"
+If Xplayer's not fullscreened, this toggles the state of the "Show Controls"
 menu entry, and consequently shows or hides the controls in the UI.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -1132,16 +1132,16 @@ menu entry, and consequently shows or hides the controls in the UI.
 <col>
 </colgroup>
 <tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr></tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-set-scale-ratio"></a><h3>totem_action_set_scale_ratio ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_set_scale_ratio        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-set-scale-ratio"></a><h3>xplayer_action_set_scale_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_set_scale_ratio        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> ratio</code></em>);</pre>
 <p>
 Sets the video scale ratio, as a float where, for example,
@@ -1154,8 +1154,8 @@ Sets the video scale ratio, as a float where, for example,
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1167,11 +1167,11 @@ Sets the video scale ratio, as a float where, for example,
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-action-set-playlist-index"></a><h3>totem_action_set_playlist_index ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_action_set_playlist_index     (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-action-set-playlist-index"></a><h3>xplayer_action_set_playlist_index ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_action_set_playlist_index     (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index</code></em>);</pre>
 <p>
-Sets the <code class="code">0</code>-based playlist index to <em class="parameter"><code>index</code></em>, causing Totem to load and
+Sets the <code class="code">0</code>-based playlist index to <em class="parameter"><code>index</code></em>, causing Xplayer to load and
 start playing that playlist entry.
 </p>
 <p>
@@ -1185,8 +1185,8 @@ has the effect of restarting the current playlist entry.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1198,17 +1198,17 @@ has the effect of restarting the current playlist entry.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-action-remote"></a><h3>totem_object_action_remote ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_action_remote          (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
-                                                         <em class="parameter"><code><a class="link" href="TotemObject.html#TotemRemoteCommand" title="enum TotemRemoteCommand"><span class="type">TotemRemoteCommand</span></a> cmd</code></em>,
+<a name="xplayer-object-action-remote"></a><h3>xplayer_object_action_remote ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_action_remote          (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="XplayerObject.html#XplayerRemoteCommand" title="enum XplayerRemoteCommand"><span class="type">XplayerRemoteCommand</span></a> cmd</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *url</code></em>);</pre>
 <p>
-Executes the specified <em class="parameter"><code>cmd</code></em> on this instance of Totem. If <em class="parameter"><code>cmd</code></em>
+Executes the specified <em class="parameter"><code>cmd</code></em> on this instance of Xplayer. If <em class="parameter"><code>cmd</code></em>
 is an operation requiring an MRL, <em class="parameter"><code>url</code></em> is required; it can be <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 otherwise.
 </p>
 <p>
-If Totem's fullscreened and the operation is executed correctly,
+If Xplayer's fullscreened and the operation is executed correctly,
 the controls will appear as if the user had moved the mouse.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -1218,13 +1218,13 @@ the controls will appear as if the user had moved the mouse.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cmd</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html#TotemRemoteCommand" title="enum TotemRemoteCommand"><span class="type">TotemRemoteCommand</span></a>
+<td>a <a class="link" href="XplayerObject.html#XplayerRemoteCommand" title="enum XplayerRemoteCommand"><span class="type">XplayerRemoteCommand</span></a>
 </td>
 </tr>
 <tr>
@@ -1237,10 +1237,10 @@ the controls will appear as if the user had moved the mouse.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-is-fullscreen"></a><h3>totem_is_fullscreen ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_is_fullscreen                 (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-is-fullscreen"></a><h3>xplayer_is_fullscreen ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_is_fullscreen                 (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Totem is fullscreened.
+Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Xplayer is fullscreened.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1249,24 +1249,24 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Totem is fullscreened</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Xplayer is fullscreened</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-is-playing"></a><h3>totem_object_is_playing ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_object_is_playing             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-is-playing"></a><h3>xplayer_object_is_playing ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_object_is_playing             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Totem is playing a stream.
+Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Xplayer is playing a stream.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1275,22 +1275,22 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Totem is playing a stream</td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Xplayer is playing a stream</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-is-paused"></a><h3>totem_object_is_paused ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_object_is_paused              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-is-paused"></a><h3>xplayer_object_is_paused ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_object_is_paused              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if playback is paused.
 </p>
@@ -1301,8 +1301,8 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1315,8 +1315,8 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-is-seekable"></a><h3>totem_object_is_seekable ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            totem_object_is_seekable            (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-is-seekable"></a><h3>xplayer_object_is_seekable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xplayer_object_is_seekable            (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the current stream is seekable.
 </p>
@@ -1327,8 +1327,8 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1341,10 +1341,10 @@ Returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macr
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-main-window"></a><h3>totem_object_get_main_window ()</h3>
-<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="returnvalue">GtkWindow</span></a> *         totem_object_get_main_window        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-main-window"></a><h3>xplayer_object_get_main_window ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="returnvalue">GtkWindow</span></a> *         xplayer_object_get_main_window        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Gets Totem's main window and increments its reference count.
+Gets Xplayer's main window and increments its reference count.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1353,13 +1353,13 @@ Gets Totem's main window and increments its reference count.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>Totem's main window. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+<td>Xplayer's main window. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -1367,10 +1367,10 @@ Gets Totem's main window and increments its reference count.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-ui-manager"></a><h3>totem_object_get_ui_manager ()</h3>
-<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      totem_object_get_ui_manager         (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-ui-manager"></a><h3>xplayer_object_get_ui_manager ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      xplayer_object_get_ui_manager         (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Gets Totem's UI manager, but does not change its reference count.
+Gets Xplayer's UI manager, but does not change its reference count.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1379,13 +1379,13 @@ Gets Totem's UI manager, but does not change its reference count.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>Totem's UI manager. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+<td>Xplayer's UI manager. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -1393,8 +1393,8 @@ Gets Totem's UI manager, but does not change its reference count.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-current-mrl"></a><h3>totem_object_get_current_mrl ()</h3>
-<pre class="programlisting"><span class="returnvalue">char</span> *              totem_object_get_current_mrl        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-current-mrl"></a><h3>xplayer_object_get_current_mrl ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              xplayer_object_get_current_mrl        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Get the MRL of the current stream, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if nothing's playing.
 Free with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.
@@ -1406,8 +1406,8 @@ Free with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allo
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1419,10 +1419,10 @@ Free with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allo
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-video-widget"></a><h3>totem_object_get_video_widget ()</h3>
-<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         totem_object_get_video_widget       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-video-widget"></a><h3>xplayer_object_get_video_widget ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="returnvalue">GtkWidget</span></a> *         xplayer_object_get_video_widget       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
-Gets Totem's video widget and increments its reference count.
+Gets Xplayer's video widget and increments its reference count.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1431,13 +1431,13 @@ Gets Totem's video widget and increments its reference count.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>Totem's video widget. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+<td>Xplayer's video widget. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
 </tbody>
@@ -1445,8 +1445,8 @@ Gets Totem's video widget and increments its reference count.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-get-current-time"></a><h3>totem_get_current_time ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              totem_get_current_time              (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-get-current-time"></a><h3>xplayer_get_current_time ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              xplayer_get_current_time              (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Gets the current position's time in the stream as a gint64.
 </p>
@@ -1457,8 +1457,8 @@ Gets the current position's time in the stream as a gint64.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1470,8 +1470,8 @@ Gets the current position's time in the stream as a gint64.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-set-current-subtitle"></a><h3>totem_object_set_current_subtitle ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_set_current_subtitle   (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-set-current-subtitle"></a><h3>xplayer_object_set_current_subtitle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_set_current_subtitle   (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *subtitle_uri</code></em>);</pre>
 <p>
 Add the <em class="parameter"><code>subtitle_uri</code></em> subtitle file to the playlist, setting it as the subtitle for the current
@@ -1484,8 +1484,8 @@ playlist entry.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1497,8 +1497,8 @@ playlist entry.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-playlist-length"></a><h3>totem_object_get_playlist_length ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               totem_object_get_playlist_length    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-playlist-length"></a><h3>xplayer_object_get_playlist_length ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               xplayer_object_get_playlist_length    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Returns the length of the current playlist.
 </p>
@@ -1509,8 +1509,8 @@ Returns the length of the current playlist.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1522,8 +1522,8 @@ Returns the length of the current playlist.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-playlist-pos"></a><h3>totem_object_get_playlist_pos ()</h3>
-<pre class="programlisting"><span class="returnvalue">int</span>                 totem_object_get_playlist_pos       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-playlist-pos"></a><h3>xplayer_object_get_playlist_pos ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 xplayer_object_get_playlist_pos       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Returns the <code class="code">0</code>-based index of the current entry in the playlist. If
 there is no current entry in the playlist, <code class="code">-1</code> is returned.
@@ -1535,8 +1535,8 @@ there is no current entry in the playlist, <code class="code">-1</code> is retur
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1549,9 +1549,9 @@ there is no current entry in the playlist, <code class="code">-1</code> is retur
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-title-at-playlist-pos"></a><h3>totem_object_get_title_at_playlist_pos ()</h3>
-<pre class="programlisting"><span class="returnvalue">char</span> *              totem_object_get_title_at_playlist_pos
-                                                        (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-get-title-at-playlist-pos"></a><h3>xplayer_object_get_title_at_playlist_pos ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              xplayer_object_get_title_at_playlist_pos
+                                                        (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> playlist_index</code></em>);</pre>
 <p>
 Gets the title of the playlist entry at <em class="parameter"><code>index</code></em>.
@@ -1563,8 +1563,8 @@ Gets the title of the playlist entry at <em class="parameter"><code>index</code>
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1581,8 +1581,8 @@ Gets the title of the playlist entry at <em class="parameter"><code>index</code>
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-get-short-title"></a><h3>totem_get_short_title ()</h3>
-<pre class="programlisting"><span class="returnvalue">char</span> *              totem_get_short_title               (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-get-short-title"></a><h3>xplayer_get_short_title ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              xplayer_get_short_title               (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Gets the title of the current entry in the playlist.
 </p>
@@ -1593,8 +1593,8 @@ Gets the title of the current entry in the playlist.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1607,8 +1607,8 @@ Gets the title of the current entry in the playlist.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-volume"></a><h3>totem_object_get_volume ()</h3>
-<pre class="programlisting"><span class="returnvalue">double</span>              totem_object_get_volume             (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>);</pre>
+<a name="xplayer-object-get-volume"></a><h3>xplayer_object_get_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">double</span>              xplayer_object_get_volume             (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>);</pre>
 <p>
 Gets the current volume level, as a value between <code class="code">0.0</code> and <code class="code">1.0</code>.
 </p>
@@ -1619,8 +1619,8 @@ Gets the current volume level, as a value between <code class="code">0.0</code> 
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1632,10 +1632,10 @@ Gets the current volume level, as a value between <code class="code">0.0</code> 
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-version"></a><h3>totem_object_get_version ()</h3>
-<pre class="programlisting"><span class="returnvalue">char</span> *              totem_object_get_version            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<a name="xplayer-object-get-version"></a><h3>xplayer_object_get_version ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              xplayer_object_get_version            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>
-Gets the application name and version (e.g. "Totem 2.28.0").
+Gets the application name and version (e.g. "Xplayer 2.28.0").
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1650,13 +1650,13 @@ Gets the application name and version (e.g. "Totem 2.28.0").
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-add-sidebar-page"></a><h3>totem_object_add_sidebar_page ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_add_sidebar_page       (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-add-sidebar-page"></a><h3>xplayer_object_add_sidebar_page ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_add_sidebar_page       (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *page_id</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
                                                          <em class="parameter"><code><a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="type">GtkWidget</span></a> *main_widget</code></em>);</pre>
 <p>
-Adds a sidebar page to Totem's sidebar with the given <em class="parameter"><code>page_id</code></em>.
+Adds a sidebar page to Xplayer's sidebar with the given <em class="parameter"><code>page_id</code></em>.
 <em class="parameter"><code>main_widget</code></em> is added into the page and shown automatically, while
 <em class="parameter"><code>title</code></em> is displayed as the page's title in the tab bar.
 </p>
@@ -1667,8 +1667,8 @@ Adds a sidebar page to Totem's sidebar with the given <em class="parameter"><cod
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1688,11 +1688,11 @@ Adds a sidebar page to Totem's sidebar with the given <em class="parameter"><cod
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-remove-sidebar-page"></a><h3>totem_object_remove_sidebar_page ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                totem_object_remove_sidebar_page    (<em class="parameter"><code><a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem</code></em>,
+<a name="xplayer-object-remove-sidebar-page"></a><h3>xplayer_object_remove_sidebar_page ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                xplayer_object_remove_sidebar_page    (<em class="parameter"><code><a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *page_id</code></em>);</pre>
 <p>
-Removes the page identified by <em class="parameter"><code>page_id</code></em> from Totem's sidebar.
+Removes the page identified by <em class="parameter"><code>page_id</code></em> from Xplayer's sidebar.
 If <em class="parameter"><code>page_id</code></em> doesn't exist in the sidebar, this function does
 nothing.
 </p>
@@ -1703,8 +1703,8 @@ nothing.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>a <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>a <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a>
 </td>
 </tr>
 <tr>
@@ -1716,11 +1716,11 @@ nothing.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-supported-content-types"></a><h3>totem_object_get_supported_content_types ()</h3>
-<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * totem_object_get_supported_content_types
+<a name="xplayer-object-get-supported-content-types"></a><h3>xplayer_object_get_supported_content_types ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * xplayer_object_get_supported_content_types
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>
-Get the full list of file content types which Totem supports playing.
+Get the full list of file content types which Xplayer supports playing.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1729,7 +1729,7 @@ Get the full list of file content types which Totem supports playing.
 </colgroup>
 <tbody><tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of the content types Totem supports. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of the content types Xplayer supports. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
 </tr></tbody>
 </table></div>
@@ -1737,11 +1737,11 @@ Get the full list of file content types which Totem supports playing.
 </div>
 <hr>
 <div class="refsect2">
-<a name="totem-object-get-supported-uri-schemes"></a><h3>totem_object_get_supported_uri_schemes ()</h3>
-<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * totem_object_get_supported_uri_schemes
+<a name="xplayer-object-get-supported-uri-schemes"></a><h3>xplayer_object_get_supported_uri_schemes ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const * xplayer_object_get_supported_uri_schemes
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>
-Get the full list of URI schemes which Totem supports accessing.
+Get the full list of URI schemes which Xplayer supports accessing.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1750,7 +1750,7 @@ Get the full list of URI schemes which Totem supports accessing.
 </colgroup>
 <tbody><tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of the URI schemes Totem supports. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of the URI schemes Xplayer supports. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
 </tr></tbody>
 </table></div>
@@ -1758,9 +1758,9 @@ Get the full list of URI schemes which Totem supports accessing.
 </div>
 </div>
 <div class="refsect1">
-<a name="TotemObject.property-details"></a><h2>Property Details</h2>
+<a name="XplayerObject.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="TotemObject--current-content-type"></a><h3>The <code class="literal">"current-content-type"</code> property</h3>
+<a name="XplayerObject--current-content-type"></a><h3>The <code class="literal">"current-content-type"</code> property</h3>
 <pre class="programlisting">  "current-content-type"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
 <p>
 The content-type of the current stream.
@@ -1769,7 +1769,7 @@ The content-type of the current stream.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--current-display-name"></a><h3>The <code class="literal">"current-display-name"</code> property</h3>
+<a name="XplayerObject--current-display-name"></a><h3>The <code class="literal">"current-display-name"</code> property</h3>
 <pre class="programlisting">  "current-display-name"     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
 <p>
 The display name of the current stream.
@@ -1778,7 +1778,7 @@ The display name of the current stream.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--current-mrl"></a><h3>The <code class="literal">"current-mrl"</code> property</h3>
+<a name="XplayerObject--current-mrl"></a><h3>The <code class="literal">"current-mrl"</code> property</h3>
 <pre class="programlisting">  "current-mrl"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
 <p>
 The MRL of the current stream.
@@ -1787,7 +1787,7 @@ The MRL of the current stream.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--current-time"></a><h3>The <code class="literal">"current-time"</code> property</h3>
+<a name="XplayerObject--current-time"></a><h3>The <code class="literal">"current-time"</code> property</h3>
 <pre class="programlisting">  "current-time"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read</pre>
 <p>
 The player's position (time) in the current stream, in milliseconds.
@@ -1796,34 +1796,34 @@ The player's position (time) in the current stream, in milliseconds.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--fullscreen"></a><h3>The <code class="literal">"fullscreen"</code> property</h3>
+<a name="XplayerObject--fullscreen"></a><h3>The <code class="literal">"fullscreen"</code> property</h3>
 <pre class="programlisting">  "fullscreen"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
 <p>
-If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Totem is in fullscreen mode.
+If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Xplayer is in fullscreen mode.
 </p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--playing"></a><h3>The <code class="literal">"playing"</code> property</h3>
+<a name="XplayerObject--playing"></a><h3>The <code class="literal">"playing"</code> property</h3>
 <pre class="programlisting">  "playing"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
 <p>
-If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Totem is playing an audio or video file.
+If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Xplayer is playing an audio or video file.
 </p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--remember-position"></a><h3>The <code class="literal">"remember-position"</code> property</h3>
+<a name="XplayerObject--remember-position"></a><h3>The <code class="literal">"remember-position"</code> property</h3>
 <pre class="programlisting">  "remember-position"        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
 <p>
-If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Totem will remember the position it was at last time a given file was opened.
+If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, Xplayer will remember the position it was at last time a given file was opened.
 </p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--seekable"></a><h3>The <code class="literal">"seekable"</code> property</h3>
+<a name="XplayerObject--seekable"></a><h3>The <code class="literal">"seekable"</code> property</h3>
 <pre class="programlisting">  "seekable"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
 <p>
 If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the current stream is seekable.
@@ -1832,7 +1832,7 @@ If <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.ht
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject--stream-length"></a><h3>The <code class="literal">"stream-length"</code> property</h3>
+<a name="XplayerObject--stream-length"></a><h3>The <code class="literal">"stream-length"</code> property</h3>
 <pre class="programlisting">  "stream-length"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read</pre>
 <p>
 The length of the current stream, in milliseconds.
@@ -1841,13 +1841,13 @@ The length of the current stream, in milliseconds.
 </div>
 </div>
 <div class="refsect1">
-<a name="TotemObject.signal-details"></a><h2>Signal Details</h2>
+<a name="XplayerObject.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
-<a name="TotemObject-file-closed"></a><h3>The <code class="literal">"file-closed"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-file-closed"></a><h3>The <code class="literal">"file-closed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-file-closed" title='The "file-closed" signal'><span class="type">"file-closed"</span></a> signal is emitted when Totem closes a stream.
+The <a class="link" href="XplayerObject.html#XplayerObject-file-closed" title='The "file-closed" signal'><span class="type">"file-closed"</span></a> signal is emitted when Xplayer closes a stream.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1856,8 +1856,8 @@ The <a class="link" href="TotemObject.html#TotemObject-file-closed" title='The "
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
@@ -1868,12 +1868,12 @@ The <a class="link" href="TotemObject.html#TotemObject-file-closed" title='The "
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-file-has-played"></a><h3>The <code class="literal">"file-has-played"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-file-has-played"></a><h3>The <code class="literal">"file-has-played"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *mrl,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-file-has-played" title='The "file-has-played" signal'><span class="type">"file-has-played"</span></a> signal is emitted when a new stream has started playing in Totem.
+The <a class="link" href="XplayerObject.html#XplayerObject-file-has-played" title='The "file-has-played" signal'><span class="type">"file-has-played"</span></a> signal is emitted when a new stream has started playing in Xplayer.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1882,8 +1882,8 @@ The <a class="link" href="TotemObject.html#TotemObject-file-has-played" title='T
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>mrl</code></em> :</span></p></td>
@@ -1898,12 +1898,12 @@ The <a class="link" href="TotemObject.html#TotemObject-file-has-played" title='T
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-file-opened"></a><h3>The <code class="literal">"file-opened"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-file-opened"></a><h3>The <code class="literal">"file-opened"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *mrl,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-file-opened" title='The "file-opened" signal'><span class="type">"file-opened"</span></a> signal is emitted when a new stream is opened by Totem.
+The <a class="link" href="XplayerObject.html#XplayerObject-file-opened" title='The "file-opened" signal'><span class="type">"file-opened"</span></a> signal is emitted when a new stream is opened by Xplayer.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -1912,8 +1912,8 @@ The <a class="link" href="TotemObject.html#TotemObject-file-opened" title='The "
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>mrl</code></em> :</span></p></td>
@@ -1928,12 +1928,12 @@ The <a class="link" href="TotemObject.html#TotemObject-file-opened" title='The "
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-get-text-subtitle"></a><h3>The <code class="literal">"get-text-subtitle"</code> signal</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>*              user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-get-text-subtitle"></a><h3>The <code class="literal">"get-text-subtitle"</code> signal</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>*              user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *mrl,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-get-text-subtitle" title='The "get-text-subtitle" signal'><span class="type">"get-text-subtitle"</span></a> signal is emitted before opening a stream, so that plugins
+The <a class="link" href="XplayerObject.html#XplayerObject-get-text-subtitle" title='The "get-text-subtitle" signal'><span class="type">"get-text-subtitle"</span></a> signal is emitted before opening a stream, so that plugins
 have the opportunity to detect or download text subtitles for the stream if necessary.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -1943,8 +1943,8 @@ have the opportunity to detect or download text subtitles for the stream if nece
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>mrl</code></em> :</span></p></td>
@@ -1964,12 +1964,12 @@ have the opportunity to detect or download text subtitles for the stream if nece
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-get-user-agent"></a><h3>The <code class="literal">"get-user-agent"</code> signal</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>*              user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-get-user-agent"></a><h3>The <code class="literal">"get-user-agent"</code> signal</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>*              user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *mrl,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-get-user-agent" title='The "get-user-agent" signal'><span class="type">"get-user-agent"</span></a> signal is emitted before opening a stream, so that plugins
+The <a class="link" href="XplayerObject.html#XplayerObject-get-user-agent" title='The "get-user-agent" signal'><span class="type">"get-user-agent"</span></a> signal is emitted before opening a stream, so that plugins
 have the opportunity to return the user-agent to be set.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -1979,8 +1979,8 @@ have the opportunity to return the user-agent to be set.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>mrl</code></em> :</span></p></td>
@@ -2000,15 +2000,15 @@ have the opportunity to return the user-agent to be set.
 </div>
 <hr>
 <div class="refsect2">
-<a name="TotemObject-metadata-updated"></a><h3>The <code class="literal">"metadata-updated"</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> *totem,
+<a name="XplayerObject-metadata-updated"></a><h3>The <code class="literal">"metadata-updated"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> *xplayer,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *artist,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *title,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *album,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>        track_number,
                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)         : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
 <p>
-The <a class="link" href="TotemObject.html#TotemObject-metadata-updated" title='The "metadata-updated" signal'><span class="type">"metadata-updated"</span></a> signal is emitted when the metadata of a stream is updated, typically
+The <a class="link" href="XplayerObject.html#XplayerObject-metadata-updated" title='The "metadata-updated" signal'><span class="type">"metadata-updated"</span></a> signal is emitted when the metadata of a stream is updated, typically
 when it's being loaded.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -2018,8 +2018,8 @@ when it's being loaded.
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><em class="parameter"><code>totem</code></em> :</span></p></td>
-<td>the <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> which received the signal</td>
+<td><p><span class="term"><em class="parameter"><code>xplayer</code></em> :</span></p></td>
+<td>the <a class="link" href="XplayerObject.html" title="XplayerObject"><span class="type">XplayerObject</span></a> which received the signal</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>artist</code></em> :</span></p></td>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
-<book xmlns="http://www.devhelp.net/book" title="Totem Reference Manual" link="index.html" author="" name="totem" version="2" language="c">
+<book xmlns="http://www.devhelp.net/book" title="Xplayer Reference Manual" link="index.html" author="" name="xplayer" version="2" language="c">
   <chapters>
     <sub name="Tutorials" link="tutorials.html">
-      <sub name="Writing Totem Plugins" link="totem-plugins.html"/>
+      <sub name="Writing Xplayer Plugins" link="xplayer-plugins.html"/>
     </sub>
     <sub name="Core API" link="core-api.html">
-      <sub name="TotemObject" link="TotemObject.html"/>
-      <sub name="Interface" link="totem-Interface.html"/>
-      <sub name="TotemPlugin" link="totem-TotemPlugin.html"/>
+      <sub name="XplayerObject" link="XplayerObject.html"/>
+      <sub name="Interface" link="xplayer-Interface.html"/>
+      <sub name="XplayerPlugin" link="xplayer-XplayerPlugin.html"/>
       <sub name="BaconVideoWidget" link="BaconVideoWidget.html"/>
     </sub>
     <sub name="Index of all symbols" link="api-index-full.html"/>
@@ -22,88 +22,88 @@
     </sub>
   </chapters>
   <functions>
-    <keyword type="" name="Locations" link="totem-plugins.html#id-1.2.2.3.3"/>
-    <keyword type="" name="The .plugin File" link="totem-plugins.html#id-1.2.2.3.4"/>
-    <keyword type="" name="Writing a Plugin" link="totem-plugins.html#id-1.2.2.3.5"/>
-    <keyword type="typedef" name="Totem" link="TotemObject.html#Totem"/>
-    <keyword type="struct" name="TotemObject" link="TotemObject.html#TotemObject-struct"/>
-    <keyword type="enum" name="enum TotemRemoteCommand" link="TotemObject.html#TotemRemoteCommand"/>
-    <keyword type="enum" name="enum TotemRemoteSetting" link="TotemObject.html#TotemRemoteSetting"/>
-    <keyword type="macro" name="TOTEM_GSETTINGS_SCHEMA" link="TotemObject.html#TOTEM-GSETTINGS-SCHEMA:CAPS"/>
-    <keyword type="function" name="totem_object_plugins_init ()" link="TotemObject.html#totem-object-plugins-init"/>
-    <keyword type="function" name="totem_object_plugins_shutdown ()" link="TotemObject.html#totem-object-plugins-shutdown"/>
-    <keyword type="function" name="totem_file_opened ()" link="TotemObject.html#totem-file-opened"/>
-    <keyword type="function" name="totem_file_closed ()" link="TotemObject.html#totem-file-closed"/>
-    <keyword type="function" name="totem_metadata_updated ()" link="TotemObject.html#totem-metadata-updated"/>
-    <keyword type="function" name="totem_object_action_error ()" link="TotemObject.html#totem-object-action-error"/>
-    <keyword type="function" name="totem_object_action_exit ()" link="TotemObject.html#totem-object-action-exit"/>
-    <keyword type="function" name="totem_object_add_to_playlist_and_play ()" link="TotemObject.html#totem-object-add-to-playlist-and-play"/>
-    <keyword type="function" name="totem_object_action_play ()" link="TotemObject.html#totem-object-action-play"/>
-    <keyword type="function" name="totem_object_action_play_pause ()" link="TotemObject.html#totem-object-action-play-pause"/>
-    <keyword type="function" name="totem_action_pause ()" link="TotemObject.html#totem-action-pause"/>
-    <keyword type="function" name="totem_object_action_stop ()" link="TotemObject.html#totem-object-action-stop"/>
-    <keyword type="function" name="totem_action_fullscreen ()" link="TotemObject.html#totem-action-fullscreen"/>
-    <keyword type="function" name="totem_object_action_fullscreen_toggle ()" link="TotemObject.html#totem-object-action-fullscreen-toggle"/>
-    <keyword type="function" name="totem_object_action_next ()" link="TotemObject.html#totem-object-action-next"/>
-    <keyword type="function" name="totem_object_action_previous ()" link="TotemObject.html#totem-object-action-previous"/>
-    <keyword type="function" name="totem_action_next_angle ()" link="TotemObject.html#totem-action-next-angle"/>
-    <keyword type="function" name="totem_object_action_remote_get_setting ()" link="TotemObject.html#totem-object-action-remote-get-setting"/>
-    <keyword type="function" name="totem_object_action_remote_set_setting ()" link="TotemObject.html#totem-object-action-remote-set-setting"/>
-    <keyword type="function" name="totem_object_action_seek_time ()" link="TotemObject.html#totem-object-action-seek-time"/>
-    <keyword type="function" name="totem_action_seek_relative ()" link="TotemObject.html#totem-action-seek-relative"/>
-    <keyword type="function" name="totem_object_action_volume ()" link="TotemObject.html#totem-object-action-volume"/>
-    <keyword type="function" name="totem_action_volume_relative ()" link="TotemObject.html#totem-action-volume-relative"/>
-    <keyword type="function" name="totem_action_volume_toggle_mute ()" link="TotemObject.html#totem-action-volume-toggle-mute"/>
-    <keyword type="function" name="totem_action_toggle_aspect_ratio ()" link="TotemObject.html#totem-action-toggle-aspect-ratio"/>
-    <keyword type="function" name="totem_action_get_aspect_ratio ()" link="TotemObject.html#totem-action-get-aspect-ratio"/>
-    <keyword type="function" name="totem_action_set_aspect_ratio ()" link="TotemObject.html#totem-action-set-aspect-ratio"/>
-    <keyword type="function" name="totem_action_toggle_controls ()" link="TotemObject.html#totem-action-toggle-controls"/>
-    <keyword type="function" name="totem_action_set_scale_ratio ()" link="TotemObject.html#totem-action-set-scale-ratio"/>
-    <keyword type="function" name="totem_action_set_playlist_index ()" link="TotemObject.html#totem-action-set-playlist-index"/>
-    <keyword type="function" name="totem_object_action_remote ()" link="TotemObject.html#totem-object-action-remote"/>
-    <keyword type="function" name="totem_is_fullscreen ()" link="TotemObject.html#totem-is-fullscreen"/>
-    <keyword type="function" name="totem_object_is_playing ()" link="TotemObject.html#totem-object-is-playing"/>
-    <keyword type="function" name="totem_object_is_paused ()" link="TotemObject.html#totem-object-is-paused"/>
-    <keyword type="function" name="totem_object_is_seekable ()" link="TotemObject.html#totem-object-is-seekable"/>
-    <keyword type="function" name="totem_object_get_main_window ()" link="TotemObject.html#totem-object-get-main-window"/>
-    <keyword type="function" name="totem_object_get_ui_manager ()" link="TotemObject.html#totem-object-get-ui-manager"/>
-    <keyword type="function" name="totem_object_get_current_mrl ()" link="TotemObject.html#totem-object-get-current-mrl"/>
-    <keyword type="function" name="totem_object_get_video_widget ()" link="TotemObject.html#totem-object-get-video-widget"/>
-    <keyword type="function" name="totem_get_current_time ()" link="TotemObject.html#totem-get-current-time"/>
-    <keyword type="function" name="totem_object_set_current_subtitle ()" link="TotemObject.html#totem-object-set-current-subtitle"/>
-    <keyword type="function" name="totem_object_get_playlist_length ()" link="TotemObject.html#totem-object-get-playlist-length"/>
-    <keyword type="function" name="totem_object_get_playlist_pos ()" link="TotemObject.html#totem-object-get-playlist-pos"/>
-    <keyword type="function" name="totem_object_get_title_at_playlist_pos ()" link="TotemObject.html#totem-object-get-title-at-playlist-pos"/>
-    <keyword type="function" name="totem_get_short_title ()" link="TotemObject.html#totem-get-short-title"/>
-    <keyword type="function" name="totem_object_get_volume ()" link="TotemObject.html#totem-object-get-volume"/>
-    <keyword type="function" name="totem_object_get_version ()" link="TotemObject.html#totem-object-get-version"/>
-    <keyword type="function" name="totem_object_add_sidebar_page ()" link="TotemObject.html#totem-object-add-sidebar-page"/>
-    <keyword type="function" name="totem_object_remove_sidebar_page ()" link="TotemObject.html#totem-object-remove-sidebar-page"/>
-    <keyword type="function" name="totem_object_get_supported_content_types ()" link="TotemObject.html#totem-object-get-supported-content-types" since="3.1.5"/>
-    <keyword type="function" name="totem_object_get_supported_uri_schemes ()" link="TotemObject.html#totem-object-get-supported-uri-schemes" since="3.1.5"/>
-    <keyword type="property" name="The &quot;current-content-type&quot; property" link="TotemObject.html#TotemObject--current-content-type"/>
-    <keyword type="property" name="The &quot;current-display-name&quot; property" link="TotemObject.html#TotemObject--current-display-name"/>
-    <keyword type="property" name="The &quot;current-mrl&quot; property" link="TotemObject.html#TotemObject--current-mrl"/>
-    <keyword type="property" name="The &quot;current-time&quot; property" link="TotemObject.html#TotemObject--current-time"/>
-    <keyword type="property" name="The &quot;fullscreen&quot; property" link="TotemObject.html#TotemObject--fullscreen"/>
-    <keyword type="property" name="The &quot;playing&quot; property" link="TotemObject.html#TotemObject--playing"/>
-    <keyword type="property" name="The &quot;remember-position&quot; property" link="TotemObject.html#TotemObject--remember-position"/>
-    <keyword type="property" name="The &quot;seekable&quot; property" link="TotemObject.html#TotemObject--seekable"/>
-    <keyword type="property" name="The &quot;stream-length&quot; property" link="TotemObject.html#TotemObject--stream-length"/>
-    <keyword type="signal" name="The &quot;file-closed&quot; signal" link="TotemObject.html#TotemObject-file-closed"/>
-    <keyword type="signal" name="The &quot;file-has-played&quot; signal" link="TotemObject.html#TotemObject-file-has-played"/>
-    <keyword type="signal" name="The &quot;file-opened&quot; signal" link="TotemObject.html#TotemObject-file-opened"/>
-    <keyword type="signal" name="The &quot;get-text-subtitle&quot; signal" link="TotemObject.html#TotemObject-get-text-subtitle"/>
-    <keyword type="signal" name="The &quot;get-user-agent&quot; signal" link="TotemObject.html#TotemObject-get-user-agent"/>
-    <keyword type="signal" name="The &quot;metadata-updated&quot; signal" link="TotemObject.html#TotemObject-metadata-updated"/>
-    <keyword type="function" name="totem_interface_error ()" link="totem-Interface.html#totem-interface-error"/>
-    <keyword type="function" name="totem_interface_error_blocking ()" link="totem-Interface.html#totem-interface-error-blocking"/>
-    <keyword type="function" name="totem_interface_error_with_link ()" link="totem-Interface.html#totem-interface-error-with-link"/>
-    <keyword type="macro" name="TOTEM_PLUGIN_REGISTER()" link="totem-TotemPlugin.html#TOTEM-PLUGIN-REGISTER:CAPS"/>
-    <keyword type="macro" name="TOTEM_PLUGIN_REGISTER_CONFIGURABLE()" link="totem-TotemPlugin.html#TOTEM-PLUGIN-REGISTER-CONFIGURABLE:CAPS"/>
-    <keyword type="function" name="totem_plugin_find_file ()" link="totem-TotemPlugin.html#totem-plugin-find-file"/>
-    <keyword type="function" name="totem_plugin_load_interface ()" link="totem-TotemPlugin.html#totem-plugin-load-interface"/>
-    <keyword type="function" name="totem_get_plugin_paths ()" link="totem-TotemPlugin.html#totem-get-plugin-paths" since="2.90.0"/>
+    <keyword type="" name="Locations" link="xplayer-plugins.html#id-1.2.2.3.3"/>
+    <keyword type="" name="The .plugin File" link="xplayer-plugins.html#id-1.2.2.3.4"/>
+    <keyword type="" name="Writing a Plugin" link="xplayer-plugins.html#id-1.2.2.3.5"/>
+    <keyword type="typedef" name="Xplayer" link="XplayerObject.html#Xplayer"/>
+    <keyword type="struct" name="XplayerObject" link="XplayerObject.html#XplayerObject-struct"/>
+    <keyword type="enum" name="enum XplayerRemoteCommand" link="XplayerObject.html#XplayerRemoteCommand"/>
+    <keyword type="enum" name="enum XplayerRemoteSetting" link="XplayerObject.html#XplayerRemoteSetting"/>
+    <keyword type="macro" name="XPLAYER_GSETTINGS_SCHEMA" link="XplayerObject.html#XPLAYER-GSETTINGS-SCHEMA:CAPS"/>
+    <keyword type="function" name="xplayer_object_plugins_init ()" link="XplayerObject.html#xplayer-object-plugins-init"/>
+    <keyword type="function" name="xplayer_object_plugins_shutdown ()" link="XplayerObject.html#xplayer-object-plugins-shutdown"/>
+    <keyword type="function" name="xplayer_file_opened ()" link="XplayerObject.html#xplayer-file-opened"/>
+    <keyword type="function" name="xplayer_file_closed ()" link="XplayerObject.html#xplayer-file-closed"/>
+    <keyword type="function" name="xplayer_metadata_updated ()" link="XplayerObject.html#xplayer-metadata-updated"/>
+    <keyword type="function" name="xplayer_object_action_error ()" link="XplayerObject.html#xplayer-object-action-error"/>
+    <keyword type="function" name="xplayer_object_action_exit ()" link="XplayerObject.html#xplayer-object-action-exit"/>
+    <keyword type="function" name="xplayer_object_add_to_playlist_and_play ()" link="XplayerObject.html#xplayer-object-add-to-playlist-and-play"/>
+    <keyword type="function" name="xplayer_object_action_play ()" link="XplayerObject.html#xplayer-object-action-play"/>
+    <keyword type="function" name="xplayer_object_action_play_pause ()" link="XplayerObject.html#xplayer-object-action-play-pause"/>
+    <keyword type="function" name="xplayer_action_pause ()" link="XplayerObject.html#xplayer-action-pause"/>
+    <keyword type="function" name="xplayer_object_action_stop ()" link="XplayerObject.html#xplayer-object-action-stop"/>
+    <keyword type="function" name="xplayer_action_fullscreen ()" link="XplayerObject.html#xplayer-action-fullscreen"/>
+    <keyword type="function" name="xplayer_object_action_fullscreen_toggle ()" link="XplayerObject.html#xplayer-object-action-fullscreen-toggle"/>
+    <keyword type="function" name="xplayer_object_action_next ()" link="XplayerObject.html#xplayer-object-action-next"/>
+    <keyword type="function" name="xplayer_object_action_previous ()" link="XplayerObject.html#xplayer-object-action-previous"/>
+    <keyword type="function" name="xplayer_action_next_angle ()" link="XplayerObject.html#xplayer-action-next-angle"/>
+    <keyword type="function" name="xplayer_object_action_remote_get_setting ()" link="XplayerObject.html#xplayer-object-action-remote-get-setting"/>
+    <keyword type="function" name="xplayer_object_action_remote_set_setting ()" link="XplayerObject.html#xplayer-object-action-remote-set-setting"/>
+    <keyword type="function" name="xplayer_object_action_seek_time ()" link="XplayerObject.html#xplayer-object-action-seek-time"/>
+    <keyword type="function" name="xplayer_action_seek_relative ()" link="XplayerObject.html#xplayer-action-seek-relative"/>
+    <keyword type="function" name="xplayer_object_action_volume ()" link="XplayerObject.html#xplayer-object-action-volume"/>
+    <keyword type="function" name="xplayer_action_volume_relative ()" link="XplayerObject.html#xplayer-action-volume-relative"/>
+    <keyword type="function" name="xplayer_action_volume_toggle_mute ()" link="XplayerObject.html#xplayer-action-volume-toggle-mute"/>
+    <keyword type="function" name="xplayer_action_toggle_aspect_ratio ()" link="XplayerObject.html#xplayer-action-toggle-aspect-ratio"/>
+    <keyword type="function" name="xplayer_action_get_aspect_ratio ()" link="XplayerObject.html#xplayer-action-get-aspect-ratio"/>
+    <keyword type="function" name="xplayer_action_set_aspect_ratio ()" link="XplayerObject.html#xplayer-action-set-aspect-ratio"/>
+    <keyword type="function" name="xplayer_action_toggle_controls ()" link="XplayerObject.html#xplayer-action-toggle-controls"/>
+    <keyword type="function" name="xplayer_action_set_scale_ratio ()" link="XplayerObject.html#xplayer-action-set-scale-ratio"/>
+    <keyword type="function" name="xplayer_action_set_playlist_index ()" link="XplayerObject.html#xplayer-action-set-playlist-index"/>
+    <keyword type="function" name="xplayer_object_action_remote ()" link="XplayerObject.html#xplayer-object-action-remote"/>
+    <keyword type="function" name="xplayer_is_fullscreen ()" link="XplayerObject.html#xplayer-is-fullscreen"/>
+    <keyword type="function" name="xplayer_object_is_playing ()" link="XplayerObject.html#xplayer-object-is-playing"/>
+    <keyword type="function" name="xplayer_object_is_paused ()" link="XplayerObject.html#xplayer-object-is-paused"/>
+    <keyword type="function" name="xplayer_object_is_seekable ()" link="XplayerObject.html#xplayer-object-is-seekable"/>
+    <keyword type="function" name="xplayer_object_get_main_window ()" link="XplayerObject.html#xplayer-object-get-main-window"/>
+    <keyword type="function" name="xplayer_object_get_ui_manager ()" link="XplayerObject.html#xplayer-object-get-ui-manager"/>
+    <keyword type="function" name="xplayer_object_get_current_mrl ()" link="XplayerObject.html#xplayer-object-get-current-mrl"/>
+    <keyword type="function" name="xplayer_object_get_video_widget ()" link="XplayerObject.html#xplayer-object-get-video-widget"/>
+    <keyword type="function" name="xplayer_get_current_time ()" link="XplayerObject.html#xplayer-get-current-time"/>
+    <keyword type="function" name="xplayer_object_set_current_subtitle ()" link="XplayerObject.html#xplayer-object-set-current-subtitle"/>
+    <keyword type="function" name="xplayer_object_get_playlist_length ()" link="XplayerObject.html#xplayer-object-get-playlist-length"/>
+    <keyword type="function" name="xplayer_object_get_playlist_pos ()" link="XplayerObject.html#xplayer-object-get-playlist-pos"/>
+    <keyword type="function" name="xplayer_object_get_title_at_playlist_pos ()" link="XplayerObject.html#xplayer-object-get-title-at-playlist-pos"/>
+    <keyword type="function" name="xplayer_get_short_title ()" link="XplayerObject.html#xplayer-get-short-title"/>
+    <keyword type="function" name="xplayer_object_get_volume ()" link="XplayerObject.html#xplayer-object-get-volume"/>
+    <keyword type="function" name="xplayer_object_get_version ()" link="XplayerObject.html#xplayer-object-get-version"/>
+    <keyword type="function" name="xplayer_object_add_sidebar_page ()" link="XplayerObject.html#xplayer-object-add-sidebar-page"/>
+    <keyword type="function" name="xplayer_object_remove_sidebar_page ()" link="XplayerObject.html#xplayer-object-remove-sidebar-page"/>
+    <keyword type="function" name="xplayer_object_get_supported_content_types ()" link="XplayerObject.html#xplayer-object-get-supported-content-types" since="3.1.5"/>
+    <keyword type="function" name="xplayer_object_get_supported_uri_schemes ()" link="XplayerObject.html#xplayer-object-get-supported-uri-schemes" since="3.1.5"/>
+    <keyword type="property" name="The &quot;current-content-type&quot; property" link="XplayerObject.html#XplayerObject--current-content-type"/>
+    <keyword type="property" name="The &quot;current-display-name&quot; property" link="XplayerObject.html#XplayerObject--current-display-name"/>
+    <keyword type="property" name="The &quot;current-mrl&quot; property" link="XplayerObject.html#XplayerObject--current-mrl"/>
+    <keyword type="property" name="The &quot;current-time&quot; property" link="XplayerObject.html#XplayerObject--current-time"/>
+    <keyword type="property" name="The &quot;fullscreen&quot; property" link="XplayerObject.html#XplayerObject--fullscreen"/>
+    <keyword type="property" name="The &quot;playing&quot; property" link="XplayerObject.html#XplayerObject--playing"/>
+    <keyword type="property" name="The &quot;remember-position&quot; property" link="XplayerObject.html#XplayerObject--remember-position"/>
+    <keyword type="property" name="The &quot;seekable&quot; property" link="XplayerObject.html#XplayerObject--seekable"/>
+    <keyword type="property" name="The &quot;stream-length&quot; property" link="XplayerObject.html#XplayerObject--stream-length"/>
+    <keyword type="signal" name="The &quot;file-closed&quot; signal" link="XplayerObject.html#XplayerObject-file-closed"/>
+    <keyword type="signal" name="The &quot;file-has-played&quot; signal" link="XplayerObject.html#XplayerObject-file-has-played"/>
+    <keyword type="signal" name="The &quot;file-opened&quot; signal" link="XplayerObject.html#XplayerObject-file-opened"/>
+    <keyword type="signal" name="The &quot;get-text-subtitle&quot; signal" link="XplayerObject.html#XplayerObject-get-text-subtitle"/>
+    <keyword type="signal" name="The &quot;get-user-agent&quot; signal" link="XplayerObject.html#XplayerObject-get-user-agent"/>
+    <keyword type="signal" name="The &quot;metadata-updated&quot; signal" link="XplayerObject.html#XplayerObject-metadata-updated"/>
+    <keyword type="function" name="xplayer_interface_error ()" link="xplayer-Interface.html#xplayer-interface-error"/>
+    <keyword type="function" name="xplayer_interface_error_blocking ()" link="xplayer-Interface.html#xplayer-interface-error-blocking"/>
+    <keyword type="function" name="xplayer_interface_error_with_link ()" link="xplayer-Interface.html#xplayer-interface-error-with-link"/>
+    <keyword type="macro" name="XPLAYER_PLUGIN_REGISTER()" link="xplayer-XplayerPlugin.html#XPLAYER-PLUGIN-REGISTER:CAPS"/>
+    <keyword type="macro" name="XPLAYER_PLUGIN_REGISTER_CONFIGURABLE()" link="xplayer-XplayerPlugin.html#XPLAYER-PLUGIN-REGISTER-CONFIGURABLE:CAPS"/>
+    <keyword type="function" name="xplayer_plugin_find_file ()" link="xplayer-XplayerPlugin.html#xplayer-plugin-find-file"/>
+    <keyword type="function" name="xplayer_plugin_load_interface ()" link="xplayer-XplayerPlugin.html#xplayer-plugin-load-interface"/>
+    <keyword type="function" name="xplayer_get_plugin_paths ()" link="xplayer-XplayerPlugin.html#xplayer-get-plugin-paths" since="2.90.0"/>
     <keyword type="struct" name="BaconVideoWidget" link="BaconVideoWidget.html#BaconVideoWidget-struct"/>
     <keyword type="struct" name="BaconVideoWidgetClass" link="BaconVideoWidget.html#BaconVideoWidgetClass"/>
     <keyword type="enum" name="enum BvwAspectRatio" link="BaconVideoWidget.html#BvwAspectRatio"/>
@@ -211,37 +211,37 @@
     <keyword type="signal" name="The &quot;got-redirect&quot; signal" link="BaconVideoWidget.html#BaconVideoWidget-got-redirect"/>
     <keyword type="signal" name="The &quot;missing-plugins&quot; signal" link="BaconVideoWidget.html#BaconVideoWidget-missing-plugins"/>
     <keyword type="signal" name="The &quot;tick&quot; signal" link="BaconVideoWidget.html#BaconVideoWidget-tick"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_UNKNOWN" link="TotemObject.html#TOTEM-REMOTE-COMMAND-UNKNOWN:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_PLAY" link="TotemObject.html#TOTEM-REMOTE-COMMAND-PLAY:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_PAUSE" link="TotemObject.html#TOTEM-REMOTE-COMMAND-PAUSE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_STOP" link="TotemObject.html#TOTEM-REMOTE-COMMAND-STOP:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_PLAYPAUSE" link="TotemObject.html#TOTEM-REMOTE-COMMAND-PLAYPAUSE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_NEXT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-NEXT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_PREVIOUS" link="TotemObject.html#TOTEM-REMOTE-COMMAND-PREVIOUS:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_SEEK_FORWARD" link="TotemObject.html#TOTEM-REMOTE-COMMAND-SEEK-FORWARD:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_SEEK_BACKWARD" link="TotemObject.html#TOTEM-REMOTE-COMMAND-SEEK-BACKWARD:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_VOLUME_UP" link="TotemObject.html#TOTEM-REMOTE-COMMAND-VOLUME-UP:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_VOLUME_DOWN" link="TotemObject.html#TOTEM-REMOTE-COMMAND-VOLUME-DOWN:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_FULLSCREEN" link="TotemObject.html#TOTEM-REMOTE-COMMAND-FULLSCREEN:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_QUIT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-QUIT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_ENQUEUE" link="TotemObject.html#TOTEM-REMOTE-COMMAND-ENQUEUE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_REPLACE" link="TotemObject.html#TOTEM-REMOTE-COMMAND-REPLACE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_SHOW" link="TotemObject.html#TOTEM-REMOTE-COMMAND-SHOW:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_TOGGLE_CONTROLS" link="TotemObject.html#TOTEM-REMOTE-COMMAND-TOGGLE-CONTROLS:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_UP" link="TotemObject.html#TOTEM-REMOTE-COMMAND-UP:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_DOWN" link="TotemObject.html#TOTEM-REMOTE-COMMAND-DOWN:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_LEFT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-LEFT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_RIGHT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-RIGHT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_SELECT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-SELECT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_DVD_MENU" link="TotemObject.html#TOTEM-REMOTE-COMMAND-DVD-MENU:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_ZOOM_UP" link="TotemObject.html#TOTEM-REMOTE-COMMAND-ZOOM-UP:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_ZOOM_DOWN" link="TotemObject.html#TOTEM-REMOTE-COMMAND-ZOOM-DOWN:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_EJECT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-EJECT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_PLAY_DVD" link="TotemObject.html#TOTEM-REMOTE-COMMAND-PLAY-DVD:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_MUTE" link="TotemObject.html#TOTEM-REMOTE-COMMAND-MUTE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_COMMAND_TOGGLE_ASPECT" link="TotemObject.html#TOTEM-REMOTE-COMMAND-TOGGLE-ASPECT:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_SETTING_SHUFFLE" link="TotemObject.html#TOTEM-REMOTE-SETTING-SHUFFLE:CAPS"/>
-    <keyword type="constant" name="TOTEM_REMOTE_SETTING_REPEAT" link="TotemObject.html#TOTEM-REMOTE-SETTING-REPEAT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_UNKNOWN" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_PLAY" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-PLAY:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_PAUSE" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-PAUSE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_STOP" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-STOP:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_PLAYPAUSE" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-PLAYPAUSE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_NEXT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-NEXT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_PREVIOUS" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-PREVIOUS:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_SEEK_FORWARD" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-SEEK-FORWARD:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_SEEK_BACKWARD" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-SEEK-BACKWARD:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_VOLUME_UP" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-VOLUME-UP:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_VOLUME_DOWN" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-VOLUME-DOWN:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_FULLSCREEN" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-FULLSCREEN:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_QUIT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-QUIT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_ENQUEUE" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-ENQUEUE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_REPLACE" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-REPLACE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_SHOW" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-SHOW:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_TOGGLE_CONTROLS" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-TOGGLE-CONTROLS:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_UP" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-UP:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_DOWN" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-DOWN:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_LEFT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-LEFT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_RIGHT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-RIGHT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_SELECT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-SELECT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_DVD_MENU" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-DVD-MENU:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_ZOOM_UP" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-ZOOM-UP:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_ZOOM_DOWN" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-ZOOM-DOWN:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_EJECT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-EJECT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_PLAY_DVD" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-PLAY-DVD:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_MUTE" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-MUTE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_COMMAND_TOGGLE_ASPECT" link="XplayerObject.html#XPLAYER-REMOTE-COMMAND-TOGGLE-ASPECT:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_SETTING_SHUFFLE" link="XplayerObject.html#XPLAYER-REMOTE-SETTING-SHUFFLE:CAPS"/>
+    <keyword type="constant" name="XPLAYER_REMOTE_SETTING_REPEAT" link="XplayerObject.html#XPLAYER-REMOTE-SETTING-REPEAT:CAPS"/>
     <keyword type="constant" name="BVW_RATIO_AUTO" link="BaconVideoWidget.html#BVW-RATIO-AUTO:CAPS"/>
     <keyword type="constant" name="BVW_RATIO_SQUARE" link="BaconVideoWidget.html#BVW-RATIO-SQUARE:CAPS"/>
     <keyword type="constant" name="BVW_RATIO_FOURBYTHREE" link="BaconVideoWidget.html#BVW-RATIO-FOURBYTHREE:CAPS"/>

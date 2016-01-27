@@ -5,7 +5,7 @@ plugin_LTLIBRARIES = libmovie-properties.la
 
 plugin_in_files = movie-properties.plugin.in
 
-libmovie_properties_la_SOURCES = totem-movie-properties.c
+libmovie_properties_la_SOURCES = xplayer-movie-properties.c
 libmovie_properties_la_LDFLAGS = $(plugin_ldflags)
 libmovie_properties_la_LIBADD = \
 	$(plugin_libadd)	\

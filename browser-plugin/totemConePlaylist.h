@@ -1,4 +1,4 @@
-/* Totem Cone plugin
+/* Xplayer Cone plugin
  *
  * Copyright © 2004 Bastien Nocera <hadess@hadess.net>
  * Copyright © 2002 David A. Schleef <ds@schleef.org>
@@ -20,17 +20,17 @@
  * Boston, MA 02110-1301  USA.
  */
 
-#ifndef __TOTEM_CONE_PLAYLIST_H__
-#define __TOTEM_CONE_PLAYLIST_H__
+#ifndef __XPLAYER_CONE_PLAYLIST_H__
+#define __XPLAYER_CONE_PLAYLIST_H__
 
-#include "totemNPClass.h"
-#include "totemNPObject.h"
+#include "xplayerNPClass.h"
+#include "xplayerNPObject.h"
 
-class totemConePlaylist : public totemNPObject
+class xplayerConePlaylist : public xplayerNPObject
 {
   public:
-    totemConePlaylist (NPP);
-    virtual ~totemConePlaylist ();
+    xplayerConePlaylist (NPP);
+    virtual ~xplayerConePlaylist ();
 
   private:
 
@@ -55,6 +55,6 @@ class totemConePlaylist : public totemNPObject
     virtual bool SetPropertyByIndex (int aIndex, const NPVariant *aValue);
 };
 
-TOTEM_DEFINE_NPCLASS (totemConePlaylist);
+XPLAYER_DEFINE_NPCLASS (xplayerConePlaylist);
 
-#endif /* __TOTEM_CONE_PLAYLIST_H__ */
+#endif /* __XPLAYER_CONE_PLAYLIST_H__ */

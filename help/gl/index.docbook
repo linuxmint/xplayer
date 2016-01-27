@@ -4,7 +4,7 @@
 <!ENTITY appversion "2.26">
 <!ENTITY manrevision "3.0">
 <!ENTITY date "February 2009">
-<!ENTITY app "Totem Movie Player">
+<!ENTITY app "Xplayer Movie Player">
 <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file.
        Use the appversion entity to specify the version of the application.
@@ -23,7 +23,7 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title>Manual do <application>Reprodutor de filmes Totem</application></title>
+    <title>Manual do <application>Reprodutor de filmes Xplayer</application></title>
     <copyright lang="en">
       <year>2003</year>
       <holder>Chee Bin HOH</holder>
@@ -37,7 +37,7 @@
     </releaseinfo>
 
     <abstract role="description">
-      <para>O <application>reprodutor de filmes Totem</application> é un reprodutor multimedia para GNOME que emprega GStreamer de forma predeterminada, pero que tamén pode empregar xine. É compatíbel coa maioría de códecs de son e de vídeo incluíndo os de DVDs entre outros. Entre as súas características podemos citar a saída de TV, reprodución a pantalla completa, visualización de subtíítulos e moito máis.</para>
+      <para>O <application>reprodutor de filmes Xplayer</application> é un reprodutor multimedia para GNOME que emprega GStreamer de forma predeterminada, pero que tamén pode empregar xine. É compatíbel coa maioría de códecs de son e de vídeo incluíndo os de DVDs entre outros. Entre as súas características podemos citar a saída de TV, reprodución a pantalla completa, visualización de subtíítulos e moito máis.</para>
     </abstract>
 
     <publisher>
@@ -164,7 +164,7 @@
 <!-- to V3.0, and so on. -->
     <revhistory>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V2.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V2.0</revnumber>
 	<date>August 2006</date>
 	<revdescription>
 	  <para role="author" lang="en">Chee Bin HOH
@@ -174,7 +174,7 @@
         </revdescription>
       </revision>
       <revision lang="en">
-        <revnumber>Totem Movie Player Manual V3.0</revnumber>
+        <revnumber>Xplayer Movie Player Manual V3.0</revnumber>
 	<date>February 2009</date>
 	<revdescription>
 	  <para role="author" lang="en">Philip Withnall
@@ -185,10 +185,10 @@
       </revision>
     </revhistory>
 
-    <releaseinfo>Este manual describe a versión 2.26 do Reprodutor de filmes Totem.</releaseinfo>
+    <releaseinfo>Este manual describe a versión 2.26 do Reprodutor de filmes Xplayer.</releaseinfo>
     <legalnotice>
       <title>Comentarios e suxestións</title>
-      <para lang="en">To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      <para lang="en">To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
         this manual, follow the directions in the
         <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
       </para>
@@ -196,10 +196,10 @@
   </articleinfo>
 
   <indexterm zone="index" lang="en">
-    <primary>Totem Movie Player</primary>
+    <primary>Xplayer Movie Player</primary>
   </indexterm>
   <indexterm zone="index" lang="en">
-    <primary>totem</primary>
+    <primary>xplayer</primary>
   </indexterm>
 
 
@@ -207,10 +207,10 @@
 <!-- ============= Introduction ============================== -->
 <!-- Use the Introduction section to give a brief overview of what
      the application is and what it does. -->
-  <sect1 id="totem-introduction">
+  <sect1 id="xplayer-introduction">
     <title>Introdución</title>
-    <para>O aplicativo <application>Reprodutor de filmes Totem</application> é un reprodutor de filmes para o escritorio GNOME baseado na infraestrutura GStreamer e na biblioteca xine que lle permite reproducir filmes ou cancións.</para>
-    <para>O <application>reprodutor de filmes Totem</application> posúe as seguintes características:</para>
+    <para>O aplicativo <application>Reprodutor de filmes Xplayer</application> é un reprodutor de filmes para o escritorio GNOME baseado na infraestrutura GStreamer e na biblioteca xine que lle permite reproducir filmes ou cancións.</para>
+    <para>O <application>reprodutor de filmes Xplayer</application> posúe as seguintes características:</para>
     <itemizedlist>
       <listitem>
 	<para>Compatibilidade con diferentes ficheiros de vídeo e son.</para>
@@ -235,7 +235,7 @@
       </listitem>
     </itemizedlist>
     <note>
-      <para>O <application>reprodutor de filmes Totem</application> tamén inclúe características adicionais coma:</para>
+      <para>O <application>reprodutor de filmes Xplayer</application> tamén inclúe características adicionais coma:</para>
       <itemizedlist>
 	<listitem>
 	  <para>Un miniaturizador de vídeo para GNOME.</para>
@@ -260,12 +260,12 @@
      If the information about how to get started is very short, you can
      include it in the Introduction and omit this section. -->
 
-  <sect1 id="totem-getting-started">
+  <sect1 id="xplayer-getting-started">
     <title>Comezo</title>
 
-    <sect2 id="totem-start">
-      <title>Iniciar o <application>reprodutor de filmes Totem</application></title>
-      <para>Pode iniciar o <application>reprodutor de filmes Totem</application> das seguintes maneiras:</para>
+    <sect2 id="xplayer-start">
+      <title>Iniciar o <application>reprodutor de filmes Xplayer</application></title>
+      <para>Pode iniciar o <application>reprodutor de filmes Xplayer</application> das seguintes maneiras:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Mediante o menú <guimenu>Aplicativos</guimenu></term>
@@ -281,32 +281,32 @@
 	<varlistentry>
 	  <term>Mediante a liña de ordes</term>
 	  <listitem>
-	    <para>Para iniciar o <application>reprodutor de filmes Totem</application> desde a liña de ordes, escriba a seguinte orde, e prema <keycap>Intro</keycap>:</para>
+	    <para>Para iniciar o <application>reprodutor de filmes Xplayer</application> desde a liña de ordes, escriba a seguinte orde, e prema <keycap>Intro</keycap>:</para>
 	    <para lang="en">
-            <command>totem</command>
+            <command>xplayer</command>
             </para>
 	    <tip>
-	      <para>Para ver as diferentes opcións de liña de ordes dispoñíbeis escriba <command>totem --help</command> e prema <keycap>Intro</keycap>.</para>
+	      <para>Para ver as diferentes opcións de liña de ordes dispoñíbeis escriba <command>xplayer --help</command> e prema <keycap>Intro</keycap>.</para>
 	    </tip>
 	  </listitem>
 	</varlistentry>
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-when-start">
-      <title>Ao iniciar o <application>reprodutor de filmes Totem</application></title>
-      <para>Cando se inicia o <application>reprodutor de filmes Totem</application> móstrase a seguinte xanela.</para>
+    <sect2 id="xplayer-when-start">
+      <title>Ao iniciar o <application>reprodutor de filmes Xplayer</application></title>
+      <para>Cando se inicia o <application>reprodutor de filmes Xplayer</application> móstrase a seguinte xanela.</para>
 
       <!-- ==== Figure ==== -->
-      <figure id="totem-start-fig">
-	<title>Xanela inicial do <application>reprodutor de filmes Totem</application></title>
+      <figure id="xplayer-start-fig">
+	<title>Xanela inicial do <application>reprodutor de filmes Xplayer</application></title>
 	<screenshot>
 	  <mediaobject lang="en">
 	    <imageobject>
-	      <imagedata fileref="figures/totem_start_window.png" format="PNG"/>
+	      <imagedata fileref="figures/xplayer_start_window.png" format="PNG"/>
 	    </imageobject>
 	    <textobject>
-	      <phrase>Shows <application>Totem Movie Player</application> main window with
+	      <phrase>Shows <application>Xplayer Movie Player</application> main window with
 		  sidebar opened on playlist. Contains
 		  menubar, display area, sidebar, elapsed time slider, seek control
 		  buttons, volume slider and statusbar.
@@ -319,12 +319,12 @@
 
       <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
       <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
-      <para>A xanela do <application>reprodutor de filmes Totem</application> contén os seguintes elementos:</para>
+      <para>A xanela do <application>reprodutor de filmes Xplayer</application> contén os seguintes elementos:</para>
       <variablelist>
 	<varlistentry>
 	  <term>Barra de menús.</term>
   	  <listitem>
-	    <para>Os menús da barra de menús conteñen todas as ordes que necesite empregar no <application>reprodutor de filmes Totem</application>.</para>
+	    <para>Os menús da barra de menús conteñen todas as ordes que necesite empregar no <application>reprodutor de filmes Xplayer</application>.</para>
  	  </listitem>
    	</varlistentry>
 	<varlistentry>
@@ -371,11 +371,11 @@
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to use the application to perform the tasks for
   which the application is designed. -->
-  <sect1 id="totem-usage">
+  <sect1 id="xplayer-usage">
     <title>Modo de uso</title>
 
     <!-- ================ Usage Subsection ================================ -->
-    <sect2 id="totem-open-file">
+    <sect2 id="xplayer-open-file">
       <title>Abrir un ficheiro</title>
       <para lang="en">To open a video or an audio file, choose
         <menuchoice>
@@ -387,14 +387,14 @@
 		Select the file or files you want to open, then click
 	<guibutton>OK</guibutton>.
       </para>
-      <para>Pode arrastrar un ficheiro desde outro aplicativo, por exemplo o xestor de ficheiros, á xanela do <application>Reprodutor de filmes Totem</application>. Se arrastra o ficheiro á área de visualización o ficheiro substituirá á lista de reprodución actual e empezará a reproducirse inmediatamente. Se arrastra o ficheiro á lista de reprodución da barra lateral o ficheiro engadirase á lista de reprodución actual. O aplicativo do <application>Reprodutor de filmes Totem</application> abrirá o ficheiro e reproducirá o filme ou canción. O <application>Reprodutor de filmes Totem</application> mostra o título do filme ou canción na barra de título da xanela e na lista de reprodución da barra lateral.</para>
-      <para>Se intenta abrir un formato de ficheiro que non recoñece o <application>Reprodutor de filmes Totem</application> o aplicativo mostra unha mensaxe de erro. Este erro ocorre a maior parte das veces debido a que non ten instalados os códecs correctos. Pode atopar información sobre como conseguir que os códecs funcionen correctamente no  <ulink url="http://projects.gnome.org/totem/#codecs" type="http">sitio web do <application>Reprodutor de filmes Totem</application></ulink>.</para>
+      <para>Pode arrastrar un ficheiro desde outro aplicativo, por exemplo o xestor de ficheiros, á xanela do <application>Reprodutor de filmes Xplayer</application>. Se arrastra o ficheiro á área de visualización o ficheiro substituirá á lista de reprodución actual e empezará a reproducirse inmediatamente. Se arrastra o ficheiro á lista de reprodución da barra lateral o ficheiro engadirase á lista de reprodución actual. O aplicativo do <application>Reprodutor de filmes Xplayer</application> abrirá o ficheiro e reproducirá o filme ou canción. O <application>Reprodutor de filmes Xplayer</application> mostra o título do filme ou canción na barra de título da xanela e na lista de reprodución da barra lateral.</para>
+      <para>Se intenta abrir un formato de ficheiro que non recoñece o <application>Reprodutor de filmes Xplayer</application> o aplicativo mostra unha mensaxe de erro. Este erro ocorre a maior parte das veces debido a que non ten instalados os códecs correctos. Pode atopar información sobre como conseguir que os códecs funcionen correctamente no  <ulink url="http://projects.gnome.org/xplayer/#codecs" type="http">sitio web do <application>Reprodutor de filmes Xplayer</application></ulink>.</para>
       <tip>
-	<para>Pode facer dobre clic nun ficheiro de vídeo ou de son no xestor de ficheiros <application>Nautilus</application> para abrilo na xanela do <application>Reprodutor de filmes Totem</application>.</para>
+	<para>Pode facer dobre clic nun ficheiro de vídeo ou de son no xestor de ficheiros <application>Nautilus</application> para abrilo na xanela do <application>Reprodutor de filmes Xplayer</application>.</para>
       </tip>
     </sect2>
 
-    <sect2 id="totem-usage-open-location">
+    <sect2 id="xplayer-usage-open-location">
       <title>Abrir unha localización</title>
       <para lang="en">To open a file by URI (location), choose
         <menuchoice>
@@ -408,7 +408,7 @@
       <para>Se xa ten un URI no portapapeis pegarase automaticamente na caixa de combinación.</para>
     </sect2>
 
-    <sect2 id="totem-usage-play">
+    <sect2 id="xplayer-usage-play">
       <title>Reproducir un filme (DVD ou VCD)</title>
 	      <para lang="en">Insert the disc in the optical device of your computer, then choose
           	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
@@ -422,11 +422,11 @@
       </para>
        </sect2>
 
-    <sect2 id="totem-usage-pause">
+    <sect2 id="xplayer-usage-pause">
       <title>Deter un filme ou canción</title>
       <para lang="en">To pause a movie or song that is playing, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_pause_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_pause_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows pause button.</phrase></textobject>
         </inlinemediaobject> button, or choose
         <menuchoice>
@@ -437,7 +437,7 @@
       </para>
       <para lang="en">To resume playing a movie or song, click on the
         <inlinemediaobject>
-	  <imageobject><imagedata fileref="figures/totem_play_button.png" format="PNG"/></imageobject>
+	  <imageobject><imagedata fileref="figures/xplayer_play_button.png" format="PNG"/></imageobject>
           <textobject><phrase>Shows play button.</phrase></textobject>
         </inlinemediaobject> button again, or choose
         <menuchoice>
@@ -448,7 +448,7 @@
       </para>
     </sect2>
 
-    <sect2 id="totem-usage-view-properties">
+    <sect2 id="xplayer-usage-view-properties">
       <title>Ver as propiedades dun filme ou canción</title>
       <para lang="en">To view the properties of a movie or song, choose
         <menuchoice>
@@ -457,7 +457,7 @@
 	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
     </sect2>
 
-    <sect2 id="totem-usage-seek">
+    <sect2 id="xplayer-usage-seek">
       <title>Desprazarse polos filmes ou cancións</title>
       <para>Para desprazarse polos filmes ou cancións pode usar os seguintes métodos:</para>
       <variablelist>
@@ -510,7 +510,7 @@
                 <guimenuitem>Next Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_next_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_next_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek next button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -526,7 +526,7 @@
                 <guimenuitem>Previous Chapter/Movie</guimenuitem>
               </menuchoice> or click on the
               <inlinemediaobject>
-	        <imageobject><imagedata fileref="figures/totem_previous_button.png" format="PNG"/></imageobject>
+	        <imageobject><imagedata fileref="figures/xplayer_previous_button.png" format="PNG"/></imageobject>
 	        <textobject><phrase>Shows a seek previous button</phrase></textobject>
               </inlinemediaobject> button.
             </para>
@@ -535,9 +535,9 @@
       </variablelist>
     </sect2>
 
-    <sect2 id="totem-usage-change-zoom">
+    <sect2 id="xplayer-usage-change-zoom">
       <title>Cambiar o factor de ampliación</title>
-	  <sect3 id="totem-usage-change-size">
+	  <sect3 id="xplayer-usage-change-size">
 		<title>Cambiar o tamaño do vídeo</title>
       <para>Para cambiar o factor de ampliación da área de visualización pode empregar os seguintes métodos:</para>
       <itemizedlist>
@@ -562,7 +562,7 @@
     </listitem>
 	</itemizedlist>
 	</sect3>
-	 <sect3 id="totem-usage-change-ratio">
+	 <sect3 id="xplayer-usage-change-ratio">
 		<title>Cambiar a proporción de aspecto do vídeo</title>
 	      <para lang="en">To switch between different aspect ratios, choose
             <menuchoice>
@@ -573,7 +573,7 @@
 	  </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-adjust-volume">
+    <sect2 id="xplayer-usage-adjust-volume">
       <title>Axustar o volume</title>
       <para lang="en">To increase the volume, choose
         <menuchoice>
@@ -591,40 +591,40 @@
       <para>Tamén pode empregar o botón do volume: prema no botón do volume e seleccione o nivel de volume co control desprazábel.</para>
     </sect2>
 
-    <sect2 id="totem-usage-on-top">
+    <sect2 id="xplayer-usage-on-top">
       <title>Facer que a xanela sempre estea en primeiro plano</title>
-      <para lang="en">To make the <application>Totem Movie Player</application> window always on top of other application windows,
+      <para lang="en">To make the <application>Xplayer Movie Player</application> window always on top of other application windows,
         choose
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Plugins</guimenuitem>
-        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Totem Movie Player</application> window will now stay on
+        </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>Xplayer Movie Player</application> window will now stay on
         top of all other windows while a movie is playing, but not while audio or visualizations are playing.
        </para>
-       <para>Para facer que a xanela non estea sempre en primeiro plano, desactive o engadido <guilabel>Sempre en primeiro plano</guilabel>. Consulte <xref linkend="totem-plugins-always-on-top"/> para obter máis información.</para>
+       <para>Para facer que a xanela non estea sempre en primeiro plano, desactive o engadido <guilabel>Sempre en primeiro plano</guilabel>. Consulte <xref linkend="xplayer-plugins-always-on-top"/> para obter máis información.</para>
     </sect2>
 
-    <sect2 id="totem-usage-show-control">
+    <sect2 id="xplayer-usage-show-control">
       <title>Mostrar ou ocultar os controis</title>
-      <para lang="en">To show or hide the <application>Totem Movie Player</application> window controls, choose
+      <para lang="en">To show or hide the <application>Xplayer Movie Player</application> window controls, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
           <guimenu>View</guimenu>
           <guimenuitem>Show Controls</guimenuitem>
         </menuchoice>, or press the <keycap>H</keycap> key.
-        You can also right-click on the <application>Totem Movie Player</application> window, then choose
+        You can also right-click on the <application>Xplayer Movie Player</application> window, then choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo></shortcut>
 	  <guimenuitem>Show Controls</guimenuitem>
         </menuchoice> from the popup menu.
       </para>
-      <para>Se a opción <guilabel>Mostrar os controis</guilabel> está seleccionada, o <application>Reprodutor de filmes Totem</application> mostrará na súa xanela a barra de menús, o control desprazábel do tempo transcorrido, os botóns de control de desprazamento, o control desprazábel do volume e a barra de estado. Se a opción <guilabel>Show Controls</guilabel> non está seleccionada, o aplicativo ocultará estes controis e mostrará só a área de visualización.</para>
+      <para>Se a opción <guilabel>Mostrar os controis</guilabel> está seleccionada, o <application>Reprodutor de filmes Xplayer</application> mostrará na súa xanela a barra de menús, o control desprazábel do tempo transcorrido, os botóns de control de desprazamento, o control desprazábel do volume e a barra de estado. Se a opción <guilabel>Show Controls</guilabel> non está seleccionada, o aplicativo ocultará estes controis e mostrará só a área de visualización.</para>
     </sect2>
 
-    <sect2 id="totem-usage-playlist">
+    <sect2 id="xplayer-usage-playlist">
       <title>Xestionar a lista de reprodución</title>
 
-      <sect3 id="totem-usage-playlist-show-hide">
+      <sect3 id="xplayer-usage-playlist-show-hide">
 	<title>Mostrar ou ocultar a lista de reprodución</title>
 	<para lang="en">To show or hide the playlist, choose
           <menuchoice>
@@ -634,7 +634,7 @@
 		  the sidebar.</para>
       </sect3>
 
-      <sect3 id="totem-usage-playlist-manage">
+      <sect3 id="xplayer-usage-playlist-manage">
 	<title>Xestionar unha lista de reprodución</title>
 	<para lang="en">You can use the <application>Playlist</application> dialog to do the following:
           <variablelist>
@@ -683,27 +683,27 @@
           </variablelist>
         </para>
       </sect3>
-      <sect3 id="totem-usage-playlist-repeat">
+      <sect3 id="xplayer-usage-playlist-repeat">
 	<title>Seleccionar ou deseleccionar o modo de repetición</title>
 	<para>Para activar ou desactivar o modo de repetición, seleccione <menuchoice><guimenu>Editar</guimenu><guimenuitem>Modo de repetición</guimenuitem></menuchoice>.</para>
       </sect3>
-      <sect3 id="totem-usage-playlist-shuffle">
+      <sect3 id="xplayer-usage-playlist-shuffle">
 	<title>Seleccionar ou deseleccionar o modo aleatorio</title>
 	<para>Para activar ou desactivar o modo aleatorio, seleccione <menuchoice><guimenu>Editar</guimenu><guimenuitem>Modo aleatorio</guimenuitem></menuchoice>.</para>
       </sect3>
     </sect2>
 
-    <sect2 id="totem-usage-subtitle">
+    <sect2 id="xplayer-usage-subtitle">
 	  <title>Seleccionar subtítulos</title>
 	  <para>Para seleccionar o idioma dos subtítulos, seleccione <menuchoice><guimenu>Ver</guimenu><guisubmenu>Subtítulos</guisubmenu></menuchoice> e seleccione o idioma de subtítulos que desexe mostrar.</para>
 	  <para>Para desactivar a visualización dos subtítulos, seleccione <menuchoice><guimenu>Ver</guimenu><guisubmenu>Subtítulos</guisubmenu><guimenuitem>Ningún</guimenuitem></menuchoice>.</para>
-	  <note><para>De forma predefinida, o <application>Reprodutor de filmes Totem</application> seleccionará para os subtítulos o mesmo idioma que emprega no computador.</para></note>
-	  <para>O <application>Reprodutor de filmes Totem</application> cargará e mostrará automaticamente os subtítulos para un vídeo se atopa un ficheiro de subtítulos co mesmo nome que o vídeo que se está reproducindo, e con extensión <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> ou <filename class="extension">ass</filename>.</para>
+	  <note><para>De forma predefinida, o <application>Reprodutor de filmes Xplayer</application> seleccionará para os subtítulos o mesmo idioma que emprega no computador.</para></note>
+	  <para>O <application>Reprodutor de filmes Xplayer</application> cargará e mostrará automaticamente os subtítulos para un vídeo se atopa un ficheiro de subtítulos co mesmo nome que o vídeo que se está reproducindo, e con extensión <filename class="extension">asc</filename>, <filename class="extension">txt</filename>, <filename class="extension">sub</filename>, <filename class="extension">srt</filename>, <filename class="extension">smi</filename>, <filename class="extension">ssa</filename> ou <filename class="extension">ass</filename>.</para>
 	  <para>Se o ficheiro que contén os subtítulos ten un nome diferente ao do vídeo que se está reproducindo, pode premer co botón dereito no vídeo na lista de reprodución e seleccionar <menuchoice><guimenuitem>Seleccionar os subtítulos de texto</guimenuitem></menuchoice> no menú emerxente para cargar o ficheiro de subtítulos correcto. Tamén pode seleccionar os subtítulos seleccionando <menuchoice><guimenu>Ver</guimenu><guimenuitem>Seleccionar subtítulos de texto</guimenuitem></menuchoice>.</para>
-	  <para>Usando o engadido do <guilabel>Descargador de subtítulos</guilabel> tamén pode descargar os subtítulos do servizo OpenSubtitles. Consulte <xref linkend="totem-plugins-opensubtitles"/> para obter máis información.</para>
+	  <para>Usando o engadido do <guilabel>Descargador de subtítulos</guilabel> tamén pode descargar os subtítulos do servizo OpenSubtitles. Consulte <xref linkend="xplayer-plugins-opensubtitles"/> para obter máis información.</para>
 	</sect2>
 
-    <sect2 id="totem-usage-take-screenshot">
+    <sect2 id="xplayer-usage-take-screenshot">
       <title>Facer unha captura de pantalla</title>
       <para lang="en">To take a screenshot of the movie or visualization that is playing, choose
         <menuchoice>
@@ -713,10 +713,10 @@
 	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
 	to save the screenshot.
       </para>
-      <tip><para>O <application>Reprodutor de filmes Totem</application> mostrará unha previsualización da captura de pantalla que se vai gardar no lado esquerdo da caixa de diálogo <application>Gardar a captura de pantalla</application>.</para></tip>
+      <tip><para>O <application>Reprodutor de filmes Xplayer</application> mostrará unha previsualización da captura de pantalla que se vai gardar no lado esquerdo da caixa de diálogo <application>Gardar a captura de pantalla</application>.</para></tip>
     </sect2>
 
-    <sect2 id="totem-usage-create-screenshot-gallery">
+    <sect2 id="xplayer-usage-create-screenshot-gallery">
       <title>Crear unha galería de capturas</title>
       <para lang="en">To create a gallery of screenshots of the movie or visualization that is playing, choose
         <menuchoice>
@@ -732,65 +732,65 @@
   </sect1>
 
 <!-- =========== Plugins ======================================= -->
-  <sect1 id="totem-plugins">
+  <sect1 id="xplayer-plugins">
     <title>Engadidos</title>
-    <para>O <application>Reprodutor de filmes Totem</application> posúe moitas características que se fornecen a través de engadidos — anacos de software que só se cargan cando é necesario.</para>
-    <sect2 id="totem-plugins-load">
+    <para>O <application>Reprodutor de filmes Xplayer</application> posúe moitas características que se fornecen a través de engadidos — anacos de software que só se cargan cando é necesario.</para>
+    <sect2 id="xplayer-plugins-load">
       <title>Activar un engadido</title>
       <para>Para ver a lista dos engadidos instalados, seleccione <menuchoice><guimenu>Editar</guimenu><guimenuitem>Engadidos</guimenuitem></menuchoice>. Móstrase a caixa de diálogo <application>Configurar os engadidos</application>. Á esquerda está unha lista con todos os engadidos instalados, e na dereita móstrase unha descrición do engadido seleccionado. Os engadidos que teñen opcións que se poden cambiar mostrarán un botón <guibutton>Configurar</guibutton> á dereita.</para>
       <para>Para activar un engadido só ten que seleccionar a caixa de verificación situada á esquerda do seu nome na lista de engadidos, e o engadido cargarase automaticamente. Se se produce algún erro ao cargar o engadido mostrarase inmediatamente unha caixa de diálogo para indicar o erro.</para>
-      <para>Para desactivar un engadido desmarque a súa caixa de verificación. Os engadidos activados ou desactivados  seguirano estando incluso se se pecha o <application>Reprodutor de filmes Totem</application>.</para>
+      <para>Para desactivar un engadido desmarque a súa caixa de verificación. Os engadidos activados ou desactivados  seguirano estando incluso se se pecha o <application>Reprodutor de filmes Xplayer</application>.</para>
     </sect2>
-    <sect2 id="totem-plugins-always-on-top">
+    <sect2 id="xplayer-plugins-always-on-top">
       <title>Sempre en primeiro plano</title>
-      <para>Cando o engadido <guilabel>Sempre en primeiro plano</guilabel> está activado, este forzará que a xanela principal do <application>Reprodutor de filmes Totem</application> sempre estea por riba das outras xanelas ao reproducir un filme, pero non cando se reproduza son ou visualizacións. Para facer que a xanela deixe de estar en primeiro plano desactive o engadido.</para>
+      <para>Cando o engadido <guilabel>Sempre en primeiro plano</guilabel> está activado, este forzará que a xanela principal do <application>Reprodutor de filmes Xplayer</application> sempre estea por riba das outras xanelas ao reproducir un filme, pero non cando se reproduza son ou visualizacións. Para facer que a xanela deixe de estar en primeiro plano desactive o engadido.</para>
     </sect2>
-    <sect2 id="totem-plugins-coherence">
+    <sect2 id="xplayer-plugins-coherence">
       <title>Cliente DLNA/UPnP de Coherence</title>
-      <para>O engadido <guilabel>Cliente DLNA/UPnP de Coherence</guilabel> permítelle ao <application>Reprodutor de filmes Totem</application> reproducir contidos multimedia de servidores multimedia UPnP (como os servidores Coherence) na rede local.</para>
+      <para>O engadido <guilabel>Cliente DLNA/UPnP de Coherence</guilabel> permítelle ao <application>Reprodutor de filmes Xplayer</application> reproducir contidos multimedia de servidores multimedia UPnP (como os servidores Coherence) na rede local.</para>
       <para>Co engadido <guilabel>Cliente DLNA/UPnP de Coherence</guilabel> activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>Cliente DLNA/UPnP de Coherence</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>Cliente DLNA/UPnP de Coherence</guilabel>.</para>
-      <para>A vista de árbore da barra lateral listará os servidores multimedia dispoñíbeis. Ao premer nun deles expandirase para mostrar os tipos de contidos que pode servir, e premendo nun cartafol de contidos expandirase para listar os ficheiros multimedia dispoñíbeis. Ao facer dobre clic sobre un ficheiro multimedia este engadirase á lista de reprodución do <application>Reprodutor de filmes Totem</application> e reproducirase. Tamén pode premer co botón dereito nun ficheiro e seleccionar <menuchoice><guimenuitem>Reproducir</guimenuitem></menuchoice> ou <menuchoice><guimenuitem>Pór na lista de reprodución</guimenuitem></menuchoice> para reproducir o ficheiro inmediatamente ou engadilo á lista de reprodución.</para>
+      <para>A vista de árbore da barra lateral listará os servidores multimedia dispoñíbeis. Ao premer nun deles expandirase para mostrar os tipos de contidos que pode servir, e premendo nun cartafol de contidos expandirase para listar os ficheiros multimedia dispoñíbeis. Ao facer dobre clic sobre un ficheiro multimedia este engadirase á lista de reprodución do <application>Reprodutor de filmes Xplayer</application> e reproducirase. Tamén pode premer co botón dereito nun ficheiro e seleccionar <menuchoice><guimenuitem>Reproducir</guimenuitem></menuchoice> ou <menuchoice><guimenuitem>Pór na lista de reprodución</guimenuitem></menuchoice> para reproducir o ficheiro inmediatamente ou engadilo á lista de reprodución.</para>
       <para>Se o servidor multimedia o permite, ao seleccionar <menuchoice><guimenuitem>Eliminar</guimenuitem></menuchoice> desde o menú contextual dun ficheiro poderá eliminar ese ficheiro no servidor multimedia.</para>
     </sect2>
-    <sect2 id="totem-plugins-gromit">
+    <sect2 id="xplayer-plugins-gromit">
       <title>Anotacións Gromit</title>
       <para>O engadido <guilabel>Anotacións Gromit</guilabel> permítelle debuxar enriba dos filmes mentres se reproducen empregando <ulink type="http" url="http://www.home.unix-ag.org/simon/gromit/"><application>Gromit</application></ulink>. Debe ter instalado <application>Gromit</application> antes de activar o engadido — consulte a documentación do sistema operativo para obter máis información sobre como facer isto.</para>
       <para>Co engadido activado prema <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> para activar ou desactivar <application>Gromit</application>. Cando <application>Gromit</application> está activado, o punteiro converterase nunha mira. Para debuxar na pantalla, manteña premido o botón do rato e arrastre o punteiro antes de soltar o botón do rato. Prema <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo> outra vez para desactivar<application>Gromit</application>.</para>
-      <para>Para limpar as anotacións da pantalla prema <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, ou peche o <application>Reprodutor de filmes Totem</application>.</para>
+      <para>Para limpar as anotacións da pantalla prema <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, ou peche o <application>Reprodutor de filmes Xplayer</application>.</para>
     </sect2>
-    <sect2 id="totem-plugins-jamendo">
+    <sect2 id="xplayer-plugins-jamendo">
       <title>Jamendo</title>
       <para>O engadido <guilabel>Jamendo</guilabel> permítelle escoitar a colección de música licenciada baixo Creative Commons do servizo <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink>.</para>
-      <sect3 id="totem-plugins-jamendo-configuration">
+      <sect3 id="xplayer-plugins-jamendo-configuration">
         <title>Configurar o engadido</title>
         <para>O engadido <guilabel>Jamendo</guilabel> pódese configurar. Prema no botón <guibutton>Configurar</guibutton> ao activar o engadido e mostrarase a caixa de diálogo <application>Configuración do engadido de Jamendo</application>. Nela poderá escoller se se van descargar as cancións en formato Ogg ou MP3 (prefírese o formato Ogg debido á súa natureza de código aberto); e o número de álbums a obter cando se realiza unha busca (escolla máis álbums se ten unha conexión rápida á Internet).</para>
         <para>Cando remate prema en <guibutton>Aceptar</guibutton>.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-setup">
+      <sect3 id="xplayer-plugins-jamendo-setup">
         <title>Mostrar a barra lateral de Jamendo</title>
         <para>Co engadido <guilabel>Jamendo</guilabel> activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>Jamendo</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>Jamendo</guilabel>.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-search">
+      <sect3 id="xplayer-plugins-jamendo-search">
         <title>Buscar música</title>
         <para>Introduza os termos de busca no campo de busca situado na cima da barra lateral de <guilabel>Jamendo</guilabel>. Pode realizar buscas por artista ou mediante etiquetas. Prema no botón buscar para comezar a busca.</para>
         <para>Os resultados da busca mostraranse na vista de árbore na páxina <guilabel>Resultados da busca</guilabel> da barra lateral, e poderase navegar por eles empregando os botóns de frecha situados ao fondo da barra lateral. Na lista dos álbums se preme nun álbum listaranse as súas cancións debaixo del. Prema outra vez para ocultar as cancións do álbum.</para>
         <para>Cun artista seleccionado, pode premer no botón <guibutton>Páxina de álbum de Jamendo</guibutton> para abrir esa páxina de álbum no sitio web de Jamendo. Facendo dobre clic no álbum, ou seleccionando <menuchoice><guimenuitem>Engadir á lista de reprodución</guimenuitem></menuchoice> desde o menú contextual do álbum, substituirase a lista de reprodución coas cancións do álbum e comezarase a reproducir o fluxo da primeira canción desde o sitio web de Jamendo. Facendo dobre clic nunha canción individual substituirase a lista de reprodución con esa única canción.</para>
       </sect3>
-      <sect3 id="totem-plugins-jamendo-popular">
+      <sect3 id="xplayer-plugins-jamendo-popular">
         <title>Álbums populares e últimas publicacións</title>
         <para>Ao ver a páxina <guilabel>Popular</guilabel> na barra lateral de <guilabel>Jamendo</guilabel> cargarase unha lista dos álbums máis populares do momento en Jamendo, que se poden reproducir da mesma forma que os resultados. Ao ver a páxina <guilabel>Últimas publicacións</guilabel> tamén se cargará unha lista dos últimas álbums publicados en Jamendo.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-tracker">
+    <sect2 id="xplayer-plugins-tracker">
       <title>Busca local</title>
-      <para>O engadido de <guilabel>Busca local</guilabel> permítelle buscar filmes e ficheiros de son reproducíbeis no seu computador desde o <application>Reprodutor de filmes Totem</application>. Co engadido activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>Busca local</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>Busca local</guilabel>.</para>
+      <para>O engadido de <guilabel>Busca local</guilabel> permítelle buscar filmes e ficheiros de son reproducíbeis no seu computador desde o <application>Reprodutor de filmes Xplayer</application>. Co engadido activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>Busca local</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>Busca local</guilabel>.</para>
       <para>Para realizar unha busca escriba o termos de busca na caixa de texto situada na cima da barra lateral e prema en <guibutton>Localizar</guibutton>. Os termos de busca poden incluír comodíns como <literal>*</literal>, que coincidirá con calquera carácter. Por exemplo, a busca <userinput>*.mpg</userinput> atopará todos os filmes coa extensión de ficheiro <filename class="extension">.mpg</filename>.</para>
       <para>Pódese navegar polos resultados de busca empregando os botóns <guibutton>Atrás</guibutton> e <guibutton>Adiante</guibutton> situados ao fondo da barra lateral, e pode ir a unha páxina de resultados específica introducindo o seu número no selector numérico.</para>
     </sect2>
-    <sect2 id="totem-plugins-publish">
+    <sect2 id="xplayer-plugins-publish">
       <title>Publicar a lista de reprodución</title>
       <para>O engadido <guilabel>Publicar a lista de reprodución</guilabel> permítelle publicar listas de reprodución na rede local para que outros computadores poidan acceder a elas e reproducilas.</para>
-      <sect3 id="totem-plugins-publish-configuration">
+      <sect3 id="xplayer-plugins-publish-configuration">
         <title>Configurar o engadido</title>
         <para lang="en">The <guilabel>Publish Playlist</guilabel> plugin can be configured. Click on the <guibutton>Configure</guibutton> button when enabling the
           plugin, and the configuration dialog will be displayed. Here, you can change the name which will appear for your playlist share. The following
@@ -798,7 +798,7 @@
           <variablelist>
 	    <varlistentry>
 	      <term lang="en"><literal>%a</literal></term>
-	      <listitem><para lang="en">Replaced with the program's name: <application>Totem Movie Player</application>.</para></listitem>
+	      <listitem><para lang="en">Replaced with the program's name: <application>Xplayer Movie Player</application>.</para></listitem>
 	    </varlistentry>
 	    <varlistentry>
 	      <term lang="en"><literal>%h</literal></term>
@@ -821,60 +821,60 @@
 	<para>Tamén pode seleccionar a caixa de verificación <guilabel>Usar protocolo de transporte cifrado</guilabel> se desexa cifrar as listas de reprodución compartidas cando se transmiten pola rede.</para>
         <para>Cando remate prema en <guibutton>Pechar</guibutton>.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-publishing">
+      <sect3 id="xplayer-plugins-publish-publishing">
         <title>Publicar listas de reprodución</title>
         <para>Co engadido activado non é necesario publicar explicitamente as listas de reprodución xa que están dispoñíbeis automaticamente na rede como un sitio web Zeroconf.</para>
       </sect3>
-      <sect3 id="totem-plugins-publish-neighborhood">
+      <sect3 id="xplayer-plugins-publish-neighborhood">
         <title>Explorar a veciñanza</title>
         <para>Para ver as listas de reprodución compartidas por outras persoas na rede, seleccione <guilabel>Veciñanza</guilabel> na lista despregábel situada na cima da barra lateral. Se se publicou algunha lista na rede mostrarase na barra lateral. Faga dobre clic nunha lista de reprodución para cargala e reproducila no seu computador.</para>
       </sect3>
     </sect2>
-    <sect2 id="totem-plugins-opensubtitles">
+    <sect2 id="xplayer-plugins-opensubtitles">
       <title>Descargador de subtítulos</title>
       <para>O engadido <guilabel>Descargador de subtítulos</guilabel> permítelle buscar e descargar ficheiros de subtítulos do servizo <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink>.</para>
       <para>Os subtítulos só se poden descargar para filmes locais; non para ficheiros de son, DVDs, fluxos DVB, VCDs nin fluxos HTTP. Para buscar subtítulos para o filme en reprodución, seleccione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Descargar os subtítulos do filme</guimenuitem></menuchoice>, o que mostrará a caixa de diálogo <application>Descargar os subtítulos do filme</application>.</para>
       <para>Seleccione o idioma para o cal desexa ter os subtítulos na lista despregábel situada na cima da caixa de diálogo, e prema no botón <guibutton>Localizar</guibutton> para buscar subtítulos para o filme actual. Os subtítulos atópanse en base ao contido do filme, en vez de empregar o nome de ficheiro ou as etiquetas.</para>
       <para>Os resultados lístanse na vista de árbore situada na parte media da caixa de diálogo. Actualmente os subtítulos só se poden empregar cun filme <emphasis>recargando</emphasis> o filme cos subtítulos, así que despois de seleccionar o ficheiro de subtítulos que desexa descargar, prema no botón <guibutton>Reproducir con subtitulado</guibutton> para descargar os subtítulos e recargar o filme.</para>
-        <note><para>Os ficheiros de subtítulos descargados gárdanse nunha caché (por defecto en <filename>~/.cache/totem/subtitles</filename>) de xeito que non é necesario volvelos descargar ao volver reproducir o filme. Ao descargar novos subtítulos para un filme, elimínanse os subtítulos descargados anteriormente para ese filme.</para></note>
+        <note><para>Os ficheiros de subtítulos descargados gárdanse nunha caché (por defecto en <filename>~/.cache/xplayer/subtitles</filename>) de xeito que non é necesario volvelos descargar ao volver reproducir o filme. Ao descargar novos subtítulos para un filme, elimínanse os subtítulos descargados anteriormente para ese filme.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-thumbnail">
+    <sect2 id="xplayer-plugins-thumbnail">
       <title>Miniaturas</title>
-      <para>O engadido <guilabel>Miniaturas</guilabel> mostra unha miniatura do filme actual como icona da xanela principal do <application>Reprodutor de filmes Totem</application>, e actualízaa cando se cargan novos filmes.</para>
-      <note><para>Se non existe unha miniatura para o filme actual (ou se está reproducindo un ficheiro de son), a icona da xanela principal será o logotipo do <application>Reprodutor de filmes Totem</application>.</para></note>
+      <para>O engadido <guilabel>Miniaturas</guilabel> mostra unha miniatura do filme actual como icona da xanela principal do <application>Reprodutor de filmes Xplayer</application>, e actualízaa cando se cargan novos filmes.</para>
+      <note><para>Se non existe unha miniatura para o filme actual (ou se está reproducindo un ficheiro de son), a icona da xanela principal será o logotipo do <application>Reprodutor de filmes Xplayer</application>.</para></note>
     </sect2>
-    <sect2 id="totem-plugins-brasero">
+    <sect2 id="xplayer-plugins-brasero">
       <title>Gravadora de disco de vídeo</title>
       <para>O engadido <guilabel>Gravadora de disco de vídeo</guilabel> permítelle gravar a lista de reprodución actual nun DVD ou VCD empregando <application>Brasero</application>.</para>
       <para lang="en">To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
         A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
         information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
     </sect2>
-    <sect2 id="totem-plugins-youtube">
+    <sect2 id="xplayer-plugins-youtube">
       <title>Navegador de YouTube</title>
-      <para>O engadido <guilabel>Navegador de YouTube</guilabel> permítelle buscar e navegar en  <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, e reproducir vídeos de YouTube directamente no <application>Reprodutor de filmes Totem</application>. Co engadido activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>YouTube</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>YouTube</guilabel>.</para>
+      <para>O engadido <guilabel>Navegador de YouTube</guilabel> permítelle buscar e navegar en  <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, e reproducir vídeos de YouTube directamente no <application>Reprodutor de filmes Xplayer</application>. Co engadido activado, seleccione <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>Ver</guimenu><guimenuitem>Barra lateral</guimenuitem></menuchoice> ou prema no botón <guibutton>Barra lateral</guibutton> para mostrar a barra lateral. Seleccione <guilabel>YouTube</guilabel> na lista despregábel situada na cima da barra lateral para mostrar a barra lateral de <guilabel>YouTube</guilabel>.</para>
       <para>Para buscar un vídeo de YouTube escriba os termos de busca no campo de entrada situado na cima da barra lateral, e prema en <guibutton>Localizar</guibutton>. Os resultados da busca listaranse na vista de árbore de debaixo. Cargaranse máis resultados automaticamente a medida que se desprace cara abaixo pola lista.</para>
       <para>Para reproducir un vídeo, faga dobre clic nel na lista de resultados, ou seleccione <menuchoice><guimenuitem>Engadir á lista de reprodución</guimenuitem></menuchoice> no seu menú contextual. Cando se reproduce un vídeo cargarase automaticamente unha lista de vídeos relacionados na páxina <guilabel>Vídeos relacionados</guilabel> da barra lateral de <guilabel>YouTube</guilabel>.</para>
       <para>Os vídeos de YouTube pódense abrir nun navegador web seleccionando<menuchoice><guimenuitem>Abrir nun navegador web</guimenuitem></menuchoice> no seu menú contextual. Isto abrirá o vídeo na súa localización orixinal no sitio web de YouTube.</para>
     </sect2>
-    <sect2 id="totem-plugins-dbus-service">
+    <sect2 id="xplayer-plugins-dbus-service">
       <title>Servizo de D-Bus</title>
-      <para>O engadido <guilabel>Servizo de D-Bus</guilabel> envía notificacións sobre as pistas que se están reproducindo no <application>Reprodutor de filmes Totem</application> ao bus de sesións D-Bus. Os aplicativos como <application>Gajim</application> poden escoitar ditas notificacións e respondelas, por exemplo, actualizando a mensaxe de estado da mensaxería instantánea para mostrar o vídeo que se está a reproducir no <application>Reprodutor de filmes Totem</application>.</para>
+      <para>O engadido <guilabel>Servizo de D-Bus</guilabel> envía notificacións sobre as pistas que se están reproducindo no <application>Reprodutor de filmes Xplayer</application> ao bus de sesións D-Bus. Os aplicativos como <application>Gajim</application> poden escoitar ditas notificacións e respondelas, por exemplo, actualizando a mensaxe de estado da mensaxería instantánea para mostrar o vídeo que se está a reproducir no <application>Reprodutor de filmes Xplayer</application>.</para>
     </sect2>
   </sect1>
 
 <!-- =========== Usage ======================================= -->
 <!-- Use this section to describe how to customize the
      application. -->
-  <sect1 id="totem-prefs">
+  <sect1 id="xplayer-prefs">
     <title>Preferencias</title>
-    <para lang="en">To modify the preferences of <application>Totem Movie Player</application>, choose
+    <para lang="en">To modify the preferences of <application>Xplayer Movie Player</application>, choose
       <menuchoice>
         <guimenu>Edit</guimenu>
 	<guimenuitem>Preferences</guimenuitem>
       </menuchoice>.</para>
 
-    <sect2 id="totem-prefs-general">
+    <sect2 id="xplayer-prefs-general">
       <title>Xeral</title>
       <variablelist>
 	<varlistentry>
@@ -901,7 +901,7 @@
         </varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-display">
+    <sect2 id="xplayer-prefs-display">
       <title>Visualización</title>
       <variablelist>
 	<varlistentry>
@@ -909,7 +909,7 @@
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	        <para>Seleccione a opción de redimensionar se desexa que o <application>Reprodutor de filmes Totem</application> redimensione automaticamente o tamaño da xanela ao tamaño do vídeo cando se carga un novo vídeo.</para>
+	        <para>Seleccione a opción de redimensionar se desexa que o <application>Reprodutor de filmes Xplayer</application> redimensione automaticamente o tamaño da xanela ao tamaño do vídeo cando se carga un novo vídeo.</para>
               </listitem>
               <listitem>
                 <para>Seleccione a opción do protector de pantalla se desexa permitir que o protector de pantalla se active ao reproducir ficheiros de son. Algúns monitores con altofalantes integrados poden deixar de reproducir música cando se activa o protector de pantalla.</para>
@@ -955,7 +955,7 @@
 	</varlistentry>
       </variablelist>
     </sect2>
-    <sect2 id="totem-prefs-audio">
+    <sect2 id="xplayer-prefs-audio">
       <title>Son</title>
       <variablelist>
 	<varlistentry>
@@ -986,11 +986,11 @@
       section is optional: primary place for this info is "About.." box of
       the program. However, if you do wish to include this info in the
       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
-  <sect1 id="totem-about">
-    <title>Sobre o <application>reprodutor de filmes Totem</application></title>
-    <para>O <application>Reprodutor de filmes Totem</application> foi escrito por Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) para a infraestrutura GStreamer, e Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Para obter máis información sobre o <application>Reprodutor de filmes Totem</application> visite o <ulink url="http://projects.gnome.org/totem/" type="http">sitio web do <application>Reprodutor de filmes Totem</application></ulink>.</para>
+  <sect1 id="xplayer-about">
+    <title>Sobre o <application>reprodutor de filmes Xplayer</application></title>
+    <para>O <application>Reprodutor de filmes Xplayer</application> foi escrito por Bastien Nocera (<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</email>) para a infraestrutura GStreamer, e Guenter Bartsch (<email>guenter@users.sourceforge.net</email>). Para obter máis información sobre o <application>Reprodutor de filmes Xplayer</application> visite o <ulink url="http://projects.gnome.org/xplayer/" type="http">sitio web do <application>Reprodutor de filmes Xplayer</application></ulink>.</para>
     <para lang="en">
-      To report a bug or make a suggestion regarding the <application>Totem Movie Player</application> application or
+      To report a bug or make a suggestion regarding the <application>Xplayer Movie Player</application> application or
       this manual, follow the directions in the
       <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
     </para>

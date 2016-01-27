@@ -58,7 +58,7 @@
               <property name="value">0</property>
               <signal name="value-changed" handler="tstw_adjustment_value_changed_cb"/>
 	    </object>
-	    <object class="TotemTimeEntry" id="tstw_skip_time_entry">
+	    <object class="XplayerTimeEntry" id="tstw_skip_time_entry">
 	      <property name="climb_rate">1</property>
 	      <property name="adjustment">tstw_skip_adjustment</property>
 	      <signal name="activate" handler="time_entry_activate_cb"/>

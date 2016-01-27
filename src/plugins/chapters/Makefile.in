@@ -127,10 +127,10 @@ am__installdirs = "$(DESTDIR)$(plugindir)" "$(DESTDIR)$(plugindir)" \
 LTLIBRARIES = $(plugin_LTLIBRARIES)
 am__DEPENDENCIES_1 =
 libchapters_la_DEPENDENCIES = $(plugin_libadd) $(am__DEPENDENCIES_1)
-am_libchapters_la_OBJECTS = libchapters_la-totem-chapters.lo \
-	libchapters_la-totem-cmml-parser.lo \
-	libchapters_la-totem-chapters-utils.lo \
-	libchapters_la-totem-edit-chapter.lo
+am_libchapters_la_OBJECTS = libchapters_la-xplayer-chapters.lo \
+	libchapters_la-xplayer-cmml-parser.lo \
+	libchapters_la-xplayer-chapters-utils.lo \
+	libchapters_la-xplayer-edit-chapter.lo
 libchapters_la_OBJECTS = $(am_libchapters_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -208,7 +208,7 @@ ALL_PLUGINS = @ALL_PLUGINS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = \
-	-DG_LOG_DOMAIN=\""Totem"\"	\
+	-DG_LOG_DOMAIN=\""Xplayer"\"	\
 	$(DISABLE_DEPRECATED)		\
 	-I$(top_srcdir)/		\
 	-I$(top_srcdir)/src		\
@@ -390,11 +390,11 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-TOTEM_API_VERSION = @TOTEM_API_VERSION@
-TOTEM_PLPARSER_REQS = @TOTEM_PLPARSER_REQS@
-TOTEM_VERSION_MAJOR = @TOTEM_VERSION_MAJOR@
-TOTEM_VERSION_MICRO = @TOTEM_VERSION_MICRO@
-TOTEM_VERSION_MINOR = @TOTEM_VERSION_MINOR@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -477,7 +477,7 @@ plugin_ldflags = \
 	-module
 
 plugin_libadd = \
-	$(top_builddir)/src/libtotem.la
+	$(top_builddir)/src/libxplayer.la
 
 plugindir = $(PLUGINDIR)/chapters
 plugin_LTLIBRARIES = libchapters.la
@@ -485,13 +485,13 @@ plugin_in_files = chapters.plugin.in
 uidir = $(plugindir)
 ui_DATA = chapters-list.ui chapters-edit.ui
 libchapters_la_SOURCES = \
-	totem-chapters.c	\
-	totem-cmml-parser.c	\
-	totem-cmml-parser.h	\
-	totem-chapters-utils.c	\
-	totem-chapters-utils.h	\
-	totem-edit-chapter.c	\
-	totem-edit-chapter.h
+	xplayer-chapters.c	\
+	xplayer-cmml-parser.c	\
+	xplayer-cmml-parser.h	\
+	xplayer-chapters-utils.c	\
+	xplayer-chapters-utils.h	\
+	xplayer-edit-chapter.c	\
+	xplayer-edit-chapter.h
 
 libchapters_la_LDFLAGS = $(plugin_ldflags)
 libchapters_la_LIBADD = \
@@ -582,10 +582,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-totem-chapters-utils.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-totem-chapters.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-totem-cmml-parser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-totem-edit-chapter.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-xplayer-chapters-utils.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-xplayer-chapters.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-xplayer-cmml-parser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchapters_la-xplayer-edit-chapter.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -608,33 +608,33 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-libchapters_la-totem-chapters.lo: totem-chapters.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-totem-chapters.lo -MD -MP -MF $(DEPDIR)/libchapters_la-totem-chapters.Tpo -c -o libchapters_la-totem-chapters.lo `test -f 'totem-chapters.c' || echo '$(srcdir)/'`totem-chapters.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-totem-chapters.Tpo $(DEPDIR)/libchapters_la-totem-chapters.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-chapters.c' object='libchapters_la-totem-chapters.lo' libtool=yes @AMDEPBACKSLASH@
+libchapters_la-xplayer-chapters.lo: xplayer-chapters.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-xplayer-chapters.lo -MD -MP -MF $(DEPDIR)/libchapters_la-xplayer-chapters.Tpo -c -o libchapters_la-xplayer-chapters.lo `test -f 'xplayer-chapters.c' || echo '$(srcdir)/'`xplayer-chapters.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-xplayer-chapters.Tpo $(DEPDIR)/libchapters_la-xplayer-chapters.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-chapters.c' object='libchapters_la-xplayer-chapters.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-totem-chapters.lo `test -f 'totem-chapters.c' || echo '$(srcdir)/'`totem-chapters.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-xplayer-chapters.lo `test -f 'xplayer-chapters.c' || echo '$(srcdir)/'`xplayer-chapters.c
 
-libchapters_la-totem-cmml-parser.lo: totem-cmml-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-totem-cmml-parser.lo -MD -MP -MF $(DEPDIR)/libchapters_la-totem-cmml-parser.Tpo -c -o libchapters_la-totem-cmml-parser.lo `test -f 'totem-cmml-parser.c' || echo '$(srcdir)/'`totem-cmml-parser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-totem-cmml-parser.Tpo $(DEPDIR)/libchapters_la-totem-cmml-parser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-cmml-parser.c' object='libchapters_la-totem-cmml-parser.lo' libtool=yes @AMDEPBACKSLASH@
+libchapters_la-xplayer-cmml-parser.lo: xplayer-cmml-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-xplayer-cmml-parser.lo -MD -MP -MF $(DEPDIR)/libchapters_la-xplayer-cmml-parser.Tpo -c -o libchapters_la-xplayer-cmml-parser.lo `test -f 'xplayer-cmml-parser.c' || echo '$(srcdir)/'`xplayer-cmml-parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-xplayer-cmml-parser.Tpo $(DEPDIR)/libchapters_la-xplayer-cmml-parser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-cmml-parser.c' object='libchapters_la-xplayer-cmml-parser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-totem-cmml-parser.lo `test -f 'totem-cmml-parser.c' || echo '$(srcdir)/'`totem-cmml-parser.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-xplayer-cmml-parser.lo `test -f 'xplayer-cmml-parser.c' || echo '$(srcdir)/'`xplayer-cmml-parser.c
 
-libchapters_la-totem-chapters-utils.lo: totem-chapters-utils.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-totem-chapters-utils.lo -MD -MP -MF $(DEPDIR)/libchapters_la-totem-chapters-utils.Tpo -c -o libchapters_la-totem-chapters-utils.lo `test -f 'totem-chapters-utils.c' || echo '$(srcdir)/'`totem-chapters-utils.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-totem-chapters-utils.Tpo $(DEPDIR)/libchapters_la-totem-chapters-utils.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-chapters-utils.c' object='libchapters_la-totem-chapters-utils.lo' libtool=yes @AMDEPBACKSLASH@
+libchapters_la-xplayer-chapters-utils.lo: xplayer-chapters-utils.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-xplayer-chapters-utils.lo -MD -MP -MF $(DEPDIR)/libchapters_la-xplayer-chapters-utils.Tpo -c -o libchapters_la-xplayer-chapters-utils.lo `test -f 'xplayer-chapters-utils.c' || echo '$(srcdir)/'`xplayer-chapters-utils.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-xplayer-chapters-utils.Tpo $(DEPDIR)/libchapters_la-xplayer-chapters-utils.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-chapters-utils.c' object='libchapters_la-xplayer-chapters-utils.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-totem-chapters-utils.lo `test -f 'totem-chapters-utils.c' || echo '$(srcdir)/'`totem-chapters-utils.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-xplayer-chapters-utils.lo `test -f 'xplayer-chapters-utils.c' || echo '$(srcdir)/'`xplayer-chapters-utils.c
 
-libchapters_la-totem-edit-chapter.lo: totem-edit-chapter.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-totem-edit-chapter.lo -MD -MP -MF $(DEPDIR)/libchapters_la-totem-edit-chapter.Tpo -c -o libchapters_la-totem-edit-chapter.lo `test -f 'totem-edit-chapter.c' || echo '$(srcdir)/'`totem-edit-chapter.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-totem-edit-chapter.Tpo $(DEPDIR)/libchapters_la-totem-edit-chapter.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='totem-edit-chapter.c' object='libchapters_la-totem-edit-chapter.lo' libtool=yes @AMDEPBACKSLASH@
+libchapters_la-xplayer-edit-chapter.lo: xplayer-edit-chapter.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -MT libchapters_la-xplayer-edit-chapter.lo -MD -MP -MF $(DEPDIR)/libchapters_la-xplayer-edit-chapter.Tpo -c -o libchapters_la-xplayer-edit-chapter.lo `test -f 'xplayer-edit-chapter.c' || echo '$(srcdir)/'`xplayer-edit-chapter.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libchapters_la-xplayer-edit-chapter.Tpo $(DEPDIR)/libchapters_la-xplayer-edit-chapter.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xplayer-edit-chapter.c' object='libchapters_la-xplayer-edit-chapter.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-totem-edit-chapter.lo `test -f 'totem-edit-chapter.c' || echo '$(srcdir)/'`totem-edit-chapter.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchapters_la_CFLAGS) $(CFLAGS) -c -o libchapters_la-xplayer-edit-chapter.lo `test -f 'xplayer-edit-chapter.c' || echo '$(srcdir)/'`xplayer-edit-chapter.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -16,10 +16,10 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.
  *
  *
- * The Totem project hereby grant permission for non-gpl compatible GStreamer
- * plugins to be used and distributed together with GStreamer and Totem. This
+ * The Xplayer project hereby grant permission for non-gpl compatible GStreamer
+ * plugins to be used and distributed together with GStreamer and Xplayer. This
  * permission are above and beyond the permissions granted by the GPL license
- * Totem is covered by.
+ * Xplayer is covered by.
  *
  * Monday 7th February 2005: Christian Schaller: Add exception clause.
  * See license_change file for details.
@@ -32,23 +32,23 @@
 #include <glib-object.h>
 #include <string.h>
 
-#include "totem-plugin.h"
-#include "totem.h"
+#include "xplayer-plugin.h"
+#include "xplayer.h"
 
-#define TOTEM_TYPE_AUTOLOAD_SUBTITLES_PLUGIN	(totem_autoload_subtitles_plugin_get_type ())
-#define TOTEM_AUTOLOAD_SUBTITLES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), TOTEM_TYPE_AUTOLOAD_SUBTITLES_PLUGIN, TotemAutoloadSubtitlesPlugin))
+#define XPLAYER_TYPE_AUTOLOAD_SUBTITLES_PLUGIN	(xplayer_autoload_subtitles_plugin_get_type ())
+#define XPLAYER_AUTOLOAD_SUBTITLES_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), XPLAYER_TYPE_AUTOLOAD_SUBTITLES_PLUGIN, XplayerAutoloadSubtitlesPlugin))
 
 typedef struct {
 	guint signal_id;
-	TotemObject *totem;
+	XplayerObject *xplayer;
 	GSettings *settings;
 	gboolean autoload_subs;
-} TotemAutoloadSubtitlesPluginPrivate;
+} XplayerAutoloadSubtitlesPluginPrivate;
 
-TOTEM_PLUGIN_REGISTER(TOTEM_TYPE_AUTOLOAD_SUBTITLES_PLUGIN, TotemAutoloadSubtitlesPlugin, totem_autoload_subtitles_plugin)
+XPLAYER_PLUGIN_REGISTER(XPLAYER_TYPE_AUTOLOAD_SUBTITLES_PLUGIN, XplayerAutoloadSubtitlesPlugin, xplayer_autoload_subtitles_plugin)
 
 /* List from xine-lib's demux_sputext.c.
- * Keep in sync with the list in totem_setup_file_filters() in this file.
+ * Keep in sync with the list in xplayer_setup_file_filters() in this file.
  * Don't add .txt extensions, as there are too many false positives. */
 static const char subtitle_ext[][4] = {
 	"sub",
@@ -60,7 +60,7 @@ static const char subtitle_ext[][4] = {
 };
 
 static gboolean
-totem_uri_exists (const char *uri)
+xplayer_uri_exists (const char *uri)
 {
 	GFile *file = g_file_new_for_uri (uri);
 	if (file != NULL) {
@@ -74,7 +74,7 @@ totem_uri_exists (const char *uri)
 }
 
 static char *
-totem_uri_get_subtitle_for_uri (const char *uri)
+xplayer_uri_get_subtitle_for_uri (const char *uri)
 {
 	char *subtitle;
 	guint len, i;
@@ -111,7 +111,7 @@ totem_uri_get_subtitle_for_uri (const char *uri)
 		char *subtitle_ext_upper;
 		memcpy (subtitle + suffix + 1, subtitle_ext[i], 3);
 
-		if (totem_uri_exists (subtitle))
+		if (xplayer_uri_exists (subtitle))
 			return subtitle;
 
 		/* Check with upper-cased extension */
@@ -119,7 +119,7 @@ totem_uri_get_subtitle_for_uri (const char *uri)
 		memcpy (subtitle + suffix + 1, subtitle_ext_upper, 3);
 		g_free (subtitle_ext_upper);
 
-		if (totem_uri_exists (subtitle))
+		if (xplayer_uri_exists (subtitle))
 			return subtitle;
 	}
 	g_free (subtitle);
@@ -127,7 +127,7 @@ totem_uri_get_subtitle_for_uri (const char *uri)
 }
 
 static char *
-totem_uri_get_subtitle_in_subdir (GFile *file, const char *subdir)
+xplayer_uri_get_subtitle_in_subdir (GFile *file, const char *subdir)
 {
 	char *filename, *subtitle, *full_path_str;
 	GFile *parent, *full_path, *directory;
@@ -146,14 +146,14 @@ totem_uri_get_subtitle_in_subdir (GFile *file, const char *subdir)
 	/* Get the subtitles from that URI */
 	full_path_str = g_file_get_uri (full_path);
 	g_object_unref (full_path);
-	subtitle = totem_uri_get_subtitle_for_uri (full_path_str);
+	subtitle = xplayer_uri_get_subtitle_for_uri (full_path_str);
 	g_free (full_path_str);
 
 	return subtitle;
 }
 
 static char *
-totem_uri_get_cached_subtitle_for_uri (const char *uri)
+xplayer_uri_get_cached_subtitle_for_uri (const char *uri)
 {
 	char *filename, *basename, *fake_filename, *fake_uri, *ret;
 
@@ -169,7 +169,7 @@ totem_uri_get_cached_subtitle_for_uri (const char *uri)
 	}
 
 	fake_filename = g_build_filename (g_get_user_cache_dir (),
-				"totem",
+				"xplayer",
 				"subtitles",
 				basename,
 				NULL);
@@ -177,14 +177,14 @@ totem_uri_get_cached_subtitle_for_uri (const char *uri)
 	fake_uri = g_filename_to_uri (fake_filename, NULL, NULL);
 	g_free (fake_filename);
 
-	ret = totem_uri_get_subtitle_for_uri (fake_uri);
+	ret = xplayer_uri_get_subtitle_for_uri (fake_uri);
 	g_free (fake_uri);
 
 	return ret;
 }
 
 static char *
-totem_uri_get_subtitle_uri (const char *uri)
+xplayer_uri_get_subtitle_uri (const char *uri)
 {
 	GFile *file;
 	char *subtitle;
@@ -206,20 +206,20 @@ totem_uri_get_subtitle_uri (const char *uri)
 	}
 
 	/* Try in the cached subtitles directory */
-	subtitle = totem_uri_get_cached_subtitle_for_uri (uri);
+	subtitle = xplayer_uri_get_cached_subtitle_for_uri (uri);
 	if (subtitle != NULL) {
 		g_object_unref (file);
 		return subtitle;
 	}
 
 	/* Try in the current directory */
-	subtitle = totem_uri_get_subtitle_for_uri (uri);
+	subtitle = xplayer_uri_get_subtitle_for_uri (uri);
 	if (subtitle != NULL) {
 		g_object_unref (file);
 		return subtitle;
 	}
 
-	subtitle = totem_uri_get_subtitle_in_subdir (file, "subtitles");
+	subtitle = xplayer_uri_get_subtitle_in_subdir (file, "subtitles");
 	g_object_unref (file);
 
 	return subtitle;
@@ -228,16 +228,16 @@ totem_uri_get_subtitle_uri (const char *uri)
 
 
 static char *
-get_text_subtitle_cb (TotemObject                  *totem,
+get_text_subtitle_cb (XplayerObject                  *xplayer,
 		      const char                   *mrl,
-		      TotemAutoloadSubtitlesPlugin *pi)
+		      XplayerAutoloadSubtitlesPlugin *pi)
 {
 	char *sub;
 
 	if (pi->priv->autoload_subs == FALSE)
 		return NULL;
 
-	sub = totem_uri_get_subtitle_uri (mrl);
+	sub = xplayer_uri_get_subtitle_uri (mrl);
 
 	return sub;
 }
@@ -245,7 +245,7 @@ get_text_subtitle_cb (TotemObject                  *totem,
 static void
 autoload_subs_changed (GSettings                *settings,
 		       char                     *key,
-		       TotemAutoloadSubtitlesPlugin *pi)
+		       XplayerAutoloadSubtitlesPlugin *pi)
 {
 	pi->priv->autoload_subs = g_settings_get_boolean (settings, "autoload-subtitles");
 }
@@ -253,29 +253,29 @@ autoload_subs_changed (GSettings                *settings,
 static void
 impl_activate (PeasActivatable *plugin)
 {
-	TotemAutoloadSubtitlesPlugin *pi = TOTEM_AUTOLOAD_SUBTITLES_PLUGIN (plugin);
+	XplayerAutoloadSubtitlesPlugin *pi = XPLAYER_AUTOLOAD_SUBTITLES_PLUGIN (plugin);
 
-	pi->priv->totem = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
-	pi->priv->settings = g_settings_new ("org.gnome.totem");
+	pi->priv->xplayer = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
+	pi->priv->settings = g_settings_new ("org.gnome.xplayer");
 	pi->priv->autoload_subs = g_settings_get_boolean (pi->priv->settings, "autoload-subtitles");
 	g_signal_connect (pi->priv->settings, "changed::autoload-subtitles",
 			  G_CALLBACK (autoload_subs_changed), pi);
-	pi->priv->signal_id = g_signal_connect (G_OBJECT (pi->priv->totem), "get-text-subtitle",
+	pi->priv->signal_id = g_signal_connect (G_OBJECT (pi->priv->xplayer), "get-text-subtitle",
 						G_CALLBACK (get_text_subtitle_cb), pi);
 }
 
 static void
 impl_deactivate (PeasActivatable *plugin)
 {
-	TotemAutoloadSubtitlesPlugin *pi = TOTEM_AUTOLOAD_SUBTITLES_PLUGIN (plugin);
+	XplayerAutoloadSubtitlesPlugin *pi = XPLAYER_AUTOLOAD_SUBTITLES_PLUGIN (plugin);
 
 	if (pi->priv->signal_id) {
-		g_signal_handler_disconnect (pi->priv->totem, pi->priv->signal_id);
+		g_signal_handler_disconnect (pi->priv->xplayer, pi->priv->signal_id);
 		pi->priv->signal_id = 0;
 	}
-	if (pi->priv->totem) {
-		g_object_unref (pi->priv->totem);
-		pi->priv->totem = NULL;
+	if (pi->priv->xplayer) {
+		g_object_unref (pi->priv->xplayer);
+		pi->priv->xplayer = NULL;
 	}
 	if (pi->priv->settings) {
 		g_object_unref (pi->priv->settings);

@@ -1,4 +1,4 @@
-/* totem-menu.c
+/* xplayer-menu.c
 
    Copyright (C) 2004-2005 Bastien Nocera
 
@@ -29,54 +29,54 @@
 #include <string.h>
 #include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
-#include "totem-menu.h"
-#include "totem.h"
-#include "totem-interface.h"
-#include "totem-private.h"
-#include "totem-sidebar.h"
-#include "totem-statusbar.h"
+#include "xplayer-menu.h"
+#include "xplayer.h"
+#include "xplayer-interface.h"
+#include "xplayer-private.h"
+#include "xplayer-sidebar.h"
+#include "xplayer-statusbar.h"
 #include "bacon-video-widget.h"
-#include "totem-uri.h"
+#include "xplayer-uri.h"
 
-#include "totem-profile.h"
+#include "xplayer-profile.h"
 
-#define TOTEM_MAX_RECENT_ITEM_LEN 40
+#define XPLAYER_MAX_RECENT_ITEM_LEN 40
 
 /* Callback functions for GtkBuilder */
-G_MODULE_EXPORT void open_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void open_location_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void eject_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void properties_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void play_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void quit_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void preferences_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void fullscreen_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void zoom_1_2_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void zoom_1_1_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void zoom_2_1_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void zoom_toggle_action_callback (GtkToggleAction *action, Totem *totem);
-G_MODULE_EXPORT void next_angle_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void dvd_root_menu_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void dvd_title_menu_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void dvd_audio_menu_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void dvd_angle_menu_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void dvd_chapter_menu_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void next_chapter_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void previous_chapter_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void skip_forward_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void skip_backwards_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void volume_up_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void volume_down_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void contents_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void about_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void plugins_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void repeat_mode_action_callback (GtkToggleAction *action, Totem *totem);
-G_MODULE_EXPORT void shuffle_mode_action_callback (GtkToggleAction *action, Totem *totem);
-G_MODULE_EXPORT void show_controls_action_callback (GtkToggleAction *action, Totem *totem);
-G_MODULE_EXPORT void show_sidebar_action_callback (GtkToggleAction *action, Totem *totem);
-G_MODULE_EXPORT void aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Totem *totem);
-G_MODULE_EXPORT void select_subtitle_action_callback (GtkAction *action, Totem *totem);
-G_MODULE_EXPORT void clear_playlist_action_callback (GtkAction *action, Totem *totem);
+G_MODULE_EXPORT void open_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void open_location_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void eject_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void properties_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void play_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void quit_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void preferences_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void fullscreen_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void zoom_1_2_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void zoom_1_1_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void zoom_2_1_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void zoom_toggle_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void next_angle_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void dvd_root_menu_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void dvd_title_menu_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void dvd_audio_menu_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void dvd_angle_menu_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void dvd_chapter_menu_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void next_chapter_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void previous_chapter_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void skip_forward_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void skip_backwards_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void volume_up_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void volume_down_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void contents_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void about_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void plugins_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void repeat_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void shuffle_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void show_controls_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void show_sidebar_action_callback (GtkToggleAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Xplayer *xplayer);
+G_MODULE_EXPORT void select_subtitle_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void clear_playlist_action_callback (GtkAction *action, Xplayer *xplayer);
 
 /* Helper function to escape underscores in labels
  * before putting them in menu items */
@@ -94,7 +94,7 @@ escape_label_for_menu (const char *name)
 
 /* Subtitle and language menus */
 static void
-totem_g_list_deep_free (GList *list)
+xplayer_g_list_deep_free (GList *list)
 {
 	GList *l;
 
@@ -105,29 +105,29 @@ totem_g_list_deep_free (GList *list)
 
 static void
 subtitles_changed_callback (GtkRadioAction *action, GtkRadioAction *current,
-		Totem *totem)
+		Xplayer *xplayer)
 {
 	int rank;
 
 	rank = gtk_radio_action_get_current_value (current);
 
-	bacon_video_widget_set_subtitle (totem->bvw, rank);
+	bacon_video_widget_set_subtitle (xplayer->bvw, rank);
 }
 
 
 static void
 languages_changed_callback (GtkRadioAction *action, GtkRadioAction *current,
-		Totem *totem)
+		Xplayer *xplayer)
 {
 	int rank;
 
 	rank = gtk_radio_action_get_current_value (current);
 
-	bacon_video_widget_set_language (totem->bvw, rank);
+	bacon_video_widget_set_language (xplayer->bvw, rank);
 }
 
 static GtkAction *
-add_lang_action (Totem *totem, GtkActionGroup *action_group, guint ui_id,
+add_lang_action (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id,
 		const char **paths, const char *prefix, const char *lang, 
 		int lang_id, int lang_index, GSList **group)
 {
@@ -165,7 +165,7 @@ add_lang_action (Totem *totem, GtkActionGroup *action_group, guint ui_id,
 	gtk_action_group_add_action (action_group, action);
 	g_object_unref (action);
 	for (i = 0; paths[i] != NULL; i++) {
-		gtk_ui_manager_add_ui (totem->ui_manager, ui_id,
+		gtk_ui_manager_add_ui (xplayer->ui_manager, ui_id,
 				       paths[i], name, name, GTK_UI_MANAGER_MENUITEM, FALSE);
 	}
 	g_free (name);
@@ -174,7 +174,7 @@ add_lang_action (Totem *totem, GtkActionGroup *action_group, guint ui_id,
 }
 
 static GtkAction *
-create_lang_actions (Totem *totem, GtkActionGroup *action_group, guint ui_id,
+create_lang_actions (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id,
 		const char **paths, const char *prefix, GList *list,
 		gboolean is_lang)
 {
@@ -186,12 +186,12 @@ create_lang_actions (Totem *totem, GtkActionGroup *action_group, guint ui_id,
 	char *action_data;
 
 	if (is_lang == FALSE) {
-		add_lang_action (totem, action_group, ui_id, paths, prefix,
+		add_lang_action (xplayer, action_group, ui_id, paths, prefix,
 		                /* Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD */
 				_("None"), -2, 0, &group);
 	}
 
-	action = add_lang_action (totem, action_group, ui_id, paths, prefix,
+	action = add_lang_action (xplayer, action_group, ui_id, paths, prefix,
 	                          /* Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD */
 	                          C_("Language", "Auto"), -1, 0, &group);
 
@@ -213,7 +213,7 @@ create_lang_actions (Totem *totem, GtkActionGroup *action_group, guint ui_id,
 			g_hash_table_replace (lookup, l->data, GINT_TO_POINTER (num + 1));
 		}
 
-		add_lang_action (totem, action_group, ui_id, paths, prefix,
+		add_lang_action (xplayer, action_group, ui_id, paths, prefix,
 				 action_data, i, num + 1, &group);
 		g_free (action_data);
 		i++;
@@ -225,7 +225,7 @@ create_lang_actions (Totem *totem, GtkActionGroup *action_group, guint ui_id,
 }
 
 static gboolean
-totem_sublang_equal_lists (GList *orig, GList *new)
+xplayer_sublang_equal_lists (GList *orig, GList *new)
 {
 	GList *o, *n;
 	gboolean retval;
@@ -253,109 +253,109 @@ totem_sublang_equal_lists (GList *orig, GList *new)
 }
 
 static void
-totem_languages_update (Totem *totem, GList *list)
+xplayer_languages_update (Xplayer *xplayer, GList *list)
 {
 	GtkAction *action;
-	const char *paths[3] = { "/tmw-menubar/sound/languages/placeholder", "/totem-main-popup/popup-languages/placeholder", NULL };
+	const char *paths[3] = { "/tmw-menubar/sound/languages/placeholder", "/xplayer-main-popup/popup-languages/placeholder", NULL };
 	int current;
 
 	/* Remove old UI */
-	gtk_ui_manager_remove_ui (totem->ui_manager, totem->languages_ui_id);
-	gtk_ui_manager_ensure_update (totem->ui_manager);
+	gtk_ui_manager_remove_ui (xplayer->ui_manager, xplayer->languages_ui_id);
+	gtk_ui_manager_ensure_update (xplayer->ui_manager);
 
 	/* Create new ActionGroup */
-	if (totem->languages_action_group) {
-		gtk_ui_manager_remove_action_group (totem->ui_manager,
-				totem->languages_action_group);
-		g_object_unref (totem->languages_action_group);
+	if (xplayer->languages_action_group) {
+		gtk_ui_manager_remove_action_group (xplayer->ui_manager,
+				xplayer->languages_action_group);
+		g_object_unref (xplayer->languages_action_group);
 	}
-	totem->languages_action_group = gtk_action_group_new ("languages-action-group");
-	gtk_ui_manager_insert_action_group (totem->ui_manager,
-			totem->languages_action_group, -1);
+	xplayer->languages_action_group = gtk_action_group_new ("languages-action-group");
+	gtk_ui_manager_insert_action_group (xplayer->ui_manager,
+			xplayer->languages_action_group, -1);
 
 	if (list != NULL) {
-		action = create_lang_actions (totem, totem->languages_action_group,
-				totem->languages_ui_id,
+		action = create_lang_actions (xplayer, xplayer->languages_action_group,
+				xplayer->languages_ui_id,
 				paths,
 				"languages", list, TRUE);
-		gtk_ui_manager_ensure_update (totem->ui_manager);
+		gtk_ui_manager_ensure_update (xplayer->ui_manager);
 
-		current = bacon_video_widget_get_language (totem->bvw);
+		current = bacon_video_widget_get_language (xplayer->bvw);
 		gtk_radio_action_set_current_value (GTK_RADIO_ACTION (action),
 				current);
 		g_signal_connect (G_OBJECT (action), "changed",
-				G_CALLBACK (languages_changed_callback), totem);
+				G_CALLBACK (languages_changed_callback), xplayer);
 	}
 
-	totem_g_list_deep_free (totem->language_list);
-	totem->language_list = list;
+	xplayer_g_list_deep_free (xplayer->language_list);
+	xplayer->language_list = list;
 }
 
 static void
-totem_subtitles_update (Totem *totem, GList *list)
+xplayer_subtitles_update (Xplayer *xplayer, GList *list)
 {
 	GtkAction *action;
 	int current;
-	const char *paths[3] = { "/tmw-menubar/view/subtitles/placeholder", "/totem-main-popup/popup-subtitles/placeholder", NULL };
+	const char *paths[3] = { "/tmw-menubar/view/subtitles/placeholder", "/xplayer-main-popup/popup-subtitles/placeholder", NULL };
 
 	/* Remove old UI */
-	gtk_ui_manager_remove_ui (totem->ui_manager, totem->subtitles_ui_id);
-	gtk_ui_manager_ensure_update (totem->ui_manager);
+	gtk_ui_manager_remove_ui (xplayer->ui_manager, xplayer->subtitles_ui_id);
+	gtk_ui_manager_ensure_update (xplayer->ui_manager);
 
 	/* Create new ActionGroup */
-	if (totem->subtitles_action_group) {
-		gtk_ui_manager_remove_action_group (totem->ui_manager,
-				totem->subtitles_action_group);
-		g_object_unref (totem->subtitles_action_group);
+	if (xplayer->subtitles_action_group) {
+		gtk_ui_manager_remove_action_group (xplayer->ui_manager,
+				xplayer->subtitles_action_group);
+		g_object_unref (xplayer->subtitles_action_group);
 	}
-	totem->subtitles_action_group = gtk_action_group_new ("subtitles-action-group");
-	gtk_ui_manager_insert_action_group (totem->ui_manager,
-			totem->subtitles_action_group, -1);
+	xplayer->subtitles_action_group = gtk_action_group_new ("subtitles-action-group");
+	gtk_ui_manager_insert_action_group (xplayer->ui_manager,
+			xplayer->subtitles_action_group, -1);
 
 
 	if (list != NULL) {
-		action = create_lang_actions (totem, totem->subtitles_action_group,
-				totem->subtitles_ui_id,
+		action = create_lang_actions (xplayer, xplayer->subtitles_action_group,
+				xplayer->subtitles_ui_id,
 				paths,
 				"subtitles", list, FALSE);
-		gtk_ui_manager_ensure_update (totem->ui_manager);
+		gtk_ui_manager_ensure_update (xplayer->ui_manager);
 
-		current = bacon_video_widget_get_subtitle (totem->bvw);
+		current = bacon_video_widget_get_subtitle (xplayer->bvw);
 		gtk_radio_action_set_current_value (GTK_RADIO_ACTION (action),
 				current);
 		g_signal_connect (G_OBJECT (action), "changed",
-				G_CALLBACK (subtitles_changed_callback), totem);
+				G_CALLBACK (subtitles_changed_callback), xplayer);
 	}
 
-	totem_g_list_deep_free (totem->subtitles_list);
-	totem->subtitles_list = list;
+	xplayer_g_list_deep_free (xplayer->subtitles_list);
+	xplayer->subtitles_list = list;
 }
 
 void
-totem_sublang_update (Totem *totem)
+xplayer_sublang_update (Xplayer *xplayer)
 {
 	GList *list;
 
-	list = bacon_video_widget_get_languages (totem->bvw);
-	if (totem_sublang_equal_lists (totem->language_list, list) == TRUE) {
-		totem_g_list_deep_free (list);
+	list = bacon_video_widget_get_languages (xplayer->bvw);
+	if (xplayer_sublang_equal_lists (xplayer->language_list, list) == TRUE) {
+		xplayer_g_list_deep_free (list);
 	} else {
-		totem_languages_update (totem, list);
+		xplayer_languages_update (xplayer, list);
 	}
 
-	list = bacon_video_widget_get_subtitles (totem->bvw);
-	if (totem_sublang_equal_lists (totem->subtitles_list, list) == TRUE) {
-		totem_g_list_deep_free (list);
+	list = bacon_video_widget_get_subtitles (xplayer->bvw);
+	if (xplayer_sublang_equal_lists (xplayer->subtitles_list, list) == TRUE) {
+		xplayer_g_list_deep_free (list);
 	} else {
-		totem_subtitles_update (totem, list);
+		xplayer_subtitles_update (xplayer, list);
 	}
 }
 
 void
-totem_sublang_exit (Totem *totem)
+xplayer_sublang_exit (Xplayer *xplayer)
 {
-	totem_g_list_deep_free (totem->subtitles_list);
-	totem_g_list_deep_free (totem->language_list);
+	xplayer_g_list_deep_free (xplayer->subtitles_list);
+	xplayer_g_list_deep_free (xplayer->language_list);
 }
 
 /* Recent files */
@@ -373,12 +373,12 @@ connect_proxy_cb (GtkActionGroup *action_group,
         label = GTK_LABEL (gtk_bin_get_child (GTK_BIN (proxy)));
 
         gtk_label_set_ellipsize (label, PANGO_ELLIPSIZE_MIDDLE);
-        gtk_label_set_max_width_chars (label,TOTEM_MAX_RECENT_ITEM_LEN);
+        gtk_label_set_max_width_chars (label,XPLAYER_MAX_RECENT_ITEM_LEN);
 }
 
 static void
 on_recent_file_item_activated (GtkAction *action,
-                               Totem *totem)
+                               Xplayer *xplayer)
 {
 	GtkRecentInfo *recent_info;
 	const gchar *uri, *display_name;
@@ -387,27 +387,27 @@ on_recent_file_item_activated (GtkAction *action,
 	uri = gtk_recent_info_get_uri (recent_info);
 	display_name = gtk_recent_info_get_display_name (recent_info);
 
-	totem_add_to_playlist_and_play (totem, uri, display_name);
+	xplayer_add_to_playlist_and_play (xplayer, uri, display_name);
 }
 
 static gint
-totem_compare_recent_items (GtkRecentInfo *a, GtkRecentInfo *b)
+xplayer_compare_recent_items (GtkRecentInfo *a, GtkRecentInfo *b)
 {
-	gboolean has_totem_a, has_totem_b;
+	gboolean has_xplayer_a, has_xplayer_b;
 
-	has_totem_a = gtk_recent_info_has_group (a, "Totem");
-	has_totem_b = gtk_recent_info_has_group (b, "Totem");
+	has_xplayer_a = gtk_recent_info_has_group (a, "Xplayer");
+	has_xplayer_b = gtk_recent_info_has_group (b, "Xplayer");
 
-	if (has_totem_a && has_totem_b) {
+	if (has_xplayer_a && has_xplayer_b) {
 		time_t time_a, time_b;
 
 		time_a = gtk_recent_info_get_modified (a);
 		time_b = gtk_recent_info_get_modified (b);
 
 		return (time_b - time_a);
-	} else if (has_totem_a) {
+	} else if (has_xplayer_a) {
 		return -1;
-	} else if (has_totem_b) {
+	} else if (has_xplayer_b) {
 		return 1;
 	}
 
@@ -415,49 +415,49 @@ totem_compare_recent_items (GtkRecentInfo *a, GtkRecentInfo *b)
 }
 
 static void
-totem_recent_manager_changed_callback (GtkRecentManager *recent_manager, Totem *totem)
+xplayer_recent_manager_changed_callback (GtkRecentManager *recent_manager, Xplayer *xplayer)
 {
-        GList *items, *totem_items, *l;
+        GList *items, *xplayer_items, *l;
         guint n_items = 0;
 
-        if (totem->recent_ui_id != 0) {
-                gtk_ui_manager_remove_ui (totem->ui_manager, totem->recent_ui_id);
-                gtk_ui_manager_ensure_update (totem->ui_manager);
+        if (xplayer->recent_ui_id != 0) {
+                gtk_ui_manager_remove_ui (xplayer->ui_manager, xplayer->recent_ui_id);
+                gtk_ui_manager_ensure_update (xplayer->ui_manager);
         }
 
-        if (totem->recent_action_group) {
-                gtk_ui_manager_remove_action_group (totem->ui_manager,
-                                totem->recent_action_group);
+        if (xplayer->recent_action_group) {
+                gtk_ui_manager_remove_action_group (xplayer->ui_manager,
+                                xplayer->recent_action_group);
         }
 
-        totem->recent_action_group = gtk_action_group_new ("recent-action-group");
-        g_signal_connect (totem->recent_action_group, "connect-proxy",
+        xplayer->recent_action_group = gtk_action_group_new ("recent-action-group");
+        g_signal_connect (xplayer->recent_action_group, "connect-proxy",
                           G_CALLBACK (connect_proxy_cb), NULL);
-        gtk_ui_manager_insert_action_group (totem->ui_manager,
-                        totem->recent_action_group, -1);
-        g_object_unref (totem->recent_action_group);
+        gtk_ui_manager_insert_action_group (xplayer->ui_manager,
+                        xplayer->recent_action_group, -1);
+        g_object_unref (xplayer->recent_action_group);
 
-        totem->recent_ui_id = gtk_ui_manager_new_merge_id (totem->ui_manager);
+        xplayer->recent_ui_id = gtk_ui_manager_new_merge_id (xplayer->ui_manager);
         items = gtk_recent_manager_get_items (recent_manager);
 
-	/* Remove the non-Totem items */
-	totem_items = NULL;
+	/* Remove the non-Xplayer items */
+	xplayer_items = NULL;
         for (l = items; l && l->data; l = l->next) {
                 GtkRecentInfo *info;
 
                 info = (GtkRecentInfo *) l->data;
 
-                if (gtk_recent_info_has_group (info, "Totem")) {
+                if (gtk_recent_info_has_group (info, "Xplayer")) {
 			gtk_recent_info_ref (info);
-			totem_items = g_list_prepend (totem_items, info);
+			xplayer_items = g_list_prepend (xplayer_items, info);
 		}
 	}
 	g_list_foreach (items, (GFunc) gtk_recent_info_unref, NULL);
         g_list_free (items);
 
-        totem_items = g_list_sort (totem_items, (GCompareFunc) totem_compare_recent_items);
+        xplayer_items = g_list_sort (xplayer_items, (GCompareFunc) xplayer_compare_recent_items);
 
-        for (l = totem_items; l && l->data; l = l->next) {
+        for (l = xplayer_items; l && l->data; l = l->next) {
                 GtkRecentInfo *info;
                 GtkAction     *action;
                 char           action_name[32];
@@ -470,7 +470,7 @@ totem_recent_manager_changed_callback (GtkRecentManager *recent_manager, Totem *
 
                 info = (GtkRecentInfo *) l->data;
 
-                if (!gtk_recent_info_has_group (info, "Totem"))
+                if (!gtk_recent_info_has_group (info, "Xplayer"))
                         continue;
 
                 g_snprintf (action_name, sizeof (action_name), "RecentFile%u", n_items);
@@ -487,7 +487,7 @@ totem_recent_manager_changed_callback (GtkRecentManager *recent_manager, Totem *
                                         (GDestroyNotify) gtk_recent_info_unref);
                 g_signal_connect (G_OBJECT (action), "activate",
                                   G_CALLBACK (on_recent_file_item_activated),
-                                  totem);
+                                  xplayer);
 
                 mime_type = gtk_recent_info_get_mime_type (info);
                 content_type = g_content_type_from_mime_type (mime_type);
@@ -501,11 +501,11 @@ totem_recent_manager_changed_callback (GtkRecentManager *recent_manager, Totem *
                         g_object_unref (icon);
                 }
 
-                gtk_action_group_add_action (totem->recent_action_group,
+                gtk_action_group_add_action (xplayer->recent_action_group,
                                             action);
                 g_object_unref (action);
 
-                gtk_ui_manager_add_ui (totem->ui_manager, totem->recent_ui_id,
+                gtk_ui_manager_add_ui (xplayer->ui_manager, xplayer->recent_ui_id,
                                       "/tmw-menubar/movie/recent-placeholder",
                                       label, action_name, GTK_UI_MANAGER_MENUITEM,
                                       FALSE);
@@ -515,185 +515,185 @@ totem_recent_manager_changed_callback (GtkRecentManager *recent_manager, Totem *
                         break;
         }
 
-        g_list_foreach (totem_items, (GFunc) gtk_recent_info_unref, NULL);
-        g_list_free (totem_items);
+        g_list_foreach (xplayer_items, (GFunc) gtk_recent_info_unref, NULL);
+        g_list_free (xplayer_items);
 }
 
 void
-totem_setup_recent (Totem *totem)
+xplayer_setup_recent (Xplayer *xplayer)
 {
-	totem->recent_manager = gtk_recent_manager_get_default ();
-	totem->recent_action_group = NULL;
-	totem->recent_ui_id = 0;
+	xplayer->recent_manager = gtk_recent_manager_get_default ();
+	xplayer->recent_action_group = NULL;
+	xplayer->recent_ui_id = 0;
 
-	g_signal_connect (G_OBJECT (totem->recent_manager), "changed",
-			G_CALLBACK (totem_recent_manager_changed_callback),
-			totem);
+	g_signal_connect (G_OBJECT (xplayer->recent_manager), "changed",
+			G_CALLBACK (xplayer_recent_manager_changed_callback),
+			xplayer);
 
-	totem_recent_manager_changed_callback (totem->recent_manager, totem);
+	xplayer_recent_manager_changed_callback (xplayer->recent_manager, xplayer);
 }
 
 void
-open_action_callback (GtkAction *action, Totem *totem)
+open_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_open (totem);
+	xplayer_action_open (xplayer);
 }
 
 void
-open_location_action_callback (GtkAction *action, Totem *totem)
+open_location_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_open_location (totem);
+	xplayer_action_open_location (xplayer);
 }
 
 void
-eject_action_callback (GtkAction *action, Totem *totem)
+eject_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_eject (totem);
+	xplayer_action_eject (xplayer);
 }
 
 void
-properties_action_callback (GtkAction *action, Totem *totem)
+properties_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_show_properties (totem);
+	xplayer_action_show_properties (xplayer);
 }
 
 void
-play_action_callback (GtkAction *action, Totem *totem)
+play_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_play_pause (totem);
+	xplayer_action_play_pause (xplayer);
 }
 
 G_GNUC_NORETURN void
-quit_action_callback (GtkAction *action, Totem *totem)
+quit_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_exit (totem);
+	xplayer_action_exit (xplayer);
 }
 
 void
-preferences_action_callback (GtkAction *action, Totem *totem)
+preferences_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	gtk_widget_show (totem->prefs);
+	gtk_widget_show (xplayer->prefs);
 }
 
 void
-fullscreen_action_callback (GtkAction *action, Totem *totem)
+fullscreen_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_fullscreen_toggle (totem);
+	xplayer_action_fullscreen_toggle (xplayer);
 }
 
 void
-zoom_1_2_action_callback (GtkAction *action, Totem *totem)
+zoom_1_2_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_set_scale_ratio (totem, 0.5);
+	xplayer_action_set_scale_ratio (xplayer, 0.5);
 }
 
 void
-zoom_1_1_action_callback (GtkAction *action, Totem *totem)
+zoom_1_1_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_set_scale_ratio (totem, 1);
+	xplayer_action_set_scale_ratio (xplayer, 1);
 }
 
 void
-zoom_2_1_action_callback (GtkAction *action, Totem *totem)
+zoom_2_1_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_set_scale_ratio (totem, 2);
+	xplayer_action_set_scale_ratio (xplayer, 2);
 }
 
 void
 zoom_toggle_action_callback (GtkToggleAction *action,
-			     Totem           *totem)
+			     Xplayer           *xplayer)
 {
-	bacon_video_widget_set_zoom (totem->bvw,
+	bacon_video_widget_set_zoom (xplayer->bvw,
 				     gtk_toggle_action_get_active (action) ? BVW_ZOOM_EXPAND : BVW_ZOOM_NONE);
 }
 
 void
-select_subtitle_action_callback (GtkAction *action, Totem *totem)
+select_subtitle_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_playlist_select_subtitle_dialog (totem->playlist,
-					       TOTEM_PLAYLIST_DIALOG_PLAYING);
+	xplayer_playlist_select_subtitle_dialog (xplayer->playlist,
+					       XPLAYER_PLAYLIST_DIALOG_PLAYING);
 }
 
 void
-next_angle_action_callback (GtkAction *action, Totem *totem)
+next_angle_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_next_angle (totem);
+	xplayer_action_next_angle (xplayer);
 }
 
 void
-dvd_root_menu_action_callback (GtkAction *action, Totem *totem)
+dvd_root_menu_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-        bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ROOT_MENU);
+        bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU);
 }
 
 void
-dvd_title_menu_action_callback (GtkAction *action, Totem *totem)
+dvd_title_menu_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-        bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_TITLE_MENU);
+        bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_TITLE_MENU);
 }
 
 void
-dvd_audio_menu_action_callback (GtkAction *action, Totem *totem)
+dvd_audio_menu_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-        bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_AUDIO_MENU);
+        bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_AUDIO_MENU);
 }
 
 void
-dvd_angle_menu_action_callback (GtkAction *action, Totem *totem)
+dvd_angle_menu_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-        bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_ANGLE_MENU);
+        bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ANGLE_MENU);
 }
 
 void
-dvd_chapter_menu_action_callback (GtkAction *action, Totem *totem)
+dvd_chapter_menu_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-        bacon_video_widget_dvd_event (totem->bvw, BVW_DVD_CHAPTER_MENU);
+        bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_CHAPTER_MENU);
 }
 
 void
-next_chapter_action_callback (GtkAction *action, Totem *totem)
+next_chapter_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	TOTEM_PROFILE (totem_action_next (totem));
+	XPLAYER_PROFILE (xplayer_action_next (xplayer));
 }
 
 void
-previous_chapter_action_callback (GtkAction *action, Totem *totem)
+previous_chapter_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	TOTEM_PROFILE (totem_action_previous (totem));
+	XPLAYER_PROFILE (xplayer_action_previous (xplayer));
 }
 
 void
-skip_forward_action_callback (GtkAction *action, Totem *totem)
+skip_forward_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_seek_relative (totem, SEEK_FORWARD_OFFSET * 1000, FALSE);
+	xplayer_action_seek_relative (xplayer, SEEK_FORWARD_OFFSET * 1000, FALSE);
 }
 
 void
-skip_backwards_action_callback (GtkAction *action, Totem *totem)
+skip_backwards_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_seek_relative (totem, SEEK_BACKWARD_OFFSET * 1000, FALSE);
+	xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_OFFSET * 1000, FALSE);
 }
 
 void
-volume_up_action_callback (GtkAction *action, Totem *totem)
+volume_up_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_volume_relative (totem, VOLUME_UP_OFFSET);
+	xplayer_action_volume_relative (xplayer, VOLUME_UP_OFFSET);
 }
 
 void
-volume_down_action_callback (GtkAction *action, Totem *totem)
+volume_down_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_volume_relative (totem, VOLUME_DOWN_OFFSET);
+	xplayer_action_volume_relative (xplayer, VOLUME_DOWN_OFFSET);
 }
 
 void
-contents_action_callback (GtkAction *action, Totem *totem)
+contents_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_action_show_help (totem);
+	xplayer_action_show_help (xplayer);
 }
 
 void
-about_action_callback (GtkAction *action, Totem *totem)
+about_action_callback (GtkAction *action, Xplayer *xplayer)
 {
 	const char *authors[] =
 	{
@@ -705,26 +705,26 @@ about_action_callback (GtkAction *action, Totem *totem)
 		NULL
 	};
 	const char *artists[] = { "Jakub Steiner <jimmac@ximian.com>", NULL };
-	char *license = totem_interface_get_license ();
+	char *license = xplayer_interface_get_license ();
 
-	gtk_show_about_dialog (GTK_WINDOW (totem->win),
+	gtk_show_about_dialog (GTK_WINDOW (xplayer->win),
 				     "version", VERSION,
 				     "copyright", _("Copyright \xc2\xa9 2002-2009 Bastien Nocera"),
 				     "comments", _("Videos"),
 				     "authors", authors,
 				     "artists", artists,
 				     "translator-credits", _("translator-credits"),
-				     "logo-icon-name", "totem",
+				     "logo-icon-name", "xplayer",
 				     "license", license,
 				     "wrap-license", TRUE,
-				     "website-label", _("Totem Website"),
+				     "website-label", _("Xplayer Website"),
 				     "website", PACKAGE_URL,
 				     NULL);
 	g_free (license);
 }
 
 static gboolean
-totem_plugins_window_delete_cb (GtkWidget *window,
+xplayer_plugins_window_delete_cb (GtkWidget *window,
 				   GdkEventAny *event,
 				   gpointer data)
 {
@@ -734,7 +734,7 @@ totem_plugins_window_delete_cb (GtkWidget *window,
 }
 
 static void
-totem_plugins_response_cb (GtkDialog *dialog,
+xplayer_plugins_response_cb (GtkDialog *dialog,
 			      int response_id,
 			      gpointer data)
 {
@@ -743,55 +743,55 @@ totem_plugins_response_cb (GtkDialog *dialog,
 
 
 void
-plugins_action_callback (GtkAction *action, Totem *totem)
+plugins_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	if (totem->plugins == NULL) {
+	if (xplayer->plugins == NULL) {
 		GtkWidget *manager;
 
-		totem->plugins = gtk_dialog_new_with_buttons (_("Configure Plugins"),
-							      GTK_WINDOW (totem->win),
+		xplayer->plugins = gtk_dialog_new_with_buttons (_("Configure Plugins"),
+							      GTK_WINDOW (xplayer->win),
 							      GTK_DIALOG_DESTROY_WITH_PARENT,
 							      GTK_STOCK_CLOSE,
 							      GTK_RESPONSE_CLOSE,
 							      NULL);
-		gtk_container_set_border_width (GTK_CONTAINER (totem->plugins), 5);
-		gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (totem->plugins))), 2);
+		gtk_container_set_border_width (GTK_CONTAINER (xplayer->plugins), 5);
+		gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (xplayer->plugins))), 2);
 
-		g_signal_connect_object (G_OBJECT (totem->plugins),
+		g_signal_connect_object (G_OBJECT (xplayer->plugins),
 					 "delete_event",
-					 G_CALLBACK (totem_plugins_window_delete_cb),
+					 G_CALLBACK (xplayer_plugins_window_delete_cb),
 					 NULL, 0);
-		g_signal_connect_object (G_OBJECT (totem->plugins),
+		g_signal_connect_object (G_OBJECT (xplayer->plugins),
 					 "response",
-					 G_CALLBACK (totem_plugins_response_cb),
+					 G_CALLBACK (xplayer_plugins_response_cb),
 					 NULL, 0);
 
 		manager = peas_gtk_plugin_manager_new (NULL);
 		gtk_widget_show_all (GTK_WIDGET (manager));
-		gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (totem->plugins))),
+		gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (xplayer->plugins))),
 				    manager, TRUE, TRUE, 0);
-		gtk_window_set_default_size (GTK_WINDOW (totem->plugins), 600, 400);
+		gtk_window_set_default_size (GTK_WINDOW (xplayer->plugins), 600, 400);
 	}
 
-	gtk_window_present (GTK_WINDOW (totem->plugins));
+	gtk_window_present (GTK_WINDOW (xplayer->plugins));
 }
 
 void
-repeat_mode_action_callback (GtkToggleAction *action, Totem *totem)
+repeat_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 {
-	totem_playlist_set_repeat (totem->playlist,
+	xplayer_playlist_set_repeat (xplayer->playlist,
 			gtk_toggle_action_get_active (action));
 }
 
 void
-shuffle_mode_action_callback (GtkToggleAction *action, Totem *totem)
+shuffle_mode_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 {
-	totem_playlist_set_shuffle (totem->playlist,
+	xplayer_playlist_set_shuffle (xplayer->playlist,
 			gtk_toggle_action_get_active (action));
 }
 
 void
-show_controls_action_callback (GtkToggleAction *action, Totem *totem)
+show_controls_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 {
 	gboolean show;
 
@@ -799,38 +799,38 @@ show_controls_action_callback (GtkToggleAction *action, Totem *totem)
 
 	/* Let's update our controls visibility */
 	if (show)
-		totem->controls_visibility = TOTEM_CONTROLS_VISIBLE;
+		xplayer->controls_visibility = XPLAYER_CONTROLS_VISIBLE;
 	else
-		totem->controls_visibility = TOTEM_CONTROLS_HIDDEN;
+		xplayer->controls_visibility = XPLAYER_CONTROLS_HIDDEN;
 
-	show_controls (totem, FALSE);
+	show_controls (xplayer, FALSE);
 }
 
 void
-show_sidebar_action_callback (GtkToggleAction *action, Totem *totem)
+show_sidebar_action_callback (GtkToggleAction *action, Xplayer *xplayer)
 {
-	if (totem_is_fullscreen (totem))
+	if (xplayer_is_fullscreen (xplayer))
 		return;
 
-	totem_sidebar_toggle (totem, gtk_toggle_action_get_active (action));
+	xplayer_sidebar_toggle (xplayer, gtk_toggle_action_get_active (action));
 }
 
 void
-aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Totem *totem)
+aspect_ratio_changed_callback (GtkRadioAction *action, GtkRadioAction *current, Xplayer *xplayer)
 {
-	totem_action_set_aspect_ratio (totem, gtk_radio_action_get_current_value (current));
+	xplayer_action_set_aspect_ratio (xplayer, gtk_radio_action_get_current_value (current));
 }
 
 void
-clear_playlist_action_callback (GtkAction *action, Totem *totem)
+clear_playlist_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	totem_playlist_clear (totem->playlist);
-	totem_action_set_mrl (totem, NULL, NULL);
+	xplayer_playlist_clear (xplayer->playlist);
+	xplayer_action_set_mrl (xplayer, NULL, NULL);
 }
 
 /* Show help in status bar when selecting (hovering over) a menu item. */
 static void
-menu_item_select_cb (GtkMenuItem *proxy, Totem *totem)
+menu_item_select_cb (GtkMenuItem *proxy, Xplayer *xplayer)
 {
 	GtkAction *action;
 	const gchar *message;
@@ -840,52 +840,52 @@ menu_item_select_cb (GtkMenuItem *proxy, Totem *totem)
 
 	message = gtk_action_get_tooltip (action);
 	if (message)
-		totem_statusbar_push_help (TOTEM_STATUSBAR (totem->statusbar), message);
+		xplayer_statusbar_push_help (XPLAYER_STATUSBAR (xplayer->statusbar), message);
 }
 
 static void
-menu_item_deselect_cb (GtkMenuItem *proxy, Totem *totem)
+menu_item_deselect_cb (GtkMenuItem *proxy, Xplayer *xplayer)
 {
-	totem_statusbar_pop_help (TOTEM_STATUSBAR (totem->statusbar));
+	xplayer_statusbar_pop_help (XPLAYER_STATUSBAR (xplayer->statusbar));
 }
 
 static void
-setup_action (Totem *totem, GtkAction *action)
+setup_action (Xplayer *xplayer, GtkAction *action)
 {
 	GSList *proxies;
 	for (proxies = gtk_action_get_proxies (action); proxies != NULL; proxies = proxies->next) {
 		if (GTK_IS_MENU_ITEM (proxies->data)) {
-			g_signal_connect (proxies->data, "select", G_CALLBACK (menu_item_select_cb), totem);
-			g_signal_connect (proxies->data, "deselect", G_CALLBACK (menu_item_deselect_cb), totem);
+			g_signal_connect (proxies->data, "select", G_CALLBACK (menu_item_select_cb), xplayer);
+			g_signal_connect (proxies->data, "deselect", G_CALLBACK (menu_item_deselect_cb), xplayer);
 		}
 
 	}
 }
 
 static void
-setup_menu_items (Totem *totem)
+setup_menu_items (Xplayer *xplayer)
 {
 	GList *action_groups;
 
 	/* FIXME: We can remove this once GTK+ bug #574001 is fixed */
-	for (action_groups = gtk_ui_manager_get_action_groups (totem->ui_manager);
+	for (action_groups = gtk_ui_manager_get_action_groups (xplayer->ui_manager);
 	     action_groups != NULL; action_groups = action_groups->next) {
 		GtkActionGroup *action_group = GTK_ACTION_GROUP (action_groups->data);
 		GList *actions;
 		for (actions = gtk_action_group_list_actions (action_group); actions != NULL; actions = actions->next) {
-			setup_action (totem, GTK_ACTION (actions->data));
+			setup_action (xplayer, GTK_ACTION (actions->data));
 		}
 	}
 }
 
 void
-totem_ui_manager_setup (Totem *totem)
+xplayer_ui_manager_setup (Xplayer *xplayer)
 {
-	totem->main_action_group = GTK_ACTION_GROUP (gtk_builder_get_object (totem->xml, "main-action-group"));
+	xplayer->main_action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xplayer->xml, "main-action-group"));
 
 	/* FIXME: Moving these to GtkBuilder depends on bug #457631 */
-	if (gtk_widget_get_direction (totem->win) == GTK_TEXT_DIR_RTL) {
-		GtkActionGroup *action_group = GTK_ACTION_GROUP (gtk_builder_get_object (totem->xml, "skip-action-group"));
+	if (gtk_widget_get_direction (xplayer->win) == GTK_TEXT_DIR_RTL) {
+		GtkActionGroup *action_group = GTK_ACTION_GROUP (gtk_builder_get_object (xplayer->xml, "skip-action-group"));
 		GtkAction *action;
 
 		action = gtk_action_group_get_action (action_group, "skip-forward");
@@ -895,15 +895,15 @@ totem_ui_manager_setup (Totem *totem)
 		gtk_action_set_accel_path (action, "Right");
 	}
 
-	totem->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (totem->xml, "totem-ui-manager"));
+	xplayer->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (xplayer->xml, "xplayer-ui-manager"));
 
-	setup_menu_items (totem);
+	setup_menu_items (xplayer);
 
-	totem->devices_action_group = NULL;
-	totem->devices_ui_id = gtk_ui_manager_new_merge_id (totem->ui_manager);
-	totem->languages_action_group = NULL;
-	totem->languages_ui_id = gtk_ui_manager_new_merge_id (totem->ui_manager);
-	totem->subtitles_action_group = NULL;
-	totem->subtitles_ui_id = gtk_ui_manager_new_merge_id (totem->ui_manager);
+	xplayer->devices_action_group = NULL;
+	xplayer->devices_ui_id = gtk_ui_manager_new_merge_id (xplayer->ui_manager);
+	xplayer->languages_action_group = NULL;
+	xplayer->languages_ui_id = gtk_ui_manager_new_merge_id (xplayer->ui_manager);
+	xplayer->subtitles_action_group = NULL;
+	xplayer->subtitles_ui_id = gtk_ui_manager_new_merge_id (xplayer->ui_manager);
 }
 

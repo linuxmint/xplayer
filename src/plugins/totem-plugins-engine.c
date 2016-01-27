@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *
- * Plugin engine for Totem, heavily based on the code from Rhythmbox,
- * which is based heavily on the code from totem.
+ * Plugin engine for Xplayer, heavily based on the code from Rhythmbox,
+ * which is based heavily on the code from xplayer.
  *
  * Copyright (C) 2002-2005 Paolo Maggi
  *               2006 James Livingston  <jrl@ids.org.au>
@@ -39,47 +39,47 @@
 #include <libpeas/peas-activatable.h>
 #include <libpeas/peas-extension-set.h>
 
-#include "totem-dirs.h"
-#include "totem-plugins-engine.h"
+#include "xplayer-dirs.h"
+#include "xplayer-plugins-engine.h"
 
-typedef struct _TotemPluginsEnginePrivate{
+typedef struct _XplayerPluginsEnginePrivate{
 	PeasExtensionSet *activatable_extensions;
-	TotemObject *totem;
+	XplayerObject *xplayer;
 	GSettings *settings;
 	guint garbage_collect_id;
-} _TotemPluginsEnginePrivate;
+} _XplayerPluginsEnginePrivate;
 
-G_DEFINE_TYPE(TotemPluginsEngine, totem_plugins_engine, PEAS_TYPE_ENGINE)
+G_DEFINE_TYPE(XplayerPluginsEngine, xplayer_plugins_engine, PEAS_TYPE_ENGINE)
 
-static void totem_plugins_engine_dispose (GObject *object);
+static void xplayer_plugins_engine_dispose (GObject *object);
 #if 0
-static void totem_plugins_engine_activate_plugin (PeasEngine     *engine,
+static void xplayer_plugins_engine_activate_plugin (PeasEngine     *engine,
 						  PeasPluginInfo *info);
-static void totem_plugins_engine_deactivate_plugin (PeasEngine     *engine,
+static void xplayer_plugins_engine_deactivate_plugin (PeasEngine     *engine,
 						    PeasPluginInfo *info);
 #endif
 static gboolean
 garbage_collect_cb (gpointer data)
 {
-	TotemPluginsEngine *engine = (TotemPluginsEngine *) data;
+	XplayerPluginsEngine *engine = (XplayerPluginsEngine *) data;
 	peas_engine_garbage_collect (PEAS_ENGINE (engine));
 	return TRUE;
 }
 
 static void
-totem_plugins_engine_class_init (TotemPluginsEngineClass *klass)
+xplayer_plugins_engine_class_init (XplayerPluginsEngineClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->dispose = totem_plugins_engine_dispose;
-	g_type_class_add_private (klass, sizeof (TotemPluginsEnginePrivate));
+	object_class->dispose = xplayer_plugins_engine_dispose;
+	g_type_class_add_private (klass, sizeof (XplayerPluginsEnginePrivate));
 }
 
 static void
 on_activatable_extension_added (PeasExtensionSet *set,
 				PeasPluginInfo   *info,
 				PeasExtension    *exten,
-				TotemPluginsEngine *engine)
+				XplayerPluginsEngine *engine)
 {
 	peas_activatable_activate (PEAS_ACTIVATABLE (exten));
 }
@@ -88,15 +88,15 @@ static void
 on_activatable_extension_removed (PeasExtensionSet *set,
 				  PeasPluginInfo   *info,
 				  PeasExtension    *exten,
-				  TotemPluginsEngine *engine)
+				  XplayerPluginsEngine *engine)
 {
 	peas_activatable_deactivate (PEAS_ACTIVATABLE (exten));
 }
 
-TotemPluginsEngine *
-totem_plugins_engine_get_default (TotemObject *totem)
+XplayerPluginsEngine *
+xplayer_plugins_engine_get_default (XplayerObject *xplayer)
 {
-	static TotemPluginsEngine *engine = NULL;
+	static XplayerPluginsEngine *engine = NULL;
 	char **paths;
 	guint i;
 	const GList *plugin_infos, *l;
@@ -104,18 +104,18 @@ totem_plugins_engine_get_default (TotemObject *totem)
 	if (G_LIKELY (engine != NULL))
 		return g_object_ref (engine);
 
-	g_return_val_if_fail (totem != NULL, NULL);
+	g_return_val_if_fail (xplayer != NULL, NULL);
 
 	g_irepository_require (g_irepository_get_default (), "Peas", "1.0", 0, NULL);
 	g_irepository_require (g_irepository_get_default (), "PeasGtk", "1.0", 0, NULL);
-	g_irepository_require (g_irepository_get_default (), "Totem", TOTEM_API_VERSION, 0, NULL);
+	g_irepository_require (g_irepository_get_default (), "Xplayer", XPLAYER_API_VERSION, 0, NULL);
 
-	paths = totem_get_plugin_paths ();
+	paths = xplayer_get_plugin_paths ();
 
-	engine = TOTEM_PLUGINS_ENGINE (g_object_new (TOTEM_TYPE_PLUGINS_ENGINE,
+	engine = XPLAYER_PLUGINS_ENGINE (g_object_new (XPLAYER_TYPE_PLUGINS_ENGINE,
 						     NULL));
 	for (i = 0; paths[i] != NULL; i++) {
-		/* Totem uses the libdir even for noarch data */
+		/* Xplayer uses the libdir even for noarch data */
 		peas_engine_add_search_path (PEAS_ENGINE (engine),
 					     paths[i], paths[i]);
 	}
@@ -126,11 +126,11 @@ totem_plugins_engine_get_default (TotemObject *totem)
 	g_object_add_weak_pointer (G_OBJECT (engine),
 				   (gpointer) &engine);
 
-	engine->priv->totem = g_object_ref (totem);
+	engine->priv->xplayer = g_object_ref (xplayer);
 
 	engine->priv->activatable_extensions = peas_extension_set_new (PEAS_ENGINE (engine),
 								       PEAS_TYPE_ACTIVATABLE,
-								       "object", totem,
+								       "object", xplayer,
 								       NULL);
 
 	g_signal_connect (engine->priv->activatable_extensions, "extension-added",
@@ -155,13 +155,13 @@ totem_plugins_engine_get_default (TotemObject *totem)
 }
 
 /* Necessary to break the reference cycle between activatable_extensions and the engine itself. Also useful to allow the plugins to be shut down
- * earlier than the rest of Totem, so that (for example) they can display modal save dialogues and the like. */
+ * earlier than the rest of Xplayer, so that (for example) they can display modal save dialogues and the like. */
 void
-totem_plugins_engine_shut_down (TotemPluginsEngine *self)
+xplayer_plugins_engine_shut_down (XplayerPluginsEngine *self)
 {
-	TotemPluginsEnginePrivate *priv = self->priv;
+	XplayerPluginsEnginePrivate *priv = self->priv;
 
-	g_return_if_fail (TOTEM_IS_PLUGINS_ENGINE (self));
+	g_return_if_fail (XPLAYER_IS_PLUGINS_ENGINE (self));
 	g_return_if_fail (priv->activatable_extensions != NULL);
 
 	/* Disconnect from the signal handlers in case unreffing activatable_extensions doesn't finalise the PeasExtensionSet. */
@@ -177,39 +177,39 @@ totem_plugins_engine_shut_down (TotemPluginsEngine *self)
 }
 
 static void
-totem_plugins_engine_init (TotemPluginsEngine *engine)
+xplayer_plugins_engine_init (XplayerPluginsEngine *engine)
 {
 	engine->priv = G_TYPE_INSTANCE_GET_PRIVATE (engine,
-						    TOTEM_TYPE_PLUGINS_ENGINE,
-						    TotemPluginsEnginePrivate);
+						    XPLAYER_TYPE_PLUGINS_ENGINE,
+						    XplayerPluginsEnginePrivate);
 
-	engine->priv->settings = g_settings_new (TOTEM_GSETTINGS_SCHEMA);
+	engine->priv->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);
 
 	/* Commented out because it's a no-op. A further section is commented out below, and more's commented out
-	 * in totem-python-module.c. */
+	 * in xplayer-python-module.c. */
 	engine->priv->garbage_collect_id = g_timeout_add_seconds_full (G_PRIORITY_LOW, 20, garbage_collect_cb, engine, NULL);
 }
 
 static void
-totem_plugins_engine_dispose (GObject *object)
+xplayer_plugins_engine_dispose (GObject *object)
 {
-	TotemPluginsEngine *engine = TOTEM_PLUGINS_ENGINE (object);
+	XplayerPluginsEngine *engine = XPLAYER_PLUGINS_ENGINE (object);
 
 	if (engine->priv->activatable_extensions != NULL)
-		totem_plugins_engine_shut_down (engine);
+		xplayer_plugins_engine_shut_down (engine);
 
 	if (engine->priv->garbage_collect_id > 0)
 		g_source_remove (engine->priv->garbage_collect_id);
 	engine->priv->garbage_collect_id = 0;
 	peas_engine_garbage_collect (PEAS_ENGINE (engine));
 
-	if (engine->priv->totem)
-		g_object_unref (engine->priv->totem);
-	engine->priv->totem = NULL;
+	if (engine->priv->xplayer)
+		g_object_unref (engine->priv->xplayer);
+	engine->priv->xplayer = NULL;
 
 	if (engine->priv->settings != NULL)
 		g_object_unref (engine->priv->settings);
 	engine->priv->settings = NULL;
 
-	G_OBJECT_CLASS (totem_plugins_engine_parent_class)->dispose (object);
+	G_OBJECT_CLASS (xplayer_plugins_engine_parent_class)->dispose (object);
 }
