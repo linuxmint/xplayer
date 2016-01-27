@@ -15,8 +15,4 @@ EXTRA_DIST += $(ui_DATA)
 gsettings_SCHEMAS = org.gnome.xplayer.plugins.opensubtitles.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
-convertdir = $(datadir)/GConf/gsettings
-convert_DATA = opensubtitles.convert
-EXTRA_DIST += opensubtitles.convert
-
 -include $(top_srcdir)/git.mk

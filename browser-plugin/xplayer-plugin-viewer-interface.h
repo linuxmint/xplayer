@@ -77,9 +77,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER 
                                                                                  gpointer     arg_4,
                                                                                  gpointer     arg_5,
                                                                                  gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_STRING_STRING_STRING_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_STRING_STRING_STRING_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -127,9 +127,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER (GClosure     *closure
                                                            gint64       arg_1,
                                                            gpointer     arg_2,
                                                            gpointer     data2);
-  register GMarshalFunc_BOOLEAN__INT64_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__INT64_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -177,9 +177,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER (GClosur
                                                                          gint         arg_4,
                                                                          gpointer     arg_5,
                                                                          gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_UINT_INT_INT_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_UINT_INT_INT_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -226,9 +226,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER (GClosure     *closure,
   typedef gboolean (*GMarshalFunc_BOOLEAN__POINTER) (gpointer     data1,
                                                      gpointer     arg_1,
                                                      gpointer     data2);
-  register GMarshalFunc_BOOLEAN__POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -272,9 +272,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER (GClosure     *closur
                                                             gdouble      arg_1,
                                                             gpointer     arg_2,
                                                             gpointer     data2);
-  register GMarshalFunc_BOOLEAN__DOUBLE_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__DOUBLE_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -321,9 +321,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER (GClosu
                                                                           gpointer     arg_3,
                                                                           gpointer     arg_4,
                                                                           gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_STRING_STRING_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_STRING_STRING_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -371,9 +371,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER (GClosure     *c
                                                                  guint        arg_2,
                                                                  gpointer     arg_3,
                                                                  gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_UINT_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_UINT_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -419,9 +419,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER (GClosure     *closur
                                                             guint64      arg_1,
                                                             gpointer     arg_2,
                                                             gpointer     data2);
-  register GMarshalFunc_BOOLEAN__UINT64_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__UINT64_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -466,9 +466,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER (GClosure     *closure,
                                                           guint        arg_1,
                                                           gpointer     arg_2,
                                                           gpointer     data2);
-  register GMarshalFunc_BOOLEAN__UINT_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__UINT_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -514,9 +514,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER (GClosure     
                                                                    gpointer     arg_2,
                                                                    gpointer     arg_3,
                                                                    gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_STRING_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_STRING_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -562,9 +562,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER (GClosure     *closur
                                                             gpointer     arg_1,
                                                             gpointer     arg_2,
                                                             gpointer     data2);
-  register GMarshalFunc_BOOLEAN__STRING_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__STRING_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);
@@ -609,9 +609,9 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__BOOLEAN_POINTER (GClosure     *closu
                                                              gboolean     arg_1,
                                                              gpointer     arg_2,
                                                              gpointer     data2);
-  register GMarshalFunc_BOOLEAN__BOOLEAN_POINTER callback;
-  register GCClosure *cc = (GCClosure*) closure;
-  register gpointer data1, data2;
+  GMarshalFunc_BOOLEAN__BOOLEAN_POINTER callback;
+  GCClosure *cc = (GCClosure*) closure;
+  gpointer data1, data2;
   gboolean v_return;
 
   g_return_if_fail (return_value != NULL);

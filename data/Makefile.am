@@ -115,10 +115,6 @@ CLEANFILES += $(gsettings_SCHEMAS)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-convertdir = $(datadir)/GConf/gsettings
-convert_DATA = xplayer.convert
-EXTRA_DIST += $(convert_DATA)
-
 # pkg-config file for the plugin API
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = xplayer.pc

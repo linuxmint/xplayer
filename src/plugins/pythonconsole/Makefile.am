@@ -11,8 +11,4 @@ plugin_in_files = pythonconsole.plugin.in
 gsettings_SCHEMAS = org.gnome.xplayer.plugins.pythonconsole.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
-convertdir = $(datadir)/GConf/gsettings
-convert_DATA = pythonconsole.convert
-EXTRA_DIST += pythonconsole.convert
-
 -include $(top_srcdir)/git.mk

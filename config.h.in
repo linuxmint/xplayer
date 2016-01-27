@@ -9,7 +9,7 @@
 /* Define to the Gettext package name */
 #undef GETTEXT_PACKAGE
 
-/* Enable additional debugging at the expense of performance and size */
+/* Define if debugging is enabled */
 #undef GNOME_ENABLE_DEBUG
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
@@ -57,6 +57,9 @@
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
 #undef LT_OBJDIR
+
+/* Define if debugging is disabled */
+#undef NDEBUG
 
 /* Name of package */
 #undef PACKAGE
