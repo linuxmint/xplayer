@@ -98,7 +98,8 @@ am__DEPENDENCIES_1 =
 libxplayergsthelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_libxplayergsthelpers_la_OBJECTS =  \
 	libxplayergsthelpers_la-xplayer-gst-helpers.lo
-libxplayergsthelpers_la_OBJECTS = $(am_libxplayergsthelpers_la_OBJECTS)
+libxplayergsthelpers_la_OBJECTS =  \
+	$(am_libxplayergsthelpers_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -119,7 +120,8 @@ libxplayergstpixbufhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 libxplayerrtlhelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_libxplayerrtlhelpers_la_OBJECTS =  \
 	libxplayerrtlhelpers_la-xplayer-rtl-helpers.lo
-libxplayerrtlhelpers_la_OBJECTS = $(am_libxplayerrtlhelpers_la_OBJECTS)
+libxplayerrtlhelpers_la_OBJECTS =  \
+	$(am_libxplayerrtlhelpers_la_OBJECTS)
 libxplayerrtlhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libxplayerrtlhelpers_la_CFLAGS) $(CFLAGS) \
@@ -127,7 +129,8 @@ libxplayerrtlhelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 libxplayertimehelpers_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_libxplayertimehelpers_la_OBJECTS =  \
 	libxplayertimehelpers_la-xplayer-time-helpers.lo
-libxplayertimehelpers_la_OBJECTS = $(am_libxplayertimehelpers_la_OBJECTS)
+libxplayertimehelpers_la_OBJECTS =  \
+	$(am_libxplayertimehelpers_la_OBJECTS)
 libxplayertimehelpers_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libxplayertimehelpers_la_CFLAGS) $(CFLAGS) \
@@ -380,11 +383,6 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
-XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
-XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
-XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
-XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -392,6 +390,11 @@ WARN_CFLAGS = @WARN_CFLAGS@
 WARN_CXXFLAGS = @WARN_CXXFLAGS@
 XGETTEXT = @XGETTEXT@
 XMLLINT = @XMLLINT@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@

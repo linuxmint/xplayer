@@ -4,7 +4,7 @@
 
 Summary: Movie player for GNOME 2
 Name: xplayer
-Version: 3.10.1
+Version: 1.0.0
 Release: 1
 License: GPL
 Group: Applications/Multimedia

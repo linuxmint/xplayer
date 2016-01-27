@@ -82,14 +82,14 @@
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
 
-/* Define to the Xplayer plugin API version */
-#undef XPLAYER_API_VERSION
-
-/* enable search for UI files and plugins in local directory */
-#undef XPLAYER_RUN_IN_SOURCE_TREE
-
 /* Version number of package */
 #undef VERSION
 
 /* Define if smclient is enabled */
 #undef WITH_SMCLIENT
+
+/* Define to the Xplayer plugin API version */
+#undef XPLAYER_API_VERSION
+
+/* enable search for UI files and plugins in local directory */
+#undef XPLAYER_RUN_IN_SOURCE_TREE

@@ -1,8 +1,8 @@
 AC_PREREQ[(2.64)]
 
-m4_define(xplayer_version_major, 3)
-m4_define(xplayer_version_minor, 10)
-m4_define(xplayer_version_micro, 1)
+m4_define(xplayer_version_major, 1)
+m4_define(xplayer_version_minor, 0)
+m4_define(xplayer_version_micro, 0)
 
 # The version of the API exposed to plugins
 m4_define(xplayer_api_version_major, 1)
@@ -10,9 +10,9 @@ m4_define(xplayer_api_version_minor, 0)
 
 AC_INIT([xplayer],
         [xplayer_version_major.xplayer_version_minor.xplayer_version_micro],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer],
+        [http://github.com/linuxmint/xplayer],
         [xplayer],
-        [http://projects.gnome.org/xplayer/])
+        [http://github.com/linuxmint/xplayer/])
 
 AM_MAINTAINER_MODE([enable])
 AC_CONFIG_SRCDIR([src/xplayer.c])
@@ -52,7 +52,7 @@ AC_PATH_PROG([GLIB_MKENUMS],[glib-mkenums])
 GLIB_REQS=2.33.0
 GIO_REQS=2.27.92
 GTK_REQS=3.5.2
-XPLAYER_PLPARSER_REQS=3.9.92
+XPLAYER_PLPARSER_REQS=1.0.0
 GNOMEICON_REQS=2.15.90
 DBUS_REQS=0.82
 VALA_REQS=0.14.1

@@ -367,11 +367,6 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
-XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
-XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
-XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
-XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -379,6 +374,11 @@ WARN_CFLAGS = @WARN_CFLAGS@
 WARN_CXXFLAGS = @WARN_CXXFLAGS@
 XGETTEXT = @XGETTEXT@
 XMLLINT = @XMLLINT@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -573,8 +573,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-bacon-video-widget-gst-missing-plugins.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-bacon-video-widget.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-gsd-osd-window.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-video-utils.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbaconvideowidget_la-xplayer-aspect-frame.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

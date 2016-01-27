@@ -57,18 +57,18 @@ G_BEGIN_DECLS
 
 /* BOOLEAN:STRING,STRING,STRING,STRING,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER (GClosure     *closure,
-                                                                                           GValue       *return_value,
-                                                                                           guint         n_param_values,
-                                                                                           const GValue *param_values,
-                                                                                           gpointer      invocation_hint,
-                                                                                           gpointer      marshal_data);
+                                                                                             GValue       *return_value,
+                                                                                             guint         n_param_values,
+                                                                                             const GValue *param_values,
+                                                                                             gpointer      invocation_hint,
+                                                                                             gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER (GClosure     *closure,
-                                                                               GValue       *return_value G_GNUC_UNUSED,
-                                                                               guint         n_param_values,
-                                                                               const GValue *param_values,
-                                                                               gpointer      invocation_hint G_GNUC_UNUSED,
-                                                                               gpointer      marshal_data)
+                                                                                 GValue       *return_value G_GNUC_UNUSED,
+                                                                                 guint         n_param_values,
+                                                                                 const GValue *param_values,
+                                                                                 gpointer      invocation_hint G_GNUC_UNUSED,
+                                                                                 gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_STRING_STRING_STRING_POINTER) (gpointer     data1,
                                                                                  gpointer     arg_1,
@@ -110,18 +110,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER 
 
 /* BOOLEAN:INT64,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER (GClosure     *closure,
-                                                                     GValue       *return_value,
-                                                                     guint         n_param_values,
-                                                                     const GValue *param_values,
-                                                                     gpointer      invocation_hint,
-                                                                     gpointer      marshal_data);
+                                                                       GValue       *return_value,
+                                                                       guint         n_param_values,
+                                                                       const GValue *param_values,
+                                                                       gpointer      invocation_hint,
+                                                                       gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER (GClosure     *closure,
-                                                         GValue       *return_value G_GNUC_UNUSED,
-                                                         guint         n_param_values,
-                                                         const GValue *param_values,
-                                                         gpointer      invocation_hint G_GNUC_UNUSED,
-                                                         gpointer      marshal_data)
+                                                           GValue       *return_value G_GNUC_UNUSED,
+                                                           guint         n_param_values,
+                                                           const GValue *param_values,
+                                                           gpointer      invocation_hint G_GNUC_UNUSED,
+                                                           gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__INT64_POINTER) (gpointer     data1,
                                                            gint64       arg_1,
@@ -157,18 +157,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER (GClosure     *closure
 
 /* BOOLEAN:STRING,UINT,INT,INT,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER (GClosure     *closure,
-                                                                                   GValue       *return_value,
-                                                                                   guint         n_param_values,
-                                                                                   const GValue *param_values,
-                                                                                   gpointer      invocation_hint,
-                                                                                   gpointer      marshal_data);
+                                                                                     GValue       *return_value,
+                                                                                     guint         n_param_values,
+                                                                                     const GValue *param_values,
+                                                                                     gpointer      invocation_hint,
+                                                                                     gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER (GClosure     *closure,
-                                                                       GValue       *return_value G_GNUC_UNUSED,
-                                                                       guint         n_param_values,
-                                                                       const GValue *param_values,
-                                                                       gpointer      invocation_hint G_GNUC_UNUSED,
-                                                                       gpointer      marshal_data)
+                                                                         GValue       *return_value G_GNUC_UNUSED,
+                                                                         guint         n_param_values,
+                                                                         const GValue *param_values,
+                                                                         gpointer      invocation_hint G_GNUC_UNUSED,
+                                                                         gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_UINT_INT_INT_POINTER) (gpointer     data1,
                                                                          gpointer     arg_1,
@@ -210,18 +210,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER (GClosur
 
 /* BOOLEAN:POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER (GClosure     *closure,
-                                                               GValue       *return_value,
-                                                               guint         n_param_values,
-                                                               const GValue *param_values,
-                                                               gpointer      invocation_hint,
-                                                               gpointer      marshal_data);
+                                                                 GValue       *return_value,
+                                                                 guint         n_param_values,
+                                                                 const GValue *param_values,
+                                                                 gpointer      invocation_hint,
+                                                                 gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER (GClosure     *closure,
-                                                   GValue       *return_value G_GNUC_UNUSED,
-                                                   guint         n_param_values,
-                                                   const GValue *param_values,
-                                                   gpointer      invocation_hint G_GNUC_UNUSED,
-                                                   gpointer      marshal_data)
+                                                     GValue       *return_value G_GNUC_UNUSED,
+                                                     guint         n_param_values,
+                                                     const GValue *param_values,
+                                                     gpointer      invocation_hint G_GNUC_UNUSED,
+                                                     gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__POINTER) (gpointer     data1,
                                                      gpointer     arg_1,
@@ -255,18 +255,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER (GClosure     *closure,
 
 /* BOOLEAN:DOUBLE,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER (GClosure     *closure,
-                                                                      GValue       *return_value,
-                                                                      guint         n_param_values,
-                                                                      const GValue *param_values,
-                                                                      gpointer      invocation_hint,
-                                                                      gpointer      marshal_data);
+                                                                        GValue       *return_value,
+                                                                        guint         n_param_values,
+                                                                        const GValue *param_values,
+                                                                        gpointer      invocation_hint,
+                                                                        gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER (GClosure     *closure,
-                                                          GValue       *return_value G_GNUC_UNUSED,
-                                                          guint         n_param_values,
-                                                          const GValue *param_values,
-                                                          gpointer      invocation_hint G_GNUC_UNUSED,
-                                                          gpointer      marshal_data)
+                                                            GValue       *return_value G_GNUC_UNUSED,
+                                                            guint         n_param_values,
+                                                            const GValue *param_values,
+                                                            gpointer      invocation_hint G_GNUC_UNUSED,
+                                                            gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__DOUBLE_POINTER) (gpointer     data1,
                                                             gdouble      arg_1,
@@ -302,18 +302,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER (GClosure     *closur
 
 /* BOOLEAN:STRING,STRING,STRING,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER (GClosure     *closure,
-                                                                                    GValue       *return_value,
-                                                                                    guint         n_param_values,
-                                                                                    const GValue *param_values,
-                                                                                    gpointer      invocation_hint,
-                                                                                    gpointer      marshal_data);
+                                                                                      GValue       *return_value,
+                                                                                      guint         n_param_values,
+                                                                                      const GValue *param_values,
+                                                                                      gpointer      invocation_hint,
+                                                                                      gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER (GClosure     *closure,
-                                                                        GValue       *return_value G_GNUC_UNUSED,
-                                                                        guint         n_param_values,
-                                                                        const GValue *param_values,
-                                                                        gpointer      invocation_hint G_GNUC_UNUSED,
-                                                                        gpointer      marshal_data)
+                                                                          GValue       *return_value G_GNUC_UNUSED,
+                                                                          guint         n_param_values,
+                                                                          const GValue *param_values,
+                                                                          gpointer      invocation_hint G_GNUC_UNUSED,
+                                                                          gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_STRING_STRING_POINTER) (gpointer     data1,
                                                                           gpointer     arg_1,
@@ -353,18 +353,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER (GClosu
 
 /* BOOLEAN:STRING,UINT,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER (GClosure     *closure,
-                                                                           GValue       *return_value,
-                                                                           guint         n_param_values,
-                                                                           const GValue *param_values,
-                                                                           gpointer      invocation_hint,
-                                                                           gpointer      marshal_data);
+                                                                             GValue       *return_value,
+                                                                             guint         n_param_values,
+                                                                             const GValue *param_values,
+                                                                             gpointer      invocation_hint,
+                                                                             gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER (GClosure     *closure,
-                                                               GValue       *return_value G_GNUC_UNUSED,
-                                                               guint         n_param_values,
-                                                               const GValue *param_values,
-                                                               gpointer      invocation_hint G_GNUC_UNUSED,
-                                                               gpointer      marshal_data)
+                                                                 GValue       *return_value G_GNUC_UNUSED,
+                                                                 guint         n_param_values,
+                                                                 const GValue *param_values,
+                                                                 gpointer      invocation_hint G_GNUC_UNUSED,
+                                                                 gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_UINT_POINTER) (gpointer     data1,
                                                                  gpointer     arg_1,
@@ -402,18 +402,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER (GClosure     *c
 
 /* BOOLEAN:UINT64,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER (GClosure     *closure,
-                                                                      GValue       *return_value,
-                                                                      guint         n_param_values,
-                                                                      const GValue *param_values,
-                                                                      gpointer      invocation_hint,
-                                                                      gpointer      marshal_data);
+                                                                        GValue       *return_value,
+                                                                        guint         n_param_values,
+                                                                        const GValue *param_values,
+                                                                        gpointer      invocation_hint,
+                                                                        gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER (GClosure     *closure,
-                                                          GValue       *return_value G_GNUC_UNUSED,
-                                                          guint         n_param_values,
-                                                          const GValue *param_values,
-                                                          gpointer      invocation_hint G_GNUC_UNUSED,
-                                                          gpointer      marshal_data)
+                                                            GValue       *return_value G_GNUC_UNUSED,
+                                                            guint         n_param_values,
+                                                            const GValue *param_values,
+                                                            gpointer      invocation_hint G_GNUC_UNUSED,
+                                                            gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__UINT64_POINTER) (gpointer     data1,
                                                             guint64      arg_1,
@@ -449,18 +449,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER (GClosure     *closur
 
 /* BOOLEAN:UINT,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER (GClosure     *closure,
-                                                                    GValue       *return_value,
-                                                                    guint         n_param_values,
-                                                                    const GValue *param_values,
-                                                                    gpointer      invocation_hint,
-                                                                    gpointer      marshal_data);
+                                                                      GValue       *return_value,
+                                                                      guint         n_param_values,
+                                                                      const GValue *param_values,
+                                                                      gpointer      invocation_hint,
+                                                                      gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER (GClosure     *closure,
-                                                        GValue       *return_value G_GNUC_UNUSED,
-                                                        guint         n_param_values,
-                                                        const GValue *param_values,
-                                                        gpointer      invocation_hint G_GNUC_UNUSED,
-                                                        gpointer      marshal_data)
+                                                          GValue       *return_value G_GNUC_UNUSED,
+                                                          guint         n_param_values,
+                                                          const GValue *param_values,
+                                                          gpointer      invocation_hint G_GNUC_UNUSED,
+                                                          gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__UINT_POINTER) (gpointer     data1,
                                                           guint        arg_1,
@@ -496,18 +496,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER (GClosure     *closure,
 
 /* BOOLEAN:STRING,STRING,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER (GClosure     *closure,
-                                                                             GValue       *return_value,
-                                                                             guint         n_param_values,
-                                                                             const GValue *param_values,
-                                                                             gpointer      invocation_hint,
-                                                                             gpointer      marshal_data);
+                                                                               GValue       *return_value,
+                                                                               guint         n_param_values,
+                                                                               const GValue *param_values,
+                                                                               gpointer      invocation_hint,
+                                                                               gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER (GClosure     *closure,
-                                                                 GValue       *return_value G_GNUC_UNUSED,
-                                                                 guint         n_param_values,
-                                                                 const GValue *param_values,
-                                                                 gpointer      invocation_hint G_GNUC_UNUSED,
-                                                                 gpointer      marshal_data)
+                                                                   GValue       *return_value G_GNUC_UNUSED,
+                                                                   guint         n_param_values,
+                                                                   const GValue *param_values,
+                                                                   gpointer      invocation_hint G_GNUC_UNUSED,
+                                                                   gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_STRING_POINTER) (gpointer     data1,
                                                                    gpointer     arg_1,
@@ -545,18 +545,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER (GClosure     
 
 /* BOOLEAN:STRING,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER (GClosure     *closure,
-                                                                      GValue       *return_value,
-                                                                      guint         n_param_values,
-                                                                      const GValue *param_values,
-                                                                      gpointer      invocation_hint,
-                                                                      gpointer      marshal_data);
+                                                                        GValue       *return_value,
+                                                                        guint         n_param_values,
+                                                                        const GValue *param_values,
+                                                                        gpointer      invocation_hint,
+                                                                        gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER (GClosure     *closure,
-                                                          GValue       *return_value G_GNUC_UNUSED,
-                                                          guint         n_param_values,
-                                                          const GValue *param_values,
-                                                          gpointer      invocation_hint G_GNUC_UNUSED,
-                                                          gpointer      marshal_data)
+                                                            GValue       *return_value G_GNUC_UNUSED,
+                                                            guint         n_param_values,
+                                                            const GValue *param_values,
+                                                            gpointer      invocation_hint G_GNUC_UNUSED,
+                                                            gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__STRING_POINTER) (gpointer     data1,
                                                             gpointer     arg_1,
@@ -592,18 +592,18 @@ dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER (GClosure     *closur
 
 /* BOOLEAN:BOOLEAN,POINTER */
 extern void dbus_glib_marshal_xplayer_embedded_BOOLEAN__BOOLEAN_POINTER (GClosure     *closure,
-                                                                       GValue       *return_value,
-                                                                       guint         n_param_values,
-                                                                       const GValue *param_values,
-                                                                       gpointer      invocation_hint,
-                                                                       gpointer      marshal_data);
+                                                                         GValue       *return_value,
+                                                                         guint         n_param_values,
+                                                                         const GValue *param_values,
+                                                                         gpointer      invocation_hint,
+                                                                         gpointer      marshal_data);
 void
 dbus_glib_marshal_xplayer_embedded_BOOLEAN__BOOLEAN_POINTER (GClosure     *closure,
-                                                           GValue       *return_value G_GNUC_UNUSED,
-                                                           guint         n_param_values,
-                                                           const GValue *param_values,
-                                                           gpointer      invocation_hint G_GNUC_UNUSED,
-                                                           gpointer      marshal_data)
+                                                             GValue       *return_value G_GNUC_UNUSED,
+                                                             guint         n_param_values,
+                                                             const GValue *param_values,
+                                                             gpointer      invocation_hint G_GNUC_UNUSED,
+                                                             gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__BOOLEAN_POINTER) (gpointer     data1,
                                                              gboolean     arg_1,
@@ -644,23 +644,23 @@ G_END_DECLS
 #include <dbus/dbus-glib.h>
 static const DBusGMethodInfo dbus_glib_xplayer_embedded_methods[] = {
   { (GCallback) xplayer_embedded_do_command, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER, 0 },
-  { (GCallback) xplayer_embedded_set_window, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER, 54 },
-  { (GCallback) xplayer_embedded_unset_window, dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER, 138 },
-  { (GCallback) xplayer_embedded_setup_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 190 },
-  { (GCallback) xplayer_embedded_open_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER, 254 },
-  { (GCallback) xplayer_embedded_close_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 306 },
-  { (GCallback) xplayer_embedded_open_uri, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 350 },
-  { (GCallback) xplayer_embedded_set_playlist, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER, 410 },
-  { (GCallback) xplayer_embedded_set_local_file, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER, 483 },
-  { (GCallback) xplayer_embedded_set_local_cache, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER, 557 },
-  { (GCallback) xplayer_embedded_set_href, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 612 },
-  { (GCallback) xplayer_embedded_set_error_logo, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 675 },
-  { (GCallback) xplayer_embedded_launch_player, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER, 720 },
-  { (GCallback) xplayer_embedded_set_volume, dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER, 782 },
-  { (GCallback) xplayer_embedded_clear_playlist, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 835 },
-  { (GCallback) xplayer_embedded_add_item, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER, 881 },
-  { (GCallback) xplayer_embedded_set_fullscreen, dbus_glib_marshal_xplayer_embedded_BOOLEAN__BOOLEAN_POINTER, 964 },
-  { (GCallback) xplayer_embedded_set_time, dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER, 1032 },
+  { (GCallback) xplayer_embedded_set_window, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_INT_INT_POINTER, 56 },
+  { (GCallback) xplayer_embedded_unset_window, dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT_POINTER, 142 },
+  { (GCallback) xplayer_embedded_setup_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 196 },
+  { (GCallback) xplayer_embedded_open_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__INT64_POINTER, 262 },
+  { (GCallback) xplayer_embedded_close_stream, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 316 },
+  { (GCallback) xplayer_embedded_open_uri, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 362 },
+  { (GCallback) xplayer_embedded_set_playlist, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER, 424 },
+  { (GCallback) xplayer_embedded_set_local_file, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_POINTER, 499 },
+  { (GCallback) xplayer_embedded_set_local_cache, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_POINTER, 575 },
+  { (GCallback) xplayer_embedded_set_href, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_POINTER, 632 },
+  { (GCallback) xplayer_embedded_set_error_logo, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 697 },
+  { (GCallback) xplayer_embedded_launch_player, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_UINT_POINTER, 744 },
+  { (GCallback) xplayer_embedded_set_volume, dbus_glib_marshal_xplayer_embedded_BOOLEAN__DOUBLE_POINTER, 808 },
+  { (GCallback) xplayer_embedded_clear_playlist, dbus_glib_marshal_xplayer_embedded_BOOLEAN__POINTER, 863 },
+  { (GCallback) xplayer_embedded_add_item, dbus_glib_marshal_xplayer_embedded_BOOLEAN__STRING_STRING_STRING_STRING_POINTER, 911 },
+  { (GCallback) xplayer_embedded_set_fullscreen, dbus_glib_marshal_xplayer_embedded_BOOLEAN__BOOLEAN_POINTER, 996 },
+  { (GCallback) xplayer_embedded_set_time, dbus_glib_marshal_xplayer_embedded_BOOLEAN__UINT64_POINTER, 1066 },
 };
 
 const DBusGObjectInfo dbus_glib_xplayer_embedded_object_info = {  1,

@@ -144,15 +144,17 @@ am__DEPENDENCIES_1 =
 am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
 @ENABLE_CONE_PLUGIN_TRUE@libxplayer_cone_plugin_la_DEPENDENCIES =  \
 @ENABLE_CONE_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libxplayer_cone_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
-	xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+am__libxplayer_cone_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
+	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
 	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
-	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
-	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
-	xplayerConeAudio.cpp xplayerConeAudio.h xplayerCone.cpp xplayerCone.h \
-	xplayerConeInput.cpp xplayerConeInput.h xplayerConePlaylist.cpp \
-	xplayerConePlaylist.h xplayerConePlaylistItems.cpp \
-	xplayerConePlaylistItems.h xplayerConeVideo.cpp xplayerConeVideo.h
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp \
+	xplayerPlugin.cpp xplayerPlugin.h \
+	xplayer-plugin-viewer-constants.h xplayerConeAudio.cpp \
+	xplayerConeAudio.h xplayerCone.cpp xplayerCone.h \
+	xplayerConeInput.cpp xplayerConeInput.h \
+	xplayerConePlaylist.cpp xplayerConePlaylist.h \
+	xplayerConePlaylistItems.cpp xplayerConePlaylistItems.h \
+	xplayerConeVideo.cpp xplayerConeVideo.h
 am__objects_1 = libxplayer_cone_plugin_la-xplayerNPNGlue.lo \
 	libxplayer_cone_plugin_la-xplayerNPClass.lo \
 	libxplayer_cone_plugin_la-xplayerNPObject.lo \
@@ -180,15 +182,16 @@ libxplayer_cone_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 @ENABLE_CONE_PLUGIN_TRUE@	$(plugindir)
 @ENABLE_GMP_PLUGIN_TRUE@libxplayer_gmp_plugin_la_DEPENDENCIES =  \
 @ENABLE_GMP_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libxplayer_gmp_plugin_la_SOURCES_DIST = npapi.h npruntime.h npupp.h \
-	xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
+am__libxplayer_gmp_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
+	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
 	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
-	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
-	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
-	xplayerGMPControls.cpp xplayerGMPControls.h xplayerGMPError.cpp \
-	xplayerGMPError.h xplayerGMPNetwork.cpp xplayerGMPNetwork.h \
-	xplayerGMPPlayer.cpp xplayerGMPPlayer.h xplayerGMPPlaylist.cpp \
-	xplayerGMPPlaylist.h xplayerGMPSettings.cpp xplayerGMPSettings.h
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp \
+	xplayerPlugin.cpp xplayerPlugin.h \
+	xplayer-plugin-viewer-constants.h xplayerGMPControls.cpp \
+	xplayerGMPControls.h xplayerGMPError.cpp xplayerGMPError.h \
+	xplayerGMPNetwork.cpp xplayerGMPNetwork.h xplayerGMPPlayer.cpp \
+	xplayerGMPPlayer.h xplayerGMPPlaylist.cpp xplayerGMPPlaylist.h \
+	xplayerGMPSettings.cpp xplayerGMPSettings.h
 am__objects_2 = libxplayer_gmp_plugin_la-xplayerNPNGlue.lo \
 	libxplayer_gmp_plugin_la-xplayerNPClass.lo \
 	libxplayer_gmp_plugin_la-xplayerNPObject.lo \
@@ -202,7 +205,8 @@ am__objects_2 = libxplayer_gmp_plugin_la-xplayerNPNGlue.lo \
 @ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPPlayer.lo \
 @ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPPlaylist.lo \
 @ENABLE_GMP_PLUGIN_TRUE@	libxplayer_gmp_plugin_la-xplayerGMPSettings.lo
-libxplayer_gmp_plugin_la_OBJECTS = $(am_libxplayer_gmp_plugin_la_OBJECTS)
+libxplayer_gmp_plugin_la_OBJECTS =  \
+	$(am_libxplayer_gmp_plugin_la_OBJECTS)
 libxplayer_gmp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(libxplayer_gmp_plugin_la_CXXFLAGS) $(CXXFLAGS) \
@@ -214,9 +218,10 @@ libxplayer_gmp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 am__libxplayer_mully_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
 	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
 	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
-	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
-	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
-	xplayerMullYPlugin.cpp xplayerMullYPlugin.h
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp \
+	xplayerPlugin.cpp xplayerPlugin.h \
+	xplayer-plugin-viewer-constants.h xplayerMullYPlugin.cpp \
+	xplayerMullYPlugin.h
 am__objects_3 = libxplayer_mully_plugin_la-xplayerNPNGlue.lo \
 	libxplayer_mully_plugin_la-xplayerNPClass.lo \
 	libxplayer_mully_plugin_la-xplayerNPObject.lo \
@@ -231,16 +236,17 @@ libxplayer_mully_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(libxplayer_mully_plugin_la_CXXFLAGS) $(CXXFLAGS) \
 	$(libxplayer_mully_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_MULLY_PLUGIN_TRUE@am_libxplayer_mully_plugin_la_rpath = -rpath \
-@ENABLE_MULLY_PLUGIN_TRUE@	$(plugindir)
+@ENABLE_MULLY_PLUGIN_TRUE@am_libxplayer_mully_plugin_la_rpath =  \
+@ENABLE_MULLY_PLUGIN_TRUE@	-rpath $(plugindir)
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@libxplayer_narrowspace_plugin_la_DEPENDENCIES =  \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	$(am__DEPENDENCIES_2)
-am__libxplayer_narrowspace_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
-	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
-	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
-	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
-	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
-	xplayerNarrowSpacePlugin.cpp xplayerNarrowSpacePlugin.h
+am__libxplayer_narrowspace_plugin_la_SOURCES_DIST = npapi.h \
+	npruntime.h npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp \
+	xplayerNPClass.h xplayerNPObject.cpp xplayerNPObject.h \
+	xplayerNPObjectWrapper.h xplayerNPVariantWrapper.h \
+	xplayerPluginGlue.cpp xplayerPlugin.cpp xplayerPlugin.h \
+	xplayer-plugin-viewer-constants.h xplayerNarrowSpacePlugin.cpp \
+	xplayerNarrowSpacePlugin.h
 am__objects_4 = libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo \
 	libxplayer_narrowspace_plugin_la-xplayerNPClass.lo \
 	libxplayer_narrowspace_plugin_la-xplayerNPObject.lo \
@@ -251,10 +257,11 @@ am__objects_4 = libxplayer_narrowspace_plugin_la-xplayerNPNGlue.lo \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	libxplayer_narrowspace_plugin_la-xplayerNarrowSpacePlugin.lo
 libxplayer_narrowspace_plugin_la_OBJECTS =  \
 	$(am_libxplayer_narrowspace_plugin_la_OBJECTS)
-libxplayer_narrowspace_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(libxplayer_narrowspace_plugin_la_CXXFLAGS) $(CXXFLAGS) \
-	$(libxplayer_narrowspace_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+libxplayer_narrowspace_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) \
+	--tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
+	$(CXXLD) $(libxplayer_narrowspace_plugin_la_CXXFLAGS) \
+	$(CXXFLAGS) $(libxplayer_narrowspace_plugin_la_LDFLAGS) \
+	$(LDFLAGS) -o $@
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@am_libxplayer_narrowspace_plugin_la_rpath =  \
 @ENABLE_NARROWSPACE_PLUGIN_TRUE@	-rpath $(plugindir)
 @ENABLE_VEGAS_PLUGIN_TRUE@libxplayer_vegas_plugin_la_DEPENDENCIES =  \
@@ -262,9 +269,10 @@ libxplayer_narrowspace_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 am__libxplayer_vegas_plugin_la_SOURCES_DIST = npapi.h npruntime.h \
 	npupp.h xplayerNPNGlue.cpp xplayerNPClass.cpp xplayerNPClass.h \
 	xplayerNPObject.cpp xplayerNPObject.h xplayerNPObjectWrapper.h \
-	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp xplayerPlugin.cpp \
-	xplayerPlugin.h xplayer-plugin-viewer-constants.h \
-	xplayerVegasPlugin.cpp xplayerVegasPlugin.h
+	xplayerNPVariantWrapper.h xplayerPluginGlue.cpp \
+	xplayerPlugin.cpp xplayerPlugin.h \
+	xplayer-plugin-viewer-constants.h xplayerVegasPlugin.cpp \
+	xplayerVegasPlugin.h
 am__objects_5 = libxplayer_vegas_plugin_la-xplayerNPNGlue.lo \
 	libxplayer_vegas_plugin_la-xplayerNPClass.lo \
 	libxplayer_vegas_plugin_la-xplayerNPObject.lo \
@@ -279,8 +287,8 @@ libxplayer_vegas_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(libxplayer_vegas_plugin_la_CXXFLAGS) $(CXXFLAGS) \
 	$(libxplayer_vegas_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
-@ENABLE_VEGAS_PLUGIN_TRUE@am_libxplayer_vegas_plugin_la_rpath = -rpath \
-@ENABLE_VEGAS_PLUGIN_TRUE@	$(plugindir)
+@ENABLE_VEGAS_PLUGIN_TRUE@am_libxplayer_vegas_plugin_la_rpath =  \
+@ENABLE_VEGAS_PLUGIN_TRUE@	-rpath $(plugindir)
 PROGRAMS = $(libexec_PROGRAMS) $(noinst_PROGRAMS)
 am_test_glow_button_OBJECTS =  \
 	test_glow_button-xplayer-glow-button.$(OBJEXT) \
@@ -580,11 +588,6 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
-XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
-XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
-XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
-XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -592,6 +595,11 @@ WARN_CFLAGS = @WARN_CFLAGS@
 WARN_CXXFLAGS = @WARN_CXXFLAGS@
 XGETTEXT = @XGETTEXT@
 XMLLINT = @XMLLINT@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@

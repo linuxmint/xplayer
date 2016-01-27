@@ -172,14 +172,15 @@ libxplayer_la_DEPENDENCIES = libxplayer_player.la \
 	backend/libbaconvideowidget.la $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_2)
 am__libxplayer_la_SOURCES_DIST = xplayer.h xplayer-interface.h \
-	plugins/xplayer-plugin.h plugins/xplayer-dirs.h xplayer-object.c \
-	xplayer-private.h xplayer-preferences.c xplayer-preferences.h \
-	xplayer-dnd-menu.c xplayer-dnd-menu.h xplayer-options.c \
-	xplayer-options.h xplayer-playlist.c xplayer-playlist.h \
-	eggfileformatchooser.c eggfileformatchooser.h egg-macros.h \
-	xplayer-session.c xplayer-session.h xplayer-sidebar.c \
-	xplayer-sidebar.h xplayer-open-location.c xplayer-open-location.h \
-	xplayer-menu.c xplayer-menu.h xplayer-uri.c xplayer-uri.h \
+	plugins/xplayer-plugin.h plugins/xplayer-dirs.h \
+	xplayer-object.c xplayer-private.h xplayer-preferences.c \
+	xplayer-preferences.h xplayer-dnd-menu.c xplayer-dnd-menu.h \
+	xplayer-options.c xplayer-options.h xplayer-playlist.c \
+	xplayer-playlist.h eggfileformatchooser.c \
+	eggfileformatchooser.h egg-macros.h xplayer-session.c \
+	xplayer-session.h xplayer-sidebar.c xplayer-sidebar.h \
+	xplayer-open-location.c xplayer-open-location.h xplayer-menu.c \
+	xplayer-menu.h xplayer-uri.c xplayer-uri.h \
 	xplayer-subtitle-encoding.c xplayer-subtitle-encoding.h \
 	xplayer-profile.h plugins/xplayer-plugins-engine.c \
 	plugins/xplayer-plugins-engine.h plugins/xplayer-dirs.c \
@@ -192,17 +193,21 @@ am__objects_1 =
 @WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_XSMP_TRUE@	libxplayer_la-eggsmclient-xsmp.lo
 @WITH_SMCLIENT_TRUE@@WITH_SMCLIENT_WIN32_TRUE@am__objects_4 = libxplayer_la-eggsmclient-win32.lo
 @WITH_SMCLIENT_QUARTZ_TRUE@@WITH_SMCLIENT_TRUE@am__objects_5 = libxplayer_la-eggsmclient-osx.lo
-am_libxplayer_la_OBJECTS = $(am__objects_1) libxplayer_la-xplayer-object.lo \
-	libxplayer_la-xplayer-preferences.lo libxplayer_la-xplayer-dnd-menu.lo \
-	libxplayer_la-xplayer-options.lo libxplayer_la-xplayer-playlist.lo \
+am_libxplayer_la_OBJECTS = $(am__objects_1) \
+	libxplayer_la-xplayer-object.lo \
+	libxplayer_la-xplayer-preferences.lo \
+	libxplayer_la-xplayer-dnd-menu.lo \
+	libxplayer_la-xplayer-options.lo \
+	libxplayer_la-xplayer-playlist.lo \
 	libxplayer_la-eggfileformatchooser.lo \
-	libxplayer_la-xplayer-session.lo libxplayer_la-xplayer-sidebar.lo \
-	libxplayer_la-xplayer-open-location.lo libxplayer_la-xplayer-menu.lo \
-	libxplayer_la-xplayer-uri.lo \
+	libxplayer_la-xplayer-session.lo \
+	libxplayer_la-xplayer-sidebar.lo \
+	libxplayer_la-xplayer-open-location.lo \
+	libxplayer_la-xplayer-menu.lo libxplayer_la-xplayer-uri.lo \
 	libxplayer_la-xplayer-subtitle-encoding.lo \
-	libxplayer_la-xplayer-plugins-engine.lo libxplayer_la-xplayer-dirs.lo \
-	$(am__objects_2) $(am__objects_3) $(am__objects_4) \
-	$(am__objects_5)
+	libxplayer_la-xplayer-plugins-engine.lo \
+	libxplayer_la-xplayer-dirs.lo $(am__objects_2) \
+	$(am__objects_3) $(am__objects_4) $(am__objects_5)
 libxplayer_la_OBJECTS = $(am_libxplayer_la_OBJECTS)
 libxplayer_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libxplayer_la_CFLAGS) \
@@ -240,8 +245,8 @@ am_xplayer_OBJECTS = xplayer-xplayer.$(OBJEXT)
 xplayer_OBJECTS = $(am_xplayer_OBJECTS)
 xplayer_DEPENDENCIES = libxplayer.la $(am__DEPENDENCIES_1)
 xplayer_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(xplayer_CFLAGS) $(CFLAGS) \
-	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(xplayer_CFLAGS) \
+	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 am_xplayer_audio_preview_OBJECTS =  \
 	xplayer_audio_preview-xplayer-audio-preview.$(OBJEXT) \
 	xplayer_audio_preview-xplayer-resources.$(OBJEXT)
@@ -304,7 +309,8 @@ SOURCES = $(libxplayer_properties_page_la_SOURCES) \
 	$(xplayer_audio_preview_SOURCES) \
 	$(xplayer_video_thumbnailer_SOURCES)
 DIST_SOURCES = $(am__libxplayer_properties_page_la_SOURCES_DIST) \
-	$(am__libxplayer_la_SOURCES_DIST) $(libxplayer_player_la_SOURCES) \
+	$(am__libxplayer_la_SOURCES_DIST) \
+	$(libxplayer_player_la_SOURCES) \
 	$(am__test_properties_page_SOURCES_DIST) $(xplayer_SOURCES) \
 	$(xplayer_audio_preview_SOURCES) \
 	$(xplayer_video_thumbnailer_SOURCES)
@@ -571,11 +577,6 @@ THUMBNAILER_CFLAGS = @THUMBNAILER_CFLAGS@
 THUMBNAILER_LIBS = @THUMBNAILER_LIBS@
 TIME_HELPER_CFLAGS = @TIME_HELPER_CFLAGS@
 TIME_HELPER_LIBS = @TIME_HELPER_LIBS@
-XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
-XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
-XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
-XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
-XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 USE_NLS = @USE_NLS@
 VALAC = @VALAC@
 VERSION = @VERSION@
@@ -583,6 +584,11 @@ WARN_CFLAGS = @WARN_CFLAGS@
 WARN_CXXFLAGS = @WARN_CXXFLAGS@
 XGETTEXT = @XGETTEXT@
 XMLLINT = @XMLLINT@
+XPLAYER_API_VERSION = @XPLAYER_API_VERSION@
+XPLAYER_PLPARSER_REQS = @XPLAYER_PLPARSER_REQS@
+XPLAYER_VERSION_MAJOR = @XPLAYER_VERSION_MAJOR@
+XPLAYER_VERSION_MICRO = @XPLAYER_VERSION_MICRO@
+XPLAYER_VERSION_MINOR = @XPLAYER_VERSION_MINOR@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -690,10 +696,11 @@ libxplayer_la_SOURCES = $(XPLAYER_MARSHAL_FILES) $(INST_H_FILES) \
 	xplayer-object.c xplayer-private.h xplayer-preferences.c \
 	xplayer-preferences.h xplayer-dnd-menu.c xplayer-dnd-menu.h \
 	xplayer-options.c xplayer-options.h xplayer-playlist.c \
-	xplayer-playlist.h eggfileformatchooser.c eggfileformatchooser.h \
-	egg-macros.h xplayer-session.c xplayer-session.h xplayer-sidebar.c \
-	xplayer-sidebar.h xplayer-open-location.c xplayer-open-location.h \
-	xplayer-menu.c xplayer-menu.h xplayer-uri.c xplayer-uri.h \
+	xplayer-playlist.h eggfileformatchooser.c \
+	eggfileformatchooser.h egg-macros.h xplayer-session.c \
+	xplayer-session.h xplayer-sidebar.c xplayer-sidebar.h \
+	xplayer-open-location.c xplayer-open-location.h xplayer-menu.c \
+	xplayer-menu.h xplayer-uri.c xplayer-uri.h \
 	xplayer-subtitle-encoding.c xplayer-subtitle-encoding.h \
 	xplayer-profile.h plugins/xplayer-plugins-engine.c \
 	plugins/xplayer-plugins-engine.h plugins/xplayer-dirs.c \
@@ -708,8 +715,8 @@ libxplayer_la_LDFLAGS = \
 	-no-undefined \
 	$(AM_LDFLAGS)
 
-libxplayer_la_LIBADD = libxplayer_player.la backend/libbaconvideowidget.la \
-	$(PLAYER_LIBS) $(am__append_3)
+libxplayer_la_LIBADD = libxplayer_player.la \
+	backend/libbaconvideowidget.la $(PLAYER_LIBS) $(am__append_3)
 
 # Xplayer
 xplayer_SOURCES = xplayer.c
