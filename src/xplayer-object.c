@@ -4057,7 +4057,7 @@ xplayer_callback_connect (XplayerObject *xplayer)
 
 	/* Force add an icon, so it doesn't follow the
 	 * gtk-button-images setting */
-	icon = g_themed_icon_new_with_default_fallbacks ("view-sidebar-symbolic");
+	icon = g_themed_icon_new_with_default_fallbacks ("xplayer-view-sidebar-symbolic");
 	image = gtk_image_new_from_gicon (icon, GTK_ICON_SIZE_BUTTON);
 	gtk_widget_show (image);
 	gtk_container_add (GTK_CONTAINER (item), image);

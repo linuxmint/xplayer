@@ -286,7 +286,7 @@
                <property name="label" translatable="yes">S_idebar</property>
                <property name="tooltip" translatable="yes">Show or hide the sidebar</property>
 	       <property name="active">TRUE</property>
-	       <property name="icon-name">view-sidebar-symbolic</property>
+	       <property name="icon-name">xplayer-view-sidebar-symbolic</property>
                <signal name="activate" handler="show_sidebar_action_callback"/>
             </object>
             <accelerator key="F9"/>
