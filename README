@@ -1,13 +1,9 @@
+                    _  _ ___  _    ____ _   _ ____ ____ 
+                     \/  |__] |    |__|  \_/  |___ |__/ 
+                    _/\_ |    |___ |  |   |   |___ |  \ 
 
-                         _|_ __|_ _ ._ _  
-                          |_(_)|_(/_| | | 
+Xplayer is movie/media player primarily for the Cinnamon desktop, but also Xfce and to a lesser extent MATE based on GStreamer forked from Totem.
 
-Xplayer is movie player for the GNOME desktop based on GStreamer.
-It features a playlist, a full-screen mode, seek and volume controls,
-as well as complete keyboard navigation.
-
-Apart from a movie player, it also includes a Mozilla plugin, and a
-Nautilus thumbnailer and properties page.
 
 News
 ====
@@ -104,8 +100,8 @@ Automatic GStreamer codec installation (optional)
 BUGS
 ====
 
-Bugs should be filed in GNOME's Bugzilla:
-http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer
+Bugs should be filed in xplayer's github repository:
+https://github.com/linuxmint/xplayer
 
 To get a better debug output, run:
 # xplayer --debug
@@ -113,9 +109,3 @@ To get a better debug output, run:
 Or for the stand-alone applications:
 # gsettings set org.gnome.xplayer debug true
 then run your application and capture its output
-
-Contact
-=======
-
-Bastien Nocera <hadess@hadess.net>
-http://www.gnome.org/projects/xplayer/
