@@ -30,7 +30,7 @@
 #define GST_USE_UNSTABLE_API 1
 #include <gst/gst.h>
 #include <glib/gi18n-lib.h>
-#include "xplayer-properties-view.h"
+#include "xplayer-nautilus-properties-view.h"
 
 static GtkWidget *window, *props, *label;
 
