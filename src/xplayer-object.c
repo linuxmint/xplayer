@@ -3726,18 +3726,13 @@ xplayer_action_handle_scroll (XplayerObject    *xplayer,
 	if (xplayer_fullscreen_is_fullscreen (xplayer->fs) != FALSE)
 		xplayer_fullscreen_show_popups (xplayer->fs, TRUE);
 
-	if (direction == GDK_SCROLL_SMOOTH) {
-		gdouble y;
-		gdk_event_get_scroll_deltas (event, NULL, &y);
-		direction = y >= 0.0 ? GDK_SCROLL_DOWN : GDK_SCROLL_UP;
-	}
 
 	switch (direction) {
 	case GDK_SCROLL_UP:
-		xplayer_action_seek_relative (xplayer, SEEK_FORWARD_SHORT_OFFSET * 1000, FALSE);
+		xplayer_action_seek_relative (xplayer, xplayer->stream_length / 500, FALSE);
 		break;
 	case GDK_SCROLL_DOWN:
-		xplayer_action_seek_relative (xplayer, SEEK_BACKWARD_SHORT_OFFSET * 1000, FALSE);
+		xplayer_action_seek_relative (xplayer, xplayer->stream_length / 500, FALSE);
 		break;
 	default:
 		retval = FALSE;
