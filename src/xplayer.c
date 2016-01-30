@@ -180,9 +180,6 @@ app_init (Xplayer *xplayer, char **argv)
 		xplayer_action_set_mrl (xplayer, NULL, NULL);
 	}
 
-	/* Set the logo at the last minute so we won't try to show it before a video */
-	bacon_video_widget_set_logo (xplayer->bvw, "xplayer");
-
 	if (optionstate.fullscreen == FALSE)
 		gdk_window_set_cursor (gtk_widget_get_window (xplayer->win), NULL);
 
