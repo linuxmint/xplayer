@@ -20,7 +20,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 DEB_DH_STRIP_ARGS := --dbg-package=xplayer-dbg
 DEB_DH_MAKESHLIBS_ARGS += -Xplugins/
 DEB_DH_GIREPOSITORY_ARGS += -lsrc
-DEB_DH_MAKESHLIBS_ARGS_xplayer += -X/usr/lib/nautilus/
 DEB_DH_MAKESHLIBS_ARGS_libxplayer0 += -V'libxplayer0 (>= $(DEB_VERSION)), libxplayer0 (<< $(DEB_GNOME_NEXTVERSION))'
 DEB_DH_INSTALL_ARGS += --fail-missing -Xlibxplayer.a -Xlibxplayer.la
 

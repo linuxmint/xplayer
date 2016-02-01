@@ -32,7 +32,6 @@ Build-Depends: debhelper (>= 8),
                libgstreamer1.0-dev,
                libgtk-3-dev (>= 3.5.2),
                liblircclient-dev (>= 0.6.6),
-               libnautilus-extension-dev (>= 2.91.4),
                libpeas-dev (>= 1.1.0),
                librsvg2-dev (>= 2.16.0-2),
                libsoup2.4-dev,
@@ -95,12 +94,11 @@ Description: Simple media player based on GStreamer
     * Aspect ratio toggling, scaling based on the video's original size
     * Full keyboard control
     * Simple playlist with repeat mode and saving feature
-    * GNOME, Nautilus and GIO integration
+    * GIO integration
     * Screenshot of the current movie
     * Brightness and Contrast control
     * Visualisation plugin when playing audio-only files
-    * Video thumbnailer for nautilus
-    * Nautilus properties page
+    * Video thumbnailer
     * Works on remote displays
     * DVD, VCD and OGG/OGM subtitles with automatic language selection
     * Extensible with plugins
