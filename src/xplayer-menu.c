@@ -695,29 +695,13 @@ contents_action_callback (GtkAction *action, Xplayer *xplayer)
 void
 about_action_callback (GtkAction *action, Xplayer *xplayer)
 {
-	const char *authors[] =
-	{
-		"Bastien Nocera <hadess@hadess.net>",
-		"Ronald Bultje <rbultje@ronald.bitfreak.net>",
-		"Julien Moutte <julien@moutte.net> (GStreamer backend)",
-		"Tim-Philipp M\303\274ller <tim\100centricular\056net> (GStreamer backend)",
-		"Philip Withnall <philip@tecnocode.co.uk>",
-		NULL
-	};
-	const char *artists[] = { "Jakub Steiner <jimmac@ximian.com>", NULL };
 	char *license = xplayer_interface_get_license ();
 
 	gtk_show_about_dialog (GTK_WINDOW (xplayer->win),
 				     "version", VERSION,
-				     "copyright", _("Copyright \xc2\xa9 2002-2009 Bastien Nocera"),
-				     "comments", _("Videos"),
-				     "authors", authors,
-				     "artists", artists,
-				     "translator-credits", _("translator-credits"),
 				     "logo-icon-name", "xplayer",
 				     "license", license,
 				     "wrap-license", TRUE,
-				     "website-label", _("Xplayer Website"),
 				     "website", PACKAGE_URL,
 				     NULL);
 	g_free (license);
