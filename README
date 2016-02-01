@@ -1,26 +1,7 @@
-                    _  _ ___  _    ____ _   _ ____ ____ 
-                     \/  |__] |    |__|  \_/  |___ |__/ 
-                    _/\_ |    |___ |  |   |   |___ |  \ 
+General Information
+===================
 
-Xplayer is a GTK based, generic media player that can be used for multiple desktop environments. It is based on GStreamer and forked from The GNOME Project's Totem.
-
-
-News
-====
-
-See NEWS file
-
-Dependencies
-============
-
-GStreamer 1.0
-	http://gstreamer.freedesktop.org
-
-GNOME 3.x development platform
-	http://www.gnome.org
-
-gromit 20041213, for the Telestrator mode:
-	http://www.home.unix-ag.org/simon/gromit/
+xplayer is a generic media player.
 
 Controls
 ========
@@ -83,8 +64,6 @@ Middle mouse button click:
 Copyright
 =========
 
-Nifty media player icon by Jakub Steiner <jimmac@ximian.com>
-
 UI help by Seth Nickell <snickell@stanford.edu>
 
 Automatic GStreamer codec installation (optional)
@@ -100,12 +79,9 @@ Automatic GStreamer codec installation (optional)
 BUGS
 ====
 
-Bugs should be filed in xplayer's github repository:
-https://github.com/linuxmint/xplayer
-
 To get a better debug output, run:
 # xplayer --debug
 
 Or for the stand-alone applications:
-# gsettings set org.gnome.xplayer debug true
+# gsettings set org.x.player debug true
 then run your application and capture its output
