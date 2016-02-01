@@ -36,7 +36,7 @@
  *
  * The GSettings schema under which all Xplayer settings are stored.
  **/
-#define XPLAYER_GSETTINGS_SCHEMA "org.gnome.xplayer"
+#define XPLAYER_GSETTINGS_SCHEMA "org.x.player"
 
 G_BEGIN_DECLS
 

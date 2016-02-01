@@ -721,7 +721,7 @@ src/plugins/gromit/Makefile
 src/plugins/lirc/Makefile
 src/plugins/media-player-keys/Makefile
 src/plugins/opensubtitles/Makefile
-src/plugins/opensubtitles/org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in
+src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in
 src/plugins/properties/Makefile
 src/plugins/recent/Makefile
 src/plugins/rotation/Makefile
@@ -731,7 +731,7 @@ src/plugins/skipto/Makefile
 src/plugins/samplepython/Makefile
 src/plugins/sample-vala/Makefile
 src/plugins/pythonconsole/Makefile
-src/plugins/pythonconsole/org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in
+src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in
 src/plugins/brasero-disc-recorder/Makefile
 src/plugins/chapters/Makefile
 src/plugins/zeitgeist-dp/Makefile
@@ -740,7 +740,7 @@ src/plugins/vimeo/Makefile
 src/backend/Makefile
 browser-plugin/Makefile
 data/Makefile
-data/org.gnome.xplayer.gschema.xml.in
+data/org.x.player.gschema.xml.in
 data/xplayer.desktop.in.in
 data/xplayer.pc
 data/icons/Makefile

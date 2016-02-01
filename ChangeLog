@@ -5942,7 +5942,7 @@ Date:   Fri Apr 27 13:09:22 2012 +0100
 
     data: Remove unused connection speed configuration
 
- data/org.gnome.xplayer.gschema.xml.in.in | 5 -----
+ data/org.x.player.gschema.xml.in.in | 5 -----
  data/xplayer.convert                     | 1 -
  2 files changed, 6 deletions(-)
 
@@ -6059,7 +6059,7 @@ Date:   Mon Apr 23 15:10:09 2012 +0100
     
     https://bugzilla.gnome.org/show_bug.cgi?id=651844
 
- data/org.gnome.xplayer.gschema.xml.in.in | 2 +-
+ data/org.x.player.gschema.xml.in.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 3a053e2c6b75326853e3956850c3f5412428a9ed
@@ -14742,7 +14742,7 @@ Date:   Wed Dec 15 22:38:21 2010 +0000
     API freeze for 3.0 if it's to be done at all, because BvwAudioOutputType is
     effectively public API, since it's used in our GSettings schema.
 
- data/org.gnome.xplayer.gschema.xml.in.in    |  2 +-
+ data/org.x.player.gschema.xml.in.in    |  2 +-
  docs/reference/xplayer-sections.txt         | 10 +++++-----
  src/backend/bacon-video-widget-gst-0.10.c | 22 +++++++++++-----------
  src/backend/bacon-video-widget.h          | 12 ++++++------
@@ -15103,7 +15103,7 @@ Date:   Mon Dec 6 13:30:41 2010 +0000
     https://bugzilla.gnome.org/show_bug.cgi?id=350261
 
  configure.in                              |  17 +-
- data/org.gnome.xplayer.gschema.xml.in.in    |   2 +-
+ data/org.x.player.gschema.xml.in.in    |   2 +-
  data/xplayer.ui                             |   5 +-
  src/plugins/save-file/Makefile.am         |  15 ++
  src/plugins/save-file/save-file.plugin.in |   9 +
@@ -15569,7 +15569,7 @@ Date:   Sun Nov 14 11:11:23 2010 +0000
 
     Fix a typo in the OpenSubtitles schema path
 
- .../org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in             | 2 +-
+ .../org.x.player.plugins.opensubtitles.gschema.xml.in.in             | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit a6963d8e10b1ff9bf58116f36ed64c76d7fa1ca7
@@ -15596,10 +15596,10 @@ Date:   Mon Nov 8 14:38:52 2010 +0000
 
     date: Fix data paths in GSettings schemas
 
- data/org.gnome.xplayer.gschema.xml.in.in                                  | 2 +-
- src/plugins/jamendo/org.gnome.xplayer.plugins.jamendo.gschema.xml.in.in   | 2 +-
- .../org.gnome.xplayer.plugins.opensubtitles.gschema.xml.in.in             | 2 +-
- .../org.gnome.xplayer.plugins.pythonconsole.gschema.xml.in.in             | 2 +-
+ data/org.x.player.gschema.xml.in.in                                  | 2 +-
+ src/plugins/jamendo/org.x.player.plugins.jamendo.gschema.xml.in.in   | 2 +-
+ .../org.x.player.plugins.opensubtitles.gschema.xml.in.in             | 2 +-
+ .../org.x.player.plugins.pythonconsole.gschema.xml.in.in             | 2 +-
  4 files changed, 4 insertions(+), 4 deletions(-)
 
 commit 244a071c0f5c449b83ff38e38e9a8b8a2a3d6ec8
@@ -17286,7 +17286,7 @@ Date:   Thu Aug 19 21:38:09 2010 +0100
 
     Improve naming of the visualization GSettings keys
 
- data/org.gnome.xplayer.gschema.xml.in.in    | 10 +++++-----
+ data/org.x.player.gschema.xml.in.in    | 10 +++++-----
  data/xplayer.convert                        |  6 +++---
  src/backend/bacon-video-widget-gst-0.10.c |  2 +-
  src/xplayer-preferences.c                   | 22 +++++++++++-----------
@@ -17298,7 +17298,7 @@ Date:   Thu Aug 19 09:41:16 2010 +0100
 
     Convert visual-quality to an enum
 
- data/org.gnome.xplayer.gschema.xml.in.in | 6 +++---
+ data/org.x.player.gschema.xml.in.in | 6 +++---
  src/xplayer-preferences.c                | 4 +++-
  2 files changed, 6 insertions(+), 4 deletions(-)
 
@@ -17308,7 +17308,7 @@ Date:   Thu Aug 19 09:38:08 2010 +0100
 
     Convert audio-output-type to an enum
 
- data/org.gnome.xplayer.gschema.xml.in.in    | 5 ++---
+ data/org.x.player.gschema.xml.in.in    | 5 ++---
  src/backend/bacon-video-widget-gst-0.10.c | 4 ++--
  2 files changed, 4 insertions(+), 5 deletions(-)
 
@@ -17318,7 +17318,7 @@ Date:   Thu Aug 19 09:35:46 2010 +0100
 
     Convert connection-speed to an enum
 
- data/org.gnome.xplayer.gschema.xml.in.in    |  6 ++---
+ data/org.x.player.gschema.xml.in.in    |  6 ++---
  src/backend/bacon-video-widget-gst-0.10.c |  4 ++--
  src/xplayer-preferences.c                   | 39 ++++++++++++++++++++++++++++++-
  3 files changed, 43 insertions(+), 6 deletions(-)
@@ -17331,7 +17331,7 @@ Date:   Wed Aug 18 09:24:34 2010 +0100
     
     They store URIs, not paths.
 
- data/org.gnome.xplayer.gschema.xml.in.in           | 4 ++--
+ data/org.x.player.gschema.xml.in.in           | 4 ++--
  data/xplayer.convert                               | 4 ++--
  src/plugins/screenshot/xplayer-screenshot-plugin.c | 4 ++--
  src/xplayer-uri.c                                  | 6 +++---
@@ -17426,7 +17426,7 @@ Date:   Wed Aug 18 09:22:06 2010 +0100
 
     Add an active-plugins key to store the list of active plugins
 
- data/org.gnome.xplayer.gschema.xml.in.in | 5 +++++
+ data/org.x.player.gschema.xml.in.in | 5 +++++
  1 file changed, 5 insertions(+)
 
 commit 9b403af7a43fe953dd6237f69a378086bd05d087
@@ -17452,7 +17452,7 @@ Date:   Wed Aug 18 00:00:36 2010 +0100
  configure.in                              |  10 +-
  data/Makefile.am                          |  51 ++---
  data/handlers.sh                          |  49 +++--
- data/org.gnome.xplayer.gschema.xml.in.in    | 120 +++++++++++
+ data/org.x.player.gschema.xml.in.in    | 120 +++++++++++
  data/schemas.sh                           |  66 +++---
  data/xplayer.convert                        |  26 +++
  data/xplayer.schemas.in                     | 332 ------------------------------
@@ -20568,7 +20568,7 @@ Date:   Sat Apr 10 16:35:00 2010 +0100
 
     Implement SetTime in the NarrowSpace plugin
 
- browser-plugin/org_gnome_xplayer_PluginViewer.xml |  3 +++
+ browser-plugin/org_x_player_PluginViewer.xml |  3 +++
  browser-plugin/xplayer-plugin-viewer.c            | 12 ++++++++++++
  browser-plugin/xplayerGMPControls.cpp             |  2 +-
  browser-plugin/xplayerNarrowSpacePlugin.cpp       | 14 ++++++++++++--
@@ -20617,7 +20617,7 @@ Date:   Fri Apr 9 14:56:30 2010 +0100
     
     Helps with https://bugzilla.gnome.org/show_bug.cgi?id=608301
 
- browser-plugin/org_gnome_xplayer_PluginViewer.xml |  5 +++-
+ browser-plugin/org_x_player_PluginViewer.xml |  5 +++-
  browser-plugin/xplayer-plugin-viewer.c            | 39 ++++++++++++++++++-------
  browser-plugin/xplayerPlugin.cpp                  | 39 +++++++++++++++++++++++--
  browser-plugin/xplayerPlugin.h                    |  3 ++
@@ -22732,7 +22732,7 @@ Date:   Fri Nov 20 17:04:05 2009 +0000
     When using AddItem(). Makes the subtitle handling test case
     for OLPC work.
 
- browser-plugin/org_gnome_xplayer_PluginViewer.xml |  1 +
+ browser-plugin/org_x_player_PluginViewer.xml |  1 +
  browser-plugin/xplayer-plugin-viewer.c            |  3 ++-
  browser-plugin/xplayerPlugin.cpp                  | 10 ++++------
  3 files changed, 7 insertions(+), 7 deletions(-)
@@ -22897,7 +22897,7 @@ Date:   Wed Nov 18 15:51:53 2009 +0000
     
     https://bugzilla.gnome.org/show_bug.cgi?id=560946
 
- browser-plugin/org_gnome_xplayer_PluginViewer.xml |  2 ++
+ browser-plugin/org_x_player_PluginViewer.xml |  2 ++
  browser-plugin/xplayer-plugin-viewer.c            | 17 ++++++++++----
  browser-plugin/xplayerConePlaylist.cpp            | 30 ++++++++++++++++++++++++-
  browser-plugin/xplayerPlugin.cpp                  | 26 +++++++++++++++++----

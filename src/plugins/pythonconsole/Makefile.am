@@ -8,7 +8,7 @@ plugin_in_files = pythonconsole.plugin.in
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-gsettings_SCHEMAS = org.gnome.xplayer.plugins.pythonconsole.gschema.xml
+gsettings_SCHEMAS = org.x.player.plugins.pythonconsole.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

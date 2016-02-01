@@ -336,7 +336,7 @@ static void zeitgeist_dp_plugin_real_activate (PeasActivatable* base) {
 	event = _tmp13_;
 	_tmp14_ = _g_object_ref0 (event);
 	g_ptr_array_add (templates, _tmp14_);
-	_tmp15_ = zeitgeist_data_source_new_full ("org.gnome.Xplayer,dataprovider", "Xplayer dataprovider", "Logs access/leave events for media files played with Xplayer", templates);
+	_tmp15_ = zeitgeist_data_source_new_full ("org.x.Player,dataprovider", "Xplayer dataprovider", "Logs access/leave events for media files played with Xplayer", templates);
 	ds = _tmp15_;
 	_tmp16_ = self->priv->zg_registry;
 	zeitgeist_data_source_registry_register_data_source (_tmp16_, ds, NULL, NULL, NULL);

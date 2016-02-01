@@ -3906,7 +3906,7 @@
 
 2008-02-15  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer-constants.h:
 	* browser-plugin/xplayerpluginviewer-marshal.list:
 	* browser-plugin/xplayer-plugin-viewer.c:
@@ -3966,7 +3966,7 @@
 
 2008-02-14  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer.c: (xplayer_pl_item_free),
 	(xplayer_embedded_clear_playlist), (xplayer_embedded_add_item),
 	(xplayer_embedded_open_uri), (xplayer_embedded_open_stream),
@@ -5795,7 +5795,7 @@
 	and add the states to those constants
 
 	* browser-plugin/Makefile.am:
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayerpluginviewer-marshal.list:
 	* browser-plugin/xplayerPlugin.cpp:
 	* browser-plugin/xplayerPlugin.h:
@@ -6074,7 +6074,7 @@
 
 2007-08-27  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	Add SetVolume function
 
 	* browser-plugin/xplayer-plugin-viewer.c: (xplayer_embedded_play),
@@ -6493,7 +6493,7 @@
 
 2007-08-16  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	Add SetLocalCache method
 	* browser-plugin/xplayer-plugin-viewer.c:
 	(xplayer_embedded_set_local_cache), (on_eos_event),
@@ -6521,7 +6521,7 @@
 
 2007-08-16  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer.c:
 	(xplayer_embedded_save_volume), (property_notify_cb_volume):
 	* browser-plugin/xplayerPlugin.cpp: Revert "SaveState" patch
@@ -6536,7 +6536,7 @@
 
 2007-08-15  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer.c:
 	(xplayer_embedded_save_state):
 	* browser-plugin/xplayerPlugin.cpp: Call SaveState just before
@@ -9628,7 +9628,7 @@
 
 2007-01-12  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	add the SetErrorLogo method
 
 	* browser-plugin/xplayer-plugin-viewer.c:
@@ -10147,7 +10147,7 @@
 
 	* browser-plugin/.cvsignore:
 	* browser-plugin/Makefile.am:
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer.c:
 	(xplayer_embedded_class_init), (xplayer_embedded_open_internal),
 	(my_gdk_spawn_make_environment_for_screen), (sn_error_trap_push),
@@ -10182,7 +10182,7 @@
 
 2006-12-13  Bastien Nocera  <hadess@hadess.net>
 
-	* browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	* browser-plugin/org_x_player_PluginViewer.xml:
 	* browser-plugin/xplayer-plugin-viewer.c: (xplayer_embedded_set_error),
 	(xplayer_embedded_set_state), (xplayer_embedded_set_href),
 	(xplayer_embedded_launch_player), (on_open1_activate),
@@ -10621,7 +10621,7 @@
 	* browser-plugin/Makefile.am:
 	* browser-plugin/README:
 	* browser-plugin/TODO:
-	A browser-plugin/org_gnome_xplayer_PluginViewer.xml:
+	A browser-plugin/org_x_player_PluginViewer.xml:
 	A browser-plugin/xplayer-plugin-viewer-commands.h:
 	A browser-plugin/xplayer-plugin-viewer-options.h:
 	A browser-plugin/xplayer-plugin-viewer.c:

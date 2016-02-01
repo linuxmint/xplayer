@@ -21,9 +21,9 @@
 #ifndef __XPLAYER_PLUGIN_VIEWER_OPTIONS_H__
 #define __XPLAYER_PLUGIN_VIEWER_OPTIONS_H__
 
-#define XPLAYER_PLUGIN_VIEWER_INTERFACE_NAME	"org.gnome.xplayer.PluginViewer"
-#define XPLAYER_PLUGIN_VIEWER_NAME_TEMPLATE	"org.gnome.xplayer.PluginViewer_%d"
-#define XPLAYER_PLUGIN_VIEWER_DBUS_PATH		"/org/gnome/xplayer/PluginViewer"
+#define XPLAYER_PLUGIN_VIEWER_INTERFACE_NAME	"org.x.player.PluginViewer"
+#define XPLAYER_PLUGIN_VIEWER_NAME_TEMPLATE	"org.x.player.PluginViewer_%d"
+#define XPLAYER_PLUGIN_VIEWER_DBUS_PATH		"/org/x/player/PluginViewer"
 
 #define XPLAYER_OPTION_BASE_URI		"base-uri"
 #define XPLAYER_OPTION_CONTROLS_HIDDEN	"no-controls"

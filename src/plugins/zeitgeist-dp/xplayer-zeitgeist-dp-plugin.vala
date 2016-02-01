@@ -47,7 +47,7 @@ class ZeitgeistDpPlugin: GLib.Object, Peas.Activatable {
                                           "application://xplayer.desktop", null);
     templates.add (event);
     var ds = new Zeitgeist.DataSource.full (
-      "org.gnome.Xplayer,dataprovider",
+      "org.x.Player,dataprovider",
       "Xplayer dataprovider",
       "Logs access/leave events for media files played with Xplayer",
       templates

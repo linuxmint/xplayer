@@ -256,7 +256,7 @@ impl_activate (PeasActivatable *plugin)
 	XplayerAutoloadSubtitlesPlugin *pi = XPLAYER_AUTOLOAD_SUBTITLES_PLUGIN (plugin);
 
 	pi->priv->xplayer = g_object_ref (g_object_get_data (G_OBJECT (plugin), "object"));
-	pi->priv->settings = g_settings_new ("org.gnome.xplayer");
+	pi->priv->settings = g_settings_new ("org.x.player");
 	pi->priv->autoload_subs = g_settings_get_boolean (pi->priv->settings, "autoload-subtitles");
 	g_signal_connect (pi->priv->settings, "changed::autoload-subtitles",
 			  G_CALLBACK (autoload_subs_changed), pi);

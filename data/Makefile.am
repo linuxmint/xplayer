@@ -107,9 +107,9 @@ CLEANFILES += \
 	xplayerMimeTypes.js
 
 # GSettings schemas, enum files and conversion file
-gsettings_ENUM_NAMESPACE = org.gnome.xplayer
+gsettings_ENUM_NAMESPACE = org.x.player
 gsettings_ENUM_FILES = $(top_srcdir)/src/*.h $(top_srcdir)/src/backend/*.h
-gsettings_SCHEMAS = org.gnome.xplayer.gschema.xml
+gsettings_SCHEMAS = org.x.player.gschema.xml
 CLEANFILES += $(gsettings_SCHEMAS)
 
 @INTLTOOL_XML_NOMERGE_RULE@

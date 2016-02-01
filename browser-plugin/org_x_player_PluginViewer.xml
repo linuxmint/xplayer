@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<node name="/org/gnome/xplayer/PluginViewer">
-  <interface name="org.gnome.xplayer.PluginViewer">
+<node name="/org/x/player/PluginViewer">
+  <interface name="org.x.player.PluginViewer">
     <method name="DoCommand">
       <arg type="s" name="Command" direction="in" />
     </method>

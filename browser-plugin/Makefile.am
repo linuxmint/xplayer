@@ -96,11 +96,11 @@ xplayer_plugin_viewer_LDADD = \
 
 xplayer_plugin_viewer_LDFLAGS = -export-dynamic
 
-xplayer-plugin-viewer-interface.h: org_gnome_xplayer_PluginViewer.xml
+xplayer-plugin-viewer-interface.h: org_x_player_PluginViewer.xml
 	$(DBUS_BIND) --prefix=xplayer_embedded --mode=glib-server $< > $@
 
 CLEANFILES = xplayer-plugin-viewer-interface.h
-EXTRA_DIST += org_gnome_xplayer_PluginViewer.xml
+EXTRA_DIST += org_x_player_PluginViewer.xml
 
 # Xplayer GMP Plugin
 if ENABLE_GMP_PLUGIN

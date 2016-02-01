@@ -270,7 +270,7 @@ main (int argc, char **argv)
 
 	/* Build the main Xplayer object */
 	xplayer = g_object_new (XPLAYER_TYPE_OBJECT,
-			      "application-id", "org.gnome.Xplayer",
+			      "application-id", "org.x.Player",
 			      "flags", G_APPLICATION_HANDLES_COMMAND_LINE,
 			      NULL);
 	xplayer->settings = g_settings_new (XPLAYER_GSETTINGS_SCHEMA);

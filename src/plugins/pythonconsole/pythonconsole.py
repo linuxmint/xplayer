@@ -143,7 +143,7 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
         dialog = Gtk.MessageDialog (None, 0, Gtk.MessageType.INFO,
                                     Gtk.ButtonsType.OK_CANCEL, msg)
         if dialog.run () == Gtk.ResponseType.OK:
-            schema = 'org.gnome.xplayer.plugins.pythonconsole'
+            schema = 'org.x.player.plugins.pythonconsole'
             settings = Gio.Settings.new (schema)
             password = settings.get_string ('rpdb2-password') or "xplayer"
             def start_debugger (password):

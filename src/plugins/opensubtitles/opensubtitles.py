@@ -382,7 +382,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
         self._dialog = None
         self._xplayer = None
-        schema = 'org.gnome.xplayer.plugins.opensubtitles'
+        schema = 'org.x.player.plugins.opensubtitles'
         self._settings = Gio.Settings.new (schema)
 
         self._manager = None
