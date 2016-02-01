@@ -175,49 +175,49 @@ xplayer_video_thumbnailer_LDADD =		\
 # Nautilus Property Page
 if HAVE_NAUTILUS
 nautilusdir = $(NAUTILUSDIR)
-nautilus_LTLIBRARIES = libxplayer-properties-page.la
+nautilus_LTLIBRARIES = libxplayer-nautilus-properties-page.la
 
-libxplayer_properties_page_la_SOURCES = \
-	xplayer-properties-main.c		\
-	xplayer-properties-view.c		\
-	xplayer-properties-view.h
+libxplayer_nautilus_properties_page_la_SOURCES = \
+	xplayer-nautilus-properties-main.c		\
+	xplayer-nautilus-properties-view.c		\
+	xplayer-nautilus-properties-view.h
 
-libxplayer_properties_page_la_CPPFLAGS = \
+libxplayer_nautilus_properties_page_la_CPPFLAGS = \
 	-I$(top_srcdir)/src/properties		\
 	-I$(top_builddir)/data			\
-	-DG_LOG_DOMAIN=\""XplayerPropertiesPage"\"\
+	-DG_LOG_DOMAIN=\""XplayerNautilusPropertiesPage"\"\
 	$(AM_CPPFLAGS)
 
-libxplayer_properties_page_la_CFLAGS =	\
+libxplayer_nautilus_properties_page_la_CFLAGS =	\
 	$(NAUTILUS_CFLAGS)		\
 	$(AM_CFLAGS)
 
-libxplayer_properties_page_la_LDFLAGS = \
+libxplayer_nautilus_properties_page_la_LDFLAGS = \
 	-export_dynamic -avoid-version -module -no-undefined	\
 	$(AM_LDFLAGS)
 
-libxplayer_properties_page_la_LIBADD =				\
+libxplayer_nautilus_properties_page_la_LIBADD =				\
 	properties/libbaconvideowidgetproperties.la		\
 	$(NAUTILUS_LIBS)
 
-noinst_PROGRAMS = test-properties-page
+noinst_PROGRAMS = libxplayer-nautilus-test-properties-page
 
-test_properties_page_SOURCES = \
-	xplayer-properties-main.c		\
-	xplayer-properties-view.c		\
-	xplayer-properties-view.h		\
-	test-properties-page.c
+libxplayer_nautilus_test_properties_page_SOURCES = \
+	xplayer-nautilus-properties-main.c		\
+	xplayer-nautilus-properties-view.c		\
+	xplayer-nautilus-properties-view.h		\
+	xplayer-nautilus-test-properties-page.c
 
-test_properties_page_CPPFLAGS = \
+libxplayer_nautilus_test_properties_page_CPPFLAGS = \
 	-I$(top_builddir)/data			\
 	-I$(top_srcdir)/src/properties		\
 	$(AM_CPPFLAGS)
 
-test_properties_page_CFLAGS =	\
+libxplayer_nautilus_test_properties_page_CFLAGS =	\
 	$(NAUTILUS_CFLAGS)	\
 	$(AM_CFLAGS)
 
-test_properties_page_LDADD = \
+libxplayer_nautilus_test_properties_page_LDADD = \
 	backend/libbaconvideowidget.la				\
 	properties/libbaconvideowidgetproperties.la		\
 	libxplayer_player.la					\

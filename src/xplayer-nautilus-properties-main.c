@@ -30,7 +30,7 @@
 #define GST_USE_UNSTABLE_API 1
 #include <gst/gst.h>
 
-#include "xplayer-properties-view.h"
+#include "xplayer-nautilus-properties-view.h"
 #include <libnautilus-extension/nautilus-extension-types.h>
 #include <libnautilus-extension/nautilus-property-page-provider.h>
 

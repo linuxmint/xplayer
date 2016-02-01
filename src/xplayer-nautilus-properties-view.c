@@ -35,7 +35,7 @@
 #include <gst/tag/tag.h>
 #include <gst/pbutils/pbutils.h>
 
-#include "xplayer-properties-view.h"
+#include "xplayer-nautilus-properties-view.h"
 #include "bacon-video-widget-properties.h"
 
 struct XplayerPropertiesViewPriv {
