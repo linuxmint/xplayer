@@ -161,7 +161,7 @@ static const char kPluginLongDescription[] =
 #elif defined(XPLAYER_VEGAS_PLUGIN)
   "Shockwave Flash 11.1 r102";
 #else
-  "The <a href=\"http://www.gnome.org/\">Videos</a> " PACKAGE_VERSION " plugin handles video and audio streams.";
+  "The <a href=\"https://github.com/linuxmint/xplayer/\">Videos</a> " PACKAGE_VERSION " plugin handles video and audio streams.";
 #endif
 
 static const char kPluginUserAgent[] =
