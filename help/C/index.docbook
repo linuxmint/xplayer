@@ -5,7 +5,7 @@
   <!ENTITY appversion "2.26">
   <!ENTITY manrevision "3.0">
   <!ENTITY date "February 2009">
-  <!ENTITY app "Xplayer Movie Player">
+  <!ENTITY app "Movie Player">
   <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file.
        Use the appversion entity to specify the version of the application.
@@ -14,42 +14,19 @@
        Use the app entity to specify the name of the application. -->
 ]>
 
-<!--
-      (Do not remove this comment block.)
-  Maintained by the GNOME Documentation Project
-  http://developer.gnome.org/projects/gdp
-  Template version: 2.0 beta
-  Template last modified Apr 11, 2002
--->
-
 <!-- =============Document Header ============================= -->
 <article id="index" lang="en">
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
     <title><application>&app;</application> Manual</title>
-    <copyright>
-      <year>2003</year>
-      <holder>Chee Bin HOH</holder>
-    </copyright>
-    <copyright>
-      <year>2009</year>
-      <holder>Philip Withnall</holder>
-    </copyright>
-    <releaseinfo revision="2.26" role="final">
-    	<ulink type="peerreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=574524"/>
-    </releaseinfo>
 
     <abstract role="description">
-      <para><application>&app;</application> is a media player for GNOME that runs on GStreamer by default, but can
+      <para><application>&app;</application> is a media player that runs on GStreamer by default, but can
 also be run on xine. It has support for most audio and video codecs including
 DVDs among many others. Features include TV-out, fullscreen,
 subtitles, and more.</para>
     </abstract>
-
-    <publisher>
-      <publishername> GNOME Documentation Project </publishername>
-    </publisher>
 
     &legal;
     <!-- This file  contains link to license for the documentation (GNU FDL), and
@@ -81,18 +58,6 @@ subtitles, and more.</para>
 	<email>philip@tecnocode.co.uk</email>
       </author>
 
-<!-- This is appropriate place for other contributors: translators,
-     maintainers,  etc. Commented out by default.
-      <othercredit role="translator">
-	<firstname>Latin</firstname>
-	<surname>Translator 1</surname>
-	<affiliation>
-          <orgname>Latin Translation Team</orgname>
-  	  <address> <email>translator@gnome.org</email> </address>
-        </affiliation>
-        <contrib>Latin translation</contrib>
-      </othercredit>
--->
     </authorgroup>
 <!-- According to GNU FDL, revision history is mandatory if you are -->
 <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
@@ -131,13 +96,7 @@ subtitles, and more.</para>
 
     <releaseinfo>This manual describes version &appversion; of &app;.
     </releaseinfo>
-    <legalnotice>
-      <title>Feedback</title>
-      <para>To report a bug or make a suggestion regarding the <application>&app;</application> application or
-        this manual, follow the directions in the
-        <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
-      </para>
-    </legalnotice>
+
   </articleinfo>
 
   <indexterm zone="index">
@@ -154,7 +113,7 @@ subtitles, and more.</para>
      the application is and what it does. -->
   <sect1 id="xplayer-introduction">
     <title>Introduction</title>
-    <para>The <application>&app;</application> application is a movie player for the GNOME desktop based on
+    <para>The <application>&app;</application> application is a movie player based on
       the GStreamer framework and xine library, and enables you to play movies or songs.
     </para>
     <para><application>&app;</application> provides the following features:</para>
@@ -181,21 +140,6 @@ subtitles, and more.</para>
 	<para>Comprehensive set of plugins, including a subtitle downloader, YouTube browser, and disc burner.</para>
       </listitem>
     </itemizedlist>
-    <note>
-      <para><application>&app;</application> also comes with additional functionality such as:
-      </para>
-      <itemizedlist>
-	<listitem>
-	  <para>Video thumbnailer for GNOME.</para>
-        </listitem>
-        <listitem>
-	  <para>Audio preview application for GNOME.</para>
-        </listitem>
-	<listitem>
-	  <para>Nautilus properties tab.</para>
-        </listitem>
-      </itemizedlist>
-    </note>
   </sect1>
 <!-- =========== End of Introduction ========================= -->
 
@@ -358,16 +302,6 @@ subtitles, and more.</para>
         displays the title of the movie or song in the titlebar of
         the window and in the playlist in the sidebar.
       </para>
-      <para>If you try to open a file format that <application>&app;</application> does
-	not recognize, the application displays an error message. This error is most often encountered
-	if you do not have the correct codecs installed. Information on getting codecs working can be found on
-	the <ulink url="http://projects.gnome.org/xplayer/#codecs" type="http"><application>&app;</application> website</ulink>.
-      </para>
-      <tip>
-	<para>You can double-click on a video or an audio file in the <application>Nautilus</application>
-          file manager to open it in the <application>&app;</application> window.
-        </para>
-      </tip>
     </sect2>
 
     <sect2 id="xplayer-usage-open-location">
@@ -1069,44 +1003,4 @@ subtitles, and more.</para>
     </sect2>
   </sect1>
 
-<!-- ============= Bugs ================================== -->
-<!-- This section is optional and is commented out by default.
-     You can use it to describe known bugs and limitations of the
-	  program if there are any - please be frank and list all
-     problems you know of.
-
-  <sect1 id="mayapp-bugs">
-  <title>Known Bugs and Limitations</title>
-  <para> </para>
- </sect1>
--->
-
-<!-- ============= About ================================== -->
-<!-- This section contains info about the program (not docs), such as
-      author's name(s), web page, license, feedback address. This
-      section is optional: primary place for this info is "About.." box of
-      the program. However, if you do wish to include this info in the
-      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
-  <sect1 id="xplayer-about">
-    <title>About <application>&app;</application></title>
-    <para><application>&app;</application> is written by
-      Bastien Nocera (<email>hadess@hadess.net</email>),
-      Julien Moutte (<email>julien@moutte.net</email>) for the GStreamer backend,
-      and Guenter Bartsch (<email>guenter@users.sourceforge.net</email>).
-      To find more information about <application>&app;</application>, please visit the
-      <ulink url="http://projects.gnome.org/xplayer/" type="http"><application>&app;</application>
-      website</ulink>.
-    </para>
-    <para>
-      To report a bug or make a suggestion regarding the <application>&app;</application> application or
-      this manual, follow the directions in the
-      <ulink url="help:user-guide#feedback" type="help">GNOME Feedback Page</ulink>.
-    </para>
-    <para> This program is distributed under the terms of the GNU
-      General Public license as published by the Free Software
-      Foundation; either version 2 of the License, or (at your option)
-      any later version. A copy of this license can be found at this
-      <ulink url="help:gpl" type="help">link</ulink>, or in the file
-      COPYING included with the source code of this program. </para>
-  </sect1>
 </article>

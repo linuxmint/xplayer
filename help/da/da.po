@@ -8,7 +8,7 @@
 # Konventioner
 # ------------
 #
-# <application>Xplayer Movie Player</..> -> (filmafspilleren) <..>Xplayer</..>
+# <application>Movie Player</..> -> (filmafspilleren) <..>Xplayer</..>
 # display area -> fremvisningsområde
 #
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 "md5=a966195040a035bf48daab94c9320afc"
 
 #: ../C/xplayer.xml:30(title)
-msgid "<application>Xplayer Movie Player</application> Manual"
+msgid "<application>Movie Player</application> Manual"
 msgstr "Manual til <application>Xplayer</application>"
 
 #: ../C/xplayer.xml:32(year)
@@ -95,12 +95,12 @@ msgstr "Philip Withnall"
 
 #: ../C/xplayer.xml:44(para)
 msgid ""
-"<application>Xplayer Movie Player</application> is a media player for GNOME "
+"<application>Movie Player</application> is a media player "
 "that runs on GStreamer by default, but can also be run on xine. It has "
 "support for most audio and video codecs including DVDs among many others. "
 "Features include TV-out, fullscreen, subtitles, and more."
 msgstr ""
-"<application>Xplayer</application> er en medieafspiller til GNOME, der kører "
+"<application>Xplayer</application> er en medieafspiller, der kører "
 "over GStreamer som standard, men som også kan køres over xine. Den "
 "understøtter de fleste lyd- og videocodec inklusive DVD'er og mange andre. "
 "Der understøttes TV-udgang, fuldskærm, undertekster med mere."
@@ -259,7 +259,7 @@ msgid "philip@tecnocode.co.uk"
 msgstr "philip@tecnocode.co.uk"
 
 #: ../C/xplayer.xml:111(revnumber)
-msgid "Xplayer Movie Player Manual V2.0"
+msgid "Movie Player Manual V2.0"
 msgstr "Manual til Xplayer, V2.0"
 
 #: ../C/xplayer.xml:112(date)
@@ -271,7 +271,7 @@ msgid "Chee Bin HOH <email>cbhoh@gnome.org</email>"
 msgstr "Chee Bin HOH <email>cbhoh@gnome.org</email>"
 
 #: ../C/xplayer.xml:121(revnumber)
-msgid "Xplayer Movie Player Manual V3.0"
+msgid "Movie Player Manual V3.0"
 msgstr "Manual til Xplayer, V3.0"
 
 #: ../C/xplayer.xml:122(date)
@@ -283,7 +283,7 @@ msgid "Philip Withnall <email>philip@tecnocode.co.uk</email>"
 msgstr "Philip Withnall <email>philip@tecnocode.co.uk</email>"
 
 #: ../C/xplayer.xml:132(releaseinfo)
-msgid "This manual describes version 2.26 of Xplayer Movie Player."
+msgid "This manual describes version 2.26 of Movie Player."
 msgstr "Denne manual beskriver version 2.26 af Xplayer."
 
 #: ../C/xplayer.xml:135(title)
@@ -292,7 +292,7 @@ msgstr "Tilbagemelding"
 
 #: ../C/xplayer.xml:136(para) ../C/xplayer.xml:1100(para)
 msgid ""
-"To report a bug or make a suggestion regarding the <application>Xplayer Movie "
+"To report a bug or make a suggestion regarding the <application>Movie "
 "Player</application> application or this manual, follow the directions in "
 "the <ulink url=\"ghelp:user-guide#feedback\" type=\"help\">GNOME Feedback "
 "Page</ulink>."
@@ -303,8 +303,8 @@ msgstr ""
 "ulink>."
 
 #: ../C/xplayer.xml:144(primary) ../C/xplayer.xml:261(application)
-msgid "Xplayer Movie Player"
-msgstr "Filmafspilleren Xplayer"
+msgid "Movie Player"
+msgstr "Filmafspilleren"
 
 #: ../C/xplayer.xml:147(primary) ../C/xplayer.xml:236(command)
 msgid "xplayer"
@@ -316,17 +316,16 @@ msgstr "Introduktion"
 
 #: ../C/xplayer.xml:157(para)
 msgid ""
-"The <application>Xplayer Movie Player</application> application is a movie "
-"player for the GNOME desktop based on the GStreamer framework and xine "
+"The <application>Movie Player</application> application is a movie "
+"player based on the GStreamer framework and xine "
 "library, and enables you to play movies or songs."
 msgstr ""
-"Programmet <application>Xplayer</application> er en filmafspiller til GNOME-"
-"skrivebordet baseret på GStreamer samt xine-biblioteket, som lader dig "
+"Programmet <application>Xplayer</application> er en filmafspiller baseret på GStreamer samt xine-biblioteket, som lader dig "
 "afspille film og musik."
 
 #: ../C/xplayer.xml:160(para)
 msgid ""
-"<application>Xplayer Movie Player</application> provides the following "
+"<application>Movie Player</application> provides the following "
 "features:"
 msgstr "<application>Xplayer</application> indeholder følgende funktionalitet:"
 
@@ -364,7 +363,7 @@ msgstr ""
 
 #: ../C/xplayer.xml:185(para)
 msgid ""
-"<application>Xplayer Movie Player</application> also comes with additional "
+"<application>Movie Player</application> also comes with additional "
 "functionality such as:"
 msgstr ""
 "<application>Xplayer</application> inkluderer yderligere funktioner såsom:"
@@ -386,12 +385,12 @@ msgid "Getting Started"
 msgstr "Kom godt i gang"
 
 #: ../C/xplayer.xml:215(title)
-msgid "To Start <application>Xplayer Movie Player</application>"
+msgid "To Start <application>Movie Player</application>"
 msgstr "Start filmafspilleren <application>Xplayer</application>"
 
 #: ../C/xplayer.xml:216(para)
 msgid ""
-"You can start <application>Xplayer Movie Player</application> in the following "
+"You can start <application>Movie Player</application> in the following "
 "ways:"
 msgstr "Du kan starte <application>Xplayer</application> på følgende måder:"
 
@@ -413,7 +412,7 @@ msgstr "Kommandolinje"
 
 #: ../C/xplayer.xml:233(para)
 msgid ""
-"To start <application>Xplayer Movie Player</application> from a command line, "
+"To start <application>Movie Player</application> from a command line, "
 "type the following command, then press <keycap>Return</keycap>:"
 msgstr ""
 "For at starte <application>Xplayer</application> fra kommandolinjen, skriver "
@@ -428,18 +427,18 @@ msgstr ""
 "for at se andre kommandolinjetilvalg."
 
 #: ../C/xplayer.xml:249(title)
-msgid "When You Start <application>Xplayer Movie Player</application>"
+msgid "When You Start <application>Movie Player</application>"
 msgstr "Opstart af <application>Xplayer</application>"
 
 #: ../C/xplayer.xml:250(para)
 msgid ""
-"When you start <application>Xplayer Movie Player</application>, the following "
+"When you start <application>Movie Player</application>, the following "
 "window is displayed."
 msgstr ""
 "Når du starter <application>Xplayer</application>, vises følgende vindue."
 
 #: ../C/xplayer.xml:254(title)
-msgid "<application>Xplayer Movie Player</application> Start Up Window"
+msgid "<application>Movie Player</application> Start Up Window"
 msgstr "<application>Xplayer</application>s opstartsvindue"
 
 #: ../C/xplayer.xml:261(phrase)
@@ -456,7 +455,7 @@ msgstr ""
 #. for example, the items on the menubar and on the toolbar. This section is optional.
 #: ../C/xplayer.xml:274(para)
 msgid ""
-"The <application>Xplayer Movie Player</application> window contains the "
+"The <application>Movie Player</application> window contains the "
 "following elements:"
 msgstr ""
 "<application>Xplayer</application>-vinduet indeholder følgende elementer:"
@@ -468,7 +467,7 @@ msgstr "Menubjælke."
 #: ../C/xplayer.xml:280(para)
 msgid ""
 "The menus on the menubar contain all of the commands you need to use in "
-"<application>Xplayer Movie Player</application>."
+"<application>Movie Player</application>."
 msgstr ""
 "Menuerne i menubjælken indeholder alle de kommandoer, du har brug for i "
 "<application>Xplayer</application>."
@@ -576,12 +575,12 @@ msgstr ""
 #: ../C/xplayer.xml:353(para)
 msgid ""
 "You can drag a file from another application such as a file manager to the "
-"<application>Xplayer Movie Player</application> window. If you drag the file "
+"<application>Movie Player</application> window. If you drag the file "
 "to the display area, the file will replace the current playlist and will "
 "start playing immediately. If you drag the file to the playlist in the "
 "sidebar, the file will be appended to the current playlist. The "
-"<application>Xplayer Movie Player</application> application will open the file "
-"and play the movie or song. <application>Xplayer Movie Player</application> "
+"<application>Movie Player</application> application will open the file "
+"and play the movie or song. <application>Movie Player</application> "
 "displays the title of the movie or song in the titlebar of the window and in "
 "the playlist in the sidebar."
 msgstr ""
@@ -596,12 +595,12 @@ msgstr ""
 
 #: ../C/xplayer.xml:361(para)
 msgid ""
-"If you try to open a file format that <application>Xplayer Movie Player</"
+"If you try to open a file format that <application>Movie Player</"
 "application> does not recognize, the application displays an error message. "
 "This error is most often encountered if you do not have the correct codecs "
 "installed. Information on getting codecs working can be found on the <ulink "
 "url=\"http://projects.gnome.org/xplayer/#codecs\" type=\"http"
-"\"><application>Xplayer Movie Player</application> website</ulink>."
+"\"><application>Movie Player</application> website</ulink>."
 msgstr ""
 "Prøver du at åbne et filformat, som <application>Xplayer</application> ikke "
 "genkender, vil programmet vise en fejlmeddelelse. Denne fejl ses som oftest, "
@@ -614,7 +613,7 @@ msgstr ""
 msgid ""
 "You can double-click on a video or an audio file in the "
 "<application>Nautilus</application> file manager to open it in the "
-"<application>Xplayer Movie Player</application> window."
+"<application>Movie Player</application> window."
 msgstr ""
 "I filhåndteringsprogrammet <application>Nautilus</application>, kan du "
 "dobbeltklikke på en video- eller lydfil for at åbne den i "
@@ -926,11 +925,11 @@ msgstr "Få vinduet til altid at være øverst"
 
 #: ../C/xplayer.xml:578(para)
 msgid ""
-"To make the <application>Xplayer Movie Player</application> window always on "
+"To make the <application>Movie Player</application> window always on "
 "top of other application windows, choose <menuchoice><guimenu>Edit</"
 "guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. Select the "
 "<guilabel>Always on Top</guilabel> plugin to enable it. The "
-"<application>Xplayer Movie Player</application> window will now stay on top of "
+"<application>Movie Player</application> window will now stay on top of "
 "all other windows while a movie is playing, but not while audio or "
 "visualizations are playing."
 msgstr ""
@@ -957,11 +956,11 @@ msgstr "Vis eller skjul kontroller"
 
 #: ../C/xplayer.xml:592(para)
 msgid ""
-"To show or hide the <application>Xplayer Movie Player</application> window "
+"To show or hide the <application>Movie Player</application> window "
 "controls, choose <menuchoice><shortcut><keycombo><keycap>Ctrl</"
 "keycap><keycap>H</keycap></keycombo></shortcut><guimenu>View</"
 "guimenu><guimenuitem>Show Controls</guimenuitem></menuchoice>, or press the "
-"<keycap>H</keycap> key. You can also right-click on the <application>Xplayer "
+"<keycap>H</keycap> key. You can also right-click on the <application>"
 "Movie Player</application> window, then choose "
 "<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>H</keycap></"
 "keycombo></shortcut><guimenuitem>Show Controls</guimenuitem></menuchoice> "
@@ -981,7 +980,7 @@ msgstr ""
 #: ../C/xplayer.xml:604(para)
 msgid ""
 "If the <guilabel>Show Controls</guilabel> option is selected, "
-"<application>Xplayer Movie Player</application> will show the menubar, elapsed "
+"<application>Movie Player</application> will show the menubar, elapsed "
 "time slider, seek control buttons, volume slider and statusbar on the "
 "window. If the <guilabel>Show Controls</guilabel> option is unselected, the "
 "application will hide these controls and show only the display area."
@@ -1144,7 +1143,7 @@ msgstr ""
 
 #: ../C/xplayer.xml:697(para)
 msgid ""
-"By default, <application>Xplayer Movie Player</application> will choose the "
+"By default, <application>Movie Player</application> will choose the "
 "same language for the subtitles as the one you normally use on your computer."
 msgstr ""
 "Som standard vil <application>Xplayer</application> vælge det samme sprog for "
@@ -1152,7 +1151,7 @@ msgstr ""
 
 #: ../C/xplayer.xml:699(para)
 msgid ""
-"<application>Xplayer Movie Player</application> will automatically load and "
+"<application>Movie Player</application> will automatically load and "
 "display subtitles for a video if it finds a subtitle file with the same name "
 "as the video being played, and the extension <filename class=\"extension"
 "\">asc</filename>, <filename class=\"extension\">txt</filename>, <filename "
@@ -1217,7 +1216,7 @@ msgstr ""
 
 #: ../C/xplayer.xml:722(para)
 msgid ""
-"<application>Xplayer Movie Player</application> will display a preview of the "
+"<application>Movie Player</application> will display a preview of the "
 "screenshot which is to be saved on the left-hand side of the "
 "<application>Save Screenshot</application> dialog."
 msgstr ""
@@ -1275,7 +1274,7 @@ msgstr "Udvidelsesmoduler"
 
 #: ../C/xplayer.xml:746(para)
 msgid ""
-"<application>Xplayer Movie Player</application> has many features which are "
+"<application>Movie Player</application> has many features which are "
 "present in the form of plugins — pieces of the software which are only "
 "loaded if necessary."
 msgstr ""
@@ -1319,7 +1318,7 @@ msgstr ""
 #: ../C/xplayer.xml:756(para)
 msgid ""
 "To disable a plugin again, deselect its checkbox. Plugins will remain "
-"enabled or disabled as set even when <application>Xplayer Movie Player</"
+"enabled or disabled as set even when <application>Movie Player</"
 "application> is closed."
 msgstr ""
 "Du kan deaktivere et udvidelsesmodul igen ved at fjerne fluebenet fra "
@@ -1334,7 +1333,7 @@ msgstr "Altid øverst"
 #: ../C/xplayer.xml:761(para)
 msgid ""
 "When enabled, the <guilabel>Always on Top</guilabel> plugin will force the "
-"main <application>Xplayer Movie Player</application> window to be on top of "
+"main <application>Movie Player</application> window to be on top of "
 "all other windows while a movie is playing, but not while audio or "
 "visualizations are playing. To stop the window being on top, disable the "
 "plugin again."
@@ -1352,7 +1351,7 @@ msgstr "Klient til Coherence DLNA/UPnP"
 #: ../C/xplayer.xml:767(para)
 msgid ""
 "The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows "
-"<application>Xplayer Movie Player</application> to play multimedia content "
+"<application>Movie Player</application> to play multimedia content "
 "from UPnP media servers (such as Coherence servers) on the local network."
 msgstr ""
 "Udvidelsesmodulet <guilabel>Coherence DLNA/UPnP-klient</guilabel> lader "
@@ -1382,7 +1381,7 @@ msgid ""
 "The tree view in the sidebar will list the available media servers. Clicking "
 "on one will expand it to show the types of media it can serve, and clicking "
 "on a media folder will expand it to list the media files available. Double-"
-"clicking on a media file will add it to <application>Xplayer Movie Player</"
+"clicking on a media file will add it to <application>Movie Player</"
 "application>'s playlist and play it. You may alternatively right-click on a "
 "file and choose <menuchoice><guimenuitem>Play</guimenuitem></menuchoice> or "
 "<menuchoice><guimenuitem>Enqueue</guimenuitem></menuchoice> to play the file "
@@ -1449,7 +1448,7 @@ msgstr ""
 #: ../C/xplayer.xml:791(para)
 msgid ""
 "To clear the screen of annotations, press <keycombo><keycap>Ctrl</"
-"keycap><keycap>E</keycap></keycombo>, or close <application>Xplayer Movie "
+"keycap><keycap>E</keycap></keycombo>, or close <application>Movie "
 "Player</application>."
 msgstr ""
 "Du kan rydde skærmen for annotationer ved at trykke <keycombo><keycap>Ctrl</"
@@ -1591,7 +1590,7 @@ msgstr "Lokal søgning"
 msgid ""
 "The <guilabel>Local Search</guilabel> plugin allows you to search for "
 "playable movies and audio files on your computer from within "
-"<application>Xplayer Movie Player</application>. With the plugin enabled, "
+"<application>Movie Player</application>. With the plugin enabled, "
 "choose <menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
 "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
 "<guibutton>Sidebar</guibutton> button to show the sidebar. Select "
@@ -1654,10 +1653,10 @@ msgstr "%a"
 
 #: ../C/xplayer.xml:857(para)
 msgid ""
-"Replaced with the program's name: <application>Xplayer Movie Player</"
+"Replaced with the program's name: <application>Movie Player</"
 "application>."
 msgstr ""
-"Erstattes med programmets navn: <application>Xplayer - filmafspiller</"
+"Erstattes med programmets navn: <application>- filmafspiller</"
 "application>."
 
 #: ../C/xplayer.xml:860(literal)
@@ -1826,7 +1825,7 @@ msgstr "Miniature"
 
 #: ../C/xplayer.xml:911(para)
 msgid ""
-"The <guilabel>Thumbnail</guilabel> plugin sets <application>Xplayer Movie "
+"The <guilabel>Thumbnail</guilabel> plugin sets <application>Movie "
 "Player</application>'s main window icon to a thumbnail of the current movie, "
 "and updates the icon when new movies are loaded."
 msgstr ""
@@ -1837,7 +1836,7 @@ msgstr ""
 #: ../C/xplayer.xml:913(para)
 msgid ""
 "If a thumbnail doesn't exist for the current movie (or if you're playing an "
-"audio file), the main window icon will be reset to the <application>Xplayer "
+"audio file), the main window icon will be reset to the <application>"
 "Movie Player</application> logo."
 msgstr ""
 "Hvis en miniature ikke findes for den aktuelle film (eller hvis du afspiller "
@@ -1881,7 +1880,7 @@ msgstr "YouTube-læser"
 msgid ""
 "The <guilabel>YouTube Browser</guilabel> plugin allows you to search and "
 "browse <ulink type=\"http\" url=\"http://www.youtube.com/\">YouTube</ulink>, "
-"and play YouTube videos directly in <application>Xplayer Movie Player</"
+"and play YouTube videos directly in <application>Movie Player</"
 "application>. With the plugin enabled, choose "
 "<menuchoice><shortcut><keycap>F9</keycap></shortcut><guimenu>View</"
 "guimenu><guimenuitem>Sidebar</guimenuitem></menuchoice> or click on the "
@@ -1946,11 +1945,11 @@ msgstr "D-Bus-tjeneste"
 #: ../C/xplayer.xml:941(para)
 msgid ""
 "The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of "
-"which track is playing in <application>Xplayer Movie Player</application> on "
+"which track is playing in <application>Movie Player</application> on "
 "the D-Bus session bus. Applications such as <application>Gajim</application> "
 "can listen for such notifications and respond accordingly by, for example, "
 "updating your instant messaging status message to display the video "
-"currently being played in <application>Xplayer Movie Player</application>."
+"currently being played in <application>Movie Player</application>."
 msgstr ""
 "Udvidelsesmodulet <guilabel>D-Bus-tjeneste</guilabel> rundsender beskeder "
 "om, hvilket spor, der afspilles i <application>Xplayer</application> via D-Bus-"
@@ -1965,7 +1964,7 @@ msgstr "Indstillinger"
 
 #: ../C/xplayer.xml:953(para)
 msgid ""
-"To modify the preferences of <application>Xplayer Movie Player</application>, "
+"To modify the preferences of <application>Movie Player</application>, "
 "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</"
 "guimenuitem></menuchoice>."
 msgstr ""
@@ -2024,7 +2023,7 @@ msgstr "Fremvisning"
 
 #: ../C/xplayer.xml:999(para)
 msgid ""
-"Select the resize option if you want <application>Xplayer Movie Player</"
+"Select the resize option if you want <application>Movie Player</"
 "application> to automatically resize the window to the size of the video "
 "when a new video is loaded."
 msgstr ""
@@ -2129,17 +2128,17 @@ msgstr ""
 "guilabel>."
 
 #: ../C/xplayer.xml:1091(title)
-msgid "About <application>Xplayer Movie Player</application>"
+msgid "About <application>Movie Player</application>"
 msgstr "Om <application>Xplayer</application>"
 
 #: ../C/xplayer.xml:1092(para)
 msgid ""
-"<application>Xplayer Movie Player</application> is written by Bastien Nocera "
+"<application>Movie Player</application> is written by Bastien Nocera "
 "(<email>hadess@hadess.net</email>), Julien Moutte (<email>julien@moutte.net</"
 "email>) for the GStreamer backend, and Guenter Bartsch (<email>guenter@users."
-"sourceforge.net</email>). To find more information about <application>Xplayer "
+"sourceforge.net</email>). To find more information about <application>"
 "Movie Player</application>, please visit the <ulink url=\"http://projects."
-"gnome.org/xplayer/\" type=\"http\"><application>Xplayer Movie Player</"
+"gnome.org/xplayer/\" type=\"http\"><application>Movie Player</"
 "application> website</ulink>."
 msgstr ""
 "<application>Xplayer</application> er skrevet af Bastien Nocera "
@@ -2172,8 +2171,8 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#~ msgid "<application>Xplayer Movie Player</application> Manual V2.0"
+#~ msgid "<application>Movie Player</application> Manual V2.0"
 #~ msgstr "Manual til <application>Xplayer</application>, V2.0"
 
-#~ msgid "<application>Xplayer Movie Player</application> Manual V3.0"
+#~ msgid "<application>Movie Player</application> Manual V3.0"
 #~ msgstr "Manual til <application>Xplayer</application>, V3.0"
