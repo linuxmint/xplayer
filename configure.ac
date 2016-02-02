@@ -79,7 +79,7 @@ AC_SUBST(XPLAYER_API_VERSION)
 AC_DEFINE_UNQUOTED(XPLAYER_API_VERSION, ["$XPLAYER_API_VERSION"], [Define to the Xplayer plugin API version])
 
 # The full list of plugins
-allowed_plugins="apple-trailers autoload-subtitles brasero-disc-recorder chapters dbusservice im-status gromit lirc media-player-keys ontop opensubtitles properties pythonconsole recent rotation save-file samplepython sample-vala screensaver screenshot sidebar-test skipto zeitgeist-dp grilo vimeo"
+allowed_plugins="apple-trailers autoload-subtitles brasero-disc-recorder chapters dbusservice im-status gromit lirc media-player-keys ontop opensubtitles properties pythonconsole recent rotation samplepython sample-vala screensaver screenshot sidebar-test skipto zeitgeist-dp grilo vimeo"
 
 PLUGINDIR='${libdir}/xplayer/plugins'
 AC_SUBST(PLUGINDIR)
@@ -442,18 +442,6 @@ for plugin in ${used_plugins}; do
 				add_plugin="0"
 			fi
 		;;
-		save-file)
-			dnl the nautilus check should be a run-time check
-			dnl but it might not always be running
-			PKG_CHECK_MODULES(SAVE_FILE_CHECK, gio-2.0 >= 2.26 libnautilus-extension >= 2.91.3,
-					  [BUILD_SAVE_FILE=yes], [BUILD_SAVE_FILE=no])
-			if test "${BUILD_SAVE_FILE}" != "yes" ; then
-				plugin_error_or_ignore "you need gio-2.0 >=2.26 to use the save-file plugin"
-				add_plugin="0"
-			else
-				PKG_CHECK_MODULES(SAVE_FILE, gio-2.0 >= 2.26)
-			fi
-		;;
 		chapters)
 			PKG_CHECK_MODULES(CHAPTERS, libxml-2.0 >= $LIBXML_REQS gtk+-3.0 glib-2.0,
 				[BUILD_CHAPTERS=yes], [BUILD_CHAPTERS=no])
@@ -725,7 +713,6 @@ src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in
 src/plugins/properties/Makefile
 src/plugins/recent/Makefile
 src/plugins/rotation/Makefile
-src/plugins/save-file/Makefile
 src/plugins/sidebar-test/Makefile
 src/plugins/skipto/Makefile
 src/plugins/samplepython/Makefile
