@@ -253,7 +253,7 @@ class OpenSubtitlesModel (object):
             import locale
             (language_code, _encoding) = locale.getlocale ()
             self.lang = LANGUAGES[language_code.split ('_')[0]]
-        except (ImportError, IndexError, AttributeError):
+        except (ImportError, IndexError, AttributeError, KeyError):
             self.lang = 'eng'
 
         self._lock = threading.Lock ()
