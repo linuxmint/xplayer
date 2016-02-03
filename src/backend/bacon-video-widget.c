@@ -3801,6 +3801,8 @@ bacon_video_widget_close (BaconVideoWidget * bvw)
 
   g_clear_pointer (&bvw->priv->mrl, g_free);
   g_clear_pointer (&bvw->priv->subtitle_uri, g_free);
+  g_object_set (G_OBJECT (bvw->priv->play), "suburi", NULL, NULL);
+  g_clear_pointer (&bvw->priv->subtitle_uri, g_free);
   g_clear_pointer (&bvw->priv->user_id, g_free);
   g_clear_pointer (&bvw->priv->user_pw, g_free);
 
