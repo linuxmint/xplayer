@@ -3727,16 +3727,16 @@ xplayer_action_handle_scroll (XplayerObject    *xplayer,
 		xplayer_fullscreen_show_popups (xplayer->fs, TRUE);
 
 
-	switch (direction) {
-	case GDK_SCROLL_UP:
-		xplayer_action_seek_relative (xplayer, xplayer->stream_length / 500, FALSE);
-		break;
-	case GDK_SCROLL_DOWN:
-		xplayer_action_seek_relative (xplayer, xplayer->stream_length / 500, FALSE);
-		break;
-	default:
-		retval = FALSE;
-	}
+    switch (direction) {
+    case GDK_SCROLL_UP:
+        xplayer_action_seek_relative (xplayer, xplayer->stream_length / 500, FALSE);
+        break;
+    case GDK_SCROLL_DOWN:
+        xplayer_action_seek_relative (xplayer, -xplayer->stream_length / 500, FALSE);
+        break;
+    default:
+        retval = FALSE;
+    }
 
 	return retval;
 }
