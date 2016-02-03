@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-01 16:38+0000\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -288,8 +288,7 @@ msgstr ""
 msgid "Extra Large"
 msgstr ""
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5468
-#: ../src/xplayer-properties-view.c:242
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr ""
 
@@ -429,7 +428,6 @@ msgid "_Audio output type:"
 msgstr ""
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr ""
 
@@ -461,7 +459,7 @@ msgstr ""
 msgid "Container:"
 msgstr ""
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr ""
 
@@ -942,21 +940,19 @@ msgid ""
 "first."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5464
-#: ../src/xplayer-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5466
-#: ../src/xplayer-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5753
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5934
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1451,51 +1447,6 @@ msgstr ""
 msgid "Select Subtitle Font"
 msgstr ""
 
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
-msgid "Audio/Video"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:141
-msgid "N/A"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:170
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:173
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:190
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:222
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:230
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:251
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr ""
-
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr ""
@@ -1741,7 +1692,7 @@ msgstr ""
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:877
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1749,15 +1700,15 @@ msgid ""
 "<b>%s</b>: %s"
 msgstr ""
 
-#: ../src/xplayer-video-thumbnailer.c:878
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr ""
 
-#: ../src/xplayer-video-thumbnailer.c:880
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr ""
 
-#: ../src/xplayer-video-thumbnailer.c:883
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr ""
 
@@ -2160,6 +2111,33 @@ msgstr ""
 msgid "Adds movie properties to the sidebar"
 msgstr ""
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr ""
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr ""
@@ -2242,36 +2220,6 @@ msgstr ""
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
-msgstr ""
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr ""
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr ""
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
 msgstr ""
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
