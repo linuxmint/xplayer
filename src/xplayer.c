@@ -266,7 +266,7 @@ main (int argc, char **argv)
 	g_set_application_name (_("Videos"));
 	gtk_window_set_default_icon_name ("xplayer");
 	g_setenv("PULSE_PROP_media.role", "video", TRUE);
-
+	g_setenv("PULSE_PROP_application.icon_name", "xplayer", TRUE);
 
 	/* Build the main Xplayer object */
 	xplayer = g_object_new (XPLAYER_TYPE_OBJECT,
