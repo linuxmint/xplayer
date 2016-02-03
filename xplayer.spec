@@ -8,7 +8,7 @@ Version: 1.0.0
 Release: 1
 License: GPL
 Group: Applications/Multimedia
-URL: http://www.gnome.org/projects/xplayer/
+URL: https://github.com/linuxmint/xplayer/
 Source0: http://ftp.gnome.org/pub/GNOME/sources/xplayer/0.99/xplayer-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires(post): GConf2
