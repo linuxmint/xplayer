@@ -5893,7 +5893,12 @@ bacon_video_widget_initable_init (GInitable     *initable,
 				  GError       **error)
 {
   BaconVideoWidget *bvw;
+#ifdef HAVE_CLUTTER_GST_3
+  GstElement *audio_sink = NULL;
+  ClutterGstVideoSink *video_sink = NULL;
+#else
   GstElement *audio_sink = NULL, *video_sink = NULL;
+#endif
   gchar *version_str;
   GstPlayFlags flags;
   GstElement *audio_bin, *audio_converter;
@@ -5918,7 +5923,11 @@ bacon_video_widget_initable_init (GInitable     *initable,
   bvw->priv->play = element_make_or_warn ("playbin", "play");
   audio_converter = element_make_or_warn ("audioconvert", "audio-converter");
   bvw->priv->audio_pitchcontrol = element_make_or_warn ("scaletempo", "scaletempo");
+#ifdef HAVE_CLUTTER_GST_3
+  video_sink = clutter_gst_video_sink_new ();
+#else
   video_sink = element_make_or_warn ("cluttersink", "video-sink");
+#endif
   audio_sink = element_make_or_warn ("autoaudiosink", "audio-sink");
 
   if (!bvw->priv->play ||
@@ -5973,10 +5982,12 @@ bacon_video_widget_initable_init (GInitable     *initable,
   clutter_actor_set_background_color (bvw->priv->stage, CLUTTER_COLOR_Black);
 
   /* Video sink, with aspect frame */
-  bvw->priv->texture = g_object_new (CLUTTER_TYPE_TEXTURE,
-				     "disable-slicing", TRUE,
-				     NULL);
+#ifdef HAVE_CLUTTER_GST_3
+  bvw->priv->texture = g_object_new (CLUTTER_TYPE_ACTOR, "content", g_object_new (CLUTTER_GST_TYPE_CONTENT, "sink", video_sink, NULL), "name", "texture", NULL);
+#else
+  bvw->priv->texture = g_object_new (CLUTTER_TYPE_TEXTURE, "disable-slicing", TRUE, NULL);
   g_object_set (G_OBJECT (video_sink), "texture", bvw->priv->texture, NULL);
+#endif
 
   /* The logo */
   bvw->priv->logo_frame = xplayer_aspect_frame_new ();
