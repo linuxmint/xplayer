@@ -611,42 +611,6 @@ AM_CONDITIONAL([ENABLE_MULLY_PLUGIN],[test "$enable_mully_plugin" = "yes"])
 AM_CONDITIONAL([ENABLE_CONE_PLUGIN],[test "$enable_cone_plugin" = "yes"])
 AM_CONDITIONAL([ENABLE_VEGAS_PLUGIN],[test "$enable_vegas_plugin" = "yes"])
 
-dnl ********
-dnl Nautilus
-dnl ********
-
-dnl Check for Nautilus property page build
-AC_ARG_ENABLE(nautilus,
-	AS_HELP_STRING([--enable-nautilus],[compile the nautilus plugin]),
-	[case "${enableval}" in
-	yes) ENABLE_NAUTILUS=yes ;;
-	no) ENABLE_NAUTILUS=no ;;
-	*) AC_MSG_ERROR(bad value ${enableval} for --enable-nautilus) ;;
-	esac],
-	[ENABLE_NAUTILUS=yes]) dnl Default value
-
-if test x$ENABLE_NAUTILUS = "xyes" ; then
-	PKG_CHECK_MODULES(NAUTILUS, gtk+-3.0 gthread-2.0 libnautilus-extension gstreamer-tag-1.0 >= $GSTPLUG_REQS $MISSING_PLUGINS_MODULES,
-			[HAVE_NAUTILUS=yes], [HAVE_NAUTILUS=no])
-fi
-
-AC_ARG_WITH(nautilusdir,
-	    AS_HELP_STRING([--with-nautilusdir=DIR],[Installation path for Nautilus extension @<:@auto@:>@]),
-	    [ac_with_nautilusdir=$withval],
-	    [ac_with_nautilusdir=""])
-
-if test x$HAVE_NAUTILUS = "xyes"; then
-	AC_DEFINE(HAVE_NAUTILUS, 1, [defined if you build the nautilus plugin])
-	if test "${ac_with_nautilusdir}" = ""; then
-		ac_with_nautilusdir=`pkg-config --variable=extensiondir libnautilus-extension`
-	fi
-	AC_SUBST(NAUTILUSDIR)
-	AC_MSG_NOTICE([installing nautilus plugin in ${ac_with_nautilusdir}])
-	AC_SUBST([NAUTILUSDIR],[${ac_with_nautilusdir}])
-
-fi
-AM_CONDITIONAL(HAVE_NAUTILUS, test x$HAVE_NAUTILUS = "xyes")
-
 GLIB_GSETTINGS
 
 GNOME_DEBUG_CHECK
@@ -819,11 +783,6 @@ if test x$enable_browser_plugins = xyes ; then
 	fi
 else
 	AC_MSG_NOTICE([   Browser plugin disabled])
-fi
-if test x$ENABLE_NAUTILUS = xyes ; then
-	AC_MSG_NOTICE([** Nautilus properties page enabled])
-else
-	AC_MSG_NOTICE([   Nautilus properties page disabled])
 fi
 if test "$with_smclient" != "no" ; then
 	AC_MSG_NOTICE([** SM client support enabled])
