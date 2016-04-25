@@ -49,6 +49,15 @@
 #include "xplayer-search-entry.h"
 #include <libgd/gd.h>
 
+#ifndef HAVE_GRILO_0_3_0
+#define grl_operation_options_set_resolution_flags grl_operation_options_set_flags
+#define grl_registry_load_all_plugins(a, b, c) grl_registry_load_all_plugins(a, c)
+#define grl_media_is_audio GRL_IS_MEDIA_AUDIO
+#define grl_media_is_container GRL_IS_MEDIA_BOX
+#define grl_media_is_image GRL_IS_MEDIA_IMAGE
+#define grl_media_is_video GRL_IS_MEDIA_VIDEO
+#endif
+
 #define XPLAYER_TYPE_GRILO_PLUGIN                                         \
 	(xplayer_grilo_plugin_get_type ())
 #define XPLAYER_GRILO_PLUGIN(o)                                           \
@@ -237,9 +246,9 @@ load_icon (XplayerGriloPlugin *self, IconType icon_type, gint thumb_size)
 static GdkPixbuf *
 get_icon (XplayerGriloPlugin *self, GrlMedia *media, gint thumb_size)
 {
-	if (GRL_IS_MEDIA_BOX (media)) {
+	if (grl_media_is_container (media)) {
 		return load_icon (self, ICON_BOX, thumb_size);
-	} else if (GRL_IS_MEDIA_VIDEO (media)) {
+	} else if (grl_media_is_video (media)) {
 		return load_icon (self, ICON_VIDEO, thumb_size);
 	}
 	return NULL;
@@ -449,8 +458,8 @@ browse_cb (GrlSource *source,
 		                    MODEL_RESULTS_REMAINING, &remaining_expected,
 		                    -1);
 		/* Filter images */
-		if (GRL_IS_MEDIA_IMAGE (media) ||
-		    GRL_IS_MEDIA_AUDIO (media)) {
+		if (grl_media_is_image (media) ||
+		    grl_media_is_audio (media)) {
 			g_object_unref (media);
 			goto out;
 		}
@@ -502,7 +511,7 @@ browse (XplayerGriloPlugin *self,
 		caps = grl_source_get_caps (source, GRL_OP_BROWSE);
 
 		default_options = grl_operation_options_new (NULL);
-		grl_operation_options_set_flags (default_options, BROWSE_FLAGS);
+		grl_operation_options_set_resolution_flags (default_options, BROWSE_FLAGS);
 		grl_operation_options_set_skip (default_options, (page - 1) * PAGE_SIZE);
 		grl_operation_options_set_count (default_options, PAGE_SIZE);
 		if (grl_caps_get_type_filter (caps) & GRL_TYPE_FILTER_VIDEO)
@@ -566,7 +575,7 @@ play (XplayerGriloPlugin *self,
 			GrlOperationOptions *resolve_options;
 
 			resolve_options = grl_operation_options_new (NULL);
-			grl_operation_options_set_flags (resolve_options, RESOLVE_FLAGS);
+			grl_operation_options_set_resolution_flags (resolve_options, RESOLVE_FLAGS);
 
 			url_keys = grl_metadata_key_list_new (GRL_METADATA_KEY_URL, NULL);
 			grl_source_resolve (source, media, url_keys, resolve_options, resolve_url_cb, self);
@@ -611,8 +620,8 @@ search_cb (GrlSource *source,
 
 		self->priv->search_remaining--;
 		/* Filter images */
-		if (GRL_IS_MEDIA_IMAGE (media) ||
-		    GRL_IS_MEDIA_AUDIO (media)) {
+		if (grl_media_is_image (media) ||
+		    grl_media_is_audio (media)) {
 			g_object_unref (media);
 			goto out;
 		}
@@ -651,7 +660,7 @@ get_search_options (XplayerGriloPlugin *self)
 	GrlOperationOptions *supported_options;
 
 	default_options = grl_operation_options_new (NULL);
-	grl_operation_options_set_flags (default_options, BROWSE_FLAGS);
+	grl_operation_options_set_resolution_flags (default_options, BROWSE_FLAGS);
 	grl_operation_options_set_skip (default_options, self->priv->search_page * PAGE_SIZE);
 	grl_operation_options_set_count (default_options, PAGE_SIZE);
 	grl_operation_options_set_type_filter (default_options, GRL_TYPE_FILTER_VIDEO);
@@ -755,7 +764,7 @@ browser_activated_cb (GtkTreeView *tree_view,
 	                    -1);
 
 	if (content != NULL &&
-	    GRL_IS_MEDIA_BOX (content) == FALSE) {
+	    grl_media_is_container (content) == FALSE) {
 		play (self, source, content, TRUE);
 		goto free_data;
 	}
@@ -948,7 +957,7 @@ load_grilo_plugins (XplayerGriloPlugin *self)
 	g_signal_connect (registry, "source-removed",
 	                  G_CALLBACK (source_removed_cb), self);
 
-	if (grl_registry_load_all_plugins (registry, &error) == FALSE) {
+	if (grl_registry_load_all_plugins (registry, TRUE, &error) == FALSE) {
 		g_warning ("Failed to load grilo plugins: %s", error->message);
 		g_error_free (error);
 	}
@@ -1121,7 +1130,7 @@ get_more_browse_results_cb (GtkAdjustment *adjustment,
 		                    -1);
 		/* Skip non-boxes (they can not be browsed) */
 		if (container != NULL &&
-		    GRL_IS_MEDIA_BOX (container) == FALSE) {
+		    grl_media_is_container (container) == FALSE) {
 			goto free_elements;
 		}
 

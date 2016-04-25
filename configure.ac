@@ -476,8 +476,15 @@ for plugin in ${used_plugins}; do
 			fi
 		;;
 		grilo)
-			PKG_CHECK_MODULES(LIBGRILO, grilo-0.2 >= $GRILO_REQS,
-				[HAVE_LIBGRILO=yes], [HAVE_LIBGRILO=no])
+			PKG_CHECK_EXISTS(grilo-0.3 >= $GRILO_REQS, [have_grilo_0_3_0=yes], [have_grilo_0_3_0=no])
+			if test "$have_grilo_0_3_0" = yes; then
+				PKG_CHECK_MODULES(LIBGRILO, grilo-0.3 >= $GRILO_REQS,
+					[HAVE_LIBGRILO=yes], [HAVE_LIBGRILO=no])
+				AC_DEFINE(HAVE_GRILO_0_3_0, 1, [libgrilo >= 0.3.0 present])
+			else
+				PKG_CHECK_MODULES(LIBGRILO, grilo-0.2 >= $GRILO_REQS,
+					[HAVE_LIBGRILO=yes], [HAVE_LIBGRILO=no])
+			fi
 			if test "${HAVE_LIBGRILO}" != "yes" ; then
 				plugin_error_or_ignore "you need libgrilo >= $GRILO_REQS installed for the Grilo plugin"
 				add_plugin="0"
