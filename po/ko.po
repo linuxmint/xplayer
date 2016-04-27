@@ -17,70 +17,73 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-29 15:37+0000\n"
-"PO-Revision-Date: 2013-09-14 21:15+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-12 06:37+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
-"Language: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: Korean\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "멈춤"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "일시 정지"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "재생중"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "영상을 재생하는 중"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:441
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "재생할 URI가 없습니다"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:674
-#: ../browser-plugin/xplayer-plugin-viewer.c:1698
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
 msgid "Xplayer Movie Player"
 msgstr "토템 동영상 플레이어"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1118
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "\"%s\"(으)로 열기(_O)"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1339 ../src/xplayer-object.c:2450
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "오류가 발생했습니다"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2031
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "재생 목록이 없거나 목록이 비어 있습니다"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2126
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "동영상 브라우저 플러그인"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2142 ../src/xplayer.c:248
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "스레드에 안전한 라이브러리를 초기화할 수 없습니다."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2142
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "시스템 설치가 올바른지 확인하십시오. 토템 플러그인을 끝냅니다."
 
@@ -88,7 +91,7 @@ msgstr "시스템 설치가 올바른지 확인하십시오. 토템 플러그인
 msgid "Leave Fullscreen"
 msgstr "전체 화면 나가기"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "시간:"
 
@@ -100,9 +103,7 @@ msgstr "오디오를 플레이할 경우에도 화면 보호기 활성화"
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
-msgstr ""
-"오디오를 플레이할 경우에도 화면 보호기 시작을 허용합니다. 모니터에서 스피커 "
-"기능을 하는 경우 이 기능이 필요합니다."
+msgstr "오디오를 플레이할 경우에도 화면 보호기 시작을 허용합니다. 모니터에서 스피커 기능을 하는 경우 이 기능이 필요합니다."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
@@ -230,8 +231,7 @@ msgstr "동영상을 읽어들였을 때 외부 챕터 파일을 자동으로 �
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
-msgstr ""
-"재생 중인 오디오/비디오 파일을 일시 중지하거나 닫을 때 위치를 저장할지 여부."
+msgstr "재생 중인 오디오/비디오 파일을 일시 중지하거나 닫을 때 위치를 저장할지 여부."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:33
 msgid "Active plugins list"
@@ -259,11 +259,11 @@ msgstr "위치 복사(_C)"
 msgid "Copy the location to the clipboard"
 msgstr "위치를 클립보드에 복사합니다"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "자막 선택(_S)..."
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "자막으로 이용할 파일을 고릅니다"
 
@@ -302,8 +302,7 @@ msgstr "크게"
 msgid "Extra Large"
 msgstr "아주 크게"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5468
-#: ../src/xplayer-properties-view.c:242
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "스테레오"
 
@@ -443,7 +442,6 @@ msgid "_Audio output type:"
 msgstr "오디오 출력 형식(_A):"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr "오디오"
 
@@ -475,7 +473,7 @@ msgstr "커멘트:"
 msgid "Container:"
 msgstr "컨테이너:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "비디오"
 
@@ -504,8 +502,8 @@ msgid "Channels:"
 msgstr "채널:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:247
-#: ../src/xplayer.c:255 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "동영상"
 
@@ -516,321 +514,372 @@ msgstr "동영상을 재생합니다"
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr ""
-"Video;비디오;Movie;영상;Film;영화;Clip;동영상;Series;시리즈;Player;플레이어;"
-"DVD;TV;텔레비젼;티비;Disc;디스크;"
+"Video;비디오;Movie;영상;Film;영화;Clip;동영상;Series;시리즈;Player;플레이어;DVD;TV;텔레비젼;티비;Dis"
+"c;디스크;"
+
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "재생/일시 정지"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "다음"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "이전"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "무음"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "전체 화면"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "열기(_O)"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "위치 열기(_L)"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "전체 화면(_F)"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "기본 설정(_N)"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "임의 재생(_L)"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "반복(_R)"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "끝내기(_Q)"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "동영상(_M)"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "열기(_O)..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "파일을 엽니다"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "위치 열기(_L)..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "외부 파일 열기"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "꺼내기(_E)"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "현재 디스크 빼기"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "속성(_P)"
 
 # tooltip - 문장으로 번역
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "현재 스트림의 속성을 봅니다"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "재생 / 일시 정지(_A)"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "동영상을 재생하거나 일시 정지합니다"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "프로그램을 마칩니다"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "재생 목록 지우기(_C)"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "재생 목록 지우기"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "기본 설정(_N)"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "프로그램을 설정합니다"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "플러그인..."
 
 # tooltip - 문장으로 번역
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "프로그램을 확장하는 플러그인을 설정합니다"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "보기(_V)"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "전체 화면(_F)"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "전체 화면으로 전환"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "창 크기를 영상 크기에 맞추기"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "1∶2 크기(_R)"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "원래 영상 크기의 절반 크기로"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "_1∶1 크기"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "원래 영상 크기와 같은 크기로"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "_2∶1 크기"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "원래 영상 크기의 두 배 크기로"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "화면 비율(_A)"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "각도 바꾸기(_G)"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "카메라 각도 바꾸기"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "이동(_G)"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "DVD 메뉴(_D)"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "DVD 메뉴로 이동"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "제목 메뉴(_T)"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "제목 메뉴로 이동"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "오디오 메뉴(_U)"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "오디오 메뉴로 이동"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "각도 메뉴(_A)"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "원형 메뉴로 이동"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "챕터 메뉴(_C)"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "챕터 메뉴로 이동"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "다음 챕터로/동영상으로(_N)"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "다음 챕터로 혹은 동영상으로"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "이전 챕터로/동영상으로(_P)"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "이전 챕터로 혹은 동영상으로"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "사운드(_S)"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "소리 높임(_U)"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "볼륨 높이기"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "소리 낮춤(_D)"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "볼륨 낮추기"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "차례(_C)"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "도움말 차례"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "이 프로그램 정보"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "반복 모드(_R)"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "반복 모드 설정"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "임의 재생 모드(_L)"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "임의 재생 모드 설정"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "컨트롤 보이기(_C)"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "컨트롤을 보입니다"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "가장자리 창(_I)"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "가장자리 창을 보여주거나 감춥니다"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "자동"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "화면 비율을 자동으로 설정합니다"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "정사각형"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "화면 비율을 정사각형으로 설정합니다"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "4∶3 (TV) 화면 비율"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (와이드스크린)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "16∶9 (와이드) 화면 비율"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "2.11∶1 (DVB) 화면 비율"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "자막(_U)"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "언어(_L)"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "확대"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "확대"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "앞으로 건너뛰기(_F)"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "앞으로 건너뛰기"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "뒤로 건너뛰기(_B)"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "뒤로 건너뛰기"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "재생 시간 표시줄"
 
@@ -888,7 +937,8 @@ msgstr "동영상을 읽을 수 없습니다."
 #: ../src/backend/bacon-video-widget.c:3375
 #: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -904,35 +954,31 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"코덱이 없어서 오디오 또는 비디오 스트림을 처리할 수 없습니다. 동영상 파일의 "
-"종류에 따라 추가 플러그인을 설치해야 할 수도 있습니다."
+"코덱이 없어서 오디오 또는 비디오 스트림을 처리할 수 없습니다. 동영상 파일의 종류에 따라 추가 플러그인을 설치해야 할 수도 있습니다."
 
 #: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
-msgstr ""
-"이 파일은 네트워크를 통해 재생할 수 없습니다. 먼저 로컬 위치에 다운로드하십시"
-"오."
+msgstr "이 파일은 네트워크를 통해 재생할 수 없습니다. 먼저 로컬 위치에 다운로드하십시오."
 
-#: ../src/backend/bacon-video-widget.c:5464 ../src/xplayer-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "서라운드"
 
-#: ../src/backend/bacon-video-widget.c:5466 ../src/xplayer-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "모노"
 
-#: ../src/backend/bacon-video-widget.c:5753
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "지원하지 않는 비디오 스트림이 미디어에 포함되어 있습니다."
 
-#: ../src/backend/bacon-video-widget.c:5934
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
-msgstr ""
-"필요한 플러그인이 없습니다. 프로그램을 올바르게 설치했는지 확인하십시오."
+msgstr "필요한 플러그인이 없습니다. 프로그램을 올바르게 설치했는지 확인하십시오."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -998,12 +1044,12 @@ msgstr "확장자"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"'%s'에 대해 사용할 파일 형식을 찾을 수 없습니다. 이 파일에 대한 확장 기능을 "
-"설치하거나 수동으로 아래 목록에서 파일 형식을 선택하십시오."
+"'%s'에 대해 사용할 파일 형식을 찾을 수 없습니다. 이 파일에 대한 확장 기능을 설치하거나 수동으로 아래 목록에서 파일 형식을 "
+"선택하십시오."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
@@ -1042,7 +1088,7 @@ msgstr "세션 관리 옵션을 표시합니다"
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1055,7 +1101,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1166,23 +1212,23 @@ msgstr[0] "초당 %d 프레임"
 msgid "Audio Preview"
 msgstr "오디오 미리 보기"
 
-#: ../src/xplayer.c:248
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "시스템 설치가 올바른지 확인하십시오. 토템을 끝냅니다."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "지금 재생(_P)"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "재생 목록에 추가(_A)"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "취소"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "파일 없음"
 
@@ -1227,51 +1273,35 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
-msgstr ""
-"토템에는 독점적인 GStreamer 플러그인을 사용할 수 있는 예외 조항이 있습니다."
+msgstr "토템에는 독점적인 GStreamer 플러그인을 사용할 수 있는 예외 조항이 있습니다."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "없음"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "자동"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Copyright © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"장재만 <jacojang@korea.com>\n"
-"류창우 <cwryu@debian.org>\n"
-"차영호 <ganadist@gmail.com>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "토템 홈페이지"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "플러그인 설정"
 
-#: ../src/xplayer-object.c:161
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1281,52 +1311,47 @@ msgstr ""
 "사용 가능한 명령행 옵션 목록을 보려면 '%s --help' 명령을 실행하십시오.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:589
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "토템 %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "일시 정지"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "재생"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1917
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "토템이 '%s'을(를) 재생할 수 없습니다."
 
-#: ../src/xplayer-object.c:2108
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "토템 도움말 차례를 표시할 수 없습니다."
 
-#: ../src/xplayer-object.c:3997 ../src/xplayer-object.c:3999
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "이전 장으로/동영상으로"
 
-#: ../src/xplayer-object.c:4006 ../src/xplayer-object.c:4008
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "재생 / 일시 정지"
 
-#: ../src/xplayer-object.c:4016 ../src/xplayer-object.c:4018
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "다음 장으로/동영상으로"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
-msgid "Fullscreen"
-msgstr "전체 화면"
-
-#: ../src/xplayer-object.c:4162
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "토템이 시작할 수 없습니다."
 
-#: ../src/xplayer-object.c:4162
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "이유 없음."
 
@@ -1337,18 +1362,6 @@ msgstr "위치 열기..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "디버깅 사용"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "재생/일시 정지"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "다음"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "이전"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1412,50 +1425,50 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "동시에 대기열에 넣고 바꿀 수 없습니다"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast 재생 목록"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 오디오(스트림)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 오디오(스트림, DOS 형식)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "XML 공유 재생 목록(XSPF)"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "타이틀 %d"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "재생 목록을 저장할 수 없습니다"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "재생 목록 저장"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: ../src/xplayer-playlist.c:1860
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "'%s' 재생 목록을 파싱할 수 없습니다. 손상된 것 같습니다."
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "재생 목록 오류"
 
@@ -1466,51 +1479,6 @@ msgstr "기본 설정"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "자막 글꼴 선택"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
-msgid "Audio/Video"
-msgstr "오디오/비디오"
-
-#: ../src/xplayer-properties-view.c:141
-msgid "N/A"
-msgstr "해당 없음"
-
-#: ../src/xplayer-properties-view.c:170
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "해당 없음"
-
-#: ../src/xplayer-properties-view.c:173
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kbps"
-
-#: ../src/xplayer-properties-view.c:190
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:222
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:230
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "해당 없음"
-
-#: ../src/xplayer-properties-view.c:251
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "해당 없음"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1559,8 +1527,10 @@ msgstr "%s, %f %%"
 msgid "Current Locale"
 msgstr "현재 로캘"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "아랍어"
 
@@ -1568,7 +1538,8 @@ msgstr "아랍어"
 msgid "Armenian"
 msgstr "아르메니아어"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "발트어"
@@ -1577,17 +1548,22 @@ msgstr "발트어"
 msgid "Celtic"
 msgstr "켈트어"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "중앙 유럽"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "중국어 간체"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "중국어 번체"
@@ -1596,9 +1572,12 @@ msgstr "중국어 번체"
 msgid "Croatian"
 msgstr "크로아티아어"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "키릴 문자"
 
@@ -1606,7 +1585,8 @@ msgstr "키릴 문자"
 msgid "Cyrillic/Russian"
 msgstr "키릴 문자/러시아어"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "키릴 문자/우크라이나어"
 
@@ -1614,7 +1594,8 @@ msgstr "키릴 문자/우크라이나어"
 msgid "Georgian"
 msgstr "그루지야어"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "그리스어"
@@ -1627,8 +1608,10 @@ msgstr "구자라트어"
 msgid "Gurmukhi"
 msgstr "구루묵히"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "히브리어"
 
@@ -1644,13 +1627,16 @@ msgstr "힌두어"
 msgid "Icelandic"
 msgstr "아이슬랜드어"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "일본어"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "한국어"
 
@@ -1662,7 +1648,8 @@ msgstr "북유럽"
 msgid "Persian"
 msgstr "페르시아어"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "루마니아어"
 
@@ -1674,24 +1661,31 @@ msgstr "남부 유럽"
 msgid "Thai"
 msgstr "타이어"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "터키어"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "유니코드"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "서양어"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "베트남어"
@@ -1731,7 +1725,7 @@ msgstr "디렉터리 추가"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:861
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1742,15 +1736,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:862
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "파일 이름"
 
-#: ../src/xplayer-video-thumbnailer.c:864
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "해상도"
 
-#: ../src/xplayer-video-thumbnailer.c:867
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "재생 시간"
 
@@ -2155,6 +2149,33 @@ msgstr "동영상 속성"
 msgid "Adds movie properties to the sidebar"
 msgstr "가장자리 창에 동영상 속성을 추가합니다"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kbps"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "해당 없음"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "해당 없음"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "속성"
@@ -2165,11 +2186,11 @@ msgstr "RPDB2 암호"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
-"권한이 없이 토템에 원격으로 접근하지 않도록 RPDB2 서버를 보호할 암호. 빈 값이"
-"면, 'xplayer' 기본값을 사용합니다."
+"권한이 없이 토템에 원격으로 접근하지 않도록 RPDB2 서버를 보호할 암호. 빈 값이면, 'xplayer' 기본값을 사용합니다."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2215,8 +2236,8 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"확인을 누르면 WINPDB나 RPDB2를 이용해 연결할 때까지 토템이 대기합니다. DConf"
-"에서 디버거 암호를 설정하지 않았다면 기본 암호를 ('xplayer') 사용합니다."
+"확인을 누르면 WINPDB나 RPDB2를 이용해 연결할 때까지 토템이 대기합니다. DConf에서 디버거 암호를 설정하지 않았다면 기본 "
+"암호를 ('xplayer') 사용합니다."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2241,36 +2262,6 @@ msgstr "시계 방향 회전(_R)"
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "시계 반대 방향 회전(_L)"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "복사본 저장"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "현재 재생 중인 동영상의 복사본을 저장합니다"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "복사본 저장..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "동영상의 복사본을 저장합니다"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "복사본 저장"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "동영상"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "동영상 스트림"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"

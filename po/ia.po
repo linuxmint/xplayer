@@ -1,54 +1,49 @@
-# translation of nn.po to Norwegian Nynorsk
-# This file is distributed under the same license as the xplayer package.
-# Copyright (C) 2008, The Free Software Foundation, Inc.
-# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2006.
-# Eskild Hustvedt <eskildh@gnome.org>, 2008.
-# Torstein Adolf Winterseth <kvikende@yahoo.no>, 2009.
-# Eirik U. Birkeland <eirbir@gmail.com>, 2009.
-# Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
+# Interlingua translation for linuxmint
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: nn\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-02-03 13:01+0000\n"
-"Last-Translator: Torstein A. W. <Unknown>\n"
-"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"PO-Revision-Date: 2016-03-15 13:15+0000\n"
+"Last-Translator: karm <melo@carmu.com>\n"
+"Language-Team: Interlingua <ia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
-"Language: nn\n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
 #: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
-msgstr "Stoppa"
+msgstr "Stoppate"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
-msgstr "Sett på pause"
+msgstr "In pausa"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
-msgstr "Spelar av"
+msgstr "In reproduction"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "Spelar ein film"
+msgstr "Reproduction de un film"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
-msgstr "Ingen URI å spela av"
+msgstr "Nulle URI a reproducer"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:675
 #: ../browser-plugin/xplayer-plugin-viewer.c:1699
 msgid "Xplayer Movie Player"
-msgstr "Xplayer – filmspelar"
+msgstr "Reproductor de film Xplayer"
 
 #. translators: this is:
 #. * Open With ApplicationName
@@ -56,932 +51,885 @@ msgstr "Xplayer – filmspelar"
 #: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
-msgstr "_Opna med «%s»"
+msgstr "Aperir (_Open) con \"%s\""
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
-msgstr "Ein feil oppstod."
+msgstr "Un error ha occurrite"
 
-#
 #: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
-msgstr "Anten finst det inga speleliste, eller så er ho tom"
+msgstr "Nulle lista de reproduction o lista de reproduction vacue"
 
-#
 #: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
-msgstr "Nettlesartillegg for avspeling av film"
+msgstr "Plugin de exploration de films"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
-msgstr "Klarte ikkje starta trådsikre bibliotek."
+msgstr "Impossibile initialisar le librerias thread-safe."
 
-#
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"Sjå til at systemet er rett installert. Xplayer-tillegget vert avslutta no."
+"Verifica le installation de tu systema.  Le plugin de Xplayer nunc exira."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
-msgstr "Avslutt fullskjerm"
+msgstr "Lassar le schermo plen"
 
 #: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
-msgstr "Tid:"
+msgstr "Tempore:"
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Lat pauseskjermen slå seg på sjølv når berre lyd vert spela av"
+msgstr "Consentir le salva schermo se activar durante un reproduction audio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Lat pauseskjermen slå seg på når berre lyd vert spela av. Slå av om du har "
-"skjermhøgtalarar."
+"Consentir la activation del salva schermo durante le reproduction audio. "
+"Disactivar si tu ha le altoparlatores alimentate le le monitor."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
-msgstr "Vis visuelle effektar når det ikkje er video å visa"
+msgstr "Monstrar le effectos visual si nulle video es presentate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
-msgstr "Vis visuelle effektar når ei lydfil vert spela av."
+msgstr ""
+"Monstrar le effectos visual durante le reproduction de files de sol audio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
-msgstr ""
+msgstr "Nomine del plugin del effectos visual"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
-msgstr "Lysstyrke på videoen"
+msgstr "Le brillantia del video"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
-msgstr "Kontrast i videoen"
+msgstr "Le contrasto del video"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "The hue of the video"
-msgstr "Fargetone i videoen"
+msgstr "Le casa del video"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "The saturation of the video"
-msgstr "Metting i videoen"
+msgstr "Le saturation del video"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
-msgstr "Endra storleiken på lerretet automatisk ved filopning"
+msgstr "Redimensionar automaticamente le canevas al cargamento del file"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Repeat mode"
-msgstr "Gjentaking"
+msgstr "Modo repetition"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
-msgstr "Omskipling"
+msgstr "Modo miscer"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
-#| msgid "Whether to enable debug for the playback engine"
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Om linjedobling på linjefletta filmer skal slåast av"
+msgstr "Si disactivar le de-interlaciamento pro le filmes interlaciate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
-msgstr "Om avspelingsmotoren skal bruka feilsøking"
+msgstr "Si activar le correction de defectos pro le motor del reproduction"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
-msgstr "Lydutdatatype som skal brukast"
+msgstr "Typo de output audio a usar"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
-msgstr "Innstilling for visualiseringskvaliteten"
+msgstr "Configuration del qualitate del visualisation"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Quality setting for the audio visualization."
-msgstr ""
+msgstr "Configuration del qualitate pro le visualisation del audio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Network buffering threshold"
-msgstr "Terskel for nettverksmellomlagring"
+msgstr "Limine de activation del memoria tampon de rete"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
+"Quantitate de datos pro tampon pro le streams de rete  ante le comenciamento "
+"pro monstrar lo (in secundas)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid "Subtitle font"
-msgstr "Skrifttype for undertekst"
+msgstr "Typo de characteres del subtitulos"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
 msgstr ""
+"Description del typo de character Pango pro le visualisation del subtitulos."
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid "Subtitle encoding"
-msgstr "Teiknsett for undertekst"
+msgstr "Codification del subtitulos"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Encoding character set for subtitle."
-msgstr ""
+msgstr "Codification del equipamento de characteres pro le subtitulos"
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Standard stad for «Opna»-vindauge"
+msgstr "Position ordinari pro le fenestras de dialogo \"Aperir...\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
+"Position ordinari pro le fenestras de dialogo \"Aperir...\". Le actual "
+"directorio es le option predefinite."
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Standard stad for «Ta skjermbilete»-vindauge"
+msgstr ""
+"Position ordinari pro le fenestras de dialogo  \"Capturar le schermo\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
+"Position ordinari pro le fenestras de dialogo  \"Capturar le schermo\". Le "
+"directorio ordinari es \"Pictures\""
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Om tillegg i heimemappa til brukaren skal slåast av"
+msgstr "Si disactivar le plugins in le  directorio \"home\" del usator"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Om snøggtastane skal slåast av"
+msgstr "Si disactivar le vias breve de claviero"
 
-#
 #: ../data/org.x.player.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Om undertekstfiler skal opnast automatisk når filmar vert opna"
+msgstr ""
+"Si auto-cargar le files texto del subtitulos quando un film es cargate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
+"Si auto-cargar le files del capitulos externe quando un film es cargate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
+"Si rememorar le position del files audio/video reproducite in lor pausa o "
+"clausura"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:33
 msgid "Active plugins list"
-msgstr ""
+msgstr "Lista del plugins active"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr ""
+msgstr "Un lista del nomines del plugins que es active (cargate e fluente)."
 
-#
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr "Fje_rn"
+msgstr "_Remover"
 
-#
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "Fjern fila frå spelelista"
+msgstr "Remover le file ex le lista de reproduction"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr "_Kopier adresse"
+msgstr "_Copiar le position"
 
-#
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr "Kopier plasseringa til utklippstavla"
+msgstr "Copiar le position al taula de transferentia"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Vel undertekst …"
+msgstr "_Seliger le subtitulos del texto..."
 
-#
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "Vel ei fil som skal brukast som undertekst"
+msgstr "Seliger un file a usar pro le subtitulos del texto"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "Legg til …"
+msgstr "Adder..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr "Fjern"
+msgstr "Remover"
 
-#
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Lagra speleliste …"
+msgstr "Salvar le lista de reproduction"
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "Flytt opp"
+msgstr "Mover supra"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "Flytt ned"
+msgstr "Mover  a basso"
 
-#
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:2
 msgid "Normal"
 msgstr "Normal"
 
-#
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:4
 msgid "Large"
-msgstr "Stor"
+msgstr "Large"
 
-#
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:6
 msgid "Extra Large"
-msgstr "Ekstra stor"
+msgstr "Extra large"
 
-#
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Stereo"
 
-#
 #: ../data/preferences.ui.h:8
 msgid "4-channel"
-msgstr "4-kanal"
+msgstr "4-channeles"
 
-#
 #: ../data/preferences.ui.h:9
 msgid "4.1-channel"
-msgstr "4.1-kanal"
+msgstr "4.1-channeles"
 
-#
 #: ../data/preferences.ui.h:10
 msgid "5.0-channel"
-msgstr "5.0-kanal"
+msgstr "5.0-channeles"
 
-#
 #: ../data/preferences.ui.h:11
 msgid "5.1-channel"
-msgstr "5.1-kanal"
+msgstr "5.1-channeles"
 
-#
 #: ../data/preferences.ui.h:12
 msgid "AC3 Passthrough"
-msgstr "AC3-gjennomgang"
+msgstr "AC3 Passante"
 
 #: ../data/preferences.ui.h:13
 msgid "Xplayer Preferences"
-msgstr "Innstillingar for Xplayer"
+msgstr "Preferentias de Xplayer"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
-msgstr "Avspeling"
+msgstr "In reproduction"
 
 #: ../data/preferences.ui.h:15
 msgid "Start playing files from last position"
-msgstr "Spel av filer frå den sist brukte plasseringa"
+msgstr "Initiar a reproducer le files ab le position ultime"
 
-#
 #: ../data/preferences.ui.h:16
 msgid "Text Subtitles"
-msgstr "Undertekst"
+msgstr "Subtitulos del texto"
 
 #: ../data/preferences.ui.h:17
-#| msgid "Automatically _load subtitle files when movie is loaded"
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Last inn undertekstfiler når ein film er lasta"
+msgstr "Cargar le files del subtitu_Los quando le film es cargate"
 
 #: ../data/preferences.ui.h:18
 msgid "_Font:"
-msgstr "_Skrifttype:"
+msgstr "Typo de character (_Font):"
 
-#
 #: ../data/preferences.ui.h:19
 msgid "_Encoding:"
-msgstr "_Koding:"
+msgstr "Codification (_Encoding):"
 
 #: ../data/preferences.ui.h:20
 msgid "External Chapters"
-msgstr ""
+msgstr "Capitulos Externe"
 
 #: ../data/preferences.ui.h:21
 msgid "Load _chapter files when movie is loaded"
-msgstr ""
+msgstr "Cargar le files del _capitulo con le film"
 
 #: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
 msgid "General"
-msgstr "Generelt"
+msgstr "General"
 
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:24
 msgid "Display"
-msgstr "Vis"
+msgstr "Schermo"
 
 #: ../data/preferences.ui.h:25
-#| msgid "Automatically _resize the window when a new video is loaded"
 msgid "_Resize the window when a new video is loaded"
-msgstr "Endra _storleiken på vindauget når ein ny film er lasta"
+msgstr "_Redimensionar le fenestra quando un nove video es cargate"
 
 #: ../data/preferences.ui.h:26
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Slå av _linjedobling av linjefletta filmar"
+msgstr "Disactivar _de-interlaciamento del videos interlaciate"
 
 #: ../data/preferences.ui.h:27
 msgid "Disable screensaver when playing"
-msgstr ""
+msgstr "Disactivar le salva schermo durante le reproduction"
 
 #: ../data/preferences.ui.h:28
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
-msgstr "Video eller lyd"
+msgstr "Video o audio"
 
-#
 #: ../data/preferences.ui.h:31
 msgid "Visual Effects"
-msgstr "Visuelle effektar"
+msgstr "Visual effectos"
 
 #: ../data/preferences.ui.h:32
 msgid "Show _visual effects when an audio file is played"
-msgstr "Vis _visuelle effektar når ei lydfil vert spela av"
+msgstr "Monstrar le effectos _visual quando un file audio es reproducite"
 
 #: ../data/preferences.ui.h:33
 msgid "_Type of visualization:"
-msgstr "_Visualiseringstype:"
+msgstr "_Typo de visualization:"
 
 #: ../data/preferences.ui.h:34
 msgid "Visualization _size:"
-msgstr "_Storleik på visualisering:"
+msgstr "Dimen_sion de visualisation"
 
-#
 #: ../data/preferences.ui.h:35
 msgid "Color Balance"
-msgstr "Fargebalanse"
+msgstr "Balanciamento del color"
 
 #: ../data/preferences.ui.h:36
 msgid "_Brightness:"
-msgstr "_Lysstyrke:"
+msgstr "_Brillantia:"
 
 #: ../data/preferences.ui.h:37
 msgid "Co_ntrast:"
-msgstr "Ko_ntrast:"
+msgstr "Co_ntrasto:"
 
 #: ../data/preferences.ui.h:38
 msgid "Sat_uration:"
-msgstr "Me_tting:"
+msgstr "Sat_uration:"
 
 #: ../data/preferences.ui.h:39
 msgid "_Hue:"
-msgstr "_Fargetone:"
+msgstr "Tinta (Hue):"
 
 #: ../data/preferences.ui.h:40
 msgid "Reset to _Defaults"
-msgstr "Still tilbake til _standard"
+msgstr "Restaurar al optiones pre_Definite"
 
-#
 #: ../data/preferences.ui.h:41
 msgid "Audio Output"
-msgstr "Lydutgang"
+msgstr "Output audio"
 
 #: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
-msgstr "_Lydutdatatype:"
+msgstr "Typo de output del _Audio:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr "Lyd"
+msgstr "Audio"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr "Tittel:"
+msgstr "Titulo:"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr "Artist:"
+msgstr "Artista:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "Lengd:"
+msgstr "Duration:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr "År:"
+msgstr "Anno:"
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
 msgstr "Album:"
 
-#
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr "Kommentar:"
+msgstr "Commento:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr ""
+msgstr "Continitor:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr "Bilete"
+msgstr "Video"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr "Mål:"
+msgstr "Dimensiones:"
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr "Kodek:"
+msgstr "Codec:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Biletrate:"
+msgstr "Frequentia de quadro:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr "Bitrate:"
+msgstr "Frequentia de bit:"
 
-#
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Samplingsrate:"
+msgstr "Frequentia de campionar"
 
-#
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr "Kanalar:"
+msgstr "Canales:"
 
-#
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
 #: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
-msgstr "Videoar"
+msgstr "Videos"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr ""
+msgstr "Reproducer films"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr ""
+msgstr "Video;Film;Film;Retalio video;Serie;Reproductor;DVD;TV;Disco;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Spel av / pause"
+msgstr "Reproducer/Pausar"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "Neste"
+msgstr "Sequente"
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "Førre"
+msgstr "Precedente"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr ""
+msgstr "Mute"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
 #: ../src/xplayer-object.c:4045
 msgid "Fullscreen"
-msgstr "Fullskjerm"
+msgstr "Schermo plen"
 
 #: ../data/xplayer.ui.h:1
 msgid "_Movie"
-msgstr "_Film"
+msgstr "Fil_M"
 
-#
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_Opna …"
+msgstr "Aperir (_Open)..."
 
-#
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr "Opna ei fil"
+msgstr "Aperir un file"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Opna _adresse …"
+msgstr "Operir un position (_Location)..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Opna ei ikkje-lokal fil"
+msgstr "Operir un file non-local"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "Løys _ut"
+msgstr "_Ejectar"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "Løys ut den gjeldande disken"
+msgstr "Ejectar le disco actual"
 
-#
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr "_Eigenskapar"
+msgstr "_Proprietates"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "Vis eigenskapane til den gjeldande straumen"
+msgstr "Vider le proprietates del stream actual"
 
-#
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "Spel av / p_ause"
+msgstr "Reproducer / P_ausar"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Spel av filmen eller set han på pause"
+msgstr "Reproducer o pausar le film"
 
-#
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr "_Avslutt"
+msgstr "_Quitar"
 
-#
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr "Avslutt programmet"
+msgstr "Quitar le programma"
 
-#
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr "R_ediger"
+msgstr "Re_Diger"
 
-#
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "_Tøm speleliste"
+msgstr "_Clarar le lista de reproduction"
 
-#
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "Tøm spelelista"
+msgstr "Clara le lista de reproduction"
 
-#
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "_Innstillingar"
+msgstr "Prefere_ntias"
 
-#
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "Set opp programmet"
+msgstr "Configurar le application"
 
-#
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Tillegg …"
+msgstr "Plugins..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Set opp programtillegg for å utvida programmet"
+msgstr "Configurar le plugins pro extender le application"
 
-#
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr "_Vis"
+msgstr "_Vider"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "_Fullskjerm"
+msgstr "Plen schermo (_Full)"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Byt til fullskjerm"
+msgstr "Excambiar a schermo plen"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Tilpass vindauget til filmen"
+msgstr "Adaptar le fenestra al film"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr ""
+msgstr "_Redimensionar 1∶2"
 
-#
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "Endra storleiken til halvparten av opphavleg storleik"
+msgstr "Redimensionar a medietate le dimension original del video"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr ""
+msgstr "Redimensionar _1∶1"
 
-#
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Endra storleiken til opphavleg storleik"
+msgstr "Redimensionar al dimension original del video"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr ""
+msgstr "Redimensionar  _2∶1"
 
-#
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "Endra storleiken til det dobbelte av opphavleg storleik"
+msgstr "Redimensionar al duple del dimension original del video"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr "_Aspektrate"
+msgstr "Ration del _Aspecto"
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr "Byt _kameravinkel"
+msgstr "Excambiar le an_gulos"
 
-#
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "Byt kameravinkel"
+msgstr "Excambiar le angulos del camera"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr "_Gå"
+msgstr "Ir (_Go)"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr "_DVD-meny"
+msgstr "Menu del _DVD"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "Gå til DVD-menyen"
+msgstr "Ir al menu del _DVD"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr "_Tittelmeny"
+msgstr "Menu del _Titulo"
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr "Gå til tittelmenyen"
+msgstr "Ir al menu del titulo"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr "L_ydmeny"
+msgstr "Menu de A_udio"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Gå til lydmenyen"
+msgstr "Ir al menu del audio"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr "_Kameravinkelmeny"
+msgstr "Menu del _Angulo"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr "Gå til kameravinkelmenyen"
+msgstr "Ir al menu del angulo"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "_Kapittelmeny"
+msgstr "Menu del _Chapitulo"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Gå til kapittelmenyen"
+msgstr "Ir al menu del capitulo"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "_Neste kapittel/film"
+msgstr "Capitulo/film seque_Nte"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Neste kapittel eller film"
+msgstr "Capitulo o film sequente"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "_Førre kapittel/film"
+msgstr "Capitulo/Film _Precedente"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Førre kapittel eller film"
+msgstr "Capitulo o film precedente"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr "_Lyd"
+msgstr "_Sono"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "_Høgare lyd"
+msgstr "Volumime s_Uper"
 
-#
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "Skru opp volumet"
+msgstr "Accrescer le volumine"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "_Lågare lyd"
+msgstr "Volumine infra (_Down)"
 
-#
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "Skru ned volumet"
+msgstr "Decrescer le volumine"
 
-#
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr "_Hjelp"
+msgstr "Adjutar (_Help)"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr "_Innhald"
+msgstr "_Contentos"
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr "Hjelp"
+msgstr "Contentos del adjuta"
 
-#
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "_Om"
+msgstr "_A proposito"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "Om dette programmet"
+msgstr "Re iste application"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr "_Gjentaking"
+msgstr "Modo _Repeter"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "Vel gjentaking"
+msgstr "Fixar le modo repeter"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "_Omskipling"
+msgstr "Modo Miscer (Shuff_le)"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Vel omskipling"
+msgstr "Fixar le modo miscer"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "Vis _kontrollpanel"
+msgstr "Monstrar le _Controlos"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "Vis kontrollpanel"
+msgstr "Monstrar le controlos"
 
-#
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr "S_idestolpe"
+msgstr "Barra lateral (S_idebar)"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr "Vis eller gøym sidestolpen"
+msgstr "Monstrar o occultar le quadro lateral"
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Vel automatisk aspektrate"
+msgstr "Fixa in automatic le ration del aspecto"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr "Kvadrat"
+msgstr "Quadrate"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "Vel kvadratisk aspektrate"
+msgstr "Fixa quadrato le ration del aspecto"
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
-msgstr ""
+msgstr "4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr ""
+msgstr "Impone le ration del aspecto (TV) 4∶3"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr ""
+msgstr "16∶9 (Schermo large)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr ""
+msgstr "Impone le ration del aspecto 16∶9 (Schermo large)"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
-msgstr ""
+msgstr "(DVB) 2.11∶1"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
-msgstr ""
+msgstr "Impone le ration del aspecto 2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr "_Undertekst"
+msgstr "S_ubtitulos"
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr "_Språk"
+msgstr "_Linguas"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Forstørr"
+msgstr "Aggrandir"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Forstørr"
+msgstr "Aggrandir"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr "Hopp _framover"
+msgstr "Saltar Avante (_Forward)"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr "Hopp framover"
+msgstr "Saltar avante"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "Hopp _bakover"
+msgstr "Saltar a retro (_Backwards)"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "Hopp bakover"
+msgstr "Saltar a retro"
 
-#
 #: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
-msgstr "Tidssøkjelinje"
+msgstr "Barra de querer del tempore"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Skriv _adressa til fila du vil opna:"
+msgstr "Inserer le _adresse del file tu desira aperir:"
 
-#
 #: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
-msgstr "Etterspurnad etter passord for RTSP-tenar"
+msgstr "Contrasigno requirite pro le servitor de RTSP"
 
 #: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
-msgstr "Lydspor %d"
+msgstr "Tracia audio #%d"
 
 #: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
-msgstr "Undertekst %d"
+msgstr "Subtitulo #%d"
 
 #: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
-msgstr "Tenaren du vil kopla til er ukjend."
+msgstr "Le servitor tu sta probar a associar te non es note."
 
 #: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
-msgstr "Tilkopling til tenaren nekta."
+msgstr "Le connexion a iste servitor ha essite refusate."
 
 #: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
-msgstr "Fann ikkje filmen."
+msgstr "Le film specificate non pote esser trovate."
 
 #: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
-msgstr "Tenaren nekta adgang til denne fila eller straumen."
+msgstr "Le servitor ha refusate le accesso a iste file o stream."
 
-#
 #: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
-msgstr "Autentisering kreves for å aksessere denne fila eller straummen."
+msgstr "Le authentication es necesse al accesso a iste file o stream"
 
 #: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
-msgstr "Du har ikkje lov til å opna denne fila."
+msgstr "Tu non es consentite aperir iste file."
 
 #: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
-msgstr ""
+msgstr "Iste position non es valide"
 
 #: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
-msgstr ""
+msgstr "Le film non pote esser legite."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3375
@@ -995,103 +943,111 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
+"Le reproduction de iste film require un plug-in %s que non es installate."
 msgstr[1] ""
+"Le reproduction de iste film require le sequente plugins que non es "
+"installate:\r\n"
+"\r\n"
+"%s"
 
 #: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
+"Un stream audio o video non es gerite debitemente per carentia del codecs. "
+"Tu pote necessitar de installar plugins additional pro ser capace a "
+"reproducer alcun typos de filmes"
 
 #: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
+"Iste file non pote ser reproducite sur le rete. Prova antea a discargar lo "
+"localmente"
 
-#
 #: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Surround"
 
-#
 #: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Mono"
 
 #: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
-msgstr "Mediet inneheld ikkje nokon støtta videostraumar."
+msgstr "Le medios contine nulle videos fluente supportate."
 
 #: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
+"Alcun plug-ins necessari es mancante. Rende te secur que le programma es "
+"installate correctemente."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Fila er ikkje ei gyldig .desktop-fil"
+msgstr "Le file non es un file .desktop valide"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Kjende ikkje igjen versjonen til .desktop-fila «%s»"
+msgstr "Version '%s' de file de scriptorio non recognite"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "Startar %s"
+msgstr "Lanceamento de %s"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Programmet godtek ikkje dokument frå kommandolinja"
+msgstr "Le application non accepta documentos sur le linea de commando"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Kjende ikkje igjen køyrevalet %d"
+msgstr "Option %d de lanceamento non recognite"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Klarer ikkje senda dokument-URI-ar til ei «Type=Link»-skrivebordsoppføring"
+"Impossibile passar le URIs  del documento al entrata del scriptorio\\ "
+"'Type=Link'"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Ikkje eit køyrbart element"
+msgstr "No es un elemento lanceabile"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr "Fil_format: %s"
+msgstr "_Format de File: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr "Alle filer"
+msgstr "Tote le files"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Alle støtta filer"
+msgstr "Omne files supportate"
 
-#
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr "Etter filetternamn"
+msgstr "Per Extension"
 
-#
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr "Filformat"
+msgstr "Formato de file"
 
-#
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Filetternamn"
+msgstr "Extension(es)"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -1101,28 +1057,29 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Klarte ikkje å finna ut kva for filformat du ville bruka for «%s». Bruk eit "
-"kjent filformat, eller vel eit filformat frå lista nedanfor."
+"Le programma ha essite incapace a cercar ab le formato de file tu desira "
+"usar pro `%s'. Per favor rende te secur de usar un extension note pro iste "
+"file o elige manualmente un formato de file ab le lista sequente."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr "Ukjent filformat"
+msgstr "Formato de file non recognoscite"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Ikkje bruk tilkopling til økthandsamar"
+msgstr "Disactivar le connexion al gerente de session"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Vel fil som inneheld lagra innstillingar"
+msgstr "Specificar le file continente le configuration salvate"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr "FIL"
+msgstr "FILE"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Oppgje ID for økthandsaming"
+msgstr "Specificar le ID de gestion de sexion"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
@@ -1130,11 +1087,11 @@ msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Val til øktstyring:"
+msgstr "Optiones de gestion de sexion:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Vis val for øktstyring"
+msgstr "Monstrar le optiones de gestion de sexion"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1172,143 +1129,137 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
 msgid "Unknown"
-msgstr "Ukjend"
+msgstr "Incognite"
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
-#
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
 msgstr "0 Hz"
 
-#
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr "0 kanalar"
+msgstr "0 Channales"
 
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d time"
-msgstr[1] "%d timar"
+msgstr[0] "%d hora"
+msgstr[1] "%d horas"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minutt"
-msgstr[1] "%d minutt"
+msgstr[0] "%d minuta"
+msgstr[1] "%d minutas"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekund"
-msgstr[1] "%d sekund"
+msgstr[0] "%d secunda"
+msgstr[1] "%d secundas"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
 #, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr ""
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:170
 #, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr ""
+msgstr "%s %s"
 
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr "0 sekund"
+msgstr "0 seconds"
 
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d quadro per secunda"
+msgstr[1] "%d quadros per secunda"
 
-#
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "Førehandsvising av lyd"
+msgstr "Vista preliminar Audio"
 
 #: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Kontroller systeminstallasjonen din. Xplayer vert avslutta no."
+msgstr "Verifica le installation de tu systema"
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr "_Spel no"
+msgstr "Re_Producer ora"
 
-#
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "_Legg til i speleliste"
+msgstr "_Adder al lista de reproduction"
 
-#
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Cancellar"
 
 #: ../src/xplayer-fullscreen.c:574
 msgid "No File"
-msgstr "Inga fil"
+msgstr "Nulle file"
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "Klarte ikkje lasta grensesnitt for «%s». %s"
+msgstr "Impossibile cargar le interfacie '%s'. %s"
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr "Fila finst ikkje."
+msgstr "Le file non existe."
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Kontroller at Xplayer er installert ordentleg."
+msgstr "Rende te secur que Xplayer es debitemente installate."
 
-#
 #: ../src/xplayer-interface.c:357
 msgid ""
 "Xplayer is free software; you can redistribute it and/or modify it under the "
@@ -1316,12 +1267,11 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer er fri programvare. Du kan fritt endra og distribuera henne vidare, "
-"så lenge du følgjer vilkåra i GNU General Public License, utgjeven av Free "
-"Software Foundation – anten versjon 2 av lisensen, eller (viss du ønskjer "
-"det) ein seinare versjon."
+"Xplayer is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
 
-#
 #: ../src/xplayer-interface.c:361
 msgid ""
 "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
@@ -1329,46 +1279,43 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Xplayer vert distribuert i håp om at programmet er nyttig, men utan NOKA "
-"FORM FOR GARANTI, ikkje eingong ein implisitt garanti om at det er SALBART "
-"eller PASSAR TIL EIT VISST FORMÅL. Sjå GNU General Public License for fleire "
-"detaljar."
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
 
-#
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Du skal ha fått ein kopi av GNU General Public License saman med Xplayer. "
-"Viss dette ikkje er tilfelle, kan du skriva til Free Software Foundation, "
-"Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA."
+"You should have received a copy of the GNU General Public License along with "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 
-#
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer inneheld eit unntak for å tillata bruk av proprietære GStreamer-"
-"tillegg."
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
+"plugins."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:191
 msgid "None"
-msgstr "Ingen"
+msgstr "Nulle"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
-#
 #: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
-msgstr "Set opp tillegg"
+msgstr "Configurar le Plugins"
 
 #: ../src/xplayer-object.c:162
 #, c-format
@@ -1377,8 +1324,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Køyr «%s --help» for å sjå ei fullstendig liste over tilgjengelege "
-"kommandolinjeval.\n"
+"Run '%s --help' to see a full list of available command line options.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:590
@@ -1388,177 +1334,169 @@ msgstr "Xplayer %s"
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "Pause"
+msgstr "Pausar"
 
 #: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
-msgstr "Spel av"
+msgstr "Reproducer"
 
 #: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
 #: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Xplayer klarte ikkje spela «%s»."
+msgstr "Xplayer non pote reproducer '%s'."
 
 #: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
-msgstr "Xplayer klarte ikkje visa hjelpa."
+msgstr "Xplayer non pote monstrar le contento del adjuta."
 
-#
 #: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
-msgstr "Førre kapittel/film"
+msgstr "Capitulo/Film Precedente"
 
-#
 #: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
-msgstr "Spel av / pause"
+msgstr "Reproduction / Pausa"
 
-#
 #: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
-msgstr "Neste kapittel/film"
+msgstr "Capitulo/Film sequente"
 
 #: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
-msgstr "Xplayer klarte ikkje starta."
+msgstr "Xplayer non pote initiar."
 
 #: ../src/xplayer-object.c:4175
 msgid "No reason."
-msgstr "Ingen grunn."
+msgstr "Nulle ration."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Opna adresse …"
+msgstr "Aperir le position..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Bruk feilsøking"
+msgstr "Activar le correction de defectos"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "Søk framover"
+msgstr "Querer in avante"
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Søk bakover"
+msgstr "Querer in retro"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Høgare lyd"
+msgstr "Altiar le volumine"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Lågare lyd"
+msgstr "Abassar le volumine"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "Demp lyden"
+msgstr "Mutar le sono"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Slå av/på fullskjerm"
+msgstr "Alternar le schermo plen"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Vis/gøym kontrollpanel"
+msgstr "Monstrar/Celar le controlos"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr "Avslutt"
+msgstr "Quitar"
 
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr "Set i kø"
+msgstr "Adder in cauda"
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr "Byt ut"
+msgstr "Replaciar"
 
-#
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr "Søk"
+msgstr "Querer"
 
-#
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Spelelisteindeks"
+msgstr "Indice del lista de reproduction"
 
-#
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "Filmar som skal spelast av"
+msgstr "Films a reproducer"
 
-#
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "– Spel av filmar og songar"
+msgstr "- Reproducer films e cantos"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr ""
+msgstr "Impossibile adder in cauda e supplantar al mesme tempore"
 
-#
 #. By extension entry
 #: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
-msgstr "MP3 ShoutCast-speleliste"
+msgstr "Lista de selection MP3 ShoutCast"
 
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
-msgstr "MP3-lyd (i straum)"
+msgstr "Audio MP3 (fluxo)"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "MP3-lyd (i straum og DOS-format)"
+msgstr "Audio MP3 (fluente, formato DOS )"
 
 #: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
-msgstr "Delbar XML-speleliste"
+msgstr "Lista de reproduction in commun XML"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
-msgstr "Tittel %d"
+msgstr "Titulo %d"
 
 #: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
-msgstr "Klarte ikkje lagra spelelista"
+msgstr "Impossibile salvar le lista de reproduction"
 
 #: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
-msgstr "Lagra speleliste"
+msgstr "Salvar le lista de reproduction"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Speleliste"
+msgstr "Lista de reproduction"
 
 #: ../src/xplayer-playlist.c:1861
 #, c-format
-#| msgid "The playlist '%s' could not be parsed, it might be damaged."
 msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr "Spelelista «%s» kunne ikkje tolkast. Ho kan vera øydelagd."
+msgstr ""
+"Le lista de reproduction '%s' non pote esser analysate. Illo pote esser "
+"damnificate."
 
 #: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
-msgstr "Feil i spelelista"
+msgstr "Error del lista de reproduction"
 
-#
 #: ../src/xplayer-preferences.c:297
 msgid "Preferences"
-msgstr "Innstillingar"
+msgstr "Preferentias"
 
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
-msgstr "Vel skrifttype for undertekst"
+msgstr "Eliger le typo de character del subtitulos"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1567,7 +1505,7 @@ msgstr "0:00 / 0:00"
 #: ../src/xplayer-statusbar.c:133
 #, c-format
 msgid "%s (Streaming)"
-msgstr "%s (straum)"
+msgstr "%s (Fluente)"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
@@ -1579,17 +1517,17 @@ msgstr "%s / %s"
 #: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "Søk til %s / %s"
+msgstr "Querer pro %s / %s"
 
 #: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
-msgstr "Mellomlagrar"
+msgstr "Memoria tampon"
 
 #. eg: 75 %
 #: ../src/xplayer-statusbar.c:250
 #, c-format
 msgid "%lf %%"
-msgstr ""
+msgstr "%lf %%"
 
 #. eg: Paused, 0:32 / 1:05
 #: ../src/xplayer-statusbar.c:325
@@ -1601,67 +1539,57 @@ msgstr "%s, %s"
 #: ../src/xplayer-statusbar.c:330
 #, c-format
 msgid "%s, %f %%"
-msgstr ""
+msgstr "%s, %f %%"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "Gjeldande lokaltilpassing"
+msgstr "Region actual"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr "Arabisk"
+msgstr "Arabe"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr "Armensk"
+msgstr "Armeniano"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "Baltisk"
+msgstr "Baltico"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr "Keltisk"
+msgstr "Celtico"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "Sentraleuropeisk"
+msgstr "Europee central"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "Forenkla kinesisk"
+msgstr "Chinese Simplificate"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "Tradisjonell kinesisk"
+msgstr "Chinese Traditional"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr "Kroatisk"
+msgstr "Croato"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
 #: ../src/xplayer-subtitle-encoding.c:213
@@ -1669,114 +1597,95 @@ msgstr "Kroatisk"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "Kyrillisk"
+msgstr "Cyrillico"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "Kyrillisk/russisk"
+msgstr "Cyrillico/Russo"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "Kyrillisk/ukrainsk"
+msgstr "Cyrillico/Ukrainiano"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "Georgisk"
+msgstr "Georgiano"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr "Gresk"
+msgstr "Greco"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr "Hebraisk"
+msgstr "Hebreo"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Hebraisk, visuelt"
+msgstr "Hebreo visual"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
 msgstr "Hindi"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "Islandsk"
+msgstr "Islandese"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr "Japansk"
+msgstr "Japonese"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr "Koreansk"
+msgstr "Coreano"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "Nordisk"
+msgstr "Nordico"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr "Persisk"
+msgstr "Farsi (Perse)"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr "Rumensk"
+msgstr "Romaniano"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "Søreuropeisk"
+msgstr "Sud europeo"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
 msgstr "Thai"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "Tyrkisk"
+msgstr "Turco"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
 #: ../src/xplayer-subtitle-encoding.c:310
@@ -1785,57 +1694,51 @@ msgstr "Tyrkisk"
 msgid "Unicode"
 msgstr "Unicode"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
 #: ../src/xplayer-subtitle-encoding.c:321
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "Vestleg"
+msgstr "Occidental"
 
-#
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "Vietnamesisk"
+msgstr "Vietnamese"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr "Alle filer"
+msgstr "Tote le files"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Støtta filer"
+msgstr "Files supportate"
 
-#
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Lydfiler"
+msgstr "Files audio"
 
-#
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Videofiler"
+msgstr "Files video"
 
-#
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "Undertekstfiler"
+msgstr "Files de subtitulos"
 
-#
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "Vel fil for undertekst"
+msgstr "Eliger subtitulos de texto"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Vel filmar eller spelelister"
+msgstr "Eliger filmes o listas de reproduction"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr ""
+msgstr "Adder un directorio"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1851,148 +1754,145 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr "Filnamn"
+msgstr "Nomine de file"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "Oppløysing"
+msgstr "Resolution"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr "Lengd"
+msgstr "Duration"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
-msgstr ""
+msgstr "Trailers Apple"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr ""
+msgstr "Fixa le agente de usator pro le sito del trailers Apple"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr ""
+msgstr "Auto-cargar le subtitulos"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr ""
+msgstr "Auto-carga subtitulos de texto"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "Videoplateopptakar"
+msgstr "Apparato registrator de disco video"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Tek opp (S)VCD-ar eller video-DVD-ar"
+msgstr "Registra (S)VCDs o video DVDs"
 
-#
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Lag videoplate …"
+msgstr "_Crear un disco video..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Lag ein video-DVD eller ein (S)VCD av filmen som er open no"
+msgstr "Crea un video DVD o un (S)VCD ab le film currentemente aperte"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "Kopier _video-DVD …"
+msgstr "Copiar Vide_o DVD..."
 
-#
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Kopier video-DVD-en som vert spela av no"
+msgstr "Copiar le DVD video actualmente in reproduction"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Kopier (S)VCD …"
+msgstr "Copiar un (S)VCD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "Kopier (S)VCD-en som vert spela av no"
+msgstr "Copiar le (S)VCD actualmente in reproduction"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "Klarte ikkje kopiera videoplata."
+msgstr "Le video disco non pote esser duplicate."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "Klarte ikkje ta opp filmen."
+msgstr "Le film non pote esser registrate."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "Klarte ikkje skriva til eit prosjekt."
+msgstr "Incapace a scriber un projecto."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr ""
+msgstr "Nomine pro le nove capitulo:"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr ""
+msgstr "_Remover un capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr ""
+msgstr "Remover le capitulo ab le lista"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr ""
+msgstr "Ir (_Go) al Capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr ""
+msgstr "Ir al capitulo in le film"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr ""
+msgstr "Adder capitulo..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr ""
+msgstr "Remover un capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr ""
+msgstr "Ir al capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr ""
+msgstr "Salvar le cambios"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr ""
+msgstr "Nulle datos del capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr ""
+msgstr "Cargar le capitulos..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr ""
+msgstr "Carga capitulos ex un file externe CMML"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr ""
+msgstr "Adder nove capitulos"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr ""
+msgstr "Crear un nove lista del capitulos pro le film"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr ""
+msgstr "Capitulos"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr ""
+msgstr "Supportar le marcatores de capitulo in le filmes"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -2000,300 +1900,297 @@ msgid ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 msgstr ""
+"<b>Titulo: </b>%s\n"
+"<b>Tempore de initio: </b>%s"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr ""
+msgstr "Error durante le lectura del file con capitulos"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr ""
+msgstr "Un capitulo con le mesme tempore ja existe"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr ""
+msgstr "Prova un altere nomine o remove un capitulo existente."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr ""
+msgstr "Error durante le scriptura de file con capitulos"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr ""
+msgstr "Error occurrite durante le salvamento de capitulos"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
+"Per favor controla que tu ha le licentia pro scriber in le plica continente "
+"le film."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr ""
+msgstr "Aperir un file del capitulo"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr ""
+msgstr "Captura de schermo del capitulo"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr ""
+msgstr "Titulo del capitulo"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr ""
+msgstr "Salvar le cambios a un lista de capitulos ante le clausura?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr ""
+msgstr "Clauder sin salvamento"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr ""
+msgstr "Si tu non salva, le cambios le lista del capitulos essera perdite."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr ""
+msgstr "Adder capitulo"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "D-Bus Service"
-msgstr "D-Bus-teneste"
+msgstr "Servicio D-Bus"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid ""
 "Plugin for sending notifications of currently playing movies to the D-Bus "
 "subsystem."
 msgstr ""
-"Programtillegg for å senda varslingar om filmane som vert spela av til D-Bus-"
-"systemet."
+"Plug-in pro mandar notificationes del filmes actualmente in reproduction al "
+"sub-systema de D-Bus."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr ""
+msgstr "Le objecto MediaPlayer2 non implementa le interfacie ‘%s’"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr ""
+msgstr "Le proprietate ‘%s’ non es scribibile."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr ""
+msgstr "Proprietate incognite ‘%s’ requirite de un objecto MediaPlayer 2"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr ""
+msgstr "Le URI ‘%s’ non es supportate."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr ""
+msgstr "Navigator Grilo"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
+"Un plug-in pro lassar tu explorar le contento de medios ab varie fontes"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr ""
+msgstr "Adder al lista de reproduction"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr ""
+msgstr "Copiar le position"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
-msgstr ""
+msgstr "Explorar"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
-msgstr ""
+msgstr "Cercar"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
-msgstr ""
+msgstr "Error de explorar"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
-msgstr ""
+msgstr "Error de cercar"
 
-#
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "Gromit-annotasjonar"
+msgstr "Annotationes de Gromit"
 
-#
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "Presentasjonshjelpar for å laga annotasjonar på skjermen"
+msgstr "Adjutante  del presentation pro render annotationes sur le schermo"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr "Programfila for gromit vart ikkje funnen."
+msgstr "Le binari gromit non ha essite trovate."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr ""
+msgstr "Stato de Instant Messenger"
 
-#
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
-"Set statusen i lynmeldingsklienten til «Vekke» når ein film vert spela av"
+"Configura le stato de tu Instant Messenger a foras durante le reproduction "
+"de un film"
 
-#
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr "Infraraud fjernkontroll"
+msgstr "Controlo remote infrarubie"
 
-#
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr "Støtte for infraraud fjernkontroll"
+msgstr "Supporta le controlo remote infrarubie"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr "Klarte ikkje klargjera lirc."
+msgstr "Impossibile initialisar lirc."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "Klarte ikkje lesa oppsettet for lirc."
+msgstr "Impossibile leger le configuration de lirc."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr ""
+msgstr "Claves del reproductor de medios"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr ""
+msgstr "Supportar additional claves del reproductor de medios"
 
-#
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr "Alltid øvst"
+msgstr "Sempre al summitate"
 
-#
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr "Ha hovudvindauget øvst når ein film vert spela av"
+msgstr ""
+"Tener le fenestra principal in alto durante le reproduction de un film"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Undertekstnedlastar"
+msgstr "Discargator de subtitulos"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr ""
+msgstr "Cercar subtitulos pro le film actualmente in reproduction"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:42
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "Portugese brasilian"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr ""
+msgstr "In cerca de subtitulos…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:645
 msgid "Downloading the subtitles…"
-msgstr ""
+msgstr "Discargamento del subtitulos…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr "Klarte ikkje kontakta nettstaden OpenSubtitles"
+msgstr "Impossibile continger le sito web OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr ""
+msgstr "Impossibile continger le sito web OpenSubtitles."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
-msgstr ""
+msgstr "Nulle resultatos trovate."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:478
 msgid "Subtitles"
-msgstr "Undertekstar"
+msgstr "Subtitulos"
 
-#
 #. translators comment:
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:484
 msgid "Format"
-msgstr "Format"
+msgstr "Formato"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:489
 msgid "Rating"
-msgstr "Karakter"
+msgstr "Valor"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Last ned undertekstar frå OpenSubtitles"
+msgstr "Discargar subtitulos de film ex OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "_Download Movie Subtitles…"
-msgstr ""
+msgstr "_Discargar subtitulos de film…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:589
 msgid "Searching subtitles…"
-msgstr ""
+msgstr "In cerca de subtitulos…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Last ned filmundertekstar"
+msgstr "Discargar subtitulos de film"
 
-#
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "Undertekstspråk"
+msgstr "Lingua del subtitulos:"
 
-#
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr "_Spel av med undertekst"
+msgstr "_Reproducer con subtitulos"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr ""
+msgstr "Lingua del subtitulos"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr ""
+msgstr "Le lingua pro cercar subtitulos pro le films."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr ""
+msgstr "Proprietates del film"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr ""
+msgstr "Adde le proprietates de film al barra lateral"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
-msgstr "%d×%d"
+msgstr "%d x %d"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr "%d kb/s"
+msgstr "%d kbps"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
@@ -2303,15 +2200,15 @@ msgstr "%d Hz"
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
-msgstr "Eigenskapar"
+msgstr "Proprietates"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr ""
+msgstr "Contrasigno de rpdb2"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2319,45 +2216,47 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
+"Un contrasigno pro proteger del  expulicar Xplayer le servitor de rpdb2 ab "
+"un accesso remote non autorisate. Si isto es vacue,  uno ordinari de "
+"'xplayer' essera usate."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr "Python-konsoll"
+msgstr "Consola de Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr ""
+msgstr "Consola interactive de Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr "Python-konsollmeny"
+msgstr "Menu del consola de Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr "_Python-konsoll"
+msgstr "Consola de _Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "Vis Python-konsollen i Xplayer"
+msgstr "Monstrar le consola Python de Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Python-feilsøking"
+msgstr "Chassator de errores de Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "Slå på ekstern Python-feilsøking med «rpdb2»"
+msgstr "Activar le expulicamento remote de Python con rpdb2"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-#| msgid "You can access the xplayer object through 'xplayer_object' :\\n%s"
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr "Du kan få tilgang til Xplayer.Object gjennom «xplayer_object»:\\n%s"
+msgstr "Tu poter acceder le Xplayer.Object per le 'xplayer_object' :\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid "Xplayer Python Console"
-msgstr "Xplayer–Python-konsoll"
+msgstr "Consola Python de Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
@@ -2365,57 +2264,59 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
+"Post que tu pulsa OK, Xplayer attendera usque tu associara isto con winpdb o "
+"rpdb2."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr ""
+msgstr "Files recente"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr ""
+msgstr "Adde le files que ha essite reproducite al lista del files recente"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr ""
+msgstr "Plug-in de rotation"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr ""
+msgstr "Permitte videos a ser rotate si illos es in le orientation improprie"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
-msgstr ""
+msgstr "_Rotar in verso horari"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
-msgstr ""
+msgstr "Rotar in verso contra-horari (Counterc_lockwise)"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr ""
+msgstr "Salva schermo"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr ""
+msgstr "Disactiva le salva schermo quando un film es in reproduction"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Breidd på skjermbilete (i pikslar):"
+msgstr "Largessa del captura de schermo (in pixels):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Rekn ut talet på skjermbilete"
+msgstr "Calcular le numero de instantaneas de schermo"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Talet på skjermbilete:"
+msgstr "Numero de instantaneas de schermo"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr ""
+msgstr "Instantanea de schermo ex %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2423,19 +2324,20 @@ msgstr ""
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr ""
+msgstr "Captura de schermo ab %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr ""
+msgstr "Instantanee de schermo"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
 msgstr ""
+"Permitte instantaneas de schermo e galerias de ser prendite de videos"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr "Lagra galleri"
+msgstr "Salvar le galeria"
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2444,64 +2346,65 @@ msgstr "Lagra galleri"
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr "Galleri-%s-%d.jpg"
+msgstr "Galleria-%s-%d.jpg"
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "Opprettar galleri …"
+msgstr "Creation de un Gallery..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "Lagrar galleriet som «%s»"
+msgstr "Salvar un galleria como \"%s\""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayer klarte ikkje ta skjermbilete av filmen."
+msgstr "Xplayer non pote obtener un captura de schermo del video."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "Dette skal ikkje skje. Du bør senda inn ei feilmelding."
+msgstr ""
+"Iste non es supponite de occurrer; per favor mitte un reporto de defecto."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr ""
+msgstr "Prender un instantanea del _Schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Ta eit skjermbilete"
+msgstr "Captura le schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Lag skjermbilet_galleri …"
+msgstr "Crear un _Galleria de instantaneas de schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Lag eit galleri av skjermbilete"
+msgstr "Crear un galleria de instantaneas de schermo"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
-msgstr ""
+msgstr "Saltar a"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr ""
+msgstr "Forni un fenestra de dialogo \"Saltar a\""
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr "_Hopp til:"
+msgstr "_Saltar a"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "secunda"
+msgstr[1] "secundas"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2510,20 +2413,20 @@ msgstr[1] ""
 #: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr ""
+msgstr "_Saltar a..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr "Hopp til eit bestemt tidspunkt"
+msgstr "Saltar a un tempore specificate."
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr ""
+msgstr "Plugin de Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr ""
+msgstr "Un plugin que manda le eventos a Zeitgeist"

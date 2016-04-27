@@ -11,20 +11,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu_to_be_translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-18 18:33+0200\n"
-"PO-Revision-Date: 2013-09-18 18:33+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-09 19:04+0000\n"
+"Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
-"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: eu\n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1651 ../src/xplayer-statusbar.c:115
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Geldituta"
 
@@ -58,7 +59,7 @@ msgstr "Xplayer film-erreproduzitzailea"
 msgid "_Open with \"%s\""
 msgstr "_Ireki honekin: %s"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2451
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "Errorea gertatu da"
 
@@ -70,19 +71,20 @@ msgstr "Ez dago erreprodukzio-zerrendarik, edo hutsik dago"
 msgid "Movie browser plugin"
 msgstr "Filmen arakatzaile plugina"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:267
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Ezin izan dira hari seguruko liburutegiak abiarazi."
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Egiaztatu sistemaren instalazioa. Xplayer plugina itxi egingo da orain."
+msgstr ""
+"Egiaztatu sistemaren instalazioa. Xplayer plugina itxi egingo da orain."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Irten pantaila osotik"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Denbora:"
 
@@ -270,11 +272,11 @@ msgstr "_Kopiatu helbidea"
 msgid "Copy the location to the clipboard"
 msgstr "Kopiatu kokalekua arbelean"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "_Hautatu testuaren azpitituluak..."
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "Hautatu azpitituluen fitxategia erabiltzeko"
 
@@ -313,8 +315,7 @@ msgstr "Handia"
 msgid "Extra Large"
 msgstr "Oso handia"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5468
-#: ../src/xplayer-properties-view.c:242
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Estereoa"
 
@@ -455,7 +456,6 @@ msgid "_Audio output type:"
 msgstr "_Audioaren irteera mota:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:283
 msgid "Audio"
 msgstr "Audioa"
 
@@ -487,7 +487,7 @@ msgstr "Iruzkina:"
 msgid "Container:"
 msgstr "Edukiontzia:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:285
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "Bideoa"
 
@@ -516,8 +516,8 @@ msgid "Channels:"
 msgstr "Kanalak:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:266
-#: ../src/xplayer.c:274 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1659
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Bideoak"
 
@@ -529,316 +529,367 @@ msgstr "Filma erreproduzitzea"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Bideoa;Filma;Klipa;Serieak;Erreproduzitzailea;DVD;TB;Diskoa;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Erreproduzitu/Pausarazi"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Hurrengoa"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Aurrekoa"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "Mututu"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Pantaila osoa"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Ireki"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "Ireki _kokalekua"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "_Pantaila osoa"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "_Hobespenak"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "Au_sazko modua"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "E_rrepikatze-modua"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "I_rten"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Filma"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_Ireki..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Ireki fitxategia"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "Ireki _kokalekua..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Ireki lokalekoa ez den fitxategia"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Egotzi"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "Egotzi uneko diskoa"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Propietateak"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "Ikusi uneko korrontearen propietateak"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Erreproduzitu / P_ausarazi"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "Erreproduzitu edo pausarazi filma"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "I_rten"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Irten programatik"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Editatu"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "_Garbitu erreprodukzio-zerrenda"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Garbitu erreprodukzio-zerrenda"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "_Hobespenak"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Konfiguratu aplikazioa"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Pluginak..."
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "Konfiguratu pluginak aplikazioa hedatzeko"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "_Ikusi"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "_Pantaila osoa"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Aldatu pantaila osora"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "Doitu leihoa filmara"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "_Aldatu tamaina: 1:2"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Aldatu jatorrizko bideoaren tamainaren erdira"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "Aldatu tamaina: _1:1"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Aldatu jatorrizko bideoaren tamaina"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "Aldatu tamaina: _2:1"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "Aldatu jatorrizko bideoaren tamainaren bikoitzera"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "Aspektu-e_rlazioa"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "Aldatu an_geluak"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "Aldatu kameraren angeluak"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "_Joan"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "_DVD menua"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "Joan DVDaren menura"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "_Tituluaren menua"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "Joan tituluaren menura"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "A_udioaren menua"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "Joan audioaren menura"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "_Angeluaren menua"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "Joan angeluaren menura"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "A_talen menua"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "Joan kapituluen menura"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "_Hurrengo kapitulua/filma"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "Hurrengo kapitulua edo filma"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "_Aurreko kapitulua/filma"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "Aurreko kapitulua edo filma"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "_Soinua"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "_Igo bolumena"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "Igo bolumena"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "_Jaitsi bolumena"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "Jaitsi bolumena"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "Laguntzaren edukia"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "Aplikazio honi buruz"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "E_rrepikatze-modua"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Ezarri errepikatze-modua"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "Au_sazko modua"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Ezarri ausazko-modua"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "Erakutsi _kontrolak"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "Erakutsi kontrolak"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "_Albo-panela"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "Erakutsi edo ezkutatu albo-panela"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "Aspektu-erlazio automatikoa ezartzen du"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Karratua"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "Lauki-erlazioa ezartzen du"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4:3 (TB)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "4:3 (TB) aspektu-erlazioa ezartzen du"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16:9 (panoramikoa)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "16:9 (panoramikoa) aspektu-erlazioa ezartzen du"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "2.11:1 (DVB) aspektu-erlazioa ezartzen du"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "A_zpitituluak"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "_Hizkuntzak"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "Zooma handiagotu"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "Zooma handiagotu"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "Saltatu a_urrerantz"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "Saltatu aurrerantz"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "Saltatu a_tzerantz"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "Saltatu atzerantz"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "Denbora-barra"
 
@@ -896,7 +947,8 @@ msgstr "Ezin izan da filma irakurri."
 #: ../src/backend/bacon-video-widget.c:3375
 #: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -926,19 +978,19 @@ msgstr ""
 "Ezin da fitxategia erreproduzitu sarearen bitartez. Saiatu aurrenik lokalera "
 "deskargatzen."
 
-#: ../src/backend/bacon-video-widget.c:5464 ../src/xplayer-properties-view.c:238
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Ingurakaria"
 
-#: ../src/backend/bacon-video-widget.c:5466 ../src/xplayer-properties-view.c:240
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Monoa"
 
-#: ../src/backend/bacon-video-widget.c:5753
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "Euskarriak onartzen ez den bideo-korrontea dauka."
 
-#: ../src/backend/bacon-video-widget.c:5934
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -974,7 +1026,8 @@ msgstr "Abiarazteko aukera ezezaguna: %d"
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Ezin zaio dokumentuaren URIrik eman mahaigaineko 'Type=Link' sarrerari"
+msgstr ""
+"Ezin zaio dokumentuaren URIrik eman mahaigaineko 'Type=Link' sarrerari"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
@@ -1010,8 +1063,8 @@ msgstr "Luzapena(k)"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "Programak ezin du erabiltzea nahi duzun fitxategi-formatua aurkitu "
@@ -1055,7 +1108,7 @@ msgstr "Erakutsi saio-kudeaketaren aukerak"
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1068,7 +1121,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1183,7 +1236,7 @@ msgstr[1] "%d fotograma segundoko"
 msgid "Audio Preview"
 msgstr "Audioaren aurrebista"
 
-#: ../src/xplayer.c:267
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Egiaztatu sistemaren instalazioa. Xplayer itxi egingo da orain."
 
@@ -1199,7 +1252,7 @@ msgstr "_Gehitu erreprodukzio-zerrendari"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Fitxategirik ez"
 
@@ -1224,9 +1277,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer software librea da; birbana eta/edo alda dezakezu Software Foundation-"
-"ek argitaratutako GNU Lizentzia Publiko Orokorraren 2. bertsioan, edo "
-"(nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero."
+"Xplayer software librea da; birbana eta/edo alda dezakezu Software "
+"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 2. bertsioan, "
+"edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1243,8 +1296,8 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Xplayer programarekin batera GNU Lizentzia Publiko Orokorraren kopia bat "
 "jasoko zenuen; hala ez bada, idatzi hona: Free SoftwareFoundation, Inc., 59 "
@@ -1259,32 +1312,17 @@ msgstr ""
 "baimentzen duena."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Bat ere ez"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Copyright-a © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>\n"
-"Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Julen Ruiz Aizpuru <julenx@gmail.com>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "Xplayer-en web gunea"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Konfiguratu pluginak"
 
@@ -1313,37 +1351,32 @@ msgid "Play"
 msgstr "Erreproduzitu"
 
 #: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1918
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer-ek ezin izan du '%s' erreproduzitu."
 
-#: ../src/xplayer-object.c:2109
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer-ek ezin du laguntzako edukia bistaratu."
 
-#: ../src/xplayer-object.c:3998 ../src/xplayer-object.c:4000
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Aurreko kapitulua/filma"
 
-#: ../src/xplayer-object.c:4007 ../src/xplayer-object.c:4009
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Erreproduzitu / Pausarazi"
 
-#: ../src/xplayer-object.c:4017 ../src/xplayer-object.c:4019
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Hurrengo kapitulua/filma"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4030 ../src/xplayer-object.c:4032
-msgid "Fullscreen"
-msgstr "Pantaila osoa"
-
-#: ../src/xplayer-object.c:4163
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "Ezin izan da Xplayer abiarazi."
 
-#: ../src/xplayer-object.c:4163
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "Ez dago arrazoirik."
 
@@ -1354,18 +1387,6 @@ msgstr "Ireki helbidea..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Gaitu arazketa"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Erreproduzitu/Pausarazi"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Hurrengoa"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Aurrekoa"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1485,51 +1506,6 @@ msgstr "Hobespenak"
 msgid "Select Subtitle Font"
 msgstr "Hautatu azpitituluen letra-tipoa"
 
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:281
-msgid "Audio/Video"
-msgstr "Audioa/Bideoa"
-
-#: ../src/xplayer-properties-view.c:141
-msgid "N/A"
-msgstr "E/E"
-
-#: ../src/xplayer-properties-view.c:170
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "E/E"
-
-#: ../src/xplayer-properties-view.c:173
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kb/s"
-
-#: ../src/xplayer-properties-view.c:190
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:222
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:230
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "E/E"
-
-#: ../src/xplayer-properties-view.c:251
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "E/E"
-
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
 msgstr "0:00 / 0:00"
@@ -1577,8 +1553,10 @@ msgstr "%s, %%%f"
 msgid "Current Locale"
 msgstr "Uneko hizkuntza-ezarpena"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabiera"
 
@@ -1586,7 +1564,8 @@ msgstr "Arabiera"
 msgid "Armenian"
 msgstr "Armeniera"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltikoa"
@@ -1595,17 +1574,22 @@ msgstr "Baltikoa"
 msgid "Celtic"
 msgstr "Zeltiarra"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Europako Erdialdekoa"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Txinatar soildua"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Txinatar tradizionala"
@@ -1614,9 +1598,12 @@ msgstr "Txinatar tradizionala"
 msgid "Croatian"
 msgstr "Kroaziera"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Zirilikoa"
 
@@ -1624,7 +1611,8 @@ msgstr "Zirilikoa"
 msgid "Cyrillic/Russian"
 msgstr "Zirilikoa/Errusiarra"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Zirilikoa/Ukrainarra"
 
@@ -1632,7 +1620,8 @@ msgstr "Zirilikoa/Ukrainarra"
 msgid "Georgian"
 msgstr "Georgiera"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Greziera"
@@ -1645,8 +1634,10 @@ msgstr "Gujaratiera"
 msgid "Gurmukhi"
 msgstr "Gurmukhi-koa"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebreera"
 
@@ -1662,13 +1653,16 @@ msgstr "Hindiera"
 msgid "Icelandic"
 msgstr "Islandiera"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japoniera"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Koreera"
 
@@ -1680,7 +1674,8 @@ msgstr "Nordikoa"
 msgid "Persian"
 msgstr "Persiera"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Errumaniera"
 
@@ -1692,24 +1687,31 @@ msgstr "Europako Hegoaldekoa"
 msgid "Thai"
 msgstr "Thailandiera"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turkiera"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Mendebalekoa"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamera"
@@ -1749,7 +1751,7 @@ msgstr "Gehitu direktorioa"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:877
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1760,15 +1762,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:878
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Fitxategi-Izena"
 
-#: ../src/xplayer-video-thumbnailer.c:880
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Bereizmena"
 
-#: ../src/xplayer-video-thumbnailer.c:883
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Iraupena"
 
@@ -2053,7 +2055,8 @@ msgstr "Berehalako mezularitzaren egoera"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
-msgstr "Ezarri berehalako mezularitzaren egoera kanpoan filma erreproduzitzean"
+msgstr ""
+"Ezarri berehalako mezularitzaren egoera kanpoan filma erreproduzitzean"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -2177,6 +2180,33 @@ msgstr "Filmaren propietateak"
 msgid "Adds movie properties to the sidebar"
 msgstr "Filmaren propietateak albo-panelari gehitzen dizkio"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kb/s"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "E/E"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "E/E"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Propietateak"
@@ -2187,11 +2217,12 @@ msgstr "rpdb2 pasahitza"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
-"Autorizatu gabeko urruneko sarbidetzatik rpdb2 zerbitzaria (Xplayer arazteko ) "
-"babesteko pasahitza Hutsik egonez gero, 'xplayer' lehenetsia erabiliko da."
+"Autorizatu gabeko urruneko sarbidetzatik rpdb2 zerbitzaria (Xplayer arazteko "
+") babesteko pasahitza Hutsik egonez gero, 'xplayer' lehenetsia erabiliko da."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2266,43 +2297,13 @@ msgstr "_Biratu erlojuaren norantzan"
 msgid "Rotate Counterc_lockwise"
 msgstr "Biratu erlojuaren aur_kako norantzan"
 
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Gorde kopia bat"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "Gorde unean erreproduzitzen ari den filmaren kopia"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Gorde kopia..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Gorde filmaren kopia"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Gorde kopia bat"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Filma"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Filmaren korrontea"
-
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
 msgstr "Pantaila-babeslea"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "Pantaila-babeslea desgaitzen du filma bat erreproduzitzean "
+msgstr "Pantaila-babeslea desgaitzen du filma bat erreproduzitzean"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
@@ -2433,804 +2434,3 @@ msgstr "Zeitgeist plugina"
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
 msgstr "Gertaerak Zeitgeist gunera bidaltzeko plugina"
-
-#~ msgid "Plugins"
-#~ msgstr "Pluginak"
-
-#~ msgid "Add Web Video..."
-#~ msgstr "Gehitu web bideoa..."
-
-#~ msgid "--:--"
-#~ msgstr "--:--"
-
-#~ msgctxt "long time format"
-#~ msgid "-%d:%02d:%02d"
-#~ msgstr "-%d:%02d:%02d"
-
-#~ msgctxt "short time format"
-#~ msgid "-%d:%02d"
-#~ msgstr "-%d:%02d"
-
-#~ msgid "Back"
-#~ msgstr "Atzera"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Utzi"
-
-#~ msgid "_Save"
-#~ msgstr "_Gorde"
-
-#~ msgid "_Close"
-#~ msgstr "_Itxi"
-
-#~ msgid "_Add"
-#~ msgstr "_Gehitu"
-
-#~ msgid "Recent"
-#~ msgstr "Azken fitxategiak"
-
-#~ msgid "_Skip To"
-#~ msgstr "_Saltatu hona"
-
-#~ msgid "Vimeo"
-#~ msgstr "Vimeo"
-
-#~ msgid "Sets the user agent for the Vimeo site"
-#~ msgstr "Erabiltzailearen agentea ezartzen du Vimeo gunearentzako"
-
-#~ msgid ""
-#~ "Whether to remember the current playlist, the playing track and position."
-#~ msgstr ""
-#~ "Uneko erreprodukzio-zerrenda, erreproduzitzen ari den pista eta posizioa "
-#~ "gogoratu edo ez."
-
-#~ msgid "Remember last played movies"
-#~ msgstr "Gogoratu erreproduzitutako azken filmak"
-
-#~ msgid "No error message"
-#~ msgstr "Ez dago errore mezurik"
-
-#~ msgid "Failed to parse CMML file"
-#~ msgstr "Huts egin du CMML fitxategia analizatzean"
-
-#~ msgid "Add the video to the playlist"
-#~ msgstr "Gehitu bideoa erreprodukzio-zerrendari"
-
-#~ msgid "Play movies and songs"
-#~ msgstr "Erreproduzitu filmak eta kantak"
-
-#~ msgid "1.5 Mbps T1/Intranet/LAN"
-#~ msgstr "1.5 Mbps T1/Intranet/LAN"
-
-#~ msgid "112 Kbps Dual ISDN/DSL"
-#~ msgstr "112 Kbps Dual ISDN/DSL"
-
-#~ msgid "14.4 Kbps Modem"
-#~ msgstr "14.4 Kbps modema"
-
-#~ msgid "19.2 Kbps Modem"
-#~ msgstr "19.2 Kbps modema"
-
-#~ msgid "256 Kbps DSL/Cable"
-#~ msgstr "256 Kbps DSL/Cable"
-
-#~ msgid "28.8 Kbps Modem"
-#~ msgstr "28.8 Kbps modema"
-
-#~ msgid "33.6 Kbps Modem"
-#~ msgstr "33.6 Kbps modema"
-
-#~ msgid "34.4 Kbps Modem"
-#~ msgstr "34.4 Kbps modema"
-
-#~ msgid "384 Kbps DSL/Cable"
-#~ msgstr "384 Kbps DSL/Cable"
-
-#~ msgid "512 Kbps DSL/Cable"
-#~ msgstr "512 Kbps DSL/Cable"
-
-#~ msgid "56 Kbps Modem/ISDN"
-#~ msgstr "56 Kbps modema/ISDN"
-
-#~ msgid "Configure the application"
-#~ msgstr "Konfiguratu aplikazioa"
-
-#~ msgid "Connection _speed:"
-#~ msgstr "Konexio-a_biadura:"
-
-#~ msgid "Intranet/LAN"
-#~ msgstr "Intranet/LAN"
-
-#~ msgid "Networking"
-#~ msgstr "Sarea"
-
-#~ msgid "Open a file"
-#~ msgstr "Ireki fitxategia"
-
-#~ msgid "Open a non-local file"
-#~ msgstr "Ireki lokalekoa ez den fitxategia"
-
-#~ msgid "Quit the program"
-#~ msgstr "Irten programatik"
-
-#~ msgid "Set the repeat mode"
-#~ msgstr "Ezarri errepikatze-modua"
-
-#~ msgid "Set the shuffle mode"
-#~ msgstr "Ezarri ausazko-modua"
-
-#~ msgid "Switch to fullscreen"
-#~ msgstr "Aldatu pantaila osora"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network."
-#~ msgstr ""
-#~ "Sareko konexioaren batez besteko abiadura, sarearen gaineko euskarriaren "
-#~ "kalitatea hautatzeko erabilita."
-
-#~ msgid "Network connection speed"
-#~ msgstr "Sareko konexio-abiadura"
-
-#~ msgid "Unknown video"
-#~ msgstr "Bideo ezezaguna"
-
-#~ msgid "Play Image '%s'"
-#~ msgstr "Erreproduzitu '%s' irudia"
-
-#~ msgid "device%d"
-#~ msgstr "gailua%d"
-
-#~ msgid "Play Disc '%s'"
-#~ msgstr "Erreproduzitu '%s' diskoa"
-
-#~ msgid "Movie Player using %s"
-#~ msgstr "Film-erreproduzitzailea %s erabiltzen ari da"
-
-#~ msgid ""
-#~ "Xplayer could not play this media (%s) although a plugin is present to "
-#~ "handle it."
-#~ msgstr ""
-#~ "Xplayer-ek ezin izan du euskarri hori (%s) erreproduzitu, nahiz eta hura "
-#~ "kudeatzeko plugina instalatuta dagoen."
-
-#~ msgid ""
-#~ "You might want to check that a disc is present in the drive and that it "
-#~ "is correctly configured."
-#~ msgstr ""
-#~ "Ziurtatu unitatean diskoa dagoela eta unitatea behar bezala konfiguratuta "
-#~ "dagoela."
-
-#~ msgid "More information about media plugins"
-#~ msgstr "Euskarrien pluginei buruzko informazio gehiago"
-
-#~ msgid ""
-#~ "Please install the necessary plugins and restart Xplayer to be able to play "
-#~ "this media."
-#~ msgstr ""
-#~ "Instalatu behar diren pluginak eta berrabiarazi Xplayer euskarri hori "
-#~ "erreproduzitu ahal izateko."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it does not have the "
-#~ "appropriate plugins to be able to read from the disc."
-#~ msgstr ""
-#~ "Xplayer-ek ezin du euskarri mota hori (%s) erreproduzitu, diskotik "
-#~ "irakurtzeko plugin egokiak ez dituzulako."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because you do not have the "
-#~ "appropriate plugins to handle it."
-#~ msgstr ""
-#~ "Xplayer-ek ezin du euskarri mota hori (%s) erreproduzitu, hura kudeatzeko "
-#~ "plugin egokiak ez dituzulako."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it is not supported."
-#~ msgstr ""
-#~ "Xplayer-ek ezin du euskarri mota hori (%s) erreproduzitu, ez baitago "
-#~ "onartuta."
-
-#~ msgid "Please insert another disc to play back."
-#~ msgstr "Sartu beste disko bat erreproduzitzeko."
-
-#~ msgid "Xplayer does not support playback of Audio CDs"
-#~ msgstr "Xplayer-ek ez du Audioko CDak erreproduzitzea onartzen"
-
-#~ msgid ""
-#~ "Please consider using a music player or a CD extractor to play this CD"
-#~ msgstr ""
-#~ "Aholkua: erabili musika-erreproduzitzaile edo CD erauzle bat CD hau "
-#~ "erreproduzitzeko"
-
-#~ msgid "%d %%"
-#~ msgstr "%%%d"
-
-#~ msgid "No video URI"
-#~ msgstr "Ez da bideoaren URIa"
-
-#~ msgid ""
-#~ "The requested audio output was not found. Please select another audio "
-#~ "output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Eskatutako audio-irteera ez da aurkitu. Hautatu beste audio-irteera "
-#~ "Multimedia-sistemako hautatzailean."
-
-#~ msgid "Location not found."
-#~ msgstr "Kokalekua ez da aurkitu."
-
-#~ msgid ""
-#~ "Could not open location; you might not have permission to open the file."
-#~ msgstr ""
-#~ "Ezin izan da kokalekua ireki. Ez duzu nahikoa baimen fitxategia "
-#~ "irekitzeko."
-
-#~ msgid ""
-#~ "The video output is in use by another application. Please close other "
-#~ "video applications, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Bideo-irteera beste aplikazio batek darabil. Itxi beste bideo-aplikazioa "
-#~ "edo hautatu beste bideo-irteera Multimedia-sistemako hautatzailean."
-
-#~ msgid ""
-#~ "The audio output is in use by another application. Please select another "
-#~ "audio output in the Multimedia Systems Selector. You may want to consider "
-#~ "using a sound server."
-#~ msgstr ""
-#~ "Audio-irteera beste aplikazio batek darabil. Hautatu beste audio-irteera "
-#~ "Multimedia-sistemako hautatzailean. Soinu-zerbitzaria erabiltzea nahi "
-#~ "izan dezakezu."
-
-#~ msgid ""
-#~ "Failed to create a GStreamer play object. Please check your GStreamer "
-#~ "installation."
-#~ msgstr ""
-#~ "Huts egin du GStreamer-ern erreprodukzio-objektua sortzean. Egiaztatu "
-#~ "GStreamer-en instalazioa."
-
-#~ msgid ""
-#~ "Failed to open audio output. You may not have permission to open the "
-#~ "sound device, or the sound server may not be running. Please select "
-#~ "another audio output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Huts egin du audio-irteera irekitzean. Ez dituzu nahikoa baimen soinuaren "
-#~ "gailua irekitzeko, edo soinuaren zerbitzaria ez da exekutatzen ari. "
-#~ "Hautatu beste audio-irteera Multimedia-sistemako hautatzailean."
-
-#~ msgid ""
-#~ "Could not find the audio output. You may need to install additional "
-#~ "GStreamer plugins, or select another audio output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Ezin izan da audio-irteera aurkitu. Hautatu beste audio-irteera "
-#~ "Multimedia-sistemako hautatzailean."
-
-#~ msgid "Bemused"
-#~ msgstr "Bemused"
-
-#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
-#~ msgstr "Kontrolatu Xplayer telefono mugikorraren bidez Bemused bezeroarekin"
-
-#~ msgid "Untitled %d"
-#~ msgstr "%d titulurik gabe"
-
-#~ msgid "Xplayer Bemused Server"
-#~ msgstr "Xplayer Bemused zerbitzaria"
-
-#~ msgid "Xplayer Bemused Server version 1.0"
-#~ msgstr "Xplayer Bemused zerbitzaria, 1.0 bertsioa"
-
-#~ msgid "BBC iPlayer"
-#~ msgstr "BBC iPlayer"
-
-#~ msgid ""
-#~ "Stream BBC programs from the last 7 days from the BBC iPlayer service."
-#~ msgstr "Azken 7 egunetako BBC programen korrontea BBC iPlayer zerbitzutik."
-
-#~ msgid "Error listing channel categories"
-#~ msgstr "Errorea kanalen kategoria zerrendatzean"
-
-#~ msgid ""
-#~ "There was an unknown error getting the list of television channels "
-#~ "available on BBC iPlayer."
-#~ msgstr ""
-#~ "Errore ezezaguna gertatu da BBC iPlayer zerbitzuko telebisten kanalen "
-#~ "zerrenda eskuratzean."
-
-#~ msgid "Loading…"
-#~ msgstr "Kargatzen…"
-
-#~ msgid "Error getting programme feed"
-#~ msgstr "Errorea programaren iturria eskuratzean"
-
-#~ msgid ""
-#~ "There was an error getting the list of programmes for this channel and "
-#~ "category combination."
-#~ msgstr ""
-#~ "Errorea gertatu da kanal eta kategoria konbinazio honetako programen "
-#~ "zerrenda eskuratzean."
-
-#~ msgid "<no reason given>"
-#~ msgstr "<ez da arrazoirik eman>"
-
-#~ msgid "Programme unavailable (\"%s\")"
-#~ msgstr "Programa ez dago eskuragarri (\"%s\")"
-
-#~ msgid ""
-#~ "A format string used to build the network service name used when "
-#~ "publishing playlists over the network. The following format placeholders "
-#~ "can be used: • %a: the program name as returned by "
-#~ "g_get_application_name() • %h: the machine's host name in title case • "
-#~ "%u: the user's login name in title case • %U: the user's real name • %%: "
-#~ "the percent sign"
-#~ msgstr ""
-#~ "Sareko zerbitzuaren izena eraikitzeko erabilitako formatuaren katea "
-#~ "sarean zehar erreprodukzio-zerrenda argitaratzean. Formatuaren heldu-leku "
-#~ "hauek erabil daitezke: %a: programaren izena g_get_application_name() "
-#~ "funtzioak itzulita bezala; %h:ordenagailuaren ostalari-izena tituluaren "
-#~ "kasuan; %u: erabiltzaile-izena tituluaren kasuan; %U: erabiltzailearen "
-#~ "benetako izena; %%: ehunekoaren ikurra"
-
-#~ msgid "Format for network service name"
-#~ msgstr "Sareko zerbitzuaren izenaren formatua"
-
-#~ msgid "Publisher protocol to use"
-#~ msgstr "Argitaratzearen protokoloa erabiltzeko"
-
-#~ msgid ""
-#~ "The transport protocol to use when publishing playlists over the network."
-#~ msgstr ""
-#~ "Garraioaren protokoloa erreprodukzio-zerrendak sarean zehar argitaratzean "
-#~ "erabiltzeko."
-
-#~ msgid "Neighbors"
-#~ msgstr "Ondokoak"
-
-#~ msgid "Publish Playlist"
-#~ msgstr "Argitaratu erreprodukzio-zerrenda"
-
-#~ msgid "Share the current playlist via HTTP"
-#~ msgstr "Partekatu uneko erreprodukzio-zerrenda HTTP bidez"
-
-#~ msgid "Service _Name:"
-#~ msgstr "Zerbitzu-_izena:"
-
-#~ msgid ""
-#~ "The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name."
-#~ msgstr ""
-#~ "Sareko erreprodukzio-zerrenda jakinarazteko erabili den izena.\n"
-#~ "<b>%u</b> katearen agerpen guztiak zure izenarekin ordeztuko dira,\n"
-#~ "eta <b>%h</b> katea berriz zure ordenagailuaren izenarekin ordeztuko da."
-
-#~ msgid "Use _encrypted transport protocol (HTTPS)"
-#~ msgstr "Erabili _enkriptatutako garraio-protokoloa (HTTPS)"
-
-#~ msgid "Save in _folder:"
-#~ msgstr "Gorde _karpetan:"
-
-#~ msgid "Select a folder"
-#~ msgstr "Hautatu karpeta"
-
-#~ msgid "_Name:"
-#~ msgstr "_Izena:"
-
-#~ msgid "There was an error saving the screenshot."
-#~ msgstr "Errorea gertatu da pantaila-argazkia gordetzean."
-
-#~ msgid "Save Screenshot"
-#~ msgstr "Gorde pantaila-argazkia"
-
-#~ msgid "A plugin to let you browse YouTube videos."
-#~ msgstr "YouTube-eko bideoak arakatzeko plugin bat."
-
-#~ msgid "YouTube Browser"
-#~ msgstr "YouTube arakatzailea"
-
-#~ msgid "Related Videos"
-#~ msgstr "Zerikusia duten bideoak"
-
-#~ msgid "Search Results"
-#~ msgstr "Bilaketaren emaitzak"
-
-#~ msgid "_Open in Web Browser"
-#~ msgstr "_Ireki web arakatzailean"
-
-#~ msgid "Open the video in your web browser"
-#~ msgstr "Ireki bideoa web arakatzailean"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Cancelling query…"
-#~ msgstr "Kontsulta bertan behera uzten…"
-
-#~ msgid "Error Searching for Videos"
-#~ msgstr "Errorea bideoak bilatzean"
-
-#~ msgid ""
-#~ "The response from the server could not be understood. Please check you "
-#~ "are running the latest version of libgdata."
-#~ msgstr ""
-#~ "Zerbitzariaren erantzuna ezin izan da ulertu. Begiratu libgdata "
-#~ "liburutegiaren azken bertsioa erabiltzen ari zarela."
-
-#~ msgid "Fetching search results…"
-#~ msgstr "Bilaketaren emaitzak eskuratzen…"
-
-#~ msgid "Fetching related videos…"
-#~ msgstr "Zerikusia duten bideoak eskuratzen…"
-
-#~ msgid "Error Opening Video in Web Browser"
-#~ msgstr "Errorea bideoa web arakatzailean irekitzean"
-
-#~ msgid "Fetching more videos…"
-#~ msgstr "Bideo gehiago eskuratzen…"
-
-#~ msgid "Video Format Not Supported"
-#~ msgstr "Bideoaren formatua ez dago onartuta"
-
-#~ msgid ""
-#~ "This video is not available in any formats which Xplayer supports. Would "
-#~ "you like to open it in your web browser instead?"
-#~ msgstr ""
-#~ "Bideo hau ez Xplayer-ek onartzen dituen formatuen artean. Nahi duzu web "
-#~ "arakatzailea irekitzea horren ordez?"
-
-#~ msgid "0 frames per second"
-#~ msgstr "0 fotograma segundoko"
-
-#~ msgid "0 kbps"
-#~ msgstr "0 kb/s"
-
-#~ msgid "0 x 0"
-#~ msgstr "0 x 0"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Zooma txikiagotu"
-
-#~ msgid "Zoom Reset"
-#~ msgstr "Berrezarri zooma"
-
-#~ msgid "Zoom out"
-#~ msgstr "Zooma txikiagotu"
-
-#~ msgid "Zoom reset"
-#~ msgstr "Berrezarri zooma"
-
-#~ msgid ""
-#~ "The playback of this movie requires the following decoders which are not "
-#~ "installed:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Filma hau erreproduzitzeko honako deskodetzaileak behar dira, baina ez "
-#~ "daude instalatuta:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "Media file could not be played."
-#~ msgstr "Multimediako fitxategia ezin izan da irakurri."
-
-#~ msgid "Too old version of GStreamer installed."
-#~ msgstr "GStreamer-en bertsio zaharregia dago instalatuta."
-
-#~ msgid ""
-#~ "Failed to open video output. It may not be available. Please select "
-#~ "another video output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Huts egin du bideo-irteera irekitzean. Ez dago erabilgarri. Hautatu beste "
-#~ "bideo-irteera Multimedia-sistemako hautatzailean."
-
-#~ msgid ""
-#~ "Could not find the video output. You may need to install additional "
-#~ "GStreamer plugins, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Ezin izan da bideo-irteera aurkitu. Agian GStreamer-en bestelako plugin "
-#~ "gehigarri batzuk instalatu beharko dira, edo hautatu beste bideo-irteera "
-#~ "Multimedia-sistemako hautatzailean."
-
-#~ msgid "%s"
-#~ msgstr "%s"
-
-#~ msgid "Delete"
-#~ msgstr "Ezabatu"
-
-#~ msgid "Coherence DLNA/UPnP Client"
-#~ msgstr "Coherence DLNA/UPnP bezeroa"
-
-#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
-#~ msgstr "DLNA/UPnP bezeroa Xplayer-entzako Coherence motorrarekin"
-
-#~ msgid "By artist"
-#~ msgstr "Artistaren arabera"
-
-#~ msgid "By tag"
-#~ msgstr "Etiketaren arabera"
-
-#~ msgid "Jamendo Album Page"
-#~ msgstr "Albumaren orrialdea Jamendo-n"
-
-#~ msgid "Latest Releases"
-#~ msgstr "Azken argitalpenak"
-
-#~ msgid "Number of albums to _retrieve:"
-#~ msgstr "Album kopurua _eskuratzeko:"
-
-#~ msgid "Popular"
-#~ msgstr "Ospetsua"
-
-#~ msgid "Preferred audio _format:"
-#~ msgstr "Audio-_formatu hobetsia:"
-
-#~ msgid "_Open Jamendo Album Page in Browser"
-#~ msgstr "_Ireki Jamendoko albumaren orrialdean web-arakatzailean"
-
-#~ msgid "Jamendo"
-#~ msgstr "Jamendo"
-
-#~ msgid ""
-#~ "Listen to the large collection of Creative Commons licensed music on "
-#~ "Jamendo."
-#~ msgstr ""
-#~ "Entzun Creative Commons lizentziapeko musiken bilduma handia Jamendo-n."
-
-#~ msgid "You need to install the Python simplejson module."
-#~ msgstr "Python simplejson modulua instalatu behar duzu."
-
-#~ msgid "Artist: %s"
-#~ msgstr "Artista: %s"
-
-#~ msgid "%Y-%m-%d"
-#~ msgstr "%Y-%m-%d"
-
-#~ msgid "%x"
-#~ msgstr "%x"
-
-#~ msgid "Genre: %s"
-#~ msgstr "Generoa: %s"
-
-#~ msgid "Released on: %s"
-#~ msgstr "Argitalpena: %s"
-
-#~ msgid "License: %s"
-#~ msgstr "Lizentzia: %s"
-
-#~ msgid "%02d. %s"
-#~ msgstr "%02d. %s"
-
-#~ msgid "Album: %s"
-#~ msgstr "Albuma: %s"
-
-#~ msgid "Duration: %s"
-#~ msgstr "Iraupena: %s"
-
-#~ msgid "Fetching albums, please wait…"
-#~ msgstr "Albumak eskuratzen, itxoin..."
-
-#~ msgid ""
-#~ "Failed to connect to Jamendo server.\n"
-#~ "%s."
-#~ msgstr ""
-#~ "Huts egin du Jamendo zerbitzariarekin konektatzean.\n"
-#~ "%s"
-
-#~ msgid "The Jamendo server returned code %s."
-#~ msgstr "Jamendo zerbitzariak honako kodea itzuli du: %s."
-
-#~ msgid "An error occurred while fetching albums."
-#~ msgstr "Errorea gertatu da albumak eskuratzean."
-
-#~ msgid "%H:%M:%S"
-#~ msgstr "%H:%M:%S"
-
-#~ msgid "%M:%S"
-#~ msgstr "%M:%S"
-
-#~ msgid "Audio format to download from Jamendo"
-#~ msgstr "Audioaren formatua Jamendo webgunetik deskargatzeko"
-
-#~ msgid "Number of results per page"
-#~ msgstr "Emaitzen kopurua orrialdea"
-
-#~ msgid ""
-#~ "The number of Jamendo search results to display in each page of results."
-#~ msgstr ""
-#~ "Jamendo-ko bilaketako emaitza kopurua, emaitzaren orrialde bakoitzean "
-#~ "bistaratzeko."
-
-#~ msgid "The preferred audio format to download tracks from Jamendo in."
-#~ msgstr "Audioaren formatu hobetsia Jamendo-tik pistak deskargatzeko."
-
-#~ msgid "Language"
-#~ msgstr "Hizkuntza"
-
-#~ msgid "Could not connect to Tracker"
-#~ msgstr "Ezin izan da Tracker-ekin konektatu"
-
-#~ msgid "No results"
-#~ msgstr "Emaitzarik ez"
-
-#~ msgid "Showing %i - %i of %i match"
-#~ msgid_plural "Showing %i - %i of %i matches"
-#~ msgstr[0] "Bat datorrena %i - %i / %i erakusten"
-#~ msgstr[1] "Bat datozten %i - %i / %i erakusten"
-
-#~ msgid "Page"
-#~ msgstr "Orrialdea"
-
-#~ msgid "Set the window icon to the thumbnail of the playing movie"
-#~ msgstr ""
-#~ "Ezarri leihoaren ikonoa erreproduzitzen ari den filmaren koadro txikian"
-
-#~ msgid "Thumbnail"
-#~ msgstr "Koadro txikia"
-
-#~ msgid "Search for local videos using Tracker"
-#~ msgstr "Bilatu bideo lokalak Tracker erabiliz"
-
-#~ msgid "Browser Plugin using %s"
-#~ msgstr "Arakatzaile plugina %s erabiltzen ari da"
-
-#~ msgid "Xplayer Browser Plugin"
-#~ msgstr "Xplayer-en arakatzaile plugina"
-
-#~ msgid "Author:"
-#~ msgstr "Egilea:"
-
-#~ msgid "C_onfigure..."
-#~ msgstr "_Konfiguratu..."
-
-#~ msgid "Copyright:"
-#~ msgstr "Copyright-a:"
-
-#~ msgid "Description:"
-#~ msgstr "Azalpena:"
-
-#~ msgid "Site:"
-#~ msgstr "Gunea:"
-
-#~ msgid "Deinterlace"
-#~ msgstr "Gurutzelarkatu"
-
-#~ msgid "_Deinterlace"
-#~ msgstr "_Gurutzelarkatu"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, "
-#~ "\"2\" for 28.8 Kbps Modem, \"3\" for 33.6 Kbps Modem, \"4\" for 34.4 Kbps "
-#~ "Modem, \"5\" for 56 Kbps Modem/ISDN, \"6\" for 112 Kbps Dual ISDN/DSL, "
-#~ "\"7\" for 256 Kbps DSL/Cable, \"8\" for 384 Kbps DSL/Cable, \"9\" for 512 "
-#~ "Kbps DSL/Cable, \"10\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/"
-#~ "LAN."
-#~ msgstr ""
-#~ "Sareko konexioaren gutxi gorabeherako abiadura, sarean bidez euskarri "
-#~ "igortzeko kalitatea hautatzeko erabiltzen da. \"0\" 14.4 Kbps modema, "
-#~ "\"1\" 19.2 Kbps modema, \"2\" 28.8 Kbps modema, \"3\" 33.6 Kbps modema, "
-#~ "\"4\" 34.4 Kbps modema, \"5\" 56 Kbps modema/ISDN, \"6\" 112 Kbps ISDN/"
-#~ "DSL bikoitza, \"7\" 256 Kbps DSL/Cable, \"8\" 384 Kbps DSL/Cable, \"9\" "
-#~ "512 Kbps DSL/Cable, \"10\" 1.5 Mbps T1/Intranet/LAN, \"11\" Intranet/LAN."
-
-#~ msgid "Buffer size"
-#~ msgstr "Buffer-tamaina"
-
-#~ msgid "Enable deinterlacing"
-#~ msgstr "Gaitu gurutzelarkatzea"
-
-#~ msgid "Maximum amount of data to decode ahead of display (in seconds)"
-#~ msgstr ""
-#~ "Gehienezko datu-kopurua bistaratze aurretik dekodetzeko (segundotan)"
-
-#~ msgid ""
-#~ "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-#~ msgstr ""
-#~ "Audioaren bisualizazioaren kalitate ezarpenak: \"0\" txikia, \"1\" "
-#~ "normala, \"2\" handia, \"3\" oso handia."
-
-#~ msgid ""
-#~ "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel "
-#~ "output, \"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" "
-#~ "for AC3 Passthrough."
-#~ msgstr ""
-#~ "Erabili beharreko audioaren irteera-mota: \"0\" estereoa, \"1\" 4 "
-#~ "kanaleko irteera, \"2\" 5.0 kanaleko irteera, \"3\" 5.1 kanaleko irteera, "
-#~ "\"4\" AC3 bidea."
-
-#~ msgid "UTF-8"
-#~ msgstr "UTF-8"
-
-#~ msgid "Whether the main window should stay on top"
-#~ msgstr "Leiho nagusiak gainean egon behar duen ala ez adierazten du"
-
-#~ msgid "Whether the main window should stay on top of the other ones"
-#~ msgstr ""
-#~ "Leiho nagusiak gainerako leihoen gainean egon behar duen ala ez "
-#~ "adierazten du"
-
-#~ msgid "Could not launch URL \"%s\": %s"
-#~ msgstr "Ezin izan da '%s' URLa abiarazi: %s"
-
-#~ msgid "Default browser not configured"
-#~ msgstr "Arakatzaile lehenetsia ez dago konfiguratuta"
-
-#~ msgid "Error launching URI"
-#~ msgstr "Errorea URIa abiaraztean"
-
-#~ msgid "Don't connect to an already-running instance"
-#~ msgstr "Ez konektatu exekutatzen ari den instantzia batera"
-
-#~ msgid "Enable visual effects?"
-#~ msgstr "Gaitu efektu bisualak?"
-
-#~ msgid ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-#~ msgstr ""
-#~ "Xplayer urrunetik exekutatzen ari zarela dirudi.\n"
-#~ "Ziur zaude efektu bisualak gaitu nahi dituzula?"
-
-#~ msgid ""
-#~ "Changing the visuals effect type will require a restart to take effect."
-#~ msgstr ""
-#~ "Efektu bisualen mota aldatzeak eragina izan dezan Xplayer berrabiarazi egin "
-#~ "behar da."
-
-#~ msgid ""
-#~ "The change of audio output type will only take effect when Xplayer is "
-#~ "restarted."
-#~ msgstr ""
-#~ "Soinu-irteera mota aldatzeak Xplayer berrabiaraztean izango du eragina."
-
-#~ msgid "Could not open link"
-#~ msgstr "Ezin izan da esteka ireki"
-
-#~ msgid "Xplayer could not initialize the configuration engine."
-#~ msgstr "Xplayer-ek ezin izan du konfigurazio-motorra abiarazi."
-
-#~ msgid "Make sure that GNOME is properly installed."
-#~ msgstr "Ziurtatu GNOME behar bezala instalatuta dagoela."
-
-#~ msgid "Enabled"
-#~ msgstr "Gaituta"
-
-#~ msgid ""
-#~ "Unable to activate plugin %s.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Ezin da %s plugina aktibatu.\n"
-#~ "%s"
-
-#~ msgid "Unable to activate plugin %s"
-#~ msgstr "Ezin da %s plugina aktibatu"
-
-#~ msgid "Plugin Error"
-#~ msgstr "Pluginaren errorea"
-
-#~ msgid "Could not connect to the Galago daemon."
-#~ msgstr "Ezin izan da Galago daemona-rekin konektatu"
-
-#~ msgid "Jamendo Plugin Configuration"
-#~ msgstr "Jamendo pluginaren konfigurazioa"
-
-#~ msgid "Recordings"
-#~ msgstr "Grabazioak"
-
-#~ msgid "MythTV Recordings"
-#~ msgstr "MythTV grabazioak"
-
-#~ msgid "MythTV LiveTV"
-#~ msgstr "MythTV LiveTV"
-
-#~ msgid "_Download Movie Subtitles..."
-#~ msgstr "_Deskargatu filmaren azpitituluak..."
-
-#~ msgid "Could not get name and thumbnail for %s: %s"
-#~ msgstr "Ezin izan da %s(r)en koadro txiki eta izenik lortu: %s"
-
-#~ msgid "Error Looking Up Video URI"
-#~ msgstr "Errorea bideoaren URIa bilatzean"

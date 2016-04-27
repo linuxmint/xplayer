@@ -6,31 +6,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-07 17:49-0500\n"
-"PO-Revision-Date: 2013-04-07 20:23-0500\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-03 12:39+0000\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
-"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-meydan@lists."
-"sourceforge.net>\n"
-"Language: \n"
+"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-"
+"meydan@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: \n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1178
-#: ../src/xplayer-object.c:1648 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Toqtatılğan"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1171
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Tınışlanğan"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1164
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "Oynatıla"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Bir film oynatıla"
@@ -52,7 +54,7 @@ msgstr "Xplayer Film Oynatıcı"
 msgid "_Open with \"%s\""
 msgstr "\"%s\" _ile aç"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2473
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "Bir hata hasıl oldı"
 
@@ -65,7 +67,7 @@ msgid "Movie browser plugin"
 msgstr "Film kezici plagini"
 
 # tr
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Güvenli iş parçacığı kütüphaneleri ilklendirilemiyor."
 
@@ -78,7 +80,7 @@ msgstr "Kurulumunuzu kontrol edin. Xplayer eklentisi şimdi çıkıyor."
 msgid "Leave Fullscreen"
 msgstr "Tam Ekrandan Çıq"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Zaman:"
 
@@ -273,12 +275,12 @@ msgstr "Qonumnı _Kopiyala"
 msgid "Copy the location to the clipboard"
 msgstr "Qonumnı tüyreme-tahtasına kopiyala"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "Metin _Altyazılarını Sayla..."
 
 # tr
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "Metin altyazıları için kullanılacak bir dosya seçin"
 
@@ -317,8 +319,7 @@ msgstr "İri"
 msgid "Extra Large"
 msgstr "Ziyade Büyük"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -462,7 +463,6 @@ msgid "_Audio output type:"
 msgstr "_Davuş çıqtısı türü:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "Davuş"
 
@@ -495,7 +495,7 @@ msgstr "Şerh:"
 msgid "Container:"
 msgstr "Konteyner:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "Video"
 
@@ -525,8 +525,8 @@ msgid "Channels:"
 msgstr "Kanallar:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
-#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1656
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Videolar"
 
@@ -538,322 +538,373 @@ msgstr "Filmler oynat"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Film;Klip;Dizi;Seriya;Oynatıcı;DVD;TV;Disk;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Oynat/Tınışla"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Soñraki"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Evelki"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr ""
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Tam-ekran"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Aç"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "Qonum A_ç"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "_Tam ekran"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "Terci_hler"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "_Qarıştır"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "_Tekrarla"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "_Çıq"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "Fil_m"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr ""
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Bir dosye aç"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr ""
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Yerli olmağan bir dosye aç"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Çıqart"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "Ağımdaki diskni çıqart"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Hasiyetler"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "Cari aqıntınıñ hasiyetlerini köster"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Oynat / Tınışl_a"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "Filmni oynat yaki beklet"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "_Çıq"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Programdan çıq"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Tahrir"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "Çalma Listesini _Temizle"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Çalma listesini temizle"
 
-# tüklü
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "Terci_hler"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Uyğulamanı yapılandır"
+
+# tüklü
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Eklentiler..."
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "Uyğulamanı uzatmaq üzre plaginlerni yapılandır"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "_Körünim"
 
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "_Tam ekran"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Tam ekranğa almaştır"
+
 # tüklü
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "Pencereni Filmge Uydur"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "_Kene ölçülendir 1∶2"
 
 # tr
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Özgün video boyutunun yarısına yeniden boyutlandır"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "Kene ölçülendir _1∶1"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Özgün video ölçüsine yañıdan ölçülendir"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "Kene ölçülendir _2∶1"
 
 # tr
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "Özgün video boyutunun iki katına yeniden boyutlandır"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "_Aspekt Nisbeti"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "_Köşelerni deniştir"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "Kamera köşelerini deniştir"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "_Bar"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "_DVD Menüsi"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "DVD menüsine bar"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "_Serlevha Menüsi"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "Serlevha menüsine bar"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "_Davuş Menüsi"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "Davuş menüsine bar"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "_Köşe Menüsi"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "Köşe menüsine bar"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "Bap _Menüsi"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "Bap menüsine bar"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "_Soñraki Bap/Film"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "Soñraki bap yaki film"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "_Evelki Bap/Film"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "Evelki bap yaki film"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "_Davuş"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "Davuşlılıqnı _Köter"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "Davuşlılıqnı arttır"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "Davuşlılıqnı _Alçaqlat"
 
 # tüklü
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "Gürlükni eksilt"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Münderice"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "Yardım mündericesi"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "_Haqqında"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "Bu uyğulama haqqında"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr ""
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Tekrar tarzını tesbit et"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr ""
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Qarıştırma tarzını tesbit et"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "_Kontrollerni Köster"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "Kontrollerni köster"
 
 # tüklü
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "_Yan Çubuq"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "Yan çubuqnı köster yaki gizle"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Avto"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "Avtomatik aspekt nisbetini tesbit eter"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Kare"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "Kare aspekt nisbetini tesbit eter"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "4∶3 (TV) aspekt nisbetini tesbit eter"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (Kenişekran)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "16∶9 (kenişekran) aspekt nisbetini tesbit eter"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "2.11∶1 (DVB) aspekt nisbetini tesbit eter"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "_Altyazılar"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "_Tiller"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "Yaqınlaştır"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "Yaqınlaştır"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "_İlerige doğru atla"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "İlerige doğru atla"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "_Kerige doğru atla"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "Kerige doğru atla"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "Zaman arama çubuğı"
 
@@ -862,63 +913,64 @@ msgstr "Zaman arama çubuğı"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Açmak istediğiniz dosyanın _adresini giriniz:"
 
-#: ../src/backend/bacon-video-widget.c:1641
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "RTSP sunucısı içün sır-söz rica etile"
 
-#: ../src/backend/bacon-video-widget.c:2885
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Davuş Çığırı #%d"
 
-#: ../src/backend/bacon-video-widget.c:2889
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Altyazı #%d"
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3286
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr "Bağlanmaya çalıştığınız sunucu bilinmiyor."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3289
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr "Bu sunucuya bağlantı rededildi."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3292
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr "Belirttiğiniz film bulunamıyor."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3299
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr "Sunucu bu dosyaya ya da akışkan ortama erişimi redetti."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3305
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
 msgstr "Bu dosyaya veya akışa erişim için kimlik doğrulama gerekli."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3312
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr "Bu dosyayı açmanıza izin verilmedi."
 
-#: ../src/backend/bacon-video-widget.c:3317
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr "Bu qonum keçerli biri degildir."
 
-#: ../src/backend/bacon-video-widget.c:3325
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr "Film oqulamadı."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3348
-#: ../src/backend/bacon-video-widget.c:3356
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -926,13 +978,9 @@ msgid_plural ""
 "%s"
 msgstr[0] ""
 "Bu filmniñ oynatılması içün qurulmağan olğan bir %s plagini şarttır."
-msgstr[1] ""
-"Bu filmniñ oynatılması içün qurulmağan olğan aşağıdaki plaginler şarttır:\n"
-"\n"
-"%s"
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3367
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -941,7 +989,7 @@ msgstr ""
 "bazı türlerini oynatabilmek içün ek plaginler qurmañız kerekebilir"
 
 # tr
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -950,21 +998,21 @@ msgstr ""
 "deñeñiz."
 
 # tüklü
-#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Qırşavlama (Surround)"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Mono"
 
 # tr
-#: ../src/backend/bacon-video-widget.c:5748
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "Ortamda desteklenen akışkan video bulunmuyor."
 
 # tr
-#: ../src/backend/bacon-video-widget.c:5930
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1039,8 +1087,8 @@ msgstr "Uzantı(lar)"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "Program, `%s' içün qullanmağa istegeniñiz dosye formatını tesbit etamadı. O "
@@ -1054,7 +1102,7 @@ msgstr "Dosye formatı tanılmağan"
 # tr
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Oturum yöneticisine bağlantıyı devre dışı bırak "
+msgstr "Oturum yöneticisine bağlantıyı devre dışı bırak"
 
 # tr
 #: ../src/eggsmclient.c:229
@@ -1086,7 +1134,7 @@ msgstr "Oturım idaresi ihtiyariyatını köster"
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1099,7 +1147,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1174,21 +1222,18 @@ msgstr "0 Kanal"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d saat"
-msgstr[1] "%d saat"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d daqqa"
-msgstr[1] "%d daqqa"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d saniye"
-msgstr[1] "%d saniye"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1214,30 +1259,29 @@ msgstr "0 saniye"
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
 msgstr[0] "saniyede %d çerçive"
-msgstr[1] "saniyede %d çerçive"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "Davuş Ög-baquv"
 
 # tr
-#: ../src/xplayer.c:249
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Kurulumunuzu kontrol edin. Xplayer şimdi çıkıyor."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "Şimdi _Oynat"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "Ç_alma Listesine Ekle"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Vazgeç"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Dosye Yoq"
 
@@ -1264,8 +1308,8 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer, serbest yazılımdır; onı Serbest Yazılım Vaqfı (FSF) tarafından neşir "
-"etilgeni kibi GNU Umumiy Aleniy Litsenziyası şartları altında kene "
+"Xplayer, serbest yazılımdır; onı Serbest Yazılım Vaqfı (FSF) tarafından "
+"neşir etilgeni kibi GNU Umumiy Aleniy Litsenziyası şartları altında kene "
 "dağıtabilir ve/yaki deñiştirebilirsiñiz; ya Litsenziyanıñ 2-nci sürümi, ya "
 "da (ihtiyarıñızğa köre) her hangi soñraki sürümi."
 
@@ -1284,8 +1328,8 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Bu program ile beraber bir GNU Umumiy Aleniy Litsenziyası kopiyasını "
 "berilgen olmañız lâzim; aksi taqdirde, Serbest Yazılım Vaqfı'na yazıñız: "
@@ -1297,38 +1341,26 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer mülkiyetli GStreamer eklentilerini qullanmağa izin bergen bir istisna "
-"ihtiva ete."
+"Xplayer mülkiyetli GStreamer eklentilerini qullanmağa izin bergen bir "
+"istisna ihtiva ete."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Hiç biri"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Avto"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Telif haqqı © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr "Reşat SABIQ <tilde.birlik@gmail.com>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "Xplayer Ağ Saytı"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Eklentilerni Ayarla"
 
 # tr
-#: ../src/xplayer-object.c:161
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1339,58 +1371,49 @@ msgstr ""
 "çalıştırın.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:589
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1166 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Tınışla"
 
-#: ../src/xplayer-object.c:1173 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Oynat"
 
 # tüklü
-#: ../src/xplayer-object.c:1265 ../src/xplayer-object.c:1292
-#: ../src/xplayer-object.c:1785 ../src/xplayer-object.c:1940
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer '%s' oynatamadı."
 
-#: ../src/xplayer-object.c:1791
-msgid "No error message"
-msgstr "Hata mesajı yoq"
-
 # tr
-#: ../src/xplayer-object.c:2131
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer yardım içeriğini gösteremiyor."
 
-#: ../src/xplayer-object.c:4020 ../src/xplayer-object.c:4022
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Evelki Bap/Film"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Oynat / Tınışla"
 
-#: ../src/xplayer-object.c:4039 ../src/xplayer-object.c:4041
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Soñraki Bap/Film"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4052 ../src/xplayer-object.c:4054
-msgid "Fullscreen"
-msgstr "Tam-ekran"
-
-#: ../src/xplayer-object.c:4185
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "Xplayer başlayamadı."
 
-#: ../src/xplayer-object.c:4185
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "Sebep yoq."
 
@@ -1402,18 +1425,6 @@ msgstr "Qonum Aç..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Arızasızlandıruvnı qabilleştir"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Oynat/Tınışla"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Soñraki"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Evelki"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1478,51 +1489,51 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "Aynı zamanda quyruqqa eklep ivaz etilalmay"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast çalma listesi"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 davuş (aqıtılğan)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 davuş (aqıtılğan, DOS formatı)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "XML Üleşilebilir Çalma Listesi"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "Serlevha %d"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "Çalma listesi saqlanamadı"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "Çalma Listesini Saqla"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Çalma Listesi"
 
 # tr
-#: ../src/xplayer-playlist.c:1860
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "'%s' oynatma listesi ayırıştırılamadı. Hasarlı olabilir."
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Çalma listesi hatası"
 
@@ -1533,55 +1544,6 @@ msgstr "Tercihler"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Altyazı Hurufatı Sayla"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "Davuş/Video"
-
-# tüklü
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "Uyğulanamaz"
-
-# tüklü
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "Uyğulanalmaz"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kb/s"
-
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-# tüklü
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "Uyğulanalmaz"
-
-# tüklü
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "Uyğulanalmaz"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1631,8 +1593,10 @@ msgstr "%s, %%%f"
 msgid "Current Locale"
 msgstr "Ağımdaki Mahal"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arapça"
 
@@ -1640,7 +1604,8 @@ msgstr "Arapça"
 msgid "Armenian"
 msgstr "Ermenice"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltıq"
@@ -1650,17 +1615,22 @@ msgid "Celtic"
 msgstr "Keltik"
 
 # tr
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Orta Avropa"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Çince, Basitleştirilgen"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Çince, Ananeviy"
@@ -1669,9 +1639,12 @@ msgstr "Çince, Ananeviy"
 msgid "Croatian"
 msgstr "Hırvatça"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Kiril"
 
@@ -1679,7 +1652,8 @@ msgstr "Kiril"
 msgid "Cyrillic/Russian"
 msgstr "Kiril/Rusça"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Kiril/Ukraince"
 
@@ -1687,7 +1661,8 @@ msgstr "Kiril/Ukraince"
 msgid "Georgian"
 msgstr "Gürcice"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Yunanca"
@@ -1701,8 +1676,10 @@ msgstr "Güceratice"
 msgid "Gurmukhi"
 msgstr "Gurmuki"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "İbraniyce"
 
@@ -1718,13 +1695,16 @@ msgstr "Hindce"
 msgid "Icelandic"
 msgstr "İslandiyaca"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Yaponca"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Korece"
 
@@ -1736,7 +1716,8 @@ msgstr "Skandinav"
 msgid "Persian"
 msgstr "Farsça"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Rumınca"
 
@@ -1748,24 +1729,31 @@ msgstr "Cenübiy Avropa"
 msgid "Thai"
 msgstr "Tayca"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Türkçe"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unikod"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Ğarbiy"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamca"
@@ -1805,7 +1793,7 @@ msgstr "Fihrist Ekle"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1816,16 +1804,16 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Dosye Adı"
 
 # tr
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Çezinirlik"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Devamlılıq"
 
@@ -2252,6 +2240,35 @@ msgstr "Film Hasiyetleri"
 msgid "Adds movie properties to the sidebar"
 msgstr "Yan çubuqqa film hasiyetlerini ekler"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kb/s"
+
+# tüklü
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Uyğulanalmaz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+# tüklü
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "Uyğulanalmaz"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Hasiyetler"
@@ -2262,8 +2279,9 @@ msgstr "rpdb2 sır-sözü"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
 "Xplayer'ni illetsizlendirmek içün qullanılğan rpdb2 sunucısını salâhiyetsiz "
 "uzaqtan irişimden himaye etmek içün bir sır-söz. Boş ise, ögbelgileme olaraq "
@@ -2343,36 +2361,6 @@ msgstr "Saat Yelquvanı Yönünde _Aylandır"
 msgid "Rotate Counterc_lockwise"
 msgstr "Saat Yelquvanınıñ _Ters Yönünde Aylandır"
 
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Kopiyanı Saqla"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "Hal-hazırda oynatılğan videonıñ bir kopiyasını saqla"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Bir Kopiyasını Saqla..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Filmniñ bir kopiyasını saqla"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Bir Kopiyanı Saqla"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Film"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Film aqıntısı"
-
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
 msgstr "Ekran Qoruyıcı"
@@ -2415,7 +2403,8 @@ msgstr "Ekran-körüntisi"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "Videolarnıñ ekran körüntileri ve galereyalarınıñ alınmasına izin berir"
+msgstr ""
+"Videolarnıñ ekran körüntileri ve galereyalarınıñ alınmasına izin berir"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
@@ -2487,7 +2476,6 @@ msgstr "Şurağa _atla:"
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "saniye"
-msgstr[1] "saniye"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2506,1409 +2494,10 @@ msgstr "Şunda _Atla..."
 msgid "Skip to a specific time"
 msgstr "Muayyen bir zamanğa atla"
 
-#~ msgid "Add the video to the playlist"
-#~ msgstr "Videonı çalma listesine ekle"
-
-#~ msgid "Play movies and songs"
-#~ msgstr "Filmlerni ve yırlarnı çal"
-
-#~ msgid "1.5 Mbps T1/Intranet/LAN"
-#~ msgstr "1,5 Mb/s T1/İç-şebeke/Yerli Mıntıqa Şebekesi (YMŞ; LAN)"
-
-#~ msgid "112 Kbps Dual ISDN/DSL"
-#~ msgstr "112 Kb/s Çifte ISDN/DSL"
-
-#~ msgid "14.4 Kbps Modem"
-#~ msgstr "14,4 Kb/s Modem"
-
-#~ msgid "19.2 Kbps Modem"
-#~ msgstr "19,2 Kb/s Modem"
-
-# tüklü
-#~ msgid "256 Kbps DSL/Cable"
-#~ msgstr "256 Kb/s DSL/Kabel"
-
-#~ msgid "28.8 Kbps Modem"
-#~ msgstr "28,8 Kb/s Modem"
-
-#~ msgid "33.6 Kbps Modem"
-#~ msgstr "33,6 Kb/s Modem"
-
-#~ msgid "34.4 Kbps Modem"
-#~ msgstr "34,4 Kb/s Modem"
-
-#~ msgid "384 Kbps DSL/Cable"
-#~ msgstr "384 Kb/s DSL/Kabel"
-
-#~ msgid "512 Kbps DSL/Cable"
-#~ msgstr "512 Kb/s DSL/Kabel"
-
-# tüklü
-#~ msgid "56 Kbps Modem/ISDN"
-#~ msgstr "56 Kb/s Modem/ISDN"
-
-#~ msgid "Configure the application"
-#~ msgstr "Uyğulamanı yapılandır"
-
-#~ msgid "Connection _speed:"
-#~ msgstr "Bağlantı _sur'atı:"
-
-#~ msgid "Intranet/LAN"
-#~ msgstr "İç-şebeke/Yerli Mıntıqa Şebekesi (YMŞ) [Intranet/LAN]"
-
-#~ msgid "Networking"
-#~ msgstr "Şebekeleme"
-
-#~ msgid "Open a file"
-#~ msgstr "Bir dosye aç"
-
-#~ msgid "Open a non-local file"
-#~ msgstr "Yerli olmağan bir dosye aç"
-
-#~ msgid "Quit the program"
-#~ msgstr "Programdan çıq"
-
-#~ msgid "Set the repeat mode"
-#~ msgstr "Tekrar tarzını tesbit et"
-
-#~ msgid "Set the shuffle mode"
-#~ msgstr "Qarıştırma tarzını tesbit et"
-
-#~ msgid "Switch to fullscreen"
-#~ msgstr "Tam ekranğa almaştır"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network."
-#~ msgstr ""
-#~ "Taqribiy şebeke bağlantısı sür'atı: şebeke arqalı vasat üzerinde "
-#~ "keyfiyetni saylamaq içün qullanılır."
-
-#~ msgid "Network connection speed"
-#~ msgstr "Şebeke bağlantısı sur'atı"
-
-#~ msgid "Unknown video"
-#~ msgstr "Bilinmegen video"
-
-#~ msgid "Play Image '%s'"
-#~ msgstr "'%s' Suretini Oynat"
-
-#~ msgid "device%d"
-#~ msgstr "cihaz%d"
-
-#~ msgid "Play Disc '%s'"
-#~ msgstr "'%s' Diskini Oynat"
-
-#~ msgid "Movie Player using %s"
-#~ msgstr "%s Qullanğan Film Oynatıcı"
-
-# tr
-#~ msgid ""
-#~ "Xplayer could not play this media (%s) although a plugin is present to "
-#~ "handle it."
-#~ msgstr ""
-#~ "Xplayer gerekli eklentiler kurulu olmasına rağmen bu ortamı (%s) "
-#~ "oynatamıyor."
-
-# tr
-#~ msgid ""
-#~ "You might want to check that a disc is present in the drive and that it "
-#~ "is correctly configured."
-#~ msgstr ""
-#~ "Sürücünün doğru yapılandırıldığından ve içinde bir ortam bulunup "
-#~ "bulunmadığını kontrol etmek isteyebilirsiniz."
-
-# tüklü
-#~ msgid "More information about media plugins"
-#~ msgstr "Vasat eklentileri haqqında daha çoq malümat"
-
-# tr
-#~ msgid ""
-#~ "Please install the necessary plugins and restart Xplayer to be able to play "
-#~ "this media."
-#~ msgstr ""
-#~ "Lütfen bu ortamı oynatmak için gerekli eklentileri kurun ve Xplayer'i "
-#~ "yeniden başlatın."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it does not have the "
-#~ "appropriate plugins to be able to read from the disc."
-#~ msgstr ""
-#~ "Xplayer bu türdeki vasatlarnı (%s) oynatalmay çünki diskten oquybilmek içün "
-#~ "uyğun plaginlerge sahip degildir."
-
-# tr
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because you do not have the "
-#~ "appropriate plugins to handle it."
-#~ msgstr ""
-#~ "Xplayer bu türdeki (%s) ortamları oynatamıyor çünkü bu işlem için doğru "
-#~ "eklentiler kurulu değil."
-
-# tr
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it is not supported."
-#~ msgstr ""
-#~ "Xplayer bu türdeki (%s) ortamları oynatamıyor çünkü bu desteklenmiyor."
-
-# tr
-#~ msgid "Please insert another disc to play back."
-#~ msgstr "Çalmak için lütfen başka bir disk yerleştirin."
-
-# tr
-#~ msgid "Xplayer was not able to play this disc."
-#~ msgstr "Xplayer bu diski oynatamadı."
-
-# tr
-#~ msgid "Xplayer does not support playback of Audio CDs"
-#~ msgstr "Xplayer Ses CD'lerini çalmayı desteklemiyor."
-
-# tr
-#~ msgid ""
-#~ "Please consider using a music player or a CD extractor to play this CD"
-#~ msgstr ""
-#~ "Lütfen bu CD'yi oynatmak için bir müzik çalar ya da CD aktarıcı "
-#~ "kullanmayı düşünün"
-
-#~ msgid "%d %%"
-#~ msgstr "%d %%"
-
-#~ msgid "No video URI"
-#~ msgstr "Video URI yoq"
-
-# tr
-#~ msgid ""
-#~ "The requested audio output was not found. Please select another audio "
-#~ "output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Talep edilen ses çıkışı bulunamadı. Lütfen Çokluortam Sistemleri "
-#~ "Seçicisinden başka bir ses çıkış türü seçin."
-
-#~ msgid "Location not found."
-#~ msgstr "Qonum tapılmadı."
-
-#~ msgid ""
-#~ "Could not open location; you might not have permission to open the file."
-#~ msgstr "Qonum açılamadı; dosyeni açmaq içün ruhsetiñiz olmaybilir."
-
-# tr
-#~ msgid ""
-#~ "The video output is in use by another application. Please close other "
-#~ "video applications, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Video çıkışı şu anda başka bir uygulama tarafından kullanılıyor. Lütfen "
-#~ "diğer uygulamaları sonlandırın ya da Çokluortam Sistemleri Seçicisinden "
-#~ "başka bir video çıkış türü seçin."
-
-# tr
-#~ msgid ""
-#~ "The audio output is in use by another application. Please select another "
-#~ "audio output in the Multimedia Systems Selector. You may want to consider "
-#~ "using a sound server."
-#~ msgstr ""
-#~ "Ses çıkışı başka bir uygulama tarafından kullanılıyor. Lütfen Çokluortam "
-#~ "Sistemleri Seçicisinden başka bir ses çıkışı seçin. Bunun yerine bir ses "
-#~ "sunucusu kullanmayı deneyebilirsiniz."
-
-# tr
-#~ msgid ""
-#~ "Failed to create a GStreamer play object. Please check your GStreamer "
-#~ "installation."
-#~ msgstr ""
-#~ "GStramer oynatma nesnesi oluşturulamadı. Lütfen GStramer kurulumunuzu "
-#~ "gözden geçirin."
-
-# tr
-#~ msgid ""
-#~ "Failed to open audio output. You may not have permission to open the "
-#~ "sound device, or the sound server may not be running. Please select "
-#~ "another audio output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Ses çıkışı açılamadı. Belki ses aygıtını açmak için yeterli yetkiniz "
-#~ "bulunmuyor ya da ses sunucusu çalışmıyor. Lütfen Çokluortam Sistemleri "
-#~ "Seçicisinden başka bir ses çıkış türü seçin."
-
-# tr
-#~ msgid ""
-#~ "Could not find the audio output. You may need to install additional "
-#~ "GStreamer plugins, or select another audio output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Ses çıkışı bulunamadı. Çokluortam Sistemleri Seçicisinden başka bir ses "
-#~ "çıkışı seçebilir veya ek GStreamer eklentileri kurabilirsiniz."
-
-#~ msgid "Failed to parse CMML file"
-#~ msgstr "CMML dosyesi ayırıştırılamadı"
-
-# tüklü
-#~ msgid "BBC iPlayer"
-#~ msgstr "BBC iPlayer"
-
-#~ msgid ""
-#~ "Stream BBC programs from the last 7 days from the BBC iPlayer service."
-#~ msgstr "BBC iPlayer hızmetinden soñki 7 künlük programlarnı aqıntıla."
-
-#~ msgid "Error listing channel categories"
-#~ msgstr "Kanal ulamlarını listelegende hata"
-
-#~ msgid ""
-#~ "There was an unknown error getting the list of television channels "
-#~ "available on BBC iPlayer."
-#~ msgstr ""
-#~ "BBC iPlayer üzerinde faydalanışlı TV kanallarınıñ listesini ketirgende "
-#~ "bilinmegen bir hata bar edi."
-
-#~ msgid "Loading…"
-#~ msgstr "Yüklene…"
-
-#~ msgid "Error getting programme feed"
-#~ msgstr "Program beslemesi alınğanda hata"
-
-#~ msgid ""
-#~ "There was an error getting the list of programmes for this channel and "
-#~ "category combination."
-#~ msgstr ""
-#~ "Bu kanal ve ulam kombinirlemesi içün programlar listesini ketirgende bir "
-#~ "hata bar edi."
-
-#~ msgid "<no reason given>"
-#~ msgstr "<sebep berilmegen>"
-
-#~ msgid "Programme unavailable (\"%s\")"
-#~ msgstr "Program faydalanışsız (\"%s\")"
-
-#~ msgid ""
-#~ "A format string used to build the network service name used when "
-#~ "publishing playlists over the network. The following format placeholders "
-#~ "can be used: • %a: the program name as returned by g_get_application_name"
-#~ "() • %h: the machine's host name in title case • %u: the user's login "
-#~ "name in title case • %U: the user's real name • %%: the percent sign"
-#~ msgstr ""
-#~ "Şebeke arqalı çalma listelerini neşretkende qullanılğan şebeke hızmet "
-#~ "ismini inşa etmek içün qullanılğan format tizgisi. Aşağıdaki format "
-#~ "yertutucıları qullanılabilir: • %a: g_get_application_name() tarafından "
-#~ "qaytarılğanı kibi program adı • %h: maşnanıñ serlevha kelişindeki "
-#~ "qonaqbay adı • %u: qullanıcınıñ serlevha kelişindeki içeri imzalanma adı "
-#~ "• %U: qullanıcınıñ kerçek adı • %%: yüzde işareti"
-
-#~ msgid "Format for network service name"
-#~ msgstr "Şebeke hızmet ismi içün format"
-
-#~ msgid "Publisher protocol to use"
-#~ msgstr "Qullanılacaq naşir protokolı"
-
-#~ msgid ""
-#~ "The transport protocol to use when publishing playlists over the network."
-#~ msgstr ""
-#~ "Şebeke arqalı çalma listelerini neşretkende qullanılacaq naqliye "
-#~ "protokolı."
-
-#~ msgid "Neighbors"
-#~ msgstr "Qomşular"
-
-#~ msgid "Publish Playlist"
-#~ msgstr "Çalma Listesini Neşir Et"
-
-# tr
-#~ msgid "Share the current playlist via HTTP"
-#~ msgstr "Güncel çalma listesini HTTP yoluyla paylaş"
-
-#~ msgid "Service _Name:"
-#~ msgstr "Hızmet İ_smi:"
-
-#~ msgid ""
-#~ "The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name."
-#~ msgstr ""
-#~ "Şebeke üzerinde çalma listesi hızmetini ilân etüv içün qullanılğan isim.\n"
-#~ "<b>%u</b> tizgisiniñ tüm rastkelişleri ismiñiz ile ivaz etilecek, <b>%h</"
-#~ "b> ise bilgisayarıñıznıñ qonaqbay adı ile deñiştirilecek."
-
-# tr
-#~ msgid "Use _encrypted transport protocol (HTTPS)"
-#~ msgstr "Şi_freli iletişim protokolü kullan (HTTPS)"
-
-#~ msgid "Save in _folder:"
-#~ msgstr "_Cilbentte saqla:"
-
-#~ msgid "Select a folder"
-#~ msgstr "Bir cilbent saylañız"
-
-#~ msgid "_Name:"
-#~ msgstr "İ_sim:"
-
-# tr
-#~ msgid "There was an error saving the screenshot."
-#~ msgstr "Ekran görüntüsü kaydedilirken hata oluştu."
-
-#~ msgid "Save Screenshot"
-#~ msgstr "Ekran Körüntisi Saqla"
-
-#~ msgid "Author:"
-#~ msgstr "Müellif:"
-
-#~ msgid "C_onfigure..."
-#~ msgstr "_Ayarla..."
-
-#~ msgid "Copyright:"
-#~ msgstr "Telif haqqı:"
-
-#~ msgid "Description:"
-#~ msgstr "Tasvir:"
-
-#~ msgid "Site:"
-#~ msgstr "Sayt:"
-
-# tüklü
-#~ msgid "0 frames per second"
-#~ msgstr "Saniyede 0 çerçive"
-
-#~ msgid "0 kbps"
-#~ msgstr "0 kb/s"
-
-#~ msgid "0 x 0"
-#~ msgstr "0 x 0"
-
-# tüklü
-#~ msgid "Deinterlace"
-#~ msgstr "Örüştirimsizle"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Uzaqlaştır"
-
-# tüklü
-#~ msgid "Zoom Reset"
-#~ msgstr "Miqyaslamanı Sıfırla"
-
-#~ msgid "Zoom out"
-#~ msgstr "Uzaqlaştır"
-
-#~ msgid "Zoom reset"
-#~ msgstr "Miqyaslamanı sıfırla"
-
-#~ msgid "_Deinterlace"
-#~ msgstr "_Örüştirimsizle"
-
-# tr
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, "
-#~ "\"2\" for 28.8 Kbps Modem, \"3\" for 33.6 Kbps Modem, \"4\" for 34.4 Kbps "
-#~ "Modem, \"5\" for 56 Kbps Modem/ISDN, \"6\" for 112 Kbps Dual ISDN/DSL, "
-#~ "\"7\" for 256 Kbps DSL/Cable, \"8\" for 384 Kbps DSL/Cable, \"9\" for 512 "
-#~ "Kbps DSL/Cable, \"10\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/"
-#~ "LAN."
-#~ msgstr ""
-#~ "Yaklaşık ağ bağlantı hızı, ağ üzerinde ortamın kalitesini seçmek için "
-#~ "kullanılır: \"0\" 14,4 Kbps modem için, \"1\" 19,2 Kbps modem için, \"2\" "
-#~ "28,8 Kbps modem için, \"3\" 33,6 Kbps modem için, \"4\" 34,4 Kbps modem "
-#~ "için, \"5\" 56 Kbps Modem/ISDN için, \"6\" 112 Kbps Çift ISDN/DSL için, "
-#~ "\"7\" 256 Kbps DSL/Kablo için, \"8\" 384 Kbps DSL/Kablo için, \"9\" 512 "
-#~ "Kbps DSL/Kablo için, \"10\" 1,5 Mbps T1/Intranet/LAN için, \"11\" "
-#~ "İntranet/LAN için."
-
-#~ msgid "Buffer size"
-#~ msgstr "Bufer ölçüsi"
-
-#~ msgid "Enable deinterlacing"
-#~ msgstr "Örüştirimsizlemeni qabilleştir"
-
-# tr
-#~ msgid "Maximum amount of data to decode ahead of display (in seconds)"
-#~ msgstr "Gösterilmeden önce çözümlenecek veri miktarı (saniye olarak)"
-
-# tr
-#~ msgid ""
-#~ "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-#~ msgstr ""
-#~ "Ses görselleştirmesi için kalite ayarları: \"0\" küçük, \"1\" normal "
-#~ "için, \"2\" büyük, \"3\" çok büyük için."
-
-# tr
-#~ msgid ""
-#~ "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel "
-#~ "output, \"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" "
-#~ "for AC3 Passthrough."
-#~ msgstr ""
-#~ "Kullanılacak ses çıkışı tipi: stereo için\"0\", 4 kanallı çıkış için "
-#~ "\"1\", 5.0 kanallı çıkış için \"2\", 5.1 kanallı çıkış için \"3\", AC3 "
-#~ "ara bağlantısı için \"4\"."
-
-#~ msgid "UTF-8"
-#~ msgstr "UTF-8"
-
-# tr
-#~ msgid "Whether the main window should stay on top"
-#~ msgstr "Pencere en üstte yer alsın"
-
-# tr
-#~ msgid "Whether the main window should stay on top of the other ones"
-#~ msgstr "Pencere diğerlerinin üstünde yer alsın"
-
-#~ msgid "Could not launch URL \"%s\": %s"
-#~ msgstr "URL \"%s\" fırlatılamadı : %s"
-
-#~ msgid "Default browser not configured"
-#~ msgstr "Ög-belgilengen kezici ayarlanmağan"
-
-#~ msgid "Error launching URI"
-#~ msgstr "URI fırlatılğanda hata"
-
-# tr
-#~ msgid "Don't connect to an already-running instance"
-#~ msgstr "Zaten çalışan oluşumlara bağlanma"
-
-#~ msgid "Enable visual effects?"
-#~ msgstr "Körsel Effektlerni qabilleştir?"
-
-# tr
-#~ msgid ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-#~ msgstr ""
-#~ "Öyle görünüyorki Xplayer'i uzaktan çalıştırıyorsunuz.\n"
-#~ "Görsel efektleri etkinleştirmek istediğinize emin misiniz?"
-
-# tr
-#~ msgid ""
-#~ "Changing the visuals effect type will require a restart to take effect."
-#~ msgstr "Görsel efekt değişiminin etkin olması için yeniden başlatma gereki."
-
-# tr
-#~ msgid ""
-#~ "The change of audio output type will only take effect when Xplayer is "
-#~ "restarted."
-#~ msgstr ""
-#~ "Ses çıkış türünün değiştirilmesi Xplayer yeniden başlatıldığında etkin olur."
-
-#~ msgid "Could not open link"
-#~ msgstr "İlişim açılamadı"
-
-# tr
-#~ msgid "Xplayer could not initialize the configuration engine."
-#~ msgstr "Xplayer yapılandırma mekanizmasını başlatamadı."
-
-# tr
-#~ msgid "Make sure that GNOME is properly installed."
-#~ msgstr "GNOME'un düzgün kurulduğundan emin olun."
-
-# tr
-#~ msgid ""
-#~ "The playback of this movie requires the following decoders which are not "
-#~ "installed:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Bu filmin oynatılması kurulu olmaya şu kodekleri gerektiriyor:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "Media file could not be played."
-#~ msgstr "Vasat dosyesi oynatılamadı."
-
-# tr
-#~ msgid "Too old version of GStreamer installed."
-#~ msgstr "GStreamer'ın çok eski sürümü yüklü."
-
-# tr
-#~ msgid ""
-#~ "Failed to open video output. It may not be available. Please select "
-#~ "another video output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Video çıkışı açılamadı. Belki mevcut olmayabilir. Lütfen Çokluortam "
-#~ "Sistemleri Seçicisinden başka bir video çıkış türü seçin."
-
-# tr
-#~ msgid ""
-#~ "Could not find the video output. You may need to install additional "
-#~ "GStreamer plugins, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Video çıkışı bulunamadı. Çokluortam Sistemleri Seçicisinden başka bir "
-#~ "video çıkışı seçebilir veya ek GStreamer eklentileri kurabilirsiniz."
-
-#~ msgid "%s"
-#~ msgstr "%s"
-
-#~ msgid "Plugin"
-#~ msgstr "Eklenti"
-
-#~ msgid "Enabled"
-#~ msgstr "Qabilleştirilgen"
-
-# tr
-#~ msgid ""
-#~ "Unable to activate plugin %s.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "%s eklentisi etkinleştirilemiyor.\n"
-#~ "%s"
-
-#~ msgid "Unable to activate plugin %s"
-#~ msgstr "%s plagini faalleştirilalmay"
-
-#~ msgid "Plugin Error"
-#~ msgstr "Eklenti Hatası"
-
-#~ msgid "Bemused"
-#~ msgstr "Bemused"
-
-# tr
-#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
-#~ msgstr "Bir Bemused istemcisi ile Xplayer'i bir mobil telefondan kontrol et"
-
-#~ msgid "Untitled %d"
-#~ msgstr "Serlevhasız %d"
-
-#~ msgid "Xplayer Bemused Server"
-#~ msgstr "Xplayer Bemused Sunucısı"
-
-#~ msgid "Xplayer Bemused Server version 1.0"
-#~ msgstr "Xplayer Bemused Sunucısı sürüm 1.0"
-
-#~ msgid "Delete"
-#~ msgstr "Sil"
-
-# tüklü
-#~ msgid "Coherence DLNA/UPnP Client"
-#~ msgstr "Coherence DLNA/UPnP Müşterisi"
-
-# tr
-#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
-#~ msgstr "Coherence tarafından desteklenen Xplayer için bir DLNA/UPnP istemcisi"
-
-# tr
-#~ msgid "Could not connect to the Galago daemon."
-#~ msgstr "Galago sunucusuna bağlanılamadı."
-
-#~ msgid "By artist"
-#~ msgstr "Sanatçığa köre"
-
-#~ msgid "By tag"
-#~ msgstr "Nişanğa köre"
-
-#~ msgid "Jamendo Album Page"
-#~ msgstr "Jamendo Albom Saifesi"
-
-#~ msgid "Jamendo Plugin Configuration"
-#~ msgstr "Jamendo Eklenti Ayarlaması"
-
-#~ msgid "Latest Releases"
-#~ msgstr "Soñki Çıqarılışlar"
-
-#~ msgid "Number of albums to _retrieve:"
-#~ msgstr "_Tapılıp ketirilecek albomlarnıñ sayısı:"
-
-# tüklü
-#~ msgid "Popular"
-#~ msgstr "Halqçan"
-
-#~ msgid "Preferred audio _format:"
-#~ msgstr "Tercih etilgen davuş _formatı:"
-
-#~ msgid "Search Results"
-#~ msgstr "Qıdırma Sonuçları"
-
-# tr
-#~ msgid "_Open Jamendo Album Page in Browser"
-#~ msgstr "Tarayıcıda Jamendo Albom Sayfasını _Aç"
-
-#~ msgid "Jamendo"
-#~ msgstr "Jamendo"
-
-# tüklü
-#~ msgid ""
-#~ "Listen to the large collection of Creative Commons licensed music on "
-#~ "Jamendo."
-#~ msgstr ""
-#~ "Jamendo'da Creative Commons litsenziyalı balaban bir musıqi cıyıntığını "
-#~ "diñleñiz."
-
-# tr
-#~ msgid "You need to install the Python simplejson module."
-#~ msgstr "Python simplejson modülünü yüklemeniz gerekiyor."
-
-#~ msgid "Artist: %s"
-#~ msgstr "Sanatçı: %s"
-
-#~ msgid "%Y-%m-%d"
-#~ msgstr "%d-%m-%Y"
-
-#~ msgid "%x"
-#~ msgstr "%x"
-
-#~ msgid "Genre: %s"
-#~ msgstr "Janr: %s"
-
-#~ msgid "Released on: %s"
-#~ msgstr "Çıqarılış tarihı: %s"
-
-#~ msgid "License: %s"
-#~ msgstr "Litsenziya: %s"
-
-#~ msgid "%02d. %s"
-#~ msgstr "%02d. %s"
-
-#~ msgid "Album: %s"
-#~ msgstr "Albom: %s"
-
-#~ msgid "Duration: %s"
-#~ msgstr "Devamlılıq: %s"
-
-#~ msgid "Fetching albums, please wait..."
-#~ msgstr "Albomlar ketirile, lütfen bekleñiz..."
-
-# tr
-#~ msgid ""
-#~ "Failed to connect to Jamendo server.\n"
-#~ "%s."
-#~ msgstr ""
-#~ "Jamendo sunucusuna bağlanamadı.\n"
-#~ "%s."
-
-# tr
-#~ msgid "The Jamendo server returned code %s."
-#~ msgstr "Jamendo sunucusu %s kodunu döndü."
-
-#~ msgid "%H:%M:%S"
-#~ msgstr "%H:%M:%S"
-
-#~ msgid "%M:%S"
-#~ msgstr "%M:%S"
-
-# tüklü
-#~ msgid "en"
-#~ msgstr "en"
-
-#~ msgid "Recordings"
-#~ msgstr "Qaydlar"
-
-#~ msgid "MythTV Recordings"
-#~ msgstr "MythTV Qaydları"
-
-#~ msgid "MythTV LiveTV"
-#~ msgstr "MythTV LiveTV"
-
-#~ msgid "Language"
-#~ msgstr "Til"
-
-#~ msgid "_Download Movie Subtitles..."
-#~ msgstr "Film Altyazılarını _Endir..."
-
-#~ msgid "Could not get name and thumbnail for %s: %s"
-#~ msgstr "%s dosyesi içün isim ve başparmaq-tırnağı alınamadı: %s"
-
-#~ msgid "Could not connect to Tracker"
-#~ msgstr "İzci (Tracker) ile bağlanılamadı"
-
-# tüklü
-#~ msgid "No results"
-#~ msgstr "Netice yoq"
-
-# tüklü
-#~ msgid "Showing %i - %i of %i match"
-#~ msgid_plural "Showing %i - %i of %i matches"
-#~ msgstr[0] "%3$i eşleşmeden %1$i - %2$i menzili kösterile"
-
-#~ msgid "Page"
-#~ msgstr "Saife"
-
-# tr
-#~ msgid "Set the window icon to the thumbnail of the playing movie"
-#~ msgstr "Pencere simgesini oynayan filmin küçük resmi yap"
-
-# tüklü
-#~ msgid "Thumbnail"
-#~ msgstr "Başparmaq-tırnağı"
-
-# tr
-#~ msgid "Search for local videos using Tracker"
-#~ msgstr "İzleyiciyi kullanarak yerel videolarda ara"
-
-#~ msgid "Related Videos"
-#~ msgstr "Alâqadar Videolar"
-
-#~ msgid "_Open in Web Browser"
-#~ msgstr "Ağ Kezicisinde _Aç"
-
-#~ msgid "Open the video in your web browser"
-#~ msgstr "Videonı ağ kezicisinde aç"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Cancelling query…"
-#~ msgstr "İstifsar lâğu etile…"
-
-#~ msgid "Error Looking Up Video URI"
-#~ msgstr "Video URI Tapıştırğanda Hata"
-
-#~ msgid "Error Searching for Videos"
-#~ msgstr "Videolar içün Qıdırğanda Hata"
-
-#~ msgid ""
-#~ "The response from the server could not be understood. Please check you "
-#~ "are running the latest version of libgdata."
-#~ msgstr ""
-#~ "Sunucınıñ cevabı añlaşılamadı. Lütfen libgdata'nıñ eñ soñki sürümini "
-#~ "çaptırğanıñızdan emin oluñız."
-
-#~ msgid "Fetching search results…"
-#~ msgstr "Qıdırma neticeleri ketirile..."
-
-#~ msgid "Fetching related videos…"
-#~ msgstr "Alâqadar videolar ketirile..."
-
-#~ msgid "Error Opening Video in Web Browser"
-#~ msgstr "Videonı Ağ Kezicisinde Açqanda Hata"
-
-#~ msgid "Fetching more videos…"
-#~ msgstr "Daha çoq video ketirile..."
-
-#~ msgid "Browser Plugin using %s"
-#~ msgstr "%s qullanğan Kezici Eklentisi"
-
-#~ msgid "Xplayer Browser Plugin"
-#~ msgstr "Xplayer Kezici Eklentisi"
-
-#~ msgid "Sound volume"
-#~ msgstr "Davuş hacmi"
-
-# tr
-#~ msgid "Sound volume, in percent, between 0 and 100"
-#~ msgstr "Ses şiddeti, yüzde olaral, 0 ile 100 arasında"
-
-# tr
-#~ msgid "DVB Adapter %u"
-#~ msgstr "DVB Adaptörü %u"
-
-#~ msgid "Watch TV on '%s'"
-#~ msgstr "'%s' üzerinde TV seyir et"
-
-# tr
-#~ msgid "Sets 16:9 (Anamorphic) aspect ratio"
-#~ msgstr "Görüntü oranını 16:9 (Anamorfik) olarak ayarlar"
-
-#~ msgid ""
-#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
-#~ "supported."
-#~ msgstr ""
-#~ "Xplayer TV oynatamay, çünki hiç bir TV adaptorı mevcut degil yaki olar "
-#~ "desteklenmey."
-
-# tr
-#~ msgid "Please insert a supported TV adapter."
-#~ msgstr "Lütfen desteklenen bir TV adaptörü takın."
-
-#~ msgid "More information about watching TV"
-#~ msgstr "TV seyir etüv haqqında daa çoq malümat"
-
-# tüklü
-#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
-#~ msgstr ""
-#~ "Xplayer'niñ alıcını ayarlay bilüvi içün kerekli kanal listelemesi eksiktir."
-
-# tr
-#~ msgid ""
-#~ "Please follow the instructions provided in the link to create a channels "
-#~ "listing."
-#~ msgstr ""
-#~ "Bir kanal listelemesi oluşturmak için lütfen aşağıda verilen talimatları "
-#~ "takip edin."
-
-# tr
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
-#~ msgstr "Xplayer bu türdeki (%s) ortamları oynatamıyor çünkü TV aygıtı meşgul."
-
-#~ msgid "Please try again later."
-#~ msgstr "Lütfen soñra tekrar deñeñiz."
-
-#~ msgid "TV signal lost"
-#~ msgstr "TV signalı coyulğan"
-
-# tr
-#~ msgid "Please verify your hardware setup."
-#~ msgstr "Lütfen donanım kurulumunuzu denetleyin."
-
-#~ msgid "<b>Language</b>"
-#~ msgstr "<b>Til</b>"
-
-#~ msgid "Screenshot%d.jpg"
-#~ msgstr "Ekran-körüntisi%d.jpg"
-
-#~ msgid "Xplayer could not play '%s'"
-#~ msgstr "'%s' Xplayer tarafından oynatılamay"
-
-# tr
-#~ msgid "The Xplayer plugin could not be started."
-#~ msgstr "Xplayer eklentisi başlatılamadı."
-
-# tr
-#~ msgid "_Allow the screensaver to activate even when audio-only is playing"
-#~ msgstr ""
-#~ "S_adece müzik çalıyorken dahi ekran koruyucunun etkinleşmesine izin ver"
-
-# tr
-#~ msgid "Failed to retrieve working directory"
-#~ msgstr "Çalışma klasörünü bulmaya başarısız"
-
-# tr
-#~ msgid ""
-#~ "Couldn't load the '%s' audio driver\n"
-#~ "Check that the device is not busy."
-#~ msgstr ""
-#~ "Ses aygıtı '%s' yüklenemedi\n"
-#~ "Aygıtın meşgul olup olmadığını kontrol edin."
-
-# tr
-#~ msgid ""
-#~ "The TV adapter could not tune into the channel. Please check your "
-#~ "hardware setup and channel configuration."
-#~ msgstr ""
-#~ "TV adaptörü kanala tam olarak ayarlanamadı. Lütfen donanım kurulumunu ve "
-#~ "kanal yapılandırmasını kontrol edin."
-
-# tr
-#~ msgid "The device name you specified (%s) seems to be invalid."
-#~ msgstr "Belirttiğiniz aygıt ismi (%s) geçersiz görünüyor."
-
-# tr
-#~ msgid "The server you are trying to connect to (%s) is unreachable."
-#~ msgstr "Bağlanmaya çalıştığınız sunucuya (%s) ulaşılamaz."
-
-# tr
-#~ msgid ""
-#~ "The source seems encrypted and can't be read. Are you trying to play an "
-#~ "encrypted DVD without libdvdcss?"
-#~ msgstr ""
-#~ "Kaynak şifreli görünüyor ve okunamaz. libdvdcss olmadan şifrelenmiş bir "
-#~ "DVD oynatmaya mı çalışıyorsunuz?"
-
-# tr
-#~ msgid "A problem occurred while loading a library or a decoder (%s)."
-#~ msgstr "Bir kütüphane ya da çözücü yüklenmeye çalışırken hata oluştu (%s)."
-
-# tr
-#~ msgid "This file is encrypted and cannot be played back."
-#~ msgstr "Bu dosya şifrelenmiş ve oynatılamaz."
-
-# tr
-#~ msgid "For security reasons, this movie can not be played back."
-#~ msgstr "Güvenlik gerekçesi ile bu film oynatılamaz."
-
-# tr
-#~ msgid "The audio device is busy. Is another application using it?"
-#~ msgstr "Ses aygıtı meşgul. Başka bir uygulama bu aygıtı mı kullanıyor?"
-
-# tr
-#~ msgid "Authentication is required to access this file."
-#~ msgstr "Bu dosyaya erişebilmek için yetkilendirme gerekli."
-
-# tr
-#~ msgid "The file you tried to play is an empty file."
-#~ msgstr "Oynatmaya çalıştığın dosya boş."
-
-# tr
-#~ msgid "There is no input plugin to handle the location of this movie"
-#~ msgstr "Bu filmin bulunduğu yeri destekleyen bir giriş eklentisi yok"
-
-# tr
-#~ msgid "There is no plugin to handle this movie."
-#~ msgstr "Bu filmi destekleyen bir eklenti bulunmuyor."
-
-# tr
-#~ msgid "This movie is broken and can not be played further."
-#~ msgstr "Bu film bozuk ve bu nedenle oynatılamıyor."
-
-#~ msgid "This movie could not be opened."
-#~ msgstr "Bu film açılamadı."
-
-# tr
-#~ msgid ""
-#~ "Video codec '%s' is not handled. You might need to install additional "
-#~ "plugins to be able to play some types of movies"
-#~ msgstr ""
-#~ "'%s' video çözücüsü kullanılamıyor. Bazı filmleri oynatabilmek için "
-#~ "fazladan birkaç eklenti kurmanız gerekebilir"
-
-#~ msgid "This is an audio-only file and there is no audio output available."
-#~ msgstr ""
-#~ "Bu bir faqat-davuş dosyesidir ve hiç bir davuş çıqtısı faydalanılışlı "
-#~ "degildir."
-
-#~ msgid "Language %d"
-#~ msgstr "Til %d"
-
-#~ msgid "No video to capture."
-#~ msgstr "Yaqalanacaq film yoq."
-
-# tüklü
-#~ msgid "Video codec is not handled."
-#~ msgstr "Video kodek qollanmay."
-
-#~ msgid "Movie is not playing."
-#~ msgstr "Film oynatılmay."
-
-# tr
-#~ msgid "Could not initialise the thread-safe libraries."
-#~ msgstr "Güvenli iş parçacığı kütüphaneleri ilklendirilemiyor."
-
-#~ msgid "Whether to autoload external chapter files when a movie is loaded."
-#~ msgstr ""
-#~ "Bir film yüklengeninde tış bap dosyeleriniñ avto-yüklenip-yüklenmeycegi."
-
-#~ msgid "BBC content viewer"
-#~ msgstr "BBC münderice körüntileyici"
-
-#~ msgid ""
-#~ "Watch or listen to selected video and audio content made available by the "
-#~ "British Broadcasting Corporation (BBC)"
-#~ msgstr ""
-#~ "BBC tarafından saylanıp faydalanışlı yapılğan video ve davuş "
-#~ "mündericesini seyir etiñiz ve diñleñiz"
-
-#~ msgid "BBC"
-#~ msgstr "BBC"
-
-#~ msgid "Parsing available content list ..."
-#~ msgstr "Faydalanışlı münderice cedveli ayırıştırıla ..."
-
-#~ msgid "Downloading available content list ... "
-#~ msgstr "Faydalanışlı münderice cedveli endirile ... "
-
-#~ msgid "Error downloading available content list"
-#~ msgstr "Faydalanışlı münderice cedveli endirilgende hata"
-
-#~ msgid "Could not connect to server"
-#~ msgstr "Sunucığa bağlanılamadı"
-
-#~ msgid "Downloading available content list ..."
-#~ msgstr "Faydalanışlı münderice cedveli endirile ..."
-
-#~ msgid "Connecting to server ..."
-#~ msgstr "Sunucığa bağlanıla ..."
-
-#~ msgid "Loading ..."
-#~ msgstr "Yüklene…"
-
-#~ msgid "No details available"
-#~ msgstr "Tafsilât yoq"
-
-#~ msgid "Children's"
-#~ msgstr "Balalarnıñki"
-
-#~ msgid "Activities"
-#~ msgstr "Faaliyetler"
-
-#~ msgid "Drama"
-#~ msgstr "Drama"
-
-#~ msgid "Entertainment & Comedy"
-#~ msgstr "Eglence ve Komediya"
-
-#~ msgid "Factual"
-#~ msgstr "Reportajlar"
-
-#~ msgid "Music"
-#~ msgstr "Musıqi"
-
-#~ msgid "News"
-#~ msgstr "Haberler"
-
-#~ msgid "Sport"
-#~ msgstr "Sport"
-
-#~ msgid "Action & Adventure"
-#~ msgstr "Amel ve Macera"
-
-#~ msgid "Biographical"
-#~ msgstr "Tercimeihal"
-
-#~ msgid "Classic & Period"
-#~ msgstr "Klassik ve Devir"
-
-#~ msgid "Crime"
-#~ msgstr "Cinayet"
-
-#~ msgid "Historical"
-#~ msgstr "Tarihiy"
-
-#~ msgid "Horror & Supernatural"
-#~ msgstr "Dehşet ve Tabiatüstü"
-
-#~ msgid "Legal & Courtroom"
-#~ msgstr "Huquqiy ve Mahkeme"
-
-#~ msgid "Medical"
-#~ msgstr "Tibbiy"
-
-#~ msgid "Musical"
-#~ msgstr "Müzikal"
-
-#~ msgid "Political"
-#~ msgstr "Siyasiy"
-
-#~ msgid "Psychological"
-#~ msgstr "Ruhiyat"
-
-#~ msgid "Relationships & Romance"
-#~ msgstr "Munasebetler ve Aşq"
-
-#~ msgid "SciFi & Fantasy"
-#~ msgstr "İlimQurğu ve Hulya"
-
-#~ msgid "Soaps"
-#~ msgstr "Sabun Operaları"
-
-#~ msgid "Spiritual"
-#~ msgstr "Ruhiy"
-
-#~ msgid "Thriller"
-#~ msgstr "Kerilim"
-
-#~ msgid "War & Disaster"
-#~ msgstr "Cenk ve Afet"
-
-#~ msgid "Impressionists"
-#~ msgstr "İntibacılar"
-
-#~ msgid "Satire"
-#~ msgstr "Hicviye"
-
-#~ msgid "Sitcoms"
-#~ msgstr "Vaziyet Komediyaları"
-
-#~ msgid "Sketch"
-#~ msgstr "Qabataslaq"
-
-#~ msgid "Spoof"
-#~ msgstr "Parodi"
-
-#~ msgid "Standup"
-#~ msgstr "Ayaqta Sunum"
-
-#~ msgid "Variety Shows"
-#~ msgstr "Çeşitlilik Temaşaları"
-
-#~ msgid "Antiques"
-#~ msgstr "Antik Eşya"
-
-#~ msgid "Arts, Culture & the Media"
-#~ msgstr "Sanat, Medeniyet ve Vasat"
-
-#~ msgid "Beauty & Style"
-#~ msgstr "Güzellik ve Üslüp"
-
-#~ msgid "Cars & Motors"
-#~ msgstr "Arabalar ve Motorlar"
-
-#~ msgid "Cinema"
-#~ msgstr "Kino"
-
-#~ msgid "Consumer"
-#~ msgstr "Tüketici"
-
-#~ msgid "Crime & Justice"
-#~ msgstr "Cinayet ve Adalet"
-
-#~ msgid "Disability"
-#~ msgstr "Alillik"
-
-#~ msgid "Families & Relationships"
-#~ msgstr "Aileler ve Munasebetler"
-
-#~ msgid "Food & Drink"
-#~ msgstr "Yemek ve İçecek"
-
-#~ msgid "Health & Wellbeing"
-#~ msgstr "Sağlıq & Sihhat"
-
-#~ msgid "History"
-#~ msgstr "Tarih"
-
-#~ msgid "Homes & Gardens"
-#~ msgstr "Evler & Bağçalar"
-
-#~ msgid "Life Stories"
-#~ msgstr "Hayat Hikâyeleri"
-
-#~ msgid "Money"
-#~ msgstr "Aqça"
-
-#~ msgid "Pets & Animals"
-#~ msgstr "Evcil ve Yabaniy Hayvanlar"
-
-#~ msgid "Politics"
-#~ msgstr "Siyaset"
-
-#~ msgid "Science, Nature & Environment"
-#~ msgstr "İlim, Tabiat & Çevre"
-
-#~ msgid "Travel"
-#~ msgstr "Seyahat"
-
-#~ msgid "Learning"
-#~ msgstr "Ögrenüv"
-
-#~ msgid "Age 11-19"
-#~ msgstr "11-19 Yaş"
-
-#~ msgid "Age 5-11"
-#~ msgstr "5-11 Yaş"
-
-#~ msgid "Adults"
-#~ msgstr "Baliğler (Yetişkenler)"
-
-#~ msgid "Pre-School"
-#~ msgstr "Mektep-Aldı"
-
-#~ msgid "Classic Pop & Rock"
-#~ msgstr "Klassik Pop & Rok"
-
-#~ msgid "Classical"
-#~ msgstr "Klassik"
-
-# tüklü
-#~ msgid "Country"
-#~ msgstr "Kantri"
-
-#~ msgid "Dance & Electronica"
-#~ msgstr "Oyun & Elektronika"
-
-#~ msgid "Desi"
-#~ msgstr "Desi"
-
-#~ msgid "Easy Listening, Soundtracks & Musicals"
-#~ msgstr "Qolay Diñlev, Davuş-çığırları & Müzikaller"
-
-#~ msgid "Folk"
-#~ msgstr "Halq"
-
-#~ msgid "Hip Hop, RnB & Dancehall"
-#~ msgstr "Hip Hop, R&B & Oyun-salonı"
-
-#~ msgid "Jazz & Blues"
-#~ msgstr "Caz & Hüzün"
-
-#~ msgid "Pop & Chart"
-#~ msgstr "Pop & Sıralama"
-
-#~ msgid "Rock & Indie"
-#~ msgstr "Rok & Mustaqil"
-
-#~ msgid "Soul & Reggae"
-#~ msgstr "Soul & Rege"
-
-#~ msgid "World"
-#~ msgstr "Dünya"
-
-#~ msgid "Religion & Ethics"
-#~ msgstr "Din & Ahlâq"
-
-#~ msgid "Archery"
-#~ msgstr "Oqçulıq"
-
-#~ msgid "Athletics"
-#~ msgstr "Atletizm"
-
-#~ msgid "Badminton"
-#~ msgstr "Badminton"
-
-#~ msgid "Baseball"
-#~ msgstr "Beysbol"
-
-#~ msgid "Basketball"
-#~ msgstr "Basketbol"
-
-#~ msgid "Bowls"
-#~ msgstr "Bowling"
-
-#~ msgid "Boxing"
-#~ msgstr "Boks"
-
-#~ msgid "Canoeing"
-#~ msgstr "Kano"
-
-#~ msgid "Cricket"
-#~ msgstr "Kriket"
-
-#~ msgid "Cycling"
-#~ msgstr "Ayaqmaşnalav"
-
-#~ msgid "Darts"
-#~ msgstr "Dart Oyunı"
-
-#~ msgid "Disability Sport"
-#~ msgstr "Alillik Sportu"
-
-#~ msgid "Diving"
-#~ msgstr "Dalış"
-
-#~ msgid "Equestrian"
-#~ msgstr "Minicilik"
-
-#~ msgid "Fencing"
-#~ msgstr "Qılıççılıq"
-
-#~ msgid "Football"
-#~ msgstr "Futbol"
-
-#~ msgid "Gaelic Games"
-#~ msgstr "Keltçe Oyunlar"
-
-#~ msgid "Golf"
-#~ msgstr "Golf"
-
-#~ msgid "Gymnastics"
-#~ msgstr "Gimnastik"
-
-#~ msgid "Handball"
-#~ msgstr "Gandbol"
-
-#~ msgid "Hockey"
-#~ msgstr "Hokkey"
-
-#~ msgid "Horse Racing"
-#~ msgstr "At Qoşusı"
-
-#~ msgid "Judo"
-#~ msgstr "Dzüdo"
-
-#~ msgid "Modern Pentathlon"
-#~ msgstr "Zemaneviy Pentatlon"
-
-#~ msgid "Motorsport"
-#~ msgstr "Motorsport"
-
-#~ msgid "Olympics"
-#~ msgstr "Olimpiada"
-
-#~ msgid "Rowing"
-#~ msgstr "Kürekçilik"
-
-#~ msgid "Rugby League"
-#~ msgstr "Ragbi"
-
-#~ msgid "Rugby Union"
-#~ msgstr "Ragbi Birligi"
-
-#~ msgid "Sailing"
-#~ msgstr "Yelkencilik"
-
-#~ msgid "Shinty"
-#~ msgstr "Şinti"
-
-#~ msgid "Shooting"
-#~ msgstr "Atuv"
-
-#~ msgid "Snooker"
-#~ msgstr "Snuker"
-
-#~ msgid "Softball"
-#~ msgstr "Softbol"
-
-#~ msgid "Swimming"
-#~ msgstr "Yaldav"
-
-#~ msgid "Table Tennis"
-#~ msgstr "Masa Tenisi"
-
-#~ msgid "Taekwondo"
-#~ msgstr "Taekwondo"
-
-#~ msgid "Tennis"
-#~ msgstr "Tennis"
-
-#~ msgid "Triathlon"
-#~ msgstr "Triatlon"
-
-#~ msgid "Volleyball"
-#~ msgstr "Voleybol"
-
-#~ msgid "Water Polo"
-#~ msgstr "Sutopu"
-
-#~ msgid "Weightlifting"
-#~ msgstr "Ağırlıq Köterüv"
-
-#~ msgid "Winter Sports"
-#~ msgstr "Qış Sportları"
-
-#~ msgid "Wrestling"
-#~ msgstr "Küreş"
-
-#~ msgid "Weather"
-#~ msgstr "Hava"
-
-#~ msgid "Unknown: %s"
-#~ msgstr "Namalüm: %s"
-
-#~ msgid "Chapters support"
-#~ msgstr "Baplar destegi"
-
-#~ msgid "Continue to watch movie without loaded chapters"
-#~ msgstr "Yüklengen baplar olmadan filmni seyretmege devam et"
-
-#~ msgid "_Go to"
-#~ msgstr "Şurağa _bar"
-
-#~ msgid "Please check you rights and free space"
-#~ msgstr "Lütfen haqlarıñıznı ve boş fezañıznı teşkeriñiz"
-
-# tr
-#~ msgid "An error occurred while fetching albums."
-#~ msgstr "Albüm alma sırasında bir hata oluştu."
-
-#~ msgid "seconds"
-#~ msgstr "saniye"
-
-#~ msgid ""
-#~ "Plugin for sending notifications of currently-playing movies to the D-Bus "
-#~ "subsystem."
-#~ msgstr ""
-#~ "Hal-hazırda oynatılğan filmer haqqındaki bildirimlerni D-Bus alt-"
-#~ "sistemine yibermek içün plagin."
-
-#~ msgid "Number of albums to _retrieve"
-#~ msgstr "_Tapılıp ketirilecek albomlarnıñ sayısı"
-
-#~ msgid "Preferred audio _format"
-#~ msgstr "Tercih etilgen davuş _formatı"
-
-# tr
-#~ msgid ""
-#~ "<small>The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name.</small>"
-#~ msgstr ""
-#~ "<small>Şebeke üzerinde çalma listesi hızmetini ilân etüv içün qullanılğan "
-#~ "isim.\n"
-#~ "<b>%u</b> tizgisiniñ tüm rastkelişleri ismiñiz ile ivaz etilecek, <b>%h</"
-#~ "b> ise bilgisayarıñıznıñ qonaqbay adı ile deñiştirilecek.</small>"
-
-# tr
-#~ msgid "Could not get metadata for file %s: %s"
-#~ msgstr "%s dosyası için meta bilgi alınamadı: %s"
-
-# tr
-#, fuzzy
-#~ msgid "Allow the screensaver to activate even when audio-only is playing"
-#~ msgstr ""
-#~ "S_adece müzik çalıyorken dahi ekran koruyucunun etkinleşmesine izin ver"
-
-# tüklü
-#, fuzzy
-#~ msgid ""
-#~ "Allow the screensaver to activate even when audio-only is playing. This "
-#~ "is useful for monitor-powered speakers."
-#~ msgstr ""
-#~ "Davuş çalğanda ekran qoruyıcısına faalleşmege izin ber. Hoparlörleriñiz "
-#~ "ekrandan küç ala ise, ğayrı qabilleştiriñiz."
-
-#, fuzzy
-#~ msgid "File Format: %s"
-#~ msgstr "Dosye _Formatı: %s"
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
+msgid "Zeitgeist Plugin"
+msgstr ""
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
+msgid "A plugin sending events to Zeitgeist"
+msgstr ""

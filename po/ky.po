@@ -8,30 +8,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xplayer-3.6\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-25 11:09+0000\n"
-"PO-Revision-Date: 2012-09-27 10:47+0600\n"
-"Last-Translator: Timur Zhamakeev <ztimur@gmail.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-03 12:37+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Kirghiz <gnome-i18n@gnome.org>\n"
-"Language: ky_KG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ky_KG\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Lokalize 1.4\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Токтотулган"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Паузаланды"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "Ойнотуу"
 
@@ -40,40 +42,40 @@ msgstr "Ойнотуу"
 msgid "Playing a movie"
 msgstr "Фильмди ойнотуу"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:443
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "Ойнотуу үчүн URI жок"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:676
-#: ../browser-plugin/xplayer-plugin-viewer.c:1700
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
 msgid "Xplayer Movie Player"
 msgstr "Xplayer видеоойноткучу"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1120
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "«%s» менен _ачуу"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1341 ../src/xplayer-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "Ката чыкты"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2033
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "Ойнотуу тизмеси жок же ал бош"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2128
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "Фильмдин браузер плагини"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2144 ../src/xplayer.c:240
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr ""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2144
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 
@@ -81,7 +83,7 @@ msgstr ""
 msgid "Leave Fullscreen"
 msgstr "Толук экран режиминен чыгуу"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Убакыт:"
 
@@ -241,19 +243,19 @@ msgstr "_Өчүрүү"
 msgid "Remove file from playlist"
 msgstr ""
 
-#: ../data/playlist.ui.h:3 ../data/video-list.ui.h:3
+#: ../data/playlist.ui.h:3
 msgid "_Copy Location"
 msgstr ""
 
-#: ../data/playlist.ui.h:4 ../data/video-list.ui.h:4
+#: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
 msgstr ""
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr ""
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr ""
 
@@ -292,8 +294,7 @@ msgstr ""
 msgid "Extra Large"
 msgstr ""
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5518
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Стерео"
 
@@ -371,68 +372,68 @@ msgid "Disable _deinterlacing of interlaced videos"
 msgstr ""
 
 #: ../data/preferences.ui.h:27
-msgid "Disable screensaver when playing "
+msgid "Disable screensaver when playing"
 msgstr ""
 
-#: ../data/preferences.ui.h:28 ../data/properties.ui.h:9
-#: ../src/xplayer-properties-view.c:275
+#: ../data/preferences.ui.h:28
+msgctxt "Screensaver disable"
 msgid "Video"
-msgstr "Видео"
+msgstr ""
 
-#: ../data/preferences.ui.h:29
+#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "Видео же аудио"
 
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:31
 msgid "Visual Effects"
 msgstr "Көрүнөө эффекттер"
 
-#: ../data/preferences.ui.h:31
+#: ../data/preferences.ui.h:32
 msgid "Show _visual effects when an audio file is played"
 msgstr ""
 
-#: ../data/preferences.ui.h:32
+#: ../data/preferences.ui.h:33
 msgid "_Type of visualization:"
 msgstr ""
 
-#: ../data/preferences.ui.h:33
+#: ../data/preferences.ui.h:34
 msgid "Visualization _size:"
 msgstr ""
 
-#: ../data/preferences.ui.h:34
+#: ../data/preferences.ui.h:35
 msgid "Color Balance"
 msgstr "Түс балансы"
 
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:36
 msgid "_Brightness:"
 msgstr "Ачык _түстүүлүк:"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:37
 msgid "Co_ntrast:"
 msgstr "_Карама каршылык:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:38
 msgid "Sat_uration:"
 msgstr "Ка_ныккандык:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:39
 msgid "_Hue:"
 msgstr "Тү_с:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:40
 msgid "Reset to _Defaults"
 msgstr ""
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:41
 msgid "Audio Output"
 msgstr ""
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
 msgstr ""
 
-#: ../data/preferences.ui.h:42 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
+#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "Аудио"
 
@@ -464,6 +465,10 @@ msgstr "Комментарий:"
 msgid "Container:"
 msgstr "Контейнер:"
 
+#: ../data/properties.ui.h:9
+msgid "Video"
+msgstr "Видео"
+
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
 msgstr "Өлчөм:"
@@ -489,8 +494,8 @@ msgid "Channels:"
 msgstr "Каналдар:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:239
-#: ../src/xplayer.c:248 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Видео"
 
@@ -502,316 +507,367 @@ msgstr ""
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr ""
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr ""
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Кийинки"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Абалкы"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr ""
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Толук экран"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Ачуу"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr ""
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "_Толук экран"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "_Параметрлер"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr ""
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr ""
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "_Чыгуу"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Фильм"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr ""
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr ""
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr ""
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr ""
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Чыгаруу"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr ""
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Өзгөчөлүктөр"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr ""
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Ойнотуу / П_ауза"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr ""
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "_Чыгуу"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr ""
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Оңдоо"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "Ойнотуу тизме_син тазалоо"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Ойнотуу тизмесин тазалоо"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "_Параметрлер"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr ""
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Плагиндер…"
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr ""
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "_Көрүнүш"
 
-#: ../data/xplayer.ui.h:21
-msgid "Fit Window to Movie"
-msgstr "Терезе өлчөмү"
-
 #: ../data/xplayer.ui.h:22
-msgid "_Resize 1:2"
-msgstr "_Масштаб 1:2"
+msgid "_Fullscreen"
+msgstr "_Толук экран"
 
 #: ../data/xplayer.ui.h:23
-msgid "Resize to half the original video size"
+msgid "Switch to fullscreen"
 msgstr ""
 
 #: ../data/xplayer.ui.h:24
-msgid "Resize _1:1"
-msgstr "Масштаб _1:1"
+msgid "Fit Window to Movie"
+msgstr "Терезе өлчөмү"
 
 #: ../data/xplayer.ui.h:25
-msgid "Resize to the original video size"
+msgid "_Resize 1∶2"
 msgstr ""
 
 #: ../data/xplayer.ui.h:26
-msgid "Resize _2:1"
-msgstr "Масштаб _2:1"
+msgid "Resize to half the original video size"
+msgstr ""
 
 #: ../data/xplayer.ui.h:27
-msgid "Resize to double the original video size"
+msgid "Resize _1∶1"
 msgstr ""
 
 #: ../data/xplayer.ui.h:28
-msgid "_Aspect Ratio"
+msgid "Resize to the original video size"
 msgstr ""
 
 #: ../data/xplayer.ui.h:29
-msgid "Switch An_gles"
+msgid "Resize _2∶1"
 msgstr ""
 
 #: ../data/xplayer.ui.h:30
-msgid "Switch camera angles"
+msgid "Resize to double the original video size"
 msgstr ""
 
 #: ../data/xplayer.ui.h:31
-msgid "_Go"
-msgstr "_Өтүш"
+msgid "_Aspect Ratio"
+msgstr ""
 
 #: ../data/xplayer.ui.h:32
-msgid "_DVD Menu"
-msgstr "_DVD менюсу"
+msgid "Switch An_gles"
+msgstr ""
 
 #: ../data/xplayer.ui.h:33
-msgid "Go to the DVD menu"
+msgid "Switch camera angles"
 msgstr ""
 
 #: ../data/xplayer.ui.h:34
+msgid "_Go"
+msgstr "_Өтүш"
+
+#: ../data/xplayer.ui.h:35
+msgid "_DVD Menu"
+msgstr "_DVD менюсу"
+
+#: ../data/xplayer.ui.h:36
+msgid "Go to the DVD menu"
+msgstr ""
+
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "_Эпизод менюсу"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "А_удио менюсу"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr ""
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr ""
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr ""
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr ""
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr ""
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "_Үн"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr ""
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr ""
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr ""
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr ""
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "_Жардам"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Мазмун"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr ""
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "_Бул жөнүндө"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr ""
 
-#: ../data/xplayer.ui.h:56
-msgid "Show _Controls"
-msgstr ""
-
-#: ../data/xplayer.ui.h:57
-msgid "Show controls"
-msgstr ""
-
-#: ../data/xplayer.ui.h:58
-msgid "S_idebar"
-msgstr ""
-
 #: ../data/xplayer.ui.h:59
-msgid "Show or hide the sidebar"
+msgid "_Repeat Mode"
 msgstr ""
 
 #: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr ""
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr ""
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr ""
+
+#: ../data/xplayer.ui.h:63
+msgid "Show _Controls"
+msgstr ""
+
+#: ../data/xplayer.ui.h:64
+msgid "Show controls"
+msgstr ""
+
+#: ../data/xplayer.ui.h:65
+msgid "S_idebar"
+msgstr ""
+
+#: ../data/xplayer.ui.h:66
+msgid "Show or hide the sidebar"
+msgstr ""
+
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Авто"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr ""
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Чарчы"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr ""
 
-#: ../data/xplayer.ui.h:64
-msgid "4:3 (TV)"
-msgstr "4:3 (ТВ)"
-
-#: ../data/xplayer.ui.h:65
-msgid "Sets 4:3 (TV) aspect ratio"
+#: ../data/xplayer.ui.h:71
+msgid "4∶3 (TV)"
 msgstr ""
 
-#: ../data/xplayer.ui.h:66
-msgid "16:9 (Widescreen)"
-msgstr "16:9 (жазы экран)"
-
-#: ../data/xplayer.ui.h:67
-msgid "Sets 16:9 (widescreen) aspect ratio"
+#: ../data/xplayer.ui.h:72
+msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr ""
-
-#: ../data/xplayer.ui.h:68
-msgid "2.11:1 (DVB)"
-msgstr "2.11:1 (DVB)"
-
-#: ../data/xplayer.ui.h:69
-msgid "Sets 2.11:1 (DVB) aspect ratio"
-msgstr ""
-
-#: ../data/xplayer.ui.h:70
-msgid "S_ubtitles"
-msgstr "С_убтитрлар"
 
 #: ../data/xplayer.ui.h:73
-msgid "_Languages"
-msgstr "_Тилдер"
+msgid "16∶9 (Widescreen)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:74
-msgid "Zoom In"
-msgstr "Чоңойтуу"
+msgid "Sets 16∶9 (widescreen) aspect ratio"
+msgstr ""
 
 #: ../data/xplayer.ui.h:75
-msgid "Zoom in"
-msgstr "Чоңойтуу"
+msgid "2.11∶1 (DVB)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:76
-msgid "Skip _Forward"
+msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr ""
 
 #: ../data/xplayer.ui.h:77
+msgid "S_ubtitles"
+msgstr "С_убтитрлар"
+
+#: ../data/xplayer.ui.h:80
+msgid "_Languages"
+msgstr "_Тилдер"
+
+#: ../data/xplayer.ui.h:81
+msgid "Zoom In"
+msgstr "Чоңойтуу"
+
+#: ../data/xplayer.ui.h:82
+msgid "Zoom in"
+msgstr "Чоңойтуу"
+
+#: ../data/xplayer.ui.h:83
+msgid "Skip _Forward"
+msgstr ""
+
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr ""
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr ""
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr ""
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr ""
 
@@ -819,97 +875,91 @@ msgstr ""
 msgid "Enter the _address of the file you would like to open:"
 msgstr ""
 
-#: ../data/video-list.ui.h:1 ../src/xplayer-dnd-menu.c:97
-msgid "_Add to Playlist"
-msgstr ""
-
-#: ../data/video-list.ui.h:2
-msgid "Add the video to the playlist"
-msgstr ""
-
-#: ../src/backend/bacon-video-widget.c:1643
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2940
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2944
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3341
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3347
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3354
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3360
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3367
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3380
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr ""
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3403
-#: ../src/backend/bacon-video-widget.c:3411
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
-"The playback of this movie requires the following decoders which are not "
+"The playback of this movie requires the following plugins which are not "
 "installed:\n"
 "\n"
 "%s"
 msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/backend/bacon-video-widget.c:3422
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3432
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5514 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Көлөмдүү"
 
-#: ../src/backend/bacon-video-widget.c:5516 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Моно"
 
-#: ../src/backend/bacon-video-widget.c:5801
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5983
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -979,8 +1029,8 @@ msgstr "Кеңейтме(лер)"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 
@@ -1021,7 +1071,7 @@ msgstr ""
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1034,7 +1084,7 @@ msgstr ""
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1140,28 +1190,29 @@ msgstr "0 секунда"
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
 msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr ""
 
-#: ../src/xplayer.c:240
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 
-#: ../src/xplayer-cell-renderer-video.c:126
-msgid "Unknown video"
-msgstr "Белгисиз видео"
-
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr ""
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:98
+msgid "_Add to Playlist"
+msgstr ""
+
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Айнуу"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Файл жок"
 
@@ -1198,8 +1249,8 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 
 #: ../src/xplayer-interface.c:368
@@ -1209,29 +1260,17 @@ msgid ""
 msgstr ""
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Жок"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Авто"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr ""
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr ""
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr ""
 
@@ -1243,56 +1282,47 @@ msgid ""
 msgstr ""
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:591
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Пауза"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Ойнотуу"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr ""
 
-#: ../src/xplayer-object.c:1793
-msgid "No error message"
-msgstr ""
-
-#: ../src/xplayer-object.c:2133
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr ""
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr ""
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Ойнотуу / Пауза"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr ""
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4051 ../src/xplayer-object.c:4053
-msgid "Fullscreen"
-msgstr "Толук экран"
-
-#: ../src/xplayer-object.c:4184
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr ""
 
-#: ../src/xplayer-object.c:4184
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr ""
 
@@ -1303,18 +1333,6 @@ msgstr "Дарек ачуу…"
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr ""
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr ""
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Кийинки"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Абалкы"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1416,12 +1434,12 @@ msgstr ""
 msgid "Playlist"
 msgstr "Ойнотуу тизмеси"
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 
-#: ../src/xplayer-playlist.c:1863
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Ойнотуу тизмесинин катасы"
 
@@ -1432,51 +1450,6 @@ msgstr "Параметрлер"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Субтитр шрифтин тандоо"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "Аудио/Видео"
-
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "Ж"
-
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "Ж"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr ""
-
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "Ж"
-
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "Ж"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1525,8 +1498,10 @@ msgstr ""
 msgid "Current Locale"
 msgstr "Кезектеги локаль"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Араб"
 
@@ -1534,7 +1509,8 @@ msgstr "Араб"
 msgid "Armenian"
 msgstr "Армян"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr ""
@@ -1543,17 +1519,22 @@ msgstr ""
 msgid "Celtic"
 msgstr "Кельт"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr ""
@@ -1562,9 +1543,12 @@ msgstr ""
 msgid "Croatian"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Кириллица"
 
@@ -1572,7 +1556,8 @@ msgstr "Кириллица"
 msgid "Cyrillic/Russian"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr ""
 
@@ -1580,7 +1565,8 @@ msgstr ""
 msgid "Georgian"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Грек"
@@ -1593,8 +1579,10 @@ msgstr ""
 msgid "Gurmukhi"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Иврит"
 
@@ -1610,13 +1598,16 @@ msgstr "Хинди"
 msgid "Icelandic"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Жапон"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Корей"
 
@@ -1628,7 +1619,8 @@ msgstr ""
 msgid "Persian"
 msgstr ""
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr ""
 
@@ -1640,33 +1632,40 @@ msgstr ""
 msgid "Thai"
 msgstr "Тай"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Түрк"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Юникод"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Батыштык"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Вьетнам"
 
-#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:998
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "Бүт файлдар"
 
-#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:995
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "Колдолгон файлдар"
 
@@ -1694,14 +1693,10 @@ msgstr ""
 msgid "Add Directory"
 msgstr ""
 
-#: ../src/xplayer-video-list.c:330
-msgid "No video URI"
-msgstr ""
-
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1709,15 +1704,15 @@ msgid ""
 "<b>%s</b>: %s"
 msgstr ""
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Файл"
 
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Чечим"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Узундук"
 
@@ -1841,7 +1836,7 @@ msgid "Create a new chapter list for the movie"
 msgstr ""
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/xplayer-chapters.c:1139
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr ""
 
@@ -1856,63 +1851,59 @@ msgid ""
 "<b>Start time: </b>%s"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:328
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:544
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:717
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:842
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:843
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:976
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1093
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1104
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr ""
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1184
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr ""
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/xplayer-chapters.c:1189
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr ""
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
-#: ../src/plugins/chapters/xplayer-chapters.c:1191
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Сактоо"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1194
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr ""
-
-#: ../src/plugins/chapters/xplayer-cmml-parser.c:651
-msgid "Failed to parse CMML file"
 msgstr ""
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
@@ -1966,19 +1957,19 @@ msgstr "Ойнотуу тизмесине кошуу"
 msgid "Copy Location"
 msgstr "Даректи копиялоо"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1186
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "Сереп"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1229
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "Издөө"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:454
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "Сереп катасы"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:609
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "Издөө катасы"
 
@@ -2124,6 +2115,33 @@ msgstr ""
 msgid "Adds movie properties to the sidebar"
 msgstr ""
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Ж"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "Ж"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Өзгөчөлүктөр"
@@ -2134,8 +2152,9 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
@@ -2205,36 +2224,6 @@ msgstr ""
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
-msgstr ""
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Копияны сактоо"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Копияны сактоо…"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr ""
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Копияны сактоо"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Фильм"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
 msgstr ""
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
@@ -2313,19 +2302,19 @@ msgstr ""
 msgid "This is not supposed to happen; please file a bug report."
 msgstr ""
 
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:333
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
 msgstr "_Кадрды сактоо"
 
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:333
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
 msgstr "Экрандан кадрды сактоо"
 
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
 msgstr "_Кадр сериясын жасоо…"
 
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
 msgstr ""
 
@@ -2366,3 +2355,10 @@ msgstr "_Өтүү…"
 msgid "Skip to a specific time"
 msgstr ""
 
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
+msgid "Zeitgeist Plugin"
+msgstr ""
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
+msgid "A plugin sending events to Zeitgeist"
+msgstr ""

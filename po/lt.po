@@ -13,34 +13,36 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-04-24 22:48+0000\n"
-"PO-Revision-Date: 2013-04-27 22:36+0300\n"
-"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-17 19:46+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: \n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Sustabdytas"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Pristabdyta"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "Grojama"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Rodomas filmas"
@@ -63,7 +65,7 @@ msgstr "Xplayer filmų leistuvas"
 msgid "_Open with \"%s\""
 msgstr "_Atverti su „%s“"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "Įvyko klaida"
 
@@ -76,19 +78,20 @@ msgstr "Nėra grojaraščio arba grojaraštis tuščias"
 msgid "Movie browser plugin"
 msgstr "Filmų naršyklės įskiepis"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Nepavyko inicializuoti saugių gijų bibliotekų."
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Patikrinkite savo sistemos įdiegimą. Xplayer įskiepis dabar užsidarys."
+msgstr ""
+"Patikrinkite savo sistemos įdiegimą. Xplayer įskiepis dabar užsidarys."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Išjungti viso ekrano veikseną"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Laikas:"
 
@@ -200,7 +203,8 @@ msgstr "Numatytoji „Atverti...“ dialogų vieta"
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
-msgstr "Numatytoji dialogų „Atverti...“ vieta. Standartinė – esamas aplankas."
+msgstr ""
+"Numatytoji dialogų „Atverti...“ vieta. Standartinė – esamas aplankas."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
@@ -263,11 +267,11 @@ msgstr "_Kopijuoti vietą"
 msgid "Copy the location to the clipboard"
 msgstr "Perkelti vietą į iškarpinę"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "Pasirinkite _titrus..."
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "Pasirinkite titrų failą"
 
@@ -306,8 +310,7 @@ msgstr "Didelis"
 msgid "Extra Large"
 msgstr "Ypač didelis"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -333,7 +336,7 @@ msgstr "AC3 Passthrough"
 
 #: ../data/preferences.ui.h:13
 msgid "Xplayer Preferences"
-msgstr "Xplayer nustatymai"
+msgstr "Xplayer nuostatos"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
@@ -447,7 +450,6 @@ msgid "_Audio output type:"
 msgstr "_Audio išvesties tipas:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "Garsas"
 
@@ -479,7 +481,7 @@ msgstr "Komentaras:"
 msgid "Container:"
 msgstr "Konteineris:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "Vaizdas"
 
@@ -508,8 +510,8 @@ msgid "Channels:"
 msgstr "Kanalai:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
-#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Videoįrašai"
 
@@ -521,316 +523,367 @@ msgstr "Groti filmus"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Vaizdas;Filmas;Klipas;Serialas;Grotuvas;DVD;TV;Diskas;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Leisti / pauzė"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Kitas"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Ankstesnis"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "Nutildyti"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Visame ekrane"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Atverti"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "Atverti _vietą"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "_Visame ekrane"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "_Nustatymai"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "_Maišymo veiksena"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "Ka_rtojimo veiksena"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "Iš_eiti"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Filmas"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_Atverti..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Atverti failą"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "Atverti _vietą..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Atverti nevietinį failą"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Išmesti"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "Išstumti diską"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Savybės"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "Rodyti srauto savybes"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Groti / P_auzė"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "Leisti arba pristabdyti filmą"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "Iš_eiti"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Išeiti iš programos"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Keisti"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "Iš_valyti grojaraštį"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Išvalyti grojaraštį"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "_Nustatymai"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Konfigūruoti programą"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Įskiepiai..."
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "Konfigūruoti įskiepius programos išplėtimui"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "R_odymas"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "_Visame ekrane"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Perjungti į visą ekraną"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "Pritaikyti lango dydį prie filmo"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "_Keisti mastelį į 1:2"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Perpus sumažinti vaizdą"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "Keisti mastelį į _1:1"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Nustatyti originalų vaizdo dydį"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "Keisti mastelį į _2:1"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "Dvigubai padidinti vaizdą"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "V_aizdo proporcija"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "Pakeisti kamp_us"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "Pakeisti kameros kampą"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "_Eiti"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "_DVD meniu"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "Eiti į DVD meniu"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "_Pavadinimo meniu"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "Eiti į pavadinimo meniu"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "Garso meni_u"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "Eiti į garso meniu"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "K_ampo meniu"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "Eiti į kampo meniu"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "_Takelio meniu"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "Eiti į takelio menu"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "_Kitas takelis/filmas"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "Kitas takelis arba filmas"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "_Ankstesnis takelis/filmas"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "Ankstesnis takelis arba filmas"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "Gar_sas"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "_Didinti garsumą"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "Padidinti garsumą"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "_Mažinti garsumą"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "Sumažinti garsumą"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "Žinynas turinys"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "_Apie"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "Apie šią programą"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "Ka_rtojimo veiksena"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Nustatyti kartojimo veikseną"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "_Maišymo veiksena"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Nustatyti maišymo veikseną"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "Rodyti _valdiklius"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "Rodyti valdymo elementus"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "Šoninė _juosta"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "Rodyti arba slėpti šoninę juostą"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Automatinis"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "Automatiškai nustato vaizdo proporciją"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Kvadratas"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "Nustato kvadratinę vaizdo proporciją"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4:3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Nustato 4:3 (TV) vaizdo proporciją"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16:9 (Plačiaekranis)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Nustato 16:9 (plačiaekranę) vaizdo proporciją"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11:1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Nustato 2.11:1 (DVB) vaizdo proporciją"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "S_ubtitrai"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "Ka_lbos"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "Pritraukti"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "Pritraukti"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "Persukti į _priekį"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "Persukti į priekį"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "Persukti _atgal"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "Persukti atgal"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "Laiko slankiklis"
 
@@ -838,57 +891,58 @@ msgstr "Laiko slankiklis"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Įveskite norimo atverti failo _adresą:"
 
-#: ../src/backend/bacon-video-widget.c:1641
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "RTSP serverio slaptažodis"
 
-#: ../src/backend/bacon-video-widget.c:2885
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Audio takelis #%d"
 
-#: ../src/backend/bacon-video-widget.c:2889
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Titrai #%d"
 
-#: ../src/backend/bacon-video-widget.c:3286
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr "Serveris, prie kurio mėginate jungtis, nežinomas."
 
-#: ../src/backend/bacon-video-widget.c:3289
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr "Neleista prisijungti prie šio serverio."
 
-#: ../src/backend/bacon-video-widget.c:3292
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr "Nepavyko rasti nurodyto filmo."
 
-#: ../src/backend/bacon-video-widget.c:3299
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr "Serveris neleido prieiti prie šio failo ar srauto."
 
-#: ../src/backend/bacon-video-widget.c:3305
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
 msgstr "Šiam failui ar srautui priteiti reikia patvirtinti tapatybę."
 
-#: ../src/backend/bacon-video-widget.c:3312
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr "Jums neleista atverti šio failo."
 
-#: ../src/backend/bacon-video-widget.c:3317
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr "Ši vieta nėra tinkama."
 
-#: ../src/backend/bacon-video-widget.c:3325
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr "Filmo nepavyko perskaityti."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3348
-#: ../src/backend/bacon-video-widget.c:3356
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -904,7 +958,7 @@ msgstr[2] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3367
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -912,7 +966,7 @@ msgstr ""
 "Garso ar vaizdo srautas nėra apdorojamas dėl trūkstamų kodekų. Gali reikėti "
 "įdiegti papildomus įskiepius, kad galėtumėt groti tam tikro tipo filmus"
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -920,19 +974,19 @@ msgstr ""
 "Nepavyko groti šio failo per tinklą. Pabandykite pirma jį parsisiųsti į "
 "diską."
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Apsupimas"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5748
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "Laikmenoje nėra palaikomų video srautų."
 
-#: ../src/backend/bacon-video-widget.c:5930
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -948,7 +1002,7 @@ msgstr "Šis failas nėra tinkamas .desktop failas"
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Neatpažinta darbastalio failo versija „%s“"
+msgstr "Neatpažinta darbalaukio failo versija „%s“"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
@@ -963,12 +1017,12 @@ msgstr "Programa nepriima dokumentų komandinėje eilutėje"
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Neatpažintas paleidimo nustatymas: %d"
+msgstr "Neatpažintas paleidimo parametras: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Negalima perduoti URI „Type=Link“ darbastalio įrašui"
+msgstr "Negalima perduoti dokumentų URI „Type=Link“ darbalaukio įrašui"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
@@ -1004,8 +1058,8 @@ msgstr "Plėtinys"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "Programa neatpažino failo „%s“ formato. Suteikite failui žinomą priesagą "
@@ -1017,7 +1071,7 @@ msgstr "Failo formatas neatpažintas"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Išjungti ryšį su seansų valdykle"
+msgstr "Išjungti ryšį su seansų tvarkytuve"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
@@ -1037,18 +1091,18 @@ msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Sesijos valdymo nustatymai:"
+msgstr "Sesijos valdymo parinktys:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Rodyti sesijos valdymo nustatymus"
+msgstr "Rodyti sesijos valdymo parinktis"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1061,7 +1115,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1199,23 +1253,23 @@ msgstr[2] "%d kadrų per sekundę"
 msgid "Audio Preview"
 msgstr "Audio peržiūra"
 
-#: ../src/xplayer.c:249
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Patikrinkite savo sistemos įdiegimą. Xplayer dabar užsidarys."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "Leisti _dabar"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "_Pridėti į grojaraštį"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Nėra failo"
 
@@ -1259,8 +1313,8 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Turėjote gauti GNU Bendrosios Viešosios Licencijos kopiją kartu su Xplayer. "
 "Jeigu negavote, rašykite Laisvosios Programinės Įrangos Fondui, 59 Temple "
@@ -1275,41 +1329,21 @@ msgstr ""
 "įskiepius."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Nėra"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Automatinis"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Autorinės teisės © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"Paskutinysis vertėjas:\n"
-"Aurimas Černius <aurisc4@gmail.com>,\n"
-"\n"
-"Vertėjai:\n"
-"Žygimantas Beručka <zygis@gnome.org>,\n"
-"Gintautas Miliauskas <gintas@akl.lt>\n"
-"Justina Klingaitė <justina.klingaite@gmail.com>\n"
-"Artūras Šlajus <x11@h2o.pieva.net>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "Xplayer žiniatinklio svetainė"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Konfigūruoti įskiepius"
 
-#: ../src/xplayer-object.c:161
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1320,56 +1354,47 @@ msgstr ""
 "eilutės parametrų sąrašą.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:589
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Leisti"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer nepavyko paleisti „%s“."
 
-#: ../src/xplayer-object.c:1793
-msgid "No error message"
-msgstr "Nėra klaidos pranešimo"
-
-#: ../src/xplayer-object.c:2133
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer nepavyko parodyti pagalbos turinio."
 
-#: ../src/xplayer-object.c:4022 ../src/xplayer-object.c:4024
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Ankstesnis takelis/filmas"
 
-#: ../src/xplayer-object.c:4031 ../src/xplayer-object.c:4033
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Groti / Pauzė"
 
-#: ../src/xplayer-object.c:4041 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Kitas takelis/filmas"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4054 ../src/xplayer-object.c:4056
-msgid "Fullscreen"
-msgstr "Visame ekrane"
-
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "Xplayer negalėjo startuoti."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "Jokios priežasties."
 
@@ -1380,18 +1405,6 @@ msgstr "Atverti vietą..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Įjungti derinimą"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Leisti / pauzė"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Kitas"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Ankstesnis"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1455,115 +1468,60 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "Negalima įdėti į eilę ir pakeisti tuo pačiu metu"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast grojaraštis"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 audio (srautas)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 audio (srautas, DOS formatas)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "XML viešintinas grojaraštis"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "%d įrašas"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "Nepavyko išsaugoti grojaraščio"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "Išsaugoti grojaraštį"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Grojaraštis"
 
-#: ../src/xplayer-playlist.c:1860
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "Nepavyko perskaityti grojaraščio „%s“. Jis gali būti sugadintas."
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Grojaraščio klaida"
 
 #: ../src/xplayer-preferences.c:297
 msgid "Preferences"
-msgstr "Nustatymai"
+msgstr "Nuostatos"
 
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Pasirinkite subtitrų šriftą"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "Garsas / vaizdas"
-
-#  Video Codec
-#  Audio Codec
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "Nėra"
-
-#  Video Codec
-#  Audio Codec
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "Nėra"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kbps"
-
-#  eg: 75 %
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#  eg: 75 %
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#  Video Codec
-#  Audio Codec
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "N/A"
-
-#  Video Codec
-#  Audio Codec
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "Nėra"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1615,8 +1573,10 @@ msgstr "%s, %f %%"
 msgid "Current Locale"
 msgstr "Dabartinė lokalė"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabų"
 
@@ -1624,7 +1584,8 @@ msgstr "Arabų"
 msgid "Armenian"
 msgstr "Armėnų"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltų"
@@ -1633,17 +1594,22 @@ msgstr "Baltų"
 msgid "Celtic"
 msgstr "Keltų"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Centrinės Europos"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Supaprastinta kinų"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Tradicinė kinų"
@@ -1652,9 +1618,12 @@ msgstr "Tradicinė kinų"
 msgid "Croatian"
 msgstr "Kroatų"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Kirilica"
 
@@ -1662,7 +1631,8 @@ msgstr "Kirilica"
 msgid "Cyrillic/Russian"
 msgstr "Kirilica/Rusų"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Kirilica/Ukrainiečių"
 
@@ -1670,7 +1640,8 @@ msgstr "Kirilica/Ukrainiečių"
 msgid "Georgian"
 msgstr "Gruzinų"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Graikų"
@@ -1683,8 +1654,10 @@ msgstr "Gudžaratų"
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebrajų"
 
@@ -1700,13 +1673,16 @@ msgstr "Hindi"
 msgid "Icelandic"
 msgstr "Islandų"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japonų"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Korėjiečių"
 
@@ -1718,7 +1694,8 @@ msgstr "Skandinavų"
 msgid "Persian"
 msgstr "Persų"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Rumunų"
 
@@ -1730,24 +1707,31 @@ msgstr "Pietų Europos"
 msgid "Thai"
 msgstr "Tajų"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turkų"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unikodas"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Vakariečių"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamiečių"
@@ -1787,7 +1771,7 @@ msgstr "Pridėti katalogą"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1798,15 +1782,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Failo vardas"
 
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Raiška"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Trukmė"
 
@@ -2214,6 +2198,39 @@ msgstr "Filmo savybės"
 msgid "Adds movie properties to the sidebar"
 msgstr "Prideda filmo savybes į šoninę juostą"
 
+#  eg: 75 %
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kbps"
+
+#  Video Codec
+#  Audio Codec
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Nėra"
+
+#  eg: 75 %
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#  Video Codec
+#  Audio Codec
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "N/A"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Savybės"
@@ -2224,8 +2241,9 @@ msgstr "rpdb2 slaptažodis"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
 "Slaptažodis rpdb2 serverio apsaugojimui Xplayer derinimui nuo neleistino "
 "prisijungimo. Jei tuščias, bus naudojamas numatytasis „xplayer“."
@@ -2301,36 +2319,6 @@ msgstr "Pasukti pagal laikrodžio _rodyklę"
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Pasukti prieš _laikrodžio rodyklę"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Įrašyti kopiją"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "Įrašyti šiuo metu grojamo filmo kopiją"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Įrašyti kopiją..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Įrašyti filmo kopiją"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Įrašyti kopiją"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Filmas"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Filmo srautas"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
@@ -2471,4 +2459,3 @@ msgstr "Zeitgeist įskiepis"
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
 msgstr "Įskiepis, siunčiantis įvykius į Zeitgeist"
-

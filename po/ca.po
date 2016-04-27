@@ -7,32 +7,35 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xplayer 2.14\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-04-24 22:48+0000\n"
-"PO-Revision-Date: 2013-04-25 23:26+0200\n"
-"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-03 16:23+0000\n"
+"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ca\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Aturat"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "En pausa"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "S'està reproduint"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "S'està reproduint una pel·lícula"
@@ -54,7 +57,7 @@ msgstr "Reproductor de vídeo Xplayer"
 msgid "_Open with \"%s\""
 msgstr "_Obre amb el «%s»"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "S'ha produït un error"
 
@@ -66,9 +69,10 @@ msgstr "No hi ha cap llista de reproducció o bé és buida"
 msgid "Movie browser plugin"
 msgstr "Connector per veure pel·lícules al navegador"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
-msgstr "No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
+msgstr ""
+"No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
@@ -79,7 +83,7 @@ msgstr ""
 msgid "Leave Fullscreen"
 msgstr "Surt de la pantalla completa"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Temps:"
 
@@ -201,7 +205,8 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Ubicació predeterminada per als diàlegs «Feu una captura de pantalla»"
+msgstr ""
+"Ubicació predeterminada per als diàlegs «Feu una captura de pantalla»"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
@@ -268,11 +273,11 @@ msgstr "_Copia la ubicació"
 msgid "Copy the location to the clipboard"
 msgstr "Copia la ubicació al porta-retalls"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "_Seleccioneu els subtítols de text..."
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "Seleccioneu el fitxer que conté els subtítols"
 
@@ -311,8 +316,7 @@ msgstr "Gran"
 msgid "Extra Large"
 msgstr "Extra gran"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Estèreo"
 
@@ -452,7 +456,6 @@ msgid "_Audio output type:"
 msgstr "Tipus de sortid_a d'àudio:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "Àudio"
 
@@ -484,7 +487,7 @@ msgstr "Comentari:"
 msgid "Container:"
 msgstr "Contenidor:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "Vídeo"
 
@@ -513,8 +516,8 @@ msgid "Channels:"
 msgstr "Canals:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
-#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Vídeos"
 
@@ -526,316 +529,367 @@ msgstr "Reprodueix pel·lícules"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Vídeo;Pel·lícula;Film;Clip;Sèries;Reproductor;DVD;TV;Disc;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Reprodueix/Fes una pausa"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Següent"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Anterior"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "Silencia"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Obre"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "Obre una _ubicació"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "Pantalla _completa"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "_Preferències"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "_Mescla"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "_Repeteix"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "_Surt"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Pel·lícula"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_Obre..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Obre un fitxer"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "Obre una _ubicació..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Obre un fitxer no local"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Expulsa"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "Expulsa el disc actual"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Propietats"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "Visualitza les propietats del flux actual"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Reprodueix / Fes una p_ausa"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "Reprodueix o fes una pausa a la pel·lícula"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "_Surt"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Surt de l'aplicació"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "_Neteja la llista de reproducció"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Neteja la llista de reproducció"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "_Preferències"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Configura l'aplicació"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Connectors..."
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "Configureu els connectors per ampliar l'aplicació"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "_Visualitza"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "Pantalla _completa"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Canvia a pantalla sencera"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "Ajusta la finestra a la pel·lícula"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "_Redimensiona a 1∶2"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Redimensiona el vídeo a la meitat de la mida original"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "Redimensiona a _1∶1"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Redimensiona el vídeo a la mida original"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "Redimensiona a _2∶1"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "Redimensiona el vídeo al doble de la mida original"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "Relació d'_aspecte"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "Commuta els an_gles"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "Commuta els angles de la càmera"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "Vé_s"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "Menú del _DVD"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "Vés al menú del DVD"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "Menú del _títol"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "Vés al menú del títol"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "Menú d'à_udio"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "Vés al menú d'àudio"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "Menú d'an_gle"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "Vés al menú d'angle"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "Menú dels _capítols"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "Vés al menú dels capítols"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "Capítol/pel·lícula _següent"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "Capítol o pel·lícula següent"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "Capítol/pel·lícula _anterior"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "Capítol o pel·lícula anterior"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "S_o"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "_Apuja el volum"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "Apuja el volum"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "A_baixa el volum"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "Abaixa el volum"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "Continguts de l'ajuda"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "Quant a aquesta aplicació"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "Mode de _repetició"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Estableix el mode de repetició"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "Mode a_leatori"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Estableix el mode aleatori"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "Mostra els _controls"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "Mostra els controls"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "_Barra lateral"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "Mostra o amaga la barra lateral"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "Estableix la relació d'aspecte automàtica"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Quadrat"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "Estableix la relació d'aspecte quadrada"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Estableix la relació d'aspecte a 4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (Pantalla ampla)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Estableix la relació d'aspecte a 16∶9 (pantalla ampla)"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Estableix la relació d'aspecte a 2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "S_ubtítols"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "_Idiomes"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "Apropa"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "Apropa"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "Salta en_davant"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "Salta endavant"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "Salta _enrere"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "Salta enrere"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "Barra de cerca de temps"
 
@@ -843,57 +897,58 @@ msgstr "Barra de cerca de temps"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Introduïu l'_adreça del fitxer que vulgueu obrir:"
 
-#: ../src/backend/bacon-video-widget.c:1641
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "El servidor de RTSP sol·licita la contrasenya"
 
-#: ../src/backend/bacon-video-widget.c:2885
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Pista d'àudio #%d"
 
-#: ../src/backend/bacon-video-widget.c:2889
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Subtítol #%d"
 
-#: ../src/backend/bacon-video-widget.c:3286
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr "Es desconeix el servidor al qual esteu intentant connectar."
 
-#: ../src/backend/bacon-video-widget.c:3289
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr "S'ha refusat la connexió a aquest servidor."
 
-#: ../src/backend/bacon-video-widget.c:3292
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr "No s'ha trobat la pel·lícula especificada."
 
-#: ../src/backend/bacon-video-widget.c:3299
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr "El servidor ha rebutjat l'accés a aquest fitxer o flux."
 
-#: ../src/backend/bacon-video-widget.c:3305
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
 msgstr "Es requereix autenticació per a accedir a aquest fitxer o flux."
 
-#: ../src/backend/bacon-video-widget.c:3312
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr "No teniu permís per a obrir aquest fitxer."
 
-#: ../src/backend/bacon-video-widget.c:3317
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr "La ubicació no és vàlida."
 
-#: ../src/backend/bacon-video-widget.c:3325
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr "No s'ha pogut llegir la pel·lícula."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3348
-#: ../src/backend/bacon-video-widget.c:3356
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -907,7 +962,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3367
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -916,7 +971,7 @@ msgstr ""
 "Potser cal que instal·leu connectors addicionals per poder veure alguns "
 "tipus de pel·lícules"
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -924,19 +979,19 @@ msgstr ""
 "No es pot reproduir aquest fitxer a través de la xarxa. Proveu de baixar-lo "
 "al disc primer."
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Envoltant"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5748
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "El medi no conté cap flux de vídeo conegut."
 
-#: ../src/backend/bacon-video-widget.c:5930
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1010,8 +1065,8 @@ msgstr "Extensions"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "No s'ha pogut descobrir el format de fitxer que voleu utilitzar per a «%s». "
@@ -1055,7 +1110,7 @@ msgstr "Mostra les opcions de la gestió de la sessió"
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1068,7 +1123,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1183,23 +1238,23 @@ msgstr[1] "%d quadres per segon"
 msgid "Audio Preview"
 msgstr "Previsualització d'àudio"
 
-#: ../src/xplayer.c:249
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verifiqueu la instal·lació del sistema. El Xplayer sortirà ara."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "_Reprodueix"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "_Afegeix a la llista de reproducció"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Cap fitxer"
 
@@ -1244,8 +1299,8 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
 "juntament amb el Xplayer; en cas contrari, escriviu a la Free Software "
@@ -1260,35 +1315,21 @@ msgstr ""
 "propietat."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Cap"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Copyright © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"Jordi Mallach <jordi@sindominio.net>\n"
-"Gil Forcada <gilforcada@guifi.net>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "Pàgina web del Xplayer"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Configura els connectors"
 
-#: ../src/xplayer-object.c:161
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1299,56 +1340,47 @@ msgstr ""
 "línia d'ordres.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:589
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Fes una pausa"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Reprodueix"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "El Xplayer no ha pogut reproduir «%s»."
 
-#: ../src/xplayer-object.c:1793
-msgid "No error message"
-msgstr "No hi ha cap missatge d'error"
-
-#: ../src/xplayer-object.c:2133
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "El Xplayer no ha pogut mostrar els continguts de l'ajuda."
 
-#: ../src/xplayer-object.c:4022 ../src/xplayer-object.c:4024
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Capítol/pel·lícula anterior"
 
-#: ../src/xplayer-object.c:4031 ../src/xplayer-object.c:4033
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Reprodueix / Fes una pausa"
 
-#: ../src/xplayer-object.c:4041 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Capítol/pel·lícula següent"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4054 ../src/xplayer-object.c:4056
-msgid "Fullscreen"
-msgstr "Pantalla completa"
-
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "No s'ha pogut executar el Xplayer."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "Sense motiu."
 
@@ -1359,18 +1391,6 @@ msgstr "Obre una ubicació..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Habilita la depuració"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Reprodueix/Fes una pausa"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Següent"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Anterior"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1434,51 +1454,51 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "No es pot enviar a la cua i reemplaçar alhora"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "Llista de reproducció MP3 ShoutCast"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "Àudio MP3 (en flux)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "Àudio MP3 (en flux, format DOS)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "Llista de reproducció XML per compartir"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "Títol %d"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "No s'ha pogut desar la llista de reproducció"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "Desa la llista de reproducció"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Llista de reproducció"
 
-#: ../src/xplayer-playlist.c:1860
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 "No s'ha pogut analitzar la llista de reproducció «%s», pot estar malmesa."
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "S'ha produït un error de la llista de reproducció"
 
@@ -1489,51 +1509,6 @@ msgstr "Preferències"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Seleccioneu el tipus de lletra per als subtítols"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "Àudio/Vídeo"
-
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "N/D"
-
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "N/D"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d Kbps"
-
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "N/D"
-
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "N/D"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1582,8 +1557,10 @@ msgstr "%s, %f %%"
 msgid "Current Locale"
 msgstr "Localització actual"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Àrab"
 
@@ -1591,7 +1568,8 @@ msgstr "Àrab"
 msgid "Armenian"
 msgstr "Armeni"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Bàltic"
@@ -1600,17 +1578,22 @@ msgstr "Bàltic"
 msgid "Celtic"
 msgstr "Cèltic"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Europeu central"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Xinès simplificat"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Xinès tradicional"
@@ -1619,9 +1602,12 @@ msgstr "Xinès tradicional"
 msgid "Croatian"
 msgstr "Croat"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Ciríl·lic"
 
@@ -1629,7 +1615,8 @@ msgstr "Ciríl·lic"
 msgid "Cyrillic/Russian"
 msgstr "Ciríl·lic/Rus"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Ciríl·lic/Ucraïnès"
 
@@ -1637,7 +1624,8 @@ msgstr "Ciríl·lic/Ucraïnès"
 msgid "Georgian"
 msgstr "Georgià"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Grec"
@@ -1651,8 +1639,10 @@ msgstr "Gujarati"
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebreu"
 
@@ -1668,13 +1658,16 @@ msgstr "Hindi"
 msgid "Icelandic"
 msgstr "Islandès"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japonès"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Coreà"
 
@@ -1686,7 +1679,8 @@ msgstr "Nòrdic"
 msgid "Persian"
 msgstr "Persa"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Romanès"
 
@@ -1698,24 +1692,31 @@ msgstr "Sud europeu"
 msgid "Thai"
 msgstr "Tai"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turc"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Occidental"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamita"
@@ -1755,7 +1756,7 @@ msgstr "Afegiu un directori"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1766,15 +1767,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Nom del fitxer"
 
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Resolució"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Durada"
 
@@ -2002,7 +2003,8 @@ msgstr "La propietat «%s» no és d'escriptura."
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr "Es desconeix la propietat sol·licitada «%s» d'un objecte MediaPlayer 2"
+msgstr ""
+"Es desconeix la propietat sol·licitada «%s» d'un objecte MediaPlayer 2"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
@@ -2187,6 +2189,33 @@ msgstr "Propietats de la pel·lícula"
 msgid "Adds movie properties to the sidebar"
 msgstr "Afegeix les propietats de les pel·lícules a la barra lateral"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d Kbps"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "N/D"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "N/D"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Propietats"
@@ -2197,12 +2226,13 @@ msgstr "contrasenya rpdb2"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
 "Una contrasenya per protegir el servidor rpdb2 d'accessos remots no "
-"autoritzats a la depuració del Xplayer. Si es deixa buida la contrasenya serà "
-"«xplayer»."
+"autoritzats a la depuració del Xplayer. Si es deixa buida la contrasenya "
+"serà «xplayer»."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2248,9 +2278,9 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Després de prémer D'acord, el Xplayer s'esperarà fins que us hi connecteu amb "
-"el winpdb o el rpdb2. Si no heu establert una contrasenya de depuració en el "
-"DConf, s'utilitzarà la contrasenya predeterminada («xplayer»)."
+"Després de prémer D'acord, el Xplayer s'esperarà fins que us hi connecteu "
+"amb el winpdb o el rpdb2. Si no heu establert una contrasenya de depuració "
+"en el DConf, s'utilitzarà la contrasenya predeterminada («xplayer»)."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2275,36 +2305,6 @@ msgstr "_Gira en sentit horari"
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Gira en sentit _antihorari"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Desa'n una còpia"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "Desa una còpia de la pel·lícula que s'està reproduint"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Desa'n una còpia..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Desa una còpia de la pel·lícula"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Desa'n una còpia"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Pel·lícula"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Flux de la pel·lícula"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"

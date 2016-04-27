@@ -9,28 +9,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-04 18:51+0000\n"
-"PO-Revision-Date: 2012-08-03 23:33-0400\n"
-"Last-Translator: Philip Withnall <philip@tecnocode.co.uk>\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-11 10:25+0000\n"
+"Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: Sugar Labs\n"
-"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: en_GB\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Stopped"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Paused"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "Playing"
 
@@ -39,40 +40,40 @@ msgstr "Playing"
 msgid "Playing a movie"
 msgstr "Playing a movie"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:443
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
 msgstr "No URI to play"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:676
-#: ../browser-plugin/xplayer-plugin-viewer.c:1700
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
 msgid "Xplayer Movie Player"
 msgstr "Xplayer Movie Player"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1120
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_Open with \"%s\""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1341 ../src/xplayer-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "An error occurred"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2033
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
 msgstr "No playlist or playlist empty"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2128
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
 msgstr "Movie browser plugin"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2144 ../src/xplayer.c:247
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Could not initialise the thread-safe libraries."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2144
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "Verify your system installation. The Xplayer plugin will now exit."
 
@@ -80,7 +81,7 @@ msgstr "Verify your system installation. The Xplayer plugin will now exit."
 msgid "Leave Fullscreen"
 msgstr "Leave Fullscreen"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Time:"
 
@@ -260,11 +261,11 @@ msgstr "_Copy Location"
 msgid "Copy the location to the clipboard"
 msgstr "Copy the location to the clipboard"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "_Select Text Subtitles…"
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "Select a file to use for text subtitles"
 
@@ -303,8 +304,7 @@ msgstr "Large"
 msgid "Extra Large"
 msgstr "Extra Large"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5518
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -382,68 +382,68 @@ msgid "Disable _deinterlacing of interlaced videos"
 msgstr "Disable _deinterlacing of interlaced videos"
 
 #: ../data/preferences.ui.h:27
-msgid "Disable screensaver when playing "
-msgstr "Disable screensaver when playing "
+msgid "Disable screensaver when playing"
+msgstr "Disable screensaver when playing"
 
-#: ../data/preferences.ui.h:28 ../data/properties.ui.h:9
-#: ../src/xplayer-properties-view.c:275
+#: ../data/preferences.ui.h:28
+msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "Video"
 
-#: ../data/preferences.ui.h:29
+#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "Video or Audio"
 
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:31
 msgid "Visual Effects"
 msgstr "Visual Effects"
 
-#: ../data/preferences.ui.h:31
+#: ../data/preferences.ui.h:32
 msgid "Show _visual effects when an audio file is played"
 msgstr "Show _visual effects when an audio file is played"
 
-#: ../data/preferences.ui.h:32
+#: ../data/preferences.ui.h:33
 msgid "_Type of visualization:"
 msgstr "_Type of visualisation:"
 
-#: ../data/preferences.ui.h:33
+#: ../data/preferences.ui.h:34
 msgid "Visualization _size:"
 msgstr "Visualisation _size:"
 
-#: ../data/preferences.ui.h:34
+#: ../data/preferences.ui.h:35
 msgid "Color Balance"
 msgstr "Colour Balance"
 
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:36
 msgid "_Brightness:"
 msgstr "_Brightness:"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:37
 msgid "Co_ntrast:"
 msgstr "Co_ntrast:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:38
 msgid "Sat_uration:"
 msgstr "Sat_uration:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:39
 msgid "_Hue:"
 msgstr "_Hue:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:40
 msgid "Reset to _Defaults"
 msgstr "Reset to _Defaults"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:41
 msgid "Audio Output"
 msgstr "Audio Output"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
 msgstr "_Audio output type:"
 
-#: ../data/preferences.ui.h:42 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
+#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "Audio"
 
@@ -475,6 +475,10 @@ msgstr "Comment:"
 msgid "Container:"
 msgstr "Container:"
 
+#: ../data/properties.ui.h:9
+msgid "Video"
+msgstr "Video"
+
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
 msgstr "Dimensions:"
@@ -500,8 +504,8 @@ msgid "Channels:"
 msgstr "Channels:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:246
-#: ../src/xplayer.c:254 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "Videos"
 
@@ -513,316 +517,367 @@ msgstr "Play movies"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Play/Pause"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Next"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Previous"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "Mute"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "_Open"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "Open _Location"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "_Fullscreen"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "Prefere_nces"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "Shuff_le"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "_Repeat"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "_Quit"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "_Movie"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_Open..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Open a file"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "Open _Location…"
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Open a non-local file"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "_Eject"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "Eject the current disc"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "_Properties"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "View the properties of the current stream"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "Play / P_ause"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "Play or pause the movie"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "_Quit"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Quit the program"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "_Edit"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "_Clear Playlist"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "Clear the playlist"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "Prefere_nces"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Configure the application"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "Plugins…"
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "Configure plugins to extend the application"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "_View"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "_Fullscreen"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Switch to fullscreen"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "Fit Window to Movie"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "_Resize 1∶2"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Resize to half the original video size"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "Resize _1∶1"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Resize to the original video size"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "Resize _2∶1"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "Resize to double the original video size"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "_Aspect Ratio"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "Switch An_gles"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "Switch camera angles"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "_Go"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "_DVD Menu"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "Go to the DVD menu"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "_Title Menu"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "Go to the title menu"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "A_udio Menu"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "Go to the audio menu"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "_Angle Menu"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "Go to the angle menu"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "_Chapter Menu"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "Go to the chapter menu"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "_Next Chapter/Movie"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "Next chapter or movie"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "_Previous Chapter/Movie"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "Previous chapter or movie"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "_Sound"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "Volume _Up"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "Increase volume"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "Volume _Down"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "Decrease volume"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "_Help"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "_Contents"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "Help contents"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "_About"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "About this application"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "_Repeat Mode"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Set the repeat mode"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "Shuff_le Mode"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Set the shuffle mode"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "Show _Controls"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "Show controls"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "S_idebar"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "Show or hide the sidebar"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "Sets automatic aspect ratio"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "Square"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "Sets square aspect ratio"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "Sets 4∶3 (TV) aspect ratio"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (Widescreen)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "Sets 16∶9 (widescreen) aspect ratio"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "Sets 2.11∶1 (DVB) aspect ratio"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "S_ubtitles"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "_Languages"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "Zoom In"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "Zoom in"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "Skip _Forward"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "Skip forward"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "Skip _Backwards"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "Skip backwards"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "Time seek bar"
 
@@ -830,57 +885,58 @@ msgstr "Time seek bar"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Enter the _address of the file you would like to open:"
 
-#: ../src/backend/bacon-video-widget.c:1643
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "Password requested for RTSP server"
 
-#: ../src/backend/bacon-video-widget.c:2942
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Audio Track #%d"
 
-#: ../src/backend/bacon-video-widget.c:2946
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Subtitle #%d"
 
-#: ../src/backend/bacon-video-widget.c:3343
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr "The server you are trying to connect to is not known."
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr "The connection to this server was refused."
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr "The specified movie could not be found."
 
-#: ../src/backend/bacon-video-widget.c:3356
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr "The server refused access to this file or stream."
 
-#: ../src/backend/bacon-video-widget.c:3362
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
 msgstr "Authentication is required to access this file or stream."
 
-#: ../src/backend/bacon-video-widget.c:3369
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr "You are not allowed to open this file."
 
-#: ../src/backend/bacon-video-widget.c:3374
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr "This location is not a valid one."
 
-#: ../src/backend/bacon-video-widget.c:3382
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr "The movie could not be read."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3405
-#: ../src/backend/bacon-video-widget.c:3413
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -894,7 +950,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3424
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -902,7 +958,7 @@ msgstr ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 
-#: ../src/backend/bacon-video-widget.c:3434
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -910,19 +966,19 @@ msgstr ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 
-#: ../src/backend/bacon-video-widget.c:5514 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "Surround"
 
-#: ../src/backend/bacon-video-widget.c:5516 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5801
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "Media contains no supported video streams."
 
-#: ../src/backend/bacon-video-widget.c:5983
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -994,12 +1050,12 @@ msgstr "Extension(s)"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 
 #: ../src/eggfileformatchooser.c:664
@@ -1039,7 +1095,7 @@ msgstr "Show session management options"
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1052,7 +1108,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1167,23 +1223,23 @@ msgstr[1] "%d frames per second"
 msgid "Audio Preview"
 msgstr "Audio Preview"
 
-#: ../src/xplayer.c:247
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verify your system installation. Xplayer will now exit."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "_Play Now"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "_Add to Playlist"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Cancel"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "No File"
 
@@ -1228,12 +1284,12 @@ msgstr ""
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "You should have received a copy of the GNU General Public Licence along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1244,35 +1300,17 @@ msgstr ""
 "plugins."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "None"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Copyright © 2002–2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"Bastien Nocera <hadess@hadess.net>\n"
-"Gareth Owen <gowen72@yahoo.com>\n"
-"David Lodge <dave@cirt.net>\n"
-"Philip Withnall <philip@tecnocode.co.uk>\n"
-"Bruce Cowan <bruce@bcowan.me.uk>\n"
-"Chris Leonard <cjl@laptop.org>"
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "Xplayer Website"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Configure Plugins"
 
@@ -1286,56 +1324,47 @@ msgstr ""
 "Run '%s --help' to see a full list of available command line options.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:591
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pause"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Play"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer could not play '%s'."
 
-#: ../src/xplayer-object.c:1793
-msgid "No error message"
-msgstr "No error message"
-
-#: ../src/xplayer-object.c:2133
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer could not display the help contents."
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Previous Chapter/Movie"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Play/Pause"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Next Chapter/Movie"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4051 ../src/xplayer-object.c:4053
-msgid "Fullscreen"
-msgstr "Fullscreen"
-
-#: ../src/xplayer-object.c:4184
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "Xplayer could not startup."
 
-#: ../src/xplayer-object.c:4184
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "No reason."
 
@@ -1346,18 +1375,6 @@ msgstr "Open Location…"
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Enable debug"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Play/Pause"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Next"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Previous"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1459,12 +1476,12 @@ msgstr "Save Playlist"
 msgid "Playlist"
 msgstr "Playlist"
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "The playlist '%s' could not be parsed. It might be damaged."
 
-#: ../src/xplayer-playlist.c:1863
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Playlist error"
 
@@ -1475,51 +1492,6 @@ msgstr "Preferences"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Select Subtitle Font"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "Audio/Video"
-
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kbps"
-
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "N/A"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1568,8 +1540,10 @@ msgstr "%s, %f %%"
 msgid "Current Locale"
 msgstr "Current Locale"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Arabic"
 
@@ -1577,7 +1551,8 @@ msgstr "Arabic"
 msgid "Armenian"
 msgstr "Armenian"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Baltic"
@@ -1586,17 +1561,22 @@ msgstr "Baltic"
 msgid "Celtic"
 msgstr "Celtic"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Central European"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Chinese Simplified"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Chinese Traditional"
@@ -1605,9 +1585,12 @@ msgstr "Chinese Traditional"
 msgid "Croatian"
 msgstr "Croatian"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Cyrillic"
 
@@ -1615,7 +1598,8 @@ msgstr "Cyrillic"
 msgid "Cyrillic/Russian"
 msgstr "Cyrillic/Russian"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Cyrillic/Ukrainian"
 
@@ -1623,7 +1607,8 @@ msgstr "Cyrillic/Ukrainian"
 msgid "Georgian"
 msgstr "Georgian"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Greek"
@@ -1636,8 +1621,10 @@ msgstr "Gujarati"
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebrew"
 
@@ -1653,13 +1640,16 @@ msgstr "Hindi"
 msgid "Icelandic"
 msgstr "Icelandic"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japanese"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Korean"
 
@@ -1671,7 +1661,8 @@ msgstr "Nordic"
 msgid "Persian"
 msgstr "Persian"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Romanian"
 
@@ -1683,33 +1674,40 @@ msgstr "South European"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turkish"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unicode"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Western"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:998
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
 msgstr "All files"
 
-#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:995
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
 msgstr "Supported files"
 
@@ -1740,7 +1738,7 @@ msgstr "Add Directory"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1751,15 +1749,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Filename"
 
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Resolution"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Duration"
 
@@ -1883,7 +1881,7 @@ msgid "Create a new chapter list for the movie"
 msgstr "Create a new chapter list for the movie"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/xplayer-chapters.c:1139
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
 msgstr "Chapters"
 
@@ -1900,65 +1898,61 @@ msgstr ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:328
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "Error while reading file with chapters"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "Chapter with the same time already exists"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:544
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "Try another name or remove an existing chapter."
 
-#: ../src/plugins/chapters/xplayer-chapters.c:717
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "Error while writing file with chapters"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:842
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "Error occurred while saving chapters"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:843
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Please check you have permission to write to the folder containing the movie."
 
-#: ../src/plugins/chapters/xplayer-chapters.c:976
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "Open Chapter File"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1093
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "Chapter Screenshot"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1104
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "Chapter Title"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1184
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "Save changes to chapter list before closing?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/xplayer-chapters.c:1189
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "Close without Saving"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
-#: ../src/plugins/chapters/xplayer-chapters.c:1191
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Save"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1194
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "If you don't save, changes to the chapter list will be lost."
-
-#: ../src/plugins/chapters/xplayer-cmml-parser.c:651
-msgid "Failed to parse CMML file"
-msgstr "Failed to parse CMML file"
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
@@ -2013,19 +2007,19 @@ msgstr "Add to Playlist"
 msgid "Copy Location"
 msgstr "Copy Location"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1220
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
 msgid "Browse"
 msgstr "Browse"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1263
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
 msgid "Search"
 msgstr "Search"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:455
+#: ../src/plugins/grilo/xplayer-grilo.c:437
 msgid "Browse Error"
 msgstr "Browse Error"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:624
+#: ../src/plugins/grilo/xplayer-grilo.c:606
 msgid "Search Error"
 msgstr "Search Error"
 
@@ -2171,6 +2165,33 @@ msgstr "Movie Properties"
 msgid "Adds movie properties to the sidebar"
 msgstr "Adds movie properties to the sidebar"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kbps"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "N/A"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Properties"
@@ -2181,11 +2202,13 @@ msgstr "rpdb2 password"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorised "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorised remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2258,36 +2281,6 @@ msgstr "_Rotate Clockwise"
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotate Anti-c_lockwise"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "Save Copy"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "Save a copy of the currently playing movie"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Save a Copy…"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Save a copy of the movie"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Save a Copy"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Movie"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Movie stream"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
@@ -2419,1400 +2412,10 @@ msgstr "_Skip To…"
 msgid "Skip to a specific time"
 msgstr "Skip to a specific time"
 
-#~ msgid "Add the video to the playlist"
-#~ msgstr "Add the video to the playlist"
-
-#~ msgid "Unknown video"
-#~ msgstr "Unknown video"
-
-#~ msgid "No video URI"
-#~ msgstr "No video URI"
-
-#~ msgid "Location not found."
-#~ msgstr "Location not found."
-
-#~ msgid ""
-#~ "Could not open location; you might not have permission to open the file."
-#~ msgstr ""
-#~ "Could not open location; you might not have permission to open the file."
-
-#~ msgid ""
-#~ "Failed to create a GStreamer play object. Please check your GStreamer "
-#~ "installation."
-#~ msgstr ""
-#~ "Failed to create a GStreamer play object. Please check your GStreamer "
-#~ "installation."
-
-#~ msgid "%d %%"
-#~ msgstr "%d %%"
-
-#~ msgid "<no reason given>"
-#~ msgstr "<no reason given>"
-
-#~ msgid "Programme unavailable (\"%s\")"
-#~ msgstr "Programme unavailable (\"%s\")"
-
-#~ msgid "BBC iPlayer"
-#~ msgstr "BBC iPlayer"
-
-#~ msgid ""
-#~ "Stream BBC programs from the last 7 days from the BBC iPlayer service"
-#~ msgstr ""
-#~ "Stream BBC programmes from the last seven days from the BBC iPlayer "
-#~ "service"
-
-#~ msgid "Error listing channel categories"
-#~ msgstr "Error listing channel categories"
-
-#~ msgid ""
-#~ "There was an unknown error getting the list of television channels "
-#~ "available on BBC iPlayer."
-#~ msgstr ""
-#~ "There was an unknown error getting the list of television channels "
-#~ "available on BBC iPlayer."
-
-#~ msgid "Loading…"
-#~ msgstr "Loading…"
-
-#~ msgid "Error getting programme feed"
-#~ msgstr "Error getting programme feed"
-
-#~ msgid ""
-#~ "There was an error getting the list of programmes for this channel and "
-#~ "category combination."
-#~ msgstr ""
-#~ "There was an error getting the list of programmes for this channel and "
-#~ "category combination."
-
-#~ msgid "_Name:"
-#~ msgstr "_Name:"
-
-#~ msgid "Save in _folder:"
-#~ msgstr "Save in _folder:"
-
-#~ msgid "Select a folder"
-#~ msgstr "Select a folder"
-
-#~ msgid "There was an error saving the screenshot."
-#~ msgstr "There was an error saving the screenshot."
-
-#~ msgid "Save Screenshot"
-#~ msgstr "Save Screenshot"
-
-#~ msgid "Movie Player"
-#~ msgstr "Movie Player"
-
-#~ msgid "Play movies and songs"
-#~ msgstr "Play movies and songs"
-
-#~ msgid "1.5 Mbps T1/Intranet/LAN"
-#~ msgstr "1.5 Mbps T1/Intranet/LAN"
-
-#~ msgid "112 Kbps Dual ISDN/DSL"
-#~ msgstr "112 Kbps Dual ISDN/DSL"
-
-#~ msgid "14.4 Kbps Modem"
-#~ msgstr "14.4 Kbps Modem"
-
-#~ msgid "19.2 Kbps Modem"
-#~ msgstr "19.2 Kbps Modem"
-
-#~ msgid "256 Kbps DSL/Cable"
-#~ msgstr "256 Kbps DSL/Cable"
-
-#~ msgid "28.8 Kbps Modem"
-#~ msgstr "28.8 Kbps Modem"
-
-#~ msgid "33.6 Kbps Modem"
-#~ msgstr "33.6 Kbps Modem"
-
-#~ msgid "34.4 Kbps Modem"
-#~ msgstr "34.4 Kbps Modem"
-
-#~ msgid "384 Kbps DSL/Cable"
-#~ msgstr "384 Kbps DSL/Cable"
-
-#~ msgid "512 Kbps DSL/Cable"
-#~ msgstr "512 Kbps DSL/Cable"
-
-#~ msgid "56 Kbps Modem/ISDN"
-#~ msgstr "56 Kbps Modem/ISDN"
-
-#~ msgid "Configure the application"
-#~ msgstr "Configure the application"
-
-#~ msgid "Connection _speed:"
-#~ msgstr "Connection _speed:"
-
-#~ msgid "Intranet/LAN"
-#~ msgstr "Intranet/LAN"
-
-#~ msgid "Networking"
-#~ msgstr "Networking"
-
-#~ msgid "Open _Location..."
-#~ msgstr "Open _Location…"
-
-#~ msgid "Open a file"
-#~ msgstr "Open a file"
-
-#~ msgid "Open a non-local file"
-#~ msgstr "Open a non-local file"
-
-#~ msgid "Quit the program"
-#~ msgstr "Quit the program"
-
-#~ msgid "Set the repeat mode"
-#~ msgstr "Set the repeat mode"
-
-#~ msgid "Set the shuffle mode"
-#~ msgstr "Set the shuffle mode"
-
-#~ msgid "Switch to fullscreen"
-#~ msgstr "Switch to fullscreen"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network."
-#~ msgstr ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network."
-
-#~ msgid "Network connection speed"
-#~ msgstr "Network connection speed"
-
-#~ msgid "Play Image '%s'"
-#~ msgstr "Play Image '%s'"
-
-#~ msgid "device%d"
-#~ msgstr "device%d"
-
-#~ msgid "Play Disc '%s'"
-#~ msgstr "Play Disc '%s'"
-
-#~ msgid "Movie Player using %s"
-#~ msgstr "Movie Player using %s"
-
-#~ msgid ""
-#~ "Xplayer could not play this media (%s) although a plugin is present to "
-#~ "handle it."
-#~ msgstr ""
-#~ "Xplayer could not play this media (%s) although a plugin is present to "
-#~ "handle it."
-
-#~ msgid ""
-#~ "You might want to check that a disc is present in the drive and that it "
-#~ "is correctly configured."
-#~ msgstr ""
-#~ "You might want to check that a disc is present in the drive and that it "
-#~ "is correctly configured."
-
-#~ msgid "More information about media plugins"
-#~ msgstr "More information about media plugins"
-
-#~ msgid ""
-#~ "Please install the necessary plugins and restart Xplayer to be able to play "
-#~ "this media."
-#~ msgstr ""
-#~ "Please install the necessary plugins and restart Xplayer to be able to play "
-#~ "this media."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it does not have the "
-#~ "appropriate plugins to be able to read from the disc."
-#~ msgstr ""
-#~ "Xplayer cannot play this type of media (%s) because it does not have the "
-#~ "appropriate plugins to be able to read from the disc."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because you do not have the "
-#~ "appropriate plugins to handle it."
-#~ msgstr ""
-#~ "Xplayer cannot play this type of media (%s) because you do not have the "
-#~ "appropriate plugins to handle it."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it is not supported."
-#~ msgstr ""
-#~ "Xplayer cannot play this type of media (%s) because it is not supported."
-
-#~ msgid "Please insert another disc to play back."
-#~ msgstr "Please insert another disc to play back."
-
-#~ msgid "Xplayer was not able to play this disc."
-#~ msgstr "Xplayer was not able to play this disc."
-
-#~ msgid "Xplayer does not support playback of Audio CDs"
-#~ msgstr "Xplayer does not support playback of Audio CDs"
-
-#~ msgid ""
-#~ "Please consider using a music player or a CD extractor to play this CD"
-#~ msgstr ""
-#~ "Please consider using a music player or a CD extractor to play this CD"
-
-#~ msgid ""
-#~ "The requested audio output was not found. Please select another audio "
-#~ "output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "The requested audio output was not found. Please select another audio "
-#~ "output in the Multimedia Systems Selector."
-
-#~ msgid ""
-#~ "The video output is in use by another application. Please close other "
-#~ "video applications, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "The video output is in use by another application. Please close other "
-#~ "video applications, or select another video output in the Multimedia "
-#~ "Systems Selector."
-
-#~ msgid ""
-#~ "The audio output is in use by another application. Please select another "
-#~ "audio output in the Multimedia Systems Selector. You may want to consider "
-#~ "using a sound server."
-#~ msgstr ""
-#~ "The audio output is in use by another application. Please select another "
-#~ "audio output in the Multimedia Systems Selector. You may want to consider "
-#~ "using a sound server."
-
-#~ msgid ""
-#~ "Failed to open audio output. You may not have permission to open the "
-#~ "sound device, or the sound server may not be running. Please select "
-#~ "another audio output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Failed to open audio output. You may not have permission to open the "
-#~ "sound device, or the sound server may not be running. Please select "
-#~ "another audio output in the Multimedia Systems Selector."
-
-#~ msgid ""
-#~ "Could not find the audio output. You may need to install additional "
-#~ "GStreamer plugins, or select another audio output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Could not find the audio output. You may need to install additional "
-#~ "GStreamer plugins, or select another audio output in the Multimedia "
-#~ "Systems Selector."
-
-#~ msgid ""
-#~ "A format string used to build the network service name used when "
-#~ "publishing playlists over the network. The following format placeholders "
-#~ "can be used: • %a: the program name as returned by g_get_application_name"
-#~ "() • %h: the machine's host name in title case • %u: the user's login "
-#~ "name in title case • %U: the user's real name • %%: the percent sign"
-#~ msgstr ""
-#~ "A format string used to build the network service name used when "
-#~ "publishing playlists over the network. The following format placeholders "
-#~ "can be used: • %a: the program name as returned by g_get_application_name"
-#~ "() • %h: the machine's host name in title case • %u: the user's login "
-#~ "name in title case • %U: the user's real name • %%: the percent sign"
-
-#~ msgid "Format for network service name"
-#~ msgstr "Format for network service name"
-
-#~ msgid "Publisher protocol to use"
-#~ msgstr "Publisher protocol to use"
-
-#~ msgid ""
-#~ "The transport protocol to use when publishing playlists over the network."
-#~ msgstr ""
-#~ "The transport protocol to use when publishing playlists over the network."
-
-#~ msgid "Neighbors"
-#~ msgstr "Neighbours"
-
-#~ msgid "Publish Playlist"
-#~ msgstr "Publish Playlist"
-
-#~ msgid "Share the current playlist via HTTP"
-#~ msgstr "Share the current playlist via HTTP"
-
-#~ msgid "Service _Name:"
-#~ msgstr "Service _Name:"
-
-#~ msgid ""
-#~ "The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name."
-#~ msgstr ""
-#~ "The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name."
-
-#~ msgid "Use _encrypted transport protocol (HTTPS)"
-#~ msgstr "Use _encrypted transport protocol (HTTPS)"
-
-#~ msgid "Bemused"
-#~ msgstr "Bemused"
-
-#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
-#~ msgstr "Control Xplayer through a mobile phone with a Bemused client"
-
-#~ msgid "Untitled %d"
-#~ msgstr "Untitled %d"
-
-#~ msgid "Xplayer Bemused Server"
-#~ msgstr "Xplayer Bemused Server"
-
-#~ msgid "Xplayer Bemused Server version 1.0"
-#~ msgstr "Xplayer Bemused Server version 1.0"
-
-#~ msgid "A plugin to let you browse YouTube videos."
-#~ msgstr "A plugin to let you browse YouTube videos."
-
-#~ msgid "YouTube Browser"
-#~ msgstr "YouTube Browser"
-
-#~ msgid "Related Videos"
-#~ msgstr "Related Videos"
-
-#~ msgid "Search Results"
-#~ msgstr "Search Results"
-
-#~ msgid "_Open in Web Browser"
-#~ msgstr "_Open in Web Browser"
-
-#~ msgid "Open the video in your web browser"
-#~ msgstr "Open the video in your web browser"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Cancelling query…"
-#~ msgstr "Cancelling query…"
-
-#~ msgid "Error Searching for Videos"
-#~ msgstr "Error Searching for Videos"
-
-#~ msgid ""
-#~ "The response from the server could not be understood. Please check you "
-#~ "are running the latest version of libgdata."
-#~ msgstr ""
-#~ "The response from the server could not be understood. Please check you "
-#~ "are running the latest version of libgdata."
-
-#~ msgid "Fetching search results…"
-#~ msgstr "Fetching search results…"
-
-#~ msgid "Fetching related videos…"
-#~ msgstr "Fetching related videos…"
-
-#~ msgid "Error Opening Video in Web Browser"
-#~ msgstr "Error Opening Video in Web Browser"
-
-#~ msgid "Fetching more videos…"
-#~ msgstr "Fetching more videos…"
-
-#~ msgid "Video Format Not Supported"
-#~ msgstr "Video Format Not Supported"
-
-#~ msgid ""
-#~ "This video is not available in any formats which Xplayer supports. Would "
-#~ "you like to open it in your web browser instead?"
-#~ msgstr ""
-#~ "This video is not available in any formats which Xplayer supports. Would "
-#~ "you like to open it in your web browser instead?"
-
-#~ msgid "0 frames per second"
-#~ msgstr "0 frames per second"
-
-#~ msgid "0 kbps"
-#~ msgstr "0 kbps"
-
-#~ msgid "0 x 0"
-#~ msgstr "0 x 0"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Zoom Out"
-
-#~ msgid "Zoom Reset"
-#~ msgstr "Zoom Reset"
-
-#~ msgid "Zoom out"
-#~ msgstr "Zoom out"
-
-#~ msgid "Zoom reset"
-#~ msgstr "Zoom reset"
-
-#~ msgid ""
-#~ "The playback of this movie requires the following decoders which are not "
-#~ "installed:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "The playback of this movie requires the following decoders which are not "
-#~ "installed:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "Media file could not be played."
-#~ msgstr "Media file could not be played."
-
-#~ msgid "Too old version of GStreamer installed."
-#~ msgstr "Too old version of GStreamer installed."
-
-#~ msgid ""
-#~ "Failed to open video output. It may not be available. Please select "
-#~ "another video output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "Failed to open video output. It may not be available. Please select "
-#~ "another video output in the Multimedia Systems Selector."
-
-#~ msgid ""
-#~ "Could not find the video output. You may need to install additional "
-#~ "GStreamer plugins, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "Could not find the video output. You may need to install additional "
-#~ "GStreamer plugins, or select another video output in the Multimedia "
-#~ "Systems Selector."
-
-#~ msgid "%s"
-#~ msgstr "%s"
-
-#~ msgid "Delete"
-#~ msgstr "Delete"
-
-#~ msgid "Coherence DLNA/UPnP Client"
-#~ msgstr "Coherence DLNA/UPnP Client"
-
-#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
-#~ msgstr "A DLNA/UPnP client for Xplayer powered by Coherence"
-
-#~ msgid "By artist"
-#~ msgstr "By artist"
-
-#~ msgid "By tag"
-#~ msgstr "By tag"
-
-#~ msgid "Jamendo Album Page"
-#~ msgstr "Jamendo Album Page"
-
-#~ msgid "Latest Releases"
-#~ msgstr "Latest Releases"
-
-#~ msgid "Number of albums to _retrieve:"
-#~ msgstr "Number of albums to _retrieve:"
-
-#~ msgid "Popular"
-#~ msgstr "Popular"
-
-#~ msgid "Preferred audio _format:"
-#~ msgstr "Preferred audio _format:"
-
-#~ msgid "_Open Jamendo Album Page in Browser"
-#~ msgstr "_Open Jamendo Album Page in Browser"
-
-#~ msgid "Jamendo"
-#~ msgstr "Jamendo"
-
-#~ msgid ""
-#~ "Listen to the large collection of Creative Commons licensed music on "
-#~ "Jamendo."
-#~ msgstr ""
-#~ "Listen to the large collection of Creative Commons-licenced music on "
-#~ "Jamendo."
-
-#~ msgid "You need to install the Python simplejson module."
-#~ msgstr "You need to install the Python simplejson module."
-
-#~ msgid "Artist: %s"
-#~ msgstr "Artist: %s"
-
-#~ msgid "%Y-%m-%d"
-#~ msgstr "%Y-%m-%d"
-
-#~ msgid "%x"
-#~ msgstr "%x"
-
-#~ msgid "Genre: %s"
-#~ msgstr "Genre: %s"
-
-#~ msgid "Released on: %s"
-#~ msgstr "Released on: %s"
-
-#~ msgid "License: %s"
-#~ msgstr "Licence: %s"
-
-#~ msgid "%02d. %s"
-#~ msgstr "%02d. %s"
-
-#~ msgid "Album: %s"
-#~ msgstr "Album: %s"
-
-#~ msgid "Duration: %s"
-#~ msgstr "Duration: %s"
-
-#~ msgid "Fetching albums, please wait…"
-#~ msgstr "Fetching albums, please wait…"
-
-#~ msgid ""
-#~ "Failed to connect to Jamendo server.\n"
-#~ "%s."
-#~ msgstr ""
-#~ "Failed to connect to Jamendo server.\n"
-#~ "%s."
-
-#~ msgid "The Jamendo server returned code %s."
-#~ msgstr "The Jamendo server returned code %s."
-
-#~ msgid "An error occurred while fetching albums."
-#~ msgstr "An error occurred while fetching albums."
-
-#~ msgid "%H:%M:%S"
-#~ msgstr "%H:%M:%S"
-
-#~ msgid "%M:%S"
-#~ msgstr "%M:%S"
-
-#~ msgid "en"
-#~ msgstr "en"
-
-#~ msgid "Audio format to download from Jamendo"
-#~ msgstr "Audio format to download from Jamendo"
-
-#~ msgid "Number of results per page"
-#~ msgstr "Number of results per page"
-
-#~ msgid ""
-#~ "The number of Jamendo search results to display in each page of results."
-#~ msgstr ""
-#~ "The number of Jamendo search results to display in each page of results."
-
-#~ msgid "The preferred audio format to download tracks from Jamendo in."
-#~ msgstr "The preferred audio format to download tracks from Jamendo in."
-
-#~ msgid "Language"
-#~ msgstr "Language"
-
-#~ msgid "Could not connect to Tracker"
-#~ msgstr "Could not connect to Tracker"
-
-#~ msgid "No results"
-#~ msgstr "No results"
-
-#~ msgid "Showing %i - %i of %i match"
-#~ msgid_plural "Showing %i - %i of %i matches"
-#~ msgstr[0] "Showing %i–%i of %i match"
-#~ msgstr[1] "Showing %i–%i of %i matches"
-
-#~ msgid "Page"
-#~ msgstr "Page"
-
-#~ msgid "Local Search"
-#~ msgstr "Local Search"
-
-#~ msgid "Set the window icon to the thumbnail of the playing movie"
-#~ msgstr "Set the window icon to the thumbnail of the playing movie"
-
-#~ msgid "Thumbnail"
-#~ msgstr "Thumbnail"
-
-#~ msgid "Search for local videos using Tracker"
-#~ msgstr "Search for local videos using Tracker"
-
-#~ msgid "Browser Plugin using %s"
-#~ msgstr "Browser Plugin using %s"
-
-#~ msgid "Xplayer Browser Plugin"
-#~ msgstr "Xplayer Browser Plugin"
-
-#~ msgid "Enable visual effects?"
-#~ msgstr "Enable visual effects?"
-
-#~ msgid ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-#~ msgstr ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-
-#~ msgid "Error loading Galago plugin"
-#~ msgstr "Error loading Galago plugin"
-
-#~ msgid "Could not connect to the Galago daemon."
-#~ msgstr "Could not connect to the Galago daemon."
-
-#~ msgid "Could not get name and thumbnail for %s: %s"
-#~ msgstr "Could not get name and thumbnail for %s: %s"
-
-#~ msgid "Error Looking Up Video URI"
-#~ msgstr "Error Looking Up Video URI"
-
-#~ msgid "seconds"
-#~ msgstr "seconds"
-
-#~ msgid "Chapters support"
-#~ msgstr "Chapters support"
-
-#~ msgid "Continue to watch movie without loaded chapters"
-#~ msgstr "Continue to watch movie without loaded chapters"
-
-#~ msgid "_Go to"
-#~ msgstr "_Go to"
-
-#~ msgid "Please check you rights and free space"
-#~ msgstr "Please check your permissions and free space"
-
-#~ msgid "_Download Movie Subtitles..."
-#~ msgstr "_Download Movie Subtitles…"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, "
-#~ "\"2\" for 28.8 Kbps Modem, \"3\" for 33.6 Kbps Modem, \"4\" for 34.4 Kbps "
-#~ "Modem, \"5\" for 56 Kbps Modem/ISDN, \"6\" for 112 Kbps Dual ISDN/DSL, "
-#~ "\"7\" for 256 Kbps DSL/Cable, \"8\" for 384 Kbps DSL/Cable, \"9\" for 512 "
-#~ "Kbps DSL/Cable, \"10\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/"
-#~ "LAN."
-#~ msgstr ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, "
-#~ "\"2\" for 28.8 Kbps Modem, \"3\" for 33.6 Kbps Modem, \"4\" for 34.4 Kbps "
-#~ "Modem, \"5\" for 56 Kbps Modem/ISDN, \"6\" for 112 Kbps Dual ISDN/DSL, "
-#~ "\"7\" for 256 Kbps DSL/Cable, \"8\" for 384 Kbps DSL/Cable, \"9\" for 512 "
-#~ "Kbps DSL/Cable, \"10\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/"
-#~ "LAN."
-
-#~ msgid ""
-#~ "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-#~ msgstr ""
-#~ "Quality settings for the audio visualisation: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-
-#~ msgid ""
-#~ "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel "
-#~ "output, \"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" "
-#~ "for AC3 Passthrough."
-#~ msgstr ""
-#~ "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel "
-#~ "output, \"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" "
-#~ "for AC3 Passthrough."
-
-#~ msgid "UTF-8"
-#~ msgstr "UTF-8"
-
-#~ msgid "Whether to autoload external chapter files when a movie is loaded."
-#~ msgstr "Whether to autoload external chapter files when a movie is loaded."
-
-#~ msgid "Don't connect to an already-running instance"
-#~ msgstr "Don't connect to an already-running instance"
-
-#~ msgid ""
-#~ "Changing the visuals effect type will require a restart to take effect."
-#~ msgstr ""
-#~ "Changing the visuals effect type will require a restart to take effect."
-
-#~ msgid ""
-#~ "The change of audio output type will only take effect when Xplayer is "
-#~ "restarted."
-#~ msgstr ""
-#~ "The change of audio output type will only take effect when Xplayer is "
-#~ "restarted."
-
-#~ msgid "Could not open link"
-#~ msgstr "Could not open link"
-
-#~ msgid "Xplayer could not initialize the configuration engine."
-#~ msgstr "Xplayer could not initialise the configuration engine."
-
-#~ msgid "Make sure that GNOME is properly installed."
-#~ msgstr "Make sure that GNOME is properly installed."
-
-#~ msgid "Recordings"
-#~ msgstr "Recordings"
-
-#~ msgid "MythTV Recordings"
-#~ msgstr "MythTV Recordings"
-
-#~ msgid "MythTV LiveTV"
-#~ msgstr "MythTV LiveTV"
-
-#~ msgid "Author:"
-#~ msgstr "Author:"
-
-#~ msgid "C_onfigure..."
-#~ msgstr "C_onfigure…"
-
-#~ msgid "Copyright:"
-#~ msgstr "Copyright:"
-
-#~ msgid "Description:"
-#~ msgstr "Description:"
-
-#~ msgid "Site:"
-#~ msgstr "Site:"
-
-#~ msgid "Deinterlace"
-#~ msgstr "Deinterlace"
-
-#~ msgid "_Deinterlace"
-#~ msgstr "_Deinterlace"
-
-#~ msgid "Buffer size"
-#~ msgstr "Buffer size"
-
-#~ msgid "Enable deinterlacing"
-#~ msgstr "Enable deinterlacing"
-
-#~ msgid "Maximum amount of data to decode ahead of display (in seconds)"
-#~ msgstr "Maximum amount of data to decode ahead of display (in seconds)"
-
-#~ msgid "Whether the main window should stay on top"
-#~ msgstr "Whether the main window should stay on top"
-
-#~ msgid "Whether the main window should stay on top of the other ones"
-#~ msgstr "Whether the main window should stay on top of the other ones"
-
-#~ msgid "Could not launch URL \"%s\": %s"
-#~ msgstr "Could not launch URL \"%s\": %s"
-
-#~ msgid "Default browser not configured"
-#~ msgstr "Default browser not configured"
-
-#~ msgid "Error launching URI"
-#~ msgstr "Error launching URI"
-
-#~ msgid "Plugin"
-#~ msgstr "Plugin"
-
-#~ msgid "Enabled"
-#~ msgstr "Enabled"
-
-#~ msgid ""
-#~ "Unable to activate plugin %s.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Unable to activate plugin %s.\n"
-#~ "%s"
-
-#~ msgid "Unable to activate plugin %s"
-#~ msgstr "Unable to activate plugin %s"
-
-#~ msgid "Plugin Error"
-#~ msgstr "Plugin Error"
-
-#~ msgid "Jamendo Plugin Configuration"
-#~ msgstr "Jamendo Plugin Configuration"
-
-#~ msgid "Could not load the \"Skip to\" dialog interface."
-#~ msgstr "Could not load the \"Skip to\" dialogue interface."
-
-#~ msgid "Sound volume"
-#~ msgstr "Sound volume"
-
-#~ msgid "Sound volume, in percent, between 0 and 100"
-#~ msgstr "Sound volume, in percent, between 0 and 100"
-
-#~ msgid "DVB Adapter %u"
-#~ msgstr "DVB Adapter %u"
-
-#~ msgid "Watch TV on '%s'"
-#~ msgstr "Watch TV on '%s'"
-
-#~ msgid "Sets 16:9 (Anamorphic) aspect ratio"
-#~ msgstr "Sets 16:9 (Anamorphic) aspect ratio"
-
-#~ msgid ""
-#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
-#~ "supported."
-#~ msgstr ""
-#~ "Xplayer cannot play TV, because no TV adapters are present or they are not "
-#~ "supported."
-
-#~ msgid "Please insert a supported TV adapter."
-#~ msgstr "Please insert a supported TV adapter."
-
-#~ msgid "More information about watching TV"
-#~ msgstr "More information about watching TV"
-
-#~ msgid "Xplayer is missing a channels listing to be able to tune the receiver."
-#~ msgstr ""
-#~ "Xplayer is missing a channels listing to be able to tune the receiver."
-
-#~ msgid ""
-#~ "Please follow the instructions provided in the link to create a channels "
-#~ "listing."
-#~ msgstr ""
-#~ "Please follow the instructions provided in the link to create a channels "
-#~ "listing."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
-#~ msgstr ""
-#~ "Xplayer cannot play this type of media (%s) because the TV device is busy."
-
-#~ msgid "Please try again later."
-#~ msgstr "Please try again later."
-
-#~ msgid "TV signal lost"
-#~ msgstr "TV signal lost"
-
-#~ msgid "Please verify your hardware setup."
-#~ msgstr "Please verify your hardware setup."
-
-#~ msgid "<b>Language</b>"
-#~ msgstr "<b>Language</b>"
-
-#~ msgid "Screenshot%d.jpg"
-#~ msgstr "Screenshot%d.jpg"
-
-#~ msgid "Xplayer could not play '%s'"
-#~ msgstr "Xplayer could not play '%s'"
-
-#~ msgid "The Xplayer plugin could not be started."
-#~ msgstr "The Xplayer plugin could not be started."
-
-#~ msgid "_Allow the screensaver to activate even when audio-only is playing"
-#~ msgstr "_Allow the screensaver to activate even when audio-only is playing"
-
-#~ msgid "Print playing movie"
-#~ msgstr "Print playing movie"
-
-#~ msgid "Failed to retrieve working directory"
-#~ msgstr "Failed to retrieve working directory"
-
-#~ msgid ""
-#~ "Couldn't load the '%s' audio driver\n"
-#~ "Check that the device is not busy."
-#~ msgstr ""
-#~ "Couldn't load the '%s' audio driver\n"
-#~ "Check that the device is not busy."
-
-#~ msgid ""
-#~ "The TV adapter could not tune into the channel. Please check your "
-#~ "hardware setup and channel configuration."
-#~ msgstr ""
-#~ "The TV adapter could not tune into the channel. Please check your "
-#~ "hardware setup and channel configuration."
-
-#~ msgid "The device name you specified (%s) seems to be invalid."
-#~ msgstr "The device name you specified (%s) seems to be invalid."
-
-#~ msgid "The server you are trying to connect to (%s) is unreachable."
-#~ msgstr "The server you are trying to connect to (%s) is unreachable."
-
-#~ msgid ""
-#~ "The source seems encrypted and can't be read. Are you trying to play an "
-#~ "encrypted DVD without libdvdcss?"
-#~ msgstr ""
-#~ "The source seems encrypted, and can't be read. Are you trying to play an "
-#~ "encrypted DVD without libdvdcss?"
-
-#~ msgid "A problem occurred while loading a library or a decoder (%s)."
-#~ msgstr "A problem occurred while loading a library or a decoder (%s)."
-
-#~ msgid "This file is encrypted and cannot be played back."
-#~ msgstr "This file is encrypted and cannot be played back."
-
-#~ msgid "For security reasons, this movie can not be played back."
-#~ msgstr "For security reasons, this movie can not be played back."
-
-#~ msgid "The audio device is busy. Is another application using it?"
-#~ msgstr "The audio device is busy. Is another application using it?"
-
-#~ msgid "Authentication is required to access this file."
-#~ msgstr "Authentication is required to access this file."
-
-#~ msgid "The file you tried to play is an empty file."
-#~ msgstr "The file you tried to play is an empty file."
-
-#~ msgid "There is no input plugin to handle the location of this movie"
-#~ msgstr "There is no input plugin to handle the location of this movie"
-
-#~ msgid "There is no plugin to handle this movie."
-#~ msgstr "There is no plugin to handle this movie."
-
-#~ msgid "This movie is broken and can not be played further."
-#~ msgstr "This movie is broken and can not be played further."
-
-#~ msgid "This movie could not be opened."
-#~ msgstr "This movie could not be opened."
-
-#~ msgid ""
-#~ "Video codec '%s' is not handled. You might need to install additional "
-#~ "plugins to be able to play some types of movies"
-#~ msgstr ""
-#~ "Video codec '%s' is not handled. You might need to install additional "
-#~ "plugins to be able to play some types of movies"
-
-#~ msgid "This is an audio-only file and there is no audio output available."
-#~ msgstr "This is an audio-only file and there is no audio output available."
-
-#~ msgid "Language %d"
-#~ msgstr "Language %d"
-
-#~ msgid "No video to capture."
-#~ msgstr "No video to capture."
-
-#~ msgid "Video codec is not handled."
-#~ msgstr "Video codec is not handled."
-
-#~ msgid "Movie is not playing."
-#~ msgstr "Movie is not playing."
-
-#~ msgid "Could not initialise the thread-safe libraries."
-#~ msgstr "Could not initialise the thread-safe libraries."
-
-#~ msgid "TV-Out"
-#~ msgstr "TV-Out"
-
-#~ msgid "TV-out in fullscreen by Nvidia (NTSC)"
-#~ msgstr "TV-out in fullscreen by Nvidia (NTSC)"
-
-#~ msgid "TV-out in fullscreen by Nvidia (PAL)"
-#~ msgstr "TV-out in fullscreen by Nvidia (PAL)"
-
-#~ msgid "_No TV-out"
-#~ msgstr "_No TV-out"
-
-#~ msgid "Unknown file extension."
-#~ msgstr "Unknown file extension."
-
-#~ msgid "Select playlist format:"
-#~ msgstr "Select playlist format:"
-
-#~ msgid ""
-#~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Xplayer is restarted."
-#~ msgstr ""
-#~ "The change of this setting will only take effect for the next movie, or "
-#~ "when Xplayer is restarted."
-
-#~ msgid "long time format|%d:%02d:%02d"
-#~ msgstr "%d:%02d:%02d"
-
-#~ msgid "short time format|%d:%02d"
-#~ msgstr "%d:%02d"
-
-#~ msgid "Search YouTube"
-#~ msgstr "Search YouTube"
-
-#~ msgid "_Sidebar"
-#~ msgstr "_Sidebar"
-
-#~ msgid "GTK+"
-#~ msgstr "GTK+"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "Xplayer could not parse the command-line options"
-#~ msgstr "Xplayer could not parse the command-line options"
-
-#~ msgid "IP address of the local MythTV server"
-#~ msgstr "IP address of the local MythTV server"
-
-#~ msgid "Name of the database for the local MythTV server"
-#~ msgstr "Name of the database for the local MythTV server"
-
-#~ msgid "Port to access the local MythTV server"
-#~ msgstr "Port to access the local MythTV server"
-
-#~ msgid "Username to access the local MythTV server"
-#~ msgstr "Username to access the local MythTV server"
-
-#~ msgid "Opening %s"
-#~ msgstr "Opening %s"
-
-#~ msgid ""
-#~ "Small\n"
-#~ "Normal\n"
-#~ "Large\n"
-#~ "Extra Large"
-#~ msgstr ""
-#~ "Small\n"
-#~ "Normal\n"
-#~ "Large\n"
-#~ "Extra Large"
-
-#~ msgid ""
-#~ "Stereo\n"
-#~ "4-channel\n"
-#~ "4.1-channel\n"
-#~ "5.0-channel\n"
-#~ "5.1-channel\n"
-#~ "AC3 Passthrough"
-#~ msgstr ""
-#~ "Stereo\n"
-#~ "4-channel\n"
-#~ "4.1-channel\n"
-#~ "5.0-channel\n"
-#~ "5.1-channel\n"
-#~ "AC3 Passthrough"
-
-#~ msgid "Properties dialog"
-#~ msgstr "Properties dialogue"
-
-#~ msgid "Volume"
-#~ msgstr "Volume"
-
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "-"
-#~ msgstr "-"
-
-#~ msgid "Full Volume"
-#~ msgstr "Full Volume"
-
-#~ msgid "Play / Pa_use"
-#~ msgstr "Play / Pa_use"
-
-#~ msgid "Resize to video size"
-#~ msgstr "Resize to video size"
-
-#~ msgid "Resize to twice the video size"
-#~ msgstr "Resize to twice the video size"
-
-#~ msgid "Volume up"
-#~ msgstr "Volume up"
-
-#~ msgid "Volume down"
-#~ msgstr "Volume down"
-
-#~ msgid "Couldn't load the 'ui description' file"
-#~ msgstr "Couldn't load the 'ui description' file"
-
-#~ msgid "playlist"
-#~ msgstr "playlist"
-
-#~ msgid "Xplayer could not eject the optical media."
-#~ msgstr "Xplayer could not eject the optical media."
-
-#~ msgid "main window"
-#~ msgstr "main window"
-
-#~ msgid "Failed to find mountpoint for device %s"
-#~ msgstr "Failed to find mountpoint for device %s"
-
-#~ msgid "Please check that a disc is present in the drive."
-#~ msgstr "Please check that a disc is present in the drive."
-
-#~ msgid "Failed to find mountpoint for %s"
-#~ msgstr "Failed to find mountpoint for %s"
-
-#~ msgid "Audio CD"
-#~ msgstr "Audio CD"
-
-#~ msgid "Video CD"
-#~ msgstr "Video CD"
-
-#~ msgid "DVD"
-#~ msgstr "DVD"
-
-#~ msgid "Couldn't write parser: %s"
-#~ msgstr "Couldn't write parser: %s"
-
-#~ msgid "Plugins Manager"
-#~ msgstr "Plugins Manager"
-
-#~ msgid "Skipto"
-#~ msgstr "Skipto"
-
-#~ msgid "Xplayer could not seek in '%s'."
-#~ msgstr "Xplayer could not seek in '%s'."
-
-#~ msgid "<b>Audio</b>"
-#~ msgstr "<b>Audio</b>"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>General</b>"
-
-#~ msgid "<b>Video</b>"
-#~ msgstr "<b>Video</b>"
-
-#~ msgid "<i>Channels:</i>"
-#~ msgstr "<i>Channels:</i>"
-
-#~ msgid "<i>Duration:</i>"
-#~ msgstr "<i>Duration:</i>"
-
-#~ msgid "<i>Title:</i>"
-#~ msgstr "<i>Title:</i>"
-
-#~ msgid "<i>Year:</i>"
-#~ msgstr "<i>Year:</i>"
-
-#~ msgid "<b>Preview</b>"
-#~ msgstr "<b>Preview</b>"
-
-#~ msgid "Save screenshot"
-#~ msgstr "Save screenshot"
-
-#~ msgid "Save screenshot to _desktop"
-#~ msgstr "Save screenshot to _desktop"
-
-#~ msgid "Save screenshot to _file:"
-#~ msgstr "Save screenshot to _file:"
-
-#~ msgid "<b>Display</b>"
-#~ msgstr "<b>Display</b>"
-
-#~ msgid "<span size=\"medium\"><b>No file</b></span>"
-#~ msgstr "<span size=\"medium\"><b>No file</b></span>"
-
-#~ msgid "Vanity Webcam utility"
-#~ msgstr "Vanity Webcam utility"
-
-#~ msgid "View live webcam and upload pictures"
-#~ msgstr "View live webcam and upload pictures"
-
-#~ msgid "Vanity"
-#~ msgstr "Vanity"
-
-#~ msgid "Vanity Preferences"
-#~ msgstr "Vanity Preferences"
-
-#~ msgid "Zoom 1:1"
-#~ msgstr "Zoom 1:1"
-
-#~ msgid "Zoom 1:2"
-#~ msgstr "Zoom 1:2"
-
-#~ msgid "Zoom 2:1"
-#~ msgstr "Zoom 2:1"
-
-#~ msgid "Zoom _1:1"
-#~ msgstr "Zoom _1:1"
-
-#~ msgid "Zoom _2:1"
-#~ msgstr "Zoom _2:1"
-
-#~ msgid "_Picture"
-#~ msgstr "_Picture"
-
-#~ msgid "_Zoom 1:2"
-#~ msgstr "_Zoom 1:2"
-
-#~ msgid "Unnamed CDROM"
-#~ msgstr "Unnamed CDROM"
-
-#~ msgid "Always on top"
-#~ msgstr "Always on top"
-
-#~ msgid "File '%s' already exists."
-#~ msgstr "File '%s' already exists."
-
-#~ msgid "The screenshot was not saved"
-#~ msgstr "The screenshot was not saved"
-
-#~ msgid "Shadow type"
-#~ msgstr "Shadow type"
-
-#~ msgid "Style of bevel around the statusbar text"
-#~ msgstr "Style of bevel around the statusbar text"
-
-#~ msgid "Webcam utility using %s"
-#~ msgstr "Webcam utility using %s"
-
-#~ msgid "Copyright © 2002-2005 Bastien Nocera"
-#~ msgstr "Copyright © 2002-2005 Bastien Nocera"
-
-#~ msgid ""
-#~ "Vanity could not startup:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Vanity could not startup:\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Vanity could not play video from the webcam.\n"
-#~ "Reason: %s"
-#~ msgstr ""
-#~ "Vanity could not play video from the webcam.\n"
-#~ "Reason: %s"
-
-#~ msgid "Debug mode on"
-#~ msgstr "Debug mode on"
-
-#~ msgid ""
-#~ "Could not initialize the thread-safe libraries.\n"
-#~ "Verify your system installation. Vanity will now exit."
-#~ msgstr ""
-#~ "Could not initialise the thread-safe libraries.\n"
-#~ "Verify your system installation. Vanity will now exit."
-
-#~ msgid "Vanity Webcam Utility"
-#~ msgstr "Vanity Webcam Utility"
-
-#~ msgid ""
-#~ "Vanity could not initialize the \n"
-#~ "configuration engine:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Vanity could not initialise the \n"
-#~ "configuration engine:\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Couldn't load the main interface (vanity.glade).\n"
-#~ "Make sure that Vanity is properly installed."
-#~ msgstr ""
-#~ "Couldn't load the main interface (vanity.glade).\n"
-#~ "Make sure that Vanity is properly installed."
-
-#~ msgid "Backend options"
-#~ msgstr "Backend options"
-
-#~ msgid ""
-#~ "The playback of this movie requires a '%s' plugin, which is not installed."
-#~ msgstr ""
-#~ "The playback of this movie requires a '%s' plugin, which is not installed."
-
-#~ msgid "Failed to find real device node for %s: %s"
-#~ msgstr "Failed to find real device node for %s: %s"
-
-#~ msgid "Failed to read symbolic link %s: %s"
-#~ msgstr "Failed to read symbolic link %s: %s"
-
-#~ msgid "    "
-#~ msgstr "    "
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "No Language Selection Available"
-#~ msgstr "No Language Selection Available"
-
-#~ msgid "No subtitles selection available"
-#~ msgstr "No subtitles selection available"
-
-#~ msgid "Set the aspect ratio"
-#~ msgstr "Set the aspect ratio"
-
-#~ msgid "Side_bar"
-#~ msgstr "Side_bar"
-
-#~ msgid "Empty"
-#~ msgstr "Empty"
-
-#~ msgid "Failed to start stand-alone movie player"
-#~ msgstr "Failed to start stand-alone movie player"
-
-#~ msgid "Option '%s' is unknown and was ignored\n"
-#~ msgstr "Option '%s' is unknown and was ignored\n"
-
-#~ msgid "Overwrite file?"
-#~ msgstr "Overwrite file?"
-
-#~ msgid ""
-#~ "A file named '%s' already exists.  Are you sure you want to overwrite it?"
-#~ msgstr ""
-#~ "A file named '%s' already exists.  Are you sure you want to overwrite it?"
-
-#~ msgid ""
-#~ "Switching on or off this type of TV-Out requires a restart to take effect."
-#~ msgstr ""
-#~ "Switching on or off this type of TV-Out requires a restart to take effect."
-
-#~ msgid "video popup menu"
-#~ msgstr "video popup menu"
-
-#~ msgid "This movie is a still image. You can open it with an image viewer."
-#~ msgstr "This movie is a still image. You can open it with an image viewer."
-
-#~ msgid "Repeat _mode"
-#~ msgstr "Repeat _mode"
-
-#~ msgid "Shuf_fle mode"
-#~ msgstr "Shuf_fle mode"
-
-#~ msgid "<span size=\"medium\"><b>No File</b></span>"
-#~ msgstr "<span size=\"medium\"><b>No File</b></span>"
-
-#~ msgid "Show/Hide Playlist"
-#~ msgstr "Show/Hide Playlist"
-
-#~ msgid "_DXR3 TV-out"
-#~ msgstr "_DXR3 TV-out"
-
-#~ msgid "_Show/Hide Playlist"
-#~ msgstr "_Show/Hide Playlist"
-
-#~ msgid "Enable deinterlacing."
-#~ msgstr "Enable deinterlacing."
-
-#~ msgid "Height of the video widget"
-#~ msgstr "Height of the video widget"
-
-#~ msgid "Name of the visual effects plugins."
-#~ msgstr "Name of the visual effects plugins."
-
-#~ msgid "Repeat mode."
-#~ msgstr "Repeat mode."
-
-#~ msgid "Resize the canvas automatically on file load."
-#~ msgstr "Resize the canvas automatically on file load."
-
-#~ msgid "Shuffle mode."
-#~ msgstr "Shuffle mode."
-
-#~ msgid "The brightness of the video."
-#~ msgstr "The brightness of the video."
-
-#~ msgid "The contrast of the video."
-#~ msgstr "The contrast of the video."
-
-#~ msgid "The hue of the video."
-#~ msgstr "The hue of the video."
-
-#~ msgid "The saturation of the video."
-#~ msgstr "The saturation of the video."
-
-#~ msgid "Whether to enable debug for the playback engine."
-#~ msgstr "Whether to enable debug for the playback engine."
-
-#~ msgid "Width of the video widget"
-#~ msgstr "Width of the video widget"
-
-#~ msgid "X coordinate for the Playlist"
-#~ msgstr "X coordinate for the Playlist"
-
-#~ msgid "X coordinate for the Playlist."
-#~ msgstr "X coordinate for the Playlist."
-
-#~ msgid "Y coordinate for the Playlist"
-#~ msgstr "Y coordinate for the Playlist"
-
-#~ msgid "Y coordinate for the Playlist."
-#~ msgstr "Y coordinate for the Playlist."
-
-#~ msgid "0 second"
-#~ msgstr "0 second"
-
-#~ msgid "%s - Xplayer Movie Player"
-#~ msgstr "%s — Xplayer Movie Player"
-
-#~ msgid "Xplayer couldn't show the movie properties window."
-#~ msgstr "Xplayer couldn't show the movie properties window."
-
-#~ msgid "Make sure that Xplayer is correctly installed."
-#~ msgstr "Make sure that Xplayer is correctly installed."
-
-#~ msgid "Xplayer Video Window"
-#~ msgstr "Xplayer Video Window"
-
-#~ msgid "Failed to open device %s for reading: %s"
-#~ msgstr "Failed to open device %s for reading: %s"
-
-#~ msgid "Failed to retrieve capabilities of device %s: %s"
-#~ msgstr "Failed to retrieve capabilities of device %s: %s"
-
-#~ msgid "Drive status 0x%x (%s) - check disc"
-#~ msgstr "Drive status 0x%x (%s) — check disc"
-
-#~ msgid "Unexpected error status %d while mounting %s"
-#~ msgstr "Unexpected error status %d while mounting %s"
-
-#~ msgid "Error getting %s disc status: %s"
-#~ msgstr "Error getting %s disc status: %s"
-
-#~ msgid "Unexpected/unknown cd type 0x%x (%s)"
-#~ msgstr "Unexpected/unknown cd type 0x%x (%s)"
-
-#~ msgid "Open from URI"
-#~ msgstr "Open from URI"
-
-#~ msgid "Select subtitle rendering font"
-#~ msgstr "Select subtitle rendering font"
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
+msgid "Zeitgeist Plugin"
+msgstr "Zeitgeist Plugin"
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
+msgid "A plugin sending events to Zeitgeist"
+msgstr "A plugin sending events to Zeitgeist"

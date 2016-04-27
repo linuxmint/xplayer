@@ -11,29 +11,244 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-06 17:45+0000\n"
-"PO-Revision-Date: 2012-02-07 18:44+0100\n"
-"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-03 12:48+0000\n"
+"Last-Translator: Kristjan SCHMIDT <Unknown>\n"
 "Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
-"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Virtaal 0.7.1\n"
-"X-DamnedLies-Scope: partial\n"
-"X-Launchpad-Export-Date: 2012-01-21 14:56+0000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Project-Style: gnome\n"
+"Language: eo\n"
+"X-DamnedLies-Scope: partial\n"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+msgid "Stopped"
+msgstr "Haltigita"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+msgid "Paused"
+msgstr "Paŭzigita"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+msgid "Playing"
+msgstr "Ludanta"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Ludi filmon"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
+msgid "No URI to play"
+msgstr "Neniu adreso por ludi"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Filmludilo Xplayero"
+
+#. translators: this is:
+#. * Open With ApplicationName
+#. * as in nautilus' right-click menu
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#, c-format
+msgid "_Open with \"%s\""
+msgstr "_Malfermi per \"%s\""
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+msgid "An error occurred"
+msgstr "Eraro okazis"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+msgid "No playlist or playlist empty"
+msgstr "Neniu ludlisto aŭ malplena ludlisto"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+msgid "Movie browser plugin"
+msgstr "Film-foliumil-kromprogramo"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Ne eblis pravalorizi la fadensendanĝerajn bibliotekojn."
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
+msgstr "Kontrolu vian sisteminstalon. Xplayera kromprogramo eliros nun."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
 msgstr "Forlasi plenekranan reĝimon"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:144
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Tempo:"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:1
+msgid "Allow the screensaver to activate when playing audio"
+msgstr "Permesi ke la ekrankurteno lanĉas eĉ se sono estas ludata"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:2
+msgid ""
+"Allow the screensaver to activate when playing audio. Disable if you have "
+"monitor-powered speakers."
+msgstr "Permesi ke la ekrankurteno lanĉas eĉ se sono estas ludata"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:3
+msgid "Show visual effects when no video is displayed"
+msgstr "Montri _aspektajn efektojn se neniu video estas montrata"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:4
+msgid "Show visual effects when playing an audio only file."
+msgstr ""
+"Montri _aspektajn efektojn dum ludado de dosiero kiu nur enhavas sonon."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:5
+msgid "Name of the visual effects plugin"
+msgstr "Nomo de la kromprogramo por aspektaj efektoj"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:6
+msgid "The brightness of the video"
+msgstr "La heleco de la video"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:7
+msgid "The contrast of the video"
+msgstr "La kontrasto de la video"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:8
+msgid "The hue of the video"
+msgstr "La kolornuanco de la video"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:9
+msgid "The saturation of the video"
+msgstr "La satureco de la video"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:10
+msgid "Resize the canvas automatically on file load"
+msgstr "Aligrandigi aŭtomate la kanvason dum dosierŝargo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:11
+msgid "Repeat mode"
+msgstr "Ripetreĝimo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:12
+msgid "Shuffle mode"
+msgstr "Miksa reĝimo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:13
+msgid "Whether to disable deinterlacing for interlaced movies"
+msgstr "Ĉu malebligi malinterplektigadon de interplektitaj videoj?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:14
+msgid "Whether to enable debug for the playback engine"
+msgstr "Ĉu ebligi sencimigon por la reproduktado modulo?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:15
+msgid "Type of audio output to use"
+msgstr "Speco de la uzenda soneligo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:16
+msgid "Visualization quality setting"
+msgstr "Kvalitagordoj de la bildigo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:17
+msgid "Quality setting for the audio visualization."
+msgstr "Kvalitagordo por la vidigo de aŭdaĵoj."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:18
+msgid "Network buffering threshold"
+msgstr "Sojla valoro de reta bufrado"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:19
+msgid ""
+"Amount of data to buffer for network streams before starting to display the "
+"stream (in seconds)."
+msgstr ""
+"Nombro da bufrotaj datumoj (en sekundoj) antaŭ ol la fluo estos ekmontrata."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:20
+msgid "Subtitle font"
+msgstr "Subteksta tiparo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:21
+msgid "Pango font description for subtitle rendering."
+msgstr "Priskribo de Pango-tiparo por subtekstmontrado."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:22
+msgid "Subtitle encoding"
+msgstr "Subteksta kodoprezento"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:23
+msgid "Encoding character set for subtitle."
+msgstr "Signaro por subtekstoj."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:24
+msgid "Default location for the \"Open...\" dialogs"
+msgstr "Defaŭlta loko de la \"Malfermi...\"-dialogo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:25
+msgid ""
+"Default location for the \"Open...\" dialogs. Default is the current "
+"directory."
+msgstr ""
+"Defaŭlta loko de la \"Malfermi...\"-dialogo. Defaŭlto estas la aktuala "
+"dosierujo."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:26
+msgid "Default location for the \"Take Screenshot\" dialogs"
+msgstr "Defaŭlta loko de la \"Fari ekrankopion...\"-dialogo"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:27
+msgid ""
+"Default location for the \"Take Screenshot\" dialogs. Default is the "
+"Pictures directory."
+msgstr ""
+"Defaŭlta loko de la \"Fari ekrankopion...\"-dialogo. Defaŭlto estas la "
+"aktuala dosierujo."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:28
+msgid "Whether to disable the plugins in the user's home directory"
+msgstr "Ĉu malebligi la kromprogramojn en la home dosierujo de la uzanto?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:29
+msgid "Whether to disable the keyboard shortcuts"
+msgstr "Ĉu malebligi la klavarajn klavkombinojn?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30
+msgid "Whether to autoload text subtitle files when a movie is loaded"
+msgstr ""
+"Ĉu subtekstdosieroj estu aŭtomate kunŝargataj kiam filmo estas ŝargata?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:31
+msgid "Whether to autoload external chapter files when a movie is loaded"
+msgstr ""
+"Ĉu eksteraj ĉapitrodosieroj estu aŭtomate kunŝargataj kiam filmo estas "
+"ŝargata?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:32
+msgid ""
+"Whether to remember the position of played audio/video files when pausing or "
+"closing them"
+msgstr ""
+"Ĉu memori la posizion de ludita aŭdvideaj dosieroj kiam paŭzanta aŭ fermanta?"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:33
+msgid "Active plugins list"
+msgstr "La listo de aktivaj kromprogramoj"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:34
+msgid ""
+"A list of the names of the plugins which are currently active (loaded and "
+"running)."
+msgstr ""
+"Listo da nomoj de la aldonaĵoj kiuj aktuale aktivas (ŝargitaj kaj lanĉitaj)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -43,11 +258,11 @@ msgstr "Fo_rigi"
 msgid "Remove file from playlist"
 msgstr "Forigi la dosieron el la ludlisto"
 
-#: ../data/playlist.ui.h:3 ../data/video-list.ui.h:3
+#: ../data/playlist.ui.h:3
 msgid "_Copy Location"
 msgstr "_Kopii lokon"
 
-#: ../data/playlist.ui.h:4 ../data/video-list.ui.h:4
+#: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
 msgstr "Kopii la lokon en la tondujon"
 
@@ -79,9 +294,163 @@ msgstr "Movi supren"
 msgid "Move Down"
 msgstr "Movi malsupren"
 
-#: ../data/properties.ui.h:1 ../data/xplayer.ui.h:122
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:2
+msgid "Normal"
+msgstr "Normala"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:4
+msgid "Large"
+msgstr "Granda"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:6
+msgid "Extra Large"
+msgstr "Grandega"
+
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+msgid "Stereo"
+msgstr "Dukanale"
+
+#: ../data/preferences.ui.h:8
+msgid "4-channel"
+msgstr "4-kanale"
+
+#: ../data/preferences.ui.h:9
+msgid "4.1-channel"
+msgstr "4.1-kanale"
+
+#: ../data/preferences.ui.h:10
+msgid "5.0-channel"
+msgstr "5.0-kanale"
+
+#: ../data/preferences.ui.h:11
+msgid "5.1-channel"
+msgstr "5.1-kanale"
+
+#: ../data/preferences.ui.h:12
+msgid "AC3 Passthrough"
+msgstr "AC3-trapasigilo"
+
+#: ../data/preferences.ui.h:13
+msgid "Xplayer Preferences"
+msgstr "Agordoj de Xplayero"
+
+#: ../data/preferences.ui.h:14
+msgid "Playback"
+msgstr "Reprodukti"
+
+#: ../data/preferences.ui.h:15
+msgid "Start playing files from last position"
+msgstr "Ludi dosierojn de la lasta pozicio"
+
+#: ../data/preferences.ui.h:16
+msgid "Text Subtitles"
+msgstr "Subtekstoj"
+
+#: ../data/preferences.ui.h:17
+msgid "_Load subtitle files when movie is loaded"
+msgstr "Ŝargi _subtekstojn kiam filmo estas ŝargite"
+
+#: ../data/preferences.ui.h:18
+msgid "_Font:"
+msgstr "_Tiparo:"
+
+#: ../data/preferences.ui.h:19
+msgid "_Encoding:"
+msgstr "_Kodoprezento:"
+
+#: ../data/preferences.ui.h:20
+msgid "External Chapters"
+msgstr "Eksteraj ĉapitroj"
+
+#: ../data/preferences.ui.h:21
+msgid "Load _chapter files when movie is loaded"
+msgstr "Ŝargi ĉ_apitrodosierojn kiam filmo estas ŝargite"
+
+#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
 msgid "General"
 msgstr "Ĝenerala"
+
+#. Tab label in the Preferences dialogue
+#: ../data/preferences.ui.h:24
+msgid "Display"
+msgstr "Montri"
+
+#: ../data/preferences.ui.h:25
+msgid "_Resize the window when a new video is loaded"
+msgstr "Alig_randigi la fenestron kiam nova video estas ŝargite"
+
+#: ../data/preferences.ui.h:26
+msgid "Disable _deinterlacing of interlaced videos"
+msgstr "_Malebligi malinterplektigadon de interplektitaj videoj"
+
+#: ../data/preferences.ui.h:27
+msgid "Disable screensaver when playing"
+msgstr ""
+
+#: ../data/preferences.ui.h:28
+msgctxt "Screensaver disable"
+msgid "Video"
+msgstr ""
+
+#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#: ../data/preferences.ui.h:30
+msgid "Video or Audio"
+msgstr "Video aŭ sono"
+
+#: ../data/preferences.ui.h:31
+msgid "Visual Effects"
+msgstr "Aspektaj efektoj"
+
+#: ../data/preferences.ui.h:32
+msgid "Show _visual effects when an audio file is played"
+msgstr "Montri _aspektajn efektojn dum ludado de sondosiero"
+
+#: ../data/preferences.ui.h:33
+msgid "_Type of visualization:"
+msgstr "_Speco de bildigo:"
+
+#: ../data/preferences.ui.h:34
+msgid "Visualization _size:"
+msgstr "Bildig_grando:"
+
+#: ../data/preferences.ui.h:35
+msgid "Color Balance"
+msgstr "Kolora ekvilibrigo"
+
+#: ../data/preferences.ui.h:36
+msgid "_Brightness:"
+msgstr "_Heleco:"
+
+#: ../data/preferences.ui.h:37
+msgid "Co_ntrast:"
+msgstr "Ko_ntrasto:"
+
+#: ../data/preferences.ui.h:38
+msgid "Sat_uration:"
+msgstr "Sat_ureco:"
+
+#: ../data/preferences.ui.h:39
+msgid "_Hue:"
+msgstr "_Nuanco:"
+
+#: ../data/preferences.ui.h:40
+msgid "Reset to _Defaults"
+msgstr "Reagordi al _defaŭltoj"
+
+#: ../data/preferences.ui.h:41
+msgid "Audio Output"
+msgstr "Sona eligo"
+
+#: ../data/preferences.ui.h:42
+msgid "_Audio output type:"
+msgstr "_Soneligtipo:"
+
+#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+msgid "Audio"
+msgstr "Sono"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -111,8 +480,7 @@ msgstr "Komento:"
 msgid "Container:"
 msgstr "Ujo:"
 
-#: ../data/properties.ui.h:9 ../data/xplayer.ui.h:128
-#: ../src/xplayer-properties-view.c:270
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "Video"
 
@@ -132,11 +500,6 @@ msgstr "Kadra kadenco:"
 msgid "Bitrate:"
 msgstr "Bitrapido:"
 
-#: ../data/properties.ui.h:14 ../data/xplayer.ui.h:142
-#: ../src/xplayer-properties-view.c:268
-msgid "Audio"
-msgstr "Sono"
-
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
 msgstr "Specimena kvanto:"
@@ -145,23 +508,42 @@ msgstr "Specimena kvanto:"
 msgid "Channels:"
 msgstr "Kanaloj:"
 
-#: ../data/video-list.ui.h:1 ../src/xplayer-dnd-menu.c:97
-msgid "_Add to Playlist"
-msgstr "_Aldoni al ludlisto"
-
-#: ../data/video-list.ui.h:2
-msgid "Add the video to the playlist"
-msgstr "Aldoni la videon al la ludlisto"
-
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:143
-#: ../src/xplayer-object.c:1667
-msgid "Movie Player"
-msgstr "Film-ludilo"
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
+msgid "Videos"
+msgstr "Videoj"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
-msgid "Play movies and songs"
-msgstr "Ludas filmojn kaj kantojn"
+msgid "Play movies"
+msgstr ""
+
+#: ../data/xplayer.desktop.in.in.in.h:3
+msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
+msgstr ""
+
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Ludi/Paŭzi"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Sekva"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Antaŭa"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr ""
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Tutekrane"
 
 #: ../data/xplayer.ui.h:1
 msgid "_Movie"
@@ -260,24 +642,24 @@ msgid "Fit Window to Movie"
 msgstr "Adapti fenestron al filmo"
 
 #: ../data/xplayer.ui.h:25
-msgid "_Resize 1:2"
-msgstr "Alig_randigi 1:2"
+msgid "_Resize 1∶2"
+msgstr ""
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "Duonigi la grandon de originala video"
 
 #: ../data/xplayer.ui.h:27
-msgid "Resize _1:1"
-msgstr "Aligrandigi _1:1"
+msgid "Resize _1∶1"
+msgstr ""
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "Ŝanĝi al originala grando de video"
 
 #: ../data/xplayer.ui.h:29
-msgid "Resize _2:1"
-msgstr "Aligrandigi _2:1"
+msgid "Resize _2∶1"
+msgstr ""
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
@@ -445,28 +827,28 @@ msgid "Sets square aspect ratio"
 msgstr "Agordi proporcion al 1:1"
 
 #: ../data/xplayer.ui.h:71
-msgid "4:3 (TV)"
-msgstr "4:3 (TV)"
+msgid "4∶3 (TV)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:72
-msgid "Sets 4:3 (TV) aspect ratio"
-msgstr "Agordi proporcion al 4:3 (TV)"
+msgid "Sets 4∶3 (TV) aspect ratio"
+msgstr ""
 
 #: ../data/xplayer.ui.h:73
-msgid "16:9 (Widescreen)"
-msgstr "16:9 (larĝ-ekrane)"
+msgid "16∶9 (Widescreen)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:74
-msgid "Sets 16:9 (widescreen) aspect ratio"
-msgstr "Agordi proporcion al 16:9 (larĝekrane)"
+msgid "Sets 16∶9 (widescreen) aspect ratio"
+msgstr ""
 
 #: ../data/xplayer.ui.h:75
-msgid "2.11:1 (DVB)"
-msgstr "2.11:1 (DVB)"
+msgid "2.11∶1 (DVB)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:76
-msgid "Sets 2.11:1 (DVB) aspect ratio"
-msgstr "Agordi proporcion al 2:1 (DVB)"
+msgid "Sets 2.11∶1 (DVB) aspect ratio"
+msgstr ""
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
@@ -500,385 +882,103 @@ msgstr "Transsalti _malantaŭen"
 msgid "Skip backwards"
 msgstr "Transsalti malantaŭen"
 
-#: ../data/xplayer.ui.h:87
-msgid "14.4 Kbps Modem"
-msgstr "14.4 Kbps modemo"
-
-#: ../data/xplayer.ui.h:88
-msgid "19.2 Kbps Modem"
-msgstr "Modemo de 19,2 kbps"
-
 #: ../data/xplayer.ui.h:89
-msgid "28.8 Kbps Modem"
-msgstr "Modemo de 28,8 kbps"
-
-#: ../data/xplayer.ui.h:90
-msgid "33.6 Kbps Modem"
-msgstr "Modemo de 33,6 kbps"
-
-#: ../data/xplayer.ui.h:91
-msgid "34.4 Kbps Modem"
-msgstr "Modemo de 34,4 kbps"
-
-#: ../data/xplayer.ui.h:92
-msgid "56 Kbps Modem/ISDN"
-msgstr "56 Kbps modemo/ISDN"
-
-#: ../data/xplayer.ui.h:93
-msgid "112 Kbps Dual ISDN/DSL"
-msgstr "112 Kbps duala ISDN/DSL"
-
-#: ../data/xplayer.ui.h:94
-msgid "256 Kbps DSL/Cable"
-msgstr "Kabla reto de 256 kbps"
-
-#: ../data/xplayer.ui.h:95
-msgid "384 Kbps DSL/Cable"
-msgstr "Kabla reto de 384 kbps"
-
-#: ../data/xplayer.ui.h:96
-msgid "512 Kbps DSL/Cable"
-msgstr "Kabla reto de 512 kbps"
-
-#: ../data/xplayer.ui.h:97
-msgid "1.5 Mbps T1/Intranet/LAN"
-msgstr "1.5 Mbps T1/Intrareto/LAN"
-
-#: ../data/xplayer.ui.h:98
-msgid "Intranet/LAN"
-msgstr "Intrareto/LAN"
-
-#. Audio visualization dimensions
-#: ../data/xplayer.ui.h:100
-msgid "Normal"
-msgstr "Normala"
-
-#. Audio visualization dimensions
-#: ../data/xplayer.ui.h:102
-msgid "Large"
-msgstr "Granda"
-
-#. Audio visualization dimensions
-#: ../data/xplayer.ui.h:104
-msgid "Extra Large"
-msgstr "Grandega"
-
-#: ../data/xplayer.ui.h:105 ../src/xplayer-properties-view.c:228
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5593
-msgid "Stereo"
-msgstr "Dukanale"
-
-#: ../data/xplayer.ui.h:106
-msgid "4-channel"
-msgstr "4-kanale"
-
-#: ../data/xplayer.ui.h:107
-msgid "4.1-channel"
-msgstr "4.1-kanale"
-
-#: ../data/xplayer.ui.h:108
-msgid "5.0-channel"
-msgstr "5.0-kanale"
-
-#: ../data/xplayer.ui.h:109
-msgid "5.1-channel"
-msgstr "5.1-kanale"
-
-#: ../data/xplayer.ui.h:110
-msgid "AC3 Passthrough"
-msgstr "AC3-trapasigilo"
-
-#: ../data/xplayer.ui.h:111
-msgid "Xplayer Preferences"
-msgstr "Agordoj de Xplayero"
-
-#: ../data/xplayer.ui.h:112
-msgid "Playback"
-msgstr "Reprodukti"
-
-#: ../data/xplayer.ui.h:113
-msgid "Start playing files from last position"
-msgstr "Ludi dosierojn de la lasta pozicio"
-
-#: ../data/xplayer.ui.h:114
-msgid "Networking"
-msgstr "Reto"
-
-#: ../data/xplayer.ui.h:115
-msgid "Connection _speed:"
-msgstr "_Konektrapido:"
-
-#: ../data/xplayer.ui.h:116
-msgid "Text Subtitles"
-msgstr "Subtekstoj"
-
-#: ../data/xplayer.ui.h:117
-msgid "_Load subtitle files when movie is loaded"
-msgstr "Ŝargi _subtekstojn kiam filmo estas ŝargite"
-
-#: ../data/xplayer.ui.h:118
-msgid "_Font:"
-msgstr "_Tiparo:"
-
-#: ../data/xplayer.ui.h:119
-msgid "_Encoding:"
-msgstr "_Kodoprezento:"
-
-#: ../data/xplayer.ui.h:120
-msgid "External Chapters"
-msgstr "Eksteraj ĉapitroj"
-
-#: ../data/xplayer.ui.h:121
-msgid "Load _chapter files when movie is loaded"
-msgstr "Ŝargi ĉ_apitrodosierojn kiam filmo estas ŝargite"
-
-#. Tab label in the Preferences dialogue
-#: ../data/xplayer.ui.h:124
-msgid "Display"
-msgstr "Montri"
-
-#: ../data/xplayer.ui.h:125
-msgid "_Resize the window when a new video is loaded"
-msgstr "Alig_randigi la fenestron kiam nova video estas ŝargite"
-
-#: ../data/xplayer.ui.h:126
-msgid "Disable _deinterlacing of interlaced videos"
-msgstr "_Malebligi malinterplektigadon de interplektitaj videoj"
-
-#: ../data/xplayer.ui.h:127
-msgid "Disable screensaver when playing "
-msgstr "Malaktivigi ekrankurteno kiam ludanta "
-
-#: ../data/xplayer.ui.h:129
-msgid "Video or Audio"
-msgstr "Video aŭ sono"
-
-#: ../data/xplayer.ui.h:130
-msgid "Visual Effects"
-msgstr "Aspektaj efektoj"
-
-#: ../data/xplayer.ui.h:131
-msgid "Show _visual effects when an audio file is played"
-msgstr "Montri _aspektajn efektojn dum ludado de sondosiero"
-
-#: ../data/xplayer.ui.h:132
-msgid "_Type of visualization:"
-msgstr "_Speco de bildigo:"
-
-#: ../data/xplayer.ui.h:133
-msgid "Visualization _size:"
-msgstr "Bildig_grando:"
-
-#: ../data/xplayer.ui.h:134
-msgid "Color Balance"
-msgstr "Kolora ekvilibrigo"
-
-#: ../data/xplayer.ui.h:135
-msgid "_Brightness:"
-msgstr "_Heleco:"
-
-#: ../data/xplayer.ui.h:136
-msgid "Co_ntrast:"
-msgstr "Ko_ntrasto:"
-
-#: ../data/xplayer.ui.h:137
-msgid "Sat_uration:"
-msgstr "Sat_ureco:"
-
-#: ../data/xplayer.ui.h:138
-msgid "_Hue:"
-msgstr "_Nuanco:"
-
-#: ../data/xplayer.ui.h:139
-msgid "Reset to _Defaults"
-msgstr "Reagordi al _defaŭltoj"
-
-#: ../data/xplayer.ui.h:140
-msgid "Audio Output"
-msgstr "Sona eligo"
-
-#: ../data/xplayer.ui.h:141
-msgid "_Audio output type:"
-msgstr "_Soneligtipo:"
-
-#: ../data/xplayer.ui.h:145
 msgid "Time seek bar"
 msgstr "Tempobreto"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:1
-msgid "Allow the screensaver to activate when playing audio"
-msgstr "Permesi ke la ekrankurteno lanĉas eĉ se sono estas ludata"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:2
-msgid ""
-"Allow the screensaver to activate when playing audio. Disable if you have "
-"monitor-powered speakers."
-msgstr "Permesi ke la ekrankurteno lanĉas eĉ se sono estas ludata"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "Montri _aspektajn efektojn se neniu video estas montrata"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr ""
-"Montri _aspektajn efektojn dum ludado de dosiero kiu nur enhavas sonon."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "Nomo de la kromprogramo por aspektaj efektoj"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
-msgid "The brightness of the video"
-msgstr "La heleco de la video"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:7
-msgid "The contrast of the video"
-msgstr "La kontrasto de la video"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:8
-msgid "The hue of the video"
-msgstr "La kolornuanco de la video"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:9
-msgid "The saturation of the video"
-msgstr "La satureco de la video"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:10
-msgid "Resize the canvas automatically on file load"
-msgstr "Aligrandigi aŭtomate la kanvason dum dosierŝargo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:11
-msgid "Network connection speed"
-msgstr "Rapido de la retkonekto"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:12
-msgid ""
-"Approximate network connection speed, used to select quality on media over "
-"the network."
-msgstr ""
-"Proksimuma rapideco de retkonekto, uzata por elekti la kvaliton de surretaj "
-"aŭdvidaĵoj."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:13
-msgid "Repeat mode"
-msgstr "Ripetreĝimo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:14
-msgid "Shuffle mode"
-msgstr "Miksa reĝimo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:15
-msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Ĉu malebligi malinterplektigadon de interplektitaj videoj?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Whether to enable debug for the playback engine"
-msgstr "Ĉu ebligi sencimigon por la reproduktado modulo?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Type of audio output to use"
-msgstr "Speco de la uzenda soneligo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
-msgid "Visualization quality setting"
-msgstr "Kvalitagordoj de la bildigo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:19
-msgid "Quality setting for the audio visualization."
-msgstr "Kvalitagordo por la vidigo de aŭdaĵoj."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:20
-msgid "Network buffering threshold"
-msgstr "Sojla valoro de reta bufrado"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:21
-msgid ""
-"Amount of data to buffer for network streams before starting to display the "
-"stream (in seconds)."
-msgstr ""
-"Nombro da bufrotaj datumoj (en sekundoj) antaŭ ol la fluo estos ekmontrata."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:22
-msgid "Subtitle font"
-msgstr "Subteksta tiparo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:23
-msgid "Pango font description for subtitle rendering."
-msgstr "Priskribo de Pango-tiparo por subtekstmontrado."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:24
-msgid "Subtitle encoding"
-msgstr "Subteksta kodoprezento"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:25
-msgid "Encoding character set for subtitle."
-msgstr "Signaro por subtekstoj."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:26
-msgid "Default location for the \"Open...\" dialogs"
-msgstr "Defaŭlta loko de la \"Malfermi...\"-dialogo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:27
-msgid ""
-"Default location for the \"Open...\" dialogs. Default is the current "
-"directory."
-msgstr ""
-"Defaŭlta loko de la \"Malfermi...\"-dialogo. Defaŭlto estas la aktuala "
-"dosierujo."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:28
-msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Defaŭlta loko de la \"Fari ekrankopion...\"-dialogo"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:29
-msgid ""
-"Default location for the \"Take Screenshot\" dialogs. Default is the "
-"Pictures directory."
-msgstr ""
-"Defaŭlta loko de la \"Fari ekrankopion...\"-dialogo. Defaŭlto estas la "
-"aktuala dosierujo."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:30
-msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Ĉu malebligi la kromprogramojn en la home dosierujo de la uzanto?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:31
-msgid "Whether to disable the keyboard shortcuts"
-msgstr "Ĉu malebligi la klavarajn klavkombinojn?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:32
-msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr ""
-"Ĉu subtekstdosieroj estu aŭtomate kunŝargataj kiam filmo estas ŝargata?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:33
-msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr ""
-"Ĉu eksteraj ĉapitrodosieroj estu aŭtomate kunŝargataj kiam filmo estas "
-"ŝargata?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:34
-msgid ""
-"Whether to remember the position of played audio/video files when pausing or "
-"closing them"
-msgstr ""
-"Ĉu memori la posizion de ludita aŭdvideaj dosieroj kiam paŭzanta aŭ fermanta?"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:35
-msgid "Active plugins list"
-msgstr "La listo de aktivaj kromprogramoj"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:36
-msgid ""
-"A list of the names of the plugins which are currently active (loaded and "
-"running)."
-msgstr ""
-"Listo da nomoj de la aldonaĵoj kiuj aktuale aktivas (ŝargitaj kaj lanĉitaj)."
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Enigi la _adreson de la dosiero kiun vi volas malfermi:"
+
+#: ../src/backend/bacon-video-widget.c:1668
+msgid "Password requested for RTSP server"
+msgstr "Pasvorto petita por RTSP-servilo"
+
+#: ../src/backend/bacon-video-widget.c:2912
+#, c-format
+msgid "Audio Track #%d"
+msgstr "Sonludero #%d"
+
+#: ../src/backend/bacon-video-widget.c:2916
+#, c-format
+msgid "Subtitle #%d"
+msgstr "Subteksto #%d"
+
+#: ../src/backend/bacon-video-widget.c:3313
+msgid "The server you are trying to connect to is not known."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3316
+msgid "The connection to this server was refused."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3319
+msgid "The specified movie could not be found."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3326
+msgid "The server refused access to this file or stream."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3332
+msgid "Authentication is required to access this file or stream."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3339
+msgid "You are not allowed to open this file."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3344
+msgid "This location is not a valid one."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3352
+msgid "The movie could not be read."
+msgstr ""
+
+#. should be exactly one missing thing (source or converter)
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
+#, c-format
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
+msgid_plural ""
+"The playback of this movie requires the following plugins which are not "
+"installed:\n"
+"\n"
+"%s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/backend/bacon-video-widget.c:3394
+msgid ""
+"An audio or video stream is not handled due to missing codecs. You might "
+"need to install additional plugins to be able to play some types of movies"
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:3404
+msgid ""
+"This file cannot be played over the network. Try downloading it locally "
+"first."
+msgstr ""
+
+#: ../src/backend/bacon-video-widget.c:5466
+msgid "Surround"
+msgstr "Ĉirkaŭe"
+
+#: ../src/backend/bacon-video-widget.c:5468
+msgid "Mono"
+msgstr "Unukanale"
+
+#: ../src/backend/bacon-video-widget.c:5755
+msgid "Media contains no supported video streams."
+msgstr "La datenaĵo ne enhavas subtenatajn video-fluojn."
+
+#: ../src/backend/bacon-video-widget.c:5945
+msgid ""
+"Some necessary plug-ins are missing. Make sure that the program is correctly "
+"installed."
+msgstr ""
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -908,7 +1008,8 @@ msgstr "Nerekonata lanĉparametro: %d"
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Ne eblas transdoni dokument-URI-ojn al labortabla elemento 'Type=Link'"
+msgstr ""
+"Ne eblas transdoni dokument-URI-ojn al labortabla elemento 'Type=Link'"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
@@ -944,8 +1045,8 @@ msgstr "Finaĵo(j)"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "La programo ne povis eltrovi la dosierformon kiun vi volas uzi por '%s'. "
@@ -983,6 +1084,31 @@ msgstr "Opcioj de la seancoadministrilo:"
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
 msgstr "Montri opciojn de la seancoadministrilo"
+
+#. hour:minutes:seconds
+#. Translators: This is a time format, like "9:05:02" for 9
+#. * hours, 5 minutes, and 2 seconds. You may change ":" to
+#. * the separator that your locale uses or use "%Id" instead
+#. * of "%d" if your locale uses localized digits.
+#. 
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
+#, c-format
+msgctxt "long time format"
+msgid "%d:%02d:%02d"
+msgstr "%d:%02d:%02d"
+
+#. minutes:seconds
+#. Translators: This is a time format, like "5:02" for 5
+#. * minutes and 2 seconds. You may change ":" to the
+#. * separator that your locale uses or use "%Id" instead of
+#. * "%d" if your locale uses localized digits.
+#. 
+#: ../src/gst/xplayer-time-helpers.c:65
+#, c-format
+msgctxt "short time format"
+msgid "%d:%02d"
+msgstr "%d:%02d"
 
 #. Title
 #. Artist
@@ -1088,23 +1214,27 @@ msgid_plural "%d frames per second"
 msgstr[0] "%d kadro per sekundo"
 msgstr[1] "%d kadroj per sekundo"
 
-#: ../src/xplayer-audio-preview.c:168
+#: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
 msgstr "Antaŭaŭskulto"
 
-#: ../src/xplayer-cell-renderer-video.c:126
-msgid "Unknown video"
-msgstr "Nekonata video"
+#: ../src/xplayer.c:259
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Kontrolu vian sisteminstalon. Xplayero eliros nun."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "_Ludi nun"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:98
+msgid "_Add to Playlist"
+msgstr "_Aldoni al ludlisto"
+
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: ../src/xplayer-fullscreen.c:616
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "Neniu dosiero"
 
@@ -1122,19 +1252,19 @@ msgstr "La dosiero ne ekzistas."
 msgid "Make sure that Xplayer is properly installed."
 msgstr "Kontrolu ĉu Xplayero estas korekte instalita."
 
-#: ../src/xplayer-interface.c:347
+#: ../src/xplayer-interface.c:357
 msgid ""
 "Xplayer is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayero estas libera programaro; vi povas distribui kaj/aŭ modifi ĝin laŭ la "
-"kondiĉoj de la Ĝenerala Publika Permesilo de GNU eldonite de la 'Free "
+"Xplayero estas libera programaro; vi povas distribui kaj/aŭ modifi ĝin laŭ "
+"la kondiĉoj de la Ĝenerala Publika Permesilo de GNU eldonite de la 'Free "
 "Software Foundation'; aŭ en la 2a versio de la permesilo aŭ (laŭ via volo) "
 "en iu sekva versio."
 
-#: ../src/xplayer-interface.c:351
+#: ../src/xplayer-interface.c:361
 msgid ""
 "Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1145,17 +1275,17 @@ msgstr ""
 "GARANTIO; eĉ sen la implica garantio de NEGOCEBLO aŭ ADAPTADO AL IU APARTA "
 "CELO. Vidu la Ĝeneralan Publikan Permesilon de GNU por pli da detaloj."
 
-#: ../src/xplayer-interface.c:355
+#: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Vi devintus ricevi kopion de la Ĝenerala Publika Permesilo de GNU kune kun "
 "Vino; se ne, skribu al Free Software Foundation, Inc., 51 Franklin Street, "
 "Fifth Floor, Boston, MA 02110-1301 Usono."
 
-#: ../src/xplayer-interface.c:358
+#: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
@@ -1164,211 +1294,74 @@ msgstr ""
 "kromprogramoj."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:190
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "Nenio"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:195
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "Aŭtomate"
 
-#. Translators:
-#. * This is not a JPEG image, but a disc image, for example,
-#. * an ISO file
-#: ../src/xplayer-menu.c:765
-#, c-format
-msgid "Play Image '%s'"
-msgstr "Ludi diskkopion '%s'"
-
-#: ../src/xplayer-menu.c:768 ../src/xplayer-menu.c:851
-#, c-format
-msgid "device%d"
-msgstr "aparato%d"
-
-#: ../src/xplayer-menu.c:848
-#, c-format
-msgid "Play Disc '%s'"
-msgstr "Ludi diskon '%s'"
-
-#. This lists the back-end type and version, such as
-#. * Movie Player using GStreamer 0.10.1
-#: ../src/xplayer-menu.c:1189
-#, c-format
-msgid "Movie Player using %s"
-msgstr "Filmludilo uzas %s"
-
-#: ../src/xplayer-menu.c:1193
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "Kopirajto © 2002-2009 Bastien NOCERA"
-
-#: ../src/xplayer-menu.c:1198
-msgid "translator-credits"
-msgstr ""
-"Launchpad Contributions:\n"
-"  Aisano https://launchpad.net/~info-ais-sanmarino\n"
-"  Kim Ribeiro https://launchpad.net/~kimribeiro\n"
-"  Kristjan SCHMIDT https://launchpad.net/~kristjan-eo\n"
-"  Manuel https://launchpad.net/~elektrolupo\n"
-"  Michael Moroni https://launchpad.net/~airon90\n"
-"  Patrick (Petriko) Oudejans https://launchpad.net/~patrickoudejans\n"
-"  Sergio Aldana https://launchpad.net/~sangtrinkulo\n"
-"GNOME Contribution:\n"
-"  Tiffany ANTOPOLSKI"
-
-#: ../src/xplayer-menu.c:1202
-msgid "Xplayer Website"
-msgstr "Retejo de Xplayero"
-
-#: ../src/xplayer-menu.c:1236
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "Agordi kromprogramojn"
 
+#: ../src/xplayer-object.c:162
+#, c-format
+msgid ""
+"%s\n"
+"Run '%s --help' to see a full list of available command line options.\n"
+msgstr ""
+"%s\n"
+"Rulu '%s --help' por vidi kompletan liston de disponeblaj komandliniaj "
+"opcioj.\n"
+
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:471
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayero %s"
 
-#: ../src/xplayer-object.c:1047 ../browser-plugin/xplayer-plugin-viewer.c:367
-msgid "Playing"
-msgstr "Ludanta"
-
-#: ../src/xplayer-object.c:1049 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Paŭzigi"
 
-#: ../src/xplayer-object.c:1054 ../browser-plugin/xplayer-plugin-viewer.c:363
-msgid "Paused"
-msgstr "Paŭzigita"
-
-#: ../src/xplayer-object.c:1056 ../src/xplayer-object.c:1066
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Ludi"
 
-#: ../src/xplayer-object.c:1061 ../src/xplayer-object.c:1659
-#: ../src/xplayer-statusbar.c:115 ../browser-plugin/xplayer-plugin-viewer.c:351
-msgid "Stopped"
-msgstr "Haltigita"
-
-#: ../src/xplayer-object.c:1142 ../src/xplayer-object.c:1169
-#: ../src/xplayer-object.c:1799 ../src/xplayer-object.c:1963
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayero ne povas ludi na '%s'."
 
-#: ../src/xplayer-object.c:1246
-#, c-format
-msgid ""
-"Xplayer could not play this media (%s) although a plugin is present to handle "
-"it."
-msgstr ""
-"Xplayero ne povas ludi ĉi tiun aŭdvidaĵojn (%s) kvankam ĉeestas kromprogramo "
-"por pritrakti ĝin."
-
-#: ../src/xplayer-object.c:1247
-msgid ""
-"You might want to check that a disc is present in the drive and that it is "
-"correctly configured."
-msgstr ""
-"Vi eble emas kontroli, ĉu disko estas en la diskingo kaj ĉu estas agordita "
-"ĝuste."
-
-#: ../src/xplayer-object.c:1255
-msgid "More information about media plugins"
-msgstr "Plu informo pri aŭdvideaj kromprogramoj"
-
-#: ../src/xplayer-object.c:1256
-msgid ""
-"Please install the necessary plugins and restart Xplayer to be able to play "
-"this media."
-msgstr ""
-"Bonvolu instali la necesajn kromprogramojn kaj restarti Xplayeron por esti "
-"ebla al ludado de ĉi tiu aŭdvidaĵo."
-
-#: ../src/xplayer-object.c:1258
-#, c-format
-msgid ""
-"Xplayer cannot play this type of media (%s) because it does not have the "
-"appropriate plugins to be able to read from the disc."
-msgstr ""
-"Xplayero ne povas ludi ĉi tiun specon de aŭdvidaĵo (%s) ĉar ne havas la "
-"konvenajn kromprogramojn por legado de la disko."
-
-#: ../src/xplayer-object.c:1260
-#, c-format
-msgid ""
-"Xplayer cannot play this type of media (%s) because you do not have the "
-"appropriate plugins to handle it."
-msgstr ""
-"Xplayero ne povas ludi ĉi tiun specon de aŭdvidaĵo (%s) ĉar vi ne havas la "
-"konvenajn kromprogramojn por pritrakti ĝin."
-
-#: ../src/xplayer-object.c:1263
-#, c-format
-msgid "Xplayer cannot play this type of media (%s) because it is not supported."
-msgstr ""
-"Xplayero ne povas ludi ĉi tiun specon de aŭdvidaĵo (%s) ĉar ĝi ne estas "
-"subtenita."
-
-#: ../src/xplayer-object.c:1264
-msgid "Please insert another disc to play back."
-msgstr "Bonvolu enmeti alian diskon por reproduktado."
-
-#: ../src/xplayer-object.c:1300
-msgid "Xplayer was not able to play this disc."
-msgstr "Xplayero ne povis ludi la diskon."
-
-#: ../src/xplayer-object.c:1301 ../src/xplayer-object.c:4229
-msgid "No reason."
-msgstr "Neniu kaŭzo."
-
-#: ../src/xplayer-object.c:1315
-msgid "Xplayer does not support playback of Audio CDs"
-msgstr "Xplayero ne subtenas ludadon de sonaj KD-j."
-
-#: ../src/xplayer-object.c:1316
-msgid "Please consider using a music player or a CD extractor to play this CD"
-msgstr ""
-"Bonvolu konsideri la uzado de muzikaj ludiloj aŭ KD-eltirilo por ludi ĉi "
-"tiun KD"
-
-#: ../src/xplayer-object.c:1805
-msgid "No error message"
-msgstr "Neniu erarmesaĝo"
-
-#: ../src/xplayer-object.c:2154
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayero ne povis montri la helpenhavoj."
 
-#: ../src/xplayer-object.c:2493 ../src/xplayer-object.c:2495
-#: ../browser-plugin/xplayer-plugin-viewer.c:1417
-msgid "An error occurred"
-msgstr "Eraro okazis"
-
-#: ../src/xplayer-object.c:4064 ../src/xplayer-object.c:4066
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "Antaŭa ĉapitro/filmo"
 
-#: ../src/xplayer-object.c:4073 ../src/xplayer-object.c:4075
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "Ludi / paŭzigi"
 
-#: ../src/xplayer-object.c:4083 ../src/xplayer-object.c:4085
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "Sekva ĉapitro/filmo"
 
-#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4097 ../src/xplayer-object.c:4099
-msgid "Fullscreen"
-msgstr "Tutekrane"
-
-#: ../src/xplayer-object.c:4229
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "Ne povis startigi Xplayeron."
+
+#: ../src/xplayer-object.c:4175
+msgid "No reason."
+msgstr "Neniu kaŭzo."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
@@ -1377,18 +1370,6 @@ msgstr "Malfermi lokon..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "Enŝalti sencimigon"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "Ludi/Paŭzi"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "Sekva"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "Antaŭa"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1443,120 +1424,69 @@ msgstr "Ludlist-indekso"
 msgid "Movies to play"
 msgstr "Ludotaj filmoj"
 
-#: ../src/xplayer-options.c:117
+#: ../src/xplayer-options.c:79
+msgid "- Play movies and songs"
+msgstr "- Ludi filmojn kaj kantojn"
+
+#: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr "Ne eblis envicigi kaj anstataŭigi en sama tempo"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3-ludlisto de ShoutCast"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3-sono (fluita)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3-sono (fluita, DOS-formo)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "Komunigebla ludlisto (XML-formo)"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "Titolo %d"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "Ne eblis konservi la ludliston"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "Konservi ludliston"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1264
-#: ../src/xplayer-sidebar.c:142
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Ludlisto"
 
-#: ../src/xplayer-playlist.c:1857
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "La aŭdvidaĵolisto '%s' ne povas esti analizita. Ĝi estus difektita."
 
-#: ../src/xplayer-playlist.c:1858
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "Ludlist-eraro"
 
-#: ../src/xplayer-preferences.c:295
+#: ../src/xplayer-preferences.c:297
 msgid "Preferences"
 msgstr "Agordoj"
 
-#: ../src/xplayer-preferences.c:451
+#: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "Elekti subteksttiparon"
-
-#: ../src/xplayer-properties-main.c:115 ../src/xplayer-properties-view.c:266
-msgid "Audio/Video"
-msgstr "Sono/Video"
-
-#: ../src/xplayer-properties-view.c:128
-msgid "N/A"
-msgstr "Neaplikeble"
-
-#: ../src/xplayer-properties-view.c:157
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "Neaplikeble"
-
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kb/s"
-
-#: ../src/xplayer-properties-view.c:177
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:209
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:216
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "Neaplikeble"
-
-#: ../src/xplayer-properties-view.c:224
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5589
-msgid "Surround"
-msgstr "Ĉirkaŭe"
-
-#: ../src/xplayer-properties-view.c:226
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5591
-msgid "Mono"
-msgstr "Unukanale"
-
-#: ../src/xplayer-properties-view.c:236
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "Neaplikeble"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1586,8 +1516,8 @@ msgstr "Bufrado"
 #. eg: 75 %
 #: ../src/xplayer-statusbar.c:250
 #, c-format
-msgid "%d %%"
-msgstr "%d %%"
+msgid "%lf %%"
+msgstr ""
 
 #. eg: Paused, 0:32 / 1:05
 #: ../src/xplayer-statusbar.c:325
@@ -1598,15 +1528,17 @@ msgstr "%s, %s"
 #. eg: Buffering, 75 %
 #: ../src/xplayer-statusbar.c:330
 #, c-format
-msgid "%s, %d %%"
-msgstr "%s, %d %%"
+msgid "%s, %f %%"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
 msgstr "Aktuala lokaĵaro"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "Araba"
 
@@ -1614,7 +1546,8 @@ msgstr "Araba"
 msgid "Armenian"
 msgstr "Armena"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "Balta"
@@ -1623,17 +1556,22 @@ msgstr "Balta"
 msgid "Celtic"
 msgstr "Kelta"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "Mezeŭropa"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "Ĉina simpligita"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "Ĉina tradicia"
@@ -1642,9 +1580,12 @@ msgstr "Ĉina tradicia"
 msgid "Croatian"
 msgstr "Kroata"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "Cirila"
 
@@ -1652,7 +1593,8 @@ msgstr "Cirila"
 msgid "Cyrillic/Russian"
 msgstr "Cirila/Rusa"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "Cirila/Ukraina"
 
@@ -1660,7 +1602,8 @@ msgstr "Cirila/Ukraina"
 msgid "Georgian"
 msgstr "Kartvela"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "Greka"
@@ -1673,8 +1616,10 @@ msgstr "Guĝarata"
 msgid "Gurmukhi"
 msgstr "Gurmukia"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "Hebrea"
 
@@ -1690,13 +1635,16 @@ msgstr "Hindia"
 msgid "Icelandic"
 msgstr "Islanda"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "Japana"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "Korea"
 
@@ -1708,7 +1656,8 @@ msgstr "Norda"
 msgid "Persian"
 msgstr "Persa"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "Rumana"
 
@@ -1720,36 +1669,71 @@ msgstr "Sudeŭropa"
 msgid "Thai"
 msgstr "Taja"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "Turka"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "Unikodo"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "Okcidente"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vjetnama"
 
-#: ../src/xplayer-video-list.c:330
-msgid "No video URI"
-msgstr "Neniu videoadreso"
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
+msgid "All files"
+msgstr "Ĉiuj dosieroj"
+
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
+msgid "Supported files"
+msgstr "Subtenataj dosieroj"
+
+#: ../src/xplayer-uri.c:360
+msgid "Audio files"
+msgstr "Son-dosieroj"
+
+#: ../src/xplayer-uri.c:368
+msgid "Video files"
+msgstr "Video-dosieroj"
+
+#: ../src/xplayer-uri.c:378
+msgid "Subtitle files"
+msgstr "Subtekstdosieroj"
+
+#: ../src/xplayer-uri.c:430
+msgid "Select Text Subtitles"
+msgstr "Elekti subtekstojn"
+
+#: ../src/xplayer-uri.c:495
+msgid "Select Movies or Playlists"
+msgstr "Elekti fimlojn aŭ ludlistojn"
+
+#: ../src/xplayer-uri.c:499
+msgid "Add Directory"
+msgstr ""
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:872
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1760,205 +1744,41 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:873
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "Dosiernomo"
 
-#: ../src/xplayer-video-thumbnailer.c:875
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "Distingivo"
 
-#: ../src/xplayer-video-thumbnailer.c:878
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "Daŭro"
 
-#: ../src/xplayer-uri.c:506 ../src/plugins/chapters/xplayer-chapters.c:998
-msgid "All files"
-msgstr "Ĉiuj dosieroj"
-
-#: ../src/xplayer-uri.c:511 ../src/plugins/chapters/xplayer-chapters.c:995
-msgid "Supported files"
-msgstr "Subtenataj dosieroj"
-
-#: ../src/xplayer-uri.c:523
-msgid "Audio files"
-msgstr "Son-dosieroj"
-
-#: ../src/xplayer-uri.c:531
-msgid "Video files"
-msgstr "Video-dosieroj"
-
-#: ../src/xplayer-uri.c:541
-msgid "Subtitle files"
-msgstr "Subtekstdosieroj"
-
-#: ../src/xplayer-uri.c:593
-msgid "Select Text Subtitles"
-msgstr "Elekti subtekstojn"
-
-#: ../src/xplayer-uri.c:656
-msgid "Select Movies or Playlists"
-msgstr "Elekti fimlojn aŭ ludlistojn"
-
-#. Options parsing
-#: ../src/xplayer.c:201
-msgid "- Play movies and songs"
-msgstr "- Ludi filmojn kaj kantojn"
-
-#: ../src/xplayer.c:212
-#, c-format
-msgid ""
-"%s\n"
-"Run '%s --help' to see a full list of available command line options.\n"
+#: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
+msgid "Apple Trailers"
 msgstr ""
-"%s\n"
-"Rulu '%s --help' por vidi kompletan liston de disponeblaj komandliniaj "
-"opcioj.\n"
 
-#: ../src/xplayer.c:254 ../src/xplayer.c:265
-#: ../browser-plugin/xplayer-plugin-viewer.c:663
-#: ../browser-plugin/xplayer-plugin-viewer.c:1793
-msgid "Xplayer Movie Player"
-msgstr "Filmludilo Xplayero"
-
-#: ../src/xplayer.c:255 ../browser-plugin/xplayer-plugin-viewer.c:2251
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Ne eblis pravalorizi la fadensendanĝerajn bibliotekojn."
-
-#: ../src/xplayer.c:255
-msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Kontrolu vian sisteminstalon. Xplayero eliros nun."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:1589
-msgid "Password requested for RTSP server"
-msgstr "Pasvorto petita por RTSP-servilo"
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2858
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2862
-#, c-format
-msgid "Audio Track #%d"
-msgstr "Sonludero #%d"
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2890
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2894
-#, c-format
-msgid "Subtitle #%d"
-msgstr "Subteksto #%d"
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3298
-msgid ""
-"The requested audio output was not found. Please select another audio output "
-"in the Multimedia Systems Selector."
+#: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
+msgid "Sets the user agent for the Apple Trailers site"
 msgstr ""
-"La petita soneligo ne estis trovita. Bonvolu elekti alian soneligon en la "
-"Plurmedia Sistemelektilo."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3303
-msgid "Location not found."
-msgstr "Lokon ne trovis."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3307
-msgid ""
-"Could not open location; you might not have permission to open the file."
+#: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
+msgid "Autoload Subtitles"
 msgstr ""
-"Ne eblas malferi lokon; vi eble ne havas permeso por malfermi la dosieron."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3318
-msgid ""
-"The video output is in use by another application. Please close other video "
-"applications, or select another video output in the Multimedia Systems "
-"Selector."
+#: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
+msgid "Autoloads text subtitles"
 msgstr ""
-"La videa eligo estas uzita per alia aplikaĵo. Bonvolu fermi aliajn videajn "
-"aplikaĵojn, aŭ elektu alian videan eligon en la Plurmedia Sistemelektilo."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3324
-msgid ""
-"The audio output is in use by another application. Please select another "
-"audio output in the Multimedia Systems Selector. You may want to consider "
-"using a sound server."
-msgstr ""
-"La soneligo estas uzita per alia aplikaĵo. Bonvolu elekti alian soneligo en "
-"la Plurmedia Sistemelektilo. Vi povas voli konsideri uzanta sonservilo."
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
+msgid "Video Disc Recorder"
+msgstr "Videa disko-registrilo"
 
-#. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3342
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3348
-#, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
-msgid_plural ""
-"The playback of this movie requires the following decoders which are not "
-"installed:\n"
-"\n"
-"%s"
-msgstr[0] ""
-"La reproduktado de ĉi tiu filmo bezonas %s kromprogramon kiu ne estas "
-"instalita."
-msgstr[1] ""
-"La reproduktado de ĉi tiu filmo bezonas la sekvantajn malkodilojn kiujn ne "
-"estas instalitajn:\n"
-"\n"
-"%s"
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:3374
-msgid ""
-"Cannot play this file over the network. Try downloading it to disk first."
-msgstr ""
-"Ne eblas prezenti tion ĉi el la reto. Provu unue elŝuti ĝin al via disko."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5878
-msgid "Media contains no supported video streams."
-msgstr "La datenaĵo ne enhavas subtenatajn video-fluojn."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:6052
-msgid ""
-"Failed to create a GStreamer play object. Please check your GStreamer "
-"installation."
-msgstr ""
-"Fiaskis krei GStreamer-ludobjekton. Bonvolu kontrolas vian Gstreamer-instalo."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:6172
-msgid ""
-"Failed to open audio output. You may not have permission to open the sound "
-"device, or the sound server may not be running. Please select another audio "
-"output in the Multimedia Systems Selector."
-msgstr ""
-"Fiaskis malfermita soneligo. Vi eble ne havas permiso por malfermi la "
-"sonaparaton, aŭ la sonservilo eble ne estas lanĉitaj. Bonvolu elekti alian "
-"soneligo en la Plurmedia Sistemelektilo."
-
-#: ../src/backend/bacon-video-widget-gst-0.10.c:6192
-msgid ""
-"Could not find the audio output. You may need to install additional "
-"GStreamer plugins, or select another audio output in the Multimedia Systems "
-"Selector."
-msgstr ""
-"Ne povas trovi la soneligon. Vi eble bezonas instali aldonajn GStreamer-"
-"kromprogramojn, aŭ elekti alia soneligo en la Plurmedia Sistemelektilo."
-
-#. hour:minutes:seconds
-#. Translators: This is a time format, like "9:05:02" for 9
-#. * hours, 5 minutes, and 2 seconds. You may change ":" to
-#. * the separator that your locale uses or use "%Id" instead
-#. * of "%d" if your locale uses localized digits.
-#.
-#: ../src/backend/video-utils.c:83 ../src/plugins/skipto/xplayer-time-entry.c:57
-#, c-format
-msgctxt "long time format"
-msgid "%d:%02d:%02d"
-msgstr "%d:%02d:%02d"
-
-#. minutes:seconds
-#. Translators: This is a time format, like "5:02" for 5
-#. * minutes and 2 seconds. You may change ":" to the
-#. * separator that your locale uses or use "%Id" instead of
-#. * "%d" if your locale uses localized digits.
-#.
-#: ../src/backend/video-utils.c:92
-#, c-format
-msgctxt "short time format"
-msgid "%d:%02d"
-msgstr "%d:%02d"
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
+msgid "Records (S)VCDs or video DVDs"
+msgstr "Rekorko de (S)VKD-oj aŭ videoj DVD-oj"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
@@ -1984,37 +1804,20 @@ msgstr "Kopii (S)VKD-n..."
 msgid "Copy the currently playing (S)VCD"
 msgstr "Kopii la aktualen ludantan (S)VKD-n"
 
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:129
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
 msgstr "La videodiskon ne povas esti duobligita."
 
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:131
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:276
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
 msgstr "La filmo ne povas esti registrita."
 
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:157
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:167
-#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:263
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
 msgstr "Ne eblas skribi projekton."
-
-#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
-msgid "Video Disc Recorder"
-msgstr "Videa disko-registrilo"
-
-#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
-msgid "Records (S)VCDs or video DVDs"
-msgstr "Rekorko de (S)VKD-oj aŭ videoj DVD-oj"
-
-#: ../src/plugins/chapters/chapters.plugin.in.h:1
-#: ../src/plugins/chapters/xplayer-chapters.c:1139
-msgid "Chapters"
-msgstr "Ĉapitroj"
-
-#: ../src/plugins/chapters/chapters.plugin.in.h:2
-msgid "Support chapter markers in movies."
-msgstr "Subteni ĉapitrajn markojn de filmoj."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
@@ -2072,6 +1875,15 @@ msgstr "Aldoni novan ĉapitron"
 msgid "Create a new chapter list for the movie"
 msgstr "Krei novan ĉapitroliston por la filmo"
 
+#: ../src/plugins/chapters/chapters.plugin.in.h:1
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
+msgid "Chapters"
+msgstr "Ĉapitroj"
+
+#: ../src/plugins/chapters/chapters.plugin.in.h:2
+msgid "Support chapter markers in movies"
+msgstr ""
+
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
 msgid ""
@@ -2081,66 +1893,66 @@ msgstr ""
 "<b>Titolo: </b>%s\n"
 "<b>Starttempo: </b>%s"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:328
+#: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
 msgstr "Eraro dum legado de ĉapitrodosiero"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:543
+#: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
 msgstr "Ĉapitro kun sama nomo jam ekzistas"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:544
+#: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
 msgstr "Provi alian nomon aŭ forigi ekzistantan ĉapitron."
 
-#: ../src/plugins/chapters/xplayer-chapters.c:717
+#: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
 msgstr "Eraro dum skribo de ĉapitrodosiero"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:842
+#: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
 msgstr "Eraro okazis dum konservado de la ĉapitroj"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:843
+#: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "Bonvolu kontroli ke vi havas permeson por skribi al la dosiero kiu enhavas "
 "la ludilon."
 
-#: ../src/plugins/chapters/xplayer-chapters.c:976
+#: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
 msgstr "Malfermi ĉapitrodosieron"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1093
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
 msgstr "Ĉapitra ekrankopion"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1104
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
 msgstr "Ĉapitra titolo"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1184
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
 msgstr "Ĉu konservi ŝanĝojn de la ĉapitrolisto antaŭ eliro?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
-#: ../src/plugins/chapters/xplayer-chapters.c:1189
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
 msgstr "Fermi sen konservo"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
-#: ../src/plugins/chapters/xplayer-chapters.c:1191
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
 msgstr "Konservi"
 
-#: ../src/plugins/chapters/xplayer-chapters.c:1194
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr "Se vi ne konservas, ŝanĝoj de ĉapitrolisto perdiĝos."
 
-#: ../src/plugins/chapters/xplayer-cmml-parser.c:651
-msgid "Failed to parse CMML file"
-msgstr "Fiaskis analizi CMML-dosieron"
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
+msgid "Add Chapter"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "D-Bus Service"
@@ -2175,13 +1987,37 @@ msgstr "Nekonata atributo ‘%s’ petita de MediaPlayer2-objekto"
 msgid "The URI ‘%s’ is not supported."
 msgstr "La URI '%s' ne estas subtenata."
 
-#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
-msgid "Instant Messenger status"
-msgstr "Stato de la tujmesaĝilo"
+#: ../src/plugins/grilo/grilo.plugin.in.h:1
+msgid "Grilo Browser"
+msgstr "Grilo-foliumilo"
 
-#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
-msgid "Set your Instant Messenger status to away when a movie is playing"
-msgstr "Agordas vian tujmesaĝil-staton al \"for\", se filmo estas ludata"
+#: ../src/plugins/grilo/grilo.plugin.in.h:2
+msgid "A plugin to let you browse media content from various sources"
+msgstr ""
+
+#: ../src/plugins/grilo/grilo.ui.h:1
+msgid "Add to Playlist"
+msgstr ""
+
+#: ../src/plugins/grilo/grilo.ui.h:2
+msgid "Copy Location"
+msgstr ""
+
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+msgid "Browse"
+msgstr "Foliumi"
+
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+msgid "Search"
+msgstr "Serĉi"
+
+#: ../src/plugins/grilo/xplayer-grilo.c:437
+msgid "Browse Error"
+msgstr "Foliuma eraro"
+
+#: ../src/plugins/grilo/xplayer-grilo.c:606
+msgid "Search Error"
+msgstr "Serĉeraro"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
@@ -2195,57 +2031,13 @@ msgstr "Prezentado helpilo por fari ekranprinotojn"
 msgid "The gromit binary was not found."
 msgstr "La Gromit-a duuma dosiero ne estis trovita."
 
-#. Add the interface to Xplayer's sidebar
-#: ../src/plugins/iplayer/iplayer.plugin.in.h:1
-#: ../src/plugins/iplayer/iplayer.py:46
-msgid "BBC iPlayer"
-msgstr "BBC-iLudilo"
-
-#: ../src/plugins/iplayer/iplayer.plugin.in.h:2
-msgid "Stream BBC programs from the last 7 days from the BBC iPlayer service."
-msgstr "Fluu BBC-programojn de la lastaj 7 tagoj de la BBC iPlayer servo."
-
-#: ../src/plugins/iplayer/iplayer.py:72
-msgid "Error listing channel categories"
-msgstr "Eraro okazita dum listado de kategorioj"
-
-#: ../src/plugins/iplayer/iplayer.py:73
-msgid ""
-"There was an unknown error getting the list of television channels available "
-"on BBC iPlayer."
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
+msgid "Instant Messenger Status"
 msgstr ""
-"Estis nekonata eraro dum akiranto de la listo de haveblaj televidaj kanaloj "
-"sur BBC iPlayer."
 
-#. Append a dummy child row so that the expander's visible; we can
-#. then queue off the expander to load the programme listing for this
-#. category
-#: ../src/plugins/iplayer/iplayer.py:84
-msgid "Loading…"
-msgstr "Ŝarganta…"
-
-#. Translators: the "programme feed" is the list of TV shows
-#. available to watch online
-#: ../src/plugins/iplayer/iplayer.py:136
-msgid "Error getting programme feed"
-msgstr "Eraro dum akiranto de programfluo"
-
-#: ../src/plugins/iplayer/iplayer.py:137
-msgid ""
-"There was an error getting the list of programmes for this channel and "
-"category combination."
-msgstr ""
-"Estis eraro dum akiranto de la listo de programoj por ĉi tiu kombinaĵo de "
-"kanalo kaj kategorio."
-
-#: ../src/plugins/iplayer/iplayer2.py:298
-msgid "<no reason given>"
-msgstr "<neniu kialo difinita>"
-
-#: ../src/plugins/iplayer/iplayer2.py:299
-#, python-format
-msgid "Programme unavailable (\"%s\")"
-msgstr "La programo estas neuzebla (\"%s\")"
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
+msgid "Set your Instant Messenger status to away when a movie is playing"
+msgstr "Agordas vian tujmesaĝil-staton al \"for\", se filmo estas ludata"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -2263,25 +2055,29 @@ msgstr "Ne eblis pravalorizi na lirc."
 msgid "Couldn't read lirc configuration."
 msgstr "Ne eblis legi konfiguron de lirc."
 
-#: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
-msgid "Download Movie Subtitles"
-msgstr "Elŝutante filmsubtekstojn"
+#: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
+msgid "Media Player Keys"
+msgstr ""
 
-#: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
-msgid "Subtitle _language:"
-msgstr "Subtekst_lingvo:"
+#: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
+msgid "Support additional media player keys"
+msgstr ""
 
-#: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
-msgid "_Play with Subtitle"
-msgstr "_Ludi kun subteksto"
+#: ../src/plugins/ontop/ontop.plugin.in.h:1
+msgid "Always On Top"
+msgstr "Ĉiam antaŭe"
+
+#: ../src/plugins/ontop/ontop.plugin.in.h:2
+msgid "Keep the main window on top when playing a movie"
+msgstr "Teni la ĉefan fenestron supre kiam ludanta filmo"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
 msgstr "Subtekstelŝutilo"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
-msgid "Look for subtitles for the currently playing movie."
-msgstr "Serĉi subtekstojn por la aktuale ludanta filmo."
+msgid "Look for subtitles for the currently playing movie"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:42
 msgid "Brazilian Portuguese"
@@ -2337,6 +2133,18 @@ msgstr "_Elŝuti filmsubtekstojn"
 msgid "Searching subtitles…"
 msgstr "Serĉante subtekstojn..."
 
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
+msgid "Download Movie Subtitles"
+msgstr "Elŝutante filmsubtekstojn"
+
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
+msgid "Subtitle _language:"
+msgstr "Subtekst_lingvo:"
+
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
+msgid "_Play with Subtitle"
+msgstr "_Ludi kun subteksto"
+
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
 msgstr "Subtekstlingvo"
@@ -2345,78 +2153,44 @@ msgstr "Subtekstlingvo"
 msgid "The language to search for subtitles for movies in."
 msgstr "La lingvo por uzi por serĉi por subtekstojn de filmoj."
 
-#: ../src/plugins/ontop/ontop.plugin.in.h:1
-msgid "Always On Top"
-msgstr "Ĉiam antaŭe"
+#: ../src/plugins/properties/movie-properties.plugin.in.h:1
+msgid "Movie Properties"
+msgstr ""
 
-#: ../src/plugins/ontop/ontop.plugin.in.h:2
-msgid "Keep the main window on top when playing a movie"
-msgstr "Teni la ĉefan fenestron supre kiam ludanta filmo"
+#: ../src/plugins/properties/movie-properties.plugin.in.h:2
+msgid "Adds movie properties to the sidebar"
+msgstr ""
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kb/s"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Neaplikeble"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "Neaplikeble"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "Atributoj"
-
-#: ../src/plugins/publish/org.x.player.plugins.publish.gschema.xml.in.in.h:1
-msgid "Publisher protocol to use"
-msgstr "Eldoneja protokolo por uzi"
-
-#: ../src/plugins/publish/org.x.player.plugins.publish.gschema.xml.in.in.h:2
-msgid ""
-"The transport protocol to use when publishing playlists over the network."
-msgstr ""
-"La transporta protokolo por uzi kiam publikigas ludlistojn per la reto."
-
-#: ../src/plugins/publish/org.x.player.plugins.publish.gschema.xml.in.in.h:3
-msgid "Format for network service name"
-msgstr "Aranĝo por retserva nomo"
-
-#: ../src/plugins/publish/org.x.player.plugins.publish.gschema.xml.in.in.h:5
-#, no-c-format
-msgid ""
-"A format string used to build the network service name used when publishing "
-"playlists over the network. The following format placeholders can be used: • "
-"%a: the program name as returned by g_get_application_name() • %h: the "
-"machine's host name in title case • %u: the user's login name in title case "
-"• %U: the user's real name • %%: the percent sign"
-msgstr ""
-"Forma ĉeno uzita por fari la retservilan nomon uzita kiam eldonantaj "
-"ludlistoj pere de reto. Formo lokokupilo ke povas esti uzita: • %a: la nomo "
-"de programo kiel estis revenigita per g_get_application_name() • %h: la "
-"gastiga nomo de maŝino nomuskle • %u: la salutnomo de uzanto nomuske • %U: "
-"la vera nomo de uzanto • %%: la elcenta signo"
-
-#. Translators: computers on the local network which are publishing their playlists over the network
-#: ../src/plugins/publish/xplayer-publish.c:552
-msgid "Neighbors"
-msgstr "Najbaroj"
-
-#: ../src/plugins/publish/publish.plugin.in.h:1
-msgid "Publish Playlist"
-msgstr "Puplici ludliston"
-
-#: ../src/plugins/publish/publish.plugin.in.h:2
-msgid "Share the current playlist via HTTP"
-msgstr "Partopreni la aktualan ludliston pere de HTTP"
-
-#: ../src/plugins/publish/publish-plugin.ui.h:1
-msgid "Service _Name:"
-msgstr "Servo_nomo:"
-
-#: ../src/plugins/publish/publish-plugin.ui.h:3
-#, no-c-format
-msgid ""
-"The name used for announcing the playlist service on the network.\n"
-"All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-"and <b>%h</b> will be replaced by your computer's host name."
-msgstr ""
-"La nomo uzita por anoncanta la ludlisto servilo en la reta.\n"
-"Ĉiuj okazaĵoj de la ĉeno <b>%u</b> estos remetita per via nomo,\n"
-"kaj <b>%h</b> estos remetita per nomo de gastigo de via komputilo."
-
-#: ../src/plugins/publish/publish-plugin.ui.h:6
-msgid "Use _encrypted transport protocol (HTTPS)"
-msgstr "Uzi HTTPS"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
@@ -2424,214 +2198,21 @@ msgstr "rpdb2-pasvorto"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
-"Pasvorto por protekti la rpd2-servilon por sencimigi Xplayeron de nerajtigita "
-"defora atingo. Se ĉi tio estas malplena, defaŭlto de 'xplayer' estos uzita."
-
-#: ../src/plugins/rotation/rotation.plugin.in.h:1
-msgid "Rotation Plugin"
-msgstr "Turna kromprogramo"
-
-#: ../src/plugins/rotation/rotation.plugin.in.h:2
-msgid "Allows videos to be rotated if they're in the wrong orientation."
-msgstr ""
-"Permesas videjojn por esti turnita se ili estas en la malĝustan orientiĝon."
-
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:60
-msgid "_Rotate Clockwise"
-msgstr "Tu_rni dekstrumen"
-
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:62
-msgid "Rotate Counterc_lockwise"
-msgstr "Turni ma_ldekstrumen"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "Konservi kopion..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "Konservi kopion de la filmo"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "Konservi kopion"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "Filmo"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "Filmfluo"
-
-#: ../src/plugins/screensaver/xplayer-screensaver.c:116
-#: ../browser-plugin/xplayer-plugin-viewer.c:1891
-msgid "Playing a movie"
-msgstr "Ludi filmon"
-
-#: ../src/plugins/screenshot/gallery.ui.h:1
-msgid "Screenshot width (in pixels):"
-msgstr "Ekrankopia larĝo (per rastrumeroj):"
-
-#: ../src/plugins/screenshot/gallery.ui.h:2
-msgid "Calculate the number of screenshots"
-msgstr "Kalkuli la kvanton de ekrankopioj"
-
-#: ../src/plugins/screenshot/gallery.ui.h:3
-msgid "Number of screenshots:"
-msgstr "Kvanto da ekrankopioj:"
-
-#: ../src/plugins/screenshot/gnome-screenshot.ui.h:1
-msgid "_Name:"
-msgstr "_Nomo:"
-
-#: ../src/plugins/screenshot/gnome-screenshot.ui.h:2
-msgid "Save in _folder:"
-msgstr "Konservi en _dosierujo:"
-
-#: ../src/plugins/screenshot/gnome-screenshot.ui.h:3
-msgid "Select a folder"
-msgstr "Elekti dosierujon"
-
-#. Write the screenshot to the temporary file
-#: ../src/plugins/screenshot/gnome-screenshot-widget.c:385
-#: ../src/plugins/screenshot/xplayer-screenshot.c:64
-msgid "Screenshot.png"
-msgstr "Ekrankopio.png"
-
-#: ../src/plugins/screenshot/xplayer-gallery.c:91
-msgid "Save Gallery"
-msgstr "Konservi galerion"
-
-#. Translators: The first argument is the movie title. The second
-#. * argument is a number which is used to prevent overwriting files.
-#. * Just translate "Gallery", and not the ".jpg". Example:
-#. * "Galerie-%s-%d.jpg".
-#: ../src/plugins/screenshot/xplayer-gallery.c:115
-#, c-format
-msgid "Gallery-%s-%d.jpg"
-msgstr "Gallerio-%s-%d.jpg"
-
-#. Set up the window
-#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
-msgid "Creating Gallery..."
-msgstr "Kreante galerion..."
-
-#. Set the progress label
-#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
-#, c-format
-msgid "Saving gallery as \"%s\""
-msgstr "Konservi galerion kiel \"%s\""
-
-#: ../src/plugins/screenshot/xplayer-screenshot.c:113
-msgid "There was an error saving the screenshot."
-msgstr "Okazis eraro dum konservado de la ekrankopio."
-
-#: ../src/plugins/screenshot/xplayer-screenshot.c:139
-msgid "Save Screenshot"
-msgstr "Konservi ekrankopion"
-
-#. Create the screenshot widget
-#. Translators: %s is the movie title and %d is an auto-incrementing number to make filename unique
-#: ../src/plugins/screenshot/xplayer-screenshot.c:160
-#, c-format
-msgid "Screenshot-%s-%d.png"
-msgstr "Ekrankopio-%s-%d.png"
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:88
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:95
-msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayero ne povis ricevi ekrankopion de la video."
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:95
-msgid "This is not supposed to happen; please file a bug report."
-msgstr "Ne estas supozite ke tio okazeblas; bonvole kreu cimraporton."
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:197
-msgid "Take _Screenshot..."
-msgstr "Fari _ekrankopion..."
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:197
-msgid "Take a screenshot"
-msgstr "Fari ekrankopion"
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:198
-msgid "Create Screenshot _Gallery..."
-msgstr "Krei erkrankopi_galerion..."
-
-#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:198
-msgid "Create a gallery of screenshots"
-msgstr "Krei galerion de ekrankopioj"
-
-#. Update the "seconds" label so that it always has the correct singular/plural form
-#. Translators: label for the seconds selector in the "Skip to" dialogue
-#: ../src/plugins/skipto/xplayer-skipto.c:160
-msgid "second"
-msgid_plural "seconds"
-msgstr[0] "sekundo"
-msgstr[1] "sekundoj"
-
-#. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
-#. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
-#. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
-#. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
-#: ../src/plugins/skipto/xplayer-skipto.c:190
-msgctxt "Skip To label length"
-msgid "7"
-msgstr "8"
-
-#: ../src/plugins/skipto/xplayer-skipto.c:197
-msgid "Skip To"
-msgstr "Salti al"
-
-#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
-msgid "_Skip To..."
-msgstr "_Salti al..."
-
-#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
-msgid "Skip to a specific time"
-msgstr "Salti al specifa tempo"
-
-#: ../src/plugins/skipto/skipto.ui.h:1
-msgid "_Skip to:"
-msgstr "_Salti al:"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:431
-msgid "No URI to play"
-msgstr "Neniu adreso por ludi"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1107
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Malfermi per \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2136
-msgid "No playlist or playlist empty"
-msgstr "Neniu ludlisto aŭ malplena ludlisto"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2235
-msgid "Movie browser plugin"
-msgstr "Film-foliumil-kromprogramo"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2251
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Kontrolu vian sisteminstalon. Xplayera kromprogramo eliros nun."
+"Pasvorto por protekti la rpd2-servilon por sencimigi Xplayeron de "
+"nerajtigita defora atingo. Se ĉi tio estas malplena, defaŭlto de 'xplayer' "
+"estos uzita."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
 msgstr "Python-konzolo"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
-msgid "Interactive Python console."
-msgstr "Dialoga Python-konzolo."
+msgid "Interactive Python console"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
@@ -2673,530 +2254,164 @@ msgstr ""
 "rpdb2. Se vi ne agordis pasvorton en DConf por sencimigilo, ĝi uzos la "
 "defaŭltan pasvorton ('xplayer')."
 
-#: ../src/plugins/grilo/grilo.plugin.in.h:1
-msgid "Grilo Browser"
-msgstr "Grilo-foliumilo"
-
-#: ../src/plugins/grilo/grilo.plugin.in.h:2
-msgid "A plugin to let you browse media content from various sources."
+#: ../src/plugins/recent/recent.plugin.in.h:1
+msgid "Recent files"
 msgstr ""
-"Kromprogramo kiu lasas vin foliumi aŭdvidean enhavon el diversaj fontoj."
 
-#: ../src/plugins/grilo/xplayer-grilo.c:452
-msgid "Browse Error"
-msgstr "Foliuma eraro"
-
-#: ../src/plugins/grilo/xplayer-grilo.c:599
-msgid "Search Error"
-msgstr "Serĉeraro"
-
-#: ../src/plugins/grilo/xplayer-grilo.c:1219 ../src/plugins/grilo/grilo.ui.h:1
-msgid "Browse"
-msgstr "Foliumi"
-
-#: ../src/plugins/grilo/xplayer-grilo.c:1285 ../src/plugins/grilo/grilo.ui.h:2
-msgid "Search"
-msgstr "Serĉi"
-
-#~ msgid "0 frames per second"
-#~ msgstr "0 kadroj per sekundo"
-
-#~ msgid "0 kbps"
-#~ msgstr "0 kbps"
-
-#~ msgid "0 x 0"
-#~ msgstr "0 x 0"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Elzomi"
-
-#~ msgid "Zoom Reset"
-#~ msgstr "Defaŭlta zomfaktoro"
-
-#~ msgid "Zoom out"
-#~ msgstr "Elzomi"
-
-#~ msgid "Zoom reset"
-#~ msgstr "Defaŭlta zomfaktoro"
-
-#~ msgid "Too old version of GStreamer installed."
-#~ msgstr "Tro maljuna versio de GStreamer estas instalita."
-
-#~ msgid "%s"
-#~ msgstr "%s"
-
-#~ msgid "Untitled %d"
-#~ msgstr "Sentitole %d"
-
-#~ msgid "Delete"
-#~ msgstr "Forigi"
-
-#~ msgid "By artist"
-#~ msgstr "Laŭ artisto"
-
-#~ msgid "By tag"
-#~ msgstr "Laŭ marko"
-
-#~ msgid "Latest Releases"
-#~ msgstr "Lasta eldono"
-
-#~ msgid "Popular"
-#~ msgstr "Populare"
-
-#~ msgid "Preferred audio _format:"
-#~ msgstr "Preferata son_formato:"
-
-#~ msgid "Search Results"
-#~ msgstr "Serĉrezultoj"
-
-#~ msgid "Jamendo"
-#~ msgstr "Jamendo"
-
-#~ msgid "Artist: %s"
-#~ msgstr "Artisto: %s"
-
-#~ msgid "%Y-%m-%d"
-#~ msgstr "%Y-%m-%d"
-
-#~ msgid "%x"
-#~ msgstr "%x"
-
-#~ msgid "Genre: %s"
-#~ msgstr "Ĝenro: %s"
-
-#~ msgid "Released on: %s"
-#~ msgstr "Eldonite je: %s"
-
-#~ msgid "License: %s"
-#~ msgstr "Permesilo: %s"
-
-#~ msgid "%02d. %s"
-#~ msgstr "%02d. %s"
-
-#~ msgid "Album: %s"
-#~ msgstr "Albumo: %s"
-
-#~ msgid "Duration: %s"
-#~ msgstr "Daŭro: %s"
-
-#~ msgid "%H:%M:%S"
-#~ msgstr "%H:%M:%S"
-
-#~ msgid "%M:%S"
-#~ msgstr "%M:%S"
-
-#~ msgid "en"
-#~ msgstr "eo"
-
-#~ msgid "Language"
-#~ msgstr "Lingvo"
-
-#~ msgid "No results"
-#~ msgstr "Neniuj rezultoj"
-
-#~ msgid "Showing %i - %i of %i match"
-#~ msgid_plural "Showing %i - %i of %i matches"
-#~ msgstr[0] "Montrante %i - %i el %i kongruo"
-#~ msgstr[1] "Montrante %i - %i el %i kongruoj"
-
-#~ msgid "Page"
-#~ msgstr "Paĝo"
-
-#~ msgid "Thumbnail"
-#~ msgstr "Miniaturo"
-
-#~ msgid "Related Videos"
-#~ msgstr "Rilataj videoj"
-
-#~ msgid "Videos"
-#~ msgstr "Videoj"
-
-#~ msgid "_Open in Web Browser"
-#~ msgstr "_Malfermi per retfoliumilo"
-
-#~ msgid "Open the video in your web browser"
-#~ msgstr "Malfermi la videon per via retfoliumilo"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Cancelling query…"
-#~ msgstr "Nuligi informpeton..."
-
-#~ msgid "Error Searching for Videos"
-#~ msgstr "Eraro dum serĉo de videoj"
-
-#~ msgid "Error Opening Video in Web Browser"
-#~ msgstr "Eraro dum melfermo de video en retfoliumilo"
-
-#~ msgid "Xplayer Browser Plugin"
-#~ msgstr "Xplayer-foliumil-kromaprogramo"
-
-#~ msgid "Author:"
-#~ msgstr "Aŭtoro:"
-
-#~ msgid "C_onfigure..."
-#~ msgstr "Ag_ordi..."
-
-#~ msgid "Copyright:"
-#~ msgstr "Kopirajto:"
-
-#~ msgid "Description:"
-#~ msgstr "Priskribo:"
-
-#~ msgid "Site:"
-#~ msgstr "Retejo:"
-
-#~ msgid ""
-#~ "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-#~ msgstr ""
-#~ "Kvalitoagordoj por la sonbildigo: \"0\" por malgrande, \"1\" por normale, "
-#~ "\"2\" por grande, \"3\" por grandege."
-
-#~ msgid "UTF-8"
-#~ msgstr "UTF-8"
-
-#~ msgid "Enable visual effects?"
-#~ msgstr "Ĉu enŝalti aspektajn efektojn?"
-
-#~ msgid ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-#~ msgstr ""
-#~ "Ŝajnas ke vi uzas Xplayeron defore.\n"
-#~ "Ĉu vi certe volas enŝalti la aspektajn efektojn?"
-
-#~ msgid "Could not open link"
-#~ msgstr "Ne eblis malfermi ligilon"
-
-#~ msgid "Make sure that GNOME is properly installed."
-#~ msgstr "Kontrolu ĉu GNOME estas korekte instalita."
-
-#~ msgid "Plugin"
-#~ msgstr "Kromprogramo"
-
-#~ msgid "Enabled"
-#~ msgstr "Ebligite"
-
-#~ msgid ""
-#~ "Unable to activate plugin %s.\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Ne eblis aktivigi kromprogramon \"%s\".\n"
-#~ "%s"
-
-#~ msgid "Unable to activate plugin %s"
-#~ msgstr "Nekapabla aktivigi la kromprogramon %s"
-
-#~ msgid "Plugin Error"
-#~ msgstr "Eraro de kromprogramo"
-
-#~ msgid "Downloading available content list ... "
-#~ msgstr "Elŝutante diponeblan enhavliston ... "
-
-#~ msgid "Error downloading available content list"
-#~ msgstr "Eraro dum elŝuto de diponebla enhavlisto"
-
-#~ msgid "Could not connect to server"
-#~ msgstr "Ne eblis konekti al servilo"
-
-#~ msgid "Downloading available content list ..."
-#~ msgstr "Elŝutante diponeblan enhavliston ..."
-
-#~ msgid "Connecting to server ..."
-#~ msgstr "Konektante al servilo..."
-
-#~ msgid "Loading ..."
-#~ msgstr "Ŝargante..."
-
-#~ msgid "No details available"
-#~ msgstr "Neniuj detaloj estas disponeblaj"
-
-#~ msgid "Children's"
-#~ msgstr "Idoj"
-
-#~ msgid "Activities"
-#~ msgstr "Aktivecoj"
-
-#~ msgid "Drama"
-#~ msgstr "Dramo"
-
-#~ msgid "Entertainment & Comedy"
-#~ msgstr "Regalado kaj komedio"
-
-#~ msgid "Factual"
-#~ msgstr "Dokumentfilmoj"
-
-#~ msgid "Music"
-#~ msgstr "Muziko"
-
-#~ msgid "News"
-#~ msgstr "Novaĵoj"
-
-#~ msgid "Sport"
-#~ msgstr "Sporto"
-
-#~ msgid "Action & Adventure"
-#~ msgstr "Agado kaj aventuro"
-
-#~ msgid "Biographical"
-#~ msgstr "Vivhistorie"
-
-#~ msgid "Crime"
-#~ msgstr "Krimo"
-
-#~ msgid "Historical"
-#~ msgstr "Historie"
-
-#~ msgid "Horror & Supernatural"
-#~ msgstr "Hororo kaj supernature"
-
-#~ msgid "Medical"
-#~ msgstr "Medicine"
-
-#~ msgid "Musical"
-#~ msgstr "Muzike"
-
-#~ msgid "Political"
-#~ msgstr "Politike"
-
-#~ msgid "Psychological"
-#~ msgstr "Psikologie"
-
-#~ msgid "Relationships & Romance"
-#~ msgstr "Rilatoj kaj romanco"
-
-#~ msgid "SciFi & Fantasy"
-#~ msgstr "Sciencfikcio kaj fantasto"
-
-#~ msgid "Spiritual"
-#~ msgstr "Spirita"
-
-#~ msgid "War & Disaster"
-#~ msgstr "Milito kaj katastrofoj"
-
-#~ msgid "Impressionists"
-#~ msgstr "Impresionistoj"
-
-#~ msgid "Satire"
-#~ msgstr "Satiro"
-
-#~ msgid "Sitcoms"
-#~ msgstr "Situacia komedio"
-
-#~ msgid "Sketch"
-#~ msgstr "Skeĉo"
-
-#~ msgid "Spoof"
-#~ msgstr "Parodio"
-
-#~ msgid "Antiques"
-#~ msgstr "Antikvaĵoj"
-
-#~ msgid "Beauty & Style"
-#~ msgstr "Beleco kaj stilo"
-
-#~ msgid "Cars & Motors"
-#~ msgstr "Aŭtoj kaj motoroj"
-
-#~ msgid "Cinema"
-#~ msgstr "Kinejo"
-
-#~ msgid "Consumer"
-#~ msgstr "Konsumanto"
-
-#~ msgid "Crime & Justice"
-#~ msgstr "Krimo kaj justico"
-
-#~ msgid "Disability"
-#~ msgstr "Invalideco"
-
-#~ msgid "Families & Relationships"
-#~ msgstr "Familioj kaj rilatoj"
-
-#~ msgid "Food & Drink"
-#~ msgstr "Mangaĵoj kaj trinkaĵoj"
-
-#~ msgid "Health & Wellbeing"
-#~ msgstr "Sano kaj bonfarto"
-
-#~ msgid "History"
-#~ msgstr "Historio"
-
-#~ msgid "Homes & Gardens"
-#~ msgstr "Domoj kaj ĝardenoj"
-
-#~ msgid "Money"
-#~ msgstr "Mono"
-
-#~ msgid "Politics"
-#~ msgstr "Politiko"
-
-#~ msgid "Travel"
-#~ msgstr "Vojaĝo"
-
-#~ msgid "Learning"
-#~ msgstr "Lernado"
-
-#~ msgid "Age 11-19"
-#~ msgstr "Aĝo 11-19"
-
-#~ msgid "Age 5-11"
-#~ msgstr "Aĝo 5-11"
-
-#~ msgid "Adults"
-#~ msgstr "Plenkreskuloj"
-
-#~ msgid "Pre-School"
-#~ msgstr "Antaŭ-lerneje"
-
-#~ msgid "Classical"
-#~ msgstr "Klasika"
-
-#~ msgid "Country"
-#~ msgstr "Lando"
-
-#~ msgid "Folk"
-#~ msgstr "Folkloro"
-
-#~ msgid "World"
-#~ msgstr "Mondo"
-
-#~ msgid "Badminton"
-#~ msgstr "Badmintono"
-
-#~ msgid "Baseball"
-#~ msgstr "Basbalo"
-
-#~ msgid "Basketball"
-#~ msgstr "Basketbalo"
-
-#~ msgid "Boxing"
-#~ msgstr "Bokso"
-
-#~ msgid "Canoeing"
-#~ msgstr "Kanuado"
-
-#~ msgid "Cricket"
-#~ msgstr "Kriketo"
-
-#~ msgid "Cycling"
-#~ msgstr "Biciklado"
-
-#~ msgid "Diving"
-#~ msgstr "Plonĝado"
-
-#~ msgid "Equestrian"
-#~ msgstr "Rajdado"
-
-#~ msgid "Fencing"
-#~ msgstr "Skermo"
-
-#~ msgid "Football"
-#~ msgstr "Piedpilkado"
-
-#~ msgid "Golf"
-#~ msgstr "Golfo"
-
-#~ msgid "Gymnastics"
-#~ msgstr "Gimnastiko"
-
-#~ msgid "Handball"
-#~ msgstr "Manpilkado"
-
-#~ msgid "Hockey"
-#~ msgstr "Hokeo"
-
-#~ msgid "Horse Racing"
-#~ msgstr "Ĉevalvetkuro"
-
-#~ msgid "Judo"
-#~ msgstr "Ĵudo"
-
-#~ msgid "Modern Pentathlon"
-#~ msgstr "Moderna pentatlono"
-
-#~ msgid "Motorsport"
-#~ msgstr "Motorsporto"
-
-#~ msgid "Olympics"
-#~ msgstr "Olimpiaj ludoj"
-
-#~ msgid "Rowing"
-#~ msgstr "Remado"
-
-#~ msgid "Rugby League"
-#~ msgstr "Rugbeo 13"
-
-#~ msgid "Rugby Union"
-#~ msgstr "Rugbeo 15"
-
-#~ msgid "Sailing"
-#~ msgstr "Velado"
-
-#~ msgid "Shooting"
-#~ msgstr "Pafado"
-
-#~ msgid "Snooker"
-#~ msgstr "Snukero"
-
-#~ msgid "Softball"
-#~ msgstr "Softbalo"
-
-#~ msgid "Swimming"
-#~ msgstr "Naĝado"
-
-#~ msgid "Table Tennis"
-#~ msgstr "Tabloteniso"
-
-#~ msgid "Taekwondo"
-#~ msgstr "Tekvondo"
-
-#~ msgid "Tennis"
-#~ msgstr "Teniso"
-
-#~ msgid "Triathlon"
-#~ msgstr "Triatlono"
-
-#~ msgid "Volleyball"
-#~ msgstr "Volejbalo"
-
-#~ msgid "Water Polo"
-#~ msgstr "Akvopilko"
-
-#~ msgid "Weightlifting"
-#~ msgstr "Halterlevo"
-
-#~ msgid "Winter Sports"
-#~ msgstr "Vintra sporto"
-
-#~ msgid "Wrestling"
-#~ msgstr "Lukto"
-
-#~ msgid "Weather"
-#~ msgstr "Vetero"
-
-#~ msgid "Unknown: %s"
-#~ msgstr "Nekonate: %s"
-
-#~ msgid "Chapters support"
-#~ msgstr "Ĉapitra supteno"
-
-#~ msgid "_Go to"
-#~ msgstr "_Iri al"
-
-#~ msgid "Recordings"
-#~ msgstr "Registraĵoj"
-
-#~ msgid "MythTV Recordings"
-#~ msgstr "MythTV-registraĵoj"
-
-#~ msgid "_Download Movie Subtitles..."
-#~ msgstr "_Elŝuti filmsubtekstojn..."
-
-#~ msgid "seconds"
-#~ msgstr "sekundoj"
-
-#~ msgid "Could not get name and thumbnail for %s: %s"
-#~ msgstr "Ne eblis akiri nomon kaj miniaturon por %s: %s"
+#: ../src/plugins/recent/recent.plugin.in.h:2
+msgid "Adds files that have been played to recent files"
+msgstr ""
+
+#: ../src/plugins/rotation/rotation.plugin.in.h:1
+msgid "Rotation Plugin"
+msgstr "Turna kromprogramo"
+
+#: ../src/plugins/rotation/rotation.plugin.in.h:2
+msgid "Allows videos to be rotated if they are in the wrong orientation"
+msgstr ""
+
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+msgid "_Rotate Clockwise"
+msgstr "Tu_rni dekstrumen"
+
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+msgid "Rotate Counterc_lockwise"
+msgstr "Turni ma_ldekstrumen"
+
+#: ../src/plugins/screensaver/screensaver.plugin.in.h:1
+msgid "Screen Saver"
+msgstr ""
+
+#: ../src/plugins/screensaver/screensaver.plugin.in.h:2
+msgid "Deactivates the screen saver when a movie is playing"
+msgstr ""
+
+#: ../src/plugins/screenshot/gallery.ui.h:1
+msgid "Screenshot width (in pixels):"
+msgstr "Ekrankopia larĝo (per rastrumeroj):"
+
+#: ../src/plugins/screenshot/gallery.ui.h:2
+msgid "Calculate the number of screenshots"
+msgstr "Kalkuli la kvanton de ekrankopioj"
+
+#: ../src/plugins/screenshot/gallery.ui.h:3
+msgid "Number of screenshots:"
+msgstr "Kvanto da ekrankopioj:"
+
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#: ../src/plugins/screenshot/screenshot-filename-builder.c:147
+#, c-format
+msgid "Screenshot from %s.png"
+msgstr ""
+
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#: ../src/plugins/screenshot/screenshot-filename-builder.c:154
+#, c-format
+msgid "Screenshot from %s - %d.png"
+msgstr ""
+
+#: ../src/plugins/screenshot/screenshot.plugin.in.h:1
+msgid "Screenshot"
+msgstr ""
+
+#: ../src/plugins/screenshot/screenshot.plugin.in.h:2
+msgid "Allows screenshots and galleries to be taken of videos"
+msgstr ""
+
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
+msgid "Save Gallery"
+msgstr "Konservi galerion"
+
+#. Translators: The first argument is the movie title. The second
+#. * argument is a number which is used to prevent overwriting files.
+#. * Just translate "Gallery", and not the ".jpg". Example:
+#. * "Galerie-%s-%d.jpg".
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
+#, c-format
+msgid "Gallery-%s-%d.jpg"
+msgstr "Gallerio-%s-%d.jpg"
+
+#. Set up the window
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
+msgid "Creating Gallery..."
+msgstr "Kreante galerion..."
+
+#. Set the progress label
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
+#, c-format
+msgid "Saving gallery as \"%s\""
+msgstr "Konservi galerion kiel \"%s\""
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayero ne povis ricevi ekrankopion de la video."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "This is not supposed to happen; please file a bug report."
+msgstr "Ne estas supozite ke tio okazeblas; bonvole kreu cimraporton."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+msgid "Take _Screenshot"
+msgstr ""
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+msgid "Take a screenshot"
+msgstr "Fari ekrankopion"
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
+msgid "Create Screenshot _Gallery..."
+msgstr "Krei erkrankopi_galerion..."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
+msgid "Create a gallery of screenshots"
+msgstr "Krei galerion de ekrankopioj"
+
+#: ../src/plugins/skipto/skipto.plugin.in.h:1
+#: ../src/plugins/skipto/xplayer-skipto.c:196
+msgid "Skip To"
+msgstr "Salti al"
+
+#: ../src/plugins/skipto/skipto.plugin.in.h:2
+msgid "Provides the \"Skip to\" dialog"
+msgstr ""
+
+#: ../src/plugins/skipto/skipto.ui.h:1
+msgid "_Skip to:"
+msgstr "_Salti al:"
+
+#. Update the "seconds" label so that it always has the correct singular/plural form
+#. Translators: label for the seconds selector in the "Skip to" dialogue
+#: ../src/plugins/skipto/xplayer-skipto.c:159
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "sekundo"
+msgstr[1] "sekundoj"
+
+#. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
+#. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
+#. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
+#. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
+#: ../src/plugins/skipto/xplayer-skipto.c:189
+msgctxt "Skip To label length"
+msgid "7"
+msgstr "8"
+
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
+msgid "_Skip To..."
+msgstr "_Salti al..."
+
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
+msgid "Skip to a specific time"
+msgstr "Salti al specifa tempo"
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
+msgid "Zeitgeist Plugin"
+msgstr ""
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
+msgid "A plugin sending events to Zeitgeist"
+msgstr ""

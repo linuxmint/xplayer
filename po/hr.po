@@ -1,1919 +1,1184 @@
-# Translation of xplayer to Croatiann
-# Copyright (C) Croatiann team
-# Translators: Automatski Prijevod <>,Danijel Studen <dstuden@vuka.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Diana Ćorluka <dina@iskrameco.hr>,Ivan Jankovic <rbrrneck@gmx.net>,Nikola Planinac <>,Robert Sedak <robert.sedak@sk.tel.hr>,
+# Croatian translation for linuxmint
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: xplayer 0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-09 18:50+0200\n"
-"PO-Revision-Date: 2008-04-15 03:51+0000\n"
-"Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
-"net>\n"
-"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-02-04 17:05+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2008-05-28 11:17+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
-
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "Prikaz u prozoru"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:73
-msgid "Time:"
-msgstr "Vrijeme:"
-
-#: ../data/playlist.ui.h:1
-msgid "Add..."
-msgstr "Dodaj..."
-
-#: ../data/playlist.ui.h:2 ../data/video-list.ui.h:2
-msgid "Copy the location to the clipboard"
-msgstr ""
-
-#: ../data/playlist.ui.h:3
-msgid "Move Down"
-msgstr "Pomakni dolje"
-
-#: ../data/playlist.ui.h:4
-msgid "Move Up"
-msgstr "Pomakni gore"
-
-#: ../data/playlist.ui.h:5
-msgid "Remove"
-msgstr "Makni"
-
-#: ../data/playlist.ui.h:6
-msgid "Remove file from playlist"
-msgstr ""
-
-#: ../data/playlist.ui.h:7
-msgid "Save Playlist..."
-msgstr ""
-
-#: ../data/playlist.ui.h:8
-msgid "Select a file to use for text subtitles"
-msgstr ""
-
-#: ../data/playlist.ui.h:9 ../data/video-list.ui.h:4
-msgid "_Copy Location"
-msgstr "_Kopiraj lokaciju"
-
-#: ../data/playlist.ui.h:10
-msgid "_Remove"
-msgstr ""
-
-#: ../data/playlist.ui.h:11
-msgid "_Select text subtitle..."
-msgstr "_Odaberite podnaslove..."
-
-#: ../data/plugins.ui.h:1
-msgid "Author:"
-msgstr ""
-
-#: ../data/plugins.ui.h:2
-msgid "C_onfigure..."
-msgstr ""
-
-#: ../data/plugins.ui.h:3
-msgid "Copyright:"
-msgstr ""
-
-#: ../data/plugins.ui.h:4
-msgid "Description:"
-msgstr ""
-
-#: ../data/plugins.ui.h:5
-msgid "Site:"
-msgstr ""
-
-#. Channels
-#: ../data/properties.ui.h:1
-#: ../src/plugins/properties/bacon-video-widget-properties.c:172
-msgid "0 Channels"
-msgstr ""
-
-#. Sample rate
-#: ../data/properties.ui.h:2
-#: ../src/plugins/properties/bacon-video-widget-properties.c:170
-msgid "0 Hz"
-msgstr ""
-
-#: ../data/properties.ui.h:3
-msgid "0 frames per second"
-msgstr "0 okvira u sekundi"
-
-#: ../data/properties.ui.h:4
-msgid "0 kbps"
-msgstr "0 kbps"
-
-#. 0 seconds
-#: ../data/properties.ui.h:5 ../src/backend/video-utils.c:270
-#: ../src/plugins/skipto/skipto.ui.h:1
-msgid "0 seconds"
-msgstr "0 sekundi"
-
-#: ../data/properties.ui.h:6
-msgid "0 x 0"
-msgstr "0 x 0"
-
-#: ../data/properties.ui.h:7
-msgid "Album:"
-msgstr ""
-
-#: ../data/properties.ui.h:8
-msgid "Artist:"
-msgstr "Izvođač:"
-
-#: ../data/properties.ui.h:9 ../data/xplayer.ui.h:5
-#: ../src/xplayer-properties-view.c:91
-msgid "Audio"
-msgstr "Audio"
-
-#: ../data/properties.ui.h:10
-msgid "Bitrate:"
-msgstr "Protok bitova:"
-
-#: ../data/properties.ui.h:11
-msgid "Channels:"
-msgstr ""
-
-#: ../data/properties.ui.h:12
-msgid "Codec:"
-msgstr ""
-
-#: ../data/properties.ui.h:13
-msgid "Comment:"
-msgstr ""
-
-#: ../data/properties.ui.h:14
-msgid "Dimensions:"
-msgstr "Dimenzije:"
-
-#: ../data/properties.ui.h:15
-msgid "Duration:"
-msgstr "Trajanje:"
-
-#: ../data/properties.ui.h:16
-msgid "Framerate:"
-msgstr "Br. slika/sec:"
-
-#: ../data/properties.ui.h:17 ../data/xplayer.ui.h:18
-msgid "General"
-msgstr "Općenito"
-
-#. Dimensions
-#. Video Codec
-#. Audio Codec
-#: ../data/properties.ui.h:18
-#: ../src/plugins/properties/bacon-video-widget-properties.c:155
-#: ../src/plugins/properties/bacon-video-widget-properties.c:157
-#: ../src/plugins/properties/bacon-video-widget-properties.c:160
-#: ../src/plugins/properties/bacon-video-widget-properties.c:163
-#: ../src/plugins/properties/bacon-video-widget-properties.c:166
-#: ../src/plugins/properties/bacon-video-widget-properties.c:168
-#: ../src/plugins/properties/bacon-video-widget-properties.c:237
-#: ../src/plugins/properties/bacon-video-widget-properties.c:239
-#: ../src/plugins/properties/bacon-video-widget-properties.c:256
-#: ../src/plugins/properties/bacon-video-widget-properties.c:259
-msgid "N/A"
-msgstr "nedostupno"
-
-#: ../data/properties.ui.h:19
-msgid "Sample rate:"
-msgstr ""
-
-#: ../data/properties.ui.h:20
-msgid "Title:"
-msgstr "Naslov:"
-
-#. Title
-#. Artist
-#. Album
-#. Year
-#. Comment
-#: ../data/properties.ui.h:21
-#: ../src/plugins/properties/bacon-video-widget-properties.c:142
-#: ../src/plugins/properties/bacon-video-widget-properties.c:144
-#: ../src/plugins/properties/bacon-video-widget-properties.c:146
-#: ../src/plugins/properties/bacon-video-widget-properties.c:148
-#: ../src/plugins/properties/bacon-video-widget-properties.c:152
-msgid "Unknown"
-msgstr "Nepoznat"
-
-#: ../data/properties.ui.h:22 ../src/xplayer-properties-view.c:87
-msgid "Video"
-msgstr "Video"
-
-#: ../data/properties.ui.h:23
-msgid "Year:"
-msgstr "Godina:"
-
-#: ../data/video-list.ui.h:1
-msgid "Add the video to the playlist"
-msgstr ""
-
-#: ../data/video-list.ui.h:3
-msgid "_Add to Playlist"
-msgstr ""
-
-#: ../data/xplayer.desktop.in.in.in.h:1
-msgid "Movie Player"
-msgstr "Preglednik filmova"
-
-#: ../data/xplayer.desktop.in.in.in.h:2
-msgid "Play movies and songs"
-msgstr "Reproducira filmove i pjesme"
-
-#: ../data/xplayer.ui.h:1 ../src/xplayer-menu.c:1333
-msgid "16:9 (Widescreen)"
-msgstr "16:9 (Widescreen)"
-
-#: ../data/xplayer.ui.h:2 ../src/xplayer-menu.c:1334
-msgid "2.11:1 (DVB)"
-msgstr "2.11:1 (DVB)"
-
-#: ../data/xplayer.ui.h:3 ../src/xplayer-menu.c:1332
-msgid "4:3 (TV)"
-msgstr "4:3 (TV)"
-
-#: ../data/xplayer.ui.h:4
-msgid "A_udio Menu"
-msgstr "Izbornik za zv_uk"
-
-#: ../data/xplayer.ui.h:6
-msgid "Audio Output"
-msgstr ""
-
-#: ../data/xplayer.ui.h:7 ../src/xplayer-menu.c:340 ../src/xplayer-menu.c:1330
-msgid "Auto"
-msgstr "Automatski"
-
-#: ../data/xplayer.ui.h:8
-msgid "Automatically _load subtitle files when movie is loaded"
-msgstr ""
-
-#: ../data/xplayer.ui.h:9
-msgid "Automatically _resize the window when a new video is loaded"
-msgstr "Automatsko mijenjanje veličine p_rozora kad se učita novi video"
-
-#: ../data/xplayer.ui.h:10
-msgid "Clear the playlist"
-msgstr ""
-
-#: ../data/xplayer.ui.h:11
-msgid "Co_ntrast:"
-msgstr "_Kontrast:"
-
-#: ../data/xplayer.ui.h:12
-msgid "Color Balance"
-msgstr ""
-
-#: ../data/xplayer.ui.h:13
-msgid "Connection _speed:"
-msgstr "Brzina _veze:"
-
-#: ../data/xplayer.ui.h:14
-msgid "Decrease volume"
-msgstr ""
-
-#: ../data/xplayer.ui.h:15 ../src/xplayer-menu.c:1324
-msgid "Deinterlace"
-msgstr "Popravi isprepletenost"
-
-#: ../data/xplayer.ui.h:16
-msgid "Display"
-msgstr "Prikaz"
-
-#: ../data/xplayer.ui.h:17
-msgid "Fit Window to Movie"
-msgstr "Podesi prozor veličini filma"
-
-#: ../data/xplayer.ui.h:19
-msgid "Go to the DVD menu"
-msgstr "Otvori DVD izbornik"
-
-#: ../data/xplayer.ui.h:20
-msgid "Go to the angle menu"
-msgstr "Otvori izbornik kuta"
-
-#: ../data/xplayer.ui.h:21
-msgid "Go to the audio menu"
-msgstr "Otvori izbornik zvuka"
-
-#: ../data/xplayer.ui.h:22
-msgid "Go to the chapter menu"
-msgstr "Otvori izbornik poglavlja"
-
-#: ../data/xplayer.ui.h:23
-msgid "Go to the title menu"
-msgstr "Otvori glavni izbornik"
-
-#: ../data/xplayer.ui.h:24
-msgid "Help contents"
-msgstr "Sadržaj pomoći"
-
-#: ../data/xplayer.ui.h:25
-msgid "Increase volume"
-msgstr ""
-
-#: ../data/xplayer.ui.h:26
-msgid "Networking"
-msgstr ""
-
-#: ../data/xplayer.ui.h:27
-msgid "Next chapter or movie"
-msgstr "Slijedeće poglavlje ili film"
-
-#: ../data/xplayer.ui.h:28
-msgid "Open _Location..."
-msgstr "Otvori _lokaciju..."
-
-#: ../data/xplayer.ui.h:29
-msgid "Open a file"
-msgstr ""
-
-#: ../data/xplayer.ui.h:30
-msgid "Open a non-local file"
-msgstr "Otvori ne-lokalnu datoteku"
-
-#: ../data/xplayer.ui.h:31
-msgid "Play / P_ause"
-msgstr ""
-
-#: ../data/xplayer.ui.h:32
-msgid "Play or pause the movie"
-msgstr "Pokreni ili pauziraj film"
-
-#: ../data/xplayer.ui.h:33
-msgid "Plugins..."
-msgstr ""
-
-#: ../data/xplayer.ui.h:34
-msgid "Prefere_nces"
-msgstr ""
-
-#: ../data/xplayer.ui.h:35
-msgid "Previous chapter or movie"
-msgstr "Prethodno poglavlje ili film"
-
-#: ../data/xplayer.ui.h:36
-msgid "Quit the program"
-msgstr ""
-
-#: ../data/xplayer.ui.h:37
-msgid "Reset To _Defaults"
-msgstr "Postavi na u_običajene postavke"
-
-#: ../data/xplayer.ui.h:38
-msgid "Resize _1:1"
-msgstr "Veličina _1:1"
-
-#: ../data/xplayer.ui.h:39
-msgid "Resize _2:1"
-msgstr "Veličina _2:1"
-
-#: ../data/xplayer.ui.h:40
-msgid "Resize to double the original video size"
-msgstr ""
-
-#: ../data/xplayer.ui.h:41
-msgid "Resize to half the original video size"
-msgstr ""
-
-#: ../data/xplayer.ui.h:42
-msgid "Resize to the original video size"
-msgstr ""
-
-#: ../data/xplayer.ui.h:43 ../src/xplayer-menu.c:1326
-msgid "S_idebar"
-msgstr ""
-
-#: ../data/xplayer.ui.h:44
-msgid "S_ubtitles"
-msgstr "_Titlovi"
-
-#: ../data/xplayer.ui.h:45
-msgid "Sat_uration:"
-msgstr "Za_sićenje:"
-
-#: ../data/xplayer.ui.h:46 ../src/xplayer-menu.c:1322
-msgid "Set the repeat mode"
-msgstr "Postavi ponavljanje"
-
-#: ../data/xplayer.ui.h:47 ../src/xplayer-menu.c:1323
-msgid "Set the shuffle mode"
-msgstr "Postavi miješanje"
-
-#: ../data/xplayer.ui.h:48
-msgid "Sets 16:9 (widescreen) aspect ratio"
-msgstr ""
-
-#: ../data/xplayer.ui.h:49 ../src/xplayer-menu.c:1334
-msgid "Sets 2.11:1 (DVB) aspect ratio"
-msgstr "Postavlja 2.11:1 (DVB) odnos dimenzija"
-
-#: ../data/xplayer.ui.h:50 ../src/xplayer-menu.c:1332
-msgid "Sets 4:3 (TV) aspect ratio"
-msgstr "Postavlja 4:3 (TV) odnos dimenzija"
-
-#: ../data/xplayer.ui.h:51 ../src/xplayer-menu.c:1330
-msgid "Sets automatic aspect ratio"
-msgstr "Postavlja automatski odnos dimenzija"
-
-#: ../data/xplayer.ui.h:52 ../src/xplayer-menu.c:1331
-msgid "Sets square aspect ratio"
-msgstr "Postavlja kvadratni odnos dimenzija"
-
-#: ../data/xplayer.ui.h:53 ../src/xplayer-menu.c:1325
-msgid "Show _Controls"
-msgstr "Pokaži _kontrole"
-
-#: ../data/xplayer.ui.h:54
-msgid "Show _visual effects when an audio file is played"
-msgstr "Prikazuj _vizualne efekte prilikom sviranja zvučne datoteke"
-
-#: ../data/xplayer.ui.h:55 ../src/xplayer-menu.c:1325
-msgid "Show controls"
-msgstr "Pokaži kontrole"
-
-#: ../data/xplayer.ui.h:56 ../src/xplayer-menu.c:1326
-msgid "Show or hide the sidebar"
-msgstr "Prikaži ili sakrij sidebar"
-
-#: ../data/xplayer.ui.h:57 ../src/xplayer-menu.c:1323
-msgid "Shuff_le Mode"
-msgstr "Razmješan način"
-
-#: ../data/xplayer.ui.h:58 ../src/xplayer-menu.c:1313 ../src/xplayer-menu.c:1318
-msgid "Skip _Backwards"
-msgstr "_Preskoči unatrag"
-
-#: ../data/xplayer.ui.h:59 ../src/xplayer-menu.c:1312 ../src/xplayer-menu.c:1317
-msgid "Skip _Forward"
-msgstr "Preskoči u_naprijed"
-
-#: ../data/xplayer.ui.h:60 ../src/xplayer-menu.c:1313 ../src/xplayer-menu.c:1318
-msgid "Skip backwards"
-msgstr "Preskoči unatrag"
-
-#: ../data/xplayer.ui.h:61 ../src/xplayer-menu.c:1312 ../src/xplayer-menu.c:1317
-msgid "Skip forward"
-msgstr "Preskoči unaprijed"
-
-#: ../data/xplayer.ui.h:62 ../src/xplayer-menu.c:1331
-msgid "Square"
-msgstr "Kvadrat"
-
-#: ../data/xplayer.ui.h:63
-msgid "Switch An_gles"
-msgstr "Promjeni _kut"
-
-#: ../data/xplayer.ui.h:64
-msgid "Switch camera angles"
-msgstr ""
-
-#: ../data/xplayer.ui.h:65
-msgid "Switch to fullscreen"
-msgstr "Prebaci na cijeli zaslon"
-
-#: ../data/xplayer.ui.h:66
-msgid "TV-Out"
-msgstr ""
-
-#: ../data/xplayer.ui.h:67
-msgid "TV-out in fullscreen by Nvidia (NTSC)"
-msgstr ""
-
-#: ../data/xplayer.ui.h:68
-msgid "TV-out in fullscreen by Nvidia (PAL)"
-msgstr ""
-
-#: ../data/xplayer.ui.h:69
-msgid "Take _Screenshot..."
-msgstr "Uzmi _sliku zaslona..."
-
-#: ../data/xplayer.ui.h:70
-msgid "Take a screenshot"
-msgstr "Uzmi sliku zaslona"
-
-#: ../data/xplayer.ui.h:71
-msgid "Text Subtitles"
-msgstr ""
-
-#: ../data/xplayer.ui.h:72
-msgid "Time seek bar"
-msgstr ""
-
-#. Title
-#: ../data/xplayer.ui.h:74 ../src/xplayer.c:1015 ../src/xplayer.c:3418
-#: ../src/xplayer.c:3450 ../browser-plugin/xplayer-plugin-viewer.c:737
-#: ../browser-plugin/xplayer-plugin-viewer.c:1789
-msgid "Xplayer Movie Player"
-msgstr "Xplayer prikazivač filmova"
-
-#: ../data/xplayer.ui.h:75
-msgid "Xplayer Preferences"
-msgstr "Postavke Xplayera"
-
-#: ../data/xplayer.ui.h:76
-msgid "Visual Effects"
-msgstr ""
-
-#: ../data/xplayer.ui.h:77
-msgid "Visualization _size:"
-msgstr "Veličina _vizualizacije:"
-
-#: ../data/xplayer.ui.h:78
-msgid "Volume _Down"
-msgstr "_Tiše"
-
-#: ../data/xplayer.ui.h:79
-msgid "Volume _Up"
-msgstr "_Glasnije"
-
-#: ../data/xplayer.ui.h:80
-msgid "Zoom In"
-msgstr "Povećaj"
-
-#: ../data/xplayer.ui.h:81
-msgid "Zoom Out"
-msgstr "Umanji"
-
-#: ../data/xplayer.ui.h:82
-msgid "Zoom Reset"
-msgstr "Resetiraj povećanje"
-
-#: ../data/xplayer.ui.h:83
-msgid "Zoom in"
-msgstr "Povećaj"
-
-#: ../data/xplayer.ui.h:84
-msgid "Zoom out"
-msgstr "Smanji"
-
-#: ../data/xplayer.ui.h:85
-msgid "Zoom reset"
-msgstr "Resetiraj povećanje"
-
-#: ../data/xplayer.ui.h:86
-msgid "_About"
-msgstr ""
-
-#: ../data/xplayer.ui.h:87
-msgid "_Allow the screensaver to activate even when audio-only is playing"
-msgstr ""
-
-#: ../data/xplayer.ui.h:88
-msgid "_Angle Menu"
-msgstr "Izbornik kut_a"
-
-#: ../data/xplayer.ui.h:89
-msgid "_Aspect Ratio"
-msgstr "Odnos dimenzij_a"
-
-#: ../data/xplayer.ui.h:90
-msgid "_Audio output type:"
-msgstr "Tip zvučnog izlaz_a:"
-
-#: ../data/xplayer.ui.h:91
-msgid "_Brightness:"
-msgstr "_Svjetlina:"
-
-#: ../data/xplayer.ui.h:92
-msgid "_Chapter Menu"
-msgstr "Izbornik _poglavlja:"
-
-#: ../data/xplayer.ui.h:93
-msgid "_Clear Playlist"
-msgstr ""
-
-#: ../data/xplayer.ui.h:94
-msgid "_Contents"
-msgstr "_Sadržaj"
-
-#: ../data/xplayer.ui.h:95
-msgid "_DVD Menu"
-msgstr "Izbornik _DVD-a"
-
-#: ../data/xplayer.ui.h:96 ../src/xplayer-menu.c:1324
-msgid "_Deinterlace"
-msgstr "_Popravi Isprepletenost"
-
-#: ../data/xplayer.ui.h:97
-msgid "_Edit"
-msgstr ""
-
-#: ../data/xplayer.ui.h:98
-msgid "_Eject"
-msgstr "_Izbaci"
-
-#: ../data/xplayer.ui.h:99
-msgid "_Encoding:"
-msgstr ""
-
-#: ../data/xplayer.ui.h:100
-msgid "_Font:"
-msgstr "_Font:"
-
-#: ../data/xplayer.ui.h:101
-msgid "_Fullscreen"
-msgstr "_Cijeli zaslon"
-
-#: ../data/xplayer.ui.h:102
-msgid "_Go"
-msgstr "_Idi"
-
-#: ../data/xplayer.ui.h:103
-msgid "_Help"
-msgstr ""
-
-#: ../data/xplayer.ui.h:104
-msgid "_Hue:"
-msgstr "_Ton boje:"
-
-#: ../data/xplayer.ui.h:105
-msgid "_Languages"
-msgstr "_Jezici"
-
-#: ../data/xplayer.ui.h:106
-msgid "_Movie"
-msgstr "_Film"
-
-#: ../data/xplayer.ui.h:107
-msgid "_Next Chapter/Movie"
-msgstr "_Slijedeće poglavlje/Film"
-
-#: ../data/xplayer.ui.h:108
-msgid "_No TV-out"
-msgstr "_Bez TV-izlaza"
-
-#: ../data/xplayer.ui.h:109
-msgid "_Open..."
-msgstr ""
-
-#: ../data/xplayer.ui.h:110
-msgid "_Previous Chapter/Movie"
-msgstr "_Prethodno poglavlje/Film"
-
-#: ../data/xplayer.ui.h:111
-msgid "_Properties"
-msgstr ""
-
-#: ../data/xplayer.ui.h:112
-msgid "_Quit"
-msgstr ""
-
-#: ../data/xplayer.ui.h:113 ../src/xplayer-menu.c:1322
-msgid "_Repeat Mode"
-msgstr "Ponavljanje"
-
-#: ../data/xplayer.ui.h:114
-msgid "_Resize 1:2"
-msgstr "_Veličina 1:2"
-
-#: ../data/xplayer.ui.h:115
-msgid "_Sound"
-msgstr "_Zvuk"
-
-#: ../data/xplayer.ui.h:116
-msgid "_Title Menu"
-msgstr "Glavni izbornik"
-
-#: ../data/xplayer.ui.h:117
-msgid "_Type of visualization:"
-msgstr "_Tip vizualizacije:"
-
-#: ../data/xplayer.ui.h:118
-msgid "_View"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:1
-msgid "Allow the screensaver to activate even when audio-only is playing"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:2
-msgid ""
-"Allow the screensaver to activate even when audio-only is playing. This is "
-"useful for monitor powered speakers."
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:3
-msgid ""
-"Amount of data to buffer for network streams before starting to display the "
-"stream (in seconds)"
-msgstr ""
-"Količina podataka s mreže koje treba pripremiti prije početka prikazivanja "
-"(u sekundama)"
-
-#: ../data/xplayer.schemas.in.h:4
-msgid "Buffer size"
-msgstr "Veličina spremnika"
-
-#: ../data/xplayer.schemas.in.h:5
-msgid "Default location for the \"Open...\" dialogs"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:6
-msgid ""
-"Default location for the \"Open...\" dialogs, default is the current "
-"directory"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:7
-msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:8
-msgid ""
-"Default location for the \"Take Screenshot\" dialogs, default is the "
-"Pictures directory"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:9
-msgid "Enable deinterlacing"
-msgstr "Uključi ispravljanje isprepletitanja"
-
-#: ../data/xplayer.schemas.in.h:10
-msgid "Encoding charset for subtitle"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:11
-msgid "Maximum amount of data to decode ahead of display (in seconds)"
-msgstr ""
-"Najveća količina podataka koju treba obraditi prije njihovog prikazivanja (u "
-"sekundama)"
-
-#: ../data/xplayer.schemas.in.h:12
-msgid "Name of the visual effects plugins"
-msgstr "Nazivi pluginova za vizualne efekte"
-
-#: ../data/xplayer.schemas.in.h:13
-msgid "Network buffering threshold"
-msgstr "Kapacitet mrežnog međuspremnika"
-
-#: ../data/xplayer.schemas.in.h:14
-msgid "Pango font description for subtitle rendering"
-msgstr "Pango opis fonta za renderiranje titlova"
-
-#: ../data/xplayer.schemas.in.h:15
-msgid "Repeat mode"
-msgstr "Ponavljanje"
-
-#: ../data/xplayer.schemas.in.h:16
-msgid "Resize the canvas automatically on file load"
-msgstr "Automatska promjena veličine pri učitavanju datoteke"
-
-#: ../data/xplayer.schemas.in.h:17
-msgid "Show visual effects when no video is displayed"
-msgstr "Prikazuj vizualne efekte kad se video ne prikazuje"
-
-#: ../data/xplayer.schemas.in.h:18
-msgid "Show visual effects when playing an audio only file."
-msgstr "Prikazuj vizualne efekte kad se svira zvučna datoteka."
-
-#: ../data/xplayer.schemas.in.h:19
-msgid "Shuffle mode"
-msgstr "Promiješano"
-
-#: ../data/xplayer.schemas.in.h:20
-msgid "Sound volume"
-msgstr "Glasnoća"
-
-#: ../data/xplayer.schemas.in.h:21
-msgid "Sound volume, in percent, between 0 and 100"
-msgstr "Glasnoća, u postocima, između 0 i 100"
-
-#: ../data/xplayer.schemas.in.h:22
-msgid "Subtitle encoding"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:23
-msgid "Subtitle font"
-msgstr "Font titlova"
-
-#: ../data/xplayer.schemas.in.h:24
-msgid "The brightness of the video"
-msgstr "Svjetlina videa"
-
-#: ../data/xplayer.schemas.in.h:25
-msgid "The contrast of the video"
-msgstr "Kontrast videa"
-
-#: ../data/xplayer.schemas.in.h:26
-msgid "The hue of the video"
-msgstr "Ton boje videa"
-
-#: ../data/xplayer.schemas.in.h:27
-msgid "The saturation of the video"
-msgstr "Zasićenost videa"
-
-#: ../data/xplayer.schemas.in.h:28
-msgid "Type of audio output to use"
-msgstr "Tip audio izlaza"
-
-#: ../data/xplayer.schemas.in.h:29
-msgid ""
-"Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel output, "
-"\"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" for AC3 "
-"Passthrough."
-msgstr ""
-"Tip audio izlaza koji treba koristiti: \"0\" za stereo, \"1\" za 4-kanalni "
-"izlaz, \"2\" za 5.0 kanalni izlaz, \"3\" za 5.1 kanalni izlaz, \"5\" za AC3 "
-"passthrough"
-
-#. Translators: This is default subtitle encoding
-#. character set. You can change this to be the most common
-#. encoding for fansub subtitles in your language. File a bug
-#. against Xplayer, and leave UTF-8 as the default if in doubt.
-#: ../data/xplayer.schemas.in.h:34
-msgid "UTF-8"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:35
-msgid "Whether the main window should stay on top"
-msgstr "Treba li glavni prozor uvijek biti na vrhu"
-
-#: ../data/xplayer.schemas.in.h:36
-msgid "Whether the main window should stay on top of the other ones"
-msgstr "Treba li glavni prozor uvijek biti iznad svih ostalih"
-
-#: ../data/xplayer.schemas.in.h:37
-msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:38
-msgid "Whether to disable the plugins in the user's home directory"
-msgstr ""
-
-#: ../data/xplayer.schemas.in.h:39
-msgid "Whether to enable debug for the playback engine"
-msgstr "Treba li uključiti debugiranje sviranja"
-
-#: ../data/uri.ui.h:1
-msgid "Enter the _address of the file you would like to open:"
-msgstr "Unesite lokaciju (URI) datoteke koju želite otvoriti:"
-
-#: ../lib/xplayer-scrsaver.c:117
-msgid "Playing a movie"
-msgstr "Prikazujem film"
-
-#: ../src/xplayer-cell-renderer-video.c:102
-msgid "Unknown video"
-msgstr ""
-
-#: ../src/xplayer-fullscreen.c:488
-msgid "No File"
-msgstr "Nema datoteke"
-
-#: ../src/xplayer-interface.c:115 ../src/xplayer-interface.c:123
-#, c-format
-msgid "Could not launch URL \"%s\": %s"
-msgstr ""
-
-#: ../src/xplayer-interface.c:115
-msgid "Default browser not configured"
-msgstr ""
-
-#: ../src/xplayer-interface.c:116 ../src/xplayer-interface.c:124
-msgid "Error launching URI"
-msgstr ""
-
-#: ../src/xplayer-interface.c:173 ../src/xplayer-interface.c:205
-#, c-format
-msgid "Couldn't load the '%s' interface. %s"
-msgstr ""
-
-#: ../src/xplayer-interface.c:173
-msgid "The file does not exist."
-msgstr ""
-
-#: ../src/xplayer-interface.c:175 ../src/xplayer-interface.c:177
-#: ../src/xplayer-interface.c:207 ../src/xplayer-interface.c:209
-msgid "Make sure that Xplayer is properly installed."
-msgstr "Provjerite je li Xplayer pravilno instaliran."
-
-#: ../src/xplayer-interface.c:320
-msgid ""
-"Xplayer is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version 2 of the License, or (at your option) any later "
-"version."
-msgstr ""
-
-#: ../src/xplayer-interface.c:324
-msgid ""
-"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-
-#: ../src/xplayer-interface.c:328
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
-msgstr ""
-
-#: ../src/xplayer-interface.c:331
-msgid ""
-"Xplayer contains an exception to allow the use of proprietary GStreamer "
-"plugins."
-msgstr ""
-
-#: ../src/xplayer-menu.c:336
-msgid "None"
-msgstr "Nijedan"
-
-#: ../src/xplayer-menu.c:815
-#, c-format
-msgid "Play Disc '%s'"
-msgstr "Pokreni disk '%s'"
-
-#: ../src/xplayer-menu.c:818
-#, c-format
-msgid "device%d"
-msgstr ""
-
-#. translators: the index of the adapter
-#. * DVB Adapter 1
-#: ../src/xplayer-menu.c:892
-#, c-format
-msgid "DVB Adapter %u"
-msgstr ""
-
-#. translators:
-#. * Watch TV on 'DVB Adapter 1'
-#. * or
-#. * Watch TV on 'Hauppauge Nova-T Stick'
-#: ../src/xplayer-menu.c:897
-#, c-format
-msgid "Watch TV on '%s'"
-msgstr ""
-
-#. This lists the back-end type and version, such as
-#. * Movie Player using GStreamer 0.10.1
-#: ../src/xplayer-menu.c:1172
-#, c-format
-msgid "Movie Player using %s"
-msgstr "Preglednik filmova koristi %s"
-
-#: ../src/xplayer-menu.c:1176
-msgid "Copyright © 2002-2007 Bastien Nocera"
-msgstr ""
-
-#: ../src/xplayer-menu.c:1181 ../browser-plugin/xplayer-plugin-viewer.c:1149
-msgid "translator-credits"
-msgstr ""
-"lokalizacija@linux.hr\n"
-"  Automatski Prijevod <>\n"
-"  Danijel Studen <dstuden@vuka.hr>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Diana Ćorluka <dina@iskrameco.hr>\n"
-"  Ivan Jankovic <rbrrneck@gmx.net>\n"
-"  Nikola Planinac <>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"\n"
-"Launchpad Contributions:\n"
-"  Ante Karamatić https://launchpad.net/~ivoks\n"
-"  Danijel Šnajder https://launchpad.net/~phantomlord\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
-"admins\n"
-"  Mario Đanić https://launchpad.net/~mario-danic"
-
-#: ../src/xplayer-menu.c:1185
-msgid "Xplayer Website"
-msgstr ""
-
-#: ../src/xplayer-menu.c:1220
-msgid "Configure Plugins"
-msgstr ""
-
-#: ../src/xplayer-menu.c:1333
-msgid "Sets 16:9 (Anamorphic) aspect ratio"
-msgstr "Postavlja 16:9 (anamorfni) odnos dimenzija"
-
-#: ../src/xplayer-open-location.c:173
-msgid "Open Location..."
-msgstr "Otvori _lokaciju..."
-
-#: ../src/xplayer-options.c:37
-msgid "Enable debug"
-msgstr "Omogući debugiranje"
-
-#: ../src/xplayer-options.c:38
-msgid "Play/Pause"
-msgstr "Pokreni/Pauziraj"
-
-#: ../src/xplayer-options.c:39 ../src/xplayer.c:345 ../src/xplayer.c:355
-msgid "Play"
-msgstr "Pokreni"
-
-#: ../src/xplayer-options.c:40 ../src/xplayer.c:338
-msgid "Pause"
-msgstr "Pauziraj"
-
-#: ../src/xplayer-options.c:41
-msgid "Next"
-msgstr "Slijedeći"
-
-#: ../src/xplayer-options.c:42
-msgid "Previous"
-msgstr "Prethodni"
-
-#: ../src/xplayer-options.c:43
-msgid "Seek Forwards"
-msgstr "Traži unaprijed"
-
-#: ../src/xplayer-options.c:44
-msgid "Seek Backwards"
-msgstr "Traži unatrag"
-
-#: ../src/xplayer-options.c:45
-msgid "Volume Up"
-msgstr "Glasnije"
-
-#: ../src/xplayer-options.c:46
-msgid "Volume Down"
-msgstr "Tiše"
-
-#: ../src/xplayer-options.c:47
-msgid "Toggle Fullscreen"
-msgstr "Prozor ili cijeli ekran"
-
-#: ../src/xplayer-options.c:48
-msgid "Show/Hide Controls"
-msgstr "Pokaži/sakrij kontrole"
-
-#: ../src/xplayer-options.c:49
-msgid "Quit"
-msgstr "Izlaz"
-
-#: ../src/xplayer-options.c:50
-msgid "Enqueue"
-msgstr "Dodaj u popis"
-
-#: ../src/xplayer-options.c:51
-msgid "Replace"
-msgstr "Zamijeni"
-
-#: ../src/xplayer-options.c:52
-msgid "Don't connect to an already running instance"
-msgstr ""
-
-#. translators: this option prints the current movie's title on the command-line
-#: ../src/xplayer-options.c:54
-msgid "Print playing movie"
-msgstr ""
-
-#: ../src/xplayer-options.c:55
-msgid "Seek"
-msgstr ""
-
-#: ../src/xplayer-options.c:56
-msgid "Playlist index"
-msgstr ""
-
-#: ../src/xplayer-options.c:57
-msgid "Movies to play"
-msgstr ""
-
-#. This is "Title 3", where title is a DVD title
-#. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:277
-#, c-format
-msgid "Title %d"
-msgstr "Naslov %d"
-
-#: ../src/xplayer-playlist.c:352 ../src/xplayer-playlist.c:973
-msgid "Could not save the playlist"
-msgstr "Ne mogu spremiti popis"
-
-#: ../src/xplayer-playlist.c:973
-msgid "Unknown file extension."
-msgstr ""
-
-#: ../src/xplayer-playlist.c:986
-msgid "Select playlist format:"
-msgstr ""
-
-#: ../src/xplayer-playlist.c:991
-msgid "By extension"
-msgstr ""
-
-#: ../src/xplayer-playlist.c:1021
-msgid "Save Playlist"
-msgstr "Spremi popis"
-
-#. translators: Playlist is the default saved playlist filename,
-#. * without the suffix
-#: ../src/xplayer-playlist.c:1032 ../src/xplayer-sidebar.c:102
-msgid "Playlist"
-msgstr "Popis"
-
-#: ../src/xplayer-playlist.c:1787
-#, c-format
-msgid "The playlist '%s' could not be parsed, it might be damaged."
-msgstr "Ne mogu shvatiti '%s', možda je oštećen."
-
-#: ../src/xplayer-playlist.c:1788
-msgid "Playlist error"
-msgstr "Greška u popisu"
-
-#: ../src/xplayer-preferences.c:108
-msgid "Enable visual effects?"
-msgstr "Želite li uključiti vizualne efekte?"
-
-#: ../src/xplayer-preferences.c:110
-msgid ""
-"It seems you are running Xplayer remotely.\n"
-"Are you sure you want to enable the visual effects?"
-msgstr ""
-"Čini se da Xplayer koristite izdaleka. Jeste li sigurni da želite ukljućiti "
-"vizualne efekte?"
-
-#: ../src/xplayer-preferences.c:163
-msgid ""
-"The change of this setting will only take effect for the next movie, or when "
-"Xplayer is restarted."
-msgstr ""
-"Promjena ove postavke će se primjeniti tek za slijedeći film, ili kod "
-"ponovnog pokretanja Xplayera."
-
-#: ../src/xplayer-preferences.c:367
-msgid "Changing the visuals effect type will require a restart to take effect."
-msgstr ""
-"Kod promjene tipa vizualnih efekata potrebno je ponovno pokrenuti aplikaciju "
-"kako bi se vidjele promjene."
-
-#: ../src/xplayer-preferences.c:451
-msgid ""
-"The change of audio output type will only take effect when Xplayer is "
-"restarted."
-msgstr ""
-"Kod uključivanja ili isključivanja ovog tipa izlaza zvuka potrebno je "
-"ponovno pokrenuti aplikaciju kako bi se vidjele promjene."
-
-#: ../src/xplayer-preferences.c:539
-msgid "Preferences"
-msgstr ""
-
-#: ../src/xplayer-preferences.c:709
-msgid "Select Subtitle Font"
-msgstr "Odaberite font za titlove"
-
-#. FIXME this should be setting an error?
-#: ../src/xplayer-properties-main.c:114 ../src/xplayer-properties-view.c:85
-#: ../src/xplayer-properties-view.c:93
-msgid "Audio/Video"
-msgstr "Audio/Video"
-
-#: ../src/xplayer-screenshot.c:59 ../src/xplayer-screenshot.c:69
-#, c-format
-msgid "Screenshot%d.png"
-msgstr "SlikaEkrana%d.png"
-
-#: ../src/xplayer-screenshot.c:92
-msgid "Screenshot.png"
-msgstr "Slika_zaslona-%d.png"
-
-#: ../src/xplayer-screenshot.c:168
-msgid "There was an error saving the screenshot."
-msgstr "Došlo je do greške prilikom spremanja slike ekrana."
-
-#: ../src/xplayer-screenshot.c:218
-msgid "Save Screenshot"
-msgstr "Spremi sliku ekrana"
-
-#: ../src/xplayer-statusbar.c:97
-msgid "0:00 / 0:00"
-msgstr "0:00 / 0:00"
-
-#: ../src/xplayer-statusbar.c:102 ../src/xplayer.c:350 ../src/xplayer.c:1007
-#: ../browser-plugin/xplayer-plugin-viewer.c:339
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Zaustavljen"
 
-#: ../src/xplayer-statusbar.c:119
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (Strujanje)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:126 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "%s / %s"
-msgstr "%s %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:129 ../src/xplayer-time-label.c:70
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "Traži do %s / %s"
-
-#: ../src/xplayer-statusbar.c:201
-msgid "Buffering"
-msgstr "Međuspremanje"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:212
-#, c-format
-msgid "%d %%"
-msgstr "%d %%"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:282
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:287
-#, c-format
-msgid "%s, %d %%"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:157
-msgid "Current Locale"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:160 ../src/xplayer-subtitle-encoding.c:162
-#: ../src/xplayer-subtitle-encoding.c:164 ../src/xplayer-subtitle-encoding.c:166
-msgid "Arabic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:169
-msgid "Armenian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:172 ../src/xplayer-subtitle-encoding.c:174
-#: ../src/xplayer-subtitle-encoding.c:176
-msgid "Baltic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:179
-msgid "Celtic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:182 ../src/xplayer-subtitle-encoding.c:184
-#: ../src/xplayer-subtitle-encoding.c:186 ../src/xplayer-subtitle-encoding.c:188
-msgid "Central European"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:191 ../src/xplayer-subtitle-encoding.c:193
-#: ../src/xplayer-subtitle-encoding.c:195 ../src/xplayer-subtitle-encoding.c:197
-msgid "Chinese Simplified"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:200 ../src/xplayer-subtitle-encoding.c:202
-#: ../src/xplayer-subtitle-encoding.c:204
-msgid "Chinese Traditional"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:207
-msgid "Croatian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:210 ../src/xplayer-subtitle-encoding.c:212
-#: ../src/xplayer-subtitle-encoding.c:214 ../src/xplayer-subtitle-encoding.c:216
-#: ../src/xplayer-subtitle-encoding.c:218 ../src/xplayer-subtitle-encoding.c:220
-msgid "Cyrillic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:223
-msgid "Cyrillic/Russian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:226 ../src/xplayer-subtitle-encoding.c:228
-msgid "Cyrillic/Ukrainian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:231
-msgid "Georgian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:234 ../src/xplayer-subtitle-encoding.c:236
-#: ../src/xplayer-subtitle-encoding.c:238
-msgid "Greek"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:241
-msgid "Gujarati"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:244
-msgid "Gurmukhi"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:247 ../src/xplayer-subtitle-encoding.c:249
-#: ../src/xplayer-subtitle-encoding.c:251 ../src/xplayer-subtitle-encoding.c:253
-msgid "Hebrew"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:256
-msgid "Hebrew Visual"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:259
-msgid "Hindi"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:262
-msgid "Icelandic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:265 ../src/xplayer-subtitle-encoding.c:267
-#: ../src/xplayer-subtitle-encoding.c:269
-msgid "Japanese"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:272 ../src/xplayer-subtitle-encoding.c:274
-#: ../src/xplayer-subtitle-encoding.c:276 ../src/xplayer-subtitle-encoding.c:278
-msgid "Korean"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:281
-msgid "Nordic"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:284
-msgid "Persian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:287 ../src/xplayer-subtitle-encoding.c:289
-msgid "Romanian"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:292
-msgid "South European"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:295
-msgid "Thai"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:298 ../src/xplayer-subtitle-encoding.c:300
-#: ../src/xplayer-subtitle-encoding.c:302 ../src/xplayer-subtitle-encoding.c:304
-msgid "Turkish"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:307 ../src/xplayer-subtitle-encoding.c:309
-#: ../src/xplayer-subtitle-encoding.c:311 ../src/xplayer-subtitle-encoding.c:313
-#: ../src/xplayer-subtitle-encoding.c:315
-msgid "Unicode"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:318 ../src/xplayer-subtitle-encoding.c:320
-#: ../src/xplayer-subtitle-encoding.c:322 ../src/xplayer-subtitle-encoding.c:324
-#: ../src/xplayer-subtitle-encoding.c:326
-msgid "Western"
-msgstr ""
-
-#: ../src/xplayer-subtitle-encoding.c:329 ../src/xplayer-subtitle-encoding.c:331
-#: ../src/xplayer-subtitle-encoding.c:333
-msgid "Vietnamese"
-msgstr ""
-
-#: ../src/xplayer-uri.c:405
-msgid "All files"
-msgstr "Sve datoteke"
-
-#: ../src/xplayer-uri.c:410
-msgid "Supported files"
-msgstr "Podržane datoteke"
-
-#: ../src/xplayer-uri.c:422
-msgid "Audio files"
-msgstr ""
-
-#: ../src/xplayer-uri.c:430
-msgid "Video files"
-msgstr ""
-
-#: ../src/xplayer-uri.c:440
-msgid "Subtitle files"
-msgstr ""
-
-#: ../src/xplayer-uri.c:505
-msgid "Select text subtitle"
-msgstr ""
-
-#: ../src/xplayer-uri.c:559
-msgid "Select Movies or Playlists"
-msgstr "Odaberite filmove ili popise"
-
-#: ../src/xplayer.c:336 ../browser-plugin/xplayer-plugin-viewer.c:355
-msgid "Playing"
-msgstr "Pokrećem"
-
-#: ../src/xplayer.c:343 ../browser-plugin/xplayer-plugin-viewer.c:351
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "Pauzirano"
 
-#: ../src/xplayer.c:431 ../src/xplayer.c:458 ../src/xplayer.c:1128
-#: ../src/xplayer.c:1276
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+msgid "Playing"
+msgstr "Reprodukcija"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Reproduciram film"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:442
+msgid "No URI to play"
+msgstr "Nema URI-ja reprodukcije"
+
+#: ../browser-plugin/xplayer-plugin-viewer.c:675
+#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+msgid "Xplayer Movie Player"
+msgstr "Xplayer reproduktor filmova"
+
+#. translators: this is:
+#. * Open With ApplicationName
+#. * as in nautilus' right-click menu
+#: ../browser-plugin/xplayer-plugin-viewer.c:1119
 #, c-format
-msgid "Xplayer could not play '%s'."
-msgstr "Xplayer nije mogao pokrenuti '%s'."
+msgid "_Open with \"%s\""
+msgstr "_Otvori s \"%s\""
 
-#: ../src/xplayer.c:541
-#, c-format
-msgid ""
-"Xplayer could not play this media (%s) although a plugin is present to handle "
-"it."
-msgstr ""
-"Xplayer nije mogao pokrenuti ovaj sadržaj (%s) iako postoji potreban plugin."
-
-#: ../src/xplayer.c:542
-msgid ""
-"You might want to check that a disc is present in the drive and that it is "
-"correctly configured."
-msgstr "Molim provjerite da je disk u uređaju i da je odgovarajuće namješten."
-
-#: ../src/xplayer.c:549 ../src/plugins/youtube/youtube.py:174
-msgid "More information about media plugins"
-msgstr ""
-
-#: ../src/xplayer.c:550 ../src/plugins/youtube/youtube.py:172
-msgid ""
-"Please install the necessary plugins and restart Xplayer to be able to play "
-"this media."
-msgstr ""
-"Molim instalirajte potrebne pluginove i ponovno pokrenite Xplayer kako biste "
-"mogli pokrenuti ovaj sadržaj."
-
-#: ../src/xplayer.c:552
-#, c-format
-msgid ""
-"Xplayer cannot play this type of media (%s) because it does not have the "
-"appropriate plugins to be able to read from the disc."
-msgstr ""
-
-#: ../src/xplayer.c:554 ../src/plugins/youtube/youtube.py:171
-#, c-format, python-format
-msgid ""
-"Xplayer cannot play this type of media (%s) because you do not have the "
-"appropriate plugins to handle it."
-msgstr ""
-"Xplayer ne može pokrenuti ovaj tip sadržaja (%s) jer nemate potrebne pluginove."
-
-#: ../src/xplayer.c:558
-msgid ""
-"Xplayer cannot play TV, because no TV adapters are present or they are not "
-"supported."
-msgstr ""
-
-#: ../src/xplayer.c:559
-msgid "Please insert a supported TV adapter."
-msgstr ""
-
-#: ../src/xplayer.c:569
-msgid "More information about watching TV"
-msgstr ""
-
-#: ../src/xplayer.c:570
-msgid "Xplayer is missing a channels listing to be able to tune the receiver."
-msgstr ""
-
-#: ../src/xplayer.c:571
-msgid ""
-"Please follow the instructions provided in the link to create a channels "
-"listing."
-msgstr ""
-
-#: ../src/xplayer.c:574
-#, c-format
-msgid ""
-"Xplayer cannot play this type of media (%s) because the TV device is busy."
-msgstr ""
-"Xplayer ne može pokrenuti ovaj tip sadržaja (%s) jer je zauzet TV uređaj."
-
-#: ../src/xplayer.c:575
-msgid "Please try again later."
-msgstr ""
-
-#: ../src/xplayer.c:580
-#, c-format
-msgid "Xplayer cannot play this type of media (%s) because it is not supported."
-msgstr ""
-
-#: ../src/xplayer.c:581
-msgid "Please insert another disc to play back."
-msgstr ""
-
-#: ../src/xplayer.c:615
-msgid "Xplayer was not able to play this disc."
-msgstr "Xplayer ne može reproducirati ovaj disk."
-
-#: ../src/xplayer.c:616 ../src/xplayer.c:3282
-#: ../browser-plugin/xplayer-plugin-viewer.c:1780
-msgid "No reason."
-msgstr "Bez razloga."
-
-#: ../src/xplayer.c:630
-msgid "Xplayer does not support playback of Audio CDs"
-msgstr ""
-
-#: ../src/xplayer.c:631
-msgid "Please consider using a music player or a CD extractor to play this CD"
-msgstr ""
-
-#: ../src/xplayer.c:932 ../src/xplayer.c:940
-msgid "Xplayer could not get a screenshot of that film."
-msgstr "Xplayer nije mogao dobiti prikaz slike zaslona tog filma"
-
-#: ../src/xplayer.c:940
-msgid "This is not supposed to happen; please file a bug report."
-msgstr "Ovo se nije trebalo dogoditi; molim prijavite grešku u aplikaciji."
-
-#: ../src/xplayer.c:1134
-msgid "No error message"
-msgstr "Nema poruke o grešci"
-
-#: ../src/xplayer.c:1451
-msgid "Xplayer could not display the help contents."
-msgstr "Xplayer nije mogao prikazati pomoć."
-
-#: ../src/xplayer.c:1720 ../src/xplayer.c:1722
-#: ../browser-plugin/xplayer-plugin-viewer.c:1437
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
-msgstr "Došlo  je do pogreške"
+msgstr "Došlo je do greške"
 
-#: ../src/xplayer.c:2576
-msgid "TV signal lost"
-msgstr ""
+#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+msgid "No playlist or playlist empty"
+msgstr "Nema popisa izvođenja ili je popis prazan"
 
-#: ../src/xplayer.c:2577
-msgid "Please verify your hardware setup."
-msgstr ""
+#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+msgid "Movie browser plugin"
+msgstr "Priključak preglednika filmova"
 
-#: ../src/xplayer.c:3143 ../src/xplayer.c:3145
-msgid "Previous Chapter/Movie"
-msgstr ""
-
-#: ../src/xplayer.c:3151 ../src/xplayer.c:3153
-msgid "Play / Pause"
-msgstr ""
-
-#: ../src/xplayer.c:3160 ../src/xplayer.c:3162
-msgid "Next Chapter/Movie"
-msgstr ""
-
-#: ../src/xplayer.c:3282
-msgid "Xplayer could not startup."
-msgstr "Xplayer se nije mogao pokrenuti."
-
-#: ../src/xplayer.c:3419
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
-msgstr "Ne mogu inicijalizirati thread-safe biblioteke."
+msgstr "Pokretanje thread-safe biblioteke nije moguće."
 
-#: ../src/xplayer.c:3419
-msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Provjerite svoju instalaciju sustava. Xplayer će sada završiti."
-
-#. Handle command line arguments
-#: ../src/xplayer.c:3427
-msgid "- Play movies and songs"
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
+"Provjerite svoju instalaciju sustava. Xplayer priključak će se sada "
+"zatvoriti."
 
-#: ../src/xplayer.c:3436
-#, c-format
+#: ../data/fullscreen.ui.h:1
+msgid "Leave Fullscreen"
+msgstr "Napusti cijelozaslonski prikaz"
+
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+msgid "Time:"
+msgstr "Vrijeme:"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:1
+msgid "Allow the screensaver to activate when playing audio"
+msgstr "Dopusti aktivaciju čuvara zaslona prilikom reproduciranja glazbe"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
-"%s\n"
-"Run '%s --help' to see a full list of available command line options.\n"
+"Allow the screensaver to activate when playing audio. Disable if you have "
+"monitor-powered speakers."
 msgstr ""
+"Dopusti aktivaciju čuvara zaslona prilikom reproduciranja glazbe. Isključite "
+"ako imate zvučnike u monitoru."
 
-#: ../src/xplayer.c:3456
-msgid "Xplayer could not initialize the configuration engine."
-msgstr "Xplayer nije mogao inicijalizirati konfiguraciju."
+#: ../data/org.x.player.gschema.xml.in.in.h:3
+msgid "Show visual effects when no video is displayed"
+msgstr "Prikazuj vizualne efekte kada se video snimka ne prikazuje"
 
-#: ../src/xplayer.c:3456
-msgid "Make sure that GNOME is properly installed."
-msgstr "Provjerite da je GNOME pravilno instaliran."
+#: ../data/org.x.player.gschema.xml.in.in.h:4
+msgid "Show visual effects when playing an audio only file."
+msgstr "Prikazuj vizualne efekte kada se svira zvučna datoteka."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2468
+#: ../data/org.x.player.gschema.xml.in.in.h:5
+msgid "Name of the visual effects plugin"
+msgstr "Naziv priključka vizualnih efekata"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:6
+msgid "The brightness of the video"
+msgstr "Svjetlina video snimke"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:7
+msgid "The contrast of the video"
+msgstr "Kontrast video snimke"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:8
+msgid "The hue of the video"
+msgstr "Ton boje video snimke"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:9
+msgid "The saturation of the video"
+msgstr "Zasićenost video snimke"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:10
+msgid "Resize the canvas automatically on file load"
+msgstr "Automatska promjena veličine pri učitavanju datoteke"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:11
+msgid "Repeat mode"
+msgstr "Ponavljanje"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:12
+msgid "Shuffle mode"
+msgstr "Naizmjenično"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:13
+msgid "Whether to disable deinterlacing for interlaced movies"
+msgstr "Treba li se onemogućiti raspletanje za isprepletene filmove"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:14
+msgid "Whether to enable debug for the playback engine"
+msgstr "Treba li omogućiti otklanjanje greške za pogon reproduktora."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:15
+msgid "Type of audio output to use"
+msgstr "Vrsta zvučnog izlaza za korištenje"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:16
+msgid "Visualization quality setting"
+msgstr "Postavke kvalitete vizualizacije"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:17
+msgid "Quality setting for the audio visualization."
+msgstr "Postavke kvalitete zvučne vizualizacije."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:18
+msgid "Network buffering threshold"
+msgstr "Kapacitet mrežnog međuspremnika"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid ""
-"The requested audio output was not found. Please select another audio output "
-"in the Multimedia Systems Selector."
+"Amount of data to buffer for network streams before starting to display the "
+"stream (in seconds)."
 msgstr ""
-"Ne postoji zatraženi audio izlaz. Molim, odaberite neki drugi audio izlaz u "
-"multimedijskom izborniku."
+"Količina podataka za spremanje u međuspremnih prije početka reprodukcije "
+"mrežnog strujanja (u sekundama)."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2473
-msgid "Location not found."
-msgstr "Lokacija nije pronađena."
+#: ../data/org.x.player.gschema.xml.in.in.h:20
+msgid "Subtitle font"
+msgstr "Slova podnaslova"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2477
+#: ../data/org.x.player.gschema.xml.in.in.h:21
+msgid "Pango font description for subtitle rendering."
+msgstr "Opis Pango slova za prikaz podnaslova."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:22
+msgid "Subtitle encoding"
+msgstr "Kôdna stranica podnaslova"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:23
+msgid "Encoding character set for subtitle."
+msgstr "Kôdna stranica za podnaslove."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:24
+msgid "Default location for the \"Open...\" dialogs"
+msgstr "Zadana lokacija za dijaloge \"Otvori...\""
+
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid ""
-"Could not open location; you might not have permission to open the file."
+"Default location for the \"Open...\" dialogs. Default is the current "
+"directory."
 msgstr ""
+"Zadana lokacija za \"Otvori...\" dijaloge. Zadan je trenutni direktorij."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2488
+#: ../data/org.x.player.gschema.xml.in.in.h:26
+msgid "Default location for the \"Take Screenshot\" dialogs"
+msgstr "Zadana lokacija za dijaloge \"Uslikaj video snimku\""
+
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
-"The video output is in use by another application. Please close other video "
-"applications, or select another video output in the Multimedia Systems "
-"Selector."
+"Default location for the \"Take Screenshot\" dialogs. Default is the "
+"Pictures directory."
 msgstr ""
-"Video izlaz trenutno koristi neka druga aplikacija. Molim zatvorite drugu "
-"aplikaciju, ili odaberite drugi video izlaz u Multimedia Systems Selectoru."
+"Zadana lokacija za \"Uslikaj video snimku\" dijaloge. Zadani je direktorij "
+"Slike."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2494
+#: ../data/org.x.player.gschema.xml.in.in.h:28
+msgid "Whether to disable the plugins in the user's home directory"
+msgstr "Treba li onemogućiti priključke u osobnoj mapi korisnika"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:29
+msgid "Whether to disable the keyboard shortcuts"
+msgstr "Treba li isključiti kratice tipkovnice"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30
+msgid "Whether to autoload text subtitle files when a movie is loaded"
+msgstr "Trebaju li se podnaslovi automatski učitati pri pokretanju filma"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:31
+msgid "Whether to autoload external chapter files when a movie is loaded"
+msgstr ""
+"Trebaju li se automatski učitati datoteke vanjskih poglavlja kada se učita "
+"film"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:32
 msgid ""
-"The audio output is in use by another application. Please select another "
-"audio output in the Multimedia Systems Selector. You may want to consider "
-"using a sound server."
+"Whether to remember the position of played audio/video files when pausing or "
+"closing them"
 msgstr ""
-"Audio izlaz trenutno koristi neka druga aplikacija. Molim zatvorite drugu "
-"aplikaciju, ili odaberite drugi video izlaz u Multimedia Systems Selectoru."
+"Treba li se zapamtiti položaj reproduciranih zvučnih/video datoteka kod "
+"pauziranja ili zatvaranja."
 
-#. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2512
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2518
-#, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
-msgstr ""
+#: ../data/org.x.player.gschema.xml.in.in.h:33
+msgid "Active plugins list"
+msgstr "Popis aktivnih priključaka"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2519
-#, c-format
+#: ../data/org.x.player.gschema.xml.in.in.h:34
 msgid ""
-"The playback of this movie requires the following decoders which are not "
-"installed:\n"
-"\n"
-"%s"
-msgstr ""
+"A list of the names of the plugins which are currently active (loaded and "
+"running)."
+msgstr "Popis naziva trenutno aktivnih (učitanih i pokrenutih) priključaka."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2544
-msgid ""
-"Cannot play this file over the network. Try downloading it to disk first."
-msgstr ""
-"Ne mogu reproducirati ovu datoteku preko mreže. Pokušajte ju prvo preuzeti "
-"na disk."
+#: ../data/playlist.ui.h:1
+msgid "_Remove"
+msgstr "_Ukloni"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2616
-msgid "Media file could not be played."
-msgstr "Datoteka se ne može reproducirati."
+#: ../data/playlist.ui.h:2
+msgid "Remove file from playlist"
+msgstr "Ukloni s popisa izvođenja"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:2748
-msgid "Failed to retrieve working directory"
-msgstr "Ne mogu dobiti trenutni direktorij"
+#: ../data/playlist.ui.h:3
+msgid "_Copy Location"
+msgstr "_Kopiraj lokaciju"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:4391
-msgid "Surround"
-msgstr ""
+#: ../data/playlist.ui.h:4
+msgid "Copy the location to the clipboard"
+msgstr "Kopiraj lokaciju u međuspremnik"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:4393
-msgid "Mono"
-msgstr ""
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
+msgid "_Select Text Subtitles..."
+msgstr "_Odaberi podnalove..."
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:4395
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
+msgid "Select a file to use for text subtitles"
+msgstr "Odaberite datoteku s podnaslovima"
+
+#: ../data/playlist.ui.h:7
+msgid "Add..."
+msgstr "Dodaj..."
+
+#: ../data/playlist.ui.h:8
+msgid "Remove"
+msgstr "Ukloni"
+
+#: ../data/playlist.ui.h:9
+msgid "Save Playlist..."
+msgstr "Spremi popis izvođenja..."
+
+#: ../data/playlist.ui.h:10
+msgid "Move Up"
+msgstr "Pomakni gore"
+
+#: ../data/playlist.ui.h:11
+msgid "Move Down"
+msgstr "Pomakni dolje"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:2
+msgid "Normal"
+msgstr "Normalna"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:4
+msgid "Large"
+msgstr "Velika"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:6
+msgid "Extra Large"
+msgstr "Vrlo velika"
+
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "Stereo"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:4712
-msgid "Too old version of GStreamer installed."
-msgstr "Koristite prestaru verziju GStreamer-a"
+#: ../data/preferences.ui.h:8
+msgid "4-channel"
+msgstr "4-kanalni"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:4719
-msgid "Media contains no supported video streams."
-msgstr "Sadržaj nema podržanih video traka."
+#: ../data/preferences.ui.h:9
+msgid "4.1-channel"
+msgstr "4.1-kanalni"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5094
-msgid ""
-"Failed to create a GStreamer play object. Please check your GStreamer "
-"installation."
-msgstr ""
-"Ne mogu kreirati objekt za sviranje u GStreameru. Molim provjerite svoju "
-"instalaciju GStreamera."
+#: ../data/preferences.ui.h:10
+msgid "5.0-channel"
+msgstr "5.0-kanalni"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5226
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5343
-msgid ""
-"Failed to open video output. It may not be available. Please select another "
-"video output in the Multimedia Systems Selector."
-msgstr ""
-"Ne mogu otvoriti video izlaz. Možda nije dostupan. Molim odaberite drugi "
-"video izlaz u Multimedia Systems Selectoru."
+#: ../data/preferences.ui.h:11
+msgid "5.1-channel"
+msgstr "5.1-kanalni"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5238
-msgid ""
-"Could not find the video output. You may need to install additional "
-"GStreamer plugins, or select another video output in the Multimedia Systems "
-"Selector."
-msgstr ""
-"Ne postoji zatraženi video izlaz. Trebate instalirati dodatne Gstreamer "
-"dodatke ili odabrati neki drugi video izlaz u multimedijskom izborniku."
+#: ../data/preferences.ui.h:12
+msgid "AC3 Passthrough"
+msgstr "AC3 prolaz"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5273
-msgid ""
-"Failed to open audio output. You may not have permission to open the sound "
-"device, or the sound server may not be running. Please select another audio "
-"output in the Multimedia Systems Selector."
-msgstr ""
-"Ne mogu otvoriti audio izlaz. Možda nemate dozvole za korištenje zvučnog "
-"uređaja, ili server za zvuk nije pokrenut. Molim odaberite drugi audio izlaz "
-"u  Multimedia Systems Selektoru."
+#: ../data/preferences.ui.h:13
+msgid "Xplayer Preferences"
+msgstr "Xplayer osobitosti"
 
-#: ../src/backend/bacon-video-widget-gst-0.10.c:5293
-msgid ""
-"Could not find the audio output. You may need to install additional "
-"GStreamer plugins, or select another audio output in the Multimedia Systems "
-"Selector."
-msgstr ""
-"Ne postoji zatraženi audio izlaz. Trebate instalirati dodatne Gstreamer "
-"dodatke ili odabrati neki drugi audio izlaz u multimedijskom izborniku."
+#: ../data/preferences.ui.h:14
+msgid "Playback"
+msgstr "Reprodukcija"
 
-#: ../src/backend/bacon-video-widget-xine.c:763
+#: ../data/preferences.ui.h:15
+msgid "Start playing files from last position"
+msgstr "Pokreni repodukciju s posljednjeg položaja"
+
+#: ../data/preferences.ui.h:16
+msgid "Text Subtitles"
+msgstr "Tekst podnaslova"
+
+#: ../data/preferences.ui.h:17
+msgid "_Load subtitle files when movie is loaded"
+msgstr "_Učitaj podnaslove kada je film učitan"
+
+#: ../data/preferences.ui.h:18
+msgid "_Font:"
+msgstr "_Slova:"
+
+#: ../data/preferences.ui.h:19
+msgid "_Encoding:"
+msgstr "_Kôdiranje:"
+
+#: ../data/preferences.ui.h:20
+msgid "External Chapters"
+msgstr "Vanjska poglavlja"
+
+#: ../data/preferences.ui.h:21
+msgid "Load _chapter files when movie is loaded"
+msgstr "Učitaj datoteke _poglavlja kada je film učitan"
+
+#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+msgid "General"
+msgstr "Općenito"
+
+#. Tab label in the Preferences dialogue
+#: ../data/preferences.ui.h:24
+msgid "Display"
+msgstr "Zaslon"
+
+#: ../data/preferences.ui.h:25
+msgid "_Resize the window when a new video is loaded"
+msgstr "_Promjeni veličinu prozora kada se učita nova video snimka"
+
+#: ../data/preferences.ui.h:26
+msgid "Disable _deinterlacing of interlaced videos"
+msgstr "Onemogući _raspletanje za isprepletene video snimke"
+
+#: ../data/preferences.ui.h:27
+msgid "Disable screensaver when playing"
+msgstr "Onemogući čuvara zaslona tijekom gledanja"
+
+#: ../data/preferences.ui.h:28
+msgctxt "Screensaver disable"
+msgid "Video"
+msgstr "Snimke"
+
+#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#: ../data/preferences.ui.h:30
+msgid "Video or Audio"
+msgstr "Snimke ili zvuka"
+
+#: ../data/preferences.ui.h:31
+msgid "Visual Effects"
+msgstr "Vizualni efekti"
+
+#: ../data/preferences.ui.h:32
+msgid "Show _visual effects when an audio file is played"
+msgstr "Prikazuj _vizualne efekte prilikom reprodukcije zvučne datoteke"
+
+#: ../data/preferences.ui.h:33
+msgid "_Type of visualization:"
+msgstr "_Vrsta vizualizacije:"
+
+#: ../data/preferences.ui.h:34
+msgid "Visualization _size:"
+msgstr "Veličina _vizualizacije:"
+
+#: ../data/preferences.ui.h:35
+msgid "Color Balance"
+msgstr "Uravnoteženje boja"
+
+#: ../data/preferences.ui.h:36
+msgid "_Brightness:"
+msgstr "_Svjetlina:"
+
+#: ../data/preferences.ui.h:37
+msgid "Co_ntrast:"
+msgstr "_Kontrast:"
+
+#: ../data/preferences.ui.h:38
+msgid "Sat_uration:"
+msgstr "Za_sićenje:"
+
+#: ../data/preferences.ui.h:39
+msgid "_Hue:"
+msgstr "_Ton boje:"
+
+#: ../data/preferences.ui.h:40
+msgid "Reset to _Defaults"
+msgstr "Vrati na _zadano"
+
+#: ../data/preferences.ui.h:41
+msgid "Audio Output"
+msgstr "Zvučni izlaz"
+
+#: ../data/preferences.ui.h:42
+msgid "_Audio output type:"
+msgstr "_Vrsta zvučnog izlaza:"
+
+#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+msgid "Audio"
+msgstr "Zvuk"
+
+#: ../data/properties.ui.h:2
+msgid "Title:"
+msgstr "Naslov:"
+
+#: ../data/properties.ui.h:3
+msgid "Artist:"
+msgstr "Izvođač:"
+
+#: ../data/properties.ui.h:4
+msgid "Duration:"
+msgstr "Trajanje:"
+
+#: ../data/properties.ui.h:5
+msgid "Year:"
+msgstr "Godina:"
+
+#: ../data/properties.ui.h:6
+msgid "Album:"
+msgstr "Album:"
+
+#: ../data/properties.ui.h:7
+msgid "Comment:"
+msgstr "Komentar:"
+
+#: ../data/properties.ui.h:8
+msgid "Container:"
+msgstr "Format:"
+
+#: ../data/properties.ui.h:9
+msgid "Video"
+msgstr "Snimka"
+
+#: ../data/properties.ui.h:10
+msgid "Dimensions:"
+msgstr "Razlučivost:"
+
+#: ../data/properties.ui.h:11
+msgid "Codec:"
+msgstr "Kôdek:"
+
+#: ../data/properties.ui.h:12
+msgid "Framerate:"
+msgstr "Broj sličica:"
+
+#: ../data/properties.ui.h:13
+msgid "Bitrate:"
+msgstr "Brzina prijenosa:"
+
+#: ../data/properties.ui.h:15
+msgid "Sample rate:"
+msgstr "Frekvencija:"
+
+#: ../data/properties.ui.h:16
+msgid "Channels:"
+msgstr "Kanali:"
+
+#. Title
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
+msgid "Videos"
+msgstr "Snimke"
+
+#: ../data/xplayer.desktop.in.in.in.h:2
+msgid "Play movies"
+msgstr "Gledajte filmove"
+
+#: ../data/xplayer.desktop.in.in.in.h:3
+msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
+msgstr "Video;Film;Film;Isječak;Serije;Reproduktor;DVD;TV;Disk;"
+
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "Reproduciraj/Pauziraj"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "Sljedeće"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "Prijašnje"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "Utišaj"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "Cijeli zaslon"
+
+#: ../data/xplayer.ui.h:1
+msgid "_Movie"
+msgstr "_Film"
+
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_Otvori..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "Otvori datoteku"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "Otvori _lokaciju..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "Otvori ne-lokalnu datoteku"
+
+#: ../data/xplayer.ui.h:6
+msgid "_Eject"
+msgstr "_Izbaci"
+
+#: ../data/xplayer.ui.h:7
+msgid "Eject the current disc"
+msgstr "Izbaci trenutni medij"
+
+#: ../data/xplayer.ui.h:8
+msgid "_Properties"
+msgstr "_Svojstva"
+
+#: ../data/xplayer.ui.h:9
+msgid "View the properties of the current stream"
+msgstr "Prikaži svojstva trenutnog strujanja"
+
+#: ../data/xplayer.ui.h:10
+msgid "Play / P_ause"
+msgstr "Reprodukcija / P_auza"
+
+#: ../data/xplayer.ui.h:11
+msgid "Play or pause the movie"
+msgstr "Reproduciraj ili pauziraj film"
+
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "_Zatvori"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "Zatvori program"
+
+#: ../data/xplayer.ui.h:14
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../data/xplayer.ui.h:15
+msgid "_Clear Playlist"
+msgstr "_Obriši popis izvođenja"
+
+#: ../data/xplayer.ui.h:16
+msgid "Clear the playlist"
+msgstr "Obriši popis izvođenja"
+
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "Osobit_osti"
+
+#: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "Podesi aplikaciju"
+
+#: ../data/xplayer.ui.h:19
+msgid "Plugins..."
+msgstr "Priključci..."
+
+#: ../data/xplayer.ui.h:20
+msgid "Configure plugins to extend the application"
+msgstr "Podesi priključke za proširivanje aplikacije"
+
+#: ../data/xplayer.ui.h:21
+msgid "_View"
+msgstr "_Pogled"
+
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "_Cijeli zaslon"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "Prebaci na cijeli zaslon"
+
+#: ../data/xplayer.ui.h:24
+msgid "Fit Window to Movie"
+msgstr "Prilagodi prozor veličini filma"
+
+#: ../data/xplayer.ui.h:25
+msgid "_Resize 1∶2"
+msgstr "_1∶2"
+
+#: ../data/xplayer.ui.h:26
+msgid "Resize to half the original video size"
+msgstr "Dvostuko umanji veličinu slike"
+
+#: ../data/xplayer.ui.h:27
+msgid "Resize _1∶1"
+msgstr "_1∶1"
+
+#: ../data/xplayer.ui.h:28
+msgid "Resize to the original video size"
+msgstr "Vrati izvornu veličinu filma"
+
+#: ../data/xplayer.ui.h:29
+msgid "Resize _2∶1"
+msgstr "_2∶1"
+
+#: ../data/xplayer.ui.h:30
+msgid "Resize to double the original video size"
+msgstr "Udvostruči veličinu filma"
+
+#: ../data/xplayer.ui.h:31
+msgid "_Aspect Ratio"
+msgstr "_Omjer slike"
+
+#: ../data/xplayer.ui.h:32
+msgid "Switch An_gles"
+msgstr "Promijeni _kuteve"
+
+#: ../data/xplayer.ui.h:33
+msgid "Switch camera angles"
+msgstr "Promijeni kuteve kamere"
+
+#: ../data/xplayer.ui.h:34
+msgid "_Go"
+msgstr "_Idi"
+
+#: ../data/xplayer.ui.h:35
+msgid "_DVD Menu"
+msgstr "_DVD izbornik"
+
+#: ../data/xplayer.ui.h:36
+msgid "Go to the DVD menu"
+msgstr "Prikaži DVD izbornik"
+
+#: ../data/xplayer.ui.h:37
+msgid "_Title Menu"
+msgstr "_Glavni izbornik"
+
+#: ../data/xplayer.ui.h:38
+msgid "Go to the title menu"
+msgstr "Prikaži glavni izbornik"
+
+#: ../data/xplayer.ui.h:39
+msgid "A_udio Menu"
+msgstr "I_zbornik zvuka"
+
+#: ../data/xplayer.ui.h:40
+msgid "Go to the audio menu"
+msgstr "Prikaži izbornik zvuka"
+
+#: ../data/xplayer.ui.h:41
+msgid "_Angle Menu"
+msgstr "_Izbornik kuta"
+
+#: ../data/xplayer.ui.h:42
+msgid "Go to the angle menu"
+msgstr "Prikaži izbornik kuta"
+
+#: ../data/xplayer.ui.h:43
+msgid "_Chapter Menu"
+msgstr "_Izbornik poglavlja"
+
+#: ../data/xplayer.ui.h:44
+msgid "Go to the chapter menu"
+msgstr "Prikaži izbornik poglavlja"
+
+#: ../data/xplayer.ui.h:45
+msgid "_Next Chapter/Movie"
+msgstr "_Sljedeće poglavlje/Film"
+
+#: ../data/xplayer.ui.h:46
+msgid "Next chapter or movie"
+msgstr "Sljedeće poglavlje ili film"
+
+#: ../data/xplayer.ui.h:47
+msgid "_Previous Chapter/Movie"
+msgstr "_Prijašnje poglavlje/film"
+
+#: ../data/xplayer.ui.h:48
+msgid "Previous chapter or movie"
+msgstr "Prijašnje poglavlje ili film"
+
+#: ../data/xplayer.ui.h:49
+msgid "_Sound"
+msgstr "_Zvuk"
+
+#: ../data/xplayer.ui.h:50
+msgid "Volume _Up"
+msgstr "_Pojačaj glasnoću zvuka"
+
+#: ../data/xplayer.ui.h:51
+msgid "Increase volume"
+msgstr "Pojačaj glasnoću zvuka"
+
+#: ../data/xplayer.ui.h:52
+msgid "Volume _Down"
+msgstr "_Smanji glasnoću zvuka"
+
+#: ../data/xplayer.ui.h:53
+msgid "Decrease volume"
+msgstr "Smanji glasnoću zvuka"
+
+#: ../data/xplayer.ui.h:54
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../data/xplayer.ui.h:55
+msgid "_Contents"
+msgstr "_Priručnik"
+
+#: ../data/xplayer.ui.h:56
+msgid "Help contents"
+msgstr "Sadržaj pomoći"
+
+#: ../data/xplayer.ui.h:57
+msgid "_About"
+msgstr "_O programu"
+
+#: ../data/xplayer.ui.h:58
+msgid "About this application"
+msgstr "O ovoj aplikaciji"
+
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "_Ponavljanje"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "Postavi ponavljanje"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "_Naizmjenično"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "Postavi naizmjenični način"
+
+#: ../data/xplayer.ui.h:63
+msgid "Show _Controls"
+msgstr "Prikaži _kontrole"
+
+#: ../data/xplayer.ui.h:64
+msgid "Show controls"
+msgstr "Prikaži kontrole"
+
+#: ../data/xplayer.ui.h:65
+msgid "S_idebar"
+msgstr "_Bočna traka"
+
+#: ../data/xplayer.ui.h:66
+msgid "Show or hide the sidebar"
+msgstr "Prikaži ili sakrij bočnu traku"
+
+#: ../data/xplayer.ui.h:67
+msgctxt "Aspect ratio"
+msgid "Auto"
+msgstr "Automatski"
+
+#: ../data/xplayer.ui.h:68
+msgid "Sets automatic aspect ratio"
+msgstr "Postavlja automatski omjer slike"
+
+#: ../data/xplayer.ui.h:69
+msgid "Square"
+msgstr "Kvadrat"
+
+#: ../data/xplayer.ui.h:70
+msgid "Sets square aspect ratio"
+msgstr "Postavlja kvadratni omjer slike"
+
+#: ../data/xplayer.ui.h:71
+msgid "4∶3 (TV)"
+msgstr "4∶3 (TV)"
+
+#: ../data/xplayer.ui.h:72
+msgid "Sets 4∶3 (TV) aspect ratio"
+msgstr "Setovi 4∶3 (TV) omjer slike"
+
+#: ../data/xplayer.ui.h:73
+msgid "16∶9 (Widescreen)"
+msgstr "16∶9 (širok zaslon)"
+
+#: ../data/xplayer.ui.h:74
+msgid "Sets 16∶9 (widescreen) aspect ratio"
+msgstr "Setovi 16∶9 (širok zaslona) omjer slike"
+
+#: ../data/xplayer.ui.h:75
+msgid "2.11∶1 (DVB)"
+msgstr "2.11∶1 (DVB)"
+
+#: ../data/xplayer.ui.h:76
+msgid "Sets 2.11∶1 (DVB) aspect ratio"
+msgstr "Setovi 2.11∶1 (DVB) omjer slike"
+
+#: ../data/xplayer.ui.h:77
+msgid "S_ubtitles"
+msgstr "P_odnaslovi"
+
+#: ../data/xplayer.ui.h:80
+msgid "_Languages"
+msgstr "_Jezici"
+
+#: ../data/xplayer.ui.h:81
+msgid "Zoom In"
+msgstr "Uvećaj"
+
+#: ../data/xplayer.ui.h:82
+msgid "Zoom in"
+msgstr "Uvećaj"
+
+#: ../data/xplayer.ui.h:83
+msgid "Skip _Forward"
+msgstr "Premotaj u_naprijed"
+
+#: ../data/xplayer.ui.h:84
+msgid "Skip forward"
+msgstr "Premotaj unaprijed"
+
+#: ../data/xplayer.ui.h:85
+msgid "Skip _Backwards"
+msgstr "_Premotaj unatrag"
+
+#: ../data/xplayer.ui.h:86
+msgid "Skip backwards"
+msgstr "Premotaj unatrag"
+
+#: ../data/xplayer.ui.h:89
+msgid "Time seek bar"
+msgstr "Traka premotavanja"
+
+#: ../data/uri.ui.h:1
+msgid "Enter the _address of the file you would like to open:"
+msgstr "Upišite _adresu datoteke koju želite otvoriti:"
+
+#: ../src/backend/bacon-video-widget.c:1668
+msgid "Password requested for RTSP server"
+msgstr "Zatražena je lozinka za RTSP poslužitelj"
+
+#: ../src/backend/bacon-video-widget.c:2912
+#, c-format
+msgid "Audio Track #%d"
+msgstr "Zvučni zapis #%d"
+
+#: ../src/backend/bacon-video-widget.c:2916
+#, c-format
+msgid "Subtitle #%d"
+msgstr "Podnaslov #%d"
+
+#: ../src/backend/bacon-video-widget.c:3313
+msgid "The server you are trying to connect to is not known."
+msgstr "Poslužitelj s kojim se pokušavate povezati nije poznat."
+
+#: ../src/backend/bacon-video-widget.c:3316
+msgid "The connection to this server was refused."
+msgstr "Povezivanje s ovim poslužiteljem je odbijeno."
+
+#: ../src/backend/bacon-video-widget.c:3319
+msgid "The specified movie could not be found."
+msgstr "Navedeni film nije pronađen."
+
+#: ../src/backend/bacon-video-widget.c:3326
+msgid "The server refused access to this file or stream."
+msgstr "Poslužitelj je odbio zahtjev za pristup ovoj datoteci ili strujanju."
+
+#: ../src/backend/bacon-video-widget.c:3332
+msgid "Authentication is required to access this file or stream."
+msgstr "Potrebna je ovjera za pristup ovoj datoteci ili strujanju."
+
+#: ../src/backend/bacon-video-widget.c:3339
+msgid "You are not allowed to open this file."
+msgstr "Nemate dopuštenje za otvaranje ove datoteke."
+
+#: ../src/backend/bacon-video-widget.c:3344
+msgid "This location is not a valid one."
+msgstr "Ova lokacija nije valjana."
+
+#: ../src/backend/bacon-video-widget.c:3352
+msgid "The movie could not be read."
+msgstr "Film se ne može učitati"
+
+#. should be exactly one missing thing (source or converter)
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
 msgid ""
-"Couldn't load the '%s' audio driver\n"
-"Check that the device is not busy."
-msgstr ""
-"Ne mogu učitati audio driver '%s'.\n"
-"Provjerite da uređaj nije zauzet."
+"The playback of this movie requires a %s plugin which is not installed."
+msgid_plural ""
+"The playback of this movie requires the following plugins which are not "
+"installed:\n"
+"\n"
+"%s"
+msgstr[0] ""
+"Reprodukcija ovog filma zahtijeva %s priključak koji nije instaliran."
+msgstr[1] ""
+"Reprodukcija ovog filma zahtijeva sljedeće priključke koji nisu "
+"instalirani:\n"
+"\n"
+"%s"
+msgstr[2] ""
+"Reprodukcija ovog filma zahtijeva sljedeće priključke koji nisu "
+"instalirani:\n"
+"\n"
+"%s"
 
-#: ../src/backend/bacon-video-widget-xine.c:1233
-#: ../src/backend/bacon-video-widget-xine.c:1827
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
-"No video output is available. Make sure that the program is correctly "
+"An audio or video stream is not handled due to missing codecs. You might "
+"need to install additional plugins to be able to play some types of movies"
+msgstr ""
+"Nemoguće je rukovati sa zvučnim ili video strujanjem jer nedostaju kôdeki. "
+"Možda trebate instalirati dodatne priključke kako bi mogli gledati neke "
+"vrste filmova."
+
+#: ../src/backend/bacon-video-widget.c:3404
+msgid ""
+"This file cannot be played over the network. Try downloading it locally "
+"first."
+msgstr ""
+"Ova datoteka se ne može reproducirati putem mreže. Prvo ju pokušajte "
+"preuzeti na vaše računalo."
+
+#: ../src/backend/bacon-video-widget.c:5466
+msgid "Surround"
+msgstr "Surround"
+
+#: ../src/backend/bacon-video-widget.c:5468
+msgid "Mono"
+msgstr "Mono"
+
+#: ../src/backend/bacon-video-widget.c:5755
+msgid "Media contains no supported video streams."
+msgstr "Medij ne sadrži podržana video strujanja."
+
+#: ../src/backend/bacon-video-widget.c:5945
+msgid ""
+"Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Video izlaz nije dostupan. Provjerite da je program pravilno instaliran."
+"Neki potrebni priključci nedostaju. Pobrinite se da je program ispravno "
+"instaliran."
 
-#: ../src/backend/bacon-video-widget-xine.c:1362
-msgid ""
-"The TV adapter could not tune into the channel. Please check your hardware "
-"setup and channel configuration."
-msgstr ""
-
-#: ../src/backend/bacon-video-widget-xine.c:1367
-msgid "The server you are trying to connect to is not known."
-msgstr "Server na koji se pokušavate spojiti nije poznat."
-
-#: ../src/backend/bacon-video-widget-xine.c:1371
+#: ../src/eggdesktopfile.c:165
 #, c-format
-msgid "The device name you specified (%s) seems to be invalid."
-msgstr "Ime uređaja koji ste naveli (%s) je nepravilno."
+msgid "File is not a valid .desktop file"
+msgstr "Datoteka nije valjana .desktop datoteka"
 
-#: ../src/backend/bacon-video-widget-xine.c:1375
+#: ../src/eggdesktopfile.c:188
 #, c-format
-msgid "The server you are trying to connect to (%s) is unreachable."
-msgstr "Server na koji se pokušavate spojiti (%s) je nedostupan."
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "Nepoznata inačica datoteke radne površine '%s'"
 
-#: ../src/backend/bacon-video-widget-xine.c:1379
-msgid "The connection to this server was refused."
-msgstr "Spajanje na ovaj server je odbijeno."
-
-#: ../src/backend/bacon-video-widget-xine.c:1383
-msgid "The specified movie could not be found."
-msgstr "Navedeni film nije nađen."
-
-#: ../src/backend/bacon-video-widget-xine.c:1389
-#: ../src/backend/bacon-video-widget-xine.c:1405
-msgid ""
-"The source seems encrypted and can't be read. Are you trying to play an "
-"encrypted DVD without libdvdcss?"
-msgstr ""
-"Izvor izgleda kriptiran, te ga nije moguće pročitati. Možda pokušavate "
-"pokrenuti kriptirani DVD bez libdvdcss?"
-
-#: ../src/backend/bacon-video-widget-xine.c:1392
-msgid "The movie could not be read."
-msgstr "Ne mogu pročitati film."
-
-#: ../src/backend/bacon-video-widget-xine.c:1399
+#: ../src/eggdesktopfile.c:968
 #, c-format
-msgid "A problem occurred while loading a library or a decoder (%s)."
-msgstr "Došlo je do problema prilikom učitavanja biblioteke ili dekodera (%s)."
+msgid "Starting %s"
+msgstr "Pokretanje %s"
 
-#: ../src/backend/bacon-video-widget-xine.c:1408
-msgid "This file is encrypted and cannot be played back."
-msgstr "Ova datoteka je kriptirana i nije ju moguće pokrenuti."
+#: ../src/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "Aplikacija ne prihvaća dokumente u naredbenom retku"
 
-#: ../src/backend/bacon-video-widget-xine.c:1413
-msgid "For security reasons, this movie can not be played back."
-msgstr "Zbog sigurnosnih razloga, ovaj film nije moguće pokrenuti."
+#: ../src/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "Nepoznata mogućnost pokretanja: %d"
 
-#: ../src/backend/bacon-video-widget-xine.c:1418
-msgid "The audio device is busy. Is another application using it?"
-msgstr "Audio uređaj je zauzet. Koristi li ga neka druga aplikacija?"
-
-#: ../src/backend/bacon-video-widget-xine.c:1424
-msgid "Authentication is required to access this file."
+#: ../src/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"Proslijeđivanje URI-ja dokumenata na 'Type=Link' unos radne površine nije "
+"moguće"
 
-#: ../src/backend/bacon-video-widget-xine.c:1426
-msgid "Authentication is required to access this file or stream."
-msgstr ""
+#: ../src/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr "Stavka nije pokretljiva"
 
-#: ../src/backend/bacon-video-widget-xine.c:1432
-msgid "You are not allowed to open this file."
-msgstr "Nije vam dozvoljeno otvaranje ove datoteke."
+#: ../src/eggfileformatchooser.c:240
+#, c-format
+msgid "File _Format: %s"
+msgstr "_Format datoteke: %s"
 
-#: ../src/backend/bacon-video-widget-xine.c:1434
-msgid "The server refused access to this file or stream."
-msgstr "Server je odbio zahtjev za ovom datotekom ili tokom."
+#: ../src/eggfileformatchooser.c:379
+msgid "All Files"
+msgstr "Sve datoteke"
 
-#: ../src/backend/bacon-video-widget-xine.c:1438
-msgid "The file you tried to play is an empty file."
-msgstr "Datoteka koji želite pokrenuti je prazna."
+#: ../src/eggfileformatchooser.c:380
+msgid "All Supported Files"
+msgstr "Sve podržane datoteke"
 
-#: ../src/backend/bacon-video-widget-xine.c:1618
-msgid "There is no input plugin to handle the location of this movie"
-msgstr ""
-"Ne postoji dodatak koji bi omogućio reproduciranje filma s ove putanje."
+#: ../src/eggfileformatchooser.c:389
+msgid "By Extension"
+msgstr "Prema vrsti"
 
-#: ../src/backend/bacon-video-widget-xine.c:1622
-msgid "There is no plugin to handle this movie."
-msgstr "Nemate plugina potrebnog za ovaj film."
+#: ../src/eggfileformatchooser.c:404
+msgid "File Format"
+msgstr "Format datoteke"
 
-#: ../src/backend/bacon-video-widget-xine.c:1626
-msgid "This movie is broken and can not be played further."
-msgstr "Ovaj film je strgan i nije ga moguće dalje prikazivati."
+#: ../src/eggfileformatchooser.c:422
+msgid "Extension(s)"
+msgstr "Proširenje(a)"
 
-#: ../src/backend/bacon-video-widget-xine.c:1630
-msgid "This location is not a valid one."
-msgstr "Ova lokacija nije legalna."
-
-#: ../src/backend/bacon-video-widget-xine.c:1634
-msgid "This movie could not be opened."
-msgstr "Ovaj film nije moguće otvoriti."
-
-#: ../src/backend/bacon-video-widget-xine.c:1638
-msgid "Generic Error."
-msgstr "Opća pogreška."
-
-#: ../src/backend/bacon-video-widget-xine.c:2472
+#. Translators: the parameter is a filename
+#: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"Video codec '%s' is not handled. You might need to install additional "
-"plugins to be able to play some types of movies"
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
 msgstr ""
-"Ne mogu koristiti video kodek '%s'. Možda ćete trebati instalirati dodatne "
-"plugine kako bi mogli koristiti određene tipove filmova."
+"Program nije uspio saznati format datoteke koju želite koristiti za `%s'. "
+"Provjerite koristite li poznatu vrstu datoteke za tu datoteku ili ručno "
+"odaberite format datoteke iz popisa ispod."
 
-#: ../src/backend/bacon-video-widget-xine.c:2476
-#, c-format
-msgid ""
-"Audio codec '%s' is not handled. You might need to install additional "
-"plugins to be able to play some types of movies"
-msgstr ""
-"Ne mogu koristiti audio kodek '%s'. Možda ćete trebati instalirati dodatne "
-"plugine kako bi mogli koristiti određene tipove filmova."
+#: ../src/eggfileformatchooser.c:664
+msgid "File format not recognized"
+msgstr "Format datoteke nije prepoznat"
 
-#: ../src/backend/bacon-video-widget-xine.c:2490
-msgid "This is an audio-only file and there is no audio output available."
-msgstr "Ova datoteka sadrži samo zvuk, a zvučni izlaz nije dostupan."
+#: ../src/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr "Onemogući povezivanje s upraviteljem sesije"
 
-#: ../src/backend/bacon-video-widget-xine.c:4122
-#: ../src/backend/bacon-video-widget-xine.c:4169
-#: ../src/backend/bacon-video-widget-xine.c:4191
-#, c-format
-msgid "Language %d"
-msgstr "Jezik %d"
+#: ../src/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr "Odredite datoteku koja sadrži spremljena podešavanja"
 
-#: ../src/backend/bacon-video-widget-xine.c:4280
-msgid "No video to capture."
-msgstr "Nema videa za uhvatiti."
+#: ../src/eggsmclient.c:229
+msgid "FILE"
+msgstr "DATOTEKA"
 
-#: ../src/backend/bacon-video-widget-xine.c:4288
-msgid "Video codec is not handled."
-msgstr "Video coded ne može biti procesiran."
+#: ../src/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr "Odredite ID upravljanja sesijama"
 
-#: ../src/backend/bacon-video-widget-xine.c:4299
-msgid "Movie is not playing."
-msgstr "Film se ne prikazuje"
+#: ../src/eggsmclient.c:232
+msgid "ID"
+msgstr "ID"
+
+#: ../src/eggsmclient.c:253
+msgid "Session management options:"
+msgstr "Mogućnosti upravljanja sesijama:"
+
+#: ../src/eggsmclient.c:254
+msgid "Show session management options"
+msgstr "Prikaži mogućnosti upravljanja sesijama"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
-#. * of "%d" if your locale uses localized digits. Do not
-#. * translate the "long time format|" part. Remove it from
-#. * the translation.
-#.
-#: ../src/backend/video-utils.c:221
+#. * of "%d" if your locale uses localized digits.
+#. 
+#: ../src/gst/xplayer-time-helpers.c:56
+#: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
-msgid "long time format|%d:%02d:%02d"
-msgstr ""
+msgctxt "long time format"
+msgid "%d:%02d:%02d"
+msgstr "%d:%02d:%02d"
 
 #. minutes:seconds
 #. Translators: This is a time format, like "5:02" for 5
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
-#. * "%d" if your locale uses localized digits. Do not
-#. * translate the "short time format|" part. Remove it from
-#. * the translation.
-#.
-#: ../src/backend/video-utils.c:231
+#. * "%d" if your locale uses localized digits.
+#. 
+#: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
-msgid "short time format|%d:%02d"
-msgstr ""
+msgctxt "short time format"
+msgid "%d:%02d"
+msgstr "%d:%02d"
 
-#: ../src/backend/video-utils.c:250
+#. Title
+#. Artist
+#. Album
+#. Year
+#. Container
+#: ../src/properties/bacon-video-widget-properties.c:107
+#: ../src/properties/bacon-video-widget-properties.c:109
+#: ../src/properties/bacon-video-widget-properties.c:111
+#: ../src/properties/bacon-video-widget-properties.c:113
+#: ../src/properties/bacon-video-widget-properties.c:119
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#. Dimensions
+#: ../src/properties/bacon-video-widget-properties.c:122
+msgctxt "Dimensions"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#. Video Codec
+#: ../src/properties/bacon-video-widget-properties.c:124
+msgctxt "Video codec"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#: ../src/properties/bacon-video-widget-properties.c:127
+msgctxt "Video bit rate"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#: ../src/properties/bacon-video-widget-properties.c:130
+#: ../src/properties/bacon-video-widget-properties.c:240
+msgctxt "Frame rate"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#: ../src/properties/bacon-video-widget-properties.c:134
+msgctxt "Audio bit rate"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#. Audio Codec
+#: ../src/properties/bacon-video-widget-properties.c:136
+msgctxt "Audio codec"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#. Sample rate
+#: ../src/properties/bacon-video-widget-properties.c:138
+msgid "0 Hz"
+msgstr "0 Hz"
+
+#. Channels
+#: ../src/properties/bacon-video-widget-properties.c:140
+msgid "0 Channels"
+msgstr "0 kanala"
+
+#: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1921,7 +1186,7 @@ msgstr[0] "%d sat"
 msgstr[1] "%d sata"
 msgstr[2] "%d sati"
 
-#: ../src/backend/video-utils.c:252
+#: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
@@ -1929,7 +1194,7 @@ msgstr[0] "%d minuta"
 msgstr[1] "%d minute"
 msgstr[2] "%d minuta"
 
-#: ../src/backend/video-utils.c:255
+#: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1937,443 +1202,1232 @@ msgstr[0] "%d sekunda"
 msgstr[1] "%d sekunde"
 msgstr[2] "%d sekundi"
 
-#. hour:minutes:seconds
-#: ../src/backend/video-utils.c:261
+#. 5 hours 2 minutes 12 seconds
+#: ../src/properties/bacon-video-widget-properties.c:167
 #, c-format
+msgctxt "time"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
-#. minutes:seconds
-#: ../src/backend/video-utils.c:264
+#. 2 minutes 12 seconds
+#: ../src/properties/bacon-video-widget-properties.c:170
 #, c-format
+msgctxt "time"
 msgid "%s %s"
 msgstr "%s %s"
 
-#. seconds
-#: ../src/backend/video-utils.c:267
+#. 0 seconds
+#: ../src/properties/bacon-video-widget-properties.c:176
+msgid "0 seconds"
+msgstr "0 sekundi"
+
+#: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
-msgid "%s"
-msgstr "%s"
+msgid "%d frame per second"
+msgid_plural "%d frames per second"
+msgstr[0] "%d sličica u sekundi"
+msgstr[1] "%d sličice u sekundi"
+msgstr[2] "%d sličica u sekundi"
 
-#: ../src/plugins/xplayer-plugin-manager.c:51
-msgid "Plugin"
+#: ../src/xplayer-audio-preview.c:137
+msgid "Audio Preview"
+msgstr "Preslušavanje"
+
+#: ../src/xplayer.c:259
+msgid "Verify your system installation. Xplayer will now exit."
+msgstr "Provjerite svoju instalaciju sustava. Xplayer će se sada zatvoriti."
+
+#: ../src/xplayer-dnd-menu.c:95
+msgid "_Play Now"
+msgstr "_Reproduciraj sada"
+
+#: ../src/xplayer-dnd-menu.c:98
+msgid "_Add to Playlist"
+msgstr "_Dodaj na popis izvođenja"
+
+#: ../src/xplayer-dnd-menu.c:104
+msgid "Cancel"
+msgstr "Odustani"
+
+#: ../src/xplayer-fullscreen.c:574
+msgid "No File"
+msgstr "Nema datoteke"
+
+#: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
+#, c-format
+msgid "Couldn't load the '%s' interface. %s"
+msgstr "Nije moguće učitati '%s' sučelje. %s"
+
+#: ../src/xplayer-interface.c:181
+msgid "The file does not exist."
+msgstr "Datoteka ne postoji."
+
+#: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
+#: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
+msgid "Make sure that Xplayer is properly installed."
+msgstr "Provjerite je li Xplayer pravilno instaliran."
+
+#: ../src/xplayer-interface.c:357
+msgid ""
+"Xplayer is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version."
 msgstr ""
+"Xplayer je slobodan softver; možete ga besplatno dijeliti i/ili mijenjati "
+"pod uvjetima GNU Opće javne licence koju je izdala Zaklada slobodnog "
+"softvera; bilo prema 2. inačici ili (ako želite) prema novijoj."
 
-#: ../src/plugins/xplayer-plugin-manager.c:52
-msgid "Enabled"
+#: ../src/xplayer-interface.c:361
+msgid ""
+"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
 msgstr ""
+"Xplayer se distribuira u nadi da će biti koristan, ali bez IKAKVOG JAMSTVA; "
+"čak i bez podrazumijevanog jamstva prodaje ili upotrebe. Za više pojedinosti "
+"provjerite GNU Opću javnu licencu."
 
-#: ../src/plugins/xplayer-plugins-engine.c:579
+#: ../src/xplayer-interface.c:365
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
+msgstr ""
+"Trebali ste dobiti kopiju GNU Opće javne licence s Xplayerom; ako niste, "
+"pišite na Free Software Fundation, Inc., 59 Temple Place, Suite 330, Boston, "
+"MA 02111-1307 USA"
+
+#: ../src/xplayer-interface.c:368
+msgid ""
+"Xplayer contains an exception to allow the use of proprietary GStreamer "
+"plugins."
+msgstr ""
+"Xplayer sadrži iznimku za omogućavanje korištenja neslobodnih GStreamer "
+"priključaka."
+
+#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
+#: ../src/xplayer-menu.c:191
+msgid "None"
+msgstr "Nijedan"
+
+#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
+#: ../src/xplayer-menu.c:196
+msgctxt "Language"
+msgid "Auto"
+msgstr "Automatski"
+
+#: ../src/xplayer-menu.c:735
+msgid "Configure Plugins"
+msgstr "Podesite priključke"
+
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
-"Unable to activate plugin %s.\n"
-"%s"
+"%s\n"
+"Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
+"%s\n"
+"Pokrenite '%s --help' za popis svih mogućih naredbi naredbenog retka.\n"
 
-#: ../src/plugins/xplayer-plugins-engine.c:582
+#. Translators: %s is the xplayer version number
+#: ../src/xplayer-object.c:590
 #, c-format
-msgid "Unable to activate plugin %s"
-msgstr ""
+msgid "Xplayer %s"
+msgstr "Xplayer %s"
 
-#: ../src/plugins/xplayer-plugins-engine.c:584
-msgid "Plugin Error"
-msgstr ""
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+msgid "Pause"
+msgstr "Pauziraj"
 
-#: ../src/plugins/bemused/bemused.xplayer-plugin.in.h:1
-msgid "Bemused"
-msgstr ""
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-options.c:51
+msgid "Play"
+msgstr "Reproduciraj"
 
-#: ../src/plugins/bemused/bemused.xplayer-plugin.in.h:2
-msgid "Control Xplayer through a mobile phone with a Bemused client"
-msgstr ""
-
-#: ../src/plugins/bemused/xplayer-bemused.c:185
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
-msgid "Untitled %d"
-msgstr ""
+msgid "Xplayer could not play '%s'."
+msgstr "Xplayer ne može reproducirati '%s'."
 
-#: ../src/plugins/bemused/xplayer-bemused.c:607
-msgid "Xplayer Bemused Server"
-msgstr ""
+#: ../src/xplayer-object.c:2110
+msgid "Xplayer could not display the help contents."
+msgstr "Xplayer nije mogao prikazati sadržaj pomoći."
 
-#. FIXME version
-#: ../src/plugins/bemused/xplayer-bemused.c:609
-msgid "Xplayer Bemused Server version 1.0"
-msgstr ""
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+msgid "Previous Chapter/Movie"
+msgstr "Prijašnje poglavlje/film"
 
-#: ../src/plugins/galago/galago.xplayer-plugin.in.h:1
-msgid "Instant Messenger status"
-msgstr ""
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+msgid "Play / Pause"
+msgstr "Reproduciraj / Pauza"
 
-#: ../src/plugins/galago/galago.xplayer-plugin.in.h:2
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+msgid "Next Chapter/Movie"
+msgstr "Sljedeće poglavlje/Film"
+
+#: ../src/xplayer-object.c:4175
+msgid "Xplayer could not startup."
+msgstr "Xplayer se nije mogao pokrenuti."
+
+#: ../src/xplayer-object.c:4175
+msgid "No reason."
+msgstr "Bez razloga."
+
+#: ../src/xplayer-open-location.c:182
+msgid "Open Location..."
+msgstr "Otvori lokaciju..."
+
+#: ../src/xplayer-options.c:49
+msgid "Enable debug"
+msgstr "Omogući otklanjanje grešaka"
+
+#: ../src/xplayer-options.c:55
+msgid "Seek Forwards"
+msgstr "Premotaj unaprijed"
+
+#: ../src/xplayer-options.c:56
+msgid "Seek Backwards"
+msgstr "Premotaj unatrag"
+
+#: ../src/xplayer-options.c:57
+msgid "Volume Up"
+msgstr "Pojačaj glasnoću zvuka"
+
+#: ../src/xplayer-options.c:58
+msgid "Volume Down"
+msgstr "Smanji glasnoću zvuka"
+
+#: ../src/xplayer-options.c:59
+msgid "Mute sound"
+msgstr "Utišaj zvuk"
+
+#: ../src/xplayer-options.c:60
+msgid "Toggle Fullscreen"
+msgstr "Prozor ili cijeli zaslon"
+
+#: ../src/xplayer-options.c:61
+msgid "Show/Hide Controls"
+msgstr "Prikaži/Sakrij kontrole"
+
+#: ../src/xplayer-options.c:62
+msgid "Quit"
+msgstr "Zatvori"
+
+#: ../src/xplayer-options.c:63
+msgid "Enqueue"
+msgstr "Dodaj u red čekanja"
+
+#: ../src/xplayer-options.c:64
+msgid "Replace"
+msgstr "Zamijeni"
+
+#: ../src/xplayer-options.c:65
+msgid "Seek"
+msgstr "Premotavanje"
+
+#. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
+#: ../src/xplayer-options.c:67
+msgid "Playlist index"
+msgstr "Sadržaj popisa izvođenja"
+
+#: ../src/xplayer-options.c:69
+msgid "Movies to play"
+msgstr "Filmovi za gledanje"
+
+#: ../src/xplayer-options.c:79
+msgid "- Play movies and songs"
+msgstr "- Reproduciraj filmove i pjesme"
+
+#: ../src/xplayer-options.c:142
+msgid "Can't enqueue and replace at the same time"
+msgstr "Dodavanje u red čekanja i zamjena nije moguća u isto vrijeme"
+
+#. By extension entry
+#: ../src/xplayer-playlist.c:162
+msgid "MP3 ShoutCast playlist"
+msgstr "MP3 ShoutCast popis izvođenja"
+
+#: ../src/xplayer-playlist.c:163
+msgid "MP3 audio (streamed)"
+msgstr "MP3 zvuk (strujanje)"
+
+#: ../src/xplayer-playlist.c:164
+msgid "MP3 audio (streamed, DOS format)"
+msgstr "MP3 zvuk (strujanje, DOS format)"
+
+#: ../src/xplayer-playlist.c:165
+msgid "XML Shareable Playlist"
+msgstr "XML dijeljiv popis izvođenja"
+
+#. This is "Title 3", where title is a DVD title
+#. * Note: NOT a DVD chapter
+#: ../src/xplayer-playlist.c:348
+#, c-format
+msgid "Title %d"
+msgstr "Naslov %d"
+
+#: ../src/xplayer-playlist.c:447
+msgid "Could not save the playlist"
+msgstr "Nemoguće spremanje popisa izvođenja"
+
+#: ../src/xplayer-playlist.c:1022
+msgid "Save Playlist"
+msgstr "Spremi popis izvođenja"
+
+#. translators: Playlist is the default saved playlist filename,
+#. * without the suffix
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-sidebar.c:145
+msgid "Playlist"
+msgstr "Popis Izvođenja"
+
+#: ../src/xplayer-playlist.c:1861
+#, c-format
+msgid "The playlist '%s' could not be parsed. It might be damaged."
+msgstr "'%s' popis izvođenja se ne može obraditi. Možda je oštećen."
+
+#: ../src/xplayer-playlist.c:1862
+msgid "Playlist error"
+msgstr "Greška u popisu izvođenja"
+
+#: ../src/xplayer-preferences.c:297
+msgid "Preferences"
+msgstr "Osobitosti"
+
+#: ../src/xplayer-preferences.c:445
+msgid "Select Subtitle Font"
+msgstr "Odaberite slova podnaslova"
+
+#: ../src/xplayer-statusbar.c:110
+msgid "0:00 / 0:00"
+msgstr "0:00 / 0:00"
+
+#: ../src/xplayer-statusbar.c:133
+#, c-format
+msgid "%s (Streaming)"
+msgstr "%s (Strujanje)"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
+#, c-format
+msgid "%s / %s"
+msgstr "%s %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "Premotaj na %s / %s"
+
+#: ../src/xplayer-statusbar.c:239
+msgid "Buffering"
+msgstr "Međuspremanje"
+
+#. eg: 75 %
+#: ../src/xplayer-statusbar.c:250
+#, c-format
+msgid "%lf %%"
+msgstr "%lf %%"
+
+#. eg: Paused, 0:32 / 1:05
+#: ../src/xplayer-statusbar.c:325
+#, c-format
+msgid "%s, %s"
+msgstr "%s, %s"
+
+#. eg: Buffering, 75 %
+#: ../src/xplayer-statusbar.c:330
+#, c-format
+msgid "%s, %f %%"
+msgstr "%s, %f %%"
+
+#: ../src/xplayer-subtitle-encoding.c:156
+msgid "Current Locale"
+msgstr "Trenutne lokalne postavke"
+
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
+msgid "Arabic"
+msgstr "Arapski"
+
+#: ../src/xplayer-subtitle-encoding.c:168
+msgid "Armenian"
+msgstr "Armenski"
+
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:175
+msgid "Baltic"
+msgstr "Baltički"
+
+#: ../src/xplayer-subtitle-encoding.c:178
+msgid "Celtic"
+msgstr "Keltski"
+
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
+msgid "Central European"
+msgstr "Srednjoeuropski"
+
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
+msgid "Chinese Simplified"
+msgstr "Pojednostavljeni kineski"
+
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:203
+msgid "Chinese Traditional"
+msgstr "Tradicionalni kineski"
+
+#: ../src/xplayer-subtitle-encoding.c:206
+msgid "Croatian"
+msgstr "Hrvatski"
+
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
+msgid "Cyrillic"
+msgstr "Ćirilica"
+
+#: ../src/xplayer-subtitle-encoding.c:222
+msgid "Cyrillic/Russian"
+msgstr "Ćirilica/Ruski"
+
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
+msgid "Cyrillic/Ukrainian"
+msgstr "Ćirilica/ukrajinski"
+
+#: ../src/xplayer-subtitle-encoding.c:230
+msgid "Georgian"
+msgstr "Gruzijski"
+
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:237
+msgid "Greek"
+msgstr "Grčki"
+
+#: ../src/xplayer-subtitle-encoding.c:240
+msgid "Gujarati"
+msgstr "Gudžaratski"
+
+#: ../src/xplayer-subtitle-encoding.c:243
+msgid "Gurmukhi"
+msgstr "Gurmuki"
+
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
+msgid "Hebrew"
+msgstr "Hebrejski"
+
+#: ../src/xplayer-subtitle-encoding.c:255
+msgid "Hebrew Visual"
+msgstr "Hebrejski vizualni"
+
+#: ../src/xplayer-subtitle-encoding.c:258
+msgid "Hindi"
+msgstr "Hindski"
+
+#: ../src/xplayer-subtitle-encoding.c:261
+msgid "Icelandic"
+msgstr "Islandski"
+
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:268
+msgid "Japanese"
+msgstr "Japanski"
+
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
+msgid "Korean"
+msgstr "Korejski"
+
+#: ../src/xplayer-subtitle-encoding.c:280
+msgid "Nordic"
+msgstr "Nordijski"
+
+#: ../src/xplayer-subtitle-encoding.c:283
+msgid "Persian"
+msgstr "Perzijski"
+
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
+msgid "Romanian"
+msgstr "Rumunjski"
+
+#: ../src/xplayer-subtitle-encoding.c:291
+msgid "South European"
+msgstr "Južnoeuropski"
+
+#: ../src/xplayer-subtitle-encoding.c:294
+msgid "Thai"
+msgstr "Tajlandski"
+
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
+msgid "Turkish"
+msgstr "Turski"
+
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:314
+msgid "Unicode"
+msgstr "Unikôdni"
+
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:325
+msgid "Western"
+msgstr "Zapadni"
+
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:332
+msgid "Vietnamese"
+msgstr "Vijetnamski"
+
+#: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
+msgid "All files"
+msgstr "Sve datoteke"
+
+#: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
+msgid "Supported files"
+msgstr "Podržane datoteke"
+
+#: ../src/xplayer-uri.c:360
+msgid "Audio files"
+msgstr "Zvučne datoteke"
+
+#: ../src/xplayer-uri.c:368
+msgid "Video files"
+msgstr "Video datoteke"
+
+#: ../src/xplayer-uri.c:378
+msgid "Subtitle files"
+msgstr "Datoteke podnaslova"
+
+#: ../src/xplayer-uri.c:430
+msgid "Select Text Subtitles"
+msgstr "Odaberite datoteku podnaslova"
+
+#: ../src/xplayer-uri.c:495
+msgid "Select Movies or Playlists"
+msgstr "Odaberite filmove ili popise izvođenja"
+
+#: ../src/xplayer-uri.c:499
+msgid "Add Directory"
+msgstr "Dodaj direktorij"
+
+#. Translators: The first string is "Filename" (as translated); the second is an actual filename.
+#. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
+#. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
+#: ../src/xplayer-video-thumbnailer.c:878
+#, c-format
+msgid ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
+msgstr ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
+
+#: ../src/xplayer-video-thumbnailer.c:879
+msgid "Filename"
+msgstr "Naziv datoteke"
+
+#: ../src/xplayer-video-thumbnailer.c:881
+msgid "Resolution"
+msgstr "Razlučivost"
+
+#: ../src/xplayer-video-thumbnailer.c:884
+msgid "Duration"
+msgstr "Trajanje"
+
+#: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
+msgid "Apple Trailers"
+msgstr "Apple najave"
+
+#: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
+msgid "Sets the user agent for the Apple Trailers site"
+msgstr "Postavljanje korisničkog agenta za stranice Apple najava"
+
+#: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
+msgid "Autoload Subtitles"
+msgstr "Automatski učitaj podnaslov"
+
+#: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
+msgid "Autoloads text subtitles"
+msgstr "Automatski učitaj datoteku podnaslova"
+
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
+msgid "Video Disc Recorder"
+msgstr "Snimač video medija"
+
+#: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
+msgid "Records (S)VCDs or video DVDs"
+msgstr "Snima (S)VCD-e ili video DVD-e"
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
+msgid "_Create Video Disc..."
+msgstr "_Stvaranje video medija..."
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
+msgid "Create a video DVD or a (S)VCD from the currently opened movie"
+msgstr "Stvaranje video DVD-a ili (S)VCD-a od trenutno otvorenog filma"
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
+msgid "Copy Vide_o DVD..."
+msgstr "Kopiraj vide_o DVD..."
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
+msgid "Copy the currently playing video DVD"
+msgstr "Kopiraj trenutni video DVD"
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
+msgid "Copy (S)VCD..."
+msgstr "Kopiraj (S)VCD..."
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
+msgid "Copy the currently playing (S)VCD"
+msgstr "Kopiraj trenutni (S)VCD"
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
+msgid "The video disc could not be duplicated."
+msgstr "Video medij nije bilo moguće duplicirati."
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
+msgid "The movie could not be recorded."
+msgstr "Film se ne može snimiti."
+
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
+#: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
+msgid "Unable to write a project."
+msgstr "Projekt se ne može zapisati."
+
+#: ../src/plugins/chapters/chapters-edit.ui.h:1
+msgid "Name for new chapter:"
+msgstr "Naziv novog poglavlja:"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:1
+msgid "_Remove Chapter"
+msgstr "_Ukloni poglavlje"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:2
+msgid "Remove the chapter from the list"
+msgstr "Ukloni poglavlje s popisa"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:3
+msgid "_Go to Chapter"
+msgstr "_Idi na poglavlje"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:4
+msgid "Go to the chapter in the movie"
+msgstr "Idi na poglavlje u ovom filmu"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:5
+msgid "Add Chapter..."
+msgstr "Dodaj poglavlje..."
+
+#: ../src/plugins/chapters/chapters-list.ui.h:6
+msgid "Remove Chapter"
+msgstr "Ukloni poglavlje"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:7
+msgid "Go to Chapter"
+msgstr "Idi na poglavlje"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:8
+msgid "Save Changes"
+msgstr "Spremi promjene"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:9
+msgid "No chapter data"
+msgstr "Nema podataka o poglavljima"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:10
+msgid "Load Chapters..."
+msgstr "Učitaj poglavlja..."
+
+#: ../src/plugins/chapters/chapters-list.ui.h:11
+msgid "Load chapters from an external CMML file"
+msgstr "Učitaj poglavlja iz vanjske CMML datoteke"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:12
+msgid "Add New Chapters"
+msgstr "Dodaj nova poglavlja"
+
+#: ../src/plugins/chapters/chapters-list.ui.h:13
+msgid "Create a new chapter list for the movie"
+msgstr "Stvori novi popis poglavlja za ovaj film"
+
+#: ../src/plugins/chapters/chapters.plugin.in.h:1
+#: ../src/plugins/chapters/xplayer-chapters.c:1125
+msgid "Chapters"
+msgstr "Poglavlja"
+
+#: ../src/plugins/chapters/chapters.plugin.in.h:2
+msgid "Support chapter markers in movies"
+msgstr "Podrži oznake poglavlja u filmovima"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:56
+#, c-format
+msgid ""
+"<b>Title: </b>%s\n"
+"<b>Start time: </b>%s"
+msgstr ""
+"<b>Naslov: </b>%s\n"
+"<b>Vrijeme početka: </b>%s"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:323
+msgid "Error while reading file with chapters"
+msgstr "Greška pri čitanju datoteke s poglavljima"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:542
+msgid "Chapter with the same time already exists"
+msgstr "Poglavlje s istim nazivom već postoji"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:543
+msgid "Try another name or remove an existing chapter."
+msgstr "Pokušajte novi naziv ili uklonite postojeće poglavlje."
+
+#: ../src/plugins/chapters/xplayer-chapters.c:703
+msgid "Error while writing file with chapters"
+msgstr "Greška pri zapisivanju datoteke s poglavljima"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:828
+msgid "Error occurred while saving chapters"
+msgstr "Došlo je do greške pri spremanju poglavlja"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:829
+msgid ""
+"Please check you have permission to write to the folder containing the movie."
+msgstr "Provjerite imate li ovlasti za pisanje u mapu koja sadrži film."
+
+#: ../src/plugins/chapters/xplayer-chapters.c:962
+msgid "Open Chapter File"
+msgstr "Otvori datoteku poglavlja"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:1079
+msgid "Chapter Screenshot"
+msgstr "Slika poglavlja"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:1090
+msgid "Chapter Title"
+msgstr "Naslov poglavlja"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:1170
+msgid "Save changes to chapter list before closing?"
+msgstr "Spremi promjene popisa poglavlja prije zatvaranja?"
+
+#. Translators: close Xplayer without saving changes to the chapter list of the current movie.
+#: ../src/plugins/chapters/xplayer-chapters.c:1175
+msgid "Close without Saving"
+msgstr "Zatvori bez spremanja"
+
+#. Translators: save changes to the chapter list of the current movie before closing Xplayer.
+#: ../src/plugins/chapters/xplayer-chapters.c:1177
+msgid "Save"
+msgstr "Spremi"
+
+#: ../src/plugins/chapters/xplayer-chapters.c:1180
+msgid "If you don't save, changes to the chapter list will be lost."
+msgstr "Ako ne spremite, promjene popisa poglavlja će biti izgubljene."
+
+#: ../src/plugins/chapters/xplayer-edit-chapter.c:95
+msgid "Add Chapter"
+msgstr "Dodaj poglavlje"
+
+#: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
+msgid "D-Bus Service"
+msgstr "D-Bus usluga"
+
+#: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
+msgid ""
+"Plugin for sending notifications of currently playing movies to the D-Bus "
+"subsystem."
+msgstr ""
+"Priključak za slanje obavijesti o trenutno pokrenutim filmovima na D-Bus "
+"podsustav."
+
+#: ../src/plugins/dbusservice/dbusservice.py:213
+#: ../src/plugins/dbusservice/dbusservice.py:243
+#, python-format
+msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
+msgstr "MediaPlayer2 objekt ne implementira ‘%s’ sučelje"
+
+#: ../src/plugins/dbusservice/dbusservice.py:222
+#, python-format
+msgid "The property ‘%s’ is not writeable."
+msgstr "Svojstvo ‘%s’ nije zapisivo."
+
+#: ../src/plugins/dbusservice/dbusservice.py:238
+#, python-format
+msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
+msgstr "Nepoznato svojstvo ‘%s’ zahtijevano od MediaPlayer 2 objekta"
+
+#: ../src/plugins/dbusservice/dbusservice.py:341
+#, python-format
+msgid "The URI ‘%s’ is not supported."
+msgstr "URI ‘%s’ nije podržan."
+
+#: ../src/plugins/grilo/grilo.plugin.in.h:1
+msgid "Grilo Browser"
+msgstr "Grilo preglednik"
+
+#: ../src/plugins/grilo/grilo.plugin.in.h:2
+msgid "A plugin to let you browse media content from various sources"
+msgstr ""
+"Priključak koji vam omogućuje pregledavanje medijskih sadržaja s različitih "
+"izvora"
+
+#: ../src/plugins/grilo/grilo.ui.h:1
+msgid "Add to Playlist"
+msgstr "Dodaj u popis izvođenja"
+
+#: ../src/plugins/grilo/grilo.ui.h:2
+msgid "Copy Location"
+msgstr "Kopiraj lokaciju"
+
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+msgid "Browse"
+msgstr "Pregledaj"
+
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+msgid "Search"
+msgstr "Pretraži"
+
+#: ../src/plugins/grilo/xplayer-grilo.c:437
+msgid "Browse Error"
+msgstr "Greška pregledanja"
+
+#: ../src/plugins/grilo/xplayer-grilo.c:606
+msgid "Search Error"
+msgstr "Greška pretraživanja"
+
+#: ../src/plugins/gromit/gromit.plugin.in.h:1
+msgid "Gromit Annotations"
+msgstr "Gromit napomene"
+
+#: ../src/plugins/gromit/gromit.plugin.in.h:2
+msgid "Presentation helper to make annotations on screen"
+msgstr "Pomoćnik prezentacije za stvaranje napomena na zaslonu"
+
+#: ../src/plugins/gromit/xplayer-gromit.c:231
+msgid "The gromit binary was not found."
+msgstr "Gromit binarna datoteka nije pronađena."
+
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
+msgid "Instant Messenger Status"
+msgstr "Status klijenta za slanje trenutnih poruka"
+
+#: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
+"Postavite status vašeg klijenta za slanje trenutnih poruka na nedostupan kad "
+"se prikazuje film"
 
-#: ../src/plugins/galago/xplayer-galago.c:171
-msgid "Could not connect to the Galago daemon."
-msgstr ""
-
-#: ../src/plugins/gromit/gromit.xplayer-plugin.in.h:1
-msgid "Gromit Annotations"
-msgstr ""
-
-#: ../src/plugins/gromit/gromit.xplayer-plugin.in.h:2
-msgid "Presentation helper to make annotations on screen"
-msgstr ""
-
-#: ../src/plugins/gromit/xplayer-gromit.c:276
-msgid "The gromit binary was not found."
-msgstr ""
-
-#: ../src/plugins/lirc/lirc.xplayer-plugin.in.h:1
+#: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr ""
+msgstr "Infracrveni daljinski upravljač"
 
-#: ../src/plugins/lirc/lirc.xplayer-plugin.in.h:2
+#: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr ""
+msgstr "Podržava infracrveni daljinski upravljač"
 
-#: ../src/plugins/lirc/xplayer-lirc.c:261
+#: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr ""
+msgstr "Nemoguće pokretanje lirca."
 
-#: ../src/plugins/lirc/xplayer-lirc.c:270
+#: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr ""
+msgstr "Nemoguće čitanje podešavanja lirca"
 
-#: ../src/plugins/mythtv/xplayer-mythtv.c:200
-msgid "Recordings"
-msgstr ""
+#: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
+msgid "Media Player Keys"
+msgstr "Tipke medijskog reproduktora"
 
-#: ../src/plugins/mythtv/xplayer-mythtv.c:523
-msgid "MythTV Recordings"
-msgstr ""
+#: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
+msgid "Support additional media player keys"
+msgstr "Podržava dodatne tipke medijskog reproduktora"
 
-#: ../src/plugins/mythtv/xplayer-mythtv.c:524
-msgid "MythTV LiveTV"
-msgstr ""
-
-#: ../src/plugins/ontop/ontop.xplayer-plugin.in.h:1
+#: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr ""
+msgstr "Uvijek na vrhu"
 
-#: ../src/plugins/ontop/ontop.xplayer-plugin.in.h:2
+#: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr ""
+msgstr "Zadrži glavni prozor na vrhu kada se prikazuje film"
 
-#: ../src/plugins/properties/xplayer-movie-properties.c:159
-msgid "Properties"
-msgstr "Svojstva"
+#: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
+msgid "Subtitle Downloader"
+msgstr "Preuzimatelj podnaslova"
 
-#: ../src/plugins/properties/bacon-video-widget-properties.c:234
+#: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
+msgid "Look for subtitles for the currently playing movie"
+msgstr "Pretražite podnaslov za film koji trenutno gledate"
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:42
+msgid "Brazilian Portuguese"
+msgstr "Brazilski portugalski"
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
+msgid "Searching for subtitles…"
+msgstr "Pretraživanje podnaslova..."
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:645
+msgid "Downloading the subtitles…"
+msgstr "Preuzimanje podnaslova..."
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
+msgid "Could not contact the OpenSubtitles website"
+msgstr "Kontaktiranje OpenSubtitles web stranice nije uspjelo"
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
+msgid "Could not contact the OpenSubtitles website."
+msgstr "Kontaktiranje OpenSubtitles web stranice nije uspjelo."
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
+msgid "No results found."
+msgstr "Nema pronađenih rezultata."
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:478
+msgid "Subtitles"
+msgstr "Podnaslovi"
+
+#. translators comment:
+#. This is the file-type of the subtitle file detected
+#: ../src/plugins/opensubtitles/opensubtitles.py:484
+msgid "Format"
+msgstr "Format"
+
+#. translators comment:
+#. This is a rating of the quality of the subtitle
+#: ../src/plugins/opensubtitles/opensubtitles.py:489
+msgid "Rating"
+msgstr "Ocjena"
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
+msgid "Download movie subtitles from OpenSubtitles"
+msgstr "Preuzmi podnaslove filma s OpenSubtitles"
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
+msgid "_Download Movie Subtitles…"
+msgstr "_Preuzmi podnaslove filma..."
+
+#: ../src/plugins/opensubtitles/opensubtitles.py:589
+msgid "Searching subtitles…"
+msgstr "Pretraživanje podnaslova..."
+
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
+msgid "Download Movie Subtitles"
+msgstr "Preuzmite podnaslove filma"
+
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
+msgid "Subtitle _language:"
+msgstr "_Jezik podnaslova:"
+
+#: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
+msgid "_Play with Subtitle"
+msgstr "_Reproduciraj s podnaslovima"
+
+#: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
+msgid "Subtitle language"
+msgstr "Jezik podnaslova"
+
+#: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
+msgid "The language to search for subtitles for movies in."
+msgstr "Jezik za pretraživanje podnaslova filma."
+
+#: ../src/plugins/properties/movie-properties.plugin.in.h:1
+msgid "Movie Properties"
+msgstr "Svojstva filma"
+
+#: ../src/plugins/properties/movie-properties.plugin.in.h:2
+msgid "Adds movie properties to the sidebar"
+msgstr "Dodaje svojstva filma u bočnu traku"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
 msgstr "%d x %d"
 
-#: ../src/plugins/properties/bacon-video-widget-properties.c:237
-#, c-format
-msgid "%d frames per second"
-msgstr "%d sličica po sekundi (fps)"
-
-#: ../src/plugins/properties/bacon-video-widget-properties.c:239
-#: ../src/plugins/properties/bacon-video-widget-properties.c:256
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
 msgstr "%d kbps"
 
-#: ../src/plugins/properties/bacon-video-widget-properties.c:259
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "Nedostupno"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr ""
+msgstr "%d Hz"
 
-#: ../src/plugins/publish/xplayer-publish.c:582
-msgid "Neighbours"
-msgstr ""
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "Nedostupno"
 
-#: ../src/plugins/publish/publish.xplayer-plugin.in.h:1
-msgid "Publish Playlist"
-msgstr ""
+#: ../src/plugins/properties/xplayer-movie-properties.c:246
+msgid "Properties"
+msgstr "Svojstva"
 
-#: ../src/plugins/publish/publish.xplayer-plugin.in.h:2
-msgid "Share the current playlist via HTTP"
-msgstr ""
+#: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "rpdb2 password"
+msgstr "rpdb2 lozinka"
 
-#: ../src/plugins/publish/publish-plugin.ui.h:2
-#, no-c-format
+#: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"<small>The name used for announcing the playlist service on the network.\n"
-"All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-"and <b>%h</b> will be replaced by your computer's host name.</small>"
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
+"Lozinka za zaštitu rpdb2 poslužitelja za otklanjanje grešaka u Xplayeru od "
+"neovlaštenog udaljenog pristupa. Ako je prazno, koristiti će se zadana "
+"lozinka 'xplayer'."
 
-#: ../src/plugins/publish/publish-plugin.ui.h:5
-msgid "Service _Name:"
-msgstr ""
-
-#: ../src/plugins/publish/publish-plugin.ui.h:6
-msgid "Use _encrypted transport protocol (HTTPS)"
-msgstr ""
-
-#: ../src/plugins/skipto/xplayer-skipto.c:189
-msgid "Skip to"
-msgstr "Preskoči na"
-
-#: ../src/plugins/skipto/xplayer-skipto-plugin.c:216
-msgid "_Skip to..."
-msgstr "Pre_skoči na..."
-
-#: ../src/plugins/skipto/xplayer-skipto-plugin.c:216
-msgid "Skip to a specific time"
-msgstr "Preskoči do određenog vremena"
-
-#: ../src/plugins/skipto/xplayer-skipto-plugin.c:222
-msgid "Could not load the \"Skip to\" dialog interface."
-msgstr ""
-
-#: ../src/plugins/skipto/skipto.ui.h:2
-msgid "_Skip to:"
-msgstr "Pre_skoči na:"
-
-#: ../src/plugins/skipto/skipto.ui.h:3
-msgid "seconds"
-msgstr "sekundi"
-
-#. Display an error
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:169
-#, c-format
-msgid "Could not get metadata for file %s: %s"
-msgstr ""
-
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:170
-msgid "File Error"
-msgstr ""
-
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:224
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:276
-msgid "No results"
-msgstr ""
-
-#. Translators:
-#. * This is used to show which items are listed in the list view, for example:
-#. * Showing 10-20 of 128 matches
-#. * This is similar to what web searches use, eg. Google on the top-right of their search results page show:
-#. * Personalized Results 1 - 10 of about 4,130,000 for foobar
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:231
-#, c-format
-msgid "Showing %i - %i of %i match"
-msgid_plural "Showing %i - %i of %i matches"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:367
-#: ../src/plugins/youtube/youtube.ui.h:2
-msgid "Search Results"
-msgstr ""
-
-#: ../src/plugins/tracker/xplayer-tracker-widget.c:416
-msgid "Page"
-msgstr ""
-
-#: ../src/plugins/tracker/xplayer-tracker.c:92
-#: ../src/plugins/tracker/tracker.xplayer-plugin.in.h:1
-msgid "Local Search"
-msgstr ""
-
-#: ../src/plugins/thumbnail/thumbnail.xplayer-plugin.in.h:1
-msgid "Set the window icon to the thumbnail of the playing movie"
-msgstr ""
-
-#: ../src/plugins/thumbnail/thumbnail.xplayer-plugin.in.h:2
-msgid "Thumbnail"
-msgstr ""
-
-#: ../src/plugins/tracker/tracker.xplayer-plugin.in.h:2
-msgid "Search for local videos using Tracker"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.xplayer-plugin.in.h:1
-msgid "A plugin to let you browse YouTube videos."
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.xplayer-plugin.in.h:2
-msgid "YouTube browser"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.ui.h:1
-msgid "Related Videos"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.ui.h:3
-msgid "Search YouTube"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.ui.h:4
-msgid "Search:"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:91 ../src/plugins/youtube/youtube.py:171
-msgid "YouTube"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:108
-msgid "Videos"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:114
-msgid "_Open in Web Browser"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:114
-msgid "Open the video in your web browser"
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:147
-msgid "Fetching related videos..."
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:195
-msgid "Fetching more videos..."
-msgstr ""
-
-#: ../src/plugins/youtube/youtube.py:293
-msgid "Fetching search results..."
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:466
-msgid "No URI to play"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:492
-#, c-format
-msgid "Xplayer could not play '%s'"
-msgstr ""
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1087
-#, c-format
-msgid "_Open with \"%s\""
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1138
-#, c-format
-msgid "Browser Plugin using %s"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1143
-msgid "Xplayer Browser Plugin"
-msgstr ""
-
-#. FIXME!
-#. FIXME construct and show error message
-#: ../browser-plugin/xplayer-plugin-viewer.c:1780
-msgid "The Xplayer plugin could not be started."
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2128
-msgid "No playlist or playlist empty"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2232
-msgid "Could not initialise the thread-safe libraries."
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2232
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-
-#: ../src/plugins/pythonconsole/pythonconsole.xplayer-plugin.in.h:1
-msgid "Interactive Python console."
-msgstr ""
-
-#: ../src/plugins/pythonconsole/pythonconsole.xplayer-plugin.in.h:2
+#: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr ""
+msgstr "Python konzola"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:74
+#: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
+msgid "Interactive Python console"
+msgstr "Interaktivna Python konzola"
+
+#: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr ""
+msgstr "Izbornik python konzole"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:77
+#: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr ""
+msgstr "_Python konzola"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:78
+#: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr ""
+msgstr "Prikaži Xplayerovu Python konzolu."
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:83
+#: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr ""
+msgstr "Python otklanjanje grešaka"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:84
+#: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr ""
+msgstr "Omogući udaljeno Python otklanjanje grešaka s rpdb2"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:106
+#. pylint: disable-msg=E1101
+#: ../src/plugins/pythonconsole/pythonconsole.py:125
 #, python-format
-msgid "You can access the xplayer object through 'xplayer_object' :\\n%s"
-msgstr ""
+msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "Ne možete pristupiti Xplayeru.Objekt putem 'xplayer_object' :\\n%s"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:111
+#: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid "Xplayer Python Console"
-msgstr ""
+msgstr "Xplayer Python konzola"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:120
+#: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
-"rpdb2. If you have not set a debugger password in GConf, it will use the "
+"rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
+"Nakon što kliknete na U redu, Xplayer će pričekati dok se ne povežete s "
+"winpdb ili rpbd2. Ako niste postavili lozinku za otklanjanje grešaka u "
+"DConfu, tada možete upotrijebiti zadanu lozinku ('xplayer')."
 
-#~ msgid "1.5 Mbps T1/Intranet/LAN"
-#~ msgstr "1.5 Mbps T1/Intranet/LAN"
+#: ../src/plugins/recent/recent.plugin.in.h:1
+msgid "Recent files"
+msgstr "Nedavne datoteke"
 
-#~ msgid "112 Kbps Dual ISDN/DSL"
-#~ msgstr "112 Kbps Dual ISDN/DSL"
+#: ../src/plugins/recent/recent.plugin.in.h:2
+msgid "Adds files that have been played to recent files"
+msgstr "Dodajte datoteke koje su bile nedavno reproducirane"
 
-#~ msgid "14.4 Kbps Modem"
-#~ msgstr "14.4 Kbps Modem"
+#: ../src/plugins/rotation/rotation.plugin.in.h:1
+msgid "Rotation Plugin"
+msgstr "Priključak zakretanja"
 
-#~ msgid "19.2 Kbps Modem"
-#~ msgstr "19.2 Kbps Modem"
+#: ../src/plugins/rotation/rotation.plugin.in.h:2
+msgid "Allows videos to be rotated if they are in the wrong orientation"
+msgstr "Dopušta zakretanje video snimka ako su pogrešno zakrenute"
 
-#~ msgid "256 Kbps DSL/Cable"
-#~ msgstr "256 Kbps DSL/Cable"
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+msgid "_Rotate Clockwise"
+msgstr "_Zakreni u smjeru kazaljke sata"
 
-#~ msgid "28.8 Kbps Modem"
-#~ msgstr "28.8 Kbps Modem"
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+msgid "Rotate Counterc_lockwise"
+msgstr "Zakreni suprotn_o kazaljci sata"
 
-#~ msgid "33.6 Kbps Modem"
-#~ msgstr "33.6 Kbps Modem"
+#: ../src/plugins/screensaver/screensaver.plugin.in.h:1
+msgid "Screen Saver"
+msgstr "Čuvar zaslona"
 
-#~ msgid "34.4 Kbps Modem"
-#~ msgstr "34.4 Kbps Modem"
+#: ../src/plugins/screensaver/screensaver.plugin.in.h:2
+msgid "Deactivates the screen saver when a movie is playing"
+msgstr "Isključuje čuvara zaslona kada gledate film"
 
-#~ msgid "384 Kbps DSL/Cable"
-#~ msgstr "384 Kbps DSL/Cable"
+#: ../src/plugins/screenshot/gallery.ui.h:1
+msgid "Screenshot width (in pixels):"
+msgstr "Širina video snimke (u pikselima):"
 
-#~ msgid "4-channel"
-#~ msgstr "4-kanalni"
+#: ../src/plugins/screenshot/gallery.ui.h:2
+msgid "Calculate the number of screenshots"
+msgstr "Izračunaj broj slika video snimke"
 
-#~ msgid "5.0-channel"
-#~ msgstr "5.0-kanalni"
+#: ../src/plugins/screenshot/gallery.ui.h:3
+msgid "Number of screenshots:"
+msgstr "Broj slika video snimke:"
 
-#~ msgid "5.1-channel"
-#~ msgstr "5.1-kanalni"
+#. translators: this is the name of the file that gets made up
+#. * with the screenshot if the entire screen is taken
+#: ../src/plugins/screenshot/screenshot-filename-builder.c:147
+#, c-format
+msgid "Screenshot from %s.png"
+msgstr "Slika video snimke iz %s.png"
 
-#~ msgid "512 Kbps DSL/Cable"
-#~ msgstr "512 Kbps DSL/Cable"
+#. translators: this is the name of the file that gets
+#. * made up with the screenshot if the entire screen is
+#. * taken
+#: ../src/plugins/screenshot/screenshot-filename-builder.c:154
+#, c-format
+msgid "Screenshot from %s - %d.png"
+msgstr "Slika video snimke iz %s - %d.png"
 
-#~ msgid "56 Kbps Modem/ISDN"
-#~ msgstr "56 Kbps Modem/ISDN"
+#: ../src/plugins/screenshot/screenshot.plugin.in.h:1
+msgid "Screenshot"
+msgstr "Slika video snimke"
 
-#~ msgid "AC3 Passthrough"
-#~ msgstr "AC3 prolaz"
+#: ../src/plugins/screenshot/screenshot.plugin.in.h:2
+msgid "Allows screenshots and galleries to be taken of videos"
+msgstr "Dopušta uzimanje slike i galerija iz video snimke"
 
-#~ msgid "Large"
-#~ msgstr "Veliko"
+#: ../src/plugins/screenshot/xplayer-gallery.c:91
+msgid "Save Gallery"
+msgstr "Spremi galeriju"
 
-#~ msgid "Normal"
-#~ msgstr "Obično"
+#. Translators: The first argument is the movie title. The second
+#. * argument is a number which is used to prevent overwriting files.
+#. * Just translate "Gallery", and not the ".jpg". Example:
+#. * "Galerie-%s-%d.jpg".
+#: ../src/plugins/screenshot/xplayer-gallery.c:115
+#, c-format
+msgid "Gallery-%s-%d.jpg"
+msgstr "Galerija-%s-%d.jpg"
+
+#. Set up the window
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
+msgid "Creating Gallery..."
+msgstr "Stvaranje galerije..."
+
+#. Set the progress label
+#: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
+#, c-format
+msgid "Saving gallery as \"%s\""
+msgstr "Spremanje galerije kao \"%s\""
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "Xplayer could not get a screenshot of the video."
+msgstr "Xplayer nije uspio napraviti sliku video snimke."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
+msgid "This is not supposed to happen; please file a bug report."
+msgstr "Ovo se nije trebalo dogoditi; prijavite izvještaj greške."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+msgid "Take _Screenshot"
+msgstr "_Uslikaj video snimku"
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
+msgid "Take a screenshot"
+msgstr "Uslikaj video snimku"
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
+msgid "Create Screenshot _Gallery..."
+msgstr "Stvori _galeriju..."
+
+#: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
+msgid "Create a gallery of screenshots"
+msgstr "Stvori galeriju video snimke"
+
+#: ../src/plugins/skipto/skipto.plugin.in.h:1
+#: ../src/plugins/skipto/xplayer-skipto.c:196
+msgid "Skip To"
+msgstr "Premotavanje"
+
+#: ../src/plugins/skipto/skipto.plugin.in.h:2
+msgid "Provides the \"Skip to\" dialog"
+msgstr "Omogućuje \"Premotaj na\" dijalog"
+
+#: ../src/plugins/skipto/skipto.ui.h:1
+msgid "_Skip to:"
+msgstr "_Premotaj na:"
+
+#. Update the "seconds" label so that it always has the correct singular/plural form
+#. Translators: label for the seconds selector in the "Skip to" dialogue
+#: ../src/plugins/skipto/xplayer-skipto.c:159
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "sekundu"
+msgstr[1] "sekunde"
+msgstr[2] "sekundi"
+
+#. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
+#. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
+#. * translations for "second" and "seconds", as translated elsewhere in this file. For example, in English, "second" is 6 characters long and
+#. * "seconds" is 7 characters long, so this string should be translated to "7". See: bgo#639398
+#: ../src/plugins/skipto/xplayer-skipto.c:189
+msgctxt "Skip To label length"
+msgid "7"
+msgstr "7"
+
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
+msgid "_Skip To..."
+msgstr "_Premotaj na..."
+
+#: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
+msgid "Skip to a specific time"
+msgstr "Premotaj na određeno vrijeme"
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
+msgid "Zeitgeist Plugin"
+msgstr "Zeitgeist priključak"
+
+#: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
+msgid "A plugin sending events to Zeitgeist"
+msgstr "Priključak koji šalje događaje u Zeitgeist"

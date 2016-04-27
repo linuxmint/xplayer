@@ -9,33 +9,35 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=xplayer&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-18 13:38+0000\n"
-"PO-Revision-Date: 2013-06-05 15:27+0530\n"
-"Last-Translator: Sandeep Shedmake <sshedmak@redhat.com>\n"
+"Report-Msgid-Bugs-To: "
+"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
+"mponent=general\n"
+"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"PO-Revision-Date: 2016-03-09 05:23+0000\n"
+"Last-Translator: Vikram Kulkarni <kul.vikram@gmail.com>\n"
 "Language-Team: Marathi <maajhe-sanganak@freelists.org>\n"
-"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: mr\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:351 ../src/xplayer-object.c:1180
-#: ../src/xplayer-object.c:1650 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
+#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "थांबले आहे"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:363 ../src/xplayer-object.c:1173
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
 msgid "Paused"
 msgstr "स्तब्ध"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:367 ../src/xplayer-object.c:1166
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
 msgid "Playing"
 msgstr "चालवित आहे"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:385
+#: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "चित्रपट चालवत आहे"
@@ -57,7 +59,7 @@ msgstr "टोटेम चित्रपट वादक"
 msgid "_Open with \"%s\""
 msgstr "\"%s\" सह उघडा (_O)"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2475
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
 msgid "An error occurred"
 msgstr "त्रुटी निर्माण झाली"
 
@@ -69,7 +71,7 @@ msgstr "वादकयादी उपलब्ध नाही किंवा
 msgid "Movie browser plugin"
 msgstr "चलचित्र ब्राऊजर प्लगइन"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:249
+#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
 msgstr "थ्रेड-सेफ लायब्ररी प्रारंभ करू शकले नाही."
 
@@ -81,7 +83,7 @@ msgstr "तुमचे प्रणाली प्रतिष्ठपना 
 msgid "Leave Fullscreen"
 msgstr "पडदाभर सोडा"
 
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:81
+#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "वेळ:"
 
@@ -95,8 +97,7 @@ msgid ""
 "monitor-powered speakers."
 msgstr ""
 "ऑडिओ चालवितेवेळी स्क्रीनसेवरला स्क्रीय होण्यास परवानगी द्या. मॉनीटर सक्षम "
-"स्पीकर्स् "
-"असल्यास अक्षम करा."
+"स्पीकर्स् असल्यास अक्षम करा."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
@@ -207,8 +208,7 @@ msgid ""
 "Pictures directory."
 msgstr ""
 "\"स्क्रीनशॉठ घ्या\" संवादकरीता पूर्वनिर्धारीत ठिकाण. छायाचित्र डिरेक्ट्री "
-"पूर्वनिर्धारीत "
-"आहे."
+"पूर्वनिर्धारीत आहे."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
@@ -260,11 +260,11 @@ msgstr "प्रत बनविण्याचे स्थळ (_C)"
 msgid "Copy the location to the clipboard"
 msgstr "क्लिपबोर्ड मध्ये स्थानाचे प्रत बनवा"
 
-#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:71
+#: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
 msgstr "मजकूर उपशिर्षक नीवडा (_S)..."
 
-#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:72
+#: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
 msgstr "पाठ्य उपशिर्षक करीता फाइल निवडा"
 
@@ -303,8 +303,7 @@ msgstr "मोठे"
 msgid "Extra Large"
 msgstr "अगाऊ वाढीव"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5463
-#: ../src/xplayer-properties-view.c:232
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
 msgstr "स्टिरीओ"
 
@@ -444,7 +443,6 @@ msgid "_Audio output type:"
 msgstr "ऑडिओ आऊटपुट प्रकार (_A):"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
-#: ../src/xplayer-properties-view.c:273
 msgid "Audio"
 msgstr "ऑडिओ"
 
@@ -476,7 +474,7 @@ msgstr "टीप्पणी:"
 msgid "Container:"
 msgstr "कंटेनर:"
 
-#: ../data/properties.ui.h:9 ../src/xplayer-properties-view.c:275
+#: ../data/properties.ui.h:9
 msgid "Video"
 msgstr "व्हिडीओ"
 
@@ -505,8 +503,8 @@ msgid "Channels:"
 msgstr "मार्ग:"
 
 #. Title
-#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:80 ../src/xplayer.c:248
-#: ../src/xplayer.c:256 ../src/xplayer-menu.c:789 ../src/xplayer-object.c:1658
+#: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
 msgstr "व्हिडीओज्"
 
@@ -518,316 +516,367 @@ msgstr "चित्रपट चालवा"
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr "व्हिडिओ;चित्रपट;फिल्म;क्लिप;सिरिज्;प्लेअर;DVD;TV;डिस्क;"
 
+#: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
+msgid "Play/Pause"
+msgstr "चालवा/ स्तब्ध करा"
+
+#: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
+msgid "Next"
+msgstr "पुढचे"
+
+#: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
+msgid "Previous"
+msgstr "मागचे"
+
+#: ../data/xplayer.desktop.in.in.in.h:7
+msgid "Mute"
+msgstr "आवाज बंद करा"
+
+#. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
+#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4045
+msgid "Fullscreen"
+msgstr "पडदाभर"
+
 #: ../data/xplayer.ui.h:1
-msgid "_Open"
-msgstr "उघडा (_O)"
-
-#: ../data/xplayer.ui.h:2
-msgid "Open _Location"
-msgstr "ठिकाण उघडा (_L)"
-
-#: ../data/xplayer.ui.h:3
-msgid "_Fullscreen"
-msgstr "पडदाभर (_F)"
-
-#: ../data/xplayer.ui.h:4
-msgid "Prefere_nces"
-msgstr "प्राधान्यता (_n)"
-
-#: ../data/xplayer.ui.h:5
-msgid "Shuff_le"
-msgstr "टोलणे (_l)"
-
-#: ../data/xplayer.ui.h:6
-msgid "_Repeat"
-msgstr "पुनरावृत्त (_R)"
-
-#: ../data/xplayer.ui.h:7
-msgid "_Quit"
-msgstr "बाहेर पडा (_Q)"
-
-#: ../data/xplayer.ui.h:8
 msgid "_Movie"
 msgstr "चित्रपट (_M)"
 
-#: ../data/xplayer.ui.h:9
+#: ../data/xplayer.ui.h:2
+msgid "_Open..."
+msgstr "_उघडा..."
+
+#: ../data/xplayer.ui.h:3
+msgid "Open a file"
+msgstr "फाइल उघडा"
+
+#: ../data/xplayer.ui.h:4
+msgid "Open _Location..."
+msgstr "स्थान उघडा (_L)..."
+
+#: ../data/xplayer.ui.h:5
+msgid "Open a non-local file"
+msgstr "स्थानिकहीन फाइल उघडा"
+
+#: ../data/xplayer.ui.h:6
 msgid "_Eject"
 msgstr "बाहेर काढा (_E)"
 
-#: ../data/xplayer.ui.h:10
+#: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
 msgstr "सध्याची डिस्क बाहेर काढा"
 
-#: ../data/xplayer.ui.h:11
+#: ../data/xplayer.ui.h:8
 msgid "_Properties"
 msgstr "वैशिष्ट्ये (_P)"
 
-#: ../data/xplayer.ui.h:12
+#: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
 msgstr "सध्याच्या स्ट्रीमच्या गुणधर्मचे दृष्य पहा"
 
-#: ../data/xplayer.ui.h:13
+#: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
 msgstr "चालवा / स्तब्ध (_a)"
 
-#: ../data/xplayer.ui.h:14
+#: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
 msgstr "चित्रपट चालवा किंवा स्तब्ध करा"
 
-#: ../data/xplayer.ui.h:15
+#: ../data/xplayer.ui.h:12
+msgid "_Quit"
+msgstr "बाहेर पडा (_Q)"
+
+#: ../data/xplayer.ui.h:13
+msgid "Quit the program"
+msgstr "कार्यक्रमाच्या बाहेर पडा"
+
+#: ../data/xplayer.ui.h:14
 msgid "_Edit"
 msgstr "संपादन (_E)"
 
-#: ../data/xplayer.ui.h:16
+#: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
 msgstr "वादकयादी पुसून टाका (_C)"
 
-#: ../data/xplayer.ui.h:17
+#: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
 msgstr "वादकयादी पुसून टाका"
 
+#: ../data/xplayer.ui.h:17
+msgid "Prefere_nces"
+msgstr "प्राधान्यता (_n)"
+
 #: ../data/xplayer.ui.h:18
+msgid "Configure the application"
+msgstr "ऍप्लिकेशन संयोजीत करा"
+
+#: ../data/xplayer.ui.h:19
 msgid "Plugins..."
 msgstr "प्लगइन..."
 
-#: ../data/xplayer.ui.h:19
+#: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
 msgstr "ऍप्लिकेशन विस्तारीता करण्यासाठी प्लगइन संरचीत करा"
 
-#: ../data/xplayer.ui.h:20
+#: ../data/xplayer.ui.h:21
 msgid "_View"
 msgstr "दृश्य (_V)"
 
-#: ../data/xplayer.ui.h:21
+#: ../data/xplayer.ui.h:22
+msgid "_Fullscreen"
+msgstr "पडदाभर (_F)"
+
+#: ../data/xplayer.ui.h:23
+msgid "Switch to fullscreen"
+msgstr "पडदाभर करा"
+
+#: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
 msgstr "चित्रपटास चौकटीत बसवा"
 
-#: ../data/xplayer.ui.h:22
+#: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
 msgstr "1∶2 आकार बदला (_R)"
 
-#: ../data/xplayer.ui.h:23
+#: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
 msgstr "मुळ व्हिडीओ आकारचे अर्धे आकार करा"
 
-#: ../data/xplayer.ui.h:24
+#: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
 msgstr "1∶1 आकार बदला (_1)"
 
-#: ../data/xplayer.ui.h:25
+#: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
 msgstr "मुळ व्हिडीओ आकार एवढे करा"
 
-#: ../data/xplayer.ui.h:26
+#: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
 msgstr "2∶1 आकार बदला (_2)"
 
-#: ../data/xplayer.ui.h:27
+#: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
 msgstr "मुळ व्हिडीओ आकारच्या दुप्पट आकार करा"
 
-#: ../data/xplayer.ui.h:28
+#: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
 msgstr "Aspect प्रमाण (_A)"
 
-#: ../data/xplayer.ui.h:29
+#: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
 msgstr "कोन बदलवा (_g)"
 
-#: ../data/xplayer.ui.h:30
+#: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
 msgstr "कॅमेराचे कोन बदलवा"
 
-#: ../data/xplayer.ui.h:31
+#: ../data/xplayer.ui.h:34
 msgid "_Go"
 msgstr "जा (_G)"
 
-#: ../data/xplayer.ui.h:32
+#: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
 msgstr "डिव्हिडी मेनू (_D)"
 
-#: ../data/xplayer.ui.h:33
+#: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
 msgstr "डिव्हिडी मेनूकडे जा"
 
-#: ../data/xplayer.ui.h:34
+#: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
 msgstr "शिर्षक मेनू (_T)"
 
-#: ../data/xplayer.ui.h:35
+#: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
 msgstr "शिर्षक मेनूकडे जा"
 
-#: ../data/xplayer.ui.h:36
+#: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
 msgstr "ऑडिओ मेन्यु (_u)"
 
-#: ../data/xplayer.ui.h:37
+#: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
 msgstr "ऑडिओ मेनूकडे जा"
 
-#: ../data/xplayer.ui.h:38
+#: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
 msgstr "कोन मेनू (_A)"
 
-#: ../data/xplayer.ui.h:39
+#: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
 msgstr "कोन मेनूकडे जा"
 
-#: ../data/xplayer.ui.h:40
+#: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
 msgstr "पाठ मेनू (_C)"
 
-#: ../data/xplayer.ui.h:41
+#: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
 msgstr "पाठ मेनूकडे जा"
 
-#: ../data/xplayer.ui.h:42
+#: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
 msgstr "पुढचा पाठ/चित्रपट (_N)"
 
-#: ../data/xplayer.ui.h:43
+#: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
 msgstr "पुढचा पाठ किंवा चित्रपट"
 
-#: ../data/xplayer.ui.h:44
+#: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
 msgstr "पूर्वीचा पाठ/चित्रपट (_P)"
 
-#: ../data/xplayer.ui.h:45
+#: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
 msgstr "मागचा पाठ किंवा चित्रपट"
 
-#: ../data/xplayer.ui.h:46
+#: ../data/xplayer.ui.h:49
 msgid "_Sound"
 msgstr "आवाज (_S)"
 
-#: ../data/xplayer.ui.h:47
+#: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
 msgstr "आवाज वाढवा (_U)"
 
-#: ../data/xplayer.ui.h:48
+#: ../data/xplayer.ui.h:51
 msgid "Increase volume"
 msgstr "आवाज वाढवा"
 
-#: ../data/xplayer.ui.h:49
+#: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
 msgstr "आवाज कमी करा (_D)"
 
-#: ../data/xplayer.ui.h:50
+#: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
 msgstr "आवाज कमी करा"
 
-#: ../data/xplayer.ui.h:51
+#: ../data/xplayer.ui.h:54
 msgid "_Help"
 msgstr "मदत (_H)"
 
-#: ../data/xplayer.ui.h:52
+#: ../data/xplayer.ui.h:55
 msgid "_Contents"
 msgstr "अनुक्रम(_C)"
 
-#: ../data/xplayer.ui.h:53
+#: ../data/xplayer.ui.h:56
 msgid "Help contents"
 msgstr "मदत तपशील"
 
-#: ../data/xplayer.ui.h:54
+#: ../data/xplayer.ui.h:57
 msgid "_About"
 msgstr "विषयी (_A)"
 
-#: ../data/xplayer.ui.h:55
+#: ../data/xplayer.ui.h:58
 msgid "About this application"
 msgstr "या ऍप्लिकेशन विषयी"
 
-#: ../data/xplayer.ui.h:56
+#: ../data/xplayer.ui.h:59
+msgid "_Repeat Mode"
+msgstr "पुन:प्रसारण पध्दत (_R)"
+
+#: ../data/xplayer.ui.h:60
+msgid "Set the repeat mode"
+msgstr "पुन:प्रसारण पध्दती निश्चित करा"
+
+#: ../data/xplayer.ui.h:61
+msgid "Shuff_le Mode"
+msgstr "शफल पध्दती (_l)"
+
+#: ../data/xplayer.ui.h:62
+msgid "Set the shuffle mode"
+msgstr "शफल मार्ग स्थिर करा"
+
+#: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
 msgstr "नियंत्रण साधने दर्शवा (_C)"
 
-#: ../data/xplayer.ui.h:57
+#: ../data/xplayer.ui.h:64
 msgid "Show controls"
 msgstr "नियंत्रण साधने दर्शवा"
 
-#: ../data/xplayer.ui.h:58
+#: ../data/xplayer.ui.h:65
 msgid "S_idebar"
 msgstr "बाजूचीपट्टी (_i)"
 
-#: ../data/xplayer.ui.h:59
+#: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
 msgstr "बाजूचीपट्टी दर्शवा किंवा लपवा"
 
-#: ../data/xplayer.ui.h:60
+#: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr "स्वयं"
 
-#: ../data/xplayer.ui.h:61
+#: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
 msgstr "आपोआप aspect प्रमाण निश्चित करा"
 
-#: ../data/xplayer.ui.h:62
+#: ../data/xplayer.ui.h:69
 msgid "Square"
 msgstr "चौरस"
 
-#: ../data/xplayer.ui.h:63
+#: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
 msgstr "चौकोनी aspect प्रमाण निश्चित करा"
 
-#: ../data/xplayer.ui.h:64
+#: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
 msgstr "4∶3 (TV)"
 
-#: ../data/xplayer.ui.h:65
+#: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
 msgstr "4∶3 (TV) ॲस्पेक्ट प्रमाण ठरवले जाते"
 
-#: ../data/xplayer.ui.h:66
+#: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
 msgstr "16∶9 (वाइडस्क्रीन)"
 
-#: ../data/xplayer.ui.h:67
+#: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
 msgstr "16:9 (वाइडस्क्रीन) ॲस्पेक्ट प्रमाण ठरवतो"
 
-#: ../data/xplayer.ui.h:68
+#: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
 msgstr "2.11∶1 (DVB)"
 
-#: ../data/xplayer.ui.h:69
+#: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
 msgstr "2.11∶1 (DVB) ॲस्पेक्ट प्रमाण ठरवतो"
 
-#: ../data/xplayer.ui.h:70
+#: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
 msgstr "उपशिर्षक (_u)"
 
-#: ../data/xplayer.ui.h:73
+#: ../data/xplayer.ui.h:80
 msgid "_Languages"
 msgstr "भाषा (_L)"
 
-#: ../data/xplayer.ui.h:74
+#: ../data/xplayer.ui.h:81
 msgid "Zoom In"
 msgstr "मोठे करा"
 
-#: ../data/xplayer.ui.h:75
+#: ../data/xplayer.ui.h:82
 msgid "Zoom in"
 msgstr "मोठे करा"
 
-#: ../data/xplayer.ui.h:76
+#: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
 msgstr "पुढे सरकवा (_F)"
 
-#: ../data/xplayer.ui.h:77
+#: ../data/xplayer.ui.h:84
 msgid "Skip forward"
 msgstr "पुढे सरकवा"
 
-#: ../data/xplayer.ui.h:78
+#: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
 msgstr "मागे सरकवा (_B)"
 
-#: ../data/xplayer.ui.h:79
+#: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
 msgstr "मागे सरकवा"
 
-#: ../data/xplayer.ui.h:82
+#: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
 msgstr "वेळ संचयन पट्टी"
 
@@ -835,57 +884,59 @@ msgstr "वेळ संचयन पट्टी"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "तुम्हाला उघडायची त्या फाइलचा पत्ता प्रविष्ट करा (_a):"
 
-#: ../src/backend/bacon-video-widget.c:1641
+#: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "RTSP सर्व्हरकरीता पासवर्डची विनंती केली"
 
-#: ../src/backend/bacon-video-widget.c:2885
+#: ../src/backend/bacon-video-widget.c:2912
 #, c-format
 msgid "Audio Track #%d"
 msgstr "ऑडिओ ट्रॅक #%d"
 
-#: ../src/backend/bacon-video-widget.c:2889
+#: ../src/backend/bacon-video-widget.c:2916
 #, c-format
 msgid "Subtitle #%d"
 msgstr "उपशिर्षक #%d"
 
-#: ../src/backend/bacon-video-widget.c:3286
+#: ../src/backend/bacon-video-widget.c:3313
 msgid "The server you are trying to connect to is not known."
 msgstr "जोडणी करण्याजोगी सर्व्हर परिचीत नाही."
 
-#: ../src/backend/bacon-video-widget.c:3289
+#: ../src/backend/bacon-video-widget.c:3316
 msgid "The connection to this server was refused."
 msgstr "या सर्व्हरकरीता जोडणी नकारली गेली."
 
-#: ../src/backend/bacon-video-widget.c:3292
+#: ../src/backend/bacon-video-widget.c:3319
 msgid "The specified movie could not be found."
 msgstr "निर्देशीत चित्रपट आढळले नाही."
 
-#: ../src/backend/bacon-video-widget.c:3299
+#: ../src/backend/bacon-video-widget.c:3326
 msgid "The server refused access to this file or stream."
 msgstr "सर्व्हरने या फाइल किंवा स्ट्रिमकरीता प्रवेश नकारले."
 
-#: ../src/backend/bacon-video-widget.c:3305
+#: ../src/backend/bacon-video-widget.c:3332
 msgid "Authentication is required to access this file or stream."
-msgstr "या फाइल किंवा स्ट्रिमकरीता प्रवेश प्राप्त करण्यासाठी ओळख पटवणे आवश्यक."
+msgstr ""
+"या फाइल किंवा स्ट्रिमकरीता प्रवेश प्राप्त करण्यासाठी ओळख पटवणे आवश्यक."
 
-#: ../src/backend/bacon-video-widget.c:3312
+#: ../src/backend/bacon-video-widget.c:3339
 msgid "You are not allowed to open this file."
 msgstr "ह्या फाइलला उघडण्यास तुमच्याकडे परवानगी नाही."
 
-#: ../src/backend/bacon-video-widget.c:3317
+#: ../src/backend/bacon-video-widget.c:3344
 msgid "This location is not a valid one."
 msgstr "हे ठिकाण वैध नाही."
 
-#: ../src/backend/bacon-video-widget.c:3325
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The movie could not be read."
 msgstr "चित्रपट वाचणे अशक्य."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3348
-#: ../src/backend/bacon-video-widget.c:3356
+#: ../src/backend/bacon-video-widget.c:3375
+#: ../src/backend/bacon-video-widget.c:3383
 #, c-format
-msgid "The playback of this movie requires a %s plugin which is not installed."
+msgid ""
+"The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
 "The playback of this movie requires the following plugins which are not "
 "installed:\n"
@@ -898,44 +949,41 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3367
+#: ../src/backend/bacon-video-widget.c:3394
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 "न आढळणाऱ्या कोडेक्समुळे ऑडिओ किंवा व्हिडिओ स्ट्रिम. चित्रपटांचे काहिक प्रकार "
-"चालवण्यासाठी "
-"अगाऊ प्लगइन्स् प्रतिष्ठापीत करणे आवश्यक आहे"
+"चालवण्यासाठी अगाऊ प्लगइन्स् प्रतिष्ठापीत करणे आवश्यक आहे"
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3404
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 "ह्या फाइलला नेटवर्कवर चालवणे शक्य नाही. त्यास प्रथम स्थानीयरित्या डाउनलोड "
-"करायचा "
-"प्रयत्न करा."
+"करायचा प्रयत्न करा."
 
-#: ../src/backend/bacon-video-widget.c:5459 ../src/xplayer-properties-view.c:228
+#: ../src/backend/bacon-video-widget.c:5466
 msgid "Surround"
 msgstr "भोवती"
 
-#: ../src/backend/bacon-video-widget.c:5461 ../src/xplayer-properties-view.c:230
+#: ../src/backend/bacon-video-widget.c:5468
 msgid "Mono"
 msgstr "एकसंख्यी"
 
-#: ../src/backend/bacon-video-widget.c:5748
+#: ../src/backend/bacon-video-widget.c:5755
 msgid "Media contains no supported video streams."
 msgstr "मिडिया मध्ये समर्थीत व्हिडियो प्रव्हा समाविष्टीत नाही."
 
-#: ../src/backend/bacon-video-widget.c:5930
+#: ../src/backend/bacon-video-widget.c:5945
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
 "काहिक आवश्यक प्लगइन्स् आढळले नाहीत. प्रोग्रमा योग्यरित्या प्रतिष्ठापीत आहे "
-"याची खात्री "
-"करा."
+"याची खात्री करा."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -1001,8 +1049,8 @@ msgstr "विस्तार"
 #: ../src/eggfileformatchooser.c:657
 #, c-format
 msgid ""
-"The program was not able to find out the file format you want to use for `"
-"%s'. Please make sure to use a known extension for that file or manually "
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
 "`%s' साठी वापरण्याजोगी फाइल रूपण कार्यक्रमाला आढळले नाही. फाइलकरीता परिचीत "
@@ -1046,7 +1094,7 @@ msgstr "सत्र व्यवस्थापक पर्याय दाख
 #. * hours, 5 minutes, and 2 seconds. You may change ":" to
 #. * the separator that your locale uses or use "%Id" instead
 #. * of "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:56
 #: ../src/plugins/skipto/xplayer-time-entry.c:57
 #, c-format
@@ -1059,7 +1107,7 @@ msgstr "%d:%02d:%02d"
 #. * minutes and 2 seconds. You may change ":" to the
 #. * separator that your locale uses or use "%Id" instead of
 #. * "%d" if your locale uses localized digits.
-#.
+#. 
 #: ../src/gst/xplayer-time-helpers.c:65
 #, c-format
 msgctxt "short time format"
@@ -1174,23 +1222,23 @@ msgstr[1] "दर सेकंदकरीता %d फ्रेम्स्"
 msgid "Audio Preview"
 msgstr "ऑडिओ पूर्वावलोकन"
 
-#: ../src/xplayer.c:249
+#: ../src/xplayer.c:259
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "तुमच्या प्रणालीचे प्रतिष्ठापना तपासा. टोटेम आता बाहेर पडेल."
 
-#: ../src/xplayer-dnd-menu.c:94
+#: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
 msgstr "आत्ता चालवा (_P)"
 
-#: ../src/xplayer-dnd-menu.c:97
+#: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
 msgstr "वादकयादी मध्ये जोडा (_A)"
 
-#: ../src/xplayer-dnd-menu.c:103
+#: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: ../src/xplayer-fullscreen.c:573
+#: ../src/xplayer-fullscreen.c:574
 msgid "No File"
 msgstr "फाइल नाही"
 
@@ -1216,10 +1264,9 @@ msgid ""
 "version."
 msgstr ""
 "Xplayer मुक्त सॉफ्टवेअर आहे; तुम्ही याचे वितरण व/किंवा संपादन Free Software "
-"Foundation "
-"प्रकाशीत GNU General Public License च्या अंतर्गत; एकतर परवानातील आवृत्ती 2 , "
-"किंवा "
-"(तुमच्या पर्यायनुसारे) पुढील कुठल्याही आवृत्तीनुसारे करू शकता."
+"Foundation प्रकाशीत GNU General Public License च्या अंतर्गत; एकतर परवानातील "
+"आवृत्ती 2 , किंवा (तुमच्या पर्यायनुसारे) पुढील कुठल्याही आवृत्तीनुसारे करू "
+"शकता."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1228,22 +1275,20 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Xplayer चा वापर लाभदायी ठरावा या हेतुने त्याचे वितरन केले आहे, पण कुठल्याही हमी "
-"विना; "
-"व्यापारहेतु अंतर्भुतीत किंवा कुठल्याही हेतुकरीता वापरकरीतायेण्याजोगी हमी "
-"विना.  अधिक "
-"माहितीकरीता GNU General Public License पहा."
+"Xplayer चा वापर लाभदायी ठरावा या हेतुने त्याचे वितरन केले आहे, पण कुठल्याही "
+"हमी विना; व्यापारहेतु अंतर्भुतीत किंवा कुठल्याही हेतुकरीता "
+"वापरकरीतायेण्याजोगी हमी विना.  अधिक माहितीकरीता GNU General Public License "
+"पहा."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple Place, "
-"Suite 330, Boston, MA  02111-1307  USA"
+"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "तुमच्याकडे Xplayer सह GNU General Public License ची एक प्रत असायला हवी; "
-"नसल्यास, "
-"Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  "
-"02111-1307  USA कडे लिहून पाठवा"
+"नसल्यास, Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, "
+"MA  02111-1307  USA कडे लिहून पाठवा"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1251,40 +1296,24 @@ msgid ""
 "plugins."
 msgstr ""
 "टोटेम मधला एक अपवाद असा की सर्वोतया मालकीचे GStreamer प्लगइनच्या वापर करीता "
-"दिली "
-"जाते."
+"दिली जाते."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:291
+#: ../src/xplayer-menu.c:191
 msgid "None"
 msgstr "काहीच नाही"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:296
+#: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
 msgstr "स्वयं"
 
-#: ../src/xplayer-menu.c:788
-msgid "Copyright © 2002-2009 Bastien Nocera"
-msgstr "सर्वहक्काधिकार © 2002-2009 Bastien Nocera"
-
-#: ../src/xplayer-menu.c:792
-msgid "translator-credits"
-msgstr ""
-"संदिप शेडमाके <sandeep.shedmake@gmail.com>, 2008; संदिप शेडमाके <"
-"sshedmak@redhat."
-"com>, 2009, 2010."
-
-#: ../src/xplayer-menu.c:796
-msgid "Xplayer Website"
-msgstr "टोटेम संकेतस्थळ"
-
-#: ../src/xplayer-menu.c:827
+#: ../src/xplayer-menu.c:735
 msgid "Configure Plugins"
 msgstr "प्लगइन संयोजीत करा"
 
-#: ../src/xplayer-object.c:161
+#: ../src/xplayer-object.c:162
 #, c-format
 msgid ""
 "%s\n"
@@ -1294,56 +1323,47 @@ msgstr ""
 "उपलब्ध आदेश ओळ पर्याय पाहण्याकरीता '%s --help' चालवा.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:589
+#: ../src/xplayer-object.c:590
 #, c-format
 msgid "Xplayer %s"
 msgstr "टोटेम %s"
 
-#: ../src/xplayer-object.c:1168 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "स्तब्ध करा"
 
-#: ../src/xplayer-object.c:1175 ../src/xplayer-object.c:1185
+#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "चालवा"
 
-#: ../src/xplayer-object.c:1267 ../src/xplayer-object.c:1294
-#: ../src/xplayer-object.c:1787 ../src/xplayer-object.c:1942
+#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
+#: ../src/xplayer-object.c:1919
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "टोटेम '%1$s' चालवू शकले नाही."
 
-#: ../src/xplayer-object.c:1793
-msgid "No error message"
-msgstr "त्रुटी संदेश नाही"
-
-#: ../src/xplayer-object.c:2133
+#: ../src/xplayer-object.c:2110
 msgid "Xplayer could not display the help contents."
 msgstr "टोटेम मदत अनुक्रम दर्शवू शकले नाही."
 
-#: ../src/xplayer-object.c:4022 ../src/xplayer-object.c:4024
+#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
 msgid "Previous Chapter/Movie"
 msgstr "पूर्वीचे पाठ/चित्रपट"
 
-#: ../src/xplayer-object.c:4031 ../src/xplayer-object.c:4033
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Play / Pause"
 msgstr "चालवा / स्तब्ध"
 
-#: ../src/xplayer-object.c:4041 ../src/xplayer-object.c:4043
+#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
 msgid "Next Chapter/Movie"
 msgstr "पुढचाचे पाठ/चित्रपट"
 
-#. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../src/xplayer-object.c:4054 ../src/xplayer-object.c:4056
-msgid "Fullscreen"
-msgstr "पडदाभर"
-
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "Xplayer could not startup."
 msgstr "टोटेम सुरू होऊ शकले नाही."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4175
 msgid "No reason."
 msgstr "कारण नाही."
 
@@ -1354,18 +1374,6 @@ msgstr "स्थळ उघडा..."
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
 msgstr "डिबग कार्यान्वीत करा"
-
-#: ../src/xplayer-options.c:50
-msgid "Play/Pause"
-msgstr "चालवा/ स्तब्ध करा"
-
-#: ../src/xplayer-options.c:53
-msgid "Next"
-msgstr "पुढचे"
-
-#: ../src/xplayer-options.c:54
-msgid "Previous"
-msgstr "मागचे"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1429,50 +1437,50 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "रांगेत लावणे व त्यास एकाचवेळी अदलाबदल करणे अशक्य"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:161
+#: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 शाउटकास्ट वादकयादी"
 
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
 msgstr "MP3 ऑडिओ (स्ट्रीम्ड्)"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 ऑडिओ (स्ट्रीम्ड्, DOS रूपण)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
 msgstr "XML सहभागीय वादकयादी"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:347
+#: ../src/xplayer-playlist.c:348
 #, c-format
 msgid "Title %d"
 msgstr "शिर्षक %d"
 
-#: ../src/xplayer-playlist.c:446
+#: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
 msgstr "वादकयादी संचयीत करू शकले नाही"
 
-#: ../src/xplayer-playlist.c:1021
+#: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
 msgstr "वादकयादी साठवा"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1033 ../src/xplayer-playlist.c:1262
+#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "वादकयादी"
 
-#: ../src/xplayer-playlist.c:1860
+#: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "वादकसूची '%s' वाचणे अशक्य. ते कदाचित दोषीत असावे."
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
 msgstr "वादकयादी मध्ये त्रुटी"
 
@@ -1483,51 +1491,6 @@ msgstr "प्राधान्यता"
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
 msgstr "उपशिर्षक फॉन्ट निवडा"
-
-#: ../src/xplayer-properties-main.c:116 ../src/xplayer-properties-view.c:271
-msgid "Audio/Video"
-msgstr "ऑडिओ/व्हिडीओ"
-
-#: ../src/xplayer-properties-view.c:131
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:160
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-msgctxt "Stream bit rate"
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:163
-#: ../src/plugins/properties/xplayer-movie-properties.c:152
-#: ../src/plugins/properties/xplayer-movie-properties.c:163
-#, c-format
-msgid "%d kbps"
-msgstr "%d kbps"
-
-#: ../src/xplayer-properties-view.c:180
-#: ../src/plugins/properties/xplayer-movie-properties.c:149
-#, c-format
-msgid "%d x %d"
-msgstr "%d x %d"
-
-#: ../src/xplayer-properties-view.c:212
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: ../src/xplayer-properties-view.c:220
-#: ../src/plugins/properties/xplayer-movie-properties.c:166
-msgctxt "Sample rate"
-msgid "N/A"
-msgstr "N/A"
-
-#: ../src/xplayer-properties-view.c:241
-msgctxt "Number of audio channels"
-msgid "N/A"
-msgstr "N/A"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1576,8 +1539,10 @@ msgstr "%s, %f %%"
 msgid "Current Locale"
 msgstr "सध्याची लोकेल"
 
-#: ../src/xplayer-subtitle-encoding.c:159 ../src/xplayer-subtitle-encoding.c:161
-#: ../src/xplayer-subtitle-encoding.c:163 ../src/xplayer-subtitle-encoding.c:165
+#: ../src/xplayer-subtitle-encoding.c:159
+#: ../src/xplayer-subtitle-encoding.c:161
+#: ../src/xplayer-subtitle-encoding.c:163
+#: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
 msgstr "अरबी"
 
@@ -1585,7 +1550,8 @@ msgstr "अरबी"
 msgid "Armenian"
 msgstr "अर्मेनियन"
 
-#: ../src/xplayer-subtitle-encoding.c:171 ../src/xplayer-subtitle-encoding.c:173
+#: ../src/xplayer-subtitle-encoding.c:171
+#: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
 msgstr "बाल्टिक"
@@ -1594,17 +1560,22 @@ msgstr "बाल्टिक"
 msgid "Celtic"
 msgstr "सेल्टिक"
 
-#: ../src/xplayer-subtitle-encoding.c:181 ../src/xplayer-subtitle-encoding.c:183
-#: ../src/xplayer-subtitle-encoding.c:185 ../src/xplayer-subtitle-encoding.c:187
+#: ../src/xplayer-subtitle-encoding.c:181
+#: ../src/xplayer-subtitle-encoding.c:183
+#: ../src/xplayer-subtitle-encoding.c:185
+#: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
 msgstr "मध्य युरोपिअन"
 
-#: ../src/xplayer-subtitle-encoding.c:190 ../src/xplayer-subtitle-encoding.c:192
-#: ../src/xplayer-subtitle-encoding.c:194 ../src/xplayer-subtitle-encoding.c:196
+#: ../src/xplayer-subtitle-encoding.c:190
+#: ../src/xplayer-subtitle-encoding.c:192
+#: ../src/xplayer-subtitle-encoding.c:194
+#: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
 msgstr "विश्लेषीत चिनी"
 
-#: ../src/xplayer-subtitle-encoding.c:199 ../src/xplayer-subtitle-encoding.c:201
+#: ../src/xplayer-subtitle-encoding.c:199
+#: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
 msgstr "पारंपारिक चिनी"
@@ -1613,9 +1584,12 @@ msgstr "पारंपारिक चिनी"
 msgid "Croatian"
 msgstr "क्रोएशीयन"
 
-#: ../src/xplayer-subtitle-encoding.c:209 ../src/xplayer-subtitle-encoding.c:211
-#: ../src/xplayer-subtitle-encoding.c:213 ../src/xplayer-subtitle-encoding.c:215
-#: ../src/xplayer-subtitle-encoding.c:217 ../src/xplayer-subtitle-encoding.c:219
+#: ../src/xplayer-subtitle-encoding.c:209
+#: ../src/xplayer-subtitle-encoding.c:211
+#: ../src/xplayer-subtitle-encoding.c:213
+#: ../src/xplayer-subtitle-encoding.c:215
+#: ../src/xplayer-subtitle-encoding.c:217
+#: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
 msgstr "सायरिलिक"
 
@@ -1623,7 +1597,8 @@ msgstr "सायरिलिक"
 msgid "Cyrillic/Russian"
 msgstr "सायरिलिक/रशियन"
 
-#: ../src/xplayer-subtitle-encoding.c:225 ../src/xplayer-subtitle-encoding.c:227
+#: ../src/xplayer-subtitle-encoding.c:225
+#: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
 msgstr "सायरिलिक/युक्रेनियन"
 
@@ -1631,7 +1606,8 @@ msgstr "सायरिलिक/युक्रेनियन"
 msgid "Georgian"
 msgstr "जॉर्जियन"
 
-#: ../src/xplayer-subtitle-encoding.c:233 ../src/xplayer-subtitle-encoding.c:235
+#: ../src/xplayer-subtitle-encoding.c:233
+#: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
 msgstr "ग्रीक"
@@ -1644,8 +1620,10 @@ msgstr "गुजराथी"
 msgid "Gurmukhi"
 msgstr "गुरमुखी"
 
-#: ../src/xplayer-subtitle-encoding.c:246 ../src/xplayer-subtitle-encoding.c:248
-#: ../src/xplayer-subtitle-encoding.c:250 ../src/xplayer-subtitle-encoding.c:252
+#: ../src/xplayer-subtitle-encoding.c:246
+#: ../src/xplayer-subtitle-encoding.c:248
+#: ../src/xplayer-subtitle-encoding.c:250
+#: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
 msgstr "हिब्रू"
 
@@ -1661,13 +1639,16 @@ msgstr "हिंदी"
 msgid "Icelandic"
 msgstr "आयलॅंडिक"
 
-#: ../src/xplayer-subtitle-encoding.c:264 ../src/xplayer-subtitle-encoding.c:266
+#: ../src/xplayer-subtitle-encoding.c:264
+#: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
 msgstr "जपानी"
 
-#: ../src/xplayer-subtitle-encoding.c:271 ../src/xplayer-subtitle-encoding.c:273
-#: ../src/xplayer-subtitle-encoding.c:275 ../src/xplayer-subtitle-encoding.c:277
+#: ../src/xplayer-subtitle-encoding.c:271
+#: ../src/xplayer-subtitle-encoding.c:273
+#: ../src/xplayer-subtitle-encoding.c:275
+#: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
 msgstr "कोरियन"
 
@@ -1679,7 +1660,8 @@ msgstr "नॉर्डिक"
 msgid "Persian"
 msgstr "पर्शियन"
 
-#: ../src/xplayer-subtitle-encoding.c:286 ../src/xplayer-subtitle-encoding.c:288
+#: ../src/xplayer-subtitle-encoding.c:286
+#: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
 msgstr "रोमानियन"
 
@@ -1691,24 +1673,31 @@ msgstr "दक्षिण युरोपिअन"
 msgid "Thai"
 msgstr "थाइ"
 
-#: ../src/xplayer-subtitle-encoding.c:297 ../src/xplayer-subtitle-encoding.c:299
-#: ../src/xplayer-subtitle-encoding.c:301 ../src/xplayer-subtitle-encoding.c:303
+#: ../src/xplayer-subtitle-encoding.c:297
+#: ../src/xplayer-subtitle-encoding.c:299
+#: ../src/xplayer-subtitle-encoding.c:301
+#: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
 msgstr "तुर्किश"
 
-#: ../src/xplayer-subtitle-encoding.c:306 ../src/xplayer-subtitle-encoding.c:308
-#: ../src/xplayer-subtitle-encoding.c:310 ../src/xplayer-subtitle-encoding.c:312
+#: ../src/xplayer-subtitle-encoding.c:306
+#: ../src/xplayer-subtitle-encoding.c:308
+#: ../src/xplayer-subtitle-encoding.c:310
+#: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
 msgstr "युनिकोड"
 
-#: ../src/xplayer-subtitle-encoding.c:317 ../src/xplayer-subtitle-encoding.c:319
-#: ../src/xplayer-subtitle-encoding.c:321 ../src/xplayer-subtitle-encoding.c:323
+#: ../src/xplayer-subtitle-encoding.c:317
+#: ../src/xplayer-subtitle-encoding.c:319
+#: ../src/xplayer-subtitle-encoding.c:321
+#: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
 msgstr "पश्चिमी"
 
-#: ../src/xplayer-subtitle-encoding.c:328 ../src/xplayer-subtitle-encoding.c:330
+#: ../src/xplayer-subtitle-encoding.c:328
+#: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "वियेतनामी"
@@ -1748,7 +1737,7 @@ msgstr "डिरेक्ट्री समाविष्ट करा"
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
 #. The sixth string is "Duration" (as translated); the seventh is the movie duration in words.
-#: ../src/xplayer-video-thumbnailer.c:848
+#: ../src/xplayer-video-thumbnailer.c:878
 #, c-format
 msgid ""
 "<b>%s</b>: %s\n"
@@ -1759,15 +1748,15 @@ msgstr ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 
-#: ../src/xplayer-video-thumbnailer.c:849
+#: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
 msgstr "फाइलचेनाव"
 
-#: ../src/xplayer-video-thumbnailer.c:851
+#: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
 msgstr "रेजॉल्यूशन"
 
-#: ../src/xplayer-video-thumbnailer.c:854
+#: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
 msgstr "कार्यकाळ"
 
@@ -1933,8 +1922,7 @@ msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
 "चित्रपट समाविष्टीत असलेल्या फोल्डरकरीता लिहण्यासाठी तुमच्याकडे परवानगी आहे "
-"कृपया याची "
-"तपासणी करा."
+"कृपया याची तपासणी करा."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -2055,7 +2043,8 @@ msgstr "इंस्टंट मेसेंजर स्थिती"
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
-"चित्रपट चालवितेवेळी त्वरीत संदेश पाठवाची स्थिती उपलब्ध नाही म्हणून निश्चित करा"
+"चित्रपट चालवितेवेळी त्वरीत संदेश पाठवाची स्थिती उपलब्ध नाही म्हणून निश्चित "
+"करा"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -2179,6 +2168,33 @@ msgstr "चित्रपट गुणधर्म"
 msgid "Adds movie properties to the sidebar"
 msgstr "बाजूच्यापट्टीकरीता चित्रपट गुणधर्म समाविष्ट करतो"
 
+#: ../src/plugins/properties/xplayer-movie-properties.c:149
+#, c-format
+msgid "%d x %d"
+msgstr "%d x %d"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+#, c-format
+msgid "%d kbps"
+msgstr "%d kbps"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:152
+#: ../src/plugins/properties/xplayer-movie-properties.c:163
+msgctxt "Stream bit rate"
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../src/plugins/properties/xplayer-movie-properties.c:166
+msgctxt "Sample rate"
+msgid "N/A"
+msgstr "N/A"
+
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
 msgstr "गुणधर्म"
@@ -2189,12 +2205,13 @@ msgstr "rpdb2 पासवर्ड"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
-"A password to protect the rpdb2 server for debugging Xplayer from unauthorized "
-"remote access. If this is empty, a default of 'xplayer' will be used."
+"A password to protect the rpdb2 server for debugging Xplayer from "
+"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
+"used."
 msgstr ""
 "अनोळखी रिमोट प्रवेशपासून टोटेमला डिबग करण्यासाठी rpdb2 सर्व्हर सुरक्षित "
-"करण्यासाठी "
-"पासवर्ड. हे रिकामे असल्यास, 'xplayer' चे पूर्वनिर्धारित वापरले जाईल."
+"करण्यासाठी पासवर्ड. हे रिकामे असल्यास, 'xplayer' चे पूर्वनिर्धारित वापरले "
+"जाईल."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2241,10 +2258,8 @@ msgid ""
 "default password ('xplayer')."
 msgstr ""
 "ठिक आहे दाबल्यावर, winpdb किंवा rpdb2 शी जुळवणी स्थापीत होईपर्यंत Xplayer "
-"प्रतिक्षा "
-"करेल. DConf मध्ये डीबगर गुप्तशब्द निश्चित न केल्यास, पूर्वनिर्धारित पासवर्ड "
-"('xplayer') "
-"याचा वापर केला जाईल."
+"प्रतिक्षा करेल. DConf मध्ये डीबगर गुप्तशब्द निश्चित न केल्यास, "
+"पूर्वनिर्धारित पासवर्ड ('xplayer') याचा वापर केला जाईल."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2269,36 +2284,6 @@ msgstr "घड्याळीच्या दिशेने फिरवा (_R
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
 msgstr "घड्याळीच्या उलट दिशेने फिरवा (_l)"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:1
-msgid "Save Copy"
-msgstr "प्रत साठवा"
-
-#: ../src/plugins/save-file/save-file.plugin.in.h:2
-msgid "Save a copy of the currently playing movie"
-msgstr "सध्याचे चालवत असलेल्या चित्रपटाचे प्रत साठवा"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:63
-msgid "Save a Copy..."
-msgstr "प्रत साठवा..."
-
-#: ../src/plugins/save-file/xplayer-save-file.c:64
-msgid "Save a copy of the movie"
-msgstr "चित्रपटाचे प्रत साठवा"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:129
-msgid "Save a Copy"
-msgstr "प्रत साठवा"
-
-#. translators: Movie is the default saved movie filename,
-#. * without the suffix
-#: ../src/plugins/save-file/xplayer-save-file.c:161
-msgid "Movie"
-msgstr "चित्रपट"
-
-#: ../src/plugins/save-file/xplayer-save-file.c:183
-msgid "Movie stream"
-msgstr "चित्रपट स्ट्रिम"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
@@ -2438,619 +2423,3 @@ msgstr "झिटगिस्ट प्लगइन"
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
 msgstr "झिटगिस्ट करिता प्लगइन सेंडिंग इव्हेंट्स"
-
-#~ msgid ""
-#~ "Whether to remember the current playlist, the playing track and position."
-#~ msgstr "सध्याची वादकसूची, सुरू गाण व ठिकाण लक्षात ठेवायचे किंवा नाही."
-
-#~ msgid "Remember last played movies"
-#~ msgstr "शेवटच्यावेळी चालवलेले चित्रपट"
-
-#~ msgid "Add the video to the playlist"
-#~ msgstr "वादकसूची मध्ये व्हिडीओ समाविष्ट करा"
-
-#~ msgid "Unknown video"
-#~ msgstr "अपरिचीत व्हिडीओ"
-
-#~ msgid "No video URI"
-#~ msgstr "व्हिडीओ URI आढळले नाही"
-
-#~ msgid "Failed to parse CMML file"
-#~ msgstr "CMML फाइल वाचण्यास अपयशी"
-
-#~ msgid "Author:"
-#~ msgstr "लेखक:"
-
-#~ msgid "C_onfigure..."
-#~ msgstr "संयोजीत करा (_o)..."
-
-#~ msgid "Copyright:"
-#~ msgstr "प्रतिकृती हक्काधिकार:"
-
-#~ msgid "Description:"
-#~ msgstr "वर्णन:"
-
-#~ msgid "Site:"
-#~ msgstr "स्थान:"
-
-#~ msgid "0 frames per second"
-#~ msgstr "0 फ्रेम्स प्रती सेकंद"
-
-#~ msgid "0 kbps"
-#~ msgstr "0 kbps"
-
-#~ msgid "0 x 0"
-#~ msgstr "0 x 0"
-
-#~ msgid "Play movies and songs"
-#~ msgstr "चित्रपट आणि गाणी चालवा"
-
-#~ msgid "1.5 Mbps T1/Intranet/LAN"
-#~ msgstr "1.5 Mbps T1/इन्ट्रानेट/LAN"
-
-#~ msgid "112 Kbps Dual ISDN/DSL"
-#~ msgstr "112 Kbps दुहेरी ISDN/DSL"
-
-#~ msgid "14.4 Kbps Modem"
-#~ msgstr "14.4 Kbps मोडेम"
-
-#~ msgid "19.2 Kbps Modem"
-#~ msgstr "19.2 Kbps मोडेम"
-
-#~ msgid "256 Kbps DSL/Cable"
-#~ msgstr "256 Kbps DSL/केबल"
-
-#~ msgid "28.8 Kbps Modem"
-#~ msgstr "28.8 Kbps मोडेम"
-
-#~ msgid "33.6 Kbps Modem"
-#~ msgstr "33.6 Kbps मोडेम"
-
-#~ msgid "34.4 Kbps Modem"
-#~ msgstr "34.4 Kbps मोडेम"
-
-#~ msgid "384 Kbps DSL/Cable"
-#~ msgstr "384 Kbps DSL/केबल"
-
-#~ msgid "512 Kbps DSL/Cable"
-#~ msgstr "512 Kbps DSL/केबल"
-
-#~ msgid "56 Kbps Modem/ISDN"
-#~ msgstr "56 Kbps मोडेम/ISDN"
-
-#~ msgid "Configure the application"
-#~ msgstr "ऍप्लिकेशन संयोजीत करा"
-
-#~ msgid "Connection _speed:"
-#~ msgstr "जुळवणीचा वेग (_s):"
-
-#~ msgid "Intranet/LAN"
-#~ msgstr "इन्ट्रानेट/LAN"
-
-#~ msgid "Networking"
-#~ msgstr "संजाळीकरण"
-
-#~ msgid "Open a non-local file"
-#~ msgstr "स्थानिकहीन फाइल उघडा"
-
-#~ msgid "Quit the program"
-#~ msgstr "कार्यक्रमाच्या बाहेर पडा"
-
-#~ msgid "Set the repeat mode"
-#~ msgstr "पुन:प्रसारण पध्दती निश्चित करा"
-
-#~ msgid "Set the shuffle mode"
-#~ msgstr "शफल मार्ग स्थिर करा"
-
-#~ msgid "Switch to fullscreen"
-#~ msgstr "पडदाभर करा"
-
-#~ msgid "Zoom Out"
-#~ msgstr "लहान करा"
-
-#~ msgid "Zoom Reset"
-#~ msgstr "मोठे करण्याची पुर्नस्थापना"
-
-#~ msgid "Zoom out"
-#~ msgstr "लहान करा"
-
-#~ msgid "Zoom reset"
-#~ msgstr "मोठे करण्याची पुर्नस्थापना"
-
-#~ msgid ""
-#~ "Approximate network connection speed, used to select quality on media "
-#~ "over the network: \"0\" for 14.4 Kbps Modem, \"1\" for 19.2 Kbps Modem, "
-#~ "\"2\" for 28.8 Kbps Modem, \"3\" for 33.6 Kbps Modem, \"4\" for 34.4 Kbps "
-#~ "Modem, \"5\" for 56 Kbps Modem/ISDN, \"6\" for 112 Kbps Dual ISDN/DSL, "
-#~ "\"7\" for 256 Kbps DSL/Cable, \"8\" for 384 Kbps DSL/Cable, \"9\" for 512 "
-#~ "Kbps DSL/Cable, \"10\" for 1.5 Mbps T1/Intranet/LAN, \"11\" for Intranet/"
-#~ "LAN."
-#~ msgstr ""
-#~ "अंदाजे नेटवर्क जुळवणी वेग, ज्याचा वापर नेटवर्कवरील मिडीयाचा दर्जा ठरवण्याकरीता केला "
-#~ "जातो: \"0\" 14.4 Kbps मोडेमसाठी, \"1\" 19.2 Kbps मोडेमसाठी, \"2\"  28.8 "
-#~ "Kbps मोडेमसाठी, \"3\" 33.6 Kbps मोडेमसाठी, \"4\" 34.4 Kbps मोडेमसाठी, \"5\" "
-#~ "56 Kbps मोडेम/ISDN साठी, \"6\" 112 Kbps डुअल ISDN/DSL साठी, \"7\" 256 Kbps "
-#~ "DSL/केबलसाठी, \"8\" 384 Kbps DSL/केबलसाठी, \"9\" 512 Kbps DSL/केबलसाठी, "
-#~ "\"10\" 1.5 Mbps T1/इंट्रानेट/LAN साठी, \"11\" इंट्रानेट/LAN साठी."
-
-#~ msgid "Network connection speed"
-#~ msgstr "नेटवर्क जुळवणी वेग"
-
-#~ msgid ""
-#~ "Quality settings for the audio visualization: \"0\" for small, \"1\" for "
-#~ "normal, \"2\" for large, \"3\" for extra large."
-#~ msgstr ""
-#~ "ऑडिओ आभासीकरणसाठी दर्जा संरचना: \"0\" लहानकरीता, \"1\" सर्वसाधारणसाठी, \"2\" "
-#~ "मोठ्याकरीता, \"3\" जास्त मोठ्यांकरीता."
-
-#~ msgid ""
-#~ "Type of audio output to use: \"0\" for stereo, \"1\" for 4-channel "
-#~ "output, \"2\" for 5.0 channel output, \"3\" for 5.1 channel output, \"4\" "
-#~ "for AC3 Passthrough."
-#~ msgstr ""
-#~ "ऑडिओ आऊपुटचा वापरण्याजोगी प्रकरा: स्टिरीओ करीता \"0\" , 4-मार्ग आउटपुट करीता "
-#~ "\"1\", 5.0 मार्ग आउटपुट करीता \"2\", 5.1 मार्ग आउटपुट करीता \"3\", AC3 उत्तीर्ण "
-#~ "करीता \"4\"."
-
-#~ msgid "UTF-8"
-#~ msgstr "UTF-8"
-
-#, fuzzy
-#~ msgid "Play Image '%s'"
-#~ msgstr "डिस्क '%s' चालवा"
-
-#~ msgid "device%d"
-#~ msgstr "साधन%d"
-
-#~ msgid "Play Disc '%s'"
-#~ msgstr "डिस्क '%s' चालवा"
-
-#~ msgid "Movie Player using %s"
-#~ msgstr "%s सह Movie Player वापरा"
-
-#~ msgid ""
-#~ "Xplayer could not play this media (%s) although a plugin is present to "
-#~ "handle it."
-#~ msgstr ""
-#~ "मिडीया हाताळणी करीता योग्य प्लगइन उपलब्ध असल्यावरही टोटेम या प्रकारची मिडीया "
-#~ "(%s) चालवू शकत नाही."
-
-#~ msgid ""
-#~ "You might want to check that a disc is present in the drive and that it "
-#~ "is correctly configured."
-#~ msgstr ""
-#~ "तुम्हाला बहुदा ड्राइव्ह मध्ये डिस्क आहे का याची तपासणी घ्याची असावी व ते सुस्थितरित्या "
-#~ "संयोजीत आहे का याची तपासणीही घ्याची असेल."
-
-#~ msgid "More information about media plugins"
-#~ msgstr "मिडीया प्लगइन विषयी अधिक माहिती"
-
-#~ msgid ""
-#~ "Please install the necessary plugins and restart Xplayer to be able to play "
-#~ "this media."
-#~ msgstr ""
-#~ "कृपया आवश्यक प्लगइन प्रतिष्ठापीत करा व ही मिडीया चालविण्याकरीता टोटेम पुनःसुरू करा."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it does not have the "
-#~ "appropriate plugins to be able to read from the disc."
-#~ msgstr ""
-#~ "टोटेम या प्रकारची मिडीया (%s) चालवू शकत नाही कारण त्याकडे डीस्क पासून "
-#~ "वाचण्याकरीताचे योग्य प्लगइन नाही."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because you do not have the "
-#~ "appropriate plugins to handle it."
-#~ msgstr ""
-#~ "टोटेम या प्रकारची मिडीया (%s) चालवू शकत नाही कारण त्याकडे हाताळण्याकरीताचे योग्य "
-#~ "प्लगइन नाही."
-
-#~ msgid ""
-#~ "Xplayer cannot play this type of media (%s) because it is not supported."
-#~ msgstr "टोटेम या प्रकारची मिडीया (%s) चालवू शकत नाही कराण प्रकार समर्थीत नाही."
-
-#~ msgid "Please insert another disc to play back."
-#~ msgstr "चालविण्याकरीता कृपया आणखी डीस्क अंतर्भूत करा."
-
-#~ msgid "Xplayer does not support playback of Audio CDs"
-#~ msgstr "टोटेम ऑडिओ CD चे गायन करीता समर्थन करीत नाही"
-
-#~ msgid ""
-#~ "Please consider using a music player or a CD extractor to play this CD"
-#~ msgstr "ही CD चालविण्याकरीता संगीत वादक किंवा CD एक्सट्रॅक्टरचा वापर करणे आवश्यक आहे"
-
-#~ msgid "Don't connect to an already-running instance"
-#~ msgstr "आधिपासूनच कार्यरत घटनाशी जुळवू नका"
-
-#~ msgid "Enable visual effects?"
-#~ msgstr "दृष्य प्रभाव चालू करायचे का?"
-
-#~ msgid ""
-#~ "It seems you are running Xplayer remotely.\n"
-#~ "Are you sure you want to enable the visual effects?"
-#~ msgstr ""
-#~ "टोटेमला दूर्रस्थरित्या चालविले जात आहे असे दिसून येते.\n"
-#~ "तुम्हाला नक्की दृश्यीय प्रभाव कार्यान्वीत करायचे?"
-
-#~ msgid ""
-#~ "Changing the visuals effect type will require a restart to take effect."
-#~ msgstr "दृश्य प्रभाव प्रकार बदल प्रभावी होण्याकरीता पुन्हसुरू करणे आवश्यक आहे."
-
-#~ msgid ""
-#~ "The change of audio output type will only take effect when Xplayer is "
-#~ "restarted."
-#~ msgstr "टोटेम पुन्हा सूरू केल्यावरच ऑडिओ आऊटपुट प्रकार मधिल बदल प्रभावी पडेल."
-
-#~ msgid "%d %%"
-#~ msgstr "%d %%"
-
-#~ msgid "Could not open link"
-#~ msgstr "दुवा उघडा"
-
-#~ msgid "Xplayer could not initialize the configuration engine."
-#~ msgstr "संयोजना इंजिन टोटेम प्रारंभ करू शकले नाही."
-
-#~ msgid "Make sure that GNOME is properly installed."
-#~ msgstr "जिनोम व्यवस्थित स्थापीत आहे याची खात्री करा."
-
-#~ msgid ""
-#~ "The requested audio output was not found. Please select another audio "
-#~ "output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "विनंतीकृत ऑडिओ आउटपुट आढळले नाही. कृपया मल्टिमिडीया प्रणाली निवडक मधिल अन्य ऑडिओ "
-#~ "ऑउटपुट निवडा."
-
-#~ msgid "Location not found."
-#~ msgstr "ठिकाण सापडले नाही."
-
-#~ msgid ""
-#~ "Could not open location; you might not have permission to open the file."
-#~ msgstr "स्थान उघडू शकले नाही; तुमच्याकडे फाइल उघडण्याची परवानगी कदाचीत नसावी."
-
-#~ msgid ""
-#~ "The video output is in use by another application. Please close other "
-#~ "video applications, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "व्हिडिओ आउटपुट अन्य अनुप्रयोग द्वारे वापरले जात आहे. कृपया अन्य व्हिडीओ अनुप्रयोग बंद "
-#~ "करा, किंवा मल्टिमिडीया प्रणाली निवडक मधिल अन्य ऑडिओ ऑउटपुट निवडा."
-
-#~ msgid ""
-#~ "The audio output is in use by another application. Please select another "
-#~ "audio output in the Multimedia Systems Selector. You may want to consider "
-#~ "using a sound server."
-#~ msgstr ""
-#~ "ऑडिओ आउटपुट अन्य अनुप्रयोग द्वारे वापरले जात आहे. कृपया मल्टिमिडीया प्रणाली निवडक "
-#~ "मधिल अन्य ऑडिओ ऑउटपुट निवडा. तुम्हच्याकडे अन्य श्राव्य सर्वर वापराचे पर्याय आहे."
-
-#~ msgid ""
-#~ "The playback of this movie requires the following decoders which are not "
-#~ "installed:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "या चित्रपट चालविण्याकरीता खालिल डीकोडरची आवश्यकता आहे जी प्रतिष्ठापीत नाही:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "Media file could not be played."
-#~ msgstr "मिडिया फाइल वापरता आली नाही."
-
-#~ msgid "Too old version of GStreamer installed."
-#~ msgstr "जीस्टीमरची अगोदरची जुनी आवृती स्थापित झाली आहे."
-
-#~ msgid ""
-#~ "Failed to create a GStreamer play object. Please check your GStreamer "
-#~ "installation."
-#~ msgstr ""
-#~ "GStreamer चालविण्याकरती घटक निर्माण करण्यास अपयशी. कृपया GStreamer प्रतिष्ठापना "
-#~ "तपासून पहा."
-
-#~ msgid ""
-#~ "Failed to open video output. It may not be available. Please select "
-#~ "another video output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "व्हिडिओ आउपुट उघडण्यास अपयशी. ते उपलब्ध नसावे. कृपया मल्टिमिडीया प्रणाली निवडक "
-#~ "मधिल अन्य ऑडिओ ऑउटपुट निवडा."
-
-#~ msgid ""
-#~ "Could not find the video output. You may need to install additional "
-#~ "GStreamer plugins, or select another video output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "व्हिडीओ आउपुट आढळले नाही. तुम्हाला अगाऊ GStreamer प्लगइन प्रतिष्ठापीत करायची "
-#~ "आवश्यकता आहे, किंवा मल्टिमिडीया प्रणाली निवडक मधिल अन्य ऑडिओ ऑउटपुट निवडा."
-
-#~ msgid ""
-#~ "Failed to open audio output. You may not have permission to open the "
-#~ "sound device, or the sound server may not be running. Please select "
-#~ "another audio output in the Multimedia Systems Selector."
-#~ msgstr ""
-#~ "ऑडिओ आउपुट उघडण्यास अपयशी. श्राव्य साधन उघडण्याकरीताचे लागणारी परवानगी तुमच्याकडे "
-#~ "नाही, किंवा आवाज सर्वर कार्यरत नसावे. कृपया मल्टिमिडीया प्रणाली निवडक मधिल अन्य "
-#~ "ऑडिओ ऑउटपुट निवडा."
-
-#~ msgid ""
-#~ "Could not find the audio output. You may need to install additional "
-#~ "GStreamer plugins, or select another audio output in the Multimedia "
-#~ "Systems Selector."
-#~ msgstr ""
-#~ "ऑडिओ आउपुट आढळले नाही. तुम्हाला अगाऊ GStreamer प्लगइन प्रतिष्ठापीत करायची "
-#~ "आवश्यकता आहे, किंवा मल्टिमिडीया प्रणाली निवडक मधिल अन्य ऑडिओ ऑउटपुट निवडा."
-
-#~ msgid "%s"
-#~ msgstr "%1$s"
-
-#~ msgid "Bemused"
-#~ msgstr "Bemused"
-
-#~ msgid "Control Xplayer through a mobile phone with a Bemused client"
-#~ msgstr "टोटेमला मोबाईल फोनच्या द्वारे Bemused क्लाऐंटचा वापर करून नियंत्रीत करा"
-
-#~ msgid "Untitled %d"
-#~ msgstr "शिर्षकहीन %d"
-
-#~ msgid "Xplayer Bemused Server"
-#~ msgstr "टोटेम Bemused सर्वर"
-
-#~ msgid "Xplayer Bemused Server version 1.0"
-#~ msgstr "टोटेम Bemused सर्वर आवृत्ती 1.0"
-
-#~ msgid "Delete"
-#~ msgstr "नष्ट करा"
-
-#~ msgid "Coherence DLNA/UPnP Client"
-#~ msgstr "Coherence DLNA/UPnP क्लाएंट"
-
-#~ msgid "A DLNA/UPnP client for Xplayer powered by Coherence"
-#~ msgstr "Coherence कडून Xplayer सक्षम करीता DLNA/UPnP क्लाएंट"
-
-#~ msgid "Could not connect to the Galago daemon."
-#~ msgstr "Galago डीमनशी जुळवणी करू शकले नाही."
-
-#~ msgid "BBC iPlayer"
-#~ msgstr "BBC iPlayer"
-
-#~ msgid ""
-#~ "Stream BBC programs from the last 7 days from the BBC iPlayer service."
-#~ msgstr "BBC iPlayer सेवाचा वापर करून शेवटच्या 7 दिवसांचे BBC कार्यक्रम स्ट्रीम."
-
-#~ msgid ""
-#~ "There was an unknown error getting the list of television channels "
-#~ "available on BBC iPlayer."
-#~ msgstr ""
-#~ "BBC iPlayer वरील उपलब्ध टेलीवीशन वाहिनींची सूची प्राप्त करतवेळी अपरिचीत त्रुटी "
-#~ "आढळली."
-
-#~ msgid "Loading…"
-#~ msgstr "लोड करत आहे…"
-
-#~ msgid "Error getting programme feed"
-#~ msgstr "प्रोग्राम फीड प्राप्त करतेवेळी त्रुटी"
-
-#, fuzzy
-#~ msgid ""
-#~ "There was an error getting the list of programmes for this channel and "
-#~ "category combination."
-#~ msgstr ""
-#~ "या वाहिनी किंवा विभाग जोडणी करीता प्रोग्रामची सूची प्राप्त करतेवेळी अपरिचीत त्रुटी "
-#~ "आढळली."
-
-#~ msgid "Programme unavailable (\"%s\")"
-#~ msgstr "कार्यक्रम अनुपलब्ध (\"%s\")"
-
-#~ msgid "By artist"
-#~ msgstr "कलाकार कडून"
-
-#~ msgid "By tag"
-#~ msgstr "टॅग कडून"
-
-#~ msgid "Jamendo Album Page"
-#~ msgstr "Jamendo अल्बम पान"
-
-#~ msgid "Latest Releases"
-#~ msgstr "अलिकडील प्रकाशन"
-
-#, fuzzy
-#~ msgid "Number of albums to _retrieve:"
-#~ msgstr "पुनःप्राप्य करण्याजोगी अल्बमची संख्या (_r)"
-
-#~ msgid "Popular"
-#~ msgstr "प्रतिष्ठीत"
-
-#, fuzzy
-#~ msgid "Preferred audio _format:"
-#~ msgstr "पसंतीचे ऑडिओ रूपण (_f)"
-
-#~ msgid "Search Results"
-#~ msgstr "शोध परीणाम"
-
-#~ msgid "_Open Jamendo Album Page in Browser"
-#~ msgstr "अल्बम पान ब्राउजर मध्ये उघडा (_O)"
-
-#~ msgid "Jamendo"
-#~ msgstr "Jamendo"
-
-#~ msgid ""
-#~ "Listen to the large collection of Creative Commons licensed music on "
-#~ "Jamendo."
-#~ msgstr "Jamendo वर Creative Commons करारबद्ध संगीतचे मोठे संग्रह ऐका."
-
-#~ msgid "You need to install the Python simplejson module."
-#~ msgstr "तुम्हाला Python simplejson घटक प्रतिष्ठापीत करावे लागेल."
-
-#~ msgid "Artist: %s"
-#~ msgstr "कलाकार: %s"
-
-#~ msgid "%Y-%m-%d"
-#~ msgstr "%Y-%m-%d"
-
-#~ msgid "%x"
-#~ msgstr "%x"
-
-#~ msgid "Genre: %s"
-#~ msgstr "वर्ग: %s"
-
-#~ msgid "Released on: %s"
-#~ msgstr "प्रकाशीत केले: %s"
-
-#~ msgid "License: %s"
-#~ msgstr "करार: %s"
-
-#~ msgid "%02d. %s"
-#~ msgstr "%02d. %s"
-
-#~ msgid "Album: %s"
-#~ msgstr "अल्बम: %s"
-
-#~ msgid "Duration: %s"
-#~ msgstr "कार्यकाळ: %s"
-
-#~ msgid "Fetching albums, please wait..."
-#~ msgstr "अल्बम्स् प्राप्त करत आहे, कृपया थांबा..."
-
-#~ msgid ""
-#~ "Failed to connect to Jamendo server.\n"
-#~ "%s."
-#~ msgstr ""
-#~ "Jamendo सर्व्हरशी जुळवणी करण्यास अपयशी.\n"
-#~ "%s."
-
-#~ msgid "The Jamendo server returned code %s."
-#~ msgstr "Jamendo सर्व्हरने कोड %s पाठवले."
-
-#~ msgid "%H:%M:%S"
-#~ msgstr "%H:%M:%S"
-
-#~ msgid "%M:%S"
-#~ msgstr "%M:%S"
-
-#~ msgid "en"
-#~ msgstr "en"
-
-#~ msgid "Recordings"
-#~ msgstr "रेकॉर्डींग"
-
-#~ msgid "MythTV Recordings"
-#~ msgstr "MythTV रेकॉर्डींग्स्"
-
-#~ msgid "MythTV LiveTV"
-#~ msgstr "MythTV LiveTV"
-
-#, fuzzy
-#~ msgid "Language"
-#~ msgstr "भाषा (_L)"
-
-#~ msgid "_Download Movie Subtitles..."
-#~ msgstr "चित्रपटाचे उपशिर्षक डाउनलोड करा (_D)..."
-
-#~ msgid "Neighbors"
-#~ msgstr "शेजारी"
-
-#~ msgid "Publish Playlist"
-#~ msgstr "वादकयादी दर्शवा"
-
-#~ msgid "Share the current playlist via HTTP"
-#~ msgstr "सध्याची वादकयादी HTTP द्वारे सहभागीय करा"
-
-#~ msgid "Service _Name:"
-#~ msgstr "सेवाचे नाव (_N):"
-
-#, fuzzy
-#~ msgid ""
-#~ "The name used for announcing the playlist service on the network.\n"
-#~ "All occurrences of the string <b>%u</b> will be replaced by your name,\n"
-#~ "and <b>%h</b> will be replaced by your computer's host name."
-#~ msgstr ""
-#~ "<small>नेवर्क वरील वादकयादी सेवा घोषीत करण्यासाठी वापरले गेलेले नाव.\n"
-#~ "<b>%u</b> चे सर्व घटनाक्रम तुमच्या नावाद्वारे बदलविले जाईल,\n"
-#~ "व <b>%h</b> तुमच्या संगणकीय यजमान नावाशी बदलविले जाईल.</small>"
-
-#~ msgid "Use _encrypted transport protocol (HTTPS)"
-#~ msgstr "एनक्रीप्टेड स्थानांतरन शिष्टाचार वापरा (_e) (HTTPS)"
-
-#~ msgid "Save in _folder:"
-#~ msgstr "फोल्डरमध्ये साठवा (_f):"
-
-#~ msgid "Select a folder"
-#~ msgstr "फोल्डर नीवडा"
-
-#~ msgid "_Name:"
-#~ msgstr "नाव (_N):"
-
-#~ msgid "There was an error saving the screenshot."
-#~ msgstr "स्क्रीनशॉट साठवताना त्रुटी झाली आहे."
-
-#, fuzzy
-#~ msgid "Could not get name and thumbnail for %s: %s"
-#~ msgstr "फाइल %s करीता मेटाडेटा प्राप्त करू शकत नाही: %s"
-
-#, fuzzy
-#~ msgid "Could not connect to Tracker"
-#~ msgstr "Galago डीमनशी जुळवणी करू शकले नाही."
-
-#~ msgid "No results"
-#~ msgstr "परिणाम नाही"
-
-#~ msgid "Showing %i - %i of %i match"
-#~ msgid_plural "Showing %i - %i of %i matches"
-#~ msgstr[0] "%3$i जुळवणी पैकी %1$i - %2$i दर्शवित आहे"
-#~ msgstr[1] "%3$i जुळवणी पैकी %1$i - %2$i दर्शवित आहे"
-
-#~ msgid "Page"
-#~ msgstr "पान"
-
-#~ msgid "Set the window icon to the thumbnail of the playing movie"
-#~ msgstr "चित्रपट चालवितेवेळी चौकट चिन्हला थंबनेल करीता निश्चित करा"
-
-#~ msgid "Thumbnail"
-#~ msgstr "थंबनेल"
-
-#~ msgid "Search for local videos using Tracker"
-#~ msgstr "निरिक्षकाचे वापर करून स्थानिक व्हिडीओज् शोधा"
-
-#~ msgid "Related Videos"
-#~ msgstr "संबंधित व्हिडीओज्"
-
-#~ msgid "_Open in Web Browser"
-#~ msgstr "वेब ब्राऊजर मध्ये उघडा (_O)"
-
-#~ msgid "Open the video in your web browser"
-#~ msgstr "विडीओ वेब ब्राऊजर मध्ये उघडा"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Cancelling query…"
-#~ msgstr "चौकशी रद्द करत आहे…"
-
-#~ msgid "Error Looking Up Video URI"
-#~ msgstr "व्हिडीओ URI शोधतेवेळी त्रुटी आढळली"
-
-#~ msgid "Error Searching for Videos"
-#~ msgstr "व्हिडीओज् शोधतेवेळी त्रुटी"
-
-#~ msgid ""
-#~ "The response from the server could not be understood. Please check you "
-#~ "are running the latest version of libgdata."
-#~ msgstr ""
-#~ "सर्व्हर पासून प्रतिसाद समझला नाही. कृपया तुम्ही libgdata ची सर्वात अलिकडील आवृत्ती "
-#~ "चालवत आहे याची खात्री करा."
-
-#~ msgid "Fetching search results…"
-#~ msgstr "शोध परिणाम प्राप्त करत आहे…"
-
-#~ msgid "Fetching related videos…"
-#~ msgstr "संबंधित विडीओ प्राप्त करत आहे…"
-
-#~ msgid "Error Opening Video in Web Browser"
-#~ msgstr "वेब ब्राऊजर मध्ये व्हिडीओ उघडतेवेळी त्रुटी"
-
-#~ msgid "Fetching more videos…"
-#~ msgstr "आणखी व्हिडीओज् प्राप्त करत आहे…"
-
-#~ msgid "Browser Plugin using %s"
-#~ msgstr "%s चा वापर करणारे ब्राऊजर प्लगइन"
-
-#~ msgid "Xplayer Browser Plugin"
-#~ msgstr "टोटेम ब्राऊजर प्लगइन"
