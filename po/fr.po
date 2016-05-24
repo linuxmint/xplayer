@@ -24,15 +24,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-02-03 12:45+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2016-05-23 13:02+0000\n"
+"Last-Translator: Phan Hoang <phahoatho@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "Language: \n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
@@ -102,7 +102,8 @@ msgstr "Minutage :"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Autoriser l'économiseur d'écran lors des lectures audio"
+msgstr ""
+"Autoriser l'activation de l'économiseur d'écran lors des lectures audio"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
@@ -120,7 +121,7 @@ msgstr ""
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "Show visual effects when playing an audio only file."
 msgstr ""
-"Affiche des effets visuels lors de la lecture d'un fichier ne contenant que "
+"Afficher des effets visuels lors de la lecture d'un fichier ne contenant que "
 "du son."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
@@ -159,7 +160,7 @@ msgstr "Lecture aléatoire"
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
-"Indique s'il faut désactiver le désentrelacement pour les vidéos entrelacées"
+"Indique s'il faut désactiver le désentrelacement des vidéos entrelacées"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
@@ -740,7 +741,7 @@ msgstr "Va au menu angle"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "Menu _chapitre"
+msgstr "Menu _chapitres"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
@@ -987,9 +988,9 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Un flux audio ou vidéo n'est pas géré pour cause d'absence de codecs. Il se "
-"peut que vous deviez installer des greffons supplémentaires pour être "
-"capable de visualiser certains types de films"
+"Un flux audio ou vidéo n'est pas géré pour cause d'absence de codecs. "
+"L'installation de greffons supplémentaires pourrait être nécessaire pour la "
+"visualisation de certains types de films"
 
 #: ../src/backend/bacon-video-widget.c:3404
 msgid ""
@@ -1016,7 +1017,7 @@ msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Des greffons indispensables manquent. Assurez-vous que le programme est "
+"Il manque des greffons indispensables. Assurez-vous que le programme est "
 "correctement installé."
 
 #: ../src/eggdesktopfile.c:165
@@ -1314,7 +1315,7 @@ msgid ""
 "details."
 msgstr ""
 "Xplayer est distribué dans l'espoir qu'il sera utile, mais SANS AUCUNE "
-"GARANTIE ; sans même la garantie implicite de QUALITÉ LOYALE et MARCHANDE ou "
+"GARANTIE ; sans même la garantie implicite de COMMERCIALISABILITÉ ou "
 "D'ADÉQUATION À UNE UTILISATION PARTICULIÈRE. Pour plus de détails, voir la "
 "Licence Publique Générale GNU."
 
@@ -1530,7 +1531,7 @@ msgstr "Préférences"
 
 #: ../src/xplayer-preferences.c:445
 msgid "Select Subtitle Font"
-msgstr "Sélection des polices de sous-titres"
+msgstr "Sélection de la police de sous-titres"
 
 #: ../src/xplayer-statusbar.c:110
 msgid "0:00 / 0:00"
@@ -1718,7 +1719,7 @@ msgstr "Thaï"
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "Turque"
+msgstr "Turc"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1772,7 +1773,7 @@ msgstr "Sélectionner les films ou les listes de lecture"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr "Ajouter un répertoire"
+msgstr "Ajouter un dossier"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1939,7 +1940,7 @@ msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr "Erreur lors de la lecture du fichier de chapitrage"
+msgstr "Erreur lors de la lecture du fichier avec chapitrage"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
@@ -1951,7 +1952,7 @@ msgstr "Attribuez un autre nom ou enlevez un chapitre existant."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr "Erreur lors de l'écriture du fichier de chapitrage"
+msgstr "Erreur lors de l'écriture du fichier avec chapitrage"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
@@ -1961,8 +1962,8 @@ msgstr "Une erreur est survenue lors de l'enregistrement du chapitrage"
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Vérifiez que vous possédez les droits d'écriture dans le dossier contenant "
-"la vidéo."
+"Veuillez vérifier que vous possédez les droits d'écriture dans le dossier "
+"contenant la vidéo."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -1995,7 +1996,7 @@ msgstr "Enregistrer"
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
 "Si vous n'enregistrez pas, les modifications de la liste des chapitres "
-"seront perdus."
+"seront perdues."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
@@ -2040,7 +2041,7 @@ msgstr "Navigateur Grilo"
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Un greffon vous permettant de parcourir du contenu multimédia de différentes "
+"Un greffon vous permettant de parcourir le contenu multimédia de différentes "
 "sources"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
@@ -2253,9 +2254,9 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"Un mot de passe pour protéger d'un accès distant non autorisé, le serveur "
-"rpdb2 de débogage de Xplayer. Si vide, le mot de passe « xplayer » est "
-"utilisé par défaut."
+"Un mot de passe pour protéger le serveur rpdb2 d'un débogage de Xplayer "
+"depuis un accès distant non autorisé. Si vide, le mot de passe « xplayer » "
+"est utilisé par défaut."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2301,9 +2302,9 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Après avoir validé, Xplayer attend que vous vous connectiez à lui avec "
-"winpdb ou rpdb2. Si vous n'avez pas défini de mot de passe de débogage dans "
-"GConf, utilisez le mot de passe par défaut (« xplayer »)."
+"Après validation, Xplayer attend que vous vous connectiez à lui avec winpdb "
+"ou rpdb2. Si vous n'avez pas défini de mot de passe de débogage dans DConf, "
+"utilisez le mot de passe par défaut (« xplayer »)."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2311,7 +2312,7 @@ msgstr "Fichiers récents"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr "Ajoute les fichiers qui ont été lus aux fichiers récents"
+msgstr "Ajoute les fichiers lus aux fichiers récents"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"

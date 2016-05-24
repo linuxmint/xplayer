@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-02-06 03:31+0000\n"
+"PO-Revision-Date: 2016-04-21 21:25+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <locales@geez.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-04-21 14:44+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
 #: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
@@ -35,7 +35,7 @@ msgstr "በ መጫወት ላይ"
 #: ../browser-plugin/xplayer-plugin-viewer.c:386
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "ሙቪ በ መጫወት ላይ"
+msgstr "ሙቪ በ ማጫወት ላይ"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:442
 msgid "No URI to play"
@@ -60,7 +60,7 @@ msgstr "ስህተት ተፋጥሯል"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
-msgstr ""
+msgstr "የ ማጫወቻ ዝርዝር ወይንም ማጫወቻው ባዶ ነው"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
@@ -76,15 +76,15 @@ msgstr ""
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
-msgstr ""
+msgstr "ከ ሙሉ ገጽ መመልከቻ መውጫ"
 
 #: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
-msgstr "ስአት"
+msgstr "ሰአት:"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr ""
+msgstr "የ መመልከቻ ማዳኛ ይጀምር ሙዚቃ በሚጫወት ጊዜ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
-msgstr ""
+msgstr "የ ቪዲዮው ብሩህነት"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
@@ -126,11 +126,11 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Repeat mode"
-msgstr ""
+msgstr "መድገሚያ ዘዴ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Shuffle mode"
-msgstr ""
+msgstr "መበወዣ ዘዴ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Whether to disable deinterlacing for interlaced movies"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid "Subtitle font"
-msgstr ""
+msgstr "የ ንዑስ አርእስት ፊደል"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Pango font description for subtitle rendering."
@@ -180,23 +180,23 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
-msgstr ""
+msgstr "ነባር አካባቢ ለ \"መክፈቻ...\" ንግግሮች"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
-msgstr ""
+msgstr "ነባር አካባቢ ለ \"መክፈቻ...\" ንግግሮች: ነባር የ አሁኑ ዳይሬክቶሪ ነው"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr ""
+msgstr "ነባር አካባቢ ለ \"መመልከቻ ፎቶ ማንሻ\" ንግግሮች"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
-msgstr ""
+msgstr "ነባር አካባቢ ለ \"መመልከቻ ፎቶ ማንሻ\" ንግግሮች: ነባር የ ስእሎች ዳይሬክቶሪ ነው"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
@@ -222,7 +222,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:33
 msgid "Active plugins list"
-msgstr ""
+msgstr "ንቁ የ ተሰኪ ዝርዝር"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:34
 msgid ""
@@ -232,82 +232,82 @@ msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr ""
+msgstr "_ማስወገጃ"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr ""
+msgstr "ፋይሉን ከ ማጫወቻ ዝርዝር ውስጥ ማስወገጃ"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr ""
+msgstr "አካባቢ _ኮፒ ማድረጊያ"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr ""
+msgstr "አካባቢ ወደ ቁራጭ ሰሌዳ ኮፒ ማድረጊያ"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr ""
+msgstr "_ይምረጡ የ ጽሁፍ ንዑስ አርእስቶች..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr ""
+msgstr "ይምረጡ ፋይል ለ መጠቀም ለ ጽሁፍ ንዑስ አርእስቶች"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr ""
+msgstr "መጨመሪያ..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr ""
+msgstr "ማስወገጃ"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr ""
+msgstr "የ ማጫወቻ ዝርዝር ማስቀመጫ..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr ""
+msgstr "ወደ ላይ ማንቀሳቀሻ"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr ""
+msgstr "ወደ ታች ማንቀሳቀሻ"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:2
 msgid "Normal"
-msgstr ""
+msgstr "መደበኛ"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:4
 msgid "Large"
-msgstr ""
+msgstr "ትልቅ"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:6
 msgid "Extra Large"
-msgstr ""
+msgstr "በጣም ትልቅ"
 
 #: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
 msgid "Stereo"
-msgstr ""
+msgstr "ስቴሪዮ"
 
 #: ../data/preferences.ui.h:8
 msgid "4-channel"
-msgstr ""
+msgstr "4-ጣቢያ"
 
 #: ../data/preferences.ui.h:9
 msgid "4.1-channel"
-msgstr ""
+msgstr "4.1-ጣቢያ"
 
 #: ../data/preferences.ui.h:10
 msgid "5.0-channel"
-msgstr ""
+msgstr "5.0-ጣቢያ"
 
 #: ../data/preferences.ui.h:11
 msgid "5.1-channel"
-msgstr ""
+msgstr "5.1-ጣቢያ"
 
 #: ../data/preferences.ui.h:12
 msgid "AC3 Passthrough"
@@ -319,7 +319,7 @@ msgstr "የቶተም ምርጫዎች"
 
 #: ../data/preferences.ui.h:14
 msgid "Playback"
-msgstr ""
+msgstr "መልሶ ማጫወቻ"
 
 #: ../data/preferences.ui.h:15
 msgid "Start playing files from last position"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: ../data/preferences.ui.h:16
 msgid "Text Subtitles"
-msgstr ""
+msgstr "የ ጽሁፍ ንዑስ አርእስት"
 
 #: ../data/preferences.ui.h:17
 msgid "_Load subtitle files when movie is loaded"
@@ -335,7 +335,7 @@ msgstr ""
 
 #: ../data/preferences.ui.h:18
 msgid "_Font:"
-msgstr ""
+msgstr "_ፊደል:"
 
 #: ../data/preferences.ui.h:19
 msgid "_Encoding:"
@@ -351,12 +351,12 @@ msgstr ""
 
 #: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
 msgid "General"
-msgstr ""
+msgstr "ባጠቃላይ"
 
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:24
 msgid "Display"
-msgstr ""
+msgstr "ማሳያ"
 
 #: ../data/preferences.ui.h:25
 msgid "_Resize the window when a new video is loaded"
@@ -373,12 +373,12 @@ msgstr ""
 #: ../data/preferences.ui.h:28
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr ""
+msgstr "ቪዲዮ"
 
 #. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
-msgstr ""
+msgstr "ቪዲዮ ወይንም ድምፅ"
 
 #: ../data/preferences.ui.h:31
 msgid "Visual Effects"
@@ -398,15 +398,15 @@ msgstr ""
 
 #: ../data/preferences.ui.h:35
 msgid "Color Balance"
-msgstr ""
+msgstr "ቀለም ማስተካከያ"
 
 #: ../data/preferences.ui.h:36
 msgid "_Brightness:"
-msgstr ""
+msgstr "_ብሩህነት:"
 
 #: ../data/preferences.ui.h:37
 msgid "Co_ntrast:"
-msgstr ""
+msgstr "ማነ_ፃፀሪያ:"
 
 #: ../data/preferences.ui.h:38
 msgid "Sat_uration:"
@@ -418,43 +418,43 @@ msgstr ""
 
 #: ../data/preferences.ui.h:40
 msgid "Reset to _Defaults"
-msgstr ""
+msgstr "እንደ ነበር መመለሻ ወደ _ነባር"
 
 #: ../data/preferences.ui.h:41
 msgid "Audio Output"
-msgstr ""
+msgstr "የ ድምፅ ውጤት"
 
 #: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
-msgstr ""
+msgstr "የ _ድምፅ ውጤት:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr ""
+msgstr "ድምፅ"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr ""
+msgstr "አርእስት:"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr ""
+msgstr "ተዋናይ:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr ""
+msgstr "የሚፈጀው ጊዜ:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr ""
+msgstr "አመት:"
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
-msgstr ""
+msgstr "አልበም:"
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr ""
+msgstr "አስተያየት:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
@@ -462,11 +462,11 @@ msgstr ""
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr ""
+msgstr "ቪዲዮ"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr ""
+msgstr "አቅጣጫዎች:"
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
@@ -486,17 +486,17 @@ msgstr ""
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr ""
+msgstr "ጣቢያዎች:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
 #: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
 msgid "Videos"
-msgstr ""
+msgstr "ቪዲዮዎች"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr ""
+msgstr "ሙቪ ማጫወቻ"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
@@ -516,14 +516,14 @@ msgstr "የቀድሞው"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr ""
+msgstr "መቀነሻ"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
 #: ../src/xplayer-object.c:4045
 msgid "Fullscreen"
-msgstr ""
+msgstr "በ ሙሉ መመልከቻ ዘዴ"
 
 #: ../data/xplayer.ui.h:1
 msgid "_Movie"
@@ -531,15 +531,15 @@ msgstr "ፊልም (_M)"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr ""
+msgstr "_መክፈቻ..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr ""
+msgstr "ፋይል መክፈቻ"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr ""
+msgstr "መክፈቻ _አካባቢ..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
@@ -547,15 +547,15 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr ""
+msgstr "_ማውጫ"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr ""
+msgstr "የ አሁኑን ዲስክ ማውጫ"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr ""
+msgstr "_ባህሪዎች"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
@@ -563,43 +563,43 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr ""
+msgstr "ማጫወቻ / ማ_ስቆሚያ"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr ""
+msgstr "ሙቪ ማጫወቻ ወይንም ማስቆሚያ"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr ""
+msgstr "_ማጥፊያ"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr ""
+msgstr "ፕሮግራሙን ማጥፊያ"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr ""
+msgstr "_ማረሚያ"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr ""
+msgstr "የ ማጫወቻ ዝርዝር _ማጽጃ"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr ""
+msgstr "የ ማጫወቻ ዝርዝር ማጽጃ"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr ""
+msgstr "ምርጫ_ዎች"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr ""
+msgstr "መተግበሪያውን ማሰናጃ"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr ""
+msgstr "ተሰኪዎች..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
@@ -607,7 +607,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr ""
+msgstr "_መመልከቻ"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
@@ -615,7 +615,7 @@ msgstr "ሙሉ እስክሪን (_F)"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr ""
+msgstr "ወደ ሙሉ መመልከቻ ዘዴ መቀየሪያ"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
@@ -623,7 +623,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr ""
+msgstr "_እንደገና መመጠኛ 1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
@@ -631,7 +631,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr ""
+msgstr "እንደገና መመጠኛ _1∶1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
@@ -639,7 +639,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr ""
+msgstr "እንደገና መመጠኛ _2∶1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
@@ -663,27 +663,27 @@ msgstr "ሂድ ወደ (_G)"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr ""
+msgstr "የ _ዲቪዲ ዝርዝር"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr ""
+msgstr "ወደ ዲቪዲ ዝርዝር መሄጃ"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr ""
+msgstr "የ _አርእስት ዝርዝር"
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr ""
+msgstr "ወደ አርእስት ዝርዝር መሄጃ"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr ""
+msgstr "የ ድምፅ ዝርዝር"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr ""
+msgstr "ወደ ድምፅ ዝርዝር መሄጃ"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -695,27 +695,27 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr ""
+msgstr "የ _ምእራፍ ዝርዝር"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr ""
+msgstr "ወደ ምእራፍ ዝርዝር መሄጃ"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr ""
+msgstr "የ _ሚቀጥለው ምእራፍ/ሙቪ"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr ""
+msgstr "የሚቀጥለው ምእራፍ ወይንም ሙቪ"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr ""
+msgstr "ቀደም ያለው ምእራፍ/ሙቪ"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr ""
+msgstr "ቀደም ያለው ምእራፍ ወይንም ሙቪ"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
@@ -723,67 +723,67 @@ msgstr "ድምፅ (_S)"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr ""
+msgstr "መጠን _መጨመሪያ"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr ""
+msgstr "መጠን መጨመሪያ"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr ""
+msgstr "መጠን _መቀነሻ"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr ""
+msgstr "መጠን መቀነሻ"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr ""
+msgstr "_እርዳታ"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr ""
+msgstr "_ይዞታዎች"
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr ""
+msgstr "የ እርዳታ ይዞታዎች"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr ""
+msgstr "_ስለ"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr ""
+msgstr "ስለዚህ መተግበሪያ"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr ""
+msgstr "_መድገሚያ ዘዴ"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr ""
+msgstr "የ መድገሚያ ዘዴ ማሰናጃ"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr ""
+msgstr "መበ_ወዣ ዘዴ"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr ""
+msgstr "የ መበወዣ ዘዴ ማሰናጃ"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr ""
+msgstr "_መቆጣጠሪያ ማሰናጃ"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr ""
+msgstr "መቆጣጠሪያ ማሳያ"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr ""
+msgstr "ጥ_ንሸራታች መደርደሪያ"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
@@ -792,7 +792,7 @@ msgstr ""
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr ""
+msgstr "በራሱ"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
@@ -808,7 +808,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
-msgstr ""
+msgstr "4∶3 (ቲቪ)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
@@ -816,7 +816,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr ""
+msgstr "16∶9 (ሰፊ መመልከቻ)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
@@ -832,35 +832,35 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr ""
+msgstr "ን_ዑስ አርእስት"
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr ""
+msgstr "_ቋንቋዎች"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr ""
+msgstr "በ ቅርብ ማሳያ"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr ""
+msgstr "በ ቅርብ ማሳያ"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr ""
+msgstr "ወደ _ፊት መዝለያ"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr ""
+msgstr "ወደ ፊት መዝለያ"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr ""
+msgstr "ወደ _ኋላ መዝለያ"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr ""
+msgstr "ወደ ኋላ መዝለያ"
 
 #: ../data/xplayer.ui.h:89
 msgid "Time seek bar"
