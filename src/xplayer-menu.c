@@ -698,6 +698,7 @@ about_action_callback (GtkAction *action, Xplayer *xplayer)
 	char *license = xplayer_interface_get_license ();
 
 	gtk_show_about_dialog (GTK_WINDOW (xplayer->win),
+				     "program-name", "Xplayer",
 				     "version", VERSION,
 				     "logo-icon-name", "xplayer",
 				     "license", license,
