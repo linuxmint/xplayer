@@ -86,7 +86,7 @@ xplayer_screensaver_update_from_state (XplayerObject *xplayer,
 	has_video_frames = has_video (bvw);
 
 	if ((xplayer_is_playing (xplayer) != FALSE && has_video_frames) ||
-	    (xplayer_is_playing (xplayer) != FALSE && !lock_screensaver_on_audio)) {
+	    (xplayer_is_playing (xplayer) != FALSE && lock_screensaver_on_audio)) {
 		if (pi->priv->inhibit_cookie == 0) {
 			GtkWindow *window;
 
