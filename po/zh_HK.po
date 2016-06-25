@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: xplayer 3.3.92\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-04-01 21:19+0000\n"
+"PO-Revision-Date: 2016-06-12 15:08+0000\n"
 "Last-Translator: tomoe_musashi <hkg.musashi@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-05-24 09:37+0000\n"
-"X-Generator: Launchpad (build 18053)\n"
+"X-Launchpad-Export-Date: 2016-06-25 09:31+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "Language: zh_TW\n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
@@ -81,7 +81,7 @@ msgstr "請驗證安裝時有沒有問題。Xplayer 會立刻結束。"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave Fullscreen"
-msgstr "離開全螢幕"
+msgstr "離開全熒幕"
 
 #: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
 msgid "Time:"
@@ -89,13 +89,13 @@ msgstr "時間："
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "允許螢幕保護程式在播放音樂時作用"
+msgstr "允許熒幕保護程式在播放音樂時作用"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
-msgstr "允許螢幕保護程式在播放音樂時作用。如果你使用螢幕內附的喇叭則停用它。"
+msgstr "允許熒幕保護程式在播放音樂時作用。如果你使用熒幕內附的喇叭則停用它。"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "Show visual effects when no video is displayed"
@@ -201,7 +201,7 @@ msgstr "\"擷取畫面快照\" 對話視窗的預設位置"
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
-msgstr "「擷取螢幕截圖」對話視窗的預設位置。預設是圖片資料夾。"
+msgstr "「擷取熒幕截圖」對話視窗的預設位置。預設是圖片資料夾。"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
@@ -373,7 +373,7 @@ msgstr "停用交錯式影片的去交錯(_D)"
 
 #: ../data/preferences.ui.h:27
 msgid "Disable screensaver when playing"
-msgstr "播放時停用螢幕保護程式"
+msgstr "播放時停用熒幕保護程式"
 
 #: ../data/preferences.ui.h:28
 msgctxt "Screensaver disable"
@@ -529,7 +529,7 @@ msgstr "靜音"
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
 #: ../src/xplayer-object.c:4045
 msgid "Fullscreen"
-msgstr "全螢幕"
+msgstr "全熒幕"
 
 # Following German team's practice (_Movie -> _File), since xplayer can play
 # audio as well -- Abel
@@ -619,11 +619,11 @@ msgstr "檢視(_V)"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "全螢幕(_F)"
+msgstr "全熒幕(_F)"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "切換至全螢幕"
+msgstr "切換至全熒幕"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
@@ -824,12 +824,11 @@ msgstr "設置為 4:3 (電視) 長寬比"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr "16:9 (寬螢幕)"
+msgstr "16:9 (寬熒幕)"
 
-# anamorphic has discriminating meaning in chinese. -- Abel
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "設置為 16:9 (寬螢幕) 長寬比"
+msgstr "設置為 16:9 (寬熒幕) 長寬比"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
@@ -1368,7 +1367,7 @@ msgstr "靜音"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "切換全螢幕模式"
+msgstr "切換全熒幕模式"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
@@ -1899,7 +1898,7 @@ msgstr "開啟章節檔案"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "章節螢幕截圖"
+msgstr "章節熒幕截圖"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
@@ -1996,7 +1995,7 @@ msgstr "Gromit 註解"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "在螢幕上做註記的簡報加強程式"
+msgstr "在熒幕上做註記的簡報加強程式"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
@@ -2247,11 +2246,11 @@ msgstr "逆時針方向旋轉(_L)"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr "螢幕保護程式"
+msgstr "熒幕保護程式"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "播放影片時停用螢幕保護程式"
+msgstr "播放影片時停用熒幕保護程式"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
@@ -2270,7 +2269,7 @@ msgstr "畫面快照的數量:"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "螢幕截圖來自 %s.png"
+msgstr "熒幕截圖來自 %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2278,7 +2277,7 @@ msgstr "螢幕截圖來自 %s.png"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr "螢幕截圖來自 %s - %d.png"
+msgstr "熒幕截圖來自 %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
@@ -2286,7 +2285,7 @@ msgstr "畫面快照"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "允許影片使用螢幕截圖和藝廊"
+msgstr "允許影片使用熒幕截圖和藝廊"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
