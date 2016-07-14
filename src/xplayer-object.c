@@ -3907,7 +3907,7 @@ xplayer_setup_window (XplayerObject *xplayer)
 		xplayer->sidebar_w = 0;
 		w = DEFAULT_WINDOW_W;
 		h = DEFAULT_WINDOW_H;
-		show_sidebar = TRUE;
+		show_sidebar = FALSE;
 		page_id = NULL;
 		g_free (filename);
 	} else {
