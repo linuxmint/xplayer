@@ -26,6 +26,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
+#include <libxapp/xapp-display.h>
 
 #include "backend/bacon-video-widget.h"
 
@@ -54,6 +55,10 @@ struct XplayerFullscreen {
 	GtkWidget              *volume;
 	GtkWidget              *buttons_box;
 	GtkWidget              *exit_button;
+	GtkWidget              *blank_button;
+
+	/* Screen blanker */
+	XAppDisplay            *xappdisplay;
 
 	/* Private */
 	XplayerFullscreenPrivate *priv;
@@ -83,3 +88,5 @@ void     xplayer_fullscreen_set_seekable       (XplayerFullscreen *fs,
 					      gboolean seekable);
 void     xplayer_fullscreen_set_can_set_volume (XplayerFullscreen *fs,
 					      gboolean can_set_volume);
+void     xplayer_fullscreen_toggle_blank_monitors (XplayerFullscreen *fs,
+                          GtkWidget *window);

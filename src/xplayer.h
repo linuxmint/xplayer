@@ -191,6 +191,7 @@ void	xplayer_action_pause			(XplayerObject *xplayer);
 #define xplayer_action_fullscreen_toggle xplayer_object_action_fullscreen_toggle
 void	xplayer_object_action_fullscreen_toggle	(XplayerObject *xplayer);
 void	xplayer_action_fullscreen			(XplayerObject *xplayer, gboolean state);
+void	xplayer_action_blank			    (XplayerObject *xplayer);
 #define xplayer_action_next xplayer_object_action_next
 void	xplayer_object_action_next		(XplayerObject *xplayer);
 #define xplayer_action_previous xplayer_object_action_previous

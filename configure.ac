@@ -60,6 +60,7 @@ PYTHON_REQS=2.3
 PYGOBJECT_REQS=2.90.3
 GRILO_REQS=0.2.0
 LIBXML_REQS=2.6.0
+XAPP_REQS=1.0.0
 
 # Used in the pkg-config file for plugins
 AC_SUBST(GLIB_REQS)
@@ -288,15 +289,15 @@ AM_CONDITIONAL([ENABLE_PYTHON],[test "x$enable_python" = "xyes"])
 # Player requirements
 #================================================================
 
-PKG_CHECK_MODULES(PLAYER, $BACKEND_MODULES glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS gmodule-2.0 xplayer-plparser >= $XPLAYER_PLPARSER_REQS libpeas-1.0 >= $PEAS_REQS libpeas-gtk-1.0 >= $PEAS_REQS $PYTHON_MODULES)
-PKG_CHECK_MODULES(LIBPLAYER, glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS clutter-gtk-1.0)
-PKG_CHECK_MODULES(HELPER, gstreamer-1.0 gstreamer-tag-1.0)
-PKG_CHECK_MODULES(TIME_HELPER, glib-2.0)
-PKG_CHECK_MODULES(RTL_HELPER, glib-2.0 gtk+-3.0 >= $GTK_REQS)
-PKG_CHECK_MODULES(PIXBUF_HELPER, gdk-pixbuf-2.0 gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0)
-PKG_CHECK_MODULES(THUMBNAILER, gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0)
-PKG_CHECK_MODULES(PREVIEW, gstreamer-1.0 >= $GST_REQS gio-2.0 >= $GIO_REQS gdk-pixbuf-2.0)
-PKG_CHECK_MODULES(PROPERTIES, gtk+-3.0 >= $GTK_REQS)
+PKG_CHECK_MODULES(PLAYER, $BACKEND_MODULES glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS gmodule-2.0 xplayer-plparser >= $XPLAYER_PLPARSER_REQS libpeas-1.0 >= $PEAS_REQS libpeas-gtk-1.0 >= $PEAS_REQS $PYTHON_MODULES xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(LIBPLAYER, glib-2.0 >= $GLIB_REQS gio-2.0 >= $GIO_REQS gtk+-3.0 >= $GTK_REQS gdk-x11-3.0 >= $GTK_REQS clutter-gtk-1.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(HELPER, gstreamer-1.0 gstreamer-tag-1.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(TIME_HELPER, glib-2.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(RTL_HELPER, glib-2.0 gtk+-3.0 >= $GTK_REQS xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(PIXBUF_HELPER, gdk-pixbuf-2.0 gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(THUMBNAILER, gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gstreamer-tag-1.0 >= $GSTPLUG_REQS gstreamer-video-1.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(PREVIEW, gstreamer-1.0 >= $GST_REQS gio-2.0 >= $GIO_REQS gdk-pixbuf-2.0 xapp >= $XAPP_REQS)
+PKG_CHECK_MODULES(PROPERTIES, gtk+-3.0 >= $GTK_REQS xapp >= $XAPP_REQS)
 
 LIBGD_INIT([
 	tagged-entry
@@ -452,7 +453,7 @@ for plugin in ${used_plugins}; do
 			fi
 		;;
 		chapters)
-			PKG_CHECK_MODULES(CHAPTERS, libxml-2.0 >= $LIBXML_REQS gtk+-3.0 glib-2.0,
+			PKG_CHECK_MODULES(CHAPTERS, libxml-2.0 >= $LIBXML_REQS gtk+-3.0 glib-2.0 xapp >= $XAPP_REQS,
 				[BUILD_CHAPTERS=yes], [BUILD_CHAPTERS=no])
 			if test "${BUILD_CHAPTERS}" != "yes" ; then
 				plugin_error "you need gtk+-3.0, glib-2.0 >= 2.15.0 and libxml-2.0 >= 2.6.0 to use the chapters plugin"
@@ -529,7 +530,8 @@ if test "$enable_browser_plugins" = "yes" ; then
 		 gio-2.0 >= $GIO_REQS
 		 gmodule-export-2.0
 		 x11
-		 xplayer-plparser-mini >= $XPLAYER_PLPARSER_REQS],
+		 xplayer-plparser-mini >= $XPLAYER_PLPARSER_REQS
+		 xapp >= $XAPP_REQS],
 		[],[enable_browser_plugins=no])
 
 	AC_SUBST([BROWSER_PLUGIN_CFLAGS])
@@ -569,7 +571,7 @@ if test "$enable_browser_plugins" = "yes" ; then
 		AM_CXXFLAGS="-fno-rtti $AM_CXXFLAGS"
 	fi
 
-	PKG_CHECK_MODULES(PLUGIN_VIEWER, $BACKEND_MODULES gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gdk-x11-3.0 >= $GTK_REQS dbus-glib-1 >= $DBUS_REQS)
+	PKG_CHECK_MODULES(PLUGIN_VIEWER, $BACKEND_MODULES gtk+-3.0 >= $GTK_REQS xplayer-plparser >= $XPLAYER_PLPARSER_REQS gdk-x11-3.0 >= $GTK_REQS dbus-glib-1 >= $DBUS_REQS xapp >= $XAPP_REQS)
 	PKG_CHECK_MODULES(GLOW_BUTTON, gtk+-3.0)
 fi
 

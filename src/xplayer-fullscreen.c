@@ -95,7 +95,7 @@ xplayer_fullscreen_move_popups (XplayerFullscreen *fs)
 {
 	int exit_width,    exit_height;
 	int control_width, control_height;
-	
+
 	GdkScreen              *screen;
 	GdkRectangle            fullscreen_rect;
 	GdkWindow              *window;
@@ -130,8 +130,7 @@ xplayer_fullscreen_move_popups (XplayerFullscreen *fs)
 				 control_height);
 	} else {
 		gtk_window_move (GTK_WINDOW (priv->exit_popup),
-				 fullscreen_rect.width + fullscreen_rect.x -
-				 exit_width,
+				 fullscreen_rect.width + fullscreen_rect.x - exit_width,
 				 fullscreen_rect.y);
 		gtk_window_move (GTK_WINDOW (priv->control_popup),
 				 fullscreen_rect.x,
@@ -328,7 +327,7 @@ xplayer_fullscreen_show_popups (XplayerFullscreen *fs, gboolean show_cursor)
 
 	/* Show the popup widgets */
 	xplayer_fullscreen_move_popups (fs);
-	gtk_widget_show_all (fs->priv->exit_popup);
+	gtk_widget_show (fs->priv->exit_popup);
 	gtk_widget_show_all (fs->priv->control_popup);
 
 	if (show_cursor != FALSE) {
@@ -387,10 +386,21 @@ xplayer_fullscreen_set_fullscreen (XplayerFullscreen *fs,
 
 	fs->priv->is_fullscreen = fullscreen;
 
-	if (fullscreen == FALSE)
+	if (fullscreen == FALSE) {
 		gd_fullscreen_filter_stop (fs->priv->filter);
-	else
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(fs->blank_button), FALSE);
+		xapp_display_unblank_monitors(fs->xappdisplay);
+	}
+	else {
 		gd_fullscreen_filter_start (fs->priv->filter);
+		GdkScreen *screen = gdk_screen_get_default ();
+		if (gdk_screen_get_n_monitors (screen) > 1) {
+			gtk_widget_show (fs->blank_button);
+		}
+		else {
+			gtk_widget_hide (fs->blank_button);
+		}
+	}
 }
 
 static void
@@ -433,6 +443,10 @@ xplayer_fullscreen_new (GtkWindow *toplevel_window)
 				"tcw_buttons_hbox"));
 	fs->exit_button = GTK_WIDGET (gtk_builder_get_object (fs->priv->xml,
 				"tefw_fs_exit_button"));
+	fs->blank_button = GTK_WIDGET (gtk_builder_get_object (fs->priv->xml,
+				"tefw_fs_blank_button"));
+
+	fs->xappdisplay = xapp_display_new();
 
 	/* Volume */
 	fs->volume = GTK_WIDGET (gtk_builder_get_object (fs->priv->xml, "tcw_volume_button"));
@@ -446,6 +460,7 @@ xplayer_fullscreen_new (GtkWindow *toplevel_window)
 			  G_CALLBACK (xplayer_fullscreen_motion_notify), fs);
 	gtk_widget_add_events (fs->seek, GDK_POINTER_MOTION_MASK);
 	gtk_widget_add_events (fs->exit_button, GDK_POINTER_MOTION_MASK);
+	gtk_widget_add_events (fs->blank_button, GDK_POINTER_MOTION_MASK);
 
 	return fs;
 }
@@ -597,4 +612,16 @@ xplayer_fullscreen_set_can_set_volume (XplayerFullscreen *fs, gboolean can_set_v
 	g_return_if_fail (XPLAYER_IS_FULLSCREEN (fs));
 
 	gtk_widget_set_sensitive (fs->volume, can_set_volume);
+}
+
+void
+xplayer_fullscreen_toggle_blank_monitors (XplayerFullscreen *fs, GtkWidget *window)
+{
+	if (xapp_display_are_monitors_blanked(fs->xappdisplay)) {
+		xapp_display_unblank_monitors(fs->xappdisplay);
+	}
+	else {
+		xapp_display_blank_other_monitors(fs->xappdisplay, window);
+	}
+	xplayer_fullscreen_move_popups (fs);
 }

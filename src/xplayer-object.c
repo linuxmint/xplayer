@@ -104,6 +104,8 @@ G_MODULE_EXPORT gboolean window_key_press_event_cb (GtkWidget *win, GdkEventKey 
 G_MODULE_EXPORT int window_scroll_event_cb (GtkWidget *win, GdkEvent *event, XplayerObject *xplayer);
 G_MODULE_EXPORT void main_pane_size_allocated (GtkWidget *main_pane, GtkAllocation *allocation, XplayerObject *xplayer);
 G_MODULE_EXPORT void fs_exit1_activate_cb (GtkButton *button, XplayerObject *xplayer);
+G_MODULE_EXPORT void fs_blank1_activate_cb (GtkToggleButton *button, XplayerObject *xplayer);
+
 
 enum {
 	PROP_0,
@@ -1507,9 +1509,21 @@ xplayer_action_fullscreen (XplayerObject *xplayer, gboolean state)
 }
 
 void
+xplayer_action_blank (XplayerObject *xplayer)
+{
+	xplayer_fullscreen_toggle_blank_monitors(xplayer->fs, GTK_WINDOW (xplayer->win));
+}
+
+void
 fs_exit1_activate_cb (GtkButton *button, XplayerObject *xplayer)
 {
 	xplayer_action_fullscreen (xplayer, FALSE);
+}
+
+void
+fs_blank1_activate_cb (GtkToggleButton *button, XplayerObject *xplayer)
+{
+	xplayer_action_blank (xplayer);
 }
 
 void
@@ -4068,6 +4082,9 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	/* Fullscreen window buttons */
 	g_signal_connect (G_OBJECT (xplayer->fs->exit_button), "clicked",
 			  G_CALLBACK (fs_exit1_activate_cb), xplayer);
+
+	g_signal_connect (G_OBJECT (xplayer->fs->blank_button), "toggled",
+			  G_CALLBACK (fs_blank1_activate_cb), xplayer);
 
 	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
 	item = gtk_action_create_tool_item (action);
