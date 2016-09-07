@@ -44,6 +44,33 @@
                 <property name="position">0</property>
               </packing>
             </child>
+            <child>
+             <object class="GtkAdjustment" id="tcw_seek_adjustment">
+                      <property name="lower">0</property>
+                      <property name="upper">65535</property>
+                      <property name="step-increment">1</property>
+                      <property name="page-increment">10</property>
+                      <property name="page-size">0</property>
+                      <property name="value">0</property>
+                    </object>
+             <object class="GtkHScale" id="tcw_seek_hscale">
+               <property name="visible">True</property>
+               <property name="sensitive">False</property>
+               <property name="can_focus">True</property>
+               <property name="draw_value">False</property>
+               <property name="value_pos">GTK_POS_TOP</property>
+               <property name="digits">1</property>
+               <property name="inverted">False</property>
+               <property name="adjustment">tcw_seek_adjustment</property>
+               <signal name="button-press-event" handler="xplayer_fullscreen_seek_slider_pressed_cb"/>
+               <signal name="button-release-event" handler="xplayer_fullscreen_seek_slider_released_cb"/>
+             </object>
+             <packing>
+               <property name="padding">0</property>
+               <property name="expand">True</property>
+               <property name="fill">True</property>
+             </packing>
+           </child>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -58,8 +85,8 @@
             <property name="spacing">3</property>
             <child>
               <object class="XplayerTimeLabel" id="tcw_time_display_label">
-	      <property name="visible">True</property>
-	    </object>
+	            <property name="visible">True</property>
+	         </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">False</property>
