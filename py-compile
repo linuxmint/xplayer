@@ -29,7 +29,7 @@ scriptversion=2011-06-08.12; # UTC
 # <automake-patches@gnu.org>.
 
 if [ -z "$PYTHON" ]; then
-  PYTHON=python
+  PYTHON=python2
 fi
 
 me=py-compile
