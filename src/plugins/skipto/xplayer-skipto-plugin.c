@@ -179,7 +179,7 @@ impl_activate (PeasActivatable *plugin)
 	XplayerSkiptoPluginPrivate *priv = pi->priv;
 
 	const GtkActionEntry menu_entries[] = {
-		{ "skip-to", GTK_STOCK_JUMP_TO, N_("_Skip To..."), "<Control>K", N_("Skip to a specific time"), G_CALLBACK (skip_to_action_callback) }
+		{ "skip-to", "go-jump-symbolic", N_("_Skip To..."), "<Control>K", N_("Skip to a specific time"), G_CALLBACK (skip_to_action_callback) }
 	};
 
 	priv->xplayer = g_object_get_data (G_OBJECT (plugin), "object");

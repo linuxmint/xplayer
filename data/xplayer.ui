@@ -15,7 +15,7 @@
          <child>
             <object class="GtkAction" id="open">
                <property name="label" translatable="yes">_Open...</property>
-               <property name="stock-id">gtk-open</property>
+               <property name="icon-name">document-open-symbolic</property>
                <property name="tooltip" translatable="yes">Open a file</property>
                <signal name="activate" handler="open_action_callback"/>
             </object>
@@ -41,7 +41,7 @@
          <child>
             <object class="GtkAction" id="properties">
                <property name="label" translatable="yes">_Properties</property>
-               <property name="stock-id">gtk-properties</property>
+               <property name="icon-name">document-properties-symbolic</property>
                <property name="tooltip" translatable="yes">View the properties of the current stream</property>
                <signal name="activate" handler="properties_action_callback"/>
             </object>
@@ -58,7 +58,7 @@
          <child>
             <object class="GtkAction" id="quit">
                <property name="label" translatable="yes">_Quit</property>
-               <property name="stock-id">gtk-quit</property>
+               <property name="icon-name">window-close-symbolic</property>
                <property name="tooltip" translatable="yes">Quit the program</property>
                <signal name="activate" handler="quit_action_callback"/>
             </object>
@@ -73,7 +73,7 @@
          <child>
             <object class="GtkAction" id="clear-playlist">
                <property name="label" translatable="yes">_Clear Playlist</property>
-               <property name="icon-name">gtk-clear</property>
+               <property name="icon-name">edit-clear-symbolic</property>
                <property name="tooltip" translatable="yes">Clear the playlist</property>
                <signal name="activate" handler="clear_playlist_action_callback"/>
             </object>
@@ -81,7 +81,7 @@
          <child>
             <object class="GtkAction" id="preferences">
                <property name="label" translatable="yes">Prefere_nces</property>
-               <property name="stock-id">gtk-preferences</property>
+               <property name="icon-name">preferences-system-symbolic</property>
                <property name="tooltip" translatable="yes">Configure the application</property>
                <signal name="activate" handler="preferences_action_callback"/>
             </object>
@@ -156,7 +156,7 @@
          <child>
             <object class="GtkAction" id="dvd-root-menu">
                <property name="label" translatable="yes">_DVD Menu</property>
-               <property name="stock-id">gtk-index</property>
+               <property name="icon-name">emblem-documents-symbolic</property>
                <property name="tooltip" translatable="yes">Go to the DVD menu</property>
                <signal name="activate" handler="dvd_root_menu_action_callback"/>
             </object>
@@ -186,7 +186,7 @@
          <child>
             <object class="GtkAction" id="dvd-chapter-menu">
                <property name="label" translatable="yes">_Chapter Menu</property>
-               <property name="stock-id">gtk-index</property>
+               <property name="icon-name">emblem-documents-symbolic</property>
                <property name="tooltip" translatable="yes">Go to the chapter menu</property>
                <signal name="activate" handler="dvd_chapter_menu_action_callback"/>
             </object>
@@ -241,7 +241,7 @@
          <child>
             <object class="GtkAction" id="contents">
                <property name="label" translatable="yes">_Contents</property>
-               <property name="stock-id">gtk-help</property>
+               <property name="icon-name">help-browser-symbolic</property>
                <property name="tooltip" translatable="yes">Help contents</property>
                <signal name="activate" handler="contents_action_callback"/>
             </object>
@@ -250,7 +250,7 @@
          <child>
             <object class="GtkAction" id="about">
                <property name="label" translatable="yes">_About</property>
-               <property name="stock-id">gtk-about</property>
+               <property name="icon-name">help-about-symbolic</property>
                <property name="tooltip" translatable="yes">About this application</property>
                <signal name="activate" handler="about_action_callback"/>
             </object>
@@ -363,7 +363,7 @@
          <child>
             <object class="GtkToggleAction" id="zoom-toggle">
                <property name="label" translatable="yes">Zoom In</property>
-               <property name="stock-id">gtk-zoom-in</property>
+               <property name="icon-name">zoom-in-symbolic</property>
                <property name="tooltip" translatable="yes">Zoom in</property>
                <signal name="activate" handler="zoom_toggle_action_callback"/>
             </object>
