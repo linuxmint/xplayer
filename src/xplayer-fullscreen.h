@@ -26,7 +26,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
-#include <libxapp/xapp-display.h>
+#include <libxapp/xapp-monitor-blanker.h>
 
 #include "backend/bacon-video-widget.h"
 
@@ -57,8 +57,8 @@ struct XplayerFullscreen {
 	GtkWidget              *exit_button;
 	GtkWidget              *blank_button;
 
-	/* Screen blanker */
-	XAppDisplay            *xappdisplay;
+	/* Monitor blanker */
+	XAppMonitorBlanker     *xapp_monitor_blanker;
 
 	/* Private */
 	XplayerFullscreenPrivate *priv;
