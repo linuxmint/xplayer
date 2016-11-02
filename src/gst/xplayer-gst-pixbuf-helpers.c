@@ -52,6 +52,7 @@ xplayer_gst_playbin_get_frame (GstElement *play)
   gint outheight = 0;
   GstMemory *memory;
   GstMapInfo info;
+  GdkPixbufRotation rotation = GDK_PIXBUF_ROTATE_NONE;
 
   g_return_val_if_fail (play != NULL, NULL);
   g_return_val_if_fail (GST_IS_ELEMENT (play), NULL);
@@ -110,6 +111,43 @@ done:
     GST_DEBUG ("Could not take screenshot: %s", "could not create pixbuf");
     g_warning ("Could not take screenshot: %s", "could not create pixbuf");
     gst_sample_unref (sample);
+  }
+
+  /* Did we check whether we need to rotate the video? */
+  if (g_object_get_data (G_OBJECT (play), "orientation-checked") == NULL) {
+    GstTagList *tags = NULL;
+
+    g_signal_emit_by_name (G_OBJECT (play), "get-video-tags", 0, &tags);
+    if (tags) {
+      char *orientation_str;
+      gboolean ret;
+
+      ret = gst_tag_list_get_string_index (tags, GST_TAG_IMAGE_ORIENTATION, 0, &orientation_str);
+      if (!ret || !orientation_str)
+        rotation = GDK_PIXBUF_ROTATE_NONE;
+      else if (g_str_equal (orientation_str, "rotate-90"))
+        rotation = GDK_PIXBUF_ROTATE_CLOCKWISE;
+      else if (g_str_equal (orientation_str, "rotate-180"))
+        rotation = GDK_PIXBUF_ROTATE_UPSIDEDOWN;
+      else if (g_str_equal (orientation_str, "rotate-270"))
+        rotation = GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE;
+
+      gst_tag_list_unref (tags);
+    }
+
+    g_object_set_data (G_OBJECT (play), "orientation-checked", GINT_TO_POINTER(1));
+    g_object_set_data (G_OBJECT (play), "orientation", GINT_TO_POINTER(rotation));
+  }
+
+  rotation = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (play), "orientation"));
+  if (rotation != GDK_PIXBUF_ROTATE_NONE) {
+    GdkPixbuf *rotated;
+
+    rotated = gdk_pixbuf_rotate_simple (pixbuf, rotation);
+    if (rotated) {
+      g_object_unref (pixbuf);
+      pixbuf = rotated;
+    }
   }
 
   return pixbuf;
