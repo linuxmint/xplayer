@@ -80,6 +80,9 @@ gboolean        xplayer_aspect_frame_get_expand   (XplayerAspectFrame *frame);
 
 void            xplayer_aspect_frame_set_rotation (XplayerAspectFrame *frame,
 						 gdouble           rotation);
+void            xplayer_aspect_frame_set_internal_rotation
+						(XplayerAspectFrame *frame,
+						 gdouble           rotation);
 gdouble         xplayer_aspect_frame_get_rotation (XplayerAspectFrame *frame);
 
 G_END_DECLS
