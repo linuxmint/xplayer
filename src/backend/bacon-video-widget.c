@@ -6010,7 +6010,7 @@ bacon_video_widget_initable_init (GInitable     *initable,
 
   /* The OSD */
   bvw->priv->osd = bacon_video_osd_actor_new ();
-  clutter_actor_set_anchor_point (bvw->priv->osd, -OSD_MARGIN, -OSD_MARGIN); /* FIXME RTL */
+  clutter_actor_set_pivot_point (bvw->priv->osd, -OSD_MARGIN, -OSD_MARGIN); /* FIXME RTL */
   clutter_actor_set_size (bvw->priv->osd, OSD_SIZE, OSD_SIZE);
   clutter_actor_add_child (bvw->priv->stage, bvw->priv->osd);
   clutter_actor_set_child_above_sibling (bvw->priv->stage,
