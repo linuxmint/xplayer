@@ -437,6 +437,18 @@ xplayer_aspect_frame_set_rotation (XplayerAspectFrame *frame,
   xplayer_aspect_frame_set_rotation_internal (frame, rotation, TRUE);
 }
 
+void
+xplayer_aspect_frame_set_internal_rotation (XplayerAspectFrame *frame,
+					  gdouble           rotation)
+{
+  g_return_if_fail (XPLAYER_IS_ASPECT_FRAME (frame));
+
+  rotation = fmod (rotation, 360.0);
+
+  frame->priv->rotation = rotation;
+  xplayer_aspect_frame_set_rotation_internal (frame, rotation, FALSE);
+}
+
 gdouble
 xplayer_aspect_frame_get_rotation (XplayerAspectFrame *frame)
 {
