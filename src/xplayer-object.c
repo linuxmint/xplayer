@@ -1607,11 +1607,20 @@ xplayer_get_nice_name_for_stream (XplayerObject *xplayer)
 	tracknum = g_value_get_int (&value);
 	g_value_unset (&value);
 
-	xplayer_metadata_updated (xplayer,
-				g_value_get_string (&artist_value),
-				g_value_get_string (&title_value),
-				g_value_get_string (&album_value),
-				tracknum);
+	if (g_value_get_string (&title_value) != NULL) {
+		xplayer_metadata_updated (xplayer,
+			g_value_get_string (&artist_value),
+			g_value_get_string (&title_value),
+			g_value_get_string (&album_value),
+			tracknum);
+	}
+	else {
+		xplayer_metadata_updated (xplayer,
+			_("Media Player"),
+			xplayer_get_short_title(xplayer),
+			"Xplayer",
+			0);
+	}
 
 	if (g_value_get_string (&title_value) == NULL) {
 		retval = NULL;
