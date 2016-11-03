@@ -1,3 +1,37 @@
+xplayer (1.2.0) serena; urgency=medium
+
+  [ JosephMcc ]
+  * Convert most of the icons to symbolics
+
+  [ Clement Lefebvre ]
+  * Don't show sidebar by default
+  * Fullscreen: Add a screen blanking button
+  * Fixed missing seek bar in fullscreen mode
+  * Enable rotation and opensubtitles plugins by default
+
+  [ ion201 ]
+  * explicity use python 2
+
+  [ Clement Lefebvre ]
+  * Updated calls to renamed XappMonitorBlanker
+
+  [ leigh123linux ]
+  * thumbnailer: Add support for rotated thumbnails
+  * backend: Automatically rotate mobile phone videos
+  * backend: Remove use of obsolete clutter function
+
+  [ Clement Lefebvre ]
+  * Change name from Videos to Media Player
+
+  [ leigh123linux ]
+  * backend: Don't warn when rotation is unset
+
+  [ Clement Lefebvre ]
+  * dbus: Show media name when no metadata is available
+  * Enable dbus plugin by default
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 03 Nov 2016 17:24:28 +0000
+
 xplayer (1.0.7) sarah; urgency=medium
 
   * Fixed screensaver inhibit on audio playback
