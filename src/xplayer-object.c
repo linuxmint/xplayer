@@ -1663,7 +1663,7 @@ update_mrl_label (XplayerObject *xplayer, const char *name)
 		xplayer_fullscreen_set_title (xplayer->fs, NULL);
 
 		/* Title */
-		gtk_window_set_title (GTK_WINDOW (xplayer->win), _("Videos"));
+		gtk_window_set_title (GTK_WINDOW (xplayer->win), _("Media Player"));
 	}
 }
 

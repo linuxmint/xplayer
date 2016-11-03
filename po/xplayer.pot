@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-28 09:46+0100\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -292,7 +292,7 @@ msgstr ""
 msgid "Extra Large"
 msgstr ""
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr ""
 
@@ -494,7 +494,7 @@ msgstr ""
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
 #: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
-msgid "Videos"
+msgid "Media Player"
 msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:2
@@ -877,51 +877,51 @@ msgstr ""
 msgid "Password requested for RTSP server"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr ""
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 msgid "The playback of this movie requires a %s plugin which is not installed."
 msgid_plural ""
@@ -932,31 +932,31 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."

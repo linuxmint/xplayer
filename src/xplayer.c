@@ -255,7 +255,7 @@ main (int argc, char **argv)
 	if (XInitThreads () == 0)
 	{
 		gtk_init (&argc, &argv);
-		g_set_application_name (_("Videos"));
+		g_set_application_name (_("Media Player"));
 		xplayer_action_error_and_exit (_("Could not initialize the thread-safe libraries."), _("Verify your system installation. Xplayer will now exit."), NULL);
 	}
 #endif
@@ -263,7 +263,7 @@ main (int argc, char **argv)
 	g_type_init ();
 
 	g_set_prgname ("xplayer");
-	g_set_application_name (_("Videos"));
+	g_set_application_name (_("Media Player"));
 	gtk_window_set_default_icon_name ("xplayer");
 	g_setenv("PULSE_PROP_media.role", "video", TRUE);
 	g_setenv("PULSE_PROP_application.icon_name", "xplayer", TRUE);
