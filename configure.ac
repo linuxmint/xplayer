@@ -20,7 +20,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
 
-AM_INIT_AUTOMAKE([1.11 dist-xz tar-ustar no-dist-gzip check-news subdir-objects])
+AM_INIT_AUTOMAKE([1.11 dist-xz tar-ustar no-dist-gzip subdir-objects])
 
 # Enable silent build when available (Automake 1.11)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
