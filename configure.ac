@@ -20,7 +20,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
 
-AM_INIT_AUTOMAKE([1.11 dist-xz tar-ustar no-dist-gzip check-news])
+AM_INIT_AUTOMAKE([1.11 dist-xz tar-ustar no-dist-gzip check-news subdir-objects])
 
 # Enable silent build when available (Automake 1.11)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
@@ -36,6 +36,7 @@ YELP_HELP_INIT
 
 GOBJECT_INTROSPECTION_CHECK([0.6.7])
 
+GNOME_DEBUG_CHECK
 AC_PROG_CXX
 AM_PROG_CC_C_O
 
@@ -621,7 +622,6 @@ AM_CONDITIONAL([ENABLE_VEGAS_PLUGIN],[test "$enable_vegas_plugin" = "yes"])
 
 GLIB_GSETTINGS
 
-GNOME_DEBUG_CHECK
 GNOME_COMPILE_WARNINGS([maximum])
 GNOME_CXX_WARNINGS
 GNOME_MAINTAINER_MODE_DEFINES
