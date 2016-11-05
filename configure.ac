@@ -318,7 +318,7 @@ AC_ARG_ENABLE([vala],
 AC_MSG_RESULT([$enable_vala])
 if test "x$enable_vala" != "xno"; then
 	AM_PROG_VALAC([$VALA_REQS])
-	if test "x$VALAC" = "x"; then
+	if test "$VALAC" = "valac"; then
 		if test "x$enable_vala" = "xyes"; then
 			AC_MSG_ERROR([Vala plugin support explicitly requested, but not found])
 		fi
