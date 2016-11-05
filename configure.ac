@@ -674,7 +674,6 @@ AC_SUBST([AM_LDFLAGS])
 
 AC_CONFIG_FILES([
 Makefile
-xplayer.spec
 libgd/Makefile
 src/Makefile
 src/gst/Makefile

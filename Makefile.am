@@ -15,13 +15,10 @@ EXTRA_DIST =			\
 	intltool-merge.in	\
 	intltool-update.in	\
 	AUTHORS NEWS		\
-	xplayer.spec.in		\
-	xplayer.spec		\
 	ChangeLog.pre-gitlog	\
 	MAINTAINERS		\
 	xplayer.doap
 
-CLEANFILES = xplayer.spec
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
