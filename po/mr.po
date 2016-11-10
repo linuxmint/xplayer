@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
 "PO-Revision-Date: 2016-03-09 05:23+0000\n"
 "Last-Translator: Vikram Kulkarni <kul.vikram@gmail.com>\n"
 "Language-Team: Marathi <maajhe-sanganak@freelists.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:32+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:17+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: mr\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "थांबले आहे"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
 msgid "Paused"
 msgstr "स्तब्ध"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
 msgid "Playing"
 msgstr "चालवित आहे"
 
@@ -59,7 +59,7 @@ msgstr "टोटेम चित्रपट वादक"
 msgid "_Open with \"%s\""
 msgstr "\"%s\" सह उघडा (_O)"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
 msgid "An error occurred"
 msgstr "त्रुटी निर्माण झाली"
 
@@ -79,13 +79,17 @@ msgstr "थ्रेड-सेफ लायब्ररी प्रारंभ
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "तुमचे प्रणाली प्रतिष्ठपना तपासून पहा. टोटेम प्लगइन आता बाहेर पडेल."
 
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "पडदाभर सोडा"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "वेळ:"
+
+#: ../data/fullscreen.ui.h:2
+msgid "Blank other monitors"
+msgstr ""
+
+#: ../data/fullscreen.ui.h:3
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -303,7 +307,7 @@ msgstr "मोठे"
 msgid "Extra Large"
 msgstr "अगाऊ वाढीव"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr "स्टिरीओ"
 
@@ -389,7 +393,7 @@ msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "व्हिडिओ"
 
-#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "व्हिडिओ किंवा ऑडिओ"
@@ -504,9 +508,9 @@ msgstr "मार्ग:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
-msgid "Videos"
-msgstr "व्हिडीओज्"
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+msgid "Media Player"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -534,8 +538,8 @@ msgstr "आवाज बंद करा"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
-#: ../src/xplayer-object.c:4045
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
+#: ../src/xplayer-object.c:4054
 msgid "Fullscreen"
 msgstr "पडदाभर"
 
@@ -888,52 +892,52 @@ msgstr "तुम्हाला उघडायची त्या फाइल
 msgid "Password requested for RTSP server"
 msgstr "RTSP सर्व्हरकरीता पासवर्डची विनंती केली"
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr "ऑडिओ ट्रॅक #%d"
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr "उपशिर्षक #%d"
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
 msgstr "जोडणी करण्याजोगी सर्व्हर परिचीत नाही."
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
 msgstr "या सर्व्हरकरीता जोडणी नकारली गेली."
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr "निर्देशीत चित्रपट आढळले नाही."
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr "सर्व्हरने या फाइल किंवा स्ट्रिमकरीता प्रवेश नकारले."
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr ""
 "या फाइल किंवा स्ट्रिमकरीता प्रवेश प्राप्त करण्यासाठी ओळख पटवणे आवश्यक."
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr "ह्या फाइलला उघडण्यास तुमच्याकडे परवानगी नाही."
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr "हे ठिकाण वैध नाही."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr "चित्रपट वाचणे अशक्य."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -949,7 +953,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -957,7 +961,7 @@ msgstr ""
 "न आढळणाऱ्या कोडेक्समुळे ऑडिओ किंवा व्हिडिओ स्ट्रिम. चित्रपटांचे काहिक प्रकार "
 "चालवण्यासाठी अगाऊ प्लगइन्स् प्रतिष्ठापीत करणे आवश्यक आहे"
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -965,19 +969,19 @@ msgstr ""
 "ह्या फाइलला नेटवर्कवर चालवणे शक्य नाही. त्यास प्रथम स्थानीयरित्या डाउनलोड "
 "करायचा प्रयत्न करा."
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr "भोवती"
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr "एकसंख्यी"
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr "मिडिया मध्ये समर्थीत व्हिडियो प्रव्हा समाविष्टीत नाही."
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1238,7 +1242,7 @@ msgstr "वादकयादी मध्ये जोडा (_A)"
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: ../src/xplayer-fullscreen.c:574
+#: ../src/xplayer-fullscreen.c:589
 msgid "No File"
 msgstr "फाइल नाही"
 
@@ -1309,11 +1313,11 @@ msgctxt "Language"
 msgid "Auto"
 msgstr "स्वयं"
 
-#: ../src/xplayer-menu.c:735
+#: ../src/xplayer-menu.c:736
 msgid "Configure Plugins"
 msgstr "प्लगइन संयोजीत करा"
 
-#: ../src/xplayer-object.c:162
+#: ../src/xplayer-object.c:164
 #, c-format
 msgid ""
 "%s\n"
@@ -1323,47 +1327,47 @@ msgstr ""
 "उपलब्ध आदेश ओळ पर्याय पाहण्याकरीता '%s --help' चालवा.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:590
+#: ../src/xplayer-object.c:592
 #, c-format
 msgid "Xplayer %s"
 msgstr "टोटेम %s"
 
-#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "स्तब्ध करा"
 
-#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "चालवा"
 
-#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1919
+#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
+#: ../src/xplayer-object.c:1933
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "टोटेम '%1$s' चालवू शकले नाही."
 
-#: ../src/xplayer-object.c:2110
+#: ../src/xplayer-object.c:2124
 msgid "Xplayer could not display the help contents."
 msgstr "टोटेम मदत अनुक्रम दर्शवू शकले नाही."
 
-#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "पूर्वीचे पाठ/चित्रपट"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "चालवा / स्तब्ध"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "पुढचाचे पाठ/चित्रपट"
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "Xplayer could not startup."
 msgstr "टोटेम सुरू होऊ शकले नाही."
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "कारण नाही."
 
@@ -2008,19 +2012,19 @@ msgstr "वादकसूचीत समाविष्ट करा"
 msgid "Copy Location"
 msgstr "ठिकाणाचे प्रत बनवा"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
 msgstr "तपासणी करा"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
 msgstr "शोधा"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
 msgstr "त्रुटीची तपासणी करा"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
 msgstr "सर्च त्रुटी"
 
@@ -2086,57 +2090,57 @@ msgstr "Subtitle डाउनलोडर"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "सध्या सुरू असलेल्या चित्रपटकरीता उपशीर्षक पहा"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:42
+#: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
 msgstr "ब्रजिलियन पॉर्ट्यूगिज्"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:177
+#: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
 msgstr "उपशीर्षक शोधत आहे..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:225
-#: ../src/plugins/opensubtitles/opensubtitles.py:645
+#: ../src/plugins/opensubtitles/opensubtitles.py:227
+#: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
 msgstr "उपशीर्षक डाउनलोड करत आहे..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:290
+#: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
 msgstr "OpenSubtitles संकेतस्थळ उघडणे अशक्य"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:323
-#: ../src/plugins/opensubtitles/opensubtitles.py:341
+#: ../src/plugins/opensubtitles/opensubtitles.py:325
+#: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
 msgstr "OpenSubtitles संकेतस्थळशी संपर्क करणे अशक्य."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:329
+#: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
 msgstr "परिणाम आढळले नाही."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:478
+#: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
 msgstr "उपशिर्षक"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:484
+#: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
 msgstr "रूपण"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:489
+#: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
 msgstr "गुणवत्ताश्रेणी"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:525
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "OpenSubtitles पासून चित्रपटाचे उपशिर्षक डाउनलोड करा"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
 msgstr "चित्रपटाचे उपशीर्षक डाउनलोड करा (_D)..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:589
+#: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
 msgstr "उपशीर्षक शोधत आहे..."
 

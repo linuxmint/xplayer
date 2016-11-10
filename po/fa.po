@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-02-03 11:23+0000\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
 "PO-Revision-Date: 2016-02-03 12:37+0000\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Persian\n"
@@ -22,21 +22,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:31+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:16+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: fa\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "متوقف شده"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
 msgid "Paused"
 msgstr "مکث شده"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
 msgid "Playing"
 msgstr "در حال پخش"
 
@@ -62,7 +62,7 @@ msgstr "پخش‌کننده‌ی فیلم توتم"
 msgid "_Open with \"%s\""
 msgstr "_باز کردن با «%s»"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
 msgid "An error occurred"
 msgstr "خطایی پیش آمد"
 
@@ -83,13 +83,17 @@ msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 "از درستی نصب سیستمتان مطمئن شوید. افزونه‌ی توتم هم‌اکنون خارج می‌شود."
 
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "ترک حالت تمام‌صفحه"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "زمان:"
+
+#: ../data/fullscreen.ui.h:2
+msgid "Blank other monitors"
+msgstr ""
+
+#: ../data/fullscreen.ui.h:3
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -312,7 +316,7 @@ msgstr "بزرگ"
 msgid "Extra Large"
 msgstr "خیلی بزرگ"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr "استریو"
 
@@ -400,7 +404,7 @@ msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "ویديو"
 
-#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "ویدیو یا صوت"
@@ -515,9 +519,9 @@ msgstr "کانال‌ها:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
-msgid "Videos"
-msgstr "ویدیوها"
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+msgid "Media Player"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -545,8 +549,8 @@ msgstr ""
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
-#: ../src/xplayer-object.c:4045
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
+#: ../src/xplayer-object.c:4054
 msgid "Fullscreen"
 msgstr "تمام‌صفحه"
 
@@ -908,51 +912,51 @@ msgstr "_نشانی پرونده‌ای را که می‌خواهید باز ک�
 msgid "Password requested for RTSP server"
 msgstr "گذرواژه برای کارگزار RTSP درخواست شده است"
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr "قطعه صدا #%Id"
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr "زیرنویس #%Id"
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
 msgstr "کارگزاری که شما در تلاش برای اتصال به آن هستید، شناخته شده نیست."
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
 msgstr "اتصال به کارگزار رد شد."
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr "فیلم مشخص شده را نمی‌توان پیدا کرد."
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr "کارگزار دسترسی به این پرونده یا جریان را رد کرد."
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr "تصدیق‌هویت جهت دسترسی به این پرونده یا جریان لازم است."
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr "شما اجازه باز کردن این پرونده را ندارید."
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr "این مکان یک مکان معتبر نیست."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr "فیلم قابل خواندن نیست."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 #| msgid ""
 #| "The playback of this movie requires a %s plugin which is not installed."
@@ -970,7 +974,7 @@ msgid_plural ""
 "%s"
 msgstr[0] "پخش این فیلم نیازمند یک افزونه %s است که نصب نشده است."
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -978,26 +982,26 @@ msgstr ""
 "یک جریان صوتی یا تصویری به دلیل نبود کُدِک مناسب قابل اجرا نیست. ممکن است "
 "لازم باشد جهت پخش بعضی از انواع فیلم‌ها، افزونه‌ای اضافی نصب کنید"
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 "نمی توان این فایل را از شبکه پخش نمود. سعی کنید اول آنرا اول بارگیری کنید."
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr "فراگیر"
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr "واحد"
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr "رسانه حاوی هیچ ویدیوی جاری پشتیبانی شده‌ای نیست."
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1254,7 +1258,7 @@ msgstr "_افزودن به فهرست پخش"
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../src/xplayer-fullscreen.c:574
+#: ../src/xplayer-fullscreen.c:589
 msgid "No File"
 msgstr "پرونده‌ای نیست"
 
@@ -1323,11 +1327,11 @@ msgctxt "Language"
 msgid "Auto"
 msgstr "خودکار"
 
-#: ../src/xplayer-menu.c:735
+#: ../src/xplayer-menu.c:736
 msgid "Configure Plugins"
 msgstr "پیکربندی افزونه‌ها"
 
-#: ../src/xplayer-object.c:162
+#: ../src/xplayer-object.c:164
 #, c-format
 msgid ""
 "%s\n"
@@ -1338,47 +1342,47 @@ msgstr ""
 "نمایید.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:590
+#: ../src/xplayer-object.c:592
 #, c-format
 msgid "Xplayer %s"
 msgstr "توتم  %s"
 
-#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "مکث"
 
-#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "پخش"
 
-#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1919
+#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
+#: ../src/xplayer-object.c:1933
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "توتم نتوانست «%s» را پخش کند."
 
-#: ../src/xplayer-object.c:2110
+#: ../src/xplayer-object.c:2124
 msgid "Xplayer could not display the help contents."
 msgstr "توتم نتوانست محتویات راهنما را نمایش دهد."
 
-#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "فصل/فیلم قبلی"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "پخش / مکث"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "فصل/فیلم بعدی"
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "Xplayer could not startup."
 msgstr "توتم نتوانست شروع به کار کند."
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "بدون دلیل."
 
@@ -2020,19 +2024,19 @@ msgstr "اضافه‌کردن به فهرست پخش"
 msgid "Copy Location"
 msgstr "رونوشت از مکان"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
 msgstr "مرور"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
 msgstr "جستجو"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
 msgstr "خطای مرور"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
 msgstr "خطای جستجو"
 
@@ -2096,57 +2100,57 @@ msgstr "بارگیری زیرنویس"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "جستجو برای زیرنویس‌های فیلمی که هم‌اکنون پخش می‌شود"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:42
+#: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
 msgstr "پرتغالی‌ برزیل"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:177
+#: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
 msgstr "درحال جستجو برای زیرنویس‌ها..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:225
-#: ../src/plugins/opensubtitles/opensubtitles.py:645
+#: ../src/plugins/opensubtitles/opensubtitles.py:227
+#: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
 msgstr "درحال بارگیری زیرنویس‌ها..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:290
+#: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
 msgstr "امکان برقراری ارتباط با پایگاه‌وب OpenSubtitles نبود"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:323
-#: ../src/plugins/opensubtitles/opensubtitles.py:341
+#: ../src/plugins/opensubtitles/opensubtitles.py:325
+#: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
 msgstr "امکان برقراری ارتباط با پایگاه‌وب OpenSubtitles نبود."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:329
+#: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
 msgstr "هیج نتیجه‌ای پیدا نشد."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:478
+#: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
 msgstr "زیرنویس‌ها"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:484
+#: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
 msgstr "قالب"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:489
+#: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
 msgstr "نمره‌دهی"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:525
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "باگیری زیرنویس فیلم‌ها از OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
 msgstr "_بارگیری زیرنویس‌های فیلم..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:589
+#: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
 msgstr "درحال جستجوی زیرنویس‌ها..."
 

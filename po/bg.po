@@ -14,28 +14,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-02-04 17:40+0000\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"PO-Revision-Date: 2016-11-04 13:54+0000\n"
 "Last-Translator: spacy01 <Unknown>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:31+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:16+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: bg\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Спрян"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
 msgid "Paused"
 msgstr "На пауза"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
 msgid "Playing"
 msgstr "Изпълнява се"
 
@@ -61,7 +61,7 @@ msgstr "Изпълнение на филми (Xplayer)"
 msgid "_Open with \"%s\""
 msgstr "_Отваряне с „%s“"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
 msgid "An error occurred"
 msgstr "Получи се грешка"
 
@@ -82,13 +82,17 @@ msgstr ""
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr "Проверете системата си. Приставката на Xplayer ще бъде спряна."
 
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "Изход от цял екран"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Време:"
+
+#: ../data/fullscreen.ui.h:2
+msgid "Blank other monitors"
+msgstr "Изпразни другите монитори"
+
+#: ../data/fullscreen.ui.h:3
+msgid "Leave fullscreen"
+msgstr "Изход от цял екран"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -310,7 +314,7 @@ msgstr "голям"
 msgid "Extra Large"
 msgstr "извънредно голям"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr "стерео"
 
@@ -396,7 +400,7 @@ msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "Видео"
 
-#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "Видео или звук"
@@ -511,9 +515,9 @@ msgstr "Канали:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
-msgid "Videos"
-msgstr "Видео клипове"
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+msgid "Media Player"
+msgstr "Мултимедиен плеър"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -541,8 +545,8 @@ msgstr "Без звук"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
-#: ../src/xplayer-object.c:4045
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
+#: ../src/xplayer-object.c:4054
 msgid "Fullscreen"
 msgstr "На цял екран"
 
@@ -897,51 +901,51 @@ msgstr "Въвеждане на _местоположението на файл�
 msgid "Password requested for RTSP server"
 msgstr "Сървърът за RTSP изисква парола"
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Аудио № %d"
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Субтитри № %d"
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
 msgstr "Опитвате се да се свържете към неизвестен сървър."
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
 msgstr "Свързването към този сървър беше отказано."
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr "Зададеният филм не може да бъде намерен."
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr "Сървърът не разрешава достъп до този файл или поток."
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr "Изисква се удостоверяване за достъп до този файл или поток."
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr "Нямате права за достъп, за да отворите този файл."
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr "Местоположението е грешно."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr "Филмът не може да бъде прочетен."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -958,7 +962,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -967,7 +971,7 @@ msgstr ""
 "възпроизведени. Може да е необходимо да инсталирате допълнителни приставки, "
 "за да гледате някои видове филми"
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -975,19 +979,19 @@ msgstr ""
 "Файлът не може да бъде изпълнен през мрежата. Опитайте да го изтеглите "
 "локално."
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr "обемен звук"
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr "моно"
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr "Медията съдържа неподдържани видео потоци."
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1249,7 +1253,7 @@ msgstr "_Добавяне към списъка за изпълнение"
 msgid "Cancel"
 msgstr "Отказ"
 
-#: ../src/xplayer-fullscreen.c:574
+#: ../src/xplayer-fullscreen.c:589
 msgid "No File"
 msgstr "Липсва файл"
 
@@ -1319,11 +1323,11 @@ msgctxt "Language"
 msgid "Auto"
 msgstr "Автоматично"
 
-#: ../src/xplayer-menu.c:735
+#: ../src/xplayer-menu.c:736
 msgid "Configure Plugins"
 msgstr "Настройки на приставките"
 
-#: ../src/xplayer-object.c:162
+#: ../src/xplayer-object.c:164
 #, c-format
 msgid ""
 "%s\n"
@@ -1334,47 +1338,47 @@ msgstr ""
 "ред.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:590
+#: ../src/xplayer-object.c:592
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Пауза"
 
-#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Изпълнение"
 
-#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1919
+#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
+#: ../src/xplayer-object.c:1933
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer не може да изпълни „%s“."
 
-#: ../src/xplayer-object.c:2110
+#: ../src/xplayer-object.c:2124
 msgid "Xplayer could not display the help contents."
 msgstr "Ръководството не може да бъде показано."
 
-#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "Предишна глава/филм"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "Изпълнение/пауза"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "Следваща глава/филм"
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "Xplayer could not startup."
 msgstr "Xplayer не може да се стартира."
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "Няма причина."
 
@@ -2018,19 +2022,19 @@ msgstr "Добавяне към списъка за изпълнение"
 msgid "Copy Location"
 msgstr "Копиране на местоположението"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
 msgstr "Разглеждане"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
 msgstr "Търсене"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
 msgstr "Грешка при разглеждане"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
 msgstr "Грешка при търсене"
 
@@ -2096,57 +2100,57 @@ msgstr "Изтегляне на субтитри"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Търсене на субтитри за текущо изпълнявания филм"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:42
+#: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
 msgstr "португалско (бразилско)"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:177
+#: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
 msgstr "Търсене на субтитри…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:225
-#: ../src/plugins/opensubtitles/opensubtitles.py:645
+#: ../src/plugins/opensubtitles/opensubtitles.py:227
+#: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
 msgstr "Изтегляне на субтитри…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:290
+#: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
 msgstr "Няма връзка със сайта OpenSubtitles.org"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:323
-#: ../src/plugins/opensubtitles/opensubtitles.py:341
+#: ../src/plugins/opensubtitles/opensubtitles.py:325
+#: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
 msgstr "Няма връзка със сайта OpenSubtitles.org."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:329
+#: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
 msgstr "Няма резултати."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:478
+#: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
 msgstr "Субтитри"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:484
+#: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
 msgstr "Формат"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:489
+#: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
 msgstr "Оценка"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:525
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Изтегляне на субтитри от OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
 msgstr "Изтегляне на _субтитри за филма…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:589
+#: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
 msgstr "Търсене на субтитри…"
 

@@ -10,29 +10,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-02-29 17:15+0000\n"
-"Last-Translator: RTV <rtv1196@gmail.com>\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"PO-Revision-Date: 2016-11-05 08:42+0000\n"
+"Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:32+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:16+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: uk\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Зупинено"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
 msgid "Paused"
 msgstr "Призупинено"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
 msgid "Playing"
 msgstr "Відтворення"
 
@@ -58,13 +58,13 @@ msgstr "Мультимедійний програвач Xplayer"
 msgid "_Open with \"%s\""
 msgstr "Відкрити _у проґрамі «%s»"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
 msgid "An error occurred"
 msgstr "Виникла помилка"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2032
 msgid "No playlist or playlist empty"
-msgstr "Немає переліку відтворення, або перелік відтворення порожній"
+msgstr "Немає грайлиста, або грайлист порожній"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
@@ -80,13 +80,17 @@ msgstr ""
 "Перевірте, чи правильно встановлена Ваша система. Модуль Xplayer завершує "
 "свою роботу."
 
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "Вийти з повноекранного режиму"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Час:"
+
+#: ../data/fullscreen.ui.h:2
+msgid "Blank other monitors"
+msgstr "Не показувати на інших моніторах"
+
+#: ../data/fullscreen.ui.h:3
+msgid "Leave fullscreen"
+msgstr "Вийти з повноекранного режиму"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -146,7 +150,7 @@ msgstr "Чи увімкнути черезрядковість для відео
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
-msgstr "Чи увімкнути налагодження механізму відтворення"
+msgstr "Чи увімкнути зневадження механізму відтворення"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
@@ -214,7 +218,7 @@ msgstr "Чи вимикати модулі у домашньому катало�
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Чи вимикати комбінації клавіш"
+msgstr "Чи вимикати сполучення клявіш"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
@@ -249,7 +253,7 @@ msgstr "В_илучити"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "Вилучити файл з переліку відтворення"
+msgstr "Вилучити файл з грайлиста"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
@@ -277,7 +281,7 @@ msgstr "Вилучити"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Зберегти перелік відтворення…"
+msgstr "Зберегти грайлист…"
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -300,9 +304,9 @@ msgstr "Великий"
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:6
 msgid "Extra Large"
-msgstr "Дуже високий"
+msgstr "Дуже великий"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr "Стерео"
 
@@ -388,7 +392,7 @@ msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "Відео"
 
-#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "Відео або Аудіо"
@@ -503,9 +507,9 @@ msgstr "Канали:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
-msgid "Videos"
-msgstr "Відео"
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+msgid "Media Player"
+msgstr "Програвач медія"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -533,8 +537,8 @@ msgstr "Приглушити"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
-#: ../src/xplayer-object.c:4045
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
+#: ../src/xplayer-object.c:4054
 msgid "Fullscreen"
 msgstr "На увесь екран"
 
@@ -596,11 +600,11 @@ msgstr "З_міни"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "О_чистити перелік відтворення"
+msgstr "О_чистити грайлист"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "Очистити перелік відтворення"
+msgstr "Очистити грайлист"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
@@ -805,11 +809,11 @@ msgstr "Показати чи сховати бічну панель"
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr "Автоматично"
+msgstr "Самочинно"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Встановити автоматичне співвідношення сторін"
+msgstr "Встановити самочинне співвідношення сторін"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
@@ -887,52 +891,52 @@ msgstr "Уведіть _адресу файлу, який треба відкр�
 msgid "Password requested for RTSP server"
 msgstr "Запит паролю для сервера RTSP"
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Аудіо доріжка #%d"
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Субтитри №%d"
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
 msgstr "Сервер, до якого Ви намагаєтеся під'єднатися, невідомий."
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
 msgstr "Відмовлено у з'єднанні з цим сервером."
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr "Вказаний фільм неможливо знайти."
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr "Сервер відмовив у доступі до цього файлу або потоку."
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr ""
 "Щоб доступитися до цього файлу або потоку, потрібно засвідчити право."
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr "Ви не можете відкрити цей файл."
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr "Ця адреса не є правильною."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr "Фільм неможливо прочитати."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -954,15 +958,15 @@ msgstr[2] ""
 "\r\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Аудіо- або відеопотік не обробляється через брак кодеків. Напевно варто "
+"Аудіо- або відеопотік не опрацьовується через брак кодеків. Напевно варто "
 "встановити додатки, які надають можливість програвати певні типи відеозаписів"
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -970,19 +974,19 @@ msgstr ""
 "Неможливо відтворити цей файл через мережу. Спробуйте спочатку звантажити "
 "його на локальний диск."
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr "Об'ємний"
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr "Моно"
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr "Не знайдено підтримуваних потоків відео."
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1068,7 +1072,7 @@ msgstr "Невідомий формат файлу"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Не з'єднуватися з менеджером сеансів"
+msgstr "Не з'єднуватися з керівником сеансів"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
@@ -1243,13 +1247,13 @@ msgstr "_Відтворити"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "_Додати до переліку відтворення"
+msgstr "_Додати до грайлиста"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../src/xplayer-fullscreen.c:574
+#: ../src/xplayer-fullscreen.c:589
 msgid "No File"
 msgstr "Немає файлу"
 
@@ -1286,8 +1290,8 @@ msgid ""
 "details."
 msgstr ""
 "Xplayer розповсюджується зі сподіванням, що буде корисним, але БЕЗ БУДЬ-ЯКИХ "
-"ГАРАНТІЙ; навіть без неявної гарантії ПРИДАТНОСТІ ДО ПРОДАЖУ чи "
-"ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ.  Докладніше дивіться GNU General Public License."
+"ЗАПОРУК; навіть без неявної запоруки ПРИДАТНОСТИ ДО ПРОДАЖУ чи ВІДПОВІДНОСТИ "
+"ПЕВНІЙ МЕТІ.  Докладніше дивіться GNU General Public License."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1316,13 +1320,13 @@ msgstr "Немає"
 #: ../src/xplayer-menu.c:196
 msgctxt "Language"
 msgid "Auto"
-msgstr "Автоматично"
+msgstr "Самочинно"
 
-#: ../src/xplayer-menu.c:735
+#: ../src/xplayer-menu.c:736
 msgid "Configure Plugins"
 msgstr "Налаштувати додатки"
 
-#: ../src/xplayer-object.c:162
+#: ../src/xplayer-object.c:164
 #, c-format
 msgid ""
 "%s\n"
@@ -1333,47 +1337,47 @@ msgstr ""
 "рядка.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:590
+#: ../src/xplayer-object.c:592
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Призупинити"
 
-#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Відтворити"
 
-#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1919
+#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
+#: ../src/xplayer-object.c:1933
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Не вдалося відтворити «%s»."
 
-#: ../src/xplayer-object.c:2110
+#: ../src/xplayer-object.c:2124
 msgid "Xplayer could not display the help contents."
 msgstr "Неможливо показати вміст довідки."
 
-#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "Попередній фрагмент/фільм"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "Відтворити / Призупинити"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "Наступний фрагмент/фільм"
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "Xplayer could not startup."
 msgstr "Не вдалося запустити Xplayer."
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "Причина невідома."
 
@@ -1432,7 +1436,7 @@ msgstr "Пошук"
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Індекс переліку відтворення"
+msgstr "Індекс грайлиста"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
@@ -1449,7 +1453,7 @@ msgstr "Неможливо поставити в чергу і замінити 
 #. By extension entry
 #: ../src/xplayer-playlist.c:162
 msgid "MP3 ShoutCast playlist"
-msgstr "Перелік відтворення MP3 ShoutCast"
+msgstr "Грайлист MP3 ShoutCast"
 
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 audio (streamed)"
@@ -1461,7 +1465,7 @@ msgstr "MP3 аудіо (потік, формат DOS)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
-msgstr "Перелік відтворення XML Shareable"
+msgstr "Грайлист XML Shareable"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
@@ -1472,28 +1476,27 @@ msgstr "Заголовок %d"
 
 #: ../src/xplayer-playlist.c:447
 msgid "Could not save the playlist"
-msgstr "Не вдалося зберегти перелік відтворення"
+msgstr "Не вдалося зберегти грайлист"
 
 #: ../src/xplayer-playlist.c:1022
 msgid "Save Playlist"
-msgstr "Зберегти перелік програвання"
+msgstr "Зберегти грайлист"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Перелік відтворення"
+msgstr "Грайлист"
 
 #: ../src/xplayer-playlist.c:1861
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr ""
-"Перелік відтворення «%s» неможливо проаналізувати. Можливо, його пошкоджено."
+msgstr "Грайлист «%s» неможливо проаналізувати. Можливо, його пошкоджено."
 
 #: ../src/xplayer-playlist.c:1862
 msgid "Playlist error"
-msgstr "Помилка переліку відтворення"
+msgstr "Помилка грайлиста"
 
 #: ../src/xplayer-preferences.c:297
 msgid "Preferences"
@@ -1526,7 +1529,7 @@ msgstr "Перейти до %s / %s"
 
 #: ../src/xplayer-statusbar.c:239
 msgid "Buffering"
-msgstr "Буферизація"
+msgstr "Буферування"
 
 #. eg: 75 %
 #: ../src/xplayer-statusbar.c:250
@@ -1576,7 +1579,7 @@ msgstr "Кельтське"
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "Центрально-європейське"
+msgstr "Центрально-европейське"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
@@ -1640,7 +1643,7 @@ msgstr "Гебрейське"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Гебрейське візуальне"
+msgstr "Гебрейське наочне"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1648,7 +1651,7 @@ msgstr "Гінді"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "Ісландське"
+msgstr "Ісляндське"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
@@ -1678,7 +1681,7 @@ msgstr "Румунське"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "Південно-європейське"
+msgstr "Південно-европейське"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
@@ -1705,7 +1708,7 @@ msgstr "Унікод"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "Західне"
+msgstr "Західнє"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
@@ -1739,7 +1742,7 @@ msgstr "Вибрати текстові субтитри"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Вибір відеофайлів чи переліків відтворення"
+msgstr "Вибір відеофайлів чи грайлистів"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
@@ -1781,11 +1784,11 @@ msgstr "Встановлює користувацького агента для 
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Автоматичне довантаження субтитрів"
+msgstr "Самочинне довантаження субтитрів"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Автоматичне довантаження текстових субтитрів"
+msgstr "Самочинне довантаження текстових субтитрів"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
@@ -1872,7 +1875,7 @@ msgstr "Зберегти зміни"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr "про фрагменти розділів"
+msgstr "Немає даних про фрагменти"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
@@ -1984,7 +1987,7 @@ msgstr ""
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "В об'єкті MediaPlayer2 не реалізовано інтерфейс «%s»"
+msgstr "В об'єкті MediaPlayer2 не зреалізовано інтерфейс «%s»"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
@@ -2012,31 +2015,31 @@ msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr "Додати до переліку відтворення"
+msgstr "Додати до грайлиста"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
 msgstr "Копіювати адресу"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
 msgstr "Перегляд"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
 msgstr "Пошук"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
 msgstr "Помилка перегляду"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
 msgstr "Помилка пошуку"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "Аннотації засобами Gromit"
+msgstr "Анотації засобами Gromit"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
@@ -2074,11 +2077,11 @@ msgstr "Не вдалося прочитати конфігурацію lirc"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "Клавіші медіапрогравача"
+msgstr "Клявіші медіяпрогравача"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr "Підтримування додаткових мультимедійних клавіш"
+msgstr "Підтримування додаткових мультимедійних клявіш"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
@@ -2096,57 +2099,57 @@ msgstr "Звантаження субтитрів"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Пошук субтитрів для відтворюваного наразі фільму"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:42
+#: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
 msgstr "Бразильська португальська"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:177
+#: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
 msgstr "Пошук субтитрів…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:225
-#: ../src/plugins/opensubtitles/opensubtitles.py:645
+#: ../src/plugins/opensubtitles/opensubtitles.py:227
+#: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
 msgstr "Звантаження субтитрів…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:290
+#: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
 msgstr "Не вдалося з'єднатися з сервером OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:323
-#: ../src/plugins/opensubtitles/opensubtitles.py:341
+#: ../src/plugins/opensubtitles/opensubtitles.py:325
+#: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
 msgstr "Неможливо з'єднатися з сайтом OpenSubtitles."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:329
+#: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
 msgstr "Нічого не знайдено"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:478
+#: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
 msgstr "Субтитри"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:484
+#: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
 msgstr "Формат"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:489
+#: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
 msgstr "Оцінка"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:525
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Звантажити субтитри до фільму з OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
 msgstr "_Завантажити субтитри до фільму…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:589
+#: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
 msgstr "Пошук субтитрів…"
 

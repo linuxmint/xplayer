@@ -16,28 +16,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:23+0000\n"
-"PO-Revision-Date: 2016-06-18 17:53+0000\n"
+"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"PO-Revision-Date: 2016-11-04 18:53+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-06-25 09:31+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-11-09 17:16+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: da\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1181
-#: ../src/xplayer-object.c:1644 ../src/xplayer-statusbar.c:115
+#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
+#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
 msgid "Stopped"
 msgstr "Stoppet"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1174
+#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
 msgid "Paused"
 msgstr "På pause"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1167
+#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
 msgid "Playing"
 msgstr "Afspiller"
 
@@ -64,7 +64,7 @@ msgstr "Xplayer - filmafspiller"
 msgid "_Open with \"%s\""
 msgstr "_Åbn med \"%s\""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2452
+#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
 msgid "An error occurred"
 msgstr "Der opstod en fejl"
 
@@ -74,7 +74,7 @@ msgstr "Ingen eller tom afspilningsliste"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2127
 msgid "Movie browser plugin"
-msgstr "Udvidelsesmodul til filmgennemsyn"
+msgstr "Plugin til filmgennemsyn"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
 msgid "Could not initialize the thread-safe libraries."
@@ -82,16 +82,19 @@ msgstr "Kunne ikke klargøre de trådsikre biblioteker."
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2143
 msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Kontrollér din systeminstallation. Xplayer-udvidelsesmodulet vil nu afslutte."
+msgstr "Kontrollér din systeminstallation. Xplayer-pluginet vil nu afslutte."
 
-#: ../data/fullscreen.ui.h:1
-msgid "Leave Fullscreen"
-msgstr "Forlad fuldskærm"
-
-#: ../data/fullscreen.ui.h:2 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
 msgid "Time:"
 msgstr "Tid:"
+
+#: ../data/fullscreen.ui.h:2
+msgid "Blank other monitors"
+msgstr "Gør andre skærme sorte"
+
+#: ../data/fullscreen.ui.h:3
+msgid "Leave fullscreen"
+msgstr "Forlad fuldskærm"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -115,15 +118,15 @@ msgstr "Vis visuelle effekter når en fil med kun lyd afspilles."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "Name of the visual effects plugin"
-msgstr "Navn på udvidelsesmodul til visuelle effekter"
+msgstr "Navn på plugin til visuelle effekter"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
-msgstr "Lysstyrken for videoen"
+msgstr "Videoens lysstyrke"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "The contrast of the video"
-msgstr "Kontrasten for videoen"
+msgstr "Videoens kontrast"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "The hue of the video"
@@ -135,7 +138,7 @@ msgstr "Videoens mætning"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
-msgstr "Ændr størrelsen af lærredet automatisk ved filåbninger"
+msgstr "Ændr størrelsen af lærredet automatisk når fil indlæses"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Repeat mode"
@@ -151,11 +154,11 @@ msgstr "Om deinterlacing for interlacede film skal deaktiveres"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid "Whether to enable debug for the playback engine"
-msgstr "Om fejlanalysering skal slåes til for afspilningsmotoren"
+msgstr "Om fejlanalysering skal slås til for afspilningsmotoren"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Type of audio output to use"
-msgstr "Type lyd-uddata der skal benyttes"
+msgstr "Type lydoutput der skal benyttes"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Visualization quality setting"
@@ -195,7 +198,7 @@ msgstr "Tegnkodning til undertekster."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Forvalgt placering for \"Åbn...\"-vinduerne"
+msgstr "Standardplacering for \"Åbn...\"-vinduerne"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid ""
@@ -207,7 +210,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Forvalgt placering for \"Gem skærmbillede\"-vinduerne"
+msgstr "Standardplacering for \"Gem skærmbillede\"-vinduerne"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
@@ -219,7 +222,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Om udvidelsesmoduler i brugerens hjemmemappe skal deaktiveres"
+msgstr "Om plugins i brugerens hjemmemappe skal deaktiveres"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid "Whether to disable the keyboard shortcuts"
@@ -227,31 +230,32 @@ msgstr "Om tastaturgenveje skal deaktiveres"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Om undertekster skal hentes automatisk når en film indlæses"
+msgstr "Om undertekster skal hentes automatisk, når en film indlæses"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:31
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr "Om eksterne kapitelfiler skal hentes automatisk når en film indlæses"
+msgstr ""
+"Om eksterne kapitelfiler skal hentes automatisk, når en film indlæses"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:32
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Hvorvidt positionen i de afspillede lyd-/videofiler skal huskes, når de "
-"sættes på pause eller lukkes"
+"Om positionen i de afspillede lyd-/videofiler skal huskes, når de sættes på "
+"pause eller lukkes"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:33
 msgid "Active plugins list"
-msgstr "Liste over aktive udvidelsesmoduler"
+msgstr "Liste over aktive plugins"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:34
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"En liste af navne på udvidelsesmodulerne, der i øjeblikket er aktiveret "
-"(indlæst og kører)."
+"En liste med navne på plugins der i øjeblikket er aktiveret (indlæst og "
+"kører)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -275,7 +279,7 @@ msgstr "_Vælg undertekster..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "Vælg en fil at læse undertekster fra"
+msgstr "Vælg en fil med undertekster"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
@@ -312,25 +316,25 @@ msgstr "Stor"
 msgid "Extra Large"
 msgstr "Ekstra stor"
 
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5470
+#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
 msgid "Stereo"
 msgstr "Stereo"
 
 #: ../data/preferences.ui.h:8
 msgid "4-channel"
-msgstr "4-kanal"
+msgstr "4-kanals"
 
 #: ../data/preferences.ui.h:9
 msgid "4.1-channel"
-msgstr "4.1-kanal"
+msgstr "4.1-kanals"
 
 #: ../data/preferences.ui.h:10
 msgid "5.0-channel"
-msgstr "5.0-kanal"
+msgstr "5.0-kanals"
 
 #: ../data/preferences.ui.h:11
 msgid "5.1-channel"
-msgstr "5.1-kanal"
+msgstr "5.1-kanals"
 
 # Jeg aner ikke hvad dette passthrough er for noget, jeg kan kun finde kommentarer på nettet der bruger ordet uden at komme ind på hvad det er
 #: ../data/preferences.ui.h:12
@@ -384,7 +388,7 @@ msgstr "Fremvisning"
 
 #: ../data/preferences.ui.h:25
 msgid "_Resize the window when a new video is loaded"
-msgstr "Ændr automatisk _størrelsen på vinduet når en video indlæses"
+msgstr "Ændr automatisk _størrelsen på vinduet, når en video indlæses"
 
 #: ../data/preferences.ui.h:26
 msgid "Disable _deinterlacing of interlaced videos"
@@ -401,7 +405,7 @@ msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "Video"
 
-#. Translators: this is part of the sentence 'Disable screensaver when playing [] Video [] Video or Audio
+#. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:30
 msgid "Video or Audio"
 msgstr "Video eller lyd"
@@ -416,20 +420,19 @@ msgstr "Vis _visuelle effekter når en lydfil afspilles"
 
 #: ../data/preferences.ui.h:33
 msgid "_Type of visualization:"
-msgstr "_Visualiseringstype:"
+msgstr "V_isualiseringstype:"
 
 #: ../data/preferences.ui.h:34
 msgid "Visualization _size:"
-msgstr "Visualiserings_størrelse:"
+msgstr "Vis_ualiseringsstørrelse:"
 
 #: ../data/preferences.ui.h:35
 msgid "Color Balance"
 msgstr "Farvebalance"
 
-# Genvejstasten _Lys... er ikke i konflikt med _Lyd... ovenfor, da de indgår i forskellige skærmbilleder
 #: ../data/preferences.ui.h:36
 msgid "_Brightness:"
-msgstr "_Lysstyrke:"
+msgstr "L_ysstyrke:"
 
 #: ../data/preferences.ui.h:37
 msgid "Co_ntrast:"
@@ -449,11 +452,11 @@ msgstr "Nulstil til fo_rvalg"
 
 #: ../data/preferences.ui.h:41
 msgid "Audio Output"
-msgstr "Lyd-ud"
+msgstr "Lydoutput"
 
 #: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
-msgstr "_Lyduddata-type:"
+msgstr "L_ydoutput-type:"
 
 #: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
 msgid "Audio"
@@ -469,7 +472,7 @@ msgstr "Kunstner:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "Varighed:"
+msgstr "Længde:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
@@ -509,7 +512,7 @@ msgstr "Bitfrekvens:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Samplefrekvens:"
+msgstr "Samplingsfrekvens:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -517,9 +520,9 @@ msgstr "Kanaler:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1652
-msgid "Videos"
-msgstr "Videoer"
+#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+msgid "Media Player"
+msgstr "Medieafspiller"
 
 # Enten "afspilning af (en) film" eller "afspiller en film". Lad os håbe sidstnævnte er korrekt...
 #: ../data/xplayer.desktop.in.in.in.h:2
@@ -548,8 +551,8 @@ msgstr "Lyd fra"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4043
-#: ../src/xplayer-object.c:4045
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
+#: ../src/xplayer-object.c:4054
 msgid "Fullscreen"
 msgstr "Fuldskærm"
 
@@ -579,7 +582,7 @@ msgstr "_Skub ud"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "Skub den aktuelle skive ud"
+msgstr "Skub den aktuelle disk ud"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
@@ -591,7 +594,7 @@ msgstr "Vis egenskaberne for den aktuelle strøm"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "Afspil / p_ause"
+msgstr "A_fspil / pause"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
@@ -619,7 +622,7 @@ msgstr "Ryd afspilningslisten"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "_Indstillinger for Xplayer"
+msgstr "_Indstillinger"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
@@ -627,11 +630,11 @@ msgstr "Konfigurér programmet"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Udvidelsesmoduler..."
+msgstr "Plugins..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Konfigurér udvidelsesmoduler til dette program"
+msgstr "Konfigurér plugins til dette program"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -763,7 +766,7 @@ msgstr "Lydstyrke _ned"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "Mindsk lydstyrken"
+msgstr "Sænk lydstyrken"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
@@ -799,19 +802,19 @@ msgstr "_Vilkårlig rækkefølgetilstand"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Angiv blandingstilstanden"
+msgstr "Angiv vilkårlig rækkefølgetilstanden"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "Vis _kontroller"
+msgstr "Vis _kontrolelementer"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "Vis kontroller"
+msgstr "Vis kontrolelementer"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr "_Sidepanel"
+msgstr "Sidep_anel"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
@@ -844,11 +847,11 @@ msgstr "Sætter højde-/breddeforholdet til 4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr "16∶9 (bredskærm)"
+msgstr "16∶9 (bredformat)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "Sætter højde-/breddeforholdet til 16∶9 (bredskærm)"
+msgstr "Sætter højde-/breddeforholdet til 16∶9 (bredformat)"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
@@ -868,11 +871,11 @@ msgstr "_Sprog"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Zoom ind"
+msgstr "Forstør"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Zoom ind"
+msgstr "Forstør"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
@@ -896,57 +899,57 @@ msgstr "Søgebjælke"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Angiv _adressen på den fil du ønsker at åbne:"
+msgstr "A_ngiv adressen på den fil, du ønsker at åbne:"
 
 #: ../src/backend/bacon-video-widget.c:1668
 msgid "Password requested for RTSP server"
 msgstr "Adgangskode afventes for RTSP-server"
 
-#: ../src/backend/bacon-video-widget.c:2912
+#: ../src/backend/bacon-video-widget.c:2945
 #, c-format
 msgid "Audio Track #%d"
 msgstr "Lydspor #%d"
 
-#: ../src/backend/bacon-video-widget.c:2916
+#: ../src/backend/bacon-video-widget.c:2949
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Undertekst #%d"
 
-#: ../src/backend/bacon-video-widget.c:3313
+#: ../src/backend/bacon-video-widget.c:3346
 msgid "The server you are trying to connect to is not known."
-msgstr "Den server du forsøger at tilkoble til, er ikke kendt."
+msgstr "Den server, du forsøger at forbinde til, er ikke kendt."
 
-#: ../src/backend/bacon-video-widget.c:3316
+#: ../src/backend/bacon-video-widget.c:3349
 msgid "The connection to this server was refused."
-msgstr "Forbindelses til denne server blev nægtet."
+msgstr "Forbindelse til denne server blev nægtet."
 
-#: ../src/backend/bacon-video-widget.c:3319
+#: ../src/backend/bacon-video-widget.c:3352
 msgid "The specified movie could not be found."
 msgstr "Den angivne film blev ikke fundet."
 
-#: ../src/backend/bacon-video-widget.c:3326
+#: ../src/backend/bacon-video-widget.c:3359
 msgid "The server refused access to this file or stream."
 msgstr "Serveren nægtede adgang til denne fil eller strøm."
 
-#: ../src/backend/bacon-video-widget.c:3332
+#: ../src/backend/bacon-video-widget.c:3365
 msgid "Authentication is required to access this file or stream."
 msgstr "Denne fil eller strøm kan ikke tilgås uden godkendelse."
 
-#: ../src/backend/bacon-video-widget.c:3339
+#: ../src/backend/bacon-video-widget.c:3372
 msgid "You are not allowed to open this file."
 msgstr "Du har ikke rettigheder til at åbne denne fil."
 
-#: ../src/backend/bacon-video-widget.c:3344
+#: ../src/backend/bacon-video-widget.c:3377
 msgid "This location is not a valid one."
 msgstr "Denne placering er ikke gyldig."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3385
 msgid "The movie could not be read."
 msgstr "Filmen kunne ikke læses."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3375
-#: ../src/backend/bacon-video-widget.c:3383
+#: ../src/backend/bacon-video-widget.c:3408
+#: ../src/backend/bacon-video-widget.c:3416
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -956,49 +959,48 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Afspilning af denne film kræver et udvidelsesmodul til %s som ikke er "
-"installeret."
+"Afspilning af denne film kræver et %s-plugin,som ikke er installeret."
 msgstr[1] ""
-"Afspilning af denne film kræver følgende udvidelsesmoduler som ikke er "
-"installeret:\n"
-"\n"
+"Afspilning af denne film kræver følgende plugins, som ikke er "
+"installeret:\r\n"
+"\r\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3394
+#: ../src/backend/bacon-video-widget.c:3427
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 "En lyd- eller videostrøm kan ikke håndteres på grund af manglende codec. Du "
-"bliver muligvis nødt til at installere yderligere udvidelsesmoduler for at "
-"afspille visse typer film"
+"bliver muligvis nødt til at installere yderligere plugins for at afspille "
+"visse typer film"
 
-#: ../src/backend/bacon-video-widget.c:3404
+#: ../src/backend/bacon-video-widget.c:3437
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 "Denne fil kan ikke afspilles over netværket. Prøv at hente den lokalt først."
 
-#: ../src/backend/bacon-video-widget.c:5466
+#: ../src/backend/bacon-video-widget.c:5500
 msgid "Surround"
 msgstr "Surround"
 
-#: ../src/backend/bacon-video-widget.c:5468
+#: ../src/backend/bacon-video-widget.c:5502
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5755
+#: ../src/backend/bacon-video-widget.c:5789
 msgid "Media contains no supported video streams."
 msgstr "Medie indeholder ingen understøttede video-strømme."
 
-#: ../src/backend/bacon-video-widget.c:5945
+#: ../src/backend/bacon-video-widget.c:5979
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Der mangler visse nødvendige udvidelsesmoduler. Kontrollér at programmet er "
-"korrekt installeret."
+"Der mangler visse nødvendige plugins. Kontrollér, at programmet er korrekt "
+"installeret."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -1008,7 +1010,7 @@ msgstr "Filen er ikke en gyldig .desktop-fil"
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Ukendt version af skrivebordsfil \"%s\""
+msgstr "Ukendt skrivebordsfilversion \"%s\""
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
@@ -1028,12 +1030,12 @@ msgstr "Ukendt opstartstilvalg: %d"
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Kan ikke give dokument-URI'er til en \"Type=Link\"-skrivebordspost"
+msgstr "Kan ikke sende dokument-URI'er til en 'Type=Link'-skrivebordspost"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Ikke et kørbart element"
+msgstr "Ikke et opstartbart element"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
@@ -1048,10 +1050,9 @@ msgstr "Alle filer"
 msgid "All Supported Files"
 msgstr "Alle understøttede filer"
 
-# Denne streng synes at blive brugt når man gemmer en afspilningsliste. Meningen er at afspilningsliste-formatet bestemmes af den extension brugeren skriver, hvorfor det må være korrekt at skrive "ved hjælp af fil-endelse" som oversættelse
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr "Ved hjælp af fil-endelse"
+msgstr "Ved hjælp af filendelse"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
@@ -1059,7 +1060,7 @@ msgstr "Filformat"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Fil-endelser"
+msgstr "Filendelser"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -1254,7 +1255,7 @@ msgstr "_Føj til afspilningsliste"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: ../src/xplayer-fullscreen.c:574
+#: ../src/xplayer-fullscreen.c:589
 msgid "No File"
 msgstr "Ingen fil"
 
@@ -1291,9 +1292,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Xplayer distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN "
-"GARANTI; selv uden de underforståede garantier SALGBARHED eller EGNETHED TIL "
-"ET BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
+"Xplayer distribueres i håb om, at det viser sig nyttigt, men UDEN NOGEN "
+"GARANTI; selv uden de underforståede garantier om SALGBARHED eller EGNETHED "
+"TIL ET BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
 "detaljer."
 
 #: ../src/xplayer-interface.c:365
@@ -1312,7 +1313,7 @@ msgid ""
 "plugins."
 msgstr ""
 "Xplayer indeholder en undtagelse for at tillade brug af proprietære "
-"GStreamer-udvidelsesmoduler."
+"GStreamer-plugins."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:191
@@ -1325,61 +1326,62 @@ msgctxt "Language"
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/xplayer-menu.c:735
+#: ../src/xplayer-menu.c:736
 msgid "Configure Plugins"
-msgstr "Konfigurér udvidelsesmoduler"
+msgstr "Konfigurér plugins"
 
-#: ../src/xplayer-object.c:162
+#: ../src/xplayer-object.c:164
 #, c-format
 msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Kør \"%s --help\" for at se en fuldstændig liste af kommandolinjetilvalg.\n"
+"Kør \"%s --help\" for at se den fulde liste over tilgængelige "
+"kommandolinjetilvalg.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:590
+#: ../src/xplayer-object.c:592
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pause"
 
-#: ../src/xplayer-object.c:1176 ../src/xplayer-object.c:1186
+#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Afspil"
 
-#: ../src/xplayer-object.c:1268 ../src/xplayer-object.c:1295
-#: ../src/xplayer-object.c:1919
+#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
+#: ../src/xplayer-object.c:1933
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer kunne ikke afspille \"%s\"."
 
-#: ../src/xplayer-object.c:2110
+#: ../src/xplayer-object.c:2124
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer kunne ikke vise indholdet af hjælp."
 
-#: ../src/xplayer-object.c:4010 ../src/xplayer-object.c:4012
+#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
 msgid "Previous Chapter/Movie"
 msgstr "Forrige kapitel/film"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
 msgid "Play / Pause"
 msgstr "Afspil / pause"
 
-#: ../src/xplayer-object.c:4029 ../src/xplayer-object.c:4031
+#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
 msgid "Next Chapter/Movie"
 msgstr "Næste kapitel/film"
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "Xplayer could not startup."
 msgstr "Xplayer kunne ikke starte."
 
-#: ../src/xplayer-object.c:4175
+#: ../src/xplayer-object.c:4187
 msgid "No reason."
 msgstr "Ingen begrundelse."
 
@@ -1389,7 +1391,7 @@ msgstr "Åbn placering..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Aktiver fejlsøgning"
+msgstr "Aktivér fejlsøgning"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1417,7 +1419,7 @@ msgstr "Fuldskærm"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Vis/skjul kontroller"
+msgstr "Vis/skjul kontrolelementer"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
@@ -1467,7 +1469,7 @@ msgstr "MP3-audio (strøm, DOS-format)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "XML Shareable Playlist"
-msgstr "Delelig XML-afspilningsliste"
+msgstr "Delbar XML-afspilningsliste"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
@@ -1589,13 +1591,13 @@ msgstr "Centraleuropæisk"
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "Forenklet kinesisk"
+msgstr "Kinesisk (forenklet)"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "Traditionelt kinesisk"
+msgstr "Kinesisk (traditionel)"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
@@ -1644,10 +1646,9 @@ msgstr "Gurmukhi"
 msgid "Hebrew"
 msgstr "Hebraisk"
 
-# Jeg ved intet om Hebraisk, ejheller hvad "visual" betyder i denne sammenhæng, men forhåbentlig er det meningsfuldt
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Hebraisk visuelt"
+msgstr "Hebraisk (visuel)"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1776,7 +1777,7 @@ msgstr "Opløsning"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr "Varighed"
+msgstr "Længde"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
@@ -1792,7 +1793,7 @@ msgstr "Hent automatisk undertekster"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Henter undertekster automatisk"
+msgstr "Henter automatisk undertekster"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
@@ -1812,7 +1813,7 @@ msgstr "Opret en video-dvd eller en (S)VCD fra den nu åbne film"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "Kopiér vide_o-dvd..."
+msgstr "Kopiér _video-dvd..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
@@ -1985,7 +1986,7 @@ msgid ""
 "Plugin for sending notifications of currently playing movies to the D-Bus "
 "subsystem."
 msgstr ""
-"Udvidelsesmodul til at sende påmindelser om den nu afspillede film til D-Bus-"
+"Plugin til at sende påmindelser om den nu afspillede film til D-Bus-"
 "undersystemet."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
@@ -2007,17 +2008,15 @@ msgstr "Et MediaPlayer2-objekt kræver en ukendt egenskab \"%s\""
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr "URI \"%s\" er ikke understøttet."
+msgstr "URI'en \"%s\" er ikke understøttet."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr "Grillo-læser"
+msgstr "Grilo-læser"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr ""
-"Et udvidelsesmodul, der lader dig gennemse medieindhold fra forskellige "
-"kilder"
+msgstr "Et plugin til at gennemse medieindhold fra forskellige kilder"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
@@ -2027,19 +2026,19 @@ msgstr "Føj til afspilningsliste"
 msgid "Copy Location"
 msgstr "Kopiér placering"
 
-#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1175
+#: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
 msgstr "Gennemse"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1218
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
 msgstr "Søg"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:437
+#: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
 msgstr "Fejl ved gennemsyn"
 
-#: ../src/plugins/grilo/xplayer-grilo.c:606
+#: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
 msgstr "Fejl ved søgning"
 
@@ -2083,11 +2082,11 @@ msgstr "Kunne ikke læse lirc-konfiguration."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "Medieafspiller-taster"
+msgstr "Musikafspiller-taster"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr "Understøt yderligere medie-afspillertaster"
+msgstr "Understøt yderligere medieafspillertaster"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
@@ -2105,57 +2104,57 @@ msgstr "Underteksthenter"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Kig efter undertekster for filmen, der afspilles nu"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:42
+#: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
 msgstr "Brasiliansk portugisisk"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:177
+#: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
 msgstr "Søger efter undertekster…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:225
-#: ../src/plugins/opensubtitles/opensubtitles.py:645
+#: ../src/plugins/opensubtitles/opensubtitles.py:227
+#: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
 msgstr "Henter undertekster…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:290
+#: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
-msgstr "Kunne ikke kontakte hjemmesiden for OpenSubtitles"
+msgstr "Kunne ikke kontakte websitet for OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:323
-#: ../src/plugins/opensubtitles/opensubtitles.py:341
+#: ../src/plugins/opensubtitles/opensubtitles.py:325
+#: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
-msgstr "Kunne ikke komme i forbindelse med websiden OpenSubtitles."
+msgstr "Kunne ikke kontakte websitet for OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:329
+#: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
 msgstr "Ingen resultater fundet."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:478
+#: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
 msgstr "Undertekster"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:484
+#: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
 msgstr "Format"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:489
+#: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
 msgstr "Bedømmelse"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:525
+#: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Hent filmundertekster fra OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
 msgstr "_Hent undertekster til film…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:589
+#: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
 msgstr "Søger i undertekster…"
 
@@ -2202,7 +2201,7 @@ msgstr "%d kbps"
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr "Ikke tilgængelig"
+msgstr "-"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
@@ -2229,7 +2228,7 @@ msgid ""
 "used."
 msgstr ""
 "En adgangskode til at beskytte rpdb2-serveren til fejlsøgning af Xplayer fra "
-"uautoriseret fjerntilgang, Hvis denne er tom, bruges standardværdien "
+"uautoriseret fjernadgang, Hvis denne er tom, bruges standardværdien "
 "\"xplayer\"."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
@@ -2276,7 +2275,7 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Efter du har trykket O.k., ventes indtil du forbinder til Xplayer med winpdb "
+"Efter du har trykket OK, ventes indtil du forbinder til Xplayer med winpdb "
 "eller rpdb2. Hvis du ikke har indstillet et fejlsøgerkodeord i DConf, vil "
 "standardkodeordet blive benyttet (\"xplayer\")."
 
@@ -2290,7 +2289,7 @@ msgstr "Føjer filer som er blevet afspillet til de seneste filer"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Udvidelsesmodul til rotering"
+msgstr "Rotering"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2311,7 +2310,7 @@ msgstr "Pauseskærm"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "Deaktivér pauseskærm når der afspilles en film"
+msgstr "Deaktiverer pauseskærmen, når der afspilles en film"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
@@ -2375,7 +2374,7 @@ msgstr "Gemmer galleri som \"%s\""
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayer kunne ikke skaffe et skærmbillede af videoen."
+msgstr "Xplayer kunne ikke tage et skærmbillede af videoen."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
@@ -2391,7 +2390,7 @@ msgstr "Gem et skærmbillede"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Opret _galleri af skærmbilleder..."
+msgstr "_Opret galleri af skærmbilleder..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
@@ -2404,7 +2403,7 @@ msgstr "Spring til"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr "Giver \"Spring til\"-vinduet"
+msgstr "Åbner \"Spring til\"-vinduet"
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
@@ -2437,8 +2436,8 @@ msgstr "Spring til angivet tidspunkt"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Udvidelsesmodul til Zeitgeist"
+msgstr "Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Et udvidelsesmodul, der sender hændelser til Zeitgeist"
+msgstr "Et plugin der sender hændelser til Zeitgeist"
