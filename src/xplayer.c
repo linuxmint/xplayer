@@ -91,8 +91,10 @@ app_init (Xplayer *xplayer, char **argv)
 	if (gtk_clutter_init (NULL, NULL) != CLUTTER_INIT_SUCCESS)
 		g_warning ("gtk-clutter failed to initialise, expect problems from here on.");
 
-	gtk_settings = gtk_settings_get_default ();
-	g_object_set (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme", TRUE, NULL);
+	if (TRUE == g_settings_get_boolean (xplayer->settings, "prefer-dark-theme")) {
+		gtk_settings = gtk_settings_get_default ();
+		g_object_set (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme", TRUE, NULL);
+	}
 
 	/* Debug log handling */
 	g_log_set_handler (G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, (GLogFunc) debug_handler, xplayer->settings);
