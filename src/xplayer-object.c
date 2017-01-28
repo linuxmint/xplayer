@@ -1815,6 +1815,11 @@ xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 				     GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
 				     source_table, G_N_ELEMENTS (source_table),
 				     GDK_ACTION_COPY);
+
+		/* Hide subtitles if user did not select the respective option in preferences */
+		if (g_settings_get_boolean(xplayer->settings, "autodisplay-subtitles") == FALSE)
+			/* Must be called with -2 (no subtitles) to remove the GST_PLAY_FLAG_TEXT from the flags, which is responsible for the subtitle display */
+			bacon_video_widget_set_subtitle(xplayer->bvw, -2);
 	}
 	update_buttons (xplayer);
 	update_media_menu_items (xplayer);
