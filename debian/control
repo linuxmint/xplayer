@@ -80,8 +80,8 @@ Depends: ${misc:Depends},
          gnome-icon-theme (>= 2.15.90),
          gnome-icon-theme-symbolic,
          gsettings-desktop-schemas,
-Recommends: xplayer-plugins,
-            gstreamer1.0-pulseaudio,
+         xplayer-plugins
+Recommends: gstreamer1.0-pulseaudio
 Suggests: gnome-codec-install,
           gstreamer1.0-libav,
           gstreamer1.0-plugins-bad,
