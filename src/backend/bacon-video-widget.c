@@ -2829,7 +2829,7 @@ bacon_video_widget_get_subtitle (BaconVideoWidget * bvw)
   g_object_get (bvw->priv->play, "flags", &flags, NULL);
 
   if ((flags & GST_PLAY_FLAG_TEXT) == 0)
-    return -2;
+    return -1;
 
   g_object_get (G_OBJECT (bvw->priv->play), "current-text", &subtitle, NULL);
 
@@ -2855,9 +2855,8 @@ bacon_video_widget_set_subtitle (BaconVideoWidget * bvw, int subtitle)
 
   g_object_get (bvw->priv->play, "flags", &flags, NULL);
 
-  if (subtitle == -2) {
+  if (subtitle == -1) {
     flags &= ~GST_PLAY_FLAG_TEXT;
-    subtitle = -1;
   } else {
     flags |= GST_PLAY_FLAG_TEXT;
   }
@@ -3026,14 +3025,6 @@ bacon_video_widget_get_languages (BaconVideoWidget * bvw)
 
   list = get_lang_list_for_type (bvw, "AUDIO");
 
-  /* When we have only one language, we don't need to show
-   * any languages, we default to the only track */
-  if (g_list_length (list) == 1) {
-    g_free (list->data);
-    g_list_free (list);
-    list = NULL;
-  }
-
   return list;
 }
 
@@ -3075,11 +3066,6 @@ bacon_video_widget_set_language (BaconVideoWidget * bvw, int language)
 
   g_return_if_fail (BACON_IS_VIDEO_WIDGET (bvw));
   g_return_if_fail (bvw->priv->play != NULL);
-
-  if (language == -1)
-    language = 0;
-  else if (language == -2)
-    language = -1;
 
   GST_DEBUG ("setting language to %d", language);
 
@@ -3889,7 +3875,9 @@ bacon_video_widget_set_text_subtitle (BaconVideoWidget * bvw,
   g_return_if_fail (GST_IS_ELEMENT (bvw->priv->play));
   g_return_if_fail (bvw->priv->mrl != NULL);
 
-  GST_LOG ("Setting subtitle as %s", GST_STR_NULL (subtitle_uri));
+  GST_LOG ("Setting subtitle as %s\n", GST_STR_NULL (subtitle_uri));
+
+  bacon_video_widget_set_subtitle(bvw, 0);
 
   if (subtitle_uri == NULL &&
       bvw->priv->subtitle_uri == NULL)

@@ -229,6 +229,12 @@ void    xplayer_object_action_error               (XplayerObject *xplayer,
 						 const char *title,
 						 const char *reason);
 
+#define xplayer_action_cycle_language xplayer_object_action_cycle_language
+void	xplayer_object_action_cycle_language		(XplayerObject *xplayer);
+
+#define xplayer_action_cycle_subtitle xplayer_object_action_cycle_subtitle
+void	xplayer_object_action_cycle_subtitle		(XplayerObject *xplayer);
+
 gboolean xplayer_is_fullscreen			(XplayerObject *xplayer);
 #define xplayer_is_playing xplayer_object_is_playing
 gboolean xplayer_object_is_playing		(XplayerObject *xplayer);

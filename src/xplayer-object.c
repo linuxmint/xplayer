@@ -42,9 +42,11 @@
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <math.h>
 #include <gio/gio.h>
 
+#include <gst/tag/tag.h>
 #include <string.h>
 
 #include "xplayer.h"
@@ -1370,6 +1372,110 @@ xplayer_object_action_stop (XplayerObject *xplayer)
 	play_pause_set_label (xplayer, STATE_STOPPED);
 }
 
+static
+char * get_language_name (char * language_code)
+{
+	const char * language;
+	char * upper_language;
+
+	language = gst_tag_get_language_name (language_code);
+
+	if (language)
+	{
+		upper_language = g_strdup_printf("%c%s", toupper (language[0]), language+1);
+		return upper_language;
+	}
+	else {
+		return g_strdup(_("Unknown"));
+	}
+}
+
+/**
+ * xplayer_object_action_cycle_language:
+ * @xplayer: a #XplayerObject
+ *
+ * Switch to the next available audio track.
+ **/
+void
+xplayer_object_action_cycle_language (XplayerObject *xplayer)
+{
+	int current_track, new_track;
+	char * track_name;
+	GList *list, *track;
+
+	if (xplayer->mrl == NULL)
+		return;
+
+	current_track = bacon_video_widget_get_language (xplayer->bvw);
+	list = bacon_video_widget_get_languages (xplayer->bvw);
+	new_track = current_track + 1;
+
+	if (new_track < 0)
+	{
+		new_track = 0;
+	}
+
+	if (new_track >= g_list_length (list))
+	{
+		new_track = 0;;
+	}
+
+	track = g_list_nth (list, new_track);
+	bacon_video_widget_set_language (xplayer->bvw, new_track);
+	track_name = get_language_name (track->data);
+
+	// Show track name
+	printf("Audio track: %s\n", track_name);
+	g_free (track_name);
+
+	// Refresh the menus
+	xplayer_languages_update (xplayer, list);
+}
+
+/**
+ * xplayer_object_action_cycle_subtitle:
+ * @xplayer: a #XplayerObject
+ *
+ * Switch to the next available subtitle track.
+ **/
+void
+xplayer_object_action_cycle_subtitle (XplayerObject *xplayer)
+{
+	int current_track, new_track;
+	char * track_name;
+	GList *list, *track;
+
+	if (xplayer->mrl == NULL)
+		return;
+
+	current_track = bacon_video_widget_get_subtitle (xplayer->bvw);
+	list = bacon_video_widget_get_subtitles (xplayer->bvw);
+	new_track = current_track + 1;
+
+	if (new_track < 0)
+	{
+		new_track = 0;
+	}
+
+	if (new_track >= g_list_length (list))
+	{
+		bacon_video_widget_set_subtitle (xplayer->bvw, -1);
+		track_name = g_strdup(_("None"));
+	}
+	else {
+		track = g_list_nth (list, new_track);
+		bacon_video_widget_set_subtitle (xplayer->bvw, new_track);
+		track_name = get_language_name (track->data);
+	}
+
+	// Show track name
+	printf ("Subtitle track: %s\n", track_name);
+	g_free (track_name);
+
+	// Refresh the menus
+	xplayer_subtitles_update (xplayer, list);
+}
+
 /**
  * xplayer_object_action_play_pause:
  * @xplayer: a #XplayerObject
@@ -1818,8 +1924,8 @@ xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 
 		/* Hide subtitles if user did not select the respective option in preferences */
 		if (g_settings_get_boolean(xplayer->settings, "autodisplay-subtitles") == FALSE)
-			/* Must be called with -2 (no subtitles) to remove the GST_PLAY_FLAG_TEXT from the flags, which is responsible for the subtitle display */
-			bacon_video_widget_set_subtitle(xplayer->bvw, -2);
+			/* Must be called with -1 (no subtitles) to remove the GST_PLAY_FLAG_TEXT from the flags, which is responsible for the subtitle display */
+			bacon_video_widget_set_subtitle(xplayer->bvw, -1);
 	}
 	update_buttons (xplayer);
 	update_media_menu_items (xplayer);
@@ -3526,6 +3632,10 @@ xplayer_action_handle_key_press (XplayerObject *xplayer, GdkEventKey *event)
 	case GDK_KEY_H:
 		xplayer_action_toggle_controls (xplayer);
 		break;
+	case GDK_KEY_l:
+	case GDK_KEY_L:
+		xplayer_action_cycle_language (xplayer);
+		break;
 	case GDK_KEY_M:
 	case GDK_KEY_m:
 		bacon_video_widget_dvd_event (xplayer->bvw, BVW_DVD_ROOT_MENU);
@@ -3583,6 +3693,10 @@ xplayer_action_handle_key_press (XplayerObject *xplayer, GdkEventKey *event)
 	case GDK_KEY_R:
 	case GDK_KEY_ZoomIn:
 		xplayer_action_set_zoom (xplayer, TRUE);
+		break;
+	case GDK_KEY_s:
+	case GDK_KEY_S:
+		xplayer_action_cycle_subtitle (xplayer);
 		break;
 	case GDK_KEY_t:
 	case GDK_KEY_T:

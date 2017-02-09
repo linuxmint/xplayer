@@ -34,6 +34,9 @@ void xplayer_sublang_exit (Xplayer *xplayer);
 
 void xplayer_setup_recent (Xplayer *xplayer);
 
+void xplayer_languages_update (Xplayer *xplayer, GList *list);
+void xplayer_subtitles_update (Xplayer *xplayer, GList *list);
+
 G_END_DECLS
 
 #endif /* XPLAYER_MENU_H */

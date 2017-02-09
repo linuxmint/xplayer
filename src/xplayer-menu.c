@@ -27,6 +27,7 @@
 #define GST_USE_UNSTABLE_API 1
 #include <gst/tag/tag.h>
 #include <string.h>
+#include <ctype.h>
 #include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
 #include "xplayer-menu.h"
@@ -126,29 +127,51 @@ languages_changed_callback (GtkRadioAction *action, GtkRadioAction *current,
 	bacon_video_widget_set_language (xplayer->bvw, rank);
 }
 
+static
+char * get_language_name (char * language_code)
+{
+	const char * language;
+	char * upper_language;
+
+	language = gst_tag_get_language_name (language_code);
+
+	if (language)
+	{
+		upper_language = g_strdup_printf("%c%s", toupper (language[0]), language+1);
+		return upper_language;
+	}
+	else {
+		return g_strdup(_("Unknown"));
+	}
+}
+
 static GtkAction *
 add_lang_action (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id,
 		const char **paths, const char *prefix, const char *lang, 
 		int lang_id, int lang_index, GSList **group)
 {
-	const char *full_lang;
+	char *full_lang;
 	char *label;
 	char *name;
 	GtkAction *action;
 	guint i;
 
-	full_lang = gst_tag_get_language_name (lang);
+	if (lang_id < 0)
+	{
+		full_lang = g_strdup(_("None"));
+	}
+	else {
+		full_lang = get_language_name (lang);
+	}
 
 	if (lang_index > 1) {
 		char *num_lang;
 
-		num_lang = g_strdup_printf ("%s #%u",
-					    full_lang ? full_lang : lang,
-					    lang_index);
+		num_lang = g_strdup_printf ("%s #%u", full_lang, lang_index);
 		label = escape_label_for_menu (num_lang);
 		g_free (num_lang);
 	} else {
-		label = escape_label_for_menu (full_lang ? full_lang : lang);
+		label = escape_label_for_menu (full_lang);
 	}
 
 	name = g_strdup_printf ("%s-%d", prefix, lang_id);
@@ -169,6 +192,7 @@ add_lang_action (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id,
 				       paths[i], name, name, GTK_UI_MANAGER_MENUITEM, FALSE);
 	}
 	g_free (name);
+	g_free (full_lang);
 
 	return action;
 }
@@ -188,12 +212,8 @@ create_lang_actions (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id
 	if (is_lang == FALSE) {
 		add_lang_action (xplayer, action_group, ui_id, paths, prefix,
 		                /* Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD */
-				_("None"), -2, 0, &group);
+				_("None"), -1, 0, &group);
 	}
-
-	action = add_lang_action (xplayer, action_group, ui_id, paths, prefix,
-	                          /* Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD */
-	                          C_("Language", "Auto"), -1, 0, &group);
 
 	i = 0;
 	lookup = g_hash_table_new_full (g_str_hash, g_str_equal, NULL, NULL);
@@ -213,7 +233,7 @@ create_lang_actions (Xplayer *xplayer, GtkActionGroup *action_group, guint ui_id
 			g_hash_table_replace (lookup, l->data, GINT_TO_POINTER (num + 1));
 		}
 
-		add_lang_action (xplayer, action_group, ui_id, paths, prefix,
+		action = add_lang_action (xplayer, action_group, ui_id, paths, prefix,
 				 action_data, i, num + 1, &group);
 		g_free (action_data);
 		i++;
@@ -252,7 +272,7 @@ xplayer_sublang_equal_lists (GList *orig, GList *new)
 	return retval;
 }
 
-static void
+void
 xplayer_languages_update (Xplayer *xplayer, GList *list)
 {
 	GtkAction *action;
@@ -291,7 +311,7 @@ xplayer_languages_update (Xplayer *xplayer, GList *list)
 	xplayer->language_list = list;
 }
 
-static void
+void
 xplayer_subtitles_update (Xplayer *xplayer, GList *list)
 {
 	GtkAction *action;
