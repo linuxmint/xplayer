@@ -378,6 +378,10 @@ xplayer_setup_preferences (Xplayer *xplayer)
 	item = POBJ ("tpw_auto_subtitles_checkbutton");
 	g_settings_bind (xplayer->settings, "autoload-subtitles", item, "active", G_SETTINGS_BIND_DEFAULT);
 
+	/* Auto-load subtitles */
+	item = POBJ ("tpw_auto_display_subtitles_checkbutton");
+	g_settings_bind (xplayer->settings, "autodisplay-subtitles", item, "active", G_SETTINGS_BIND_DEFAULT);
+
 	/* Auto-load external chapters */
 	item = POBJ ("tpw_auto_chapters_checkbutton");
 	g_settings_bind (xplayer->settings, "autoload-chapters", item, "active", G_SETTINGS_BIND_DEFAULT);
