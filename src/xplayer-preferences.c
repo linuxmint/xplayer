@@ -263,6 +263,23 @@ visualization_quality_writable_changed_cb (GSettings *settings, const gchar *key
 	gtk_widget_set_sensitive (PWID ("tpw_visuals_size_combobox"), writable && show_visualizations);
 }
 
+static void
+prefer_dark_theme_changed_cb (GSettings *settings,
+							  const gchar *key,
+							  XplayerObject *xplayer) {
+
+	GtkSettings *gtk_settings;
+	gboolean prefer_dark_theme;
+
+	g_return_if_fail (0 == strcmp (key, "prefer-dark-theme"));
+
+	prefer_dark_theme = g_settings_get_boolean (settings, "prefer-dark-theme");
+	gtk_settings = gtk_settings_get_default ();
+
+	g_object_set (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme", prefer_dark_theme, NULL);
+
+}
+
 void
 xplayer_setup_preferences (Xplayer *xplayer)
 {
@@ -339,6 +356,11 @@ xplayer_setup_preferences (Xplayer *xplayer)
 	g_settings_bind (xplayer->settings, "disable-deinterlacing", item, "active", G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (xplayer->settings, "disable-deinterlacing", bvw, "deinterlacing",
 	                 G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY | G_SETTINGS_BIND_INVERT_BOOLEAN);
+
+	/* Prefer dark theme */
+	item = POBJ ("tpw_prefer_dark_theme_checkbutton");
+	g_settings_bind (xplayer->settings, "prefer-dark-theme", item, "active", G_SETTINGS_BIND_DEFAULT);
+	g_signal_connect(xplayer->settings, "changed::prefer-dark-theme", (GCallback) prefer_dark_theme_changed_cb, xplayer);
 
 	/* Enable visuals */
 	item = POBJ ("tpw_visuals_checkbutton");
