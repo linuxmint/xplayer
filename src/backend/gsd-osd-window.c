@@ -219,7 +219,7 @@ draw_action_custom (GsdOsdDrawContext  *ctx,
 
         x = 100.0;
         y = 100.0;
-        icon_size = 64;
+        icon_size = 48;
         font_size = 28;
 
         if (ctx->message)
@@ -254,7 +254,7 @@ draw_action_custom (GsdOsdDrawContext  *ctx,
                 }
             }
 
-            gtk_render_icon (ctx->style, cr, pixbuf, x, y);
+            gtk_render_icon (ctx->style, cr, pixbuf, x, y + 10);
             g_object_unref (pixbuf);
         }
 }

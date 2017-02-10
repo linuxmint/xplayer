@@ -3603,11 +3603,45 @@ xplayer_action_handle_key_press (XplayerObject *xplayer, GdkEventKey *event)
 {
 	gboolean retval;
 	const char *icon_name;
+	gfloat rate;
+	char * speed;
 
 	retval = TRUE;
 	icon_name = NULL;
 
 	switch (event->keyval) {
+	case GDK_KEY_BackSpace:
+		bacon_video_widget_set_rate (xplayer->bvw, 1.0);
+		bacon_video_widget_show_osd (xplayer->bvw, "preferences-system-time-symbolic", "100%");
+		break;
+	case GDK_KEY_bracketleft:
+		rate = bacon_video_widget_get_rate (xplayer->bvw) - 0.1;
+		bacon_video_widget_set_rate (xplayer->bvw, rate);
+		speed = g_strdup_printf ("%d%%", (int)(rate * 100));
+		bacon_video_widget_show_osd (xplayer->bvw, "preferences-system-time-symbolic", speed);
+		g_free (speed);
+		break;
+	case GDK_KEY_bracketright:
+		rate = bacon_video_widget_get_rate (xplayer->bvw) + 0.1;
+		bacon_video_widget_set_rate (xplayer->bvw, rate);
+		speed = g_strdup_printf ("%d%%", (int)(rate * 100));
+		bacon_video_widget_show_osd (xplayer->bvw, "preferences-system-time-symbolic", speed);
+		g_free (speed);
+		break;
+	case GDK_KEY_braceleft:
+		rate = bacon_video_widget_get_rate (xplayer->bvw) /2;
+		bacon_video_widget_set_rate (xplayer->bvw, rate);
+		speed = g_strdup_printf ("%d%%", (int)(rate * 100));
+		bacon_video_widget_show_osd (xplayer->bvw, "preferences-system-time-symbolic", speed);
+		g_free (speed);
+		break;
+	case GDK_KEY_braceright:
+		rate = bacon_video_widget_get_rate (xplayer->bvw) *2;
+		bacon_video_widget_set_rate (xplayer->bvw, rate);
+		speed = g_strdup_printf ("%d%%", (int)(rate * 100));
+		bacon_video_widget_show_osd (xplayer->bvw, "preferences-system-time-symbolic", speed);
+		g_free (speed);
+		break;
 	case GDK_KEY_A:
 	case GDK_KEY_a:
 		xplayer_action_toggle_aspect_ratio (xplayer);
