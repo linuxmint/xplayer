@@ -351,7 +351,7 @@ xplayer_fullscreen_show_popups_or_osd (XplayerFullscreen *fs,
 		return;
 	}
 
-	//bacon_video_widget_popup_osd (fs->priv->bvw, icon_name);
+	//bacon_video_widget_show_osd (fs->priv->bvw, icon_name, "");
 }
 
 G_MODULE_EXPORT gboolean

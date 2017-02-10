@@ -1425,7 +1425,7 @@ xplayer_object_action_cycle_language (XplayerObject *xplayer)
 	track_name = get_language_name (track->data);
 
 	// Show track name
-	printf("Audio track: %s\n", track_name);
+	bacon_video_widget_show_osd (xplayer->bvw, "preferences-desktop-locale-symbolic", track_name);
 	g_free (track_name);
 
 	// Refresh the menus
@@ -1469,7 +1469,7 @@ xplayer_object_action_cycle_subtitle (XplayerObject *xplayer)
 	}
 
 	// Show track name
-	printf ("Subtitle track: %s\n", track_name);
+	bacon_video_widget_show_osd (xplayer->bvw, "media-view-subtitles-symbolic", track_name);
 	g_free (track_name);
 
 	// Refresh the menus

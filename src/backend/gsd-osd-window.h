@@ -71,15 +71,6 @@ GType                 gsd_osd_window_get_type          (void);
 
 GtkWidget *           gsd_osd_window_new               (void);
 gboolean              gsd_osd_window_is_valid          (GsdOsdWindow       *window);
-void                  gsd_osd_window_set_action        (GsdOsdWindow       *window,
-                                                        GsdOsdWindowAction  action);
-void                  gsd_osd_window_set_action_custom (GsdOsdWindow       *window,
-                                                        const char         *icon_name,
-                                                        gboolean            show_level);
-void                  gsd_osd_window_set_volume_muted  (GsdOsdWindow       *window,
-                                                        gboolean            muted);
-void                  gsd_osd_window_set_volume_level  (GsdOsdWindow       *window,
-                                                        int                 level);
 
 G_END_DECLS
 

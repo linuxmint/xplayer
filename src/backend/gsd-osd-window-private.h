@@ -50,17 +50,14 @@ G_BEGIN_DECLS
 #define FADE_FRAME_TIMEOUT 10     /* timeout in ms between each frame of the fade */
 
 typedef struct {
-        int                 size;
+        int                 width;
+        int                 height;
         GtkStyleContext    *style;
         GtkTextDirection    direction;
 
-        GsdOsdWindowAction  action;
         GtkIconTheme       *theme;
         const char         *icon_name;
-
-        gboolean            show_level;
-        int                 volume_level;
-        guint               volume_muted : 1;
+        const char         *message;
 } GsdOsdDrawContext;
 
 void gsd_osd_window_draw (GsdOsdDrawContext *ctx, cairo_t *cr);

@@ -59,8 +59,7 @@ struct BaconVideoOsdActorClass {
 GType                 bacon_video_osd_actor_get_type          (void);
 
 ClutterActor *        bacon_video_osd_actor_new               (void);
-void                  bacon_video_osd_actor_set_icon_name     (BaconVideoOsdActor *osd,
-							       const char         *icon_name);
+void                  bacon_video_osd_actor_set_content       (BaconVideoOsdActor *osd, const char *icon_name, const char *message);
 void                  bacon_video_osd_actor_hide              (BaconVideoOsdActor *osd);
 void                  bacon_video_osd_actor_show              (BaconVideoOsdActor *osd);
 void                  bacon_video_osd_actor_show_and_fade     (BaconVideoOsdActor *osd);

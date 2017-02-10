@@ -464,8 +464,7 @@ void bacon_video_widget_set_audio_output_type    (BaconVideoWidget *bvw,
 						  BvwAudioOutputType type);
 
 /* OSD */
-void bacon_video_widget_popup_osd                 (BaconVideoWidget *bvw,
-						   const char       *icon_name);
+void bacon_video_widget_show_osd (BaconVideoWidget *bvw, const char *icon_name, const char *message);
 
 G_END_DECLS
 

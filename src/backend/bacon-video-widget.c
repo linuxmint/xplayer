@@ -3267,13 +3267,13 @@ bacon_video_widget_set_audio_output_type (BaconVideoWidget *bvw,
 }
 
 void
-bacon_video_widget_popup_osd (BaconVideoWidget *bvw,
-			      const char       *icon_name)
+bacon_video_widget_show_osd (BaconVideoWidget *bvw,
+                             const char *icon_name,
+                             const char *message)
 {
   g_return_if_fail (BACON_IS_VIDEO_WIDGET (bvw));
 
-  bacon_video_osd_actor_set_icon_name (BACON_VIDEO_OSD_ACTOR (bvw->priv->osd),
-				       icon_name);
+  bacon_video_osd_actor_set_content (BACON_VIDEO_OSD_ACTOR (bvw->priv->osd), icon_name, message);
   bacon_video_osd_actor_show_and_fade (BACON_VIDEO_OSD_ACTOR (bvw->priv->osd));
 }
 
@@ -6038,7 +6038,6 @@ bacon_video_widget_initable_init (GInitable     *initable,
   clutter_actor_set_child_above_sibling (bvw->priv->stage,
 					 bvw->priv->osd,
 					 bvw->priv->frame);
-  bacon_video_osd_actor_hide (BACON_VIDEO_OSD_ACTOR (bvw->priv->osd));
 
   /* And tell playbin */
   g_object_set (bvw->priv->play, "video-sink", video_sink, NULL);

@@ -40,7 +40,7 @@
 #include "gsd-osd-window.h"
 #include "gsd-osd-window-private.h"
 
-#define ICON_SCALE 0.50           /* size of the icon compared to the whole OSD */
+#define ICON_SCALE 0.10           /* size of the icon compared to the whole OSD */
 #define FG_ALPHA 1.0              /* Alpha value to be used for foreground objects drawn in an OSD window */
 
 #define GSD_OSD_WINDOW_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSD_TYPE_OSD_WINDOW, GsdOsdWindowPrivate))
@@ -57,12 +57,8 @@ struct GsdOsdWindowPrivate
         guint                    monitors_changed_id;
         guint                    monitor_changed : 1;
 
-        GsdOsdWindowAction       action;
         char                    *icon_name;
-        gboolean                 show_level;
-
-        int                      volume_level;
-        guint                    volume_muted : 1;
+        char                    *message;
 };
 
 G_DEFINE_TYPE (GsdOsdWindow, gsd_osd_window, GTK_TYPE_WINDOW)
@@ -186,112 +182,6 @@ add_hide_timeout (GsdOsdWindow *window)
                                                        window);
 }
 
-static const char *
-get_image_name_for_volume (gboolean muted,
-                           int volume)
-{
-        static const char *icon_names[] = {
-                "audio-volume-muted-symbolic",
-                "audio-volume-low-symbolic",
-                "audio-volume-medium-symbolic",
-                "audio-volume-high-symbolic",
-                NULL
-        };
-        int n;
-
-        if (muted) {
-                n = 0;
-        } else {
-                /* select image */
-                n = 3 * volume / 100 + 1;
-                if (n < 1) {
-                        n = 1;
-                } else if (n > 3) {
-                        n = 3;
-                }
-        }
-
-	return icon_names[n];
-}
-
-static void
-action_changed (GsdOsdWindow *window)
-{
-        gsd_osd_window_update_and_hide (GSD_OSD_WINDOW (window));
-}
-
-static void
-volume_level_changed (GsdOsdWindow *window)
-{
-        gsd_osd_window_update_and_hide (GSD_OSD_WINDOW (window));
-}
-
-static void
-volume_muted_changed (GsdOsdWindow *window)
-{
-        gsd_osd_window_update_and_hide (GSD_OSD_WINDOW (window));
-}
-
-void
-gsd_osd_window_set_action (GsdOsdWindow      *window,
-                           GsdOsdWindowAction action)
-{
-        g_return_if_fail (GSD_IS_OSD_WINDOW (window));
-        g_return_if_fail (action == GSD_OSD_WINDOW_ACTION_VOLUME);
-
-        if (window->priv->action != action) {
-                window->priv->action = action;
-                action_changed (window);
-        } else {
-                gsd_osd_window_update_and_hide (GSD_OSD_WINDOW (window));
-        }
-}
-
-void
-gsd_osd_window_set_action_custom (GsdOsdWindow      *window,
-                                  const char        *icon_name,
-                                  gboolean           show_level)
-{
-        g_return_if_fail (GSD_IS_OSD_WINDOW (window));
-        g_return_if_fail (icon_name != NULL);
-
-        if (window->priv->action != GSD_OSD_WINDOW_ACTION_CUSTOM ||
-            g_strcmp0 (window->priv->icon_name, icon_name) != 0 ||
-            window->priv->show_level != show_level) {
-                window->priv->action = GSD_OSD_WINDOW_ACTION_CUSTOM;
-                g_free (window->priv->icon_name);
-                window->priv->icon_name = g_strdup (icon_name);
-                window->priv->show_level = show_level;
-                action_changed (window);
-        } else {
-                gsd_osd_window_update_and_hide (GSD_OSD_WINDOW (window));
-        }
-}
-
-void
-gsd_osd_window_set_volume_muted (GsdOsdWindow *window,
-                                 gboolean      muted)
-{
-        g_return_if_fail (GSD_IS_OSD_WINDOW (window));
-
-        if (window->priv->volume_muted != muted) {
-                window->priv->volume_muted = muted;
-                volume_muted_changed (window);
-        }
-}
-
-void
-gsd_osd_window_set_volume_level (GsdOsdWindow *window,
-                                 int           level)
-{
-        g_return_if_fail (GSD_IS_OSD_WINDOW (window));
-
-        if (window->priv->volume_level != level) {
-                window->priv->volume_level = level;
-                volume_level_changed (window);
-        }
-}
-
 static GdkPixbuf *
 load_pixbuf (GsdOsdDrawContext *ctx,
              const char        *name,
@@ -320,412 +210,52 @@ load_pixbuf (GsdOsdDrawContext *ctx,
 }
 
 static void
-draw_eject (cairo_t *cr,
-            double   _x0,
-            double   _y0,
-            double   width,
-            double   height)
-{
-        int box_height;
-        int tri_height;
-        int separation;
-
-        box_height = height * 0.2;
-        separation = box_height / 3;
-        tri_height = height - box_height - separation;
-
-        cairo_rectangle (cr, _x0, _y0 + height - box_height, width, box_height);
-
-        cairo_move_to (cr, _x0, _y0 + tri_height);
-        cairo_rel_line_to (cr, width, 0);
-        cairo_rel_line_to (cr, -width / 2, -tri_height);
-        cairo_rel_line_to (cr, -width / 2, tri_height);
-        cairo_close_path (cr);
-        cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, FG_ALPHA);
-        cairo_fill_preserve (cr);
-
-        cairo_set_source_rgba (cr, 0.6, 0.6, 0.6, FG_ALPHA / 2);
-        cairo_set_line_width (cr, 2);
-        cairo_stroke (cr);
-}
-
-static void
-draw_waves (cairo_t *cr,
-            double   cx,
-            double   cy,
-            double   max_radius,
-            int      volume_level)
-{
-        const int n_waves = 3;
-        int last_wave;
-        int i;
-
-        last_wave = n_waves * volume_level / 100;
-
-        for (i = 0; i < n_waves; i++) {
-                double angle1;
-                double angle2;
-                double radius;
-                double alpha;
-
-                angle1 = -M_PI / 4;
-                angle2 = M_PI / 4;
-
-                if (i < last_wave)
-                        alpha = 1.0;
-                else if (i > last_wave)
-                        alpha = 0.1;
-                else alpha = 0.1 + 0.9 * (n_waves * volume_level % 100) / 100.0;
-
-                radius = (i + 1) * (max_radius / n_waves);
-                cairo_arc (cr, cx, cy, radius, angle1, angle2);
-                cairo_set_source_rgba (cr, 0.6, 0.6, 0.6, alpha / 2);
-                cairo_set_line_width (cr, 14);
-                cairo_set_line_cap  (cr, CAIRO_LINE_CAP_ROUND);
-                cairo_stroke_preserve (cr);
-
-                cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, alpha);
-                cairo_set_line_width (cr, 10);
-                cairo_set_line_cap  (cr, CAIRO_LINE_CAP_ROUND);
-                cairo_stroke (cr);
-        }
-}
-
-static void
-draw_cross (cairo_t *cr,
-            double   cx,
-            double   cy,
-            double   size)
-{
-        cairo_move_to (cr, cx, cy - size/2.0);
-        cairo_rel_line_to (cr, size, size);
-
-        cairo_move_to (cr, cx, cy + size/2.0);
-        cairo_rel_line_to (cr, size, -size);
-
-        cairo_set_source_rgba (cr, 0.6, 0.6, 0.6, FG_ALPHA / 2);
-        cairo_set_line_width (cr, 14);
-        cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
-        cairo_stroke_preserve (cr);
-
-        cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, FG_ALPHA);
-        cairo_set_line_width (cr, 10);
-        cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
-        cairo_stroke (cr);
-}
-
-static void
-draw_speaker (cairo_t *cr,
-              double   cx,
-              double   cy,
-              double   width,
-              double   height)
-{
-        double box_width;
-        double box_height;
-        double _x0;
-        double _y0;
-
-        box_width = width / 3;
-        box_height = height / 3;
-
-        _x0 = cx - (width / 2) + box_width;
-        _y0 = cy - box_height / 2;
-
-        cairo_move_to (cr, _x0, _y0);
-        cairo_rel_line_to (cr, - box_width, 0);
-        cairo_rel_line_to (cr, 0, box_height);
-        cairo_rel_line_to (cr, box_width, 0);
-
-        cairo_line_to (cr, cx + box_width, cy + height / 2);
-        cairo_rel_line_to (cr, 0, -height);
-        cairo_line_to (cr, _x0, _y0);
-        cairo_close_path (cr);
-
-        cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, FG_ALPHA);
-        cairo_fill_preserve (cr);
-
-        cairo_set_source_rgba (cr, 0.6, 0.6, 0.6, FG_ALPHA / 2);
-        cairo_set_line_width (cr, 2);
-        cairo_stroke (cr);
-}
-
-static gboolean
-render_speaker (GsdOsdDrawContext *ctx,
-                cairo_t           *cr,
-                double             _x0,
-                double             _y0,
-                double             width,
-                double             height)
-{
-        GdkPixbuf         *pixbuf;
-        const char        *icon_name;
-        int                icon_size;
-
-        icon_name = get_image_name_for_volume (ctx->volume_muted,
-                                               ctx->volume_level);
-
-        icon_size = (int) width;
-
-        pixbuf = load_pixbuf (ctx, icon_name, icon_size);
-
-        if (pixbuf == NULL) {
-                return FALSE;
-        }
-
-        gtk_render_icon (ctx->style, cr,
-                         pixbuf, _x0, _y0);
-
-        g_object_unref (pixbuf);
-
-        return TRUE;
-}
-
-static void
-draw_volume_boxes (GsdOsdDrawContext *ctx,
-                   cairo_t           *cr,
-                   double             percentage,
-                   double             _x0,
-                   double             _y0,
-                   double             width,
-                   double             height)
-{
-        gdouble   x1;
-        GdkRGBA  acolor;
-
-        height = round (height) - 1;
-        width = round (width) - 1;
-        x1 = round ((width - 1) * percentage);
-
-        /* bar background */
-        gtk_style_context_save (ctx->style);
-        gtk_style_context_add_class (ctx->style, GTK_STYLE_CLASS_TROUGH);
-        gtk_style_context_get_background_color (ctx->style, GTK_STATE_NORMAL, &acolor);
-
-        gsd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, width, height);
-        gdk_cairo_set_source_rgba (cr, &acolor);
-        cairo_fill (cr);
-
-        gtk_style_context_restore (ctx->style);
-
-        /* bar progress */
-        if (percentage < 0.01)
-                return;
-        gtk_style_context_save (ctx->style);
-        gtk_style_context_add_class (ctx->style, GTK_STYLE_CLASS_PROGRESSBAR);
-        gtk_style_context_get_background_color (ctx->style, GTK_STATE_NORMAL, &acolor);
-
-        gsd_osd_window_draw_rounded_rectangle (cr, 1.0, _x0, _y0, height / 6, x1, height);
-        gdk_cairo_set_source_rgba (cr, &acolor);
-        cairo_fill (cr);
-
-        gtk_style_context_restore (ctx->style);
-}
-
-static void
-draw_action_volume (GsdOsdDrawContext *ctx,
-                    cairo_t           *cr)
-{
-        int window_width;
-        int window_height;
-        double icon_box_width;
-        double icon_box_height;
-        double icon_box_x0;
-        double icon_box_y0;
-        double volume_box_x0;
-        double volume_box_y0;
-        double volume_box_width;
-        double volume_box_height;
-        gboolean res;
-
-	window_width = window_height = ctx->size;
-
-        icon_box_width = round (window_width * ICON_SCALE);
-        icon_box_height = round (window_height * ICON_SCALE);
-        volume_box_width = icon_box_width;
-        volume_box_height = round (window_height * 0.05);
-
-        icon_box_x0 = round ((window_width - icon_box_width) / 2);
-        icon_box_y0 = round ((window_height - icon_box_height - volume_box_height) / 2 - volume_box_height);
-        volume_box_x0 = round (icon_box_x0);
-        volume_box_y0 = round (icon_box_height + icon_box_y0) + volume_box_height;
-
-#if 0
-        g_message ("icon box: w=%f h=%f _x0=%f _y0=%f",
-                   icon_box_width,
-                   icon_box_height,
-                   icon_box_x0,
-                   icon_box_y0);
-        g_message ("volume box: w=%f h=%f _x0=%f _y0=%f",
-                   volume_box_width,
-                   volume_box_height,
-                   volume_box_x0,
-                   volume_box_y0);
-#endif
-
-        res = render_speaker (ctx,
-                              cr,
-                              icon_box_x0, icon_box_y0,
-                              icon_box_width, icon_box_height);
-        if (! res) {
-                double speaker_width;
-                double speaker_height;
-                double speaker_cx;
-                double speaker_cy;
-
-                speaker_width = icon_box_width * 0.5;
-                speaker_height = icon_box_height * 0.75;
-                speaker_cx = icon_box_x0 + speaker_width / 2;
-                speaker_cy = icon_box_y0 + speaker_height / 2;
-
-#if 0
-                g_message ("speaker box: w=%f h=%f cx=%f cy=%f",
-                           speaker_width,
-                           speaker_height,
-                           speaker_cx,
-                           speaker_cy);
-#endif
-
-                /* draw speaker symbol */
-                draw_speaker (cr, speaker_cx, speaker_cy, speaker_width, speaker_height);
-
-                if (!ctx->volume_muted) {
-                        /* draw sound waves */
-                        double wave_x0;
-                        double wave_y0;
-                        double wave_radius;
-
-                        wave_x0 = window_width / 2;
-                        wave_y0 = speaker_cy;
-                        wave_radius = icon_box_width / 2;
-
-                        draw_waves (cr, wave_x0, wave_y0, wave_radius, ctx->volume_level);
-                } else {
-                        /* draw 'mute' cross */
-                        double cross_x0;
-                        double cross_y0;
-                        double cross_size;
-
-                        cross_size = speaker_width * 3 / 4;
-                        cross_x0 = icon_box_x0 + icon_box_width - cross_size;
-                        cross_y0 = speaker_cy;
-
-                        draw_cross (cr, cross_x0, cross_y0, cross_size);
-                }
-        }
-
-        /* draw volume meter */
-        draw_volume_boxes (ctx,
-                           cr,
-                           (double) ctx->volume_level / 100.0,
-                           volume_box_x0,
-                           volume_box_y0,
-                           volume_box_width,
-                           volume_box_height);
-}
-
-static gboolean
-render_custom (GsdOsdDrawContext  *ctx,
-               cairo_t            *cr,
-               double              _x0,
-               double              _y0,
-               double              width,
-               double              height)
-{
-        GdkPixbuf         *pixbuf;
-        int                icon_size;
-
-        icon_size = (int)width;
-
-        pixbuf = load_pixbuf (ctx, ctx->icon_name, icon_size);
-
-        if (pixbuf == NULL) {
-                char *name;
-                if (ctx->direction == GTK_TEXT_DIR_RTL)
-                        name = g_strdup_printf ("%s-rtl", ctx->icon_name);
-                else
-                        name = g_strdup_printf ("%s-ltr", ctx->icon_name);
-                pixbuf = load_pixbuf (ctx, name, icon_size);
-                g_free (name);
-                if (pixbuf == NULL)
-                        return FALSE;
-        }
-
-        gtk_render_icon (ctx->style, cr,
-                         pixbuf, _x0, _y0);
-
-        g_object_unref (pixbuf);
-
-        return TRUE;
-}
-
-static void
 draw_action_custom (GsdOsdDrawContext  *ctx,
                     cairo_t            *cr)
 {
-        int window_width;
-        int window_height;
-        double icon_box_width;
-        double icon_box_height;
-        double icon_box_x0;
-        double icon_box_y0;
-        double bright_box_x0;
-        double bright_box_y0;
-        double bright_box_width;
-        double bright_box_height;
-        gboolean res;
+        GdkPixbuf *pixbuf;
+        int icon_size, font_size;
+        double x, y;
 
-	window_width = window_height = ctx->size;
+        x = 100.0;
+        y = 100.0;
+        icon_size = 64;
+        font_size = 28;
 
-        icon_box_width = round (window_width * ICON_SCALE);
-        icon_box_height = round (window_height * ICON_SCALE);
-        bright_box_width = round (icon_box_width);
-        bright_box_height = round (window_height * 0.05);
-
-        icon_box_x0 = round ((window_width - icon_box_width) / 2);
-        if (ctx->show_level != FALSE) {
-                icon_box_y0 = round ((window_height - icon_box_height - bright_box_height) / 2 - bright_box_height);
-                bright_box_x0 = round (icon_box_x0);
-                bright_box_y0 = round (icon_box_height + icon_box_y0) + bright_box_height;
-        } else {
-                icon_box_y0 = round ((window_height - icon_box_height) / 2);
-                bright_box_x0 = 0;
-                bright_box_y0 = 0;
+        if (ctx->message)
+        {
+            /* Draw text message */
+            cairo_select_font_face(cr, "Sans", CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_BOLD);
+            cairo_set_font_size(cr, font_size);
+            cairo_set_source_rgb (cr, 255, 255, 255);
+            cairo_move_to(cr, x, y);
+            cairo_show_text(cr, ctx->message);
         }
 
-#if 0
-        g_message ("icon box: w=%f h=%f _x0=%f _y0=%f",
-                   icon_box_width,
-                   icon_box_height,
-                   icon_box_x0,
-                   icon_box_y0);
-        g_message ("brightness box: w=%f h=%f _x0=%f _y0=%f",
-                   bright_box_width,
-                   bright_box_height,
-                   bright_box_x0,
-                   bright_box_y0);
-#endif
+        if (ctx->icon_name)
+        {
+            pixbuf = load_pixbuf (ctx, ctx->icon_name, icon_size);
+            if (pixbuf == NULL)
+            {
+                char *name;
+                if (ctx->direction == GTK_TEXT_DIR_RTL)
+                {
+                    name = g_strdup_printf ("%s-rtl", ctx->icon_name);
+                }
+                else
+                {
+                    name = g_strdup_printf ("%s-ltr", ctx->icon_name);
+                }
+                pixbuf = load_pixbuf (ctx, name, icon_size);
+                g_free (name);
+                if (pixbuf == NULL)
+                {
+                    return FALSE;
+                }
+            }
 
-        res = render_custom (ctx,
-                             cr,
-                             icon_box_x0, icon_box_y0,
-                             icon_box_width, icon_box_height);
-        if (!res && g_str_has_prefix (ctx->icon_name, "media-eject")) {
-                /* draw eject symbol */
-                draw_eject (cr,
-                            icon_box_x0, icon_box_y0,
-                            icon_box_width, icon_box_height);
-        }
-
-        if (ctx->show_level != FALSE) {
-                /* draw volume meter */
-                draw_volume_boxes (ctx,
-                                   cr,
-                                   (double) ctx->volume_level / 100.0,
-                                   bright_box_x0,
-                                   bright_box_y0,
-                                   bright_box_width,
-                                   bright_box_height);
+            gtk_render_icon (ctx->style, cr, pixbuf, x, y);
+            g_object_unref (pixbuf);
         }
 }
 
@@ -735,25 +265,17 @@ gsd_osd_window_draw (GsdOsdDrawContext *ctx,
 {
         gdouble          corner_radius;
         GdkRGBA          acolor;
+        int              size;
 
         /* draw a box */
-        corner_radius = ctx->size / 10;
-        gsd_osd_window_draw_rounded_rectangle (cr, 1.0, 0.0, 0.0, corner_radius, ctx->size - 1, ctx->size - 1);
+        size = MIN(ctx->width, ctx->height);
+        corner_radius = size / 10;
+        gsd_osd_window_draw_rounded_rectangle (cr, 1.0, 0.0, 0.0, corner_radius, size - 1, size - 1);
 
         gtk_style_context_get_background_color (ctx->style, GTK_STATE_NORMAL, &acolor);
         gdk_cairo_set_source_rgba (cr, &acolor);
         cairo_fill (cr);
-
-        switch (ctx->action) {
-        case GSD_OSD_WINDOW_ACTION_VOLUME:
-                draw_action_volume (ctx, cr);
-                break;
-        case GSD_OSD_WINDOW_ACTION_CUSTOM:
-                draw_action_custom (ctx, cr);
-                break;
-        default:
-                break;
-        }
+        draw_action_custom (ctx, cr);
 }
 
 static gboolean
@@ -794,14 +316,11 @@ gsd_osd_window_obj_draw (GtkWidget *widget,
         cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
         cairo_paint (cr);
 
-        ctx.size = size;
+        ctx.width = width;
+        ctx.height = height;
         ctx.style = context;
-        ctx.volume_level = window->priv->volume_level;
-        ctx.volume_muted = window->priv->volume_muted;
         ctx.icon_name = window->priv->icon_name;
         ctx.direction = gtk_widget_get_direction (GTK_WIDGET (window));
-        ctx.show_level = window->priv->show_level;
-        ctx.action = window->priv->action;
         if (window != NULL && gtk_widget_has_screen (GTK_WIDGET (window))) {
                 ctx.theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (window)));
         } else {
@@ -813,7 +332,7 @@ gsd_osd_window_obj_draw (GtkWidget *widget,
         gtk_style_context_restore (context);
 
         /* Make sure we have a transparent background */
-        cairo_rectangle (orig_cr, 0, 0, size, size);
+        cairo_rectangle (orig_cr, 0, 0, width, height);
         cairo_set_source_rgba (orig_cr, 0.0, 0.0, 0.0, 0.0);
         cairo_fill (orig_cr);
 
@@ -909,6 +428,10 @@ gsd_osd_window_finalize (GObject *object)
 	if (window->priv->icon_name) {
 		g_free (window->priv->icon_name);
 		window->priv->icon_name = NULL;
+	}
+	if (window->priv->message) {
+		g_free (window->priv->message);
+		window->priv->message = NULL;
 	}
 
 	if (window->priv->monitors_changed_id > 0) {

@@ -44,6 +44,7 @@ struct BaconVideoOsdActorPrivate
 {
 	ClutterCanvas     *canvas;
 	char              *icon_name;
+	char              *message;
 	GtkStyleContext   *style;
 	GsdOsdDrawContext *ctx;
 
@@ -121,6 +122,9 @@ bacon_video_osd_actor_finalize (GObject *object)
 	g_free (osd->priv->icon_name);
 	osd->priv->icon_name = NULL;
 
+	g_free (osd->priv->message);
+	osd->priv->message = NULL;
+
 	G_OBJECT_CLASS (bacon_video_osd_actor_parent_class)->finalize (object);
 }
 
@@ -144,8 +148,6 @@ bacon_video_osd_actor_draw (ClutterCanvas      *canvas,
 {
 	GsdOsdDrawContext *ctx;
 
-	g_return_val_if_fail (osd->priv->icon_name != NULL, FALSE);
-
 	ctx = osd->priv->ctx;
 
 	cairo_save (cr);
@@ -155,8 +157,10 @@ bacon_video_osd_actor_draw (ClutterCanvas      *canvas,
 	cairo_restore (cr);
 	cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
 
-	ctx->size = MIN(width, height);
+	ctx->width = width;
+	ctx->height = height;
 	ctx->icon_name = osd->priv->icon_name;
+	ctx->message = osd->priv->message;
 
 	gsd_osd_window_draw (ctx, cr);
 
@@ -182,7 +186,8 @@ bacon_video_osd_actor_init (BaconVideoOsdActor *osd)
 	clutter_actor_set_content (self, CLUTTER_CONTENT (osd->priv->canvas));
 	g_object_unref (osd->priv->canvas);
 
-	osd->priv->icon_name = g_strdup ("media-playback-pause-symbolic");
+	osd->priv->icon_name = NULL;
+	osd->priv->message = NULL;
 
 	osd->priv->ctx = g_new0 (GsdOsdDrawContext, 1);
 
@@ -194,7 +199,6 @@ bacon_video_osd_actor_init (BaconVideoOsdActor *osd)
 
 	osd->priv->ctx->direction = clutter_get_default_text_direction ();
 	osd->priv->ctx->theme = gtk_icon_theme_get_default ();
-	osd->priv->ctx->action = GSD_OSD_WINDOW_ACTION_CUSTOM;
 	osd->priv->ctx->style = osd->priv->style;
 
 	g_signal_connect (osd->priv->canvas, "draw", G_CALLBACK (bacon_video_osd_actor_draw), osd);
@@ -204,19 +208,23 @@ bacon_video_osd_actor_init (BaconVideoOsdActor *osd)
 ClutterActor *
 bacon_video_osd_actor_new (void)
 {
-        return g_object_new (BACON_TYPE_VIDEO_OSD_ACTOR, NULL);
+	return g_object_new (BACON_TYPE_VIDEO_OSD_ACTOR, NULL);
 }
 
 void
-bacon_video_osd_actor_set_icon_name (BaconVideoOsdActor *osd,
-				     const char         *icon_name)
+bacon_video_osd_actor_set_content (BaconVideoOsdActor *osd,
+						const char *icon_name,
+						const char *message)
 {
 	g_return_if_fail (BACON_IS_VIDEO_OSD_ACTOR (osd));
 
 	g_free (osd->priv->icon_name);
 	osd->priv->icon_name = g_strdup (icon_name);
 
-	if (icon_name != NULL)
+	g_free (osd->priv->message);
+	osd->priv->message = g_strdup (message);
+
+	if (icon_name != NULL || message != NULL)
 		clutter_content_invalidate (CLUTTER_CONTENT (osd->priv->canvas));
 }
 
