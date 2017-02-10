@@ -1385,7 +1385,12 @@ char * get_language_name (char * language_code)
 		upper_language = g_strdup_printf("%c%s", toupper (language[0]), language+1);
 		return upper_language;
 	}
-	else {
+	else if (language_code)
+	{
+		return g_strdup (language_code);
+	}
+	else
+	{
 		return g_strdup(_("Unknown"));
 	}
 }
