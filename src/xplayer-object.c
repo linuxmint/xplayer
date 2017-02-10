@@ -57,6 +57,7 @@
 #include "bacon-video-widget.h"
 #include "xplayer-statusbar.h"
 #include "xplayer-time-label.h"
+#include "xplayer-time-helpers.h"
 #include "xplayer-sidebar.h"
 #include "xplayer-menu.h"
 #include "xplayer-uri.h"
@@ -2062,6 +2063,20 @@ xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, 
 		xplayer_action_error (xplayer, msg, err->message);
 		g_free (msg);
 		g_error_free (err);
+	}
+	else
+	{
+		char *position, *length, *time_string;
+
+		position = xplayer_time_to_string (bacon_video_widget_get_current_time (xplayer->bvw));
+		length = xplayer_time_to_string (bacon_video_widget_get_stream_length (xplayer->bvw));
+		time_string = g_strdup_printf ("%s / %s", position, length);
+
+		bacon_video_widget_show_osd (xplayer->bvw, NULL, time_string);
+
+		g_free (position);
+		g_free (length);
+		g_free (time_string);
 	}
 }
 
