@@ -1922,6 +1922,12 @@ xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 
 		xplayer_file_opened (xplayer, xplayer->mrl);
 
+		/* Focus window if the playlist is empty */
+		if (!xplayer_playlist_has_previous_mrl (xplayer->playlist) && !xplayer_playlist_has_next_mrl (xplayer->playlist))
+		{
+			gtk_window_present (GTK_WINDOW (xplayer->win));
+		}
+
 		/* Set the drag source */
 		gtk_drag_source_set (GTK_WIDGET (xplayer->bvw),
 				     GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
