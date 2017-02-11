@@ -116,7 +116,6 @@ int main
 
 	bvw = bacon_video_widget_new (NULL);
 	bacon_video_widget_set_logo (BACON_VIDEO_WIDGET (bvw), "xplayer");
-	bacon_video_widget_set_show_visualizations (BACON_VIDEO_WIDGET (bvw), TRUE);
 
 	g_signal_connect (G_OBJECT (bvw), "eos", G_CALLBACK (on_eos_event), NULL);
 	g_signal_connect (G_OBJECT (bvw), "got-metadata", G_CALLBACK (on_got_metadata), NULL);

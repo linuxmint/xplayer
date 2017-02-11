@@ -253,32 +253,6 @@ void bacon_video_widget_get_metadata		 (BaconVideoWidget *bvw,
 						  BvwMetadataType type,
 						  GValue *value);
 
-/* Visualisation functions */
-/**
- * BvwVisualizationQuality:
- * @BVW_VISUALIZATION_SMALL: small size (240×15)
- * @BVW_VISUALIZATION_NORMAL: normal size (320×25)
- * @BVW_VISUALIZATION_LARGE: large size (480×25)
- * @BVW_VISUALIZATION_EXTRA_LARGE: extra large size (600×30)
- *
- * The different visualisation sizes or qualities available for use
- * with bacon_video_widget_set_visualization_quality().
- **/
-typedef enum {
-	BVW_VISUALIZATION_SMALL = 0,
-	BVW_VISUALIZATION_NORMAL,
-	BVW_VISUALIZATION_LARGE,
-	BVW_VISUALIZATION_EXTRA_LARGE
-} BvwVisualizationQuality;
-
-void bacon_video_widget_set_show_visualizations	  (BaconVideoWidget *bvw,
-						   gboolean show_visualizations);
-GList *bacon_video_widget_get_visualization_list  (BaconVideoWidget *bvw);
-void bacon_video_widget_set_visualization	  (BaconVideoWidget *bvw,
-						   const char *name);
-void bacon_video_widget_set_visualization_quality (BaconVideoWidget *bvw,
-						   BvwVisualizationQuality quality);
-
 /* Picture settings */
 /**
  * BvwVideoProperty:

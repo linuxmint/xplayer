@@ -36,7 +36,7 @@
  * @stability: Unstable
  * @include: bacon-video-widget.h
  *
- * #BaconVideoWidget is a widget to play audio or video streams, with support for visualisations for audio-only streams. It has a GStreamer
+ * #BaconVideoWidget is a widget to play audio or video streams. It has a GStreamer
  * backend, and abstracts away the differences to provide a simple interface to the functionality required by Xplayer. It handles all the low-level
  * audio and video work for Xplayer (or passes the work off to the backend).
  **/
@@ -144,13 +144,11 @@ enum
   PROP_REFERRER,
   PROP_SEEKABLE,
   PROP_SHOW_CURSOR,
-  PROP_SHOW_VISUALIZATIONS,
   PROP_USER_AGENT,
   PROP_VOLUME,
   PROP_DOWNLOAD_FILENAME,
   PROP_AUTO_RESIZE,
   PROP_DEINTERLACING,
-  PROP_VISUALIZATION_QUALITY,
   PROP_BRIGHTNESS,
   PROP_CONTRAST,
   PROP_SATURATION,
@@ -212,11 +210,6 @@ struct BaconVideoWidgetPrivate
   GdkCursor                   *cursor;
 
   /* Visual effects */
-  GList                       *vis_plugins_list;
-  GHashTable                  *vis_plugins_ht;
-  gboolean                     show_vfx;
-  BvwVisualizationQuality      visq;
-  gchar                       *vis_element_name;
   GstElement                  *audio_capsfilter;
   GstElement                  *audio_pitchcontrol;
 
@@ -296,8 +289,6 @@ static void bacon_video_widget_get_property (GObject * object,
 
 static void bacon_video_widget_finalize (GObject * object);
 
-static void setup_vis (BaconVideoWidget * bvw);
-static GList * get_visualization_features (void);
 static void size_changed_cb (GdkScreen *screen, BaconVideoWidget *bvw);
 static void bvw_stop_play_pipeline (BaconVideoWidget * bvw);
 static GError* bvw_error_from_gst_error (BaconVideoWidget *bvw, GstMessage *m);
@@ -628,7 +619,6 @@ bacon_video_widget_realize (GtkWidget * widget)
 static void
 size_changed_cb (GdkScreen *screen, BaconVideoWidget *bvw)
 {
-  setup_vis (bvw);
 }
 
 static void
@@ -639,11 +629,10 @@ set_current_actor (BaconVideoWidget *bvw)
   if (bvw->priv->stage == NULL)
     return;
 
-  /* If there's only audio and no visualisation, draw the logo as well.
-   * If we have a cover image to display, we display it regardless of whether we're
-   * doing visualisations. */
+  /* If there's only audio, draw the logo as well.
+   * If we have a cover image to display, we display it */
   draw_logo = bvw->priv->media_has_audio &&
-      !bvw->priv->media_has_video && (!bvw->priv->show_vfx || bvw->priv->cover_pixbuf);
+      !bvw->priv->media_has_video && (bvw->priv->cover_pixbuf);
 
   if (bvw->priv->logo_mode || draw_logo) {
     const GdkPixbuf *pixbuf;
@@ -883,17 +872,6 @@ bacon_video_widget_class_init (BaconVideoWidgetClass * klass)
                                                          G_PARAM_STATIC_STRINGS));
 
   /**
-   * BaconVideoWidget:show-visualizations:
-   *
-   * Whether visualisations should be shown for audio-only streams.
-   **/
-  g_object_class_install_property (object_class, PROP_SHOW_VISUALIZATIONS,
-                                   g_param_spec_boolean ("show-visualizations", "Show visualizations?",
-                                                         "Whether visualisations should be shown for audio-only streams.", FALSE,
-                                                         G_PARAM_WRITABLE |
-                                                         G_PARAM_STATIC_STRINGS));
-
-  /**
    * BaconVideoWidget:referrer:
    *
    * The HTTP referrer URI.
@@ -947,18 +925,6 @@ bacon_video_widget_class_init (BaconVideoWidgetClass * klass)
                                                          "Whether to automatically deinterlace videos.", FALSE,
                                                          G_PARAM_READWRITE |
                                                          G_PARAM_STATIC_STRINGS));
-
-  /**
-   * BaconVideoWidget:visualization-quality:
-   *
-   * The size of the visualizations to display when playing audio.
-   **/
-  g_object_class_install_property (object_class, PROP_VISUALIZATION_QUALITY,
-                                   g_param_spec_enum ("visualization-quality", "Visualization quality",
-                                                      "The size of the visualizations to display when playing audio.", BVW_TYPE_VISUALIZATION_QUALITY,
-                                                      BVW_VISUALIZATION_SMALL,
-                                                      G_PARAM_READWRITE |
-                                                      G_PARAM_STATIC_STRINGS));
 
   /**
    * BaconVideoWidget:brightness:
@@ -2531,9 +2497,6 @@ caps_set (GObject * obj,
   gst_caps_unref (caps);
 }
 
-static void get_visualization_size (BaconVideoWidget *bvw,
-                                    int *w, int *h, gint *fps_n, gint *fps_d);
-
 static void
 parse_stream_info (BaconVideoWidget *bvw)
 {
@@ -2562,10 +2525,7 @@ parse_stream_info (BaconVideoWidget *bvw)
       gint flags;
 
       g_object_get (bvw->priv->play, "flags", &flags, NULL);
-      if (bvw->priv->show_vfx && !bvw->priv->cover_pixbuf)
-	flags |= GST_PLAY_FLAG_VIS;
-      else
-	flags &= ~GST_PLAY_FLAG_VIS;
+      flags &= ~GST_PLAY_FLAG_VIS;
       g_object_set (bvw->priv->play, "flags", flags, NULL);
     }
   }
@@ -2580,9 +2540,6 @@ parse_stream_info (BaconVideoWidget *bvw)
     g_signal_connect (videopad, "notify::caps",
         G_CALLBACK (caps_set), bvw);
     gst_object_unref (videopad);
-  } else if (bvw->priv->show_vfx) {
-    get_visualization_size (bvw, &bvw->priv->video_width,
-        &bvw->priv->video_height, NULL, NULL);
   }
 
   set_current_actor (bvw);
@@ -2627,12 +2584,8 @@ bacon_video_widget_finalize (GObject * object)
   g_clear_pointer (&bvw->priv->referrer, g_free);
   g_clear_pointer (&bvw->priv->mrl, g_free);
   g_clear_pointer (&bvw->priv->subtitle_uri, g_free);
-  g_clear_pointer (&bvw->priv->vis_element_name, g_free);
 
   g_clear_object (&bvw->priv->clock);
-
-  g_clear_pointer (&bvw->priv->vis_plugins_list, g_list_free);
-  g_clear_pointer (&bvw->priv->vis_plugins_ht, g_hash_table_destroy);
 
   if (bvw->priv->play != NULL)
     gst_element_set_state (bvw->priv->play, GST_STATE_NULL);
@@ -2686,9 +2639,6 @@ bacon_video_widget_set_property (GObject * object, guint property_id,
     case PROP_SHOW_CURSOR:
       bacon_video_widget_set_show_cursor (bvw, g_value_get_boolean (value));
       break;
-    case PROP_SHOW_VISUALIZATIONS:
-      bacon_video_widget_set_show_visualizations (bvw, g_value_get_boolean (value));
-      break;
     case PROP_USER_AGENT:
       bacon_video_widget_set_user_agent (bvw, g_value_get_string (value));
       break;
@@ -2700,9 +2650,6 @@ bacon_video_widget_set_property (GObject * object, guint property_id,
       break;
     case PROP_DEINTERLACING:
       bacon_video_widget_set_deinterlacing (bvw, g_value_get_boolean (value));
-      break;
-    case PROP_VISUALIZATION_QUALITY:
-      bacon_video_widget_set_visualization_quality (bvw, g_value_get_enum (value));
       break;
     case PROP_BRIGHTNESS:
       bacon_video_widget_set_video_property (bvw, BVW_VIDEO_BRIGHTNESS, g_value_get_int (value));
@@ -2772,9 +2719,6 @@ bacon_video_widget_get_property (GObject * object, guint property_id,
       break;
     case PROP_DEINTERLACING:
       g_value_set_boolean (value, bacon_video_widget_get_deinterlacing (bvw));
-      break;
-    case PROP_VISUALIZATION_QUALITY:
-      g_value_set_enum (value, bvw->priv->visq);
       break;
     case PROP_BRIGHTNESS:
       g_value_set_int (value, bacon_video_widget_get_video_property (bvw, BVW_VIDEO_BRIGHTNESS));
@@ -4100,9 +4044,6 @@ bvw_check_for_cover_pixbuf (BaconVideoWidget * bvw)
     g_value_unset (&value);
   }
 
-  if (bvw->priv->cover_pixbuf)
-    setup_vis (bvw);
-
   return (bvw->priv->cover_pixbuf != NULL);
 }
 
@@ -4378,336 +4319,6 @@ bacon_video_widget_get_show_cursor (BaconVideoWidget * bvw)
   return bvw->priv->cursor_shown;
 }
 
-static struct {
-	int height;
-	int fps;
-} const vis_qualities[] = {
-	{ 240, 15 }, /* BVW_VISUALIZATION_SMALL */
-	{ 320, 25 }, /* BVW_VISUALIZATION_NORMAL */
-	{ 480, 25 }, /* BVW_VISUALIZATION_LARGE */
-	{ 600, 30 }  /* BVW_VISUALIZATION_EXTRA_LARGE */
-};
-
-static void
-get_visualization_size (BaconVideoWidget *bvw,
-                        int *w, int *h, gint *fps_n, gint *fps_d)
-{
-  GdkScreen *screen;
-  int new_fps_n;
-
-  g_return_if_fail (h != NULL);
-  g_return_if_fail (bvw->priv->visq < G_N_ELEMENTS (vis_qualities));
-
-  if (gtk_widget_get_realized (GTK_WIDGET (bvw)) == FALSE) {
-    if (fps_n)
-      *fps_n = 1;
-    if (fps_d)
-      *fps_d = 1;
-    return;
-  }
-
-  *h = vis_qualities[bvw->priv->visq].height;
-  new_fps_n = vis_qualities[bvw->priv->visq].fps;
-
-  screen = gtk_widget_get_screen (GTK_WIDGET (bvw));
-  *w = *h * gdk_screen_get_width (screen) / gdk_screen_get_height (screen);
-
-  if (fps_n)
-    *fps_n = new_fps_n;
-  if (fps_d)
-    *fps_d = 1;
-}
-
-static void
-add_longname (GstElementFactory *f, GHashTable *ht)
-{
-  g_hash_table_insert (ht,
-		       (gpointer) gst_element_factory_get_metadata (f, GST_ELEMENT_METADATA_LONGNAME),
-		       (gpointer) gst_plugin_feature_get_name (GST_PLUGIN_FEATURE (f)));
-}
-
-static void
-ensure_vis_plugins_list (BaconVideoWidget *bvw)
-{
-  GHashTable *ht;
-  GList *features;
-
-  if (bvw->priv->vis_plugins_ht)
-    return;
-
-  features = get_visualization_features ();
-  ht = g_hash_table_new (g_str_hash, g_str_equal);
-  g_list_foreach (features, (GFunc) add_longname, ht);
-  g_list_free (features);
-
-  bvw->priv->vis_plugins_ht = ht;
-}
-
-static GstElementFactory *
-setup_vis_find_factory (BaconVideoWidget * bvw, const gchar * vis_name)
-{
-  const char *factory_name;
-
-  ensure_vis_plugins_list (bvw);
-
-  factory_name = g_hash_table_lookup (bvw->priv->vis_plugins_ht, vis_name);
-  if (factory_name == NULL)
-    return NULL;
-
-  return gst_element_factory_find (factory_name);
-}
-
-static void
-setup_vis (BaconVideoWidget * bvw)
-{
-  GstElement *vis_bin = NULL;
-
-  GST_DEBUG ("setup_vis called, show_vfx %d, vis element %s",
-      bvw->priv->show_vfx, bvw->priv->vis_element_name);
-
-  /* Check to see if we have an embedded cover image. If we do, don't show visualisations.
-   * FIXME probably wrong now, hide that and use an OSD instead */
-  bvw_check_for_cover_pixbuf (bvw);
-
-  if (bvw->priv->show_vfx && !bvw->priv->cover_pixbuf && bvw->priv->vis_element_name) {
-    GstElement *vis_element = NULL, *vis_capsfilter = NULL;
-    GstPad *pad = NULL;
-    GstCaps *caps = NULL;
-    GstElementFactory *fac = NULL;
-    
-    fac = setup_vis_find_factory (bvw, bvw->priv->vis_element_name);
-    if (!fac) {
-      GST_DEBUG ("Could not find element factory for visualisation '%s'",
-          GST_STR_NULL (bvw->priv->vis_element_name));
-      /* use goom as fallback, better than nothing */
-      fac = setup_vis_find_factory (bvw, "goom");
-      if (fac == NULL) {
-        goto beach;
-      } else {
-        GST_DEBUG ("Falling back on 'goom' for visualisation");
-      }     
-    }
-    
-    vis_element = gst_element_factory_create (fac, "vis_element");
-    if (!GST_IS_ELEMENT (vis_element)) {
-      GST_DEBUG ("failed creating visualisation element");
-      goto beach;
-    }
-    
-    vis_capsfilter = gst_element_factory_make ("capsfilter",
-        "vis_capsfilter");
-    if (!GST_IS_ELEMENT (vis_capsfilter)) {
-      GST_DEBUG ("failed creating visualisation capsfilter element");
-      gst_object_unref (vis_element);
-      goto beach;
-    }
-    
-    vis_bin = gst_bin_new ("vis_bin");
-    if (!GST_IS_ELEMENT (vis_bin)) {
-      GST_DEBUG ("failed creating visualisation bin");
-      gst_object_unref (vis_element);
-      gst_object_unref (vis_capsfilter);
-      goto beach;
-    }
-    /* We created the bin, now ref and sink to make sure we own it */
-    gst_object_ref (vis_bin);
-    gst_object_ref_sink (vis_bin);
-    
-    gst_bin_add_many (GST_BIN (vis_bin), vis_element, vis_capsfilter, NULL);
-    
-    /* Sink ghostpad */
-    pad = gst_element_get_static_pad (vis_element, "sink");
-    gst_element_add_pad (vis_bin, gst_ghost_pad_new ("sink", pad));
-    gst_object_unref (pad);
-
-    /* Source ghostpad, link with vis_element */
-    pad = gst_element_get_static_pad (vis_capsfilter, "src");
-    gst_element_add_pad (vis_bin, gst_ghost_pad_new ("src", pad));
-    gst_element_link_pads (vis_element, "src", vis_capsfilter, "sink");
-    gst_object_unref (pad);
-
-    /* Get allowed output caps from visualisation element */
-    pad = gst_element_get_static_pad (vis_element, "src");
-    caps = gst_pad_get_allowed_caps (pad);
-    gst_object_unref (pad);
-    
-    GST_DEBUG ("allowed caps: %" GST_PTR_FORMAT, caps);
-    
-    /* Can we fixate ? */
-    if (caps && !gst_caps_is_fixed (caps)) {
-      guint i;
-      gint w, h, fps_n, fps_d;
-
-      caps = gst_caps_make_writable (caps);
-
-      /* Get visualization size */
-      get_visualization_size (bvw, &w, &h, &fps_n, &fps_d);
-
-      for (i = 0; i < gst_caps_get_size (caps); ++i) {
-        GstStructure *s = gst_caps_get_structure (caps, i);
-      
-        /* Fixate */
-        gst_structure_fixate_field_nearest_int (s, "width", w);
-        gst_structure_fixate_field_nearest_int (s, "height", h);
-        gst_structure_fixate_field_nearest_fraction (s, "framerate", fps_n,
-            fps_d);
-      }
-
-      /* set this */
-      g_object_set (vis_capsfilter, "caps", caps, NULL);
-    }
-
-    GST_DEBUG ("visualisation caps: %" GST_PTR_FORMAT, caps);
-    
-    if (GST_IS_CAPS (caps)) {
-      gst_caps_unref (caps);
-    }
-  }
-
-  if (bvw->priv->media_has_audio &&
-      !bvw->priv->media_has_video) {
-    gint flags;
-
-    g_object_get (bvw->priv->play, "flags", &flags, NULL);
-    if (bvw->priv->show_vfx && !bvw->priv->cover_pixbuf) {
-      flags |= GST_PLAY_FLAG_VIS;
-    } else {
-      flags &= ~GST_PLAY_FLAG_VIS;
-    }
-    g_object_set (bvw->priv->play, "flags", flags, NULL);
-  }
-
-beach:
-  g_object_set (bvw->priv->play, "vis-plugin", vis_bin, NULL);
-  if (vis_bin)
-    gst_object_unref (vis_bin);
-  
-  return;
-}
-
-/**
- * bacon_video_widget_set_show_visualizations:
- * @bvw: a #BaconVideoWidget
- * @show_visualizations: %TRUE to show visualisations, %FALSE otherwise
- *
- * Sets whether to show visualisations when playing audio-only streams.
- **/
-void
-bacon_video_widget_set_show_visualizations (BaconVideoWidget * bvw,
-                                     gboolean show_visualizations)
-{
-  g_return_if_fail (BACON_IS_VIDEO_WIDGET (bvw));
-  g_return_if_fail (GST_IS_ELEMENT (bvw->priv->play));
-
-  if (show_visualizations == bvw->priv->show_vfx)
-    return;
-
-  bvw->priv->show_vfx = show_visualizations;
-  setup_vis (bvw);
-  set_current_actor (bvw);
-}
-
-static gboolean
-filter_features (GstPluginFeature * feature, gpointer data)
-{
-  const gchar *element_type;
-
-  if (!GST_IS_ELEMENT_FACTORY (feature))
-    return FALSE;
-  element_type = gst_element_factory_get_metadata (GST_ELEMENT_FACTORY (feature),
-                                                   GST_ELEMENT_METADATA_KLASS);
-  if (!g_strrstr (element_type, "Visualization"))
-    return FALSE;
-
-  return TRUE;
-}
-
-static GList *
-get_visualization_features (void)
-{
-  return gst_registry_feature_filter (gst_registry_get (),
-      filter_features, FALSE, NULL);
-}
-
-/**
- * bacon_video_widget_get_visualization_list:
- * @bvw: a #BaconVideoWidget
- *
- * Returns a list of the visualisations available when playing audio-only streams.
- *
- * Return value: a #GList of visualisation names; owned by @bvw
- **/
-GList *
-bacon_video_widget_get_visualization_list (BaconVideoWidget * bvw)
-{
-  g_return_val_if_fail (BACON_IS_VIDEO_WIDGET (bvw), NULL);
-  g_return_val_if_fail (GST_IS_ELEMENT (bvw->priv->play), NULL);
-
-  if (bvw->priv->vis_plugins_list)
-    return bvw->priv->vis_plugins_list;
-
-  ensure_vis_plugins_list (bvw);
-  bvw->priv->vis_plugins_list = g_hash_table_get_keys (bvw->priv->vis_plugins_ht);
-
-  return bvw->priv->vis_plugins_list;
-}
-
-/**
- * bacon_video_widget_set_visualization:
- * @bvw: a #BaconVideoWidget
- * @name: the visualisation's name, or %NULL
- *
- * Sets the visualisation to display when playing audio-only streams.
- *
- * If @name is %NULL, visualisations will be disabled. Otherwise, @name
- * should be from the list returned by bacon_video_widget_get_visualization_list().
- **/
-void
-bacon_video_widget_set_visualization (BaconVideoWidget * bvw, const char *name)
-{
-  g_return_if_fail (BACON_IS_VIDEO_WIDGET (bvw));
-  g_return_if_fail (GST_IS_ELEMENT (bvw->priv->play));
-
-  if (bvw->priv->vis_element_name) {
-    if (strcmp (bvw->priv->vis_element_name, name) == 0) {
-      return;
-    }
-    else {
-      g_free (bvw->priv->vis_element_name);
-    }
-  }
-
-  bvw->priv->vis_element_name = g_strdup (name);
-
-  GST_DEBUG ("new visualisation element name = '%s'", GST_STR_NULL (name));
-
-  setup_vis (bvw);
-}
-
-/**
- * bacon_video_widget_set_visualization_quality:
- * @bvw: a #BaconVideoWidget
- * @quality: the visualisation quality
- *
- * Sets the quality/size of displayed visualisations.
- **/
-void
-bacon_video_widget_set_visualization_quality (BaconVideoWidget * bvw,
-                                        BvwVisualizationQuality quality)
-{
-  g_return_if_fail (BACON_IS_VIDEO_WIDGET (bvw));
-  g_return_if_fail (GST_IS_ELEMENT (bvw->priv->play));
-
-  if (bvw->priv->visq == quality)
-    return;
-
-  bvw->priv->visq = quality;
-  
-  setup_vis (bvw);
-
-  g_object_notify (G_OBJECT (bvw), "visualization-quality");
-}
-
 /**
  * bacon_video_widget_get_auto_resize:
  * @bvw: a #BaconVideoWidget
@@ -4806,11 +4417,7 @@ bacon_video_widget_set_scale_ratio (BaconVideoWidget * bvw, gfloat ratio)
 
   GST_DEBUG ("ratio = %.2f", ratio);
 
-  if (!bvw->priv->media_has_video && bvw->priv->show_vfx) {
-    get_visualization_size (bvw, &w, &h, NULL, NULL);
-  } else {
-    get_media_size (bvw, &w, &h);
-  }
+  get_media_size (bvw, &w, &h);
 
   if (ratio == 0.0) {
     if (xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, 2.0))
@@ -5760,8 +5367,7 @@ bacon_video_widget_get_metadata (BaconVideoWidget * bvw,
  * Determines whether individual frames from the current stream can
  * be returned using bacon_video_widget_get_current_frame().
  *
- * Frames cannot be returned for audio-only streams, unless visualisations
- * are enabled.
+ * Frames cannot be returned for audio-only streams.
  *
  * Return value: %TRUE if frames can be captured, %FALSE otherwise
  **/
@@ -5772,7 +5378,7 @@ bacon_video_widget_can_get_frames (BaconVideoWidget * bvw, GError ** error)
   g_return_val_if_fail (GST_IS_ELEMENT (bvw->priv->play), FALSE);
 
   /* check for video */
-  if (!bvw->priv->media_has_video && !bvw->priv->show_vfx) {
+  if (!bvw->priv->media_has_video) {
     g_set_error_literal (error, BVW_ERROR, BVW_ERROR_CANNOT_CAPTURE,
         _("Media contains no supported video streams."));
     return FALSE;
@@ -5987,10 +5593,6 @@ bacon_video_widget_initable_init (GInitable     *initable,
                         bvw);
 
   bvw->priv->speakersetup = BVW_AUDIO_SOUND_STEREO;
-  bvw->priv->visq = BVW_VISUALIZATION_SMALL;
-  bvw->priv->show_vfx = FALSE;
-  bvw->priv->vis_plugins_list = NULL;
-  bvw->priv->vis_element_name = g_strdup ("goom");
   bvw->priv->ratio_type = BVW_RATIO_AUTO;
 
   bvw->priv->cursor_shown = TRUE;

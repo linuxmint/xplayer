@@ -4438,8 +4438,6 @@ video_widget_create (XplayerObject *xplayer)
 	gtk_widget_realize (GTK_WIDGET (xplayer->bvw));
 	gtk_widget_show (GTK_WIDGET (xplayer->bvw));
 
-	xplayer_preferences_visuals_setup (xplayer);
-
 	g_signal_connect (G_OBJECT (xplayer->bvw), "notify::volume",
 			G_CALLBACK (property_notify_cb_volume), xplayer);
 	g_signal_connect (G_OBJECT (xplayer->bvw), "notify::seekable",

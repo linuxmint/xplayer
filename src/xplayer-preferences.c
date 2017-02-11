@@ -48,41 +48,10 @@
 #define POBJ(x) gtk_builder_get_object (xplayer->prefs_xml, x)
 
 /* Callback functions for GtkBuilder */
-G_MODULE_EXPORT void checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer);
 G_MODULE_EXPORT void audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer);
-G_MODULE_EXPORT void visual_menu_changed (GtkComboBox *combobox, Xplayer *xplayer);
 G_MODULE_EXPORT void tpw_color_reset_clicked_cb (GtkButton *button, Xplayer *xplayer);
 G_MODULE_EXPORT void font_set_cb (GtkFontButton * fb, Xplayer * xplayer);
 G_MODULE_EXPORT void encoding_set_cb (GtkComboBox *cb, Xplayer *xplayer);
-
-static void
-xplayer_prefs_set_show_visuals (Xplayer *xplayer, gboolean value)
-{
-	GtkWidget *item;
-
-	g_settings_set_boolean (xplayer->settings, "show-visualizations", value);
-
-	item = PWID ("tpw_visuals_type_label");
-	gtk_widget_set_sensitive (item, value);
-	item = PWID ("tpw_visuals_type_combobox");
-	gtk_widget_set_sensitive (item, value);
-	item = PWID ("tpw_visuals_size_label");
-	gtk_widget_set_sensitive (item, value);
-	item = PWID ("tpw_visuals_size_combobox");
-	gtk_widget_set_sensitive (item, value);
-
-	bacon_video_widget_set_show_visualizations
-		(BACON_VIDEO_WIDGET (xplayer->bvw), value);
-}
-
-void
-checkbutton2_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer)
-{
-	gboolean value;
-
-	value = gtk_toggle_button_get_active (togglebutton);
-	xplayer_prefs_set_show_visuals (xplayer, value);
-}
 
 void
 audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xplayer)
@@ -91,21 +60,6 @@ audio_screensaver_button_toggled_cb (GtkToggleButton *togglebutton, Xplayer *xpl
 
 	value = gtk_toggle_button_get_active (togglebutton);
 	g_settings_set_boolean (xplayer->settings, "lock-screensaver-on-audio", value);
-}
-
-static void
-show_vfx_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
-{
-	GObject *item;
-
-	item = POBJ ("tpw_visuals_checkbutton");
-	g_signal_handlers_disconnect_by_func (item,
-			checkbutton2_toggled_cb, xplayer);
-
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (item), g_settings_get_boolean (xplayer->settings, "show-visualizations"));
-
-	g_signal_connect (item, "toggled",
-			G_CALLBACK (checkbutton2_toggled_cb), xplayer);
 }
 
 static void
@@ -134,21 +88,6 @@ lock_screensaver_on_audio_changed_cb (GSettings *settings, const gchar *key, Xpl
 
 	g_signal_connect (item, "toggled",
 			  G_CALLBACK (audio_screensaver_button_toggled_cb), xplayer);
-}
-
-void
-visual_menu_changed (GtkComboBox *combobox, Xplayer *xplayer)
-{
-	GList *list;
-	const gchar *name;
-	int i;
-
-	i = gtk_combo_box_get_active (combobox);
-	list = bacon_video_widget_get_visualization_list (xplayer->bvw);
-	name = g_list_nth_data (list, i);
-
-	g_settings_set_string (xplayer->settings, "visualization-name", name);
-	bacon_video_widget_set_visualization (xplayer->bvw, name);
 }
 
 void
@@ -249,21 +188,6 @@ int_enum_set_mapping (const GValue *value, const GVariantType *expected_type, GE
 }
 
 static void
-visualization_quality_writable_changed_cb (GSettings *settings, const gchar *key, XplayerObject *xplayer)
-{
-	gboolean writable, show_visualizations;
-
-	if (strcmp (key, "visualization-quality") != 0)
-		return;
-
-	writable = g_settings_is_writable (settings, key);
-	show_visualizations = g_settings_get_boolean (settings, "show-visualizations");
-
-	/* Only enable the size combobox if the visualization-quality setting is writable, and visualizations are enabled */
-	gtk_widget_set_sensitive (PWID ("tpw_visuals_size_combobox"), writable && show_visualizations);
-}
-
-static void
 prefer_dark_theme_changed_cb (GSettings *settings,
 							  const gchar *key,
 							  XplayerObject *xplayer) {
@@ -284,10 +208,9 @@ void
 xplayer_setup_preferences (Xplayer *xplayer)
 {
 	GtkWidget *menu, *content_area, *bvw;
-	gboolean show_visuals, lock_screensaver_on_audio;
+	gboolean lock_screensaver_on_audio;
 	guint i, hidden;
-	char *visual, *font, *encoding;
-	GList *list, *l;
+	char *font, *encoding;
 	GtkWidget *widget;
 	GObject *item;
 
@@ -362,18 +285,6 @@ xplayer_setup_preferences (Xplayer *xplayer)
 	g_settings_bind (xplayer->settings, "prefer-dark-theme", item, "active", G_SETTINGS_BIND_DEFAULT);
 	g_signal_connect(xplayer->settings, "changed::prefer-dark-theme", (GCallback) prefer_dark_theme_changed_cb, xplayer);
 
-	/* Enable visuals */
-	item = POBJ ("tpw_visuals_checkbutton");
-	show_visuals = g_settings_get_boolean (xplayer->settings, "show-visualizations");
-
-	g_signal_handlers_disconnect_by_func (item, checkbutton2_toggled_cb, xplayer);
-	gtk_toggle_button_set_active
-		(GTK_TOGGLE_BUTTON (item), show_visuals);
-	xplayer_prefs_set_show_visuals (xplayer, show_visuals);
-	g_signal_connect (item, "toggled", G_CALLBACK (checkbutton2_toggled_cb), xplayer);
-
-	g_signal_connect (xplayer->settings, "changed::show-visualizations", (GCallback) show_vfx_changed_cb, xplayer);
-
 	/* Auto-load subtitles */
 	item = POBJ ("tpw_auto_subtitles_checkbutton");
 	g_settings_bind (xplayer->settings, "autoload-subtitles", item, "active", G_SETTINGS_BIND_DEFAULT);
@@ -385,50 +296,6 @@ xplayer_setup_preferences (Xplayer *xplayer)
 	/* Auto-load external chapters */
 	item = POBJ ("tpw_auto_chapters_checkbutton");
 	g_settings_bind (xplayer->settings, "autoload-chapters", item, "active", G_SETTINGS_BIND_DEFAULT);
-
-	/* Visuals list */
-	list = bacon_video_widget_get_visualization_list (xplayer->bvw);
-	menu = gtk_menu_new ();
-	gtk_widget_show (menu);
-
-	visual = g_settings_get_string (xplayer->settings, "visualization-name");
-	if (*visual == '\0') {
-		g_free (visual);
-		visual = g_strdup ("goom");
-	}
-
-	item = POBJ ("tpw_visuals_type_liststore");
-
-	i = 0;
-	for (l = list; l != NULL; l = l->next) {
-		const char *name = l->data;
-		GtkTreeIter iter;
-
-		gtk_list_store_append (GTK_LIST_STORE (item), &iter);
-		gtk_list_store_set (GTK_LIST_STORE (item), &iter,
-				    0, name, -1);
-
-		if (strcmp (name, visual) == 0) {
-			GObject *combobox;
-
-			combobox = POBJ ("tpw_visuals_type_combobox");
-			gtk_combo_box_set_active (GTK_COMBO_BOX (combobox), i);
-		}
-
-		i++;
-	}
-	g_free (visual);
-
-	/* Visualisation quality. We have to bind the writability separately, as the sensitivity of the size combobox is also affected by whether
-	 * visualizations are enabled. */
-	item = POBJ ("tpw_visuals_size_combobox");
-	g_settings_bind (xplayer->settings, "visualization-quality", bvw, "visualization-quality",
-	                 G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY);
-	g_settings_bind_with_mapping (xplayer->settings, "visualization-quality", item, "active",
-	                              G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_NO_SENSITIVITY,
-	                              (GSettingsBindGetMapping) int_enum_get_mapping, (GSettingsBindSetMapping) int_enum_set_mapping,
-	                              g_type_class_ref (BVW_TYPE_VISUALIZATION_QUALITY), (GDestroyNotify) g_type_class_unref);
-	g_signal_connect (xplayer->settings, "writable-changed::visualization-quality", (GCallback) visualization_quality_writable_changed_cb, xplayer);
 
 	/* Brightness and all */
 	hidden = 0;
@@ -498,19 +365,4 @@ xplayer_setup_preferences (Xplayer *xplayer)
 	g_signal_connect (xplayer->settings, "changed::disable-keyboard-shortcuts", (GCallback) disable_kbd_shortcuts_changed_cb, xplayer);
 
 	g_object_unref (bvw);
-}
-
-void
-xplayer_preferences_visuals_setup (Xplayer *xplayer)
-{
-	char *visual;
-
-	visual = g_settings_get_string (xplayer->settings, "visualization-name");
-	if (*visual == '\0') {
-		g_free (visual);
-		visual = g_strdup ("goom");
-	}
-
-	bacon_video_widget_set_visualization (xplayer->bvw, visual);
-	g_free (visual);
 }

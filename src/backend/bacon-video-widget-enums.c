@@ -68,22 +68,6 @@ bvw_metadata_type_get_type (void)
   return etype;
 }
 GType
-bvw_visualization_quality_get_type (void)
-{
-  static GType etype = 0;
-  if (etype == 0) {
-    static const GEnumValue values[] = {
-      { BVW_VISUALIZATION_SMALL, "BVW_VISUALIZATION_SMALL", "small" },
-      { BVW_VISUALIZATION_NORMAL, "BVW_VISUALIZATION_NORMAL", "normal" },
-      { BVW_VISUALIZATION_LARGE, "BVW_VISUALIZATION_LARGE", "large" },
-      { BVW_VISUALIZATION_EXTRA_LARGE, "BVW_VISUALIZATION_EXTRA_LARGE", "extra-large" },
-      { 0, NULL, NULL }
-    };
-    etype = g_enum_register_static ("BvwVisualizationQuality", values);
-  }
-  return etype;
-}
-GType
 bvw_video_property_get_type (void)
 {
   static GType etype = 0;

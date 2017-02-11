@@ -32,7 +32,6 @@
 G_BEGIN_DECLS
 
 void xplayer_setup_preferences (Xplayer *xplayer);
-void xplayer_preferences_visuals_setup (Xplayer *xplayer);
 
 G_END_DECLS
 

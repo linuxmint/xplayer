@@ -6,15 +6,6 @@
 			<_summary>Allow the screensaver to activate when playing audio</_summary>
 			<_description>Allow the screensaver to activate when playing audio. Disable if you have monitor-powered speakers.</_description>
 		</key>
-		<key name="show-visualizations" type="b">
-			<default>false</default>
-			<_summary>Show visual effects when no video is displayed</_summary>
-			<_description>Show visual effects when playing an audio only file.</_description>
-		</key>
-		<key name="visualization-name" type="s">
-			<default>'goom'</default>
-			<_summary>Name of the visual effects plugin</_summary>
-		</key>
 		<key name="brightness" type="i">
 			<default>32767</default>
 			<_summary>The brightness of the video</_summary>
@@ -54,11 +45,6 @@
 		<key name="audio-output-type" enum="org.x.player.BvwAudioOutputType">
 			<default>'stereo'</default>
 			<_summary>Type of audio output to use</_summary>
-		</key>
-		<key name="visualization-quality" enum="org.x.player.BvwVisualizationQuality">
-			<default>'small'</default>
-			<_summary>Visualization quality setting</_summary>
-			<_description>Quality setting for the audio visualization.</_description>
 		</key>
 		<key name="network-buffer-threshold" type="d">
 			<default>2</default>
