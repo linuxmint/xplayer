@@ -55,6 +55,13 @@
             </object>
             <accelerator key="space" modifiers="GDK_CONTROL_MASK"/>
          </child>
+        <child>
+         <object class="GtkAction" id="stop">
+               <property name="label" translatable="yes">Stop</property>
+               <property name="tooltip" translatable="yes">Stops the movie</property>
+               <signal name="activate" handler="stop_action_callback"/>
+            </object>
+         </child>
          <child>
             <object class="GtkAction" id="quit">
                <property name="label" translatable="yes">_Quit</property>
@@ -406,6 +413,7 @@
             <menuitem name="eject" action="eject"/>
             <separator/>
             <menuitem name="play" action="play"/>
+            <menuitem name="stop" action="stop"/>
             <separator/>
             <menuitem name="quit" action="quit"/>
          </menu>
@@ -474,6 +482,7 @@
       </menubar>
       <popup name="xplayer-main-popup">
          <menuitem name="play" action="play"/>
+         <menuitem name="stop" action="stop"/>
          <menuitem name="next-chapter" action="next-chapter"/>
          <menuitem name="previous-chapter" action="previous-chapter"/>
          <menuitem name="skip-forward" action="skip-forward"/>

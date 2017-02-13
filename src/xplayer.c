@@ -103,6 +103,7 @@ app_init (Xplayer *xplayer, char **argv)
 		xplayer_action_exit (NULL);
 
 	set_rtl_icon_name (xplayer, "play", "media-playback-start");
+	set_rtl_icon_name (xplayer, "stop", "media-playback-stop");
 	set_rtl_icon_name (xplayer, "next-chapter", "media-skip-forward");
 	set_rtl_icon_name (xplayer, "previous-chapter", "media-skip-backward");
 	set_rtl_icon_name (xplayer, "skip-forward", "media-seek-forward");
