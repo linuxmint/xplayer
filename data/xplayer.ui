@@ -286,7 +286,7 @@
                <property name="label" translatable="yes">S_idebar</property>
                <property name="tooltip" translatable="yes">Show or hide the sidebar</property>
 	       <property name="active">TRUE</property>
-	       <property name="icon-name">xplayer-view-sidebar-symbolic</property>
+	       <property name="icon-name">open-menu-symbolic</property>
                <signal name="activate" handler="show_sidebar_action_callback"/>
             </object>
             <accelerator key="F9"/>
@@ -612,6 +612,20 @@
 			      </packing>
 		      </child>
 
+          <child>
+            <object class="GtkHBox" id="tmw_fullscreen_button_hbox">
+              <property name="visible">True</property>
+              <property name="homogeneous">False</property>
+              <property name="spacing">0</property>
+            </object>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+              <property name="pack_type">GTK_PACK_END</property>
+            </packing>
+          </child>
+
 		      <child>
 			      <object class="GtkVolumeButton" id="tmw_volume_button">
       			  <property name="visible">True</property>
@@ -729,7 +743,7 @@
 
       <child>
 	<object class="XplayerStatusbar" id="tmw_statusbar">
-	  <property name="visible">True</property>
+	  <property name="visible">False</property>
 	</object>
 	<packing>
 	  <property name="padding">0</property>

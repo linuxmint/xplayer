@@ -4200,40 +4200,52 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_buttons_hbox"));
 
 	/* Previous */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"previous-chapter");
-	item = gtk_action_create_tool_item (action);
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
-					_("Previous Chapter/Movie"));
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Previous Chapter/Movie"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
+    gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Previous Chapter/Movie"));
+	atk_object_set_name (gtk_widget_get_accessible (item),	_("Previous Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Play/Pause */
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
 	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
-	item = gtk_action_create_tool_item (action);
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Play / Pause"));
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item),
- 					_("Play / Pause"));
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Play / Pause"));
+	atk_object_set_name (gtk_widget_get_accessible (item), _("Play / Pause"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Next */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"next-chapter");
-	item = gtk_action_create_tool_item (action);
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
-					_("Next Chapter/Movie"));
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Next Chapter/Movie"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "next-chapter");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Next Chapter/Movie"));
+	atk_object_set_name (gtk_widget_get_accessible (item), _("Next Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Fullscreen button */
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_fullscreen_button_hbox"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
 	action = gtk_action_group_get_action (xplayer->main_action_group, "fullscreen");
-	item = gtk_action_create_tool_item (action);
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
 	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window. */
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), _("Fullscreen"));
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Fullscreen"));
 	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window. */
 	atk_object_set_name (gtk_widget_get_accessible (item), _("Fullscreen"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
@@ -4242,18 +4254,11 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_sidebar_button_hbox"));
 	action = gtk_action_group_get_action (xplayer->main_action_group, "sidebar");
 	item = gtk_toggle_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
-
-	/* Remove the label */
-	label = gtk_bin_get_child (GTK_BIN (item));
-	gtk_widget_destroy (label);
-
-	/* Force add an icon, so it doesn't follow the
-	 * gtk-button-images setting */
-	icon = g_themed_icon_new_with_default_fallbacks ("xplayer-view-sidebar-symbolic");
-	image = gtk_image_new_from_gicon (icon, GTK_ICON_SIZE_BUTTON);
-	gtk_widget_show (image);
-	gtk_container_add (GTK_CONTAINER (item), image);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "drag_data_received",
 			G_CALLBACK (drop_playlist_cb), xplayer);
