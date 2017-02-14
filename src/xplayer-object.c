@@ -4228,13 +4228,9 @@ xplayer_callback_connect (XplayerObject *xplayer)
 			_("Next Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
-	/* Separator */
-	item = GTK_WIDGET(gtk_separator_tool_item_new ());
-	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
-
 	/* Fullscreen button */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"fullscreen");
+	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_fullscreen_button_hbox"));
+	action = gtk_action_group_get_action (xplayer->main_action_group, "fullscreen");
 	item = gtk_action_create_tool_item (action);
 	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window. */
 	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), _("Fullscreen"));
