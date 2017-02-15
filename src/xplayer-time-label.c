@@ -18,11 +18,19 @@ static void
 xplayer_time_label_init (XplayerTimeLabel *label)
 {
 	char *time_string;
+	char *length_string;
+	char *label_string;
 	label->priv = G_TYPE_INSTANCE_GET_PRIVATE (label, XPLAYER_TYPE_TIME_LABEL, XplayerTimeLabelPrivate);
 
 	time_string = xplayer_time_to_string (0);
-	gtk_label_set_text (GTK_LABEL (label), time_string);
+	length_string = xplayer_time_to_string (0);
+	label_string = g_strdup_printf (_("%s / %s"), time_string, length_string);
+
+	gtk_label_set_text (GTK_LABEL (label), label_string);
+
 	g_free (time_string);
+	g_free (length_string);
+	g_free (label_string);
 
 	label->priv->time = 0;
 	label->priv->length = -1;
@@ -44,37 +52,40 @@ xplayer_time_label_class_init (XplayerTimeLabelClass *klass)
 void
 xplayer_time_label_set_time (XplayerTimeLabel *label, gint64 _time, gint64 length)
 {
-	char *label_str;
-
 	g_return_if_fail (XPLAYER_IS_TIME_LABEL (label));
 
-	if (_time / 1000 == label->priv->time / 1000 &&
-	    length / 1000 == label->priv->length / 1000)
+	if ((_time / 1000 == label->priv->time / 1000) && (length / 1000 == label->priv->length / 1000))
+    {
 		return;
-
-	if (length <= 0) {
-		label_str = xplayer_time_to_string (_time);
-	} else {
-		char *time_str, *length_str;
+    }
+    else
+    {
+        char *label_str;
+		char *time_str;
+        char *length_str;
 
 		time_str = xplayer_time_to_string (_time);
 		length_str = xplayer_time_to_string (length);
-		if (label->priv->seeking == FALSE) {
+		if (label->priv->seeking == FALSE)
+        {
 			/* Elapsed / Total Length */
 			label_str = g_strdup_printf (_("%s / %s"), time_str, length_str);
-		} else {
+		}
+        else
+        {
 			/* Seeking to Time / Total Length */
 			label_str = g_strdup_printf (_("Seek to %s / %s"), time_str, length_str);
 		}
+
+        gtk_label_set_text (GTK_LABEL (label), label_str);
+
+        g_free (label_str);
 		g_free (time_str);
 		g_free (length_str);
+
+        label->priv->time = _time;
+        label->priv->length = length;
 	}
-
-	gtk_label_set_text (GTK_LABEL (label), label_str);
-	g_free (label_str);
-
-	label->priv->time = _time;
-	label->priv->length = length;
 }
 
 void

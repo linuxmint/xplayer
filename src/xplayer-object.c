@@ -56,7 +56,6 @@
 #include "xplayer-playlist.h"
 #include "bacon-video-widget.h"
 #include "xplayer-statusbar.h"
-#include "xplayer-time-label.h"
 #include "xplayer-time-helpers.h"
 #include "xplayer-sidebar.h"
 #include "xplayer-menu.h"
@@ -2734,6 +2733,8 @@ update_current_time (BaconVideoWidget *bvw,
 		xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 current_time, stream_length);
+
+        xplayer_time_label_set_time (XPLAYER_TIME_LABEL (xplayer->time_label), current_time, stream_length);
 	}
 
 	if (xplayer->stream_length != stream_length) {
@@ -2816,6 +2817,8 @@ seek_slider_changed_cb (GtkAdjustment *adj, XplayerObject *xplayer)
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 (int) (pos * _time), _time);
 
+    xplayer_time_label_set_time (XPLAYER_TIME_LABEL (xplayer->time_label), (int) (pos * _time), _time);
+
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) != FALSE)
 		xplayer_action_seek (xplayer, pos);
 }
@@ -2841,8 +2844,7 @@ seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject
 		xplayer_action_seek (xplayer, val / 65535.0);
 
 	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
-	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label),
-			FALSE);
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 	return FALSE;
 }
 
@@ -4234,6 +4236,9 @@ xplayer_callback_connect (XplayerObject *xplayer)
     gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Next Chapter/Movie"));
 	atk_object_set_name (gtk_widget_get_accessible (item), _("Next Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
+
+    /* Time label */
+    xplayer->time_label = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_time_display_label"));
 
 	/* Fullscreen button */
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_fullscreen_button_hbox"));
