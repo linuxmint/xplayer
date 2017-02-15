@@ -55,7 +55,6 @@
 #include "xplayer-plugins-engine.h"
 #include "xplayer-playlist.h"
 #include "bacon-video-widget.h"
-#include "xplayer-statusbar.h"
 #include "xplayer-time-helpers.h"
 #include "xplayer-sidebar.h"
 #include "xplayer-menu.h"
@@ -974,7 +973,6 @@ reset_seek_status (XplayerObject *xplayer)
 	 * avoid being "stuck" seeking on errors */
 
 	if (xplayer->seek_lock != FALSE) {
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		xplayer->seek_lock = FALSE;
 		bacon_video_widget_seek (xplayer->bvw, 0, NULL);
@@ -1167,24 +1165,16 @@ play_pause_set_label (XplayerObject *xplayer, XplayerStates state)
 	switch (state)
 	{
 	case STATE_PLAYING:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Playing"));
 		id = "media-playback-pause-symbolic";
 		tip = N_("Pause");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PLAYING);
 		break;
 	case STATE_PAUSED:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Paused"));
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
 		tip = N_("Play");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PAUSED);
 		break;
 	case STATE_STOPPED:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Stopped"));
-		xplayer_statusbar_set_time_and_length
-			(XPLAYER_STATUSBAR (xplayer->statusbar), 0, 0);
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_NONE);
 		tip = N_("Play");
@@ -1772,11 +1762,6 @@ update_mrl_label (XplayerObject *xplayer, const char *name)
 		/* Title */
 		gtk_window_set_title (GTK_WINDOW (xplayer->win), name);
 	} else {
-		xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR
-				(xplayer->statusbar), 0, 0);
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Stopped"));
-
 		g_object_notify (G_OBJECT (xplayer), "stream-length");
 
 		/* Update the mrl label */
@@ -2040,7 +2025,6 @@ xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, 
 	if (bacon_video_widget_is_seekable (xplayer->bvw) == FALSE)
 		return;
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
 	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 
 	if (relative != FALSE) {
@@ -2053,7 +2037,6 @@ xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, 
 
 	bacon_video_widget_seek_time (xplayer->bvw, sec, accurate, &err);
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 
 	if (err != NULL)
@@ -2612,12 +2595,6 @@ on_error_event (BaconVideoWidget *bvw, char *message,
 }
 
 static void
-on_buffering_event (BaconVideoWidget *bvw, gdouble percentage, XplayerObject *xplayer)
-{
-	xplayer_statusbar_push (XPLAYER_STATUSBAR (xplayer->statusbar), percentage);
-}
-
-static void
 on_download_buffering_event (BaconVideoWidget *bvw, gdouble level, XplayerObject *xplayer)
 {
 	update_fill (xplayer, level);
@@ -2718,18 +2695,6 @@ update_current_time (BaconVideoWidget *bvw,
 		gtk_adjustment_set_value (xplayer->seekadj,
 					  current_position * 65535);
 
-		if (stream_length == 0 && xplayer->mrl != NULL)
-		{
-			xplayer_statusbar_set_time_and_length
-				(XPLAYER_STATUSBAR (xplayer->statusbar),
-				(int) (current_time / 1000), -1);
-		} else {
-			xplayer_statusbar_set_time_and_length
-				(XPLAYER_STATUSBAR (xplayer->statusbar),
-				(int) (current_time / 1000),
-				(int) (stream_length / 1000));
-		}
-
 		xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 current_time, stream_length);
@@ -2793,7 +2758,6 @@ seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject 
 
 	xplayer->seek_lock = TRUE;
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE) {
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 	}
 
@@ -2811,8 +2775,6 @@ seek_slider_changed_cb (GtkAdjustment *adj, XplayerObject *xplayer)
 
 	pos = gtk_adjustment_get_value (adj) / 65535;
 	_time = bacon_video_widget_get_stream_length (xplayer->bvw);
-	xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR (xplayer->statusbar),
-			(int) (pos * _time / 1000), _time / 1000);
 	xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 (int) (pos * _time), _time);
@@ -2843,7 +2805,6 @@ seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE)
 		xplayer_action_seek (xplayer, val / 65535.0);
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 	return FALSE;
 }
@@ -2952,7 +2913,7 @@ void
 show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 {
 	GtkAction *action;
-	GtkWidget *menubar, *controlbar, *statusbar, *bvw_box, *widget;
+	GtkWidget *menubar, *controlbar, *bvw_box, *widget;
 	GtkAllocation allocation;
 	int width = 0, height = 0;
 
@@ -2961,7 +2922,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 
 	menubar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_menubar_box"));
 	controlbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
-	statusbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_statusbar"));
 	bvw_box = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_bvw_box"));
 	widget = GTK_WIDGET (xplayer->bvw);
 
@@ -2978,7 +2938,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		gtk_widget_set_sensitive (menubar, TRUE);
 		gtk_widget_show (menubar);
 		gtk_widget_show (controlbar);
-		gtk_widget_show (statusbar);
 		if (xplayer_sidebar_is_visible (xplayer) != FALSE) {
 			/* This is uglier then you might expect because of the
 			   resize handle between the video and sidebar. There
@@ -3008,14 +2967,11 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		if (was_fullscreen == FALSE) {
 			GtkAllocation allocation_menubar;
 			GtkAllocation allocation_controlbar;
-			GtkAllocation allocation_statusbar;
 
 			gtk_widget_get_allocation (menubar, &allocation_menubar);
 			gtk_widget_get_allocation (controlbar, &allocation_controlbar);
-			gtk_widget_get_allocation (statusbar, &allocation_statusbar);
 			height += allocation_menubar.height
-				+ allocation_controlbar.height
-				+ allocation_statusbar.height;
+				+ allocation_controlbar.height;
 			gtk_window_resize (GTK_WINDOW(xplayer->win),
 					width, height);
 		}
@@ -3030,7 +2986,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		gtk_widget_hide (menubar);
 
 		gtk_widget_hide (controlbar);
-		gtk_widget_hide (statusbar);
 		gtk_widget_hide (xplayer->sidebar);
 
 		 /* We won't show controls in fullscreen */
@@ -3591,7 +3546,6 @@ xplayer_action_handle_key_release (XplayerObject *xplayer, GdkEventKey *event)
 	switch (event->keyval) {
 	case GDK_KEY_Left:
 	case GDK_KEY_Right:
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		break;
 	default:
@@ -4406,10 +4360,6 @@ video_widget_create (XplayerObject *xplayer)
 	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"got-metadata",
 			G_CALLBACK (on_got_metadata_event),
-			xplayer);
-	g_signal_connect (G_OBJECT (xplayer->bvw),
-			"buffering",
-			G_CALLBACK (on_buffering_event),
 			xplayer);
 	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"download-buffering",

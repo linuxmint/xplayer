@@ -78,7 +78,6 @@ struct _XplayerObject {
 	BaconVideoWidget *bvw;
 	GtkWidget *prefs;
 	GtkBuilder *prefs_xml;
-	GtkWidget *statusbar;
 
 	/* UI manager */
 	GtkActionGroup *main_action_group;

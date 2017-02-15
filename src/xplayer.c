@@ -123,7 +123,6 @@ app_init (Xplayer *xplayer, char **argv)
 	xplayer->seek = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_seek_hscale"));
 	xplayer->seekadj = gtk_range_get_adjustment (GTK_RANGE (xplayer->seek));
 	xplayer->volume = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_volume_button"));
-	xplayer->statusbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_statusbar"));
 	xplayer->seek_lock = FALSE;
 	xplayer->fs = xplayer_fullscreen_new (GTK_WINDOW (xplayer->win));
 	gtk_scale_button_set_adjustment (GTK_SCALE_BUTTON (xplayer->fs->volume),

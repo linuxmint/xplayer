@@ -34,8 +34,6 @@ header_DATA = $(INST_H_FILES)
 # Xplayer UI ltlibrary (used by browser plugins)
 libxplayer_player_la_SOURCES = \
 	$(INST_H_FILES)		\
-	xplayer-statusbar.c	\
-	xplayer-statusbar.h	\
 	xplayer-interface.c	\
 	xplayer-fullscreen.c	\
 	xplayer-fullscreen.h	\
