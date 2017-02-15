@@ -164,6 +164,7 @@ void       xplayer_playlist_set_at_end (XplayerPlaylist *playlist);
 int        xplayer_playlist_get_current (XplayerPlaylist *playlist);
 int        xplayer_playlist_get_last (XplayerPlaylist *playlist);
 void       xplayer_playlist_set_current (XplayerPlaylist *playlist, guint current_index);
+GtkWidget *xplayer_playlist_get_toolbar (XplayerPlaylist *playlist);
 
 G_END_DECLS
 

@@ -55,8 +55,6 @@
 #include "xplayer-plugins-engine.h"
 #include "xplayer-playlist.h"
 #include "bacon-video-widget.h"
-#include "xplayer-statusbar.h"
-#include "xplayer-time-label.h"
 #include "xplayer-time-helpers.h"
 #include "xplayer-sidebar.h"
 #include "xplayer-menu.h"
@@ -975,7 +973,6 @@ reset_seek_status (XplayerObject *xplayer)
 	 * avoid being "stuck" seeking on errors */
 
 	if (xplayer->seek_lock != FALSE) {
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		xplayer->seek_lock = FALSE;
 		bacon_video_widget_seek (xplayer->bvw, 0, NULL);
@@ -1168,24 +1165,16 @@ play_pause_set_label (XplayerObject *xplayer, XplayerStates state)
 	switch (state)
 	{
 	case STATE_PLAYING:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Playing"));
 		id = "media-playback-pause-symbolic";
 		tip = N_("Pause");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PLAYING);
 		break;
 	case STATE_PAUSED:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Paused"));
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
 		tip = N_("Play");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_PAUSED);
 		break;
 	case STATE_STOPPED:
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Stopped"));
-		xplayer_statusbar_set_time_and_length
-			(XPLAYER_STATUSBAR (xplayer->statusbar), 0, 0);
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
 		xplayer_playlist_set_playing (xplayer->playlist, XPLAYER_PLAYLIST_STATUS_NONE);
 		tip = N_("Play");
@@ -1773,11 +1762,6 @@ update_mrl_label (XplayerObject *xplayer, const char *name)
 		/* Title */
 		gtk_window_set_title (GTK_WINDOW (xplayer->win), name);
 	} else {
-		xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR
-				(xplayer->statusbar), 0, 0);
-		xplayer_statusbar_set_text (XPLAYER_STATUSBAR (xplayer->statusbar),
-				_("Stopped"));
-
 		g_object_notify (G_OBJECT (xplayer), "stream-length");
 
 		/* Update the mrl label */
@@ -2041,7 +2025,6 @@ xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, 
 	if (bacon_video_widget_is_seekable (xplayer->bvw) == FALSE)
 		return;
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
 	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 
 	if (relative != FALSE) {
@@ -2054,7 +2037,6 @@ xplayer_seek_time_rel (XplayerObject *xplayer, gint64 _time, gboolean relative, 
 
 	bacon_video_widget_seek_time (xplayer->bvw, sec, accurate, &err);
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 
 	if (err != NULL)
@@ -2613,12 +2595,6 @@ on_error_event (BaconVideoWidget *bvw, char *message,
 }
 
 static void
-on_buffering_event (BaconVideoWidget *bvw, gdouble percentage, XplayerObject *xplayer)
-{
-	xplayer_statusbar_push (XPLAYER_STATUSBAR (xplayer->statusbar), percentage);
-}
-
-static void
 on_download_buffering_event (BaconVideoWidget *bvw, gdouble level, XplayerObject *xplayer)
 {
 	update_fill (xplayer, level);
@@ -2719,21 +2695,11 @@ update_current_time (BaconVideoWidget *bvw,
 		gtk_adjustment_set_value (xplayer->seekadj,
 					  current_position * 65535);
 
-		if (stream_length == 0 && xplayer->mrl != NULL)
-		{
-			xplayer_statusbar_set_time_and_length
-				(XPLAYER_STATUSBAR (xplayer->statusbar),
-				(int) (current_time / 1000), -1);
-		} else {
-			xplayer_statusbar_set_time_and_length
-				(XPLAYER_STATUSBAR (xplayer->statusbar),
-				(int) (current_time / 1000),
-				(int) (stream_length / 1000));
-		}
-
 		xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 current_time, stream_length);
+
+        xplayer_time_label_set_time (XPLAYER_TIME_LABEL (xplayer->time_label), current_time, stream_length);
 	}
 
 	if (xplayer->stream_length != stream_length) {
@@ -2792,7 +2758,6 @@ seek_slider_pressed_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject 
 
 	xplayer->seek_lock = TRUE;
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE) {
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), TRUE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), TRUE);
 	}
 
@@ -2810,11 +2775,11 @@ seek_slider_changed_cb (GtkAdjustment *adj, XplayerObject *xplayer)
 
 	pos = gtk_adjustment_get_value (adj) / 65535;
 	_time = bacon_video_widget_get_stream_length (xplayer->bvw);
-	xplayer_statusbar_set_time_and_length (XPLAYER_STATUSBAR (xplayer->statusbar),
-			(int) (pos * _time / 1000), _time / 1000);
 	xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (xplayer->fs->time_label),
 			 (int) (pos * _time), _time);
+
+    xplayer_time_label_set_time (XPLAYER_TIME_LABEL (xplayer->time_label), (int) (pos * _time), _time);
 
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) != FALSE)
 		xplayer_action_seek (xplayer, pos);
@@ -2840,9 +2805,7 @@ seek_slider_released_cb (GtkWidget *widget, GdkEventButton *event, XplayerObject
 	if (bacon_video_widget_can_direct_seek (xplayer->bvw) == FALSE)
 		xplayer_action_seek (xplayer, val / 65535.0);
 
-	xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
-	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label),
-			FALSE);
+	xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 	return FALSE;
 }
 
@@ -2950,7 +2913,7 @@ void
 show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 {
 	GtkAction *action;
-	GtkWidget *menubar, *controlbar, *statusbar, *bvw_box, *widget;
+	GtkWidget *menubar, *controlbar, *bvw_box, *widget;
 	GtkAllocation allocation;
 	int width = 0, height = 0;
 
@@ -2959,7 +2922,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 
 	menubar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_menubar_box"));
 	controlbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
-	statusbar = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_statusbar"));
 	bvw_box = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_bvw_box"));
 	widget = GTK_WIDGET (xplayer->bvw);
 
@@ -2976,7 +2938,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		gtk_widget_set_sensitive (menubar, TRUE);
 		gtk_widget_show (menubar);
 		gtk_widget_show (controlbar);
-		gtk_widget_show (statusbar);
 		if (xplayer_sidebar_is_visible (xplayer) != FALSE) {
 			/* This is uglier then you might expect because of the
 			   resize handle between the video and sidebar. There
@@ -3006,14 +2967,11 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		if (was_fullscreen == FALSE) {
 			GtkAllocation allocation_menubar;
 			GtkAllocation allocation_controlbar;
-			GtkAllocation allocation_statusbar;
 
 			gtk_widget_get_allocation (menubar, &allocation_menubar);
 			gtk_widget_get_allocation (controlbar, &allocation_controlbar);
-			gtk_widget_get_allocation (statusbar, &allocation_statusbar);
 			height += allocation_menubar.height
-				+ allocation_controlbar.height
-				+ allocation_statusbar.height;
+				+ allocation_controlbar.height;
 			gtk_window_resize (GTK_WINDOW(xplayer->win),
 					width, height);
 		}
@@ -3028,7 +2986,6 @@ show_controls (XplayerObject *xplayer, gboolean was_fullscreen)
 		gtk_widget_hide (menubar);
 
 		gtk_widget_hide (controlbar);
-		gtk_widget_hide (statusbar);
 		gtk_widget_hide (xplayer->sidebar);
 
 		 /* We won't show controls in fullscreen */
@@ -3589,7 +3546,6 @@ xplayer_action_handle_key_release (XplayerObject *xplayer, GdkEventKey *event)
 	switch (event->keyval) {
 	case GDK_KEY_Left:
 	case GDK_KEY_Right:
-		xplayer_statusbar_set_seeking (XPLAYER_STATUSBAR (xplayer->statusbar), FALSE);
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		break;
 	default:
@@ -4182,9 +4138,11 @@ xplayer_setup_window (XplayerObject *xplayer)
 void
 xplayer_callback_connect (XplayerObject *xplayer)
 {
-	GtkWidget *item, *image, *label;
-	GIcon *icon;
+	GtkWidget *item, *image;
+    GtkWidget *sidebar_toolbar;
+    GtkWidget *size_box;
 	GtkAction *action;
+    GtkSizeGroup *size_group;
 	GtkActionGroup *action_group;
 	GtkBox *box;
 
@@ -4200,44 +4158,55 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_buttons_hbox"));
 
 	/* Previous */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"previous-chapter");
-	item = gtk_action_create_tool_item (action);
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
-					_("Previous Chapter/Movie"));
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Previous Chapter/Movie"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
+    gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Previous Chapter/Movie"));
+	atk_object_set_name (gtk_widget_get_accessible (item),	_("Previous Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Play/Pause */
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
 	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
-	item = gtk_action_create_tool_item (action);
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Play / Pause"));
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item),
- 					_("Play / Pause"));
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Play / Pause"));
+	atk_object_set_name (gtk_widget_get_accessible (item), _("Play / Pause"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
 	/* Next */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"next-chapter");
-	item = gtk_action_create_tool_item (action);
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), 
-					_("Next Chapter/Movie"));
-	atk_object_set_name (gtk_widget_get_accessible (item),
-			_("Next Chapter/Movie"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "next-chapter");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Next Chapter/Movie"));
+	atk_object_set_name (gtk_widget_get_accessible (item), _("Next Chapter/Movie"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
-	/* Separator */
-	item = GTK_WIDGET(gtk_separator_tool_item_new ());
-	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
+    /* Time label */
+    xplayer->time_label = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_time_display_label"));
 
 	/* Fullscreen button */
-	action = gtk_action_group_get_action (xplayer->main_action_group,
-			"fullscreen");
-	item = gtk_action_create_tool_item (action);
+	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_fullscreen_button_hbox"));
+    item = gtk_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "fullscreen");
+	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
 	/* Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window. */
-	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item), _("Fullscreen"));
+    gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Fullscreen"));
 	/* Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window. */
 	atk_object_set_name (gtk_widget_get_accessible (item), _("Fullscreen"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
@@ -4246,18 +4215,11 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_sidebar_button_hbox"));
 	action = gtk_action_group_get_action (xplayer->main_action_group, "sidebar");
 	item = gtk_toggle_button_new ();
+    image = gtk_image_new ();
+    gtk_button_set_image (GTK_BUTTON (item), image);
+    gtk_style_context_add_class (gtk_widget_get_style_context (item), "flat");
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (item), action);
-
-	/* Remove the label */
-	label = gtk_bin_get_child (GTK_BIN (item));
-	gtk_widget_destroy (label);
-
-	/* Force add an icon, so it doesn't follow the
-	 * gtk-button-images setting */
-	icon = g_themed_icon_new_with_default_fallbacks ("xplayer-view-sidebar-symbolic");
-	image = gtk_image_new_from_gicon (icon, GTK_ICON_SIZE_BUTTON);
-	gtk_widget_show (image);
-	gtk_container_add (GTK_CONTAINER (item), image);
+    gtk_button_set_label (GTK_BUTTON (item), NULL);
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "drag_data_received",
 			G_CALLBACK (drop_playlist_cb), xplayer);
@@ -4326,6 +4288,12 @@ xplayer_callback_connect (XplayerObject *xplayer)
 
 	action = gtk_action_group_get_action (action_group, "skip-backwards");
 	gtk_action_set_sensitive (action, FALSE);
+
+    sidebar_toolbar = xplayer_playlist_get_toolbar (xplayer->playlist);
+    size_box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
+    size_group = gtk_size_group_new (GTK_SIZE_GROUP_VERTICAL);
+    gtk_size_group_add_widget (size_group, size_box);
+    gtk_size_group_add_widget (size_group, sidebar_toolbar);
 }
 
 void
@@ -4400,10 +4368,6 @@ video_widget_create (XplayerObject *xplayer)
 	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"got-metadata",
 			G_CALLBACK (on_got_metadata_event),
-			xplayer);
-	g_signal_connect (G_OBJECT (xplayer->bvw),
-			"buffering",
-			G_CALLBACK (on_buffering_event),
 			xplayer);
 	g_signal_connect (G_OBJECT (xplayer->bvw),
 			"download-buffering",

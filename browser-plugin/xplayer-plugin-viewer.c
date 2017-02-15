@@ -45,7 +45,6 @@
 
 #include "bacon-video-widget.h"
 #include "xplayer-interface.h"
-#include "xplayer-statusbar.h"
 #include "xplayer-time-label.h"
 #include "xplayer-fullscreen.h"
 #include "xplayer-glow-button.h"
@@ -55,7 +54,6 @@
 #include "xplayer-plugin-viewer-constants.h"
 #include "xplayer-plugin-viewer-options.h"
 
-GtkWidget *xplayer_statusbar_create (void);
 GtkWidget *xplayer_volume_create (void);
 GtkWidget *xplayer_pp_create (void);
 
@@ -108,7 +106,6 @@ typedef struct _XplayerEmbedded {
 	GtkBuilder *menuxml, *xml;
 	GtkWidget *pp_button;
 	GtkWidget *pp_fs_button;
-	XplayerStatusbar *statusbar;
 	int width, height;
         char *user_agent;
 	const char *mimetype;
@@ -154,7 +151,6 @@ typedef struct _XplayerEmbedded {
 	guint is_browser_stream : 1;
 	guint is_playlist : 1;
 	guint controller_hidden : 1;
-	guint show_statusbar : 1;
 	guint hidden : 1;
 	guint repeat : 1;
 	guint seeking : 1;
@@ -349,8 +345,6 @@ xplayer_embedded_set_state (XplayerEmbedded *emb, XplayerStates state)
 	switch (state) {
 	case XPLAYER_STATE_STOPPED:
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
-		xplayer_statusbar_set_text (emb->statusbar, _("Stopped"));
-		xplayer_statusbar_set_time_and_length (emb->statusbar, 0, 0);
 		xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (emb->fs->time_label), 0, 0);
 		if (emb->href_uri != NULL && emb->hidden == FALSE) {
@@ -361,11 +355,9 @@ xplayer_embedded_set_state (XplayerEmbedded *emb, XplayerStates state)
 		break;
 	case XPLAYER_STATE_PAUSED:
 		id = xplayer_get_rtl_icon_name ("media-playback-start");
-		xplayer_statusbar_set_text (emb->statusbar, _("Paused"));
 		break;
 	case XPLAYER_STATE_PLAYING:
 		id = "media-playback-pause-symbolic";
-		xplayer_statusbar_set_text (emb->statusbar, _("Playing"));
 		if (emb->href_uri == NULL && emb->hidden == FALSE) {
 			gdk_window_set_cursor
 				(gtk_widget_get_window (GTK_WIDGET (emb->bvw)),
@@ -1475,14 +1467,6 @@ on_tick (GtkWidget *bvw,
 		if (emb->seeking == FALSE)
 			gtk_adjustment_set_value (emb->seekadj,
 					current_position * 65535);
-		if (stream_length == 0) {
-			xplayer_statusbar_set_time_and_length (emb->statusbar,
-					(int) (current_time / 1000), -1);
-		} else {
-			xplayer_statusbar_set_time_and_length (emb->statusbar,
-					(int) (current_time / 1000),
-					(int) (stream_length / 1000));
-		}
 
 		xplayer_time_label_set_time
 			(XPLAYER_TIME_LABEL (emb->fs->time_label),
@@ -1792,7 +1776,6 @@ xplayer_embedded_construct (XplayerEmbedded *emb,
 	g_signal_connect (G_OBJECT (emb->volume), "value-changed",
 			  G_CALLBACK (cb_vol), emb);
 
-	emb->statusbar = XPLAYER_STATUSBAR (gtk_builder_get_object (emb->xml, "statusbar"));
 
 	if (!emb->hidden)
 		gtk_widget_set_size_request (emb->window, width, height);
@@ -1805,10 +1788,6 @@ xplayer_embedded_construct (XplayerEmbedded *emb,
 	if (emb->controller_hidden != FALSE) {
 		child = GTK_WIDGET (gtk_builder_get_object (emb->xml, "controls"));
 		gtk_widget_hide (child);
-	}
-
-	if (!emb->show_statusbar) {
-		gtk_widget_hide (GTK_WIDGET (emb->statusbar));
 	}
 
 	/* Try to make controls smaller */
@@ -2053,7 +2032,6 @@ static char *arg_mime_type = NULL;
 static char **arg_remaining = NULL;
 static char *arg_referrer = NULL;
 static gboolean arg_no_controls = FALSE;
-static gboolean arg_statusbar = FALSE;
 static gboolean arg_hidden = FALSE;
 static gboolean arg_is_playlist = FALSE;
 static gboolean arg_repeat = FALSE;
@@ -2094,7 +2072,6 @@ static GOptionEntry option_entries [] =
 	{ XPLAYER_OPTION_USER_AGENT, 0, 0, G_OPTION_ARG_STRING, &arg_user_agent, NULL, NULL },
 	{ XPLAYER_OPTION_MIMETYPE, 0, 0, G_OPTION_ARG_STRING, &arg_mime_type, NULL, NULL },
 	{ XPLAYER_OPTION_CONTROLS_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_no_controls, NULL, NULL },
-	{ XPLAYER_OPTION_STATUSBAR, 0, 0, G_OPTION_ARG_NONE, &arg_statusbar, NULL, NULL },
 	{ XPLAYER_OPTION_HIDDEN, 0, 0, G_OPTION_ARG_NONE, &arg_hidden, NULL, NULL },
 	{ XPLAYER_OPTION_PLAYLIST, 0, 0, G_OPTION_ARG_NONE, &arg_is_playlist, NULL, NULL },
 	{ XPLAYER_OPTION_REPEAT, 0, 0, G_OPTION_ARG_NONE, &arg_repeat, NULL, NULL },
@@ -2202,7 +2179,6 @@ int main (int argc, char **argv)
 	}
 
 	g_type_ensure (XPLAYER_TYPE_GLOW_BUTTON);
-	g_type_ensure (XPLAYER_TYPE_STATUSBAR);
 	g_type_ensure (XPLAYER_TYPE_TIME_LABEL);
 
 	if (arg_audioonly != FALSE)
@@ -2272,7 +2248,6 @@ int main (int argc, char **argv)
 	emb->width = -1;
 	emb->height = -1;
 	emb->controller_hidden = arg_no_controls;
-	emb->show_statusbar = arg_statusbar;
 	emb->current_uri = arg_remaining ? arg_remaining[0] : NULL;
 	emb->mimetype = arg_mime_type;
 	emb->hidden = arg_hidden;

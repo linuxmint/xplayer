@@ -35,7 +35,6 @@
 #include "xplayer-interface.h"
 #include "xplayer-private.h"
 #include "xplayer-sidebar.h"
-#include "xplayer-statusbar.h"
 #include "bacon-video-widget.h"
 #include "xplayer-uri.h"
 
@@ -838,56 +837,6 @@ clear_playlist_action_callback (GtkAction *action, Xplayer *xplayer)
 	xplayer_action_set_mrl (xplayer, NULL, NULL);
 }
 
-/* Show help in status bar when selecting (hovering over) a menu item. */
-static void
-menu_item_select_cb (GtkMenuItem *proxy, Xplayer *xplayer)
-{
-	GtkAction *action;
-	const gchar *message;
-
-	action = gtk_activatable_get_related_action (GTK_ACTIVATABLE (proxy));
-	g_return_if_fail (action != NULL);
-
-	message = gtk_action_get_tooltip (action);
-	if (message)
-		xplayer_statusbar_push_help (XPLAYER_STATUSBAR (xplayer->statusbar), message);
-}
-
-static void
-menu_item_deselect_cb (GtkMenuItem *proxy, Xplayer *xplayer)
-{
-	xplayer_statusbar_pop_help (XPLAYER_STATUSBAR (xplayer->statusbar));
-}
-
-static void
-setup_action (Xplayer *xplayer, GtkAction *action)
-{
-	GSList *proxies;
-	for (proxies = gtk_action_get_proxies (action); proxies != NULL; proxies = proxies->next) {
-		if (GTK_IS_MENU_ITEM (proxies->data)) {
-			g_signal_connect (proxies->data, "select", G_CALLBACK (menu_item_select_cb), xplayer);
-			g_signal_connect (proxies->data, "deselect", G_CALLBACK (menu_item_deselect_cb), xplayer);
-		}
-
-	}
-}
-
-static void
-setup_menu_items (Xplayer *xplayer)
-{
-	GList *action_groups;
-
-	/* FIXME: We can remove this once GTK+ bug #574001 is fixed */
-	for (action_groups = gtk_ui_manager_get_action_groups (xplayer->ui_manager);
-	     action_groups != NULL; action_groups = action_groups->next) {
-		GtkActionGroup *action_group = GTK_ACTION_GROUP (action_groups->data);
-		GList *actions;
-		for (actions = gtk_action_group_list_actions (action_group); actions != NULL; actions = actions->next) {
-			setup_action (xplayer, GTK_ACTION (actions->data));
-		}
-	}
-}
-
 void
 xplayer_ui_manager_setup (Xplayer *xplayer)
 {
@@ -906,8 +855,6 @@ xplayer_ui_manager_setup (Xplayer *xplayer)
 	}
 
 	xplayer->ui_manager = GTK_UI_MANAGER (gtk_builder_get_object (xplayer->xml, "xplayer-ui-manager"));
-
-	setup_menu_items (xplayer);
 
 	xplayer->devices_action_group = NULL;
 	xplayer->devices_ui_id = gtk_ui_manager_new_merge_id (xplayer->ui_manager);

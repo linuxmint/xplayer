@@ -74,7 +74,6 @@ IGNORE_HFILES = \
 	xplayer-plugin-manager.h				\
 	xplayer-properties-view.h				\
 	xplayer-open-location.h				\
-	xplayer-statusbar.h				\
 	xplayer-sidebar.h					\
 	xplayer-session.h					\
 	xplayer-resources.h				\

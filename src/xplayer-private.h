@@ -36,6 +36,7 @@
 #include "xplayer-open-location.h"
 #include "xplayer-fullscreen.h"
 #include "xplayer-plugins-engine.h"
+#include "xplayer-time-label.h"
 
 #define xplayer_signal_block_by_data(obj, data) (g_signal_handlers_block_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
 #define xplayer_signal_unblock_by_data(obj, data) (g_signal_handlers_unblock_matched (obj, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, data))
@@ -77,7 +78,6 @@ struct _XplayerObject {
 	BaconVideoWidget *bvw;
 	GtkWidget *prefs;
 	GtkBuilder *prefs_xml;
-	GtkWidget *statusbar;
 
 	/* UI manager */
 	GtkActionGroup *main_action_group;
@@ -106,6 +106,7 @@ struct _XplayerObject {
 	GtkAdjustment *seekadj;
 	gboolean seek_lock;
 	gboolean seekable;
+	XplayerTimeLabel *time_label;
 
 	/* Volume */
 	GtkWidget *volume;

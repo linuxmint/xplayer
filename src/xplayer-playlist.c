@@ -84,6 +84,7 @@ struct XplayerPlaylistPrivate
 	GtkWidget *remove_button;
 	GtkWidget *up_button;
 	GtkWidget *down_button;
+	GtkWidget *toolbar;
 
 	/* These is the current paths for the file selectors */
 	char *path;
@@ -1691,8 +1692,8 @@ xplayer_playlist_init (XplayerPlaylist *playlist)
 	widget = GTK_WIDGET (gtk_builder_get_object (xml, ("scrolledwindow1")));
 	context = gtk_widget_get_style_context (widget);
 	gtk_style_context_set_junction_sides (context, GTK_JUNCTION_BOTTOM);
-	widget = GTK_WIDGET (gtk_builder_get_object (xml, ("toolbar1")));
-	context = gtk_widget_get_style_context (widget);
+	playlist->priv->toolbar = GTK_WIDGET (gtk_builder_get_object (xml, ("toolbar1")));
+	context = gtk_widget_get_style_context (playlist->priv->toolbar);
 	gtk_style_context_set_junction_sides (context, GTK_JUNCTION_TOP);
 
 	/* Reparent the vbox */
@@ -2887,6 +2888,14 @@ xplayer_playlist_get_last (XplayerPlaylist *playlist)
 		return -1;
 
 	return len - 1;
+}
+
+GtkWidget *
+xplayer_playlist_get_toolbar (XplayerPlaylist *playlist)
+{
+	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
+
+	return playlist->priv->toolbar;
 }
 
 void
