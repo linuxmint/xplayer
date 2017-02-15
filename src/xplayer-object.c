@@ -4138,9 +4138,11 @@ xplayer_setup_window (XplayerObject *xplayer)
 void
 xplayer_callback_connect (XplayerObject *xplayer)
 {
-	GtkWidget *item, *image, *label;
-	GIcon *icon;
+	GtkWidget *item, *image;
+    GtkWidget *sidebar_toolbar;
+    GtkWidget *size_box;
 	GtkAction *action;
+    GtkSizeGroup *size_group;
 	GtkActionGroup *action_group;
 	GtkBox *box;
 
@@ -4286,6 +4288,12 @@ xplayer_callback_connect (XplayerObject *xplayer)
 
 	action = gtk_action_group_get_action (action_group, "skip-backwards");
 	gtk_action_set_sensitive (action, FALSE);
+
+    sidebar_toolbar = xplayer_playlist_get_toolbar (xplayer->playlist);
+    size_box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
+    size_group = gtk_size_group_new (GTK_SIZE_GROUP_VERTICAL);
+    gtk_size_group_add_widget (size_group, size_box);
+    gtk_size_group_add_widget (size_group, sidebar_toolbar);
 }
 
 void

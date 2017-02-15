@@ -96,84 +96,111 @@
         <property name="can_focus">False</property>
         <property name="icon_size">1</property>
         <property name="toolbar-style">icons</property>
+        <child>
+          <object class="GtkToolItem" id="toolbutton1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="border_width">3</property>
+            <child>
+              <object class="GtkBox" id="box5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="hexpand">True</property>
+                <child>
+                  <object class="GtkButton" id="add_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="use_underline">True</property>
+              	    <property name="image">image1</property>
+              	    <signal name="clicked" handler="xplayer_playlist_add_files"/>
+              	    <property name="tooltip-text" translatable="yes">Add...</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="remove_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="use_underline">True</property>
+            	      <property name="image">image2</property>
+            	      <signal name="clicked" handler="playlist_remove_button_clicked"/>
+            	      <property name="tooltip-text" translatable="yes">Remove</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="save_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="use_underline">True</property>
+            	      <property name="image">image3</property>
+            	      <property name="tooltip-text" translatable="yes">Save Playlist...</property>
+            	     <signal name="clicked" handler="xplayer_playlist_save_files"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="up_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="use_underline">True</property>
+            	      <property name="image">image4</property>
+            	      <property name="tooltip-text" translatable="yes">Move Up</property>
+            	      <signal name="clicked" handler="xplayer_playlist_up_files"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="down_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="use_underline">True</property>
+              	    <property name="image">image5</property>
+              	    <property name="tooltip-text" translatable="yes">Move Down</property>
+              	    <signal name="clicked" handler="xplayer_playlist_down_files"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <style>
+                  <class name="linked"/>
+                </style>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="homogeneous">True</property>
+          </packing>
+        </child>
         <style>
           <class name="inline-toolbar"/>
         </style>
-        <child>
-          <object class="GtkToolButton" id="add_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_action_appearance">False</property>
-            <property name="use_underline">True</property>
-	    <property name="icon_name">list-add-symbolic</property>
-	    <signal name="clicked" handler="xplayer_playlist_add_files"/>
-	    <property name="tooltip-text" translatable="yes">Add...</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkToolButton" id="remove_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_action_appearance">False</property>
-            <property name="use_underline">True</property>
-	    <property name="icon_name">list-remove-symbolic</property>
-	    <signal name="clicked" handler="playlist_remove_button_clicked"/>
-	    <property name="tooltip-text" translatable="yes">Remove</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkToolButton" id="save_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_action_appearance">False</property>
-            <property name="use_underline">True</property>
-	    <property name="icon_name">document-save-symbolic</property>
-	    <property name="tooltip-text" translatable="yes">Save Playlist...</property>
-	    <signal name="clicked" handler="xplayer_playlist_save_files"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkToolButton" id="up_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_action_appearance">False</property>
-            <property name="use_underline">True</property>
-	    <property name="icon_name">go-up-symbolic</property>
-	    <property name="tooltip-text" translatable="yes">Move Up</property>
-	    <signal name="clicked" handler="xplayer_playlist_up_files"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkToolButton" id="down_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_action_appearance">False</property>
-            <property name="use_underline">True</property>
-	    <property name="icon_name">go-down-symbolic</property>
-	    <property name="tooltip-text" translatable="yes">Move Down</property>
-	    <signal name="clicked" handler="xplayer_playlist_down_files"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="homogeneous">True</property>
-          </packing>
-        </child>
       </object>
       <packing>
         <property name="expand">False</property>
@@ -181,5 +208,30 @@
         <property name="position">1</property>
       </packing>
     </child>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">list-add-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">list-remove-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">document-save-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">go-up-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">go-down-symbolic</property>
   </object>
 </interface>
