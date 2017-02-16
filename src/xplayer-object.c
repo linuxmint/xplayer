@@ -1961,8 +1961,12 @@ xplayer_action_direction (XplayerObject *xplayer, XplayerPlaylistDirection dir)
 {
 	if (bacon_video_widget_has_next_track (xplayer->bvw) == FALSE &&
 	    xplayer_playlist_has_direction (xplayer->playlist, dir) == FALSE &&
-	    xplayer_playlist_get_repeat (xplayer->playlist) == FALSE)
+	    xplayer_playlist_get_repeat (xplayer->playlist) == FALSE) {
+		if (dir == XPLAYER_PLAYLIST_DIRECTION_PREVIOUS) {
+			xplayer_action_seek (xplayer, 0);
+		}
 		return;
+	}
 
 	if (bacon_video_widget_has_next_track (xplayer->bvw) != FALSE) {
 		BvwDVDEvent event;
@@ -4018,11 +4022,8 @@ update_buttons (XplayerObject *xplayer)
 {
 	gboolean has_item;
 
-	/* Previous */
-	has_item = bacon_video_widget_has_previous_track (xplayer->bvw) ||
-		xplayer_playlist_has_previous_mrl (xplayer->playlist) ||
-		xplayer_playlist_get_repeat (xplayer->playlist);
-	xplayer_action_set_sensitivity ("previous-chapter", has_item);
+	/* Previous, always sensitive because it's also used to reset the current item to position 0 */
+	xplayer_action_set_sensitivity ("previous-chapter", TRUE);
 
 	/* Next */
 	has_item = bacon_video_widget_has_next_track (xplayer->bvw) ||
