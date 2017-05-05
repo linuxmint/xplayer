@@ -1,3 +1,41 @@
+xplayer (1.4.0) sonya; urgency=medium
+
+  [ Dustin Falgout ]
+  * Add option to use dark theme variant (overriding current system theme). The default behavior is to obey current system theme unless this new option is enabled. Fixes #38
+
+  [ Schallaven ]
+  * Added option to display or hide subtitles
+
+  [ Clement Lefebvre ]
+  * Packaging: Depend on xplayer-plugins
+  * Subtitles: Reduce default font size from 20 to 18
+  * Theme: Prefer dark theme by default
+  * Subtitles: Autoload srt files by default
+  * Preferences: Reorganize layout for subtitle options
+  * Revamp language/subtitle selection
+  * Revamp the OSD
+  * Subtitles/Languages: Fix showing the track name when it doesn't correspond to a known language
+  * Add the ability to change the playback speed
+  * OSD: Show track position/length when seeking
+  * Remove support for visualizations
+  * Help: Update man page and help
+  * Focus window when a new file is opened.
+  * l10n: Update POT file
+
+  [ JosephMcc ]
+  * ui: Move the seek slider inline with the play controls
+  * controls: Move the fullscreen button to the right of the seek bar
+  * player-controls: Rearrange and resize the items a bit
+  * player-controls: Actually show the time/seek label on the new controls
+  * ui: Remove the statusbar
+  * sidebar: Tweak the styling of the sidebar toolbar a bit
+
+  [ Clement Lefebvre ]
+  * Fix Previous button sensitivity/role
+  * l10n: Update POT file
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 05 May 2017 08:43:12 +0100
+
 xplayer (1.2.2) serena; urgency=medium
 
   * pkg: Add libxkbfile-dev to build-dep
