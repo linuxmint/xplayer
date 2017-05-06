@@ -7,457 +7,423 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
-"PO-Revision-Date: 2016-12-10 13:43+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"PO-Revision-Date: 2016-12-15 14:06+0000\n"
+"Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:41+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
+"Language: ur\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr ""
+msgstr "فلم چل رہی ہے"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
-msgstr ""
+msgstr "چلانے کے لیے کوئی URI نہیں"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
-msgstr ""
+msgstr "ایکس پلئیر فلم پلیئر"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
-msgstr ""
+msgstr "_کھولیں بذریعہ \"%s\""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
-msgstr ""
+msgstr "کوئی مسئلہ واقع ہوا ہے"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
-msgstr ""
+msgstr "کوئی پلے لسٹ نہیں یا پھر پلے لسٹ خالی ہے"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
-msgstr ""
+msgstr "فلم براؤزر پلگ ان"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
-msgstr ""
+msgstr "تھریڈ-سیف لائبریریوں کو شروع نہیں کیا جاسکا."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
+"اپنے سسٹم کی انسٹالیشن کی تصدیق کریں. ایکس پلیئر کا پلگ ان اب بند کر دیا "
+"جائے گا۔"
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
-msgstr ""
+msgstr "وقت:"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
+msgstr "باقی مانیٹر خالی کر دیں"
 
 #: ../data/fullscreen.ui.h:3
 msgid "Leave fullscreen"
-msgstr ""
+msgstr "مکمل سکرین چھوڑیں"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr ""
+msgstr "آڈیو فائلیں چلاتے وقت سکرین سیور کو فعال ہونے کی اجازت دیں"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
+"آڈیو فائلیں چلاتے وقت سکرین سیور کو فعال ہونے کی اجازت دیں. معطل کریں اگر آپ "
+"monitor-powered سپیکر رکھتے ہیں."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr ""
+msgid "The brightness of the video"
+msgstr "ویڈیو کی چمک (brightness)"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr ""
+msgid "The contrast of the video"
+msgstr "ویڈیو کا تناسب امتزاج"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr ""
+msgid "The hue of the video"
+msgstr "ویڈیو کے ہیو"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
-msgid "The brightness of the video"
-msgstr ""
+msgid "The saturation of the video"
+msgstr "ویڈیو کی سیچوریشن"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
-msgid "The contrast of the video"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:8
-msgid "The hue of the video"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:9
-msgid "The saturation of the video"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
-msgstr ""
+msgstr "دُہراؤ موڈ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr ""
+msgstr "شفل موڈ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr ""
+msgstr "استعمال کے لیے آڈیو آؤٹ پُٹ کی نوعیت"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr ""
+msgstr "سب ٹائٹل کا فونٹ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr ""
+msgstr "سب ٹائٹل کی رینڈرنگ کے لیے پینگو فونٹ کی تفصیل."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr ""
+msgstr "سب ٹائٹل کی انکوڈنگ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr ""
+msgstr "سب ٹائٹل کے لیے حروف کی اینکوڈنگ."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr ""
+msgstr "کیا پلگ انز کو صارف کے گھر کی ڈائریکٹری میں غیر فعال کیا جائے"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr ""
+msgstr "کیا کیبورڈ شارٹ کٹوں کو غیر فعال کیا جائے"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr ""
+msgstr "کیا متن سب ٹائٹل فائلوں کو کو فلم کے لوڈ ہوتے ہی لوڈ کر دینا چاہیے"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr ""
+msgstr "فعال پلگ ان کی فہرست"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
+"پلگ ان کے ناموں کی فہرست جو اس وقت فعال ہیں (لوڈ ہیں اور چل رہے ہیں)۔"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr ""
+msgstr "_ہٹائیں"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr ""
+msgstr "پلے لسٹ سے فائل ہٹائیں"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr ""
+msgstr "مقام _کاپی کریں"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr ""
+msgstr "مقام کِلپ بورڈ پر کاپی کریں"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr ""
+msgstr "متن سب ٹائٹل _منتخب کریں..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr ""
+msgstr "متن سب ٹائٹل کے لیے فائل منتخب کریں"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr ""
+msgstr "شامل کریں..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr ""
+msgstr "ہٹا دیں"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr ""
+msgstr "پلے لسٹ محفوظ کریں..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr ""
+msgstr "اوپر کریں"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr ""
+msgstr "نیچے کریں"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr ""
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr ""
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr ""
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
-msgstr ""
+msgstr "سٹیریو"
+
+#: ../data/preferences.ui.h:2
+msgid "4-channel"
+msgstr "4-چینل"
+
+#: ../data/preferences.ui.h:3
+msgid "4.1-channel"
+msgstr "4.1-چینل"
+
+#: ../data/preferences.ui.h:4
+msgid "5.0-channel"
+msgstr "5.0-چینل"
+
+#: ../data/preferences.ui.h:5
+msgid "5.1-channel"
+msgstr "5.1-چینل"
+
+#: ../data/preferences.ui.h:6
+msgid "AC3 Passthrough"
+msgstr "AC3 پاس تھرو"
+
+#: ../data/preferences.ui.h:7
+msgid "Xplayer Preferences"
+msgstr "ایکس پلئیر کی ترجیحات"
 
 #: ../data/preferences.ui.h:8
-msgid "4-channel"
-msgstr ""
+msgid "Playback"
+msgstr "پلے بیک"
 
 #: ../data/preferences.ui.h:9
-msgid "4.1-channel"
-msgstr ""
+msgid "Start playing files from last position"
+msgstr "آخری مقام سے فائلیں چلانا شروع کریں"
 
 #: ../data/preferences.ui.h:10
-msgid "5.0-channel"
-msgstr ""
+msgid "Text Subtitles"
+msgstr "متن سب ٹائٹل"
 
 #: ../data/preferences.ui.h:11
-msgid "5.1-channel"
-msgstr ""
+msgid "_Load subtitle files when movie is loaded"
+msgstr "جب فلم لوڈ کی جائے سب ٹائٹل فائلیں بھی ساتھ ہی _لوڈ کریں"
 
 #: ../data/preferences.ui.h:12
-msgid "AC3 Passthrough"
+msgid "_Display subtitles when movie is loaded"
 msgstr ""
 
 #: ../data/preferences.ui.h:13
-msgid "Xplayer Preferences"
-msgstr ""
+msgid "_Font:"
+msgstr "_فونٹ:"
 
 #: ../data/preferences.ui.h:14
-msgid "Playback"
-msgstr ""
+msgid "_Encoding:"
+msgstr "_انکوڈنگ:"
 
 #: ../data/preferences.ui.h:15
-msgid "Start playing files from last position"
-msgstr ""
+msgid "External Chapters"
+msgstr "بیرونی باب"
 
 #: ../data/preferences.ui.h:16
-msgid "Text Subtitles"
-msgstr ""
-
-#: ../data/preferences.ui.h:17
-msgid "_Load subtitle files when movie is loaded"
-msgstr ""
-
-#: ../data/preferences.ui.h:18
-msgid "_Font:"
-msgstr ""
-
-#: ../data/preferences.ui.h:19
-msgid "_Encoding:"
-msgstr ""
-
-#: ../data/preferences.ui.h:20
-msgid "External Chapters"
-msgstr ""
-
-#: ../data/preferences.ui.h:21
 msgid "Load _chapter files when movie is loaded"
-msgstr ""
+msgstr "جب فلم لادی جائے _باب فائلیں لادیں"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
-msgstr ""
+msgstr "عمومی"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr ""
+msgstr "ڈسپلے"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr ""
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
 msgstr ""
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr ""
+msgstr "ویڈیو"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr ""
+msgstr "ویڈیو یا آڈیو"
+
+#: ../data/preferences.ui.h:28
+msgid "Color Balance"
+msgstr "رنگ توازن"
+
+#: ../data/preferences.ui.h:29
+msgid "_Brightness:"
+msgstr "_چمک دمک:"
+
+#: ../data/preferences.ui.h:30
+msgid "Co_ntrast:"
+msgstr "تناسب امتزاج:"
 
 #: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr ""
+msgid "Sat_uration:"
+msgstr "س_یچوریشن:"
 
 #: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr ""
+msgid "_Hue:"
+msgstr "_ہیو:"
 
 #: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr ""
+msgid "Reset to _Defaults"
+msgstr "_طے شُدہ پر بحال کریں"
 
 #: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr ""
+msgid "Audio Output"
+msgstr "آڈیو آؤٹ پُٹ"
 
 #: ../data/preferences.ui.h:35
-msgid "Color Balance"
-msgstr ""
-
-#: ../data/preferences.ui.h:36
-msgid "_Brightness:"
-msgstr ""
-
-#: ../data/preferences.ui.h:37
-msgid "Co_ntrast:"
-msgstr ""
-
-#: ../data/preferences.ui.h:38
-msgid "Sat_uration:"
-msgstr ""
-
-#: ../data/preferences.ui.h:39
-msgid "_Hue:"
-msgstr ""
-
-#: ../data/preferences.ui.h:40
-msgid "Reset to _Defaults"
-msgstr ""
-
-#: ../data/preferences.ui.h:41
-msgid "Audio Output"
-msgstr ""
-
-#: ../data/preferences.ui.h:42
 msgid "_Audio output type:"
-msgstr ""
+msgstr "_آڈیو آؤٹ پُٹ نوعیت:"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr ""
+msgstr "آڈیو"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "نارمل"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "بڑا"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "بہت بڑا"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr ""
+msgstr "عنوان:"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr ""
+msgstr "فنکار:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr ""
+msgstr "مُدت:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr ""
+msgstr "سال:"
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
-msgstr ""
+msgstr "ایلبم:"
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr ""
+msgstr "تبصرہ:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
@@ -465,7 +431,7 @@ msgstr ""
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr ""
+msgstr "ویڈیو"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
@@ -473,152 +439,153 @@ msgstr ""
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr ""
+msgstr "کوڈیک:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr ""
+msgstr "فریم ریٹ:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr ""
+msgstr "بِٹ ریٹ:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr ""
+msgstr "سامپل ریٹ:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr ""
+msgstr "چینلز:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr ""
+msgstr "میڈیا پلیئر"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr ""
+msgstr "فلمیں چلائیں"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr ""
+msgstr "ویڈیو؛فلم؛مووی؛کلپ؛سیریز؛سلسلہ وار؛پلیئر؛ڈی وی ڈی؛ٹی وی؛ڈسک؛"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr ""
+msgstr "چلائیں/موقوف کریں"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr ""
+msgstr "اگلا"
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr ""
+msgstr "سابقہ"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr ""
+msgstr "خاموش کریں"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr ""
+msgstr "مکمل سکریں"
 
 #: ../data/xplayer.ui.h:1
 msgid "_Movie"
-msgstr ""
+msgstr "_فلم"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr ""
+msgstr "_کھولیں..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr ""
+msgstr "کوئی فائل کھولیں"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr ""
+msgstr "_مقام کھولیں..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr ""
+msgstr "غیر-مقامی فائل کھولیں"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr ""
+msgstr "_خارج کریں"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr ""
+msgstr "حالیہ ڈسک خارج کریں"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr ""
+msgstr "_خصوصیات"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr ""
+msgstr "حالیہ سٹریم کی خصوصیات دیکھیں"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr ""
+msgstr "چلائیں / مو_قوف کریں"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr ""
+msgstr "فلم کو چلائیں یا موقوف کریں"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr ""
+msgstr "_برخاست کریں"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr ""
+msgstr "پروگرام کو برخاست کریں"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr ""
+msgstr "_ترمیم کریں"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr ""
+msgstr "پلے لسٹ _صاف کریں"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr ""
+msgstr "پلے لسٹ صاف کریں"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr ""
+msgstr "تر_جیحات"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr ""
+msgstr "اطلاقیے کی تشکیل کریں"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr ""
+msgstr "پلگ ان..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr ""
+msgstr "اطلاقیے کو وسعت دینے کے لیے پلگ ان تشکیل دیں"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr ""
+msgstr "_منظر"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr ""
+msgstr "_بھرپور سکرین"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr ""
+msgstr "مکمل سکرین کر دیں"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
@@ -626,27 +593,27 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr ""
+msgstr "_حجم بدلیں 1:2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr ""
+msgstr "ویڈیو کے اصل حجم سے آدھا کریں"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr ""
+msgstr "حجم بدلیں _1:1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr ""
+msgstr "ویڈیو کے اصل حجم پر بحال کریں"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr ""
+msgstr "حجم بدلیں _2:1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr ""
+msgstr "ویڈیو کے اصل حجم سے دُگنا کریں"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
@@ -662,140 +629,140 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr ""
+msgstr "_جائیں"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr ""
+msgstr "_ڈی وی ڈی مینیو"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr ""
+msgstr "ڈی وی ڈی مینیو پر جائیں"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr ""
+msgstr "_عنوان مینیو"
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr ""
+msgstr "عنوان مینیو پر جائیں"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr ""
+msgstr "_آڈیو مینیو"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr ""
+msgstr "آڈیو مینیو پر جائیں"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr ""
+msgstr "_زاویہ مینیو"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr ""
+msgstr "زاویہ مینیو پر جائیں"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr ""
+msgstr "_باب مینیو"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr ""
+msgstr "باب مینیو پر جائیں"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr ""
+msgstr "ا_گلا باب/فلم"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr ""
+msgstr "اگلا باب یا فلم"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr ""
+msgstr "_سابقہ باب/فلم"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr ""
+msgstr "سابقہ باب یا فلم"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr ""
+msgstr "_آواز"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr ""
+msgstr "آواز _زیادہ"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr ""
+msgstr "آواز بڑھائیں"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr ""
+msgstr "آواز _کم کریں"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr ""
+msgstr "آواز گھٹائیں"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr ""
+msgstr "_ہدایات"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr ""
+msgstr "_موضوعات"
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr ""
+msgstr "ہدایات کے موضوعات"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr ""
+msgstr "_متعلق"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr ""
+msgstr "اس ایپلی کیشن کے بارے میں"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr ""
+msgstr "_دُہراؤ موڈ"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr ""
+msgstr "دہراؤ موڈ متعین کریں"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr ""
+msgstr "ش_فل موڈ"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr ""
+msgstr "شفل موڈ متعین کریں"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr ""
+msgstr "_کنٹرول دکھائیں"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr ""
+msgstr "کنٹرول دکھائیں"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr ""
+msgstr "ب_غلی پٹی"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr ""
+msgstr "بغلی پٹی دکھائیں یا پوشیدہ کریں"
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr ""
+msgstr "خودکار"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
@@ -803,7 +770,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr ""
+msgstr "چوکور"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
@@ -811,15 +778,15 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
-msgstr ""
+msgstr "4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr ""
+msgstr "سیٹ کرتا ہے 4:3 (ٹی وی) ایسپیکٹ شرح"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr ""
+msgstr "16:9 (وسیع سکرین)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
@@ -827,7 +794,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
-msgstr ""
+msgstr "2.11:1 (DVB)"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
@@ -835,93 +802,93 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr ""
+msgstr "س_ب ٹائٹل"
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr ""
+msgstr "_زبانیں"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr ""
+msgstr "زوم ان"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr ""
+msgstr "زوم ان"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr ""
+msgstr "_آگے پھلانگیں"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr ""
+msgstr "آگے پھلانگیں"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr ""
+msgstr "_پیچھے پھلانگیں"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr ""
+msgstr "پیچھے پھلانگیں"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr ""
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr ""
+msgstr "اس فائل کا _پتہ درج کریں جسے آپ کھولنا چاہتے ہیں:"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr ""
+msgstr "پاس ورڈ درخواست کردہ برائے RTSP سرور"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr ""
+msgstr "آڈیو ٹریک #%d"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr ""
+msgstr "سب-ٹائٹل #%d"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr ""
+msgstr "سرور جس سے آپ جڑنے کی کوشش کر رہے ہیں نا معلوم ہے۔"
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
-msgstr ""
+msgstr "اس سرور سے اتصال مسترد کردیا گیا"
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
-msgstr ""
+msgstr "بتائی گئی فلم نہیں ملی۔"
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr ""
+msgstr "سرور نے اس فائل یا سٹریم تک رسائی کی اجازت مسترد کر دی ہے"
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr ""
+msgstr "یہ فائل یا فلم چلانے کے لیے تصدیق درکار ہے۔"
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
-msgstr ""
+msgstr "آپکو اس فائل کو کھولنے کی اجازت نہیں ہے۔"
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr ""
+msgstr "یہ موزوں مقام نہیں ہے."
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr ""
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -933,31 +900,32 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
+"نیٹ ورک پر فائل نہیں چلائی جاسکتی. اسے پہلے ڈسک پر اتارنے کی کوشش کریں."
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
-msgstr ""
+msgstr "سرراؤنڈ"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
-msgstr ""
+msgstr "مونو"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -966,27 +934,27 @@ msgstr ""
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "فائل موزوں .desktop فائل نہیں ہے"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "غیر تسلیم شدہ ڈیسک ٹاپ فائل ورژن '%s'"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s شروع کیا جارہا ہے"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "ایپلی کیشن کمانڈ لائن پر دستاویزات قبول نہیں کرتا"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "چلانے کا غیر تسلیم شُدہ اختیار: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
@@ -996,32 +964,32 @@ msgstr ""
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "عنصر چلانے کے قابل نہیں ہے"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr ""
+msgstr "فائل _ساخت: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr ""
+msgstr "تمام فائلیں"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr ""
+msgstr "تمام مُعاونت کردہ فائلیں"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr ""
+msgstr "ایکس ٹینشن سے"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr ""
+msgstr "فائل ساخت"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr ""
+msgstr "ایکس ٹینشنز"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -1034,7 +1002,7 @@ msgstr ""
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr ""
+msgstr "فائل کی ساخت کی پہچان نہیں ہو سکی۔"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
@@ -1042,19 +1010,19 @@ msgstr ""
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "وہ فائل بتائیں جس میں محفوظ کردہ تشکیل موجود ہے"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "فائل"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "دورانیہ مینیجمنٹ ID بتائیں"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "آئی ڈی"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
@@ -1075,7 +1043,7 @@ msgstr ""
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
-msgstr ""
+msgstr "%d:%02d:%02d"
 
 #. minutes:seconds
 #. Translators: This is a time format, like "5:02" for 5
@@ -1087,7 +1055,7 @@ msgstr ""
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
-msgstr ""
+msgstr "%d:%02d"
 
 #. Title
 #. Artist
@@ -1099,123 +1067,125 @@ msgstr ""
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
-msgstr ""
+msgstr "نا معلوم"
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
-msgstr ""
+msgstr "0 Hz"
 
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr ""
+msgstr "0 چینل"
 
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d گھنٹہ"
+msgstr[1] "%d گھنٹے"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d منٹ"
+msgstr[1] "%d منٹ"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d سیکنڈ"
+msgstr[1] "%d سیکنڈ"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
 #, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr ""
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:170
 #, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr ""
+msgstr "%s %s"
 
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr ""
+msgstr "0 سیکنڈ"
 
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d فریم فی سیکنڈ"
+msgstr[1] "%d فریم فی سیکنڈ"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr ""
+msgstr "آڈیو پیش منظر"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
+"اپنے سسٹم کی انسٹالیشن کی تصدیق کریں. ایکس پلیئر اب بند کر دیا جائے گا۔"
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr ""
+msgstr "ابھی _چلائیں"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr ""
+msgstr "پلے لسٹ میں _شامل کریں"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr ""
+msgstr "منسوخ"
 
 #: ../src/xplayer-fullscreen.c:589
 msgid "No File"
-msgstr ""
+msgstr "کوئی فائل نہیں"
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
@@ -1224,12 +1194,12 @@ msgstr ""
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr ""
+msgstr "فائل موجود نہیں."
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr ""
+msgstr "یقین کر لیں کہ ایکس پلیئر درست طریقے سے انسٹال ہے۔"
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1238,6 +1208,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"ایکس پلیئر ایک مفت سوفٹ ویئر ہے، آپ اسے فری سوفٹ ویئر فاونڈیشن کی طرف سے "
+"جاری کردہ گنو جنرل پبلک لائسنس ورژن 2 یا (اپنی مرضی سے) بعد کے کسی ورژن کی "
+"شرائط کے تحت تقسیم / یا تبدیل کرسکتے ہیں."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1246,6 +1219,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"ایکس پلیئر اس امید کے ساتھ تقسیم کیا جاتا ہے کہ یہ مفید اور کارآمد ثابت ہوگا "
+"تاہم کسی بھی ضمانت کے بغیر؛ تجارت یا کسی مخصوص کام کے  قابل ہونے کی ایسی "
+"ضمانت کے بھی بغیر جس کی طرف یہ دلالت کرتا ہو۔ مزید تفصیلات کے لیے GNU GPL "
+"دیکھیں۔"
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1253,6 +1230,9 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
+"ایکس پلیئر کے ساتھ آپ کو گنو کے عمومی عوامی اجازے کی ایک نقل ملی ہوگی، اگر "
+"نہیں تو آزاد سوفٹ ویئر فاؤنڈیشن کو لکھیے: Free Software Foundation, Inc., 59 "
+"Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1261,21 +1241,16 @@ msgid ""
 msgstr ""
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
-msgstr ""
+msgstr "کچھ نہیں"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr ""
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr ""
+msgstr "پلگ انز کی تشکیل کریں"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1283,57 +1258,57 @@ msgid ""
 msgstr ""
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
-msgstr ""
+msgstr "ایکس پلئیر %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr ""
+msgstr "موقوف"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
-msgstr ""
+msgstr "چلائیں"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr ""
+msgstr "ایکس پلیئر '%s' کو نہیں چلا سکتا."
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr ""
+msgstr "ایکس پلیئر ہدایات کا مواد نہیں دکھا سکتا."
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr ""
+msgstr "سابقہ باب/فلم"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr ""
+msgstr "چلائیں / موقوف کریں"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr ""
+msgstr "اگلا باب/فلم"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
-msgstr ""
+msgstr "ایکس پلیئر نہیں چل سکتا."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
-msgstr ""
+msgstr "کوئی وجہ نہیں."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr ""
+msgstr "مقام کھولیں..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr ""
+msgstr "ڈی بگ فعال کریں"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1345,35 +1320,35 @@ msgstr ""
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr ""
+msgstr "آواز بڑھائیں"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr ""
+msgstr "آواز گھٹائیں"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr ""
+msgstr "آواز بند کریں"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr ""
+msgstr "فل سکرین ٹوگل کریں"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr ""
+msgstr "کنٹرول دکھائیں/پوشیدہ کریں"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr ""
+msgstr "بند کریں"
 
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr ""
+msgstr "قطار میں لگائیں"
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr ""
+msgstr "_تبدیل کریں"
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
@@ -1382,167 +1357,124 @@ msgstr ""
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr ""
+msgstr "پلے لسٹ کا انڈیکس"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr ""
+msgstr "چلانے کے لیے فلمیں"
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr ""
+msgstr "- فلمیں اور گانے چلائیں"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr ""
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr ""
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr ""
+msgstr "عنوان %d"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr ""
+msgstr "پلے لسٹ محفوظ نہیں کی جاسکی"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr ""
+msgstr "پلے لسٹ محفوظ کریں"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr ""
-
-#: ../src/xplayer-playlist.c:1861
-#, c-format
-msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr ""
+msgstr "پلے لسٹ"
 
 #: ../src/xplayer-playlist.c:1862
+#, c-format
+msgid "The playlist '%s' could not be parsed. It might be damaged."
+msgstr "پلے لسٹ '%s' کو پارس نہیں کیا جا سکا، یہ شاید خراب ہے."
+
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr ""
+msgstr "پلے لسٹ کا مسئلہ"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr ""
+msgstr "ترجیحات"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr ""
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr ""
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr ""
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr ""
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr ""
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr ""
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr ""
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr ""
+msgstr "سب ٹائٹل کا فونٹ منتخب کریں"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr ""
+msgstr "حالیہ لوکیل"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr ""
+msgstr "عربی"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr ""
+msgstr "آرمینیائی"
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr ""
+msgstr "بالٹک"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr ""
+msgstr "سیلٹک"
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr ""
+msgstr "وسطی یورپی"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "چینی سادہ"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "چینی روایتی"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr ""
+msgstr "کرواتی"
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1551,94 +1483,94 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr ""
+msgstr "سائیریلیک"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "سائرلی/روسی"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "سائرلی/اوکرانی"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr ""
+msgstr "جارجیائی"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr ""
+msgstr "يوناني"
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr ""
+msgstr "گجراتی"
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
-msgstr ""
+msgstr "گُرمُکھی"
 
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr ""
+msgstr "عبرانی"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "ابرانی بصری"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr ""
+msgstr "ہندی"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr ""
+msgstr "آئیس لینڈی"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr ""
+msgstr "جاپانی"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr ""
+msgstr "کورین"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr ""
+msgstr "نارڈک"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr ""
+msgstr "فارسی"
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr ""
+msgstr "رومانین"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr ""
+msgstr "جنوب یورپی"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr ""
+msgstr "تھائی"
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr ""
+msgstr "ترکی"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1646,7 +1578,7 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr ""
+msgstr "یونیکوڈ"
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1654,45 +1586,57 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr ""
+msgstr "مغربی"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
+msgstr "ویتنامی"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
 msgstr ""
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr ""
+msgstr "تمام فائلیں"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr ""
+msgstr "معاونت شُدہ فائلیں"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr ""
+msgstr "آڈیو فائلیں"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr ""
+msgstr "ویڈیو فائلیں"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr ""
+msgstr "سب ٹائٹل فائلیں"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr ""
+msgstr "متن سب ٹائٹل منتخب کریں"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr ""
+msgstr "فلمیں یا پلے لسٹیں منتخب کریں"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr ""
+msgstr "ڈائریکٹری شامل کریں"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1704,22 +1648,25 @@ msgid ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 msgstr ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr ""
+msgstr "فائل کا نام"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr ""
+msgstr "ریزیلوشن"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr ""
+msgstr "مُدت"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
-msgstr ""
+msgstr "ایپل ٹریلر"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
@@ -1727,123 +1674,123 @@ msgstr ""
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr ""
+msgstr "سب ٹائٹل خودکار لوڈ کریں"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr ""
+msgstr "متن سب ٹائٹل خودکار لوڈ کریں"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr ""
+msgstr "ویڈیو ڈسک ریکارڈر"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr ""
+msgstr "ویڈیو ڈی وی ڈی یا (ایس) وی سی ڈی ریکارڈ کرتا ہے"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr ""
+msgstr "ویڈیو ڈسک _بنائیں..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr ""
+msgstr "حالیہ کھلی فلم سے ویڈیو ڈی وی ڈی یا (ایس) وی سی ڈی بنائیں"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr ""
+msgstr "وی_ڈیو ڈی وی ڈی کاپی کریں..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr ""
+msgstr "حالیہ چلتی ویڈیو ڈی وی ڈی کاپی کریں"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr ""
+msgstr "(ایس) وی سی ڈی کاپی کریں..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr ""
+msgstr "حالیہ چلتی (ایس) وی سی ڈی کاپی کریں"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr ""
+msgstr "ویڈیو کی ڈسک کا نقل نہیں بنایا جاسکا."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr ""
+msgstr "فلم ریکارڈ نہیں کی جاسکی."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr ""
+msgstr "پروجیکٹ کو لکھنے سے قاصر"
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr ""
+msgstr "نئے باب کا نام:"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr ""
+msgstr "باب _حذف کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr ""
+msgstr "فہرست سے باب حذف کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr ""
+msgstr "باب پر _جائیں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr ""
+msgstr "فلم میں باب پر جائیں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr ""
+msgstr "باب شامل کریں..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr ""
+msgstr "باب حذف کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr ""
+msgstr "باب پر جائیں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr ""
+msgstr "تبدیلیاں‌ محفوظ کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr ""
+msgstr "کوئی باب ڈیٹا نہیں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr ""
+msgstr "باب لوڈ کریں..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr ""
+msgstr "بیرونی CMML فائل سے باب لوڈ کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr ""
+msgstr "نئے باب شامل کریں"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr ""
+msgstr "فلم کے لیے باب کی نئی فہرست بنائیں"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr ""
+msgstr "باب"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr ""
+msgstr "فلموں میں باب نشان کاروں کی معاونت کریں."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1851,69 +1798,72 @@ msgid ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 msgstr ""
+"<b>عُنوان: </b>%s\n"
+"<b>آغاز کا وقت: </b>%s"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr ""
+msgstr "بابوں کے ساتھ فائل پڑھتے ہوئے مسئلہ"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr ""
+msgstr "اسی وقت کا باب پہلے ہی موجود ہے"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr ""
+msgstr "دوسرا نام آزمائیں یا سابقہ باب مٹائیں."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr ""
+msgstr "بابوں والی فائل لکھتے ہوئے مسئلہ"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr ""
+msgstr "باب محفوظ کرتے ہوئے مسئلہ پیش آیا"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
+"ازراہِ کرم پڑتال کریں کہ آپ کے پاس فلم پر مشتمل فولڈر میں لکھنے کی اجازت ہے."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr ""
+msgstr "باب فائل کھولیں"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr ""
+msgstr "باب کی سکرین شاٹ"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr ""
+msgstr "باب کا عُنوان"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr ""
+msgstr "کیا بند کرنے سے پہلے باب کی فہرست میں تبدیلی محفوظ کر لی جائے؟"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr ""
+msgstr "محفوظ کیے بغیر بند کریں"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr ""
+msgstr "محفوظ کریں"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr ""
+msgstr "اگر آپ نے محفوظ نہ کیا، باب کی فہرست کی تبدیلیاں ضائع ہوجائیں گی."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr ""
+msgstr "باب شامل کریں"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "D-Bus Service"
-msgstr ""
+msgstr "ڈی-بس سروس"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid ""
@@ -1930,7 +1880,7 @@ msgstr ""
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr ""
+msgstr "خاصیت ‘%s’ لکھنے کے قابل نہیں ہے."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
@@ -1940,39 +1890,39 @@ msgstr ""
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr ""
+msgstr "ربط ‘%s’ کی معاونت نہیں ہے."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr ""
+msgstr "گریلو براؤزر"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr ""
+msgstr "ایک پلگ ان جو آپ کو مختلف ذرائع سے میڈیا دیکھنے کی صلاحیت دیتا ہے."
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr ""
+msgstr "پلے لسٹ میں شامل کریں"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr ""
+msgstr "مقام کاپی کریں"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr ""
+msgstr "براؤز"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
-msgstr ""
+msgstr "تلاش"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
-msgstr ""
+msgstr "براؤز کا مسئلہ"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
-msgstr ""
+msgstr "تلاش کا مسئلہ"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
@@ -1988,7 +1938,7 @@ msgstr ""
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr ""
+msgstr "فوری پیغام رساں حالت"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
@@ -1996,121 +1946,121 @@ msgstr ""
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr ""
+msgstr "انفراریڈ ریموٹ کنٹرول"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr ""
+msgstr "انفراریڈ ریموٹ کنٹرول کی سپورٹ کریں"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr ""
+msgstr "lirc کو نہیں چلایا جاسکا."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr ""
+msgstr "lirc کی تشکیلات نہیں پڑھی جاسکیں."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr ""
+msgstr "میڈیا پلیئر کے بٹن"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr ""
+msgstr "اضافی میڈیا پلیئر بٹن سپورٹ کریں"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr ""
+msgstr "_ہمیشہ سب سے اوپر رکھیں"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr ""
+msgstr "فلم چلاتے وقت مرکزی ونڈو کو ہمیشہ سب سے اوپر رکھیں"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr ""
+msgstr "سب ٹائٹل ڈاؤنلوڈر"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr ""
+msgstr "حالیہ چلتی فلم کے لیے سب ٹائٹل تلاش کریں."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "برازیلی پرتگالی"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
-msgstr ""
+msgstr "سب ٹائٹلز کی تلاش جاری ہے..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:227
 #: ../src/plugins/opensubtitles/opensubtitles.py:647
 msgid "Downloading the subtitles…"
-msgstr ""
+msgstr "سب ٹائٹل اتارے جارہے ہیں..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
-msgstr ""
+msgstr "OpenSubtitles کی ویب سائٹ سے رابطہ نہیں ہوسکا"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:325
 #: ../src/plugins/opensubtitles/opensubtitles.py:343
 msgid "Could not contact the OpenSubtitles website."
-msgstr ""
+msgstr "OpenSubtitles کی ویب سائٹ سے رابطہ نہیں ہوسکا."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
-msgstr ""
+msgstr "کوئی نتائج نہیں ملے۔"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
-msgstr ""
+msgstr "سب ٹائٹل"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
-msgstr ""
+msgstr "ساخت"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
-msgstr ""
+msgstr "درجہ بندی"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr ""
+msgstr "اوپن سب ٹائٹلز OpenSubtitles سے فلم کے سب ٹائٹل اتاریں"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
-msgstr ""
+msgstr "فلم کے سب ٹائٹل ا_تاریں..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:591
 msgid "Searching subtitles…"
-msgstr ""
+msgstr "سب ٹائٹلز کی تلاش جاری ہے..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr ""
+msgstr "فلم کے سب ٹائٹل اتاریں"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr ""
+msgstr "سب ٹائٹل کی _زبان:"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr ""
+msgstr "سب ٹائٹل کے ساتھ _چلائیں"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr ""
+msgstr "سب ٹائٹل کی زبان"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr ""
+msgstr "زبان جس میں فلم کے لیے سب ٹائٹل کی تلاش کی جائے گی."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr ""
+msgstr "فلم کی خصوصیات"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
@@ -2119,37 +2069,37 @@ msgstr ""
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
-msgstr ""
+msgstr "%d x %d"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr ""
+msgstr "%d kbps"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr ""
+msgstr "%d Hz"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr ""
+msgstr "غیر موجود"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
-msgstr ""
+msgstr "خصوصیات"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr ""
+msgstr "rpdb2 پاس ورڈ"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2160,27 +2110,27 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr ""
+msgstr "پائتھن کونسول"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr ""
+msgstr "انٹر ایکٹیو پائتھن کونسول."
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr ""
+msgstr "پائتھن کونسول مینیو"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr ""
+msgstr "_پائتھن کونسول"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr ""
+msgstr "ایکس پلیئر پائتھن کونسول دکھائیں"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr ""
+msgstr "پائتھن ڈی بگر"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
@@ -2194,7 +2144,7 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid "Xplayer Python Console"
-msgstr ""
+msgstr "ایکس پلیئر پائتھن کونسول"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
@@ -2205,7 +2155,7 @@ msgstr ""
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr ""
+msgstr "حالیہ فائلیں"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
@@ -2213,23 +2163,23 @@ msgstr ""
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr ""
+msgstr "گھماؤ کا پلگ ان"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr ""
+msgstr "اگر ویڈیو فائلوں کی سمت بندی غلط ہو تو انہیں گھمانے کی اجازت دیں."
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
-msgstr ""
+msgstr "گھڑی وار _گھمائیں"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
-msgstr ""
+msgstr "گھڑی کی _سمت کے الٹ گھمائیں"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr ""
+msgstr "سکرین سیور"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
@@ -2237,22 +2187,22 @@ msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr ""
+msgstr "سکرین شاٹ کی چوڑائی (پکسل میں):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr ""
+msgstr "سکرین شاٹس کی تعداد شمار کریں"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr ""
+msgstr "سکرین شاٹس کی تعداد:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr ""
+msgstr "تصویر-%s.png سے"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2260,11 +2210,11 @@ msgstr ""
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr ""
+msgstr "سکرین شاٹ-%s-%d.png سے"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr ""
+msgstr "سکرین شاٹ"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
@@ -2272,7 +2222,7 @@ msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr ""
+msgstr "گیلری محفوظ کریں"
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2281,64 +2231,64 @@ msgstr ""
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr ""
+msgstr "گیلری-%s-%d.jpg"
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr ""
+msgstr "گیلری بنائی جارہی ہے..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr ""
+msgstr "گیلری محفوظ کی جارہی ہے بطور \"%s\""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr ""
+msgstr "ایکس پلیئر ویڈیو کی سکرین شاٹ حاصل نہیں کرسکا."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr ""
+msgstr "ایسا ہونا نہیں چاہیے تھا، ازراہِ کرم بگ رپورٹ فائل کریں."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr ""
+msgstr "_سکرین شاٹ لیں"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr ""
+msgstr "سکرین کی تصویر اتاریں"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr ""
+msgstr "سکرین شاٹ کی _گیلری بنائیں..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr ""
+msgstr "سکرین شاٹ کی گیلری بنائیں"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
-msgstr ""
+msgstr "پھلانگیں تا"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr ""
+msgstr "\"چھوڑیں تا\" کا ڈائیلاگ فراہم کرتا ہے"
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr ""
+msgstr "_پھلانگیں تا:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "سیکنڈ"
+msgstr[1] "سیکنڈ"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2347,19 +2297,19 @@ msgstr[1] ""
 #: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr ""
+msgstr "_پھلانگیں تا..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr ""
+msgstr "مخصوص وقت تک پھلانگیں"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr ""
+msgstr "Zeitgeist پلگ ان"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"

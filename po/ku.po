@@ -9,73 +9,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
-"PO-Revision-Date: 2016-02-03 12:37+0000\n"
-"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"PO-Revision-Date: 2017-02-14 11:48+0000\n"
+"Last-Translator: Rokar ✌ <Unknown>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "Hat sekinandin"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "Hatiye rawestandin"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "Tê leyîstin"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr ""
+msgstr "Fîlmek tê lêdan"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr ""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr ""
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
-msgstr ""
+msgstr "Bi \"%s\" _Veke"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "Çewtiyek derket holê"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr ""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
 msgstr ""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr ""
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "Dem:"
 
@@ -98,154 +85,138 @@ msgid ""
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:7
+#: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:8
+#: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:9
+#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:10
+#: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr ""
+msgstr "Moda çawalêhato"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr ""
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "Curenivîsa binnivîsan"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr ""
+msgstr "Kodkirina Binnivîsan"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr ""
+msgstr "Ji bo diyalogên \"Veke...\" pelrêça jixweber"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr ""
+msgstr "Ji bo diyaloga \"Wêneya dîmenê bikişîne\" pelrêça jixweber"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
 msgstr ""
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
 
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
+
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr ""
+msgstr "_Rakirin"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr ""
+msgstr "Pelî ji lîsteya lêdanê rake"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr ""
+msgstr "Cihî ji _ber bigire"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
@@ -253,11 +224,11 @@ msgstr ""
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr ""
+msgstr "_Binnivîsên tekst hilbijêre..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr ""
+msgstr "Ji bo bikaranîna binnivîsê pelekê hilbijêre"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
@@ -269,7 +240,7 @@ msgstr "Rake"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr ""
+msgstr "Lîsteya lêdanê tomar bike..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -279,163 +250,152 @@ msgstr "Ber bi jêr"
 msgid "Move Down"
 msgstr "Ber bi jor"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr ""
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr ""
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr ""
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
-msgstr ""
+msgstr "Stereo"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr ""
+msgstr "4-qenal"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr ""
+msgstr "4.1-qenal"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr ""
+msgstr "5.0-qenal"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr ""
+msgstr "5.1-qenal"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr ""
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "Vebijêrkên Xplayer"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr ""
+msgstr "Lêdan"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr ""
+msgstr "Bila lêdana pelê ji cihê lê mabû berdewam bike"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr ""
+msgstr "Binnivîsên tekst"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
 msgstr ""
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr ""
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "_Cureyê nivîsê:"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr ""
+msgstr "_Kodkirin:"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr ""
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr ""
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "Giştî"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "Dîmen"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr ""
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
 msgstr ""
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr ""
+msgstr "Vîdyo"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
 msgstr ""
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr ""
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr ""
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr ""
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr ""
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
-msgstr ""
+msgstr "Kêşeya rengê"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
-msgstr ""
+msgstr "_Çirûsîn:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "Ko_trast:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
-msgstr ""
+msgstr "Tîrîtî:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
-msgstr ""
+msgstr "_Reng:"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr ""
+msgstr "Vegere mîhengên destpêkê"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr ""
+msgstr "Derketina dengê"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr ""
+msgstr "_Cûreya derketina dengê:"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "Audîo"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "Asayî"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "Mezin"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "Hê firehtir"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -447,7 +407,7 @@ msgstr "Hunermend>"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr ""
+msgstr "Demajo:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
@@ -459,11 +419,11 @@ msgstr "Album:"
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr ""
+msgstr "Şîrove:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr ""
+msgstr "Konteynir:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
@@ -475,29 +435,30 @@ msgstr ""
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr ""
+msgstr "Codec:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr ""
+msgstr "Framerate:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr ""
+msgstr "Rêjeya bît"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr ""
+msgstr "Rêjeya mînak:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr ""
+msgstr "Qenal"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr ""
+msgstr "Lêdarê Medya"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -521,14 +482,14 @@ msgstr "Ya berê"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr ""
+msgstr "Bêdeng"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr ""
+msgstr "Dîmender Tije"
 
 #: ../data/xplayer.ui.h:1
 msgid "_Movie"
@@ -536,11 +497,11 @@ msgstr "_Fîlm"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr ""
+msgstr "_Veke..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr ""
+msgstr "Dosiyekê veke"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
@@ -548,7 +509,7 @@ msgstr "Cihê _veke..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr ""
+msgstr "Pelekî neherêmî veke"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
@@ -556,11 +517,11 @@ msgstr "_Bavêje"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr ""
+msgstr "Dîska heyî derxe"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr ""
+msgstr "_Taybetî"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
@@ -568,63 +529,63 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr ""
+msgstr "Lê Bide / Raweste"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr ""
+msgstr "Fîlmê bileyîzîne an jî rawestîne"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr ""
+msgstr "_Derkeve"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr ""
+msgstr "Ji bernameyê derkeve"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr ""
+msgstr "_Biguherîne"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr ""
+msgstr "_Lîsteya lêdanê paqijke"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr ""
+msgstr "Lîsteya lêdanê paqijke"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr ""
+msgstr "_Vebijêrk"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr ""
+msgstr "Sepanê veava bike"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr ""
+msgstr "Pêvek..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr ""
+msgstr "Ji bo firehkirina sepanê pêvekan veava bike"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr ""
+msgstr "_Dîtin"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr ""
+msgstr "_Dîmender tijî"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr ""
+msgstr "Bike dîmendertije"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr ""
+msgstr "Mezinahiya paceyê li gorî Fîlmê biguherîne"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
@@ -652,15 +613,15 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr ""
+msgstr "_Rêjeya dîmenê"
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr ""
+msgstr "Tewanan biguhere"
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr ""
+msgstr "Tewannên kamerayê biguhere"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
@@ -692,11 +653,11 @@ msgstr "Biçe menuya audîo"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr ""
+msgstr "_Menûya tewanê"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr ""
+msgstr "Here menûya tewanê"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
@@ -708,19 +669,19 @@ msgstr "Biçe menuya beşan"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr ""
+msgstr "Beş/Fîlmê _Pêşde"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr ""
+msgstr "Beş an jî fîlmê din"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr ""
+msgstr "Beş/Fîlmê _Paşde"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr ""
+msgstr "Beş an jî fîlmê berê"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
@@ -732,19 +693,19 @@ msgstr "Deng _zêde bike"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr ""
+msgstr "Dengê zêdeke"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr ""
+msgstr "Deng _kêm bike"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr ""
+msgstr "Dengê kêmke"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr ""
+msgstr "_Alîkarî"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
@@ -756,56 +717,56 @@ msgstr "Naveroka alîkariyê"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr ""
+msgstr "_Der barê"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr ""
+msgstr "Der barê vê sepanê"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr ""
+msgstr "_Moda dubareyê"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr ""
+msgstr "Moda dubareyê mîhengke"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr ""
+msgstr "Moda çawalêhato"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr ""
+msgstr "Moda çawalêhatiyê mîhengke"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr ""
+msgstr "_Kontrolkirinan Nîşan Bide"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr ""
+msgstr "Kontrolkirinan nîşan bide"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr ""
+msgstr "_Darika kêlekê"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr ""
+msgstr "Darikê Kêlekê nîşan bide yan jî veşêre"
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr ""
+msgstr "Bixweber"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr ""
+msgstr "Rêjeya dîmenê dike jixweber"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr ""
+msgstr "Çargoşe"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
@@ -853,77 +814,77 @@ msgstr "Nêzîk bike"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr ""
+msgstr "_Pêşde Hilpeke"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr ""
+msgstr "Pêşde Hilpeke"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr ""
+msgstr "_Paşde Hilpeke"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr ""
+msgstr "Paşde hilpeke"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr ""
+msgstr "Darika pêşketina demê"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr ""
+msgstr "_Navnîşana pelê tu dixwazî vekî binivîse:"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "Xwendina vê fîlmê serneket."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -935,31 +896,31 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr ""
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -968,27 +929,27 @@ msgstr ""
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Pel ne pelekî .desktop a derbasdar e"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Guhertoya '%s' a nenas a pelê sermaseyê"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s tê dest pê kirin"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Sepan di rêzika fermanan de belgeyan napejirîne"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Bijareya xebatê ya nenas: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
@@ -998,32 +959,32 @@ msgstr ""
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Ev hêman nayê destpêkirin"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr ""
+msgstr "Cûreya _Pelê: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr ""
+msgstr "Hemû Pel"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr ""
+msgstr "Hemû Pelên Bipiştgirî"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr ""
+msgstr "Li gor cûreyê"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr ""
+msgstr "Formata Pelê"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr ""
+msgstr "Cûre(yên) pelan"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -1036,35 +997,35 @@ msgstr ""
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr ""
+msgstr "Cûreya pelê nayê naskirin"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Girêdana ku bi rêveberiyê hatiye kirin betal bike"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Pela ku mîhengên tomarkirî dihewîne diyar bikin"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "PEL"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "IDa rêveberiyê danişînê diyar bike"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Mîhengên gerînendeya danişînê:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Mîhengên gerînendeya danişînê nîşan bide"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1077,7 +1038,7 @@ msgstr ""
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
-msgstr ""
+msgstr "%d:%02d:%02d"
 
 #. minutes:seconds
 #. Translators: This is a time format, like "5:02" for 5
@@ -1089,7 +1050,7 @@ msgstr ""
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
-msgstr ""
+msgstr "%d:%02d"
 
 #. Title
 #. Artist
@@ -1101,6 +1062,7 @@ msgstr ""
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "Nenas"
 
@@ -1108,45 +1070,45 @@ msgstr "Nenas"
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
-msgstr ""
+msgstr "0 Hz"
 
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr ""
+msgstr "0 Kanal"
 
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
@@ -1174,14 +1136,14 @@ msgstr[1] "%d çirke"
 #, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr ""
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:170
 #, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr ""
+msgstr "%s %s"
 
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
@@ -1197,23 +1159,23 @@ msgstr[1] ""
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr ""
+msgstr "Pêşdîtina Deng"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr ""
+msgstr "_Niha lê bide"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr ""
+msgstr "_Li lîsteya lêdanê zêdeke"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr ""
+msgstr "Betal bike"
 
 #: ../src/xplayer-fullscreen.c:589
 msgid "No File"
@@ -1226,7 +1188,7 @@ msgstr ""
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr ""
+msgstr "Ev pel tuneye."
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
@@ -1263,69 +1225,67 @@ msgid ""
 msgstr ""
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "Tune"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr ""
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr ""
+msgstr "Pêvekan Veavabike"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
+"%s\n"
+"Heke tu dixwazî lîsteya tam ya vebijêrkên rêzika fermanên heyî bibîne '%s' --"
+"help'ê bixebitîne.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
-msgstr ""
+msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Raweste"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Bileyîze"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr ""
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr ""
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr ""
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr ""
+msgstr "Lê bide / rawestîne"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr ""
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr ""
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "Sedem tune."
 
@@ -1399,152 +1359,109 @@ msgid "Can't enqueue and replace at the same time"
 msgstr ""
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr ""
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr ""
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr ""
+msgstr "Lîsta Lêdanê Tomar Bike"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr ""
+msgstr "Lîsteya lêdanê"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr ""
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr ""
+msgstr "Vebijêrk"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr ""
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "0:00 / 0:00"
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr ""
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "%s / %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr ""
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr ""
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr ""
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr ""
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
 msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr ""
+msgstr "Herêma derbasdar"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr ""
+msgstr "Erebî"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr ""
+msgstr "Ermenî"
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr ""
+msgstr "Baltîkî"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr ""
+msgstr "Keltî"
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr ""
+msgstr "Ewropaya Navînî"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Çîniya Hêsankirî"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Çîniya Kevneşopî"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr ""
+msgstr "Kroatî"
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1553,94 +1470,94 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr ""
+msgstr "Kîrîlî"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Kîrîlî/Rûsî"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Kîrîlî/Ûkraynî"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr ""
+msgstr "Gurcî"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr ""
+msgstr "Yûnanî"
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr ""
+msgstr "Gucaratî"
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmuxî"
 
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr ""
+msgstr "Îbranî"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Îbraniya Dîtbarî"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr ""
+msgstr "Hindî"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr ""
+msgstr "Îzlandî"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr ""
+msgstr "Japonî"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr ""
+msgstr "Koreyî"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr ""
+msgstr "Nordîk"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr ""
+msgstr "Farisî"
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr ""
+msgstr "Romanî"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr ""
+msgstr "Ewropaya Başûrî"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr ""
+msgstr "Taî"
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr ""
+msgstr "Tirkî"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1648,7 +1565,7 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1656,17 +1573,29 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr ""
+msgstr "Rojavayî"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
+msgstr "Vietnamî"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
 msgstr ""
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr ""
+msgstr "Hemû pelan"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
@@ -1674,7 +1603,7 @@ msgstr ""
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr ""
+msgstr "Pelên Dengê"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
@@ -1694,7 +1623,7 @@ msgstr ""
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr ""
+msgstr "Pêrsat Biserveke"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1709,15 +1638,15 @@ msgstr ""
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr ""
+msgstr "Navê pel"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr ""
+msgstr "Rêjeşane"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr ""
+msgstr "Dem"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
@@ -1816,7 +1745,7 @@ msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr ""
+msgstr "Guhertinan Tomar Bike"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
@@ -1841,7 +1770,7 @@ msgstr ""
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr ""
+msgstr "Beş"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
@@ -1898,12 +1827,12 @@ msgstr ""
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr ""
+msgstr "Bigire Lê Tomar Neke"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr ""
+msgstr "Tomar Bike"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
@@ -1954,7 +1883,7 @@ msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr ""
+msgstr "Têxe Lîsteya Lêxistinê"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
@@ -1962,11 +1891,11 @@ msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr ""
+msgstr "Gerîn"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
 msgid "Search"
-msgstr ""
+msgstr "Lê bigere :"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
@@ -2038,7 +1967,7 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "Portûgaliya Brezîl"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:179
 msgid "Searching for subtitles…"
@@ -2060,7 +1989,7 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:331
 msgid "No results found."
-msgstr ""
+msgstr "Tu encam tune."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
@@ -2070,13 +1999,13 @@ msgstr "Binnivîs"
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
-msgstr ""
+msgstr "Teşe"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
-msgstr ""
+msgstr "Ecibandin"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
@@ -2133,17 +2062,17 @@ msgstr ""
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr ""
+msgstr "%d Hz"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr ""
+msgstr "Nîn e"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
@@ -2207,7 +2136,7 @@ msgstr ""
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr ""
+msgstr "Pelên dawîn"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
@@ -2223,15 +2152,15 @@ msgstr ""
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"
-msgstr ""
+msgstr "Aliyê Saetê de _Bizivîrîne"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
 msgid "Rotate Counterc_lockwise"
-msgstr ""
+msgstr "Vajiyê aliyê saetê wergerîne"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr ""
+msgstr "Dîmenderparêz"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
@@ -2266,7 +2195,7 @@ msgstr ""
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr ""
+msgstr "Wêneya sermasê"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
@@ -2332,15 +2261,15 @@ msgstr ""
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr ""
+msgstr "_Hilpeke:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "çirke"
+msgstr[1] "çirke"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2349,7 +2278,7 @@ msgstr[1] ""
 #: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."

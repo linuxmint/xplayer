@@ -16,79 +16,66 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
-"PO-Revision-Date: 2016-11-04 15:26+0000\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"PO-Revision-Date: 2017-02-13 13:21+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: de\n"
 "X-Poedit-Language: German\n"
 "X-Project-Style: gnome\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "Angehalten"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "Pause"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "Wiedergabe"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "Ein Video wird wiedergegeben"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr "Keine Adresse zum Wiedergeben"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr "Xplayer-Filmwiedergabe"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "Öffnen _mit »%s«"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "Es ist ein Fehler aufgetreten"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr "Keine oder leere Wiedergabeliste vorhanden"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
-msgstr "Film-Browser-Plugin"
+msgstr "Filmnavigatormodul"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr "Die Thread-sicheren Bibliotheken konnten nicht initialisiert werden."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"Bitte überprüfen Sie Ihre System-Installation. Das Xplayer-Plugin wird nun "
+"Bitte überprüfen Sie Ihre Systeminstallation. Das Xplayer-Modul wird jetzt "
 "beendet."
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "Dauer:"
 
@@ -102,84 +89,63 @@ msgstr "Vollbild verlassen"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Bildschirmschoner erlauben, wenn nur Audio wiedergegeben wird"
+msgstr "Bildschirmschoner erlauben, wenn nur der Ton wiedergegeben wird"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Legt fest, ob der Bildschirmschoner starten darf, wenn lediglich Audio "
-"wiedergegeben wird. Bei Monitorlautsprechern bitte deaktivieren."
+"Legt fest, ob der Bildschirmschoner starten darf, wenn lediglich der Ton "
+"wiedergegeben wird. Bei Bildschirmlautsprechern bitte deaktivieren."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "Visuelle Effekte anzeigen, wenn kein Video angezeigt wird"
+msgid "The brightness of the video"
+msgstr "Die Helligkeit des Films"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr ""
-"Visuelle Effekte anzeigen, wenn Nur-Ton-Dateien wiedergegeben werden."
+msgid "The contrast of the video"
+msgstr "Der Kontrast des Films"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "Name des visuellen Effekt-Plugins"
+msgid "The hue of the video"
+msgstr "Der Farbton des Films"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
-msgid "The brightness of the video"
-msgstr "Die Helligkeit des Videos"
+msgid "The saturation of the video"
+msgstr "Die Sättigung des Films"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
-msgid "The contrast of the video"
-msgstr "Der Kontrast des Videos"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:8
-msgid "The hue of the video"
-msgstr "Der Farbton des Videos"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:9
-msgid "The saturation of the video"
-msgstr "Der Sättigung des Videos"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Resize the canvas automatically on file load"
 msgstr "Fenstergröße beim Laden automatisch der geöffneten Datei anpassen"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr "Endlosschleife"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
 msgstr "Zufallsmodus"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 "Legt fest, ob Zeilenentflechtung von Filmen im Zeilensprungverfahren "
 "deaktivieren werden soll"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr "Soll die Wiedergabe-Engine im Fehlerdiagnosemodus ausgeführt werden?"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "Zu verwendender Audio-Ausgabetyp"
+msgstr "Zu verwendender Tonausgabetyp"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr "Qualität der Visualisierung einstellen"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr "Qualitätseinstellungen für die Klangvisualisierung."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "Grenzwert des Netzwerkzwischenspeichers"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -187,27 +153,27 @@ msgstr ""
 "Größe des anzulegenden Zwischenspeichers für Netzwerk-Streams, bevor der "
 "Stream wiedergegeben wird (in Sekunden)"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "Untertitelschrift"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr "Pango-Schriftbeschreibung für die Untertiteldarstellung."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
 msgstr "Untertitelkodierung"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr "Zeichenkodierung für Untertitel."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "Voreingestellter Ort des »Öffnen …«-Dialogs"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -215,11 +181,11 @@ msgstr ""
 "Voreingestellter Ort des »Öffnen …«-Dialogs, Vorgabe ist der momentane "
 "Ordner."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "Voreingestellter Ort des Dialoges »Bildschirmfoto aufnehmen …«"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -227,47 +193,51 @@ msgstr ""
 "Voreingestellter Ort des Dialoges »Bildschirmfoto aufnehmen …«. Vorgabe ist "
 "der Ordner »Bilder«."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
-"Legt fest, ob die Plugins im persönlichen Ordner des Benutzers deaktiviert "
+"Legt fest, ob die Module im persönlichen Ordner des Benutzers deaktiviert "
 "werden."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "Legt fest, ob die Tastenkombinationen deaktiviert sein sollen"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "Legt fest, ob Untertitel beim Laden eines Filmes automatisch geladen werden "
 "sollen"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "Legt fest, ob externe Kapiteldateien beim Laden eines Filmes automatisch "
 "geladen werden sollen"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Legt fest, ob die Wiedergabeposition von Audio- und Videodateien beim "
+"Legt fest, ob die Wiedergabeposition von Ton- und Filmdateien beim "
 "Unterbrechen oder Schließen gespeichert werden soll"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Liste aktiver Plugins"
+msgstr "Liste aktiver Module"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"Eine Liste der Namen von Plugins, die derzeit aktiv sind (geladen und in "
-"Ausführung)."
+"Eine Liste mit den Namen der Module, welche derzeit aktiv sind (geladen und "
+"in Ausführung)."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr "Dunkle Themenvariante bei Verfügbarkeit benutzen."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -313,164 +283,153 @@ msgstr "Herauf schieben"
 msgid "Move Down"
 msgstr "Hinunter schieben"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr "Normal"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr "Groß"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr "Sehr groß"
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
 msgstr "Stereo"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
 msgstr "4-Kanal"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
 msgstr "4.1-Kanal"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
 msgstr "5.0-Kanal"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
 msgstr "5.1-Kanal"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr "AC3-Durchschleifen"
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "Einstellungen von Xplayer"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
 msgstr "Wiedergabe"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
 msgstr "Wiedergabe von Dateien an der letzten Position beginnen"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
 msgstr "Untertitel"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Untertitel laden, sobald ein Video geladen wird"
+msgstr "_Untertiteldatei laden, wenn der Film geladen ist"
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr "Untertitel _anzeigen, wenn der Film geladen ist"
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "_Schrift:"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
 msgstr "_Kodierung:"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr "Externe Kapitel"
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr "_Kapiteldateien laden, sobald ein Video geladen wird"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "Allgemein"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "Anzeige"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 "_Fenstergröße automatisch ändern, sobald ein neues Video geladen wird"
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr "_Zeilenentflechtung von Filmen im Zeilensprungverfahren deaktivieren"
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Bildschirmschoner bei Wiedergabe deaktivieren"
-
-#: ../data/preferences.ui.h:28
-msgctxt "Screensaver disable"
-msgid "Video"
-msgstr "Video"
+msgstr "Bildschirmschoner deaktivieren, bei Wiedergabe von:"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:25
+msgctxt "Screensaver disable"
+msgid "Video"
+msgstr "Filmen"
+
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "Video oder Audio"
+msgstr "Filmen oder Tönen"
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr "Visuelle Effekte"
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr "_Bei der Wiedergabe von Tondateien visuelle Effekte anzeigen"
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr "Visualisierungs_typ:"
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr "Visualisierungs_größe:"
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
 msgstr "Farbabgleich"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
 msgstr "_Helligkeit:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "_Kontrast:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
 msgstr "_Sättigung:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
 msgstr "F_arbton:"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
 msgstr "Auf V_orgaben zurücksetzen"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
 msgstr "Tonausgabe"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
 msgstr "_Tonausgabetyp:"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "Ton"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "Normal"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "Groß"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "Sehr groß"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -530,7 +489,8 @@ msgstr "Kanäle:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
 msgstr "Medienwiedergabe"
 
@@ -561,8 +521,8 @@ msgstr "Stumm"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
 msgstr "Vollbild"
 
@@ -720,11 +680,11 @@ msgstr "Zum Titelmenü gehen"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr "_Audio-Menü"
+msgstr "T_onmenü"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Zum Audio-Menü gehen"
+msgstr "Zum Tonmenü gehen"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -904,7 +864,7 @@ msgid "Skip backwards"
 msgstr "Zurückspulen"
 
 # CHECK ‒ Jemand 'ne bessere Idee?
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr "Zeitleiste"
 
@@ -912,57 +872,57 @@ msgstr "Zeitleiste"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "Bitte geben Sie die Adresse der zu öffnenden Datei ein:"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr "Für den RTSP-Server wird ein Passwort angefordert"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr "Audio-Titel #%d"
+msgstr "Tonspur #%d"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr "Untertitel #%d"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr ""
 "Der Server, zu dem eine Verbindung aufgebaut werden soll, ist unbekannt."
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr "Die Verbindung zu diesem Server wurde abgewiesen."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr "Der angegebene Film konnte nicht gefunden werden."
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr ""
 "Der Server hat den Zugriff auf die Datei oder den Datenstrom verweigert."
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr "Sie müssen sich legitimieren"
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr "Es ist Ihnen nicht gestattet, diese Datei zu öffnen."
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr "Dieser Ort ist ungültig."
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "Der Film konnte nicht gelesen werden."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -972,23 +932,23 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Zum Abspielen dieses Videos wird das nicht installierte Plugin %s benötigt."
+"Zum Abspielen dieses Films wird das nicht installierte Modul %s benötigt."
 msgstr[1] ""
-"Zum Abspielen dieses Videos werden die folgenden nicht installierten Plugins "
-"benötigt:\n"
-"\n"
+"Zum Abspielen dieses Films werden die folgenden nicht installierten Module "
+"benötigt:\r\n"
+"\r\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Ein Audio- oder Video-Datenstrom kann wegen fehlender Codecs nicht "
-"verarbeitet werden. Sie müssen zusätzliche Plugins installieren, um "
-"bestimmte Filmtypen abspielen zu können"
+"Ein Ton- oder Filmdatenstrom kann wegen fehlender Codecs nicht verarbeitet "
+"werden. Sie müssen zusätzliche Module installieren, um bestimmte Filmtypen "
+"abspielen zu können."
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -996,25 +956,25 @@ msgstr ""
 "Diese Datei kann nicht über Netzwerk abgespielt werden. Versuchen Sie die "
 "Datei vorher herunterzuladen."
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr "Surround"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr "Das Medium enthält nicht unterstützte Video-Formate."
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Einige benötigte Plugins fehlen. Stellen Sie sicher, dass das Programm "
-"korrekt installiert ist."
+"Einige benötigte Module fehlen. Bitte stellen Sie sicher, dass das Programm "
+"richtig installiert ist."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -1157,6 +1117,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -1257,7 +1218,7 @@ msgstr[1] "%d Einzelbilder pro Sekunde"
 msgid "Audio Preview"
 msgstr "Tonvorschau"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "Bitte überprüfen Sie Ihre System-Installation. Xplayer wird nun beendet."
@@ -1332,24 +1293,19 @@ msgid ""
 "plugins."
 msgstr ""
 "Xplayer enthält eine Ausnahme, um das Benutzen von proprietären GStreamer-"
-"Plugins zu erlauben."
+"Modulen zu erlauben."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "Keine"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr "Auto"
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
 msgstr "Module konfigurieren"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1360,47 +1316,47 @@ msgstr ""
 "Befehlszeilenoptionen anzuzeigen.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "Pause"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "Wiedergabe"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer konnte »%s« nicht wiedergeben."
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer konnte den Hilfeindex nicht anzeigen."
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Vorheriges Kapitel/Film"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
 msgstr "Wiedergabe / Pause"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr "Nächstes Kapitel/Film"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr "Xplayer konnte nicht gestartet werden."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "Kein Grund."
 
@@ -1476,106 +1432,62 @@ msgstr ""
 "In die Warteschlange stellen und Ersetzen ist nicht gleichzeitig möglich"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3-ShoutCast-Wiedergabeliste"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr "MP3-Audio (Datenstrom)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3-Audio (Datenstrom, DOS-Format)"
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr "Gemeinsame Wiedergabeliste im XML-Format"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr "Titel %d"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr "Die Wiedergabeliste konnte nicht gespeichert werden"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
 msgstr "Wiedergabeliste speichern"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "Wiedergabeliste"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 "Die Wiedergabeliste »%s« konnte nicht verarbeitet werden, möglicherweise ist "
 "sie fehlerhaft."
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "Wiedergabelistenfehler"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
 msgstr "Untertitelschrift auswählen"
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "0:00 / 0:00"
-
-# CHECK
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (Streamen)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "%s / %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "Zu %s / %s springen"
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr "Puffervorgang"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr "%lf%%"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr "%s, %s"
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr "%s, %f%%"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1743,6 +1655,18 @@ msgstr "Westlich"
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "Zu %s / %s springen"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
@@ -2012,7 +1936,7 @@ msgid ""
 "Plugin for sending notifications of currently playing movies to the D-Bus "
 "subsystem."
 msgstr ""
-"Plugin zum Senden von Benachrichtigungen über derzeit abgespielte Videos an "
+"Module zum Senden von Benachrichtigungen, über derzeit abgespielte Filme, an "
 "das D-Bus-Subsystem."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
@@ -2045,7 +1969,7 @@ msgstr "Grilo-Browser"
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Ein Plugin, das die Suche nach Medieninhalten aus verschiedenen Quellen "
+"Ein Module, das die Suche nach Medieninhalten aus verschiedenen Quellen "
 "ermöglicht"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
@@ -2086,12 +2010,12 @@ msgstr "Die Gromit-Binärdatei konnte nicht gefunden werden."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr "Sofortnachrichten-Status"
+msgstr "Sofortnachrichtenstatus"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
-"Setzt den Sofortnachrichten-Status auf »Abwesend«, wenn ein Video abgespielt "
+"Stellt den Sofortnachrichtenstatus auf »Abwesend«, wenn ein Film abgespielt "
 "wird"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
@@ -2130,7 +2054,7 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Untertitel-Downloader"
+msgstr "Untertitelübertrager"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
@@ -2198,7 +2122,7 @@ msgstr "Filmuntertitel herunterladen"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "Untertitel-_Sprache:"
+msgstr "Untertitel_sprache:"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
@@ -2329,8 +2253,7 @@ msgstr "Drehmodul"
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr ""
-"Ermöglicht das Drehen von Videos, falls diese in falscher Orientierung "
-"vorliegen"
+"Ermöglicht das Drehen von Filmen, falls diese falsch ausgerichtet sind"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
 msgid "_Rotate Clockwise"

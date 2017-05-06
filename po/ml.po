@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
 "PO-Revision-Date: 2016-02-03 12:56+0000\n"
 "Last-Translator: Ani Peter <Unknown>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -23,69 +23,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "X-Project-Style: gnome\n"
 "Language: ml\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "നിര്‍ത്തിയിരിക്കുന്നു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "താല്‍ക്കാലികമായി നിര്‍ത്തിയിരിക്കുന്നു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "പ്രവര്‍ത്തിക്കുന്നു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "ഒരു ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുന്നു"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr "പ്ലേ ചെയ്യാന്‍ യു.ആര്‍.എല്‍ ഇല്ല"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr "ടോട്ടം മൂവി പ്ലേയര്‍"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "(_O)തുറക്കുക \"%s\" ഉപയോഗിച്ച്"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr "പ്ലേലിസ്റ്റില്ല അല്ലെങ്കില്‍ പ്ലേലിസ്റ്റ് ഖാലിയാണു"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
 msgstr "ചലചിത്രം ബ്രൌസര്‍ സംയോജകം"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr "ത്രെഡ്-സെയിഫ് ലൈബ്രറികള്‍ ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 "നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer സംയോജകം ഇപ്പോള്‍ "
 "നില്‍ക്കുന്നതാണ്."
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "സമയം:"
 
@@ -111,73 +98,52 @@ msgstr ""
 "പ്രവര്‍ത്തന രഹിതമാക്കുക."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "വീഡിയോ പ്രദര്‍ശിപ്പിക്കാത്തപ്പോള്‍ വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ കാണിയ്ക്കുക"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr ""
-"ഓഡിയോ ഫയല്‍ പ്രദര്‍ശിപ്പിക്കുമ്പോള്‍ മാത്രം വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ കാണിയ്ക്കുക"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "വിഷ്വല്‍ ഇഫക്റ്റ്സ് സംയോജകങ്ങളുടെ പേരു്"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ പ്രകാശം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:7
+#: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ തെളിച്ചം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:8
+#: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ വര്‍ണ്ണം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:9
+#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
 msgstr "ചലച്ചിത്രത്തിന്റെ സാച്ചുറേഷന്‍"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:10
+#: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
 msgstr "ഫയല്‍ ലോഡ് ചെയ്യുമ്പോള്‍ കാന്വാസ് തനിയെ വലിപ്പം മാറ്റുക"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr "ആവര്‍ത്തന മോഡ്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
 msgstr "ഷഫിള്‍ മോഡ്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr ""
 "ഇന്റര്‍ലെയിസ്ഡ് ചലചിത്രങ്ങള്‍ക്കുള്ള ഡീഇന്റര്‍ലെയിസിങ് പ്രവര്‍ത്തന "
 "രഹിതമാക്കണമോ എന്നു്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr "പ്ലേബാക്ക് എഞ്ചിന് ഡീബഗ് സജ്ജമാക്കണമോ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
 msgstr "ഉപയോഗിക്കുന്നതിനുളള ഏതു് തരം ഓഡിയോ ഔട്ട്പുട്ട്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr "വിഷ്യലൈസേഷന്റെ ഗുണ സജ്ജീകരണം"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr "ശബ്ദ വിഷ്വലൈസേഷന്റെ ഗുണനിലവാര സജ്ജീകരണം."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "ശൃംഖല ബഫറിങ് ത്രെഷോള്‍ഡ്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -185,27 +151,27 @@ msgstr ""
 "ശ്രംഖലയിലുള്ള സ്ട്രീമുകള്‍ക്ക് കാണിയ്ക്കാന്‍ തുടങ്ങുന്നതിനു മുമ്പു് ബഫര്‍ "
 "ചെയ്യേണ്ട ഡാറ്റയുടെ അളവ് (സെക്കന്റുകളില്‍)."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "അടിക്കുറിപ്പിന്റെ അക്ഷരസഞ്ചയം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr "അടിക്കുറിപ്പു് ചിത്രീകരിയ്ക്കാനുളള പാംഗോ അക്ഷരസഞ്ചയത്തിന്റെ വിവരണം."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
 msgstr "അടിക്കുറിപ്പു് എന്‍കോഡിങ്ങ്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr "അടിക്കുറിപ്പിനു് വേണ്ട എന്‍കോഡിങ്ങ്."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "\"തുറക്കുക...\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -213,11 +179,11 @@ msgstr ""
 "\"തുറക്കുക...\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം. സഹജമായിട്ടുള്ളതു് "
 "നിലവിലുള്ള ഡയറക്ടറിയാണു്."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "\"തിരച്ചിത്രം എടുക്കുക\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -225,27 +191,27 @@ msgstr ""
 "\"തിരച്ചിത്രം എടുക്കുക\" എന്ന സംഭാഷണങ്ങള്‍ക്കുള്ള സഹജമായ സ്ഥാനം. "
 "സഹജമായിട്ടുള്ളതു് ചിത്രങ്ങളുടെ ഡയറക്ടറിയാണു്."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
 "ഉപയോക്താവിന്റെ 'വീട്' തട്ടത്തില്‍ സംയോജകങ്ങള്‍ അപ്രാവര്‍ത്തികമാക്കണോ എന്നു്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "കീബോര്‍ഡ് കുറുക്കുവഴികള്‍ പ്രവര്‍ത്തന രഹിതമാക്കണമോ എന്നു്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "ചലച്ചിത്രം ലോഡ് ചെയ്യുമ്പോള്‍ അടിക്കുറിപ്പു് തനിയെ ലോഡ് ചെയ്യണോ എന്ന്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "ചലച്ചിത്രം ലഭ്യമാക്കുമ്പോള്‍ പുറത്തു് നിന്നുള്ള ഭാഗത്തിനുള്ള ഫയലുകള്‍ സ്വയമേ "
 "ലഭ്യമാക്കണമോ എന്നു്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -253,16 +219,20 @@ msgstr ""
 "തല്‍ക്കാലത്തേക്ക് നിര്‍ത്തുമ്പോള്‍ അല്ലെങ്കില്‍ പുറത്തു് കടക്കുമ്പോള്‍ "
 "പ്രവര്‍ത്തനത്തിലുള്ള ഓഡിയോ/വീഡിയോ ഫയലുകളുടെ സ്ഥാനം സൂക്ഷിക്കണമോ എന്നു്"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
 msgstr "സജീവമായ സംയോജക പട്ടിക"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
 "നിലവില്‍ സജീവമായ പ്ലഗിനുകളുടെ പേരിന്റെ പട്ടിക (ലഭ്യവും പ്രവര്‍ത്തനത്തിലും)."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -308,174 +278,162 @@ msgstr "മുകളിലേയ്ക്കു് മാറ്റുക"
 msgid "Move Down"
 msgstr "താഴേയ്ക്കു് മാറ്റുക"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr "സാധാരണ"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr "വലുത്"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr "വളരെ വലുതു്"
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
 msgstr "സ്റ്റീരിയോ"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
 msgstr "4-ചാനല്‍"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
 msgstr "4.1-ചാനല്‍"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
 msgstr "5.0-ചാനല്‍"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
 msgstr "5.1-ചാനല്‍"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr "എ.സി.3 പാസ്ത്രൂ (അകത്തൂടെ കടക്കല്‍)"
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "ടോട്ടത്തിനുള്ള മുന്‍ഗണനകള്‍"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
 msgstr "പ്ലേബാക്ക്"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
 msgstr ""
 "അവസാന സ്ഥാനത്തു് നിന്നും ഫയലുകള്‍ പ്രവര്‍ത്തിപ്പിക്കുവാന്‍ ആരംഭിക്കുക"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
 msgstr "അടിക്കുറിപ്പുകള്‍"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
 msgstr ""
 "ഒരു പുതിയ ചിത്രം ലഭ്യമാക്കുമ്പോള്‍ സ്വയമേ അടിക്കുറിപ്പു് ഫയലുകള്‍ _ചേര്‍ക്കുക"
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr ""
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "_അക്ഷരസഞ്ചയം:"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
 msgstr "_എന്‍കോഡിങ്ങ്:"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr "പുറമേയുള്ള ചാപ്റ്ററുകള്‍"
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr ""
 "ഒരു പുതിയ ചിത്രം ലഭ്യമാക്കുമ്പോള്‍ സ്വയമേ അടിക്കുറിപ്പു് ഫയലുകള്‍  "
 "_ചേര്‍ക്കുക"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "പൊതുവായ"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "പ്രദര്‍ശനം"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 "ഒരു പുതിയ ചലചിത്രം ലഭ്യമാക്കുമ്പോള്‍ സ്വയമേ ജാലകത്തിന്റെ വലിപ്പം "
 "_ക്രമീകരിയ്ക്കുക"
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr ""
 "ഇന്റര്‍ലെയിസ്ഡ് ചലചിത്രങ്ങള്‍ക്കുള്ള ഡീ_ഇന്റര്‍ലെയിസിങ് പ്രവര്‍ത്തന "
 "രഹിതമാക്കുക"
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 #| msgid "Disable screensaver when playing "
 msgid "Disable screensaver when playing"
 msgstr "പ്രവര്‍ത്തിക്കുമ്പോള്‍ സ്ക്രീന്‍സേവര്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 #| msgid "Video"
 msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "വീഡിയോ"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
 msgstr "ശബദമോ ചലചിത്രമോ"
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr "കണ്ണിന് കുളിര്‍മയേകുന്ന കാഴ്ചകള്‍"
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr ""
-"ഓഡിയോ ഫയല്‍ പ്രവര്‍ത്തിക്കുമ്പോള്‍ _വിഷ്വല്‍ ഇഫക്റ്റുകള്‍ കാണിയ്ക്കുക"
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr "ഏതു് _തരം വിഷ്വലൈസേഷന്‍:"
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr "വിഷ്യലൈസേഷന്‍ _വലിപ്പം:"
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
 msgstr "നിറത്തിന്റെ നില"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
 msgstr "_പ്രകാശം:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "_തെളിച്ചം:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
 msgstr "സാ_ച്ചുറേഷന്‍:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
 msgstr "_വര്‍ണ്ണം:"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
 msgstr "_സഹജമായവയിലേയ്ക്കു് വീണ്ടും സജ്ജീകരിയ്ക്കുക"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
 msgstr "ഓഡിയോ ഔട്ട്പുട്ട്"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
 msgstr "_ഓഡിയോ ഔട്ട്പുട്ട് രീതി:"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "ശബ്ദം"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "സാധാരണ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "വലുത്"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "വളരെ വലുതു്"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -535,7 +493,8 @@ msgstr "ചാനലുകള്‍:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
 msgstr ""
 
@@ -565,8 +524,8 @@ msgstr ""
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
 msgstr "മുഴുവന്‍ തിരശ്ശീല"
 
@@ -908,7 +867,7 @@ msgstr "_പുറകോട്ട് ഒരു പടി പോവുക"
 msgid "Skip backwards"
 msgstr "പുറകോട്ട് ഒരു പടി പോവുക"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr "പ്രത്യേക സമയത്തേയ്ക്കു് കൊണ്ടുപോകാനുള്ള ബാറ്"
 
@@ -916,55 +875,55 @@ msgstr "പ്രത്യേക സമയത്തേയ്ക്കു് ക�
 msgid "Enter the _address of the file you would like to open:"
 msgstr "നിങ്ങള്‍ തുറക്കുവാന്‍ ആഗ്രഹിക്കുന്ന ഫയലിന്റെ _വിലാസം നല്‍കുക:"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr "RTSP സേവകന്റെ അടയാളവാക്ക്"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
 msgstr "ശബ്ദ ട്രാക്ക് #%d"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr "അടിക്കുറിപ്പു് #%d"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr "നിങ്ങള്‍ ബന്ധിപ്പിക്കുവാന്‍ ശ്രമിക്കുന്ന സേവകന്‍ അപരിചിതമാണ്."
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr "ഈ സര്‍വറിലേക്കുളള കണക്ഷന്‍ നിഷേധിച്ചിരിക്കുന്നു."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr "പറഞ്ഞിരിക്കുന്ന ചലച്ചിത്രം കണ്ടുകിട്ടിയില്ല."
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr "സെര്‍വര്‍ ഐ ഫയലോ സ്ട്രീമോ ഉപയോഗിക്കാന്‍ അനുവദിക്കുന്നില്ല."
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr "ഐ ഫയല്‍ അല്ലെങ്കില്‍ സിസ്റ്റം ഉപയോഗിക്കാന്‍ തിരിച്ചറിയല്‍ ആവശ്യമാണു."
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr "ഈ ഫയല്‍ തുറക്കുവാന്‍ നിങ്ങള്‍ക്ക് അനുവാദമില്ല."
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr "ഈ സാധുതയുളള സ്ഥാനമല്ല."
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "ചലച്ചിത്രം ലഭ്യമല്ല."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -982,7 +941,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -991,7 +950,7 @@ msgstr ""
 "ചെയ്തിട്ടില്ല. ചില തരത്തിലുള്ള ചലചിത്രങ്ങള്‍ പ്രവര്‍ത്തിപ്പിയ്ക്കുന്നതിനായി "
 "അധികമായ പ്ലഗിനുകള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യേണ്ടതുണ്ടു്."
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -999,19 +958,19 @@ msgstr ""
 "ശ്രംഖലയില്‍ ഈ ഫയല്‍ പ്രവര്‍ത്തിപ്പിക്കുവാന്‍ സാധ്യമായില്ല. ആദ്യം അത് "
 "ഡിസ്ക്കിലേക്ക് ഡൌണ്‍ ലോഡ് ചെയ്യുന്നതിന് ശ്രമിക്കുക."
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr "സറൌണ്ട് (എല്ലാ ദിശയില്‍ നിന്നും ശബ്ദം)"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
 msgstr "മോണോ"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr "മീഡിയ്ക് പിന്തുണയുളള വീഡിയോ പ്രവാഹങ്ങള്‍ ലഭ്യമല്ല"
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1160,6 +1119,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "അറിഞ്ഞുകൂടാത്ത"
 
@@ -1258,7 +1218,7 @@ msgstr[1] "ഒരു സെക്കന്‍ഡില്‍ %d ഫ്രെയ�
 msgid "Audio Preview"
 msgstr "ഓഡിയോ തിരനോട്ടം"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer ഇപ്പോള്‍ പുറത്ത് "
@@ -1339,21 +1299,16 @@ msgstr ""
 "അനുവദിക്കുന്നതിനായി ഒരു ഒഴിവാക്കലുണ്ട്."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "ഒന്നുമില്ല"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr "സ്വതേ"
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
 msgstr "സംയോജകങ്ങള്‍ ക്രമീകരിയ്ക്കുക"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1363,48 +1318,48 @@ msgstr ""
 " '%s --help' രണ്‍ ചെയ്യുക ലഭ്യമായ ആജ്ഞ-വരി ഐച്ഛികങ്ങളുടെ പട്ടിക കാണാന്‍..\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
 msgstr "ടോട്ടം %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "താല്‍കാലികമായി നിര്‍ത്തുക"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "ടോട്ടത്തിനു് '%s' പ്രവര്‍ത്തിപ്പിക്കുവാന്‍‍ സാധ്യമായില്ല."
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr ""
 "ടോട്ടത്തിനു് സഹായത്തിന്റെ ഉളളടക്കം പ്രദര്‍ശിപ്പിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "തൊട്ട് മുമ്പുള്ള ഭാഗം/സിനിമ"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
 msgstr "പ്രവര്‍ത്തിപ്പിക്കുക / താല്‍കാലത്തേക്ക് നിര്‍ത്തുക"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr "അടുത്ത ഭാഗം/സിനിമ"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr "ടോട്ടത്തിനു് ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "കാരണം ഇല്ല."
 
@@ -1478,103 +1433,60 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "വരിയിലേക്ക് ചേര്‍ക്കുവാനും മാറ്റിസ്ഥാപിക്കുവാനും ഒരേസമയം പറ്റില്ല"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr "എംപിത്രി ഷൌട്ട്കാസ്റ്റ് പ്ലേലിസ്റ്റ്"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr "എംപിത്രി ഓ‍ഡിയോ (സ്ട്രീമ്ഡ്)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "എംപിത്രി ഓ‍ഡിയോ (സ്ട്രീമ്ഡ്, ഡോസ് ശൈലി)"
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr "XML പങ്കിടുന്ന പ്ലേലിസ്റ്റ്"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr "തലക്കെട്ടു് %d"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr "പ്ലേലിസ്റ്റ് സംരക്ഷിക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
 msgstr "പ്ലേലിസ്റ്റ് സൂക്ഷിക്കുക"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "പ്ലേലിസ്റ്റ്"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "പ്ലേലിസ്റ്റ് '%s' തുറക്കാന്‍ കഴിഞ്ഞില്ല. ഇതിനു കേടു വന്നിരിക്കാം"
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "പ്ലേലിസ്റ്റ് പിശക്"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
 msgstr "മുന്‍ഗണനകള്‍"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
 msgstr "അടിക്കുറിപ്പിനുള്ള അക്ഷരസഞ്ചയം തെരഞ്ഞെടുക്കുക"
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "0:00 / 0:00"
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (സ്ട്രീം ചെയ്തുകൊണ്ടിരിയ്ക്കുന്നു)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "%s / %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "%s / %s തെരയുക"
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr "ബഫറിങ്"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr "%lf %%"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr "%s, %s"
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr "%s, %f %%"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1742,6 +1654,18 @@ msgstr "പാശ്ചാത്ത്യം"
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "വിയറ്റ്നാമീസ്"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "%s / %s തെരയുക"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"

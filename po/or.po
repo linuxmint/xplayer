@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
 "PO-Revision-Date: 2016-02-03 12:37+0000\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -19,67 +19,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: or\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "ଅଟକିଛି"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "ଅଟକିଛି"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "ଚାଲୁଅଛି"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "ଗୋଟିଏ ସିନେମା ଚଳାଉଛି"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr "ଚଲାଇବା ପାଇଁ କୌଣସି URI ନାହିଁ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr "Xplayer ସିନେମା ଚାଳକ"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "\"%s\" ସହିତ ଖୋଲନ୍ତୁ (_O)"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "ଗୋଟିଏ ତ୍ରୁଟି ପରିଲିଖିଲ ହେଲା"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr "କୌଣସି ସଙ୍ଗୀତ ତାଲିକା ନାହିଁ କିମ୍ବା ସଙ୍ଗୀତ ତାଲିକା ଖାଲିଅଛି"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
 msgstr "ଚଳଚିତ୍ର ବ୍ରାଉଜର ପ୍ଲଗଇନ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr "ଥ୍ରେଡ-ସୁରକ୍ଷା ଲାଇବ୍ରେରୀକୁ ପ୍ରାରମ୍ଭିକ୍ରୁତ କରିପାରିଲା ନାହିଁ।"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 "ଆପଣଙ୍କ ତନ୍ତ୍ର ସ୍ଥାପନକୁ ଯାଞ୍ଚ କରନ୍ତୁ। Xplayer ପ୍ଲଗଇନ ବର୍ତ୍ତମାନ ବନ୍ଦ ହୋଇଯିବ।"
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "ସମୟ:"
 
@@ -104,71 +91,51 @@ msgstr ""
 "ଉପରେ ନଜର ରଖିବା ପାଇଁ ଉପଯୋଗୀ ହୋଇଥାଏ।"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "ଯେତେବେଳେ କୌଣସି ଭିଡିଓ ଦେଖାଯାଏ ନାହିଁ ଦ୍ରୁଶ୍ଯ ପ୍ରଭାବକୁ ଦେଖାନ୍ତୁ"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr "ଗୋଟିଏ କେବଳ ଧ୍ବନି ଫାଇଲକୁ ଚାଳାଇବା ସମୟରେ ଦ୍ରୁଶ୍ଯ ପ୍ରଭାବକୁ ଦେଖାନ୍ତୁ"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "ଦ୍ରୁଶ୍ଯ ପ୍ରଭାବ ପ୍ଲଗ-ଇନର ନାମ"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "ଭିଡିଓର ଉଜ୍ଜ୍ବଳତା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:7
+#: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
 msgstr "ଭିଡିଓର ପ୍ରଭେଦ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:8
+#: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
 msgstr "ଭିଡିଓର ରଙ୍ଗ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:9
+#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
 msgstr "ଭିଡିଓର ପରିପ୍ରୁକ୍ତତା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:10
+#: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
 msgstr ""
 "ଫାଇଲ ଧାରଣରେ ଅଙ୍କନ କ୍ଷେତ୍ରର ଆକାରକୁ ସ୍ବୟଂଚାଳିତ ଭାବରେ ପରିବର୍ତ୍ତିତ କରନ୍ତୁ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr "ପୁନରାବ୍ରୁତ୍ତି ଧାରା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
 msgstr "ବିଶ୍ରୁଙ୍ଖଳିତ ଧାରା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "ପଛଚଲା ଯନ୍ତ୍ର ପାଇଁ ତ୍ରୁଟି ନିବାରଣକୁ ନିଷ୍କ୍ରିୟ କରାଯିବ କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr "ପଛଚଲା ଯନ୍ତ୍ର ପାଇଁ ତ୍ରୁଟି ନିବାରଣକୁ ସକ୍ରିୟ କରାଯିବ କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
 msgstr "ବ୍ଯବହାର କରାଯିବା ଧ୍ବନି ନିର୍ଗମର ପ୍ରକାର"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr "ମାନସ ଚିତ୍ରଣ ସଂରଚନା"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr "ଧ୍ୱନି ଶ୍ରବଣ ପାଇଁ ମାନ୍ୟତା ବିନ୍ୟାସ।"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "ନେଟୱାର୍କ ବଫରିଙ୍ଗ ପ୍ରଭାବସୀମା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -176,27 +143,27 @@ msgstr ""
 "ଧାରା (ସେକଣ୍ଡରେ)କୁ ଦର୍ଶାଇବା ପାଇଁ ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ନେଟୱର୍କ ଧାରା ପାଇଁ ବଫର "
 "କରିବାକୁ ଥିବା ତଥ୍ୟର ପରିମାଣ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "ଉପଶୀର୍ଷକ ଅକ୍ଷରରୂପ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr "ଉପ-ଶୀର୍ଷକ ଚିତ୍ରଣ ପାଇଁ ପାଙ୍ଗୋ ଅକ୍ଷରରୂପ ବର୍ଣ୍ଣନା।"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
 msgstr "ଉପଶୀର୍ଷକ ସାଙ୍କେତିକରଣ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr "ଅକ୍ଷରମାଳାକୁ ଉପ-ଶୀର୍ଷକ ପାଇଁ ସାଙ୍କେତିକରଣ କରନ୍ତୁ।"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "\"Open...\" ସଂଳାପ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ସ୍ଥାନ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -204,11 +171,11 @@ msgstr ""
 "\"Open...\" ସଂଳାପ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ସ୍ଥାନ, ପୂର୍ବନିର୍ଦ୍ଧାରିତଟି ହେଉଛି "
 "ସାମ୍ପ୍ରତିକ ଡିରେକ୍ଟରୀ।"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "\"Take Screenshot\" ସଂଳାପ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ସ୍ଥାନ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -216,26 +183,26 @@ msgstr ""
 "\"ପରଦା ପ୍ରତିଛବି ନିଅନ୍ତୁ\" ସଂଳାପ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ସ୍ଥାନ, "
 "ପୂର୍ବନିର୍ଦ୍ଧାରିତଟି ହେଉଛି ପ୍ରତିଛବି ଡିରେକ୍ଟରୀ।"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "ଚାଳକର ମୂଳ ଡିରେକ୍ଟରୀରେ ପ୍ଲଗଇନଗୁଡିକୁ ନିଷ୍କ୍ରିୟ କରାଯିବ କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "କିବୋର୍ଡ ସଂକ୍ଷିପ୍ତପଥଗୁଡିକୁ ନିଷ୍କ୍ରିୟ କରାଯିବ କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "ଗୋଟିଏ ଚଳଚିତ୍ର ଧାରଣ ହେଉଥିବା ସମୟରେ ପାଠ୍ୟ ଉପଶୀର୍ଷକକୁ ସ୍ୱୟଂଧାରଣ କରିବା ଉଚିତ କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "ଗୋଟିଏ ଚଳଚିତ୍ର ଧାରଣ ହେଉଥିବା ସମୟରେ ବାହ୍ୟ ବିଷୟ ଫାଇଲଗୁଡ଼ିକୁ ସ୍ୱୟଂଧାରଣ କରିବା ଉଚିତ "
 "କି"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -243,17 +210,21 @@ msgstr ""
 "ଖେଳାଯାଇଥିବା ଧ୍ୱନି/ଭିଡିଓ ଫାଇଲଗୁଡ଼ିକ ପାଇଁ ଅଟକାଇବା ଅଥବା ବନ୍ଦ କରିବା ପାଇଁ "
 "ଅବସ୍ଥାନକୁ ମନେ ରଖିବା ଉଚିତ କି ନୁହଁ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
 msgstr "ସକ୍ରିୟ ପ୍ଲଗ-ଇନ ତାଲିକା"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
 "ପ୍ଲଗଇନମାନଙ୍କର ନାମର ଗୋଟିଏ ତାଲିକା ଯାହାକି ବର୍ତ୍ତମାନ ସକ୍ରିୟ ଅଛି (ଧାରଣ ହୋଇଛି ଏବଂ "
 "ଚାଲୁଅଛି)।"
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -299,166 +270,155 @@ msgstr "ଉପରକୁ ଯାଆନ୍ତୁ"
 msgid "Move Down"
 msgstr "ତଳକୁ ଯାଆନ୍ତୁ"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr "ସାଧାରଣ"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr "ବଡ଼"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr "ଅତି ବଡ଼"
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
 msgstr "ଷ୍ଟେରିଓ"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
 msgstr "4-ଚାନେଲ"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
 msgstr "4.1-ଚାନେଲ"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
 msgstr "5.0-ଚାନେଲ"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
 msgstr "5.1-ଚାନେଲ"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr "AC3 Passthrough"
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "Xplayer ପସନ୍ଦ"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
 msgstr "ପଛକୁ ଚଲାନ୍ତୁ"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
 msgstr "ଅନ୍ତିମ ସ୍ଥାନରୁ ଚଲାଇବା ଆରମ୍ଭ କରନ୍ତୁ"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
 msgstr "ପାଠ୍ଯ ଉପଶୀର୍ଷକ"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
 msgstr ""
 "ଚଳଚିତ୍ର ଧାରଣ କରୁଥିବା ସମୟରେ ସ୍ବୟଂଚାଳିତ ଭାବରେ ଉପଶୀର୍ଷକ ଫାଇଲକୁ ଧାରଣ କରନ୍ତୁ (_l)"
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr ""
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "ଅକ୍ଷରରୂପ (_F):"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
 msgstr "ସାଙ୍କେତିକରଣ (_E):"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr "ବାହ୍ୟ ଅଧ୍ଯାୟଗୁଡିକ"
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr "ଚଳଚିତ୍ର ଧାରଣ ହୋଇଥିବା ସମୟରେ ଅଧ୍ଯାୟ ଫାଇଲଗୁଡ଼ିକୁ ଧାରଣ କରନ୍ତୁ (_c)"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "ସାଧାରଣ"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "ପ୍ରଦର୍ଶନ"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 "ଗୋଟିଏ ନୂତନ ଭିଡିଓ ଧାରଣ କଲେ ସ୍ବୟଂଚାଳିତ ଭାବରେ ୱିଣ୍ଡୋର ଆକାରକୁ ପରିବର୍ତ୍ତିନ କରନ୍ତୁ "
 "(_R)"
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr "ଅନ୍ତଃସ୍ଥିତ ଭିଡିଓଗୁଡ଼ିକୁ ବାହାରକରିବାକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ (_d)"
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
 msgstr "ଚଲାଇବା ସମୟରେ ପରଦା ସଂରକ୍ଷକକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "ଭିଡିଓ"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
 msgstr "ଭିଡ଼ିଓ ଅଥବା ଧ୍ୱନି"
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr "ଦୃଷ୍ଟି ପ୍ରଭାବ"
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr "ଗୋଟିଏ ଅଡିଓ ଫାଇଲ ଚଳାଇଲେ (_v)"
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr "ମାନସ ଚିତ୍ରଣ ପ୍ରକାର (_T):"
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr "ମାନସ ଚିତ୍ରଣ ଆକାର (_s):"
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
 msgstr "ରଙ୍ଗ ସନ୍ତୁଳନ"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
 msgstr "ଉଜ୍ଜ୍ବଳତା (_B):"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "ପ୍ରଭେଦ (_n):"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
 msgstr "ପରିପ୍ରୁକ୍ତ (_u):"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
 msgstr "ରଙ୍ଗ (_H):"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
 msgstr "ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ପାଇଁ ପୁନଃ ସ୍ଥାପନ କରନ୍ତୁ (_D)"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
 msgstr "ଧ୍ୱନୀ ନିର୍ଗମ"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
 msgstr "ଧ୍ବନି ନିର୍ଗମ ପ୍ରକାର (_A)"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "ଧ୍ବନି"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "ସାଧାରଣ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "ବଡ଼"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "ଅତି ବଡ଼"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -518,7 +478,8 @@ msgstr "ଚାନେଲଗୁଡ଼ିକ:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
 msgstr ""
 
@@ -548,8 +509,8 @@ msgstr ""
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
 msgstr "ସମ୍ପୂର୍ଣ ପରଦା"
 
@@ -890,7 +851,7 @@ msgstr "ପଛକୁ ଯାଆନ୍ତୁ (_B)"
 msgid "Skip backwards"
 msgstr "ପଛକୁ ଯାଆନ୍ତୁ"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr "ସମୟ ଅନୁସନ୍ଧାନ ପଟି"
 
@@ -898,55 +859,55 @@ msgstr "ସମୟ ଅନୁସନ୍ଧାନ ପଟି"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "ଆପଣ ଖୋଲିବାକୁ ଇଚ୍ଛାକରୁଥିବା ଫାଇଲର ଠିକଣା ଦିଅନ୍ତୁ (_a):"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr "RTSP ସର୍ଭର ପାଇଁ ପ୍ରବେଶ ସଂକେତକୁ ଅନୁରୋଧ କରାଯାଇଛି"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
 msgstr "ଧ୍ୱନି ଟ୍ରାକ #%d"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr "ଉପଶୀର୍ଷକ #%d"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr "ଆପଣ ସଂଯୋଗ କରିବା ପାଇଁ ଚାହୁଁଥିବା ସର୍ଭରଟି ଜଣା ନାହିଁ।"
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr "ସର୍ଭର ପାଇଁ ସଂଯୋଗକୁ ବାରଣ ହୋଇଛି।"
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr "ଉଲ୍ଲିଖିତ ଚଳଚିତ୍ରଟି ମିଳୁନାହିଁ।"
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr "ସର୍ଭର ଏହି ଫାଇଲ କିମ୍ବା ଧାରା ପାଇଁ ପ୍ରବେଶାନୁମତିକୁ ବାରଣ କରିଛି।"
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr "ଏହି ଫାଇଲ କିମ୍ବା ଧାରାରେ ପ୍ରବେଶାନୁମତି ପାଇବା ପାଇଁ ବୈଧିକରଣ ଆବଶ୍ୟକ।"
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr "ଆପଣଙ୍କ ପାଖରେ ଏହି ଫାଇଲକୁ ଖୋଲିବା ପାଇଁ ଅନୁମତି ନାହିଁ।"
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr "ଏହି ଅବସ୍ଥାନଟି  ବୈଧ ନୁହଁ।"
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "ଏହି ଚଳଚିତ୍ରଟିକୁ ପଢ଼ିହେବ ନାହିଁ।"
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -963,7 +924,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -971,7 +932,7 @@ msgstr ""
 "କୋଡେକ ଅଭାବରୁ ଧ୍ୱନି କିମ୍ବା ଭିଡ଼ିଓକୁ ନିୟନ୍ତ୍ରିତ ହୋଇନଥାଏ। କିଛି ପ୍ରକାରର "
 "ଚଳଚିତ୍ରକୁ ଦେଖିବା ପାଇଁ ଆପଣଙ୍କୁ ହୁଏତଃ ଅତିରିକ୍ତ ପ୍ଲଗଇନ ସ୍ଥାପନ କରିବାକୁ ହେବ"
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -979,19 +940,19 @@ msgstr ""
 "ଏହି ଫାଇଲକୁ ନେଟୱର୍କରେ ଚଳାଇ ପାରିବେ ନାହିଁ।ଏହାକୁ ପ୍ରଥମେ ଆହରଣ କରିବା ପାଇଁ "
 "ପ୍ରଚେଷ୍ଟାକରନ୍ତୁ।"
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr "ଚାରିପାଖ"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
 msgstr "ମନୋ"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr "ମାଧ୍ଯମ କୌଣସି ସମର୍ଥିତ ଭିଡିଓ ସ୍ରୋତକୁ ଧାରଣ କରିନାହିଁ।"
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1139,6 +1100,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "ଅଜଣା"
 
@@ -1237,7 +1199,7 @@ msgstr[1] "%d ଟି ଫ୍ରେମ ପ୍ରତି ସେକେଣ୍ଡ"
 msgid "Audio Preview"
 msgstr "ଧ୍ୱନି ପ୍ରାକଦର୍ଶନ"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "ଆପଣଙ୍କ ତନ୍ତ୍ର ସ୍ଥାପନକୁ ନିରୀକ୍ଷଣ କରନ୍ତୁ। Xplayer ବର୍ତ୍ତମାନ ବନ୍ଦ ହୋଇଯିବ।"
@@ -1315,21 +1277,16 @@ msgstr ""
 "ବ୍ୟତିକ୍ରମ ଧାରଣ କରିଥାଏ."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "କିଛି ନୁହେଁ"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr "ସ୍ୱୟଂଚାଳିତ"
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
 msgstr "ପ୍ଲଗଇନଗୁଡିକୁ ବିନ୍ୟାସ କରନ୍ତୁ"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1340,47 +1297,47 @@ msgstr ""
 "ଚଳାନ୍ତୁ.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "ଅଟକାନ୍ତୁ"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "ଚଳାନ୍ତୁ"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "Xplayer '%s' ଡିସ୍କକୁ ଚଳାଇ ପାରିଲା ନାହିଁ।"
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer ସହାୟତା ବିଷୟବସ୍ତୁକୁ ପ୍ରଦର୍ଶିତ କରିପାରିଲା ନାହିଁ।"
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ପୂର୍ବବର୍ତ୍ତୀ ଅଧ୍ଯାୟ/ସିନେମା"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
 msgstr "ଚଳାନ୍ତୁ / ଅଟକାନ୍ତୁ"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr "ପରବର୍ତ୍ତୀ ଅଧ୍ଯାୟ/ସିନେମା"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr "Xplayer ପ୍ରାରମ୍ଭ ହୋଇ ପାରିଲା ନାହିଁ।"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "କୌଣସି କାରଣ ନାହିଁ।"
 
@@ -1454,103 +1411,60 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "ଏକ ସମୟରେ କ୍ରମରେ ରଖି ବଦଳାଇପାରିବେ ନାହିଁ"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast ସଙ୍ଗୀତ ସୂଚୀ"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr "MP3 ଧ୍ୱନି (ଧାରା)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 ଧ୍ୱନି (ଧାରା, DOS ସଜ୍ଜିକରଣ ଶୈଳୀ)"
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr "XML ସହଭାଗୀ ସଙ୍ଗୀତ-ସୂଚୀ"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr "ଶୀର୍ଷକ %d"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr "ସଙ୍ଗୀତ-ସୂଚୀକୁ ସଂରକ୍ଷିତ କରିପାରିଲା ନାହିଁ"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
 msgstr "ସଙ୍ଗୀତ-ସୂଚୀକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "ଗୀତ-ତାଲିକା"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "'%s' ସଙ୍ଗୀତ-ସୂଚୀକୁ ବିଶ୍ଳେଷଣ କରିପାରିଲା ନାହିଁ। ଏହା ଅକାମି ହୋଇଯାଇଥିବ।"
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "ସଙ୍ଗୀତ-ସୂଚୀ ତ୍ରୁଟି"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
 msgstr "ପସନ୍ଦ"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
 msgstr "ଉପଯୁକ୍ତ ଅକ୍ଷରରୂପକୁ ଚୟନ କରନ୍ତୁ"
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "୦:୦୦ / ୦:୦୦"
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (ପ୍ରବାହିତ)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "%s / %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "%s / %s କୁ ଖୋଜନ୍ତୁ"
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr "ସ୍ବଲ୍ପ ସଞ୍ଚୟ କରୁଅଛି"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr "%lf %%"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr "%s, %s"
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr "%s, %f %%"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1718,6 +1632,18 @@ msgstr "ପଶ୍ଚିମୀ"
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "ଭିଏତନାମୀ"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "%s / %s କୁ ଖୋଜନ୍ତୁ"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"

@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
 "PO-Revision-Date: 2016-02-03 12:37+0000\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Persian\n"
@@ -22,68 +22,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: fa\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "متوقف شده"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "مکث شده"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "در حال پخش"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "در حال پخش فیلم"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr "آدرسی برای پخش نیست"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr "پخش‌کننده‌ی فیلم توتم"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "_باز کردن با «%s»"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "خطایی پیش آمد"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr "فهرست پخشی وجود ندارد و یا خالی است"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
 msgstr "افزونه‌ی مرورگر فیلم"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr "مقدار دهی اولیه کتابخانه‌های thread-safe امکان‌پذیر نبود."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 "از درستی نصب سیستمتان مطمئن شوید. افزونه‌ی توتم هم‌اکنون خارج می‌شود."
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "زمان:"
 
@@ -108,70 +95,50 @@ msgstr ""
 "بلندگوهای monitor-powered این گزینه را غیرفعال کنید."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "نشان دادن جلوه‌های تصویری وقتی ویدیویی پخش نمی‌شود"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr "نشان دادن جلوه‌های تصویری هنگام پخش پرونده‌های فقط صوتی"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "نام متصل‌شونده‌ی جلوه‌های تصویری"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "روشنی ویدیو"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:7
+#: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
 msgstr "کنتراست ویدیو"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:8
+#: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
 msgstr "پرده‌ی رنگ ویدیو"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:9
+#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
 msgstr "غلظت رنگ ویدیو"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:10
+#: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
 msgstr "تغییر اندازه‌ی خودکار بوم هنگام بار کردن پرونده"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr "حالت تکرار"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
 msgstr "حالت تصادفی"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "اینکه آیا مشبک‌زدایی از تصاویر مشبک غیرفعال شود"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr "این که آیا اشکال‌زدا برای موتور پخش به کار انداخته بشود یا نه."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
 msgstr "نوع خروجی صوتی که استفاده می‌شود"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr "تنظیمات کیفیت تصویرسازی"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr "تنظیمات کیفیت برای تصویر‌سازی صوتی"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "آستانه‌ی میانگیری شبکه"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -179,38 +146,38 @@ msgstr ""
 "مقدار اطلاعاتی که برای جریان‌های شبکه‌ای، قبل از نمایش دادن جریان‌ها میانگیر "
 "می‌شود (به ثانیه)"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "قلم زیرنویس"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr "شرح قلم پانگو برای رسم زیرنویس"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
 msgstr "کدگذاری زیرنویس"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr "دسته‌ی کدگذاری، برای زیرنویس"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "مکان پیش فرض برای محاوره‌های «باز کردن...»"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
 "مکان پیش فرض برای محاوره‌های «بازکردن...». مکان پیش فرض شاخه‌ی فعلی می باشد"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "مکان پیش فرض برای محاوره‌های «عکس گرفتن از صفحه»"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -218,26 +185,26 @@ msgstr ""
 "مکان پیش فرض برای محاوره‌های «عکس گرفتن از صفحه». محل پیش‌فرض شاخه‌ی عکس‌ها "
 "می‌باشد"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "اینکه متصل‌شونده‌های موجود در شاخه home کاربر غیر فعال شوند"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "اینکه آیا میانبرهای صفحه کلید غیرفعال شوند"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "اینکه پس از بارگیری فیلم به طور خودکار پرونده‌های زیرنویس بارگیری شوند."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "اینکه پس از بارگیری فیلم، پرونده‌های فصل‌های خارجی به طور خودکار بارگیری "
 "شوند."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -245,17 +212,21 @@ msgstr ""
 "اینکه آیا محل پرونده‌ی صوتی/تصویری که پخش شده است در زمان مکث با خروج به "
 "خاطر بماند با خیر"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
 msgstr "فهرست متصل‌شونده‌های فعال"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
 "فهرستی از نام متصل شونده‌ها که در حال حاضر فعال هستند (بارگذاری شده و در حال "
 "اجرا)."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -301,165 +272,154 @@ msgstr "بالا رفتن"
 msgid "Move Down"
 msgstr "پایین رفتن"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr "معمولی"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr "بزرگ"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr "خیلی بزرگ"
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
 msgstr "استریو"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
 msgstr "۴-کانله"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
 msgstr "۴.۱-کاناله"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
 msgstr "۵٫۰ -کاناله"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
 msgstr "۵.۱-کاناله"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr "AC3 Passthrough"
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "ترجیحات توتم"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
 msgstr "پخش"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
 msgstr "شروع به پخش پرونده‌ها از محل قبلی"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
 msgstr "زیرنویس‌های متنی"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
 msgstr "پس از پخش ویديو، _زیرنویس بارگیری شود"
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr ""
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "_قلم:"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
 msgstr "_کدگذاری:"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr "فصل‌های خارجی"
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr "بعد از بارگیری فیلم، پرونده‌های فصل _بارگیری شوند"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "کلی"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "نمایش"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr "_تنظیم اندازه پنجره هنگام بارگیری یک ویدیو جدید"
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr "غیرفعال کردن _مشبک‌زدایی از ویدیوهای مشبک"
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 #| msgid "Disable screensaver when playing "
 msgid "Disable screensaver when playing"
 msgstr "از کار انداختن محافظ صفحه‌نمایش هنگام پخش"
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 #| msgid "Video"
 msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "ویديو"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
 msgstr "ویدیو یا صوت"
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr "جلوه‌های تصویری"
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr "نشان دادن _جلوه‌های تصویری هنگام پخش پرونده‌های صوتی"
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr "نو_ع تصویرسازی:"
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr "ا_ندازه‌ی تصویرسازی:"
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
 msgstr "موازنه‌ی رنگی"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
 msgstr "_روشنی:"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "_کنتراست:"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
 msgstr "_غلظت:"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
 msgstr "_پرده:"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
 msgstr "_بازنشانی به پیش‌فرض‌ها"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
 msgstr "خروجی صوتی"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
 msgstr "نوع خروجی _صوتی:"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "صدا"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "معمولی"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "بزرگ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "خیلی بزرگ"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -519,7 +479,8 @@ msgstr "کانال‌ها:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
 msgstr ""
 
@@ -549,8 +510,8 @@ msgstr ""
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
 msgstr "تمام‌صفحه"
 
@@ -900,7 +861,7 @@ msgstr "پرش به _عقب"
 msgid "Skip backwards"
 msgstr "پرش به عقب"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr "نوار پویش زمان"
 
@@ -908,55 +869,55 @@ msgstr "نوار پویش زمان"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "_نشانی پرونده‌ای را که می‌خواهید باز کنید وارد کنید:"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr "گذرواژه برای کارگزار RTSP درخواست شده است"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
 msgstr "قطعه صدا #%Id"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr "زیرنویس #%Id"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr "کارگزاری که شما در تلاش برای اتصال به آن هستید، شناخته شده نیست."
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr "اتصال به کارگزار رد شد."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr "فیلم مشخص شده را نمی‌توان پیدا کرد."
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr "کارگزار دسترسی به این پرونده یا جریان را رد کرد."
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr "تصدیق‌هویت جهت دسترسی به این پرونده یا جریان لازم است."
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr "شما اجازه باز کردن این پرونده را ندارید."
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr "این مکان یک مکان معتبر نیست."
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "فیلم قابل خواندن نیست."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 #| msgid ""
 #| "The playback of this movie requires a %s plugin which is not installed."
@@ -974,7 +935,7 @@ msgid_plural ""
 "%s"
 msgstr[0] "پخش این فیلم نیازمند یک افزونه %s است که نصب نشده است."
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -982,26 +943,26 @@ msgstr ""
 "یک جریان صوتی یا تصویری به دلیل نبود کُدِک مناسب قابل اجرا نیست. ممکن است "
 "لازم باشد جهت پخش بعضی از انواع فیلم‌ها، افزونه‌ای اضافی نصب کنید"
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
 "نمی توان این فایل را از شبکه پخش نمود. سعی کنید اول آنرا اول بارگیری کنید."
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr "فراگیر"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
 msgstr "واحد"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr "رسانه حاوی هیچ ویدیوی جاری پشتیبانی شده‌ای نیست."
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1148,6 +1109,7 @@ msgstr "%Id:%I02d"
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "ناشناخته"
 
@@ -1242,7 +1204,7 @@ msgstr[0] "%Id فریم بر ثانیه"
 msgid "Audio Preview"
 msgstr "پیش‌نمایش صوتی"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "از صحت نصب سیستمتان مطمئن شوید. توتم خارج می‌شود."
 
@@ -1317,21 +1279,16 @@ msgstr ""
 "توتم حاوی یک استثنا برای استفاده اختصاصی از پلاگین GStreamer می باشد."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "هیچ‌کدام"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr "خودکار"
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
 msgstr "پیکربندی افزونه‌ها"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1342,47 +1299,47 @@ msgstr ""
 "نمایید.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
 msgstr "توتم  %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "مکث"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "پخش"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "توتم نتوانست «%s» را پخش کند."
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr "توتم نتوانست محتویات راهنما را نمایش دهد."
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "فصل/فیلم قبلی"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
 msgstr "پخش / مکث"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr "فصل/فیلم بعدی"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr "توتم نتوانست شروع به کار کند."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "بدون دلیل."
 
@@ -1456,103 +1413,60 @@ msgid "Can't enqueue and replace at the same time"
 msgstr "صف‌بندی و جایگزین‌کردن در یک‌زمان ممکن نیست"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr "فهرست پخش MP3 ShoutCast"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr "قالب صوتی MP3(جریان یافته)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "قالب صوتی MP3 (جریان یافته،قالب DOS)"
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr "قالب فهرست پخش قابل اشتراک XML ‏(XSPF)"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr "عنوان: %Id"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr "ذخیره‌ی فهرست پخش ممکن نشد"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
 msgstr "ذخیره‌ی فهرست پخش"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "فهرست پخش"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr "تجزیه‌ی فهرست پخش «%s» ممکن نبود، ممکن است آسیب دیده باشد."
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "خطای فهرست پخش"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
 msgstr "ترجیحات"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
 msgstr "انتخاب قلم زیرنویس"
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "۰:۰۰ / ۰:۰۰"
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (جاری)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "‏%s‏ / ‏%s‏"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "پریدن به ‏%s‏ / ‏%s‏"
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr "در حال میانگیری"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr "٪%lf"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr "%s، %s"
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr "%s و ٪%If"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1720,6 +1634,18 @@ msgstr "غربی"
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "ویتنامی"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "‏%s‏ / ‏%s‏"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "پریدن به ‏%s‏ / ‏%s‏"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"

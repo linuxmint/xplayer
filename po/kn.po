@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2016-11-03 14:36+0000\n"
+"POT-Creation-Date: 2017-05-05 08:42+0100\n"
 "PO-Revision-Date: 2016-02-03 12:56+0000\n"
 "Last-Translator: shankar Prasad <Unknown>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
@@ -17,67 +17,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-12 12:16+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
+"X-Launchpad-Export-Date: 2017-05-06 12:40+0000\n"
+"X-Generator: Launchpad (build 18366)\n"
 "Language: kn\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:352 ../src/xplayer-object.c:1183
-#: ../src/xplayer-object.c:1658 ../src/xplayer-statusbar.c:115
-msgid "Stopped"
-msgstr "ನಿಲ್ಲಿಸಲಾಗಿದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:364 ../src/xplayer-object.c:1176
-msgid "Paused"
-msgstr "ವಿರಮಿಸಿದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:368 ../src/xplayer-object.c:1169
-msgid "Playing"
-msgstr "ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:386
+#: ../browser-plugin/xplayer-plugin-viewer.c:378
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
 msgstr "ಚಲನಚಿತ್ರವನ್ನು ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:442
+#: ../browser-plugin/xplayer-plugin-viewer.c:434
 msgid "No URI to play"
 msgstr "ಚಲಾಯಿಸಲು ಯಾವುದೆ URI ಇಲ್ಲ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:675
-#: ../browser-plugin/xplayer-plugin-viewer.c:1699
+#: ../browser-plugin/xplayer-plugin-viewer.c:667
+#: ../browser-plugin/xplayer-plugin-viewer.c:1683
 msgid "Xplayer Movie Player"
 msgstr "Xplayer ಚಲನಚಿತ್ರ ಚಾಲಕ"
 
 #. translators: this is:
 #. * Open With ApplicationName
 #. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1119
+#: ../browser-plugin/xplayer-plugin-viewer.c:1111
 #, c-format
 msgid "_Open with \"%s\""
 msgstr "\"%s\" ನೊಂದಿಗೆ ತೆರೆ (_O)"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:1340 ../src/xplayer-object.c:2466
+#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
 msgid "An error occurred"
 msgstr "ಒಂದು ದೋಷ ಎದುರಾಗಿದೆ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2032
+#: ../browser-plugin/xplayer-plugin-viewer.c:2011
 msgid "No playlist or playlist empty"
 msgstr "ಯಾವುದೆ ಚಾಲನಾಪಟ್ಟಿ ಇಲ್ಲ ಅಥವ ಚಾಲನಾಪಟ್ಟಿ ಖಾಲಿ ಇದೆ"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2127
+#: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
 msgstr "ಚಲನಚಿತ್ರ ವೀಕ್ಷಕ ಪ್ಲಗ್ಇನ್"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143 ../src/xplayer.c:259
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
 msgstr "ಎಳೆ-ಸುರಕ್ಷಿತ(ತ್ರೆಡ್‌-ಸೇಫ್‌) ಲೈಬ್ರರಿಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:2143
+#: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
 "ನಿಮ್ಮ ಗಣಕದ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ. Xplayer ಪ್ಲಗ್‌ಇನ್‌ ಈಗ ನಿರ್ಗಮಿಸುತ್ತದೆ."
 
-#: ../data/fullscreen.ui.h:1 ../data/xplayer.ui.h:88
+#: ../data/fullscreen.ui.h:1
 msgid "Time:"
 msgstr "ಸಮಯ:"
 
@@ -103,70 +90,50 @@ msgstr ""
 "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
-msgid "Show visual effects when no video is displayed"
-msgstr "ಯಾವುದೆ ವೀಡಿಯೋವನ್ನು ತೋರಿಸದೆ ಇದ್ದಾಗ ದೃಗ್ಗೋಚರ ಪರಿಣಾಮಗಳನ್ನು ತೋರಿಸು"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:4
-msgid "Show visual effects when playing an audio only file."
-msgstr "ಯಾವುದೆ ಆಡಿಯೋ ಕಡತವನ್ನು ಚಲಾಯಿಸುವಾಗ ದೃಗ್ಗೋಚರ ಪರಿಣಾಮಗಳನ್ನು ತೋರಿಸು."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:5
-msgid "Name of the visual effects plugin"
-msgstr "ನೋಟದ ಪರಿಣಾಮಗಳ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಹೆಸರು"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The brightness of the video"
 msgstr "ವೀಡಿಯೋದ ಉಜ್ವಲತೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:7
+#: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
 msgstr "ವೀಡಿಯೋದ ವೈದೃಶ್ಯ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:8
+#: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
 msgstr "ವೀಡಿಯೋದ ಬಣ್ಣ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:9
+#: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
 msgstr "ವೀಡಿಯೋದ ಪರಿಪೂರ್ಣತೆ (ಸ್ಯಾಚುರೇಶನ್)"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:10
+#: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
 msgstr "ಕಡತವು ಲೋಡ್‌ ಆದಾಗ ಕ್ಯಾನ್ವಾಸಿನ ಗಾತ್ರವನ್ನು ತಾನಾಗಿಯೆ ಬದಲಿಸು"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:11
+#: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
 msgstr "ಪುನರಾವರ್ತನಾ ಕ್ರಮ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:12
+#: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
 msgstr "ಶಫಲ್ ಕ್ರಮ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:13
+#: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
 msgstr "ಪರಸ್ಪರ ಹೆಣೆಯಲಾದ ಚಲನಚಿತ್ರಗಳಿಗಾಗಿನ ಹೆಣಿಯುವಿಕೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕು"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:14
+#: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
 msgstr "ಚಾಲನಾಎಂಜಿನಿನಲ್ಲಿ ದೋಷನಿವಾರಣೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:15
+#: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
 msgstr "ಬಳಕೆಗಾಗಿ ಆಡಿಯೋ ಔಟ್‌ಪುಟ್‌ ಬಗೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:16
-msgid "Visualization quality setting"
-msgstr "ದೃಗ್ಗೋಚರ ಗುಣಮಟ್ಟದ ಸಿದ್ಧತೆ"
-
-#: ../data/org.x.player.gschema.xml.in.in.h:17
-msgid "Quality setting for the audio visualization."
-msgstr "ಆಡಿಯೊ ವಿಶುವಲೈಸೇಶನ್‌ಗಾಗಿ ಗುಣಮಟ್ಟದ ಹೊಂದಾಣಿಕೆ."
-
-#: ../data/org.x.player.gschema.xml.in.in.h:18
+#: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
 msgstr "ಜಾಲಬಂಧ ಬಫರಿಂಗ್‌ನ ಮಿತಿ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:19
+#: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
@@ -174,27 +141,27 @@ msgstr ""
 "ಸ್ಟ್ರೀಮ್‌ಗಳನ್ನು ತೋರಿಸುವ ಮೊದಲು ಜಾಲಬಂಧ ಸ್ಟ್ರೀಮ್‌ಗಳಿಗಾಗಿ ಬಫರ್ ಮಾಡಬೇಕಿರುವ "
 "ದತ್ತಾಂಶದ ಪ್ರಮಾಣ (ಸೆಕೆಂಡುಗಳಲ್ಲಿ)."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:20
+#: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
 msgstr "ಉಪಶೀರ್ಷಿಕೆಯ ಅಕ್ಷರಶೈಲಿ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:21
+#: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr "ಉಪಶೀರ್ಷಿಕೆ ರೆಂಡಂರಿಂಗ್‌ಗಾಗಿ Pango ಅಕ್ಷರಶೈಲಿ ವಿವರಣೆ."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:22
+#: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
 msgstr "ಉಪಶೀರ್ಷಿಕೆಯ ಎನ್ಕೋಡಿಂಗ್"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:23
+#: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
 msgstr "ಉಪಶೀರ್ಷಿಕೆಗಾಗಿನ ಎನ್ಕೋಡಿಂಗ್ ಅಕ್ಷರ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:24
+#: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
 msgstr "\"ತೆರೆ...\" ಸಂವಾದಗಳಿಗಾಗಿನ ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:25
+#: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
@@ -202,11 +169,11 @@ msgstr ""
 "\"ತೆರೆ...\" ಸಂವಾದಗಳಿಗಾಗಿನ ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳ, ಪ್ರಸಕ್ತ ಕೋಶವು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿರುತ್ತದೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:26
+#: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr "\"ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆದುಕೊ...\" ಸಂವಾದಗಳಿಗಾಗಿನ ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:27
+#: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
@@ -214,25 +181,25 @@ msgstr ""
 "\"ತೆರೆಚಿತ್ರವನ್ನು ತೆಗೆದುಕೊ...\" ಸಂವಾದಗಳಿಗಾಗಿನ ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳ, ಚಿತ್ರಗಳ "
 "ಕೋಶವು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿರುತ್ತದೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:28
+#: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr "ಬಳಕೆದಾರರ ನೆಲೆ ಕೋಶಗಳಲ್ಲಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:29
+#: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
 msgstr "ಬಳಕೆದಾರರ ನೆಲೆ ಕೋಶಗಳಲ್ಲಿ ಕೀಲಮಣೆ ಸುಲಭ ಆಯ್ಕೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕೆ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:30
+#: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
 "ಚಲನಚಿತ್ರವನ್ನು ಲೋಡ್‌ ಮಾಡಿದಾಗ ಪಠ್ಯ ಉಪಶೀರ್ಷಿಕೆ ಕಡತಗಳನ್ನು ತಾನಾಗಿಯೆ ಲೋಡ್‌ ಮಾಡು"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:31
+#: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
 "ಚಲನಚಿತ್ರವನ್ನು ಲೋಡ್‌ ಮಾಡಿದಾಗ ಬಾಹ್ಯ ಅಧ್ಯಾಯ ಕಡತಗಳನ್ನು ತಾನಾಗಿಯೆ ಲೋಡ್‌ ಮಾಡು"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:32
+#: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
@@ -240,17 +207,21 @@ msgstr ""
 "ಚಲಾಯಿಸಲಾದ ಆಡಿಯೊ/ವೀಡಿಯೊ ಕಡತಗಳನ್ನು ವಿರಮಿಸುವಾಗ ಅಥವ ಮುಚ್ಚುವಾಗ ಅವುಗಳು ಇರುವ "
 "ಸ್ಥಳವನ್ನು ನೆನಪಿಟ್ಟುಕೊಳ್ಳಬೇಕೆ."
 
-#: ../data/org.x.player.gschema.xml.in.in.h:33
+#: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
 msgstr "ಸಕ್ರಿಯ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಪಟ್ಟಿ"
 
-#: ../data/org.x.player.gschema.xml.in.in.h:34
+#: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
 "ಪ್ರಸಕ್ತ ಸಕ್ರಿಯವಾಗಿರುವ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಹೆಸರುಗಳ ಒಂದು ಪಟ್ಟಿ (ಲೋಡ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು "
 "ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿದೆ)."
+
+#: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
+msgid "Use dark theme variant (if available)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -296,165 +267,153 @@ msgstr "ಮೇಲಕ್ಕೆ ವರ್ಗಾಯಿಸು"
 msgid "Move Down"
 msgstr "ಕೆಳಗೆ ವರ್ಗಾಯಿಸು"
 
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:2
-msgid "Normal"
-msgstr "ಸಾಮಾನ್ಯ"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:4
-msgid "Large"
-msgstr "ದೊಡ್ಡದಾದ"
-
-#. Audio visualization dimensions
-#: ../data/preferences.ui.h:6
-msgid "Extra Large"
-msgstr "ಅತಿ ದೊಡ್ಡದಾದ"
-
-#: ../data/preferences.ui.h:7 ../src/backend/bacon-video-widget.c:5504
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
 msgstr "ಸ್ಟೀರಿಯೋ"
 
-#: ../data/preferences.ui.h:8
+#: ../data/preferences.ui.h:2
 msgid "4-channel"
 msgstr "4-ಮಾರ್ಗ"
 
-#: ../data/preferences.ui.h:9
+#: ../data/preferences.ui.h:3
 msgid "4.1-channel"
 msgstr "4.1-ಮಾರ್ಗಗಳು"
 
-#: ../data/preferences.ui.h:10
+#: ../data/preferences.ui.h:4
 msgid "5.0-channel"
 msgstr "5.0-ಮಾರ್ಗಗಳು"
 
-#: ../data/preferences.ui.h:11
+#: ../data/preferences.ui.h:5
 msgid "5.1-channel"
 msgstr "5.1-ಮಾರ್ಗಗಳು"
 
-#: ../data/preferences.ui.h:12
+#: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
 msgstr "AC3 ಪಾಸ್‌ತ್ರೂ"
 
-#: ../data/preferences.ui.h:13
+#: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
 msgstr "Xplayer ಆದ್ಯತೆಗಳು"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:8
 msgid "Playback"
 msgstr "ಪ್ಲೇಬ್ಯಾಕ್"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
 msgstr "ಕೊನೆಗೆ ಇದ್ದಲ್ಲಿಂದ ಕಡತಗಳನ್ನು ಚಲಾಯಿಸಲು ಆರಂಭಿಸು"
 
-#: ../data/preferences.ui.h:16
+#: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
 msgstr "ಪಠ್ಯ ಉಪಶೀರ್ಷಿಕೆಗಳು"
 
-#: ../data/preferences.ui.h:17
+#: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
 msgstr "ಚಲನಚಿತ್ರವನ್ನು ಲೋಡ್‌ ಮಾಡಿದಾಗ ಉಪಶೀರ್ಷಿಕೆ ಕಡತಗಳನ್ನು ಲೋಡ್‌ ಮಾಡು (_l)"
 
-#: ../data/preferences.ui.h:18
+#: ../data/preferences.ui.h:12
+msgid "_Display subtitles when movie is loaded"
+msgstr ""
+
+#: ../data/preferences.ui.h:13
 msgid "_Font:"
 msgstr "ಅಕ್ಷರಶೈಲಿ (_F):"
 
-#: ../data/preferences.ui.h:19
+#: ../data/preferences.ui.h:14
 msgid "_Encoding:"
 msgstr "ಎನ್ಕೋಡಿಂಗ್ (_E):"
 
-#: ../data/preferences.ui.h:20
+#: ../data/preferences.ui.h:15
 msgid "External Chapters"
 msgstr "ಬಾಹ್ಯ ಅಧ್ಯಾಯಗಳು"
 
-#: ../data/preferences.ui.h:21
+#: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
 msgstr "ಚಲನಚಿತ್ರವನ್ನು ಲೋಡ್‌ ಮಾಡಿದಾಗ ಅಧ್ಯಾಯ ಕಡತಗಳನ್ನು ಲೋಡ್‌ ಮಾಡು (_c)"
 
-#: ../data/preferences.ui.h:22 ../data/properties.ui.h:1
+#: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
 msgstr "ಸಾಮಾನ್ಯ"
 
 #. Tab label in the Preferences dialogue
-#: ../data/preferences.ui.h:24
+#: ../data/preferences.ui.h:19
 msgid "Display"
 msgstr "ಪ್ರದರ್ಶಕ"
 
-#: ../data/preferences.ui.h:25
+#: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
 msgstr ""
 "ಹೊಸ ವೀಡಿಯೋವನ್ನು ಲೋಡ್‌ ಮಾಡಿದಾಗ ಕಿಟಕಿ ತಾನಾಗಿಯೆ ಗಾತ್ರಬದಲಿಸುವಂತೆ ಮಾಡು (_r)"
 
-#: ../data/preferences.ui.h:26
+#: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
 msgstr "ಪರಸ್ಪರ ಹೆಣೆಯಲಾದ ವಿಡಿಯೊಗಳನ್ನು ಮುಕ್ತಗೊಳಿಸು (ಡಿಇಂಟರ್ಲೇಸ್) (_d)"
 
-#: ../data/preferences.ui.h:27
+#: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
 msgstr "ಚಲಾಯಿಸುವಾಗ ಸ್ಕ್ರೀನ್‌ಸೇವರನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು (_a)"
 
-#: ../data/preferences.ui.h:28
+#. Translators: this is part of the sentence
+#: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
 msgstr "ವೀಡಿಯೊ"
 
 #. Translators: this is part of the sentence
-#: ../data/preferences.ui.h:30
+#: ../data/preferences.ui.h:27
 msgid "Video or Audio"
 msgstr "ವಿಡಿಯೊ ಅಥವ ಆಡಿಯೊ"
 
-#: ../data/preferences.ui.h:31
-msgid "Visual Effects"
-msgstr "ದೃಗ್ಗೋಚರ(ವಿಶುವಲ್) ಪರಿಣಾಮಗಳು"
-
-#: ../data/preferences.ui.h:32
-msgid "Show _visual effects when an audio file is played"
-msgstr ""
-"ಒಂದು ಆಡಿಯೋ ಕಡತವನ್ನು ಚಲಾಯಿಸಿದಾಗ ಚಿತ್ರನಿರೂಪಣಾ (ವಿಶುವಲ್) ಪರಿಣಾಮಗಳನ್ನು ತೋರಿಸು(_v)"
-
-#: ../data/preferences.ui.h:33
-msgid "_Type of visualization:"
-msgstr "ಚಿತ್ರನಿರೂಪಣಾ ಪ್ರಕಾರ (_T):"
-
-#: ../data/preferences.ui.h:34
-msgid "Visualization _size:"
-msgstr "ಚಿತ್ರನಿರೂಪಣೆಯ ಗಾತ್ರ (_s):"
-
-#: ../data/preferences.ui.h:35
+#: ../data/preferences.ui.h:28
 msgid "Color Balance"
 msgstr "ಬಣ್ಣದ ಸಮತೋಲನ"
 
-#: ../data/preferences.ui.h:36
+#: ../data/preferences.ui.h:29
 msgid "_Brightness:"
 msgstr "ಪ್ರಕಾಶತೆ (_B):"
 
-#: ../data/preferences.ui.h:37
+#: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
 msgstr "ವೈದೃಶ್ಯ (_n):"
 
-#: ../data/preferences.ui.h:38
+#: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
 msgstr "ಪರಿಪೂರ್ಣತೆ (_u):"
 
-#: ../data/preferences.ui.h:39
+#: ../data/preferences.ui.h:32
 msgid "_Hue:"
 msgstr "ಬಣ್ಣ (_H):"
 
-#: ../data/preferences.ui.h:40
+#: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
 msgstr "ಪೂರ್ವನಿಯೋಜಿತಕ್ಕೆ ಮರು ಹೊಂದಿಸು (_D)"
 
-#: ../data/preferences.ui.h:41
+#: ../data/preferences.ui.h:34
 msgid "Audio Output"
 msgstr "ಆಡಿಯೋ ಔಟ್‌ಪುಟ್‌"
 
-#: ../data/preferences.ui.h:42
+#: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
 msgstr "ಆಡಿಯೋ ಔಟ್‌ಪುಟ್ ಬಗೆ (_A):"
 
-#: ../data/preferences.ui.h:43 ../data/properties.ui.h:14
+#: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
 msgstr "ಆಡಿಯೋ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:38
+msgid "Normal"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:40
+msgid "Large"
+msgstr "ದೊಡ್ಡದಾದ"
+
+#. Audio visualization dimensions
+#: ../data/preferences.ui.h:42
+msgid "Extra Large"
+msgstr "ಅತಿ ದೊಡ್ಡದಾದ"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -514,7 +473,8 @@ msgstr "ಮಾರ್ಗಗಳು:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
-#: ../src/xplayer.c:258 ../src/xplayer.c:266 ../src/xplayer-object.c:1666
+#: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
+#: ../src/xplayer-object.c:1771
 msgid "Media Player"
 msgstr ""
 
@@ -544,8 +504,8 @@ msgstr ""
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
-#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4052
-#: ../src/xplayer-object.c:4054
+#: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
+#: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
 msgstr "ಪೂರ್ಣತೆರೆ"
 
@@ -886,7 +846,7 @@ msgstr "ಹಿಂದಕ್ಕೆ ನೆಗೆ(_B)"
 msgid "Skip backwards"
 msgstr "ಹಿಂದಕ್ಕೆ ನೆಗೆ"
 
-#: ../data/xplayer.ui.h:89
+#: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
 msgstr "ಸಮಯ ಕೋರಿಕೆ ಪಟ್ಟಿ"
 
@@ -894,55 +854,55 @@ msgstr "ಸಮಯ ಕೋರಿಕೆ ಪಟ್ಟಿ"
 msgid "Enter the _address of the file you would like to open:"
 msgstr "ನೀವು ತೆರೆಯಲು ಬಯಸುವ ಕಡತದ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ (_a):"
 
-#: ../src/backend/bacon-video-widget.c:1668
+#: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
 msgstr "RTSP ಪೂರೈಕೆಗಣಕಕ್ಕಾಗಿ ಗುಪ್ತಪದದ ಮನವಿ"
 
-#: ../src/backend/bacon-video-widget.c:2945
+#: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
 msgstr "ಆಡಿಯೊ ಟ್ರಾಕ್ #%d"
 
-#: ../src/backend/bacon-video-widget.c:2949
+#: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
 msgstr "ಉಪಶೀರ್ಷಕೆ #%d"
 
-#: ../src/backend/bacon-video-widget.c:3346
+#: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
 msgstr "ಸಂಪರ್ಕಸಾಧಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಪೂರೈಕೆಗಣಕವು ಅಜ್ಞಾತವಾಗಿದೆ."
 
-#: ../src/backend/bacon-video-widget.c:3349
+#: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
 msgstr "ಈ ಪೂರೈಕೆಗಣಕದೊಂದಿಗಿನ ಸಂಪರ್ಕವನ್ನು ತಿರಸ್ಕರಿಸಲಾಗಿದೆ."
 
-#: ../src/backend/bacon-video-widget.c:3352
+#: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
 msgstr "ಸೂಚಿಸಲಾದ ಚಲನಚಿತ್ರವು ಕಂಡುಬಂದಿಲ್ಲ."
 
-#: ../src/backend/bacon-video-widget.c:3359
+#: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
 msgstr "ಪೂರೈಕೆಗಣಕವು ಈ ಕಡತ ಅಥವ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ನಿರಾಕರಿಸಿದೆ."
 
-#: ../src/backend/bacon-video-widget.c:3365
+#: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr "ಈ ಕಡತ ಅಥವ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿದೆ."
 
-#: ../src/backend/bacon-video-widget.c:3372
+#: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
 msgstr "ಈ ಕಡತವನ್ನು ತೆರೆಯಲು ನಿಮಗೆ ಅನುಮತಿ ಇಲ್ಲ."
 
-#: ../src/backend/bacon-video-widget.c:3377
+#: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
 msgstr "ಈ ಸ್ಥಳವು ಒಂದು ಮಾನ್ಯವಾದ ಕಡತವಲ್ಲ."
 
-#: ../src/backend/bacon-video-widget.c:3385
+#: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
 msgstr "ಚಲನಚಿತ್ರವನ್ನು ಓದಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
 #. should be exactly one missing thing (source or converter)
-#: ../src/backend/bacon-video-widget.c:3408
-#: ../src/backend/bacon-video-widget.c:3416
+#: ../src/backend/bacon-video-widget.c:3338
+#: ../src/backend/bacon-video-widget.c:3346
 #, c-format
 msgid ""
 "The playback of this movie requires a %s plugin which is not installed."
@@ -960,7 +920,7 @@ msgstr[1] ""
 "\n"
 "%s"
 
-#: ../src/backend/bacon-video-widget.c:3427
+#: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
@@ -969,7 +929,7 @@ msgstr ""
 "ನಿಭಾಯಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.ಕೆಲವು ಬಗೆಯ ಚಲನಚಿತ್ರಗಳನ್ನು ಚಲಾಯಿಸಲು ನೀವು ಹೆಚ್ಚುವರಿ "
 "ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಬೇಕಾಗಬಹುದು."
 
-#: ../src/backend/bacon-video-widget.c:3437
+#: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
@@ -977,19 +937,19 @@ msgstr ""
 "ಈ ಕಡತವನ್ನು ಜಾಲಬಂಧದಲ್ಲಿ ಚಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಿಲ. ಅದನ್ನು ಮೊದಲು ಸ್ಥಳೀಯವಾಗಿ "
 "ಇಳಿಸಿಕೊಳ್ಳಲು ಪ್ರಯತ್ನಿಸಿ."
 
-#: ../src/backend/bacon-video-widget.c:5500
+#: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
 msgstr "ಸರೌಂಡ್‌"
 
-#: ../src/backend/bacon-video-widget.c:5502
+#: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
 msgstr "ಮೊನೊ"
 
-#: ../src/backend/bacon-video-widget.c:5789
+#: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
 msgstr "ಮೀಡಿಯಾದಲ್ಲಿ ಯಾವುದೆ ಬೆಂಬಲಿತವಾದ ವೀಡಿಯೋ ಸ್ಟ್ರೀಮ್‌ಗಳಿಲ್ಲ."
 
-#: ../src/backend/bacon-video-widget.c:5979
+#: ../src/backend/bacon-video-widget.c:5573
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1137,6 +1097,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:111
 #: ../src/properties/bacon-video-widget-properties.c:113
 #: ../src/properties/bacon-video-widget-properties.c:119
+#: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
 msgstr "ಗೊತ್ತಿರದ"
 
@@ -1235,7 +1196,7 @@ msgstr[1] "ಪ್ರತಿ ಸೆಕೆಂಡಿನಲ್ಲಿನ %d ಚೌಕ�
 msgid "Audio Preview"
 msgstr "ಆಡಿಯೋ ಮುನ್ನೋಟ"
 
-#: ../src/xplayer.c:259
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "ನಿಮ್ಮ ಗಣಕದ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ. Xplayer ಈಗ ನಿರ್ಗಮಿಸುತ್ತದೆ."
 
@@ -1312,21 +1273,16 @@ msgstr ""
 "Xplayer ಹೊಂದಿದೆ."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:191
+#: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
+#: ../src/xplayer-object.c:1458
 msgid "None"
 msgstr "ಯಾವುದೂ ಇಲ್ಲ"
 
-#. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
-#: ../src/xplayer-menu.c:196
-msgctxt "Language"
-msgid "Auto"
-msgstr "ಸ್ವಯಂಚಾಲಿತ"
-
-#: ../src/xplayer-menu.c:736
+#: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
 msgstr "ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಸಂರಚಿಸಿ"
 
-#: ../src/xplayer-object.c:164
+#: ../src/xplayer-object.c:165
 #, c-format
 msgid ""
 "%s\n"
@@ -1337,47 +1293,47 @@ msgstr ""
 "ಚಲಾಯಿಸಿ.\n"
 
 #. Translators: %s is the xplayer version number
-#: ../src/xplayer-object.c:592
+#: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
 msgstr "Xplayer %s"
 
-#: ../src/xplayer-object.c:1171 ../src/xplayer-options.c:52
+#: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
 msgstr "ವಿರಮಿಸು"
 
-#: ../src/xplayer-object.c:1178 ../src/xplayer-object.c:1188
+#: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
 msgstr "ಚಲಾಯಿಸು"
 
-#: ../src/xplayer-object.c:1270 ../src/xplayer-object.c:1297
-#: ../src/xplayer-object.c:1933
+#: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
+#: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
 msgstr "'%s' ಅನ್ನು Xplayer ಇಂದ ಚಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
 
-#: ../src/xplayer-object.c:2124
+#: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer ಸಹಾಯದ ವಿಷಯಗಳನ್ನು ತೋರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: ../src/xplayer-object.c:4019 ../src/xplayer-object.c:4021
+#: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ಹಿಂದಿನ ಅಧ್ಯಾಯ/ಚಲನಚಿತ್ರ"
 
-#: ../src/xplayer-object.c:4028 ../src/xplayer-object.c:4030
+#: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
 msgstr "ಚಲಾಯಿಸು / ವಿರಮಿಸು"
 
-#: ../src/xplayer-object.c:4038 ../src/xplayer-object.c:4040
+#: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
 msgstr "ಮುಂದಿನ ಅಧ್ಯಾಯ/ಚಲನಚಿತ್ರ"
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "Xplayer could not startup."
 msgstr "Xplayer ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: ../src/xplayer-object.c:4187
+#: ../src/xplayer-object.c:4344
 msgid "No reason."
 msgstr "ಯಾವುದೆ ಕಾರಣವಿಲ್ಲ."
 
@@ -1453,104 +1409,61 @@ msgstr ""
 "ಮಾಡಲಾಗುವುದಿಲ್ಲ"
 
 #. By extension entry
-#: ../src/xplayer-playlist.c:162
+#: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
 msgstr "MP3 ShoutCast ಚಾಲನಾಪಟ್ಟಿ"
 
-#: ../src/xplayer-playlist.c:163
+#: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
 msgstr "MP3 ಆಡಿಯೋ (ಸ್ಟ್ರೀಮ್‌ ಮಾಡಲಾದ)"
 
-#: ../src/xplayer-playlist.c:164
+#: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
 msgstr "MP3 ಆಡಿಯೋ (ಸ್ಟ್ರೀಮ್‌ ಮಾಡಲಾದ, DOS ವಿನ್ಯಾಸ)"
 
-#: ../src/xplayer-playlist.c:165
+#: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
 msgstr "XML ಹಂಚಬಹುದಾದ ಚಾಲನಾಪಟ್ಟಿ"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
-#: ../src/xplayer-playlist.c:348
+#: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
 msgstr "ಶೀರ್ಷಿಕೆ %d"
 
-#: ../src/xplayer-playlist.c:447
+#: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
 msgstr "ಚಾಲನಾಪಟ್ಟಿಯನ್ನು ಉಳಿಸಲಾಗಿಲ್ಲ"
 
-#: ../src/xplayer-playlist.c:1022
+#: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
 msgstr "ಚಾಲನಾಪಟ್ಟಿಯನ್ನು ಉಳಿಸು"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
-#: ../src/xplayer-playlist.c:1034 ../src/xplayer-playlist.c:1263
+#: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
 msgstr "ಚಾಲನಾಪಟ್ಟಿ"
 
-#: ../src/xplayer-playlist.c:1861
+#: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 "ಚಾಲನಾಪಟ್ಟಿ '%s' ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಬಹುಷಃ ಅದು ಹಾಳಾಗಿರಬಹುದು."
 
-#: ../src/xplayer-playlist.c:1862
+#: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
 msgstr "ಚಾಲನಾಪಟ್ಟಿ ದೋಷ"
 
-#: ../src/xplayer-preferences.c:297
+#: ../src/xplayer-preferences.c:237
 msgid "Preferences"
 msgstr "ಆದ್ಯತೆಗಳು"
 
-#: ../src/xplayer-preferences.c:445
+#: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
 msgstr "ಉಪಶೀರ್ಷಿಕೆಯ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಆರಿಸಿ"
-
-#: ../src/xplayer-statusbar.c:110
-msgid "0:00 / 0:00"
-msgstr "0:00 / 0:00"
-
-#: ../src/xplayer-statusbar.c:133
-#, c-format
-msgid "%s (Streaming)"
-msgstr "%s (ಸ್ಟ್ರೀಮ್‌ ಮಾಡಲಾದ)"
-
-#. Elapsed / Total Length
-#: ../src/xplayer-statusbar.c:140 ../src/xplayer-time-label.c:64
-#, c-format
-msgid "%s / %s"
-msgstr "%s / %s"
-
-#. Seeking to Time / Total Length
-#: ../src/xplayer-statusbar.c:143 ../src/xplayer-time-label.c:67
-#, c-format
-msgid "Seek to %s / %s"
-msgstr "%s / %s ಗೆ ಹೋಗು"
-
-#: ../src/xplayer-statusbar.c:239
-msgid "Buffering"
-msgstr "ಬಫರಿಂಗ್"
-
-#. eg: 75 %
-#: ../src/xplayer-statusbar.c:250
-#, c-format
-msgid "%lf %%"
-msgstr "%lf %%"
-
-#. eg: Paused, 0:32 / 1:05
-#: ../src/xplayer-statusbar.c:325
-#, c-format
-msgid "%s, %s"
-msgstr "%s, %s"
-
-#. eg: Buffering, 75 %
-#: ../src/xplayer-statusbar.c:330
-#, c-format
-msgid "%s, %f %%"
-msgstr "%s, %f %%"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1718,6 +1631,18 @@ msgstr "ವೆಸ್ಟರ್ನ್"
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
 msgstr "ವಿಯೆಟ್ನಾಮೀಸ್"
+
+#. Elapsed / Total Length
+#: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
+#, c-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. Seeking to Time / Total Length
+#: ../src/xplayer-time-label.c:77
+#, c-format
+msgid "Seek to %s / %s"
+msgstr "%s / %s ಗೆ ಹೋಗು"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
