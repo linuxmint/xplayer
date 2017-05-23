@@ -36,7 +36,7 @@
 
 G_BEGIN_DECLS
 
-gchar *xplayer_screenshot_plugin_setup_file_chooser (const char *filename_format, const char *movie_name) G_GNUC_WARN_UNUSED_RESULT;
+gchar *xplayer_screenshot_plugin_setup_file_chooser (const char *filename_format, const char *movie_name) G_GNUC_WARN_UNUSED_RESULT G_GNUC_FORMAT (1);
 void xplayer_screenshot_plugin_update_file_chooser (const char *filename);
 
 G_END_DECLS
