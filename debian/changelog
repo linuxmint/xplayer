@@ -1,3 +1,16 @@
+xplayer (1.4.2) sonya; urgency=medium
+
+  [ Björn Esser ]
+  * [xplayer-screenshot-plugin] Fix -Werror=format-nonliteral (#69)
+
+  [ Alexei Sorokin ]
+  * xplayer-playlist.c: Fix void-return in a non-void function (#70)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 23 May 2017 13:46:38 +0100
+
 xplayer (1.4.1) sonya; urgency=medium
 
   * Packaging: Change the description
