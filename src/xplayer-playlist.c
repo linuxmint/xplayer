@@ -2893,7 +2893,7 @@ xplayer_playlist_get_last (XplayerPlaylist *playlist)
 GtkWidget *
 xplayer_playlist_get_toolbar (XplayerPlaylist *playlist)
 {
-	g_return_if_fail (XPLAYER_IS_PLAYLIST (playlist));
+	g_return_val_if_fail (XPLAYER_IS_PLAYLIST (playlist), NULL);
 
 	return playlist->priv->toolbar;
 }
