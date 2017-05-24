@@ -1353,13 +1353,37 @@ xplayer_action_open_dialog (XplayerObject *xplayer, const char *path, gboolean p
  * xplayer_object_action_stop:
  * @xplayer: a #XplayerObject
  *
- * Stops the current stream.
+ * Stops the current stream. If the current position is already 0 it will also reset the playlist to the beginning (= full reset)
  **/
 void
 xplayer_object_action_stop (XplayerObject *xplayer)
 {
+	/* Reset playlist to the beginning when current position is already zero (= full reset) */
+	if (bacon_video_widget_get_current_time (xplayer->bvw) == 0) {
+		char *mrl = NULL, *subtitle = NULL;
+
+		xplayer_playlist_set_current(xplayer->playlist, 0);
+
+		mrl = xplayer_playlist_get_current_mrl (xplayer->playlist, &subtitle);
+
+		if (mrl != NULL) {
+			xplayer_action_set_mrl_with_warning (xplayer, mrl, subtitle, FALSE);
+			xplayer_playlist_set_playing(xplayer->playlist, XPLAYER_PLAYLIST_STATUS_STOPPED);
+
+			g_free (mrl);
+			g_free (subtitle);
+		}
+
+		return;
+	}
+
+	/* Stop playing */
 	bacon_video_widget_stop (xplayer->bvw);
 	play_pause_set_label (xplayer, STATE_STOPPED);
+	xplayer_playlist_set_playing(xplayer->playlist, XPLAYER_PLAYLIST_STATUS_STOPPED);
+
+	/* This updates the display to show the first frame of the video */
+	xplayer_action_seek (xplayer, 0);
 }
 
 static
@@ -1820,6 +1844,9 @@ xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 		/* Play/Pause */
 		xplayer_action_set_sensitivity ("play", FALSE);
 
+		/* Stop */
+		xplayer_action_set_sensitivity ("stop", FALSE);
+
 		/* Volume */
 		xplayer_main_set_sensitivity ("tmw_volume_button", FALSE);
 		xplayer_action_set_sensitivity ("volume-up", FALSE);
@@ -1881,6 +1908,9 @@ xplayer_action_set_mrl_with_warning (XplayerObject *xplayer,
 
 		/* Play/Pause */
 		xplayer_action_set_sensitivity ("play", TRUE);
+
+		/* Stop */
+		xplayer_action_set_sensitivity ("stop", TRUE);
 
 		/* Volume */
 		caps = bacon_video_widget_can_set_volume (xplayer->bvw);
@@ -4182,6 +4212,15 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	atk_object_set_name (gtk_widget_get_accessible (item), _("Play / Pause"));
 	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
 
+	/* Play/Pause */
+	action = gtk_action_group_get_action (xplayer->main_action_group, "stop");
+	item = gtk_action_create_tool_item (action);
+	atk_object_set_name (gtk_widget_get_accessible (item),
+			_("Stop"));
+	gtk_tool_item_set_tooltip_text (GTK_TOOL_ITEM (item),
+	 		_("Stop"));
+	gtk_box_pack_start (box, item, FALSE, FALSE, 0);
+
 	/* Next */
     item = gtk_button_new ();
     image = gtk_image_new ();
@@ -4243,6 +4282,12 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	g_signal_connect (G_OBJECT (item), "clicked",
 			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
 
+	action = gtk_action_group_get_action (xplayer->main_action_group, "stop");
+	item = gtk_action_create_tool_item (action);
+	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
+	g_signal_connect (G_OBJECT (item), "clicked",
+			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
+
 	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
 	item = gtk_action_create_tool_item (action);
 	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
@@ -4274,6 +4319,7 @@ xplayer_callback_connect (XplayerObject *xplayer)
 
 	/* Set sensitivity of the toolbar buttons */
 	xplayer_action_set_sensitivity ("play", FALSE);
+	xplayer_action_set_sensitivity ("stop", FALSE);
 	xplayer_action_set_sensitivity ("next-chapter", FALSE);
 	xplayer_action_set_sensitivity ("previous-chapter", FALSE);
 	/* FIXME: We can use this code again once bug #457631 is fixed

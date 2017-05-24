@@ -48,6 +48,7 @@ G_MODULE_EXPORT void open_location_action_callback (GtkAction *action, Xplayer *
 G_MODULE_EXPORT void eject_action_callback (GtkAction *action, Xplayer *xplayer);
 G_MODULE_EXPORT void properties_action_callback (GtkAction *action, Xplayer *xplayer);
 G_MODULE_EXPORT void play_action_callback (GtkAction *action, Xplayer *xplayer);
+G_MODULE_EXPORT void stop_action_callback (GtkAction *action, Xplayer *xplayer);
 G_MODULE_EXPORT void quit_action_callback (GtkAction *action, Xplayer *xplayer);
 G_MODULE_EXPORT void preferences_action_callback (GtkAction *action, Xplayer *xplayer);
 G_MODULE_EXPORT void fullscreen_action_callback (GtkAction *action, Xplayer *xplayer);
@@ -585,6 +586,12 @@ void
 play_action_callback (GtkAction *action, Xplayer *xplayer)
 {
 	xplayer_action_play_pause (xplayer);
+}
+
+void
+stop_action_callback (GtkAction *action, Xplayer *xplayer)
+{
+	xplayer_action_stop (xplayer);
 }
 
 G_GNUC_NORETURN void

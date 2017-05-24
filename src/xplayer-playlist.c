@@ -1244,6 +1244,9 @@ set_playing_icon (GtkTreeViewColumn *column, GtkCellRenderer *renderer,
 		case XPLAYER_PLAYLIST_STATUS_PAUSED:
 			icon_name = "media-playback-pause-symbolic";
 			break;
+		case XPLAYER_PLAYLIST_STATUS_STOPPED:
+			icon_name = "media-playback-stop-symbolic";
+			break;
 		case XPLAYER_PLAYLIST_STATUS_NONE:
 		default:
 			icon_name = NULL;

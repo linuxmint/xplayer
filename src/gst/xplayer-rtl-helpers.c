@@ -36,6 +36,7 @@ struct {
 } icons[] = {
 	{ "go-previous", "go-previous-symbolic", "go-previous-rtl-symbolic" },
 	{ "media-playback-start", "media-playback-start-symbolic", "media-playback-start-rtl-symbolic" },
+	{ "media-playback-stop", "media-playback-stop-symbolic", "media-playback-stop-rtl-symbolic" },
 	{ "media-seek-forward", "media-seek-forward-symbolic", "media-seek-forward-rtl-symbolic" },
 	{ "media-seek-backward", "media-seek-backward-symbolic", "media-seek-backward-rtl-symbolic" },
 	{ "media-skip-forward", "media-skip-forward-symbolic", "media-skip-forward-rtl-symbolic" },
