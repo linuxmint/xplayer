@@ -17,7 +17,7 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-04-11 21:27+0000\n"
+"PO-Revision-Date: 2017-06-23 21:40+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-05-23 10:32+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: \n"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:378
@@ -88,14 +88,14 @@ msgstr "Išeiti iš viso ekrano"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Leisti ekrano užsklandą, kai groja audio įrašas"
+msgstr "Leisti ekrano užsklandą, kai groja garso įrašas"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Leisti ekrano užsklandą, kai groja audio įrašas. Naudinga garsiakalbiams, "
+"Leisti ekrano užsklandą, kai groja garso įrašas. Naudinga garsiakalbiams, "
 "integruotiems į monitorių."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
@@ -179,15 +179,15 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Numatytoji dialogų „Padaryti nuotrauką“ vieta"
+msgstr "Numatytoji dialogų „Padaryti ekrano kopiją“ vieta"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Numatytoji dialogų „Padaryti nuotrauką“ vieta. Standartinė – aplankas "
-"„Paveikslėliai“."
+"Numatytoji dialogų „Padaryti ekrano kopiją“ vieta. Standartinė – aplankas "
+"„Paveikslai“."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
@@ -210,7 +210,8 @@ msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Ar prisiminti grotų audio/video failų poziciją juos sustabdant ar uždarant"
+"Ar prisiminti grotų garso/vaizdo įrašų failų poziciją juos sustabdant ar "
+"užveriant"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
@@ -260,7 +261,7 @@ msgstr "Pašalinti"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Išsaugoti grojaraštį..."
+msgstr "Įrašyti grojaraštį..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -345,7 +346,8 @@ msgstr "Ekranas"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr "Automatiškai _pakeisti lango dydį, kai įkeliamas naujas filmas"
+msgstr ""
+"Automatiškai _pakeisti lango dydį, kai įkeliamas naujas vaizdo įrašas"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
@@ -396,7 +398,7 @@ msgstr "Garso išvestis"
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr "_Audio išvesties tipas:"
+msgstr "_Garso išvesties tipas:"
 
 #: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
@@ -486,7 +488,7 @@ msgstr "Groti filmus"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "Vaizdas;Filmas;Klipas;Serialas;Grotuvas;DVD;TV;Diskas;"
+msgstr "Vaizdo įrašas;Vaizdas;Filmas;Klipas;Serialas;Grotuvas;DVD;TV;Diskas;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
@@ -621,7 +623,7 @@ msgstr "Keisti mastelį į _1:1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Nustatyti originalų vaizdo dydį"
+msgstr "Nustatyti pradinį vaizdo dydį"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
@@ -669,7 +671,7 @@ msgstr "Garso meni_u"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Eiti į garso meniu"
+msgstr "Pereiti į garso meniu"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -733,7 +735,7 @@ msgstr "_Turinys"
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr "Žinynas turinys"
+msgstr "Žinyno turinys"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
@@ -863,7 +865,7 @@ msgstr "RTSP serverio slaptažodis"
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr "Audio takelis #%d"
+msgstr "Garso takelis #%d"
 
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
@@ -888,7 +890,8 @@ msgstr "Serveris neleido prieiti prie šio failo ar srauto."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr "Šiam failui ar srautui priteiti reikia patvirtinti tapatybę."
+msgstr ""
+"Norint gauti prieigą prie šio failo ar srauto, reikia nustatyti tapatybę."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
@@ -949,7 +952,7 @@ msgstr "Mono"
 
 #: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
-msgstr "Laikmenoje nėra palaikomų video srautų."
+msgstr "Laikmenoje nėra palaikomų vaizdo srautų."
 
 #: ../src/backend/bacon-video-widget.c:5573
 msgid ""
@@ -1217,7 +1220,7 @@ msgstr[2] "%d kadrų per sekundę"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "Audio peržiūra"
+msgstr "Garso peržiūra"
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
@@ -1337,7 +1340,7 @@ msgstr "Xplayer nepavyko paleisti „%s“."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Xplayer nepavyko parodyti pagalbos turinio."
+msgstr "Xplayer nepavyko parodyti žinyno turinio."
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
@@ -1435,11 +1438,11 @@ msgstr "MP3 ShoutCast grojaraštis"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "MP3 audio (srautas)"
+msgstr "MP3 garso įrašas (srautas)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "MP3 audio (srautas, DOS formatas)"
+msgstr "MP3 garso įrašas (srautas, DOS formatas)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
@@ -1454,11 +1457,11 @@ msgstr "%d įrašas"
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr "Nepavyko išsaugoti grojaraščio"
+msgstr "Nepavyko įrašyti grojaraščio"
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "Išsaugoti grojaraštį"
+msgstr "Įrašyti grojaraštį"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
@@ -1674,11 +1677,11 @@ msgstr "Palaikomi failai"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Audio failai"
+msgstr "Garso failai"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Video failai"
+msgstr "Vaizdo įrašų failai"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
@@ -1740,27 +1743,27 @@ msgstr "Automatiškai įkelia teksto subtitrus"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "Video diskų įrašymas"
+msgstr "Vaizdo įrašų diskų įrašymas"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Įrašo (S)VCD ir video DVD"
+msgstr "Įrašo (S)VCD ir vaizdo įrašų DVD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Kurti video diską..."
+msgstr "_Kurti vaizdo įrašų diską..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Sukurti video DVD arba (S)VCD iš dabar atverto filmo"
+msgstr "Sukurti vaizdo įrašų DVD arba (S)VCD iš dabar atverto filmo"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "Kopijuoti _video DVD..."
+msgstr "Kopijuoti _vaizdo įrašų DVD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Kopijuoti rodomą video DVD"
+msgstr "Kopijuoti rodomą vaizdo įrašų DVD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
@@ -1772,7 +1775,7 @@ msgstr "Kopijuoti rodomą (S)VCD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "Nepavyko nukopijuoti video disko."
+msgstr "Nepavyko nukopijuoti vaizdo įrašų disko."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
@@ -1819,7 +1822,7 @@ msgstr "Eiti į skyrių"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr "Išsaugoti pakeitimus"
+msgstr "Įrašyti pakeitimus"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
@@ -1890,7 +1893,7 @@ msgstr "Atverti skyrių failą"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "Skyriaus kadras"
+msgstr "Skyriaus ekrano kopija"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
@@ -1898,7 +1901,7 @@ msgstr "Skyriaus pavadinimas"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr "Įrašyti skyrių sąrašo pakeitimus prieš uždarant?"
+msgstr "Įrašyti skyrių sąrašo pakeitimus prieš užveriant?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
@@ -1988,7 +1991,7 @@ msgstr "Gromit pastabos"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "Pagalbininis pateikčių įskiepis, leidžiantis kurti pastabas ekrane"
+msgstr "Pateikčių pagelbiklis, leidžiantis kurti pastabas ekrane"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
@@ -2258,22 +2261,22 @@ msgstr "Išjungti ekrano užsklandą grojant"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Ekrano nuotraukos plotis (taškais)"
+msgstr "Ekrano kopijos plotis (pikseliais):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Suskaičiuoti ekrano nuotraukas"
+msgstr "Suskaičiuoti ekrano kopijas"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Ekrano nuotraukų skaičius:"
+msgstr "Ekrano kopijų skaičius:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "Nuotrauka iš %s.png"
+msgstr "Ekrano kopija iš %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2281,15 +2284,15 @@ msgstr "Nuotrauka iš %s.png"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr "Nuotrauka iš %s - %d.png"
+msgstr "Ekrano kopija iš %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr "Nuotrauka"
+msgstr "Ekrano kopija"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "Leidžia padaryti ekranvazdžius ir galerijas iš filmų"
+msgstr "Leidžia iš vaizdo įrašų padaryti ekrano kopijas ir galerijas"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
@@ -2318,7 +2321,7 @@ msgstr "Įrašoma galerija kaip „%s“"
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayer nepavyko padaryti filmo vaizdo nuotraukos."
+msgstr "Xplayer nepavyko padaryti vaizdo įrašo ekrano kopijos."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
@@ -2326,19 +2329,19 @@ msgstr "Tai neturėjo nutikti; prašau praneškite apie klaidą."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "Padaryti ekrano _nuotrauką"
+msgstr "Padaryti ekrano _kopiją"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Padaryti ekrano nuotrauką"
+msgstr "Padaryti ekrano kopiją"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Sukurti ekrano nuotraukų galeriją..."
+msgstr "Sukurti ekrano kopijų galeriją..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Sukurti ekrano nuotraukų galeriją"
+msgstr "Sukurti ekrano kopijų galeriją"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196

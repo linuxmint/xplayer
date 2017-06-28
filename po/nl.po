@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: Xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-04-27 09:26+0000\n"
+"PO-Revision-Date: 2017-06-25 18:34+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-05-23 10:33+0000\n"
-"X-Generator: Launchpad (build 18387)\n"
+"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
+"X-Generator: Launchpad (build 18416)\n"
 "Language: nl\n"
 
 # is dit een screensaver-bericht?
@@ -57,7 +57,7 @@ msgstr "Geen of lege afspeellijst"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2104
 msgid "Movie browser plugin"
-msgstr "Invoegtoepassing voor filmverkenner"
+msgstr "Invoegsel voor filmverkenner"
 
 #: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
@@ -66,8 +66,7 @@ msgstr "Kon thread-veilige bibliotheken niet initialiseren."
 #: ../browser-plugin/xplayer-plugin-viewer.c:2120
 msgid "Verify your system installation. The Xplayer plugin will now exit."
 msgstr ""
-"Verifieer uw systeeminstallatie. De Xplayer-invoegtoepassing zal nu "
-"afsluiten."
+"Kijk uw systeeminstallatie na. Het Xplayer-invoegsel zal nu afsluiten."
 
 #: ../data/fullscreen.ui.h:1
 msgid "Time:"
@@ -191,8 +190,8 @@ msgstr ""
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
-"Bepaalt of de invoegtoepassingen uitgezet worden in de persoonlijke map van "
-"de gebruiker"
+"Bepaalt of de invoegsels uitgeschakeld worden in de persoonlijke map van de "
+"gebruiker"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
@@ -220,15 +219,14 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Lijst van actieve invoegtoepassingen"
+msgstr "Lijst van actieve invoegsels"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"Een lijst met de namen van de huidige actieve invoegtoepassingen (geladen en "
-"draaiend)"
+"Een lijst met de namen van de thans actieve invoegsels (geladen en draaiend)"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
@@ -599,11 +597,11 @@ msgstr "De toepassing instellen"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Invoegtoepassingen…"
+msgstr "Invoegsels…"
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Invoegtoepassingen instellen om de toepassing uit te breiden"
+msgstr "Invoegsels instellen om de toepassing uit te breiden"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -842,11 +840,11 @@ msgstr "_Talen"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Inzoomen"
+msgstr "Vergroten"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Inzoomen"
+msgstr "Vergroten"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
@@ -931,11 +929,11 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Voor het afspelen van deze film is een %s-invoegtoepassing nodig, maar deze "
-"is niet geïnstalleerd."
+"Voor het afspelen van deze film is een %s-invoegsel nodig, maar dit is niet "
+"geïnstalleerd."
 msgstr[1] ""
-"Voor het afspelen van deze film zijn de volgende invoegtoepassingen nodig, "
-"maar deze zijn niet geïnstalleerd:\r\n"
+"Voor het afspelen van deze film zijn de volgende invoegsels nodig, maar deze "
+"zijn niet geïnstalleerd:\r\n"
 "\r\n"
 "%s"
 
@@ -945,8 +943,8 @@ msgid ""
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 "Een geluid- of beeldstroom wordt niet opgepakt wegens ontbrekende codecs. U "
-"zou mogelijk extra invoegtoepassingen moeten installeren om sommige soorten "
-"films te kunnen afspelen."
+"zou wellicht extra invoegsels moeten installeren om sommige soorten films te "
+"kunnen afspelen."
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -1288,8 +1286,8 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer bevat een uitzondering die het gebruik van propriëtaire GStreamer-"
-"invoegtoepassingen mogelijk maakt."
+"Xplayer bevat een uitzondering die het gebruik van niet-vrije GStreamer-"
+"invoegsels mogelijk maakt."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1299,7 +1297,7 @@ msgstr "Geen"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Invoegtoepassingen instellen"
+msgstr "Invoegsels instellen"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1934,7 +1932,7 @@ msgid ""
 "Plugin for sending notifications of currently playing movies to the D-Bus "
 "subsystem."
 msgstr ""
-"Invoegtoepassing voor het verzenden van meldingen van getoonde video's naar "
+"Invoegsel voor het verzenden van meldingen van thans spelende video's naar "
 "het D-Bus-subsysteem."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
@@ -1965,8 +1963,7 @@ msgstr "Grilo-verkenner"
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Een invoegtoepassing om u media-inhoud van verschillende bronnen te laten "
-"doornemen"
+"Een invoegsel om u media-inhoud van verschillende bronnen te laten verkennen"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
@@ -2239,7 +2236,7 @@ msgstr "Voegt afgespeelde bestanden toe aan de recente bestanden"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Kantel-invoegtoepassing"
+msgstr "Kantel-invoegsel"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2391,8 +2388,8 @@ msgstr "Doorspoelen naar een specifiek tijdspunt"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Zeitgeist-invoegtoepassing"
+msgstr "Zeitgeist-invoegsel"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Een invoegtoepassing die gebeurtenissen naar Zeitgeist stuurt"
+msgstr "Een invoegsel dat gebeurtenissen naar Zeitgeist stuurt"
