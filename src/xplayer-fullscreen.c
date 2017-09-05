@@ -59,8 +59,7 @@ struct _XplayerFullscreenPrivate {
 	BaconVideoWidget *bvw;
 	GtkWidget        *parent_window;
 
-	/* Fullscreen Popups */
-	GtkWidget        *exit_popup;
+	/* Fullscreen Popup */
 	GtkWidget        *control_popup;
 
 	/* Locks for keeping the popups during adjustments */
@@ -93,7 +92,6 @@ xplayer_fullscreen_is_fullscreen (XplayerFullscreen *fs)
 static void
 xplayer_fullscreen_move_popups (XplayerFullscreen *fs)
 {
-	int exit_width,    exit_height;
 	int control_width, control_height;
 
 	GdkScreen              *screen;
@@ -111,8 +109,6 @@ xplayer_fullscreen_move_popups (XplayerFullscreen *fs)
 					 &fullscreen_rect);
 
 	/* Get the popup window sizes */
-	gtk_window_get_size (GTK_WINDOW (priv->exit_popup),
-			     &exit_width, &exit_height);
 	gtk_window_get_size (GTK_WINDOW (priv->control_popup),
 			     &control_width, &control_height);
 
@@ -120,18 +116,12 @@ xplayer_fullscreen_move_popups (XplayerFullscreen *fs)
 	gtk_window_resize (GTK_WINDOW (priv->control_popup),
 			   fullscreen_rect.width, control_height);
 
-	if (gtk_widget_get_direction (priv->exit_popup) == GTK_TEXT_DIR_RTL) {
-		gtk_window_move (GTK_WINDOW (priv->exit_popup),
-				 fullscreen_rect.x,
-				 fullscreen_rect.y);
+	if (gtk_widget_get_direction (priv->control_popup) == GTK_TEXT_DIR_RTL) {
 		gtk_window_move (GTK_WINDOW (priv->control_popup),
 				 fullscreen_rect.width - control_width,
 				 fullscreen_rect.height + fullscreen_rect.y -
 				 control_height);
 	} else {
-		gtk_window_move (GTK_WINDOW (priv->exit_popup),
-				 fullscreen_rect.width + fullscreen_rect.x - exit_width,
-				 fullscreen_rect.y);
 		gtk_window_move (GTK_WINDOW (priv->control_popup),
 				 fullscreen_rect.x,
 				 fullscreen_rect.height + fullscreen_rect.y -
@@ -174,26 +164,6 @@ xplayer_fullscreen_window_unrealize_cb (GtkWidget *widget, XplayerFullscreen *fs
 					      G_CALLBACK (xplayer_fullscreen_size_changed_cb), fs);
 	g_signal_handlers_disconnect_by_func (gtk_icon_theme_get_for_screen (screen),
 					      G_CALLBACK (xplayer_fullscreen_theme_changed_cb), fs);
-}
-
-static gboolean
-xplayer_fullscreen_exit_popup_draw_cb (GtkWidget *widget,
-				     cairo_t *cr,
-				     XplayerFullscreen *fs)
-{
-	GdkScreen *screen;
-
-	screen = gtk_widget_get_screen (widget);
-	if (gdk_screen_is_composited (screen) == FALSE)
-		return FALSE;
-
-	gtk_widget_set_app_paintable (widget, TRUE);
-
-	cairo_set_source_rgba (cr, 1., 1., 1., 0.);
-	cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-	cairo_paint (cr);
-
-	return FALSE;
 }
 
 gboolean
@@ -250,7 +220,6 @@ xplayer_fullscreen_force_popup_hide (XplayerFullscreen *fs)
 	if (xplayer_fullscreen_is_volume_popup_visible (fs))
 		gtk_bindings_activate (G_OBJECT (fs->volume), GDK_KEY_Escape, 0);
 
-	gtk_widget_hide (fs->priv->exit_popup);
 	gtk_widget_hide (fs->priv->control_popup);
 
 	xplayer_fullscreen_popup_timeout_remove (fs);
@@ -327,7 +296,6 @@ xplayer_fullscreen_show_popups (XplayerFullscreen *fs, gboolean show_cursor)
 
 	/* Show the popup widgets */
 	xplayer_fullscreen_move_popups (fs);
-	gtk_widget_show (fs->priv->exit_popup);
 	gtk_widget_show_all (fs->priv->control_popup);
 
 	if (show_cursor != FALSE) {
@@ -446,6 +414,8 @@ xplayer_fullscreen_new (GtkWindow *toplevel_window)
 	fs->blank_button = GTK_WIDGET (gtk_builder_get_object (fs->priv->xml,
 				"tefw_fs_blank_button"));
 
+	gtk_widget_set_no_show_all(fs->blank_button, TRUE);
+
 	fs->xapp_monitor_blanker = xapp_monitor_blanker_new();
 
 	/* Volume */
@@ -507,15 +477,10 @@ xplayer_fullscreen_init (XplayerFullscreen *self)
 
 	self->priv->pointer_on_control = FALSE;
 
-	self->priv->exit_popup = GTK_WIDGET (gtk_builder_get_object (self->priv->xml,
-				"xplayer_exit_fullscreen_window"));
-	g_signal_connect (G_OBJECT (self->priv->exit_popup), "draw",
-			  G_CALLBACK (xplayer_fullscreen_exit_popup_draw_cb), self);
 	self->priv->control_popup = GTK_WIDGET (gtk_builder_get_object (self->priv->xml,
 				"xplayer_controls_window"));
 
 	/* Motion notify */
-	gtk_widget_add_events (self->priv->exit_popup, GDK_POINTER_MOTION_MASK);
 	gtk_widget_add_events (self->priv->control_popup, GDK_POINTER_MOTION_MASK);
 }
 
@@ -527,7 +492,6 @@ xplayer_fullscreen_dispose (GObject *object)
 	if (priv->xml != NULL) {
 		g_object_unref (priv->xml);
 		priv->xml = NULL;
-		gtk_widget_destroy (priv->exit_popup);
 		gtk_widget_destroy (priv->control_popup);
 	}
 
