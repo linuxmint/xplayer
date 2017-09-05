@@ -2,7 +2,7 @@ Source: xplayer
 Section: video
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
-Build-Depends: debhelper (>= 8),
+Build-Depends: debhelper,
                cdbs (>= 0.4.90),
                dpkg-dev (>= 1.16.1),
                autotools-dev,
@@ -21,13 +21,10 @@ Build-Depends: debhelper (>= 8),
                libbluetooth-dev [linux-any],
                libclutter-gst-3.0-dev | libclutter-gst-2.0-dev,
                libclutter-gtk-1.0-dev,
-               libdbus-glib-1-dev (>= 0.82),
-#               libepc-ui-dev (>= 0.4.0),
                libgdata-dev (>= 0.8.0),
                libgdk-pixbuf2.0-dev (>= 2.23.0),
                libgirepository1.0-dev (>= 0.9.12),
                libglib2.0-dev (>= 2.33.0),
-#               libgrilo-0.2-dev,
                libgstreamer-plugins-base1.0-dev,
                libgstreamer1.0-dev,
                libgtk-3-dev (>= 3.5.2),
@@ -41,12 +38,10 @@ Build-Depends: debhelper (>= 8),
                libx11-dev,
                libxml2-dev (>= 2.6.0),
                libxrandr-dev (>= 2:1.1.1),
-#               libxtst-dev,
                libxxf86vm-dev (>= 1:1.0.1),
                libzeitgeist-2.0-dev,
                python (>= 2.6.6-3~),
                python-gi-dev (>= 2.90.3),
-               shared-mime-info (>= 0.22),
                valac (>= 0.14.1),
                x11proto-core-dev,
                yelp-tools
@@ -81,8 +76,7 @@ Recommends: xplayer-plugins,
 Suggests: gnome-codec-install,
           gstreamer1.0-libav,
           gstreamer1.0-plugins-bad,
-          gstreamer1.0-plugins-ugly,
-          xplayer-mozilla
+          gstreamer1.0-plugins-ugly
 Description: Simple media player based on GStreamer
  Xplayer is a simple yet featureful media player which can read
  a large number of file formats. It features :
@@ -104,25 +98,6 @@ Description: Simple media player based on GStreamer
     * Works on remote displays
     * DVD, VCD and OGG/OGM subtitles with automatic language selection
     * Extensible with plugins
-
-Package: xplayer-mozilla
-Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         xplayer (= ${binary:Version}),
-         dbus-x11 (>= 0.61)
-#Recommends: epiphany-browser | www-browser
-XB-Npp-Applications: ec8030f7-c20a-464f-9b0e-13a3a9e97384, 92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a
-XB-Npp-Name:  Xplayer Mozilla plugin
-XB-Npp-MimeType: video/quicktime, video/mp4, image/x-macpaint, image/x-quicktime, application/x-mplayer2, video/x-ms-asf-plugin, video/x-msvideo, video/x-ms-asf, video/x-ms-wmv, video/x-wmv, video/x-ms-wvx, video/x-ms-wm, application/ogg, video/mpeg, audio/wav, audio/x-wav, audio/mpeg
-XB-Npp-Description: Watch Movies in your Browser
-XB-Npp-Filename: libxplayer-
-Description: Xplayer Mozilla plugin
- This package contains the Xplayer Mozilla plugin, which will
- enhance your Gecko-based browser to be able to display movie
- clips.
- .
- This plugin should work for Firefox as well as XULRunner based browsers.
 
 Package: xplayer-common
 Architecture: all

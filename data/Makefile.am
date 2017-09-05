@@ -25,11 +25,10 @@ stuff_DATA =				\
 	xplayer.ui			\
 	fullscreen.ui			\
 	playlist.ui			\
-	mozilla-viewer.ui		\
 	preferences.ui			\
 	properties.ui			\
-	uri.ui				\
-	mozilla-viewer.css
+	uri.ui
+
 EXTRA_DIST += $(stuff_DATA)
 
 # Icons

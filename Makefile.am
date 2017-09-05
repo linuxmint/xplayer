@@ -1,12 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4 -I libgd ${ACLOCAL_FLAGS}
 
-NORMAL_SUBDIRS = libgd po data help src docs
-
-SUBDIRS = $(NORMAL_SUBDIRS)
-
-if ENABLE_BROWSER_PLUGINS
-SUBDIRS += browser-plugin
-endif
+SUBDIRS = libgd po data help src docs
 
 EXTRA_DIST =			\
 	license_change		\
@@ -18,7 +12,6 @@ EXTRA_DIST =			\
 	ChangeLog.pre-gitlog	\
 	MAINTAINERS		\
 	xplayer.doap
-
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
@@ -43,7 +36,7 @@ MAINTAINERCLEANFILES = \
 
 DISTCLEANFILES = intltool-extract intltool-merge intltool-update
 
-DIST_SUBDIRS = $(NORMAL_SUBDIRS) browser-plugin
+DIST_SUBDIRS = $(SUBDIRS)
 DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper --enable-gtk-doc --with-nautilusdir='$${libdir}/nautilus/extensions-2.0-distcheck' --enable-vala=no --enable-introspection
 
 # Build ChangeLog from GIT history

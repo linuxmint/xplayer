@@ -14,8 +14,7 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-vala=yes \
-	--disable-run-in-source-tree \
-	--disable-vegas-plugin
+	--disable-run-in-source-tree
 
 DEB_DH_STRIP_ARGS := --dbg-package=xplayer-dbg
 DEB_DH_MAKESHLIBS_ARGS += -Xplugins/
