@@ -4237,13 +4237,14 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	g_signal_connect (G_OBJECT (xplayer->fs->blank_button), "toggled",
 			  G_CALLBACK (fs_blank1_activate_cb), xplayer);
 
-	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
+
+	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
 	item = gtk_action_create_tool_item (action);
 	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "clicked",
 			G_CALLBACK (on_mouse_click_fullscreen), xplayer);
 
-	action = gtk_action_group_get_action (xplayer->main_action_group, "previous-chapter");
+	action = gtk_action_group_get_action (xplayer->main_action_group, "play");
 	item = gtk_action_create_tool_item (action);
 	gtk_box_pack_start (GTK_BOX (xplayer->fs->buttons_box), item, FALSE, FALSE, 0);
 	g_signal_connect (G_OBJECT (item), "clicked",
