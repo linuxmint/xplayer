@@ -14,6 +14,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">4</property>
+        <property name="border_width">6</property>
         <child>
           <object class="GtkHBox" id="tcw_buttons_hbox">
             <property name="visible">True</property>
@@ -33,10 +34,8 @@
             <property name="can_focus">False</property>
             <property name="spacing">2</property>
             <child>
-              <object class="GtkLabel" id="tcw_time_label">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Time:</property>
+              <object class="XplayerTimeLabel" id="tcw_time_display_label">
+               <property name="visible">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -84,16 +83,6 @@
             <property name="can_focus">False</property>
             <property name="spacing">3</property>
             <child>
-              <object class="XplayerTimeLabel" id="tcw_time_display_label">
-	            <property name="visible">True</property>
-	         </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkLabel" id="tcw_title_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -104,14 +93,14 @@
                 <property name="single_line_mode">True</property>
               </object>
               <packing>
-                <property name="expand">True</property>
+                <property name="expand">False</property>
                 <property name="fill">True</property>
                 <property name="position">1</property>
               </packing>
             </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
