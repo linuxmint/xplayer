@@ -7,72 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-22 17:16+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-31 07:55+0000\n"
 "Last-Translator: Tiago Santos <Unknown>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: pt\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "A reproduzir um filme"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Nenhum URI a reproduzir"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Reprodutor de Filmes Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Abrir com \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Ocorreu um erro"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Nenhuma lista de reprodução ou lista vazia"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Plugin de navegador de filmes"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Não foi possível inicializar as bibliotecas de threads seguras."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Verifique a instalação do seu sistema. O plugin Xplayer irá agora terminar."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Tempo:"
+msgid "Leave fullscreen"
+msgstr "Sair do ecrã completo"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Escurecer os outros monitores"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Sair do ecrã completo"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -505,8 +458,8 @@ msgid "Fullscreen"
 msgstr "Ecrã Completo"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Filme"
+msgid "_File"
+msgstr "_Ficheiro"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1193,6 +1146,10 @@ msgid "Audio Preview"
 msgstr "Antevisão Áudio"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Não foi possível inicializar as bibliotecas de threads seguras."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verifique a instalação do seu sistema. Xplayer irá agora terminar."
 
@@ -1208,7 +1165,7 @@ msgstr "_Adicionar à Lista de Reprodução"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Nenhum Ficheiro"
 
@@ -1313,6 +1270,10 @@ msgstr "Xplayer não conseguiu reproduzir '%s'."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer não conseguiu apresentar o conteúdo da ajuda."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Ocorreu um erro"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Capítulo/Filme Anterior"
@@ -1325,11 +1286,11 @@ msgstr "Reproduzir / Pausar"
 msgid "Next Chapter/Movie"
 msgstr "Capítulo/Filme Seguinte"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer não conseguiu iniciar."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Sem motivo."
 
@@ -2226,6 +2187,10 @@ msgstr "Proteção de ecrã"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Desativar a proteção de ecrã durante a reprodução"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "A reproduzir um filme"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

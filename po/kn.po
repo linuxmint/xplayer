@@ -9,71 +9,24 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2016-02-03 12:56+0000\n"
-"Last-Translator: shankar Prasad <Unknown>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-03 08:21+0000\n"
+"Last-Translator: Raghuveer Ramachandra <Unknown>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: kn\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "ಚಲನಚಿತ್ರವನ್ನು ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "ಚಲಾಯಿಸಲು ಯಾವುದೆ URI ಇಲ್ಲ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer ಚಲನಚಿತ್ರ ಚಾಲಕ"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" ನೊಂದಿಗೆ ತೆರೆ (_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "ಒಂದು ದೋಷ ಎದುರಾಗಿದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "ಯಾವುದೆ ಚಾಲನಾಪಟ್ಟಿ ಇಲ್ಲ ಅಥವ ಚಾಲನಾಪಟ್ಟಿ ಖಾಲಿ ಇದೆ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "ಚಲನಚಿತ್ರ ವೀಕ್ಷಕ ಪ್ಲಗ್ಇನ್"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "ಎಳೆ-ಸುರಕ್ಷಿತ(ತ್ರೆಡ್‌-ಸೇಫ್‌) ಲೈಬ್ರರಿಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"ನಿಮ್ಮ ಗಣಕದ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ. Xplayer ಪ್ಲಗ್‌ಇನ್‌ ಈಗ ನಿರ್ಗಮಿಸುತ್ತದೆ."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "ಸಮಯ:"
+msgid "Leave fullscreen"
+msgstr "ಪೂರ್ಣತೆರೆಯಿಂದ ನಿರ್ಗಮಿಸು"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -123,7 +76,7 @@ msgstr "ಪರಸ್ಪರ ಹೆಣೆಯಲಾದ ಚಲನಚಿತ್ರಗ�
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "ಚಾಲನಾಎಂಜಿನಿನಲ್ಲಿ ದೋಷನಿವಾರಣೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕೆ"
+msgstr "ಚಲಾವಣಾ ಎಂಜಿನಿನಲ್ಲಿ ದೋಷನಿವಾರಣೆಯನ್ನು ಶಕ್ತಗೊಳಿಸಬೇಕೆ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
@@ -510,8 +463,8 @@ msgid "Fullscreen"
 msgstr "ಪೂರ್ಣತೆರೆ"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "ಚಲನಚಿತ್ರ (_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1197,6 +1150,10 @@ msgid "Audio Preview"
 msgstr "ಆಡಿಯೋ ಮುನ್ನೋಟ"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "ಎಳೆ-ಸುರಕ್ಷಿತ(ತ್ರೆಡ್‌-ಸೇಫ್‌) ಲೈಬ್ರರಿಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "ನಿಮ್ಮ ಗಣಕದ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ. Xplayer ಈಗ ನಿರ್ಗಮಿಸುತ್ತದೆ."
 
@@ -1212,7 +1169,7 @@ msgstr "ಚಾಲನಾಪಟ್ಟಿಗೆ(ಪ್ಲೇಲಿಸ್ಟ್‍) 
 msgid "Cancel"
 msgstr "ರದ್ದು ಮಾಡು"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "ಕಡತ ಇಲ್ಲ"
 
@@ -1317,6 +1274,10 @@ msgstr "'%s' ಅನ್ನು Xplayer ಇಂದ ಚಲಾಯಿಸಲು ಸಾ�
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer ಸಹಾಯದ ವಿಷಯಗಳನ್ನು ತೋರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "ಒಂದು ದೋಷ ಉಂಟಾಗಿದೆ"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ಹಿಂದಿನ ಅಧ್ಯಾಯ/ಚಲನಚಿತ್ರ"
@@ -1329,11 +1290,11 @@ msgstr "ಚಲಾಯಿಸು / ವಿರಮಿಸು"
 msgid "Next Chapter/Movie"
 msgstr "ಮುಂದಿನ ಅಧ್ಯಾಯ/ಚಲನಚಿತ್ರ"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "ಯಾವುದೆ ಕಾರಣವಿಲ್ಲ."
 
@@ -2237,6 +2198,10 @@ msgstr "ರಕ್ಷಣಾತೆರೆ (ಸ್ಕ್ರೀನ್ ಸೇವರ್
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "ಚಲನಚಿತ್ರವನ್ನು ಚಲಾಯಿಸುವಾಗ ರಕ್ಷಣಾತೆರೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "ಚಲನಚಿತ್ರವನ್ನು ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

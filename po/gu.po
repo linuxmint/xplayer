@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 13:01+0000\n"
 "Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -16,62 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: \n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "ચિત્રપટ વગાડી રહ્યા છીએ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "વગાડવા માટે કોઈ URI નથી"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "ટોટેમ ચિત્રપટ પ્લેયર"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" સાથે ખોલો (_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "ભૂલ ઉદ્દભવી"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "વગાડવાની યાદી નથી અથવા વગાડવાની યાદી ખાલી છે"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "મુવી બ્રાઉઝર પ્લગઈન"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "થ્રેડ-સુરક્ષા લાઈબ્રેરીઓનો પ્રારંભ કરી શક્યા નહિં."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "તમારા સિસ્ટમ સ્થાપનની ખાતરી કરો. ટોટેમ પ્લગઈન હવે બંધ થઈ જશે."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "સમય:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -507,8 +461,8 @@ msgid "Fullscreen"
 msgstr "પૂર્ણ સ્ક્રીન"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "ફિલ્મ (_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1190,6 +1144,10 @@ msgid "Audio Preview"
 msgstr "ઓડિયો પૂર્વદર્શન"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "થ્રેડ-સુરક્ષા લાઈબ્રેરીઓનો પ્રારંભ કરી શક્યા નહિં."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "તમારું સિસ્ટમ સ્થાપન ચકાસો. ટોટેમ હમણાં બંધ થઈ જશે."
 
@@ -1205,7 +1163,7 @@ msgstr "વગાડવા માટેની યાદીમાં ઉમેર
 msgid "Cancel"
 msgstr "રદ કરો"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "કોઈ ફાઈલ નથી"
 
@@ -1309,6 +1267,10 @@ msgstr "ટોટેમ '%s' વગાડી શક્યું નહિં."
 msgid "Xplayer could not display the help contents."
 msgstr "ટોટેમ મદદ સમાવિષ્ટો પ્રદર્શિત કરી શક્યું નહિં."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "ભૂલ ઉદ્દભવી"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "પહેલાનું પ્રકરણ/ફિલ્મ"
@@ -1321,11 +1283,11 @@ msgstr "વગાડો / અટકાવો"
 msgid "Next Chapter/Movie"
 msgstr "આગળનું પ્રકરણ/ફિલ્મ"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "ટોટેમ શરુ થઈ શક્યું નહિં."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "કોઈ કારણ નથી."
 
@@ -2222,6 +2184,10 @@ msgstr "સ્ક્રીન સેવર"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "જ્યારે ચિત્રપટ વગાડી રહ્યા હોય ત્યારે સ્ક્રીનસેવરને નિષ્ક્રિય કરો"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "ચિત્રપટ વગાડી રહ્યા છીએ"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

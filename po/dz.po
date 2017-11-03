@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer.HEAD.dz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 13:02+0000\n"
 "Last-Translator: Tshewang Norbu <Unknown>\n"
 "Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
@@ -14,66 +14,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: BHUTAN\n"
 "X-Poedit-Language: Dzongkha\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "གློག་བརྙན་ཅིག་གཏང་དོ།"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "རྩེ་ནིའི་དོན་ལས་ ཡུ་ཨར་ཨའི་མེད་"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "ཊོ་ཊེམ་གློག་བརྙན་གཏང་འཕྲུལ།"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "འཛོལ་བ་ཅིག་བྱུང་ཡི།"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "རྩེད་ཐོ་མེད་ ཡང་ན་རྩེད་ཐེ་སྟོངམ་"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "ཐེརེཌི་སེཕ་ དཔེ་མཛོད་དེ་ འགོ་འབྱེད་འབད་མ་ཚུགས།"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"ཁྱོད་རའི་རིམ་ལུགས་འགོ་འབྱེད་ལུ་ བདེན་སྦྱོར་འབད། ཊོ་ཊེམ་པ་ལག་ཨིན་དེ་ "
-"ད་ཕྱིར་འཐོན་འགྱོ་འོང་།"
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "ཆུ་ཚོད་:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -494,8 +446,8 @@ msgid "Fullscreen"
 msgstr ""
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "གློག་བརྙན།(_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1162,6 +1114,10 @@ msgid "Audio Preview"
 msgstr ""
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "ཐེརེཌི་སེཕ་ དཔེ་མཛོད་དེ་ འགོ་འབྱེད་འབད་མ་ཚུགས།"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "ཁྱོད་རའི་རིམ་ལུགས་གཞི་བཙུགས་ལུ་ བདེན་སྦྱོར་འབད། ཊོ་ཊེམ་ད་ལྟོ་རང་ "
@@ -1179,7 +1135,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "ཡིག་སྣོད་མིན་འདུག"
 
@@ -1283,6 +1239,10 @@ msgstr "ཊོ་ཊེམ་གྱིས་'%s'གཏང་མ་ཚུགས�
 msgid "Xplayer could not display the help contents."
 msgstr "ཊོ་ཊེམ་གྱིས་ གྲོགས་རམ་གྱི་ནང་དོན་ཚུ་ བཀྲམ་སྟོན་འབད་མ་ཚུགས།"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "འཛོལ་བ་ཅིག་བྱུང་ཡི།"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ལེའུ་/གློག་བརྙནཧེ་མམ་"
@@ -1295,11 +1255,11 @@ msgstr "གཏང་/ཐེམ་"
 msgid "Next Chapter/Movie"
 msgstr "ལེའུ་/གློག་བརྙན་ཤུལ་མམ་"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "ཊོ་ཊེམ་འགོ་བཙུགས་མ་ཚུགས།"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "རྒྱུ་མཚན་མིན་འདུག"
 
@@ -2181,6 +2141,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "གློག་བརྙན་ཅིག་གཏང་དོ།"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

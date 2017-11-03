@@ -12,72 +12,26 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2016-12-09 10:12+0000\n"
-"Last-Translator: Tudor Boboc <Unknown>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-09-20 18:26+0000\n"
+"Last-Translator: Rufus Dexter <Unknown>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: ro\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Rularea unui film"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Nu există un URI de redat"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer Player pentru filme"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Deschide cu „%s”"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "A intervenit o eroare"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Nu există o listă de redare sau aceasta este goală"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Modul Navigator filme"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Nu s-au putut inițializa bibliotecile thread-safe."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Verificați configurarea sistemului. Modulul Xplayer va ieși acum."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Timp:"
+msgid "Leave fullscreen"
+msgstr "Ieși din modul \"tot ecranul\""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Nu afișa pe alte monitoare"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Ieși din modul \"tot ecranul\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -223,7 +177,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr ""
+msgstr "Folosește varianta temei întunecate (dacă e disponibilă)"
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -315,7 +269,7 @@ msgstr "Încarcă automat subtitrările _la încărcarea filmului"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr ""
+msgstr "_Arată subtitrările când filmul s-a încărcat"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -512,8 +466,8 @@ msgid "Fullscreen"
 msgstr "Pe tot ecranul"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr "_Fișier"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1206,6 +1160,10 @@ msgid "Audio Preview"
 msgstr "Previzualizare audio"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Nu s-au putut inițializa bibliotecile thread-safe."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verificați configurarea sistemului. Xplayer va ieși acum."
 
@@ -1221,7 +1179,7 @@ msgstr "_Adaugă la lista de redare"
 msgid "Cancel"
 msgstr "Renunță"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Niciun fișier"
 
@@ -1324,6 +1282,10 @@ msgstr "Xplayer nu a putut reda „%s”."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer nu a putut afișa conținutul ajutorului."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "A intervenit o eroare"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Precedentul capitol/film"
@@ -1336,11 +1298,11 @@ msgstr "Redare / Pauză"
 msgid "Next Chapter/Movie"
 msgstr "Următorul capitol/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer nu a putut porni."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Fără motiv."
 
@@ -2243,6 +2205,10 @@ msgstr "Protector de ecran"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Dezactivează protectorul de ecran atunci când se redă un film"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Rularea unui film"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

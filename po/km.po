@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:54+0000\n"
 "Last-Translator: Sok Sophea <Unknown>\n"
 "Language-Team: Khmer <>\n"
@@ -19,65 +19,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: \n"
 "X-Language: km-KH\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "ចាក់​តន្ត្រី"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "គ្មាន URI ត្រូវ​ចាក់"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "កម្មវិធី​ចាក់​ភាពយន្ត Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "បើក​ជា​មួយ \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "កំហុស​មួយ​បាន​កើត​ឡើង"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "គ្មាន​បញ្ជីចាក់ ឬ​បញ្ជី​ចាក់ទទេ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "កម្មវិធី​ជំនួយ​របស់​កម្មវិធី​រុករក​ភាពយន្ត"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "មិន​អាច​ចាប់​ផ្ដើម​បណ្ណាល័យ​ខ្សែស្រឡាយ​ដែល​មាន​​សវុត្ថិភាព​បាន​ទេ ។"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"ផ្ទៀងផ្ទាត់​ការ​ដំឡើង​ប្រព័ន្ធ​របស់​អ្នក ។ កម្មវិធី​ជំនួយ Xplayer "
-"នឹង​ចាកចេញ​ឥឡូវ ។"
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "ពេលវេលា ៖"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -514,8 +466,8 @@ msgid "Fullscreen"
 msgstr "ពេញ​អេក្រង់"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "ភាព​យន្ត"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1195,6 +1147,10 @@ msgid "Audio Preview"
 msgstr "មើល​អូឌីយ៉ូ​ជាមុន"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "មិន​អាច​ចាប់​ផ្ដើម​បណ្ណាល័យ​ខ្សែស្រឡាយ​ដែល​មាន​​សវុត្ថិភាព​បាន​ទេ ។"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "ផ្ទៀងផ្ទាត់​ការ​ដំឡើង​ប្រព័ន្ធ​របស់​អ្នក ។ Xplayer នឹង​ចាកចេញ​ឥឡូវ ។"
 
@@ -1210,7 +1166,7 @@ msgstr "បន្ថែម​ទៅ​បញ្ជី​ចាក់"
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "គ្មាន​ឯកសារ"
 
@@ -1315,6 +1271,10 @@ msgstr "Xplayer មិន​អាច​ចាក់ '%s' បាន​ទេ ។
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer មិន​អាច​បង្ហាញ​ខ្លឹមសារ​ជំនួយ​បាន​ទេ ។"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "កំហុស​មួយ​បាន​កើត​ឡើង"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ជំពូក/ភាពយន្ត​មុន"
@@ -1327,11 +1287,11 @@ msgstr "ចាក់/ផ្អាក"
 msgid "Next Chapter/Movie"
 msgstr "ជំពូក/ភាពយន្ត​បន្ទាប់"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer មិន​អាច​ចាប់ផ្ដើម​បាន​ទេ ។"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "គ្មាន​ហេតុផល"
 
@@ -2232,6 +2192,10 @@ msgstr "ធាតុ​រក្សា​អេក្រង់"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "បិទ​ធាតុ​រក្សា​អេក្រង់​នៅ​ពេល​កំពុង​ចាក់​ភាពយន្ត"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "ចាក់​តន្ត្រី"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

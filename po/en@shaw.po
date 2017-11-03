@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:37+0000\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
@@ -14,61 +14,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "𐑐𐑤𐑱𐑦𐑙 𐑩 𐑥𐑵𐑝𐑰"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "𐑯𐑴 𐑘𐑻𐑰 𐑑 𐑐𐑤𐑱"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "·𐑑𐑴𐑑𐑩𐑥 𐑥𐑵𐑝𐑰 𐑐𐑤𐑱𐑼"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_𐑴𐑐𐑩𐑯 𐑢𐑦𐑞 \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "𐑩𐑯 𐑻𐑼 𐑪𐑒𐑻𐑛"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "𐑯𐑴 𐑐𐑤𐑱𐑤𐑦𐑕𐑑 𐑹 𐑐𐑤𐑱𐑤𐑦𐑕𐑑 𐑧𐑥𐑐𐑑𐑦"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "𐑥𐑵𐑝𐑰 𐑚𐑮𐑬𐑟𐑼 𐑐𐑤𐑳𐑜𐑦𐑯"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "𐑒𐑫𐑛 𐑯𐑪𐑑 𐑦𐑯𐑦𐑖𐑩𐑤𐑲𐑟 𐑞 𐑔𐑮𐑧𐑛-𐑕𐑱𐑓 𐑤𐑲𐑚𐑮𐑼𐑦𐑟."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "𐑝𐑧𐑮𐑦𐑓𐑲 𐑿𐑼 𐑕𐑦𐑕𐑑𐑩𐑥 𐑦𐑯𐑕𐑑𐑩𐑤𐑱𐑖𐑩𐑯. 𐑞 ·𐑑𐑴𐑑𐑩𐑥 𐑐𐑤𐑳𐑜𐑦𐑯 𐑢𐑦𐑤 𐑯𐑬 𐑧𐑜𐑟𐑦𐑑."
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "𐑑𐑲𐑥:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -491,8 +445,8 @@ msgid "Fullscreen"
 msgstr ""
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_𐑥𐑵𐑝𐑰"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1164,6 +1118,10 @@ msgid "Audio Preview"
 msgstr "𐑷𐑛𐑦𐑴 𐑐𐑮𐑰𐑝𐑿"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "𐑒𐑫𐑛 𐑯𐑪𐑑 𐑦𐑯𐑦𐑖𐑩𐑤𐑲𐑟 𐑞 𐑔𐑮𐑧𐑛-𐑕𐑱𐑓 𐑤𐑲𐑚𐑮𐑼𐑦𐑟."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "𐑝𐑧𐑮𐑦𐑓𐑲 𐑿𐑼 𐑕𐑦𐑕𐑑𐑩𐑥 𐑦𐑯𐑕𐑑𐑩𐑤𐑱𐑖𐑩𐑯. ·𐑑𐑴𐑑𐑩𐑥 𐑢𐑦𐑤 𐑯𐑬 𐑧𐑜𐑟𐑦𐑑."
 
@@ -1179,7 +1137,7 @@ msgstr "_𐑨𐑛 𐑑 𐑐𐑤𐑱𐑤𐑦𐑕𐑑"
 msgid "Cancel"
 msgstr "𐑒𐑨𐑯𐑕𐑩𐑤"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "𐑯𐑴 𐑓𐑲𐑤"
 
@@ -1276,6 +1234,10 @@ msgstr "·𐑑𐑴𐑑𐑩𐑥 𐑒𐑫𐑛 𐑯𐑪𐑑 𐑐𐑤𐑱 '%s'."
 msgid "Xplayer could not display the help contents."
 msgstr "·𐑑𐑴𐑑𐑩𐑥 𐑒𐑫𐑛 𐑯𐑪𐑑 𐑛𐑩𐑕𐑐𐑤𐑱 𐑞 𐑣𐑧𐑤𐑐 𐑒𐑪𐑯𐑑𐑩𐑯𐑑𐑕."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "𐑩𐑯 𐑻𐑼 𐑪𐑒𐑻𐑛"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "𐑐𐑮𐑰𐑝𐑦𐑩𐑕 𐑗𐑨𐑐𐑑𐑼/𐑥𐑵𐑝𐑰"
@@ -1288,11 +1250,11 @@ msgstr "𐑐𐑤𐑱 / 𐑐𐑷𐑟"
 msgid "Next Chapter/Movie"
 msgstr "𐑯𐑧𐑒𐑕𐑑 𐑗𐑨𐑐𐑑𐑼/𐑥𐑵𐑝𐑰"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "·𐑑𐑴𐑑𐑩𐑥 𐑒𐑫𐑛 𐑯𐑪𐑑 𐑕𐑑𐑸𐑑𐑳𐑐."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "𐑯𐑴 𐑮𐑰𐑟𐑩𐑯."
 
@@ -2175,6 +2137,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "𐑐𐑤𐑱𐑦𐑙 𐑩 𐑥𐑵𐑝𐑰"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

@@ -16,72 +16,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-11 14:37+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-11-01 16:26+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: da\n"
 
-# Enten "afspilning af (en) film" eller "afspiller en film". Lad os håbe sidstnævnte er korrekt...
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Afspiller en film"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Ingen URI at afspille"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer - filmafspiller"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Åbn med \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Der opstod en fejl"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Ingen eller tom afspilningsliste"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Plugin til filmgennemsyn"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Kunne ikke klargøre de trådsikre biblioteker."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Kontrollér din systeminstallation. Xplayer-pluginet vil nu afslutte."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Tid:"
+msgid "Leave fullscreen"
+msgstr "Forlad fuldskærm"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Gør andre skærme sorte"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Forlad fuldskærm"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -97,7 +50,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "Videoens lysstyrke"
+msgstr "Videoens lyshed"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
@@ -109,7 +62,7 @@ msgstr "Videoens farvetone"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "Videoens mætning"
+msgstr "Videoens mætningsgrad"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
@@ -165,14 +118,14 @@ msgstr "Tegnkodning til undertekster."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Standardplacering for \"Åbn...\"-vinduerne"
+msgstr "Standardplacering for \"Åbn …\"-vinduerne"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
-"Standardplacering for \"Åbn...\"-vinduerne. Standardværdien er den nuværende "
+"Standardplacering for \"Åbn …\"-vinduerne. Standardværdien er den nuværende "
 "mappe."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
@@ -246,7 +199,7 @@ msgstr "Kopiér placeringen til udklipsholderen"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Vælg undertekster..."
+msgstr "_Vælg undertekster …"
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
@@ -254,7 +207,7 @@ msgstr "Vælg en fil med undertekster"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "Tilføj..."
+msgstr "Tilføj …"
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
@@ -262,7 +215,7 @@ msgstr "Fjern"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Gem afspilningsliste..."
+msgstr "Gem afspilningsliste …"
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -377,7 +330,7 @@ msgstr "Farvebalance"
 
 #: ../data/preferences.ui.h:29
 msgid "_Brightness:"
-msgstr "L_ysstyrke:"
+msgstr "L_yshed:"
 
 #: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
@@ -472,7 +425,7 @@ msgstr "Bitfrekvens:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Samplingsfrekvens:"
+msgstr "Samplefrekvens:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -518,12 +471,12 @@ msgid "Fullscreen"
 msgstr "Fuldskærm"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr "_Fil"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_Åbn ..."
+msgstr "_Åbn …"
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
@@ -531,7 +484,7 @@ msgstr "Åbn en fil"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Åbn _placering..."
+msgstr "Åbn _placering …"
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
@@ -591,7 +544,7 @@ msgstr "Konfigurér programmet"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Plugins..."
+msgstr "Plugins …"
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
@@ -639,7 +592,7 @@ msgstr "Anvend videoens dobbelte originalstørrelse"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr "_Højde-/breddeforhold"
+msgstr "_Højde-breddeforhold"
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
@@ -784,11 +737,11 @@ msgstr "Vis eller skjul sidepanelet"
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr "Auto"
+msgstr "Automatisk"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Sætter højde-/breddeforholdet automatisk"
+msgstr "Sætter højde-breddeforholdet automatisk"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
@@ -796,7 +749,7 @@ msgstr "Kvadratisk"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "Sætter kvadratisk højde-/breddeforhold"
+msgstr "Sætter kvadratisk højde-breddeforhold"
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
@@ -804,7 +757,7 @@ msgstr "4∶3 (tv)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr "Sætter højde-/breddeforholdet til 4∶3 (TV)"
+msgstr "Sætter højde-breddeforholdet til 4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
@@ -812,7 +765,7 @@ msgstr "16∶9 (bredformat)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "Sætter højde-/breddeforholdet til 16∶9 (bredformat)"
+msgstr "Sætter højde-breddeforholdet til 16∶9 (bredformat)"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
@@ -820,7 +773,7 @@ msgstr "2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
-msgstr "Sætter højde-/breddeforholdet til 2.11∶1 (DVB)"
+msgstr "Sætter højde-breddeforholdet til 2,11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
@@ -920,7 +873,7 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Afspilning af denne film kræver et %s-plugin,som ikke er installeret."
+"Afspilning af denne film kræver et %s-plugin, som ikke er installeret."
 msgstr[1] ""
 "Afspilning af denne film kræver følgende plugins, som ikke er "
 "installeret:\r\n"
@@ -971,7 +924,7 @@ msgstr "Filen er ikke en gyldig .desktop-fil"
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Ukendt skrivebordsfilversion \"%s\""
+msgstr "Ukendt version \"%s\" af desktop-fil"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
@@ -1202,6 +1155,10 @@ msgid "Audio Preview"
 msgstr "Forhåndsafspilning af lyd"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Kunne ikke klargøre de trådsikre biblioteker."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Kontrollér din systeminstallation. Xplayer vil nu afslutte."
 
@@ -1217,7 +1174,7 @@ msgstr "_Føj til afspilningsliste"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Ingen fil"
 
@@ -1322,6 +1279,10 @@ msgstr "Xplayer kunne ikke afspille \"%s\"."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer kunne ikke vise indholdet af hjælp."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Der opstod en fejl"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Forrige kapitel/film"
@@ -1334,17 +1295,17 @@ msgstr "Afspil / pause"
 msgid "Next Chapter/Movie"
 msgstr "Næste kapitel/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer kunne ikke starte."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Ingen begrundelse."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Åbn placering..."
+msgstr "Åbn placering …"
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
@@ -1731,7 +1692,7 @@ msgstr "Optager (S)VCD'er eller video-dvd'er"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Opret videodisk..."
+msgstr "_Opret videodisk …"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
@@ -1739,7 +1700,7 @@ msgstr "Opret en video-dvd eller en (S)VCD fra den nu åbne film"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "Kopiér _video-dvd..."
+msgstr "Kopiér _video-dvd …"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
@@ -1747,7 +1708,7 @@ msgstr "Kopiér dvd'en, der afspilles nu"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Kopiér (S)VCD..."
+msgstr "Kopiér (S)VCD …"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
@@ -1790,7 +1751,7 @@ msgstr "Gå til kapitlet i filmen"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr "Tilføj kapitel..."
+msgstr "Tilføj kapitel …"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
@@ -1810,7 +1771,7 @@ msgstr "Ingen kapiteldata"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr "Indlæs kapitler..."
+msgstr "Indlæs kapitler …"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
@@ -2238,6 +2199,11 @@ msgstr "Pauseskærm"
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Deaktiverer pauseskærmen, når der afspilles en film"
 
+# Enten "afspilning af (en) film" eller "afspiller en film". Lad os håbe sidstnævnte er korrekt...
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Afspiller en film"
+
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
 msgstr "Bredde af skærmbillede (i billedpunkter):"
@@ -2289,7 +2255,7 @@ msgstr "Galleri-%s-%d.jpg"
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "Opretter galleri..."
+msgstr "Opretter galleri …"
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
@@ -2312,11 +2278,11 @@ msgstr "Gem _skærmbillede"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Gem et skærmbillede"
+msgstr "Tag et skærmbillede"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "_Opret galleri af skærmbilleder..."
+msgstr "_Opret galleri af skærmbilleder …"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
@@ -2354,7 +2320,7 @@ msgstr "8"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr "_Spring til..."
+msgstr "_Spring til …"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"

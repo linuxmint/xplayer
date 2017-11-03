@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XPLAYER 2.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:52+0000\n"
 "Last-Translator: Fanomezana Rajaonarisoa <Unknown>\n"
 "Language-Team: Malagasy <i18n-malagasy-gnome@gna.org>\n"
@@ -16,61 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Mamaky sarimihetsika"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Mpandefa sarimihetsika Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Nisy olana iray nitranga"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Tsy afaka nanomboka ireo tahirim-boky thread-safe."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Fotoana:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -491,8 +445,8 @@ msgid "Fullscreen"
 msgstr ""
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Sarimihetsika"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1158,6 +1112,10 @@ msgid "Audio Preview"
 msgstr ""
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Tsy afaka nanomboka ireo tahirim-boky thread-safe."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Jereo tsara ny fametrahana ny rafitrao. Hijanona ny Xplayer izao."
 
@@ -1173,7 +1131,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Tsy misy rakitra"
 
@@ -1262,6 +1220,10 @@ msgstr "Tsy afaka mandefa ny '%s' ny Xplayer."
 msgid "Xplayer could not display the help contents."
 msgstr "Tsy afaka nampiseho ny mpiatin'ny toro-làlana ny Xplayer."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Nisy olana iray nitranga"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr ""
@@ -1274,11 +1236,11 @@ msgstr ""
 msgid "Next Chapter/Movie"
 msgstr ""
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Tsy afaka miantomboka ny Xplayer."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Tsy misy antony."
 
@@ -2158,6 +2120,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Mamaky sarimihetsika"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

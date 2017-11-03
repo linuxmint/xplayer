@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xplayer gnome-2-32\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-06-08 20:51+0000\n"
 "Last-Translator: Murat Balkybaev <d2vsd1@mail.ru>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -16,64 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: KAZAKHSTAN\n"
 "X-Poedit-Language: Kazakh\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,17,-1,-1\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Бейнені ойнату"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Ойнату үшін URL жоқ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Бейнеойнатқыш Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "%s _көмегімен ашу"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Қате кетті"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Ойнату тізімі жоқ немесе ол бос"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Браузерде бейнені көруге арналған плагин"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Уақыты:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -499,7 +453,7 @@ msgid "Fullscreen"
 msgstr "Толық экранға"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
+msgid "_File"
 msgstr ""
 
 #: ../data/xplayer.ui.h:2
@@ -1169,6 +1123,10 @@ msgid "Audio Preview"
 msgstr ""
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr ""
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 
@@ -1184,7 +1142,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "Бас тарту"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Файл жоқ"
 
@@ -1275,6 +1233,10 @@ msgstr ""
 msgid "Xplayer could not display the help contents."
 msgstr ""
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Қате кетті"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr ""
@@ -1287,11 +1249,11 @@ msgstr ""
 msgid "Next Chapter/Movie"
 msgstr ""
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr ""
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr ""
 
@@ -2171,6 +2133,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Бейнені ойнату"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

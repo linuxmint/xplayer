@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2017-02-18 09:13+0000\n"
 "Last-Translator: Dusan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -18,66 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: sk\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Prehráva sa film"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Žiadne URI na prehratie"
-
-# window title
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer - prehrávač filmov"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Otvoriť pomocou „%s“"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Vyskytla sa chyba"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Žiadny alebo prázdny zoznam skladieb"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Zásuvný modul na prehliadanie filmov"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Nepodarilo sa inicializovať knižnice na bezpečný beh vo vláknach."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Skontrolujte vašu inštaláciu systému. Zásuvný modul programu Xplayer teraz "
-"skončí."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Čas:"
+msgid "Leave fullscreen"
+msgstr "Opustiť režim celej obrazovky"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Vyprázdniť ostatné monitory"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Opustiť režim celej obrazovky"
 
 # summary
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -620,10 +571,9 @@ msgstr "Stíšiť"
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
 
-# menu item
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1420,6 +1370,10 @@ msgid "Audio Preview"
 msgstr "Zvuková ukážka"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Nepodarilo sa inicializovať knižnice na bezpečný beh vo vláknach."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Skontrolujte inštaláciu svojho systému. Xplayer teraz skončí."
 
@@ -1438,7 +1392,7 @@ msgstr "_Pridať do zoznamu skladieb"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Žiaden súbor"
 
@@ -1547,6 +1501,10 @@ msgstr "Xplayer nemohol prehrať „%s“."
 msgid "Xplayer could not display the help contents."
 msgstr "Programu Xplayer sa nepodarilo zobraziť obsah pomocníka."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Vyskytla sa chyba"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Predchádzajúca kapitola/film"
@@ -1559,11 +1517,11 @@ msgstr "Prehrať / Pozastaviť"
 msgid "Next Chapter/Movie"
 msgstr "Ďalšia kapitola/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Programu Xplayer sa nepodarilo naštartovať."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Žiaden dôvod."
 
@@ -2589,6 +2547,10 @@ msgstr "Šetrič obrazovky"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Vypne šetrič obrazovky počas prehrávania filmu"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Prehráva sa film"
 
 # label
 #: ../src/plugins/screenshot/gallery.ui.h:1

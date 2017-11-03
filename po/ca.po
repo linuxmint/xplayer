@@ -10,73 +10,25 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-11 23:13+0000\n"
-"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-09-16 11:29+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <Unknown>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: ca\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "S'està reproduint una pel·lícula"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "No hi ha cap URI per reproduir"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Reproductor de vídeo Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Obre amb el «%s»"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "S'ha produït un error"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "No hi ha cap llista de reproducció o bé és buida"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Connector per veure pel·lícules al navegador"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr ""
-"No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Verifiqueu la instal·lació del sistema. El connector del Xplayer sortirà ara."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Temps:"
+msgid "Leave fullscreen"
+msgstr "Surt de pantalla completa"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "Apaga els altres monitors"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Surt de pantalla completa"
+msgstr "Enfosqueix els altres monitors"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -147,12 +99,12 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Tipus de lletra dels subtítols"
+msgstr "Lletra dels subtítols"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
 msgstr ""
-"Descripció del tipus de lletra Pango per a la representació dels subtítols."
+"Descripció de la lletra de Pango per a la representació dels subtítols."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
@@ -230,7 +182,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Usa la variant obscura del tema (si és disponible)."
+msgstr "Utilitza la variant fosca del tema (si està disponible)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -326,7 +278,7 @@ msgstr "_Mostra subtítols quan la pel·lícula està carregada"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
-msgstr "_Tipus de lletra:"
+msgstr "_Lletra:"
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
@@ -518,8 +470,8 @@ msgid "Fullscreen"
 msgstr "Pantalla completa"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Pel·lícula"
+msgid "_File"
+msgstr "_Fitxer"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -607,7 +559,7 @@ msgstr "Pantalla _completa"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Canvia a pantalla sencera"
+msgstr "Canvia a pantalla completa"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
@@ -898,7 +850,7 @@ msgstr "Es requereix autenticació per a accedir a aquest fitxer o flux."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
-msgstr "No teniu permís per a obrir aquest fitxer."
+msgstr "No se us permet obrir aquest fitxer."
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
@@ -1012,7 +964,7 @@ msgstr "Tots els fitxers"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Tots els fitxers reconeguts"
+msgstr "Tots els fitxers compatibles"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
@@ -1205,6 +1157,11 @@ msgid "Audio Preview"
 msgstr "Previsualització d'àudio"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr ""
+"No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verifiqueu la instal·lació del sistema. El Xplayer sortirà ara."
 
@@ -1220,7 +1177,7 @@ msgstr "_Afegeix a la llista de reproducció"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Cap fitxer"
 
@@ -1325,6 +1282,10 @@ msgstr "El Xplayer no ha pogut reproduir «%s»."
 msgid "Xplayer could not display the help contents."
 msgstr "El Xplayer no ha pogut mostrar els continguts de l'ajuda."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "S'ha produït un error"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Capítol o pel·lícula anterior"
@@ -1337,11 +1298,11 @@ msgstr "Reprodueix / Fes una pausa"
 msgid "Next Chapter/Movie"
 msgstr "Capítol o pel·lícula següent"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "No s'ha pogut executar el Xplayer."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Sense motiu."
 
@@ -1469,7 +1430,7 @@ msgstr "Preferències"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Seleccioneu el tipus de lletra per als subtítols"
+msgstr "Seleccioneu la lletra per als subtítols"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1657,7 +1618,7 @@ msgstr "Tots els fitxers"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Fitxers permesos"
+msgstr "Fitxers compatibles"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
@@ -2244,6 +2205,10 @@ msgstr "Estalvi de pantalla"
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
 "Desactiva l'estalvi de pantalla quan s'estigui reproduint una pel·lícula"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "S'està reproduint una pel·lícula"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

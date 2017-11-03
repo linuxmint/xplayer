@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:56+0000\n"
 "Last-Translator: Ani Peter <Unknown>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -23,65 +23,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Project-Style: gnome\n"
 "Language: ml\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "ഒരു ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുന്നു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "പ്ലേ ചെയ്യാന്‍ യു.ആര്‍.എല്‍ ഇല്ല"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "ടോട്ടം മൂവി പ്ലേയര്‍"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "(_O)തുറക്കുക \"%s\" ഉപയോഗിച്ച്"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "പ്ലേലിസ്റ്റില്ല അല്ലെങ്കില്‍ പ്ലേലിസ്റ്റ് ഖാലിയാണു"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "ചലചിത്രം ബ്രൌസര്‍ സംയോജകം"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "ത്രെഡ്-സെയിഫ് ലൈബ്രറികള്‍ ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer സംയോജകം ഇപ്പോള്‍ "
-"നില്‍ക്കുന്നതാണ്."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "സമയം:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -530,8 +482,8 @@ msgid "Fullscreen"
 msgstr "മുഴുവന്‍ തിരശ്ശീല"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_ചലച്ചിത്രം"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1219,6 +1171,10 @@ msgid "Audio Preview"
 msgstr "ഓഡിയോ തിരനോട്ടം"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "ത്രെഡ്-സെയിഫ് ലൈബ്രറികള്‍ ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "നിങ്ങളുടെ സിസ്റ്റം ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക. Xplayer ഇപ്പോള്‍ പുറത്ത് "
@@ -1236,7 +1192,7 @@ msgstr "_പ്ലേലിസ്റ്റിലേയ്ക്കു് ചേ�
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "ഫയല്‍ ഇല്ല"
 
@@ -1343,6 +1299,10 @@ msgid "Xplayer could not display the help contents."
 msgstr ""
 "ടോട്ടത്തിനു് സഹായത്തിന്റെ ഉളളടക്കം പ്രദര്‍ശിപ്പിക്കുവാന്‍ സാധ്യമായില്ല"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "തൊട്ട് മുമ്പുള്ള ഭാഗം/സിനിമ"
@@ -1355,11 +1315,11 @@ msgstr "പ്രവര്‍ത്തിപ്പിക്കുക / താല
 msgid "Next Chapter/Movie"
 msgstr "അടുത്ത ഭാഗം/സിനിമ"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "ടോട്ടത്തിനു് ആരംഭിക്കുവാന്‍ സാധ്യമായില്ല."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "കാരണം ഇല്ല."
 
@@ -2272,6 +2232,10 @@ msgstr "സ്ക്രീന്‍ സേവര്‍"
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
 "ചലചിത്രം പ്രവര്‍ത്തിക്കുമ്പോള്‍ സ്ക്രീന്‍സേവര്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "ഒരു ചലച്ചിത്രം പ്രവര്‍ത്തിപ്പിക്കുന്നു"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 13:01+0000\n"
 "Last-Translator: Torstein A. W. <Unknown>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -19,66 +19,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: nn\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Spelar ein film"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Ingen URI å spela av"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer – filmspelar"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Opna med «%s»"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Ein feil oppstod."
-
-#
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Anten finst det inga speleliste, eller så er ho tom"
-
-#
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Nettlesartillegg for avspeling av film"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Klarte ikkje starta trådsikre bibliotek."
-
-#
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Sjå til at systemet er rett installert. Xplayer-tillegget vert avslutta no."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Tid:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #
@@ -531,8 +481,8 @@ msgid "Fullscreen"
 msgstr "Fullskjerm"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr ""
 
 #
 #: ../data/xplayer.ui.h:2
@@ -1237,6 +1187,10 @@ msgid "Audio Preview"
 msgstr "Førehandsvising av lyd"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Klarte ikkje starta trådsikre bibliotek."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Kontroller systeminstallasjonen din. Xplayer vert avslutta no."
 
@@ -1254,7 +1208,7 @@ msgstr "_Legg til i speleliste"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Inga fil"
 
@@ -1364,6 +1318,10 @@ msgstr "Xplayer klarte ikkje spela «%s»."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer klarte ikkje visa hjelpa."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Ein feil oppstod."
+
 #
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
@@ -1379,11 +1337,11 @@ msgstr "Spel av / pause"
 msgid "Next Chapter/Movie"
 msgstr "Neste kapittel/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer klarte ikkje starta."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Ingen grunn."
 
@@ -2325,6 +2283,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Spelar ein film"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

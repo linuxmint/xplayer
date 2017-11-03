@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2017-03-13 14:59+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
@@ -22,68 +22,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Project-Style: gnome\n"
 "Language: sr\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Пуштам филм"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Нема адресе за пуштање"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Икс биоскоп — пуштање филмова"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Отвори помоћу „%s“"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Дошло је до грешке"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Нема списка за пуштање или је празан"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Прикључак за прегледање филмова"
-
-# andrija: непотпун превод, а тежак :)
-# данило: нити и безбедно, послужиће ;)
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Нисам успео да учитам библиотеке за безбедан рад са нитима."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Проверите инсталацију вашег система. Прикључак Икс биоскопа ће се сада "
-"затворити."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Време:"
+msgid "Leave fullscreen"
+msgstr "Напустите приказ преко целог екрана"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Затамни остале мониторе"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Напустите приказ преко целог екрана"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -514,8 +464,8 @@ msgid "Fullscreen"
 msgstr "Преко целог екрана"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Филм"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1206,6 +1156,12 @@ msgstr[2] "%d кадрова у секунди"
 msgid "Audio Preview"
 msgstr "Звучни преглед"
 
+# andrija: непотпун превод, а тежак :)
+# данило: нити и безбедно, послужиће ;)
+#: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Нисам успео да учитам библиотеке за безбедан рад са нитима."
+
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Проверите инсталацију система. Икс биоскоп ће се сада угасити."
@@ -1222,7 +1178,7 @@ msgstr "_Додај на списак за пуштање"
 msgid "Cancel"
 msgstr "Откажи"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Нема датотеке"
 
@@ -1327,6 +1283,10 @@ msgstr "Икс биоскоп не може да пусти „%s“."
 msgid "Xplayer could not display the help contents."
 msgstr "Икс биоскоп не може да прикаже садржај помоћи."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Дошло је до грешке"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Претходно поглавље/филм"
@@ -1339,11 +1299,11 @@ msgstr "Пусти / Паузирај"
 msgid "Next Chapter/Movie"
 msgstr "Следеће поглавље/филм"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Икс биоскоп не може да се покрене."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Без разлога."
 
@@ -2243,6 +2203,10 @@ msgstr "Чувар екрана"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Искључите чувара екрана приликом пуштања филма"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Пуштам филм"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

@@ -11,73 +11,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu_to_be_translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-03-16 20:19+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-10-13 17:41+0000\n"
 "Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Project-Style: gnome\n"
 "Language: eu\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Filma erreproduzitzea"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Ez dago URIrik erreproduzitzeko"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer film-erreproduzitzailea"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Ireki honekin: %s"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Errorea gertatu da"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Ez dago erreprodukzio-zerrendarik, edo hutsik dago"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Filmen arakatzaile plugina"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Ezin izan dira hari seguruko liburutegiak abiarazi."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Egiaztatu sistemaren instalazioa. Xplayer plugina itxi egingo da orain."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Denbora:"
+msgid "Leave fullscreen"
+msgstr "Irten pantaila osotik"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Blokeatu beste monitoreak"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Irten pantaila osotik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -516,8 +469,8 @@ msgid "Fullscreen"
 msgstr "Pantaila osoa"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Filma"
+msgid "_File"
+msgstr "_Fitxategia"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1168,7 +1121,7 @@ msgstr[1] "%d minutu"
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "segundo %d"
-msgstr[1] "%d segundu"
+msgstr[1] "%d segundo"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1201,6 +1154,10 @@ msgid "Audio Preview"
 msgstr "Audioaren aurrebista"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Ezin izan dira hari seguruko liburutegiak abiarazi."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Egiaztatu sistemaren instalazioa. Xplayer itxi egingo da orain."
 
@@ -1216,7 +1173,7 @@ msgstr "_Gehitu erreprodukzio-zerrendari"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Fitxategirik ez"
 
@@ -1319,6 +1276,10 @@ msgstr "Xplayer-ek ezin izan du '%s' erreproduzitu."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer-ek ezin du laguntzako edukia bistaratu."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Errorea gertatu da"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Aurreko kapitulua/filma"
@@ -1331,11 +1292,11 @@ msgstr "Erreproduzitu / Pausarazi"
 msgid "Next Chapter/Movie"
 msgstr "Hurrengo kapitulua/filma"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Ezin izan da Xplayer abiarazi."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Ez dago arrazoirik."
 
@@ -2232,6 +2193,10 @@ msgstr "Pantaila-babeslea"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Pantaila-babeslea desgaitzen du filma bat erreproduzitzean"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Filma erreproduzitzea"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

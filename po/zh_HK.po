@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer 3.3.92\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2017-02-18 12:16+0000\n"
 "Last-Translator: tomoe_musashi <hkg.musashi@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -20,63 +20,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: zh_TW\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "播放影片"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "沒有要播放的 URI"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer 影片播放器"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "以「%s」開啟(_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "發生錯誤"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "沒有播放清單或清單空白"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "影片瀏覽器外掛程式"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "無法起動 thread-safe libraries。"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "請驗證安裝時有沒有問題。Xplayer 會立刻結束。"
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "時間："
+msgid "Leave fullscreen"
+msgstr "離開全熒幕"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "使其他顯示器畫面變黑"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "離開全熒幕"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -496,11 +450,9 @@ msgstr "靜音"
 msgid "Fullscreen"
 msgstr "全熒幕"
 
-# Following German team's practice (_Movie -> _File), since xplayer can play
-# audio as well -- Abel
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "檔案(_F)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1167,6 +1119,10 @@ msgid "Audio Preview"
 msgstr "音樂試聽"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "無法起動 thread-safe libraries。"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "請先驗證安裝時有沒有問題。Xplayer 會立刻結束。"
 
@@ -1182,7 +1138,7 @@ msgstr "新增至播放清單(_A)"
 msgid "Cancel"
 msgstr "取消"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "沒有檔案"
 
@@ -1278,6 +1234,10 @@ msgstr "Xplayer 無法播放‘%s’。"
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer 無法顯示求助內容。"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "發生錯誤"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "上一章/上一齣影片"
@@ -1290,11 +1250,11 @@ msgstr "播放/暫停"
 msgid "Next Chapter/Movie"
 msgstr "下一章/下一齣影片"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer 無法啟動"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "沒有原因。"
 
@@ -2181,6 +2141,10 @@ msgstr "熒幕保護程式"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "播放影片時停用熒幕保護程式"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "播放影片"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

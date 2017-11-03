@@ -8,70 +8,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-26 18:17+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-09-02 15:22+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <locales@geez.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "ሙቪ በ ማጫወት ላይ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "ምንም URI የለም ለማጫወት"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xማጫወቻ የ ሙቪ ማጫወቻ"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_መክፈቻ በ \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "ስህተት ተፋጥሯል"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "የ ማጫወቻ ዝርዝር ወይንም ማጫወቻው ባዶ ነው"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "የ ሙቪ መቃኛ ተሰኪ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "ማስጀመር አልተቻለም ፕሮግራሙን-በጥንቃቄ መጻህፍት ቤት ውስጥ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "የ እርስዎን የ ስርአት መግጠሚያ ያረጋግጡ: የ  Xማጫወቻ ተሰኪ አሁን ይጠፋል"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "ሰአት:"
+msgid "Leave fullscreen"
+msgstr "ከ ሙሉ መመልከቻ ዘዴ መውጫ"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "ሌሎች መመልከቻዎች ባዶ ማድረጊያ"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "ከ ሙሉ መመልከቻ ዘዴ መውጫ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -491,8 +445,8 @@ msgid "Fullscreen"
 msgstr "በ ሙሉ መመልከቻ ዘዴ"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_ሙቪ"
+msgid "_File"
+msgstr "_ፋይል"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1168,6 +1122,10 @@ msgid "Audio Preview"
 msgstr "የ ድምፅ ቅድመ እይታ"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "ማስጀመር አልተቻለም ፕሮግራሙን-በጥንቃቄ መጻህፍት ቤት ውስጥ"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "የ እርስዎን ስርአት ያረጋግጡ: Xማጫወቻ አሁን ይጠፋል"
 
@@ -1183,7 +1141,7 @@ msgstr "ወደ ማጫውቻ ዝርዝር _መጨመሪያ"
 msgid "Cancel"
 msgstr "መሰረዣ"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "ፋይል የለም"
 
@@ -1284,6 +1242,10 @@ msgstr "Xማጫወቻ መጫወት አልቻለም '%s'."
 msgid "Xplayer could not display the help contents."
 msgstr "Xማጫወቻ የ እርዳታ ይዞታዎችን ማሳየት አልቻለም"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "ስህተት ተፋጥሯል"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "ያለፈው ምእራፍ/ሙቪ"
@@ -1296,11 +1258,11 @@ msgstr "ማጫወቻ / ማስቆሚያ"
 msgid "Next Chapter/Movie"
 msgstr "የሚቀጥለው ምእራፍ/ሙቪ"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xማጫወቻ መጀመር አልተቻለም"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "ምንም ምክንያት የለም"
 
@@ -2189,6 +2151,10 @@ msgstr "መመልከቻ ማዳኛ"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "ሙቪ ነሚጫወት ጊዜ የ መመልከቻ ማዳኛውን ያሰናክሉ"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "ሙቪ በ ማጫወት ላይ"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

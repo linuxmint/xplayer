@@ -12,73 +12,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-06-25 18:34+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-30 13:37+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: nl\n"
 
-# is dit een screensaver-bericht?
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Er wordt een film afgespeeld"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Geen URI om af te spelen"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer mediaspeler"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Openen met '%s'"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Er is een fout opgetreden"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Geen of lege afspeellijst"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Invoegsel voor filmverkenner"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Kon thread-veilige bibliotheken niet initialiseren."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Kijk uw systeeminstallatie na. Het Xplayer-invoegsel zal nu afsluiten."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Tijd:"
+msgid "Leave fullscreen"
+msgstr "Volledig scherm verlaten"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Zet andere beeldschermen op zwart"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Volledig scherm verlaten"
 
 # 'het afspelen van' weglaten?
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -524,8 +476,8 @@ msgid "Fullscreen"
 msgstr "Volledig scherm"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr "_Bestand"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1214,6 +1166,10 @@ msgid "Audio Preview"
 msgstr "Geluidsvoorbeeld"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Kon thread-veilige bibliotheken niet initialiseren."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Verifieer a.u.b. uw systeeminstallatie. Xplayer zal nu afsluiten."
 
@@ -1229,7 +1185,7 @@ msgstr "_Toevoegen aan afspeellijst"
 msgid "Cancel"
 msgstr "Afbreken"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Geen bestand"
 
@@ -1334,6 +1290,10 @@ msgstr "Xplayer kon '%s' niet afspelen."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer kon de hulpinhoud niet weergeven."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Er is een fout opgetreden"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Vorige hoofdstuk/film"
@@ -1346,11 +1306,11 @@ msgstr "Afspelen / pauzeren"
 msgid "Next Chapter/Movie"
 msgstr "Volgende hoofdstuk/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer kan niet worden opgestart."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Geen reden."
 
@@ -2260,6 +2220,11 @@ msgstr "Schermbeveiliging"
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
 "Schakelt de schermbeveiliging uit wanneer er een film wordt afgespeeld"
+
+# is dit een screensaver-bericht?
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Er wordt een film afgespeeld"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

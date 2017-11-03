@@ -8,72 +8,26 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2016-02-03 12:49+0000\n"
-"Last-Translator: Priscilla Mahlangu <Unknown>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-07-03 00:03+0000\n"
+"Last-Translator: Thamsanca Mnune <Unknown>\n"
 "Language-Team: translate.org.za\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Project-Style: gnome\n"
 "Language: zu\n"
 "X-DamnedLies-Scope: partial\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Ukudlala i-movie"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Akukho URI angadlalwa"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Isidlali sama-movie se-Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Vula nge-\"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Kwenzeke iphutha"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Akukho hlu lokudlalwayo noma akuna lutho"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "I-plugin yesiphequluli se-movie"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Ayikwazanga ukusungula uchungechunge oluphephile lwamalabhulali."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "Qinisekisa ukufakwa kohlelo. I-plugin ye-Xplayer ngeke iphume."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Isikhathi:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -494,8 +448,8 @@ msgid "Fullscreen"
 msgstr "Isikrini esigcwele"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "I-_movie"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1169,6 +1123,10 @@ msgid "Audio Preview"
 msgstr "Ukubuka kuqala komsindo"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Ayikwazanga ukusungula uchungechunge oluphephile lwamalabhulali."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "QInisekisa ukufaka kwakho kohlelo. I-Xplayer ngeke iphume."
 
@@ -1184,7 +1142,7 @@ msgstr "Engez_a uhlu lokudlalwayo"
 msgid "Cancel"
 msgstr "Khansela"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Akukho fayela"
 
@@ -1285,6 +1243,10 @@ msgstr "I-Xplayer ayikwazanga ukudlala '%s'."
 msgid "Xplayer could not display the help contents."
 msgstr "I-Xplayer ayikwazanga ukubonisa okuqukethwe kosizo."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Kwenzeke iphutha"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Isiqephu/I-movie eyadlula"
@@ -1297,11 +1259,11 @@ msgstr "Dlala / Misa okwesikhashana"
 msgid "Next Chapter/Movie"
 msgstr "Isiqephu/I-movie esilandelayo"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "I-Xplayer ayikwazanga ukuqalisa."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Akuna sizathu."
 
@@ -2195,6 +2157,10 @@ msgstr ""
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
 
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Ukudlala i-movie"
+
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
 msgstr "Ububanzi besithombe-skrini (ngamaphikizeli):"
@@ -2224,11 +2190,11 @@ msgstr ""
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr ""
+msgstr "I-Screenshot"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr ""
+msgstr "Ivumela ama-skrini nama-galleries ukuba athathwe kumavidiyo"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
@@ -2265,7 +2231,7 @@ msgstr "Lokhu akumelanga ukwenzeke, sicela ubhalisele umbiko wesiphazamiso."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr ""
+msgstr "Thatha i-_Screenshot"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
@@ -2319,8 +2285,8 @@ msgstr "Yeqela esikhathini esicacisiwe"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr ""
+msgstr "I-Zeitgeist Plugin"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr ""
+msgstr "i-plugin yokuthumela Imicimbi ku-Zeitgeist"

@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2017-01-21 19:22+0000\n"
 "Last-Translator: Joseph Wang <joequant@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
@@ -22,66 +22,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Project-Style: gnome\n"
 "Language: el\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Γίνεται αναπαραγωγή μιας ταινίας"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Δεν υπάρχει URI προς αναπαραγωγή"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer αναπαραγωγή ταινιών"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "Άν_οιγμα με \"%s\""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Προέκυψε ένα σφάλμα"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Δεν υπάρχει λίστα αναπαραγωγής ή η λίστα είναι κενή"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Πρόσθετη λειτουργία περιήγησης ταινιών"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Αδυναμία αρχικοποίησης των βιβλιοθηκών thread-safe."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Επιβεβαιώστε τη σωστή εγκατάσταση του συστήματος σας. Το πρόσθετο Xplayer θα "
-"τερματιστεί τώρα."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Χρόνος:"
+msgid "Leave fullscreen"
+msgstr "Έξοδος από την πλήρη οθόνη"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Κενές οι άλλες οθόνες"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Έξοδος από την πλήρη οθόνη"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -520,8 +472,8 @@ msgid "Fullscreen"
 msgstr "Πλήρης οθόνη"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Ταινία"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1209,6 +1161,10 @@ msgid "Audio Preview"
 msgstr "Προεπισκόπηση ήχου"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Αδυναμία αρχικοποίησης των βιβλιοθηκών thread-safe."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "Επιβεβαιώστε την εγκατάσταση του συστήματος σας. Το Xplayer τώρα θα "
@@ -1226,7 +1182,7 @@ msgstr "_Προσθήκη στη λίστα αναπαραγωγής"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Δεν υπάρχει αρχείο"
 
@@ -1330,6 +1286,10 @@ msgstr "Το Xplayer δε μπορεί να αναπαράγει το '%s'."
 msgid "Xplayer could not display the help contents."
 msgstr "Το Xplayer δε μπορεί να εμφανίσει τα περιεχόμενα βοήθειας."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Προέκυψε ένα σφάλμα"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Προηγούμενο κεφάλαιο/ταινία"
@@ -1342,11 +1302,11 @@ msgstr "Αναπαραγωγή / Παύση"
 msgid "Next Chapter/Movie"
 msgstr "Επόμενο κεφάλαιο/ταινία"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Το Xplayer δε μπορεί να ξεκινήσει."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Χωρίς λόγο."
 
@@ -2249,6 +2209,10 @@ msgstr "Προστασία οθόνης"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Απενεργοποίηση προστασίας οθόνης κατά την αναπαραγωγή"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Γίνεται αναπαραγωγή μιας ταινίας"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:44+0000\n"
 "Last-Translator: Runa Bhattacharjee <Unknown>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -18,66 +18,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:53+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "চলচ্চিত্র চালানো হচ্ছে"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "চালানোর জন্য কোনো URI চিহ্নিত করা হয়নি"
-
-# বাজানো হোক, দেখানো হোক
-# msgstr "চলচ্চিত্র ও গান চালানো হোক" <-- Short cut ;-)
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer মুভি প্লেয়ার"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" সহযোগে খুলুন (_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "সমস্যা উৎপন্ন হয়েছে"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "প্লে-লিস্ট ফাঁকা অথবা অনুপস্থিত"
-
-# বাজানো হোক, দেখানো হোক
-# msgstr "চলচ্চিত্র ও গান চালানো হোক" <-- Short cut ;-)
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "চলচ্চিত্র ব্রাউজার প্লাগ-ইন"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "থ্রেড-সেফ লাইব্রেরি চালু করা যায়নি।"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। Xplayer প্লাগ-ইন এখন বন্ধ করা হবে।"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "সময়:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -511,13 +460,9 @@ msgstr ""
 msgid "Fullscreen"
 msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন"
 
-# msgstr "চালানো হোক (_চ)"
-# msgstr "প্রদর্শন করা হোক (_প)"
-# msgstr "প্রদর্শন (_প)"
-# আমি এটার Context সম্পর্কে জানিনা। তাই ভালভাবে বুঝতে পারতেছি না।
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "চলচ্চিত্র (_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1224,6 +1169,10 @@ msgid "Audio Preview"
 msgstr "অডিও প্রি-ভিউ"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "থ্রেড-সেফ লাইব্রেরি চালু করা যায়নি।"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। Xplayer এখন বন্ধ করা হবে।"
 
@@ -1243,7 +1192,7 @@ msgstr "প্লে-লিস্টের মধ্যে যোগ করু�
 msgid "Cancel"
 msgstr "বাতিল"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "ফাইল নেই।"
 
@@ -1348,6 +1297,10 @@ msgstr "Xplayer সহযোগে '%s' চালানো যায়নি।"
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer দ্বারা সহায়িকার বিষয় বস্তু প্রদর্শন করা যায়নি।"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "সমস্যা উৎপন্ন হয়েছে"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "পূর্ববর্তী অধ্যায়/চলচ্চিত্র"
@@ -1360,11 +1313,11 @@ msgstr "চালানো / থামানো হবে"
 msgid "Next Chapter/Movie"
 msgstr "পরবর্তী অধ্যায়/চলচ্চিত্র"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer আরম্ভ করা যায়নি।"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "কারণ নেই।"
 
@@ -2281,6 +2234,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "চলচ্চিত্র চালানো হচ্ছে"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

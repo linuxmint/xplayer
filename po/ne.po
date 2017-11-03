@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer.gnome-2-20.ne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:51+0000\n"
 "Last-Translator: Shyam Krishna Bal <Unknown>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -16,62 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "चलचित्र प्ले गर्दै"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "प्ले गर्न यूआरएल छैन"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "टोटेम चलचित्र प्लेयर"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" सँग खोल्नुहोस्"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "त्रुटि देखापर्यो"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "प्लेसूची छैन वा प्लेसूची खाली छ"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr ""
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "थ्रड-सेफ पुस्तकालयहरू थालनी गर्न सकेन ।"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"तपाईँको प्रणाली स्थापना रूजु गर्नुहोस् । टोटेम प्लगइन अहिले अन्त्य हुनेछ ।"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "समय:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -492,8 +445,8 @@ msgid "Fullscreen"
 msgstr ""
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "चलचित्र"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1162,6 +1115,10 @@ msgid "Audio Preview"
 msgstr ""
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "थ्रड-सेफ पुस्तकालयहरू थालनी गर्न सकेन ।"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "तपाईँको प्रणाली स्थापना रूजु गर्नुहोस् । टोटेमले अहिले अन्त्य गर्नेछ ।"
@@ -1178,7 +1135,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "फाइल छैन"
 
@@ -1280,6 +1237,10 @@ msgstr "टोटेमले '%s' प्ले गर्न सकेन ।"
 msgid "Xplayer could not display the help contents."
 msgstr "टोटेमले सहयोग सामग्रीहरू देखाउन सकेन ।"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "त्रुटि देखापर्यो"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "अघिल्लो अध्याय/चलचित्र"
@@ -1292,11 +1253,11 @@ msgstr "प्ले / पज गर्नुहोस्"
 msgid "Next Chapter/Movie"
 msgstr "पछिल्लो अध्याय/चलचित्र"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "टोटेम सुरुआत हुन सकेन ।"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "कारण छैन."
 
@@ -2178,6 +2139,10 @@ msgstr ""
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr ""
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "चलचित्र प्ले गर्दै"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

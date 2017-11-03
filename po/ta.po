@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-07-25 12:14+0000\n"
 "Last-Translator: Kamala Kannan <Unknown>\n"
 "Language-Team: Tamil <>\n"
@@ -23,62 +23,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: en_US\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "திரைப்படம் இயக்கத்தில் உள்ளது"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "இயக்க ஒரு யூஆர்எல் உம் இல்லை"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer திரைப்பட இயக்கி"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" உடன் திற"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "பிழை ஏற்பட்டுள்ளது"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "இயக்க பட்டியல் இல்லை அல்லது காலி"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "நகர்பட உலாவி செருகி"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "இழை காப்பு நூலகங்களை துவக்க முடியவில்லை."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "உங்கள் கணினி நிறுவலை சோதிக்கவும். டோடம் சொருகி இப்போது வெளியேறும்."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "நேரம்:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -511,8 +465,8 @@ msgid "Fullscreen"
 msgstr "முழுத்திரை"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "திரைப்படம் (_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1192,6 +1146,10 @@ msgid "Audio Preview"
 msgstr "ஒலி முன்னோட்டம்"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "இழை காப்பு நூலகங்களை துவக்க முடியவில்லை."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "உங்கள் நிறுவலை சோதிக்கவும். டோடம் இப்போது வெளியேறும்."
 
@@ -1207,7 +1165,7 @@ msgstr "_A பாடல் பட்டியலில் சேர்"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "கோப்பு இல்லை"
 
@@ -1312,6 +1270,10 @@ msgstr "Xplayer '%s' ஐ இயக்க முடியவில்லை."
 msgid "Xplayer could not display the help contents."
 msgstr "டோடம் உதவி அடக்கத்தை காட்ட இயலவில்லை"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "பிழை ஏற்பட்டுள்ளது"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "முந்தைய அத்தியாயம்/திரைப்படம்"
@@ -1324,11 +1286,11 @@ msgstr "இயக்கு/தாமதி"
 msgid "Next Chapter/Movie"
 msgstr "அடுத்த அத்தியாயம்/திரைப்படம்"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "டோடம் துவங்க முடியவில்லை"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "காரணம் இல்லை."
 
@@ -2230,6 +2192,10 @@ msgstr "திரை பாதுகாவலன்"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "நகர் படம் இயங்கும்போது திரை சேமிப்பியை செயல் நீக்குகிறது"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "திரைப்படம் இயக்கத்தில் உள்ளது"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

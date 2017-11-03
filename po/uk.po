@@ -10,74 +10,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-14 17:24+0000\n"
-"Last-Translator: stuartlittle <Stuartlittle1970@gmail.com>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-10-06 08:05+0000\n"
+"Last-Translator: sharksoft <sharksmail@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: uk\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Відтворення відео"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Немає URI для відтворення"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Мультимедійний програвач Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "Відкрити _у проґрамі «%s»"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Виникла помилка"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Немає грайлиста, або грайлист порожній"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Додаток перегляду відео"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Неможливо ініціялізувати безпечну бібліотеку потоків виконання."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Перевірте, чи правильно встановлена Ваша система. Модуль Xplayer завершує "
-"свою роботу."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Час:"
+msgid "Leave fullscreen"
+msgstr "Вийти з повноекранного режиму"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Не показувати на інших моніторах"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Вийти з повноекранного режиму"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -125,7 +77,7 @@ msgstr "Чи увімкнути черезрядковість для відео
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "Чи увімкнути зневадження механізму відтворення"
+msgstr "Чи увімкнути налагодження механізму відтворення"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
@@ -161,7 +113,7 @@ msgstr "Вказане кодування для субтитрів."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Типова адреса для діялоґу \"Відкрити...\""
+msgstr "Типова адреса для діалогу \"Відкрити...\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
@@ -171,13 +123,13 @@ msgstr "Типова адреса для «Відкрити…». Типово �
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Типова адреса для діялоґу \"Зберегти кадр...\""
+msgstr "Типова адреса для діалогу \"Зберегти кадр...\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
-msgstr "Типова адреса для «Зробити зняток…». Типово — каталог малюнків."
+msgstr "Типова адреса для «Зробити знімок…». Типово — каталог малюнків."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
@@ -185,7 +137,7 @@ msgstr "Чи вимикати модулі у домашньому катало�
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Чи вимикати сполучення клявіш"
+msgstr "Чи вимикати комбінації клавіш"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
@@ -216,7 +168,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Використовувати темний варіянт теми(якщо така є)"
+msgstr "Використовувати темний варіант теми(якщо така є)"
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -224,7 +176,7 @@ msgstr "В_илучити"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "Вилучити файл з грайлиста"
+msgstr "Вилучити файл зі списку відтворення"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
@@ -252,7 +204,7 @@ msgstr "Вилучити"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Зберегти грайлист…"
+msgstr "Зберегти список відтворення…"
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -333,7 +285,7 @@ msgstr "Загальне"
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr "Екран"
+msgstr "Відео"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
@@ -470,7 +422,7 @@ msgstr "Канали:"
 #: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
 #: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr "Програвач медія"
+msgstr "Програвач медіа"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -494,18 +446,18 @@ msgstr "Попередній"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr "Приглушити"
+msgstr "Вимкнути звук"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr "На увесь екран"
+msgstr "На весь екран"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Фільм"
+msgid "_File"
+msgstr "_Файл"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -553,7 +505,7 @@ msgstr "Ви_йти"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr "Вийти з проґрами"
+msgstr "Вийти з програми"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
@@ -561,11 +513,11 @@ msgstr "З_міни"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "О_чистити грайлист"
+msgstr "О_чистити список відтворення"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "Очистити грайлист"
+msgstr "Очистити список відтворення"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
@@ -573,15 +525,15 @@ msgstr "П_араметри"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "Налаштувати проґраму"
+msgstr "Налаштувати програму"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Додатки…"
+msgstr "Плагіни..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Налаштувати втулки для зовнішньої проґрами"
+msgstr "Налаштувати плагіни для розширення програми"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -589,7 +541,7 @@ msgstr "П_ерегляд"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "_На увесь екран"
+msgstr "_На весь екран"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
@@ -601,7 +553,7 @@ msgstr "Вікно за розміром фільму"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr "_Мірило 1∶2"
+msgstr "_Масштаб 1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
@@ -609,7 +561,7 @@ msgstr "Зробити розмір вікна відповідним полов
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr "Мірило _1∶1"
+msgstr "Масштаб _1∶1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
@@ -617,7 +569,7 @@ msgstr "Зробити розмір вікна відповідним розмі
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr "Мірило _2∶1"
+msgstr "Масштаб _2∶1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
@@ -729,11 +681,11 @@ msgstr "Зміст довідки"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "_Про проґраму"
+msgstr "_Про програму"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "Про проґраму"
+msgstr "Про цю програму"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
@@ -770,11 +722,11 @@ msgstr "Показати чи сховати бічну панель"
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr "Самочинно"
+msgstr "Авто"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Встановити самочинне співвідношення сторін"
+msgstr "Встановлює співвідношення сторін автоматично"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
@@ -846,7 +798,7 @@ msgstr "Повзунок часу"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Уведіть _адресу файлу, який треба відкрити:"
+msgstr "Введіть _адресу файлу, який треба відкрити:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
@@ -880,8 +832,7 @@ msgstr "Сервер відмовив у доступі до цього файл
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr ""
-"Щоб доступитися до цього файлу або потоку, потрібно засвідчити право."
+msgstr "Потрібна автентифікація, для доступу до цього файлу або потоку."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
@@ -907,15 +858,15 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Для відтворення цього відео потрібно встановити такий додаток:\r\n"
+"Для відтворення цього відео потрібно встановити такий плагін:\r\n"
 "\r\n"
 "%s"
 msgstr[1] ""
-"Для відтворення цього відео потрібно встановити такі додатки:\r\n"
+"Для відтворення цього відео потрібно встановити такі плагіни:\r\n"
 "\r\n"
 "%s"
 msgstr[2] ""
-"Для відтворення цього відео потрібно встановити такі додатки:\r\n"
+"Для відтворення цього відео потрібно встановити такі плагіни:\r\n"
 "\r\n"
 "%s"
 
@@ -925,7 +876,7 @@ msgid ""
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 "Аудіо- або відеопотік не опрацьовується через брак кодеків. Напевно варто "
-"встановити додатки, які надають можливість програвати певні типи відеозаписів"
+"встановити плагіни, які надають можливість програвати певні типи відеозаписів"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -952,8 +903,8 @@ msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Бракує деяких потрібних додатків. Переконайтеся, що проґраму правильно "
-"встановлено."
+"Деяких потрібних плагінів бракує. Переконайтесь, що програму встановлено "
+"правильно."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
@@ -973,7 +924,7 @@ msgstr "Запуск %s"
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Проґрама не підтримує відкривання документів через командний рядок"
+msgstr "Програма не підтримує відкривання документів через командний рядок"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
@@ -983,8 +934,7 @@ msgstr "Невідомий параметр запуску: %d"
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-"Не вдалося передати URI документу елементові стільниці, він є посиланням"
+msgstr "Не можна передавати URI документів у запис стільниці 'Type=Link'"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
@@ -998,11 +948,11 @@ msgstr "_Формат файлу: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr "Усі файли"
+msgstr "Всі файли"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Усі підтримувані файли"
+msgstr "Всі підтримувані файли"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
@@ -1024,7 +974,7 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Проґрама не може визначити формат файлу для «%s». Вкажіть відоме розширення "
+"Програма не може визначити формат файлу для «%s». Вкажіть відоме розширення "
 "в назві файлу, або вручну вкажіть формат файлу з переліку."
 
 #: ../src/eggfileformatchooser.c:664
@@ -1033,7 +983,7 @@ msgstr "Невідомий формат файлу"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Не з'єднуватися з керівником сеансів"
+msgstr "Вимкнути з'єднання з менеджером сеансів"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
@@ -1198,6 +1148,10 @@ msgid "Audio Preview"
 msgstr "Попереднє відтворення звукових файлів"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Неможливо ініціалізувати безпечну бібліотеку потоків виконання."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "Перевірте, чи правильно встановлена Ваша система. Xplayer завершує свою "
@@ -1209,13 +1163,13 @@ msgstr "_Відтворити"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "_Додати до грайлиста"
+msgstr "_Додати до списку відтворення"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Немає файлу"
 
@@ -1240,7 +1194,7 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer — вільне проґрамне забезпечення; Ви можете розповсюджувати його "
+"Xplayer — вільне програмне забезпечення; Ви можете розповсюджувати його "
 "та/або змінювати за умовами Загальної громадської ліцензії GNU версії 2 або "
 "пізнішої."
 
@@ -1252,7 +1206,7 @@ msgid ""
 "details."
 msgstr ""
 "Xplayer розповсюджується зі сподіванням, що буде корисним, але БЕЗ БУДЬ-ЯКИХ "
-"ЗАПОРУК; навіть без неявної запоруки ПРИДАТНОСТИ ДО ПРОДАЖУ чи ВІДПОВІДНОСТИ "
+"ЗАПОРУК; навіть без неявної запоруки ПРИДАТНОСТІ ДО ПРОДАЖУ чи ВІДПОВІДНОСТІ "
 "ПЕВНІЙ МЕТІ.  Докладніше дивіться GNU General Public License."
 
 #: ../src/xplayer-interface.c:365
@@ -1262,7 +1216,7 @@ msgid ""
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
 "Ви мали б отримати копію ліцензії GNU General Public License разом з "
-"проґрамою; якщо у Вас її таки немає, напишіть до Free Software Foundation, "
+"програмою; якщо у Вас її таки немає, напишіть до Free Software Foundation, "
 "Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
@@ -1281,7 +1235,7 @@ msgstr "Немає"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Налаштувати додатки"
+msgstr "Налаштувати плагіни"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1301,7 +1255,7 @@ msgstr "Xplayer %s"
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "Призупинити"
+msgstr "Пауза"
 
 #: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
@@ -1318,6 +1272,10 @@ msgstr "Не вдалося відтворити «%s»."
 msgid "Xplayer could not display the help contents."
 msgstr "Неможливо показати вміст довідки."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Виникла помилка"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Попередній фрагмент/фільм"
@@ -1330,11 +1288,11 @@ msgstr "Відтворити / Призупинити"
 msgid "Next Chapter/Movie"
 msgstr "Наступний фрагмент/фільм"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Не вдалося запустити Xplayer."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Причина невідома."
 
@@ -1344,7 +1302,7 @@ msgstr "Відкрити адресу..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Увімкнути зневадження"
+msgstr "Увімкнути налагодження"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1393,7 +1351,7 @@ msgstr "Пошук"
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Індекс грайлиста"
+msgstr "Індекс списку відтворення"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
@@ -1410,7 +1368,7 @@ msgstr "Неможливо поставити в чергу і замінити 
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr "Грайлист MP3 ShoutCast"
+msgstr "Список відтворення MP3 ShoutCast"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
@@ -1422,7 +1380,7 @@ msgstr "MP3 аудіо (потік, формат DOS)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr "Грайлист XML Shareable"
+msgstr "Список відтворення XML Shareable"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
@@ -1433,27 +1391,28 @@ msgstr "Заголовок %d"
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr "Не вдалося зберегти грайлист"
+msgstr "Не вдалося зберегти список відтворення"
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "Зберегти грайлист"
+msgstr "Зберегти список відтворення"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Грайлист"
+msgstr "Список відтворення"
 
 #: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr "Грайлист «%s» неможливо проаналізувати. Можливо, його пошкоджено."
+msgstr ""
+"Список відтворення «%s» неможливо проаналізувати. Можливо, його пошкоджено."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr "Помилка грайлиста"
+msgstr "Помилка списку відтворення"
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
@@ -1614,7 +1573,7 @@ msgstr "Турецьке"
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr "Унікод"
+msgstr "Юнікод"
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1622,7 +1581,7 @@ msgstr "Унікод"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "Західнє"
+msgstr "Західне"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
@@ -1644,7 +1603,7 @@ msgstr "Перейти до %s / %s"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr "Усі файли"
+msgstr "Всі файли"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
@@ -1668,7 +1627,7 @@ msgstr "Вибрати текстові субтитри"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Вибір відеофайлів чи грайлистів"
+msgstr "Вибір відеофайлів чи списків відтворення"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
@@ -1694,7 +1653,7 @@ msgstr "Файл"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "Роздільність"
+msgstr "Роздільна здатність"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
@@ -1706,15 +1665,15 @@ msgstr "Трейлери Apple"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr "Встановлює користувацького агента для сайту трейлерів Apple"
+msgstr "Вказує агента для сайту Apple Trailers"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Самочинне довантаження субтитрів"
+msgstr "Автоматично завантажувати субтитри"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Самочинне довантаження текстових субтитрів"
+msgstr "Автоматично завантажувати текстові субтитри"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
@@ -1761,7 +1720,7 @@ msgstr "Не вдалося записати фільм."
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "Не вдалося записати проєкт."
+msgstr "Не вдалося записати проект."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
@@ -1861,7 +1820,7 @@ msgstr "Сталася помилка при збереженні фрагмен
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Будь ласка, перевірте, чи Ви маєте право на запис до теки, що містить відео."
+"Будь ласка, перевірте, чи Ви маєте право на запис до папки, що містить відео."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -1869,7 +1828,7 @@ msgstr "Відкрити файл фрагменту"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "Зняток фрагменту"
+msgstr "Знімок фрагменту"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
@@ -1936,12 +1895,11 @@ msgstr "Переглядач Grilo"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr ""
-"Додаток, що дозволяє переглядати мультимедійний вміст з різних джерел"
+msgstr "Плагін, що дозволяє переглядати мультимедійний вміст з різних джерел"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr "Додати до грайлиста"
+msgstr "Додати до списку відтворення"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
@@ -1977,7 +1935,7 @@ msgstr "Виконуваний файл gromit не знайдено."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr "Стан у клієнті обміну миттєвими повідомленнями"
+msgstr "Статус в програмі миттєвих повідомлень"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
@@ -2003,11 +1961,11 @@ msgstr "Не вдалося прочитати конфігурацію lirc"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "Клявіші медіяпрогравача"
+msgstr "Мультимедійні клавіші"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr "Підтримування додаткових мультимедійних клявіш"
+msgstr "Підтримування додаткових мультимедійних клавіш"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
@@ -2148,8 +2106,9 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"Пароль для захисту сервера rpdb2, зневадження Xplayer через неавторизований "
-"віддалений доступ. Якщо це порожнє, буде використано типовий «xplayer»."
+"Пароль для захисту сервера rpdb2 для налагодження Xplayer через "
+"неавторизований віддалений доступ. Якщо не задано, буде використано типовий "
+"«xplayer»."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2173,11 +2132,11 @@ msgstr "Показати консоль Python програвача Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Зневадження Python"
+msgstr "Налагодження Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "Увімкнути віддалене зневадження Python за допомогою rpdb2"
+msgstr "Увімкнути віддалене налагодження Python за допомогою rpdb2"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
@@ -2197,7 +2156,7 @@ msgid ""
 "default password ('xplayer')."
 msgstr ""
 "Після того, як Ви натиснете Гаразд, Xplayer чекатиме на з’єднання від winpdb "
-"або rpdb2. Якщо пароль зневаджувача у GConf не вказано, буде використано "
+"або rpdb2. Якщо пароль налагодження у GConf не вказано, буде використано "
 "типовий пароль ('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
@@ -2206,7 +2165,7 @@ msgstr "Нещодавні файли"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr "Додає файли, які нещодавно було програно, до нещодавніх"
+msgstr "Додає файли, які вже програно, до нещодавніх файлів"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
@@ -2233,24 +2192,28 @@ msgstr "Зберігач екрану"
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Вимкнути зберігач екрану, коли програється відеозапис"
 
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Відтворення відео"
+
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Ширина знятку екрану (у точках растру):"
+msgstr "Ширина знімку екрану (у точках растру):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Розрахувати кількість знятків екрану"
+msgstr "Розрахувати кількість знімків екрану"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Кількість знятків екрану:"
+msgstr "Кількість знімків екрану:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "Зняток%s.png"
+msgstr "Знімок з %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2258,19 +2221,19 @@ msgstr "Зняток%s.png"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr "Зняток-%s-%d.png"
+msgstr "Знімок з %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr "Зняток екрану"
+msgstr "Знімок екрану"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "Дозволяє робити знятки і галереї з відеозаписів"
+msgstr "Дозволяє робити знімки і галереї з відеозаписів"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr "Зберегти серію знятків екрану"
+msgstr "Зберегти серію знімків екрану"
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2284,18 +2247,18 @@ msgstr "Галерея-%s-%d.jpg"
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "Створення серії знятків екрану…"
+msgstr "Створення галереї…"
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "Збереження серії знятків екрану у «%s»"
+msgstr "Збереження галереї «%s»"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Не вдалося отримати зняток цього відео."
+msgstr "Не вдалося отримати знімок цього відео."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
@@ -2303,19 +2266,19 @@ msgstr "Цього не повинно було трапитися, надішл
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "Зробити з_няток"
+msgstr "Зробити з_німок"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Зробити зняток екрану"
+msgstr "Зробити знімок екрану"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Створити серію знятків _екрану..."
+msgstr "Створити галерею знімків _екрану..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Створити серію знятків екрану"
+msgstr "Створити галерею знімків екрану"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
@@ -2358,8 +2321,8 @@ msgstr "Перестрибнути до вказаного часу"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Додаток Zeitgeist"
+msgstr "Плагін Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Додаток, що надсилає події в Zeitgeist"
+msgstr "Плагін, що надсилає події в Zeitgeist"

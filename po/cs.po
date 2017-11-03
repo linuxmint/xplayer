@@ -23,86 +23,37 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-26 07:12+0000\n"
-"Last-Translator: Tomáš Moravec <otoman100@gmail.com>\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-09-06 14:09+0000\n"
+"Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: cs\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Přehrávání videa"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Žádné URI k přehrání"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Přehrávač filmů Xplayer"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Otevřít s „%s“"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Došlo k chybě"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Žádný nebo prázdný seznam k přehrání"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Zásuvný modul prohlížeče na přehrávání filmů"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Nelze inicializovat knihovny podporující vlákna."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Zkontrolujte svou instalaci systému. Zásuvný modul programu Xplayer bude "
-"nyní ukončen."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Čas:"
+msgid "Leave fullscreen"
+msgstr "Opustit režim celé obrazovky"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Ztmavit ostatní monitory"
 
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Opustit režim celé obrazovky"
-
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Povolit spuštění šetřiče obrazovky i pokud se přehrává pouze zvuk"
+msgstr "Umožnit spouštění šetřiče obrazovky pokud se přehrává pouze zvuk"
 
-# TEST
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Povolit spuštění šetřiče obrazovky i pokud se přehrává pouze zvuk. Toto "
-"zakažte, pokud máte reproduktory napájené přes monitor."
+"Umožnit spouštění šetřiče obrazovky pokud se přehrává pouze zvuk. Toto "
+"nezapínejte pokud jsou reproduktory napájené přes monitor."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
@@ -118,11 +69,11 @@ msgstr "Odstín videa"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "Sytost videa"
+msgstr "Sytost barev videa"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "Změnit velikost plátna automaticky po načtení souboru"
+msgstr "Po načtení souboru automaticky změnit velikost plátna"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
@@ -134,15 +85,15 @@ msgstr "Náhodný režim"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Zda zakázat o_dstranění prokládání u prokládaného videa"
+msgstr "Zda vypnout o_dstraňování prokládání u prokládaného videa"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "Jestli povolit ladění přehrávacího systému"
+msgstr "Zda zapnout řežim ladění přehrávacího engine"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "Typ zvukového výstupu, který se má používat"
+msgstr "Typ zvukového výstupu, který používat"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
@@ -192,7 +143,7 @@ msgid ""
 "Pictures directory."
 msgstr ""
 "Výchozí umístění pro dialogovy „Sejmout obrazovku“. Výchozí je složka "
-"„Obrázky“"
+"„Obrázky“."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
@@ -200,11 +151,11 @@ msgstr "Zda zakázat zásuvné moduly v uživatelově domovské složce"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Zda zakázat klávesové zkratky"
+msgstr "Zda vypnout klávesové zkratky"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Zda automaticky nahrávat soubory s titulky, když je nahrán film"
+msgstr "Zda automaticky načítat soubory s titulky, když je načten film"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
@@ -229,11 +180,11 @@ msgid ""
 "running)."
 msgstr ""
 "Seznam názvů zásuvných modulů, které jsou v současnosti aktivované (načtené "
-"a běží)."
+"a spuštěné)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Použít tmavou variantu motivu (pokud je dostupná)."
+msgstr "Použít tmavou variantu motivu (pokud je k dispozici)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -302,11 +253,11 @@ msgstr "5.1kanálový"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr "Průchod AC3"
+msgstr "AC3 průchozí"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Nastavení Xplayeru"
+msgstr "Předvolby pro Xplayer"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
@@ -314,7 +265,7 @@ msgstr "Přehrávání"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Spustit přehrávání souborů od poslední pozice"
+msgstr "Spustit přehrávání souborů od minulé pozice"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
@@ -334,7 +285,7 @@ msgstr "_Písmo:"
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "_Kódování:"
+msgstr "_Znaková sada:"
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
@@ -359,11 +310,11 @@ msgstr "_Změnit velikost okna po načtení nového videa"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Zakázat o_dstranění prokládání u prokládaného videa"
+msgstr "Neodstraňovat prokládání u videí"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Zakázat šetřič obrazovky během přehrávání"
+msgstr "Během přehrávání vypnout šetřič obrazovky"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -430,7 +381,7 @@ msgstr "Extra velká"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr "Titul:"
+msgstr "Název:"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
@@ -438,7 +389,7 @@ msgstr "Umělec:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "Trvání:"
+msgstr "Délka:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
@@ -470,7 +421,7 @@ msgstr "Kodek:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Snímků:"
+msgstr "Snímků za sekundu:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
@@ -523,8 +474,8 @@ msgid "Fullscreen"
 msgstr "Celá obrazovka"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr "_Soubor"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -536,11 +487,11 @@ msgstr "Otevřít soubor"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Otevřít _umístění"
+msgstr "Otevřít _umístění…"
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Otevřít vzdálený soubor"
+msgstr "Otevřít soubor v síti"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
@@ -548,7 +499,7 @@ msgstr "_Vysunout"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "Vysunout právě požívaný disk"
+msgstr "Vysunout právě používaný disk"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
@@ -556,7 +507,7 @@ msgstr "_Vlastnosti"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "Zobrazit vlastnosti současného proudu"
+msgstr "Zobrazit vlastnosti stávajícího proudu"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
@@ -588,7 +539,7 @@ msgstr "Vyprázdnit seznam k přehrání"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "Nastave_ní"
+msgstr "_Předvolby"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
@@ -648,11 +599,11 @@ msgstr "_Poměr stran"
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr "Přepnout ú_hly"
+msgstr "Přepnout ú_hly pohledu"
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "Přepnout úhly kamery"
+msgstr "Přepnout na záběr z jiné kamery"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
@@ -684,7 +635,7 @@ msgstr "Přejít na nabídku zvuku"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr "Nabídka ú_hlů"
+msgstr "Nabídka ú_hlů pohledu"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
@@ -696,7 +647,7 @@ msgstr "Nabídka _kapitol"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Přejít na nabídku kapitol"
+msgstr "Přejít do nabídky kapitol"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
@@ -865,7 +816,7 @@ msgstr "Časová lišta průběhu"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Vložte _adresu souboru, který chcete otevřít:"
+msgstr "Zadejte _adresu souboru, který chcete otevřít:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
@@ -876,19 +827,18 @@ msgstr "Heslo vyžadované pro server RTSP"
 msgid "Audio Track #%d"
 msgstr "Zvuková stopa #%d"
 
-# TEST
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "Titulek #%d"
+msgstr "Titulek č. %d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr "Server, ke kterému se snažíte připojit, není známý."
+msgstr "Server ke kterému se snažíte připojit není znám."
 
 #: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
-msgstr "Připojení k tomuto serveru bylo zamítnuto."
+msgstr "Připojení bylo tímto serverem zamítnuto."
 
 # TEST
 #: ../src/backend/bacon-video-widget.c:3282
@@ -912,10 +862,9 @@ msgstr "Nemáte oprávnění otevřít tento soubor."
 msgid "This location is not a valid one."
 msgstr "Toto není platné upístění."
 
-# TEST
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "Film nebylo možno přečíst."
+msgstr "Film nebylo možno načíst."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -956,11 +905,12 @@ msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
-"Tento soubor nelze přehrávat po síti. Zkuste jej nejdřív stáhnout na disk."
+"Tento soubor nelze přehrávat po síti. Zkuste si ho nejdříve stáhnout do "
+"počítače."
 
 #: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
-msgstr "Surround"
+msgstr "Prostorový zvuk"
 
 #: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
@@ -975,7 +925,7 @@ msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Některé nutné zásuvné moduly chybí. Ujistěte se, že je program nainstalován "
+"Některé nutné zásuvné moduly chybí. Ověřte, zda je program nainstalován "
 "správně."
 
 # TEST
@@ -996,11 +946,10 @@ msgstr "Nerozpoznaný soubor .desktop Version „%s“"
 msgid "Starting %s"
 msgstr "Spouští se %s"
 
-# TEST
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Aplikace nepřijímá dokumenty z příkazové řádky"
+msgstr "Aplikace nepřijímá dokumenty z příkazového řádku"
 
 # TEST
 #: ../src/eggdesktopfile.c:1178
@@ -1032,7 +981,7 @@ msgstr "Všechny soubory"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Podporované soubory"
+msgstr "Všechny podporované soubory"
 
 # TEST
 #: ../src/eggfileformatchooser.c:389
@@ -1044,10 +993,9 @@ msgstr "Podle přípony"
 msgid "File Format"
 msgstr "Formát souboru"
 
-# TEST
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Přípona (přípony)"
+msgstr "Přípony"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -1065,30 +1013,26 @@ msgstr ""
 msgid "File format not recognized"
 msgstr "Formát souboru nebyl rozpoznán"
 
-# TEST
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Zakázat spojení se správou sezení"
+msgstr "Vypnout spojení se správou sezení"
 
-# TEST
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Zadejte soubor obsahující uložené nastavení"
+msgstr "Určete soubor obsahující uložená nastavení"
 
 # TEST
 #: ../src/eggsmclient.c:229
 msgid "FILE"
 msgstr "SOUBOR"
 
-# TEST
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Zadejte ID správy sezení"
+msgstr "Zadejte identifikátor správy sezení"
 
-# TEST
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr "ID"
+msgstr "Identifikátor"
 
 # TEST
 #: ../src/eggsmclient.c:253
@@ -1139,7 +1083,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:119
 #: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr "Neznámé"
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
@@ -1241,6 +1185,10 @@ msgid "Audio Preview"
 msgstr "Ukázka zvuku"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Nedaří se inicializovat knihovny podporující vlákna."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Zkontrolujte svou instalaci systému. Xplayer nyní skončí."
 
@@ -1253,12 +1201,11 @@ msgstr "_Přehrát hned"
 msgid "_Add to Playlist"
 msgstr "Přid_at do seznamu k přehrání"
 
-# TEST
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr "Zrušit"
+msgstr "Storno"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Žádný soubor"
 
@@ -1274,7 +1221,7 @@ msgstr "Soubor neexistuje."
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Ujistěte se, že je Xplayer správně nainstalován."
+msgstr "Ověřte, zda je Xplayer správně nainstalován."
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1305,9 +1252,9 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Kopii GNU General Public License jste měl(a) obdržet spolu s tímto "
-"programem; pokud se tak nestalo, napište o ni Free Software Foundation, "
-"Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+"Kopii GNU General Public License jste měli obdržet spolu s tímto programem; "
+"pokud se tak nestalo, napište o ni Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1333,7 +1280,8 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Seznam všech dostupných možností získáte příkazem „%s --help“.\n"
+"Spuštěním „%s --help“ si zobrazíte úplný seznam dostupných přepínačů "
+"příkazového řádku.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
@@ -1360,6 +1308,10 @@ msgstr "Xplayer nemohl přehrát „%s“."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer nemohl zobrazit obsah nápovědy."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Došlo k chybě"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Předchozí kapitola/film"
@@ -1372,12 +1324,12 @@ msgstr "Přehrát / pozastavit"
 msgid "Next Chapter/Movie"
 msgstr "Následující kapitola/film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer se nemohl spustit."
 
 # :-)
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Žádný důvod."
 
@@ -1387,7 +1339,7 @@ msgstr "Otevřít umístění…"
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Povolit ladění"
+msgstr "Zapnout ladící režim"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1412,7 +1364,7 @@ msgstr "Ztlumit zvuk"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Celá obrazovka"
+msgstr "Přepnout režim celé obrazovky"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
@@ -1449,7 +1401,7 @@ msgstr "- přehrává filmy a písničky"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr "Nelze v tu samou chvíli zařazovat do fronty a přejmenovávat"
+msgstr "Není možné přidat do fronty a nahradit zároveň"
 
 # TEST
 #. By extension entry
@@ -1513,7 +1465,7 @@ msgstr "Zvolte písmo titulků"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "Aktuální lokalizace libc"
+msgstr "Stávající místní a jazyková nastavení"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
@@ -1530,7 +1482,7 @@ msgstr "Arménské"
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "Baltské"
+msgstr "Pobaltské"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
@@ -1631,7 +1583,7 @@ msgstr "Korejské"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "Nordické"
+msgstr "Skandinávské"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
@@ -1705,7 +1657,7 @@ msgstr "Hudební soubory"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Soubory videa"
+msgstr "Video soubory"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
@@ -1910,7 +1862,7 @@ msgstr "Chyba při načítání souboru s kapitolami"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr "Kapitola se stejným názvem již existuje"
+msgstr "Kapitola se stejným názvem už existuje"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
@@ -1929,8 +1881,7 @@ msgstr "Vyskytla se chyba při ukládání kapitol"
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Zkontrolujte prosím, zda máte oprávnění zapisovat do složky, která obsahuje "
-"film."
+"Zkontrolujte zda máte oprávnění zapisovat do složky, která obsahuje film."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -1968,7 +1919,7 @@ msgstr "Přidání kapitoly"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "D-Bus Service"
-msgstr "Služba D-Bus"
+msgstr "Systémová služba D-Bus"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid ""
@@ -2051,7 +2002,8 @@ msgstr "Status komunikátoru"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
-msgstr "Při přehrávání filmu nastavit stav ve vašem komunikátoru na ‚pryč‘"
+msgstr ""
+"Při přehrávání filmu nastavit stav ve vašem komunikátoru na „nepřítomen“"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -2095,10 +2047,9 @@ msgstr "Stahování titulků"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Vyhledat titulky k právě přehrávanému filmu"
 
-# TEST
 #: ../src/plugins/opensubtitles/opensubtitles.py:43
 msgid "Brazilian Portuguese"
-msgstr "Brazilská portugalština"
+msgstr "Portugalské (Brazílie)"
 
 # TEST
 #: ../src/plugins/opensubtitles/opensubtitles.py:179
@@ -2151,10 +2102,9 @@ msgstr "Hodnocení"
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Stahování titulků k filmům z OpenSubtitles"
 
-# TEST
 #: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
-msgstr "Sta_hnout titulky k filmům…"
+msgstr "Stá_hnout titulky k filmům…"
 
 # TEST
 #: ../src/plugins/opensubtitles/opensubtitles.py:591
@@ -2283,7 +2233,7 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Po stisknutí Budiž aplikace Xplayer počká, než se k ní připojíte pomocí "
+"Po kliknutí na OK aplikace Xplayer počká, než se k ní připojíte pomocí "
 "winpdb nebo rpdb2. Pokud jste nenastavili heslo ladění v GConf, tak se "
 "použije výchozí heslo („xplayer“)."
 
@@ -2318,6 +2268,10 @@ msgstr "Šetřič obrazovky"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Vypne šetřič obrazovky, když se přehrává film"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Přehrávání videa"
 
 # TEST
 #: ../src/plugins/screenshot/gallery.ui.h:1

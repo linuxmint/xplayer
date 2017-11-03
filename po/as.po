@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
 "PO-Revision-Date: 2016-02-03 12:46+0000\n"
 "Last-Translator: Nilamdyuti Goswami <Unknown>\n"
 "Language-Team: Assamese <kde-i18n-doc@kde.org>\n"
@@ -19,63 +19,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: as_IN\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "চলচিত্ৰ চলোৱা হৈছে"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "চলোৱাৰ বাবে কোনো URI নাই"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer চলচিত্ৰ প্লেয়াৰ"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "\"%s\" সহযোগে খোলক (_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "ত্ৰুটি উৎপন্ন হৈছে"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "প্লেলিস্ট পৰিষ্কাৰ অথবা অনুপস্থিত"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "চলচিত্ৰ ব্ৰাউজাৰ প্লাগিন"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "থ্ৰেড-চেইফ লাইব্ৰৰি চলোৱা নাযায়।"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"আপোনাৰ চিস্টেমৰ ইনস্টলেষণ পৰীক্ষা কৰক। Xplayer প্লাগিন এতিয়া বন্ধ কৰা হ'ব।"
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "সময়:"
+msgid "Leave fullscreen"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
 msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
@@ -507,8 +460,8 @@ msgid "Fullscreen"
 msgstr "পূৰ্ণপৰ্দা"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "চলচিত্ৰ (_M)"
+msgid "_File"
+msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1189,6 +1142,10 @@ msgid "Audio Preview"
 msgstr "অডিঅ' পূৰ্বদৰ্শন"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "থ্ৰেড-চেইফ লাইব্ৰৰি চলোৱা নাযায়।"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "আপোনাৰ চিস্টেমৰ ইনস্টলেষণ পৰীক্ষা কৰক। Xplayer এতিয়া বন্ধ কৰা হ'ব।"
 
@@ -1204,7 +1161,7 @@ msgstr "প্লেলিস্টত যোগ কৰক (_A)"
 msgid "Cancel"
 msgstr "বাতিল কৰক"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "কোনো ফাইল নাই।"
 
@@ -1308,6 +1265,10 @@ msgstr "Xplayer এ '%s' চলাব নোৱাৰে।"
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer দ্বাৰা সহায়ৰ সমল প্ৰদৰ্শন কৰা নাযায়।"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "ত্ৰুটি উৎপন্ন হৈছে"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "পূৰ্ববৰ্তী পাঠ/চলচিত্ৰ"
@@ -1320,11 +1281,11 @@ msgstr "চলোৱা / বিৰাম দিয়ক"
 msgid "Next Chapter/Movie"
 msgstr "পৰবৰ্তী পাঠ/চলচিত্ৰ"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer আৰম্ভ কৰা নাযায়।"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "কাৰণ নাই।"
 
@@ -2220,6 +2181,10 @@ msgstr "স্ক্ৰিন ছেভাৰ"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "চলিচিত্ৰ চলাৰ সময়ত স্ক্ৰিনচেভাৰ নিষ্ক্ৰিয় কৰে"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "চলচিত্ৰ চলোৱা হৈছে"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

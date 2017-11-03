@@ -16,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-06-23 21:40+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-31 21:47+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
@@ -25,66 +25,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: \n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Rodomas filmas"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Nėra leistino URI"
-
-#  Title
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer filmų leistuvas"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "_Atverti su „%s“"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Įvyko klaida"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Nėra grojaraščio arba grojaraštis tuščias"
-
-#  Title
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Filmų naršyklės įskiepis"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Nepavyko inicializuoti saugių gijų bibliotekų."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Patikrinkite savo sistemos įdiegimą. Xplayer įskiepis dabar užsidarys."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Laikas:"
+msgid "Leave fullscreen"
+msgstr "Išeiti iš viso ekrano"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Užtemdyti kitus vaizduoklius"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Išeiti iš viso ekrano"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -514,8 +465,8 @@ msgid "Fullscreen"
 msgstr "Visame ekrane"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Filmas"
+msgid "_File"
+msgstr "_Failas"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1223,6 +1174,10 @@ msgid "Audio Preview"
 msgstr "Garso peržiūra"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Nepavyko inicializuoti saugių gijų bibliotekų."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "Patikrinkite savo sistemos įdiegimą. Xplayer dabar užsidarys."
 
@@ -1238,7 +1193,7 @@ msgstr "_Pridėti į grojaraštį"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Nėra failo"
 
@@ -1342,6 +1297,10 @@ msgstr "Xplayer nepavyko paleisti „%s“."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer nepavyko parodyti žinyno turinio."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Įvyko klaida"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Ankstesnis takelis/filmas"
@@ -1354,11 +1313,11 @@ msgstr "Groti / Pauzė"
 msgid "Next Chapter/Movie"
 msgstr "Kitas takelis/filmas"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer negalėjo startuoti."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Jokios priežasties."
 
@@ -2258,6 +2217,10 @@ msgstr "Ekrano užsklanda"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Išjungti ekrano užsklandą grojant"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Rodomas filmas"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

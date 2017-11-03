@@ -19,71 +19,25 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-11 14:14+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-31 08:59+0000\n"
 "Last-Translator: AlephAlpha <alephalpha911@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "Language: zh_CN\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "播放电影"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "无可播放的 URI"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer 电影播放器"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "用“%s”打开(_O)"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "发生了一个错误"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "无播放列表或播放列表为空"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Xplayer 浏览器插件"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "无法初始化线程安全库。"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr "请检查您的系统安装。Xplayer 插件现将退出。"
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "时间："
+msgid "Leave fullscreen"
+msgstr "退出全屏"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "其它显示器显示空白"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "退出全屏"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -506,8 +460,8 @@ msgid "Fullscreen"
 msgstr "全屏"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "电影(_M)"
+msgid "_File"
+msgstr "文件(_F)"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1175,6 +1129,10 @@ msgid "Audio Preview"
 msgstr "音频预听"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "无法初始化线程安全库。"
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr "请检查您的系统安装。Xplayer 现将退出。"
 
@@ -1190,7 +1148,7 @@ msgstr "添加到播放列表(_A)"
 msgid "Cancel"
 msgstr "取消"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "无文件"
 
@@ -1284,6 +1242,10 @@ msgstr "Xplayer 无法播放“%s”。"
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer 无法显示帮助内容。"
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "发生了一个错误"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "上一章/电影"
@@ -1296,11 +1258,11 @@ msgstr "播放/暂停"
 msgid "Next Chapter/Movie"
 msgstr "下一章/电影"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer 无法启动。"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "无原因。"
 
@@ -2187,6 +2149,10 @@ msgstr "屏幕保护程序"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "当播放电影时停用屏幕保护程序"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "播放电影"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"

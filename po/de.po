@@ -16,76 +16,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 08:42+0100\n"
-"PO-Revision-Date: 2017-02-13 13:21+0000\n"
+"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"PO-Revision-Date: 2017-08-30 12:55+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-28 07:52+0000\n"
-"X-Generator: Launchpad (build 18416)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: de\n"
 "X-Poedit-Language: German\n"
 "X-Project-Style: gnome\n"
 
-#: ../browser-plugin/xplayer-plugin-viewer.c:378
-#: ../src/plugins/screensaver/xplayer-screensaver.c:97
-msgid "Playing a movie"
-msgstr "Ein Video wird wiedergegeben"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:434
-msgid "No URI to play"
-msgstr "Keine Adresse zum Wiedergeben"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:667
-#: ../browser-plugin/xplayer-plugin-viewer.c:1683
-msgid "Xplayer Movie Player"
-msgstr "Xplayer-Filmwiedergabe"
-
-#. translators: this is:
-#. * Open With ApplicationName
-#. * as in nautilus' right-click menu
-#: ../browser-plugin/xplayer-plugin-viewer.c:1111
-#, c-format
-msgid "_Open with \"%s\""
-msgstr "Öffnen _mit »%s«"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:1332 ../src/xplayer-object.c:2598
-msgid "An error occurred"
-msgstr "Es ist ein Fehler aufgetreten"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2011
-msgid "No playlist or playlist empty"
-msgstr "Keine oder leere Wiedergabeliste vorhanden"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2104
-msgid "Movie browser plugin"
-msgstr "Filmnavigatormodul"
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120 ../src/xplayer.c:260
-msgid "Could not initialize the thread-safe libraries."
-msgstr "Die Thread-sicheren Bibliotheken konnten nicht initialisiert werden."
-
-#: ../browser-plugin/xplayer-plugin-viewer.c:2120
-msgid "Verify your system installation. The Xplayer plugin will now exit."
-msgstr ""
-"Bitte überprüfen Sie Ihre Systeminstallation. Das Xplayer-Modul wird jetzt "
-"beendet."
-
 #: ../data/fullscreen.ui.h:1
-msgid "Time:"
-msgstr "Dauer:"
+msgid "Leave fullscreen"
+msgstr "Vollbild verlassen"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
 msgstr "Andere Bildschirme leeren"
-
-#: ../data/fullscreen.ui.h:3
-msgid "Leave fullscreen"
-msgstr "Vollbild verlassen"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -527,8 +479,8 @@ msgid "Fullscreen"
 msgstr "Vollbild"
 
 #: ../data/xplayer.ui.h:1
-msgid "_Movie"
-msgstr "_Film"
+msgid "_File"
+msgstr "_Datei"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -1219,6 +1171,10 @@ msgid "Audio Preview"
 msgstr "Tonvorschau"
 
 #: ../src/xplayer.c:260
+msgid "Could not initialize the thread-safe libraries."
+msgstr "Die Thread-sicheren Bibliotheken konnten nicht initialisiert werden."
+
+#: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
 msgstr ""
 "Bitte überprüfen Sie Ihre System-Installation. Xplayer wird nun beendet."
@@ -1235,7 +1191,7 @@ msgstr "Zur Wiedergabeliste _hinzufügen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../src/xplayer-fullscreen.c:589
+#: ../src/xplayer-fullscreen.c:553
 msgid "No File"
 msgstr "Keine Datei"
 
@@ -1340,6 +1296,10 @@ msgstr "Xplayer konnte »%s« nicht wiedergeben."
 msgid "Xplayer could not display the help contents."
 msgstr "Xplayer konnte den Hilfeindex nicht anzeigen."
 
+#: ../src/xplayer-object.c:2598
+msgid "An error occurred"
+msgstr "Es ist ein Fehler aufgetreten"
+
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
 msgstr "Vorheriges Kapitel/Film"
@@ -1352,11 +1312,11 @@ msgstr "Wiedergabe / Pause"
 msgid "Next Chapter/Movie"
 msgstr "Nächstes Kapitel/Film"
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
 msgstr "Xplayer konnte nicht gestartet werden."
 
-#: ../src/xplayer-object.c:4344
+#: ../src/xplayer-object.c:4345
 msgid "No reason."
 msgstr "Kein Grund."
 
@@ -2270,6 +2230,10 @@ msgstr "Bildschirmschoner"
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
 msgstr "Deaktiviert den Bildschirmschoner bei Filmwiedergabe"
+
+#: ../src/plugins/screensaver/xplayer-screensaver.c:97
+msgid "Playing a movie"
+msgstr "Ein Video wird wiedergegeben"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
