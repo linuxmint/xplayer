@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: xplayer master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2017-09-05 15:17+0000\n"
+"PO-Revision-Date: 2017-11-12 13:42+0000\n"
 "Last-Translator: KAMI <kami911@gmail.com>\n"
 "Language-Team: Hungarian <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-11-03 11:44+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-23 10:43+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 "Language: hu\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -155,8 +155,8 @@ msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"A lejátszott hang/videófájlok pozíciója megjegyzendő-e szüneteltetéskor vagy "
-"bezárásukkor"
+"A lejátszott hang-, vagy videófájlok pozíciója megjegyzendő-e "
+"szüneteltetéskor vagy bezárásukkor"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
@@ -559,7 +559,7 @@ msgstr "Át_méretezés 1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "Átméretezés a videóméret felére"
+msgstr "Átméretezés a videoméret felére"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
@@ -567,7 +567,7 @@ msgstr "Átméretezés _1:1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Átméretezés az eredeti videóméretre"
+msgstr "Átméretezés az eredeti videoméretre"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
@@ -575,7 +575,7 @@ msgstr "Átméretezés _2:1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "Átméretezés a videóméret duplájára"
+msgstr "Átméretezés a videoméret duplájára"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
@@ -748,7 +748,7 @@ msgstr "4∶3-as (tévé) méretarány beállítása"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr "16∶9 (szelesvásznú)"
+msgstr "16∶9 (szélesvásznú)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
@@ -1178,7 +1178,7 @@ msgstr "A fájl nem létezik."
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Győződjön meg róla, hogy a Xplayer megfelelően van telepítve."
+msgstr "Győződjön meg róla, hogy az Xplayer megfelelően van telepítve."
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1187,9 +1187,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"A Xplayer szabad szoftver, terjesztheti és/vagy módosíthatja a Free Software "
-"Foundation által kiadott GNU General Public License második (vagy bármely "
-"későbbi) változatában foglaltak alapján."
+"Az Xplayer szabad szoftver, terjesztheti és/vagy módosíthatja a Free "
+"Software Foundation által kiadott GNU General Public License második (vagy "
+"bármely későbbi) változatában foglaltak alapján."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1198,8 +1198,8 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"A Xplayer programot abban a reményben terjesztjük, hogy hasznos lesz, de nem "
-"vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program "
+"Az Xplayer programot abban a reményben terjesztjük, hogy hasznos lesz, de "
+"nem vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program "
 "alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. További "
 "részletekért tanulmányozza a GNU GPL licencet."
 
@@ -1209,7 +1209,7 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"A Xplayer programhoz a GNU General Public License egy példánya is jár, ha "
+"Az Xplayer programhoz a GNU General Public License egy példánya is jár, ha "
 "nem kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
@@ -1218,7 +1218,7 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"A Xplayer tartalmaz egy kivételt a szellemi tulajdont képező GStreamer "
+"Az Xplayer tartalmaz egy kivételt a szellemi tulajdont képező GStreamer "
 "bővítmények használatának lehetővé tételéhez."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
@@ -1260,11 +1260,11 @@ msgstr "Lejátszás"
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "A Xplayer nem tudja lejátszani a következőt: „%s”."
+msgstr "Az Xplayer nem tudja lejátszani a következőt: „%s”."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "A Xplayer nem tudja megjeleníteni a súgótartalmat."
+msgstr "Az Xplayer nem tudja megjeleníteni a súgótartalmat."
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
@@ -1284,7 +1284,7 @@ msgstr "Következő fejezet/film"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "A Xplayer nem tud elindulni."
+msgstr "Az Xplayer nem tud elindulni."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
@@ -1674,7 +1674,7 @@ msgstr "Videolemez-rögzítő"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "(S)VCD-k vagy video DVD-k írása"
+msgstr "(S)VCD lemezek vagy video DVD lemezek írása"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
@@ -2098,7 +2098,7 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"A Xplayer hibakereséséhez használt jelszó az rpdb2 kiszolgáló védelméhez "
+"Az Xplayer hibakereséséhez használt jelszó az rpdb2 kiszolgáló védelméhez "
 "jogosultság nélküli távoli hozzáférés ellen. Ha üres, akkor a „xplayer” "
 "kerül felhasználásra."
 
@@ -2120,7 +2120,7 @@ msgstr "_Python konzol"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "A Xplayer Python konzoljának megjelenítése"
+msgstr "Az Xplayer Python konzoljának megjelenítése"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
@@ -2135,7 +2135,7 @@ msgstr "Távoli Python hibakeresés engedélyezése rpdb2 segítségével"
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr ""
-"A Xplayer.Object a következő „xplayer_object” segítségével érhető el:\\n%s"
+"Az Xplayer.Object a következő „xplayer_object” segítségével érhető el:\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid "Xplayer Python Console"
@@ -2147,7 +2147,7 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Az OK gomb megnyomása után a Xplayer megvárja, amíg winpdb vagy rpdb2 "
+"Az OK gomb megnyomása után az Xplayer megvárja, amíg winpdb vagy rpdb2 "
 "segítségével csatlakozik hozzá. Ha nem állított be hibakeresési jelszót a "
 "DConf-ban, akkor az alapértelmezett („xplayer”) kerül felhasználásra."
 
@@ -2249,7 +2249,7 @@ msgstr "Galéria mentése mint „%s”"
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "A Xplayer nem tud képernyőképet készíteni a videóról."
+msgstr "Az Xplayer nem tud képernyőképet készíteni a videóról."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
