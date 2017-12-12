@@ -1,6 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import os
 from datetime import datetime
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 # Get the GStreamer version
@@ -8,6 +10,7 @@ if os.system ('gst-typefind-0.10 --version') == 0:
 	# List the formats of the last files played
 	last_visited = 0
 	recent_manager = Gtk.RecentManager.get_default ()
+	last = None
 	for recent in recent_manager.get_items ():
 		if recent.has_group ("Xplayer"):
 			if recent.get_visited () > last_visited:
@@ -18,4 +21,4 @@ if os.system ('gst-typefind-0.10 --version') == 0:
 		file_handle = os.popen ('gst-typefind-0.10 "%s"' % (last))
 		parts = file_handle.read ().split (' ')
 		date = datetime.fromtimestamp (last_visited)
-		print 'Listened to a "%s" file on %s' % (parts.pop ().strip (), date.isoformat ())
+		print ('Listened to a "%s" file on %s' % (parts.pop ().strip (), date.isoformat ()))
