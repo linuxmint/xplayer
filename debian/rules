@@ -13,6 +13,7 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
 include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS += \
+	--disable-Werror \
 	--enable-vala=yes \
 	--disable-run-in-source-tree
 
