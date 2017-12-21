@@ -12,9 +12,19 @@ ACLOCAL_FLAGS="-I libgd $ACLOCAL_FLAGS"
     exit 1
 }
 
-which gnome-autogen.sh || {
-	echo "You need to install gnome-common from the GNOME git"
-	exit 1
-}
+mkdir -p m4
 
-REQUIRED_PKG_CONFIG_VERSION=0.17.1 REQUIRED_AUTOMAKE_VERSION=1.11 . gnome-autogen.sh --enable-debug "$@"
+gtkdocize --copy || exit 1
+intltoolize --force --copy --automake || exit 1
+autoreconf --verbose --force --install || exit 1
+
+cd "$olddir"
+if [ "$NOCONFIGURE" = "" ]; then
+    "$srcdir/configure" "$@" || exit 1
+
+    if [ "$1" = "--help" ]; then exit 0 else
+        echo "Now type 'make' to compile" || exit 1
+    fi
+else
+    echo "Skipping configure process."
+fi
