@@ -64,6 +64,8 @@ on_media_player_key_pressed (XplayerObject *xplayer,
 {
 	if (strcmp ("Play", key) == 0)
 		xplayer_action_play_pause (xplayer);
+    if (strcmp ("Pause", key) == 0)
+        xplayer_action_pause (xplayer);
 	else if (strcmp ("Previous", key) == 0)
 		xplayer_action_previous (xplayer);
 	else if (strcmp ("Next", key) == 0)

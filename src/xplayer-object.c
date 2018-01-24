@@ -1514,14 +1514,14 @@ xplayer_object_action_play_pause (XplayerObject *xplayer)
 }
 
 /**
- * xplayer_action_pause:
+ * xplayer_object_action_pause:
  * @xplayer: a #XplayerObject
  *
  * Pauses the current stream. If Xplayer is already paused, it continues
  * to be paused.
  **/
 void
-xplayer_action_pause (XplayerObject *xplayer)
+xplayer_object_action_pause (XplayerObject *xplayer)
 {
 	if (bacon_video_widget_is_playing (xplayer->bvw) != FALSE) {
 		bacon_video_widget_pause (xplayer->bvw);
