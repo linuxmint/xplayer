@@ -5,11 +5,9 @@ plugin_LTLIBRARIES = librotation.la
 
 plugin_in_files = rotation.plugin.in
 
-# here we are explicitly specifying gtk+-3.0 and clutter-1.0 to use the vapi
-# because vala still cannot parse the gir
 AM_VALAFLAGS = \
 	--girdir=$(top_builddir)/src	\
-	--pkg Xplayer-1.0 --pkg libpeas-1.0 --pkg cogl-pango-1.0 --pkg GtkClutter-1.0 --pkg Clutter-1.0 --pkg gtk+-3.0 bacon-video.vapi
+	--pkg Xplayer-1.0 --pkg libpeas-1.0 --pkg gtk+-3.0 bacon-video.vapi
 
 librotation_la_SOURCES = xplayer-rotation-plugin.vala
 librotation_la_LDFLAGS = $(plugin_ldflags)

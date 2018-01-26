@@ -19,8 +19,7 @@
 using GLib;
 using Xplayer;
 using Peas;
-using Clutter;
-using GtkClutter;
+using Gtk;
 
 public const string GIO_ROTATION_FILE_ATTRIBUTE = "metadata::xplayer::rotation";
 
