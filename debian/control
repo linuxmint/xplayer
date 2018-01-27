@@ -135,7 +135,7 @@ Depends: ${misc:Depends},
          gir1.2-xplayer-1.0 (= ${binary:Version}),
          python-gi (>= 2.90.3),
          python-xdg,
-         libpeas-1.0-0-python2loader | libpeas-common( << 1.16 )
+         libpeas-1.0-python2loader
 Suggests: gromit
 Description: Plugins for the Xplayer media player
  Xplayer is a simple yet featureful media player which can read
