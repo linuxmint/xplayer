@@ -1,3 +1,25 @@
+xplayer (1.8.0) tara; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Fix python shebang
+
+  [ Jason Hicks ]
+  * debian/control: Dependency fix for compiling on Ubuntu 17.10 (#86)
+
+  [ Leigh Scott ]
+  * Fix build in xenial (#88)
+  * Clean up the auto-generated files (#89)
+
+  [ Clement Lefebvre ]
+  * Add CI configuration
+  * Fix compilation error
+
+  [ Michael Webster ]
+  * Fix "Pause" handler for the MPRIS interface, as well as the media key interface.  The media-key handler simply hadn't implemented it, and the mpris plugin (python) was encountering an introspection namespace issue with the pause methods (xplayer_object_action_pause was required, but only xplayer_action_pause existed.  This should have just been an alias, like it is with other actions.)
+  * rotation plugin: Fix build, remove generated files, and allow the build to compile the .vala source.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 06 May 2018 16:52:45 +0100
+
 xplayer (1.6.1) sylvia; urgency=medium
 
   * l10n: Update translations
