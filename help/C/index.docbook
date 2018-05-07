@@ -137,7 +137,7 @@ subtitles, and more.</para>
 	<para>Complete keyboard navigation.</para>
       </listitem>
       <listitem>
-	<para>Comprehensive set of plugins, including a subtitle downloader, YouTube browser, and disc burner.</para>
+	<para>Comprehensive set of plugins, including a Subtitle downloader, Infrared Remote Control, and disc burner.</para>
       </listitem>
     </itemizedlist>
   </sect1>
@@ -205,7 +205,7 @@ subtitles, and more.</para>
 	      <phrase>Shows <application>&app;</application> main window with
 		  sidebar opened on playlist. Contains
 		  menubar, display area, sidebar, elapsed time slider, seek control
-		  buttons, volume slider and statusbar.
+		  buttons and volume slider.
           </phrase>
 	    </textobject>
 	  </mediaobject>
@@ -228,7 +228,7 @@ subtitles, and more.</para>
 	<varlistentry>
 	  <term>Display area.</term>
 	  <listitem>
-	    <para>The display area displays the movie or a visualization of the current song.
+	    <para>The display area displays the movie.
             </para>
 	  </listitem>
 	</varlistentry>
@@ -236,11 +236,25 @@ subtitles, and more.</para>
 	  <term>Sidebar.</term>
 	  <listitem>
 	    <para>The sidebar displays properties of the file played and acts as
-		playlist. It can also be used by various plugins, such as the MythTV, YouTube and Video
-		Search plugins. They can be selected by clicking on the drop-down list at the top of the sidebar.
+		playlist and chapter list.
             </para>
 	  </listitem>
 	</varlistentry>
+        <varlistentry>
+          <term>Seek control buttons.</term>
+          <listitem>
+            <para>The seek control buttons enable you to move to the next or previous track, and to pause or play
+              a movie or song.
+            </para>
+	  </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Elapsed and total time display.</term>
+          <listitem>
+            <para>The elapsed and total time display shows elapsed and total time of playing movie or song.
+            </para>
+	  </listitem>
+        </varlistentry>
 	<varlistentry>
 	  <term>Elapsed time slider.</term>
 	  <listitem>
@@ -250,26 +264,30 @@ subtitles, and more.</para>
             </para>
 	  </listitem>
         </varlistentry>
-        <varlistentry>
-          <term>Seek control buttons.</term>
-          <listitem>
-            <para>The seek control buttons enable you to move to the next or previous track, and to pause or play
-              a movie or song.
-            </para>
-	  </listitem>
-        </varlistentry>
 	<varlistentry>
 	  <term>Volume button.</term>
           <listitem>
-	    <para>The volume button enables you to adjust the volume.</para>
+	    <para>The volume button enables volume slider to adjust the volume.</para>
           </listitem>
         </varlistentry>
 	<varlistentry>
+	  <term>Fullscreen button.</term>
+          <listitem>
+	    <para>The fullscreen button switches between fullscreen display and window view.</para>
+          </listitem>
+        </varlistentry>
+	<varlistentry>
+	  <term>Sidebar button.</term>
+          <listitem>
+	    <para>The sidebar button shows or hides sidebar.</para>
+          </listitem>
+        </varlistentry>
+	<!-- <varlistentry>
 	  <term>Statusbar.</term>
 	  <listitem>
 	    <para>The statusbar displays status information about the movie or song that is playing.</para>
 	  </listitem>
-	</varlistentry>
+	</varlistentry> -->
       </variablelist>
     </sect2>
   </sect1>
@@ -287,12 +305,12 @@ subtitles, and more.</para>
       <para>To open a video or an audio file, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut>
-          <guimenu>Movie</guimenu>
-	  <guisubmenu>Open</guisubmenu>
+          <guimenu>File</guimenu>
+	  <guisubmenu>Open...</guisubmenu>
         </menuchoice>.
         The <application>Select Movies or Playlists</application> dialog is displayed.
 		Select the file or files you want to open, then click
-	<guibutton>OK</guibutton>.
+	<guibutton>Add</guibutton>.
       </para>
       <para>You can drag a file from another application such as a file manager to the
         <application>&app;</application> window. If you drag the file to the display area, the file will replace the current
@@ -309,8 +327,8 @@ subtitles, and more.</para>
       <para>To open a file by URI (location), choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></shortcut>
-	  <guimenu>Movie</guimenu>
-	  <guimenuitem>Open Location</guimenuitem>
+	  <guimenu>File</guimenu>
+	  <guimenuitem>Open Location...</guimenuitem>
         </menuchoice>. The <application>Open Location</application> dialog is displayed. Use the drop-down
         combination box to specify the URI you would like to open (it lists URIs which have
         previously been opened) &#8211; or type one in directly &#8211; then click on the <guibutton>Open</guibutton> button.
@@ -321,12 +339,12 @@ subtitles, and more.</para>
     <sect2 id="xplayer-usage-play">
       <title>To Play a Movie (DVD or VCD)</title>
 	      <para>Insert the disc in the optical device of your computer, then choose
-          	<menuchoice><guimenu>Movie</guimenu><guimenuitem>Play Disc</guimenuitem>
+          	<menuchoice><guimenu>File</guimenu><guimenuitem>Play Disc</guimenuitem>
               </menuchoice>.</para>
              <para>To eject a DVD or VCD, choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo></shortcut>
-	  <guimenu>Movie</guimenu>
+	  <guimenu>File</guimenu>
 	  <guimenuitem>Eject</guimenuitem>
         </menuchoice>.
       </para>
@@ -341,7 +359,7 @@ subtitles, and more.</para>
         </inlinemediaobject> button, or choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
-	  <guimenu>Movie</guimenu>
+	  <guimenu>File</guimenu>
           <guimenuitem>Play / Pause</guimenuitem>
         </menuchoice>. You may also use the <keycap>P</keycap> key to pause or play a movie.
       </para>
@@ -352,7 +370,7 @@ subtitles, and more.</para>
         </inlinemediaobject> button again, or choose
         <menuchoice>
 	  <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo></shortcut>
-	  <guimenu>Movie</guimenu>
+	  <guimenu>File</guimenu>
           <guimenuitem>Play / Pause</guimenuitem>
         </menuchoice>.
       </para>
@@ -362,9 +380,8 @@ subtitles, and more.</para>
       <title>To View Properties of a Movie or Song</title>
       <para>To view the properties of a movie or song, choose
         <menuchoice>
-	  <guimenu>View</guimenu>
-	  <guimenuitem>Sidebar</guimenuitem></menuchoice> to make the sidebar
-	  appear, and choose <guimenu>Properties</guimenu> in the drop-down list at the top of the sidebar.</para>
+	  <guimenu>File</guimenu>
+	  <guimenuitem>Properties</guimenuitem></menuchoice> to make the properties appear in sidebar.</para>
     </sect2>
 
     <sect2 id="xplayer-usage-seek">
@@ -403,10 +420,10 @@ subtitles, and more.</para>
               <menuchoice>
 		<shortcut><keycombo><keycap>Ctrl</keycap><keycap>K</keycap></keycombo></shortcut>
                 <guimenu>Go</guimenu>
-		<guimenuitem>Skip to</guimenuitem>
+		<guimenuitem>Skip To...</guimenuitem>
               </menuchoice>. The <application>Skip to</application> dialog is displayed. Use the
               spin box to specify the elapsed time (in seconds) to skip to, then
-              click <guibutton>OK</guibutton>.
+              click <guibutton>Skip To</guibutton>.
             </para>
             <para>The spin box also allows more natural language to be used. You can enter a time in the
             formats "hh:mm:ss", "mm:ss" or "ss"; where "hh" is the hour, "mm" is the minute and "ss" is the
@@ -468,7 +485,7 @@ subtitles, and more.</para>
           </para>
     </listitem>
 	<listitem>
-	  <para>To change the size of the original movie or visualization,
+	  <para>To change the size of the original movie,
             choose
             <menuchoice>
 	      <shortcut><keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo></shortcut>
@@ -513,9 +530,9 @@ subtitles, and more.</para>
         choose
         <menuchoice>
           <guimenu>Edit</guimenu>
-          <guimenuitem>Plugins</guimenuitem>
+          <guimenuitem>Plugins...</guimenuitem>
         </menuchoice>. Select the <guilabel>Always on Top</guilabel> plugin to enable it. The <application>&app;</application> window will now stay on
-        top of all other windows while a movie is playing, but not while audio or visualizations are playing.
+        top of all other windows while a movie is playing, but not while audio is playing.
        </para>
        <para>To stop the window from always being on top, disable the <guilabel>Always on Top</guilabel> plugin again.
        See <xref linkend="xplayer-plugins-always-on-top"/> for more information.</para>
@@ -536,8 +553,8 @@ subtitles, and more.</para>
         </menuchoice> from the popup menu.
       </para>
       <para>If the <guilabel>Show Controls</guilabel> option is selected,
-        <application>&app;</application> will show the menubar, elapsed time slider,
-        seek control buttons, volume slider and statusbar on the window. If
+        <application>&app;</application> will show the menubar seek control buttons,
+        elapsed and total time, elapsed time slider, volume button, fullscreen button and sidebar button on the window. If
         the <guilabel>Show Controls</guilabel> option is unselected, the application
         will hide these controls and show only the display area.
       </para>
@@ -550,10 +567,8 @@ subtitles, and more.</para>
 	<title>To Show or Hide the Playlist</title>
 	<para>To show or hide the playlist, choose
           <menuchoice>
-	    <guimenu>View</guimenu><guimenuitem>Sidebar</guimenuitem>
-          </menuchoice> or click on the <guibutton>Sidebar</guibutton> button, and
-		  choose <guimenu>Playlist</guimenu> on the top of
-		  the sidebar.</para>
+	    <guimenu>View</guimenu><guimenuitem>Playlist</guimenuitem>
+          </menuchoice>.</para>
       </sect3>
 
       <sect3 id="xplayer-usage-playlist-manage">
@@ -563,7 +578,7 @@ subtitles, and more.</para>
 	    <varlistentry>
 	      <term>To add a track or movie</term>
 	      <listitem>
-		<para>To add a track or movie to the playlist, click on the <guibutton>Add</guibutton>
+		<para>To add a track or movie to the playlist, click on the <guibutton>Add...</guibutton>
                   button. The <application>Select Movies or Playlists</application> dialog is displayed. Select the file that you
                   want to add to the playlist, then click <guibutton>Add</guibutton>.
                 </para>
@@ -580,7 +595,7 @@ subtitles, and more.</para>
 	    <varlistentry>
 	      <term>To save the playlist to a file</term>
 	      <listitem>
-		<para>To save the playlist to a file, click on the <guibutton>Save Playlist</guibutton>
+		<para>To save the playlist to a file, click on the <guibutton>Save Playlist...</guibutton>
                   button. The <application>Save Playlist</application> dialog is displayed; specify
                   the filename as which you want to save the playlist, and click <guibutton>Save</guibutton>.
                 </para>
@@ -636,32 +651,30 @@ subtitles, and more.</para>
 	  <filename class="extension">ssa</filename> or <filename class="extension">ass</filename>.
 	  </para>
 	  <para>If the file containing the subtitles has a different name from the video being played, you can
-	  right-click on the video in the playlist and choose <menuchoice><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice>
+	  right-click on the video in the playlist and choose <menuchoice><guimenuitem>Select Text Subtitles...</guimenuitem></menuchoice>
 	  from the popup menu to load the correct subtitle file. You may also choose subtitles by choosing
-	  <menuchoice><guimenu>View</guimenu><guimenuitem>Select Text Subtitles</guimenuitem></menuchoice>.</para>
+	  <menuchoice><guimenu>View</guimenu><guisubmenu>Subtitles</guisubmenu><guimenuitem>Select Text Subtitles...</guimenuitem></menuchoice>.</para>
 	  <para>Using the <guilabel>Subtitle Downloader</guilabel> plugin, you can also download subtitles from the OpenSubtitles service. See
 	  <xref linkend="xplayer-plugins-opensubtitles"/> for more information.</para>
 	</sect2>
 
     <sect2 id="xplayer-usage-take-screenshot">
       <title>To Take a Screenshot</title>
-      <para>To take a screenshot of the movie or visualization that is playing, choose
+      <para>To take a screenshot of the movie, choose
         <menuchoice>
           <guimenu>Edit</guimenu>
           <guimenuitem>Take Screenshot</guimenuitem>
-        </menuchoice>. The <application>Save Screenshot</application> dialog is displayed. Choose a location and
-	insert the filename as which you want to save the screenshot, then click on the <guibutton>Save</guibutton> button
-	to save the screenshot.
+        </menuchoice>. Screenshot will be saved in your Pictures folder.
       </para>
-      <tip><para><application>&app;</application> will display a preview of the screenshot which is to be saved on the left-hand side of the <application>Save Screenshot</application> dialog.</para></tip>
+      <!-- <tip><para><application>&app;</application> will display a preview of the screenshot which is to be saved on the left-hand side of the <application>Save Screenshot</application> dialog.</para></tip> -->
     </sect2>
 
     <sect2 id="xplayer-usage-create-screenshot-gallery">
       <title>To Create a Screenshot Gallery</title>
-      <para>To create a gallery of screenshots of the movie or visualization that is playing, choose
+      <para>To create a gallery of screenshots of the movie that is playing, choose
         <menuchoice>
           <guimenu>Edit</guimenu>
-          <guimenuitem>Create Screenshot Gallery</guimenuitem>
+          <guimenuitem>Create Screenshot Gallery...</guimenuitem>
         </menuchoice>. The <application>Save Gallery</application> dialog is displayed. Choose a location and
 	insert the filename as which you want to save the gallery image, then click on the <guibutton>Save</guibutton> button
 	to save the screenshot.
@@ -681,9 +694,9 @@ subtitles, and more.</para>
       if necessary.</para>
     <sect2 id="xplayer-plugins-load">
       <title>To Enable a Plugin</title>
-      <para>To view the list of installed plugins, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice>. The
+      <para>To view the list of installed plugins, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins...</guimenuitem></menuchoice>. The
         <application>Configure Plugins</application> dialog is displayed. On the left is a list of all the plugins you have installed, while on the right is
-        a description of the currently selected plugin. Plugins which have options which can be changed will have a sensitive <guibutton>Configure</guibutton>
+        a description of the currently selected plugin. Plugins which have options which can be changed will have a sensitive <guibutton>Preferences</guibutton>
         button on the right.</para>
       <para>To enable a plugin, simply select the checkbox to the left of its name in the plugin list, and the plugin will be loaded immediately. If
         there is any error loading the plugin, an error dialog will also be displayed immediately.</para>
@@ -693,10 +706,17 @@ subtitles, and more.</para>
     <sect2 id="xplayer-plugins-always-on-top">
       <title>Always on Top</title>
       <para>When enabled, the <guilabel>Always on Top</guilabel> plugin will force the main <application>&app;</application> window to be on top of
-        all other windows while a movie is playing, but not while audio or visualizations are playing. To stop the window being on top, disable
+        all other windows while a movie is playing, but not while audio is playing. To stop the window being on top, disable
         the plugin again.</para>
     </sect2>
-    <sect2 id="xplayer-plugins-coherence">
+    <sect2 id="xplayer-plugins-dbus-service">
+      <title>D-Bus Service</title>
+      <para>The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of which track is playing in <application>&app;</application>
+        on the D-Bus session bus. Applications such as <application>Gajim</application> can listen for such notifications and respond accordingly by,
+        for example, updating your instant messaging status message to display the video currently being played in
+        <application>&app;</application>.</para>
+    </sect2>
+    <!-- <sect2 id="xplayer-plugins-coherence">
       <title>Coherence DLNA/UPnP Client</title>
       <para>The <guilabel>Coherence DLNA/UPnP Client</guilabel> plugin allows <application>&app;</application> to play multimedia content from
         UPnP media servers (such as Coherence servers) on the local network.</para>
@@ -711,7 +731,7 @@ subtitles, and more.</para>
         immediately or add it to the playlist, respectively.</para>
       <para>If the media server allows it, choosing <menuchoice><guimenuitem>Delete</guimenuitem></menuchoice> from a file's context menu allows you to
         delete that file from the media server.</para>
-    </sect2>
+    </sect2> -->
     <sect2 id="xplayer-plugins-gromit">
       <title>Gromit Annotations</title>
       <para>The <guilabel>Gromit Annotations</guilabel> plugin allows you to draw on top of movies as they are played using
@@ -725,7 +745,27 @@ subtitles, and more.</para>
       <para>To clear the screen of annotations, press <keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>, or close
         <application>&app;</application>.</para>
     </sect2>
-    <sect2 id="xplayer-plugins-jamendo">
+    <sect2 id="xplayer-plugins-infrared">
+      <title>Infrared Remote Control</title>
+      <para>The <guilabel>Infrared Remote Control</guilabel> plugin enables support for infrared remote control.
+      </para>
+    </sect2>
+    <sect2 id="xplayer-plugins-instant">
+      <title>Instant Messanger Status</title>
+      <para>The <guilabel>Instant Messanger Status</guilabel> plugin sets your Instant Messenger status to away when a movie is playing.
+      </para>
+    </sect2>
+    <sect2 id="xplayer-plugins-python">
+      <title>Python Console</title>
+      <para>The <guilabel>Python Console</guilabel> plugin is interactive Python console.
+      </para>
+    </sect2>
+    <sect2 id="xplayer-plugins-rotation">
+      <title>Rotation Plugin</title>
+      <para>The <guilabel>Rotation Plugin</guilabel> allows videos to be rotated if they are in the wrong orientation.
+      </para>
+    </sect2>
+    <!-- <sect2 id="xplayer-plugins-jamendo">
       <title>Jamendo</title>
       <para>The <guilabel>Jamendo</guilabel> plugin allows you to listen to the collection of Creative Commons-licensed music on the
         <ulink type="http" url="http://www.jamendo.com/en/">Jamendo</ulink> service.</para>
@@ -823,13 +863,13 @@ subtitles, and more.</para>
           sidebar. If any playlists have been published on the network, they will be listed here. Double-click on a playlist to load and play it on
           your computer.</para>
       </sect3>
-    </sect2>
+    </sect2> -->
     <sect2 id="xplayer-plugins-opensubtitles">
       <title>Subtitle Downloader</title>
       <para>The <guilabel>Subtitle Downloader</guilabel> plugin allows you to find and download subtitle files from the
         <ulink type="http" url="http://www.opensubtitles.org/en">OpenSubtitles</ulink> service.</para>
       <para>Subtitles can only be downloaded for local movies; not audio files, DVDs, DVB streams, VCDs or HTTP streams. To search for subtitles for
-        the currently playing movie, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Download Movie Subtitles</guimenuitem></menuchoice>, which
+        the currently playing movie, choose <menuchoice><guimenu>View</guimenu><guimenu>Subtitles</guimenu><guimenuitem>Download Movie Subtitles...</guimenuitem></menuchoice>, which
         will display the <application>Download Movie Subtitles</application> dialog.</para>
       <para>Select the language in which you wish to have your subtitles from the drop-down list at the top of the dialog, then click on the
         <guibutton>Find</guibutton> button to search for subtitles for the current movie. Subtitles are found on the basis of the movie's content,
@@ -840,21 +880,21 @@ subtitles, and more.</para>
         <note><para>Downloaded subtitle files are cached (in <filename>~/.cache/xplayer/subtitles</filename>, by default) so that they do not need to be downloaded
         again when playing the movie again. When downloading new subtitles for a movie, any previously downloaded subtitles for that movie are deleted.</para></note>
     </sect2>
-    <sect2 id="xplayer-plugins-thumbnail">
+    <!-- <sect2 id="xplayer-plugins-thumbnail">
       <title>Thumbnail</title>
       <para>The <guilabel>Thumbnail</guilabel> plugin sets <application>&app;</application>'s main window icon to a thumbnail of the current movie,
         and updates the icon when new movies are loaded.</para>
       <note><para>If a thumbnail doesn't exist for the current movie (or if you're playing an audio file), the main window icon will be reset to the
         <application>&app;</application> logo.</para></note>
-    </sect2>
+    </sect2> -->
     <sect2 id="xplayer-plugins-brasero">
       <title>Video Disc Recorder</title>
       <para>The <guilabel>Video Disc Recorder</guilabel> plugin allows you to burn the current playlist to a DVD or VCD using <application>Brasero</application>.</para>
-      <para>To burn the current playlist, choose <menuchoice><guimenu>Movie</guimenu><guimenuitem>Create Video Disc</guimenuitem></menuchoice>.
+      <para>To burn the current playlist, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Create Video Disc...</guimenuitem></menuchoice>.
         A <application>Brasero</application> dialog will be displayed, giving options for converting the movies to the appropriate format and burning them to disc. For more
         information, see the <ulink type="help" url="help:brasero/brasero-new-project-video">Brasero documentation</ulink>.</para>
     </sect2>
-    <sect2 id="xplayer-plugins-youtube">
+    <!-- <sect2 id="xplayer-plugins-youtube">
       <title>YouTube Browser</title>
       <para>The <guilabel>YouTube Browser</guilabel> plugin allows you to search and browse
         <ulink type="http" url="http://www.youtube.com/">YouTube</ulink>, and play YouTube videos directly in
@@ -869,13 +909,11 @@ subtitles, and more.</para>
         page of the <guilabel>YouTube</guilabel> sidebar.</para>
       <para>YouTube videos can be opened in a web browser by choosing <menuchoice><guimenuitem>Open in Web Browser</guimenuitem></menuchoice> from
         their context menu. This will open the video in its original location on the YouTube website.</para>
-    </sect2>
-    <sect2 id="xplayer-plugins-dbus-service">
-      <title>D-Bus Service</title>
-      <para>The <guilabel>D-Bus Service</guilabel> plugin broadcasts notifications of which track is playing in <application>&app;</application>
-        on the D-Bus session bus. Applications such as <application>Gajim</application> can listen for such notifications and respond accordingly by,
-        for example, updating your instant messaging status message to display the video currently being played in
-        <application>&app;</application>.</para>
+    </sect2> -->
+    <sect2 id="xplayer-plugins-rotation">
+      <title>Zeitgeist Plugin</title>
+      <para>The <guilabel>Zeitgeist Plugin</guilabel> sending events to Zeitgeist.
+      </para>
     </sect2>
   </sect1>
 
@@ -894,20 +932,23 @@ subtitles, and more.</para>
       <title>General</title>
       <variablelist>
 	<varlistentry>
-	  <term>Networking</term>
+	  <term>Playback</term>
 	  <listitem>
-	    <para>Select network connection speed from the <guilabel>Connection speed</guilabel>
-              drop-down list.
-            </para>
+	    <itemizedlist>
+	      <listitem>
+	        <para><guilabel>Start playing files from last position</guilabel>: select this option to automatically start playing files
+	      	from last position when the movie is reloaded.</para>
           </listitem>
+        </itemizedlist>
+	      </listitem>
         </varlistentry>
 	<varlistentry>
 	  <term>Text Subtitles</term>
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	      	<para><guilabel>Automatically load subtitle files</guilabel>: select this option to automatically load any subtitle
-	      	files with the same filename as a movie when the movie is loaded.</para>
+	      	<para><guilabel>Display subtitles when movie is loaded</guilabel>: select this option to automatically display subtitle
+				when the movie is loaded.</para>
 	      </listitem>
 	      <listitem>
                 <para><guilabel>Font</guilabel>: select this option to change
@@ -917,6 +958,10 @@ subtitles, and more.</para>
 				<para><guilabel>Encoding</guilabel>: select this option to change the
 				encoding used to display subtitles.</para>
               </listitem>
+	      <listitem>
+	      	<para><guilabel>Load subtitle files when movie is loaded</guilabel>: select this option to automatically load any subtitle
+	      	files with the same filename as a movie when the movie is loaded.</para>
+	      </listitem>
             </itemizedlist>
           </listitem>
         </varlistentry>
@@ -930,13 +975,21 @@ subtitles, and more.</para>
 	  <listitem>
 	    <itemizedlist>
 	      <listitem>
-	        <para>Select the resize option if you want <application>&app;</application>
+	        <para><guilabel>Use dark theme variant (if available)</guilabel>: select this option if you want to <application>&app;</application>
+                  use dark theme.
+                </para>
+              </listitem>
+	      <listitem>
+	        <para><guilabel>Resize the window when a new video is loaded</guilabel>: select the resize option if you want <application>&app;</application>
                   to automatically resize the window to the size of the video when a new video is loaded.
                 </para>
               </listitem>
               <listitem>
-                <para>Select the screensaver option if you want to allow the screensaver to activate when
-                  playing audio files. Some monitors with integrated speakers may stop playing music when the screensaver is activated.</para>
+                <para><guilabel>Disable screensaver when playing</guilabel>: select the screensaver option if you want to disable the screensaver when
+                  playing video or audio files.</para>
+              </listitem>
+              <listitem>
+                <para><guilabel>Disable deinterlacing of interlaced videos</guilabel>: select the this option if you want to disable the deinterlacing of interlaced videos.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -971,12 +1024,16 @@ subtitles, and more.</para>
       <variablelist>
 	<varlistentry>
 	  <term>Audio Output</term>
-	  <listitem>
-	    <para>Select audio output type from the <guilabel>Audio output type</guilabel>
-              drop-down list.
+	   <listitem>
+	    <itemizedlist>
+	      <listitem>
+	        <para>Select audio output type from the <guilabel>Audio output type</guilabel>
+               drop-down list.
             </para>
-          </listitem>
-        </varlistentry>
+           </listitem>
+	    </itemizedlist>
+       </listitem>
+       </varlistentry>
       </variablelist>
     </sect2>
   </sect1>
