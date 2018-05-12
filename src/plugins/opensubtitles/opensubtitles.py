@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from gi.repository import GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
-from gi.repository import GLib, Gio, Pango, Xplayer # pylint: disable-msg=E0611
+from gi.repository import GLib, GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
+from gi.repository import Gio, Pango, Xplayer # pylint: disable-msg=E0611
 
-import xmlrpclib
+import xmlrpc.client
 import threading
 import xdg.BaseDirectory
 from os import sep, path, mkdir
@@ -15,8 +15,6 @@ gettext.textdomain ("xplayer")
 
 D_ = gettext.dgettext
 _ = gettext.gettext
-
-GObject.threads_init ()
 
 USER_AGENT = 'Xplayer'
 OK200 = '200 OK'
@@ -273,7 +271,7 @@ class OpenSubtitlesModel (object):
             # We have already logged-in before, check the connection
             try:
                 result = self._server.NoOperation (self._token)
-            except (xmlrpclib.Fault, xmlrpclib.ProtocolError):
+            except (xmlrpc.client.Fault, xmlrpc.client.ProtocolError):
                 pass
             if result and result['status'] != OK200:
                 return (True, '')
@@ -281,7 +279,7 @@ class OpenSubtitlesModel (object):
         try:
             result = self._server.LogIn (username, password, self.lang,
                                          USER_AGENT)
-        except (xmlrpclib.Fault, xmlrpclib.ProtocolError):
+        except (xmlrpc.client.Fault, xmlrpc.client.ProtocolError):
             pass
 
         if result and result.get ('status') == OK200:
@@ -321,7 +319,7 @@ class OpenSubtitlesModel (object):
             try:
                 result = self._server.SearchSubtitles (self._token,
                                                        [searchdata])
-            except xmlrpclib.ProtocolError:
+            except xmlrpc.client.ProtocolError:
                 message = _(u'Could not contact the OpenSubtitles website.')
 
             if result.get ('data'):
@@ -348,7 +346,7 @@ class OpenSubtitlesModel (object):
             try:
                 result = self._server.DownloadSubtitles (self._token,
                                                          [subtitle_id])
-            except xmlrpclib.ProtocolError:
+            except xmlrpc.client.ProtocolError:
                 message = error_message
 
             if result and result.get ('status') == OK200:
@@ -424,7 +422,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         self._xplayer.connect ('file-closed', self.__on_xplayer__file_closed)
 
         # Obtain the ServerProxy and init the model
-        server = xmlrpclib.Server ('http://api.opensubtitles.org/xml-rpc')
+        server = xmlrpc.client.Server ('http://api.opensubtitles.org/xml-rpc')
         self._model = OpenSubtitlesModel (server)
 
     def do_deactivate (self):
@@ -586,10 +584,10 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
         thread = SearchThread (self._model, movie_hash, movie_size)
         thread.start ()
-        GObject.idle_add (self._populate_treeview, thread)
+        GLib.idle_add (self._populate_treeview, thread)
 
         self._progress.set_text (_(u'Searching subtitles…'))
-        GObject.timeout_add (350, self._progress_bar_increment, thread)
+        GLib.timeout_add (350, self._progress_bar_increment, thread)
 
     def _populate_treeview (self, search_thread):
         if not search_thread.done:

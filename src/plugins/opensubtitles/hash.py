@@ -21,9 +21,9 @@ def hash_file (name):
     if filesize < 65536 * 2:
         return SIZE_ERROR, 0
 
-    file_handle = file (file_to_hash.get_path (), "rb")
+    file_handle = open (file_to_hash.get_path (), "rb")
 
-    for _ in range (65536 / bytesize):
+    for _ in range(int(65536 / bytesize)):
         buf = file_handle.read (bytesize)
         (l_value,) = struct.unpack (longlongformat, buf)
         file_hash += l_value
@@ -34,7 +34,7 @@ def hash_file (name):
     if file_handle.tell() != max (0, filesize - 65536):
         return SEEK_ERROR, 0
 
-    for _ in range (65536/bytesize):
+    for _ in range(int(65536/bytesize)):
         buf = file_handle.read (bytesize)
         (l_value,) = struct.unpack (longlongformat, buf)
         file_hash += l_value
