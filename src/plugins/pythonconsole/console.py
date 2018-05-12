@@ -36,7 +36,7 @@ import string
 import sys
 import re
 import traceback
-from gi.repository import GObject, Pango, Gtk, Gdk # pylint: disable-msg=E0611
+from gi.repository import GLib, Pango, Gtk, Gdk # pylint: disable-msg=E0611
 
 class PythonConsole(Gtk.ScrolledWindow):
 	def __init__(self, namespace = {}, destroy_cb = None):
@@ -59,7 +59,7 @@ class PythonConsole(Gtk.ScrolledWindow):
 		self.command = buffer.create_tag("command")
 		self.command.set_property("foreground", "blue")
 
-		self.__spaces_pattern = re.compile(r'^\s+')		
+		self.__spaces_pattern = re.compile(r'^\s+')
 		self.namespace = namespace
 
 		self.block_command = False
@@ -82,8 +82,8 @@ class PythonConsole(Gtk.ScrolledWindow):
 		# Signals
 		self.view.connect("key-press-event", self.__key_press_event_cb)
 		buffer.connect("mark-set", self.__mark_set_cb)
-		
- 		
+
+
 	def __key_press_event_cb(self, view, event):
 		modifier_mask = Gtk.accelerator_get_default_mod_mask()
 		event_state = event.state & modifier_mask
@@ -114,7 +114,7 @@ class PythonConsole(Gtk.ScrolledWindow):
 				cur = buffer.get_end_iter()
 				
 			buffer.place_cursor(cur)
-			GObject.idle_add(self.scroll_to_end)
+			GLib.idle_add(self.scroll_to_end)
 			return True
 		
 		elif event.keyval == Gdk.KEY_Return:
@@ -158,21 +158,21 @@ class PythonConsole(Gtk.ScrolledWindow):
 			cur = buffer.get_end_iter()
 			buffer.move_mark(inp_mark, cur)
 			buffer.place_cursor(cur)
-			GObject.idle_add(self.scroll_to_end)
+			GLib.idle_add(self.scroll_to_end)
 			return True
 
 		elif event.keyval == Gdk.KEY_KP_Down or event.keyval == Gdk.KEY_Down:
 			# Next entry from history
 			view.emit_stop_by_name("key_press_event")
 			self.history_down()
-			GObject.idle_add(self.scroll_to_end)
+			GLib.idle_add(self.scroll_to_end)
 			return True
 
 		elif event.keyval == Gdk.KEY_KP_Up or event.keyval == Gdk.KEY_Up:
 			# Previous entry from history
 			view.emit_stop_by_name("key_press_event")
 			self.history_up()
-			GObject.idle_add(self.scroll_to_end)
+			GLib.idle_add(self.scroll_to_end)
 			return True
 
 		elif event.keyval == Gdk.KEY_KP_Left or event.keyval == Gdk.KEY_Left or \
@@ -243,22 +243,22 @@ class PythonConsole(Gtk.ScrolledWindow):
 		else:
 		    buf.insert_with_tags(buf.get_end_iter(), text, tag)
 
-		GObject.idle_add(self.scroll_to_end)
- 	
- 	def eval(self, command, display_command = False):
+		GLib.idle_add(self.scroll_to_end)
+
+	def eval(self, command, display_command = False):
 		buffer = self.view.get_buffer()
 		lin = buffer.get_mark("input-line")
 		buffer.delete(buffer.get_iter_at_mark(lin),
 		              buffer.get_end_iter())
- 
+
 		if isinstance(command, list) or isinstance(command, tuple):
- 			for c in command:
-		 		if display_command:
-		 			self.write(">>> " + c + "\n", self.command)
- 				self.__run(c)
+			for c in command:
+				if display_command:
+					self.write(">>> " + c + "\n", self.command)
+				self.__run(c)
 		else:
-	 		if display_command:
-	 			self.write(">>> " + c + "\n", self.command)
+			if display_command:
+				self.write(">>> " + c + "\n", self.command)
 			self.__run(command) 
 
 		cur = buffer.get_end_iter()
@@ -268,17 +268,17 @@ class PythonConsole(Gtk.ScrolledWindow):
 		buffer.move_mark_by_name("input", cur)
 		self.view.scroll_to_iter(buffer.get_end_iter(), 0.0, False, 0.5, 0.5)
 	
- 	def __run(self, command):
+	def __run(self, command):
 		sys.stdout, self.stdout = self.stdout, sys.stdout
 		sys.stderr, self.stderr = self.stderr, sys.stderr
-               
+
 		try:
 			try:
 				r = eval(command, self.namespace, self.namespace)
 				if r is not None:
-					print `r`
+					print(r)
 			except SyntaxError:
-				exec command in self.namespace
+				exec(command, self.namespace)
 		except:
 			if hasattr(sys, 'last_type') and sys.last_type == SystemExit:
 				self.destroy()
@@ -308,6 +308,6 @@ class OutFile:
 	def readlines(self):     return []
 	def write(self, s):      self.console.write(s, self.tag)
 	def writelines(self, l): self.console.write(l, self.tag)
-	def seek(self, a):       raise IOError, (29, 'Illegal seek')
-	def tell(self):          raise IOError, (29, 'Illegal seek')
+	def seek(self, a):       raise IOError((29, 'Illegal seek'))
+	def tell(self):          raise IOError((29, 'Illegal seek'))
 	truncate = tell
