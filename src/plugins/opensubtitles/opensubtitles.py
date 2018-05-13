@@ -342,6 +342,7 @@ class OpenSubtitlesModel (object):
         (log_in_success, log_in_message) = self._log_in ()
 
         if log_in_success:
+            result = None
             try:
                 result = self._server.DownloadSubtitles (self._token,
                                                          [subtitle_id])
