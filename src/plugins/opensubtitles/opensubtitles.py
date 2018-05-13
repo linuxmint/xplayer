@@ -5,7 +5,6 @@ from gi.repository import Gio, Pango, Xplayer # pylint: disable-msg=E0611
 
 import xmlrpc.client
 import threading
-import xdg.BaseDirectory
 from os import sep, path, mkdir
 import gettext
 
@@ -618,19 +617,12 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
             subtitle_format = model.get_value (subtitle_iter, 1)
 
             if not filename:
-                bpath = xdg.BaseDirectory.xdg_cache_home + sep
+                bpath = GLib.get_user_cache_dir() + sep
                 bpath += 'xplayer' + sep
 
                 directory = Gio.file_new_for_path (bpath + 'subtitles' + sep)
-
                 if not directory.query_exists (None):
-                    if not path.exists (bpath):
-                        mkdir (bpath)
-                    if not path.exists (bpath + 'subtitles' + sep):
-                        mkdir (bpath + 'subtitles' + sep)
-                    # FIXME: We can't use this function until we depend on
-                    # GLib (PyGObject) 2.18
-                    # directory.make_directory_with_parents ()
+                        directory.make_directory_with_parents (None);
 
                 subtitle_file = Gio.file_new_for_path (self._filename)
                 movie_name = subtitle_file.get_basename ().rpartition ('.')[0]
