@@ -17,24 +17,24 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2016-12-26 19:09+0000\n"
-"Last-Translator: Karlis <Unknown>\n"
+"PO-Revision-Date: 2018-02-26 08:02+0000\n"
+"Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:43+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:23+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 "Language: et\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr ""
+msgstr "Välju täisekraanvaatest"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
+msgstr "Teiste ekraanide tühjendamine"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
@@ -178,7 +178,7 @@ msgstr "Hetkel aktiivsete (laaditud ja töötavate) pluginate nimekiri."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr ""
+msgstr "Tumeda teema variandi kasutamine (kui olemas)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -258,11 +258,11 @@ msgstr "Esitamine"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Failide esitust jätkatakse sealt, kus pooleli jäi"
+msgstr "Faili esitust jätkatakse sealt, kus pooleli jäi"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "Tekstilised subtiitrid"
+msgstr "Tekstisubtiitrid"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
@@ -270,7 +270,7 @@ msgstr "_Video avamisel laaditakse subtiitrid"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr ""
+msgstr "_Filmi laadimisel näidatakse subtiitreid"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -286,7 +286,7 @@ msgstr "Välised peatükid"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "_Peatükkide failid laaditakse koos filmiga"
+msgstr "_Peatükkide failide laadimine koos filmiga"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -303,7 +303,7 @@ msgstr "_Uue video avamisel sobitatakse akna suurus"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Üle_realaotusega videotelt ülerealaotuse eemaldamine"
+msgstr "Üle_realaotuse eemaldamise keeld"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
@@ -432,7 +432,7 @@ msgstr "Kanaleid:"
 #: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
 #: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr ""
+msgstr "Meediaesitaja"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
@@ -469,7 +469,7 @@ msgstr "Täisekraanvaade"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
-msgstr ""
+msgstr "_Fail"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -481,11 +481,11 @@ msgstr "Faili avamine"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr ""
+msgstr "Ava _asukoht..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr ""
+msgstr "Faili avamine võrgust"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
@@ -517,7 +517,7 @@ msgstr "_Lõpeta"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr ""
+msgstr "Välju programmist"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
@@ -537,7 +537,7 @@ msgstr "_Eelistused"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr ""
+msgstr "Rakenduse seadistamine"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
@@ -557,7 +557,7 @@ msgstr "_Täisekraanvaade"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr ""
+msgstr "Lülitumine täisekraanvaatesse"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
@@ -625,7 +625,7 @@ msgstr "_Helimenüü"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Liigu audio menüüsse"
+msgstr "Helimenüü avamine"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -645,19 +645,19 @@ msgstr "Peatükimenüü avamine"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "_Järgmine lõik/film"
+msgstr "_Järgmine peatükk/film"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Järgmisele filmilõigule või filmile lülitumine"
+msgstr "Järgmisele peatükile või filmile liikumine"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "_Eelmine lõik/film"
+msgstr "_Eelmine peatükk/film"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Eelmisele filmilõigule või filmile lülitumine"
+msgstr "Eelmisele peatükile või filmile liikumine"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
@@ -701,19 +701,19 @@ msgstr "Lähem teave selle rakenduse kohta"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr ""
+msgstr "_Kordav režiim"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr ""
+msgstr "Sama faili kordamine"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr ""
+msgstr "_Juhuesituse režiim"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr ""
+msgstr "Esitamine juhuslikus järjekorras"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
@@ -1281,7 +1281,7 @@ msgstr "Tekkis veaolukord"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "Eelmine lõik/film"
+msgstr "Eelmine peatükk/film"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
@@ -1289,7 +1289,7 @@ msgstr "Esita / pausi"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "Järgmine lõik/film"
+msgstr "Järgmine peatükk/film"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
@@ -1853,7 +1853,7 @@ msgstr "Salvesta"
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
-"Salvestamata jätmise korral lähevad pealkirjade nimekirjas tehtud muudatused "
+"Salvestamata jätmise korral lähevad peatükkide nimekirjas tehtud muudatused "
 "kaotsi."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95

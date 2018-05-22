@@ -1,29 +1,27 @@
-# translation of bn_IN.po to Bengali INDIA
-# This file is distributed under the same license as the XPLAYER package.
+# Bosnian translation for linuxmint
+# Copyright (c) 2018 Rosetta Contributors and Canonical Ltd 2018
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-# Runa Bhattacharjee<runa77@softhome.net>, 2003.
-# Runa Bhattacharjee <runabh@gmail.com>, 2007.
-# Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
-# Runa Bhattacharjee <runab@redhat.com>, 2008, 2009, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: bn_IN\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&component=general\n"
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2016-02-03 12:44+0000\n"
-"Last-Translator: Runa Bhattacharjee <Unknown>\n"
-"Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
+"PO-Revision-Date: 2018-03-14 22:08+0000\n"
+"Last-Translator: Deni Dulic <Unknown>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2018-05-22 09:23+0000\n"
 "X-Generator: Launchpad (build 18658)\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr ""
+msgstr "Napusti prikaz preko cijelog ekrana"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
@@ -31,43 +29,41 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "অডিও চালনার সময় স্ক্রিন-সেভার সক্রিয় করার সুবিধা উপলব্ধ করা হবে"
+msgstr "Dozvoli pokretanje čuvara ekrana kada je puštena muzika"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"অডিও চালনার সময় স্ক্রিন-সেভার সক্রিয় করার সুবিধা উপলব্ধ করা হবে। মনিটর থেকে "
-"বিদ্যুৎ প্রয়োগ করে চালিত স্পিকারের ক্ষেত্রে এটি নিষ্ক্রিয় করুন।"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "ভিডিও-র উজ্জ্বলতার মাত্রা"
+msgstr "Osvjetljenje video snimka"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "ভিডিও-র বৈপরিত্যের মাত্রা"
+msgstr "Kontrast video snimka"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
-msgstr "ভিডিও-র হিউ-র মাত্রা"
+msgstr "Nijanse video snimka"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "ভিডিও-র স্যাচুরেশন মাত্রা"
+msgstr "Zasićenje video snimka"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "ফাইল লোড হলে স্বয়ংক্রিয়ভাবে ক্যানভাসের মাপ পুনরায় নির্ধারণ করা হবে"
+msgstr "Promjeni automatski veličinu platna pri učitanju datoteke"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
-msgstr "পুনরাবৃত্তি মোড"
+msgstr "Režim ponavljanja"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr "পাঁচমিশালি মোড"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
@@ -75,15 +71,15 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "প্লেব্যাক ইঞ্জিনের জন্য ডিবাগ সক্রিয় করা হবে কিনা"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "ব্যবহারের জন্য অডিও আউটপুটের ধরন"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
-msgstr "নেটওয়ার্ক বাফারের প্রান্তিক মাপ"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
@@ -93,7 +89,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "অনুবাদলিপির ফন্ট"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
@@ -101,7 +97,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "অনুবাদলিপির এনকোডিং"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
@@ -109,7 +105,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "\"খুলুন...\" ডায়লগ বক্সগুলির ক্ষেত্রে নির্ধারিত ডিফল্ট অবস্থান"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
@@ -119,7 +115,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "\"পর্দার ছবি নিন\" শীর্ষক ডায়লগ বক্সের ডিফল্ট অবস্থান"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
@@ -130,16 +126,14 @@ msgstr ""
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
-"ব্যবহারকারীর ব্যক্তিগত ডিরেক্টরির মধ্যে প্লাগ-ইন নিষ্ক্রিয় করা হবে কি না"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
-#| msgid "Whether to disable the plugins in the user's home directory"
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "কি-বোর্ড শর্ট-কাট নিষ্ক্রিয় করা হবে কি না"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "চলচ্চিত্র লোত করামাত্র স্বয়ংক্রিয়রূপে অনুবাদলিপি লোড করা হবে কি না"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
@@ -167,88 +161,87 @@ msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr "অপসারণ (_R)"
+msgstr ""
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "প্লে-লিস্ট থেকে ফাইল মুছে ফেলুন"
+msgstr ""
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr "অবস্থান কপি করুন(_C)"
+msgstr ""
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr "নির্বাচিত অবস্থান ক্লিপ-বোর্ডে কপি করুন"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "অনুবাদলিপির লেখনি নির্বাচন করুন...(_S)"
+msgstr ""
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "অনুবাদলিপির জন্য ব্যবহারযোগ্য ফাইল নির্বাচন করুন"
+msgstr ""
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "যোগ করুন..."
+msgstr ""
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr "অপসারণ"
+msgstr ""
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "প্লে-লিস্ট সংরক্ষণ করুন..."
+msgstr ""
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "উপরে স্থানান্তর"
+msgstr ""
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "নীচে স্থানান্তর"
+msgstr ""
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
 msgid "Stereo"
-msgstr "স্টিরিও"
+msgstr ""
 
 #: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr "৪-চ্যানেল"
+msgstr ""
 
 #: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr "৪.১-চ্যানেল"
+msgstr ""
 
 #: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr "৫.০-চ্যানেল"
+msgstr ""
 
 #: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr "৫.১-চ্যানেল"
+msgstr ""
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr "AC3 পাসথ্রু"
+msgstr ""
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Xplayer সংক্রান্ত পছন্দ"
+msgstr ""
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr "চালানো হবে"
+msgstr ""
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "সর্বশেষ স্থান থেকে আরম্ভ করে ফাইল চালানো হবে"
+msgstr ""
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "অনুবাদলিপি"
+msgstr ""
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
@@ -260,11 +253,11 @@ msgstr ""
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
-msgstr "ফন্ট: (_F)"
+msgstr ""
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "এনকোডিং: (_E)"
+msgstr ""
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
@@ -276,12 +269,12 @@ msgstr ""
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
-msgstr "সাধারণ"
+msgstr ""
 
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr "প্রদর্শন"
+msgstr ""
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
@@ -308,114 +301,110 @@ msgstr ""
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
-msgstr "রঙের ভারসাম্য"
+msgstr ""
 
 #: ../data/preferences.ui.h:29
 msgid "_Brightness:"
-msgstr "উজ্জ্বলতা: (_B)"
+msgstr ""
 
 #: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
-msgstr "বৈপরীত্য: (_n)"
+msgstr ""
 
 #: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
-msgstr "স্যাচুরেশন: (_u)"
+msgstr ""
 
 #: ../data/preferences.ui.h:32
 msgid "_Hue:"
-msgstr "হিউ: (_H)"
+msgstr ""
 
 #: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr "ডিফল্ট মান পুনরায় স্থাপন করুন"
+msgstr ""
 
-# msgstr "অ্যাঙ্গেল (কোণ) মেনু"
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr "অডিও আউটপুট"
+msgstr ""
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr "অডিও আউটপুটের ধরন: (_A)"
+msgstr ""
 
-# msgstr "কোনটিই নয়"
-# msgstr "একটিও নয়"
 #: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr "অডিও"
+msgstr ""
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:38
 msgid "Normal"
-msgstr "স্বাভাবিক"
+msgstr ""
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:40
 msgid "Large"
-msgstr "বৃহৎ"
+msgstr ""
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:42
 msgid "Extra Large"
-msgstr "অধিক বৃহৎ"
+msgstr ""
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr "শিরোনাম:"
+msgstr ""
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr "শিল্পী:"
+msgstr ""
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "অবকাল:"
+msgstr ""
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr "বৎসর:"
+msgstr ""
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
-msgstr "সংকলন:"
+msgstr ""
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr "বক্তব্য:"
+msgstr ""
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
 msgstr ""
 
-# ঠিক করেন
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr "ভিডিও"
+msgstr ""
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr "দিকমাত্রা:"
+msgstr ""
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr "কোডেক:"
+msgstr ""
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "ফ্রেমের মাত্রা:"
+msgstr ""
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr "বিটের মাত্রা:"
+msgstr ""
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "নমূণার মাত্রা:"
+msgstr ""
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr "চ্যানেল:"
+msgstr ""
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
@@ -432,33 +421,28 @@ msgstr ""
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
 msgstr ""
 
-# msgstr "চলচ্চিত্রটি চালানো অথবা স্থগিত রাখা হোক"
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "চালানো/থামানো হবে"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "পরবর্তী"
+msgstr ""
 
-# msgstr "চালানো/স্থগিত রাখা হোক"
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "পূর্ববর্তী"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
 msgstr ""
 
-# msgstr "বের করে দেওয়া হোক (_ব)"
-# Eject অর্থে 'বার' শব্দটা সম্ভবত কথ্য ভাষার। Dict দেখেন।
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
-#| msgid "_Fullscreen"
 msgid "Fullscreen"
-msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
@@ -466,105 +450,95 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "খুলুন...(_O)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr "ফাইল খুলুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "চিহ্নিত অবস্থান খুলুন...(_L)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "স্থানীয় অবস্থান বহির্ভূত ফাইল খুলুন"
+msgstr ""
 
-# বাংলায় লিখতে পারেন
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "বহিষ্কার (_E)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "বর্তমান ডিস্ক বের করে নিন"
+msgstr ""
 
-# এটা কি ঠিক আছে ?
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr "বিবিধ বৈশিষ্ট্য (_P)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "বর্তমানে স্ট্রিমের বৈশিষ্ট্য প্রদর্শন করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "চালানো / থামানো হবে (_a)"
+msgstr ""
 
-# ঠিক করেন
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "চলচ্চিত্র চালানো অথবা থামানো হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr "প্রস্থান (_Q)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr "প্রোগ্রাম থেকে প্রস্থান"
+msgstr ""
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr "সম্পাদনা (_E)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "প্লে-লিস্ট ফাঁকা করুন (_C)"
+msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "প্লে-লিস্ট পরিষ্কার করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "বৈশিষ্ট্যাবলী (_n)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "অ্যাপ্লিকেশন কনফিগার করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "প্লাগ-ইন..."
+msgstr ""
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "অ্যাপ্লিকেশনের বৈশিষ্ট্য বৃদ্ধি করার জন্য প্লাগ-ইন কনফিগার করুন"
+msgstr ""
 
-# ঠিক করেন
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr "প্রদর্শন (_V)"
+msgstr ""
 
-# msgstr "বের করে দেওয়া হোক (_ব)"
-# Eject অর্থে 'বার' শব্দটা সম্ভবত কথ্য ভাষার। Dict দেখেন।
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন (_F)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "চলচ্চিত্র অনুযায়ী উইন্ডোর মাপ পরিবর্তন করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
@@ -572,7 +546,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "ভিডিও-র মাপ অনুযায়ী অর্ধেক মাপ নির্ধারণ করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
@@ -580,7 +554,7 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "ভিডিও-র মাপ অনুযায়ী প্রকৃত মাপ নির্ধারণ করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
@@ -588,181 +562,168 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "ভিডিও-র মাপ অনুযায়ী দ্বিগুণ মাপ নির্ধারণ করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr "অ্যাসপেক্টের অনুপাত (_A)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr "অ্যাঙ্গেল পরিবর্তন করুন (_g)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "ক্যামেরার কোণ পরিবর্তন করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr "চালনা (_G)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr "DVD মেনু (_D)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "DVD মেনু প্রদর্শন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr "শিরোনাম মেনু (_T)"
+msgstr ""
 
-# msgstr "অধ্যায় মেনুতে দেখানো হোক"
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr "শিরোনাম মেনু প্রদর্শন"
+msgstr ""
 
-# msgstr "অ্যাঙ্গেল (কোণ) মেনু"
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr "অডিও মেনু (_u)"
+msgstr ""
 
-# msgstr "অ্যাঙ্গেল (কোণ) মেনু দেখানো হোক"
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "অডিও মেনু প্রদর্শন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr "অ্যাঙ্গেল মেনু (_A)"
+msgstr ""
 
-# msgstr "ডিভিডি মেনু দেখানো হোক"
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr "অ্যাঙ্গেল মেনু প্রদর্শন"
+msgstr ""
 
-# msgstr "নতুন ভিডিও লোড করা হলে স্বয়ংক্রিয়ভাবে উইন্ডোর আকার পরিবর্তন করা হোক" <-- একটু সোজা করে দিলাম ;-)
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "অধ্যায় মেনু (_C)"
+msgstr ""
 
-# msgstr "অডিও মেনু দেখানো হোক"
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "চ্যাপ্টার মেনু প্রদর্শন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "পরবর্তী অধ্যায়/চলচ্চিত্র (_N)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "পরবর্তি অধ্যায় অথবা চলচ্চিত্র"
+msgstr ""
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "পূর্ববর্তী অধ্যায়/চলচ্চিত্র (_P)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "পূর্ববর্তী অধ্যায় অথবা চলচ্চিত্র"
+msgstr ""
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr "শব্দ (_S)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "শব্দের মাত্রা বৃদ্ধি করুন (_U)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "আওয়াজ বৃদ্ধি করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "শব্দের মাত্রা হ্রাস করুন (_D)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "আওয়াজ হ্রাস করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr "সাহায্য (_H)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr "সূচিপত্র (_C)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr "সহায়িকার বিষয়বস্তু"
+msgstr ""
 
-# msgstr "কোনটিই নয়"
-# msgstr "একটিও নয়"
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "পরিচিতি (_A)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "অ্যাপ্লিকেশন পরিচিতি"
+msgstr ""
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr "পুনরাবৃত্তি মোড (_R)"
+msgstr ""
 
-# সংরক্ষণ, করা হোক
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "পুনরাবৃত্তি মোড নির্ধারণ করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "পাঁচমিশেলি মোড (_l)"
+msgstr ""
 
-# সংরক্ষণ, করা হোক
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "পাচঁমিশেলি মোড নির্ধারণ করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "নিয়ন্ত্রক বাটন প্রদর্শন করা হবে (_C)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "নিয়ন্ত্রক বাটন প্রদর্শন করা হবে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr "সাইড-বার (_i)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr "সাইড-বার প্রদর্শন অথবা আড়াল করুন"
+msgstr ""
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
 msgstr ""
 
-# msgstr "_অ্যাস্পেক্টের (আবয়ব) অনুপাত পরিবর্তন করা হোক"
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "স্বয়ংক্রিয়রূপে অ্যাস্পেক্টের অনুপাত নির্ধারণ করে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr "চৌকো"
+msgstr ""
 
-# msgstr "_অ্যাস্পেক্টের (আবয়ব) অনুপাত পরিবর্তন করা হোক"
-# ../data/xplayer.glade.ue:h:71
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "চতুষ্কোন অ্যাস্পেক্ট অনুপাত নির্ধারণ করে"
+msgstr ""
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
@@ -790,63 +751,57 @@ msgstr ""
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr "অনুবাদলিপি (_u)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr "ভাষা (_L)"
+msgstr ""
 
-# msgstr "১:২ অনুপাতে প্রদর্শন করা হোক"
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "বড় মাপে প্রদর্শন"
+msgstr ""
 
-# msgstr "১:২ অনুপাতে প্রদর্শন করা হোক"
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "বড় মাপে প্রদর্শন"
+msgstr ""
 
-# msgstr "পেছনে"
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr "এগিয়ে চলুন (_F)"
+msgstr ""
 
-# msgstr "পেছনে"
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr "এগিয়ে চলুন"
+msgstr ""
 
-# আগেরটার মত
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "পিছিয়ে যান (_B)"
+msgstr ""
 
-# আগেরটার মত
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "পিছিয়ে যান"
+msgstr ""
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr "সময় প্রাপ্ত করতে ব্যবহৃত বার"
+msgstr ""
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "খোলার উদ্দেশ্যে ফাইলের ঠিকানা উল্লেখ করুন: (_a)"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr "RTSP সার্ভারের জন্য অনুরোধ করা পাসওয়ার্ড"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr "অডিও ট্র্যাক সংখ্যা #%d"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "অনুবাদলিপি #%d"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
@@ -908,15 +863,15 @@ msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5095
 msgid "Surround"
-msgstr "সারাউন্ড"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5097
 msgid "Mono"
-msgstr "মোনো"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5383
 msgid "Media contains no supported video streams."
-msgstr "কোনো সমর্থিত ভিডিও স্ট্রিম মিডিয়ার মধ্যে উপস্থিত নেই।"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5573
 msgid ""
@@ -924,69 +879,65 @@ msgid ""
 "installed."
 msgstr ""
 
-# msgstr "এই চলচ্চিত্রটি ভাঙা এবং এর পরবর্তি অংশ চালানো সম্ভব নয়" <-- বানান
-# msgstr "এই চলচ্চিত্রটি ত্রুটিযুক্ত এবং এর পরবর্তী অংশ চালানো সম্ভব নয়"
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "এটি বৈধ .desktop ফাইল নয়"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "ডেস্কটপ ফাইলের অজ্ঞাত সংস্করণ '%s'"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "%s আরম্ভ করা হচ্ছে"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "অ্যাপ্লিকেশন দ্বারা কমান্ড-লাইনের মাধ্যমে নথিপত্র গ্রহণ করা হয় না"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "প্রারম্ভিক বিকল্প অজানা: %d"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"'Type=Link' ডেস্কটপ এনট্রির ক্ষেত্রে নথিপত্রের URI উল্লেখ করা সম্ভব নয়"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "প্রারম্ভ করার যোগ্য বস্তু নয়"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr "ফাইলের বিন্যাস: %s (_F)"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr "সকল ফাইল"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "সমর্থিত সকল ফাইল"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr "এক্সটেনশন অনুযায়ী"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr "ফাইলের বিন্যাস"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "এক্সটেনশন"
+msgstr ""
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -996,41 +947,38 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"`%s'-র জন্য ব্যবহারের উদ্দেশ্যে ফাইলের বিন্যাসটি এই প্রোগ্রাম দ্বারা সনাক্ত "
-"করা সম্ভব হয়নি। অনুগ্রহ করে এই ফাইলের জন্য একটি পরিচিত এনক্সটেশন  প্রয়োগ "
-"করুন অথবা নিম্নলিখিত তালিকা থেকে একটি ফাইলের বিন্যাস নির্বাচন করুন।"
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr "ফাইলের বিন্যাস সনাক্ত করা যায়নি"
+msgstr ""
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ বিচ্ছিন্ন করা হবে"
+msgstr ""
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "সংরক্ষিত কনফিগারেশন ধারণকারী ফাইল উল্লেখ করুন"
+msgstr ""
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr "FILE"
+msgstr ""
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "সেশান পরিচালনার ID উল্লেখ করুন"
+msgstr ""
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প:"
+msgstr ""
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প প্রদর্শন করা হবে"
+msgstr ""
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1043,7 +991,7 @@ msgstr "সেশান পরিচালনা সংক্রান্ত ব
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
-msgstr "%d:%02d:%02d"
+msgstr ""
 
 #. minutes:seconds
 #. Translators: This is a time format, like "5:02" for 5
@@ -1055,7 +1003,7 @@ msgstr "%d:%02d:%02d"
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
-msgstr "%d:%02d"
+msgstr ""
 
 #. Title
 #. Artist
@@ -1069,7 +1017,7 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:119
 #: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
-msgstr "অজানা"
+msgstr ""
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
@@ -1108,34 +1056,33 @@ msgstr ""
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
-msgstr "০ হার্টজ"
+msgstr ""
 
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr "০ চ্যানেল"
+msgstr ""
 
-# msgstr "টোটেম ভিডিও উইন্ডো" <-- ঠিক আছেনা ?
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d ঘন্টা"
-msgstr[1] "%d ঘন্টা"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d মিনিট"
-msgstr[1] "%d মিনিট"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d সেকেন্ড"
-msgstr[1] "%d সেকেন্ড"
+msgstr[0] ""
+msgstr[1] ""
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1154,7 +1101,7 @@ msgstr ""
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr "০ সেকেন্ড"
+msgstr ""
 
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
@@ -1163,52 +1110,47 @@ msgid_plural "%d frames per second"
 msgstr[0] ""
 msgstr[1] ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "অডিও প্রি-ভিউ"
+msgstr ""
 
 #: ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
-msgstr "থ্রেড-সেফ লাইব্রেরি চালু করা যায়নি।"
+msgstr ""
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "আপনার সিস্টেমের ইনস্টলেশন পরীক্ষা করুন। Xplayer এখন বন্ধ করা হবে।"
+msgstr ""
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr "এখন চালানো হবে (_P)"
+msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "প্লে-লিস্টের মধ্যে যোগ করুন (_A)"
+msgstr ""
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr "বাতিল"
+msgstr ""
 
 #: ../src/xplayer-fullscreen.c:553
 msgid "No File"
-msgstr "ফাইল নেই।"
+msgstr ""
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "'%s' ইন্টারফেস লোড করা যায়নি। %s"
+msgstr ""
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr "ফাইল বর্তমানে উপস্থিত নেই।"
+msgstr ""
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Xplayer সঠিকভাবে ইনস্টল করা হয়েছে কিনা পরীক্ষা করুন।"
+msgstr ""
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1217,9 +1159,6 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা প্রকাশিত GNU "
-"General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; "
-"লাইসেন্সের সংস্করণ ২ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।"
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1228,10 +1167,6 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Xplayer বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, "
-"কিন্তু এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো "
-"সুনির্দিষ্ট কর্ম সাধনের জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে "
-"GNU General Public License পড়ুন।"
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1239,27 +1174,22 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Xplayer-র সাথে GNU General Public License-র একটি প্রতিলিপি উপলব্ধ হওয়া উচিত; "
-"না থাকলে নিম্নলিখিত ঠিকানায় লিখে তা সংগ্রহ করুন Free Software Foundation, "
-"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer দ্বারা প্রোপ্রাইটারি GStreamer প্লাগ-ইন ব্যবহারের জন্য প্রযোজ্য "
-"অনুমোদন উপস্থিত রয়েছে।"
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
 #: ../src/xplayer-object.c:1458
 msgid "None"
-msgstr "ফাঁকা"
+msgstr ""
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "প্লাগ-ইন কনফিগার করুন"
+msgstr ""
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1267,255 +1197,229 @@ msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
-"%s\n"
-"কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিকল্পের সম্পূর্ণ তালিকা দেখার জন্য '%s --"
-"help' ব্যবহার করুন।\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
 #, c-format
-#| msgid "Xplayer Website"
 msgid "Xplayer %s"
-msgstr "Xplayer %s"
+msgstr ""
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "থামানো হবে"
+msgstr ""
 
 #: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
-msgstr "চালানো হবে"
+msgstr ""
 
 #: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Xplayer সহযোগে '%s' চালানো যায়নি।"
+msgstr ""
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Xplayer দ্বারা সহায়িকার বিষয় বস্তু প্রদর্শন করা যায়নি।"
+msgstr ""
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
-msgstr "সমস্যা উৎপন্ন হয়েছে"
+msgstr ""
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "পূর্ববর্তী অধ্যায়/চলচ্চিত্র"
+msgstr ""
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr "চালানো / থামানো হবে"
+msgstr ""
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "পরবর্তী অধ্যায়/চলচ্চিত্র"
+msgstr ""
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "Xplayer আরম্ভ করা যায়নি।"
+msgstr ""
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
-msgstr "কারণ নেই।"
+msgstr ""
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "অবস্থান খুলুন..."
+msgstr ""
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "ডি-বাগ ব্যবস্থা সক্রিয় করা হবে"
+msgstr ""
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "পরবর্তী অংশে অনুসন্ধান"
+msgstr ""
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "পূর্ববর্তী অংশে অনুসন্ধান"
+msgstr ""
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "শব্দের মাত্রা বৃদ্ধি করুন"
+msgstr ""
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "শব্দের মাত্রা হ্রাস করুন"
+msgstr ""
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "নিঃশব্দ করুন"
+msgstr ""
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন করা হবে/হবে না"
+msgstr ""
 
-# Playlist=চলচ্চিত্রের তালিকা
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "নিয়ন্ত্রক বাটন প্রদর্শন/আড়াল করা হবে"
+msgstr ""
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr "প্রস্থান"
+msgstr ""
 
-# msgstr "প্রস্থান"
-# "বেরিয়ে" যাওয়া কথ্য ভাষায় Use হয়। তাই "বাহির হয়ে আসা" লেখা উচিৎ।
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr "সারিবদ্ধ করা হবে"
+msgstr ""
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr "পরিবর্তন করা হবে"
+msgstr ""
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr "সিক"
+msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "প্লে-লিস্টের ইনডেক্স"
+msgstr ""
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "চালানোর জন্য চিহ্নিত চলচ্চিত্র।"
+msgstr ""
 
-# msgstr "বৎসর:" <-- বানান
-# msgstr "বছর:"
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "- চলচ্চিত্র ও সংগীত পরিবেশন"
+msgstr ""
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
 msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr "MP3 ShoutCast প্লে-লিস্ট"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "MP3 অডিও (স্ট্রিম করা)"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "MP3 অডিও (স্ট্রিম করা, DOS বিন্যাস)"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr "XML সহযোগে যৌথভাবে ব্যবহারযোগ্য প্লে-লিস্ট"
+msgstr ""
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr "শিরোনাম %d"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr "প্লে-লিস্ট সংরক্ষণ করা যায়নি"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "প্লে-লিস্ট সংরক্ষণ করুন"
+msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "প্লে-লিস্ট"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
 
-# Header পরিবর্তন করা হইছে
-# Chapter=অধ্যায়
-# অশুদ্ধ - পরিক্ষা
-# শুদ্ধ - পরীক্ষা
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr "প্লে-লিস্ট সংক্রান্ত সমস্যা"
+msgstr ""
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr "পছন্দ"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "অনুবাদলিপির ফন্ট নির্বাচন"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "বর্তমানে ব্যবহৃত লোকেইল"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr "আরবি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr "আর্মেনিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "বল্টিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr "সেল্টিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "মধ্য ইউরোপিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "সরলীকৃত চীনা"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "পারম্পরিক চীনা"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr "ক্রোয়িশান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1524,94 +1428,94 @@ msgstr "ক্রোয়িশান"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "সিরিলিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "সিরিলিক/রুশি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "সিরিলিক/ইউক্রেনিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "জর্জিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr "গ্রিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr "গুজরাতি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
-msgstr "গুরুমুখী"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr "হিব্রু"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "হিব্রু ভিসুয়াল"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr "হিন্দি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "আইসল্যান্ডিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr "জাপানি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr "কোরিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "নর্ডিক"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr "ফার্সি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr "রোমেনিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "দক্ষিণ ইউরোপিয়ান"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr "থাই"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "তুর্কি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1619,7 +1523,7 @@ msgstr "তুর্কি"
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr "ইউনিকোড"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1627,57 +1531,53 @@ msgstr "ইউনিকোড"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "পশ্চিমি"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "ভিয়েতনামিস"
+msgstr ""
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
 #, c-format
 msgid "%s / %s"
-msgstr "%s / %s"
+msgstr ""
 
 #. Seeking to Time / Total Length
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "%s / %s অনুসন্ধান করা হবে"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr "সমস্ত ফাইল"
+msgstr ""
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "সমর্থিত ফাইল"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "অডিও ফাইল"
+msgstr ""
 
-# ঠিক করেন
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "ভিডিও ফাইল"
+msgstr ""
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "অনুবাদলিপির ফাইল"
+msgstr ""
 
-# msgstr "এই পাসওয়ার্ডটি মনে রাখা হবে"
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "অনুবাদলিপি নির্বাচন করুন"
+msgstr ""
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "চলচ্চিত্র অথবা প্লে-লিস্ট নির্বাচন করুন"
+msgstr ""
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
@@ -1693,21 +1593,18 @@ msgid ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 msgstr ""
-"<b>%s</b>: %s\n"
-"<b>%s</b>: %d×%d\n"
-"<b>%s</b>: %s"
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr "ফাইলের নাম"
+msgstr ""
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "রেসোলিউশন"
+msgstr ""
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr "অবকাল"
+msgstr ""
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
@@ -1727,50 +1624,50 @@ msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "ভিডিও ডিস্ক রেকর্ডার"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "(S)VCD অথবা DVD রেকর্ড করতে ব্যবহৃত হয়"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "ভিডিও ডিস্ক নির্মাণ করুন...(_C)"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "বর্তমানে চলমান চলচ্চিত্র থেকে ভিডিও DVD অথবা (S)VCD নির্মাণ করুন"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "ভিডিও DVD কপি করুন...(_o)"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "বর্তমানে চলমান ভিডিও DVD কপি করুন"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "(S)VCD কপি করুন..."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "বর্তমানে চলমান (S)VCD কপি করুন"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "ভিডিও ডিস্কের প্রতিলিপি তৈরি করতে ব্যর্থ।"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "চলচ্চিত্র রেকর্ড করতে ব্যর্থ।"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "প্রজেক্ট লিখতে ব্যর্থ।"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
@@ -1905,18 +1802,13 @@ msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "D-Bus Service"
-msgstr "D-Bus পরিসেবা"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-#| msgid ""
-#| "Plugin for sending notifications of currently-playing movies to the D-Bus "
-#| "subsystem."
 msgid ""
 "Plugin for sending notifications of currently playing movies to the D-Bus "
 "subsystem."
 msgstr ""
-"বর্তমানে চলমান চলচ্চিত্র থেকে D-Bus সাব-সিস্টেমে সূচনাপ্রদানের জন্য এই প্লাগ-"
-"ইন ব্যবহৃত হয়।"
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1973,15 +1865,15 @@ msgstr ""
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "Gromit অ্যানোটেশন"
+msgstr ""
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "পর্দায় অ্যানোটেশন নির্মাণের জন্য প্রেসেন্টেশন সহায়তা ব্যবস্থা"
+msgstr ""
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr "gromit বাইনারি পাওয়া যায়নি।"
+msgstr ""
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
@@ -1990,23 +1882,22 @@ msgstr ""
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
-"চলচ্চিত্র চলাকালীন ইনস্ট্যান্ট মেসেঞ্জার-এ নিজেকে অনুপস্থিত রূপে চিহ্নিত করুন"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr "ইনফ্রা-রেড রিমোট কন্ট্রোল"
+msgstr ""
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr "ইনফ্রা-রেড রিমোট কন্ট্রোলের সহায়তা"
+msgstr ""
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr "lirc আরম্ভ করতে ব্যর্থ।"
+msgstr ""
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "lirc কনফিগারেশন পড়তে ব্যর্থ।"
+msgstr ""
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
@@ -2018,15 +1909,15 @@ msgstr ""
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr "সর্বদা উপরে রাখা হবে"
+msgstr ""
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr "চলচ্চিত্র চালানোর সময়, প্রধান উইন্ডোর সর্বদা উপরে প্রদর্শন করা হবে"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "অনুবাদলিপি ডাউনলোড ব্যবস্থা"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
@@ -2047,7 +1938,7 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:292
 msgid "Could not contact the OpenSubtitles website"
-msgstr "OpenSubtitles ওয়েব-সাইটের সাথে সংযোগ স্থাপন করতে ব্যর্থ"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:325
 #: ../src/plugins/opensubtitles/opensubtitles.py:343
@@ -2060,23 +1951,23 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:480
 msgid "Subtitles"
-msgstr "অনুবাদলিপি"
+msgstr ""
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:486
 msgid "Format"
-msgstr "বিন্যাস"
+msgstr ""
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:491
 msgid "Rating"
-msgstr "মাত্রা"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:527
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "OpenSubtitles থেকে চলচ্চিত্রের অনুবাদলিপি ডাউনলোড করুন"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:529
 msgid "_Download Movie Subtitles…"
@@ -2088,15 +1979,15 @@ msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "চলচ্চিত্রের অনুবাদলিপি ডাউনলোড করুন"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "অনুবাদলিপির ভাষা: (_l)"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr "অনুবাদলিপি সহ চালানো হবে (_P)"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
@@ -2117,13 +2008,13 @@ msgstr ""
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
-msgstr "%d x %d"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr "%d কিলোবাইট/সেকেন্ড"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
@@ -2134,17 +2025,16 @@ msgstr ""
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr "%d হার্টজ"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
 msgstr ""
 
-# এটা কি ঠিক আছে ?
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
-msgstr "বৈশিষ্ট্যাবলী"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
@@ -2159,7 +2049,7 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr "Python কনসোল"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
@@ -2167,24 +2057,23 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr "Python কনসোল মেনু"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr "Python কনসোল (_P)"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "Xplayer-র python কনসোল প্রদর্শন করা হবে"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Python ডিবাগার"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
 msgstr ""
-"rpdb2-র সাহায্যে দূরবর্তী অবস্থান থেকে python ডিবাগ প্রক্রিয়া সক্রিয় করুন"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:125
@@ -2194,7 +2083,7 @@ msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:129
 msgid "Xplayer Python Console"
-msgstr "Xplayer Python কনসোল"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:139
 msgid ""
@@ -2237,19 +2126,19 @@ msgstr ""
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "চলচ্চিত্র চালানো হচ্ছে"
+msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "স্ক্রিন-শটের প্রস্থের মাপ (পিক্সেল অনুযায়ী):"
+msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "স্ক্রিন-শটের সংখ্যা গণনা করুন"
+msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "স্ক্রিন-শটের সংখ্যা:"
+msgstr ""
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
@@ -2276,7 +2165,7 @@ msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr "গ্যালারি সংরক্ষণ করুন"
+msgstr ""
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2285,27 +2174,27 @@ msgstr "গ্যালারি সংরক্ষণ করুন"
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr "Gallery-%s-%d.jpg"
+msgstr ""
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "গ্যালারি নির্মাণ করা হচ্ছে..."
+msgstr ""
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "\"%s\" নামে গ্যালারি সংরক্ষণ করা হচ্ছে"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayer দ্বারা ভিডিওর ছবি গ্রহণ করা সম্ভব হয়নি।"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "এই আচরণ প্রত্যাশিত নয়; অনুগ্রহ করে বাগ-রিপোর্ট নথিভুক্ত করুন"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
@@ -2313,15 +2202,15 @@ msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "পর্দার ছবি নিন"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "স্ক্রিন-শটের গ্যালারি নির্মাণ করুন...(_G)"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "স্ক্রিন-শটের গ্যালারি নির্মাণ করুন"
+msgstr ""
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
@@ -2332,10 +2221,9 @@ msgstr ""
 msgid "Provides the \"Skip to\" dialog"
 msgstr ""
 
-# msgstr "সামনে"
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr "চিহ্নিত স্থানে চলুন: (_S)"
+msgstr ""
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
@@ -2358,10 +2246,9 @@ msgstr ""
 msgid "_Skip To..."
 msgstr ""
 
-# যাওয়া হোক। আগের কয়েকটাতেও এই সমস্যা আছে
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr "চিহ্নিত সময়ে এগিয়ে চলুন"
+msgstr ""
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
