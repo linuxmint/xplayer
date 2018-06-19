@@ -4428,12 +4428,8 @@ bacon_video_widget_set_scale_ratio (BaconVideoWidget * bvw, gfloat ratio)
       ratio = 0.5;
     else
       return;
-  } else {
-    if (!xplayer_ratio_fits_screen (GTK_WIDGET (bvw), w, h, ratio)) {
-      GST_DEBUG ("movie doesn't fit on screen @ %.1fx (%dx%d)", w, h, ratio);
-      return;
-    }
   }
+
   w = (gfloat) w * ratio;
   h = (gfloat) h * ratio;
 
@@ -4441,7 +4437,7 @@ bacon_video_widget_set_scale_ratio (BaconVideoWidget * bvw, gfloat ratio)
 
   toplevel = gtk_widget_get_toplevel (GTK_WIDGET (bvw));
   if (gtk_widget_is_toplevel (toplevel))
-    gtk_window_resize_to_geometry (GTK_WINDOW (toplevel), w, h);
+    gtk_window_resize (GTK_WINDOW (toplevel), w, h);
 }
 
 /**
