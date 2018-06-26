@@ -11,20 +11,20 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2018-02-10 19:48+0000\n"
+"PO-Revision-Date: 2018-05-31 09:50+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <Unknown>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-05-22 09:23+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-06-26 10:15+0000\n"
+"X-Generator: Launchpad (build 18688)\n"
 "Language: ca\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr "Surt de pantalla completa"
+msgstr "Surt de la pantalla completa"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
@@ -151,8 +151,8 @@ msgstr "Si s'han d'inhabilitar les dreceres de teclat"
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
-"Si s'han de carregar automàticament els fitxers de subtítols quan es "
-"reprodueixi una pel·lícula"
+"Si s'han de carregar automàticament els fitxers de subtítols quan es carrega "
+"una pel·lícula"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
@@ -270,11 +270,11 @@ msgstr "Subtítols"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Carrega els fitxers de subtítols quan es carrega una pel·lícula"
+msgstr "_Carrega els fitxers de subtítols quan es carrega la pel·lícula"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "_Mostra subtítols quan la pel·lícula està carregada"
+msgstr "_Mostra els subtítols quan es carrega la pel·lícula"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -290,7 +290,7 @@ msgstr "Capítols externs"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "_Carrega els fitxers de capítols quan es carrega una pel·lícula"
+msgstr "_Carrega els fitxers de capítols quan es carrega la pel·lícula"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -311,7 +311,7 @@ msgstr "Inhabilita el _desentrallaçat dels vídeos entrellaçats"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Inhabilita l'estalvi de pantalla quan es reprodueixi"
+msgstr "Inhabilita l'estalvi de pantalla quan es reprodueix"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -417,7 +417,7 @@ msgstr "Còdec:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Imatges per segon:"
+msgstr "Fotogrames per segon:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
@@ -425,7 +425,7 @@ msgstr "Velocitat de transmissió:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Freqüència de mostratge:"
+msgstr "Freqüència de mostreig:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -812,7 +812,7 @@ msgstr "Barra de cerca de temps"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Introduïu l'_adreça del fitxer que vulgueu obrir:"
+msgstr "Introduïu l'_adreça del fitxer que voleu obrir:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
@@ -1149,8 +1149,8 @@ msgstr "0 segons"
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] "%d quadre per segon"
-msgstr[1] "%d quadres per segon"
+msgstr[0] "%d fotograma per segon"
+msgstr[1] "%d fotogrames per segon"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
