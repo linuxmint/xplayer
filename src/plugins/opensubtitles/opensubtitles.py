@@ -373,7 +373,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
                      Peas.Activatable):
     __gtype_name__ = 'OpenSubtitles'
 
-    object = GObject.property (type = GObject.Object)
+    object = GObject.Property (type = GObject.Object)
 
     def __init__ (self):
         GObject.Object.__init__ (self)
