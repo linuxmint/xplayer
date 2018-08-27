@@ -5,6 +5,7 @@ from gi.repository import Gio, Pango, Xplayer # pylint: disable-msg=E0611
 
 import xmlrpc.client
 import threading
+import zlib
 from os import sep, path, mkdir
 import gettext
 
@@ -356,14 +357,11 @@ class OpenSubtitlesModel (object):
                     self._lock.release ()
                     return (None, error_message)
 
-                import StringIO, gzip, base64
-                subtitle_decoded = base64.decodestring (subtitle64)
-                subtitle_gzipped = StringIO.StringIO (subtitle_decoded)
-                subtitle_gzipped_file = gzip.GzipFile (fileobj=subtitle_gzipped)
+                subtitle_unzipped = zlib.decompress(GLib.base64_decode (subtitle64), 47)
 
                 self._lock.release ()
 
-                return (subtitle_gzipped_file.read (), message)
+                return (subtitle_unzipped, message)
         else:
             message = log_in_message
 
