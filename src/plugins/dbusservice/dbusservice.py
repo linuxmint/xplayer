@@ -33,7 +33,7 @@ _ = gettext.gettext
 class DbusService (GObject.Object, Peas.Activatable):
     __gtype_name__ = 'DbusService'
 
-    object = GObject.property (type = GObject.Object)
+    object = GObject.Property (type = GObject.Object)
 
     def __init__ (self):
         GObject.Object.__init__ (self)
