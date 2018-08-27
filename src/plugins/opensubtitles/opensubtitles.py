@@ -634,7 +634,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
             GObject.idle_add (self._save_subtitles, thread, filename)
 
             self._progress.set_text (_(u'Downloading the subtitles…'))
-            GObject.timeout_add (350, self._progress_bar_increment, thread)
+            GLib.timeout_add (350, self._progress_bar_increment, thread)
         else:
             #warn user!
             pass
