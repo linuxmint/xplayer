@@ -20,7 +20,7 @@ Build-Depends: debhelper,
                intltool (>= 0.40),
                libatk1.0-dev (>= 1.29.4),
                libbluetooth-dev [linux-any],
-               libclutter-gst-3.0-dev | libclutter-gst-2.0-dev,
+               libclutter-gst-3.0-dev,
                libclutter-gtk-1.0-dev,
                libgdata-dev (>= 0.8.0),
                libgdk-pixbuf2.0-dev (>= 2.23.0),
@@ -65,7 +65,7 @@ Depends: ${misc:Depends},
          ${python:Depends},
          ${shlibs:Depends},
          xplayer-common (= ${source:Version}),
-         gstreamer1.0-clutter | gstreamer1.0-clutter-3.0,
+         gstreamer1.0-clutter-3.0,
          gstreamer1.0-plugins-base,
          gstreamer1.0-plugins-good,
          gstreamer1.0-x,
@@ -135,7 +135,7 @@ Depends: ${misc:Depends},
          gir1.2-xplayer-1.0 (= ${binary:Version}),
          python-gi (>= 2.90.3),
          python-xdg,
-         libpeas-1.0-0-python2loader | libpeas-common( << 1.16 )
+         libpeas-1.0-python2loader
 Suggests: gromit
 Description: Plugins for the Xplayer media player
  Xplayer is a simple yet featureful media player which can read
