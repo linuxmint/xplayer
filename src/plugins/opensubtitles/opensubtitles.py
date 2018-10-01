@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from gi.repository import GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
-from gi.repository import GLib, Gio, Pango, Xplayer # pylint: disable-msg=E0611
+from gi.repository import GLib, GObject, Peas, Gtk, Gdk # pylint: disable-msg=E0611
+from gi.repository import Gio, Pango, Xplayer # pylint: disable-msg=E0611
 
-import xmlrpclib
+import xmlrpc.client
 import threading
-import xdg.BaseDirectory
+import zlib
 from os import sep, path, mkdir
 import gettext
 
@@ -15,8 +15,6 @@ gettext.textdomain ("xplayer")
 
 D_ = gettext.dgettext
 _ = gettext.gettext
-
-GObject.threads_init ()
 
 USER_AGENT = 'Xplayer'
 OK200 = '200 OK'
@@ -273,7 +271,7 @@ class OpenSubtitlesModel (object):
             # We have already logged-in before, check the connection
             try:
                 result = self._server.NoOperation (self._token)
-            except (xmlrpclib.Fault, xmlrpclib.ProtocolError):
+            except (xmlrpc.client.Fault, xmlrpc.client.ProtocolError):
                 pass
             if result and result['status'] != OK200:
                 return (True, '')
@@ -281,7 +279,7 @@ class OpenSubtitlesModel (object):
         try:
             result = self._server.LogIn (username, password, self.lang,
                                          USER_AGENT)
-        except (xmlrpclib.Fault, xmlrpclib.ProtocolError):
+        except (xmlrpc.client.Fault, xmlrpc.client.ProtocolError):
             pass
 
         if result and result.get ('status') == OK200:
@@ -321,7 +319,7 @@ class OpenSubtitlesModel (object):
             try:
                 result = self._server.SearchSubtitles (self._token,
                                                        [searchdata])
-            except xmlrpclib.ProtocolError:
+            except xmlrpc.client.ProtocolError:
                 message = _(u'Could not contact the OpenSubtitles website.')
 
             if result.get ('data'):
@@ -345,10 +343,11 @@ class OpenSubtitlesModel (object):
         (log_in_success, log_in_message) = self._log_in ()
 
         if log_in_success:
+            result = None
             try:
                 result = self._server.DownloadSubtitles (self._token,
                                                          [subtitle_id])
-            except xmlrpclib.ProtocolError:
+            except xmlrpc.client.ProtocolError:
                 message = error_message
 
             if result and result.get ('status') == OK200:
@@ -358,14 +357,11 @@ class OpenSubtitlesModel (object):
                     self._lock.release ()
                     return (None, error_message)
 
-                import StringIO, gzip, base64
-                subtitle_decoded = base64.decodestring (subtitle64)
-                subtitle_gzipped = StringIO.StringIO (subtitle_decoded)
-                subtitle_gzipped_file = gzip.GzipFile (fileobj=subtitle_gzipped)
+                subtitle_unzipped = zlib.decompress(GLib.base64_decode (subtitle64), 47)
 
                 self._lock.release ()
 
-                return (subtitle_gzipped_file.read (), message)
+                return (subtitle_unzipped, message)
         else:
             message = log_in_message
 
@@ -377,7 +373,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
                      Peas.Activatable):
     __gtype_name__ = 'OpenSubtitles'
 
-    object = GObject.property (type = GObject.Object)
+    object = GObject.Property (type = GObject.Object)
 
     def __init__ (self):
         GObject.Object.__init__ (self)
@@ -424,7 +420,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
         self._xplayer.connect ('file-closed', self.__on_xplayer__file_closed)
 
         # Obtain the ServerProxy and init the model
-        server = xmlrpclib.Server ('http://api.opensubtitles.org/xml-rpc')
+        server = xmlrpc.client.Server ('http://api.opensubtitles.org/xml-rpc')
         self._model = OpenSubtitlesModel (server)
 
     def do_deactivate (self):
@@ -586,10 +582,10 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
 
         thread = SearchThread (self._model, movie_hash, movie_size)
         thread.start ()
-        GObject.idle_add (self._populate_treeview, thread)
+        GLib.idle_add (self._populate_treeview, thread)
 
         self._progress.set_text (_(u'Searching subtitles…'))
-        GObject.timeout_add (350, self._progress_bar_increment, thread)
+        GLib.timeout_add (350, self._progress_bar_increment, thread)
 
     def _populate_treeview (self, search_thread):
         if not search_thread.done:
@@ -620,19 +616,12 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
             subtitle_format = model.get_value (subtitle_iter, 1)
 
             if not filename:
-                bpath = xdg.BaseDirectory.xdg_cache_home + sep
+                bpath = GLib.get_user_cache_dir() + sep
                 bpath += 'xplayer' + sep
 
                 directory = Gio.file_new_for_path (bpath + 'subtitles' + sep)
-
                 if not directory.query_exists (None):
-                    if not path.exists (bpath):
-                        mkdir (bpath)
-                    if not path.exists (bpath + 'subtitles' + sep):
-                        mkdir (bpath + 'subtitles' + sep)
-                    # FIXME: We can't use this function until we depend on
-                    # GLib (PyGObject) 2.18
-                    # directory.make_directory_with_parents ()
+                        directory.make_directory_with_parents (None);
 
                 subtitle_file = Gio.file_new_for_path (self._filename)
                 movie_name = subtitle_file.get_basename ().rpartition ('.')[0]
@@ -645,7 +634,7 @@ class OpenSubtitles (GObject.Object, # pylint: disable-msg=R0902
             GObject.idle_add (self._save_subtitles, thread, filename)
 
             self._progress.set_text (_(u'Downloading the subtitles…'))
-            GObject.timeout_add (350, self._progress_bar_increment, thread)
+            GLib.timeout_add (350, self._progress_bar_increment, thread)
         else:
             #warn user!
             pass

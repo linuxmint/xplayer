@@ -82,36 +82,34 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
         data = dict ()
         manager = self.xplayer.get_ui_manager ()
 
-        data['action_group'] = Gtk.ActionGroup (name = 'Python')
+        self.action_group = Gtk.ActionGroup (name = 'Python')
 
         action = Gtk.Action (name = 'Python', label = 'Python',
-                             tooltip = _(u'Python Console Menu'),
+                             tooltip = _('Python Console Menu'),
                              stock_id = None)
-        data['action_group'].add_action (action)
+        self.action_group.add_action (action)
 
         action = Gtk.Action (name = 'PythonConsole',
-                             label = _(u'_Python Console'),
-                             tooltip = _(u"Show Xplayer's Python console"),
+                             label = _('_Python Console'),
+                             tooltip = _("Show Xplayer's Python console"),
                              stock_id = 'gnome-mime-text-x-python')
         action.connect ('activate', self._show_console)
-        data['action_group'].add_action (action)
+        self.action_group.add_action (action)
 
         action = Gtk.Action (name = 'PythonDebugger',
-                             label = _(u'Python Debugger'),
-                             tooltip = _(u"Enable remote Python debugging "\
+                             label = _('Python Debugger'),
+                             tooltip = _("Enable remote Python debugging "\
                                           "with rpdb2"),
                              stock_id = None)
         if HAVE_RPDB2:
             action.connect ('activate', self._enable_debugging)
         else:
             action.set_visible (False)
-        data['action_group'].add_action (action)
+        self.action_group.add_action (action)
 
-        manager.insert_action_group (data['action_group'], 0)
-        data['ui_id'] = manager.add_ui_from_string (UI_STR)
+        manager.insert_action_group (self.action_group, 0)
+        self.ui_id = manager.add_ui_from_string (UI_STR)
         manager.ensure_update ()
-
-        self.xplayer.PythonConsolePluginInfo = data
 
     def _show_console (self, _action):
         if not self.window:
@@ -122,11 +120,11 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
             }, destroy_cb = self._destroy_console)
 
             console.set_size_request (600, 400) # pylint: disable-msg=E1101
-            console.eval ('print "%s" %% xplayer_object' % _(u"You can access "\
+            console.eval ('print("%s" %% xplayer_object)' % _("You can access "\
                 "the Xplayer.Object through \'xplayer_object\' :\\n%s"), False)
 
             self.window = Gtk.Window ()
-            self.window.set_title (_(u'Xplayer Python Console'))
+            self.window.set_title (_('Xplayer Python Console'))
             self.window.add (console)
             self.window.connect ('destroy', self._destroy_console)
             self.window.show_all ()
@@ -136,7 +134,7 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
 
     @classmethod
     def _enable_debugging (cls, _action):
-        msg = _(u"After you press OK, Xplayer will wait until you connect to it "\
+        msg = _("After you press OK, Xplayer will wait until you connect to it "\
                  "with winpdb or rpdb2. If you have not set a debugger "\
                  "password in DConf, it will use the default password "\
                  "('xplayer').")
@@ -158,14 +156,10 @@ class PythonConsolePlugin (GObject.Object, Peas.Activatable):
         self.window = None
 
     def do_deactivate (self):
-        data = self.xplayer.PythonConsolePluginInfo
-
         manager = self.xplayer.get_ui_manager ()
-        manager.remove_ui (data['ui_id'])
-        manager.remove_action_group (data['action_group'])
+        manager.remove_ui (self.ui_id)
+        manager.remove_action_group (self.action_group)
         manager.ensure_update ()
-
-        self.xplayer.PythonConsolePluginInfo = None
 
         if self.window is not None:
             self.window.destroy ()

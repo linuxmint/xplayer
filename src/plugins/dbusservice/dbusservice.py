@@ -33,7 +33,7 @@ _ = gettext.gettext
 class DbusService (GObject.Object, Peas.Activatable):
     __gtype_name__ = 'DbusService'
 
-    object = GObject.property (type = GObject.Object)
+    object = GObject.Property (type = GObject.Object)
 
     def __init__ (self):
         GObject.Object.__init__ (self)
@@ -57,9 +57,9 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
         self.xplayer = xplayer
 
         self.null_metadata = {
-            'year' : u'', 'tracknumber' : '', 'location' : '',
-            'title' : u'', 'album' : u'', 'time' : u'', 'genre' : u'',
-            'artist' : u''
+            'year' : '', 'tracknumber' : '', 'location' : '',
+            'title' : '', 'album' : '', 'time' : '', 'genre' : '',
+            'artist' : ''
         }
         self.current_metadata = self.null_metadata.copy ()
         self.current_position = 0
@@ -94,7 +94,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
             'mpris:trackid': dbus.String (self.xplayer.props.current_mrl,
                 variant_level = 1),
             'mpris:length': dbus.Int64 (
-                self.xplayer.props.stream_length * 1000L,
+                self.xplayer.props.stream_length * 1000,
                 variant_level = 1),
         }
 
@@ -120,11 +120,11 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
                               title, album, num):
         self.current_metadata = self.null_metadata.copy ()
         if title:
-            self.current_metadata['title'] = unicode (title, 'utf-8')
+            self.current_metadata['title'] = title
         if artist:
-            self.current_metadata['artist'] = unicode (artist, 'utf-8')
+            self.current_metadata['artist'] = artist
         if album:
-            self.current_metadata['album'] = unicode (album, 'utf-8')
+            self.current_metadata['album'] = album
         if num:
             self.current_metadata['tracknumber'] = num
 
@@ -152,7 +152,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
     def __do_notify_current_time (self, xplayer, prop):
         # Only notify of seeks if we've skipped more than 3 seconds
         if abs (xplayer.props.current_time - self.current_position) > 3:
-            self.Seeked (xplayer.props.current_time * 1000L)
+            self.Seeked (xplayer.props.current_time * 1000)
 
         self.current_position = xplayer.props.current_time
 
@@ -198,7 +198,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
                 'Shuffle': shuffle, # TODO: Notifications
                 'Metadata': self.__calculate_metadata (),
                 'Volume': self.xplayer.get_volume (), # TODO: Notifications
-                'Position': self.xplayer.props.current_time * 1000L,
+                'Position': self.xplayer.props.current_time * 1000,
                 'CanGoNext': True, # TODO
                 'CanGoPrevious': True, # TODO
                 'CanPlay': (self.xplayer.props.current_mrl != None),
@@ -210,7 +210,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
 
         raise dbus.exceptions.DBusException (
             'org.mpris.MediaPlayer2.UnknownInterface',
-            _(u'The MediaPlayer2 object does not implement the ‘%s’ interface')
+            _('The MediaPlayer2 object does not implement the ‘%s’ interface')
                 % interface_name)
 
     @dbus.service.method (dbus_interface = dbus.PROPERTIES_IFACE,
@@ -219,7 +219,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
         if interface_name == 'org.mpris.MediaPlayer2':
             raise dbus.exceptions.DBusException (
                 'org.mpris.MediaPlayer2.ReadOnlyProperty',
-                _(u'The property ‘%s’ is not writeable.'))
+                _('The property ‘%s’ is not writeable.'))
         elif interface_name == 'org.mpris.MediaPlayer2.Player':
             if property_name == 'LoopStatus':
                 self.xplayer.action_remote_set_setting (
@@ -235,12 +235,12 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
 
             raise dbus.exceptions.DBusException (
                 'org.mpris.MediaPlayer2.ReadOnlyProperty',
-                _(u'Unknown property ‘%s’ requested of a MediaPlayer 2 object')
+                _('Unknown property ‘%s’ requested of a MediaPlayer 2 object')
                     % interface_name)
 
         raise dbus.exceptions.DBusException (
             'org.mpris.MediaPlayer2.UnknownInterface',
-            _(u'The MediaPlayer2 object does not implement the ‘%s’ interface')
+            _('The MediaPlayer2 object does not implement the ‘%s’ interface')
                 % interface_name)
 
     @dbus.service.signal (dbus_interface = dbus.PROPERTIES_IFACE,
@@ -315,13 +315,13 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
                           in_signature = 'x', # pylint: disable-msg=C0103
                           out_signature = '')
     def Seek (self, offset):
-        self.xplayer.action_seek_relative (offset / 1000L, False)
+        self.xplayer.action_seek_relative (offset / 1000, False)
 
     @dbus.service.method (dbus_interface = 'org.mpris.MediaPlayer2.Player',
                           in_signature = 'ox', # pylint: disable-msg=C0103
                           out_signature = '')
     def SetPosition (self, track_id, position):
-        position = position / 1000L
+        position = position / 1000
 
         # Bail if the position is not in the permitted range
         if position < 0 or position > self.xplayer.props.stream_length:
