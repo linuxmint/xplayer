@@ -35,7 +35,7 @@
 
 from console import PythonConsole
 
-__all__ = ('PythonConsole', 'OutFile')
+__all__ = ('PythonConsolePlugin', 'PythonConsole', 'OutFile')
 
 from gi.repository import GObject, Peas, Gtk, Xplayer # pylint: disable-msg=E0611
 from gi.repository import Gio # pylint: disable-msg=E0611
