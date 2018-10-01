@@ -108,17 +108,6 @@
             <property name="position">0</property>
           </packing>
         </child>
-        <child>
-          <object class="XplayerSearchEntry" id="gw_search_text">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
       </object>
       <packing>
         <property name="expand">False</property>
@@ -131,16 +120,6 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="shadow_type">in</property>
-        <child>
-          <object class="GdMainIconView" id="gw_search_results_view">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="model">gw_search_store_results</property>
-            <style>
-              <class name="content-view"/>
-            </style>
-          </object>
-        </child>
       </object>
       <packing>
         <property name="expand">True</property>

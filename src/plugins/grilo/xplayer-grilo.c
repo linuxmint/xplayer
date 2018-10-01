@@ -1189,15 +1189,27 @@ static void
 setup_sidebar_search (XplayerGriloPlugin *self,
                       GtkBuilder *builder)
 {
+	GtkWidget *search_combo_box, *search_results_window;
+	GtkStyleContext *search_results_view_style;
+
+	self->priv->search_results_view = gd_main_icon_view_new ();
+	self->priv->search_entry = GTK_WIDGET (xplayer_search_entry_new ());
+
 	self->priv->search_results_model = GTK_TREE_MODEL (gtk_builder_get_object (builder, "gw_search_store_results"));
 	self->priv->search_sources_list = GTK_WIDGET (gtk_builder_get_object (builder, "gw_search_select_source"));
-	self->priv->search_results_view = GTK_WIDGET (gtk_builder_get_object (builder, "gw_search_results_view"));
-	self->priv->search_entry =  GTK_WIDGET (gtk_builder_get_object (builder, "gw_search_text"));
+	search_combo_box = GTK_WIDGET (gtk_builder_get_object (builder, "gw_combo_box"));
+	search_results_window = GTK_WIDGET (gtk_builder_get_object (builder, "gw_search_results_window"));
 
-	g_signal_connect (self->priv->search_results_view,
+	gtk_icon_view_set_model (GTK_ICON_VIEW (self->priv->search_results_view),
+	                         self->priv->search_results_model);
+	gtk_widget_set_can_focus (self->priv->search_results_view, TRUE);
+
+	search_results_view_style = gtk_widget_get_style_context (self->priv->search_results_view);
+	gtk_style_context_add_class (search_results_view_style, "content-view");
+
+	g_signal_connect (GTK_ICON_VIEW (self->priv->search_results_view),
 	                  "item-activated",
-	                  G_CALLBACK (search_activated_cb),
-	                  self);
+	                  G_CALLBACK (search_activated_cb), self);
 	g_signal_connect (self->priv->search_results_view,
 	                  "popup-menu",
 	                  G_CALLBACK (popup_menu_cb), self);
@@ -1205,23 +1217,27 @@ setup_sidebar_search (XplayerGriloPlugin *self,
 	                  "button-press-event",
 	                  G_CALLBACK (context_button_pressed_cb), self);
 
+	gtk_widget_set_can_focus (self->priv->search_entry, TRUE);
+
 	g_signal_connect (self->priv->search_entry, "activate",
-	                  G_CALLBACK (search_entry_activate_cb),
-	                  self);
+	                  G_CALLBACK (search_entry_activate_cb), self);
 	g_signal_connect (self->priv->search_entry, "notify::selected-id",
 			  G_CALLBACK (search_entry_source_changed_cb), self);
 
-	g_signal_connect (gtk_scrolled_window_get_vadjustment (GTK_SCROLLED_WINDOW (gtk_builder_get_object (builder,
-		                    "gw_search_results_window"))),
+	g_signal_connect (gtk_scrolled_window_get_vadjustment (GTK_SCROLLED_WINDOW (search_results_window)),
 	                  "value_changed",
-	                  G_CALLBACK (adjustment_value_changed_cb),
-	                  self);
+	                  G_CALLBACK (adjustment_value_changed_cb), self);
 
-	g_signal_connect (gtk_scrolled_window_get_vadjustment (GTK_SCROLLED_WINDOW (gtk_builder_get_object (builder,
-		                    "gw_search_results_window"))),
-	                  "changed",
-	                  G_CALLBACK (adjustment_changed_cb),
-	                  self);
+	g_signal_connect (gtk_scrolled_window_get_vadjustment (GTK_SCROLLED_WINDOW (search_results_window)),
+	                  "changed", G_CALLBACK (adjustment_changed_cb), self);
+
+	gtk_box_pack_end (GTK_BOX (search_combo_box), self->priv->search_entry,
+	                  TRUE, TRUE, 0);
+	gtk_container_add (GTK_CONTAINER (search_results_window),
+	                   self->priv->search_results_view);
+
+	gtk_widget_show (self->priv->search_entry);
+	gtk_widget_show (self->priv->search_results_view);
 
 	xplayer_add_sidebar_page (self->priv->xplayer,
 	                        "grilo-search", _("Search"),
