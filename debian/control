@@ -135,7 +135,7 @@ Depends: ${misc:Depends},
          gir1.2-xplayer-1.0 (= ${binary:Version}),
          python3,
          python3-gi,
-         libpeas-1.0-0-python3loader | debian-system-adjustments,
+         libpeas-1.0-0,
 Suggests: gromit
 Description: Plugins for the Xplayer media player
  Xplayer is a simple yet featureful media player which can read
