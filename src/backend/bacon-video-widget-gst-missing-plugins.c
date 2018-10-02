@@ -284,6 +284,9 @@ bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **d
 	}
 
 	install_ctx = gst_install_plugins_context_new ();
+#if GST_CHECK_VERSION (1, 5, 0)
+	gst_install_plugins_context_set_desktop_id (install_ctx, "xplayer.desktop");
+#endif
 
 #ifdef GDK_WINDOWING_X11
 	display = gdk_display_get_default ();
