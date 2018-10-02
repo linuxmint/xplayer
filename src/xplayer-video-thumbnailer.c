@@ -207,6 +207,7 @@ thumb_app_set_error_handler (ThumbApp *app)
 
 	bus = gst_element_get_bus (app->play);
 	gst_bus_set_sync_handler (bus, (GstBusSyncHandler) error_handler, app->play, NULL);
+	g_object_unref (bus);
 }
 
 static void
