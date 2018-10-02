@@ -239,7 +239,6 @@ on_plugin_installation_done (GstInstallPluginsReturn res, gpointer user_data)
 }
 
 #ifdef GDK_WINDOWING_X11
-#if GST_CHECK_VERSION (1, 5, 0)
 static void
 set_startup_notification_id (GstInstallPluginsContext *install_ctx)
 {
@@ -251,7 +250,6 @@ set_startup_notification_id (GstInstallPluginsContext *install_ctx)
 	gst_install_plugins_context_set_startup_notification_id (install_ctx, startup_id);
 	g_free (startup_id);
 }
-#endif
 #endif
 
 static gboolean
@@ -265,10 +263,8 @@ bacon_video_widget_start_plugin_installation (XplayerCodecInstallContext *ctx,
 #endif
 
 	install_ctx = gst_install_plugins_context_new ();
-#if GST_CHECK_VERSION (1, 5, 0)
 	gst_install_plugins_context_set_desktop_id (install_ctx, "xplayer.desktop");
 	gst_install_plugins_context_set_confirm_search (install_ctx, confirm_search);
-#endif
 
 #ifdef GDK_WINDOWING_X11
 	display = gdk_display_get_default ();
@@ -279,9 +275,7 @@ bacon_video_widget_start_plugin_installation (XplayerCodecInstallContext *ctx,
 	{
 		gulong xid = 0;
 
-#if GST_CHECK_VERSION (1, 5, 0)
 		set_startup_notification_id (install_ctx);
-#endif
 
 		xid = bacon_video_widget_gst_get_toplevel (GTK_WIDGET (ctx->bvw));
 		gst_install_plugins_context_set_xid (install_ctx, xid);
@@ -313,7 +307,6 @@ bacon_video_widget_start_plugin_installation (XplayerCodecInstallContext *ctx,
 	return TRUE;
 }
 
-#if GST_CHECK_VERSION (1, 5, 0)
 static void
 codec_confirmation_dialog_response_cb (GtkDialog       *dialog,
                                        GtkResponseType  response_type,
@@ -380,7 +373,6 @@ show_codec_confirmation_dialog (XplayerCodecInstallContext *ctx,
 	g_free (descriptions_text);
 	g_free (message_text);
 }
-#endif
 
 static void
 on_packagekit_proxy_ready (GObject      *source_object,
@@ -398,7 +390,6 @@ on_packagekit_proxy_ready (GObject      *source_object,
 		goto out;
 	}
 
-#if GST_CHECK_VERSION (1, 5, 0)
 	if (packagekit_proxy != NULL) {
 		property = g_dbus_proxy_get_cached_property (packagekit_proxy, "DisplayName");
 		if (property != NULL) {
@@ -411,7 +402,6 @@ on_packagekit_proxy_ready (GObject      *source_object,
 			}
 		}
 	}
-#endif
 
 	/* If the above failed, fall back to immediately starting the codec installation */
 	bacon_video_widget_start_plugin_installation (ctx, TRUE);
