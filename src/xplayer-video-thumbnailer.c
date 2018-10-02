@@ -370,141 +370,6 @@ thumb_app_seek (ThumbApp *app,
 	gst_element_get_state (app->play, NULL, NULL, GST_CLOCK_TIME_NONE);
 }
 
-static GdkPixbuf *
-add_holes_to_pixbuf_small (GdkPixbuf *pixbuf, int width, int height)
-{
-	GdkPixbuf *holes, *tmp, *target;
-	char *filename;
-	int i;
-
-	filename = g_build_filename (DATADIR, "xplayer", "filmholes.png", NULL);
-	holes = gdk_pixbuf_new_from_file (filename, NULL);
-	g_free (filename);
-
-	if (holes == NULL) {
-		g_object_ref (pixbuf);
-		return pixbuf;
-	}
-
-	g_assert (gdk_pixbuf_get_has_alpha (pixbuf) == FALSE);
-	g_assert (gdk_pixbuf_get_has_alpha (holes) != FALSE);
-	target = g_object_ref (pixbuf);
-
-	for (i = 0; i < height; i += gdk_pixbuf_get_height (holes))
-	{
-		gdk_pixbuf_composite (holes, target, 0, i,
-				      MIN (width, gdk_pixbuf_get_width (holes)),
-				      MIN (height - i, gdk_pixbuf_get_height (holes)),
-				      0, i, 1, 1, GDK_INTERP_NEAREST, 255);
-	}
-
-	tmp = gdk_pixbuf_flip (holes, FALSE);
-	g_object_unref (holes);
-	holes = tmp;
-
-	for (i = 0; i < height; i += gdk_pixbuf_get_height (holes))
-	{
-		gdk_pixbuf_composite (holes, target,
-				      width - gdk_pixbuf_get_width (holes), i,
-				      MIN (width, gdk_pixbuf_get_width (holes)),
-				      MIN (height - i, gdk_pixbuf_get_height (holes)),
-				      width - gdk_pixbuf_get_width (holes), i,
-				      1, 1, GDK_INTERP_NEAREST, 255);
-	}
-
-	g_object_unref (holes);
-
-	return target;
-}
-
-static GdkPixbuf *
-add_holes_to_pixbuf_large (GdkPixbuf *pixbuf, int size)
-{
-	char *filename;
-	int lh, lw, rh, rw, i;
-	GdkPixbuf *left, *right, *small;
-	int canvas_w, canvas_h;
-	int d_height, d_width;
-	double ratio;
-
-	filename = g_build_filename (DATADIR, "xplayer",
-			"filmholes-big-left.png", NULL);
-	left = gdk_pixbuf_new_from_file (filename, NULL);
-	g_free (filename);
-
-	if (left == NULL) {
-		g_object_ref (pixbuf);
-		return pixbuf;
-	}
-
-	filename = g_build_filename (DATADIR, "xplayer",
-			"filmholes-big-right.png", NULL);
-	right = gdk_pixbuf_new_from_file (filename, NULL);
-	g_free (filename);
-
-	if (right == NULL) {
-		g_object_unref (left);
-		g_object_ref (pixbuf);
-		return pixbuf;
-	}
-
-	lh = gdk_pixbuf_get_height (left);
-	lw = gdk_pixbuf_get_width (left);
-	rh = gdk_pixbuf_get_height (right);
-	rw = gdk_pixbuf_get_width (right);
-	g_assert (lh == rh);
-	g_assert (lw == rw);
-
-	{
-		int height, width;
-
-		height = gdk_pixbuf_get_height (pixbuf);
-		width = gdk_pixbuf_get_width (pixbuf);
-
-		if (width > height) {
-			d_width = size - lw - lw;
-			d_height = d_width * height / width;
-		} else {
-			d_height = size - lw -lw;
-			d_width = d_height * width / height;
-		}
-
-		canvas_h = d_height;
-		canvas_w = d_width + 2 * lw;
-	}
-
-	small = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
-			canvas_w, canvas_h);
-	gdk_pixbuf_fill (small, 0x000000ff);
-	ratio = ((double)d_width / (double) gdk_pixbuf_get_width (pixbuf));
-
-	gdk_pixbuf_scale (pixbuf, small, lw, 0,
-			d_width, d_height,
-			lw, 0, ratio, ratio, GDK_INTERP_BILINEAR);
-
-	/* Left side holes */
-	for (i = 0; i < canvas_h; i += lh) {
-		gdk_pixbuf_composite (left, small, 0, i,
-				MIN (canvas_w, lw),
-				MIN (canvas_h - i, lh),
-				0, i, 1, 1, GDK_INTERP_NEAREST, 255);
-	}
-
-	/* Right side holes */
-	for (i = 0; i < canvas_h; i += rh) {
-		gdk_pixbuf_composite (right, small,
-				canvas_w - rw, i,
-				MIN (canvas_w, rw),
-				MIN (canvas_h - i, rh),
-				canvas_w - rw, i,
-				1, 1, GDK_INTERP_NEAREST, 255);
-	}
-
-	/* TODO Add a one pixel border of 0x33333300 all around */
-
-	return small;
-}
-
 /* This function attempts to detect images that are mostly solid images
  * It does this by calculating the statistical variance of the
  * black-and-white image */
@@ -567,24 +432,12 @@ scale_pixbuf (GdkPixbuf *pixbuf, int size, gboolean is_still)
 		GdkPixbuf *small;
 
 		small = gdk_pixbuf_scale_simple (pixbuf, d_width, d_height, GDK_INTERP_BILINEAR);
-
-		if (is_still == FALSE) {
-			result = add_holes_to_pixbuf_small (small, d_width, d_height);
-			g_return_val_if_fail (result != NULL, NULL);
-			g_object_unref (small);
-		} else {
-			result = small;
-		}
+		result = small;
 	} else {
-		if (is_still == FALSE) {
-			result = add_holes_to_pixbuf_large (pixbuf, size);
-			g_return_val_if_fail (result != NULL, NULL);
-		} else {
-			if (size > 0)
-				result = gdk_pixbuf_scale_simple (pixbuf, d_width, d_height, GDK_INTERP_BILINEAR);
-			else
-				result = g_object_ref (pixbuf);
-		}
+		if (size > 0)
+			result = gdk_pixbuf_scale_simple (pixbuf, d_width, d_height, GDK_INTERP_BILINEAR);
+		else
+			result = g_object_ref (pixbuf);
 	}
 
 	return result;
