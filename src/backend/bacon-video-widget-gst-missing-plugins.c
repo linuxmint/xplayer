@@ -240,7 +240,7 @@ on_plugin_installation_done (GstInstallPluginsReturn res, gpointer user_data)
 
 #ifdef GDK_WINDOWING_X11
 #if GST_CHECK_VERSION (1, 5, 0)
-static gchar *
+static void
 set_startup_notification_id (GstInstallPluginsContext *install_ctx)
 {
 	gchar *startup_id;
