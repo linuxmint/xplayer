@@ -237,17 +237,65 @@ on_plugin_installation_done (GstInstallPluginsReturn res, gpointer user_data)
 }
 
 static gboolean
+bacon_video_widget_start_plugin_installation (XplayerCodecInstallContext *ctx)
+{
+	GstInstallPluginsContext *install_ctx;
+	GstInstallPluginsReturn status;
+#ifdef GDK_WINDOWING_X11
+	GdkDisplay *display;
+#endif
+
+	install_ctx = gst_install_plugins_context_new ();
+#if GST_CHECK_VERSION (1, 5, 0)
+	gst_install_plugins_context_set_desktop_id (install_ctx, "xplayer.desktop");
+#endif
+
+#ifdef GDK_WINDOWING_X11
+	display = gdk_display_get_default ();
+
+	if (GDK_IS_X11_DISPLAY (display) &&
+	    gtk_widget_get_window (GTK_WIDGET (ctx->bvw)) != NULL &&
+	    gtk_widget_get_realized (GTK_WIDGET (ctx->bvw)))
+	{
+		gulong xid = 0;
+
+		xid = bacon_video_widget_gst_get_toplevel (GTK_WIDGET (ctx->bvw));
+		gst_install_plugins_context_set_xid (install_ctx, xid);
+	}
+#endif /* GDK_WINDOWING_X11 */
+
+	status = gst_install_plugins_async (ctx->details, install_ctx,
+	                                    on_plugin_installation_done,
+	                                    ctx);
+
+	gst_install_plugins_context_free (install_ctx);
+
+	GST_INFO ("gst_install_plugins_async() result = %d", status);
+
+	if (status != GST_INSTALL_PLUGINS_STARTED_OK)
+	{
+		if (status == GST_INSTALL_PLUGINS_HELPER_MISSING)
+		{
+			g_message ("Automatic missing codec installation not supported "
+			           "(helper script missing)");
+		} else {
+			g_warning ("Failed to start codec installation: %s",
+			           gst_install_plugins_return_get_name (status));
+		}
+		bacon_video_widget_gst_codec_install_context_free (ctx);
+		return FALSE;
+	}
+
+	return TRUE;
+}
+
+static gboolean
 bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **details,
 						 char **descriptions, gboolean playing,
 						 gpointer user_data)
 {
-	GstInstallPluginsContext *install_ctx;
 	XplayerCodecInstallContext *ctx;
-	GstInstallPluginsReturn status;
 	guint i, num;
-#ifdef GDK_WINDOWING_X11
-	GdkDisplay *display;
-#endif
 
 	num = g_strv_length (details);
 	g_return_val_if_fail (num > 0 && g_strv_length (descriptions) == num, FALSE);
@@ -283,46 +331,8 @@ bacon_video_widget_gst_on_missing_plugins_event (BaconVideoWidget *bvw, char **d
 		return FALSE;
 	}
 
-	install_ctx = gst_install_plugins_context_new ();
-#if GST_CHECK_VERSION (1, 5, 0)
-	gst_install_plugins_context_set_desktop_id (install_ctx, "xplayer.desktop");
-#endif
-
-#ifdef GDK_WINDOWING_X11
-	display = gdk_display_get_default ();
-
-	if (GDK_IS_X11_DISPLAY (display) &&
-	    gtk_widget_get_window (GTK_WIDGET (bvw)) != NULL &&
-	    gtk_widget_get_realized (GTK_WIDGET (bvw)))
-	{
-		gulong xid = 0;
-
-		xid = bacon_video_widget_gst_get_toplevel (GTK_WIDGET (bvw));
-		gst_install_plugins_context_set_xid (install_ctx, xid);
-	}
-#endif /* GDK_WINDOWING_X11 */
-
-	status = gst_install_plugins_async (ctx->details, install_ctx,
-	                                    on_plugin_installation_done,
-	                                    ctx);
-
-	gst_install_plugins_context_free (install_ctx);
-
-	GST_INFO ("gst_install_plugins_async() result = %d", status);
-
-	if (status != GST_INSTALL_PLUGINS_STARTED_OK)
-	{
-		if (status == GST_INSTALL_PLUGINS_HELPER_MISSING)
-		{
-			g_message ("Automatic missing codec installation not supported "
-			           "(helper script missing)");
-		} else {
-			g_warning ("Failed to start codec installation: %s",
-			           gst_install_plugins_return_get_name (status));
-		}
-		bacon_video_widget_gst_codec_install_context_free (ctx);
+	if (!bacon_video_widget_start_plugin_installation (ctx))
 		return FALSE;
-	}
 
 	/* if we managed to start playing, pause playback, since some install
 	 * wizard should now take over in a second anyway and the user might not
