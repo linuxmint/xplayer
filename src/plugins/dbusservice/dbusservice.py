@@ -198,7 +198,7 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
                 'Shuffle': shuffle, # TODO: Notifications
                 'Metadata': self.__calculate_metadata (),
                 'Volume': self.xplayer.get_volume (), # TODO: Notifications
-                'Position': self.xplayer.props.current_time * 1000,
+                'Position': dbus.Int64(self.xplayer.props.current_time * 1000),
                 'CanGoNext': True, # TODO
                 'CanGoPrevious': True, # TODO
                 'CanPlay': (self.xplayer.props.current_mrl != None),
