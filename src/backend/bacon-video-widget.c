@@ -264,6 +264,7 @@ struct BaconVideoWidgetPrivate
   /* for easy codec installation */
   GList                       *missing_plugins;   /* GList of GstMessages */
   gboolean                     plugin_install_in_progress;
+  GCancellable                *missing_plugins_cancellable;
 
   /* for mounting locations if necessary */
   GCancellable                *mount_cancellable;
@@ -613,7 +614,19 @@ bacon_video_widget_realize (GtkWidget * widget)
       !is_gtk_plug(toplevel))
     gtk_window_set_geometry_hints (GTK_WINDOW (toplevel), widget, NULL, 0);
 
+  bvw->priv->missing_plugins_cancellable = g_cancellable_new ();
+  g_object_set_data (G_OBJECT (bvw), "missing-plugins-cancellable",
+		     bvw->priv->missing_plugins_cancellable);
   bacon_video_widget_gst_missing_plugins_setup (bvw);
+}
+
+static void
+bacon_video_widget_unrealize (GtkWidget *widget)
+{
+  BaconVideoWidget *bvw = BACON_VIDEO_WIDGET (widget);
+
+  g_cancellable_cancel (bvw->priv->missing_plugins_cancellable);
+  g_clear_object (&bvw->priv->missing_plugins_cancellable);
 }
 
 static void
@@ -779,6 +792,7 @@ bacon_video_widget_class_init (BaconVideoWidgetClass * klass)
   widget_class->get_preferred_width = bacon_video_widget_get_preferred_width;
   widget_class->get_preferred_height = bacon_video_widget_get_preferred_height;
   widget_class->realize = bacon_video_widget_realize;
+  widget_class->unrealize = bacon_video_widget_unrealize;
 
   /* FIXME: Remove those when GtkClutterEmbedded passes on GDK XI 1.2
    * events properly */
