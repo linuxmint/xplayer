@@ -2161,8 +2161,10 @@ bvw_bus_message_cb (GstBus * bus, GstMessage * message, BaconVideoWidget *bvw)
     case GST_MESSAGE_ANY:
     case GST_MESSAGE_RESET_TIME:
     case GST_MESSAGE_STREAM_START:
+#if GST_CHECK_VERSION (1, 1, 3)
     case GST_MESSAGE_NEED_CONTEXT:
     case GST_MESSAGE_HAVE_CONTEXT:
+#endif
     default:
       GST_LOG ("Unhandled message: %" GST_PTR_FORMAT, message);
       break;
