@@ -212,9 +212,11 @@ error_handler (GstBus *bus,
 	case GST_MESSAGE_TOC:
 	case GST_MESSAGE_RESET_TIME:
 	case GST_MESSAGE_STREAM_START:
+	case GST_MESSAGE_ANY:
+#if GST_CHECK_VERSION (1, 1, 3)
 	case GST_MESSAGE_NEED_CONTEXT:
 	case GST_MESSAGE_HAVE_CONTEXT:
-	case GST_MESSAGE_ANY:
+#endif
 	default:
 		/* Ignored */
 		;;
@@ -366,9 +368,11 @@ thumb_app_start (ThumbApp *app)
 		case GST_MESSAGE_TOC:
 		case GST_MESSAGE_RESET_TIME:
 		case GST_MESSAGE_STREAM_START:
+		case GST_MESSAGE_ANY:
+#if GST_CHECK_VERSION (1, 1, 3)
 		case GST_MESSAGE_NEED_CONTEXT:
 		case GST_MESSAGE_HAVE_CONTEXT:
-		case GST_MESSAGE_ANY:
+#endif
 		default:
 			/* Ignore */
 			;;
