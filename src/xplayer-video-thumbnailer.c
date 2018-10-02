@@ -393,7 +393,17 @@ thumb_app_setup_play (ThumbApp *app)
 	GstElement *play;
 	GstElement *audio_sink, *video_sink;
 	GstRegistry *registry;
-	GstPluginFeature *feature;
+        const char *blacklisted_plugins[] = {
+          "vaapidecodebin",
+          "vaapidecode",
+          "vaapimpeg2dec",
+          "vaapih264dec",
+          "vaapivc1dec",
+          "vaapivp8dec",
+          "vaapivp9dec",
+          "vaapih265dec"
+        };
+        guint i;
 
 	play = gst_element_factory_make ("playbin", "play");
 	audio_sink = gst_element_factory_make ("fakesink", "audio-fake-sink");
@@ -413,18 +423,15 @@ thumb_app_setup_play (ThumbApp *app)
 	 * See: https://bugzilla.gnome.org/show_bug.cgi?id=700186 and
 	 * https://bugzilla.gnome.org/show_bug.cgi?id=749605 */
 	registry = gst_registry_get ();
-	feature = gst_registry_find_feature (registry,
-					     "vaapidecodebin",
-					     GST_TYPE_ELEMENT_FACTORY);
-	if (feature)
-		gst_registry_remove_feature (registry, feature);
 
-	feature = gst_registry_find_feature (registry,
-					     "vaapidecode",
-					     GST_TYPE_ELEMENT_FACTORY);
-	if (!feature)
-		return;
-	gst_registry_remove_feature (registry, feature);
+	for (i = 0; i < G_N_ELEMENTS (blacklisted_plugins); i++) {
+		GstPluginFeature *feature =
+			gst_registry_find_feature (registry,
+						   blacklisted_plugins[i],
+						   GST_TYPE_ELEMENT_FACTORY);
+		if (feature)
+			gst_registry_remove_feature (registry, feature);
+	}
 }
 
 static void
