@@ -348,8 +348,15 @@ thumb_app_setup_play (ThumbApp *app)
 
 	/* Disable the vaapi plugin as it will not work with the
 	 * fakesink we use:
-	 * See: https://bugzilla.gnome.org/show_bug.cgi?id=700186 */
+	 * See: https://bugzilla.gnome.org/show_bug.cgi?id=700186 and
+	 * https://bugzilla.gnome.org/show_bug.cgi?id=749605 */
 	registry = gst_registry_get ();
+	feature = gst_registry_find_feature (registry,
+					     "vaapidecodebin",
+					     GST_TYPE_ELEMENT_FACTORY);
+	if (feature)
+		gst_registry_remove_feature (registry, feature);
+
 	feature = gst_registry_find_feature (registry,
 					     "vaapidecode",
 					     GST_TYPE_ELEMENT_FACTORY);
