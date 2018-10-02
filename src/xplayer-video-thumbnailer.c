@@ -746,6 +746,7 @@ create_gallery (ThumbApp *app)
 	gint screenshot_width = 0, screenshot_height = 0, x_padding = 0, y_padding = 0;
 	gfloat scale = 1.0;
 	gchar *header_text, *duration_text, *filename;
+	GFile *file;
 
 	/* Calculate how many screenshots we're going to take */
 	stream_length = app->duration;
@@ -862,15 +863,9 @@ create_gallery (ThumbApp *app)
 
 	/* Build the header information */
 	duration_text = xplayer_time_to_string (stream_length);
-	filename = NULL;
-	if (strstr (app->input, "://")) {
-		char *local;
-		local = g_filename_from_uri (app->input, NULL, NULL);
-		filename = g_path_get_basename (local);
-		g_free (local);
-	}
-	if (filename == NULL)
-		filename = g_path_get_basename (app->input);
+	file = g_file_new_for_commandline_arg (app->input);
+	filename = g_file_get_basename (file);
+	g_object_unref (file);
 
 	/* Translators: The first string is "Filename" (as translated); the second is an actual filename.
 			The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
