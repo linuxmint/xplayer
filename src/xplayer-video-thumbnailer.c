@@ -339,7 +339,8 @@ thumb_app_setup_play (ThumbApp *app)
           "vaapivc1dec",
           "vaapivp8dec",
           "vaapivp9dec",
-          "vaapih265dec"
+          "vaapih265dec",
+          "bmcdec"
         };
         guint i;
 
