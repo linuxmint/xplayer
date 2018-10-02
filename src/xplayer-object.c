@@ -3552,6 +3552,9 @@ xplayer_action_handle_key_release (XplayerObject *xplayer, GdkEventKey *event)
 	case GDK_KEY_Right:
 		xplayer_time_label_set_seeking (XPLAYER_TIME_LABEL (xplayer->fs->time_label), FALSE);
 		break;
+	case GDK_SCROLL_LEFT:
+	case GDK_SCROLL_RIGHT:
+	case GDK_SCROLL_SMOOTH:
 	default:
 		retval = FALSE;
 	}
