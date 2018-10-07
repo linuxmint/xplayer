@@ -241,7 +241,7 @@
          <child>
             <object class="GtkAction" id="contents">
                <property name="label" translatable="yes">_Contents</property>
-               <property name="icon-name">help-browser-symbolic</property>
+               <property name="icon-name">help-contents-symbolic</property>
                <property name="tooltip" translatable="yes">Help contents</property>
                <signal name="activate" handler="contents_action_callback"/>
             </object>
