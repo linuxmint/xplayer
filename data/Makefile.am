@@ -19,9 +19,6 @@ EXTRA_DIST += \
 # UI files and images
 stuffdir = $(pkgdatadir)
 stuff_DATA =				\
-	filmholes.png			\
-	filmholes-big-left.png		\
-	filmholes-big-right.png		\
 	xplayer.ui			\
 	fullscreen.ui			\
 	playlist.ui			\
