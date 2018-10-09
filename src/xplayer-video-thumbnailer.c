@@ -196,8 +196,7 @@ static void
 thumb_app_cleanup (ThumbApp *app)
 {
 	gst_element_set_state (app->play, GST_STATE_NULL);
-	g_object_unref (app->play);
-	app->play = NULL;
+	g_clear_object (&app->play);
 }
 
 static void
@@ -686,12 +685,8 @@ capture_interesting_frame (ThumbApp *app)
 
 		/* If we get to the end of this loop, we'll end up using
 		 * the last image we pulled */
-		if (current + 1 < G_N_ELEMENTS(frame_locations)) {
-			if (pixbuf != NULL) {
-				g_object_unref (pixbuf);
-				pixbuf = NULL;
-			}
-		}
+		if (current + 1 < G_N_ELEMENTS(frame_locations))
+			g_clear_object (&pixbuf);
 		PROGRESS_DEBUG("Frame for iter %d was not interesting", current);
 	}
 	return pixbuf;
