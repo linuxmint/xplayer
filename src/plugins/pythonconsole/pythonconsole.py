@@ -33,7 +33,7 @@
 # Monday 7th February 2005: Christian Schaller: Add exception clause.
 # See license_change file for details.
 
-from console import PythonConsole
+from console import PythonConsole, OutFile
 
 __all__ = ('PythonConsolePlugin', 'PythonConsole', 'OutFile')
 
