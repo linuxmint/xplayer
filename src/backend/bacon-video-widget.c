@@ -5525,7 +5525,7 @@ bacon_video_widget_initable_init (GInitable     *initable,
 #endif
   gchar *version_str;
   GstPlayFlags flags;
-  GstElement *audio_bin, *audio_converter;
+  GstElement *audio_bin;
   GstPad *audio_pad;
 
   bvw = BACON_VIDEO_WIDGET (initable);
@@ -5545,7 +5545,6 @@ bacon_video_widget_initable_init (GInitable     *initable,
 
   /* Instantiate all the fallible plugins */
   bvw->priv->play = element_make_or_warn ("playbin", "play");
-  audio_converter = element_make_or_warn ("audioconvert", "audio-converter");
   bvw->priv->audio_pitchcontrol = element_make_or_warn ("scaletempo", "scaletempo");
 #ifdef HAVE_CLUTTER_GST_3
   video_sink = clutter_gst_video_sink_new ();
@@ -5555,7 +5554,6 @@ bacon_video_widget_initable_init (GInitable     *initable,
   audio_sink = element_make_or_warn ("autoaudiosink", "audio-sink");
 
   if (!bvw->priv->play ||
-      !audio_converter ||
       !bvw->priv->audio_pitchcontrol ||
       !video_sink ||
       !audio_sink) {
@@ -5563,8 +5561,6 @@ bacon_video_widget_initable_init (GInitable     *initable,
       g_object_ref_sink (video_sink);
     if (audio_sink)
       g_object_ref_sink (audio_sink);
-    if (audio_converter)
-      g_object_ref_sink (audio_converter);
     g_set_error_literal (error, BVW_ERROR, BVW_ERROR_PLUGIN_LOAD,
 			 _("Some necessary plug-ins are missing. "
 			   "Make sure that the program is correctly installed."));
@@ -5576,9 +5572,7 @@ bacon_video_widget_initable_init (GInitable     *initable,
   /* Add the download flag, for streaming buffering,
    * and the deinterlace flag, for video only */
   g_object_get (bvw->priv->play, "flags", &flags, NULL);
-  flags |= GST_PLAY_FLAG_DOWNLOAD;
-  g_object_set (bvw->priv->play, "flags", flags, NULL);
-  flags |= GST_PLAY_FLAG_DEINTERLACE;
+  flags |= GST_PLAY_FLAG_DOWNLOAD | GST_PLAY_FLAG_DEINTERLACE;
   g_object_set (bvw->priv->play, "flags", flags, NULL);
 
   gst_bus_add_signal_watch (bvw->priv->bus);
@@ -5646,11 +5640,8 @@ bacon_video_widget_initable_init (GInitable     *initable,
   audio_bin = gst_bin_new ("audiosinkbin");
   gst_bin_add_many (GST_BIN (audio_bin),
                     bvw->priv->audio_capsfilter,
-                    bvw->priv->audio_pitchcontrol,
-		   audio_converter, audio_sink, NULL);
+		    audio_sink, NULL);
   gst_element_link_many (bvw->priv->audio_capsfilter,
-			 bvw->priv->audio_pitchcontrol,
-			 audio_converter,
 			 audio_sink,
 			 NULL);
 
@@ -5660,6 +5651,7 @@ bacon_video_widget_initable_init (GInitable     *initable,
 
   /* And tell playbin */
   g_object_set (bvw->priv->play, "audio-sink", audio_bin, NULL);
+  g_object_set (bvw->priv->play, "audio-filter", bvw->priv->audio_pitchcontrol, NULL);
 
   /* Set default connection speed */
   g_object_set (bvw->priv->play, "connection-speed", MAX_NETWORK_SPEED, NULL);
