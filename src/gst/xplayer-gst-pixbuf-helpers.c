@@ -105,6 +105,7 @@ xplayer_gst_playbin_get_frame (GstElement *play)
       GST_ROUND_UP_4 (outwidth * 3), destroy_pixbuf, sample);
 
   gst_memory_unmap (memory, &info);
+  gst_memory_unref (memory);
 
 done:
   if (!pixbuf) {
