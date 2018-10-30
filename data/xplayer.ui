@@ -53,7 +53,7 @@
                <property name="tooltip" translatable="yes">Play or pause the movie</property>
                <signal name="activate" handler="play_action_callback"/>
             </object>
-            <accelerator key="space" modifiers="GDK_CONTROL_MASK"/>
+            <accelerator key="space"/>
          </child>
          <child>
             <object class="GtkAction" id="quit">
