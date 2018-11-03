@@ -268,18 +268,12 @@ class Root (dbus.service.Object): # pylint: disable-msg=R0923,R0904
                           in_signature = '', # pylint: disable-msg=C0103
                           out_signature = '')
     def Next (self):
-        if self.xplayer.is_playing () or self.xplayer.is_paused ():
-            return
-
         self.xplayer.action_next ()
 
     @dbus.service.method (dbus_interface = 'org.mpris.MediaPlayer2.Player',
                           in_signature = '', # pylint: disable-msg=C0103
                           out_signature = '')
     def Previous (self):
-        if self.xplayer.is_playing () or self.xplayer.is_paused ():
-            return
-
         self.xplayer.action_previous ()
 
     @dbus.service.method (dbus_interface = 'org.mpris.MediaPlayer2.Player',
