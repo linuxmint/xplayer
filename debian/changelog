@@ -1,3 +1,57 @@
+xplayer (2.0.0) tessa; urgency=medium
+
+  [ Leigh Scott ]
+  * Port to python3 (#104)
+
+  [ Alexei Sorokin ]
+  * grilo plugin: Move derived widgets from GtkBuilder (#119)
+
+  [ gogogogi ]
+  * Add croatian manual (#105)
+
+  [ Clement Lefebvre ]
+  * Packaging: Update dependencies
+  * CI: Remove Mint 18
+  * Packaging: Update dependencies
+  * Rename dbusservice plugin to MPRIS.
+  * Fix python console plugin
+  * l10n: Update POT
+
+  [ NikoKrause ]
+  * Consistent icon usage in all xapps: help-contents (#133)
+
+  [ Leigh Scott ]
+  * pythonconsole: Import all classes to expose publicly (#123)
+  * thumbnailer: Use g_clear_object (#124)
+  * thumbnailer: Simplify getting the file's basename (#125)
+  * thumbnailer: Fix memory leak (#129)
+  * gst: Fix GstMemory memory leak (#131)
+  * gst: Add new flags for playbin (#130)
+  * dbusservice: Force Position to be int64 (#132)
+  * thumbnailer: Remove film strip from generated thumbnails (#126)
+
+  [ leigh123linux ]
+  * missing plugins: Pass in Xplayer's desktop file ID
+  * missing plugins: Break out a function
+  * missing plugins: Ask the user before spawning a plugin search
+  * core: Add missing enum members to switch statements
+  * core: Conditionalise use of new GStreamer GST_MESSAGE_* API
+  * backend: Fix incorrect return type
+  * Bump gstreamer version to 1.6.0
+  * thumbnailer: Also blacklist new vaapidecodebin
+  * thumbnailer: blacklist new vaapi plugin names
+  * thumbnailer: Blacklist the bmcdec plugin
+  * thumbnailer: Blacklist GStreamer plugins rather than features
+  * thumbnailer: Blacklist video4linux2 plugin
+
+  [ Michael Webster ]
+  * src/plugins/dbusservice/dbusservice.py: Fix dbus/mpris next and previous commands.
+
+  [ chingyinwan123 ]
+  * Play/pause with SPACE instead of CTRL+SPACE (#98) (#137)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 19 Nov 2018 11:01:35 +0000
+
 xplayer (1.8.3) tara; urgency=medium
 
   * l10n: Update translations
