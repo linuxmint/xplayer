@@ -18,17 +18,17 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2017-08-30 17:42+0000\n"
-"Last-Translator: Dmitriy Kulikov <Unknown>\n"
+"POT-Creation-Date: 2018-10-01 16:32+0100\n"
+"PO-Revision-Date: 2018-10-04 06:33+0000\n"
+"Last-Translator: Dmitry Kiryanov <Unknown>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:14+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:50+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 "Language: ru\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -229,7 +229,7 @@ msgstr "Переместить вверх"
 msgid "Move Down"
 msgstr "Переместить вниз"
 
-#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
 msgstr "Стерео"
 
@@ -900,19 +900,19 @@ msgstr ""
 "Этот файл не может быть воспроизведён по сети. Попробуйте сначала загрузить "
 "его на локальный диск."
 
-#: ../src/backend/bacon-video-widget.c:5095
+#: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
 msgstr "Объёмный"
 
-#: ../src/backend/bacon-video-widget.c:5097
+#: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
 msgstr "Моно"
 
-#: ../src/backend/bacon-video-widget.c:5383
+#: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
 msgstr "На носителе не найдено поддерживаемых потоков видео."
 
-#: ../src/backend/bacon-video-widget.c:5573
+#: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1878,16 +1878,12 @@ msgid "Add Chapter"
 msgstr "Добавить фрагмент"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
-msgid "D-Bus Service"
-msgstr "Служба D-Bus"
+msgid "MPRIS Support"
+msgstr "Поддержка MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-msgid ""
-"Plugin for sending notifications of currently playing movies to the D-Bus "
-"subsystem."
-msgstr ""
-"Модуль для отправки уведомлений о проигрываемых в текущий момент фильмах "
-"через службу D-Bus."
+msgid "This plugin enables MPRIS support over DBUS."
+msgstr "Этот плагин включает поддержку MPRIS через DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1931,7 +1927,7 @@ msgstr "Копировать адрес"
 msgid "Browse"
 msgstr "Обзор"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
 msgstr "Поиск"
 
@@ -2006,57 +2002,57 @@ msgstr "Загрузка субтитров"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Поиск субтитров для воспроизводимого в данный момент фильма."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:43
+#: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
 msgstr "Бразильский португальский"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:179
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
 msgstr "Поиск субтитров…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:227
-#: ../src/plugins/opensubtitles/opensubtitles.py:647
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
 msgstr "Загрузка субтитров…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:292
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
 msgstr "Не удалось соединиться с сервером OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:325
-#: ../src/plugins/opensubtitles/opensubtitles.py:343
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
 msgstr "Не удалось соединиться с веб-сайтом OpenSubtitles."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:331
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
 msgstr "Результаты не найдены."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:480
+#: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
 msgstr "Субтитры"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:486
+#: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
 msgstr "Формат"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:491
+#: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
 msgstr "Оценка"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Загрузить субтитры к фильму с OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:529
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
 msgstr "_Загрузить субтитры к фильму…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:591
+#: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
 msgstr "Поиск субтитров…"
 
@@ -2162,17 +2158,17 @@ msgid "Enable remote Python debugging with rpdb2"
 msgstr "Включить удалённую отладку Python с помощью rpdb2"
 
 #. pylint: disable-msg=E1101
-#: ../src/plugins/pythonconsole/pythonconsole.py:125
+#: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr ""
 "Получить доступ к объекту Xplayer.Object можно через «xplayer_object» :\\n%s"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:129
+#: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
 msgstr "Консоль Python видеопроигрывателя Xplayer"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:139
+#: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
@@ -2198,11 +2194,11 @@ msgstr "Модуль вращения"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Позволяет поворачивать видео, если его положение неверно"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
 msgstr "По _часовой стрелке"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
 msgstr "_Против часовой стрелки"
 

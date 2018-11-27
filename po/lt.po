@@ -16,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 11:59+0100\n"
-"PO-Revision-Date: 2017-08-31 21:47+0000\n"
+"POT-Creation-Date: 2018-10-01 16:32+0100\n"
+"PO-Revision-Date: 2018-10-01 22:07+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:14+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:50+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 "Language: \n"
 
 #: ../data/fullscreen.ui.h:1
@@ -222,7 +222,7 @@ msgstr "Didinti garsumą"
 msgid "Move Down"
 msgstr "Mažinti garsumą"
 
-#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -893,19 +893,19 @@ msgstr ""
 "Nepavyko groti šio failo per tinklą. Pabandykite pirma jį parsisiųsti į "
 "diską."
 
-#: ../src/backend/bacon-video-widget.c:5095
+#: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
 msgstr "Apsupimas"
 
-#: ../src/backend/bacon-video-widget.c:5097
+#: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5383
+#: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
 msgstr "Laikmenoje nėra palaikomų vaizdo srautų."
 
-#: ../src/backend/bacon-video-widget.c:5573
+#: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1881,14 +1881,12 @@ msgid "Add Chapter"
 msgstr "Pridėti skyrių"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
-msgid "D-Bus Service"
-msgstr "D-Bus paslauga"
+msgid "MPRIS Support"
+msgstr "MPRIS palaikymas"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-msgid ""
-"Plugin for sending notifications of currently playing movies to the D-Bus "
-"subsystem."
-msgstr "Įskiepis notifikacijų apie rodomus filmus siuntimui į D-Bus."
+msgid "This plugin enables MPRIS support over DBUS."
+msgstr "Šis įskiepis įjungia MPRIS palaikymą per DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1932,7 +1930,7 @@ msgstr "Kopijuoti vietą"
 msgid "Browse"
 msgstr "Naršyti"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
 msgstr "Ieškoti"
 
@@ -2006,57 +2004,57 @@ msgstr "Titrų parsiuntiklis"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Ieškoti subtitrų šiuo metu grojamam filmui"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:43
+#: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
 msgstr "Portugalų (Brazilija)"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:179
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
 msgstr "Ieškoma titrų..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:227
-#: ../src/plugins/opensubtitles/opensubtitles.py:647
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
 msgstr "Parsiunčiami titrai..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:292
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
 msgstr "Nepavyko prisijungti prie OpenSubtitles svetainės"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:325
-#: ../src/plugins/opensubtitles/opensubtitles.py:343
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
 msgstr "Nepavyko prisijungti prie OpenSubtitles svetainės."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:331
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
 msgstr "Rezultatų nerasta."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:480
+#: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
 msgstr "Titrai"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:486
+#: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
 msgstr "Formatas"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:491
+#: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
 msgstr "Įvertinimas"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Parsiųsti filmo titrus iš OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:529
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
 msgstr "_Parsisiųsti filmo titrus..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:591
+#: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
 msgstr "Ieškoma titrų..."
 
@@ -2167,16 +2165,16 @@ msgid "Enable remote Python debugging with rpdb2"
 msgstr "Įjungti nuotolinį Python derinimą su rpdb2"
 
 #. pylint: disable-msg=E1101
-#: ../src/plugins/pythonconsole/pythonconsole.py:125
+#: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr "Galite pasiekti xplayer objektą per „xplayer_object“ :\\n%s"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:129
+#: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
 msgstr "Xplayer Pythono konsolė"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:139
+#: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
@@ -2202,11 +2200,11 @@ msgstr "Posūkio įskiepis"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Visi vaizdai turi būti pasukti, jei jų padėtis yra neteisinga"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
 msgstr "Pasukti pagal laikrodžio _rodyklę"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
 msgstr "Pasukti prieš _laikrodžio rodyklę"
 

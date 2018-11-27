@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"POT-Creation-Date: 2018-10-01 16:32+0100\n"
 "PO-Revision-Date: 2017-09-02 15:22+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <locales@geez.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:14+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:50+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
@@ -203,7 +203,7 @@ msgstr "ወደ ላይ ማንቀሳቀሻ"
 msgid "Move Down"
 msgstr "ወደ ታች ማንቀሳቀሻ"
 
-#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
 msgstr "ስቴሪዮ"
 
@@ -866,19 +866,19 @@ msgid ""
 "first."
 msgstr "ይህን ፋይል ማጫወት አልተቻለም በ ኔትዎርክ ውስጥ: በ መጀመሪያ ለማውረድ ይሞክሩ"
 
-#: ../src/backend/bacon-video-widget.c:5095
+#: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
 msgstr "ዙሪያ"
 
-#: ../src/backend/bacon-video-widget.c:5097
+#: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
 msgstr "ነጠላ"
 
-#: ../src/backend/bacon-video-widget.c:5383
+#: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
 msgstr "መገናኛው ምንም የ ቪዲዮ ማስተላለፊያ አልያዘም"
 
-#: ../src/backend/bacon-video-widget.c:5573
+#: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1825,14 +1825,12 @@ msgid "Add Chapter"
 msgstr "ምእራፍ መጨመሪያ"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
-msgid "D-Bus Service"
-msgstr "D-Bus ግልጋሎት"
+msgid "MPRIS Support"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-msgid ""
-"Plugin for sending notifications of currently playing movies to the D-Bus "
-"subsystem."
-msgstr "ተሰኪ ማስታወቂያዎች ለ መላክ አሁን በሚጫወተው ምሙቪ ውስጥ ወደ D-Bus ንዑስ ስርአት"
+msgid "This plugin enables MPRIS support over DBUS."
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1875,7 +1873,7 @@ msgstr "አካባቢ ኮፒ ማድረጊያ"
 msgid "Browse"
 msgstr "መቃኛ"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
 msgstr "መፈለጊያ"
 
@@ -1947,57 +1945,57 @@ msgstr "ንዑስ አርእስት ማውረጃ"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "አሁን ለሚጫወተው ሙቪ የ ንዑስ አርእስት መፈለጊያ"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:43
+#: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
 msgstr "ብራዚሊያን ፖርቱጊስ"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:179
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
 msgstr "ንዑስ አርእስት በ መፈለግ ላይ…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:227
-#: ../src/plugins/opensubtitles/opensubtitles.py:647
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
 msgstr "ንዑስ አርእስት በ ማውረድ ላይ…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:292
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
 msgstr "የ Open ንዑስ አርእስት ድህረ ገጽ መገናኘት አልተቻለም"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:325
-#: ../src/plugins/opensubtitles/opensubtitles.py:343
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
 msgstr "የ Open ንዑስ አርእስት ድህረ ገጽ መገናኘት አልተቻለም"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:331
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
 msgstr "ምንም ውጤት አልተገኘም"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:480
+#: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
 msgstr "ንዑስ አርእስት"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:486
+#: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
 msgstr "አቀራረብ"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:491
+#: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
 msgstr "ደረጃው"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "የ ሙቪ ንዑስ አርእስት ከ  Open ንዑስ አርእስት ማውረጃ"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:529
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
 msgstr "የ ሙቪ ንዑስ አርእስት በ _ማውረድ ላይ…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:591
+#: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
 msgstr "ንዑስ አርእስት በ መፈለግ ላይ…"
 
@@ -2102,16 +2100,16 @@ msgid "Enable remote Python debugging with rpdb2"
 msgstr "ማስቻያ የ ሩቅ Python debugging with rpdb2"
 
 #. pylint: disable-msg=E1101
-#: ../src/plugins/pythonconsole/pythonconsole.py:125
+#: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr "እርስዎ መድረስ ይችላሉ ወደ Xplayer.Object through 'xplayer_object' :\\n%s"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:129
+#: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
 msgstr "Xplayer Python Console"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:139
+#: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
@@ -2136,11 +2134,11 @@ msgstr "ተሰኪ ማዞሪያ"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "ቪዲዮ እንዲዞር መፍቀጃ በ ተሳሳተ አቅጣጫ ከሆኑ"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
 msgstr "_ማዞሪያ ከ ግራ ወደ ቀኝ"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
 msgstr "ማዞሪያ ከ ቀኝ _ወደ ግራ"
 

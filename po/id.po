@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"POT-Creation-Date: 2018-10-01 16:32+0100\n"
 "PO-Revision-Date: 2018-05-05 15:36+0000\n"
 "Last-Translator: Ady Suwarjono <amdersz5g7@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:14+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:50+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 "Language: id\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -221,7 +221,7 @@ msgstr "Naik"
 msgid "Move Down"
 msgstr "Turun"
 
-#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
 msgstr "Stereo"
 
@@ -886,19 +886,19 @@ msgstr ""
 "Berkas ini tak bisa diputar melalui jaringan. Cobalah untuk mengunduhnya "
 "lebih dulu."
 
-#: ../src/backend/bacon-video-widget.c:5095
+#: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
 msgstr "Stereo"
 
-#: ../src/backend/bacon-video-widget.c:5097
+#: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
 msgstr "Mono"
 
-#: ../src/backend/bacon-video-widget.c:5383
+#: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
 msgstr "Media mengandung siaran video yang tidak didukung."
 
-#: ../src/backend/bacon-video-widget.c:5573
+#: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1847,16 +1847,12 @@ msgid "Add Chapter"
 msgstr "Tambah Bab"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
-msgid "D-Bus Service"
-msgstr "Layanan D-Bus"
+msgid "MPRIS Support"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-msgid ""
-"Plugin for sending notifications of currently playing movies to the D-Bus "
-"subsystem."
+msgid "This plugin enables MPRIS support over DBUS."
 msgstr ""
-"Plugin untuk mengirim pemberitahuan tentang film yang kini diputar ke "
-"subsistem D-Bus."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1900,7 +1896,7 @@ msgstr "Salin Lokasi"
 msgid "Browse"
 msgstr "Ramban"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
 msgstr "Cari"
 
@@ -1973,57 +1969,57 @@ msgstr "Pengunduh Subtitel"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "Mencari teks subtitel untuk film yang sedang diputar"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:43
+#: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
 msgstr "Portugis Brasil"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:179
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
 msgstr "Mencari subtitel…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:227
-#: ../src/plugins/opensubtitles/opensubtitles.py:647
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
 msgstr "Mengunduh subtitel…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:292
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
 msgstr "Tidak dapat menghubungi situs web OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:325
-#: ../src/plugins/opensubtitles/opensubtitles.py:343
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
 msgstr "Tidak dapat menghubungi situs web OpenSubtitles."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:331
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
 msgstr "Tak memperoleh hasil."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:480
+#: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
 msgstr "Subtitel"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:486
+#: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
 msgstr "Format"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:491
+#: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
 msgstr "Rating"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "Mengunduh subtitel film dari OpenSubtitles"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:529
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
 msgstr "Un_duh Subtitel Film…"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:591
+#: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
 msgstr "Mencari subtitel…"
 
@@ -2128,16 +2124,16 @@ msgid "Enable remote Python debugging with rpdb2"
 msgstr "Mengaktifkan debug jarak jauh Python dengan rpdb2"
 
 #. pylint: disable-msg=E1101
-#: ../src/plugins/pythonconsole/pythonconsole.py:125
+#: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr "Anda dapat mengakses Xplayer.Object melalui 'xplayer_object' :\\n%s"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:129
+#: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
 msgstr "Konsol Python Xplayer"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:139
+#: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
@@ -2163,11 +2159,11 @@ msgstr "Plugin Rotasi"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "Perbolehkan video diputar arahnya bila orientasinya salah"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
 msgstr "Puta_r Searah Jarum Jam"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
 msgstr "Putar Me_lawan Arah Jarum Jam"
 

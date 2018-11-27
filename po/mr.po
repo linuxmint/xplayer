@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
-"POT-Creation-Date: 2017-10-26 11:59+0100\n"
+"POT-Creation-Date: 2018-10-01 16:32+0100\n"
 "PO-Revision-Date: 2016-03-09 05:23+0000\n"
 "Last-Translator: Vikram Kulkarni <kul.vikram@gmail.com>\n"
 "Language-Team: Marathi <maajhe-sanganak@freelists.org>\n"
@@ -20,8 +20,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:15+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:51+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 "Language: mr\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -217,7 +217,7 @@ msgstr "वर हलवा"
 msgid "Move Down"
 msgstr "खाली हलवा"
 
-#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5099
+#: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
 msgstr "स्टिरीओ"
 
@@ -884,19 +884,19 @@ msgstr ""
 "ह्या फाइलला नेटवर्कवर चालवणे शक्य नाही. त्यास प्रथम स्थानीयरित्या डाउनलोड "
 "करायचा प्रयत्न करा."
 
-#: ../src/backend/bacon-video-widget.c:5095
+#: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
 msgstr "भोवती"
 
-#: ../src/backend/bacon-video-widget.c:5097
+#: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
 msgstr "एकसंख्यी"
 
-#: ../src/backend/bacon-video-widget.c:5383
+#: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
 msgstr "मिडिया मध्ये समर्थीत व्हिडियो प्रव्हा समाविष्टीत नाही."
 
-#: ../src/backend/bacon-video-widget.c:5573
+#: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
@@ -1851,16 +1851,12 @@ msgid "Add Chapter"
 msgstr "अध्याय समाविष्ट करा"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
-msgid "D-Bus Service"
-msgstr "D-Bus सेवा"
+msgid "MPRIS Support"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
-msgid ""
-"Plugin for sending notifications of currently playing movies to the D-Bus "
-"subsystem."
+msgid "This plugin enables MPRIS support over DBUS."
 msgstr ""
-"D-Bus उपप्रणालीसाठी सध्या सुरू असलेल्या चित्रपटांकरीता सूचना पाठवण्यासाठीचे "
-"प्लगइन."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1904,7 +1900,7 @@ msgstr "ठिकाणाचे प्रत बनवा"
 msgid "Browse"
 msgstr "तपासणी करा"
 
-#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1227
+#: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
 msgstr "शोधा"
 
@@ -1978,57 +1974,57 @@ msgstr "Subtitle डाउनलोडर"
 msgid "Look for subtitles for the currently playing movie"
 msgstr "सध्या सुरू असलेल्या चित्रपटकरीता उपशीर्षक पहा"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:43
+#: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
 msgstr "ब्रजिलियन पॉर्ट्यूगिज्"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:179
+#: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
 msgstr "उपशीर्षक शोधत आहे..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:227
-#: ../src/plugins/opensubtitles/opensubtitles.py:647
+#: ../src/plugins/opensubtitles/opensubtitles.py:225
+#: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
 msgstr "उपशीर्षक डाउनलोड करत आहे..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:292
+#: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
 msgstr "OpenSubtitles संकेतस्थळ उघडणे अशक्य"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:325
-#: ../src/plugins/opensubtitles/opensubtitles.py:343
+#: ../src/plugins/opensubtitles/opensubtitles.py:323
+#: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
 msgstr "OpenSubtitles संकेतस्थळशी संपर्क करणे अशक्य."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:331
+#: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
 msgstr "परिणाम आढळले नाही."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:480
+#: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
 msgstr "उपशिर्षक"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
-#: ../src/plugins/opensubtitles/opensubtitles.py:486
+#: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
 msgstr "रूपण"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
-#: ../src/plugins/opensubtitles/opensubtitles.py:491
+#: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
 msgstr "गुणवत्ताश्रेणी"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:527
+#: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
 msgstr "OpenSubtitles पासून चित्रपटाचे उपशिर्षक डाउनलोड करा"
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:529
+#: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
 msgstr "चित्रपटाचे उपशीर्षक डाउनलोड करा (_D)..."
 
-#: ../src/plugins/opensubtitles/opensubtitles.py:591
+#: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
 msgstr "उपशीर्षक शोधत आहे..."
 
@@ -2134,16 +2130,16 @@ msgid "Enable remote Python debugging with rpdb2"
 msgstr "दूरस्थ Python डीबगींग rpdb2 सह चालू करा"
 
 #. pylint: disable-msg=E1101
-#: ../src/plugins/pythonconsole/pythonconsole.py:125
+#: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
 msgstr "Xplayer.Object करीता 'xplayer_object' :\\n%s तर्फे प्रवेश शक्य आहे"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:129
+#: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
 msgstr "Xplayer Python कंसोल"
 
-#: ../src/plugins/pythonconsole/pythonconsole.py:139
+#: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
 "After you press OK, Xplayer will wait until you connect to it with winpdb or "
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
@@ -2169,11 +2165,11 @@ msgstr "गोलाकार प्लगइन"
 msgid "Allows videos to be rotated if they are in the wrong orientation"
 msgstr "चुकिच्या दिशेने असल्यास व्हिडिओज्ना फिरवण्यस परवानगी देतो"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:50
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
 msgstr "घड्याळीच्या दिशेने फिरवा (_R)"
 
-#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:52
+#: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
 msgstr "घड्याळीच्या उलट दिशेने फिरवा (_l)"
 
