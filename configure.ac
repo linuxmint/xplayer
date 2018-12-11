@@ -2,7 +2,7 @@ AC_PREREQ[(2.64)]
 
 m4_define(xplayer_version_major, 2)
 m4_define(xplayer_version_minor, 0)
-m4_define(xplayer_version_micro, 1)
+m4_define(xplayer_version_micro, 2)
 
 # The version of the API exposed to plugins
 m4_define(xplayer_api_version_major, 1)
