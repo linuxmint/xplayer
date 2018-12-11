@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2018-11-20 21:55+0000\n"
-"Last-Translator: Yacine Bouklif <yacine_tizi2003@yahoo.fr>\n"
+"PO-Revision-Date: 2018-12-04 07:53+0000\n"
+"Last-Translator: Slimane Amiri <slimane.amiri@gmail.com>\n"
 "Language-Team: Kabyle <kab@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-11-27 17:51+0000\n"
-"X-Generator: Launchpad (build 18826)\n"
+"X-Launchpad-Export-Date: 2018-12-11 11:59+0000\n"
+"X-Generator: Launchpad (build 18837)\n"
 "Language: kab\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -69,7 +69,7 @@ msgstr "Taɣuri tagacurant"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr ""
+msgstr "Rmed neɣ ala tukksa n ucebbek i tividyutin ittwacebken"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
@@ -237,7 +237,7 @@ msgstr "5.1-abadu"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr ""
+msgstr "AC3 Zgel"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
@@ -294,7 +294,7 @@ msgstr "_Bedel tiddi n usfaylu ticki tettwazdem tvidyut"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr ""
+msgstr "Sens_Acebbek i tvidyutin ittwacebken"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
@@ -431,7 +431,7 @@ msgstr "Ɣer tividyutin"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr ""
+msgstr "Tavidyut;Asaru;Sinima;Aklip;Imazraren;Ameɣri;DVD;TV;Disk;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
@@ -779,7 +779,7 @@ msgstr "Simɣur"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr ""
+msgstr "Sɛeddi _Zdat"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
@@ -879,7 +879,7 @@ msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
-msgstr ""
+msgstr "Surround"
 
 #: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
@@ -946,7 +946,7 @@ msgstr "Akk ifuyla yettusefraken"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr ""
+msgstr "S usiɣzef"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
@@ -1179,6 +1179,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Xplayer d aseɣẓan ilelli; tzemreḍ ad tmuddeḍ-t u/neɣ ad as-tbedleḍ s wakken "
+"llan wawalen n Turagt Tazayezt Tamatut GNU, am akken tettwaẓreg sɣur Free "
+"Software Foundation; ama d lqem 2 n turagt, neɣ (ma tebɣiḍ) yal turagt "
+"taqburt."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1187,6 +1191,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Xplayer yettusedger  iwakken ad yenfeɛ, maca MEBLA TUBBIT N ṬMANA, ulac ula "
+"d ṭmana tudrigt belli  YEZMER AD YETTWAZZENZ neɣ YEZMER AD YETTUSEQDEC I "
+"KRA. I wugar n ttfaṣil, wali Turagt Tazayezt Tamatut GNU."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1194,6 +1201,9 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
+"Yiwet n tunɣilt (copy) n Turagt Tazayezt Tamatut GNU tlaq ad d-teddu akked "
+"Xplayer; ma ulac-itt, aru i Free Software Foundation, Inc., 59 Temple place, "
+"Suite 330, Boston, MA 02111-1307 USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1399,7 +1409,7 @@ msgstr "Fren tasefsit n iduzewlen"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr ""
+msgstr "Tutlayt tamirant"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
@@ -1427,20 +1437,20 @@ msgstr "Taseltit"
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr ""
+msgstr "Turuft talemmast"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Tacinit taḥarfit"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Tacinit tamensayt"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
@@ -1457,12 +1467,12 @@ msgstr "Asirilik"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Tasirilikt/Tarusit"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Tasirilikt/Takrinit"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
@@ -1491,7 +1501,7 @@ msgstr "Taɛebrit"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Taɛebranit tamwalant"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1516,7 +1526,7 @@ msgstr "Takurit"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr ""
+msgstr "Agafayan"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
@@ -1529,7 +1539,7 @@ msgstr "Tarumanit"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr ""
+msgstr "Turuft n unẓul"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
@@ -1656,7 +1666,7 @@ msgstr "Amseklas n uḍebsi abidyu"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr ""
+msgstr "Aklas n (S)VCDs neɣ video DVDs"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
@@ -1760,7 +1770,7 @@ msgstr "Ixfawen"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr ""
+msgstr "Sefrek tibzimin n iḥricen deg Tvidyutin"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1777,7 +1787,7 @@ msgstr "Tuccḍa di tɣuri n ufaylu s yixfawen"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr ""
+msgstr "Aḥric s wakkud-a yella yakan"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
@@ -1802,7 +1812,7 @@ msgstr "Ldi afaylu n yixfawen"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr ""
+msgstr "Tuṭṭfa n Uḥric"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
@@ -1832,17 +1842,17 @@ msgstr "Rnu ixef"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
-msgstr ""
+msgstr "Asefrek MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr ""
+msgstr "Azegrir-agi iremmed asefrak MPRIS s DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr ""
+msgstr "Taɣawsa MediaPlayer2 ur tserkeb ara agrudem  ‘%s’"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
@@ -1852,7 +1862,7 @@ msgstr "Ayla ‘%s’ ur yesɛi ara adduf s tira."
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr ""
+msgstr "Taɣaṛa tarussint ‘%s’ tettwasuter i 2 n tɣawsiwin n MediaPlayer"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
@@ -1893,7 +1903,7 @@ msgstr "Tuccḍa n unadi"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr ""
+msgstr "Asegzu Gromit"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
@@ -1905,19 +1915,21 @@ msgstr "Imisin Gromit ur yettwaf ara."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr ""
+msgstr "Addad n udiwenni usrid"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
+"Sbadu addad n udiwenni-inek usrid Messenger ɣer 'ulac-iyi' mi ara itturar "
+"asaru"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr ""
+msgstr "Asenqed ubεid n infrared"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr ""
+msgstr "Sefrek asenqed ubεid n infrared"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
@@ -1933,7 +1945,7 @@ msgstr "Tanasin n imeɣri n umidya"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr ""
+msgstr "Asenarni teqqfalin nniḍen i umeɣri n umidya"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
@@ -1953,7 +1965,7 @@ msgstr "Nadi iduzewlen i tvidyut itteddun akka tura"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "Tapuṛtugit n Brazil"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
@@ -2074,6 +2086,8 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
+"Awal n uεeddi i uhraz n uqeddac rpdb2 i mseɣti Xplayer sef unekcum ubεid ur "
+"nesεi ttesriḥ. ma yella d ilem, d amezwar n  'xplayer' ad ittwasqedcen."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2081,7 +2095,7 @@ msgstr "Tadiwent Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr ""
+msgstr "tadiwent u sefrer n Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
@@ -2120,6 +2134,9 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
+"Seld mi tettekaḍ ɣef IH, Xplayer ad yerǧu armi yeqqen ɣer winpdb neɣ rpdb2. "
+"Ma ur tesbaduḍ ara awal uεeddi i umseɣti deg DConf, ad iseqdec awal uεeddi "
+"amezwer ('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2260,8 +2277,8 @@ msgstr "_Ngez ɣer:"
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "tasint"
+msgstr[1] "tasinin"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2278,7 +2295,7 @@ msgstr "_Ngez ɣer..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr ""
+msgstr "Suref ɣer wakkud ittunefken"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
