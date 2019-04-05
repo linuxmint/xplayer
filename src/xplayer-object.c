@@ -3478,18 +3478,16 @@ static gboolean
 on_video_button_press_event (BaconVideoWidget *bvw, GdkEventButton *event,
 		XplayerObject *xplayer)
 {
-	if (event->type == GDK_BUTTON_PRESS && event->button == 1) {
-		gtk_widget_grab_focus (GTK_WIDGET (bvw));
-		return TRUE;
-	} else if (event->type == GDK_2BUTTON_PRESS && event->button == 1) {
+	if (event->type == GDK_2BUTTON_PRESS && event->button == 1) {
 		xplayer_action_fullscreen_toggle(xplayer);
 		return TRUE;
-	} else if (event->type == GDK_BUTTON_PRESS && event->button == 2) {
+	} else if (event->type == GDK_BUTTON_PRESS && (event->button == 1 || event->button == 2)) {
 		const char *icon_name;
 		if (bacon_video_widget_is_playing (xplayer->bvw) == FALSE)
 			icon_name = xplayer_get_rtl_icon_name ("media-playback-start");
 		else
 			icon_name = "media-playback-pause-symbolic";
+		gtk_widget_grab_focus (GTK_WIDGET (bvw));
 		xplayer_fullscreen_show_popups_or_osd (xplayer->fs, icon_name, FALSE);
 		xplayer_action_play_pause (xplayer);
 		return TRUE;
