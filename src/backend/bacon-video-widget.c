@@ -1715,6 +1715,9 @@ update_orientation_from_video (BaconVideoWidget *bvw)
   if (bvw->priv->rotation != BVW_ROTATION_R_ZERO)
     return;
 
+  if (bvw->priv->tagcache == NULL)
+    return;
+
   ret = gst_tag_list_get_string_index (bvw->priv->tagcache,
 				       GST_TAG_IMAGE_ORIENTATION, 0, &orientation_str);
   if (!ret || !orientation_str || g_str_equal (orientation_str, "rotate-0"))
