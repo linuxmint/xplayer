@@ -3708,6 +3708,13 @@ xplayer_action_handle_key_press (XplayerObject *xplayer, GdkEventKey *event)
 		xplayer_action_pause (xplayer);
 		icon_name = "media-playback-pause-symbolic";
 		break;
+	case GDK_KEY_w:
+	case GDK_KEY_W:
+		if (event->state & GDK_CONTROL_MASK)
+			xplayer_action_exit (xplayer);
+		else
+			retval = FALSE;
+		break;
 	case GDK_KEY_q:
 	case GDK_KEY_Q:
 		xplayer_action_exit (xplayer);
@@ -3943,6 +3950,8 @@ window_key_press_event_cb (GtkWidget *win, GdkEventKey *event, XplayerObject *xp
 		case GDK_KEY_l:
 		case GDK_KEY_q:
 		case GDK_KEY_Q:
+		case GDK_KEY_w:
+		case GDK_KEY_W:
 		case GDK_KEY_Right:
 		case GDK_KEY_Left:
 		case GDK_KEY_plus:
