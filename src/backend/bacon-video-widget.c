@@ -4744,7 +4744,7 @@ bacon_video_widget_set_video_property (BaconVideoWidget *bvw,
 
   GST_DEBUG ("set video property type %d to value %d", type, value);
 
-  if ( !(value <= 65535 && value >= 0) )
+  if (value > 65535 || value < 0)
     return;
 
   found_channel = bvw_get_color_balance_channel (GST_COLOR_BALANCE (bvw->priv->play), type);
