@@ -286,9 +286,9 @@ egg_desktop_file_new_from_key_file (GKeyFile    *key_file,
 
       /* Lots of .desktop files still get this wrong */
       ext = strrchr (desktop_file->icon, '.');
-      if (ext && (!strcmp (ext, ".png") ||
-		  !strcmp (ext, ".xpm") ||
-		  !strcmp (ext, ".svg")))
+      if (ext && !(strcmp (ext, ".png") &&
+		  strcmp (ext, ".xpm") &&
+		  strcmp (ext, ".svg")))
 	{
 	  g_warning ("Desktop file '%s' has malformed Icon key '%s'"
 		     "(should not include extension)",
@@ -506,34 +506,37 @@ egg_desktop_file_can_launch (EggDesktopFile *desktop_file,
 						 NULL, NULL);
       if (only_show_in)
 	{
-	  for (i = 0, found = FALSE; only_show_in[i] && !found; i++)
+	  for (i = 0; only_show_in[i]; i++)
 	    {
 	      if (!strcmp (only_show_in[i], desktop_environment))
-		found = TRUE;
+	      {
+		g_strfreev (only_show_in);
+		goto out;
+	      }
 	    }
 
 	  g_strfreev (only_show_in);
 
-	  if (!found)
-	    return FALSE;
+	  return FALSE;
 	}
-
+out:
       not_show_in = g_key_file_get_string_list (desktop_file->key_file,
 						EGG_DESKTOP_FILE_GROUP,
 						EGG_DESKTOP_FILE_KEY_NOT_SHOW_IN,
 						NULL, NULL);
       if (not_show_in)
 	{
-	  for (i = 0, found = FALSE; not_show_in[i] && !found; i++)
+	  for (i = 0; not_show_in[i]; i++)
 	    {
 	      if (!strcmp (not_show_in[i], desktop_environment))
-		found = TRUE;
+	      {		
+		g_strfreev (not_show_in);
+		return FALSE;
+	      }
 	    }
 
 	  g_strfreev (not_show_in);
 
-	  if (found)
-	    return FALSE;
 	}
     }
 
@@ -755,18 +758,22 @@ parse_exec (EggDesktopFile  *desktop_file,
       else if (*p == '\'')
 	{
 	  g_string_append_c (gs, *p);
-	  if (!single_quot && !double_quot)
-	    single_quot = TRUE;
-	  else if (single_quot)
+	 
+		   
+		  
+	  if (single_quot)
 	    single_quot = FALSE;
+	  else if (!double_quote)
+	    single_quot = TRUE;;
 	}
       else if (*p == '"')
 	{
 	  g_string_append_c (gs, *p);
-	  if (!single_quot && !double_quot)
-	    double_quot = TRUE;
-	  else if (double_quot)
+	  if(double_quot)
 	    double_quot = FALSE;
+	  else if (!single_quot)
+	    double_quot = TRUE;
+	   
 	}
       else if (*p == '%' && p[1])
 	{
