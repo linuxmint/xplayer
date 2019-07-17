@@ -418,9 +418,8 @@ gboolean egg_desktop_file_can_launch(EggDesktopFile *desktop_file,
         EGG_DESKTOP_FILE_KEY_ONLY_SHOW_IN, NULL, NULL);
     if (only_show_in) {
       for (i = 0, found = FALSE; only_show_in[i] && !found; i++) {
-        if (!strcmp(only_show_in[i], desktop_environment)) {
+        if (!strcmp(only_show_in[i], desktop_environment))
           found = TRUE;
-        }
       }
 
       g_strfreev(only_show_in);
@@ -433,13 +432,15 @@ gboolean egg_desktop_file_can_launch(EggDesktopFile *desktop_file,
         desktop_file->key_file, EGG_DESKTOP_FILE_GROUP,
         EGG_DESKTOP_FILE_KEY_NOT_SHOW_IN, NULL, NULL);
     if (not_show_in) {
-      for (i = 0; not_show_in[i]; i++) {
-        if (!strcmp(not_show_in[i], desktop_environment)) {
-          g_strfreev(not_show_in);
-          return FALSE;
-        }
+      for (i = 0, found = FALSE; not_show_in[i] && !found; i++) {
+        if (!strcmp(not_show_in[i], desktop_environment))
+          found = TRUE;
       }
+
       g_strfreev(not_show_in);
+
+      if (found)
+        return FALSE;
     }
   }
 
@@ -451,10 +452,9 @@ gboolean egg_desktop_file_can_launch(EggDesktopFile *desktop_file,
       found_program = g_find_program_in_path(try_exec);
       g_free(try_exec);
 
-      if (found_program) {
-        g_free(found_program);
-      }
-      return FALSE;
+      if (!found_program)
+        return FALSE;
+      g_free(found_program);
     }
   }
 
