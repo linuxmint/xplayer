@@ -433,7 +433,7 @@ gboolean egg_desktop_file_can_launch(EggDesktopFile *desktop_file,
         desktop_file->key_file, EGG_DESKTOP_FILE_GROUP,
         EGG_DESKTOP_FILE_KEY_NOT_SHOW_IN, NULL, NULL);
     if (not_show_in) {
-      for (i = 0, found = FALSE; not_show_in[i] && !found; i++) {
+      for (i = 0; not_show_in[i]; i++) {
         if (!strcmp(not_show_in[i], desktop_environment)) {
           g_strfreev(not_show_in);
           return FALSE;
@@ -511,13 +511,10 @@ static void append_quoted_word(GString *str, const char *s,
                                gboolean in_double_quotes) {
   const char *p;
 
-  if (!in_single_quotes) {
-    if (in_double_quotes) {
-      g_string_append(str, "\"'");
-    } else {
-      g_string_append_c(str, '\'');
-    }
-  }
+  if (!in_single_quotes && !in_double_quotes)
+    g_string_append_c(str, '\'');
+  else if (!in_single_quotes && in_double_quotes)
+    g_string_append(str, "\"'");
 
   if (!strchr(s, '\''))
     g_string_append(str, s);
@@ -530,13 +527,10 @@ static void append_quoted_word(GString *str, const char *s,
     }
   }
 
-  if (!in_single_quotes) {
-    if (in_double_quotes) {
-      g_string_append(str, "\"'");
-    } else {
-      g_string_append_c(str, '\'');
-    }
-  }
+  if (!in_single_quotes && !in_double_quotes)
+    g_string_append_c(str, '\'');
+  else if (!in_single_quotes && in_double_quotes)
+    g_string_append(str, "'\"");
 }
 
 static void do_percent_subst(EggDesktopFile *desktop_file, char code,
