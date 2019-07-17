@@ -31,38 +31,38 @@ G_BEGIN_DECLS
 
 /* Stores the state of the command line options */
 typedef struct {
-	gboolean debug;
-	gboolean playpause;
-	gboolean play;
-	gboolean pause;
-	gboolean next;
-	gboolean previous;
-	gboolean seekfwd;
-	gboolean seekbwd;
-	gboolean volumeup;
-	gboolean volumedown;
-	gboolean mute;
-	gboolean fullscreen;
-	gboolean togglecontrols;
-	gboolean quit;
-	gboolean enqueue;
-	gboolean replace;
-	gdouble playlistidx;
-	gint64 seek;
-	gchar **filenames;
+  gboolean debug;
+  gboolean playpause;
+  gboolean play;
+  gboolean pause;
+  gboolean next;
+  gboolean previous;
+  gboolean seekfwd;
+  gboolean seekbwd;
+  gboolean volumeup;
+  gboolean volumedown;
+  gboolean mute;
+  gboolean fullscreen;
+  gboolean togglecontrols;
+  gboolean quit;
+  gboolean enqueue;
+  gboolean replace;
+  gdouble playlistidx;
+  gint64 seek;
+  gchar **filenames;
 } XplayerCmdLineOptions;
 
 extern const GOptionEntry all_options[];
 extern XplayerCmdLineOptions optionstate;
 
-void xplayer_options_register_remote_commands (Xplayer *xplayer);
-GOptionContext *xplayer_options_get_context (void);
-void xplayer_options_process_early (Xplayer *xplayer,
-				  const XplayerCmdLineOptions* options);
-void xplayer_options_process_late (Xplayer *xplayer, 
-				 const XplayerCmdLineOptions* options);
-void xplayer_options_process_for_server (Xplayer *xplayer,
-				       const XplayerCmdLineOptions* options);
+void xplayer_options_register_remote_commands(Xplayer *xplayer);
+GOptionContext *xplayer_options_get_context(void);
+void xplayer_options_process_early(Xplayer *xplayer,
+                                   const XplayerCmdLineOptions *options);
+void xplayer_options_process_late(Xplayer *xplayer,
+                                  const XplayerCmdLineOptions *options);
+void xplayer_options_process_for_server(Xplayer *xplayer,
+                                        const XplayerCmdLineOptions *options);
 
 G_END_DECLS
 
