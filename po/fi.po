@@ -21,15 +21,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2018-10-03 07:53+0000\n"
+"PO-Revision-Date: 2019-07-14 17:54+0000\n"
 "Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2019-07-10 08:28+0000\n"
-"X-Generator: Launchpad (build 19007)\n"
+"X-Launchpad-Export-Date: 2019-07-28 09:34+0000\n"
+"X-Generator: Launchpad (build 19010)\n"
 "Language: fi\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -110,7 +110,7 @@ msgstr "Tekstityksen kirjasin"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "Pango-kirjasinkuvaus tekstityksen piirtoon."
+msgstr "Pango -kirjasinkuvaus tekstityksen piirtoon."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
@@ -118,7 +118,7 @@ msgstr "Tekstityksen merkistökoodaus"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Merkistöenkoodaus tekstitykselle."
+msgstr "Merkistökoodaus tekstitykselle."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
@@ -829,7 +829,7 @@ msgstr "Tekstitys #%d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr "Pavelin, johon yrität yhdistää, ei ole tunnettu."
+msgstr "Palvelin, johon yrität yhdistää, ei ole tunnettu."
 
 #: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
@@ -918,7 +918,7 @@ msgstr ""
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Tiedosto ei ole kelvollinen .desktop-tiedosto."
+msgstr "Tiedosto ei ole kelvollinen .desktop-tiedosto"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
@@ -1230,7 +1230,7 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer sisältää poikkeuksen, joka sallii ei-vapaiden GStreamer-"
+"Xplayer sisältää poikkeuksen, joka sallii ei-vapaiden GStreamer -"
 "liitännäisten käytön."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
@@ -1678,7 +1678,7 @@ msgstr "Lataa tekstitykset automaattisesti"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Lataa teksitykset automaattisesti"
+msgstr "Lataa tekstitykset automaattisesti"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
@@ -1948,7 +1948,7 @@ msgstr "Kauko-ohjaus infrapunalla"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr "Tuki infrapunaa käyttäville kauko-ohjaimille"
+msgstr "Tuki infrapunaa käyttäville kaukosäätimille"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
@@ -2002,7 +2002,7 @@ msgstr "OpenSubtitles-verkkosivustoon ei voi yhdistää"
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr "OpenSubtitles-verkkosivustoon ei voi yhdistää"
+msgstr "OpenSubtitles-verkkosivustoon ei voi yhdistää."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
