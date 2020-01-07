@@ -78,6 +78,8 @@ Suggests: gnome-codec-install,
           gstreamer1.0-libav,
           gstreamer1.0-plugins-bad,
           gstreamer1.0-plugins-ugly
+Breaks: xplayer-common (<< 2.2.5)
+Replaces: xplayer-common (<< 2.2.5)
 Description: Media player
  Xplayer is a simple yet featureful media player which can read
  a large number of file formats. It features :
