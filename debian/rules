@@ -23,13 +23,6 @@ DEB_DH_GIREPOSITORY_ARGS += -lsrc
 DEB_DH_MAKESHLIBS_ARGS_libxplayer0 += -V'libxplayer0 (>= $(DEB_VERSION)), libxplayer0 (<< $(DEB_GNOME_NEXTVERSION))'
 DEB_DH_INSTALL_ARGS += --fail-missing -Xlibxplayer.a -Xlibxplayer.la
 
-binary-install/xplayer::
-	dh_python2 -pxplayer /usr/lib/xplayer/xplayer
-binary-install/xplayer-plugins::
-	dh_python2 -pxplayer-plugins /usr/lib/xplayer/plugins
-binary-install/xplayer-plugins-extra::
-	dh_python2 -pxplayer-plugins-extra /usr/lib/xplayer/plugins
-
 common-binary-predeb-arch::
 	find debian -name *.a -exec rm '{}' \;
 	find debian -name *.la -exec rm '{}' \;
