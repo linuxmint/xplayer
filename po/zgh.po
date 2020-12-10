@@ -1,859 +1,838 @@
-# Serbian translation of xplayer
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003 - 2013.
-# This file is distributed under the same license as the xplayer package.
-# Maintainer: Милош Поповић <gpopac@gmail.com>
-# Prevous maintainer: Вељко М. Станојевић <veljko@vms.homelinux.net>
-# Reviewed on 2005-07-11 by Данило Шеган <danilo@gnome.org>
-# Reviewed on 2005-09-03 by Андрија Зарић <andrija@gmail.com>
-# Милош Поповић <gpopac@gmail.com>, 2010.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011, 2012, 2013, 2016, 2020.
+# Standard Moroccan Tamazight translation for linuxmint
+# Copyright (c) 2020 Rosetta Contributors and Canonical Ltd 2020
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: xplayer\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
-"mponent=general\n"
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2020-11-28 22:16+0000\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <(nothing)>\n"
+"PO-Revision-Date: 2020-10-23 22:30+0000\n"
+"Last-Translator: Hakim Oubouali <Unknown>\n"
+"Language-Team: Standard Moroccan Tamazight <zgh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2020-12-10 10:28+0000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:29+0000\n"
 "X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
-"X-Project-Style: gnome\n"
-"Language: sr\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr "Напустите приказ преко целог екрана"
+msgstr ""
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "Затамни остале мониторе"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Допушта покретање чувара екрана при пуштању музике"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Допушта покретање чувара екрана када је пуштена само музика. Искључите ако "
-"имате звучнике који се напајају са монитора."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "Осветљење видео снимка"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "Контраст видео снимка"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
-msgstr "Нијансе видео снимка"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "Засићеност видео снимке"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "Сам мења величину платна при учитавању датотеке"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
-msgstr "Режим понављања"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr "Насумични режим"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Да ли да искључи расплитање видеа са испреплетеним кадровима"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "Да ли да укључи уклањање грешака приликом пуштања"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "Врста звучног излаза који се користи"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
-msgstr "Праг за мрежно читање унапред"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
-"Количина података која ће бити унапред учитана за мрежне токове пре почетка "
-"приказивања тока (у секундама)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Словни лик за титл"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "Опис Панго словног лика за исцртавање текста превода."
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "Кодирање за титл"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Скуп знакова кодирања за титл."
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Подразумевана путања за прозорче „Отвори...“"
+msgstr ""
 
-# bug: folder or directory?
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
-msgstr "Подразумевана путања за прозорче „Отвори...“, иначе текућа фасцикла."
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Подразумевана путања за прозорче „Направи снимак екрана“"
+msgstr ""
 
-# bug: folder or directory?
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Подразумевана путања за прозорче „Направи снимак екрана“, у супротном "
-"подразумевана фасцикла са сликама."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Да ли да искључи прикључке у корисниковом личном директоријуму"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Да ли да онемогућим пречице са тастатуре"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Да ли сам да учита текстуалне датотеке са титлом при учитавању филма"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr "Да ли сам да учита спољне датотеке са поглављима при учитавању филма"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Да ли да памти положај пуштене аудио/видео датотеке приликом њеног паузирања "
-"или затварања"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Списак активних прикључака"
+msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"Списак назива прикључака који су тренутно активни (учитани и покренути)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Користите варијанту тамне теме (ако је доступна)."
+msgstr ""
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr "_Уклони"
+msgstr "_ⵙⵙⵉⵜⵢ"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "Уклоните датотеку из списка"
+msgstr ""
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr "_Умножи путању"
+msgstr "_ⵙⵏⵖⵍ ⴰⴷⵖⴰⵔ"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr "Копирај локацију у списку исечака"
+msgstr ""
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Изабери текстуални титл..."
+msgstr ""
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "Изаберите текстуалну датотеку са титловима"
+msgstr ""
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "Додај..."
+msgstr "ⵔⵏⵓ..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr "Уклони"
+msgstr "ⵙⵙⵉⵜⵢ"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Сачувај листу..."
+msgstr ""
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "Помери горе"
+msgstr "ⴷⴷⵓ ⴰⴼⵍⵍⴰ"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "Помери доле"
+msgstr ""
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
-msgstr "Стерео"
+msgstr ""
 
 #: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr "4-канала"
+msgstr ""
 
 #: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr "4.1-канала"
+msgstr ""
 
 #: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr "5.0-канала"
+msgstr ""
 
 #: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr "5.1-канала"
+msgstr ""
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr "АЦ3 пропуштање"
+msgstr ""
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Поставке Икс биоскопа"
+msgstr ""
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr "Пуштање"
+msgstr ""
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Пустите датотеке од места где су заустављене"
+msgstr ""
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "Текстуални титлови"
+msgstr ""
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "Учитај _титлове при учитавању филма"
+msgstr ""
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "_Прикажи преводе након учитавања филма"
+msgstr ""
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
-msgstr "_Словни лик:"
+msgstr ""
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "_Кодирање:"
+msgstr ""
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
-msgstr "Спољна поглавља"
+msgstr ""
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "Учитај _поглавља при учитавању филма"
+msgstr ""
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
-msgstr "Опште"
+msgstr "ⴰⵎⴰⵜⴰⵢ"
 
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr "Приказ"
+msgstr ""
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr "_Промени величину прозора при учитавању видеа"
+msgstr ""
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Искључи _расплитање преплетеног видеа"
+msgstr ""
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Искључи чувара екрана приликом пуштања"
+msgstr ""
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr "Видео"
+msgstr "ⴰⴼⵉⴷⵢⵓ"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "Видео или звук"
+msgstr "ⴰⴼⵉⴷⵢⵓ ⵏⵖ ⵉⵎⵙⵍⵉ"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
-msgstr "Равнотежа боја"
+msgstr ""
 
 #: ../data/preferences.ui.h:29
 msgid "_Brightness:"
-msgstr "_Осветљеност:"
+msgstr ""
 
 #: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
-msgstr "_Контраст:"
+msgstr ""
 
 #: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
-msgstr "_Засићење:"
+msgstr ""
 
 #: ../data/preferences.ui.h:32
 msgid "_Hue:"
-msgstr "_Нијанса:"
+msgstr ""
 
 #: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr "Врати на _основно"
+msgstr ""
 
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr "Звучни излаз"
+msgstr ""
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr "Врста _звучног излаза:"
+msgstr ""
 
 #: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr "Звук"
+msgstr "ⵉⵎⵙⵍⵉ"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:38
 msgid "Normal"
-msgstr "Нормално"
+msgstr "ⴰⵏⵎⵢⴰⵔ"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:40
 msgid "Large"
-msgstr "Велико"
+msgstr ""
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:42
 msgid "Extra Large"
-msgstr "Веома велико"
+msgstr ""
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr "Наслов:"
+msgstr "ⴰⵣⵡⵍ"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr "Извођач:"
+msgstr "ⴰⵏⴰⵥⵓⵕ:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "Трајање:"
+msgstr ""
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr "Година:"
+msgstr "ⴰⵙⴳⴳⵯⴰⵙ:"
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
-msgstr "Албум:"
+msgstr ""
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr "Напомена:"
+msgstr "ⴰⵅⴼⴰⵡⴰⵍ:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr "Садржалац:"
+msgstr ""
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr "Видео"
+msgstr "ⴰⴼⵉⴷⵢⵓ"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr "Димензије:"
+msgstr ""
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr "Кодек:"
+msgstr ""
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Проток кадрова:"
+msgstr ""
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr "Проток бита:"
+msgstr ""
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Проток узорка:"
+msgstr ""
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr "Канала:"
+msgstr ""
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
 #: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
 #: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr "Медијски програм"
+msgstr "ⴰⵎⵖⵔⵉ ⵏ ⵓⵙⵏⵖⵎⵙ"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr "Пуштајте филмове"
+msgstr "ⵖⵔ ⴰⴼⵉⵍⵎ"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "Видео;Снимак;Филм;Епизода;Серије;Пуштач;ДВД;ТВ;Диск;"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Пушта/паузира"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "Следеће"
+msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "Претходно"
+msgstr "ⵖⵔ ⴷⴼⴼⵉⵔ"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr "Утишај"
+msgstr "ⵥⵥⵉⵥⵏ"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr "Преко целог екрана"
+msgstr ""
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
-msgstr "_Датотека"
+msgstr "_ⴰⴼⴰⵢⵍⵓ"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_Отвори..."
+msgstr "_ⵕⵥⵎ..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr "Отворите датотеку"
+msgstr "ⵕⵥⵎ ⵢⴰⵏ ⵓⴼⴰⵢⵍⵓ"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Отвори _путању..."
+msgstr ""
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Отворите датотеку која није на систему"
+msgstr ""
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "_Избаци"
+msgstr ""
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "Избаците тренутни диск"
+msgstr ""
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr "_Својства"
+msgstr ""
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "Погледајте особине тренутног тока"
+msgstr ""
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "П_усти / паузирај"
+msgstr "ⵖⵔ / ⵙ_ⴳⴰⵏ"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Пустите или паузирајте филм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr "_Изађи"
+msgstr ""
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr "Изађите из програма"
+msgstr "ⵔⴳⵍ ⴰⵖⴰⵡⴰⵙ"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr "_Уређивање"
+msgstr "_ⵙⵏⴼⵍ"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "_Очисти списак"
+msgstr ""
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "Очистите листу за пуштање"
+msgstr ""
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "Пос_тавке"
+msgstr ""
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "Подесите програм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Прикључци..."
+msgstr ""
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Подесите прикључке да проширите могућности програма"
+msgstr ""
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr "_Преглед"
+msgstr ""
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "Преко _целог екрана"
+msgstr ""
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Пребаците преглед преко целог екрана"
+msgstr ""
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Прилагоди прозор филму"
+msgstr ""
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr "_Величина 1:2"
+msgstr ""
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "Промените величину на половину величине првобитног видеа"
+msgstr ""
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr "Величина _1:1"
+msgstr ""
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Промените величину на првобитну величину видеа"
+msgstr ""
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr "Величина _2:1"
+msgstr ""
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "Удвостручите величину првобитног видеа"
+msgstr ""
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr "_Однос ширине и висине"
+msgstr ""
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr "Промени _угао гледања"
+msgstr ""
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "Промените углове камере"
+msgstr ""
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr "_Иди"
+msgstr "_ⴷⴷⵓ"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr "_ДВД изборник"
+msgstr ""
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "Идите на ДВД изборник"
+msgstr ""
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr "Изборник _наслова"
+msgstr ""
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr "Идите на изборник наслова"
+msgstr ""
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr "Изборник _звука"
+msgstr ""
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Идите на изборник звука"
+msgstr ""
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr "Изборник _углова"
+msgstr ""
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr "Идите на изборник углова"
+msgstr ""
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "Изборник _поглавља"
+msgstr ""
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Идите на изборник поглавља"
+msgstr ""
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "_Следеће поглавље/филм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Следеће поглавље или филм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "_Претходно поглавље/филм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Претходно поглавље или филм"
+msgstr ""
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr "_Звук"
+msgstr "_ⵉⵎⵙⵍⵉ"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "_Појачај"
+msgstr ""
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "Појачајте звук"
+msgstr ""
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "_Утишај"
+msgstr ""
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "Утишај звук"
+msgstr ""
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr "По_моћ"
+msgstr "_ⵜⵉⵡⵉⵙⵉ"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr "_Садржај"
+msgstr ""
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr "Садржај помоћи"
+msgstr ""
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "_О програму"
+msgstr "_ⵖⴼ"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "О овом програму"
+msgstr "ⵖⴼ ⵓⵖⴰⵡⴰⵙ ⴰ"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr "_Режим понављања"
+msgstr ""
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "Подесите режим понављања"
+msgstr ""
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "_Насумични режим"
+msgstr ""
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Подесите насумични режим"
+msgstr ""
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "Прикажи _контроле"
+msgstr ""
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "Прикажите контроле"
+msgstr ""
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr "_Бочна површ"
+msgstr ""
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr "Прикажите или сакријте бочну површ"
+msgstr ""
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr "Сам прилагоди"
+msgstr ""
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Сам ће да постави однос висине и ширине"
+msgstr ""
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr "Квадрат"
+msgstr ""
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "Поставите квадратни однос висине и ширине"
+msgstr ""
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
-msgstr "4:3 (ТВ)"
+msgstr "4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr "Поставите однос висине и ширине на 4:3 (ТВ)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr "16:9 (широки екран)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "Поставите однос висине и ширине на 16:9 (широки екран)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
-msgstr "2.11:1 (ДВБ)"
+msgstr "2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
-msgstr "Поставите однос висине и ширине на 2.11:1 (ДВБ)"
+msgstr ""
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr "_Преводи"
+msgstr ""
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr "_Језици"
+msgstr "_ⵜⵓⵜⵍⴰⵢⵉⵏ"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Увећај"
+msgstr ""
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Увећајте приказ"
+msgstr ""
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr "Премотај уна_пред"
+msgstr ""
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr "Премотајте унапред"
+msgstr ""
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "Премотај уна_зад"
+msgstr ""
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "Премотајте уназад"
+msgstr ""
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr "Трака протока времена"
+msgstr ""
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Унесите _адресу датотеке коју желите да отворите:"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr "Захтевана је лозинка за РТСП сервер"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr "Звучна нумера #%d"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "Превод #%d"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr "Није познат сервер на који покушавате да се повежете."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
-msgstr "Веза са овим сервером је одбијена."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
-msgstr "Не могу да нађем наведени филм."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr "Сервер је одбио приступ овој датотеци или току."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
 msgstr ""
-"Потребно је потврђивање идентитета за приступ овој датотеци или току."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
-msgstr "Вама није дозвољено да отворите ову датотеку."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr "Ова путања није исправна."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "Филм не може бити прочитан."
+msgstr ""
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -866,112 +845,98 @@ msgid_plural ""
 "installed:\n"
 "\n"
 "%s"
-msgstr[0] "Пуштање овог филма захтева прикључак „%s“ који није инсталиран."
+msgstr[0] ""
 msgstr[1] ""
-"Пуштање овог филма захтева следеће прикључке који нису инсталирани:\n"
-"\n"
-"%s"
-msgstr[2] ""
-"Пуштање овог филма захтева следеће прикључке који нису инсталирани:\n"
-"\n"
-"%s"
 
 #: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Не може бити управљано звучним или видео током зато што недостају кодеци. "
-"Мораћете да инсталирате додатне прикључке да бисте могли да пуштате неке "
-"врсте филмова"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
-"Не могу да пустим ову датотеку преко мреже. Покушајте да је прво пренесете "
-"на диск."
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
-msgstr "Окружење"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
-msgstr "Моно"
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr "Датотека не садржи подржане видео токове."
+msgstr ""
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Неки неопходни прикључци недостају. Уверите се да је програм исправно "
-"инсталиран."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Ово није исправна „.desktop“ датотека"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Непознато издање датотеке радне површи „%s“"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "Покрећем %s"
+msgstr "ⴰⵙⵏⵜⵉ %s"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Програм не прихвата документе из линије наредби"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Непозната опција покретања: %d"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Не могу да проследим адресе докумената на „Type=Link“ унос"
+msgstr ""
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Није ставка за покретање"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr "_Врста датотеке: %s"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr "Све датотеке"
+msgstr "ⵉⴼⵓⵢⵍⴰ ⵎⴰⵕⵕⴰ"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Све подржане датотеке"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr "Према проширењу"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr "Врста датотеке"
+msgstr ""
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Проширења"
+msgstr ""
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -981,41 +946,38 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Програм не може да пронађе врсту датотеке коју желите да употребите за „%s“. "
-"Проверите да ли користите познато проширење датотеке или сами одаберите "
-"врсту датотеке из приложеног списка."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr "Није препозната врста датотеке"
+msgstr ""
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Искључује везу са управником сесије"
+msgstr ""
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Наводи датотеку која садржи сачувана подешавања"
+msgstr ""
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr "ДАТОТЕКА"
+msgstr "ⴰⴼⴰⵢⵍⵓ"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Наводи ИБ управника сесије"
+msgstr ""
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr "ИБ"
+msgstr ""
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Могућности управљања сесијом:"
+msgstr ""
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Приказује могућности управљања сесијом"
+msgstr ""
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1054,75 +1016,72 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:119
 #: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
-msgstr "Непознат"
+msgstr "ⴰⵔⵓⵙⵙⵉⵏ"
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
-msgstr "0 Hz"
+msgstr ""
 
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr "0 канала"
+msgstr "0 ⵜⴱⵓⴷⴰ"
 
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d сат"
-msgstr[1] "%d сата"
-msgstr[2] "%d сати"
+msgstr[0] "%d ⵜⵙⵔⴰⴳⵜ"
+msgstr[1] "%d ⵜⵙⵔⴰⴳⵉⵏ"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d минут"
-msgstr[1] "%d минута"
-msgstr[2] "%d минута"
+msgstr[0] "%d ⵜⵓⵙⴷⵉⴷⵜ"
+msgstr[1] "%d ⵜⵓⵙⴷⵉⴷⵉⵏ"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d секунда"
-msgstr[1] "%d секунде"
-msgstr[2] "%d секунди"
+msgstr[0] "%d ⵜⵙⵉⵏⵜ"
+msgstr[1] "%d ⵜⵙⵉⵏⴰ"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1141,60 +1100,56 @@ msgstr "%s %s"
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr "0 секунди"
+msgstr ""
 
-# bug: plural-forms
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] "%d кадар у секунди"
-msgstr[1] "%d кадра у секунди"
-msgstr[2] "%d кадрова у секунди"
+msgstr[0] "%d ⵜⵡⵍⴰⴼⵜ ⴳ ⵜⵙⵉⵏⵜ"
+msgstr[1] "%d ⵜⵡⵍⴰⴼⵉⵏ ⴳ ⵜⵙⵉⵏⵜ"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "Звучни преглед"
+msgstr ""
 
-# andrija: непотпун превод, а тежак :)
-# данило: нити и безбедно, послужиће ;)
 #: ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
-msgstr "Нисам успео да учитам библиотеке за безбедан рад са нитима."
+msgstr ""
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Проверите инсталацију система. Икс биоскоп ће се сада угасити."
+msgstr ""
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr "_Пусти сада"
+msgstr "_ⵖⵔ ⴷⵖⵉ"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "_Додај на списак за пуштање"
+msgstr ""
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr "Откажи"
+msgstr "ⵙⵔ"
 
 #: ../src/xplayer-fullscreen.c:553
 msgid "No File"
-msgstr "Нема датотеке"
+msgstr "ⵡⴰⵍⵓ ⵉⴼⵓⵢⵍⴰ"
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "Не могу да учитам „%s“ сучеље. %s"
+msgstr ""
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr "Датотека не постоји."
+msgstr ""
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Проверите да ли је Икс биоскоп правилно инсталиран."
+msgstr ""
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1203,9 +1158,6 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Икс биоскоп је слободан софтвер; можете га прослеђивати и/или мењати под "
-"условима Гнуове Опште јавне лиценце коју је објавила Задужбина слободног "
-"софтвера; 2 издања лиценце или (по вашем избору) било ког новијег издања."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1214,39 +1166,29 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Икс биоскоп се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ "
-"ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или "
-"ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ. Погледајте Гнуову Општу јавну лиценцу за "
-"више детаља."
 
-# bug: old address for FSF
 #: ../src/xplayer-interface.c:365
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Треба да сте примили примерак Гнуове Опште јавне лиценце уз Тотем; ако "
-"нисте, пишите Задужбини слободног софтвера на адресу: „Free Software "
-"Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA“"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Икс биоскоп садржи изузетак да би дозволио употребу власничких прикључака за "
-"Гстример."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
 #: ../src/xplayer-object.c:1458
 msgid "None"
-msgstr "Ништа"
+msgstr "ⵡⴰⵍⵓ"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Подесите прикључке"
+msgstr ""
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1254,232 +1196,229 @@ msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
-"%s\n"
-"Покрените „%s --help“ да ​​видите потпун списак доступних опција линије "
-"наредби.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
-msgstr "Икс биоскоп %s"
+msgstr ""
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "Паузирај"
+msgstr "ⵙⴳⴰⵏⵉ"
 
 #: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
-msgstr "Пусти"
+msgstr "ⵖⵔ"
 
 #: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Икс биоскоп не може да пусти „%s“."
+msgstr "ⵓⵔ ⵉⵣⵎⵉⵔ ⵉⴽⵙⴱⵍⴰⵢⵕ ⴰⴷ ⵉⵖⵔ '%s'."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Икс биоскоп не може да прикаже садржај помоћи."
+msgstr ""
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
-msgstr "Дошло је до грешке"
+msgstr ""
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "Претходно поглавље/филм"
+msgstr ""
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr "Пусти / Паузирај"
+msgstr "ⵖⵔ / ⵙⴳⴰⵏⵉ"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "Следеће поглавље/филм"
+msgstr ""
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "Икс биоскоп не може да се покрене."
+msgstr ""
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
-msgstr "Без разлога."
+msgstr ""
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Отвори путању..."
+msgstr ""
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Укључује уклањање грешака"
+msgstr ""
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "Премотава унапред"
+msgstr ""
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Премотава уназад"
+msgstr ""
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Појачава јачину звука"
+msgstr ""
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Утишава јачину звука"
+msgstr ""
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "Потпуно утишава јачину звука"
+msgstr ""
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Окида режим преко целог екрана"
+msgstr ""
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Приказује/скрива дугмад за управљање"
+msgstr ""
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr "Затвара програм"
+msgstr "ⴼⴼⵖ"
 
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr "Заказује пуштање"
+msgstr ""
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr "Врши замену"
+msgstr ""
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr "Премотава"
+msgstr ""
 
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Индекс списка нумера"
+msgstr ""
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "Филмови за пуштање"
+msgstr ""
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "— пуштајте филмове и песме"
+msgstr ""
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr "Не могу да закажем и да заменим у исто време"
+msgstr ""
 
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr "МП3 Шауткаст листа"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "МП3 звук (кроз ток)"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "МП3 звук (кроз ток, DOS формат)"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr "ИксМЛ дељива листа"
+msgstr ""
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr "Наслов %d"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr "Не могу да сачувам листу"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "Сачувај списак нумера"
+msgstr ""
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Списак нумера"
+msgstr ""
 
 #: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr "Не могу да учитам листу „%s“. Можда је оштећена."
+msgstr ""
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr "Грешка са листом"
+msgstr ""
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr "Поставке"
+msgstr ""
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Изаберите словни лик за преводе"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "Текући локалитет"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr "арапски"
+msgstr "ⵜⴰⵄⵕⴰⴱⵜ"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr "јерменски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "балтички"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr "келтски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "централноевропски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "кинески поједностављени"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "кинески традиционални"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr "хрватски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1488,94 +1427,94 @@ msgstr "хрватски"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "ћирилични"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "ћирилични/руски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "ћирилични/украјински"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "грузијски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr "грчки"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr "гујарати"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
-msgstr "гурмуки"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr "јеврејски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "јеврејски визуелни"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr "хинду"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "исландски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr "јапански"
+msgstr "ⵜⴰⵊⴰⴱⵓⵏⵉⵜ"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr "корејски"
+msgstr "ⵜⴰⴽⵓⵔⵉⵜ"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "нордијски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr "персијски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr "румунски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "јужноевропски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr "тајландски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "турски"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1583,7 +1522,7 @@ msgstr "турски"
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr "уникод"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1591,13 +1530,13 @@ msgstr "уникод"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "западни"
+msgstr ""
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "вијетнамски"
+msgstr "ⵜⴰⴼⵉⵜⵏⴰⵎⵉⵜ"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
@@ -1609,39 +1548,39 @@ msgstr "%s / %s"
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "Премотај на %s / %s"
+msgstr ""
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr "Све датотеке"
+msgstr "ⵉⴼⵓⵢⵍⴰ ⵎⴰⵕⵕⴰ"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Подржане датотеке"
+msgstr ""
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Звучне датотеке"
+msgstr ""
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Видео датотеке"
+msgstr ""
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "Датотеке превода"
+msgstr ""
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "Изаберите текстуални титл"
+msgstr ""
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Изаберите филмове или спискове"
+msgstr ""
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr "Додајте директоријум"
+msgstr ""
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1653,149 +1592,146 @@ msgid ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 msgstr ""
-"<b>%s</b>: %s\n"
-"<b>%s</b>: %d×%d\n"
-"<b>%s</b>: %s"
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr "Назив датотеке"
+msgstr "ⵉⵙⵎ ⵏ ⵓⴼⴰⵢⵍⵓ"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "Резолуција"
+msgstr ""
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr "Трајање"
+msgstr ""
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
-msgstr "Еплови пробни снимци"
+msgstr ""
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr "Подешава корисничког агента за сајт Еплових пробних снимака"
+msgstr ""
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Самоучитавање титлова"
+msgstr ""
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Самоучитавање текстуалних титлова"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "Смимање видео дискова"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Снимајте (С)ВЦД или видео ДВД дискове"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Направи видео диск..."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Направите видео ДВД или (С)ВЦД од тренутно пуштеног филма"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "_Умножи Видео ДВД..."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Умножите тренутно пуштени видео ДВД"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Умножи (С)ВЦД..."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "Умножите тренутно пуштени (С)ВЦД"
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "Не могу да умножим видео диск."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "Не могу да снимим филм."
+msgstr ""
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "Не могу да упишем пројекат."
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr "Назив новог поглавља:"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr "_Уклони поглавље"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr "Уклоните поглавље са списка"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr "_Иди на поглавље"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr "Идите на поглавље у филму"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr "Додај поглавље..."
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr "Уклони поглавље"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr "Иди на поглавље"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr "Сачувај измене"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr "Нема података о поглављима"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr "Учитај поглавља..."
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr "Учитајте поглавља из спољне ЦММЛ датотеке"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr "Додај нова поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr "Направите нови списак поглавља за филм"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr "Поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr "Подршка маркера поглавља у филмовима"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1803,312 +1739,305 @@ msgid ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 msgstr ""
-"<b>Наслов: </b>%s\n"
-"<b>Почетак: </b>%s"
+"<b>ⴰⵣⵡⵍ: </b>%s\n"
+"<b>ⴰⴽⵓⴷ ⵏ ⵓⵙⵏⵜⵉ: </b>%s"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr "Грешка приликом читања датотеке са поглављима"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr "Поглавља са овим називом већ постоје"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr "Покушајте други назив или уклоните постојеће поглавље."
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr "Грешка приликом уписа датотеке са поглављима"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr "Грешка приликом чувања поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Молим проверите да ли имате дозволу за писање у директоријум у коме се "
-"налази филм."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr "Отвори датотеку поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "Снимак екрана поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr "Наслов поглавља"
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr "Да сачувам измене у списак са поглављима пре затварања?"
+msgstr ""
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr "Затвори без чувања"
+msgstr "ⵔⴳⵍ ⴱⵍⴰ ⴰⵃⵟⵟⵓ"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr "Сачувај"
+msgstr "ⵃⴹⵓ"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr "Ако не сачувате, измене у списку са поглављима ће бити изгубљене."
+msgstr ""
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr "Додајте поглавље"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
-msgstr "MPRIS подршка"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "Овај прикључак омогућује MPRIS подршку путем DBUS-а."
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "Објекат Медија плејера 2 не користи „%s“ сучеље"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr "Својство „%s“ се не може уписати."
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr "Објекат Медија плејера 2 захтева непознато својство „%s“"
+msgstr ""
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr "Адреса „%s“ није подржана."
+msgstr ""
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr "Грило разгледач"
+msgstr ""
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Додатак који дозвољава разгледање медијског садржаја са разних извора"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr "Додајте на списак за пуштање"
+msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr "Умножи путању"
+msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr "Разгледај"
+msgstr ""
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
-msgstr "Тражи"
+msgstr "ⵔⵣⵓ"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
-msgstr "Грешка у разгледању"
+msgstr ""
 
 #: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
-msgstr "Грешка претраге"
+msgstr ""
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "Громитове забелешке"
+msgstr ""
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "При презентацијама помаже правећи забелешке на екрану"
+msgstr ""
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr "Громитова извршна датотека није нађена."
+msgstr ""
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr "Стање програма за тренутне поруке"
+msgstr ""
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
-"Наместите ваше стање у програму за тренутне поруке на „одсутан“ када је "
-"пуштен филм"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr "Инфрацрвени даљински управљач"
+msgstr ""
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr "Подржани инфрацрвени управљачи"
+msgstr ""
 
-# andrija: непотпун превод, а тежак :)
-# данило: нити и безбедно, послужиће ;)
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr "Нисам успео да покренем лирц."
+msgstr ""
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "Не могу да учитам поставке лирца."
+msgstr ""
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "Пречице звучног програма"
+msgstr ""
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr "Подршка за додатне тастере медијског програма"
+msgstr ""
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr "Увек у првом плану"
+msgstr ""
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr "Држи главни прозор у првом плану када је пуштен филм"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Преузимач титлова"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr "Потражите титлове за тренутно пуштени филм"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
-msgstr "Бразилски португалски"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr "Тражим преводе…"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr "Преузимам преводе…"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr "Не могу да се повежем са сајтом Отворених титлова"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr "Не могу да се повежем са сајтом Отворених титлова."
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
-msgstr "Нисам пронашао резултате."
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
-msgstr "Титлови"
+msgstr ""
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
-msgstr "Формат"
+msgstr ""
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
-msgstr "Оцена"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Преузима преводе филмова са сајта Отворених титлова"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "_Преузми преводе за филм…"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
-msgstr "Претражујем преводе…"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Преузмите титлове за филм"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "Језик тит_ла:"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr "_Пусти са титлом"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr "Језик превода"
+msgstr ""
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr "Језик за претраживање за преводе филмова."
+msgstr ""
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr "Својства филма"
+msgstr ""
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr "Додајте својства филма у бочну површ"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
 msgid "%d x %d"
-msgstr "%d x %d"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr "%d kb/s"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr "%d Hz"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr "недоступно"
+msgstr ""
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
-msgstr "Својства"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr "рпдб2 лозинка"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2116,47 +2045,44 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"Лозинка за заштиту рпдб2 сервера за отклањање грешака Икс биоскопа од "
-"неовлашћеног удаљеног приступа. Ако је ово празно, подразумевано „xplayer“ "
-"ће се користити."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr "Питонова конзола"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr "Међудејствена Питонова конзола"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr "Изборник Питонове конзоле"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr "_Питонова конзола"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "Прикажите Питонову конзолу за Икс биоскоп"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Питонов исправљач грешака"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "Укључите удаљено уклањање грешака Питона помоћу rpdb2"
+msgstr ""
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr "Можете приступити објекту Икс биоскопа кроз „xplayer_object“ :\\n%s"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
-msgstr "Питонова конзола за Икс биоскоп"
+msgstr ""
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
@@ -2164,64 +2090,61 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Након што притиснете „У реду“, Икс биоскоп ће сачекати да се повежете на "
-"њега преко „winpdb“ или „rpdb2“. Уколико нисте изабрали лозинку ради "
-"уклањања грешака у Дконфу, користите подразумевану лозинку (xplayer)."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr "Скорашње датотеке"
+msgstr "ⵉⴼⵓⵢⵍⴰ ⵉⵎⴳⴳⵓⵔⴰ"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr "Додајте пуштане датотеке у скорашње"
+msgstr ""
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Прикључак заокретања"
+msgstr ""
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr "Омогућава окретање видео снимака ако су погрешно окренути"
+msgstr ""
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
-msgstr "Окрени у _смеру казаљке на сату"
+msgstr ""
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
-msgstr "Окрени супротно од смера _казаљке на сату"
+msgstr ""
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr "Чувар екрана"
+msgstr ""
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "Искључите чувара екрана приликом пуштања филма"
+msgstr ""
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "Пуштам филм"
+msgstr "ⵜⵖⵓⵔⵉ ⵏ ⵓⴼⵉⵍⵎ"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Ширина снимка екрана (у пикселима):"
+msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Израчунајте број снимака екрана"
+msgstr ""
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Број снимака екрана:"
+msgstr ""
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "Снимак екрана са %s.png"
+msgstr ""
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2229,19 +2152,19 @@ msgstr "Снимак екрана са %s.png"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr "Снимак екрана са %s — %d.png"
+msgstr ""
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr "Снимак екрана"
+msgstr ""
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "Омогућава прављење снимака екрана и збирки из видеа"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr "Сачувај збирку"
+msgstr ""
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2250,65 +2173,64 @@ msgstr "Сачувај збирку"
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr "Збирка-%s-%d.jpg"
+msgstr ""
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "Правим збирку..."
+msgstr ""
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "Чувам збирку као „%s“"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Икс биоскоп није успео да направи снимак екрана филма."
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "Ово није требало да се деси; молим пријавите грешку."
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "_Сними екран"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Направите снимак екрана"
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Направи _збирку снимака екрана..."
+msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Направите збирку снимака екрана"
+msgstr ""
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
-msgstr "Премотај на"
+msgstr ""
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr "Приказује прозорче „Премотај на“"
+msgstr ""
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr "_Премотај на:"
+msgstr ""
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] "секунда"
-msgstr[1] "секунде"
-msgstr[2] "секунди"
+msgstr[0] "ⵜⴰⵙⵉⵏⵜ"
+msgstr[1] "ⵜⴰⵙⵉⵏⴰ"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2321,17 +2243,16 @@ msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr "_Премотај на..."
+msgstr ""
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr "Премотајте на одређено време"
+msgstr ""
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
-#| msgid "Configure Plugins"
 msgid "Zeitgeist Plugin"
-msgstr "Прикључак Цајтгајста"
+msgstr ""
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Прикључак који Цајтгајсту шаље догађаје"
+msgstr ""
