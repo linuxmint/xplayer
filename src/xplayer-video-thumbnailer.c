@@ -34,7 +34,6 @@
 #include <glib/gi18n.h>
 #include <cairo.h>
 #include <gst/gst.h>
-#include <xplayer-pl-parser.h>
 
 #include <locale.h>
 #include <errno.h>
@@ -90,52 +89,6 @@ typedef struct {
 static void save_pixbuf (GdkPixbuf *pixbuf, const char *path,
 			 const char *video_path, int size, gboolean is_still);
 
-static void
-entry_parsed_cb (XplayerPlParser *parser,
-		 const char    *uri,
-		 GHashTable    *metadata,
-		 char         **new_url)
-{
-	*new_url = g_strdup (uri);
-}
-
-static char *
-get_special_url (GFile *file)
-{
-	char *path, *orig_uri, *uri, *mime_type;
-	XplayerPlParser *parser;
-	XplayerPlParserResult res;
-
-	path = g_file_get_path (file);
-
-	mime_type = g_content_type_guess (path, NULL, 0, NULL);
-	g_free (path);
-	if (g_strcmp0 (mime_type, "application/x-cd-image") != 0) {
-		g_free (mime_type);
-		return NULL;
-	}
-	g_free (mime_type);
-
-	uri = NULL;
-	orig_uri = g_file_get_uri (file);
-
-	parser = xplayer_pl_parser_new ();
-	g_signal_connect (parser, "entry-parsed",
-			  G_CALLBACK (entry_parsed_cb), &uri);
-
-	res = xplayer_pl_parser_parse (parser, orig_uri, FALSE);
-
-	g_free (orig_uri);
-	g_object_unref (parser);
-
-	if (res == XPLAYER_PL_PARSER_RESULT_SUCCESS)
-		return uri;
-
-	g_free (uri);
-
-	return NULL;
-}
-
 static gboolean
 is_special_uri (const char *uri)
 {
@@ -158,9 +111,7 @@ thumb_app_set_filename (ThumbApp *app)
 	}
 
 	file = g_file_new_for_commandline_arg (app->input);
-	uri = get_special_url (file);
-	if (uri == NULL)
-		uri = g_file_get_uri (file);
+	uri = g_file_get_uri (file);
 	g_object_unref (file);
 
 	PROGRESS_DEBUG("setting URI %s", uri);
