@@ -21,15 +21,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2019-07-14 17:54+0000\n"
-"Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
+"PO-Revision-Date: 2021-04-02 14:24+0000\n"
+"Last-Translator: Tommi Nieminen <Unknown>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-12-10 10:28+0000\n"
-"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:19+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 "Language: fi\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -42,15 +42,15 @@ msgstr "Tyhjennä muut näytöt"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Salli näytönsäästäjän käynnistyä kun toistetaan pelkkää ääntä"
+msgstr "Salli näytönsäästäjän käynnistyminen toistettaessa ääntä"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Salli näytönsäästäjän käynnistyä kun toistetaan pelkkää ääntä. Älä salli jos "
-"sinulla on näytöstä virtansa ottavat kaiuttimet."
+"Salli näytönsäästäjän käynnistyminen toistettaessa ääntä. Poista käytöstä, "
+"jos kaiuttimet saavat virtaa näytöstä."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
@@ -82,7 +82,7 @@ msgstr "Satunnaistoisto"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Poistetaanko lomituksenpoisto käytöstä lomitetuilla elokuvilla"
+msgstr "Poistetaanko lomitetuilta elokuvilta käytöstä lomituksenpoisto"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
@@ -101,16 +101,16 @@ msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
-"Puskuroitavan tiedon määrä verkkovirroille ennen kuin virtauksen toisto "
-"alkaa (sekunteina)."
+"Verkkovirtoihin puskuroitavan tiedon määrä (sekunteina) ennen virtaustoiston "
+"alkua."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Tekstityksen kirjasin"
+msgstr "Tekstityskirjasin"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "Pango -kirjasinkuvaus tekstityksen piirtoon."
+msgstr "Pango-kirjasinkuvaus tekstityksen piirtoon."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
@@ -118,31 +118,32 @@ msgstr "Tekstityksen merkistökoodaus"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Merkistökoodaus tekstitykselle."
+msgstr "Tekstityksen merkistökoodaus."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Oletus-sijainti ”Avaa…”-ikkunoille"
+msgstr "Avaa…-ikkunoiden oletussijainti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
-msgstr "Oletussijainti ”Avaa…”-valintaikkunassa. Oletus on nykyinen kansio."
+msgstr ""
+"Avaa…-valintaikkunoiden oletussijainti. Oletuksena on nykyinen kansio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Oletuskansio ”Ota kuvakaappaus”-ikkunoille"
+msgstr "Ota kuvakaappaus -ikkunoiden oletussijainti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
-msgstr "Oletussijainti ”Ota kuvakaappaus”-ikkunalle. Oletus on Kuvat-kansio."
+msgstr "Kuvakaappausten oletussijainti. Oletuksena on Kuvat-kansio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Poistetaanko käyttäjän kotihakemiston liitännäiset käytöstä"
+msgstr "Poistetaanko liitännäiset käytöstä käyttäjän kotikansiossa"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
@@ -150,12 +151,11 @@ msgstr "Otetaanko pikanäppäimet pois käytöstä"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Ladataanko tekstitystiedostot automaattisesti kun elokuva ladataan"
+msgstr "Ladataanko tekstitystiedostot automaattisesti elokuvan mukana"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr ""
-"Ladataanko ulkoiset kappaletiedostot automaattisesti kun elokuva ladataan"
+msgstr "Ladataanko ulkoiset lukutiedostot automaattisesti elokuvan mukana"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
@@ -167,19 +167,18 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Aktiivisten liitännäisten luettelo"
+msgstr "Aktiiviset liitännäiset"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"Luettelo niiden liitännäisten nimistä, jotka ovat tällä hetkellä aktiivisia "
-"(ladattu ja suorituksessa)."
+"Luettelo tällä hetkellä aktiivisista liitännäisistä (ladattu ja käynnissä)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Käytä tumman teeman versiota (,jos saatavilla)."
+msgstr "Käytä tummaa teemamuunnelmaa (jos käytettävissä)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -219,11 +218,11 @@ msgstr "Tallenna soittolista…"
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "Siirrä ylös"
+msgstr "Siirrä ylemmäs"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "Siirrä alas"
+msgstr "Siirrä alemmas"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
@@ -231,19 +230,19 @@ msgstr "Stereo"
 
 #: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr "4-kanava"
+msgstr "4-kanavainen"
 
 #: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr "4.1-kanava"
+msgstr "4.1-kanavainen"
 
 #: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr "5.0-kanava"
+msgstr "5.0-kanavainen"
 
 #: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr "5.1-kanava"
+msgstr "5.1-kanavainen"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
@@ -259,7 +258,7 @@ msgstr "Toisto"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Aloita tiedostojen toisto viimeksi jääneestä kohdasta"
+msgstr "Ala toistaa tiedostoja viimeisimmästä kohdasta"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
@@ -287,7 +286,7 @@ msgstr "Ulkoiset kappaleet"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "Lataa _kappaletiedostoja kun elokuva avataan"
+msgstr "Lataa l_ukutiedostot elokuvan mukana"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -300,15 +299,15 @@ msgstr "Näyttö"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr "_Sovita ikkunan koko elokuvan kokoon videon avauksen yhteydessä"
+msgstr "Muuta ikkunan kokoa uuden videon latautuessa"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Poista lomitettujen videoiden lomituksen poisto käytöstä"
+msgstr "Poista lomitetuilta videoilta käytöstä lomituksenpoisto"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Estä näytönsäästäjä, kun toistetaan"
+msgstr "Estä näytönsäästäjä toistettaessa"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -319,7 +318,7 @@ msgstr "Video"
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "Videoa tai ääntä"
+msgstr "Video tai ääni"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
@@ -370,7 +369,7 @@ msgstr "Suuri"
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:42
 msgid "Extra Large"
-msgstr "Erityisen suuri"
+msgstr "Hyvin suuri"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -398,7 +397,7 @@ msgstr "Kommentti:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr "Säiliö:"
+msgstr "Säilö:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
@@ -422,7 +421,7 @@ msgstr "Bittinopeus:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Näytetaajuus:"
+msgstr "Näytteenottotaajuus:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"

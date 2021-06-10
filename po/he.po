@@ -10,173 +10,167 @@ msgstr ""
 "Project-Id-Version: xplayer.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2020-03-02 13:18+0000\n"
-"Last-Translator: Rony Alaluf <Unknown>\n"
+"PO-Revision-Date: 2021-04-21 08:38+0000\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-12-10 10:28+0000\n"
-"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:19+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 "Language: he\n"
 "X-Poedit-Language: Hebrew\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr "צא ממסך מלא"
+msgstr "יציאה ממסך מלא"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "החשך מסכים נוספים"
+msgstr "החשכת מסכים נוספים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Allow the screensaver to activate when playing audio"
+msgstr "אפשור שפעול שומר המסך בזמן השמעת שמע"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Allow the screensaver to activate when playing audio. Disable if you have "
-"monitor-powered speakers."
+"אפשור שפעול שומר המסך בזמן השמעת שמע. השבתה במידה והרמקולים מוזנים במתח "
+"מהמסך."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "The brightness of the video"
+msgstr "בהירות הווידאו"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "The contrast of the video"
+msgstr "ניגודיות הווידאו"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
-msgstr "The hue of the video"
+msgstr "גוון הווידיאו"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "The saturation of the video"
+msgstr "הרווית צבע הווידיאו"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "Resize the canvas automatically on file load"
+msgstr "התאמת גודל קנבס אוטומטית בעת טעינת קובץ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
-msgstr "Repeat mode"
+msgstr "מצב חזרה"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr "Shuffle mode"
+msgstr "מצב ערבוב"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Whether to disable deinterlacing for interlaced movies"
+msgstr "האם להשבית פרימת סרטים שזורים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "Whether to enable debug for the playback engine"
+msgstr "האם לאפשר ניפוי תקלים במנוע ההשמעה"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "Type of audio output to use"
+msgstr "סוג פלט השמע בו יעשה שימוש"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
-msgstr "Network buffering threshold"
+msgstr "סף חציצת רשת"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
-msgstr ""
-"Amount of data to buffer for network streams before starting to display the "
-"stream (in seconds)."
+msgstr "כמות הנתונים לחציצה בזרימות רשת לפני תחילת הציגה ההזרמה (בשניות)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Subtitle font"
+msgstr "גופן כתובית"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "Pango font description for subtitle rendering."
+msgstr "תיאור גופני פנגו לעיבוד כתוביות."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "Subtitle encoding"
+msgstr "קידוד כתובית"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Encoding character set for subtitle."
+msgstr "ערכת תווי קידוד עבור כתוביות."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Default location for the \"Open...\" dialogs"
+msgstr "מיקום ברירת מחדל לתיבות דו־שיח \"פתיחה...\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
-"Default location for the \"Open...\" dialogs. Default is the current "
-"directory."
+"מיקום ברירת מחדל לתיבות דו־שיח \"פתיחה...\". התיקייה הנוכחית מוגדרת כברירת "
+"מחדל."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Default location for the \"Take Screenshot\" dialogs"
+msgstr "מיקום ברירת מחדל לתיבות דו־שיח \"לכידת צילום מסך\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Default location for the \"Take Screenshot\" dialogs. Default is the "
-"Pictures directory."
+"מיקום ברירת מחדל לתיבות דו־שיח \"לכידת צילום מסך\". תיקיית התמונות מוגדרת "
+"כברירת מחדל."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Whether to disable the plugins in the user's home directory"
+msgstr "האם להשבית את המתקעים בספריית הבית של המשתמש"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Whether to disable the keyboard shortcuts"
+msgstr "האם להשבית קיצורי מקשי מקלדת"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Whether to autoload text subtitle files when a movie is loaded"
+msgstr "האם לטעון קבצי כתוביות מלל באופן אוטומטי כאשר הסרט נטען"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr "Whether to autoload external chapter files when a movie is loaded"
+msgstr "האם לטעון אוטומטית קבצי פרקים חיצוניים כאשר הסרט נטען"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
-msgstr ""
-"Whether to remember the position of played audio/video files when pausing or "
-"closing them"
+msgstr "האם לזכור את מיקום קבצי שמע/וידאו שהושמעו בעת השהיתם או סגירתם"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Active plugins list"
+msgstr "רשימת מתקעים פעילים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr ""
-"A list of the names of the plugins which are currently active (loaded and "
-"running)."
+msgstr "רשימת שמות המתקעים הפעילים כעת (טעונים ופועלים)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "התמשת בערכת נושא כהה (במידה וכזאת קיימת)"
+msgstr "שימוש בערכת נושא כהה (במידה וזמינה)"
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr "ה_סרה"
+msgstr "_הסרה"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
@@ -212,11 +206,11 @@ msgstr "שמירה ברשימת ההשמעה..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "הזזה למעלה"
+msgstr "העברה מעלה"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "הזזה למטה"
+msgstr "העברה מטה"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
@@ -248,7 +242,7 @@ msgstr "העדפות Xplayer"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr "ניגון"
+msgstr "השמעה"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
@@ -256,7 +250,7 @@ msgstr "התחלת נגינת קבצים מהמיקום האחרון"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "‏‏כתוביות"
+msgstr "‏‏כתוביות מלל"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
@@ -264,7 +258,7 @@ msgstr "_טעינת קובצי כתוביות אוטומטית עם טעינת �
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "ה_צג כתוביות לאחר שהסרט נטען"
+msgstr "ה_צגת כתוביות בעת טעינת הסרט"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -280,7 +274,7 @@ msgstr "פרקים חיצוניים"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "_טעינת קובצי פרקים אוטומטית עם טעינת הסרט"
+msgstr "_טעינת קובצי פרקים אוטומטית בעת טעינת הסרט"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -289,7 +283,7 @@ msgstr "כללי"
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr "תצוגה"
+msgstr "מצג"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
@@ -533,11 +527,11 @@ msgstr "עריכת הגדרות היישום"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "תוספים..."
+msgstr "מתקעים..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "הגדרת תוספים להרחבת היישום"
+msgstr "הגדרת מתקעים להרחבת היישום"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -861,10 +855,10 @@ msgid_plural ""
 "installed:\n"
 "\n"
 "%s"
-msgstr[0] "על מנת לצפות בסרט זה דרוש התוסף %s שאינו מותקן."
+msgstr[0] "צפיה בסרט זה דורשת מתקע %s שאינו מותקן."
 msgstr[1] ""
-"על מנת לצפות בסרט זה דרושים התוספים הבאים שאינם מותקנים:\n"
-"\n"
+"צפיה בסרט זה דורשת את המתקעים הבאים שאינם מותקנים:\r\n"
+"\r\n"
 "%s"
 
 #: ../src/backend/bacon-video-widget.c:3357
@@ -872,8 +866,8 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"תזרים שמע או וידאו לא מטופל כראוי עקב מפענחים חסרים. יתכן שיהיה עליך להתקין "
-"תוספים נוספים כדי לנגן סוגים מסוימים של סרטים"
+"תזרים שמע או וידאו לא מטופל כראוי עקב מפענחים חסרים. יתכן ויידרש להתקין "
+"מתקעים נוספים כדי לנגן סוגים מסוימים של סרטים"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -1213,9 +1207,7 @@ msgstr ""
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
-msgstr ""
-"Xplayer contains an exception to allow the use of proprietary GStreamer "
-"plugins."
+msgstr "Xplayer מכיל חריג המאפשר שימוש במתקעי GStreamer קנייניים."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1225,7 +1217,7 @@ msgstr "ללא"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "הגדרות תוספים"
+msgstr "תצור מתקעים"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1849,7 +1841,7 @@ msgstr "תמיכת MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "תוסף זה מאפשר תמיכה ב-MPIRS על DBUS."
+msgstr "מתקע זה מאפשר תמיכה ב-MPIRS על DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1878,7 +1870,7 @@ msgstr "דפדפן Grilo"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr "תוסף המאפשר לעיין בתכני מדיה ממקורות שונים"
+msgstr "מתקע המאפשר עיון בתכני מדיה ממקורות שונים"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
@@ -2148,7 +2140,7 @@ msgstr "הוספת קבצים שהתנגנו לקבצים האחרונים"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "תוסף ההטיה"
+msgstr "מתקע סיבוב"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2298,8 +2290,8 @@ msgstr "דילוג לזמן מסוים"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "תוסף Zeitgeist"
+msgstr "מתקע Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "תוסף השולח אירועים ל־Zeitgeist"
+msgstr "מתקע השולח אירועים ל־Zeitgeist"
