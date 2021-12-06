@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: xplayer.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2021-04-21 08:38+0000\n"
-"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
+"PO-Revision-Date: 2021-12-06 13:02+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: עברית <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:39+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:03+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: he\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -44,19 +44,19 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "בהירות הווידאו"
+msgstr "בהירות החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "ניגודיות הווידאו"
+msgstr "ניגודיות החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
-msgstr "גוון הווידיאו"
+msgstr "גוון החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "הרווית צבע הווידיאו"
+msgstr "הרווית צבע החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
@@ -76,7 +76,7 @@ msgstr "האם להשבית פרימת סרטים שזורים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "האם לאפשר ניפוי תקלים במנוע ההשמעה"
+msgstr "האם לאפשר ניפוי תקלים במנוע השִׁפּוּק"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
@@ -152,7 +152,7 @@ msgstr "האם לטעון אוטומטית קבצי פרקים חיצוניים 
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
-msgstr "האם לזכור את מיקום קבצי שמע/וידאו שהושמעו בעת השהיתם או סגירתם"
+msgstr "האם לזכור את מיקום קבצי שמע/חוזי שנוגנו בעת השהייתם או סגירתם"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
@@ -242,7 +242,7 @@ msgstr "העדפות Xplayer"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr "השמעה"
+msgstr "שִׁפּוּק"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
@@ -250,15 +250,15 @@ msgstr "התחלת נגינת קבצים מהמיקום האחרון"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "‏‏כתוביות מלל"
+msgstr "‏‏כתוביות"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_טעינת קובצי כתוביות אוטומטית עם טעינת הסרט"
+msgstr "_טעינת קובצי כתוביות אוטומטית בעת טעינת הסרט"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "ה_צגת כתוביות בעת טעינת הסרט"
+msgstr "ה_צגת כתוביות בעת טעינת סרט"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -287,26 +287,26 @@ msgstr "מצג"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr "_שינוי גודל החלון באופן אוטומטי בעת טעינת סרט חדש"
+msgstr "_שינוי גודל החלון באופן אוטומטי בעת טעינת חוזי חדש"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "ביטול פעולת ה־deinterlace על סרטונים שהם interlaced"
+msgstr "השבתת _פעולת ביטול שזירה של חוזי שזור"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "ביטול שומר המסך בעת נגינה"
+msgstr "השבתת  שומר המסך בעת נגינה"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr "וידאו"
+msgstr "חוזי"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "וידאו או שמע"
+msgstr "חוזי או שמע"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
@@ -385,11 +385,11 @@ msgstr "הערה:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr "מכל:"
+msgstr "מיכל:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr "וידאו"
+msgstr "חוזי"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
@@ -428,23 +428,23 @@ msgstr "נגינת סרטים"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "וידאו;סרט;קולנוע;סרטון;קליפ;סדרה;נגן;DVD;טלוויזיה;דיסק;תקליטור;כונן;"
+msgstr "חוזי;סרט;קולנוע;סרטון;קליפ;סדרה;נגן;DVD;טלוויזיה;דיסק;תקליטור;כונן;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Play/Pause"
+msgstr "ניגנה/השהיה"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "Next"
+msgstr "הבא"
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "Previous"
+msgstr "הקודם"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr "השתק"
+msgstr "השתקה"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
@@ -459,7 +459,7 @@ msgstr "_קובץ"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_פתח..."
+msgstr "_פתיחה..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
@@ -479,7 +479,7 @@ msgstr "_שליפה"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "שליפת הדיסק הנוכחי"
+msgstr "שליפת התקליטור הנוכחי"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
@@ -511,11 +511,11 @@ msgstr "ע_ריכה"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "_פינוי רשימת ההשמעה"
+msgstr "_ניקוי רשימת השמעה"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "פינוי רשימת ההשמעה"
+msgstr "ניקוי רשימת ההשמעה"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
@@ -523,7 +523,7 @@ msgstr "ה_עדפות"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "עריכת הגדרות היישום"
+msgstr "תצור היישום"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
@@ -531,7 +531,7 @@ msgstr "מתקעים..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "הגדרת מתקעים להרחבת היישום"
+msgstr "תצור מתקעים להרחבת היישום"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -547,7 +547,7 @@ msgstr "מעבר למסך מלא"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "התאמת החלון לסרט"
+msgstr "התאמת חלון לסרט"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
@@ -555,7 +555,7 @@ msgstr "_שינוי לגודל ‎1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "שינוי לחצי מגודל הווידאו"
+msgstr "שינוי למחצית גודל החוזי המקורי"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
@@ -563,7 +563,7 @@ msgstr "שינוי לגודל _1:1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "שינוי לגודל הווידאו המקורי"
+msgstr "שינוי לגודל החוזי המקורי"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
@@ -571,7 +571,7 @@ msgstr "שינוי לגודל 1:_2"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "שינוי לכפול מגודל הווידאו"
+msgstr "שינוי לכפול מגודל החוזי המקורי"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
@@ -643,11 +643,11 @@ msgstr "הפרק/סרט ה_קודם"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "הפרק או הסרט הקודמים"
+msgstr "הפרק או הסרט הקודם"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr "_צליל"
+msgstr "_שמע"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
@@ -655,7 +655,7 @@ msgstr "ה_גברת העצמה"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "הגברת עוצמת קול"
+msgstr "הגברת עוצמה"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
@@ -663,7 +663,7 @@ msgstr "ה_נמכת העצמה"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "הפחתת עצמת השמע"
+msgstr "הנמכת עוצמה"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
@@ -683,7 +683,7 @@ msgstr "על _אודות"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "על אודות יישום זה"
+msgstr "אודות יישום זה"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
@@ -695,7 +695,7 @@ msgstr "הגדרת מצב החזרה"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "מצב ע_רבול"
+msgstr "מצב ע_רבוב"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
@@ -792,11 +792,11 @@ msgstr "דילוג אחורה"
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr "סרגל הזמן"
+msgstr "סרגל זמן חתירה"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "נא להזין את _מיקום הקובץ שברצונך לפתוח:"
+msgstr "נא להזין את _מיקום הקובץ  לפתיחה:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
@@ -810,15 +810,15 @@ msgstr "רצועת שמע מס' %d"
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "כתובית מס' %d"
+msgstr "כתובית מספר %d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr "השרת אליו אתה מנסה להתחבר אינו ידוע."
+msgstr "השרת אליו נעשה נסיון להתחבר לא ידוע."
 
 #: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
-msgstr "החיבור לשרת זה נדחה."
+msgstr "החיבור לשרת זה סורב."
 
 #: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
@@ -826,7 +826,7 @@ msgstr "לא ניתן למצוא את הסרט שצוין."
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr "השרת מונע גישה לקובץ או שידור זה."
+msgstr "השרת סירב גישה לקובץ או שידור זה."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
@@ -834,15 +834,15 @@ msgstr "נדרש אישור כדי לגשת לקובץ או שידור זה."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
-msgstr "אינך מורשה לפתוח קובץ זה."
+msgstr "אין הרשאות לפתיחת קובץ זה."
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr "מיקום זה אינו תקני."
+msgstr "מיקום זה לא תקין."
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "לא ניתן לקרוא את הסרט"
+msgstr "לא ניתן לקרוא את הסרט."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -855,9 +855,9 @@ msgid_plural ""
 "installed:\n"
 "\n"
 "%s"
-msgstr[0] "צפיה בסרט זה דורשת מתקע %s שאינו מותקן."
+msgstr[0] "שִׁפּוּק סרט זה דורש מתקע %s שלא מותקן."
 msgstr[1] ""
-"צפיה בסרט זה דורשת את המתקעים הבאים שאינם מותקנים:\r\n"
+"שִׁפּוּק סרט זה דורש את המתקעים הבאים שלא מותקנים:\r\n"
 "\r\n"
 "%s"
 
@@ -866,7 +866,7 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"תזרים שמע או וידאו לא מטופל כראוי עקב מפענחים חסרים. יתכן ויידרש להתקין "
+"תזרים שמע או חוזי לא מטופל כראוי עקב מפענחים חסרים. יתכן ויידרש להתקין "
 "מתקעים נוספים כדי לנגן סוגים מסוימים של סרטים"
 
 #: ../src/backend/bacon-video-widget.c:3367
@@ -885,7 +885,7 @@ msgstr "מונו"
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr "המדיה איננה כוללת זרמי וידאו נתמכים"
+msgstr "המדיה לא כוללת זרמי חוזי נתמכים."
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
@@ -896,32 +896,32 @@ msgstr "חלק מתוספי השמע הנחוצים חסרים. נא לוודא 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "הקובץ אינו קובץ desktop. תקין"
+msgstr "הקובץ לא קובץ desktop. תקין"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "גרסת קובץ ה־desktop. ‏'%s' אינה מוכרת"
+msgstr "גרסת קובץdesktop. ‏'%s' לא מזוהה"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "%s מופעל"
+msgstr "אתחול %s"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "היישום לא מקבל מסמכים משורת הפקודה"
+msgstr "יישום לא מקבל מסמכים משורת פקודה"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "אפשרות שיגור לא מוכרת: %d"
+msgstr "אפשרות שיגור לא מזוהה: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "לא ניתן להעביר כתובות מסמך לרשומת 'Type=Link'"
+msgstr "לא ניתן להעביר מען URI מסמך לרשומת 'Type=Link' שולחן־עבודה"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
@@ -961,29 +961,29 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"התכנה לא הצליחה למצוא את מבנה הקובץ בו נעשה שימוש עבור `%s'. יש לוודא את "
-"השימוש בסיומות קבצים מוכרים עבור קובץ זה או לחלופין לבחור ידנית במבנה הקובץ "
-"מהרשימה שלהלן."
+"התכנה לא הצליחה למצוא את מבנה הקובץ בו נעשה ניסיון שימוש ב־'%s'. נא לוודא "
+"שימוש בסיומות קבצים מוכרים עבור קובץ זה, או לבחור ידנית במבנה קובץ מהרשימה "
+"מטה."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr "File format not recognized"
+msgstr "תבנית קובץ לא מזוהה"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Disable connection to session manager"
+msgstr "השבתת חיבור למנהל המופעים"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Specify file containing saved configuration"
+msgstr "נא לציין קובץ המכיל תצורה שמורה"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr "FILE"
+msgstr "קובץ"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Specify session management ID"
+msgstr "הגדרת מזהה ניהול מופעים"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
@@ -991,11 +991,11 @@ msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Session management options:"
+msgstr "אפשרויות ניהול מופעים:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Show session management options"
+msgstr "הצגת אפשרויות ניהול מופע"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1040,35 +1040,35 @@ msgstr "לא ידוע"
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
@@ -1137,7 +1137,7 @@ msgstr "לא ניתן לאתחל את ספריות ה־thread-safe."
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "נא לוודא את התקנת המערכת שלך. Xplayer ייצא עכשיו."
+msgstr "נא לוודא התקנת המערכת. Xplayer ייסגר כעת."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
@@ -1158,11 +1158,11 @@ msgstr "אין קובץ"
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "לא ניתן לטעון את המנשק '%s'.‏ %s"
+msgstr "לא ניתן לטעון את מנשק '%s'.‏ %s"
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr "הקובץ אינו קיים."
+msgstr "הקובץ לא קיים."
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
@@ -1176,10 +1176,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Xplayer is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version 2 of the License, or (at your option) any later "
-"version."
+"Xplayer הוא תוכנה חופשית; ניתן להפיץ אותו מחדש ו/או לשנות אותו במגבלות תנאי "
+"הרישיון הציבורי הכללי של גנו כפי שפורסם על ידי מוסד התכנה החופשית; גרסה 2 של "
+"הרישיון, או (לפי בחירתכם) כל גרסה מאוחרת יותר."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1188,10 +1187,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Xplayer is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
+"Xplayer מופץ בתקווה שיהיה שימושי, אך ללא כל אחריות; אפילו בלי האחריות "
+"המשתמעת של סחירות או כושר למטרה מסוימת. לפרטים נוספים נא לעיין ברישיון "
+"הציבורי הכללי של גנו."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1199,9 +1197,9 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02111-1307  USA"
+"הייתם אמורים לקבל עותק של הרישיון הציבורי הכללי של גנו יחד עם Xplayer; אם לא "
+"קבלתם, כתבו אל מוסד התכנה החופשית בע\"מ, טמפל פלייס 59, סוויט 330, בוסטון, "
+"MA 02111-1307 ארה\"ב"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
@@ -1225,8 +1223,8 @@ msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
-"%s\n"
-"Run '%s --help' to see a full list of available command line options.\n"
+"‏%s\n"
+"לקבלת רשימה מלאה של האפשרויות הזמינות בשורת הפקודה, יש להריץ '%s --help'.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
@@ -1247,11 +1245,11 @@ msgstr "נגינה"
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Xplayer אינו יכול לנגן את '%s'."
+msgstr "Xplayer לא הצליח לנגן  '%s'."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Xplayer אינו יכול להציג את תוכן העזרה."
+msgstr "Xplayer לא הצליח להציג תוכן העזרה."
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
@@ -1271,7 +1269,7 @@ msgstr "הפרק/סרט הבא"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "Xplayer לא יכול לעלות."
+msgstr "Xplayer לא הצליח לאתחול."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
@@ -1283,68 +1281,68 @@ msgstr "פתיחת מיקום..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Enable debug"
+msgstr "אפשור ניפוי תקלים"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "Seek Forwards"
+msgstr "חתירה קדימה"
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Seek Backwards"
+msgstr "חתירה אחורה"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Volume Up"
+msgstr "הגברת עצמה"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Volume Down"
+msgstr "הנמכת עצמה"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "Mute sound"
+msgstr "השתקת שמע"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Toggle Fullscreen"
+msgstr "חילוף למסך מלא"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Show/Hide Controls"
+msgstr "הצגת/הסתרת פקדים"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr "צא"
+msgstr "יציאה"
 
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr "Enqueue"
+msgstr "היפוך תור"
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr "Replace"
+msgstr "החלפה"
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr "Seek"
+msgstr "חתירה"
 
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Playlist index"
+msgstr "מפתח רשימת השמעה"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "Movies to play"
+msgstr "סרטים לנגינה"
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "- Play movies and songs"
+msgstr "- נגינת סרטים ושירים"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr "לא ניתן להוסיף לתור ולהחליף באותו הזמן"
+msgstr "לא ניתן להפוך לתור ולהחליף בו בעת"
 
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
@@ -1458,20 +1456,20 @@ msgstr "קרואטית"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "קירילי"
+msgstr "קירילית"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "קירילי/רוסית"
+msgstr "קירילית/רוסית"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "קירילי/אוקראינית"
+msgstr "קירילית/אוקראינית"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "גאורגי"
+msgstr "גאורגית"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
@@ -1496,7 +1494,7 @@ msgstr "עברית"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "עברית ויזואלית"
+msgstr "עברית חזותית"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1534,7 +1532,7 @@ msgstr "רומנית"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "דרום אירופאי"
+msgstr "דרום אירופאית"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
@@ -1567,7 +1565,7 @@ msgstr "מערבי"
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "ויאטנמי"
+msgstr "וייטנאמית"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
@@ -1579,7 +1577,7 @@ msgstr "%s / %s"
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "דילוג אל %s / %s"
+msgstr "חתירה ל־%s / %s"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
@@ -1595,7 +1593,7 @@ msgstr "קובצי שמע"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "קובצי וידאו"
+msgstr "קובצי חוזי"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
@@ -1607,7 +1605,7 @@ msgstr "בחירת כתוביות"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "יש לבחור בסרטים או ברשימות השמעה"
+msgstr "בחירת סרטים או רשימות השמעה"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
@@ -1645,7 +1643,7 @@ msgstr "קדימונים של Apple"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr "הגדרת סוכן המשתמש לאתר הקדימונים של Apple"
+msgstr "הגדרת סוכן המשתמש לאתר הקדימונים של אפל"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
@@ -1653,31 +1651,31 @@ msgstr "טעינת כתוביות אוטומטית"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "טעינת כתוביות טקסטואליות אוטומטית"
+msgstr "טעינת כתוביות אוטומטית"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "מקליט דיסק וידאו"
+msgstr "מקליט תקליטור חוזי"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "להקלטת וידאו ‎(S)VCD או DVD"
+msgstr "הקלטת חוזי ‎(S)VCD או DVD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "יצירת _דיסק וידאו..."
+msgstr "יצירת _תקליטור חוזי..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "יצירת וידאו DVD או ‎(S)VCD מהסרט הפתוח הנוכחי"
+msgstr "יצירת DVD חוזי או ‎(S)VCD מהסרט הפתוח הנוכחי"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "העתקת DVD _וידאו..."
+msgstr "העתקת DVD _חוזי..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "העתקת ה־DVD וידאו המתנגן"
+msgstr "העתקת DVD החוזי המתנגן כעת"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
@@ -1685,11 +1683,11 @@ msgstr "העתקת וידאו ‎(S)VCD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "העתקת הווידאו ‎(S)VCD המתנגן"
+msgstr "העתקת (S)VCD המתנגן כעת"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "לא ניתן לשכפל את דיסק הווידאו."
+msgstr "לא ניתן לשכפל את תקליטור החוזי."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
@@ -1700,7 +1698,7 @@ msgstr "לא ניתן להקליט את הסרט."
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "לא ניתן לכתוב פרויקט."
+msgstr "לא ניתן לכתוב מיזם."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
@@ -1799,7 +1797,7 @@ msgstr "אירעה שגיאה בעת שמירת הפרקים"
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
-msgstr "נא לבדוק שיש לך את ההרשאות המתאימות לכתיבה לתיקייה המכילה את הסרט."
+msgstr "נא לבדוק המצאות הרשאות מתאימות לכתיבה לתיקייה המכילה את הסרט."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -1807,7 +1805,7 @@ msgstr "פתיחת קובץ פרקים"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "צילום מסך של הפרק"
+msgstr "צילום מסך פרק"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
@@ -1847,22 +1845,22 @@ msgstr "מתקע זה מאפשר תמיכה ב-MPIRS על DBUS."
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "רכיב ה־MediaPlayer2 אינו מיישם את המנשק ‘%s’"
+msgstr "רכיב ה־MediaPlayer2 לא מיישם את מנשק ‘%s’"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr "המאפיין ‘%s’ אינו ניתן לכתיבה."
+msgstr "המאפיין ‘%s’ לא ניתן לכתיבה."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr "התבקש מאפיין בלתי ידוע ‘%s’ מרכיב מסוג MediaPlayer 2"
+msgstr "בקשת מאפיין לא ידוע ‘%s’ מעצם מסוג MediaPlayer 2"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr "הכתובת ‘%s’ אינה נתמכת."
+msgstr "מען ה־URI ‘%s’ לא נתמל."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
@@ -1898,23 +1896,23 @@ msgstr "שגיאה בחיפוש"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "הסברי Gromit"
+msgstr "ביאורי  Gromit"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "עוזר הצגה להוספת הערות חזותיות על המסך"
+msgstr "סייען מצג ליצירת ביאורים על גבי הצג"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr "קובץ ההפעלה של gromit לא נמצא."
+msgstr "קובץ ההפעלת gromit לא נמצא."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr "מצב לתוכנות מסרים מידיים"
+msgstr "מצב מסרים מידיים"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
-msgstr "הגדרת מצב תכנת המסרים המידיים למרוחק בעת נגינה"
+msgstr "הגדרת מצב מסרים מידיים ל'לא־זמין' בעת נגינת סרט"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -1930,11 +1928,11 @@ msgstr "לא ניתן לאתחל את lirc."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "לא ניתן לקרוא את הגדרות lirc."
+msgstr "לא ניתן לקרוא תצורת lirc."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "מקשים של נגן המדיה"
+msgstr "מקשי נגן מדיה"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
@@ -1954,7 +1952,7 @@ msgstr "מוריד הכתוביות"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr "חיפוש אחר כתוביות של הסרט המתנגן כעת"
+msgstr "חיפוש כתוביות לסרט שמתנגן כעת"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
@@ -1962,16 +1960,16 @@ msgstr "פורטוגזית ברזילאית"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr "מתבצע חיפוש אחר כתוביות…"
+msgstr "חיפוש  כתוביות…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr "הכתוביות בהורדה…"
+msgstr "הורדת כתוביות…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr "לא ניתן לגשת לאתר ה־OpenSubtitles"
+msgstr "לא ניתן לגשת לאתר OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
@@ -1996,23 +1994,23 @@ msgstr "תצורה"
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
-msgstr "ניקוד"
+msgstr "דירוג"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "הורדת כתוביות עבור הסרט מ־OpenSubtitles"
+msgstr "הורדת כתוביות סרט מ־OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "הורדת _כתוביות עבור הסרט…"
+msgstr "הורדת _כתוביות סרט…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
-msgstr "מתבצע חיפוש אחר כתוביות…"
+msgstr "חיפוש כתוביות…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "הורדת כתוביות עבור הסרט"
+msgstr "הורדת כתוביות סרט"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
@@ -2028,7 +2026,7 @@ msgstr "שפת הכתוביות"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr "The language to search for subtitles for movies in."
+msgstr "שפת חיפוש כתוביות לסרטים."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
@@ -2036,7 +2034,7 @@ msgstr "מאפייני הסרט"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr "הוספת פרטי הסרט אל סרגל הצד"
+msgstr "הוספת מאפייני הסרט לסרגל הצד"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
@@ -2053,7 +2051,7 @@ msgstr "%d ק״ב לשנייה"
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
@@ -2063,7 +2061,7 @@ msgstr "%d הרץ"
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr "לא זמין"
+msgstr "לא ישים"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
@@ -2071,7 +2069,7 @@ msgstr "מאפיינים"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr "rpdb2 password"
+msgstr "ססמת rpdb2"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2079,47 +2077,46 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"A password to protect the rpdb2 server for debugging Xplayer from "
-"unauthorized remote access. If this is empty, a default of 'xplayer' will be "
-"used."
+"ססמה להגנה על שרת rpdb2 לצורך איתור תקלים ב־Xplayer מגישה מרחוק בלתי מורשית. "
+"אם ריק, יעשה שימוש ברירת מחדל של 'xplayer'."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr "מסוף Python"
+msgstr "עמדת בקרת פייתון"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr "מסוף Python אינטראקטיבי"
+msgstr "עמדת בקרת  פיתון הִדּוּדִית"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr "תפריט מסוף Python"
+msgstr "תפריט עמדת בקרת  פייתון"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr "_מסוף Python"
+msgstr "_עמדת בקרת  פייתון"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "הצגת מסוף ה־Python של Xplayer"
+msgstr "הצגת עמדת בקרת  פייתון Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "מנפה Python"
+msgstr "מנפה תקלים פייתון"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "הפעלת ניפוי מרוחק בעזרת Python עם rpdb2"
+msgstr "הפעלת ניפוי תקלים פייתון מרוחק באמצעות rpdb2"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
+msgstr "ניתן לגשת ל־Xplayer.Object דרך 'xplayer_object':\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
-msgstr "מסוף Python של Xplayer"
+msgstr "עמדת בקרת  פייתון Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
@@ -2128,7 +2125,8 @@ msgid ""
 "default password ('xplayer')."
 msgstr ""
 "לאחר לחיצה על אישור, Xplayer ימתין עד להתחברות אליו בעזרת winpdb או rpdb2. "
-"אם לא הוגדרה ססמת מנפה ב־DConf, ססמת ברירת המחדל ('xplayer') תהיה בשימוש."
+"אם לא הוגדרה ססמת ניפוי תקלים ב־DConf, יעשה שימוש בססמת ברירת המחדל "
+"('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2144,7 +2142,7 @@ msgstr "מתקע סיבוב"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr "מתן האפשרות לסיבוב קטעי וידאו אם אינם מופיעים בכיוון הנכון"
+msgstr "אפשור סיבוב קטעי חוזי אם הם לא בכיוון הנכון"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
@@ -2160,7 +2158,7 @@ msgstr "שומר מסך"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "ביטול שומר המסך בעת נגינה של סרט"
+msgstr "נטרול שומר המסך בזמן שסרט מתנגן"
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
@@ -2168,22 +2166,22 @@ msgstr "סרט מתנגן"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "רוחב תצלום המסך (בפיקסלים):"
+msgstr "רוחב צלום־מסך (בפיקסלים):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "חישוב מספר צילומי המסך"
+msgstr "חישוב מספר צילומי־מסך"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "מספר צילומי המסך:"
+msgstr "מספר צילומי־מסך:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "צילום מסך %s.png"
+msgstr "צילום־מסך מ־%s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2199,7 +2197,7 @@ msgstr "צילום מסך"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "מתן האפשרות ליצור מצגות וגלריות מקטעי וידאו"
+msgstr "אפשור לכידת צילומי־מסך וגלריות מקטעי חוזי"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
@@ -2217,22 +2215,22 @@ msgstr "גלריה-%s-%d.jpg"
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "נוצרת גלריה..."
+msgstr "יצירת גלריה..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "הגלריה נשמרת בשם „%s“"
+msgstr "שמירת גלריה  בשם '%s'"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr "Xplayer לא הצליח לקבל צילום מסך של הסרט."
+msgstr "Xplayer לא הצליח ללכוד צילום מסך מקטע החוזי."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "שגיאה זו לא הייתה אמורה לקרות, נא לשלוח דיווח על תקלה."
+msgstr "זהו לא אמור היה לקרות, נא לשלוח דיווח על תקל."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
@@ -2240,7 +2238,7 @@ msgstr "צילום המ_סך"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "צילום המסך"
+msgstr "צילום־מסך"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
@@ -2257,7 +2255,7 @@ msgstr "דילוג אל"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr "לא ניתן לטעון את מנשק ה„דילוג אל“."
+msgstr "אפשור דו־שיח 'דילוג־אל'"
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"

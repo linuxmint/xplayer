@@ -10,34 +10,37 @@ msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2018-03-02 10:49+0000\n"
-"Last-Translator: Rhoslyn Prys <rprys@posteo.net>\n"
+"PO-Revision-Date: 2021-12-06 13:02+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Cymraeg <gnome-cy@pengwyn.linux.org.uk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
 "2 : 3;\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:40+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:04+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
+"Language: cy\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr ""
+msgstr "Gadael y sgrin lawn"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr ""
+msgstr "Duo monitorau eraill"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr ""
+msgstr "Gadewch i'r arbedwr sgrin agor wrth chwarae sain"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
+"Gadewch i'r arbedwr sgrin agor wrth chwarae sain. Analluogwch nhw os oes "
+"gennych uchelseinyddion sy'n cael eu gyrru drwy'r dangosydd."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
@@ -65,15 +68,15 @@ msgstr "Modd ailadrodd"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr "Modd shifflo"
+msgstr "Y modd shifflo"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr ""
+msgstr "P'un ai i analluogi dadosod ar gyfer ffilmiau cydgysylltiedig"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "A ddylid galluogi datblethu ar gyfer y peiriant chwarae"
+msgstr "A ddylid galluogi dadfygio ar gyfer y peiriant chwarae"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
@@ -88,6 +91,8 @@ msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
+"Faint o ddata i'w glustogi ar gyfer ffrydiau rhwydwaith cyn dechrau dangos y "
+"llif (mewn eiliadau)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
@@ -95,75 +100,87 @@ msgstr "Ffont Isdeitlau"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr ""
+msgstr "Disgrifiad o ffont pango ar gyfer rendro is-deitl."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr ""
+msgstr "Amgodio is-deitlau"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr ""
+msgstr "Amgodio nodau wedi'i osod ar gyfer is-deitl."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr ""
+msgstr "Lleoliad rhagosodedig ar gyfer y deialogau \"Agor...\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
+"Lleoliad rhagosodedig ar gyfer y deialogau \"Agor...\". Y rhagosodiad yw'r "
+"cyfeiriadur cyfredol."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr ""
+msgstr "Lleoliad rhagosodedig ar gyfer y deialogau \"Cymryd Llun Sgrin\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
+"Lleoliad rhagosodedig ar gyfer y deialogau \"Cymryd Llun Sgrin\". Y "
+"rhagosodiad yw'r cyfeiriadur Lluniau."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr ""
+msgstr "P'un ai i analluogi'r ategion yng nghyfeiriadur cartref y defnyddiwr"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr ""
+msgstr "P'un ai i analluogi'r llwybrau byr bysellfwrdd"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
+"P'un ai i awtolwytho ffeiliau is-deitl testun pan fydd ffilm yn cael ei "
+"llwytho"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
+"P'un ai i awtolwytho ffeiliau pennod allanol pan fydd ffilm yn cael ei "
+"llwytho"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
+"P'un ai i gofio safle ffeiliau sain/fideo wedi'u chwarae wrth eu oedi neu eu "
+"cau"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr ""
+msgstr "Rhestr ategion gweithredol"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
+"Rhestr o enwau'r ategion sy'n weithredol ar hyn o bryd (wedi'u llwytho a'u "
+"rhedeg)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr ""
+msgstr "Defnyddio thema dywyll (os ar gael)"
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr ""
+msgstr "_Tynnu"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
@@ -179,7 +196,7 @@ msgstr "Copïo'r lleoliad i'r clipfwrdd"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr ""
+msgstr "_Dewis Is-deitlau Testun..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
@@ -195,7 +212,7 @@ msgstr "Tynnu"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr ""
+msgstr "Cadw Rhestr Chwarae..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -207,27 +224,27 @@ msgstr "Symud i Lawr"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
-msgstr ""
+msgstr "Stereo"
 
 #: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr ""
+msgstr "4-sianel"
 
 #: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr ""
+msgstr "4.1-sianel"
 
 #: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr ""
+msgstr "5.0-sianel"
 
 #: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr ""
+msgstr "5.1-sianel"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr ""
+msgstr "AC3 Passthrough"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
@@ -235,23 +252,23 @@ msgstr "Dewisiadau Xplayer"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr ""
+msgstr "Chwarae"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr ""
+msgstr "Dechrau chwarae ffeiliau o'r safle diwethaf"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr ""
+msgstr "Is-deitlau Testun"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr ""
+msgstr "_Llwytho ffeiliau is-deitl pan fydd ffilm yn cael ei llwytho"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr ""
+msgstr "_Dangos is-deitlau pan fydd ffilm yn cael ei llwytho"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -263,11 +280,11 @@ msgstr "_Amgodiad:"
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
-msgstr ""
+msgstr "Penodau Allanol"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr ""
+msgstr "Llwytho ffeiliau _pennod pan fydd y ffilm yn cael ei llwytho"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -280,30 +297,30 @@ msgstr "Dangos"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr ""
+msgstr "_Rheoli'r ffenestr pan fydd fideo newydd yn cael ei lwytho"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr ""
+msgstr "Analluogi _dadgydblethu ailosod fideos cydblethiedig"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr ""
+msgstr "Analluogi'r arbedwr sgrin wrth chwarae"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr ""
+msgstr "Fideo"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr ""
+msgstr "Fideo neu Sain"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
-msgstr ""
+msgstr "Cydbwysedd Lliw"
 
 #: ../data/preferences.ui.h:29
 msgid "_Brightness:"
@@ -323,11 +340,11 @@ msgstr "_Arlliw:"
 
 #: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr ""
+msgstr "Ailosod i'r _Rhagosodedig"
 
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr ""
+msgstr "Allbwn Sain"
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
@@ -340,17 +357,17 @@ msgstr "Sain"
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:38
 msgid "Normal"
-msgstr ""
+msgstr "Arferol"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:40
 msgid "Large"
-msgstr ""
+msgstr "Mawr"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:42
 msgid "Extra Large"
-msgstr ""
+msgstr "Mawr Iawn"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
@@ -378,7 +395,7 @@ msgstr "Sylw:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr ""
+msgstr "Cynhwysydd:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
@@ -402,7 +419,7 @@ msgstr "Cyfradd did:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr ""
+msgstr "Cyfradd samplu:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -413,19 +430,19 @@ msgstr "Sianeli:"
 #: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
 #: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr ""
+msgstr "Chwaraewr Cyfryngau"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr ""
+msgstr "Chwarae ffilmiau"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr ""
+msgstr "Fideo;Ffilm;Ffilm;Clip;Cyfres;Chwaraewr;DVD;teledu;Disg;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Chwarae/Seibio"
+msgstr "Chwarae/Oedi"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
@@ -437,18 +454,18 @@ msgstr "Blaenorol"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr ""
+msgstr "Tewi"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr ""
+msgstr "Sgrin Lawn"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
-msgstr ""
+msgstr "_Ffeil"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -456,7 +473,7 @@ msgstr "_Agor..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr ""
+msgstr "Agor ffeil"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
@@ -468,31 +485,31 @@ msgstr "Agorwch ffeil allanol"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "_Allfwrw"
+msgstr "_Bwrw Allan"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr ""
+msgstr "Bwrw allan y ddisg gyfredol"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr ""
+msgstr "_Priodweddau"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr ""
+msgstr "Gweld priodweddau'r llif cyfredol"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr ""
+msgstr "Chwarae/_Oedi"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Chwarae neu seibio'r ffilm"
+msgstr "Chwarae neu oedi'r ffilm"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr ""
+msgstr "_Gadael"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
@@ -504,67 +521,67 @@ msgstr "_Golygu"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr ""
+msgstr "Clirio'r Rhestr Chwarae"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr ""
+msgstr "Clirio'r rhestr chwarae"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr ""
+msgstr "_Dewisiadau"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr ""
+msgstr "Ffurfweddu'r rhaglen"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr ""
+msgstr "Ategion..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr ""
+msgstr "Ffurfweddu ategion i ymestyn y rhaglen"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr ""
+msgstr "Go_lwg"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "_Llenwi'r Sgrin"
+msgstr "_Sgrin Lawn"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Newid i lenwi'r sgrin"
+msgstr "Newid i sgrin lawn"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Ffitio'r Ffenest i'r Fideo"
+msgstr "Ffitio'r Ffenestr i'r Ffilm"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr ""
+msgstr "_Newid maint 1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr ""
+msgstr "Newid maint i hanner maint y fideo gwreiddiol"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr ""
+msgstr "Newid maint _1∶1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr ""
+msgstr "Newid maint i'r maint fideo gwreiddiol"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr ""
+msgstr "Newid maint _2∶1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr ""
+msgstr "Newid maint i ddyblu maint y fideo gwreiddiol"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
@@ -576,7 +593,7 @@ msgstr "Newid On_gl"
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr ""
+msgstr "Newid onglau camera"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
@@ -644,23 +661,23 @@ msgstr "_Sain"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "Lefel Sain i _Fyny"
+msgstr "Lefel y Sain i _Fyny"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "Cynyddu lefel sain"
+msgstr "Cynyddu lefel y sain"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "Lefel Sain i _Lawr"
+msgstr "Lefel y Sain i _Lawr"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "Gostwng lefel sain"
+msgstr "Gostwng lefel y sain"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr ""
+msgstr "C_ymorth"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
@@ -672,11 +689,11 @@ msgstr "Cynnwys cymorth"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr ""
+msgstr "_Ynghylch"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr ""
+msgstr "Ynghylch y rhaglen hon"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
@@ -704,7 +721,7 @@ msgstr "Dangos rheolyddion"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr ""
+msgstr "_Bar Ochr"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
@@ -713,7 +730,7 @@ msgstr "Dangos neu guddio'r bar ochr"
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr ""
+msgstr "Awto"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
@@ -729,27 +746,27 @@ msgstr "Gosod cymhareb agwedd sgwâr"
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
-msgstr ""
+msgstr "4∶3 (teledu)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr ""
+msgstr "Yn gosod cymhareb agwedd 4∶3 (teledu)"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr ""
+msgstr "16∶9 (Sgrin lydan)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr ""
+msgstr "Yn gosod cymhareb agwedd 16∶9 (sgrin lydan)"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
-msgstr ""
+msgstr "2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
-msgstr ""
+msgstr "Yn gosod cymhareb agwedd 2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
@@ -761,11 +778,11 @@ msgstr "_Ieithoedd"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Chwyddo"
+msgstr "Chwyddo Mewn"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Chwyddo"
+msgstr "Chwyddo mewn"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
@@ -777,15 +794,15 @@ msgstr "Neidio ymlaen"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "Neidio yn Ô_l"
+msgstr "Neidio _Nôl"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "Neidio yn Ôl"
+msgstr "Neidio nôl"
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr ""
+msgstr "Bar ceisio amser"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
@@ -793,17 +810,17 @@ msgstr "Rhowch _lleoliad (URI) y ffeil rydych chi eisiau ei agor:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr ""
+msgstr "Gofynnwyd am gyfrinair ar gyfer gweinydd RTSP"
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr ""
+msgstr "Trac Sain #%d"
 
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr ""
+msgstr "Is-deitl #%d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
@@ -823,7 +840,7 @@ msgstr "Gwrthododd y gweinydd fynediad i'r ffeil neu'r ffrwd."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr ""
+msgstr "Mae angen dilysu i gael mynediad i'r ffeil neu'r nant hon."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
@@ -835,7 +852,7 @@ msgstr "Nid yw'r lleoliad yn un dilys."
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "Ni ellid darllen y ffilm."
+msgstr "Nid oedd modd darllen y ffilm."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -849,97 +866,116 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
+"Mae ail-chwarae'r ffilm hon yn gofyn am ategyn %s nad yw wedi'i osod."
 msgstr[1] ""
+"Mae ail-chwarae'r ffilm hon yn gofyn am ategion nad ydynt wedi'u gosod:\n"
+"\n"
+"%s"
+msgstr[2] ""
+"Mae ail-chwarae'r ffilm hon yn gofyn am ategion nad ydynt wedi'u gosod:\n"
+"\n"
+"%s"
+msgstr[3] ""
+"Mae ail-chwarae'r ffilm hon yn gofyn am ategion nad ydynt wedi'u gosod:\n"
+"\n"
+"%s"
 
 #: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
+"Nid yw ffrwd sain neu fideo yn cael ei thrin oherwydd codecau coll. Efallai "
+"y bydd angen i chi osod ategion ychwanegol i allu chwarae rhai mathau o "
+"ffilmiau"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
+"Nid oes modd chwarae'r ffeil hon dros y rhwydwaith. Ceisiwch ei llwytho i "
+"lawr yn lleol yn gyntaf."
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
-msgstr ""
+msgstr "Amgylchynu"
 
 #: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr "Dydy'r cyfrwng ddim yn cynnwys llif fideo wedi'i gefnogi."
+msgstr "Nid yw'r cyfrwng yn cynnwys llif fideo wedi'i gefnogi."
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
+"Mae rhai ategion angenrheidiol ar goll. Sicrhewch fod y rhaglen wedi'i gosod "
+"yn gywir."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Nid yw'r ffeil yn ffeil .desktop dilys"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Ffeil bwrdd gwaith anhysbys Fersiwn '%s'"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Cychwyn %s"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Nid yw'r rhaglen yn derbyn dogfennau ar y llinell orchymyn"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Dewis cychwyn anhysbys: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Methu trosglwyddo URI dogfen i gofnod bwrdd gwaith 'Type=Link'"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Nid yw'n eitem y mae modd ei chychwyn"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr ""
+msgstr "_Fformat Ffeil: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr ""
+msgstr "Pob Ffeil"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr ""
+msgstr "Pob Ffeil sy'n cael ei Chynnal"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr ""
+msgstr "Trwy Estyniad"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr ""
+msgstr "Fformat Ffeil"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr ""
+msgstr "Estyniad(au)"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -949,38 +985,42 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
+"Nid oedd y rhaglen yn gallu darganfod y fformat ffeil rydych chi am ei "
+"ddefnyddio ar gyfer `%s '. Gwnewch yn siŵr eich bod chi'n defnyddio estyniad "
+"hysbys ar gyfer y ffeil honno neu dewiswch fformat ffeil â llaw o'r rhestr "
+"isod."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr ""
+msgstr "Fformat ffeil heb ei chydnabod"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Analluogi cysylltiad i'r rheolwr sesiwn"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Pennu'r ffeil sy'n cynnwys y ffurfweddiad wedi ei gadw"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FFEIL"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Pennu ID rheoli sesiwn"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Dewisiadau rheoli sesiwn:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Dangos dewisiadau rheoli sesiwn"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -993,7 +1033,7 @@ msgstr ""
 #, c-format
 msgctxt "long time format"
 msgid "%d:%02d:%02d"
-msgstr ""
+msgstr "%d: %02d: %02d"
 
 #. minutes:seconds
 #. Translators: This is a time format, like "5:02" for 5
@@ -1005,7 +1045,7 @@ msgstr ""
 #, c-format
 msgctxt "short time format"
 msgid "%d:%02d"
-msgstr ""
+msgstr "%d:%02d"
 
 #. Title
 #. Artist
@@ -1025,35 +1065,35 @@ msgstr "Anhysbys"
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr ""
+msgstr "Amherthnasol"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
@@ -1078,7 +1118,7 @@ msgstr[3] "%d awr"
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d funud"
+msgstr[0] "%d munud"
 msgstr[1] "%d funud"
 msgstr[2] "%d munud"
 msgstr[3] "%d munud"
@@ -1097,14 +1137,14 @@ msgstr[3] "%d eiliad"
 #, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr ""
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:170
 #, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr ""
+msgstr "%s %s"
 
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
@@ -1115,12 +1155,14 @@ msgstr "0 eiliad"
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d ffrâm yr eiliad"
+msgstr[1] "%d ffrâm yr eiliad"
+msgstr[2] "%d ffrâm yr eiliad"
+msgstr[3] "%d ffrâm yr eiliad"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr ""
+msgstr "Rhagolwg Sain"
 
 #: ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
@@ -1128,37 +1170,37 @@ msgstr "Methwyd ymgychwyn y llyfrgelloedd edefyn-ddiogel."
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Gwiriwch eich ymsefydliad system. Mi fydd Xplayer yn terfynu nawr."
+msgstr "Gwiriwch osodiad eich system. Mi fydd Xplayer yn cau nawr."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr ""
+msgstr "_Chwarae Nawr"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr ""
+msgstr "­_Ychwanegu at y Rhestr Chwarae"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr ""
+msgstr "Diddymu"
 
 #: ../src/xplayer-fullscreen.c:553
 msgid "No File"
-msgstr "Dim ffeil"
+msgstr "Dim Ffeil"
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr ""
+msgstr "Methu llwytho'r rhyngwyneb '%s'. %s"
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr ""
+msgstr "Nid yw'r ffeil yn bodoli"
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Sicrhewch fod Xplayer wedi ei ymsefydlu yn gywir."
+msgstr "Sicrhewch fod Xplayer wedi'i osod yn iawn."
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1167,6 +1209,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Mae Xplayer yn feddalwedd rhydd; gallwch ei ailddosbarthu a/neu ei haddasu o "
+"dan delerau Trwydded Gyhoeddus Gyffredinol GNU fel y'i cyhoeddwyd gan y Free "
+"Software Foundation; naill ai fersiwn 2 o'r Drwydded, neu (yn ôl eich dewis "
+"chi) unrhyw fersiwn ddiweddarach."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1175,6 +1221,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Mae Xplayer cael ei ddosbarthu yn y gobaith y bydd yn ddefnyddiol, ond HEB "
+"UNRHYW RHYFEDD; heb hyd yn oed y warant ymhlyg o AMRYWIAETH neu HYFFORDDIANT "
+"AM DDIBEN RHANBARTHOL. Gweler Trwydded Gyhoeddus Gyffredinol GNU i gael mwy "
+"o fanylion."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1182,12 +1232,17 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
+"Dylech fod wedi derbyn copi o Drwydded Gyhoeddus Gyffredinol GNU ynghyd â "
+"Xplayer; os na, ysgrifennwch at y Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA 02111-1307 UDA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
+"Mae Xplayer yn cynnwys eithriad i ganiatáu defnyddio ategion GStreamer "
+"perchnogol."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1197,7 +1252,7 @@ msgstr "Dim"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr ""
+msgstr "Ffurfweddu Ategion"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1205,16 +1260,19 @@ msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
+"%s\n"
+"Rhedeg '%s --help' i weld rhestr lawn o holl ddewisiadau'r llinell "
+"orchymyn.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
 #, c-format
 msgid "Xplayer %s"
-msgstr ""
+msgstr "Xplayer %s"
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "Seibio"
+msgstr "Oedi"
 
 #: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
@@ -1225,11 +1283,11 @@ msgstr "Chwarae"
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Methodd Xplayer chwarae '%s'."
+msgstr "Methodd Xplayer a chwarae '%s'."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Methodd Xplayer ddangos y rhestr gynnwys."
+msgstr "Methodd Xplayer a dangos y cynnwys cymorth"
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
@@ -1237,19 +1295,19 @@ msgstr "Digwyddodd gwall"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr ""
+msgstr "Pennod/Ffilm Flaenorol"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr ""
+msgstr "Chwarae / Oedi"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr ""
+msgstr "Pennod/Ffilm Nesaf"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "Methodd Xplayer gychwyn."
+msgstr "Methodd Xplayer a chychwyn."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
@@ -1261,7 +1319,7 @@ msgstr "Agor Lleoliad..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Galluogi datnamu"
+msgstr "Galluogi dadfygio"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1269,23 +1327,23 @@ msgstr "Chwilio Ymlaen"
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Chwilio yn ôl"
+msgstr "Chwilio Nôl"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Lefel Sain i Fyny"
+msgstr "Lefel y Sain i Fyny"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Lefel Sain i Lawr"
+msgstr "Lefel y Sain i Lawr"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr ""
+msgstr "Tewi'r sain"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Toglu Llenwi'r Sgrin"
+msgstr "Toglo'r Sgrin Lawn"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
@@ -1305,48 +1363,48 @@ msgstr "Amnewid"
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr ""
+msgstr "Chwilio"
 
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr ""
+msgstr "Mynegai rhestr chwarae"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr ""
+msgstr "Ffilmiau i'w chwarae"
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr ""
+msgstr "- Chwarae ffilmiau a chaneuon"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr ""
+msgstr "Methu ychwanegu a disodli ar yr un pryd"
 
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr ""
+msgstr "Rhestr chwarae MP3 ShoutCast"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr ""
+msgstr "Sain MP3 (wedi'i ffrydio)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr ""
+msgstr "Sain MP3 (wedi'i ffrydio, fformat DOS)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr ""
+msgstr "Rhestr Chwarae Rhannol XML"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr ""
+msgstr "Teitl %d"
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
@@ -1367,6 +1425,7 @@ msgstr "Rhestr Chwarae"
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
+"Nid oedd modd dosrannu'r rhestr chwarae '%s'. Efallai y bydd wedi'i ddifrodi."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
@@ -1374,7 +1433,7 @@ msgstr "Gwall Rhestr Chwarae"
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr ""
+msgstr "Dewisiadau"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
@@ -1382,52 +1441,52 @@ msgstr "Dewis Ffont Isdeitlau"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr ""
+msgstr "Y Locale Cyfredol"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr ""
+msgstr "Arabaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr ""
+msgstr "Armenaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr ""
+msgstr "Baltaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr ""
+msgstr "Celtaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr ""
+msgstr "Canol Ewrop"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Tsieinëaidd (Symleiddiedig)"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Tsieineaidd (Traddodiadol)"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr ""
+msgstr "Croataidd"
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1436,94 +1495,94 @@ msgstr ""
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr ""
+msgstr "Syrilaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Cyrillic/Rwsaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Cyrillic/Wcranaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr ""
+msgstr "Georgiaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr ""
+msgstr "Groegaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/xplayer-subtitle-encoding.c:246
 #: ../src/xplayer-subtitle-encoding.c:248
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebraeg"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Gweledol Hebraeg"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr ""
+msgstr "Eislandaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr ""
+msgstr "Japanëaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr ""
+msgstr "Corëaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr ""
+msgstr "Nordaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr ""
+msgstr "Persaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr ""
+msgstr "Riwmanaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr ""
+msgstr "De Ewrop"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr ""
+msgstr "Twrcaidd"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1539,13 +1598,13 @@ msgstr "Unicode"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr ""
+msgstr "Gorllewinol"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr ""
+msgstr "Fietnamaidd"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
@@ -1557,7 +1616,7 @@ msgstr "%s / %s"
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "Cyrchu hyd %s / %s"
+msgstr "Chwilio hyd %s / %s"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
@@ -1565,23 +1624,23 @@ msgstr "Pob ffeil"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Ffeiliau sydd wedi'u cynnal"
+msgstr "Ffeiliau sy'n cael eu cynnal"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr ""
+msgstr "Ffeiliau sain"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr ""
+msgstr "Ffeiliau Fideo"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr ""
+msgstr "Ffeiliau is-deitlau"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr ""
+msgstr "Dewiswch Is-deitlau Testun"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
@@ -1589,7 +1648,7 @@ msgstr "Dewis Ffilmiau neu Restrau Chwarae"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr ""
+msgstr "Ychwanegu Cyfeiriadur"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1601,146 +1660,149 @@ msgid ""
 "<b>%s</b>: %d×%d\n"
 "<b>%s</b>: %s"
 msgstr ""
+"<b>%s</b>: %s\n"
+"<b>%s</b>: %d×%d\n"
+"<b>%s</b>: %s"
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr ""
+msgstr "Enw ffeil"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr ""
+msgstr "Cydraniad"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr ""
+msgstr "Hyd"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
-msgstr ""
+msgstr "Apple Trailers"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr ""
+msgstr "Yn gosod yr asiant defnyddiwr ar gyfer gwefan Apple Trailers"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr ""
+msgstr "Awtolwytho Is-deitlau"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr ""
+msgstr "Yn awtolwytho isdeitlau testun"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr ""
+msgstr "Recordydd Disg Fideo"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr ""
+msgstr "Yn recordio (S)VCDs neu DVDs fideo"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr ""
+msgstr "_Creu Disg Fideo..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr ""
+msgstr "Creu DVD fideo neu (S)VCD o'r ffilm sydd wedi'i hagor ar hyn o bryd"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr ""
+msgstr "Copïo _DVD fideo..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr ""
+msgstr "Copïo'r DVD fideo sy'n chwarae ar hyn o bryd"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr ""
+msgstr "Copïo (S)VCD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr ""
+msgstr "Copïo'r (S)VCD sy'n chwarae ar hyn o bryd"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr ""
+msgstr "Nid oes modd dyblygu'r disg fideo."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr ""
+msgstr "Nid oedd modd recordio'r ffilm."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr ""
+msgstr "Methu ysgrifennu project."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr ""
+msgstr "Enw ar gyfer pennod newydd:"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr ""
+msgstr "_Darllen y Bennod"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr ""
+msgstr "Tynnwch y bennod o'r rhestr"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr ""
+msgstr "_Mynd i Bennod"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr ""
+msgstr "Mynd i'r bennod yn y ffilm"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr ""
+msgstr "Ychwanegu Pennod..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr ""
+msgstr "Dileu Pennod"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr ""
+msgstr "Mynd i Bennod"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr ""
+msgstr "Cadw Newidiadau"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr ""
+msgstr "Dim data pennod"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr ""
+msgstr "Llwythwch Benodau ..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr ""
+msgstr "Llwytho penodau o ffeil CMML allanol"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr ""
+msgstr "Ychwanegu Penodau Newydd"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr ""
+msgstr "Creu rhestr bennod newydd ar gyfer y ffilm"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr ""
+msgstr "Penodau"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr ""
+msgstr "Cefnogi marcwyr penodau mewn ffilmiau"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1748,268 +1810,274 @@ msgid ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 msgstr ""
+"<b>Teitl:</b>%s\n"
+"<b>Amser cychwyn: </b>%s"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr ""
+msgstr "Gwall wrth ddarllen ffeil gyda phenodau"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr ""
+msgstr "Mae pennod gyda'r un amser eisoes yn bodoli"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr ""
+msgstr "Rhowch gynnig ar enw arall neu ddileu pennod sy'n bodoli eisoes."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr ""
+msgstr "Gwall wrth ysgrifennu ffeil gyda phenodau"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr ""
+msgstr "Digwyddodd gwall wrth gadw penodau"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
+"Gwiriwch fod gennych ganiatâd i ysgrifennu i'r ffolder sy'n cynnwys y ffilm."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr ""
+msgstr "Agor Ffeil Pennod"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr ""
+msgstr "Llun Sgrin y Bennod"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr ""
+msgstr "Teitl y Bennod"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr ""
+msgstr "Cadw newidiadau i'r rhestr penodau cyn cau?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr ""
+msgstr "Cau heb Gadw"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr ""
+msgstr "Cadw"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
 msgstr ""
+"Os na fyddwch yn ei chadw, fydd y newidiadau i'r rhestr benodau yn cael eu "
+"colli."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr ""
+msgstr "Ychwanegu Pennod"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
-msgstr ""
+msgstr "Cefnogaeth MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr ""
+msgstr "Mae'r ategyn hwn yn galluogi cefnogaeth MPRIS dros DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr ""
+msgstr "Nid yw’r gwrthrych MediaPlayer2 yn gweithredu’r rhyngwyneb ‘%s’"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr ""
+msgstr "Nid oes modd ysgrifennu ar yr eiddo ‘%s’."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr ""
+msgstr "Gofynnwyd am eiddo anhysbys ‘%s’ gan wrthrych MediaPlayer 2"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr ""
+msgstr "Nid yw'r URI ‘%s’ yn cael ei gefnogi."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr ""
+msgstr "Porwr Grilo"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr ""
+msgstr "Ategyn i adael i chi bori cynnwys cyfryngau o amrywiol ffynonellau"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr ""
+msgstr "Ychwanegu at y Rhestr Chwarae"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr ""
+msgstr "Copïo Lleoliad"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr ""
+msgstr "Pori"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
-msgstr ""
+msgstr "Chwilio"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
-msgstr ""
+msgstr "Gwall Pori"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
-msgstr ""
+msgstr "Gwall Chwilio"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr ""
+msgstr "Anodiadau Gromit"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr ""
+msgstr "Cynorthwyydd cyflwyno i wneud anodiadau ar y sgrin"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr ""
+msgstr "Heb ddarganfod y gromit deuaidd."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr ""
+msgstr "Statws Instant Messenger"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
+"Gosodwch eich statws Instant Messenger i ffwrdd pan fydd ffilm yn chwarae"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr ""
+msgstr "Rheolwr Pell Is-goch"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr ""
+msgstr "Yn cefnogi rheolaeth bell is-goch"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr ""
+msgstr "Methu ymgychwyn lirc."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr ""
+msgstr "Methu darllen ffurfweddiad lirc."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr ""
+msgstr "Allweddi Chwaraewr Cyfryngau"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr ""
+msgstr "Cefnogi allweddi chwaraewr cyfryngau ychwanegol"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr ""
+msgstr "Bob Tro ar y Brig"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr ""
+msgstr "Cadw'r brif ffenestr uchaf wrth chwarae ffilm"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr ""
+msgstr "Llwythwr Is-deitlau"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr ""
+msgstr "Chwilio am isdeitlau ar gyfer y ffilm sy'n chwarae ar hyn o bryd"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "Portiwgaleg Brasil"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr ""
+msgstr "Yn chwilio am isdeitlau ..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr ""
+msgstr "Yn llwytho is-deitlau i lawr ..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr ""
+msgstr "Methu cysylltu â gwefan OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr ""
+msgstr "Methu cysylltu â gwefan OpenSubtitles."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
-msgstr ""
+msgstr "Heb ganfod unrhyw ganlyniadau."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
-msgstr ""
+msgstr "Isdeitlau"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
 #: ../src/plugins/opensubtitles/opensubtitles.py:482
 msgid "Format"
-msgstr ""
+msgstr "Fformat"
 
 #. translators comment:
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
-msgstr ""
+msgstr "Graddio"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr ""
+msgstr "Llwythwch isdeitlau ffilm i lawr o OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr ""
+msgstr "Yn _Llwytho Is-deitlau Ffilm i Lawr..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
-msgstr ""
+msgstr "Yn chwilio is-deitlau…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr ""
+msgstr "Llwytho Is-deitlau Ffilm i Lawr"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr ""
+msgstr "_Iaith isdeitlau"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr ""
+msgstr "_ Chwarae gydag Is-deitl"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr ""
+msgstr "Iaith isdeitlau"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr ""
+msgstr "Yr iaith i chwilio amdani mewn isdeitlau ffilmiau."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr ""
+msgstr "Priodweddau Ffilmiau"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr ""
+msgstr "Yn ychwanegu priodweddau ffilm i'r bar ochr"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
@@ -2020,23 +2088,23 @@ msgstr "%d x %d"
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr "%d cb/e"
+msgstr "%d cbe"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr ""
+msgstr "Amh."
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr ""
+msgstr "%d Hz"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr ""
+msgstr "Amh."
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
@@ -2044,7 +2112,7 @@ msgstr "Priodweddau"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr ""
+msgstr "cyfrinair rpdb2"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2052,44 +2120,47 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
+"Cyfrinair i ddiogelu'r gweinydd rpdb2 ar gyfer dadfygio Xplayer rhag "
+"mynediad o bell heb awdurdod. Os yw hyn yn wag, bydd 'xplayer' yn cael ei "
+"defnyddio ."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr ""
+msgstr "Consol Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr ""
+msgstr "Consol Python Rhyngweithiol"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr ""
+msgstr "Dewislen Consol Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr ""
+msgstr "Consol _Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr ""
+msgstr "Dangos consol Python Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr ""
+msgstr "Dadfygiwr Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr ""
+msgstr "Galluogi dadfygio Python o bell gyda rpdb2"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr ""
+msgstr "Gallwch gyrchu'r Xplayer.Object trwy 'xplayer_object':\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
-msgstr ""
+msgstr "Consol Xplayer Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
@@ -2097,38 +2168,41 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
+"Ar ôl i chi bwyso Iawn, bydd Xplayer yn aros nes i chi gysylltu ag ef gyda "
+"winpdb neu rpdb2. Os nad ydych wedi gosod cyfrinair dadfygiwr yn DConf, bydd "
+"yn defnyddio'r cyfrinair rhagosodedig ('xplayer')."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr ""
+msgstr "Ffeiliau diweddar"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr ""
+msgstr "Yn ychwanegu ffeiliau sydd wedi'u chwarae i ffeiliau diweddar"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr ""
+msgstr "Ategyn Cylchdroi"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr ""
+msgstr "Yn caniatáu cylchdroi fideos os ydyn nhw yn y cyfeiriadedd anghywir"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
-msgstr ""
+msgstr "Cylchdroi _Clocwedd"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
-msgstr ""
+msgstr "Cylchdroi _Gwrthglocwedd"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr ""
+msgstr "Arbedwr Sgrin"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr ""
+msgstr "Yn ddadweithredu’r arbedwr sgrin pan mae ffilm yn chwarae"
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
@@ -2136,22 +2210,22 @@ msgstr "Yn chwarae ffilm"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr ""
+msgstr "Lled y llun (mewn picseli):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr ""
+msgstr "Cyfrifo'r nifer o luniau sgrin"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr ""
+msgstr "Nifer y luniau sgrin:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr ""
+msgstr "Lluniau sgrin o %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2159,19 +2233,19 @@ msgstr ""
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr ""
+msgstr "Lluniau sgrin o %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr ""
+msgstr "Llun sgrin"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr ""
+msgstr "Yn caniatáu cymryd lluniau sgrin ac orielau o fideos"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr ""
+msgstr "Cadw Oriel"
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2180,53 +2254,52 @@ msgstr ""
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr ""
+msgstr "Oriel-%s-%d.jpg"
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr ""
+msgstr "Yn Creu Oriel ..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr ""
+msgstr "Yn cadw oriel fel \"%s\""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr ""
+msgstr "Nid oedd Xplayer gael llun sgrin o'r fideo."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr ""
-"Dydi hwn ddim i fod i ddigwydd; gyrrwch adroddiad nam os gwelwch yn dda."
+msgstr "Nid yw hyn i fod i ddigwydd; ffeiliwch adroddiad gwall."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr ""
+msgstr "Tynnu _Llun Sgrin"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Creu sgrînlun"
+msgstr "Cymerwch lun sgrin"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr ""
+msgstr "Crëwch _Oriel Lluniau Sgrin..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr ""
+msgstr "Crëwch oriel o luniau sgrin"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
-msgstr ""
+msgstr "Neidio i"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr ""
+msgstr "Yn darparu'r ddeialog \"Neidio i\""
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
@@ -2237,8 +2310,10 @@ msgstr "_Neidio i:"
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "eiliad"
+msgstr[1] "eiliad"
+msgstr[2] "eiliad"
+msgstr[3] "eiliad"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2247,11 +2322,11 @@ msgstr[1] ""
 #: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr ""
+msgstr "_Neidio i..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
@@ -2259,8 +2334,8 @@ msgstr "Neidio i eitem benodol"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr ""
+msgstr "Ategyn Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr ""
+msgstr "Ategyn yn anfon digwyddiadau at Zeitgeist"

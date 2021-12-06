@@ -10,16 +10,16 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2019-12-19 09:33+0000\n"
-"Last-Translator: Alexis Borovik <Unknown>\n"
+"PO-Revision-Date: 2021-07-04 09:28+0000\n"
+"Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:39+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:03+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: be\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -28,19 +28,19 @@ msgstr "Выйсці з поўнаэкраннага рэжыму"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "Ачысцшць іншыя маніторы"
+msgstr "Ачысціць іншыя маніторы"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "Ці дазволіць запуск ахоўніка экрану пры аўдыёпрайграванні"
+msgstr "Дазволіць запуск экраннай застаўкі пры прайграванні аўдыё"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Ці трэба дазволіць запуск ахоўніка экрану пры аўдыёпрайграванні. Адключыце "
-"гэту опцыю, калі вашы калонкі сілкуюцца ад манітора."
+"Дазвольце актывацыю экраннай застаўкі пры прайграванні аўдыё. Адключыце гэту "
+"опцыю, калі вашы калонкі сілкуюцца ад манітора."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
@@ -96,19 +96,19 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Шрыфт субтытраў"
+msgstr "Шрыфт субцітраў"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "Апісанне Pango-шрыфту для паказу субтытраў."
+msgstr "Апісанне Pango-шрыфту для паказу субцітраў."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "Кадаванне субтытраў"
+msgstr "Кадзіроўка субцітраў"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Знаказбор для кадавання субтытраў."
+msgstr "Кадзіраванне набору сімвалаў для субцітраў."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
@@ -119,32 +119,33 @@ msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
-"Стандартнае месцазнаходжанне для дыялогаў \"Адкрыць...\". Калі не зададзена, "
-"будзе адкрывацца дзейны каталог."
+"Прадвызначанае месцазнаходжанне для дыялогаў \"Адкрыць...\". Бягучы каталог "
+"па змаўчанні."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Стандартнае месцазнаходжанне для дыялогаў \"Зрабіць экранны здымак\""
+msgstr ""
+"Прадвызначанае месцазнаходжанне для дыялогаў \"Зрабіць экранны здымак\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Стандартнае месцазнаходжанне для дыялогаў \"Зрабіць экранны здымак\". "
-"Стандартна - каталог Малюнкі."
+"Прадвызначанае месцазнаходжанне для дыялогаў \"Зрабіць экранны здымак\". "
+"Каталог Малюнкі па змаўчанні."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Ці адключыць плагіны з хатняга каталога карыстальніка"
+msgstr "Ці адключаць убудовы з хатняга каталога карыстальніка"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Ці адключыць клавіятурныя скароты"
+msgstr "Ці адключаць спалучэнні клавіш"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "Ці трэба аўтаматычна загружаць субтытры пры адкрыцці фільма"
+msgstr "Ці загружаць субцітры разам з фільмам"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
@@ -159,13 +160,13 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Спіс актыўных плагінаў"
+msgstr "Спіс актыўных убудоў"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr "Спіс назваў актыўных плагінаў (загружаных і дзейных)."
+msgstr "Спіс назваў актыўных убудоў (загружаных і дзейных)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
@@ -189,11 +190,11 @@ msgstr "Скапіяваць месцазнаходжанне ў буфер аб
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Выбраць субтытры..."
+msgstr "_Выбраць субцітры..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "Пазначце файл з субтытрамі"
+msgstr "Выберыце файл з субцітрамі"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
@@ -209,11 +210,11 @@ msgstr "Захаваць спіс прайгравання..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "Пасунуць вышэй"
+msgstr "Падняць"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "Пасунуць ніжэй"
+msgstr "Апусціць"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
@@ -237,11 +238,11 @@ msgstr "5.1-канальны"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr "AC3 Passthrough"
+msgstr "AC3 праходжанне"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Настáўленні Xplayer"
+msgstr "Налады Xplayer"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
@@ -253,15 +254,15 @@ msgstr "Пачаць прайграваць файлы з мінулага ме�
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "Субтытры"
+msgstr "Субцітры"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Загружаць файлы субтытраў пры адкрыцці фільма"
+msgstr "_Загружаць файлы субцітраў пры адкрыцці фільма"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "_Паказваць субтытры калі відэа загружана"
+msgstr "_Паказваць субцітры калі відэа загружана"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -269,7 +270,7 @@ msgstr "_Шрыфт:"
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "_Кадаванне:"
+msgstr "_Кадзіроўка:"
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
@@ -298,7 +299,7 @@ msgstr "Адключыць д_эінтэрлэйсінг для празрадк
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Адключаць ахоўніка экрану пры прайграванні"
+msgstr "Адключаць застаўкі экрана пры прайграванні"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -333,7 +334,7 @@ msgstr "_Тон:"
 
 #: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr "Вярнуць _стандартныя настáўленні"
+msgstr "Вярнуць _прадвызначаныя налады"
 
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
@@ -396,7 +397,7 @@ msgstr "Відэа"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr "Памер:"
+msgstr "Памеры:"
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
@@ -404,15 +405,15 @@ msgstr "Кодэк:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Чашчыня кадраў:"
+msgstr "Частата кадраў:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr "Чашчыня бітаў:"
+msgstr "Бітрэйт:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Чашчыня сэмплаў:"
+msgstr "Частата сэмплаў:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -435,15 +436,15 @@ msgstr "Відэа;Фільм;Кіно;Кліп;Серыял;Прайграва�
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Зайграць/прыпыніць"
+msgstr "Прайграць/Прыпыніць"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "Наперад"
+msgstr "Наступны"
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "Назад"
+msgstr "Папярэдні"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
@@ -454,7 +455,7 @@ msgstr "Сцішыць"
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr "_На ўвесь экран"
+msgstr "На ўвесь экран"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
@@ -470,11 +471,11 @@ msgstr "Адкрыць файл"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Адкрыць _каталог…"
+msgstr "Адкрыць _месца…"
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Адкрыць адлеглы файл"
+msgstr "Адкрыць аддалены файл"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
@@ -490,15 +491,15 @@ msgstr "_Уласцівасці"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "Паказаць уласцівасці дзейнага струменя"
+msgstr "Паказаць уласцівасці гэтай плыні"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "Зайграць/Пр_ыпыніць"
+msgstr "Граць / Пры_пыніць"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Зайграць ці прыпыніць фільм"
+msgstr "Граць ці прыпыніць фільм"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
@@ -522,19 +523,19 @@ msgstr "Ачысціць спіс прайгравання"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "Настáўл_енні"
+msgstr "_Параметры"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "Наставіць праграму"
+msgstr "Наладзіць праграму"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Плагіны..."
+msgstr "Убудовы..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Настáўленне плагінаў для пашырэння функцыянальнасці праграмы"
+msgstr "Наладзіць убудовы для пашырэння магчымасцей праграмы"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -590,7 +591,7 @@ msgstr "Змяніць вугал камеры"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr "_Пераход"
+msgstr "_Перайсці"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
@@ -670,7 +671,7 @@ msgstr "Паменшыць гучнасць"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr "_Даведка"
+msgstr "_Дапамога"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
@@ -682,11 +683,11 @@ msgstr "Змест даведкі"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "_Пра праграму"
+msgstr "_Аб праграме"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "Інфармацыя пра гэтую праграму"
+msgstr "Аб гэтай праграме"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
@@ -694,7 +695,7 @@ msgstr "_Рэжым паўтору"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "Наставіць рэжым паўтору"
+msgstr "Наладзіць рэжым паўтору"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
@@ -702,15 +703,15 @@ msgstr "Рэжым _перамешвання"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Наставіць рэжым перамешвання"
+msgstr "Наладзіць рэжым перамешвання"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "Паказваць кіроўныя _элементы"
+msgstr "Паказаць сродкі _кіравання"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "Паказваць кіроўныя элементы"
+msgstr "Паказаць сродкі кіравання"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
@@ -763,7 +764,7 @@ msgstr "Ужыць прапорцыі відэа 2.11:1 (DVB)"
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr "С_убтытры"
+msgstr "_Субцітры"
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
@@ -783,7 +784,7 @@ msgstr "Пераскочыць _наперад"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr "Пераскочыць у часе наперад"
+msgstr "Пераскочыць наперад"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
@@ -791,7 +792,7 @@ msgstr "Пераскочыць на_зад"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "Пераскочыць у часе назад"
+msgstr "Пераскочыць назад"
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
@@ -803,7 +804,7 @@ msgstr "Упішыце _адрас файла, які трэба адкрыць:
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr "Для RTSP-сервера запатрабаваны пароль"
+msgstr "Патрабуецца пароль для сервера RTSP"
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
@@ -813,7 +814,7 @@ msgstr "Аўдыётрэк #%d"
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "Субтытры №%d"
+msgstr "Субцітры №%d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
@@ -825,15 +826,15 @@ msgstr "Адмоўлена ў злучэнні з гэтым серверам."
 
 #: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
-msgstr "Не ўдалося адшукаць патрэбны фільм."
+msgstr "Вызначаны фільм не знойдзены."
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr "Сервер адмовіў у доступе да гэтага файла ці струменя."
+msgstr "Сервэр забараніў доступ да гэтага файла ці плыні."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr "Для доступу да гэтага файла ці струменя трэба прайсці ідэнтыфікацыю."
+msgstr "Для доступу да гэтай плыні патрабуецца аўтэнтыфікацыя."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
@@ -841,7 +842,7 @@ msgstr "Вам не дазволена адкрываць гэты файл."
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr "Гэта хібнае месцазнаходжанне."
+msgstr "Няправільнае месцазнаходжанне."
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
@@ -859,14 +860,14 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Каб прайграць гэты фільм, патрэбны плагін %s, але ён не ўсталяваны."
+"Каб прайграць гэты фільм, патрэбна ўбудова %s, але яна не ўсталявана."
 msgstr[1] ""
-"Каб прайграць гэты фільм, патрэбныя наступныя плагіны, але яны не "
+"Каб прайграць гэты фільм, патрэбны наступныя ўбудовы, але яны не "
 "ўсталяваныя:\r\n"
 "\r\n"
 "%s"
 msgstr[2] ""
-"Каб прайграць гэты фільм, патрэбныя наступныя плагіны, але яны не "
+"Каб прайграць гэты фільм, патрэбны наступныя ўбудовы, але яны не "
 "ўсталяваныя:\r\n"
 "\r\n"
 "%s"
@@ -876,9 +877,8 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Аўдыё- ці відэаструмень не апрацаваны з прычыны адсутнасці кодэкаў. Каб "
-"магчы прайграваць пэўныя тыпы фільмаў, патрабуецца ўсталяваць дадатковыя "
-"плагіны."
+"Аўдыё- ці відэа-плынь не апрацавана з прычыны адсутнасці кодэкаў. Каб "
+"прайграваць пэўныя тыпы фільмаў, патрабуецца ўсталяваць дадатковыя ўбудовы."
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -886,7 +886,7 @@ msgid ""
 "first."
 msgstr ""
 "Гэты файл не даступны для прайгравання праз сетку. Паспрабуйце спачатку "
-"сцягнуць яго на дыск."
+"спампаваць яго на дыск."
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
@@ -898,21 +898,20 @@ msgstr "Мона"
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr ""
-"Медыяфайл не ўтрымлівае відэаструменяў, якія б падтрымліваліся праграмай."
+msgstr "Носьбіт ня ўтрымлівае падтрыманых відэаплыняў."
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Адсутнічаюць некаторыя патрэбныя плагіны. Спраўдзіце карэктнасць усталявання "
+"Адсутнічаюць некаторыя патрэбныя ўбудовы. Спраўдзіце карэктнасць усталявання "
 "праграмы."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Файл не з'яўляецца правільным .desktop-файлам"
+msgstr "Няправільны .desktop-файл"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
@@ -927,7 +926,7 @@ msgstr "Запуск %s"
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Праграма не прымае дакументы з загаднага радка"
+msgstr "Праграма не прымае дакументы з каманднага радка"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
@@ -938,12 +937,12 @@ msgstr "Невядомая опцыя запуску: %d"
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Немагчыма перадаць URI-адрасы дакументаў .desktop-элементу з \"Type=Link\""
+"Немагчыма перадаць URI-адрасы дакументаў desktop-элементу з \"Type=Link\""
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Гэта не запускальны элемент"
+msgstr "Незапускальны элемент"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
@@ -956,7 +955,7 @@ msgstr "Усе файлы"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Усе вядомыя файлы"
+msgstr "Усе падтрымліваемыя файлы"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
@@ -1008,11 +1007,11 @@ msgstr "ID"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Опцыі для кіравання сеансам:"
+msgstr "Параметры кіравання сеансам:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Паказаць опцыі для кіравання сеансам"
+msgstr "Паказаць параметры кіравання сеансам"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1057,35 +1056,35 @@ msgstr "Невядома"
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
@@ -1144,9 +1143,9 @@ msgstr "0 секунд"
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] "%d кадраў на секунду"
-msgstr[1] "%d кадраў на секунду"
-msgstr[2] "%d кадраў на секунду"
+msgstr[0] "%d кадр у секунду"
+msgstr[1] "%d кадры ў секунду"
+msgstr[2] "%d кадраў у секунду"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
@@ -1158,8 +1157,7 @@ msgstr "Не ўдалося ініцыяваць бібліятэкі, сумя�
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr ""
-"Праверце правільнасць усталявання сістэмы. Тым часам Xplayer заканчвае працу."
+msgstr "Праверце правільнасць усталявання сістэмы. Xplayer скончыць працу."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
@@ -1167,7 +1165,7 @@ msgstr "_Зайграць"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "Д_адаць у плэйліст"
+msgstr "_Дадаць у спіс прайгравання"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
@@ -1228,7 +1226,7 @@ msgstr ""
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
-msgstr "Xplayer дазваляе выкарыстоўваць уласніцкія плагіны GStreamer."
+msgstr "Xplayer дазваляе выкарыстоўваць прапрыетарныя ўбудовы GStreamer."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1238,7 +1236,7 @@ msgstr "Няма"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Настáўленне плагінаў"
+msgstr "Наладзіць убудовы"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1247,7 +1245,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Каб убачыць поўны спіс наяўных опцый загаднага радка, выканайце \"%s --"
+"Каб убачыць поўны спіс наяўных опцый каманднага радка, выканайце \"%s --"
 "help\".\n"
 
 #. Translators: %s is the xplayer version number
@@ -1277,7 +1275,7 @@ msgstr "Xplayer не здолеў паказаць змест даведкі."
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
-msgstr "Узнікла памылка"
+msgstr "Адбылася памылка"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
@@ -1285,7 +1283,7 @@ msgstr "Папярэдні раздзел ці фільм"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr "Зайграць ці прыпыніць"
+msgstr "Граць / Прыпыніць"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
@@ -1297,15 +1295,15 @@ msgstr "Не выйшла запусціць Xplayer."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
-msgstr "Без дай прычыны."
+msgstr "Без падставы."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Адкрыць адрас..."
+msgstr "Адкрыць месца..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Уключыць наладку"
+msgstr "Уключыць адладку"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
@@ -1317,11 +1315,11 @@ msgstr "Пракруціць назад"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Павялічыць гучнасць"
+msgstr "Гучней"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Паменшыць гучнасць"
+msgstr "Цішэй"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
@@ -1333,7 +1331,7 @@ msgstr "Пераключыць поўнаэкранны рэжым"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Паказаць ці схаваць кіроўныя элементы"
+msgstr "Паказаць/схаваць сродкі кіравання"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
@@ -1375,11 +1373,11 @@ msgstr "Спіс прайгравання MP3 ShoutCast"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "Гук MP3 (струмень)"
+msgstr "Аўдыё MP3 (плынь)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "Гук MP3 (струмень, фармат DOS)"
+msgstr "Аўдыё MP3 (плынь, фармат DOS)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
@@ -1405,7 +1403,7 @@ msgstr "Захаваць спіс прайгравання"
 #: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Спіс прайгравання"
+msgstr "Плэйліст"
 
 #: ../src/xplayer-playlist.c:1862
 #, c-format
@@ -1420,11 +1418,11 @@ msgstr "Памылка ў спісе прайгравання"
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr "Настáўленні"
+msgstr "Параметры"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Выбраць шрыфт для субтытраў"
+msgstr "Выбраць шрыфт для субцітраў"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1435,45 +1433,45 @@ msgstr "Дзейная лакаль"
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr "Арабскае"
+msgstr "Арабская"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr "Армянскае"
+msgstr "Армянская"
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "Балцкае"
+msgstr "Балцкая"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr "Кельцкае"
+msgstr "Кельцкая"
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "Цэнтральна-Еўрапейскае"
+msgstr "Цэнтральна-Еўрапейская"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "Кітайскае спрошчанае"
+msgstr "Кітайская спрошчаная"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "Кітайскае традыцыйнае"
+msgstr "Кітайская традыцыйная"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr "Харвацкае"
+msgstr "Харвацкая"
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1482,30 +1480,30 @@ msgstr "Харвацкае"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "Кірылічнае"
+msgstr "Кірыліца"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "Кірылічнае/Рускае"
+msgstr "Кірыліца/Руская"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "Кірылічнае/Украінскае"
+msgstr "Кірыліца/Украінская"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "Грузінскае"
+msgstr "Грузінская"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr "Грэцкае"
+msgstr "Грэцкая"
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
-msgstr "Гуяраці"
+msgstr "Гуджараці"
 
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
@@ -1516,11 +1514,11 @@ msgstr "Гурмукхі"
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr "Іўрыт"
+msgstr "Яўрэйская"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Іўрыт (бачны)"
+msgstr "Яўрэйская візуальная"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1528,48 +1526,48 @@ msgstr "Хіндзі"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "Ісландскае"
+msgstr "Ісландская"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr "Японскае"
+msgstr "Японская"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr "Карэйскае"
+msgstr "Карэйская"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "Скандынаўскае"
+msgstr "Нардычная"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr "Персідскае"
+msgstr "Персідская"
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr "Румынскае"
+msgstr "Румынская"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "Паўднёва-Еўрапейскае"
+msgstr "Паўднёва-Еўрапейская"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr "Тайскае"
+msgstr "Тайская"
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "Турэцкае"
+msgstr "Турэцкая"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1577,7 +1575,7 @@ msgstr "Турэцкае"
 #: ../src/xplayer-subtitle-encoding.c:312
 #: ../src/xplayer-subtitle-encoding.c:314
 msgid "Unicode"
-msgstr "Юнікод"
+msgstr "Unicode"
 
 #: ../src/xplayer-subtitle-encoding.c:317
 #: ../src/xplayer-subtitle-encoding.c:319
@@ -1585,13 +1583,13 @@ msgstr "Юнікод"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "Заходняе"
+msgstr "Заходняя"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "В'етнамскае"
+msgstr "В'етнамская"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
@@ -1611,11 +1609,11 @@ msgstr "Усе файлы"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Падтрыманыя файлы"
+msgstr "Падтрымліваемыя файлы"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Гукавыя файлы"
+msgstr "Аўдыяфайлы"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
@@ -1623,11 +1621,11 @@ msgstr "Відэафайлы"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "Файлы субтытраў"
+msgstr "Файлы субцітраў"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "Выбар субтытраў"
+msgstr "Выбар субцітраў"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
@@ -1657,7 +1655,7 @@ msgstr "Назва файла"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "Памер"
+msgstr "Разрозненне"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
@@ -1674,11 +1672,11 @@ msgstr ""
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Аўтаматычнае сцягванне субтытраў"
+msgstr "Аўтаматычная спампоўка субцітраў"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Аўтаматычнае сцягванне субтытраў"
+msgstr "Аўтаматычная спампоўка субцітраў"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
@@ -1686,7 +1684,7 @@ msgstr "Запіс відэадыскаў"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Запіс (S)VCD ці Video DVD"
+msgstr "Запіс (S)VCD ці відэа DVD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
@@ -1694,27 +1692,27 @@ msgstr "_Стварыць відэадыск..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Стварыць Video DVD ці (S)VCD для адкрытага фільма"
+msgstr "Стварыць відэа DVD ці (S)VCD для адкрытага зараз фільма"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "_Скапіяваць Video DVD..."
+msgstr "Капіяваць відэа DVD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Скапіяваць адкрыты Video DVD"
+msgstr "Капіяваць відэа DVD, які зараз прайграецца"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Скапіяваць (S)VCD..."
+msgstr "Капіяваць (S)VCD..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "Скапіяваць адкрыты (S)VCD"
+msgstr "Капіяваць (S)VCD, які зараз прайграецца"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "Не выйшла скапіяваць гэты відэадыск."
+msgstr "Не выйшла дубліраваць гэты відэадыск."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
@@ -1807,7 +1805,7 @@ msgstr "Узнікла памылка падчас чытання файла з 
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr "Раздзел з такім пачаткам ужо існуе"
+msgstr "Раздзел з такім часам ужо існуе"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
@@ -1845,7 +1843,7 @@ msgstr "Захаваць змены ў спісе раздзелаў перад 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr "Закрыць, не захоўваючы"
+msgstr "Закрыць без захавання"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
@@ -1868,7 +1866,7 @@ msgstr "Падтрымка MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "Гэты плагін уключае падтрымку MPRIS праз DBUS."
+msgstr "Гэта ўбудова ўключае падтрымку MPRIS праз DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1893,16 +1891,16 @@ msgstr "URI-адрас \"%s\" не падтрымліваецца."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr "Браўзэр Grilo"
+msgstr "Браўзер Grilo"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Плагін, які дазваляе глядзець мультымедыйнае змесціва з разнастайных крыніц"
+"Убудова, якая дазваляе глядзець мультымедыйнае змесціва з разнастайных крыніц"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr "Дадаць у плэйліст"
+msgstr "Дадаць у спіс прайгравання"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
@@ -1910,7 +1908,7 @@ msgstr "Скапіяваць адрас"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr "Агляд"
+msgstr "Аглядзець"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
@@ -1948,7 +1946,7 @@ msgstr ""
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr "ІЧ-пульт дыстанцыйнага кіравання"
+msgstr "Аддаленае кіраванне праз інфрачырвоны порт"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
@@ -1980,11 +1978,11 @@ msgstr "Трымаць асноўнае акно над астатнімі па�
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Сцягванне субтытраў"
+msgstr "Спампоўка субцітраў"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr "Пошук субтытраў да адкрытага фільма"
+msgstr "Пошук субцітраў да адкрытага фільма"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
@@ -1992,21 +1990,21 @@ msgstr "Бразільская партугальская"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr "Пошук субтытраў..."
+msgstr "Пошук субцітраў..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr "Сцягванне субтытраў..."
+msgstr "Спампоўка субцітраў..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr "Не выйшла звязацца з пляцоўкай OpenSubtitles"
+msgstr "Не выйшла звязацца з сайтам OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr "Не выйшла звязацца з пляцоўкай OpenSubtitles."
+msgstr "Не выйшла звязацца з сайтам OpenSubtitles."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
@@ -2014,7 +2012,7 @@ msgstr "Нічога не знойдзена."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
-msgstr "Субтытры"
+msgstr "Субцітры"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
@@ -2030,35 +2028,35 @@ msgstr "Рэйтынг"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Сцягнуць субтытры да фільма з OpenSubtitles"
+msgstr "Спампаваць субцітры да фільма з OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "_Сцягнуць субтытры да фільма..."
+msgstr "_Спампаваць субцітры да фільма..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
-msgstr "Пошук субтытраў..."
+msgstr "Пошук субцітраў..."
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Сцягванне субтытраў да фільмаў"
+msgstr "Спампаваць субцітры да фільма"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "_Мова субтытраў:"
+msgstr "_Мова субцітраў:"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr "_Зайграць з субтытрамі"
+msgstr "_Зайграць з субцітрамі"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr "Мова субтытраў"
+msgstr "Мова субцітраў"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr "Мова для пошуку субтытраў да фільмаў."
+msgstr "Мова для пошуку субцітраў да фільмаў."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
@@ -2083,7 +2081,7 @@ msgstr "%d кбіт/с"
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
@@ -2093,7 +2091,7 @@ msgstr "%d Гц"
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr "Невядома"
+msgstr "Недаступна"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
@@ -2135,11 +2133,11 @@ msgstr "Паказаць кансоль Python для Xplayer"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Наладчык Python"
+msgstr "Адладчык Python"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "Уключыць адлеглую Python-наладку з дапамогай rpdb2"
+msgstr "Уключыць падтрымку аддаленай адладкі Python з дапамогай rpdb2"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
@@ -2158,21 +2156,21 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Пасля націску на кнопку Добра, Xplayer будзе чакаць злучэння з winpdb або "
+"Пасля націскання на кнопку Добра, Xplayer будзе чакаць злучэння з winpdb або "
 "rpdb2. Калі вы не задалі пароль наладчыка ў DConf, будзе ўжыты стандартны "
 "пароль (\"xplayer\")."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr "Ранейшыя файлы"
+msgstr "Нядаўнія файлы"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr "Дадае ранейшыя файлы ў адпаведны спіс"
+msgstr "Дадае нядаўнія файлы ў адпаведны спіс"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Плагін павароту"
+msgstr "Убудова павароту"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2180,19 +2178,19 @@ msgstr "Дазваляе паварочваць відэа з памылкова
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
-msgstr "Павярнуць па _сонцу"
+msgstr "Павярнуць па _ходу гадзіннікавай стрэлкі"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
-msgstr "Павярнуць супраць _сонца"
+msgstr "Павярнуць супраць _гадзіннікавай стрэлкі"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr "Ахоўнік экрану"
+msgstr "Экранная застаўка"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "Адключэнне ахоўніка экрану пры прайграванні фільма"
+msgstr "Адключэнне экраннай застаўкі пры прайграванні фільма"
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
@@ -2264,7 +2262,8 @@ msgstr "Xplayer не здолеў зрабіць экранны здымак г�
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "Гэта не павінна было здарыцца. Заявіце пра гэтую хібу."
+msgstr ""
+"Гэта не павінна было адбыцца; паведаміце пра гэтую хібу распрацоўшчыкам."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
@@ -2323,8 +2322,8 @@ msgstr "Пераскочыць да пэўнага часу"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Плагін Zeitgeist"
+msgstr "Убудова Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Плагін для пасылкі падзей у Zeitgeist"
+msgstr "Убудова для пасылкі падзей у Zeitgeist"
