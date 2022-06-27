@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: xplayer.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2021-12-06 13:02+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2022-06-14 08:20+0000\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:23+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:26+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
 "Language: he\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -28,19 +28,19 @@ msgstr "יציאה ממסך מלא"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "החשכת מסכים נוספים"
+msgstr "החשכת צגים אחרים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
-msgstr "אפשור שפעול שומר המסך בזמן השמעת שמע"
+msgstr "לאפשר לשומר המסך להכנס לפעולה בזמן השמעת שמע."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"אפשור שפעול שומר המסך בזמן השמעת שמע. השבתה במידה והרמקולים מוזנים במתח "
-"מהמסך."
+"לאפשר לשומר המסך להכנס לפעולה בזמן השמעת שמע. השבתת שומר המסך במידה "
+"והרמקולים מוזנים במתח הצג."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
@@ -56,11 +56,11 @@ msgstr "גוון החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "הרווית צבע החוזי"
+msgstr "רוויית צבע החוזי"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "התאמת גודל קנבס אוטומטית בעת טעינת קובץ"
+msgstr "שינוי גודל הקנבס באופן אוטומטי בעת טעינת קובץ"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
@@ -76,7 +76,7 @@ msgstr "האם להשבית פרימת סרטים שזורים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "האם לאפשר ניפוי תקלים במנוע השִׁפּוּק"
+msgstr "האם לאפשר ניפוי־תקלים במנוע ההשמעה"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
@@ -94,19 +94,19 @@ msgstr "כמות הנתונים לחציצה בזרימות רשת לפני תח
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "גופן כתובית"
+msgstr "גופן כתוביות"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr "תיאור גופני פנגו לעיבוד כתוביות."
+msgstr "תיאור גופני 'פנגו' לעיבוד כתוביות."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "קידוד כתובית"
+msgstr "קידוד כתוביות"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "ערכת תווי קידוד עבור כתוביות."
+msgstr "ערכת תווי קידוד לכתוביות."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
@@ -134,7 +134,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "האם להשבית את המתקעים בספריית הבית של המשתמש"
+msgstr "האם להשבית את התוספים בתיקיית הבית של המשתמש"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
@@ -142,27 +142,27 @@ msgstr "האם להשבית קיצורי מקשי מקלדת"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
-msgstr "האם לטעון קבצי כתוביות מלל באופן אוטומטי כאשר הסרט נטען"
+msgstr "האם לטעון קובצי כתוביות טקסט באופן אוטומטי בעת טעינת סרט"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr "האם לטעון אוטומטית קבצי פרקים חיצוניים כאשר הסרט נטען"
+msgstr "האם לטעון אוטומטית קובצי פרקים חיצוניים בעת טעינת סרט"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
-msgstr "האם לזכור את מיקום קבצי שמע/חוזי שנוגנו בעת השהייתם או סגירתם"
+msgstr "האם לזכור מיקום קובצי שמע/חוזי שנוגנו בעת השהייתם או סגירתם"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "רשימת מתקעים פעילים"
+msgstr "רשימת תוספים פעילים"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr "רשימת שמות המתקעים הפעילים כעת (טעונים ופועלים)."
+msgstr "רשימת שמות התוספים הפעילים כעת (טעונים ופועלים)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
@@ -206,11 +206,11 @@ msgstr "שמירה ברשימת ההשמעה..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "העברה מעלה"
+msgstr "העברה למעלה"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "העברה מטה"
+msgstr "העברה למטה"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
@@ -428,7 +428,8 @@ msgstr "נגינת סרטים"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "חוזי;סרט;קולנוע;סרטון;קליפ;סדרה;נגן;DVD;טלוויזיה;דיסק;תקליטור;כונן;"
+msgstr ""
+"חוזי;סרט;קולנוע;סרטון;קליט־חוזי;סדרה;נגן;DVD;טלוויזיה;דיסק;תקליטור;כונן;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
@@ -611,7 +612,7 @@ msgstr "תפריט _שמע"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "מעבר אל תפריט השמע"
+msgstr "מעבר לתפריט השמע"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -651,19 +652,19 @@ msgstr "_שמע"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "ה_גברת העצמה"
+msgstr "ה_גברת עוצמת השמע"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "הגברת עוצמה"
+msgstr "הגברת עוצמת השמע"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "ה_נמכת העצמה"
+msgstr "ה_נמכת עוצמת השמע"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "הנמכת עוצמה"
+msgstr "הנמכת עוצמת השמע"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
@@ -866,8 +867,8 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"תזרים שמע או חוזי לא מטופל כראוי עקב מפענחים חסרים. יתכן ויידרש להתקין "
-"מתקעים נוספים כדי לנגן סוגים מסוימים של סרטים"
+"תזרים שמע או חוזי לא מטופל כראוי מאחר שחסרים מפענחים. יתכן ותדרש התקנת "
+"מתקעים נוספים כדי לנגן סוגים סרטים מסוימים"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -1145,7 +1146,7 @@ msgstr "_נגינה כעת"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "ה_וספה לרשימת השמעה"
+msgstr "ה_וספה לרשימת ההשמעה"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
@@ -1293,11 +1294,11 @@ msgstr "חתירה אחורה"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "הגברת עצמה"
+msgstr "הגברת עוצמת השמע"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "הנמכת עצמה"
+msgstr "הנמכת עוצמת השמע"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
@@ -1374,7 +1375,7 @@ msgstr "לא ניתן לשמור את רשימת ההשמעה"
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "שמירת רשימת השמעה"
+msgstr "שמירת רשימת ההשמעה"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
@@ -1386,11 +1387,11 @@ msgstr "רשימת השמעה"
 #: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
-msgstr "לא ניתן לנתח את רשימת ההשמעה '%s'. יתכן שהיא פגומה."
+msgstr "לא היה ניתן לנתח את רשימת ההשמעה \"%s\". ייתכן שהיא פגומה."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr "שגיאה ברשימת השמעה"
+msgstr "שגיאה ברשימת ההשמעה"
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"

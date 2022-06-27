@@ -1,364 +1,354 @@
-# Catalan translation of xplayer.
-# Copyright © 2002-2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the xplayer package.
-# Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2004, 2005, 2006, 2007.
-# Gil Forcada <gilforcada@guifi.net>, 2006-2013.
+# Uzbek translation for linuxmint
+# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xplayer 2.14\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
-"mponent=general\n"
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2018-11-03 11:46+0000\n"
-"Last-Translator: Robert Antoni Buj Gelonch <Unknown>\n"
-"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"PO-Revision-Date: 2022-06-22 17:42+0000\n"
+"Last-Translator: Umidjon Almasov <umidjon@almasov.uz>\n"
+"Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2022-06-26 11:26+0000\n"
 "X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
-"Language: ca\n"
+"Language: uz\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
-msgstr "Surt de la pantalla completa"
+msgstr "To‘liq ekranni qoldirish"
 
 #: ../data/fullscreen.ui.h:2
 msgid "Blank other monitors"
-msgstr "Enfosqueix els altres monitors"
+msgstr "Boshqa monitorlarni bo‘shatish"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:1
 msgid "Allow the screensaver to activate when playing audio"
 msgstr ""
-"Permet que s'activi l'estalvi de pantalla quan s'estigui reproduint àudio"
+"Audio ijro etganda ekran saqlovchisini faollashtirishga ruxsat berish"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:2
 msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Permet que s'activi l'estalvi de pantalla quan s'estigui reproduint àudio. "
-"No ho habiliteu si teniu un monitor amb altaveus."
+"Audio ijro etganda ekran saqlovchisini faollashtirishga ruxsat berish. Agar "
+"sizda monitor bilan ishlaydigan dinamiklar bo‘lsa, o‘chirish."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
 msgid "The brightness of the video"
-msgstr "La brillantor del vídeo"
+msgstr "Video yorqinligi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "El contrast del vídeo"
+msgstr "Video kontrasti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
-msgstr "El to del vídeo"
+msgstr "Video rangi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:6
 msgid "The saturation of the video"
-msgstr "La saturació del vídeo"
+msgstr "Video to‘yinganligi"
 
-# FIXME: "canvas" (josep)
 #: ../data/org.x.player.gschema.xml.in.in.h:7
 msgid "Resize the canvas automatically on file load"
-msgstr "Redimensiona el llenç automàticament en carregar un fitxer"
+msgstr "Fayl yuklanganda ekran oʻlchamini avtomatik oʻzgartirish"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:8
 msgid "Repeat mode"
-msgstr "Mode repetició"
+msgstr "Takrorlash rejimi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:9
 msgid "Shuffle mode"
-msgstr "Mode aleatori"
+msgstr "Aralash rejimi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr ""
-"Si s'ha d'inhabilitar el desentrallaçat de les pel·lícules entrellaçades"
+msgstr "Interleysli filmlar uchun deinterleysing o‘chirish yoki o‘chirmaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
-msgstr "Si s'ha d'habilitar la depuració per al motor de reproducció"
+msgstr "Ijro mexanizmi uchun nosozliklar tuzatishni yoqish yoki yoqmaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:12
 msgid "Type of audio output to use"
-msgstr "Tipus de sortida d'àudio a utilitzar"
+msgstr "Foydalanish uchun audio chiqish turi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:13
 msgid "Network buffering threshold"
-msgstr "Llindar d'utilització de la memòria intermèdia de xarxa"
+msgstr "Tarmoqni buferlash ostonasi"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:14
 msgid ""
 "Amount of data to buffer for network streams before starting to display the "
 "stream (in seconds)."
 msgstr ""
-"Quantitat de dades (en segons) a emmagatzemar a la memòria intermèdia per "
-"als fluxos de la xarxa abans de començar-los a mostrar."
+"Oqimni ko‘rsatishni boshlashdan oldin tarmoq oqimlari uchun bufer "
+"qilinadigan ma'lumotlar miqdori (soniyalarda)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:15
 msgid "Subtitle font"
-msgstr "Lletra dels subtítols"
+msgstr "Subtitr shrifti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:16
 msgid "Pango font description for subtitle rendering."
-msgstr ""
-"Descripció de la lletra de Pango per a la representació dels subtítols."
+msgstr "Subtitrlarni ko‘rsatish uchun Pango shrifti tavsifi."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:17
 msgid "Subtitle encoding"
-msgstr "Codificació dels subtítols"
+msgstr "Subtitrni kodlash"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:18
 msgid "Encoding character set for subtitle."
-msgstr "Codificació del joc de caràcters dels subtítols."
+msgstr "Subtitr uchun kodlash belgilar toʻplami."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Ubicació predeterminada per als diàlegs «Obre...»"
+msgstr "\"Ochish...\" muloqot oynalari uchun standart joylashuv"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
-"Ubicació predeterminada per als diàlegs «Obre...». La predeterminada és el "
-"directori actual."
+"\"Ochish...\" muloqot oynalari uchun standart joylashuv. Standart joriy "
+"katalog hisoblanadi."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr ""
-"Ubicació predeterminada per als diàlegs «Feu una captura de pantalla»"
+msgstr "\"Skrinshot olish\" muloqot oynalari uchun standart joylashuv"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Ubicació predeterminada per als diàlegs «Feu una captura de pantalla». La "
-"predeterminada és el directori d'imatges."
+"\"Skrinshot olish\" muloqot oynalari uchun standart joylashuv. Standart - "
+"Rasmlar katalogi."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
-"Si s'han d'inhabilitar els connectors del directori d'inici de l'usuari"
+"Foydalanuvchining uy katalogidagi plaginlarni o‘chirish yoki o‘chirmaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
-msgstr "Si s'han d'inhabilitar les dreceres de teclat"
+msgstr "Klaviatura yorliqlarini o‘chirish yoki o‘chirmaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
-"Si s'han de carregar automàticament els fitxers de subtítols quan es carrega "
-"una pel·lícula"
+"Film yuklanganda matnli subtitr fayllari avtomatik yuklash yoki yuklamaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
-"Si s'han de carregar automàticament els fitxers de capítols externs quan es "
-"carrega una pel·lícula"
+"Film yuklanganda tashqi bob fayllarini avtomatik yuklash yoki yuklamaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Si s'ha de recordar la posició dels fitxers d'àudio/vídeo quan s'hi faci una "
-"pausa o es tanquin"
+"To‘xtatib turish yoki yopayotganda ijro etilgan audio/video fayllarning "
+"holatini eslab qolish yoki eslab qolmaslik"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Llista dels connectors actius"
+msgstr "Faol plaginlar ro‘yxati"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
 msgstr ""
-"Una llista dels noms dels connectors que estan actius actualment (carregats "
-"i en funcionament)."
+"Hozirda faol bo‘lgan (yuklangan va ishlayotgan) plaginlar nomlari ro‘yxati."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Utilitza la variant fosca del tema (si està disponible)."
+msgstr "Qorongʻu mavzu variantidan foydalanish (agar mavjud boʻlsa)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
-msgstr "_Suprimeix"
+msgstr "_Olib tashlash"
 
 #: ../data/playlist.ui.h:2
 msgid "Remove file from playlist"
-msgstr "Suprimeix el fitxer de la llista de reproducció"
+msgstr "Pleylistdan faylni olib tashlash"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr "_Copia la ubicació"
+msgstr "_Joylashuvni nusxalash"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr "Copia la ubicació al porta-retalls"
+msgstr "Joylashuvni buferga nusxalash"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Selecciona els subtítols de text..."
+msgstr "_Matn subtitrlarini tanlash..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
-msgstr "Seleccioneu el fitxer que conté els subtítols"
+msgstr "Matn subtitrlari foydalanish uchun faylni tanlash"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "Afegeix..."
+msgstr "Qo‘shish..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
-msgstr "Suprimeix"
+msgstr "Olib tashlash"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Desa la llista de reproducció..."
+msgstr "Pleylistni saqlash..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
-msgstr "Mou amunt"
+msgstr "Yuqoriga ko‘chirish"
 
 #: ../data/playlist.ui.h:11
 msgid "Move Down"
-msgstr "Mou avall"
+msgstr "Pastga ko‘chirish"
 
 #: ../data/preferences.ui.h:1 ../src/backend/bacon-video-widget.c:5095
 msgid "Stereo"
-msgstr "Estèreo"
+msgstr "Stereo"
 
 #: ../data/preferences.ui.h:2
 msgid "4-channel"
-msgstr "4 canals"
+msgstr "4-kanal"
 
 #: ../data/preferences.ui.h:3
 msgid "4.1-channel"
-msgstr "Canal 4.1"
+msgstr "4.1-kanal"
 
 #: ../data/preferences.ui.h:4
 msgid "5.0-channel"
-msgstr "Canal 5.0"
+msgstr "5.0-kanal"
 
 #: ../data/preferences.ui.h:5
 msgid "5.1-channel"
-msgstr "Canal 5.1"
+msgstr "5.1-kanal"
 
 #: ../data/preferences.ui.h:6
 msgid "AC3 Passthrough"
-msgstr "AC3 directe a la targeta de so"
+msgstr "AC3 orqali o‘tish"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Preferències del Xplayer"
+msgstr "Xplayer parametrlari"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
-msgstr "Reproducció"
+msgstr "Ijro etish"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Inicia la reproducció dels fitxers des de l'última posició"
+msgstr "Fayllarni oxirgi joydan ijro etishni boshlash"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
-msgstr "Subtítols"
+msgstr "Matn subtitrlari"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Carrega els fitxers de subtítols quan es carrega la pel·lícula"
+msgstr "_Film yuklanganda subtitr fayllarini yuklash"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr "_Mostra els subtítols quan es carrega la pel·lícula"
+msgstr "_Film yuklanganda subtitrlarni ko‘rsatish"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
-msgstr "_Lletra:"
+msgstr "_Shrift:"
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "_Codificació:"
+msgstr "_Kodlash:"
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
-msgstr "Capítols externs"
+msgstr "Tashqi boblar"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "_Carrega els fitxers de capítols quan es carrega la pel·lícula"
+msgstr "Film yuklanganda bob fayllarini yuklash"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
-msgstr "General"
+msgstr "Umumiy"
 
 #. Tab label in the Preferences dialogue
 #: ../data/preferences.ui.h:19
 msgid "Display"
-msgstr "Pantalla"
+msgstr "Ekran"
 
 #: ../data/preferences.ui.h:21
 msgid "_Resize the window when a new video is loaded"
-msgstr "_Redimensiona la finestra quan es carrega un vídeo nou"
+msgstr "_Yangi video yuklanganda oyna oʻlchamini oʻzgartirish"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Inhabilita el _desentrallaçat dels vídeos entrellaçats"
+msgstr "Interleysli videolarning deinterleysingni o‘chirish"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Inhabilita l'estalvi de pantalla quan es reprodueix"
+msgstr "Ijro etganda ekran pardasini oʻchirish"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
 msgctxt "Screensaver disable"
 msgid "Video"
-msgstr "Vídeo"
+msgstr "Video"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "Vídeo o àudio"
+msgstr "Video yoki audio"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
-msgstr "Balanç del color"
+msgstr "Rang balansi"
 
 #: ../data/preferences.ui.h:29
 msgid "_Brightness:"
-msgstr "_Brillantor:"
+msgstr "_Yorqinlik:"
 
 #: ../data/preferences.ui.h:30
 msgid "Co_ntrast:"
-msgstr "Co_ntrast:"
+msgstr "_Kontrast:"
 
 #: ../data/preferences.ui.h:31
 msgid "Sat_uration:"
-msgstr "Sat_uració:"
+msgstr "_Toʻyinganlik:"
 
 #: ../data/preferences.ui.h:32
 msgid "_Hue:"
-msgstr "_To:"
+msgstr "_Rang:"
 
 #: ../data/preferences.ui.h:33
 msgid "Reset to _Defaults"
-msgstr "Torna als valors per _defecte"
+msgstr "Standartga qaytarish"
 
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr "Sortida d'àudio"
+msgstr "Audio chiqish"
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr "Tipus de sortid_a d'àudio:"
+msgstr "_Audio chiqish turi:"
 
 #: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
-msgstr "Àudio"
+msgstr "Audio"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:38
@@ -368,387 +358,387 @@ msgstr "Normal"
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:40
 msgid "Large"
-msgstr "Gran"
+msgstr "Katta"
 
 #. Audio visualization dimensions
 #: ../data/preferences.ui.h:42
 msgid "Extra Large"
-msgstr "Extra gran"
+msgstr "Juda katta"
 
 #: ../data/properties.ui.h:2
 msgid "Title:"
-msgstr "Títol:"
+msgstr "Sarlavha:"
 
 #: ../data/properties.ui.h:3
 msgid "Artist:"
-msgstr "Artista:"
+msgstr "Artist:"
 
 #: ../data/properties.ui.h:4
 msgid "Duration:"
-msgstr "Durada:"
+msgstr "Davomiyligi:"
 
 #: ../data/properties.ui.h:5
 msgid "Year:"
-msgstr "Any:"
+msgstr "Yil:"
 
 #: ../data/properties.ui.h:6
 msgid "Album:"
-msgstr "Àlbum:"
+msgstr "Albom:"
 
 #: ../data/properties.ui.h:7
 msgid "Comment:"
-msgstr "Comentari:"
+msgstr "Izoh:"
 
 #: ../data/properties.ui.h:8
 msgid "Container:"
-msgstr "Contenidor:"
+msgstr "Konteyner:"
 
 #: ../data/properties.ui.h:9
 msgid "Video"
-msgstr "Vídeo"
+msgstr "Video"
 
 #: ../data/properties.ui.h:10
 msgid "Dimensions:"
-msgstr "Dimensions:"
+msgstr "O‘lchamlari:"
 
 #: ../data/properties.ui.h:11
 msgid "Codec:"
-msgstr "Còdec:"
+msgstr "Kodek:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Fotogrames per segon:"
+msgstr "Kadr tezligi:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
-msgstr "Velocitat de transmissió:"
+msgstr "Bit tezligi:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Freqüència de mostreig:"
+msgstr "Namuna tezligi:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
-msgstr "Canals:"
+msgstr "Kanallar:"
 
 #. Title
 #: ../data/xplayer.desktop.in.in.in.h:1 ../data/xplayer.ui.h:87
 #: ../src/xplayer.c:259 ../src/xplayer.c:267 ../src/xplayer-object.c:1720
 #: ../src/xplayer-object.c:1771
 msgid "Media Player"
-msgstr "Reproductor multimèdia"
+msgstr "Media pleyer"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr "Reproduïu pel·lícules"
+msgstr "Filmlarni ijro etish"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "Vídeo;Pel·lícula;Film;Clip;Sèries;Reproductor;DVD;TV;Disc;"
+msgstr "Video;Kino;Film;Klip;Serial;Pleyer;DVD;TV;Disk;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Reprodueix o fes una pausa"
+msgstr "Ijro etish/Pauza"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
-msgstr "Següent"
+msgstr "Keyingi"
 
 #: ../data/xplayer.desktop.in.in.in.h:6 ../src/xplayer-options.c:54
 msgid "Previous"
-msgstr "Anterior"
+msgstr "Oldingi"
 
 #: ../data/xplayer.desktop.in.in.in.h:7
 msgid "Mute"
-msgstr "Silencia"
+msgstr "Ovozni o‘chirish"
 
 #. Translators: this is the tooltip text for the fullscreen button in the controls box in Xplayer's main window.
 #. Translators: this is the accessibility text for the fullscreen button in the controls box in Xplayer's main window.
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr "Pantalla completa"
+msgstr "To‘liq ekran"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
-msgstr "_Fitxer"
+msgstr "_Fayl"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_Obre..."
+msgstr "_Ochish..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
-msgstr "Obre un fitxer"
+msgstr "Faylni ochish"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Obre una _ubicació..."
+msgstr "_Joylashuvni ochish..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Obre un fitxer no local"
+msgstr "Mahalliy bo‘lmagan faylni ochish"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "_Expulsa"
+msgstr "_Chiqarish"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
-msgstr "Expulsa el disc actual"
+msgstr "Joriy diskni chiqarish"
 
 #: ../data/xplayer.ui.h:8
 msgid "_Properties"
-msgstr "_Propietats"
+msgstr "_Xususiyatlar"
 
 #: ../data/xplayer.ui.h:9
 msgid "View the properties of the current stream"
-msgstr "Visualitza les propietats del flux actual"
+msgstr "Joriy oqimning xususiyatlarini ko‘rish"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "Reprodueix o fes una p_ausa"
+msgstr "Ijro etish/ P_auza"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Reprodueix o fes una pausa a la pel·lícula"
+msgstr "Filmni ijro etish yoki toʻxtatib turish"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
-msgstr "_Surt"
+msgstr "_Chiqish"
 
 #: ../data/xplayer.ui.h:13
 msgid "Quit the program"
-msgstr "Surt de l'aplicació"
+msgstr "Dasturdan chiqish"
 
 #: ../data/xplayer.ui.h:14
 msgid "_Edit"
-msgstr "_Edita"
+msgstr "_Tahrirlash"
 
 #: ../data/xplayer.ui.h:15
 msgid "_Clear Playlist"
-msgstr "_Neteja la llista de reproducció"
+msgstr "_Pleylistni tozalash"
 
 #: ../data/xplayer.ui.h:16
 msgid "Clear the playlist"
-msgstr "Neteja la llista de reproducció"
+msgstr "Pleylistni tozalash"
 
 #: ../data/xplayer.ui.h:17
 msgid "Prefere_nces"
-msgstr "_Preferències"
+msgstr "_Parametrlar"
 
 #: ../data/xplayer.ui.h:18
 msgid "Configure the application"
-msgstr "Configura l'aplicació"
+msgstr "Ilovani sozlash"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Connectors..."
+msgstr "Plaginlar..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Configureu els connectors per ampliar l'aplicació"
+msgstr "Ilovani kengaytirish uchun plaginlarni sozlash"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
-msgstr "_Visualitza"
+msgstr "_Ko‘rinish"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "Pantalla _completa"
+msgstr "_To‘liq ekran"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Canvia a pantalla completa"
+msgstr "Toʻliq ekran rejimiga oʻtish"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Ajusta la finestra a la pel·lícula"
+msgstr "Oynani filmga moslash"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
-msgstr "_Redimensiona a 1∶2"
+msgstr "_Oʻlchamini oʻzgartirish 1∶2"
 
 #: ../data/xplayer.ui.h:26
 msgid "Resize to half the original video size"
-msgstr "Redimensiona el vídeo a la meitat de la mida original"
+msgstr "Asl video o‘lchamining yarmiga o‘zgartirish"
 
 #: ../data/xplayer.ui.h:27
 msgid "Resize _1∶1"
-msgstr "Redimensiona a _1∶1"
+msgstr "Oʻlchamini oʻzgartirish _1∶1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Redimensiona el vídeo a la mida original"
+msgstr "Asl video o‘lchamiga o‘zgartirish"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
-msgstr "Redimensiona a _2∶1"
+msgstr "Oʻlchamini oʻzgartirish _2∶1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "Redimensiona el vídeo al doble de la mida original"
+msgstr "Asl video o‘lchamini ikki baravariga o‘zgartirish"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
-msgstr "Relació d'_aspecte"
+msgstr "_Tomonlar nisbati"
 
 #: ../data/xplayer.ui.h:32
 msgid "Switch An_gles"
-msgstr "Commuta els an_gles"
+msgstr "_Rakurslarni almashtirish"
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "Commuta els angles de la càmera"
+msgstr "Kamera rakurslarini almashtirish"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
-msgstr "Vé_s"
+msgstr "_o‘tish"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr "Menú del _DVD"
+msgstr "_DVD Menyu"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "Vés al menú del DVD"
+msgstr "DVD menyusiga o‘tish"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
-msgstr "Menú del _títol"
+msgstr "_Sarlavha menyusi"
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr "Vés al menú del títol"
+msgstr "Sarlavha menyusiga o‘tish"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
-msgstr "Menú de l'à_udio"
+msgstr "A_udio Menyu"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Vés al menú de l'àudio"
+msgstr "Audio menyusiga o‘tish"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
-msgstr "Menú de l'an_gle"
+msgstr "_Rakurs menyusi"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr "Vés al menú de l'angle"
+msgstr "Rakurs menyusiga o‘ting"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "Menú dels _capítols"
+msgstr "_Bo‘lim menyusi"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Vés al menú dels capítols"
+msgstr "Bo‘lim menyusiga o‘tish"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "Següe_nt capítol o pel·lícula"
+msgstr "_Keyingi bob/film"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Capítol o pel·lícula següent"
+msgstr "Keyingi bob yoki film"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "Anterior ca_pítol o pel·licula"
+msgstr "_Oldingi bob/film"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Capítol o pel·lícula anterior"
+msgstr "Oldingi bob yoki film"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
-msgstr "S_o"
+msgstr "_Ovoz"
 
 #: ../data/xplayer.ui.h:50
 msgid "Volume _Up"
-msgstr "_Apuja el volum"
+msgstr "Ovozni _ko‘tarish"
 
 #: ../data/xplayer.ui.h:51
 msgid "Increase volume"
-msgstr "Apuja el volum"
+msgstr "Ovozni oshirish ko‘tarish"
 
 #: ../data/xplayer.ui.h:52
 msgid "Volume _Down"
-msgstr "A_baixa el volum"
+msgstr "Ovozni _pasaytirish"
 
 #: ../data/xplayer.ui.h:53
 msgid "Decrease volume"
-msgstr "Abaixa el volum"
+msgstr "Ovozni pasaytirish"
 
 #: ../data/xplayer.ui.h:54
 msgid "_Help"
-msgstr "A_juda"
+msgstr "_Yordam"
 
 #: ../data/xplayer.ui.h:55
 msgid "_Contents"
-msgstr "_Continguts"
+msgstr "_Mundarija"
 
 #: ../data/xplayer.ui.h:56
 msgid "Help contents"
-msgstr "Continguts de l'ajuda"
+msgstr "Yordam mundarijasi"
 
 #: ../data/xplayer.ui.h:57
 msgid "_About"
-msgstr "_Quant a"
+msgstr "_Haqida"
 
 #: ../data/xplayer.ui.h:58
 msgid "About this application"
-msgstr "Quant a aquesta aplicació"
+msgstr "Ushbu ilova haqida"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr "Mode _repetició"
+msgstr "_Takrorlash rejimi"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "Estableix el mode repetició"
+msgstr "Takrorlash rejimini sozlash"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "Mode a_leatori"
+msgstr "_Aralash rejimi"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Estableix el mode aleatori"
+msgstr "Aralash rejimini sozlash"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
-msgstr "Mostra els _controls"
+msgstr "_Boshqaruvlarni ko‘rsatish"
 
 #: ../data/xplayer.ui.h:64
 msgid "Show controls"
-msgstr "Mostra els controls"
+msgstr "Boshqaruvlarni ko‘rsatish"
 
 #: ../data/xplayer.ui.h:65
 msgid "S_idebar"
-msgstr "_Barra lateral"
+msgstr "_Yon panel"
 
 #: ../data/xplayer.ui.h:66
 msgid "Show or hide the sidebar"
-msgstr "Mostra o amaga la barra lateral"
+msgstr "Yon panelni ko‘rsatish yoki yashirish"
 
 #: ../data/xplayer.ui.h:67
 msgctxt "Aspect ratio"
 msgid "Auto"
-msgstr "Auto"
+msgstr "Avtomatik"
 
 #: ../data/xplayer.ui.h:68
 msgid "Sets automatic aspect ratio"
-msgstr "Estableix la relació d'aspecte automàtica"
+msgstr "Avtomatik tomonlar nisbatini sozlaydi"
 
 #: ../data/xplayer.ui.h:69
 msgid "Square"
-msgstr "Quadrat"
+msgstr "Kvadrat"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "Estableix la relació d'aspecte quadrada"
+msgstr "Kvadrat tomonlar nisbatini sozlaydi"
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
@@ -756,15 +746,15 @@ msgstr "4∶3 (TV)"
 
 #: ../data/xplayer.ui.h:72
 msgid "Sets 4∶3 (TV) aspect ratio"
-msgstr "Estableix la relació d'aspecte a 4∶3 (TV)"
+msgstr "4∶3 (TV) tomonlar nisbatini sozlaydi"
 
 #: ../data/xplayer.ui.h:73
 msgid "16∶9 (Widescreen)"
-msgstr "16∶9 (Pantalla ampla)"
+msgstr "16∶9 (keng ekran)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "Estableix la relació d'aspecte a 16∶9 (pantalla ampla)"
+msgstr "16∶9 (keng ekran) tomonlar nisbatini sozlaydi"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
@@ -772,93 +762,93 @@ msgstr "2.11∶1 (DVB)"
 
 #: ../data/xplayer.ui.h:76
 msgid "Sets 2.11∶1 (DVB) aspect ratio"
-msgstr "Estableix la relació d'aspecte a 2.11∶1 (DVB)"
+msgstr "2.11∶1 (DVB) tomonlar nisbatini sozlaydi"
 
 #: ../data/xplayer.ui.h:77
 msgid "S_ubtitles"
-msgstr "S_ubtítols"
+msgstr "_Subtitrlar"
 
 #: ../data/xplayer.ui.h:80
 msgid "_Languages"
-msgstr "_Idiomes"
+msgstr "_Tillar"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Amplia el zoom"
+msgstr "Kattalashtirish"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Amplia el zoom"
+msgstr "Kattalashtirish"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr "Salta en_davant"
+msgstr "_Oldinga oʻtkazib yuborish"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
-msgstr "Salta endavant"
+msgstr "Oldinga oʻtkazib yuborish"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "Salta _enrere"
+msgstr "_Orqaga oʻtkazib yuborish"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
-msgstr "Salta enrere"
+msgstr "Orqaga oʻtkazib yuborish"
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr "Barra de cerca de temps"
+msgstr "Vaqtni qidirish paneli"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Introduïu l'_adreça del fitxer que voleu obrir:"
+msgstr "Ochmoqchi bo‘lgan fayl _manzilini kiriting:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr "El servidor de RTSP sol·licita la contrasenya"
+msgstr "RTSP serveri uchun parol so‘raldi"
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
 msgid "Audio Track #%d"
-msgstr "Pista d'àudio #%d"
+msgstr "Audio trek #%d"
 
 #: ../src/backend/bacon-video-widget.c:2892
 #, c-format
 msgid "Subtitle #%d"
-msgstr "Subtítol #%d"
+msgstr "Subtitr #%d"
 
 #: ../src/backend/bacon-video-widget.c:3276
 msgid "The server you are trying to connect to is not known."
-msgstr "Es desconeix el servidor al qual esteu intentant connectar."
+msgstr "Siz ulanmoqchi bo‘lgan server noma'lum."
 
 #: ../src/backend/bacon-video-widget.c:3279
 msgid "The connection to this server was refused."
-msgstr "S'ha refusat la connexió a aquest servidor."
+msgstr "Ushbu serverga ulanish rad etildi."
 
 #: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
-msgstr "No s'ha trobat la pel·lícula especificada."
+msgstr "Belgilangan filmni topib boʻlmadi."
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr "El servidor ha rebutjat l'accés a aquest fitxer o flux."
+msgstr "Server ushbu fayl yoki oqimga kirishni rad etdi."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr "Es requereix autenticació per a accedir a aquest fitxer o flux."
+msgstr "Ushbu fayl yoki oqimga kirish uchun autentifikatsiya talab qilinadi."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
-msgstr "No se us permet obrir aquest fitxer."
+msgstr "Bu faylni ochishga ruxsat berilmagan."
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr "La ubicació no és vàlida."
+msgstr "Bu joylashuv haqiqiy emas."
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "No s'ha pogut llegir la pel·lícula."
+msgstr "Filmni o‘qib bo‘lmadi."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -872,33 +862,28 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Hauríeu d'instal·lar el connector %s per reproduir aquesta pel·lícula."
-msgstr[1] ""
-"Hauríeu d'instal·lar els connectors següents per reproduir aquesta "
-"pel·lícula:\n"
-"\n"
-"%s"
+"Ushbu filmni ijro etish uchun oʻrnatilmagan %s plagini kerak boʻladi."
 
 #: ../src/backend/bacon-video-widget.c:3357
 msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"No es pot gestionar el flux d'àudio o de vídeo perquè manca algun còdec. "
-"Potser cal que instal·leu connectors addicionals per poder veure alguns "
-"tipus de pel·lícules"
+"Kodeklar yetishmayotganligi sababli audio yoki video oqimga ishlov "
+"berilmaydi. Ba'zi turdagi filmlarni ijro etish uchun qo‘shimcha plaginlarni "
+"o‘rnatishingiz kerak bo‘lishi mumkin"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
-"No es pot reproduir aquest fitxer a través de la xarxa. Proveu de baixar-lo "
-"al disc primer."
+"Ushbu faylni tarmoq orqali o‘ynatib bo‘lmaydi. Avval uni yuklab olishga "
+"harakat qiling."
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
-msgstr "Envoltant"
+msgstr "Surround"
 
 #: ../src/backend/bacon-video-widget.c:5093
 msgid "Mono"
@@ -906,77 +891,75 @@ msgstr "Mono"
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr "El medi no conté cap flux de vídeo conegut."
+msgstr "Mediada qo‘llab-quvvatlanadigan video oqimlari mavjud emas."
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Falten alguns connectors necessaris. Assegureu-vos que el programa està "
-"instal·lat correctament."
+"Ba'zi kerakli plaginlar yetishmayapti. Dastur to‘g‘ri o‘rnatilganligiga "
+"ishonch hosil qiling."
 
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "El fitxer no és un fitxer .desktop vàlid"
+msgstr "Fayl yaroqli .desktop fayli emas"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Es desconeix la versió «%s» del fitxer d'escriptori"
+msgstr "Noma'lum ish stoli fayli \"%s\" versiyasi"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "S'està iniciant %s"
+msgstr "%s boshlanmoqda"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "L'aplicació no accepta documents des de la línia d'ordres"
+msgstr "Ilova buyruq satrida hujjatlarni qabul qilmaydi"
 
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Es desconeix l'ordre d'execució: %d"
+msgstr "Noma'lum ishga tushirish varianti: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-"No s'ha pogut transformar l'URI del document a una entrada d'escriptori "
-"«Type=Link»"
+msgstr "Hujjat URIlarini “Type=Link” ish stoli yozuviga o‘tkazib bo‘lmaydi"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "No és un element executable"
+msgstr "Ishga tushiriladigan element emas"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
 msgid "File _Format: %s"
-msgstr "_Format del fitxer: %s"
+msgstr "Fayl _formati: %s"
 
 #: ../src/eggfileformatchooser.c:379
 msgid "All Files"
-msgstr "Tots els fitxers"
+msgstr "Barcha fayllar"
 
 #: ../src/eggfileformatchooser.c:380
 msgid "All Supported Files"
-msgstr "Tots els fitxers compatibles"
+msgstr "Barcha qo‘llab-quvvatlanadigan fayllar"
 
 #: ../src/eggfileformatchooser.c:389
 msgid "By Extension"
-msgstr "Per extensió"
+msgstr "Kengaytma bo‘yicha"
 
 #: ../src/eggfileformatchooser.c:404
 msgid "File Format"
-msgstr "Format del fitxer"
+msgstr "Fayl formati"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Extensions"
+msgstr "Kengaytma(lar)"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -986,41 +969,41 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"No s'ha pogut descobrir el format de fitxer que voleu utilitzar per a «%s». "
-"Hauríeu d'assegurar-vos que utilitzeu una extensió coneguda per al fitxer o "
-"trieu-ne una de la llista de sota."
+"Dastur “%s” uchun foydalanmoqchi boʻlgan fayl formatini topa olmadi. "
+"Iltimos, ushbu fayl uchun maʼlum kengaytmadan foydalaning yoki quyidagi "
+"roʻyxatdan fayl formatini qoʻlda tanlang."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
-msgstr "No s'ha reconegut el format del fitxer"
+msgstr "Fayl formati tan olinmadi"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Inhabilita la connexió al gestor de la sessió"
+msgstr "Sessiya menejeriga ulanishni o‘chirish"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Especifica el fitxer que conté la configuració desada"
+msgstr "Saqlangan konfiguratsiyani o‘z ichiga olgan faylni belgilash"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
-msgstr "FITXER"
+msgstr "FAYL"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Especifica l'identificador de la gestió de la sessió"
+msgstr "Seans boshqaruvi identifikatorini belgilash"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
-msgstr "Identificador"
+msgstr "Identifikator"
 
 #: ../src/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Opcions de la gestió de la sessió:"
+msgstr "Sessiyani boshqarish variantlari:"
 
 #: ../src/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Mostra les opcions de la gestió de la sessió"
+msgstr "Sessiyani boshqarish variantlarini ko‘rsatish"
 
 #. hour:minutes:seconds
 #. Translators: This is a time format, like "9:05:02" for 9
@@ -1059,72 +1042,69 @@ msgstr "%d:%02d"
 #: ../src/properties/bacon-video-widget-properties.c:119
 #: ../src/xplayer-menu.c:148 ../src/xplayer-object.c:1384
 msgid "Unknown"
-msgstr "Desconegut"
+msgstr "Noma'lum"
 
 #. Dimensions
 #: ../src/properties/bacon-video-widget-properties.c:122
 msgctxt "Dimensions"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #. Video Codec
 #: ../src/properties/bacon-video-widget-properties.c:124
 msgctxt "Video codec"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #: ../src/properties/bacon-video-widget-properties.c:127
 msgctxt "Video bit rate"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #: ../src/properties/bacon-video-widget-properties.c:130
 #: ../src/properties/bacon-video-widget-properties.c:240
 msgctxt "Frame rate"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #: ../src/properties/bacon-video-widget-properties.c:134
 msgctxt "Audio bit rate"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #. Audio Codec
 #: ../src/properties/bacon-video-widget-properties.c:136
 msgctxt "Audio codec"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #. Sample rate
 #: ../src/properties/bacon-video-widget-properties.c:138
 msgid "0 Hz"
-msgstr "0 Hz"
+msgstr "0 Gts"
 
 #. Channels
 #: ../src/properties/bacon-video-widget-properties.c:140
 msgid "0 Channels"
-msgstr "0 canals"
+msgstr "0 kanal"
 
 #: ../src/properties/bacon-video-widget-properties.c:156
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d hora"
-msgstr[1] "%d hores"
+msgstr[0] "%d soat"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minut"
-msgstr[1] "%d minuts"
+msgstr[0] "%d daqiqa"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d segon"
-msgstr[1] "%d segons"
+msgstr[0] "%d soniya"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1143,57 +1123,55 @@ msgstr "%s %s"
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr "0 segons"
+msgstr "0 soniya"
 
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] "%d fotograma per segon"
-msgstr[1] "%d fotogrames per segon"
+msgstr[0] "%d kadr/sek"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "Previsualització d'àudio"
+msgstr "Audio oldindan eshitish"
 
 #: ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
-msgstr ""
-"No s'han pogut inicialitzar les biblioteques que permeten fils segurs."
+msgstr "Oqimi xavfsiz kutubxonalarni ishga tushirib boʻlmadi."
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Verifiqueu la instal·lació del sistema. El Xplayer sortirà ara."
+msgstr "Tizim o‘rnatilishini tasdiqlang. Xplayer endi chiqadi."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
-msgstr "_Reprodueix ara"
+msgstr "_Hozir ijro etish"
 
 #: ../src/xplayer-dnd-menu.c:98
 msgid "_Add to Playlist"
-msgstr "_Afegeix a la llista de reproducció"
+msgstr "_Pleylistga qo‘shish"
 
 #: ../src/xplayer-dnd-menu.c:104
 msgid "Cancel"
-msgstr "Cancel·la"
+msgstr "Bekor qilish"
 
 #: ../src/xplayer-fullscreen.c:553
 msgid "No File"
-msgstr "Cap fitxer"
+msgstr "Fayl yo‘q"
 
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "No s'ha pogut carregar la interfície «%s». %s"
+msgstr "“%s” interfeysini yuklab bo‘lmadi. %s"
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
-msgstr "No existeix el fitxer."
+msgstr "Fayl mavjud emas."
 
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr "Assegureu-vos que el Xplayer està instal·lat correctament."
+msgstr "Xplayer to‘g‘ri o‘rnatilganligiga ishonch hosil qiling."
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1202,10 +1180,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"El Xplayer és programari lliure; podeu redistribuir-lo i/o modificar-lo sota "
-"els termes de la Llicència Pública General de GNU tal com ha estat publicada "
-"per la Free Software Foundation; ja sigui la versió 2 de la llicència o bé "
-"(si ho preferiu) qualsevol altra versió posterior."
+"Xplayer - bu bepul dastur; siz uni qayta tarqatishingiz va/yoki uni Free "
+"Software Foundation tomonidan nashr etilgan GNU General Public License "
+"shartlariga muvofiq o‘zgartirishingiz mumkin; Litsenziyaning 2-versiyasi "
+"yoki (sizning xohishingizga ko‘ra) har qanday keyingi versiyasi."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1214,10 +1192,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"El Xplayer es distribueix amb l'expectativa que serà útil, però SENSE CAP "
-"GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o ADEQUACIÓ "
-"PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública General de GNU per "
-"obtenir-ne més detalls."
+"Xplayer foydali bo‘ladi degan umidda tarqatiladi, lekin HAR QANDAY "
+"KAFOLATSIZ; TIJORAT MUVOFIQligi yoki MAQSUS MAQSADGA MUVOFIQligi "
+"to‘g‘risidagi nazarda tutilgan kafolatsiz ham. Batafsil ma'lumot uchun GNU "
+"General Public License-ga qarang."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1225,27 +1203,27 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
-"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
-"juntament amb el Xplayer; en cas contrari, escriviu a la Free Software "
-"Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+"Siz Xplayer bilan birga GNU General Public License nusxasini olishingiz "
+"kerak edi; bo‘lmasa, Free Software Foundation, Inc., 59 Temple Place, Suite "
+"330, Boston, MA 02111-1307 AQShga yozing"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"El Xplayer conté una excepció per permetre l'ús de connectors GStreamer de "
-"propietat."
+"Xplayer xususiy GStreamer plaginlaridan foydalanishga ruxsat beruvchi "
+"istisnoni o‘z ichiga oladi."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
 #: ../src/xplayer-object.c:1458
 msgid "None"
-msgstr "Cap"
+msgstr "Yo‘q"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Configuració dels connectors"
+msgstr "Plaginlarni sozlash"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1254,8 +1232,8 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Executeu «%s --help» per veure una llista completa de les opcions de la "
-"línia d'ordres.\n"
+"Buyruqlar satri uchun mumkin bo‘lgan barcha opsiyalar ro‘yxatini ko‘rish "
+"uchun '%s --help' ni bajaring.\n"
 
 #. Translators: %s is the xplayer version number
 #: ../src/xplayer-object.c:593
@@ -1265,221 +1243,221 @@ msgstr "Xplayer %s"
 
 #: ../src/xplayer-object.c:1169 ../src/xplayer-options.c:52
 msgid "Pause"
-msgstr "Fes una pausa"
+msgstr "Pauza"
 
 #: ../src/xplayer-object.c:1174 ../src/xplayer-object.c:1180
 #: ../src/xplayer-options.c:51
 msgid "Play"
-msgstr "Reprodueix"
+msgstr "Ijro etish"
 
 #: ../src/xplayer-object.c:1262 ../src/xplayer-object.c:1289
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "El Xplayer no ha pogut reproduir «%s»."
+msgstr "Xplayer “%s”ni ijro etolmadi."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "El Xplayer no ha pogut mostrar els continguts de l'ajuda."
+msgstr "Xplayer yordam tarkibini ko‘rsata olmadi."
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
-msgstr "S'ha produït un error"
+msgstr "Xatolik yuz berdi"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "Capítol o pel·lícula anterior"
+msgstr "Oldingi bob/film"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr "Reprodueix / Fes una pausa"
+msgstr "Ijro etish / Pauza"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "Capítol o pel·lícula següent"
+msgstr "Keyingi bob/film"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "No s'ha pogut executar el Xplayer."
+msgstr "Xplayer ishga tushirilmadi."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
-msgstr "Sense motiu."
+msgstr "Sabab yo‘q."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Obre una ubicació..."
+msgstr "Joylashuvni ochish..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Habilita la depuració"
+msgstr "Nosozliklarni tuzatishni yoqish"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "Cerca endavant"
+msgstr "Oldinga izlash"
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Cerca cap enrere"
+msgstr "Orqaga izlash"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Apuja el volum"
+msgstr "Ovozni oshirish"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Abaixa el volum"
+msgstr "Ovozni pasaytirish"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "Silencia el so"
+msgstr "Ovozni o‘chirish"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Commuta a pantalla completa"
+msgstr "Toʻliq ekran rejimini almashtirish"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
-msgstr "Mostra/amaga els controls"
+msgstr "Boshqaruvlarni ko‘rsatish/yashirish"
 
 #: ../src/xplayer-options.c:62
 msgid "Quit"
-msgstr "Surt"
+msgstr "Chiqish"
 
 #: ../src/xplayer-options.c:63
 msgid "Enqueue"
-msgstr "Afegeix a la cua"
+msgstr "Navbatga qo‘yish"
 
 #: ../src/xplayer-options.c:64
 msgid "Replace"
-msgstr "Reemplaça"
+msgstr "Almashtirish"
 
 #: ../src/xplayer-options.c:65
 msgid "Seek"
-msgstr "Cerca"
+msgstr "Izlash"
 
 #. Translators: help for a (hidden) command line option to specify (the zero-based index of) a playlist entry to start playing once Xplayer's finished loading
 #: ../src/xplayer-options.c:67
 msgid "Playlist index"
-msgstr "Índex de la llista de reproducció"
+msgstr "Pleylist indeksi"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "Pel·lícules a reproduir"
+msgstr "Ijro etish uchun filmlar"
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "- Reproduïu vídeos i cançons"
+msgstr "- Filmlar va qo‘shiqlarni ijro etish"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
-msgstr "No es pot enviar a la cua i reemplaçar alhora"
+msgstr "Bir vaqtning o‘zida navbatga qo‘yish va almashtirish mumkin emas"
 
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr "Llista de reproducció MP3 ShoutCast"
+msgstr "MP3 ShoutCast pleylisti"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "Àudio MP3 (en flux)"
+msgstr "MP3 audio (oqimli)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "Àudio MP3 (en flux, format DOS)"
+msgstr "MP3 audio (oqimli, DOS formati)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr "Llista de reproducció XML per compartir"
+msgstr "XML almashish mumkin pleylist"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr "Títol %d"
+msgstr "Sarlavha %d"
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
-msgstr "No s'ha pogut desar la llista de reproducció"
+msgstr "Pleylistni saqlab bo‘lmadi"
 
 #: ../src/xplayer-playlist.c:1023
 msgid "Save Playlist"
-msgstr "Desa la llista de reproducció"
+msgstr "Pleylistni saqlash"
 
 #. translators: Playlist is the default saved playlist filename,
 #. * without the suffix
 #: ../src/xplayer-playlist.c:1035 ../src/xplayer-playlist.c:1264
 #: ../src/xplayer-sidebar.c:145
 msgid "Playlist"
-msgstr "Llista de reproducció"
+msgstr "Pleylist"
 
 #: ../src/xplayer-playlist.c:1862
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
-"No s'ha pogut analitzar la llista de reproducció «%s», pot estar malmesa."
+"“%s” pleylistini tahlil qilib bo‘lmadi. Bu shikastlangan bo‘lishi mumkin."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
-msgstr "S'ha produït un error de la llista de reproducció"
+msgstr "Pleylist xatosi"
 
 #: ../src/xplayer-preferences.c:237
 msgid "Preferences"
-msgstr "Preferències"
+msgstr "Parametrlar"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Seleccioneu la lletra per als subtítols"
+msgstr "Subtitr shriftini tanlash"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "Localització actual"
+msgstr "Joriy lokal"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
 #: ../src/xplayer-subtitle-encoding.c:163
 #: ../src/xplayer-subtitle-encoding.c:165
 msgid "Arabic"
-msgstr "Àrab"
+msgstr "Arabcha"
 
 #: ../src/xplayer-subtitle-encoding.c:168
 msgid "Armenian"
-msgstr "Armeni"
+msgstr "Armancha"
 
 #: ../src/xplayer-subtitle-encoding.c:171
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "Bàltic"
+msgstr "Boltiqcha"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
-msgstr "Cèltic"
+msgstr "Keltcha"
 
 #: ../src/xplayer-subtitle-encoding.c:181
 #: ../src/xplayer-subtitle-encoding.c:183
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "Europeu central"
+msgstr "Markaziy Yevropacha"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "Xinès simplificat"
+msgstr "Xitoycha soddalashtirilgan"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "Xinès tradicional"
+msgstr "Xitoycha an'anaviy"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
-msgstr "Croat"
+msgstr "Xorvatcha"
 
 #: ../src/xplayer-subtitle-encoding.c:209
 #: ../src/xplayer-subtitle-encoding.c:211
@@ -1488,32 +1466,31 @@ msgstr "Croat"
 #: ../src/xplayer-subtitle-encoding.c:217
 #: ../src/xplayer-subtitle-encoding.c:219
 msgid "Cyrillic"
-msgstr "Ciríl·lic"
+msgstr "Kirilcha"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "Ciríl·lic/Rus"
+msgstr "Kirillcha/ruscha"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "Ciríl·lic/Ucraïnès"
+msgstr "Kirillcha/ukrainacha"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
-msgstr "Georgià"
+msgstr "Gruzincha"
 
 #: ../src/xplayer-subtitle-encoding.c:233
 #: ../src/xplayer-subtitle-encoding.c:235
 #: ../src/xplayer-subtitle-encoding.c:237
 msgid "Greek"
-msgstr "Grec"
+msgstr "Yunoncha"
 
 #: ../src/xplayer-subtitle-encoding.c:240
 msgid "Gujarati"
 msgstr "Gujarati"
 
-# FIXME
 #: ../src/xplayer-subtitle-encoding.c:243
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
@@ -1523,60 +1500,60 @@ msgstr "Gurmukhi"
 #: ../src/xplayer-subtitle-encoding.c:250
 #: ../src/xplayer-subtitle-encoding.c:252
 msgid "Hebrew"
-msgstr "Hebreu"
+msgstr "Ibroniycha"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Hebreu visual"
+msgstr "Ibroniycha vizual"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
-msgstr "Hindi"
+msgstr "Hindcha"
 
 #: ../src/xplayer-subtitle-encoding.c:261
 msgid "Icelandic"
-msgstr "Islandès"
+msgstr "Islandcha"
 
 #: ../src/xplayer-subtitle-encoding.c:264
 #: ../src/xplayer-subtitle-encoding.c:266
 #: ../src/xplayer-subtitle-encoding.c:268
 msgid "Japanese"
-msgstr "Japonès"
+msgstr "Yaponcha"
 
 #: ../src/xplayer-subtitle-encoding.c:271
 #: ../src/xplayer-subtitle-encoding.c:273
 #: ../src/xplayer-subtitle-encoding.c:275
 #: ../src/xplayer-subtitle-encoding.c:277
 msgid "Korean"
-msgstr "Coreà"
+msgstr "Koreyscha"
 
 #: ../src/xplayer-subtitle-encoding.c:280
 msgid "Nordic"
-msgstr "Nòrdic"
+msgstr "Nordik"
 
 #: ../src/xplayer-subtitle-encoding.c:283
 msgid "Persian"
-msgstr "Persa"
+msgstr "Forscha"
 
 #: ../src/xplayer-subtitle-encoding.c:286
 #: ../src/xplayer-subtitle-encoding.c:288
 msgid "Romanian"
-msgstr "Romanès"
+msgstr "Rumincha"
 
 #: ../src/xplayer-subtitle-encoding.c:291
 msgid "South European"
-msgstr "Sud europeu"
+msgstr "Janubiy yevropacha"
 
 #: ../src/xplayer-subtitle-encoding.c:294
 msgid "Thai"
-msgstr "Tai"
+msgstr "Tay tili"
 
 #: ../src/xplayer-subtitle-encoding.c:297
 #: ../src/xplayer-subtitle-encoding.c:299
 #: ../src/xplayer-subtitle-encoding.c:301
 #: ../src/xplayer-subtitle-encoding.c:303
 msgid "Turkish"
-msgstr "Turc"
+msgstr "Turkcha"
 
 #: ../src/xplayer-subtitle-encoding.c:306
 #: ../src/xplayer-subtitle-encoding.c:308
@@ -1592,13 +1569,13 @@ msgstr "Unicode"
 #: ../src/xplayer-subtitle-encoding.c:323
 #: ../src/xplayer-subtitle-encoding.c:325
 msgid "Western"
-msgstr "Occidental"
+msgstr "G‘arbiy"
 
 #: ../src/xplayer-subtitle-encoding.c:328
 #: ../src/xplayer-subtitle-encoding.c:330
 #: ../src/xplayer-subtitle-encoding.c:332
 msgid "Vietnamese"
-msgstr "Vietnamita"
+msgstr "Vyetnamcha"
 
 #. Elapsed / Total Length
 #: ../src/xplayer-time-label.c:27 ../src/xplayer-time-label.c:72
@@ -1610,39 +1587,39 @@ msgstr "%s / %s"
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "Salta a %s / %s"
+msgstr "Izlash %s / %s"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
-msgstr "Tots els fitxers"
+msgstr "Barcha fayllar"
 
 #: ../src/xplayer-uri.c:348 ../src/plugins/chapters/xplayer-chapters.c:981
 msgid "Supported files"
-msgstr "Fitxers compatibles"
+msgstr "Qo‘llab-quvvatlanadigan fayllar"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Fitxers d'àudio"
+msgstr "Audio fayllar"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Fitxers de vídeo"
+msgstr "Video fayllar"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "Fitxers de subtítols"
+msgstr "Subtitr fayllari"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "Seleccioneu els subtítols"
+msgstr "Matn subtitrlarini tanlash"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Seleccioneu pel·lícules o llistes de reproducció"
+msgstr "Filmlar yoki pleylistlarni tanlash"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
-msgstr "Afegiu un directori"
+msgstr "Katalog qo‘shish"
 
 #. Translators: The first string is "Filename" (as translated); the second is an actual filename.
 #. The third string is "Resolution" (as translated); the fourth and fifth are screenshot height and width, respectively.
@@ -1660,15 +1637,15 @@ msgstr ""
 
 #: ../src/xplayer-video-thumbnailer.c:879
 msgid "Filename"
-msgstr "Nom del fitxer"
+msgstr "Fayl nomi"
 
 #: ../src/xplayer-video-thumbnailer.c:881
 msgid "Resolution"
-msgstr "Resolució"
+msgstr "O‘lcham"
 
 #: ../src/xplayer-video-thumbnailer.c:884
 msgid "Duration"
-msgstr "Durada"
+msgstr "Davomiyligi"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
@@ -1676,127 +1653,127 @@ msgstr "Apple Trailers"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr "Estableix l'agent d'usuari pel lloc web de l'Apple Trailers"
+msgstr "Apple Trailers sayti uchun foydalanuvchi agentini sozlaydi"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Carrega automàticament els subtítols"
+msgstr "Subtitrlarni avtomatik yuklash"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
-msgstr "Carrega automàticament els subtítols de text"
+msgstr "Matn subtitrlarini avtomatik yuklaydi"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "Enregistrador de discs de vídeo"
+msgstr "Видео диск ёзгич"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Enregistra (S)VCD o DVD de vídeo"
+msgstr "(S)VCD yoki video DVD yozadi"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Crea un disc de vídeo..."
+msgstr "_Video disk yaratish..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Crea un DVD de vídeo o un (S)VCD a partir de la pel·lícula actual"
+msgstr "Hozirda ochilgan filmdan video DVD yoki (S)VCD yaratish"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "C_opia un DVD de vídeo..."
+msgstr "Video DVDni nusxalash..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Copia el DVD que s'està reproduint"
+msgstr "Hozir ijro etiladigan video DVDni nusxalash"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Copia un (S)VCD..."
+msgstr "(S) VCDni nusxalash..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "Copia el (S)VCD que s'està reproduint"
+msgstr "Hozir ijro etiladigan video (S)VCDni nusxalash"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "No s'ha pogut duplicar el disc de vídeo."
+msgstr "Video diskni nusxalab bo‘lmadi."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "No s'ha pogut enregistrar la pel·lícula."
+msgstr "Filmni yozib bo‘lmadi."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:270
 msgid "Unable to write a project."
-msgstr "No s'ha pogut escriure un projecte."
+msgstr "Loyiha yozish imkonsiz."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr "El nom del capítol nou:"
+msgstr "Yangi bob nomi:"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr "_Suprimeix el capítol"
+msgstr "_Bobni olib tashlash"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr "Suprimeix el capítol de la llista"
+msgstr "Ro‘yxatdan bobni olib tashlash"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr "_Vés al capítol"
+msgstr "_Bobga o‘tish"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr "Vés al capítol de la pel·lícula"
+msgstr "Filmning bobiga o‘tish"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr "Afegeix un capítol..."
+msgstr "Bob qo‘shish..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr "Suprimeix el capítol"
+msgstr "Bobni olib tashlash"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr "Vés al capítol"
+msgstr "Bobga o‘tish"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
-msgstr "Desa els canvis"
+msgstr "O‘zgarishlarni saqlash"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr "No hi ha informació del capítol"
+msgstr "Bob ma'lumotlari yo‘q"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr "Carrega els capítols..."
+msgstr "Boblarni yuklash..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr "Carrega els capítols des d'un fitxer CMML extern"
+msgstr "Tashqi CMML faylidan boblarni yuklang"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr "Afegeix capítols nous"
+msgstr "Yangi boblar qo‘shish"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr "Crea una llista de capítols nova per a la pel·lícula"
+msgstr "Film uchun yangi boblar ro‘yxatini yaratish"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr "Capítols"
+msgstr "Boblar"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr "Permet posar marcadors de capítols a les pel·lícules"
+msgstr "Filmlarda bo‘lim belgilarini qo‘llab-quvvatlash"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1804,225 +1781,221 @@ msgid ""
 "<b>Title: </b>%s\n"
 "<b>Start time: </b>%s"
 msgstr ""
-"<b>Títol: </b>%s\n"
-"<b>Inici: </b>%s"
+"<b>Sarlavha: </b>%s\n"
+"<b>Boshlash vaqti: </b>%s"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr "S'ha produït un error en llegir el fitxer de capítols"
+msgstr "Boblar bilan faylni o‘qishda xato"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr "Ja existeix un capítol que comença al mateix moment"
+msgstr "Xuddi shu vaqtga ega bob allaqachon mavjud"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr "Canvieu-li el nom o suprimiu un capítol ja existent."
+msgstr "Boshqa nomni sinab ko‘ring yoki mavjud bobni olib tashlang."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr "S'ha produït un error en escriure el fitxer dels capítols"
+msgstr "Boblar bilan fayl yozishda xato"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr "S'ha produït un error en desar els capítols"
+msgstr "Boblarni saqlashda xatolik yuz berdi"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Assegureu-vos que teniu permisos d'escriptura al directori que conté la "
-"pel·lícula."
+"Iltimos, filmni o‘z ichiga olgan jildga yozish uchun ruxsatingiz borligini "
+"tekshiring."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr "Obre un fitxer de capítols"
+msgstr "Bob faylini ochish"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "Captura de pantalla del capítol"
+msgstr "Bob skrinshoti"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr "Títol del capítol"
+msgstr "Bob sarlavhasi"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr "Voleu desar els canvis a la llista de capítols abans de tancar?"
+msgstr "Yopishdan oldin boblar ro‘yxatidagi o‘zgarishlar saqlansinmi?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
 msgid "Close without Saving"
-msgstr "Tanca sense desar"
+msgstr "Saqlamasdan yopish"
 
 #. Translators: save changes to the chapter list of the current movie before closing Xplayer.
 #: ../src/plugins/chapters/xplayer-chapters.c:1177
 msgid "Save"
-msgstr "Desa"
+msgstr "Saqlash"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr "Si no ho deseu es perdran els canvis a la llista de capítols."
+msgstr "Saqlamasangiz, boblar ro‘yxatidagi o‘zgarishlar yo‘qoladi."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr "Afegeix un capítol"
+msgstr "Bob qo‘shish"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
-msgstr "Suport de MPRIS"
+msgstr "MPRIS qo‘llab-quvvatlash"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "Aquest connector habilita el suport MPRIS sobre DBUS."
+msgstr "Ushbu plagin DBUS orqali MPRISni qo‘llab-quvvatlaydi."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "L'objecte MediaPlayer2 no implementa la interfície «%s»"
+msgstr "MediaPlayer2 obyekti “%s” interfeysini amalga oshirmaydi"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr "La propietat «%s» no és d'escriptura."
+msgstr "“%s” xususiyatini yozish mumkin emas."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr ""
-"Es desconeix la propietat sol·licitada «%s» d'un objecte MediaPlayer 2"
+msgstr "MediaPlayer 2 obyekti uchun nomaʼlum “%s” xususiyati soʻralgan"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr "L'URI «%s» no és compatible."
+msgstr "“%s” URI qo‘llab-quvvatlanmaydi."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr "Navegador Grilo"
+msgstr "Grilo brauzeri"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
-msgstr "Un connector que us permet navegar per continguts de diverses fonts"
+msgstr ""
+"Turli manbalardan media kontentini ko‘rib chiqish imkonini beruvchi plagin"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
-msgstr "Afegeix a la llista de reproducció"
+msgstr "Pleylistga qo‘shish"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr "Copia la ubicació"
+msgstr "Joylashuvni nusxalash"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
-msgstr "Navega"
+msgstr "Ko‘rib chiqish"
 
 #: ../src/plugins/grilo/grilo.ui.h:4 ../src/plugins/grilo/xplayer-grilo.c:1243
 msgid "Search"
-msgstr "Cerca"
+msgstr "Qidirish"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:446
 msgid "Browse Error"
-msgstr "Error de navegació"
+msgstr "Ko‘rib chiqish xatosi"
 
 #: ../src/plugins/grilo/xplayer-grilo.c:615
 msgid "Search Error"
-msgstr "Error de cerca"
+msgstr "Qidiruv xatosi"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:1
 msgid "Gromit Annotations"
-msgstr "Anotacions del Gromit"
+msgstr "Gromit izohlari"
 
 #: ../src/plugins/gromit/gromit.plugin.in.h:2
 msgid "Presentation helper to make annotations on screen"
-msgstr "Ajudant de presentacions per poder fer anotacions a la pantalla"
+msgstr "Ekranda izohlar yaratish uchun taqdimot yordamchisi"
 
 #: ../src/plugins/gromit/xplayer-gromit.c:231
 msgid "The gromit binary was not found."
-msgstr "No s'ha trobat el fitxer binari del Gromit."
+msgstr "Gromit ikkilik fayli topilmadi."
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:1
 msgid "Instant Messenger Status"
-msgstr "Estat de la missatgeria instantània"
+msgstr "Instant Messenger holati"
 
 #: ../src/plugins/im-status/xplayer-im-status.plugin.in.h:2
 msgid "Set your Instant Messenger status to away when a movie is playing"
-msgstr ""
-"Estableix l'estat d'absència en la missatgeria instantània quan s'estigui "
-"reproduint una pel·lícula"
+msgstr "Film ijro etilganda Instant Messenger holatini uzoqda qilib qo‘yish"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
-msgstr "Control remot per infraroigs"
+msgstr "Infraqizil masofadan boshqarish"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:2
 msgid "Support infrared remote control"
-msgstr "Permet el control remot per infraroigs"
+msgstr "Infraqizil masofadan boshqarishni qo‘llab-quvvatlash"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr "No s'ha pogut inicialitzar el lirc."
+msgstr "Lircni ishga tushirib boʻlmadi."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "No s'ha pogut llegir la configuració del lirc."
+msgstr "Lirc konfiguratsiyasini o‘qib bo‘lmadi."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
-msgstr "Tecles del reproductor multimèdia"
+msgstr "Media pleyer kalitlari"
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:2
 msgid "Support additional media player keys"
-msgstr "Permet més tecles del reproductor multimèdia"
+msgstr "Qo‘shimcha media pleyer kalitlarini qo‘llab-quvvatlash"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:1
 msgid "Always On Top"
-msgstr "Sempre per damunt"
+msgstr "Har doim yuqorida"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr ""
-"Mantingues la finestra principal per sobre de les altres quan s'estigui "
-"reproduint una pel·lícula"
+msgstr "Filmni ijro etganda asosiy oynani yuqorida saqlash"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Baixador de subtítols"
+msgstr "Subtitr yuklab oluvchi"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr "Cerca subtítols per a la pel·lícula que s'està reproduint"
+msgstr "Hozir ijro etilayotgan film uchun subtitrlarni qidirish"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
-msgstr "Brasiler portuguès"
+msgstr "Braziliya portugalcha"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:177
 msgid "Searching for subtitles…"
-msgstr "S'estan cercant subtítols…"
+msgstr "Subtitrlar qidirilmoqda…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr "S'estan baixant els subtítols…"
+msgstr "Subtitrlar yuklab olinmoqda…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
-msgstr "No s'ha pogut contactar amb el lloc web de l'OpenSubtitles"
+msgstr "OpenSubtitles veb-sayti bilan bog‘lanib bo‘lmadi"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:323
 #: ../src/plugins/opensubtitles/opensubtitles.py:341
 msgid "Could not contact the OpenSubtitles website."
-msgstr "No s'ha pogut contactar amb el lloc web de l'OpenSubtitles."
+msgstr "OpenSubtitles veb-sayti bilan bog‘lanib bo‘lmadi."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:329
 msgid "No results found."
-msgstr "No s'ha trobat cap resultat."
+msgstr "Hech qanday natija topilmadi."
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:476
 msgid "Subtitles"
-msgstr "Subtítols"
+msgstr "Subtitrlar"
 
 #. translators comment:
 #. This is the file-type of the subtitle file detected
@@ -2034,47 +2007,47 @@ msgstr "Format"
 #. This is a rating of the quality of the subtitle
 #: ../src/plugins/opensubtitles/opensubtitles.py:487
 msgid "Rating"
-msgstr "Valoració"
+msgstr "Reyting"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Baixa els subtítols de la pel·lícula d'OpenSubtitles"
+msgstr "OpenSubtitlesdan film subtitrlarini yuklab olish"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "_Baixa els subtítols de la pel·lícula…"
+msgstr "_Film subtitrlarini yuklab olish…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
-msgstr "S'estan cercant subtítols…"
+msgstr "Subtitrlar qidirilmoqda…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Baixa els subtítols de la pel·lícula"
+msgstr "Film subtitrlarini yuklab olish"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
-msgstr "_Llengua dels subtítols:"
+msgstr "Subtitr _tili:"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:3
 msgid "_Play with Subtitle"
-msgstr "_Reprodueix amb subtítols"
+msgstr "_Subtitr bilan ijro etish"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:1
 msgid "Subtitle language"
-msgstr "Llengua dels subtítols"
+msgstr "Subtitr tili"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr "La llengua a la qual cercar subtítols de la pel·lícula."
+msgstr "Filmlar uchun subtitrlarni qidirish uchun til."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr "Propietats de la pel·lícula"
+msgstr "Film xususiyatlari"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr "Afegeix les propietats de les pel·lícules a la barra lateral"
+msgstr "Yon panelga film xususiyatlarini qo‘shadi"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
@@ -2085,31 +2058,31 @@ msgstr "%d x %d"
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 #, c-format
 msgid "%d kbps"
-msgstr "%d Kbps"
+msgstr "%d kbps"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:152
 #: ../src/plugins/properties/xplayer-movie-properties.c:163
 msgctxt "Stream bit rate"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 #, c-format
 msgid "%d Hz"
-msgstr "%d Hz"
+msgstr "%d Gts"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:166
 msgctxt "Sample rate"
 msgid "N/A"
-msgstr "N/D"
+msgstr "Mavjud emas"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:246
 msgid "Properties"
-msgstr "Propietats"
+msgstr "Xususiyatlar"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:1
 msgid "rpdb2 password"
-msgstr "contrasenya rpdb2"
+msgstr "rpdb2 parol"
 
 #: ../src/plugins/pythonconsole/org.x.player.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid ""
@@ -2117,47 +2090,47 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
-"Una contrasenya per protegir el servidor rpdb2 d'accessos remots no "
-"autoritzats a la depuració del Xplayer. Si es deixa buida la contrasenya "
-"serà «xplayer»."
+"Xplayerni ruxsatsiz masofaviy kirishdan tuzatish uchun rpdb2 serverini "
+"himoya qilish uchun parol. Agar bu boʻsh boʻlsa, standart “xplayer” "
+"ishlatiladi."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
-msgstr "Consola del Python"
+msgstr "Python konsoli"
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:2
 msgid "Interactive Python console"
-msgstr "Consola interactiva del Python"
+msgstr "Interaktiv Python konsoli"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:88
 msgid "Python Console Menu"
-msgstr "Menú de la consola de Python"
+msgstr "Python konsol menyusi"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:93
 msgid "_Python Console"
-msgstr "Consola del _Python"
+msgstr "_Python konsoli"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:94
 msgid "Show Xplayer's Python console"
-msgstr "Mostra la consola del Python del Xplayer"
+msgstr "Xplayerning Python konsolini ko‘rsatish"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:100
 msgid "Python Debugger"
-msgstr "Depurador del Python"
+msgstr "Python tuzatuvchisi"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:101
 msgid "Enable remote Python debugging with rpdb2"
-msgstr "Habilita la depuració remota del Python amb el rpdb2"
+msgstr "Rpdb2 bilan masofaviy Python nosozliklarini tuzatishni yoqish"
 
 #. pylint: disable-msg=E1101
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr "Podeu accedir a Xplayer.Object a través de «xplayer_object»: \\n%s"
+msgstr "Xplayer.Objectga 'xplayer_object' orqali kirishingiz mumkin:\\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
-msgstr "Consola del Python del Xplayer"
+msgstr "Xplayer Python konsoli"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:137
 msgid ""
@@ -2165,65 +2138,64 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
-"Després de prémer D'acord, el Xplayer s'esperarà fins que us hi connecteu "
-"amb el winpdb o el rpdb2. Si no heu establert una contrasenya de depuració "
-"en el DConf, s'utilitzarà la contrasenya predeterminada («xplayer»)."
+"OK tugmasini bosganingizdan so‘ng, Xplayer siz unga winpdb yoki rpdb2 bilan "
+"ulanishingizni kutadi. Agar siz DConf-da tuzatuvchi parolni o‘rnatmagan "
+"bo‘lsangiz, u standart paroldan ('xplayer') foydalanadi."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
-msgstr "Fitxers recents"
+msgstr "Oxirgi fayllar"
 
 #: ../src/plugins/recent/recent.plugin.in.h:2
 msgid "Adds files that have been played to recent files"
-msgstr "Afegeix els fitxers que s'han reproduït als fitxers recents"
+msgstr "Oxirgi fayllarga ijro etilgan fayllarni qo‘shadi"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Connector de rotació"
+msgstr "Burish plagini"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
-msgstr "Permet girar vídeos que no estiguin en l'orientació correcta"
+msgstr "Videolar noto‘g‘ri yo‘nalishda bo‘lsa, ularni burish imkonini beradi"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
-msgstr "_Gira en sentit horari"
+msgstr "_Soat yo‘nalishi bo‘yicha burish"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
-msgstr "Gira en sentit _antihorari"
+msgstr "Soat miliga teskari burish"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr "Estalvi de pantalla"
+msgstr "Ekran saqlovchi"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr ""
-"Desactiva l'estalvi de pantalla quan s'estigui reproduint una pel·lícula"
+msgstr "Film ijro etilayotganda ekran saqlovchini o‘chiradi"
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "S'està reproduint una pel·lícula"
+msgstr "Film ijro etilmoqda"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Amplada de la captura de pantalla (en píxels):"
+msgstr "Skrinshot kengligi (piksellarda):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Calcula el nombre de captures de pantalla"
+msgstr "Skrinshotlar sonini hisoblash"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Nombre de captures de pantalla:"
+msgstr "Skrinshotlar soni:"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "Captura de pantalla de %s.png"
+msgstr "%s.png dan skrinshot"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2231,19 +2203,19 @@ msgstr "Captura de pantalla de %s.png"
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:154
 #, c-format
 msgid "Screenshot from %s - %d.png"
-msgstr "Captura de pantalla de %s - %d.png"
+msgstr "%s - %d.png dan skrinshot"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr "Captura de pantalla"
+msgstr "Skrinshot"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr "Permet fer captures de pantalles i galeries dels vídeos"
+msgstr "Videolardan skrinshot va galereyalar olish imkonini beradi"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
-msgstr "Desa la galeria"
+msgstr "Galereyani saqlash"
 
 #. Translators: The first argument is the movie title. The second
 #. * argument is a number which is used to prevent overwriting files.
@@ -2252,65 +2224,63 @@ msgstr "Desa la galeria"
 #: ../src/plugins/screenshot/xplayer-gallery.c:115
 #, c-format
 msgid "Gallery-%s-%d.jpg"
-msgstr "Galeria-%s-%d.jpg"
+msgstr "Galereya-%s-%d.jpg"
 
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "S'està creant la galeria..."
+msgstr "Galereya yaratilmoqda..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "S'està desant la galeria com a «%s»"
+msgstr "Galereya “%s” sifatida saqlanmoqda"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "Xplayer could not get a screenshot of the video."
-msgstr ""
-"El Xplayer no ha pogut obtenir una captura de pantalla d'aquesta pel·lícula."
+msgstr "Xplayer videoning skrinshotini ololmadi."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
 msgid "This is not supposed to happen; please file a bug report."
-msgstr "Això no hauria de passar. Envieu un informe d'error."
+msgstr "Bu sodir bo‘lmasligi kerak; Iltimos, xato haqida hisobot yuboring."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "Fes una _captura de pantalla"
+msgstr "_Skrinshot olish"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Fes una captura de pantalla"
+msgstr "Skrinshot olish"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Crea una _galeria de captures de pantalla..."
+msgstr "_Skrinshotlar galereyasini yaratish..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Crea una galeria de captures de pantalla"
+msgstr "Skrinshotlar galereyasini yaratish"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
 msgid "Skip To"
-msgstr "Salta a"
+msgstr "Oʻtish"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr "Proporciona el diàleg de «Salta a»"
+msgstr "\"o‘tish\" dialog oynasini taqdim etadi"
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
-msgstr "_Salta a:"
+msgstr "_Oʻtish:"
 
 #. Update the "seconds" label so that it always has the correct singular/plural form
 #. Translators: label for the seconds selector in the "Skip to" dialogue
 #: ../src/plugins/skipto/xplayer-skipto.c:159
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] "segon"
-msgstr[1] "segons"
+msgstr[0] "soniya"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
@@ -2319,20 +2289,20 @@ msgstr[1] "segons"
 #: ../src/plugins/skipto/xplayer-skipto.c:189
 msgctxt "Skip To label length"
 msgid "7"
-msgstr "6"
+msgstr "7"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr "Sa_lta a..."
+msgstr "_Oʻtish..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
-msgstr "Salta a un moment en concret"
+msgstr "Muayyan vaqtga o‘tish"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Connector del Zeitgeist"
+msgstr "Zeitgeist plagini"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Un connector que envia esdeveniments al Zeitgeist"
+msgstr "Zeitgeistga voqealarni yuborish plagini"
