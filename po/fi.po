@@ -21,15 +21,15 @@ msgstr ""
 "http://bugzilla.gnome.org/enter_bug.cgi?product=xplayer&keywords=I18N+L10N&co"
 "mponent=general\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2022-07-21 09:23+0000\n"
+"PO-Revision-Date: 2023-06-05 11:36+0000\n"
 "Last-Translator: Kimmo Kujansuu <Unknown>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2022-07-24 09:40+0000\n"
-"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:21+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 "Language: fi\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -122,24 +122,23 @@ msgstr "Tekstityksen merkistökoodaus."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Avaa…-ikkunoiden oletussijainti"
+msgstr "Valikossa \"Avaa…\" oletussijainti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
-msgstr ""
-"Avaa…-valintaikkunoiden oletussijainti. Oletuksena on nykyinen kansio."
+msgstr "Valikossa \"Avaa…\" oletussijainti. Oletuksena on nykyinen kansio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Ota kuvakaappaus -ikkunoiden oletussijainti"
+msgstr "Valikon \"Kuvakaappaus\" oletussijainti"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
-msgstr "Kuvakaappausten oletussijainti. Oletuksena on Kuvat-kansio."
+msgstr "Valikon \"Kuvakaappaus\" oletussijainti. Oletuksena on Kuvat-kansio."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
@@ -155,7 +154,7 @@ msgstr "Ladataanko tekstitystiedostot automaattisesti elokuvan mukana"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
-msgstr "Ladataanko ulkoiset lukutiedostot automaattisesti elokuvan mukana"
+msgstr "Ladataanko ulkoiset jakso-tiedostot automaattisesti elokuvan mukana"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
@@ -173,12 +172,11 @@ msgstr "Aktiiviset liitännäiset"
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr ""
-"Luettelo tällä hetkellä aktiivisista liitännäisistä (ladattu ja käynnissä)."
+msgstr "Luettelo aktiivisista liitännäisistä (ladattu ja käynnissä)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr "Käytä tummaa teemamuunnelmaa (jos käytettävissä)."
+msgstr "Käytä tummaa teemaa (jos käytettävissä)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -190,15 +188,15 @@ msgstr "Poista tiedosto soittolistalta"
 
 #: ../data/playlist.ui.h:3
 msgid "_Copy Location"
-msgstr "_Kopioi sijainti"
+msgstr "_Kopioi paikka"
 
 #: ../data/playlist.ui.h:4
 msgid "Copy the location to the clipboard"
-msgstr "Kopioi sijainti leikepöydälle"
+msgstr "Kopioi paikka leikepöydälle"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "Valitse tek_stitys…"
+msgstr "Valitse tek_stitys..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
@@ -206,7 +204,7 @@ msgstr "Valitse tekstitykseen käytettävä tiedosto"
 
 #: ../data/playlist.ui.h:7
 msgid "Add..."
-msgstr "Lisää…"
+msgstr "Avaa..."
 
 #: ../data/playlist.ui.h:8
 msgid "Remove"
@@ -214,7 +212,7 @@ msgstr "Poista"
 
 #: ../data/playlist.ui.h:9
 msgid "Save Playlist..."
-msgstr "Tallenna soittolista…"
+msgstr "Tallenna soittolista..."
 
 #: ../data/playlist.ui.h:10
 msgid "Move Up"
@@ -250,7 +248,7 @@ msgstr "AC3-läpivienti"
 
 #: ../data/preferences.ui.h:7
 msgid "Xplayer Preferences"
-msgstr "Xplayerin asetukset"
+msgstr "Xplayer asetukset"
 
 #: ../data/preferences.ui.h:8
 msgid "Playback"
@@ -258,7 +256,7 @@ msgstr "Toisto"
 
 #: ../data/preferences.ui.h:9
 msgid "Start playing files from last position"
-msgstr "Ala toistaa tiedostoja viimeisimmästä kohdasta"
+msgstr "Aloita toisto viimeisestä tiedostosta"
 
 #: ../data/preferences.ui.h:10
 msgid "Text Subtitles"
@@ -266,7 +264,7 @@ msgstr "Tekstitys"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "_Lataa tekstitys elokuvan käynnistyessä"
+msgstr "_Lataa tekstitys kun elokuva on ladattu"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
@@ -278,15 +276,15 @@ msgstr "_Kirjasin:"
 
 #: ../data/preferences.ui.h:14
 msgid "_Encoding:"
-msgstr "_Merkistökoodaus:"
+msgstr "_Koodaus:"
 
 #: ../data/preferences.ui.h:15
 msgid "External Chapters"
-msgstr "Ulkoiset kappaleet"
+msgstr "Ulkoiset jaksot"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "Lataa l_ukutiedostot elokuvan mukana"
+msgstr "Lataa _jakso-tiedostot elokuvan mukana"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -303,11 +301,11 @@ msgstr "Muuta ikkunan kokoa uuden videon latautuessa"
 
 #: ../data/preferences.ui.h:22
 msgid "Disable _deinterlacing of interlaced videos"
-msgstr "Poista lomitetuilta videoilta käytöstä lomituksenpoisto"
+msgstr "Poista lomitetussa videossa lomituksenpoisto käytöstä"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Estä näytönsäästäjä toistettaessa"
+msgstr "Estä näytönsäästäjä"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -318,7 +316,7 @@ msgstr "Video"
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:27
 msgid "Video or Audio"
-msgstr "Video tai ääni"
+msgstr "Video tai audio"
 
 #: ../data/preferences.ui.h:28
 msgid "Color Balance"
@@ -346,11 +344,11 @@ msgstr "Palauta _oletusasetukset"
 
 #: ../data/preferences.ui.h:34
 msgid "Audio Output"
-msgstr "Ääniulostulo"
+msgstr "Äänen ulostulo"
 
 #: ../data/preferences.ui.h:35
 msgid "_Audio output type:"
-msgstr "_Ääniulostulon tyyppi:"
+msgstr "_Äänen ulostulo:"
 
 #: ../data/preferences.ui.h:36 ../data/properties.ui.h:14
 msgid "Audio"
@@ -413,7 +411,7 @@ msgstr "Koodekki:"
 
 #: ../data/properties.ui.h:12
 msgid "Framerate:"
-msgstr "Ruutunopeus:"
+msgstr "Kuvanopeus:"
 
 #: ../data/properties.ui.h:13
 msgid "Bitrate:"
@@ -421,7 +419,7 @@ msgstr "Bittinopeus:"
 
 #: ../data/properties.ui.h:15
 msgid "Sample rate:"
-msgstr "Näytteenottotaajuus:"
+msgstr "Taajuus:"
 
 #: ../data/properties.ui.h:16
 msgid "Channels:"
@@ -446,7 +444,7 @@ msgstr ""
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
-msgstr "Toista/pidä tauko"
+msgstr "Toisto/Tauko"
 
 #: ../data/xplayer.desktop.in.in.in.h:5 ../src/xplayer-options.c:53
 msgid "Next"
@@ -473,7 +471,7 @@ msgstr "_Tiedosto"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
-msgstr "_Avaa…"
+msgstr "_Avaa..."
 
 #: ../data/xplayer.ui.h:3
 msgid "Open a file"
@@ -481,15 +479,15 @@ msgstr "Avaa tiedosto"
 
 #: ../data/xplayer.ui.h:4
 msgid "Open _Location..."
-msgstr "Avaa _sijainti..."
+msgstr "Avaa _paikasta..."
 
 #: ../data/xplayer.ui.h:5
 msgid "Open a non-local file"
-msgstr "Avaa ei-paikallinen tiedosto"
+msgstr "Avaa tiedoston ulkoisesta lähteestä"
 
 #: ../data/xplayer.ui.h:6
 msgid "_Eject"
-msgstr "L_evy ulos"
+msgstr "Poista L_evy"
 
 #: ../data/xplayer.ui.h:7
 msgid "Eject the current disc"
@@ -505,11 +503,11 @@ msgstr "Katso nykyisen virtauksen ominaisuuksia"
 
 #: ../data/xplayer.ui.h:10
 msgid "Play / P_ause"
-msgstr "Toista / _pidä tauko"
+msgstr "Toisto / T_auko"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Toista tai pidä tauko elokuvassa"
+msgstr "Elokuvalle toisto tai tauko"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
@@ -541,7 +539,7 @@ msgstr "Säädä sovellusta"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Liitännäiset…"
+msgstr "Liitännäiset..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
@@ -557,11 +555,11 @@ msgstr "_Koko näyttö"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Vaihda kokoruututilaan"
+msgstr "Vaihda koko näyttöön"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Sovita ikkuna elokuvalle"
+msgstr "Sovita elokuva ikkunaan"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
@@ -577,7 +575,7 @@ msgstr "Muuta kooksi _1:1"
 
 #: ../data/xplayer.ui.h:28
 msgid "Resize to the original video size"
-msgstr "Muuta kooksi alkuperäinen videon koko"
+msgstr "Muuta kooksi videon alkuperäinen koko"
 
 #: ../data/xplayer.ui.h:29
 msgid "Resize _2∶1"
@@ -585,7 +583,7 @@ msgstr "Muuta kooksi _2:1"
 
 #: ../data/xplayer.ui.h:30
 msgid "Resize to double the original video size"
-msgstr "Muuta kooksi kaksi kertaa videon koko"
+msgstr "Muuta kooksi videon kaksinkertainen koko"
 
 #: ../data/xplayer.ui.h:31
 msgid "_Aspect Ratio"
@@ -597,7 +595,7 @@ msgstr "Vaihda _kulmaa"
 
 #: ../data/xplayer.ui.h:33
 msgid "Switch camera angles"
-msgstr "Vaihda kamerakulmaa"
+msgstr "Vaihda kameran kulmaa"
 
 #: ../data/xplayer.ui.h:34
 msgid "_Go"
@@ -605,11 +603,11 @@ msgstr "_Siirry"
 
 #: ../data/xplayer.ui.h:35
 msgid "_DVD Menu"
-msgstr "_DVD-valikko"
+msgstr "_DVD valikko"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "Siirry DVD-valikkoon"
+msgstr "Siirry DVD:n valikkoon"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
@@ -637,27 +635,27 @@ msgstr "Siirry kuvakulmavalikkoon"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
-msgstr "Ka_ppalevalikko"
+msgstr "_Jakso valikko"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Siirry kappalevalikkoon"
+msgstr "Siirry jakso valikkoon"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "_Seuraava kappale/elokuva"
+msgstr "_Seuraava jakso/elokuva"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Seuraava kappale/elokuva"
+msgstr "Seuraava jakso/elokuva"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "Ede_llinen kappale/elokuva"
+msgstr "Ede_llinen jakso/elokuva"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Edellinen kappale/elokuva"
+msgstr "Edellinen jakso/elokuva"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
@@ -701,19 +699,19 @@ msgstr "Tietoja tästä sovelluksesta"
 
 #: ../data/xplayer.ui.h:59
 msgid "_Repeat Mode"
-msgstr "Kertaus_tila"
+msgstr "_Silmukka"
 
 #: ../data/xplayer.ui.h:60
 msgid "Set the repeat mode"
-msgstr "Aseta kertaustila"
+msgstr "Toista uudelleen silmukassa"
 
 #: ../data/xplayer.ui.h:61
 msgid "Shuff_le Mode"
-msgstr "_Satunnaistila"
+msgstr "_Satunnainen"
 
 #: ../data/xplayer.ui.h:62
 msgid "Set the shuffle mode"
-msgstr "Aseta satunnaissoittotila"
+msgstr "Toista satunnaisessa järjestyksessä"
 
 #: ../data/xplayer.ui.h:63
 msgid "Show _Controls"
@@ -746,7 +744,7 @@ msgstr "Neliö"
 
 #: ../data/xplayer.ui.h:70
 msgid "Sets square aspect ratio"
-msgstr "Aseta neliönmuotoinen kuvasuhde"
+msgstr "Asettaa neliönmuotoisen kuvasuhteen"
 
 #: ../data/xplayer.ui.h:71
 msgid "4∶3 (TV)"
@@ -762,7 +760,7 @@ msgstr "16:9 (Laajakuva)"
 
 #: ../data/xplayer.ui.h:74
 msgid "Sets 16∶9 (widescreen) aspect ratio"
-msgstr "Asettaa kuvasuhteen 16:9 (leveä kuva)"
+msgstr "Asettaa kuvasuhteen 16:9 (Laajakuva)"
 
 #: ../data/xplayer.ui.h:75
 msgid "2.11∶1 (DVB)"
@@ -782,15 +780,15 @@ msgstr "_Kielet"
 
 #: ../data/xplayer.ui.h:81
 msgid "Zoom In"
-msgstr "Lähennä"
+msgstr "Suurenna"
 
 #: ../data/xplayer.ui.h:82
 msgid "Zoom in"
-msgstr "Lähennä"
+msgstr "Suurenna"
 
 #: ../data/xplayer.ui.h:83
 msgid "Skip _Forward"
-msgstr "Kelaa _eteenpäin"
+msgstr "Kelaa _eteen"
 
 #: ../data/xplayer.ui.h:84
 msgid "Skip forward"
@@ -798,7 +796,7 @@ msgstr "Kelaa eteenpäin"
 
 #: ../data/xplayer.ui.h:85
 msgid "Skip _Backwards"
-msgstr "Kelaa _taaksepäin"
+msgstr "Kelaa _taakse"
 
 #: ../data/xplayer.ui.h:86
 msgid "Skip backwards"
@@ -806,15 +804,15 @@ msgstr "Kelaa taaksepäin"
 
 #: ../data/xplayer.ui.h:88
 msgid "Time seek bar"
-msgstr "Aikasiirtymäpalkki"
+msgstr "Aikajana"
 
 #: ../data/uri.ui.h:1
 msgid "Enter the _address of the file you would like to open:"
-msgstr "Syötä avattavan tiedoston _sijainti:"
+msgstr "Anna avattavan tiedoston _verkko-osoite:"
 
 #: ../src/backend/bacon-video-widget.c:1634
 msgid "Password requested for RTSP server"
-msgstr "RTSP-palvelin pyytää salasanaa"
+msgstr "Palvelin RTSP pyytää salasanaa"
 
 #: ../src/backend/bacon-video-widget.c:2888
 #, c-format
@@ -840,12 +838,11 @@ msgstr "Määriteltyä elokuvaa ei löytynyt."
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
-msgstr "Palvelin hylkäsi pääsyn tähän tiedostoon tai suoratoistovirtaan."
+msgstr "Palvelin hylkäsi pääsyn tähän tiedostoon tai suoratoistoon."
 
 #: ../src/backend/bacon-video-widget.c:3295
 msgid "Authentication is required to access this file or stream."
-msgstr ""
-"Pääsy tähän tiedostoon tai suoratoistovirtaan vaatii tunnistautumisen."
+msgstr "Pääsy tähän tiedostoon tai suoratoistoon vaatii tunnistautumisen."
 
 #: ../src/backend/bacon-video-widget.c:3302
 msgid "You are not allowed to open this file."
@@ -853,11 +850,11 @@ msgstr "Sinulla ei ole oikeuksia avata tätä tiedostoa."
 
 #: ../src/backend/bacon-video-widget.c:3307
 msgid "This location is not a valid one."
-msgstr "Tämä sijainti on virheellinen."
+msgstr "Tämän paikan osoite on virheellinen."
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "Elokuvaa ei voitu lukea."
+msgstr "Elokuvaa ei voitu lukea auki."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -883,9 +880,8 @@ msgid ""
 "An audio or video stream is not handled due to missing codecs. You might "
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
-"Puuttuvat koodekit estävät ääni- tai videosuoratoiston käsittelyn. "
-"Liitännäisten asennus saattaa olla tarpeen, jotta tietynlaisten "
-"mediatiedostojen toisto on mahdollista"
+"Puuttuva koodekki estää äänen tai videon suoratoiston. Liitännäisten asennus "
+"saattaa olla tarpeen, jotta mediatiedoston toisto on mahdollista"
 
 #: ../src/backend/bacon-video-widget.c:3367
 msgid ""
@@ -904,14 +900,14 @@ msgstr "Mono"
 
 #: ../src/backend/bacon-video-widget.c:5379
 msgid "Media contains no supported video streams."
-msgstr "Media ei sisällä tuettuja videomuotoja."
+msgstr "Media ei sisällä tuettuja videon suoratoistoa."
 
 #: ../src/backend/bacon-video-widget.c:5569
 msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Jotkin tarpeelliset liitännäiset puuttuvat. Varmista, että ohjelma on "
+"Jotakin tarpeellisia liitännäisiä puuttuu. Varmista, että ohjelma on "
 "asennettu oikein."
 
 #: ../src/eggdesktopfile.c:165
@@ -927,7 +923,7 @@ msgstr "Tunnistamaton desktop-tiedoston versio ”%s”"
 #: ../src/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "Käynnistetään %s"
+msgstr "Aloitetaan %s"
 
 #: ../src/eggdesktopfile.c:1110
 #, c-format
@@ -937,17 +933,17 @@ msgstr "Sovellus ei hyväksy asiakirjoja komentorivillä"
 #: ../src/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Tunnistamaton käynnistysvalitsin: %d"
+msgstr "Tunnistamaton valinta: %d"
 
 #: ../src/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Asiakirja-URIa ei voida välittää ”Type=Link”-desktop-kohteelle"
+msgstr "Ei voi välittää asiakirjan URI:a ”Type=Link”-desktop kohteelle"
 
 #: ../src/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Ei käynnistettävä kohde"
+msgstr "Ei ole käynnistettävä kohde"
 
 #: ../src/eggfileformatchooser.c:240
 #, c-format
@@ -972,7 +968,7 @@ msgstr "Tiedostomuoto"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "Extension(s)"
-msgstr "Päätteet"
+msgstr "Tiedostopääte"
 
 #. Translators: the parameter is a filename
 #: ../src/eggfileformatchooser.c:657
@@ -982,9 +978,9 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Sovellus ei tunnistanut tiedostomuotoa, jota haluat käyttää ”%s”-"
-"tiedostoille. Varmista, että käytät tunnettua tiedostopäätettä tiedostolle "
-"tai valitse käsin tiedostomuoto luettelosta alta."
+"Sovellus ei tunnistanut tiedostoa, jota haluat käyttää ”%s”-tiedostoille. "
+"Varmista, että käytät tunnettua tiedostopäätettä tai valitse alta "
+"tiedostomuoto luettelosta."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
@@ -992,11 +988,11 @@ msgstr "Tiedostomuotoa ei tunnistettu"
 
 #: ../src/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Ota yhteys istunnonhallintaan pois käytöstä"
+msgstr "Poista yhteys istunnonhallintaan"
 
 #: ../src/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Määritä tallennetut asetukset sisältävä tiedosto"
+msgstr "Määritä asetukset sisältävä tiedosto"
 
 #: ../src/eggsmclient.c:229
 msgid "FILE"
@@ -1004,7 +1000,7 @@ msgstr "TIEDOSTO"
 
 #: ../src/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Määritä istunnonhallintatunniste (ID)"
+msgstr "Määritä istunnonhallinnan tunniste (ID)"
 
 #: ../src/eggsmclient.c:232
 msgid "ID"
@@ -1105,22 +1101,22 @@ msgstr "0 kanavaa"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d tunti"
-msgstr[1] "%d tuntia"
+msgstr[0] "%d h"
+msgstr[1] "%d h"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minuutti"
-msgstr[1] "%d minuuttia"
+msgstr[0] "%d min"
+msgstr[1] "%d min"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekunti"
-msgstr[1] "%d sekuntia"
+msgstr[0] "%d s"
+msgstr[1] "%d s"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1139,18 +1135,18 @@ msgstr "%s, %s"
 #. 0 seconds
 #: ../src/properties/bacon-video-widget-properties.c:176
 msgid "0 seconds"
-msgstr "0 sekuntia"
+msgstr "0 s"
 
 #: ../src/properties/bacon-video-widget-properties.c:237
 #, c-format
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
-msgstr[0] "%d kuva sekunnissa"
-msgstr[1] "%d kuvaa sekunnissa"
+msgstr[0] "%d kuva/s"
+msgstr[1] "%d kuvaa/s"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
-msgstr "Ääniesikatselu"
+msgstr "Äännen esikatselu"
 
 #: ../src/xplayer.c:260
 msgid "Could not initialize the thread-safe libraries."
@@ -1158,7 +1154,7 @@ msgstr "Säieturvallisia kirjastoja ei voi alustaa."
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr "Tarkista järjestelmäasennuksesi. Xplayer sulkeutuu."
+msgstr "Tarkista järjestelmän asennus. Xplayer sulkeutuu nyt."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
@@ -1229,8 +1225,8 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer sisältää poikkeuksen, joka sallii ei-vapaiden GStreamer -"
-"liitännäisten käytön."
+"Xplayer sisältää poikkeuksen, joka sallii käyttää ei-vapaita GStreamer "
+"liitännäisiä."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1270,11 +1266,11 @@ msgstr "Toista"
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Xplayer ei voinut toistaa sijaintia ”%s”."
+msgstr "Xplayer ei voi toistaa paikasta ”%s”."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
-msgstr "Xplayer ei voinut näyttää ohjeen sisältöä."
+msgstr "Xplayer ei voi näyttää ohjeen sisältöä."
 
 #: ../src/xplayer-object.c:2598
 msgid "An error occurred"
@@ -1282,19 +1278,19 @@ msgstr "Tapahtui virhe"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "Edellinen kappale/elokuva"
+msgstr "Edellinen"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
-msgstr "Toista / keskeytä"
+msgstr "Toista / Tauko"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "Seuraava kappale/elokuva"
+msgstr "Seuraava"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
-msgstr "Xplayeria ei voi käynnistää."
+msgstr "Xplayer ei käynnisty."
 
 #: ../src/xplayer-object.c:4345
 msgid "No reason."
@@ -1302,35 +1298,35 @@ msgstr "Ei syytä."
 
 #: ../src/xplayer-open-location.c:182
 msgid "Open Location..."
-msgstr "Avaa sijainnista…"
+msgstr "Avaa paikasta..."
 
 #: ../src/xplayer-options.c:49
 msgid "Enable debug"
-msgstr "Käytä virheenjäljitystä"
+msgstr "Jäljitä virhe"
 
 #: ../src/xplayer-options.c:55
 msgid "Seek Forwards"
-msgstr "Kelaa eteenpäin"
+msgstr "Kelaa eteen"
 
 #: ../src/xplayer-options.c:56
 msgid "Seek Backwards"
-msgstr "Kelaa taaksepäin"
+msgstr "Kelaa taakse"
 
 #: ../src/xplayer-options.c:57
 msgid "Volume Up"
-msgstr "Kovemmalle"
+msgstr "Voimakkuutta"
 
 #: ../src/xplayer-options.c:58
 msgid "Volume Down"
-msgstr "Hiljemmalle"
+msgstr "Hiljempaa"
 
 #: ../src/xplayer-options.c:59
 msgid "Mute sound"
-msgstr "Vaimenna ääni"
+msgstr "Vaimenna"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Koko näyttö"
+msgstr "Vaihda koko näyttöön"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
@@ -1372,26 +1368,26 @@ msgstr "Ei voida lisätä jonon perään ja korvata samaan aikaan"
 #. By extension entry
 #: ../src/xplayer-playlist.c:163
 msgid "MP3 ShoutCast playlist"
-msgstr "MP3 ShoutCast -soittolista"
+msgstr "MP3 ShoutCast soittolista"
 
 #: ../src/xplayer-playlist.c:164
 msgid "MP3 audio (streamed)"
-msgstr "MP3-ääni (virta)"
+msgstr "MP3 audio (suoratoisto)"
 
 #: ../src/xplayer-playlist.c:165
 msgid "MP3 audio (streamed, DOS format)"
-msgstr "MP3-ääni (virta, DOS-muoto)"
+msgstr "MP3 audio (suoratoisto, dos-formaatti)"
 
 #: ../src/xplayer-playlist.c:166
 msgid "XML Shareable Playlist"
-msgstr "XML Shareable -soittolista"
+msgstr "XML Shareable soittolista"
 
 #. This is "Title 3", where title is a DVD title
 #. * Note: NOT a DVD chapter
 #: ../src/xplayer-playlist.c:349
 #, c-format
 msgid "Title %d"
-msgstr "Jakso %d"
+msgstr "Nimi %d"
 
 #: ../src/xplayer-playlist.c:448
 msgid "Could not save the playlist"
@@ -1412,7 +1408,8 @@ msgstr "Soittolista"
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
-"Soittolistan '%s' jäsennys epäonnistui. Soittolista saattaa olla rikkoutunut."
+"Soittolistan \"%s\" valmistelu epäonnistui. Soittolista saattaa olla "
+"rikkoutunut."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
@@ -1424,11 +1421,11 @@ msgstr "Asetukset"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Valitse tekstityksen kirjasin"
+msgstr "Valitse fontti tekstitykselle"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
-msgstr "Nykyiset maa-asetukset"
+msgstr "Maa-asetukset"
 
 #: ../src/xplayer-subtitle-encoding.c:159
 #: ../src/xplayer-subtitle-encoding.c:161
@@ -1445,7 +1442,7 @@ msgstr "Armenia"
 #: ../src/xplayer-subtitle-encoding.c:173
 #: ../src/xplayer-subtitle-encoding.c:175
 msgid "Baltic"
-msgstr "Balttilainen"
+msgstr "Balttia"
 
 #: ../src/xplayer-subtitle-encoding.c:178
 msgid "Celtic"
@@ -1456,20 +1453,20 @@ msgstr "Keltti"
 #: ../src/xplayer-subtitle-encoding.c:185
 #: ../src/xplayer-subtitle-encoding.c:187
 msgid "Central European"
-msgstr "Keski-Eurooppalainen"
+msgstr "Keski-Eurooppa"
 
 #: ../src/xplayer-subtitle-encoding.c:190
 #: ../src/xplayer-subtitle-encoding.c:192
 #: ../src/xplayer-subtitle-encoding.c:194
 #: ../src/xplayer-subtitle-encoding.c:196
 msgid "Chinese Simplified"
-msgstr "Kiina, yksinkertaistettu"
+msgstr "Kiina yksinkertainen"
 
 #: ../src/xplayer-subtitle-encoding.c:199
 #: ../src/xplayer-subtitle-encoding.c:201
 #: ../src/xplayer-subtitle-encoding.c:203
 msgid "Chinese Traditional"
-msgstr "Kiina, perinteinen"
+msgstr "Kiina perinteinen"
 
 #: ../src/xplayer-subtitle-encoding.c:206
 msgid "Croatian"
@@ -1486,12 +1483,12 @@ msgstr "Kyrillinen"
 
 #: ../src/xplayer-subtitle-encoding.c:222
 msgid "Cyrillic/Russian"
-msgstr "Kyrillinen, Venäjä"
+msgstr "Kyrillinen/Venäjä"
 
 #: ../src/xplayer-subtitle-encoding.c:225
 #: ../src/xplayer-subtitle-encoding.c:227
 msgid "Cyrillic/Ukrainian"
-msgstr "Kyrillinen, Ukraina"
+msgstr "Kyrillinen/Ukraina"
 
 #: ../src/xplayer-subtitle-encoding.c:230
 msgid "Georgian"
@@ -1520,7 +1517,7 @@ msgstr "Heprea"
 
 #: ../src/xplayer-subtitle-encoding.c:255
 msgid "Hebrew Visual"
-msgstr "Heprea näkyvä"
+msgstr "Heprea visuaalinen"
 
 #: ../src/xplayer-subtitle-encoding.c:258
 msgid "Hindi"
@@ -1603,7 +1600,7 @@ msgstr "%s / %s"
 #: ../src/xplayer-time-label.c:77
 #, c-format
 msgid "Seek to %s / %s"
-msgstr "Kelaa kohtaan %s / %s"
+msgstr "Kelaa %s / %s"
 
 #: ../src/xplayer-uri.c:343 ../src/plugins/chapters/xplayer-chapters.c:984
 msgid "All files"
@@ -1615,15 +1612,15 @@ msgstr "Tuetut tiedostot"
 
 #: ../src/xplayer-uri.c:360
 msgid "Audio files"
-msgstr "Äänitiedostot"
+msgstr "Audio"
 
 #: ../src/xplayer-uri.c:368
 msgid "Video files"
-msgstr "Videotiedostot"
+msgstr "Video"
 
 #: ../src/xplayer-uri.c:378
 msgid "Subtitle files"
-msgstr "Tekstitystiedostot"
+msgstr "Tekstitys"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
@@ -1665,15 +1662,15 @@ msgstr "Kesto"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:1
 msgid "Apple Trailers"
-msgstr "Applen trailerit"
+msgstr "Apple trailerit"
 
 #: ../src/plugins/apple-trailers/apple-trailers.plugin.in.h:2
 msgid "Sets the user agent for the Apple Trailers site"
-msgstr "Asettaa user agent -tunnisteen Applen trailerisivustoa varten"
+msgstr "Asettaa user agent tunnisteen Applen trailerisivustoa varten"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:1
 msgid "Autoload Subtitles"
-msgstr "Lataa tekstitykset automaattisesti"
+msgstr "Tekstitys automaattisesti"
 
 #: ../src/plugins/autoload-subtitles/autoload-subtitles.plugin.in.h:2
 msgid "Autoloads text subtitles"
@@ -1681,44 +1678,44 @@ msgstr "Lataa tekstitykset automaattisesti"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:1
 msgid "Video Disc Recorder"
-msgstr "Videolevyjen nauhoitin"
+msgstr "Videolevyn tallennin"
 
 #: ../src/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin.in.h:2
 msgid "Records (S)VCDs or video DVDs"
-msgstr "Kirjoittaa (S)VCD- ja DVD-videolevyjä"
+msgstr "Kirjoittaa videolevyjä (S)VCD ja DVD"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:65
 msgid "_Create Video Disc..."
-msgstr "_Luo videolevy…"
+msgstr "_Luo videolevy..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Luo DVD- tai S(VCD)-videolevy auki olevasta elokuvasta"
+msgstr "Luo DVD tai S(VCD) videolevy avatusta elokuvasta"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
-msgstr "Kopioi vide_o DVD…"
+msgstr "Kopioi vide_o DVD:lle..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:69
 msgid "Copy the currently playing video DVD"
-msgstr "Kopioi toistettava video-DVD"
+msgstr "Kopioi toistossa oleva Video-DVD:lle"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:71
 msgid "Copy (S)VCD..."
-msgstr "Kopioi (S)VCD…"
+msgstr "Kopioi (S)VCD:lle..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:72
 msgid "Copy the currently playing (S)VCD"
-msgstr "Kopioi toistettava (S)VCD"
+msgstr "Kopioi toistossa oleva (S)VCD:lle"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:136
 msgid "The video disc could not be duplicated."
-msgstr "Videolevyä ei voitu kopioida."
+msgstr "Videolevyä ei voitu monistaa."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "Elokuvaa ei voitu nauhoittaa."
+msgstr "Elokuvaa ei voitu tallentaa."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
@@ -1728,35 +1725,35 @@ msgstr "Projektia ei voitu kirjoittaa."
 
 #: ../src/plugins/chapters/chapters-edit.ui.h:1
 msgid "Name for new chapter:"
-msgstr "Uuden kappaleen nimi:"
+msgstr "Uuden jakson nimi:"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:1
 msgid "_Remove Chapter"
-msgstr "_Poista kappale"
+msgstr "_Poista jakso"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:2
 msgid "Remove the chapter from the list"
-msgstr "Poista kappale listalta"
+msgstr "Poista jakso listalta"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr "_Siirry kappaleeseen"
+msgstr "_Siirry jaksoon"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr "Siirry tiettyyn kappaleeseen elokuvassa"
+msgstr "Siirry tiettyyn jaksoon elokuvassa"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
-msgstr "Lisää kappale…"
+msgstr "Lisää jakso..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:6
 msgid "Remove Chapter"
-msgstr "Poista kappale"
+msgstr "Poista jakso"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr "Siirry kappaleeseen"
+msgstr "Siirry jaksoon"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
@@ -1764,32 +1761,32 @@ msgstr "Tallenna muutokset"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:9
 msgid "No chapter data"
-msgstr "Ei kappaletietoja"
+msgstr "Ei jakson tietoja"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:10
 msgid "Load Chapters..."
-msgstr "Lataa kappaleita…"
+msgstr "Lataa jaksot..."
 
 #: ../src/plugins/chapters/chapters-list.ui.h:11
 msgid "Load chapters from an external CMML file"
-msgstr "Lataa kappaleet CMML-tiedostosta"
+msgstr "Lataa jaksot CMML-tiedostosta"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:12
 msgid "Add New Chapters"
-msgstr "Lisää uusia kappaleita"
+msgstr "Lisää uusia jaksoja"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr "Luo uusi kappalelista elokuvaan"
+msgstr "Luo uusi jakso elokuvaan"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
 msgid "Chapters"
-msgstr "Kappaleet"
+msgstr "Jaksot"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:2
 msgid "Support chapter markers in movies"
-msgstr "Tue kappalemerkintöjä elokuvissa"
+msgstr "Tue jaksojen merkintää elokuvissa"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:56
 #, c-format
@@ -1802,44 +1799,44 @@ msgstr ""
 
 #: ../src/plugins/chapters/xplayer-chapters.c:323
 msgid "Error while reading file with chapters"
-msgstr "Virhe luettaessa kappaleilla varustettua tiedostoa"
+msgstr "Virhe luettaessa jaksojen tiedostoa"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:542
 msgid "Chapter with the same time already exists"
-msgstr "Kappale samalla ajalla on jo olemassa"
+msgstr "Jakso samalla ajalla on jo olemassa"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:543
 msgid "Try another name or remove an existing chapter."
-msgstr "Anna toinen nimi tai poista olemassa oleva kappale."
+msgstr "Anna toinen nimi tai poista olemassa oleva jakso."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:703
 msgid "Error while writing file with chapters"
-msgstr "Virhe kirjoittaessa kappaleilla varustettua tiedostoa"
+msgstr "Virhe kirjoittaessa jaksojen tiedostoa"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:828
 msgid "Error occurred while saving chapters"
-msgstr "Virhe tallennettaessa kappaleita"
+msgstr "Virhe tallennettaessa jaksoja"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:829
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
-msgstr "Tarkista onko sinulla kirjoitusoikeus elokuvan sisältävään kansioon."
+msgstr "Tarkista onko sinulla kirjoitusoikeus elokuvan kansioon."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
-msgstr "Avaa kappaletiedosto"
+msgstr "Avaa jakso-tiedosto"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1079
 msgid "Chapter Screenshot"
-msgstr "Kappaleen kuvakaappaus"
+msgstr "Jakson kuvakaappaus"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1090
 msgid "Chapter Title"
-msgstr "Kappaleen nimi"
+msgstr "Jakson nimi"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1170
 msgid "Save changes to chapter list before closing?"
-msgstr "Tallennetaanko muutokset kappalelistaan ennen sulkemista?"
+msgstr "Tallennetaanko muutokset jaksolistaan ennen sulkemista?"
 
 #. Translators: close Xplayer without saving changes to the chapter list of the current movie.
 #: ../src/plugins/chapters/xplayer-chapters.c:1175
@@ -1853,12 +1850,11 @@ msgstr "Tallenna"
 
 #: ../src/plugins/chapters/xplayer-chapters.c:1180
 msgid "If you don't save, changes to the chapter list will be lost."
-msgstr ""
-"Jos et tallenna, kaikki kappalelistaan tehdyt muutokset jätetään huomiotta."
+msgstr "Jos et tallenna, kaikki jaksolistaan tehdyt muutokset menetetään."
 
 #: ../src/plugins/chapters/xplayer-edit-chapter.c:95
 msgid "Add Chapter"
-msgstr "Lisää kappale"
+msgstr "Lisää jakso"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
@@ -1866,13 +1862,13 @@ msgstr "MPRIS–tuki"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "Tämä lisäosa ottaa käyttöön MPRIS–tuen DBUS:n yli."
+msgstr "Tämä liitännäinen käyttää MPRIS–tukea yli DBUS:in."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "MediaPlayer2-olio ei toteuta ”%s”-rajapintaa"
+msgstr "MediaPlayer2 olio ei toteuta ”%s” rajapintaa"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
@@ -1882,7 +1878,7 @@ msgstr "Ominaisuus ”%s” ei ole kirjoitettavissa."
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr "Tuntematon ominaisuus ”%s” pyydetty MediaPlayer2-oliolta"
+msgstr "Tuntematon ominaisuus ”%s” pyydetty MediaPlayer2 oliolta"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
@@ -1891,7 +1887,7 @@ msgstr "URI ”%s” ei ole tuettu."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
-msgstr "Grilo-selain"
+msgstr "Grilo selain"
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
@@ -1903,7 +1899,7 @@ msgstr "Lisää soittolistaan"
 
 #: ../src/plugins/grilo/grilo.ui.h:2
 msgid "Copy Location"
-msgstr "Kopioi sijainti"
+msgstr "Kopioi paikka"
 
 #: ../src/plugins/grilo/grilo.ui.h:3 ../src/plugins/grilo/xplayer-grilo.c:1184
 msgid "Browse"
@@ -1971,7 +1967,7 @@ msgstr "Aina päällimmäisenä"
 
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
-msgstr "Pidä pääikkuna aina päällimmäisenä näytettäessä elokuvaa"
+msgstr "Pidä pääikkuna aina päällimmäisenä elokuvaa katsoessa"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
@@ -2165,7 +2161,7 @@ msgstr "Lisää toistettuja tiedostoja viimeisimpien tiedostojen valikkoon"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Kiertoliitännäinen"
+msgstr "Kääntämisen liitännäinen"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2173,11 +2169,11 @@ msgstr "Mahdollistaa videoiden kääntämisen, jos ne ovat väärässä asennoss
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:49
 msgid "_Rotate Clockwise"
-msgstr "Kie_rrä myötäpäivään"
+msgstr "Käännä _myötäpäivään"
 
 #: ../src/plugins/rotation/xplayer-rotation-plugin.vala:51
 msgid "Rotate Counterc_lockwise"
-msgstr "Kierrä _vastapäivään"
+msgstr "Käännä _vastapäivään"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
@@ -2242,7 +2238,7 @@ msgstr "Galleria-%s-%d.jpg"
 #. Set up the window
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:101
 msgid "Creating Gallery..."
-msgstr "Luodaan galleriaa…"
+msgstr "Luodaan galleriaa..."
 
 #. Set the progress label
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
@@ -2261,19 +2257,19 @@ msgstr "Näin ei pitäisi päästä tapahtumaan. Ole hyvä ja ilmoita viasta."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "Ota _kuvakaappaus"
+msgstr "_Kuvakaappaus"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Ota kuvakaappaus"
+msgstr "Ota kuvaruudusta kaappaus"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Luo kuvakaappaus_galleria…"
+msgstr "Luo kaappaus_galleria..."
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Luo galleria kuvakaappauksista"
+msgstr "Luo galleria kaapatuista kuvista"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
@@ -2307,7 +2303,7 @@ msgstr "8"
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "_Skip To..."
-msgstr "Sii_rry kohtaan…"
+msgstr "Sii_rry kohtaan..."
 
 #: ../src/plugins/skipto/xplayer-skipto-plugin.c:182
 msgid "Skip to a specific time"
@@ -2316,7 +2312,7 @@ msgstr "Siirry annettuun ajankohtaan"
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 #| msgid "Configure Plugins"
 msgid "Zeitgeist Plugin"
-msgstr "Zeitgeist-liitännäinen"
+msgstr "Zeitgeist liitännäinen"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"

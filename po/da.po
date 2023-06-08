@@ -17,15 +17,15 @@ msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2021-01-10 14:26+0000\n"
+"PO-Revision-Date: 2023-02-22 19:18+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2022-07-24 09:39+0000\n"
-"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:20+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 "Language: da\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -118,26 +118,26 @@ msgstr "Tegnkodning til undertekster."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:19
 msgid "Default location for the \"Open...\" dialogs"
-msgstr "Standardplacering for \"Åbn …\"-vinduerne"
+msgstr "Standardplacering for “Åbn …”-vinduerne"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:20
 msgid ""
 "Default location for the \"Open...\" dialogs. Default is the current "
 "directory."
 msgstr ""
-"Standardplacering for \"Åbn …\"-vinduerne. Standardværdien er den nuværende "
+"Standardplacering for “Åbn …”-vinduerne. Standardværdien er den nuværende "
 "mappe."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
-msgstr "Standardplacering for \"Gem skærmbillede\"-vinduerne"
+msgstr "Standardplacering for “Tag skærmbillede”-vinduerne"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Standardplacering for \"Gem skærmbillede\"-vinduerne. Standardværdien er "
+"Standardplacering for “Tag skærmbillede”-vinduerne. Standardværdien er "
 "mappen Billeder."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
@@ -925,7 +925,7 @@ msgstr "Filen er ikke en gyldig .desktop-fil"
 #: ../src/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Ukendt version \"%s\" af desktop-fil"
+msgstr "Ukendt version “%s” af desktop-fil"
 
 #: ../src/eggdesktopfile.c:968
 #, c-format
@@ -985,9 +985,9 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Programmet kunne ikke finde ud af, hvilket filformat du vil bruge til "
-"\"%s\". Sikr dig venligst, at du bruger en kendt filendelse for denne fil, "
-"eller vælg manuelt et filformat fra listen herunder."
+"Programmet kunne ikke finde ud af, hvilket filformat du vil bruge til “%s”. "
+"Sikr dig venligst, at du bruger en kendt filendelse for denne fil, eller "
+"vælg manuelt et filformat fra listen herunder."
 
 #: ../src/eggfileformatchooser.c:664
 msgid "File format not recognized"
@@ -1182,7 +1182,7 @@ msgstr "Ingen fil"
 #: ../src/xplayer-interface.c:181 ../src/xplayer-interface.c:224
 #, c-format
 msgid "Couldn't load the '%s' interface. %s"
-msgstr "Kunne ikke indlæse grænsefladen \"%s\". %s"
+msgstr "Kunne ikke indlæse grænsefladen “%s”. %s"
 
 #: ../src/xplayer-interface.c:181
 msgid "The file does not exist."
@@ -1252,7 +1252,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"Kør \"%s --help\" for at se den fulde liste over tilgængelige "
+"Kør “%s --help” for at se den fulde liste over tilgængelige "
 "kommandolinjetilvalg.\n"
 
 #. Translators: %s is the xplayer version number
@@ -1274,7 +1274,7 @@ msgstr "Afspil"
 #: ../src/xplayer-object.c:2051
 #, c-format
 msgid "Xplayer could not play '%s'."
-msgstr "Xplayer kunne ikke afspille \"%s\"."
+msgstr "Xplayer kunne ikke afspille “%s”."
 
 #: ../src/xplayer-object.c:2256
 msgid "Xplayer could not display the help contents."
@@ -1416,7 +1416,7 @@ msgstr "Afspilningsliste"
 #, c-format
 msgid "The playlist '%s' could not be parsed. It might be damaged."
 msgstr ""
-"Afspilningslisten \"%s\" kunne ikke fortolkes. Den kan være beskadiget."
+"Afspilningslisten “%s” kunne ikke fortolkes. Den kan være beskadiget."
 
 #: ../src/xplayer-playlist.c:1863
 msgid "Playlist error"
@@ -1877,22 +1877,22 @@ msgstr "Dette plugin aktiverer understøttelse af MPRIS over DBUS."
 #: ../src/plugins/dbusservice/dbusservice.py:243
 #, python-format
 msgid "The MediaPlayer2 object does not implement the ‘%s’ interface"
-msgstr "MediaPlayer2-objektet anvender ikke brugergrænsefladen \"%s\""
+msgstr "MediaPlayer2-objektet anvender ikke brugergrænsefladen “%s”"
 
 #: ../src/plugins/dbusservice/dbusservice.py:222
 #, python-format
 msgid "The property ‘%s’ is not writeable."
-msgstr "Egenskaben \"%s\" er ikke skrivbar."
+msgstr "Egenskaben “%s” er ikke skrivbar."
 
 #: ../src/plugins/dbusservice/dbusservice.py:238
 #, python-format
 msgid "Unknown property ‘%s’ requested of a MediaPlayer 2 object"
-msgstr "Et MediaPlayer2-objekt kræver en ukendt egenskab \"%s\""
+msgstr "Et MediaPlayer2-objekt kræver en ukendt egenskab “%s”"
 
 #: ../src/plugins/dbusservice/dbusservice.py:341
 #, python-format
 msgid "The URI ‘%s’ is not supported."
-msgstr "URI'en \"%s\" er ikke understøttet."
+msgstr "URI'en “%s” er ikke understøttet."
 
 #: ../src/plugins/grilo/grilo.plugin.in.h:1
 msgid "Grilo Browser"
@@ -2113,7 +2113,7 @@ msgid ""
 msgstr ""
 "En adgangskode til at beskytte rpdb2-serveren til fejlsøgning af Xplayer fra "
 "uautoriseret fjernadgang, Hvis denne er tom, bruges standardværdien "
-"\"xplayer\"."
+"“xplayer”."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2147,7 +2147,7 @@ msgstr "Aktivér fjern Python-fejlsøgning med rpdb2"
 #: ../src/plugins/pythonconsole/pythonconsole.py:123
 #, python-format
 msgid "You can access the Xplayer.Object through 'xplayer_object' :\\n%s"
-msgstr "Du kan tilgå Xplayer.Objekt'et med \"xplayer_object\" : \\n%s"
+msgstr "Du kan tilgå Xplayer.Objekt'et med “xplayer_object” : \\n%s"
 
 #: ../src/plugins/pythonconsole/pythonconsole.py:127
 msgid "Xplayer Python Console"
@@ -2161,7 +2161,7 @@ msgid ""
 msgstr ""
 "Efter du har trykket OK, ventes indtil du forbinder til Xplayer med winpdb "
 "eller rpdb2. Hvis du ikke har indstillet et fejlsøgerkodeord i DConf, vil "
-"standardkodeordet blive benyttet (\"xplayer\")."
+"standardkodeordet blive benyttet (“xplayer”)."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"
@@ -2258,7 +2258,7 @@ msgstr "Opretter galleri …"
 #: ../src/plugins/screenshot/xplayer-gallery-progress.c:107
 #, c-format
 msgid "Saving gallery as \"%s\""
-msgstr "Gemmer galleri som \"%s\""
+msgstr "Gemmer galleri som “%s”"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:220
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:229
@@ -2292,7 +2292,7 @@ msgstr "Spring til"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:2
 msgid "Provides the \"Skip to\" dialog"
-msgstr "Åbner \"Spring til\"-vinduet"
+msgstr "Åbner “Spring til”-vinduet"
 
 #: ../src/plugins/skipto/skipto.ui.h:1
 msgid "_Skip to:"
