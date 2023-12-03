@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2016-11-14 16:09+0000\n"
-"Last-Translator: Cédric VALMARY (Tot en òc) <cvalmary@yahoo.fr>\n"
+"PO-Revision-Date: 2023-10-25 11:57+0000\n"
+"Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:33+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"Language: oc\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
@@ -46,7 +47,7 @@ msgstr "La luminositat de la vidèo"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:4
 msgid "The contrast of the video"
-msgstr "lo contraste de la vidèo"
+msgstr "Lo contraste de la vidèo"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:5
 msgid "The hue of the video"
@@ -137,7 +138,8 @@ msgstr ""
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
 msgstr ""
-"per desactivar los moduls d'extension dins lo repertòri de l'utilizaire"
+"Indica se cal desactivar los moduls d'extension dins lo repertòri de "
+"l'utilizaire"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
@@ -175,7 +177,7 @@ msgstr ""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
-msgstr ""
+msgstr "Utilizar una varianta de tèma escur (se disponible)."
 
 #: ../data/playlist.ui.h:1
 msgid "_Remove"
@@ -195,7 +197,7 @@ msgstr "Còpia l'emplaçament dins lo quichapapièrs"
 
 #: ../data/playlist.ui.h:5 ../data/xplayer.ui.h:78
 msgid "_Select Text Subtitles..."
-msgstr "_Seleccionar los sostítols"
+msgstr "_Seleccionar los sostítols..."
 
 #: ../data/playlist.ui.h:6 ../data/xplayer.ui.h:79
 msgid "Select a file to use for text subtitles"
@@ -267,7 +269,7 @@ msgstr "_Cargar los fichièrs de sostitolatge al cargament del filme"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
-msgstr ""
+msgstr "_Cargar los sostítols al cargament del filme"
 
 #: ../data/preferences.ui.h:13
 msgid "_Font:"
@@ -464,7 +466,7 @@ msgstr "Ecran complet"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
-msgstr ""
+msgstr "_Fichièr"
 
 #: ../data/xplayer.ui.h:2
 msgid "_Open..."
@@ -868,8 +870,8 @@ msgid_plural ""
 msgstr[0] ""
 "La lectura d'aqueste filme exigís un empeuton %s qu'es pas installat."
 msgstr[1] ""
-"La lectura d'aqueste filme exigís los desencodadors seguents que son pas "
-"installats :\r\n"
+"La lectura d'aqueste filme exigís los empeutons seguents que son pas "
+"installats :\n"
 "\r\n"
 "%s"
 
@@ -913,7 +915,7 @@ msgstr ""
 #: ../src/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Lo fichièr es pas un fichièr « .desktop » valid."
+msgstr "Lo fichièr es pas un fichièr « .desktop » valid"
 
 #: ../src/eggdesktopfile.c:188
 #, c-format
@@ -1156,7 +1158,7 @@ msgstr "Impossible d'inicializar lo supòrt de las bibliotècas thread-safe."
 
 #: ../src/xplayer.c:260
 msgid "Verify your system installation. Xplayer will now exit."
-msgstr ""
+msgstr "Verificatz l’installacion sistma. Xplayer es per se tampar."
 
 #: ../src/xplayer-dnd-menu.c:95
 msgid "_Play Now"
@@ -1186,7 +1188,7 @@ msgstr "Lo fichièr existís pas."
 #: ../src/xplayer-interface.c:183 ../src/xplayer-interface.c:185
 #: ../src/xplayer-interface.c:226 ../src/xplayer-interface.c:228
 msgid "Make sure that Xplayer is properly installed."
-msgstr ""
+msgstr "Asseguratz-vos que Xplayer es corrèctament installat."
 
 #: ../src/xplayer-interface.c:357
 msgid ""
@@ -1195,6 +1197,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Xplayer es un logicial liure ; lo podètz redistribuir e/o lo modificar al "
+"títol de las clausas de la Licéncia Publica Generala GNU, tala coma "
+"publicada per la Free Software Foundation ; siá la version 2 de la Licéncia, "
+"o (a vòstra discrecion) una version ulteriora quina que siá."
 
 #: ../src/xplayer-interface.c:361
 msgid ""
@@ -1203,6 +1209,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Xplayer es distribuit dins l'esper que serà utile, mas SENS CAP DE GARANTIDA "
+"; sens la quita garantida implicita de VALOR MERCANDA o D'ADEQÜACION A UN "
+"BESONH PARTICULAR. Per mai de detalhs, veire la Licéncia Publica Generala "
+"GNU."
 
 #: ../src/xplayer-interface.c:365
 msgid ""
@@ -1210,12 +1220,17 @@ msgid ""
 "Xplayer; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place, Suite 330, Boston, MA  02111-1307  USA"
 msgstr ""
+"Debètz aver recebuda una còpia de la licéncia generala publica GNU amb "
+"Xplayer ; s'es pas lo cas, escrivètz a la Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/xplayer-interface.c:368
 msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
+"Xplayer conten una excepcion per permetre l’utilizacion d’empeutons "
+"GStreamer proprietaris."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1853,11 +1868,11 @@ msgstr "Apondre un capítol"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:1
 msgid "MPRIS Support"
-msgstr ""
+msgstr "Presa en carga MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr ""
+msgstr "Aquesta empeuton activa la presa en carga MPRIS sus DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1947,11 +1962,11 @@ msgstr "Presa en carga de la telecomanda a infraroges"
 
 #: ../src/plugins/lirc/xplayer-lirc.c:242
 msgid "Couldn't initialize lirc."
-msgstr "Impossible d'inicializar lirc"
+msgstr "Impossible d'inicializar lirc."
 
 #: ../src/plugins/lirc/xplayer-lirc.c:254
 msgid "Couldn't read lirc configuration."
-msgstr "Impossible de legir la configuracion lirc"
+msgstr "Impossible de legir la configuracion lirc."
 
 #: ../src/plugins/media-player-keys/media-player-keys.plugin.in.h:1
 msgid "Media Player Keys"
@@ -2101,6 +2116,8 @@ msgid ""
 "unauthorized remote access. If this is empty, a default of 'xplayer' will be "
 "used."
 msgstr ""
+"Un senhal per protegir lo servidor rpdb2 pel desbugatge Xplayer dels "
+"accèsses a distància defenduts. S’aquò es void, per defaut serà « xplayer »."
 
 #: ../src/plugins/pythonconsole/pythonconsole.plugin.in.h:1
 msgid "Python Console"
@@ -2146,6 +2163,9 @@ msgid ""
 "rpdb2. If you have not set a debugger password in DConf, it will use the "
 "default password ('xplayer')."
 msgstr ""
+"Après aver quichat OK, Xplayer esperarà dusca que vos connectetz amb winpdb "
+"o rpdb2. S’avètz pas definit un senhal de desbugatge dins DConf, lo senhal "
+"per defaut « xplayer » serà utilizat."
 
 #: ../src/plugins/recent/recent.plugin.in.h:1
 msgid "Recent files"

@@ -21,11 +21,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:56+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:33+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
 "Language: fa\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
@@ -887,6 +887,10 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] "پخش این فیلم نیازمند یک افزونه %s است که نصب نشده است."
+msgstr[1] ""
+"پخش این فیلم نیازمند افزونه‌های مقابل است که نصب نشده‌اند:\n"
+"\n"
+"%s"
 
 #: ../src/backend/bacon-video-widget.c:3357
 msgid ""
@@ -1115,18 +1119,21 @@ msgstr "۰ کانال"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%Id ساعت"
+msgstr[1] "%Id ساعت"
 
 #: ../src/properties/bacon-video-widget-properties.c:158
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%Id دقیقه"
+msgstr[1] "%Id دقیقه"
 
 #: ../src/properties/bacon-video-widget-properties.c:161
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%Id ثانیه"
+msgstr[1] "%Id ثانیه"
 
 #. 5 hours 2 minutes 12 seconds
 #: ../src/properties/bacon-video-widget-properties.c:167
@@ -1152,6 +1159,7 @@ msgstr "۰ ثانیه"
 msgid "%d frame per second"
 msgid_plural "%d frames per second"
 msgstr[0] "%Id فریم بر ثانیه"
+msgstr[1] "%Id فریم بر ثانیه"
 
 #: ../src/xplayer-audio-preview.c:137
 msgid "Audio Preview"
@@ -2300,6 +2308,7 @@ msgstr "_پرش به:"
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "ثانیه"
+msgstr[1] "ثانیه"
 
 #. Fix the label width at the maximum necessary for the plural labels, to prevent it changing size when we change the spinner value
 #. Translators: you should translate this string to a number (written in digits) which corresponds to the longer character length of the
