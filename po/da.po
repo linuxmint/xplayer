@@ -17,15 +17,15 @@ msgstr ""
 "Project-Id-Version: xplayer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2023-02-22 19:18+0000\n"
+"PO-Revision-Date: 2023-12-07 10:38+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2023-12-03 13:32+0000\n"
-"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:57+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 "Language: da\n"
 
 #: ../data/fullscreen.ui.h:1
@@ -895,7 +895,8 @@ msgid ""
 "This file cannot be played over the network. Try downloading it locally "
 "first."
 msgstr ""
-"Denne fil kan ikke afspilles over netværket. Prøv at hente den lokalt først."
+"Denne fil kan ikke afspilles over netværket. Prøv at downloade den lokalt "
+"først."
 
 #: ../src/backend/bacon-video-widget.c:5091
 msgid "Surround"
@@ -1982,7 +1983,7 @@ msgstr "Bevar hovedvinduet øverst når en film bliver afspillet"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
-msgstr "Underteksthenter"
+msgstr "Downloadprogram til undertekster"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
@@ -1999,7 +2000,7 @@ msgstr "Søger efter undertekster …"
 #: ../src/plugins/opensubtitles/opensubtitles.py:225
 #: ../src/plugins/opensubtitles/opensubtitles.py:636
 msgid "Downloading the subtitles…"
-msgstr "Henter undertekster …"
+msgstr "Donwloader undertekster …"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:290
 msgid "Could not contact the OpenSubtitles website"
@@ -2032,11 +2033,11 @@ msgstr "Bedømmelse"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Hent filmundertekster fra OpenSubtitles"
+msgstr "Donwload filmundertekster fra OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "_Hent undertekster til film …"
+msgstr "_Download undertekster til film …"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
@@ -2044,7 +2045,7 @@ msgstr "Søger i undertekster …"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Hent undertekster til film"
+msgstr "Download undertekster til film"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"

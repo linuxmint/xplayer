@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-01 16:32+0100\n"
-"PO-Revision-Date: 2018-10-01 16:45+0000\n"
-"Last-Translator: karm <melo@carmu.com>\n"
+"PO-Revision-Date: 2024-01-01 01:02+0000\n"
+"Last-Translator: famese <Unknown>\n"
 "Language-Team: Interlingua <ia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2023-12-03 13:33+0000\n"
-"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:57+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
 
 #: ../data/fullscreen.ui.h:1
 msgid "Leave fullscreen"
@@ -35,7 +35,7 @@ msgid ""
 "Allow the screensaver to activate when playing audio. Disable if you have "
 "monitor-powered speakers."
 msgstr ""
-"Consentir la activation del salva schermo durante le reproduction audio. "
+"Consentir la activation del salvaschermo durante le reproduction audio. "
 "Disactivar si tu ha le altoparlatores alimentate le le monitor."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:3
@@ -68,7 +68,7 @@ msgstr "Modo miscer"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:10
 msgid "Whether to disable deinterlacing for interlaced movies"
-msgstr "Si disactivar le de-interlaciamento pro le films interlaciate"
+msgstr "Si disactivar le disinterlaciation pro le filmes interlaciate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:11
 msgid "Whether to enable debug for the playback engine"
@@ -122,19 +122,19 @@ msgstr ""
 #: ../data/org.x.player.gschema.xml.in.in.h:21
 msgid "Default location for the \"Take Screenshot\" dialogs"
 msgstr ""
-"Position ordinari pro le fenestras de dialogo  \"Capturar le schermo\""
+"Position predefinite pro le fenestras de dialogo  \"Capturar le schermo\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:22
 msgid ""
 "Default location for the \"Take Screenshot\" dialogs. Default is the "
 "Pictures directory."
 msgstr ""
-"Position ordinari pro le fenestras de dialogo  \"Capturar le schermo\". Le "
-"directorio ordinari es \"Pictures\""
+"Position predefinite pro le fenestras de dialogo  \"Capturar le schermo\". "
+"Le directorio predefinite es \"Pictures\""
 
 #: ../data/org.x.player.gschema.xml.in.in.h:23
 msgid "Whether to disable the plugins in the user's home directory"
-msgstr "Si disactivar le plugins in le  directorio \"home\" del usator"
+msgstr "Si disactivar le extensiones in le  directorio personal del usator"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:24
 msgid "Whether to disable the keyboard shortcuts"
@@ -143,30 +143,31 @@ msgstr "Si disactivar le vias breve de claviero"
 #: ../data/org.x.player.gschema.xml.in.in.h:25
 msgid "Whether to autoload text subtitle files when a movie is loaded"
 msgstr ""
-"Si auto-cargar le files texto del subtitulos quando un film es cargate"
+"Si autocargar le files texto del subtitulos quando un filme es cargate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:26
 msgid "Whether to autoload external chapter files when a movie is loaded"
 msgstr ""
-"Si auto-cargar le files del capitulos externe quando un film es cargate"
+"Si autocargar le files del capitulos externe quando un filme es cargate"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:27
 msgid ""
 "Whether to remember the position of played audio/video files when pausing or "
 "closing them"
 msgstr ""
-"Si rememorar le position del files audio/video reproducite in lor pausa o "
+"Si recordar le position del files audio/video reproducite in lor pausa o "
 "clausura"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:28
 msgid "Active plugins list"
-msgstr "Lista del plugins active"
+msgstr "Lista del extensiones active"
 
 #: ../data/org.x.player.gschema.xml.in.in.h:29
 msgid ""
 "A list of the names of the plugins which are currently active (loaded and "
 "running)."
-msgstr "Un lista del nomines del plugins que es active (cargate e fluente)."
+msgstr ""
+"Un lista del nomines del extensiones que es active (cargate e fluente)."
 
 #: ../data/org.x.player.gschema.xml.in.in.h:30 ../data/preferences.ui.h:20
 msgid "Use dark theme variant (if available)."
@@ -258,7 +259,7 @@ msgstr "Subtitulos del texto"
 
 #: ../data/preferences.ui.h:11
 msgid "_Load subtitle files when movie is loaded"
-msgstr "Cargar le files del subtitu_Los quando le film es cargate"
+msgstr "Cargar le files del subtitu_los quando le filme es cargate"
 
 #: ../data/preferences.ui.h:12
 msgid "_Display subtitles when movie is loaded"
@@ -278,7 +279,7 @@ msgstr "Capitulos Externe"
 
 #: ../data/preferences.ui.h:16
 msgid "Load _chapter files when movie is loaded"
-msgstr "Cargar le files del _capitulo con le film"
+msgstr "Cargar le files del _capitulo con le filme"
 
 #: ../data/preferences.ui.h:17 ../data/properties.ui.h:1
 msgid "General"
@@ -299,7 +300,7 @@ msgstr "Disactivar _de-interlaciamento del videos interlaciate"
 
 #: ../data/preferences.ui.h:23
 msgid "Disable screensaver when playing"
-msgstr "Disactivar le salva schermo durante le reproduction"
+msgstr "Disactivar le salvaschermo durante le reproduction"
 
 #. Translators: this is part of the sentence
 #: ../data/preferences.ui.h:25
@@ -428,11 +429,11 @@ msgstr "Reproductor de medios"
 
 #: ../data/xplayer.desktop.in.in.in.h:2
 msgid "Play movies"
-msgstr "Reproducer films"
+msgstr "Reproducer filmes"
 
 #: ../data/xplayer.desktop.in.in.in.h:3
 msgid "Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;"
-msgstr "Video;Film;Film;Retalio video;Serie;Reproductor;DVD;TV;Disco;"
+msgstr "Video;Filme;Filme;Retalio video;Serie;Reproductor;DVD;TV;Disco;"
 
 #: ../data/xplayer.desktop.in.in.in.h:4 ../src/xplayer-options.c:50
 msgid "Play/Pause"
@@ -455,7 +456,7 @@ msgstr "Mute"
 #: ../data/xplayer.desktop.in.in.in.h:8 ../src/xplayer-object.c:4210
 #: ../src/xplayer-object.c:4212
 msgid "Fullscreen"
-msgstr "Schermo plen"
+msgstr "Plen schermo"
 
 #: ../data/xplayer.ui.h:1
 msgid "_File"
@@ -499,7 +500,7 @@ msgstr "Reproducer / P_ausar"
 
 #: ../data/xplayer.ui.h:11
 msgid "Play or pause the movie"
-msgstr "Reproducer o pausar le film"
+msgstr "Reproducer o pausar le filme"
 
 #: ../data/xplayer.ui.h:12
 msgid "_Quit"
@@ -531,11 +532,11 @@ msgstr "Configurar le application"
 
 #: ../data/xplayer.ui.h:19
 msgid "Plugins..."
-msgstr "Plugins..."
+msgstr "Extensiones..."
 
 #: ../data/xplayer.ui.h:20
 msgid "Configure plugins to extend the application"
-msgstr "Configurar le plugins pro extender le application"
+msgstr "Configurar le extensiones pro extender le application"
 
 #: ../data/xplayer.ui.h:21
 msgid "_View"
@@ -543,15 +544,15 @@ msgstr "_Vider"
 
 #: ../data/xplayer.ui.h:22
 msgid "_Fullscreen"
-msgstr "Plen schermo (_Full)"
+msgstr "Plen schermo (_F)"
 
 #: ../data/xplayer.ui.h:23
 msgid "Switch to fullscreen"
-msgstr "Excambiar a schermo plen"
+msgstr "Excambiar a plen schermo"
 
 #: ../data/xplayer.ui.h:24
 msgid "Fit Window to Movie"
-msgstr "Adaptar le fenestra al film"
+msgstr "Adjustar le fenestra al filme"
 
 #: ../data/xplayer.ui.h:25
 msgid "_Resize 1∶2"
@@ -599,7 +600,7 @@ msgstr "Menu del _DVD"
 
 #: ../data/xplayer.ui.h:36
 msgid "Go to the DVD menu"
-msgstr "Ir al menu del _DVD"
+msgstr "Vader al menu del DVD"
 
 #: ../data/xplayer.ui.h:37
 msgid "_Title Menu"
@@ -607,7 +608,7 @@ msgstr "Menu del _Titulo"
 
 #: ../data/xplayer.ui.h:38
 msgid "Go to the title menu"
-msgstr "Ir al menu del titulo"
+msgstr "Vader al menu del titulo"
 
 #: ../data/xplayer.ui.h:39
 msgid "A_udio Menu"
@@ -615,7 +616,7 @@ msgstr "Menu de A_udio"
 
 #: ../data/xplayer.ui.h:40
 msgid "Go to the audio menu"
-msgstr "Ir al menu del audio"
+msgstr "Vader al menu del audio"
 
 #: ../data/xplayer.ui.h:41
 msgid "_Angle Menu"
@@ -623,7 +624,7 @@ msgstr "Menu del _Angulo"
 
 #: ../data/xplayer.ui.h:42
 msgid "Go to the angle menu"
-msgstr "Ir al menu del angulo"
+msgstr "Vader al menu del angulo"
 
 #: ../data/xplayer.ui.h:43
 msgid "_Chapter Menu"
@@ -631,23 +632,23 @@ msgstr "Menu del _Chapitulo"
 
 #: ../data/xplayer.ui.h:44
 msgid "Go to the chapter menu"
-msgstr "Ir al menu del capitulo"
+msgstr "Vader al menu del capitulo"
 
 #: ../data/xplayer.ui.h:45
 msgid "_Next Chapter/Movie"
-msgstr "Capitulo/film seque_Nte"
+msgstr "Capitulo/filme seque_nte"
 
 #: ../data/xplayer.ui.h:46
 msgid "Next chapter or movie"
-msgstr "Capitulo o film sequente"
+msgstr "Capitulo o filme sequente"
 
 #: ../data/xplayer.ui.h:47
 msgid "_Previous Chapter/Movie"
-msgstr "Capitulo/Film _Precedente"
+msgstr "Capitulo/filme _precedente"
 
 #: ../data/xplayer.ui.h:48
 msgid "Previous chapter or movie"
-msgstr "Capitulo o film precedente"
+msgstr "Capitulo o filme precedente"
 
 #: ../data/xplayer.ui.h:49
 msgid "_Sound"
@@ -826,7 +827,7 @@ msgstr "Le connexion a iste servitor ha essite refusate."
 
 #: ../src/backend/bacon-video-widget.c:3282
 msgid "The specified movie could not be found."
-msgstr "Le film specificate non pote esser trovate."
+msgstr "Le filme specificate non pote esser trovate."
 
 #: ../src/backend/bacon-video-widget.c:3289
 msgid "The server refused access to this file or stream."
@@ -846,7 +847,7 @@ msgstr "Iste position non es valide"
 
 #: ../src/backend/bacon-video-widget.c:3315
 msgid "The movie could not be read."
-msgstr "Le film non pote esser legite."
+msgstr "Le filme non pote esser legite."
 
 #. should be exactly one missing thing (source or converter)
 #: ../src/backend/bacon-video-widget.c:3338
@@ -860,9 +861,9 @@ msgid_plural ""
 "\n"
 "%s"
 msgstr[0] ""
-"Le reproduction de iste film require un plug-in %s que non es installate."
+"Le reproduction de iste filme require un extension %s que non es installate."
 msgstr[1] ""
-"Le reproduction de iste film require le sequente plugins que non es "
+"Le reproduction de iste filme require le sequente extensiones que non es "
 "installate:\r\n"
 "\r\n"
 "%s"
@@ -873,7 +874,7 @@ msgid ""
 "need to install additional plugins to be able to play some types of movies"
 msgstr ""
 "Un stream audio o video non es gerite debitemente per carentia del codecs. "
-"Tu pote necessitar de installar plugins additional pro ser capace a "
+"Tu pote necessitar de installar extensiones additional pro esser capace a "
 "reproducer alcun typos de filmes"
 
 #: ../src/backend/bacon-video-widget.c:3367
@@ -901,7 +902,7 @@ msgid ""
 "Some necessary plug-ins are missing. Make sure that the program is correctly "
 "installed."
 msgstr ""
-"Alcun plug-ins necessari es mancante. Rende te secur que le programma es "
+"Alcun extensiones necessari es mancante. Rende te secur que le programma es "
 "installate correctemente."
 
 #: ../src/eggdesktopfile.c:165
@@ -1221,8 +1222,8 @@ msgid ""
 "Xplayer contains an exception to allow the use of proprietary GStreamer "
 "plugins."
 msgstr ""
-"Xplayer contains an exception to allow the use of proprietary GStreamer "
-"plugins."
+"Xplayer contine un exception pro permitter le uso de extensiones proprietari "
+"de GStreamer."
 
 #. Translators: an entry in the "Languages" menu, used to choose the audio language of a DVD
 #: ../src/xplayer-menu.c:165 ../src/xplayer-menu.c:219
@@ -1232,7 +1233,7 @@ msgstr "Nulle"
 
 #: ../src/xplayer-menu.c:760
 msgid "Configure Plugins"
-msgstr "Configurar le Plugins"
+msgstr "Configurar le extensiones"
 
 #: ../src/xplayer-object.c:165
 #, c-format
@@ -1274,7 +1275,7 @@ msgstr "Un error ha occurrite"
 
 #: ../src/xplayer-object.c:4169 ../src/xplayer-object.c:4170
 msgid "Previous Chapter/Movie"
-msgstr "Capitulo/Film Precedente"
+msgstr "Capitulo/filme precedente"
 
 #: ../src/xplayer-object.c:4181 ../src/xplayer-object.c:4182
 msgid "Play / Pause"
@@ -1282,7 +1283,7 @@ msgstr "Reproduction / Pausa"
 
 #: ../src/xplayer-object.c:4193 ../src/xplayer-object.c:4194
 msgid "Next Chapter/Movie"
-msgstr "Capitulo/Film sequente"
+msgstr "Capitulo/filme sequente"
 
 #: ../src/xplayer-object.c:4345
 msgid "Xplayer could not startup."
@@ -1322,7 +1323,7 @@ msgstr "Mutar le sono"
 
 #: ../src/xplayer-options.c:60
 msgid "Toggle Fullscreen"
-msgstr "Alternar le schermo plen"
+msgstr "Alternar le plen schermo"
 
 #: ../src/xplayer-options.c:61
 msgid "Show/Hide Controls"
@@ -1351,11 +1352,11 @@ msgstr "Indice del lista de reproduction"
 
 #: ../src/xplayer-options.c:69
 msgid "Movies to play"
-msgstr "Films a reproducer"
+msgstr "Filmes a reproducer"
 
 #: ../src/xplayer-options.c:79
 msgid "- Play movies and songs"
-msgstr "- Reproducer films e cantos"
+msgstr "- Reproducer filmes e cantos"
 
 #: ../src/xplayer-options.c:142
 msgid "Can't enqueue and replace at the same time"
@@ -1417,7 +1418,7 @@ msgstr "Preferentias"
 
 #: ../src/xplayer-preferences.c:338
 msgid "Select Subtitle Font"
-msgstr "Eliger le typo de character del subtitulos"
+msgstr "Seliger le typo de litteras del subtitulos"
 
 #: ../src/xplayer-subtitle-encoding.c:156
 msgid "Current Locale"
@@ -1620,11 +1621,11 @@ msgstr "Files de subtitulos"
 
 #: ../src/xplayer-uri.c:430
 msgid "Select Text Subtitles"
-msgstr "Eliger subtitulos de texto"
+msgstr "Seliger subtitulos de texto"
 
 #: ../src/xplayer-uri.c:495
 msgid "Select Movies or Playlists"
-msgstr "Eliger filmes o listas de reproduction"
+msgstr "Seliger filmes o listas de reproduction"
 
 #: ../src/xplayer-uri.c:499
 msgid "Add Directory"
@@ -1686,7 +1687,7 @@ msgstr "_Crear un disco video..."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:66
 msgid "Create a video DVD or a (S)VCD from the currently opened movie"
-msgstr "Crea un video DVD o un (S)VCD ab le film currentemente aperte"
+msgstr "Crea un video DVD o un (S)VCD ab le filme currentemente aperte"
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:68
 msgid "Copy Vide_o DVD..."
@@ -1711,7 +1712,7 @@ msgstr "Le video disco non pote esser duplicate."
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:138
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:283
 msgid "The movie could not be recorded."
-msgstr "Le film non pote esser registrate."
+msgstr "Le filme non pote esser registrate."
 
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:164
 #: ../src/plugins/brasero-disc-recorder/xplayer-disc-recorder.c:174
@@ -1733,11 +1734,11 @@ msgstr "Remover le capitulo ab le lista"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:3
 msgid "_Go to Chapter"
-msgstr "Ir (_Go) al Capitulo"
+msgstr "Vader al capitulo (_G)"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:4
 msgid "Go to the chapter in the movie"
-msgstr "Ir al capitulo in le film"
+msgstr "Vader al capitulo in le filme"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:5
 msgid "Add Chapter..."
@@ -1749,7 +1750,7 @@ msgstr "Remover un capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:7
 msgid "Go to Chapter"
-msgstr "Ir al capitulo"
+msgstr "Vader al capitulo"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:8
 msgid "Save Changes"
@@ -1773,7 +1774,7 @@ msgstr "Adder nove capitulos"
 
 #: ../src/plugins/chapters/chapters-list.ui.h:13
 msgid "Create a new chapter list for the movie"
-msgstr "Crear un nove lista del capitulos pro le film"
+msgstr "Crear un nove lista del capitulos pro le filme"
 
 #: ../src/plugins/chapters/chapters.plugin.in.h:1
 #: ../src/plugins/chapters/xplayer-chapters.c:1125
@@ -1817,8 +1818,8 @@ msgstr "Error occurrite durante le salvamento de capitulos"
 msgid ""
 "Please check you have permission to write to the folder containing the movie."
 msgstr ""
-"Per favor controla que tu ha le licentia pro scriber in le plica continente "
-"le film."
+"Per favor controla que tu ha permissiones pro scriber in le dossier "
+"continente le filme."
 
 #: ../src/plugins/chapters/xplayer-chapters.c:962
 msgid "Open Chapter File"
@@ -1860,7 +1861,7 @@ msgstr "Supporto de MPRIS"
 
 #: ../src/plugins/dbusservice/dbusservice.plugin.in.h:2
 msgid "This plugin enables MPRIS support over DBUS."
-msgstr "Iste plugin activa le supporto de MPRIS sur DBUS."
+msgstr "Iste extension activa le supporto de MPRIS sur DBUS."
 
 #: ../src/plugins/dbusservice/dbusservice.py:213
 #: ../src/plugins/dbusservice/dbusservice.py:243
@@ -1890,7 +1891,7 @@ msgstr "Navigator Grilo"
 #: ../src/plugins/grilo/grilo.plugin.in.h:2
 msgid "A plugin to let you browse media content from various sources"
 msgstr ""
-"Un plug-in pro lassar tu explorar le contento de medios ab varie fontes"
+"Un extension pro lassar tu explorar le contento de medios ab varie fontes"
 
 #: ../src/plugins/grilo/grilo.ui.h:1
 msgid "Add to Playlist"
@@ -1936,7 +1937,7 @@ msgstr "Stato de Instant Messenger"
 msgid "Set your Instant Messenger status to away when a movie is playing"
 msgstr ""
 "Configura le stato de tu Instant Messenger a foras durante le reproduction "
-"de un film"
+"de un filme"
 
 #: ../src/plugins/lirc/lirc.plugin.in.h:1
 msgid "Infrared Remote Control"
@@ -1969,7 +1970,7 @@ msgstr "Sempre al summitate"
 #: ../src/plugins/ontop/ontop.plugin.in.h:2
 msgid "Keep the main window on top when playing a movie"
 msgstr ""
-"Tener le fenestra principal in alto durante le reproduction de un film"
+"Tener le fenestra principal in alto durante le reproduction de un filme"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:1
 msgid "Subtitle Downloader"
@@ -1977,7 +1978,7 @@ msgstr "Discargator de subtitulos"
 
 #: ../src/plugins/opensubtitles/opensubtitles.plugin.in.h:2
 msgid "Look for subtitles for the currently playing movie"
-msgstr "Cercar subtitulos pro le film actualmente in reproduction"
+msgstr "Cercar subtitulos pro le filme actualmente in reproduction"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:41
 msgid "Brazilian Portuguese"
@@ -2023,11 +2024,11 @@ msgstr "Valor"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:523
 msgid "Download movie subtitles from OpenSubtitles"
-msgstr "Discargar subtitulos de film ex OpenSubtitles"
+msgstr "Discargar subtitulos de filme ex OpenSubtitles"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:525
 msgid "_Download Movie Subtitles…"
-msgstr "_Discargar subtitulos de film…"
+msgstr "_Discargar subtitulos de filme…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.py:587
 msgid "Searching subtitles…"
@@ -2035,7 +2036,7 @@ msgstr "In cerca de subtitulos…"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:1
 msgid "Download Movie Subtitles"
-msgstr "Discargar subtitulos de film"
+msgstr "Discargar subtitulos de filme"
 
 #: ../src/plugins/opensubtitles/opensubtitles.ui.h:2
 msgid "Subtitle _language:"
@@ -2051,15 +2052,15 @@ msgstr "Lingua del subtitulos"
 
 #: ../src/plugins/opensubtitles/org.x.player.plugins.opensubtitles.gschema.xml.in.in.h:2
 msgid "The language to search for subtitles for movies in."
-msgstr "Le lingua pro cercar subtitulos pro le films."
+msgstr "Le lingua pro cercar subtitulos pro le filmes."
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:1
 msgid "Movie Properties"
-msgstr "Proprietates del film"
+msgstr "Proprietates del filme"
 
 #: ../src/plugins/properties/movie-properties.plugin.in.h:2
 msgid "Adds movie properties to the sidebar"
-msgstr "Adde le proprietates de film al barra lateral"
+msgstr "Adde le proprietates de filme al barra lateral"
 
 #: ../src/plugins/properties/xplayer-movie-properties.c:149
 #, c-format
@@ -2163,7 +2164,7 @@ msgstr "Adde le files que ha essite reproducite al lista del files recente"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:1
 msgid "Rotation Plugin"
-msgstr "Plug-in de rotation"
+msgstr "Extension de rotation"
 
 #: ../src/plugins/rotation/rotation.plugin.in.h:2
 msgid "Allows videos to be rotated if they are in the wrong orientation"
@@ -2179,34 +2180,34 @@ msgstr "Rotar in verso contra-horari (Counterc_lockwise)"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:1
 msgid "Screen Saver"
-msgstr "Salva schermo"
+msgstr "Salvator de schermo"
 
 #: ../src/plugins/screensaver/screensaver.plugin.in.h:2
 msgid "Deactivates the screen saver when a movie is playing"
-msgstr "Disactiva le salva schermo quando un film es in reproduction"
+msgstr "Disactiva le salvaschermo quando un filme es in reproduction"
 
 #: ../src/plugins/screensaver/xplayer-screensaver.c:97
 msgid "Playing a movie"
-msgstr "Reproduction de un film"
+msgstr "Reproduction de un filme"
 
 #: ../src/plugins/screenshot/gallery.ui.h:1
 msgid "Screenshot width (in pixels):"
-msgstr "Largessa del captura de schermo (in pixels):"
+msgstr "Largor del captura de schermo (in pixeles):"
 
 #: ../src/plugins/screenshot/gallery.ui.h:2
 msgid "Calculate the number of screenshots"
-msgstr "Calcular le numero de instantaneas de schermo"
+msgstr "Calcular le numero de captura de schermo"
 
 #: ../src/plugins/screenshot/gallery.ui.h:3
 msgid "Number of screenshots:"
-msgstr "Numero de instantaneas de schermo"
+msgstr "Numero de captura de schermo"
 
 #. translators: this is the name of the file that gets made up
 #. * with the screenshot if the entire screen is taken
 #: ../src/plugins/screenshot/screenshot-filename-builder.c:147
 #, c-format
 msgid "Screenshot from %s.png"
-msgstr "Instantanea de schermo ex %s.png"
+msgstr "Captura de schermo ex %s.png"
 
 #. translators: this is the name of the file that gets
 #. * made up with the screenshot if the entire screen is
@@ -2218,12 +2219,11 @@ msgstr "Captura de schermo ab %s - %d.png"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:1
 msgid "Screenshot"
-msgstr "Instantanee de schermo"
+msgstr "Captura de schermo"
 
 #: ../src/plugins/screenshot/screenshot.plugin.in.h:2
 msgid "Allows screenshots and galleries to be taken of videos"
-msgstr ""
-"Permitte instantaneas de schermo e galerias de ser prendite de videos"
+msgstr "Permitte capturas de schermo e galerias de ser prendite de videos"
 
 #: ../src/plugins/screenshot/xplayer-gallery.c:91
 msgid "Save Gallery"
@@ -2261,19 +2261,19 @@ msgstr ""
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take _Screenshot"
-msgstr "Prender un instantanea del _Schermo"
+msgstr "Capturar le _schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:334
 msgid "Take a screenshot"
-msgstr "Captura le schermo"
+msgstr "Capturar le schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create Screenshot _Gallery..."
-msgstr "Crear un _Galleria de instantaneas de schermo"
+msgstr "Crear un _galleria de captura de schermo"
 
 #: ../src/plugins/screenshot/xplayer-screenshot-plugin.c:335
 msgid "Create a gallery of screenshots"
-msgstr "Crear un galleria de instantaneas de schermo"
+msgstr "Crear un galleria de capturas de schermo"
 
 #: ../src/plugins/skipto/skipto.plugin.in.h:1
 #: ../src/plugins/skipto/xplayer-skipto.c:196
@@ -2315,8 +2315,8 @@ msgstr "Saltar a un tempore specificate."
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:1
 msgid "Zeitgeist Plugin"
-msgstr "Plugin de Zeitgeist"
+msgstr "Extension de Zeitgeist"
 
 #: ../src/plugins/zeitgeist-dp/zeitgeist-dp.plugin.in.h:2
 msgid "A plugin sending events to Zeitgeist"
-msgstr "Un plugin que manda le eventos a Zeitgeist"
+msgstr "Un extension que manda le eventos a Zeitgeist"
