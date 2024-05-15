@@ -106,7 +106,7 @@ struct _XplayerObject {
 	GtkAdjustment *seekadj;
 	gboolean seek_lock;
 	gboolean seekable;
-	XplayerTimeLabel *time_label;
+	GtkWidget *time_label;
 
 	/* Volume */
 	GtkWidget *volume;

@@ -250,7 +250,7 @@ draw_action_custom (GsdOsdDrawContext  *ctx,
                 g_free (name);
                 if (pixbuf == NULL)
                 {
-                    return FALSE;
+                    return;
                 }
             }
 

@@ -585,7 +585,7 @@ xplayer_fullscreen_toggle_blank_monitors (XplayerFullscreen *fs, GtkWidget *wind
 		xapp_monitor_blanker_unblank_monitors(fs->xapp_monitor_blanker);
 	}
 	else {
-		xapp_monitor_blanker_blank_other_monitors(fs->xapp_monitor_blanker, window);
+		xapp_monitor_blanker_blank_other_monitors(fs->xapp_monitor_blanker, GTK_WINDOW(window));
 	}
 	xplayer_fullscreen_move_popups (fs);
 }
