@@ -282,7 +282,7 @@ bacon_video_widget_start_plugin_installation (XplayerCodecInstallContext *ctx,
 	}
 #endif /* GDK_WINDOWING_X11 */
 
-	status = gst_install_plugins_async (ctx->details, install_ctx,
+	status = gst_install_plugins_async ((const gchar * const*)ctx->details, install_ctx,
 	                                    on_plugin_installation_done,
 	                                    ctx);
 

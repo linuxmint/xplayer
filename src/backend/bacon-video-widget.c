@@ -1923,7 +1923,7 @@ bvw_handle_buffering_message (GstMessage * message, BaconVideoWidget *bvw)
        gst_element_set_state (GST_ELEMENT (bvw->priv->play), GST_STATE_PAUSED);
 
        bvw_reconfigure_fill_timeout (bvw, 200);
-       bvw->priv->download_buffering_element = g_object_ref (message->src);
+       bvw->priv->download_buffering_element = GST_ELEMENT_CAST(g_object_ref (message->src));
      }
 
      return;

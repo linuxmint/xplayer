@@ -1612,7 +1612,7 @@ xplayer_action_fullscreen (XplayerObject *xplayer, gboolean state)
 void
 xplayer_action_blank (XplayerObject *xplayer)
 {
-	xplayer_fullscreen_toggle_blank_monitors(xplayer->fs, GTK_WINDOW (xplayer->win));
+	xplayer_fullscreen_toggle_blank_monitors(xplayer->fs, GTK_WIDGET (xplayer->win));
 }
 
 void
@@ -4304,7 +4304,7 @@ xplayer_callback_connect (XplayerObject *xplayer)
 	gtk_action_set_sensitive (action, FALSE);
 
     sidebar_toolbar = xplayer_playlist_get_toolbar (xplayer->playlist);
-    size_box = GTK_BOX (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
+    size_box = GTK_WIDGET (gtk_builder_get_object (xplayer->xml, "tmw_controls_vbox"));
     size_group = gtk_size_group_new (GTK_SIZE_GROUP_VERTICAL);
     gtk_size_group_add_widget (size_group, size_box);
     gtk_size_group_add_widget (size_group, sidebar_toolbar);
